@@ -1,0 +1,13 @@
+initial_beliefs:
+- 0.3
+- 0.3
+- 0.4
+method: sampling
+observation:
+- 0.5
+- 0.2
+- 0.3
+updated_beliefs:
+- 0.3004496523538899
+- 0.300757444921444
+- 0.39879290272466716

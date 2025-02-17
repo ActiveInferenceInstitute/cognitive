@@ -1,0 +1,23 @@
+# Example configuration for discrete variational active inference
+
+method: variational
+policy_type: discrete
+temporal_horizon: 5
+learning_rate: 0.01
+precision_init: 1.0
+use_gpu: false
+
+# Model-specific parameters
+custom_params:
+  exploration_weight: 0.3  # Balance between exploration and exploitation
+  state_dimensions: [10, 10]  # Example state space dimensions
+  action_dimensions: [4]  # Example action space dimensions
+  
+  # Prior preferences
+  goal_prior_weight: 2.0
+  entropy_weight: 0.5
+  
+  # Learning parameters
+  belief_momentum: 0.9
+  policy_temperature: 0.5
+  max_iterations: 100 

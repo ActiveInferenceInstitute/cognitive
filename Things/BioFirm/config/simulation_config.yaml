@@ -1,0 +1,84 @@
+# BioFirm Simulation Configuration
+
+simulation:
+  duration: 1000.0  # simulation duration in time units
+  time_step: 0.1    # simulation time step
+  spatial_resolution:
+    micro: 0.1
+    meso: 1.0
+    macro: 10.0
+  noise_levels:
+    ecological: 0.05
+    climate: 0.02
+    social: 0.08
+  random_seed: 42
+
+temporal_scales:
+  micro:
+    duration: 100.0
+    resolution: 0.1
+    variables: ["biodiversity", "soil_health", "water_cycles"]
+    
+  meso:
+    duration: 500.0
+    resolution: 1.0
+    variables: ["biomass", "energy_flows", "pollution_levels"]
+    
+  macro:
+    duration: 1000.0
+    resolution: 10.0
+    variables: ["temperature", "precipitation", "carbon_cycles"]
+
+spatial_scales:
+  local:
+    resolution: 0.1
+    variables: ["biodiversity", "soil_health", "water_cycles"]
+    interaction_range: 0.2
+    
+  regional:
+    resolution: 1.0
+    variables: ["biomass", "energy_flows", "pollution_levels"]
+    interaction_range: 2.0
+    
+  biome:
+    resolution: 10.0
+    variables: ["temperature", "precipitation", "carbon_cycles"]
+    interaction_range: 20.0
+
+interventions:
+  ecological:
+    target_variables: ["biodiversity", "soil_health"]
+    intensity: 0.3
+    duration: 50.0
+    risk_tolerance: 0.3
+    
+  climate:
+    target_variables: ["temperature", "carbon_cycles"]
+    intensity: 0.4
+    duration: 100.0
+    uncertainty_threshold: 0.2
+    
+  social:
+    target_variables: ["land_use", "resource_extraction"]
+    intensity: 0.2
+    duration: 75.0
+    community_threshold: 0.4
+
+stability_scenarios:
+  - baseline
+  - perturbation
+  - recovery
+
+disturbance_types:
+  - shock
+  - stress
+  - transformation
+
+visualization:
+  dpi: 300
+  style: "seaborn"
+  color_scheme: "viridis"
+  save_format: "png"
+  plot_dimensions:
+    width: 12
+    height: 8 

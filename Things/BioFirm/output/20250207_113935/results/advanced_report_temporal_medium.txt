@@ -1,0 +1,17 @@
+Advanced Analysis Report: temporal_medium
+==================================================
+
+1. Time Series Analysis
+--------------------
+
+2. Causality Analysis
+--------------------
+
+3. Information Theory Metrics
+--------------------
+
+4. Fractal Analysis
+--------------------
+
+5. Network Metrics
+--------------------

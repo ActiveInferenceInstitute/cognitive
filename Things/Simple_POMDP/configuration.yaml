@@ -1,0 +1,122 @@
+# SimplePOMDP Configuration
+
+# Model Parameters
+model:
+  name: "SimplePOMDP"
+  description: "Simple POMDP implementation with Active Inference"
+  version: "0.1.0"
+
+# State Space Configuration
+state_space:
+  num_states: 3
+  state_labels: ["State1", "State2", "State3"]
+  initial_state: 0
+
+# Observation Space Configuration
+observation_space:
+  num_observations: 2
+  observation_labels: ["Obs1", "Obs2"]
+
+# Action Space Configuration
+action_space:
+  num_actions: 2
+  action_labels: ["Action1", "Action2"]
+
+# Matrix Specifications
+matrices:
+  A_matrix:  # Observation/Likelihood Matrix
+    shape: [2, 3]  # [num_observations, num_states]
+    initialization: "random_stochastic"
+    constraints:
+      - "column_stochastic"
+      - "non_negative"
+    
+  B_matrix:  # Transition/Dynamics Matrix
+    shape: [3, 3, 2]  # [num_states, num_states, num_actions]
+    initialization: "identity_based"
+    initialization_params:
+      strength: 0.8
+    constraints:
+      - "row_stochastic"
+      - "non_negative"
+    
+  C_matrix:  # Preference Matrix
+    shape: [2]  # [num_observations]
+    initialization: "log_preferences"
+    initialization_params:
+      preferences: [0.1, 2.0]  # Strong preference for second observation
+      description: "Log-preferences: O1=0.1 (avoid), O2=2.0 (prefer)"
+    
+  D_matrix:  # Prior Beliefs
+    shape: [3]  # [num_states]
+    initialization: "uniform"
+    constraints:
+      - "sum_to_one"
+      - "non_negative"
+    
+  E_matrix:  # Action Prior Matrix
+    shape: [2]  # [num_actions]
+    initialization: "uniform"
+    description: "Initial uniform prior over actions"
+    learning_rate: 0.2  # Rate at which policy prior is updated
+
+# Inference Parameters
+inference:
+  time_horizon: 5
+  num_iterations: 10
+  learning_rate: 0.1
+  temperature: 1.0
+
+# Visualization Settings
+visualization:
+  output_dir: "visualization/outputs"
+  formats: ["png"]
+  dpi: 300
+  style:
+    colormap_2d: "YlOrRd"
+    colormap_3d: "viridis"
+    figure_size: [10, 8]
+  
+  plots:
+    required:
+      - "belief_evolution"
+      - "free_energy_landscape"
+      - "policy_evaluation"
+      - "state_transitions"
+      - "observation_likelihood"
+    
+    custom:
+      belief_evolution:
+        type: "line"
+        title: "Belief Evolution"
+        xlabel: "Time Step"
+        ylabel: "Belief Probability"
+      
+      free_energy_landscape:
+        type: "surface"
+        title: "Free Energy Landscape"
+        xlabel: "State Dimension 1"
+        ylabel: "State Dimension 2"
+        zlabel: "Free Energy"
+      
+      policy_evaluation:
+        type: "bar"
+        title: "Policy Evaluation"
+        xlabel: "Policies"
+        ylabel: "Expected Free Energy"
+
+# Testing Configuration
+testing:
+  coverage_threshold: 90
+  test_cases:
+    - "matrix_initialization"
+    - "belief_updating"
+    - "policy_selection"
+    - "free_energy_computation"
+    - "visualization_outputs"
+  
+  validation:
+    matrix_properties: true
+    probability_constraints: true
+    numerical_stability: true
+    visualization_quality: true 

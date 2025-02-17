@@ -1,0 +1,135 @@
+# Example BioFirm Configuration
+
+system:
+  name: "BioFirm"
+  type: "bioregional_stewardship"
+  
+  initial_states:
+    local:
+      ecological_state:
+        biodiversity: 0.4
+        habitat_connectivity: 0.3
+        ecosystem_services: 0.5
+        species_richness: 0.4
+        ecological_integrity: 0.3
+      climate_state:
+        temperature: 0.6
+        precipitation: 0.5
+        carbon_storage: 0.3
+        albedo: 0.4
+        extreme_events: 0.7
+      social_state:
+        community_engagement: 0.4
+        traditional_knowledge: 0.3
+        stewardship_practices: 0.4
+        resource_governance: 0.3
+        social_resilience: 0.4
+      economic_state:
+        sustainable_livelihoods: 0.3
+        circular_economy: 0.2
+        ecosystem_valuation: 0.3
+        green_infrastructure: 0.2
+        resource_efficiency: 0.3
+        
+  target_states:
+    local:
+      ecological_state:
+        biodiversity: 0.8
+        habitat_connectivity: 0.7
+        ecosystem_services: 0.8
+        species_richness: 0.7
+        ecological_integrity: 0.8
+      climate_state:
+        temperature: 0.5
+        precipitation: 0.6
+        carbon_storage: 0.8
+        albedo: 0.6
+        extreme_events: 0.3
+      social_state:
+        community_engagement: 0.8
+        traditional_knowledge: 0.7
+        stewardship_practices: 0.8
+        resource_governance: 0.7
+        social_resilience: 0.8
+      economic_state:
+        sustainable_livelihoods: 0.7
+        circular_economy: 0.6
+        ecosystem_valuation: 0.7
+        green_infrastructure: 0.6
+        resource_efficiency: 0.7
+        
+  ecological_constraints:
+    "ecological.biodiversity_to_ecological.ecosystem_services":
+      min: 0.5
+      max: 2.0
+    "climate.carbon_storage_to_climate.temperature":
+      min: 0.3
+      max: 1.5
+    "social.community_engagement_to_ecological.stewardship_practices":
+      min: 0.7
+      max: 1.3
+
+state_spaces:
+  local:
+    dimensions: [20]  # Combined dimensions from all states
+    labels:
+      ecological: ["biodiversity", "habitat_connectivity", "ecosystem_services", "species_richness", "ecological_integrity"]
+      climate: ["temperature", "precipitation", "carbon_storage", "albedo", "extreme_events"]
+      social: ["community_engagement", "traditional_knowledge", "stewardship_practices", "resource_governance", "social_resilience"]
+      economic: ["sustainable_livelihoods", "circular_economy", "ecosystem_valuation", "green_infrastructure", "resource_efficiency"]
+    mappings:
+      identity: [[1.0, 0.0], [0.0, 1.0]]  # Example identity mapping
+    scale: "local"
+    temporal_resolution: "monthly"
+
+observation:
+  local:
+    observation_space:
+      dimensions: [5]  # [CRITICAL, POOR, FAIR, GOOD, EXCELLENT]
+      labels:
+        states: ["CRITICAL", "POOR", "FAIR", "GOOD", "EXCELLENT"]
+      mappings:
+        ordinal: [[1.0, 0.0], [0.0, 1.0]]  # Example ordinal mapping
+    likelihood_matrix: [[0.8, 0.2], [0.2, 0.8]]  # Example likelihood matrix
+    noise_model: "gaussian"
+    precision: 1.0
+  couplings:
+    local_to_landscape: 0.3
+    landscape_to_regional: 0.4
+
+transition:
+  local:
+    action_space:
+      dimensions: [4]  # [PROTECT, RESTORE, ENHANCE, TRANSFORM]
+      labels:
+        actions: ["PROTECT", "RESTORE", "ENHANCE", "TRANSFORM"]
+      mappings:
+        discrete: [[1.0, 0.0], [0.0, 1.0]]  # Example discrete mapping
+    transition_matrices:
+      PROTECT: [[0.9, 0.1], [0.1, 0.9]]  # Example transition matrices
+      RESTORE: [[0.7, 0.3], [0.3, 0.7]]
+      ENHANCE: [[0.6, 0.4], [0.4, 0.6]]
+      TRANSFORM: [[0.4, 0.6], [0.6, 0.4]]
+    temporal_horizon: 20
+    control_modes: ["homeostatic", "goal_directed", "exploratory"]
+  couplings:
+    local_to_landscape: 0.3
+    landscape_to_regional: 0.4
+
+stewardship:
+  stakeholder_weights:
+    local_communities: 0.3
+    indigenous_knowledge: 0.3
+    scientific_expertise: 0.2
+    policy_makers: 0.2
+  learning_rate: 0.1
+  default_constraints:
+    budget_limit: 1000000
+    time_horizon: "5y"
+    social_acceptance: 0.7
+
+visualization:
+  style: "seaborn-whitegrid"
+  update_frequency: 10
+  save_format: "png"
+  dpi: 300 

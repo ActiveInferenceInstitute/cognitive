@@ -1,0 +1,199 @@
+# Colony Configuration
+
+# Colony Parameters
+colony:
+  name: "Active Inference Colony"
+  version: "1.0.0"
+  description: "Multi-agent ant colony system using active inference"
+
+# Population Parameters
+population:
+  initial_size: 100
+  max_size: 500
+  min_size: 50
+  growth_rate: 0.01
+  mortality_rate: 0.005
+  
+  # Agent Distribution
+  distribution:
+    foragers: 0.4
+    maintainers: 0.2
+    nurses: 0.2
+    defenders: 0.1
+    explorers: 0.1
+
+# Nest Parameters
+nest:
+  # Physical Structure
+  structure:
+    size: [50, 50]
+    chambers:
+      - name: "food_storage"
+        size: [10, 10]
+        position: [5, 5]
+      - name: "brood_chamber"
+        size: [15, 15]
+        position: [25, 25]
+      - name: "waste_chamber"
+        size: [8, 8]
+        position: [40, 40]
+    
+  # Environmental Controls
+  environment:
+    temperature: 25.0
+    humidity: 0.7
+    ventilation: 0.5
+    
+  # Resource Management
+  resources:
+    food_capacity: 1000
+    water_capacity: 500
+    building_materials: 200
+
+# Collective Behavior
+collective:
+  # Decision Making
+  decision_making:
+    consensus_threshold: 0.7
+    quorum_size: 0.3
+    decision_timeout: 100
+    
+  # Task Allocation
+  task_allocation:
+    dynamic: true
+    response_threshold: 0.6
+    switch_cost: 0.2
+    
+  # Information Sharing
+  information_sharing:
+    network_topology: "small_world"
+    connection_density: 0.3
+    communication_range: 5.0
+
+# Pheromone System
+pheromones:
+  # Types
+  types:
+    food:
+      evaporation_rate: 0.01
+      diffusion_rate: 0.1
+      deposit_amount: 1.0
+    home:
+      evaporation_rate: 0.005
+      diffusion_rate: 0.05
+      deposit_amount: 0.8
+    alarm:
+      evaporation_rate: 0.05
+      diffusion_rate: 0.2
+      deposit_amount: 2.0
+    trail:
+      evaporation_rate: 0.02
+      diffusion_rate: 0.15
+      deposit_amount: 1.2
+      
+  # Grid Parameters
+  grid:
+    resolution: 0.5
+    update_frequency: 5
+    max_value: 10.0
+
+# Learning Parameters
+learning:
+  # Collective Learning
+  collective:
+    enabled: true
+    learning_rate: 0.05
+    memory_size: 1000
+    
+  # Social Learning
+  social:
+    imitation_weight: 0.3
+    innovation_weight: 0.2
+    conformity_pressure: 0.4
+    
+  # Cultural Evolution
+  cultural:
+    mutation_rate: 0.01
+    selection_pressure: 0.8
+    transmission_fidelity: 0.9
+
+# Adaptation Parameters
+adaptation:
+  # Environmental
+  environmental:
+    sensitivity: 0.7
+    response_time: 10
+    adaptation_rate: 0.05
+    
+  # Population
+  population:
+    task_flexibility: 0.6
+    specialization_rate: 0.1
+    diversity_maintenance: 0.4
+
+# Performance Metrics
+metrics:
+  # Colony Level
+  colony:
+    - "population_size"
+    - "resource_levels"
+    - "task_efficiency"
+    - "survival_rate"
+    
+  # Collective Behavior
+  collective:
+    - "coordination_index"
+    - "information_flow"
+    - "decision_accuracy"
+    - "adaptation_rate"
+    
+  # Resource Management
+  resources:
+    - "food_collection_rate"
+    - "resource_distribution"
+    - "waste_management"
+    
+  # Recording
+  recording:
+    frequency: 100
+    save_path: "logs/colony/"
+    detailed: true
+
+# Visualization
+visualization:
+  enabled: true
+  update_frequency: 10
+  
+  # Display Options
+  display:
+    show_pheromones: true
+    show_agents: true
+    show_resources: true
+    show_network: true
+    
+  # Analysis Plots
+  plots:
+    - "population_dynamics"
+    - "resource_levels"
+    - "task_distribution"
+    - "pheromone_maps"
+    
+  # Export Settings
+  export:
+    format: ["png", "csv"]
+    frequency: 1000
+    path: "output/visualizations/"
+
+# Emergency Protocols
+emergency:
+  # Threat Response
+  threats:
+    detection_threshold: 0.7
+    response_time: 5
+    mobilization_rate: 0.8
+    
+  # Resource Management
+  resources:
+    critical_threshold: 0.2
+    emergency_allocation: true
+    conservation_rate: 0.5 

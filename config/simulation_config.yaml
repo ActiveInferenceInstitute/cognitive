@@ -1,0 +1,70 @@
+# BioFirm Simulation Configuration
+
+simulation:
+  duration: 1000  # Time steps
+  time_step: 0.1  # Time step size
+  spatial_resolution:
+    local: 0.1
+    regional: 1.0
+    biome: 10.0
+  noise_levels:
+    ecological: 0.05
+    climate: 0.02
+    social: 0.08
+  intervention_frequency: 10
+  random_seed: 42
+
+temporal_hierarchy:
+  micro:
+    scale: 0.1
+    processes: ["metabolism", "behavior", "adaptation"]
+    coupling_strength: 0.7
+  meso:
+    scale: 1.0
+    processes: ["population", "community", "ecosystem"]
+    coupling_strength: 0.5
+  macro:
+    scale: 10.0
+    processes: ["evolution", "succession", "climate"]
+    coupling_strength: 0.3
+
+spatial_hierarchy:
+  local:
+    scale: 0.1
+    entities: ["individual", "patch", "habitat"]
+    interaction_range: 0.2
+  regional:
+    scale: 1.0
+    entities: ["population", "landscape", "biome"]
+    interaction_range: 2.0
+  biome:
+    scale: 10.0
+    entities: ["metacommunity", "ecoregion", "biosphere"]
+    interaction_range: 20.0
+
+intervention_strategies:
+  ecological:
+    restoration_targets: ["biodiversity", "ecosystem_function", "habitat_quality"]
+    implementation_rate: 0.1
+    monitoring_frequency: 5
+    risk_tolerance: 0.3
+    weight: 1.0
+  climate:
+    intervention_types: ["emission_reduction", "carbon_sequestration", "adaptation"]
+    implementation_rate: 0.05
+    monitoring_frequency: 10
+    uncertainty_threshold: 0.2
+    weight: 1.0
+  social:
+    intervention_areas: ["education", "policy", "technology"]
+    implementation_rate: 0.08
+    monitoring_frequency: 7
+    community_threshold: 0.4
+    weight: 1.0
+
+visualization:
+  plot_types: ["line", "heatmap", "network", "scatter"]
+  update_frequency: 10
+  save_format: "png"
+  dpi: 300
+  style: "seaborn-whitegrid" 

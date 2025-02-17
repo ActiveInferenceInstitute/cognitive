@@ -1,0 +1,126 @@
+Scenario Comparison Report: stability
+==================================================
+
+1. Pairwise Scenario Comparisons
+------------------------------
+
+
+Metric: Resilience
+--------------------
+
+Baseline vs Perturbed:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Baseline vs Extreme:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Perturbed vs Extreme:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Metric: Resistance
+--------------------
+
+Baseline vs Perturbed:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Baseline vs Extreme:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Perturbed vs Extreme:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Metric: Recovery
+--------------------
+
+Baseline vs Perturbed:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Baseline vs Extreme:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Perturbed vs Extreme:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Metric: Adaptability
+--------------------
+
+Baseline vs Perturbed:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Baseline vs Extreme:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Perturbed vs Extreme:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+
+2. Scenario Rankings
+--------------------
+
+Resilience:
+  1. Baseline: 0.7000
+  2. Perturbed: 0.7000
+  3. Extreme: 0.7000
+
+Resistance:
+  1. Baseline: 0.6000
+  2. Perturbed: 0.6000
+  3. Extreme: 0.6000
+
+Recovery:
+  1. Baseline: 0.8000
+  2. Perturbed: 0.8000
+  3. Extreme: 0.8000
+
+Adaptability:
+  1. Baseline: 0.7500
+  2. Perturbed: 0.7500
+  3. Extreme: 0.7500
+
+
+3. Scenario Variability
+--------------------
+
+Resilience:
+  Baseline CV: 0.1429
+  Perturbed CV: 0.1429
+  Extreme CV: 0.1429
+
+Resistance:
+  Baseline CV: 0.1667
+  Perturbed CV: 0.1667
+  Extreme CV: 0.1667
+
+Recovery:
+  Baseline CV: 0.1250
+  Perturbed CV: 0.1250
+  Extreme CV: 0.1250
+
+Adaptability:
+  Baseline CV: 0.1333
+  Perturbed CV: 0.1333
+  Extreme CV: 0.1333

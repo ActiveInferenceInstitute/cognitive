@@ -1,0 +1,92 @@
+"""
+Test configuration for SimplePOMDP.
+"""
+
+state_space:
+  num_states: 3
+  state_labels: ["State1", "State2", "State3"]
+  initial_state: 0
+
+observation_space:
+  num_observations: 2
+  observation_labels: ["Obs1", "Obs2"]
+
+action_space:
+  num_actions: 3  # Updated to match E-matrix example
+  action_labels: ["Action1", "Action2", "Action3"]
+  temperature: 1.0  # Default temperature for action selection
+
+matrices:
+  A_matrix:  # Observation/Likelihood Matrix
+    shape: [2, 3]  # [num_observations, num_states]
+    initialization: "random_stochastic"
+    constraints:
+      - "column_stochastic"
+      - "non_negative"
+    
+  B_matrix:  # Transition/Dynamics Matrix
+    shape: [3, 3, 3]  # [num_states, num_states, num_actions]
+    initialization: "identity_based"
+    initialization_params:
+      strength: 0.8
+    constraints:
+      - "row_stochastic"
+      - "non_negative"
+    
+  C_matrix:  # Preference Matrix
+    shape: [2]  # [num_observations]
+    initialization: "log_preferences"
+    initialization_params:
+      preferences: [0.1, 2.0]  # Strong preference for second observation
+      description: "Log-preferences: O1=0.1 (avoid), O2=2.0 (prefer)"
+    
+  D_matrix:  # Prior Beliefs
+    shape: [3]  # [num_states]
+    initialization: "uniform"
+    constraints:
+      - "sum_to_one"
+      - "non_negative"
+    
+  E_matrix:  # Action Distribution Matrix
+    shape: [3]  # [num_actions]
+    initialization: "uniform"  # Start with uniform distribution
+    initialization_params:
+      initial_distribution: [0.33, 0.33, 0.34]  # Example initial distribution
+    constraints:
+      - "sum_to_one"
+      - "non_negative"
+    validation:
+      check_normalization: true
+      check_non_negative: true
+      check_shape: true
+    learning:
+      temperature: 1.0  # Temperature parameter for softmax
+      min_probability: 1e-10  # Minimum probability for numerical stability
+      learning_rate: 0.2  # Rate at which action distribution is updated
+
+inference:
+  learning_rate: 0.5
+  temperature: 1.0
+  num_iterations: 10
+  policy_learning_rate: 0.2
+
+visualization:
+  output_dir: "test_output"
+  style:
+    figure_size: [8, 6]
+    dpi: 100
+    colormap: "YlOrRd"
+    format: "png"
+    theme: "default"
+  plots:
+    action_distribution:
+      enabled: true
+      title: "Action Probability Distribution"
+      xlabel: "Actions"
+      ylabel: "Probability"
+    temperature_effects:
+      enabled: true
+      temperatures: [0.1, 0.5, 1.0, 2.0, 5.0]
+      title: "Temperature Effects on Action Distribution"
+      xlabel: "Actions"
+      ylabel: "Probability" 

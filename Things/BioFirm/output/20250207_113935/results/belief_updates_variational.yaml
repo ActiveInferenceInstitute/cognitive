@@ -1,0 +1,13 @@
+initial_beliefs:
+- 0.3
+- 0.3
+- 0.4
+method: variational
+observation:
+- 0.5
+- 0.2
+- 0.3
+updated_beliefs:
+- 0.32
+- 0.29
+- 0.39

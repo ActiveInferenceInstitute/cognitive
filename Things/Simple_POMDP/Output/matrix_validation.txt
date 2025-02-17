@@ -1,0 +1,79 @@
+Matrix Validation Report
+======================
+
+A Matrix (Observation Model):
+- Shape: (3, 3)
+- Column stochastic: True
+- Non-negative: True
+
+Observation probabilities:
+  P(Low|Low) = 0.202
+  P(Low|Medium) = 0.003
+  P(Low|High) = 0.411
+  P(Medium|Low) = 0.582
+  P(Medium|Medium) = 0.714
+  P(Medium|High) = 0.186
+  P(High|Low) = 0.216
+  P(High|Medium) = 0.283
+  P(High|High) = 0.403
+
+B Matrix (Transition Model):
+- Shape: (3, 3, 3)
+
+Action: Decrease
+- Column stochastic: True
+- Non-negative: True
+
+Transition probabilities:
+  P(Low|Low,Decrease) = 0.324
+  P(Low|Medium,Decrease) = 0.186
+  P(Low|High,Decrease) = 0.012
+  P(Medium|Low,Decrease) = 0.320
+  P(Medium|Medium,Decrease) = 0.162
+  P(Medium|High,Decrease) = 0.722
+  P(High|Low,Decrease) = 0.356
+  P(High|Medium,Decrease) = 0.651
+  P(High|High,Decrease) = 0.266
+
+Action: Stay
+- Column stochastic: True
+- Non-negative: True
+
+Transition probabilities:
+  P(Low|Low,Stay) = 0.423
+  P(Low|Medium,Stay) = 0.005
+  P(Low|High,Stay) = 0.182
+  P(Medium|Low,Stay) = 0.257
+  P(Medium|Medium,Stay) = 0.738
+  P(Medium|High,Stay) = 0.719
+  P(High|Low,Stay) = 0.320
+  P(High|Medium,Stay) = 0.257
+  P(High|High,Stay) = 0.099
+
+Action: Increase
+- Column stochastic: True
+- Non-negative: True
+
+Transition probabilities:
+  P(Low|Low,Increase) = 0.320
+  P(Low|Medium,Increase) = 0.367
+  P(Low|High,Increase) = 0.486
+  P(Medium|Low,Increase) = 0.241
+  P(Medium|Medium,Increase) = 0.364
+  P(Medium|High,Increase) = 0.264
+  P(High|Low,Increase) = 0.438
+  P(High|Medium,Increase) = 0.269
+  P(High|High,Increase) = 0.250
+
+C Matrix (Log Preferences over Observations):
+- Shape: (3,)
+
+Log preference values:
+  ln P(Low) = 0.100
+  ln P(Medium) = 2.000
+  ln P(High) = 0.100
+
+Normalized preference probabilities:
+  P(Low) = 0.115
+  P(Medium) = 0.770
+  P(High) = 0.115

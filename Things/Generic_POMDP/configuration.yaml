@@ -1,0 +1,307 @@
+# Generic POMDP Configuration
+
+# Model Parameters
+model:
+  name: "Generic POMDP"
+  description: "Generic POMDP implementation using Active Inference"
+  version: "1.0.3"
+  temporal_preferences: true  # Enable temporal preference handling
+  learning_mode: "continuous"  # Enable continuous learning
+
+# Space Dimensions
+dimensions:
+  observations: 6
+  states: 3
+  actions: 2
+  total_timesteps: 15  # Total number of timesteps to run simulation
+  planning_horizon: 5   # Number of timesteps to look ahead for policy evaluation
+  memory_length: 5     # Number of past observations to consider for belief updates
+  temporal_discount: 0.95  # Discount factor for future preferences
+  belief_momentum: 0.8  # Added belief momentum for smoother updates
+
+# Matrix Specifications
+matrices:
+  A_matrix:  # Observation model P(o|s)
+    initialization: "random_stochastic"
+    constraints:
+      - "column_stochastic"
+      - "non_negative"
+      - "sparse"  # Added sparsity constraint for more distinct state-observation mappings
+    sparsity_params:
+      target_sparsity: 0.7
+      min_value: 0.05
+    validation:
+      max_condition_number: 1e6
+      min_eigenvalue: 1e-6
+    learning:
+      enabled: true
+      rate: 0.1
+      momentum: 0.9
+      
+  B_matrix:  # Transition model P(s'|s,a)
+    initialization: "identity_based"
+    initialization_params:
+      strength: 0.8  # Strength of identity component
+      noise: 0.1    # Added noise parameter for exploration
+      temporal_coherence: 0.9  # Higher values make state transitions more temporally coherent
+    constraints:
+      - "column_stochastic"
+      - "non_negative"
+      - "temporal_consistency"  # Added constraint for temporal consistency
+    validation:
+      max_condition_number: 1e6
+      min_eigenvalue: 1e-6
+    learning:
+      enabled: true
+      rate: 0.05
+      momentum: 0.95
+      
+  C_matrix:  # Preferences over observations
+    initialization: "temporal_goal_directed"  # Changed to temporal goal-directed initialization
+    initialization_params:
+      default_value: 0.0
+      goal_states: [0, 3]  # Specify preferred goal states
+      goal_value: 1.0
+      avoid_value: -1.0
+      temporal_profile: "increasing"  # Preferences increase over time
+      temporal_scale: 1.5  # Scale factor for temporal preference increase
+    constraints:
+      - "finite_values"
+      - "bounded"
+      - "temporal_coherence"  # Added temporal coherence constraint
+    bounds:
+      min: -2.0
+      max: 2.0
+    temporal_params:
+      horizon_weight: 1.2  # Weight future preferences more heavily
+      smoothing: 0.1  # Smooth preference transitions
+    learning:
+      enabled: true
+      rate: 0.2
+      momentum: 0.8
+      
+  D_matrix:  # Prior beliefs over states
+    initialization: "informed"  # Changed to informed initialization
+    initialization_params:
+      concentration: 1.0  # Dirichlet concentration parameter
+      temporal_bias: 0.2  # Bias towards temporally consistent states
+    constraints:
+      - "normalized"
+      - "non_negative"
+      - "minimum_entropy"  # Added minimum entropy constraint
+    min_entropy: 0.5
+    learning:
+      enabled: true
+      rate: 0.15
+      momentum: 0.85
+      
+  E_matrix:  # Prior over policies
+    initialization: "temporal_softmax"  # Changed to temporal-aware softmax
+    initialization_params:
+      temperature: 1.0
+      temporal_bonus: 0.2  # Bonus for temporally coherent policies
+    constraints:
+      - "normalized"
+      - "non_negative"
+      - "entropy_regularized"  # Added entropy regularization
+    entropy_weight: 0.1
+    learning:
+      enabled: true
+      rate: 0.1
+      momentum: 0.9
+
+# Inference Parameters
+inference:
+  learning_rate: 0.05  # Reduced learning rate for more stable updates
+  temperature: 0.8    # Reduced temperature for more focused exploration
+  convergence_threshold: 1e-6
+  max_iterations: 100
+  belief_update:
+    method: "variational"  # Changed to variational inference
+    momentum: 0.9
+    adaptive_lr: true
+    min_lr: 1e-4
+    max_lr: 0.5
+    window_size: 10
+    smoothing_factor: 0.2  # Added smoothing for belief updates
+    regularization: 0.01   # Added regularization
+  policy_selection:
+    method: "temporal_softmax"
+    temperature: 1.0
+    exploration_bonus: 0.1
+    temporal_horizon_bonus: 0.2  # Bonus for policies with good long-term outcomes
+
+# Learning Parameters
+learning:
+  enabled: true
+  type: "online"
+  parameters:
+    memory_decay: 0.95
+    learning_rate_decay: 0.999
+    min_learning_rate: 1e-4
+    exploration_decay: 0.995
+    min_exploration: 0.05
+    belief_momentum: 0.9     # Added belief momentum
+    temporal_smoothing: 0.2  # Added temporal smoothing
+  regularization:
+    type: "l2"
+    strength: 0.01
+    temporal_coherence: 0.1  # Added temporal coherence regularization
+  curriculum:
+    enabled: true
+    difficulty_increase_rate: 0.1
+    max_difficulty: 1.0
+    adaptive_pacing: true    # Added adaptive pacing
+  temporal:
+    sequence_length: 5
+    prediction_horizon: 3
+    sequence_weight: 0.3
+    consistency_weight: 0.2  # Added consistency weight
+  belief_update:
+    method: "momentum"       # Changed to momentum-based updates
+    momentum: 0.9
+    step_size: 0.1
+    regularization: 0.01
+
+# Analysis Parameters
+analysis:
+  enabled: true
+  metrics:
+    - "belief_entropy"
+    - "free_energy"
+    - "accuracy"
+    - "temporal_consistency"
+    - "preference_satisfaction"
+    - "learning_progress"    # Added learning progress metric
+  temporal_analysis:
+    window_size: 5
+    overlap: 2
+    metrics:
+      - "state_transitions"
+      - "observation_sequences"
+      - "belief_trajectories"
+      - "learning_curves"    # Added learning curves
+  information_theory:
+    compute_mutual_info: true
+    compute_kl_divergence: true
+    compute_entropy_rate: true
+    temporal_dependencies: true  # Added temporal dependencies
+
+# Numerical Parameters
+numerical:
+  stability_threshold: 1e-12
+  max_condition_number: 1e6
+  gradient_clip: 10.0
+  belief_clip: [1e-7, 1.0]
+  precision_scaling: true
+  precision_params:
+    initial: 1.0
+    learning_rate: 0.1
+    min_value: 0.1
+    max_value: 10.0
+
+# Output Settings
+output:
+  base_dir: "Output/"
+  subdirs:
+    logs: "logs/"
+    plots: "plots/"
+    test_results: "test_results/"
+    simulations: "simulations/"
+    checkpoints: "checkpoints/"  # Added checkpoints directory
+    analysis: "analysis/"  # Added analysis directory
+  file_formats:
+    plots: ["png", "pdf"]
+    data: ["csv", "json"]
+    checkpoints: ["pt", "npz"]
+    analysis: ["json", "yaml"]
+  logging:
+    level: "INFO"
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    file: "Output/logs/simulation.log"
+    rotation: "1 day"
+    backup_count: 7
+
+# Visualization Settings
+visualization:
+  enabled: true
+  output_dir: "Output/plots/"
+  formats:
+    - "png"
+    - "pdf"
+  required_plots:
+    - "belief_evolution"
+    - "free_energy"
+    - "action_probabilities"
+    - "observation_counts"
+    - "learning_curves"      # Added learning curves
+    - "belief_trajectories"  # Added belief trajectories
+    - "state_transitions"    # Added state transition visualization
+    - "temporal_preference_heatmap"  # Added temporal preference visualization
+    - "policy_evaluation_over_time"  # Added policy evaluation visualization
+    - "information_theory_metrics"   # Added information theory metrics
+    - "temporal_consistency_analysis" # Added temporal consistency analysis
+  style:
+    colormap: "viridis"
+    figure_size: [10, 6]
+    font_size: 12
+    dpi: 300
+    grid: true
+    legend_location: "best"
+  interactive:
+    enabled: true
+    backend: "plotly"
+  temporal_plots:
+    enabled: true
+    types:
+      - "state_sequence_diagram"
+      - "belief_flow"
+      - "preference_evolution"
+      - "policy_tree"
+    animation:
+      enabled: true
+      fps: 2
+      duration: 10
+
+# Testing Configuration
+testing:
+  enabled: true
+  coverage_threshold: 90
+  test_cases:
+    initialization:
+      - "matrix_properties"
+      - "state_initialization"
+      - "constraint_satisfaction"
+      - "temporal_consistency"  # Added temporal consistency test
+    dynamics:
+      - "belief_updates"
+      - "action_selection"
+      - "observation_generation"
+      - "temporal_consistency"
+      - "sequence_prediction"  # Added sequence prediction test
+    learning:
+      - "belief_convergence"
+      - "policy_improvement"
+      - "exploration_decay"
+      - "temporal_credit_assignment"  # Added temporal credit assignment test
+    convergence:
+      - "free_energy_minimization"
+      - "belief_convergence"
+      - "learning_stability"
+      - "temporal_stability"  # Added temporal stability test
+    numerical:
+      - "stability"
+      - "precision"
+      - "gradient_properties"
+      - "temporal_coherence"  # Added temporal coherence test
+  benchmarks:
+    enabled: true
+    metrics:
+      - "belief_update_time"
+      - "policy_evaluation_time"
+      - "learning_convergence_rate"
+      - "temporal_prediction_accuracy"  # Added temporal prediction metric
+    baseline_performance:
+      max_update_time_ms: 50
+      min_convergence_rate: 0.1
+      min_temporal_accuracy: 0.7  # Added temporal accuracy threshold 

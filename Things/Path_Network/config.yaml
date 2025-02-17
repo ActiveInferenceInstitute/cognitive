@@ -1,0 +1,91 @@
+# Path Network Simulation Configuration
+
+# Network Configuration
+network:
+  num_nodes: 15
+  initial_connectivity: 0.3
+  min_weight: 0.1
+  max_weight: 1.0
+  dynamic_topology: true
+  topology_update_interval: 50
+
+# Environmental Dynamics
+dynamics:
+  wave_components:
+    - name: "slow_wave"
+      amplitude: 1.0
+      frequency: 0.1
+      phase: 0.0
+    - name: "medium_wave"
+      amplitude: 0.5
+      frequency: 0.5
+      phase: 0.0
+    - name: "fast_wave"
+      amplitude: 0.2
+      frequency: 2.0
+      phase: 0.0
+  noise_std: 0.05
+  time_scale: 1.0
+
+# Simulation Parameters
+simulation:
+  total_steps: 1000
+  initial_period: 200
+  save_interval: 10
+  visualization_interval: 20
+
+# Agent Parameters
+agent:
+  dt: 0.01
+  taylor_order: 2
+  tolerance: 0.1
+  learning_rate: 0.01
+
+# Perturbation Settings
+perturbation:
+  magnitude: 2.0
+  duration: 100
+  decay: 1.0
+
+# Visualization Settings
+visualization:
+  # General settings
+  style: "seaborn-whitegrid"
+  font_scale: 1.2
+  dpi: 300
+  fps: 30  # For animations
+  
+  # Color schemes
+  network_cmap: "coolwarm"
+  agent_cmap: "viridis"
+  
+  # Plot sizes
+  network_figsize: [15, 10]
+  timeseries_figsize: [12, 6]
+  animation_figsize: [10, 10]
+  
+  # Output formats
+  save_formats: ["png", "pdf"]
+  create_animations: true
+  
+  # Animation settings
+  animation_duration: 10  # seconds
+  
+  # Plot types to generate
+  plots:
+    network_topology: true
+    height_distribution: true
+    height_variations: true
+    phase_space: true
+    prediction_errors: true
+    correlation_matrix: true
+    free_energy: true
+    spectral_analysis: true
+    
+  # 3D visualization
+  enable_3d: true
+  3d_rotation_speed: 2  # degrees per frame
+  
+  # Interactive features
+  enable_interactive: true
+  update_interval: 100  # milliseconds 

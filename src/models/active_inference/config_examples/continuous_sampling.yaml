@@ -1,0 +1,30 @@
+# Example configuration for continuous sampling-based active inference
+
+method: sampling
+policy_type: continuous
+temporal_horizon: 10
+learning_rate: 0.005
+precision_init: 1.0
+use_gpu: false
+num_samples: 2000
+temperature: 0.8
+
+# Model-specific parameters
+custom_params:
+  exploration_weight: 0.4
+  state_dimensions: [6]  # Continuous state space dimension
+  action_dimensions: [2]  # Continuous action space dimension
+  
+  # Sampling parameters
+  proposal_std: 0.1
+  min_acceptance_rate: 0.2
+  adaptation_rate: 0.01
+  
+  # Prior parameters
+  state_prior_mean: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  state_prior_std: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+  
+  # MCMC parameters
+  burn_in: 500
+  thinning: 2
+  num_chains: 4 

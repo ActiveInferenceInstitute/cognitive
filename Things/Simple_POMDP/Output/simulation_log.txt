@@ -1,0 +1,323 @@
+Simulation Log
+==============
+
+
+Step 1:
+State: High
+Observation: Low
+Action: Decrease
+Variational FE: 1.557
+
+Expected Free Energies:
+Decrease: 0.047
+Stay: -0.200
+Increase: 0.052
+
+Beliefs:
+Low: 0.250
+Medium: 0.170
+High: 0.580
+
+Step 2:
+State: High
+Observation: Low
+Action: Increase
+Variational FE: 1.561
+
+Expected Free Energies:
+Decrease: -0.112
+Stay: -0.280
+Increase: 0.031
+
+Beliefs:
+Low: 0.329
+Medium: 0.087
+High: 0.584
+
+Step 3:
+State: Medium
+Observation: Medium
+Action: Increase
+Variational FE: 0.708
+
+Expected Free Energies:
+Decrease: -0.131
+Stay: -0.230
+Increase: 0.043
+
+Beliefs:
+Low: 0.413
+Medium: 0.235
+High: 0.351
+
+Step 4:
+State: High
+Observation: Medium
+Action: Decrease
+Variational FE: 0.729
+
+Expected Free Energies:
+Decrease: 0.025
+Stay: -0.153
+Increase: 0.064
+
+Beliefs:
+Low: 0.317
+Medium: 0.432
+High: 0.252
+
+Step 5:
+State: Medium
+Observation: Medium
+Action: Increase
+Variational FE: 0.702
+
+Expected Free Energies:
+Decrease: 0.090
+Stay: -0.206
+Increase: 0.051
+
+Beliefs:
+Low: 0.383
+Medium: 0.432
+High: 0.186
+
+Step 6:
+State: Medium
+Observation: High
+Action: Stay
+Variational FE: 1.204
+
+Expected Free Energies:
+Decrease: 0.110
+Stay: -0.158
+Increase: 0.062
+
+Beliefs:
+Low: 0.263
+Medium: 0.475
+High: 0.262
+
+Step 7:
+State: High
+Observation: Low
+Action: Decrease
+Variational FE: 1.465
+
+Expected Free Energies:
+Decrease: 0.090
+Stay: -0.247
+Increase: 0.042
+
+Beliefs:
+Low: 0.209
+Medium: 0.240
+High: 0.551
+
+Step 8:
+State: Low
+Observation: Low
+Action: Stay
+Variational FE: 2.159
+
+Expected Free Energies:
+Decrease: -0.082
+Stay: -0.306
+Increase: 0.025
+
+Beliefs:
+Low: 0.270
+Medium: 0.128
+High: 0.601
+
+Step 9:
+State: High
+Observation: Low
+Action: Increase
+Variational FE: 1.554
+
+Expected Free Energies:
+Decrease: -0.134
+Stay: -0.269
+Increase: 0.034
+
+Beliefs:
+Low: 0.338
+Medium: 0.066
+High: 0.595
+
+Step 10:
+State: Medium
+Observation: High
+Action: Stay
+Variational FE: 1.244
+
+Expected Free Energies:
+Decrease: -0.143
+Stay: -0.226
+Increase: 0.044
+
+Beliefs:
+Low: 0.264
+Medium: 0.310
+High: 0.426
+
+Step 11:
+State: High
+Observation: High
+Action: Increase
+Variational FE: 1.229
+
+Expected Free Energies:
+Decrease: 0.000
+Stay: -0.255
+Increase: 0.039
+
+Beliefs:
+Low: 0.282
+Medium: 0.295
+High: 0.424
+
+Step 12:
+State: High
+Observation: Low
+Action: Increase
+Variational FE: 1.564
+
+Expected Free Energies:
+Decrease: -0.000
+Stay: -0.242
+Increase: 0.042
+
+Beliefs:
+Low: 0.336
+Medium: 0.149
+High: 0.515
+
+Step 13:
+State: Medium
+Observation: Medium
+Action: Stay
+Variational FE: 0.547
+
+Expected Free Energies:
+Decrease: -0.075
+Stay: -0.217
+Increase: 0.047
+
+Beliefs:
+Low: 0.287
+Medium: 0.424
+High: 0.289
+
+Step 14:
+State: High
+Observation: Medium
+Action: Increase
+Variational FE: 0.697
+
+Expected Free Energies:
+Decrease: 0.075
+Stay: -0.229
+Increase: 0.046
+
+Beliefs:
+Low: 0.370
+Medium: 0.427
+High: 0.203
+
+Step 15:
+State: Medium
+Observation: High
+Action: Stay
+Variational FE: 1.205
+
+Expected Free Energies:
+Decrease: 0.105
+Stay: -0.167
+Increase: 0.060
+
+Beliefs:
+Low: 0.256
+Medium: 0.476
+High: 0.268
+
+Step 16:
+State: Low
+Observation: Medium
+Action: Increase
+Variational FE: 0.692
+
+Expected Free Energies:
+Decrease: 0.088
+Stay: -0.252
+Increase: 0.041
+
+Beliefs:
+Low: 0.353
+Medium: 0.456
+High: 0.191
+
+Step 17:
+State: High
+Observation: High
+Action: Increase
+Variational FE: 1.214
+
+Expected Free Energies:
+Decrease: 0.111
+Stay: -0.178
+Increase: 0.058
+
+Beliefs:
+Low: 0.312
+Medium: 0.371
+High: 0.316
+
+Step 18:
+State: High
+Observation: Low
+Action: Increase
+Variational FE: 1.563
+
+Expected Free Energies:
+Decrease: 0.059
+Stay: -0.213
+Increase: 0.049
+
+Beliefs:
+Low: 0.344
+Medium: 0.188
+High: 0.468
+
+Step 19:
+State: Low
+Observation: Medium
+Action: Stay
+Variational FE: 0.553
+
+Expected Free Energies:
+Decrease: -0.041
+Stay: -0.206
+Increase: 0.050
+
+Beliefs:
+Low: 0.289
+Medium: 0.443
+High: 0.267
+
+Step 20:
+State: Low
+Observation: Medium
+Action: Stay
+Variational FE: 0.565
+
+Expected Free Energies:
+Decrease: 0.085
+Stay: -0.227
+Increase: 0.047
+
+Beliefs:
+Low: 0.233
+Medium: 0.595
+High: 0.172

@@ -1,0 +1,15 @@
+numpy>=1.21.0
+scipy>=1.7.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+torch>=1.9.0
+networkx>=2.6.0
+pyyaml>=5.4.0
+h5py>=3.3.0
+pandas>=1.3.0
+noise>=1.2.2  # For Perlin noise generation
+tqdm>=4.61.0  # For progress bars
+pytest>=6.2.0  # For testing
+black>=21.6b0  # For code formatting
+mypy>=0.910  # For type checking
+pylint>=2.9.0  # For code analysis 

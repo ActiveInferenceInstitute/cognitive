@@ -1,0 +1,346 @@
+# Simulation Configuration
+
+# Environment settings
+environment:
+  size: [100, 100]  # World dimensions
+  nest_location: [50, 50]  # Center of the world
+  obstacles:
+    count: 10
+    size_range: [2, 5]
+  food_sources:
+    count: 5
+    size_range: [1, 3]
+    value_range: [10, 50]
+  pheromone_decay: 0.995  # Decay rate per timestep
+  terrain_scale: 50.0
+  terrain_octaves: 6
+  terrain_persistence: 0.5
+  terrain_lacunarity: 2.0
+  resource_regeneration_rate: 0.1
+
+# Colony settings
+colony:
+  initial_population: 50
+  max_population: 100
+  reproduction_rate: 0.001  # Chance per timestep
+  
+  # Nest structure
+  nest:
+    structure:
+      chambers:
+        - name: "food_storage"
+          size: [10, 10]
+          position: [5, 5]
+        - name: "brood_chamber"
+          size: [15, 15]
+          position: [25, 25]
+        - name: "waste_chamber"
+          size: [8, 8]
+          position: [40, 40]
+    environment:
+      temperature: 25.0
+      humidity: 0.7
+      ventilation: 0.5
+    resources:
+      food_capacity: 1000
+      water_capacity: 500
+      building_materials: 200
+
+# Agent settings
+agent:
+  physical:
+    sensor_range: 10.0
+    max_speed: 2.0
+    turn_rate: 0.5  # radians per timestep
+    energy:
+      initial: 100.0
+      critical_level: 30.0
+      consumption_rate: 0.1
+  
+  behavior:
+    task_switching:
+      flexibility: 0.01  # Base rate of task switching
+    learning_rate: 0.1
+    exploration_rate: 0.2
+
+# Visualization settings
+visualization:
+  enabled: true
+  update_interval: 1  # Update every N timesteps
+  trail_length: 50  # Number of positions to keep for trails
+  colors:
+    background: [255, 255, 255]
+    obstacles: [100, 100, 100]
+    food: [0, 255, 0]
+    nest: [139, 69, 19]
+    agents:
+      foraging: [255, 0, 0]
+      maintenance: [0, 0, 255]
+      nursing: [255, 192, 203]
+      defense: [128, 0, 0]
+      exploration: [255, 165, 0]
+    pheromones:
+      food: [0, 255, 0, 128]
+      home: [255, 0, 0, 128]
+      alarm: [255, 165, 0, 128]
+      trail: [0, 0, 255, 128]
+
+# Simulation settings
+simulation:
+  timestep: 0.1
+  max_steps: 10000
+  random_seed: 42
+
+# Data collection settings
+data_collection:
+  enabled: true
+  output_directory: "output"
+  save_interval: 100  # Save data every N steps
+  metrics:
+    - population
+    - task_distribution
+    - resource_levels
+    - pheromone_coverage
+
+# Runtime Parameters
+runtime:
+  # Time Settings
+  time:
+    max_steps: 100000
+    timestep: 0.1
+    real_time_factor: 1.0
+    
+  # Execution
+  execution:
+    num_threads: 4
+    gpu_enabled: false
+    seed: 42
+    deterministic: true
+
+# Debug settings
+debug:
+  logging:
+    level: "INFO"
+    file: "simulation.log"
+  profiling:
+    enabled: false
+    interval: 1000
+
+# Initialization
+initialization:
+  # World Setup
+  world:
+    random_seed: 42
+    generate_terrain: true
+    place_resources: true
+    
+  # Colony Setup
+  colony:
+    random_seed: 43
+    place_nest: true
+    distribute_agents: true
+
+# Physics Engine
+physics:
+  # Engine Settings
+  engine:
+    type: "2D"
+    collision_detection: true
+    spatial_hash_size: 5.0
+    
+  # Parameters
+  parameters:
+    gravity: [0, 0]
+    friction: 0.5
+    restitution: 0.5
+    
+  # Constraints
+  constraints:
+    velocity_cap: 10.0
+    force_cap: 100.0
+    acceleration_cap: 20.0
+
+# Integration
+integration:
+  # Methods
+  method: "RK4"
+  substeps: 2
+  
+  # Error Control
+  error_tolerance: 1e-6
+  max_iterations: 100
+  
+  # Stability
+  stability_checks: true
+  energy_conservation: true
+
+# Active Inference Parameters
+active_inference:
+  # Global Parameters
+  global:
+    temperature: 1.0
+    learning_rate: 0.1
+    exploration_rate: 0.2
+    
+  # Hierarchical Settings
+  hierarchical:
+    levels: 3
+    top_down_weight: 0.7
+    bottom_up_weight: 0.3
+    
+  # Precision Settings
+  precision:
+    initial: 1.0
+    learning_enabled: true
+    adaptation_rate: 0.05
+
+# Multi-Agent System
+multi_agent:
+  # Coordination
+  coordination:
+    enabled: true
+    method: "decentralized"
+    communication_range: 5.0
+    
+  # Synchronization
+  synchronization:
+    enabled: true
+    update_frequency: 10
+    sync_tolerance: 0.1
+    
+  # Load Balancing
+  load_balancing:
+    enabled: true
+    method: "dynamic"
+    threshold: 0.8
+
+# Analysis Settings
+analysis:
+  # Data Collection
+  data_collection:
+    enabled: true
+    frequency: 100
+    detailed_logging: true
+    
+  # Metrics
+  metrics:
+    agent_level:
+      - "position"
+      - "velocity"
+      - "energy"
+      - "beliefs"
+    colony_level:
+      - "population"
+      - "resources"
+      - "efficiency"
+      - "coordination"
+    environment_level:
+      - "resource_distribution"
+      - "pheromone_maps"
+      - "agent_density"
+    
+  # Statistics
+  statistics:
+    compute_mean: true
+    compute_variance: true
+    compute_correlations: true
+    temporal_analysis: true
+
+# Visualization
+visualization:
+  # Real-time Display
+  realtime:
+    enabled: true
+    update_frequency: 10
+    quality: "medium"
+    
+  # Recording
+  recording:
+    enabled: true
+    format: "mp4"
+    framerate: 30
+    resolution: [1920, 1080]
+    
+  # Features
+  features:
+    show_agents: true
+    show_pheromones: true
+    show_resources: true
+    show_stats: true
+    
+  # UI Elements
+  ui:
+    show_controls: true
+    show_plots: true
+    show_metrics: true
+    interactive: true
+
+# Data Management
+data:
+  # Storage
+  storage:
+    format: "hdf5"
+    compression: true
+    backup_frequency: 1000
+    
+  # Export
+  export:
+    enabled: true
+    format: ["csv", "json"]
+    frequency: 1000
+    
+  # Checkpointing
+  checkpointing:
+    enabled: true
+    frequency: 5000
+    keep_last: 5
+    
+  # Analysis Output
+  analysis:
+    save_plots: true
+    save_metrics: true
+    save_trajectories: true
+    output_format: ["png", "pdf"]
+
+# Performance Monitoring
+performance:
+  # Monitoring
+  monitoring:
+    enabled: true
+    frequency: 100
+    
+  # Profiling
+  profiling:
+    enabled: true
+    detailed: true
+    
+  # Optimization
+  optimization:
+    auto_tune: true
+    target_fps: 30
+    
+  # Resource Usage
+  resources:
+    max_memory: "4GB"
+    max_cpu_percent: 80
+    gpu_memory_limit: "2GB"
+
+# Debug Settings
+debug:
+  # Logging
+  logging:
+    level: "INFO"
+    file: "logs/simulation.log"
+    console_output: true
+    
+  # Validation
+  validation:
+    check_constraints: true
+    verify_physics: true
+    test_consistency: true
+    
+  # Development
+  development:
+    assertions_enabled: true
+    extra_checks: true
+    profile_code: true 

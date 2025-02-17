@@ -1,0 +1,116 @@
+# Configuration for Continuous Generic Active Inference
+
+# Model parameters
+model:
+  state_dim: 2          # Dimension of state space
+  obs_dim: 3           # Dimension of observation space
+  n_orders: 4          # Number of generalized coordinate orders
+  dt: 0.01            # Time step for integration
+  alpha: 1.0          # Learning rate for belief updating
+  sigma: 1.0          # Action selection precision
+
+  # Belief updating parameters
+  belief_update:
+    n_steps: 10        # Number of gradient descent steps
+    momentum: 0.9      # Momentum coefficient
+    rmsprop: 0.999     # RMSprop coefficient
+    epsilon: 1e-8      # Numerical stability constant
+
+  # Action selection parameters
+  action_selection:
+    n_candidates: 2   # Number of action candidates
+    horizon: 1         # Planning horizon
+    
+    # Expected free energy weights
+    weights:
+      accuracy: 1.0    # Weight for expected accuracy
+      complexity: 0.1  # Weight for expected complexity
+      info_gain: 0.5   # Weight for information gain
+      goal: 1.0        # Weight for goal-directed behavior
+
+  # Dynamical system parameters
+  dynamics:
+    friction: 0.1      # Friction coefficient
+    coupling: 0.05     # State coupling strength
+    potential: 0.5     # Quadratic potential strength
+
+# Visualization parameters
+visualization:
+  output_dir: "Output"  # Directory for saving plots
+  fps: 30              # Frames per second for animations
+  plot_interval: 1    # Steps between plots
+  
+  # Plot types
+  plots:
+    belief_evolution: true
+    free_energy: true
+    actions: true
+    phase_space: true
+    summary: true
+    animations: true
+    taylor_expansion: true
+    generalized_coordinates: true
+  
+  # Plot settings
+  settings:
+    figsize: [10, 8]
+    dpi: 100
+    fontsize: 12
+    linewidth: 2
+    
+# Logging parameters
+logging:
+  level: "INFO"        # Logging level
+  save_interval: 100   # Steps between state saves
+  log_dir: "logs"      # Directory for log files
+  
+  # Metrics to track
+  metrics:
+    - "free_energy"
+    - "belief_precision"
+    - "action_magnitude"
+    - "prediction_error"
+    
+# Testing parameters
+testing:
+  n_test_episodes: 5   # Number of test episodes
+  test_interval: 1000  # Steps between tests
+  
+  # Test scenarios
+  scenarios:
+    - name: "stationary"
+      duration: 100
+      noise_level: 0.1
+    - name: "moving"
+      duration: 200
+      noise_level: 0.2
+    - name: "perturbed"
+      duration: 150
+      noise_level: 0.3
+  
+  taylor_expansion:
+    tolerance: 1e-3
+    test_points: 10
+  
+  generalized_coordinates:
+    derivative_tolerance: 1e-2
+    consistency_steps: 10
+  
+  free_energy:
+    gradient_steps: 20
+    monotonic_decrease: true
+
+output:
+  directories:
+    - "belief_evolution"
+    - "free_energy"
+    - "phase_space"
+    - "taylor_expansion"
+    - "generalized_coordinates"
+    - "animations"
+    - "summary"
+    
+  file_formats:
+    static: "png"
+    animation: "gif"
+    data: "json" 

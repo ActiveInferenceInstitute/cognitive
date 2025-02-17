@@ -1,0 +1,182 @@
+Scenario Comparison Report: resilience
+==================================================
+
+1. Pairwise Scenario Comparisons
+------------------------------
+
+
+Metric: Recovery Time
+--------------------
+
+Shock vs Press:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Shock vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Press vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Metric: Resistance
+--------------------
+
+Shock vs Press:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Shock vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Press vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Metric: Recovery Rate
+--------------------
+
+Shock vs Press:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Shock vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Press vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Metric: Adaptability
+--------------------
+
+Shock vs Press:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Shock vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Press vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Metric: Robustness
+--------------------
+
+Shock vs Press:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Shock vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Press vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Metric: Transformability
+--------------------
+
+Shock vs Press:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Shock vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+Press vs Pulse:
+  Difference: 0.0000
+  Effect size (Cohen's d): 0.0000
+  Statistical significance: p=1.0000
+
+
+2. Scenario Rankings
+--------------------
+
+Recovery Time:
+  1. Shock: 50.0000
+  2. Press: 50.0000
+  3. Pulse: 50.0000
+
+Resistance:
+  1. Shock: 0.6000
+  2. Press: 0.6000
+  3. Pulse: 0.6000
+
+Recovery Rate:
+  1. Shock: 0.0500
+  2. Press: 0.0500
+  3. Pulse: 0.0500
+
+Adaptability:
+  1. Shock: 0.7000
+  2. Press: 0.7000
+  3. Pulse: 0.7000
+
+Robustness:
+  1. Shock: 0.6500
+  2. Press: 0.6500
+  3. Pulse: 0.6500
+
+Transformability:
+  1. Shock: 0.5500
+  2. Press: 0.5500
+  3. Pulse: 0.5500
+
+
+3. Scenario Variability
+--------------------
+
+Recovery Time:
+  Shock CV: 0.1000
+  Press CV: 0.1000
+  Pulse CV: 0.1000
+
+Resistance:
+  Shock CV: 0.1667
+  Press CV: 0.1667
+  Pulse CV: 0.1667
+
+Recovery Rate:
+  Shock CV: 0.2000
+  Press CV: 0.2000
+  Pulse CV: 0.2000
+
+Adaptability:
+  Shock CV: 0.1429
+  Press CV: 0.1429
+  Pulse CV: 0.1429
+
+Robustness:
+  Shock CV: 0.1538
+  Press CV: 0.1538
+  Pulse CV: 0.1538
+
+Transformability:
+  Shock CV: 0.1818
+  Press CV: 0.1818
+  Pulse CV: 0.1818

@@ -1,0 +1,168 @@
+# Nestmate Agent Configuration
+
+# Agent Parameters
+agent:
+  name: "Nestmate"
+  version: "1.0.0"
+  description: "Active inference-based ant agent"
+
+# Physical Parameters
+physical:
+  max_speed: 1.0
+  turn_rate: 0.5
+  sensor_range: 5.0
+  carry_capacity: 1.0
+  energy:
+    initial: 1.0
+    consumption_rate: 0.001
+    recharge_rate: 0.005
+    critical_level: 0.2
+
+# Sensory System
+sensors:
+  pheromone:
+    types: ["food", "home", "alarm", "trail"]
+    detection_threshold: 0.01
+    gradient_sensitivity: 0.8
+  vision:
+    range: 5.0
+    angle: 120.0
+    resolution: 10
+  touch:
+    range: 0.5
+    sensitivity: 0.9
+  proprioception:
+    accuracy: 0.95
+
+# Active Inference Parameters
+active_inference:
+  # Generative Model
+  model:
+    hierarchical_levels: 3
+    state_dimensions: [10, 20, 30]
+    temporal_horizon: 5
+    precision_initial: 1.0
+    
+  # Belief Updates
+  belief_update:
+    method: "variational"
+    learning_rate: 0.1
+    momentum: 0.9
+    precision_update_rate: 0.05
+    
+  # Free Energy
+  free_energy:
+    temperature: 1.0
+    exploration_weight: 0.2
+    temporal_discount: 0.95
+    
+  # Policy Selection
+  policy:
+    num_policies: 10
+    evaluation_horizon: 3
+    selection_temperature: 0.5
+    
+  # Preferences
+  preferences:
+    food_weight: 1.0
+    home_weight: 0.8
+    safety_weight: 0.6
+    social_weight: 0.4
+
+# Learning Parameters
+learning:
+  enabled: true
+  type: "online"
+  parameters:
+    learning_rate: 0.1
+    exploration_rate: 0.2
+    decay_rate: 0.995
+    min_exploration: 0.05
+  
+  # Experience Replay
+  experience_replay:
+    enabled: true
+    buffer_size: 1000
+    batch_size: 32
+    update_frequency: 10
+  
+  # Social Learning
+  social_learning:
+    enabled: true
+    imitation_rate: 0.3
+    observation_range: 5.0
+
+# Behavior Parameters
+behavior:
+  # Task Switching
+  task_switching:
+    threshold: 0.7
+    cooldown: 50
+    flexibility: 0.5
+  
+  # Pheromone Deposition
+  pheromone:
+    deposit_rate: 0.1
+    deposit_amount: 1.0
+    threshold: 0.3
+  
+  # Movement
+  movement:
+    persistence: 0.7
+    alignment_weight: 0.3
+    cohesion_weight: 0.4
+    separation_weight: 0.5
+
+# Memory Parameters
+memory:
+  spatial:
+    capacity: 100
+    decay_rate: 0.01
+  temporal:
+    window_size: 10
+    compression_rate: 0.8
+  social:
+    capacity: 50
+    forget_rate: 0.05
+
+# Communication
+communication:
+  range: 3.0
+  bandwidth: 5
+  noise: 0.1
+  protocols:
+    - "location_sharing"
+    - "task_status"
+    - "danger_signal"
+    - "food_location"
+
+# Adaptation Parameters
+adaptation:
+  # Environmental
+  environmental:
+    learning_rate: 0.05
+    adaptation_threshold: 0.3
+    
+  # Social
+  social:
+    conformity_bias: 0.4
+    innovation_rate: 0.2
+    
+  # Task
+  task:
+    specialization_rate: 0.1
+    flexibility: 0.7
+
+# Performance Metrics
+metrics:
+  tracking:
+    - "energy_level"
+    - "task_success_rate"
+    - "exploration_efficiency"
+    - "social_integration"
+    - "learning_progress"
+  
+  logging:
+    frequency: 100
+    detailed: true
+    save_path: "logs/agent/" 

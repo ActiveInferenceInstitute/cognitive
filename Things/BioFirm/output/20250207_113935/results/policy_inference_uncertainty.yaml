@@ -1,0 +1,25 @@
+expected_free_energy:
+- -0.5744499726726121
+- -0.5744499726726121
+- -0.604449972672612
+goal_prior:
+- 0.33
+- 0.33
+- 0.34
+goal_type: uncertainty_driven
+inferred_policies:
+- 0.32998350207729554
+- 0.32998350207729554
+- 0.3400329958454089
+initial_state:
+  beliefs:
+  - 0.3
+  - 0.3
+  - 0.4
+  free_energy: -1.5
+  policies:
+  - 0.2
+  - 0.3
+  - 0.5
+  precision: 1.0
+  prediction_error: 0.1

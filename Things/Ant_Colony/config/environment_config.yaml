@@ -1,0 +1,246 @@
+# Environment Configuration
+
+# Environment Parameters
+environment:
+  name: "Ant Colony Environment"
+  version: "1.0.0"
+  description: "Dynamic environment for ant colony simulation"
+
+# World Parameters
+world:
+  # Dimensions
+  size: [100, 100]
+  resolution: 0.5
+  wrap_around: false
+  
+  # Physical Properties
+  physics:
+    timestep: 0.1
+    friction: 0.5
+    collision_detection: true
+    
+  # Boundaries
+  boundaries:
+    type: "solid"
+    elasticity: 0.8
+    roughness: 0.3
+
+# Terrain Parameters
+terrain:
+  # Types
+  types:
+    - name: "soil"
+      friction: 0.6
+      deformability: 0.3
+    - name: "rock"
+      friction: 0.8
+      deformability: 0.1
+    - name: "sand"
+      friction: 0.4
+      deformability: 0.7
+      
+  # Generation
+  generation:
+    method: "perlin_noise"
+    seed: 42
+    scale: 10.0
+    octaves: 4
+    
+  # Features
+  features:
+    obstacles:
+      density: 0.1
+      min_size: [1, 1]
+      max_size: [5, 5]
+    gradients:
+      enabled: true
+      strength: 0.5
+
+# Resource Parameters
+resources:
+  # Food Sources
+  food:
+    types:
+      - name: "small_food"
+        size: 1.0
+        energy: 5.0
+        decay_rate: 0.001
+      - name: "medium_food"
+        size: 2.0
+        energy: 10.0
+        decay_rate: 0.002
+      - name: "large_food"
+        size: 3.0
+        energy: 20.0
+        decay_rate: 0.003
+    
+    # Distribution
+    distribution:
+      method: "clustered"
+      cluster_size: 5
+      cluster_spread: 10.0
+      total_amount: 1000
+      
+    # Dynamics
+    dynamics:
+      respawn_rate: 0.01
+      min_distance_to_nest: 10.0
+      max_distance_to_nest: 50.0
+  
+  # Water Sources
+  water:
+    distribution:
+      method: "random"
+      total_amount: 500
+    dynamics:
+      evaporation_rate: 0.001
+      flow_rate: 0.1
+
+# Environmental Conditions
+conditions:
+  # Temperature
+  temperature:
+    base: 25.0
+    variation: 5.0
+    daily_cycle: true
+    cycle_period: 1000
+    
+  # Humidity
+  humidity:
+    base: 0.7
+    variation: 0.2
+    daily_cycle: true
+    cycle_period: 1000
+    
+  # Light
+  light:
+    base: 1.0
+    variation: 0.3
+    daily_cycle: true
+    cycle_period: 1000
+
+# Hazards
+hazards:
+  # Predators
+  predators:
+    enabled: true
+    types:
+      - name: "small_predator"
+        speed: 1.5
+        damage: 5.0
+        range: 10.0
+      - name: "large_predator"
+        speed: 1.0
+        damage: 10.0
+        range: 15.0
+    spawn_rate: 0.001
+    
+  # Environmental
+  environmental:
+    flood_probability: 0.001
+    drought_probability: 0.001
+    disease_probability: 0.0005
+
+# Pheromone Grid
+pheromone_grid:
+  resolution: 0.5
+  layers:
+    - name: "food"
+      diffusion_rate: 0.1
+      evaporation_rate: 0.01
+    - name: "home"
+      diffusion_rate: 0.05
+      evaporation_rate: 0.005
+    - name: "alarm"
+      diffusion_rate: 0.2
+      evaporation_rate: 0.05
+    - name: "trail"
+      diffusion_rate: 0.15
+      evaporation_rate: 0.02
+  
+  # Dynamics
+  dynamics:
+    update_frequency: 5
+    max_value: 10.0
+    min_value: 0.01
+
+# Spatial Analysis
+spatial:
+  # Grid Analysis
+  grid:
+    enabled: true
+    resolution: 2.0
+    metrics:
+      - "resource_density"
+      - "agent_density"
+      - "pheromone_concentration"
+      
+  # Regions
+  regions:
+    automatic_detection: true
+    min_region_size: 10
+    max_regions: 10
+
+# Time Parameters
+time:
+  # Cycles
+  cycles:
+    day_length: 1000
+    season_length: 10000
+    year_length: 40000
+    
+  # Events
+  events:
+    random_seed: 42
+    min_interval: 100
+    max_interval: 1000
+
+# Performance Settings
+performance:
+  # Optimization
+  optimization:
+    spatial_hashing: true
+    grid_size: 5.0
+    max_entities_per_cell: 10
+    
+  # Update Frequencies
+  update_freq:
+    physics: 1
+    pheromones: 5
+    resources: 10
+    hazards: 20
+    
+  # Limits
+  limits:
+    max_entities: 1000
+    max_pheromone_updates: 1000
+    max_collision_checks: 1000
+
+# Visualization Settings
+visualization:
+  # Layers
+  layers:
+    terrain: true
+    resources: true
+    pheromones: true
+    agents: true
+    hazards: true
+    
+  # Colors
+  colors:
+    terrain:
+      soil: [139, 69, 19]
+      rock: [128, 128, 128]
+      sand: [194, 178, 128]
+    pheromones:
+      food: [0, 255, 0]
+      home: [255, 0, 0]
+      alarm: [255, 255, 0]
+      trail: [0, 0, 255]
+      
+  # Display
+  display:
+    grid_lines: false
+    coordinates: true
+    scale_bar: true
+    legend: true 
