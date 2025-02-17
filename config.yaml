@@ -1,0 +1,78 @@
+# Project Configuration
+
+# Paths
+paths:
+  templates: templates/node_templates
+  knowledge_base: knowledge_base
+  data: data
+  models: src/models
+  utils: src/utils
+
+# Active Inference Parameters
+active_inference:
+  default_precision: 1.0
+  temporal_horizon: 5
+  learning_rate: 0.01
+  exploration_factor: 0.1
+  discount_factor: 0.95
+  inference_iterations: 10
+  convergence_threshold: 0.001
+
+# Knowledge Base Settings
+knowledge_base:
+  auto_linking: true
+  link_distance: 2
+  min_relationship_strength: 0.3
+  max_relationships_per_node: 50
+  update_frequency: "daily"
+
+# Template Settings
+templates:
+  default_confidence: 0.7
+  default_precision: 1.0
+  auto_update_timestamps: true
+  required_fields:
+    - id
+    - type
+    - created
+    - modified
+
+# Visualization
+visualization:
+  network_layout: "force_directed"
+  node_size_factor: 1.0
+  edge_width_factor: 1.0
+  color_scheme: "default"
+  interactive: true
+
+# Analysis
+analysis:
+  metrics:
+    - "free_energy"
+    - "prediction_error"
+    - "complexity"
+    - "accuracy"
+  log_level: "INFO"
+  save_history: true
+  history_length: 1000
+
+# Integration
+obsidian:
+  vault_path: "./"
+  sync_interval: 300  # seconds
+  backup_enabled: true
+  backup_interval: 86400  # daily
+
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/cognitive_model.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  max_size: 10485760  # 10MB
+  backup_count: 5
+
+# Development
+development:
+  debug: false
+  profile: false
+  test_mode: false 
