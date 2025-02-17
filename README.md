@@ -2,6 +2,14 @@
 
 A comprehensive framework for modeling cognitive ecosystems using [[active_inference|Active Inference]], integrated with [[docs/guides/obsidian_linking|Obsidian]] for knowledge management.
 
+## Institutional Affiliation
+
+This project is developed under the [[active_inference_institute|Active Inference Institute]], a leading research organization dedicated to advancing the understanding and application of Active Inference in cognitive science and artificial intelligence.
+
+- 🌐 Website: [Active Inference Institute](https://activeinference.institute)
+- 📧 Contact: [[contact|blanket@activeinference.institute]]
+- 🔗 [[institutional_collaborations|Institutional Collaborations]]
+
 ## Overview
 
 This project combines cognitive modeling with knowledge management to create a powerful framework for:
