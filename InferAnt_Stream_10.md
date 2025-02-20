@@ -1,9 +1,9 @@
-# InferAnt Stream 10: Active Inference - Modeling, Learning, and Exploration
+# InferAnt Stream 10.2: Active Inference - Modeling, Learning, and Exploration
 
 ## Stream Information
 
 - **Platform**: GitHub Live
-- **Repository**: <https://github.com/docxology/cognitive>
+- **Repository**: <https://github.com/ActiveInferenceInstitute/cognitive>
 - **Tools**:
   - Obsidian: <https://obsidian.md/>
   - CodeViz: <https://codeviz.ai/>

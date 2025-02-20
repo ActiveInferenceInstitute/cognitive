@@ -189,6 +189,10 @@
   },
   "active": "26da5c325ed6eb0c",
   "lastOpenFiles": [
+    "docs/implmentations/rxinfer/free_energy_message_passing_details.md",
+    "docs/implmentations/rxinfer/active_inference_examples.md",
+    "docs/implmentations/rxinfer/free_energy_message_passing_active_inference.md",
+    "docs/implmentations/rxinfer/model_macro_paradigm.md",
     "docs/implmentations/rxinfer/free_energy.md",
     "docs/implmentations/rxinfer/execution_engine.md",
     "docs/implmentations/rxinfer/compiler_pipeline.md",
@@ -210,10 +214,6 @@
     "knowledge_base/biology/myrmecology.md",
     "docs/concepts/index.md",
     "knowledge_base/biology/entomology.md",
-    "docs/implmentations/rxinfer/model_macro_paradigm.md",
-    "knowledge_base/mathematics/predictive_coding.md",
-    "knowledge_base/mathematics/free_energy_principle.md",
-    "knowledge_base/mathematics/d_separation.md",
-    "knowledge_base/mathematics/markov_properties.md"
+    "knowledge_base/mathematics/predictive_coding.md"
   ]
 }
