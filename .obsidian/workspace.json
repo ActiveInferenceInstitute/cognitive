@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/implmentations/rxinfer/model_macro_paradigm.md",
+                "file": "docs/implmentations/rxinfer/advanced_systems_engineering_guidebook.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "model_macro_paradigm"
+              "title": "advanced_systems_engineering_guidebook"
             }
           }
         ]
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/implmentations/rxinfer/model_macro_paradigm.md",
+                "file": "docs/implmentations/rxinfer/advanced_systems_engineering_guidebook.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for model_macro_paradigm"
+              "title": "Backlinks for advanced_systems_engineering_guidebook"
             }
           },
           {
@@ -131,12 +131,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/implmentations/rxinfer/model_macro_paradigm.md",
+                "file": "docs/implmentations/rxinfer/advanced_systems_engineering_guidebook.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from model_macro_paradigm"
+              "title": "Outgoing links from advanced_systems_engineering_guidebook"
             }
           },
           {
@@ -160,13 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/implmentations/rxinfer/model_macro_paradigm.md",
+                "file": "docs/implmentations/rxinfer/advanced_systems_engineering_guidebook.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of model_macro_paradigm"
+              "title": "Outline of advanced_systems_engineering_guidebook"
             }
           }
         ]
@@ -189,10 +189,13 @@
   },
   "active": "26da5c325ed6eb0c",
   "lastOpenFiles": [
+    "docs/implmentations/rxinfer/streaming_inference.md",
+    "docs/implmentations/rxinfer/systems_engineering_guidebook.md",
+    "docs/implmentations/rxinfer/advanced_systems_engineering_guidebook.md",
+    "docs/implmentations/rxinfer/model_macro_paradigm.md",
     "docs/implmentations/rxinfer/free_energy_message_passing_details.md",
     "docs/implmentations/rxinfer/active_inference_examples.md",
     "docs/implmentations/rxinfer/free_energy_message_passing_active_inference.md",
-    "docs/implmentations/rxinfer/model_macro_paradigm.md",
     "docs/implmentations/rxinfer/free_energy.md",
     "docs/implmentations/rxinfer/execution_engine.md",
     "docs/implmentations/rxinfer/compiler_pipeline.md",
@@ -205,15 +208,12 @@
     "docs/implmentations/rxinfer/reactive_programming.md",
     "docs/implmentations/rxinfer/rxinfer_variational_inference.md",
     "docs/implmentations/rxinfer/rxinfer)variational_inference.md",
-    "docs/implmentations/rxinfer/streaming_inference.md",
     "docs/implmentations/rxinfer/getting_started.md",
     "knowledge_base/biology/insect_population_genetics.md",
     "knowledge_base/biology/insect_flight_dynamics.md",
     "knowledge_base/biology/mathematical_entomology.md",
     "knowledge_base/biology/apidology.md",
     "knowledge_base/biology/myrmecology.md",
-    "docs/concepts/index.md",
-    "knowledge_base/biology/entomology.md",
-    "knowledge_base/mathematics/predictive_coding.md"
+    "docs/concepts/index.md"
   ]
 }
