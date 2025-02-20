@@ -6,6 +6,7 @@
       {
         "id": "7d45e3eaaab92d8f",
         "type": "tabs",
+        "dimension": 43.9297124600639,
         "children": [
           {
             "id": "26da5c325ed6eb0c",
@@ -13,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/implmentations/rxinfer/README.md",
+                "file": "docs/implmentations/rxinfer/model_macro_paradigm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "model_macro_paradigm"
             }
           }
         ]
@@ -26,6 +27,7 @@
       {
         "id": "13c8251f305a54a9",
         "type": "tabs",
+        "dimension": 56.0702875399361,
         "children": [
           {
             "id": "4b7c14691fc0c93e",
@@ -36,8 +38,19 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
+          },
+          {
+            "id": "7e36f68a10b2479c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,11 +191,19 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "publish:Publish changes...": false
     }
   },
-  "active": "4b7c14691fc0c93e",
+  "active": "7e36f68a10b2479c",
   "lastOpenFiles": [
-    "docs/implmentations/rxinfer/README.md"
+    "docs/implmentations/rxinfer/model_macro_paradigm.md",
+    "knowledge_base/mathematics/bayesian_networks.md",
+    "knowledge_base/mathematics/message_passing.md",
+    "knowledge_base/mathematics/factor_graphs.md",
+    "knowledge_base/mathematics/probabilistic_models.md",
+    "2025-02-12.md",
+    "docs/implmentations/rxinfer/README.md",
+    "InferAnt_Stream_10.md"
   ]
 }

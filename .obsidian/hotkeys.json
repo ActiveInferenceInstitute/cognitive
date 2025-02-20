@@ -1,0 +1,10 @@
+{
+  "publish:view-changes": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "."
+    }
+  ]
+}
