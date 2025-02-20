@@ -2,362 +2,312 @@
 title: Probabilistic Graphical Models
 type: concept
 status: stable
-created: 2024-03-15
-complexity: advanced
-processing_priority: 1
+created: 2024-03-20
 tags:
   - mathematics
   - probability
-  - graphical_models
-  - machine_learning
+  - graphical-models
+  - machine-learning
 semantic_relations:
-  - type: foundation_for
-    links:
-      - [[markov_blanket]]
-      - [[bayesian_networks]]
-      - [[markov_random_fields]]
-  - type: implements
-    links:
+  - type: foundation
+    links: 
       - [[probability_theory]]
       - [[graph_theory]]
-      - [[conditional_independence]]
-  - type: relates
-    links:
-      - [[variational_inference]]
-      - [[belief_propagation]]
-      - [[causal_inference]]
       - [[information_theory]]
-
+  - type: implements
+    links:
+      - [[bayesian_networks]]
+      - [[markov_random_fields]]
+      - [[factor_graphs]]
+  - type: related
+    links:
+      - [[message_passing]]
+      - [[variational_inference]]
+      - [[causal_inference]]
 ---
 
 # Probabilistic Graphical Models
 
 ## Overview
 
-Probabilistic Graphical Models (PGMs) provide a framework for representing and reasoning about complex probability distributions using graph structures. They combine probability theory with graph theory to create powerful tools for modeling uncertainty, causality, and dependencies in complex systems.
+Probabilistic Graphical Models (PGMs) provide a unified framework for representing and reasoning about complex probability distributions using graph structures. They combine [[probability_theory|probability theory]] with [[graph_theory|graph theory]] to create powerful tools for modeling uncertainty, dependencies, and causality in complex systems.
 
 ## Mathematical Foundation
 
-### Graph Representation
+### 1. Graph Representation
 
 #### Directed Graphs (Bayesian Networks)
 ```math
 P(X_1,...,X_n) = \prod_{i=1}^n P(X_i|Pa(X_i))
 ```
 where:
-- $X_i$ are random variables
-- $Pa(X_i)$ are parents of $X_i$
+- X_i are random variables
+- Pa(X_i) are parents of X_i
 
 #### Undirected Graphs (Markov Random Fields)
 ```math
 P(X_1,...,X_n) = \frac{1}{Z}\prod_{C \in \mathcal{C}} \phi_C(X_C)
 ```
 where:
-- $\mathcal{C}$ are maximal cliques
-- $\phi_C$ are potential functions
-- $Z$ is partition function
+- C are maximal cliques
+- φ_C are potential functions
+- Z is partition function
 
-## Implementation
+#### Factor Graphs
+```math
+P(X_1,...,X_n) = \prod_{a \in F} f_a(X_{\partial a})
+```
+where:
+- F is the set of factors
+- ∂a denotes variables connected to factor a
 
-### Graph Structure
+### 2. [[conditional_independence|Conditional Independence]]
 
-```python
-class ProbabilisticGraph:
-    def __init__(self,
-                 nodes: List[str],
-                 edges: List[Tuple[str, str]],
-                 directed: bool = True):
-        """Initialize probabilistic graph.
-        
-        Args:
-            nodes: List of node names
-            edges: List of edges
-            directed: Whether graph is directed
-        """
-        self.nodes = nodes
-        self.edges = edges
-        self.directed = directed
-        
-        # Initialize graph structure
-        self.adjacency = self._build_adjacency()
-        self.factors = {}
-        
-    def _build_adjacency(self) -> Dict[str, Set[str]]:
-        """Build adjacency structure.
-        
-        Returns:
-            adjacency: Adjacency dictionary
-        """
-        adj = {node: set() for node in self.nodes}
-        
-        for i, j in self.edges:
-            adj[i].add(j)
-            if not self.directed:
-                adj[j].add(i)
-        
-        return adj
-    
-    def add_factor(self,
-                  variables: List[str],
-                  factor: torch.Tensor):
-        """Add factor to graph.
-        
-        Args:
-            variables: Variables in factor
-            factor: Factor tensor
-        """
-        key = tuple(sorted(variables))
-        self.factors[key] = factor
-    
-    def get_markov_blanket(self,
-                          node: str) -> Set[str]:
-        """Get Markov blanket of node.
-        
-        Args:
-            node: Target node
-            
-        Returns:
-            blanket: Markov blanket
-        """
-        if self.directed:
-            # For Bayesian networks
-            parents = self.get_parents(node)
-            children = self.get_children(node)
-            spouses = set().union(*[
-                self.get_parents(child)
-                for child in children
-            ])
-            return parents.union(children).union(spouses)
-        else:
-            # For Markov random fields
-            return self.adjacency[node]
+```math
+X \perp Y | Z \iff P(X|Y,Z) = P(X|Z)
 ```
 
-### Inference Algorithms
+### 3. [[markov_properties|Markov Properties]]
 
-```python
-class InferenceEngine:
-    def __init__(self,
-                 graph: ProbabilisticGraph):
-        """Initialize inference engine.
-        
-        Args:
-            graph: Probabilistic graph
-        """
-        self.graph = graph
-        
-    def variable_elimination(self,
-                           query_var: str,
-                           evidence: Dict[str, Any]) -> torch.Tensor:
-        """Perform variable elimination.
-        
-        Args:
-            query_var: Query variable
-            evidence: Evidence dictionary
-            
-        Returns:
-            distribution: Resulting distribution
-        """
-        # Get elimination ordering
-        ordering = self.get_elimination_ordering(query_var, evidence)
-        
-        # Initialize factor list
-        factors = self.graph.factors.copy()
-        
-        # Eliminate variables
-        for var in ordering:
-            # Collect relevant factors
-            relevant_factors = self.get_relevant_factors(var, factors)
-            
-            # Multiply factors
-            product = self.multiply_factors(relevant_factors)
-            
-            # Marginalize
-            new_factor = self.marginalize(product, var)
-            
-            # Update factor list
-            factors[self.get_factor_key(new_factor)] = new_factor
-        
-        return self.normalize(factors[query_var])
-    
-    def belief_propagation(self,
-                          max_iterations: int = 100,
-                          tolerance: float = 1e-6) -> Dict[str, torch.Tensor]:
-        """Perform belief propagation.
-        
-        Args:
-            max_iterations: Maximum iterations
-            tolerance: Convergence tolerance
-            
-        Returns:
-            beliefs: Node beliefs
-        """
-        # Initialize messages
-        messages = self.initialize_messages()
-        
-        # Message passing
-        for _ in range(max_iterations):
-            old_messages = messages.copy()
-            
-            # Update messages
-            for i, j in self.graph.edges:
-                messages[(i,j)] = self.compute_message(i, j, messages)
-            
-            # Check convergence
-            if self.check_convergence(messages, old_messages, tolerance):
-                break
-        
-        # Compute final beliefs
-        return self.compute_beliefs(messages)
+#### Local Markov Property
+```math
+X_i \perp X_V\backslash cl(i) | X_{ne(i)}
 ```
 
-### Learning Algorithms
+#### Global Markov Property
+```math
+X_A \perp X_B | X_S
+```
+where S separates A and B in the graph
 
-```python
-class StructureLearning:
-    def __init__(self,
-                 data: torch.Tensor,
-                 nodes: List[str]):
-        """Initialize structure learning.
-        
-        Args:
-            data: Training data
-            nodes: Node names
-        """
-        self.data = data
-        self.nodes = nodes
-        
-    def score_based_learning(self,
-                           score_fn: str = 'bic') -> ProbabilisticGraph:
-        """Learn structure using score-based method.
-        
-        Args:
-            score_fn: Scoring function
-            
-        Returns:
-            graph: Learned graph
-        """
-        # Initialize empty graph
-        graph = ProbabilisticGraph(self.nodes, [])
-        
-        # Hill climbing
-        while True:
-            best_score = float('-inf')
-            best_operation = None
-            
-            # Try all possible operations
-            for op in self.get_possible_operations(graph):
-                # Apply operation
-                new_graph = self.apply_operation(graph, op)
-                
-                # Compute score
-                score = self.compute_score(new_graph, score_fn)
-                
-                if score > best_score:
-                    best_score = score
-                    best_operation = op
-            
-            if best_operation is None:
-                break
-                
-            # Apply best operation
-            graph = self.apply_operation(graph, best_operation)
-        
-        return graph
+## Types of Models
+
+### 1. [[bayesian_networks|Bayesian Networks]]
+
+```julia
+struct BayesianNetwork <: ProbabilisticGraphicalModel
+    nodes::Vector{Variable}
+    edges::Vector{DirectedEdge}
+    parameters::Dict{Variable, ConditionalProbability}
+end
+```
+
+Key features:
+- Directed acyclic graphs
+- Conditional probability tables
+- Causal interpretation
+
+### 2. [[markov_random_fields|Markov Random Fields]]
+
+```julia
+struct MarkovRandomField <: ProbabilisticGraphicalModel
+    nodes::Vector{Variable}
+    edges::Vector{UndirectedEdge}
+    potentials::Dict{Clique, PotentialFunction}
+end
+```
+
+Key features:
+- Undirected graphs
+- Potential functions
+- Symmetric dependencies
+
+### 3. [[factor_graphs|Factor Graphs]]
+
+```julia
+struct FactorGraph <: ProbabilisticGraphicalModel
+    variables::Vector{Variable}
+    factors::Vector{Factor}
+    edges::Vector{Edge}
+end
+```
+
+Key features:
+- Bipartite graphs
+- Explicit factor nodes
+- Message passing structure
+
+## Inference Methods
+
+### 1. [[exact_inference|Exact Inference]]
+
+```julia
+function variable_elimination(model::ProbabilisticGraphicalModel,
+                            query::Variable,
+                            evidence::Dict{Variable, Any})
+    # Order variables
+    order = elimination_order(model, query)
     
-    def constraint_based_learning(self) -> ProbabilisticGraph:
-        """Learn structure using constraint-based method.
+    # Initialize factors
+    factors = collect_factors(model)
+    
+    # Eliminate variables
+    for var in order
+        if var != query && var ∉ keys(evidence)
+            factors = eliminate_variable(factors, var)
+        end
+    end
+    
+    return normalize(multiply_factors(factors))
+end
+```
+
+### 2. [[approximate_inference|Approximate Inference]]
+
+#### Sampling Methods
+```julia
+function importance_sampling(model::ProbabilisticGraphicalModel,
+                           query::Variable,
+                           evidence::Dict{Variable, Any},
+                           n_samples::Int)
+    samples = Vector{Float64}(undef, n_samples)
+    weights = Vector{Float64}(undef, n_samples)
+    
+    for i in 1:n_samples
+        sample = generate_sample(model, evidence)
+        weights[i] = compute_weight(sample, evidence)
+        samples[i] = sample[query]
+    end
+    
+    return weighted_average(samples, weights)
+end
+```
+
+#### Variational Methods
+```julia
+function variational_inference(model::ProbabilisticGraphicalModel,
+                             q_family::Distribution,
+                             max_iters::Int=100)
+    # Initialize variational parameters
+    θ = initialize_parameters(q_family)
+    
+    for iter in 1:max_iters
+        # Compute expectations
+        expectations = compute_expectations(model, q_family, θ)
         
-        Returns:
-            graph: Learned graph
-        """
-        # Start with complete graph
-        edges = [
-            (i, j) for i in self.nodes
-            for j in self.nodes if i != j
-        ]
-        graph = ProbabilisticGraph(self.nodes, edges)
+        # Update parameters
+        θ_new = update_parameters(expectations)
         
-        # Remove edges based on CI tests
-        for i in self.nodes:
-            for j in self.nodes:
-                if i == j:
-                    continue
-                    
-                # Find separating set
-                sep_set = self.find_separating_set(i, j, graph)
-                
-                if sep_set is not None:
-                    graph.remove_edge(i, j)
+        # Check convergence
+        if converged(θ, θ_new)
+            break
+        end
         
-        # Orient edges
-        return self.orient_edges(graph)
+        θ = θ_new
+    end
+    
+    return q_family(θ)
+end
+```
+
+## Learning
+
+### 1. [[parameter_learning|Parameter Learning]]
+
+#### Maximum Likelihood
+```julia
+function learn_parameters!(model::ProbabilisticGraphicalModel,
+                         data::Matrix{Float64})
+    # For each parameter
+    for param in model.parameters
+        # Compute sufficient statistics
+        stats = sufficient_statistics(data, param)
+        
+        # Update parameter
+        update_parameter!(param, stats)
+    end
+end
+```
+
+#### Bayesian Learning
+```julia
+function bayesian_parameter_learning!(model::ProbabilisticGraphicalModel,
+                                    data::Matrix{Float64},
+                                    prior::Distribution)
+    # For each parameter
+    for param in model.parameters
+        # Compute posterior
+        posterior = update_posterior(prior, data, param)
+        
+        # Update parameter distribution
+        update_parameter_distribution!(param, posterior)
+    end
+end
+```
+
+### 2. [[structure_learning|Structure Learning]]
+
+#### Score-Based Learning
+```julia
+function learn_structure!(model::ProbabilisticGraphicalModel,
+                         data::Matrix{Float64},
+                         score_fn::Function)
+    current_structure = empty_structure()
+    current_score = score_fn(current_structure, data)
+    
+    while true
+        # Generate candidate structures
+        candidates = generate_candidates(current_structure)
+        
+        # Score candidates
+        scores = [score_fn(c, data) for c in candidates]
+        
+        # Select best candidate
+        best_idx = argmax(scores)
+        
+        if scores[best_idx] <= current_score
+            break
+        end
+        
+        current_structure = candidates[best_idx]
+        current_score = scores[best_idx]
+    end
+    
+    return current_structure
+end
 ```
 
 ## Applications
 
-### Bayesian Networks
-
-#### Causal Modeling
-- Causal relationships
-- Intervention analysis
-- Counterfactual reasoning
-
-#### Expert Systems
+### 1. [[probabilistic_reasoning|Probabilistic Reasoning]]
 - Medical diagnosis
-- Fault diagnosis
-- Decision support
+- Fault detection
+- Decision support systems
 
-### Markov Random Fields
-
-#### Computer Vision
+### 2. [[computer_vision|Computer Vision]]
 - Image segmentation
 - Object recognition
 - Scene understanding
 
-#### Natural Language
+### 3. [[natural_language_processing|Natural Language Processing]]
 - Part-of-speech tagging
 - Named entity recognition
 - Semantic parsing
 
 ## Best Practices
 
-### Model Design
-1. Choose appropriate graph type
-2. Define clear semantics
-3. Handle missing data
-4. Consider scalability
+### 1. Model Selection
+- Choose appropriate model type
+- Consider computational requirements
+- Balance model complexity
+- Validate assumptions
 
-### Implementation
-1. Efficient data structures
-2. Optimize inference
-3. Manage memory
-4. Profile performance
+### 2. Implementation
+- Use efficient data structures
+- Implement numerical safeguards
+- Cache intermediate results
+- Profile performance bottlenecks
 
-### Validation
-1. Cross-validation
-2. Structure validation
-3. Parameter validation
-4. Inference validation
+### 3. Validation
+- Test with synthetic data
+- Cross-validate results
+- Monitor convergence
+- Analyze sensitivity
 
-## Common Issues
+## References
 
-### Technical Challenges
-1. Inference intractability
-2. Structure learning complexity
-3. Parameter estimation
-4. Model selection
-
-### Solutions
-1. Approximate inference
-2. Sparse structures
-3. Parameter tying
-4. Regularization
-
-## Related Documentation
-- [[probability_theory]]
-- [[graph_theory]]
-- [[markov_blanket]]
-- [[conditional_independence]]
-- [[variational_inference]]
-- [[belief_propagation]] 
+1. Koller, D., & Friedman, N. (2009). Probabilistic Graphical Models
+2. Bishop, C. M. (2006). Pattern Recognition and Machine Learning
+3. Murphy, K. P. (2012). Machine Learning: A Probabilistic Perspective
+4. Wainwright, M. J., & Jordan, M. I. (2008). Graphical Models, Exponential Families, and Variational Inference
+5. Pearl, J. (1988). Probabilistic Reasoning in Intelligent Systems 

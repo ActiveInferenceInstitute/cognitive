@@ -3,20 +3,20 @@ type: concept
 id: evolutionary_dynamics_001
 created: 2024-03-15
 modified: 2024-03-15
-tags: [evolution, dynamics, mathematical-biology, complex-systems]
-aliases: [evolution-dynamics, evolutionary-systems]
+tags: [evolution, dynamics, mathematics, biology, complexity]
+aliases: [evolution-dynamics, evolutionary-processes]
 complexity: advanced
 processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[natural_selection]]
       - [[population_genetics]]
+      - [[natural_selection]]
       - [[evolutionary_game_theory]]
   - type: implements
     links:
-      - [[replicator_dynamics]]
       - [[fitness_landscapes]]
+      - [[replicator_dynamics]]
       - [[adaptive_dynamics]]
   - type: relates
     links:
@@ -29,52 +29,35 @@ semantic_relations:
 
 ## Overview
 
-Evolutionary dynamics describes the mathematical principles governing evolutionary change in biological systems. It integrates concepts from population genetics, game theory, and dynamical systems to model how populations evolve over time.
+Evolutionary dynamics describes the mathematical principles governing evolutionary processes across scales, from molecular to ecological systems. This framework integrates concepts from population genetics, game theory, and complex systems theory.
 
 ## Mathematical Framework
 
-### 1. Replicator Dynamics
+### Core Dynamics
 
-The fundamental equation of evolutionary dynamics:
+The fundamental equations of evolutionary dynamics:
 
 ```math
 \begin{aligned}
-& \text{Basic Replicator:} \\
+& \text{Replicator Equation:} \\
 & \dot{x}_i = x_i(f_i(x) - \bar{f}(x)) \\
 & \text{Selection Gradient:} \\
-& \nabla_s = \frac{\partial f_i}{\partial x_i} \\
-& \text{Fitness Landscape:} \\
-& F(x) = \int f(x)dx
+& \nabla_s = \frac{\partial \ln W}{\partial s} \\
+& \text{Price Equation:} \\
+& \Delta\bar{z} = \text{Cov}(w,z) + \mathbb{E}[w\Delta z]
 \end{aligned}
 ```
 
-### 2. Population Genetics
-
-Core equations for genetic change:
+### Population Genetics Framework
 
 ```math
 \begin{aligned}
-& \text{Hardy-Weinberg:} \\
-& p^2 + 2pq + q^2 = 1 \\
-& \text{Selection Equation:} \\
-& \Delta p = \frac{pq(w_{AA}p + w_{Aa}q)}{w} \\
-& \text{Mutation-Selection:} \\
-& \dot{p} = sp(1-p) - \mu p + \nu(1-p)
-\end{aligned}
-```
-
-### 3. Adaptive Dynamics
-
-Framework for evolutionary adaptation:
-
-```math
-\begin{aligned}
-& \text{Canonical Equation:} \\
-& \dot{x} = \frac{1}{2}\mu\sigma^2N\frac{\partial W(y,x)}{\partial y}\bigg|_{y=x} \\
-& \text{Invasion Fitness:} \\
-& S(y,x) = \ln(W(y,x)) \\
-& \text{Evolutionary Singularity:} \\
-& \frac{\partial S(y,x)}{\partial y}\bigg|_{y=x} = 0
+& \text{Wright-Fisher Process:} \\
+& P(i \to j) = \binom{N}{j}\left(\frac{i}{N}\right)^j\left(1-\frac{i}{N}\right)^{N-j} \\
+& \text{Moran Process:} \\
+& T_{i,i+1} = \frac{i(N-i)f_A}{Nf_T}, T_{i,i-1} = \frac{i(N-i)f_B}{Nf_T} \\
+& \text{Fixation Probability:} \\
+& \rho = \frac{1}{1 + \sum_{k=1}^{N-1}\prod_{i=1}^k\frac{T_{i,i-1}}{T_{i,i+1}}}
 \end{aligned}
 ```
 
@@ -85,239 +68,265 @@ Framework for evolutionary adaptation:
 ```python
 class EvolutionaryDynamics:
     """Simulates evolutionary dynamics"""
-    def __init__(self):
-        self.replicator = ReplicatorDynamics()
-        self.genetics = PopulationGenetics()
-        self.adaptation = AdaptiveDynamics()
+    def __init__(self,
+                 population_size: int,
+                 fitness_function: Callable,
+                 mutation_rate: float):
+        self.N = population_size
+        self.fitness = fitness_function
+        self.mu = mutation_rate
+        self.population = self.initialize_population()
         
-    def simulate_evolution(self,
-                         initial_state: np.ndarray,
-                         fitness_function: Callable,
-                         time_span: float,
-                         params: Dict) -> np.ndarray:
-        """Simulate evolutionary trajectory"""
-        # Initialize components
-        self.replicator.setup(initial_state, fitness_function)
-        self.genetics.setup(params['genetic_params'])
-        self.adaptation.setup(params['adaptive_params'])
+    def simulate_generation(self) -> np.ndarray:
+        """Simulate one generation of evolution"""
+        # Selection
+        fitness_values = self.compute_fitness()
+        selected = self.selection_step(fitness_values)
         
-        # Time evolution
-        trajectory = []
-        current_state = initial_state
+        # Reproduction
+        offspring = self.reproduction_step(selected)
         
-        for t in np.arange(0, time_span, params['dt']):
-            # Replicator dynamics
-            replicator_change = self.replicator.step(
-                current_state)
-                
-            # Genetic changes
-            genetic_change = self.genetics.step(
-                current_state)
-                
-            # Adaptive changes
-            adaptive_change = self.adaptation.step(
-                current_state)
-                
-            # Combine changes
-            total_change = (replicator_change + 
-                          genetic_change +
-                          adaptive_change)
-                          
-            current_state += total_change * params['dt']
-            trajectory.append(current_state.copy())
-            
-        return np.array(trajectory)
+        # Mutation
+        mutated = self.mutation_step(offspring)
+        
+        self.population = mutated
+        return self.population
+        
+    def compute_fitness(self) -> np.ndarray:
+        """Compute fitness of current population"""
+        return np.array([
+            self.fitness(individual)
+            for individual in self.population
+        ])
+        
+    def selection_step(self,
+                      fitness_values: np.ndarray) -> np.ndarray:
+        """Perform selection based on fitness"""
+        probabilities = fitness_values / np.sum(fitness_values)
+        selected_indices = np.random.choice(
+            len(self.population),
+            size=self.N,
+            p=probabilities
+        )
+        return self.population[selected_indices]
+        
+    def reproduction_step(self,
+                         selected: np.ndarray) -> np.ndarray:
+        """Perform reproduction with recombination"""
+        offspring = []
+        for i in range(0, self.N, 2):
+            parent1 = selected[i]
+            parent2 = selected[i+1]
+            child1, child2 = self.recombine(parent1, parent2)
+            offspring.extend([child1, child2])
+        return np.array(offspring)
+        
+    def mutation_step(self,
+                     offspring: np.ndarray) -> np.ndarray:
+        """Apply mutations to offspring"""
+        mutation_mask = np.random.random(offspring.shape) < self.mu
+        mutations = np.random.normal(
+            0, 0.1, size=offspring.shape)
+        return offspring + mutation_mask * mutations
 ```
 
-### 2. Fitness Landscape Computer
+### 2. Fitness Landscape Navigator
 
 ```python
 class FitnessLandscape:
-    """Computes and analyzes fitness landscapes"""
-    def __init__(self):
-        self.topology = LandscapeTopology()
-        self.optimizer = LandscapeOptimizer()
-        self.analyzer = LandscapeAnalyzer()
+    """Navigates fitness landscapes"""
+    def __init__(self,
+                 dimension: int,
+                 ruggedness: float):
+        self.dim = dimension
+        self.ruggedness = ruggedness
+        self.landscape = self.generate_landscape()
         
-    def compute_landscape(self,
-                         genotype_space: np.ndarray,
-                         fitness_function: Callable) -> np.ndarray:
-        """Compute fitness landscape"""
-        # Compute fitness values
-        fitness_values = np.zeros_like(genotype_space)
-        for idx in np.ndindex(genotype_space.shape):
-            fitness_values[idx] = fitness_function(
-                genotype_space[idx])
+    def generate_landscape(self) -> Callable:
+        """Generate NK fitness landscape"""
+        def fitness_function(x: np.ndarray) -> float:
+            # Base fitness
+            base = np.sum(np.sin(x * self.ruggedness))
             
-        # Analyze topology
-        topology = self.topology.analyze(fitness_values)
-        
-        # Find optima
-        optima = self.optimizer.find_optima(fitness_values)
-        
-        # Analyze ruggedness
-        ruggedness = self.analyzer.compute_ruggedness(
-            fitness_values)
+            # Epistatic interactions
+            epistasis = 0
+            for i in range(self.dim):
+                for j in range(i+1, self.dim):
+                    epistasis += np.sin(x[i] * x[j])
+                    
+            return base + self.ruggedness * epistasis
             
-        return {
-            'landscape': fitness_values,
-            'topology': topology,
-            'optima': optima,
-            'ruggedness': ruggedness
-        }
+        return fitness_function
+        
+    def local_gradient(self,
+                      position: np.ndarray) -> np.ndarray:
+        """Compute local fitness gradient"""
+        eps = 1e-6
+        gradient = np.zeros_like(position)
+        
+        for i in range(self.dim):
+            pos_eps = position.copy()
+            pos_eps[i] += eps
+            gradient[i] = (
+                self.landscape(pos_eps) -
+                self.landscape(position)
+            ) / eps
+            
+        return gradient
+        
+    def find_local_optimum(self,
+                          start_position: np.ndarray,
+                          learning_rate: float = 0.01,
+                          n_steps: int = 1000) -> np.ndarray:
+        """Find local fitness optimum"""
+        position = start_position.copy()
+        
+        for _ in range(n_steps):
+            gradient = self.local_gradient(position)
+            position += learning_rate * gradient
+            
+        return position
 ```
 
-### 3. Evolutionary Game Theory
+### 3. Evolutionary Game Dynamics
 
 ```python
 class EvolutionaryGame:
-    """Implements evolutionary game theory"""
-    def __init__(self):
-        self.payoff_computer = PayoffMatrix()
-        self.strategy_evolver = StrategyEvolution()
-        self.equilibrium_finder = EquilibriumFinder()
+    """Simulates evolutionary game dynamics"""
+    def __init__(self,
+                 payoff_matrix: np.ndarray,
+                 population_size: int):
+        self.payoff = payoff_matrix
+        self.N = population_size
+        self.strategies = np.eye(len(payoff_matrix))
+        self.population = self.initialize_population()
         
-    def analyze_game(self,
-                    strategies: List[Strategy],
-                    payoff_function: Callable) -> Dict:
-        """Analyze evolutionary game"""
-        # Compute payoff matrix
-        payoff_matrix = self.payoff_computer.compute(
-            strategies, payoff_function)
+    def compute_fitness(self,
+                       population: np.ndarray) -> np.ndarray:
+        """Compute fitness based on game interactions"""
+        fitness = np.zeros(len(population))
+        
+        for i, individual in enumerate(population):
+            # Compute average payoff against population
+            strategy = self.strategies[individual]
+            opponent_dist = np.bincount(
+                population, minlength=len(self.payoff)
+            ) / self.N
             
-        # Evolve strategies
-        evolution = self.strategy_evolver.evolve(
-            payoff_matrix)
+            fitness[i] = strategy @ self.payoff @ opponent_dist
             
-        # Find equilibria
-        equilibria = self.equilibrium_finder.find(
-            payoff_matrix)
+        return fitness
+        
+    def update_population(self,
+                         steps: int = 1) -> np.ndarray:
+        """Update population using replicator dynamics"""
+        for _ in range(steps):
+            fitness = self.compute_fitness(self.population)
             
-        return {
-            'payoff_matrix': payoff_matrix,
-            'evolution': evolution,
-            'equilibria': equilibria
-        }
+            # Replicator equation update
+            strategy_counts = np.bincount(
+                self.population, minlength=len(self.payoff)
+            )
+            frequencies = strategy_counts / self.N
+            
+            avg_fitness = frequencies @ self.payoff @ frequencies
+            strategy_fitness = self.payoff @ frequencies
+            
+            # Update frequencies
+            dfreq = frequencies * (
+                strategy_fitness - avg_fitness)
+            
+            frequencies += dfreq
+            frequencies /= np.sum(frequencies)
+            
+            # Sample new population
+            self.population = np.random.choice(
+                len(self.payoff),
+                size=self.N,
+                p=frequencies
+            )
+            
+        return self.population
 ```
 
 ## Advanced Concepts
 
-### 1. Multi-Level Selection
-
-Framework for selection across levels:
+### 1. Multilevel Selection
 
 ```math
 \begin{aligned}
 & \text{Group Selection:} \\
-& \Delta \bar{z} = cov(W_k, Z_k) + \mathbb{E}[cov(w_{ij}, z_{ij})] \\
-& \text{Price Equation:} \\
-& \Delta \bar{z} = \frac{cov(w_i, z_i)}{\bar{w}} + \frac{\mathbb{E}(w_i\Delta z_i)}{\bar{w}}
+& \Delta\bar{z} = \text{Cov}(W_k,\bar{z}_k) + \mathbb{E}[W_k\Delta\bar{z}_k] \\
+& \text{Contextual Analysis:} \\
+& w_i = \beta_1z_i + \beta_2\bar{z}_k + \epsilon_i
 \end{aligned}
 ```
 
-### 2. Evolutionary Stability
+### 2. Adaptive Dynamics
 
-Conditions for evolutionary stability:
+```math
+\begin{aligned}
+& \text{Canonical Equation:} \\
+& \frac{d}{dt}x = \frac{1}{2}\mu\sigma^2N(x)\left.\frac{\partial^2W(y,x)}{\partial y^2}\right|_{y=x} \\
+& \text{Invasion Fitness:} \\
+& S(y,x) = \left.\frac{\partial\ln W(y,x)}{\partial y}\right|_{y=x}
+\end{aligned}
+```
+
+### 3. Evolutionary Stability
 
 ```math
 \begin{aligned}
 & \text{ESS Condition:} \\
-& E(S,S) > E(T,S) \text{ or } \\
-& E(S,S) = E(T,S) \text{ and } E(S,T) > E(T,T)
-\end{aligned}
-```
-
-### 3. Speciation Dynamics
-
-Mathematical models of speciation:
-
-```math
-\begin{aligned}
-& \text{Adaptive Radiation:} \\
-& \frac{dN}{dt} = rN(1-\frac{N}{K}) - \gamma N^2 \\
-& \text{Character Displacement:} \\
-& \dot{x}_i = \alpha(K-\sum_j \exp(-\frac{(x_i-x_j)^2}{2\sigma^2}))
+& W(x^*,x^*) > W(x,x^*) \text{ for all } x \neq x^* \\
+& \text{Convergence Stability:} \\
+& \left.\frac{\partial^2W(y,x)}{\partial y^2}\right|_{y=x=x^*} < 0
 \end{aligned}
 ```
 
 ## Applications
 
-### 1. Evolutionary Medicine
-- Drug resistance evolution
-- Pathogen-host coevolution
-- Cancer evolution
+### 1. Molecular Evolution
+- Sequence evolution models
+- Phylogenetic inference
+- Molecular clocks
 
-### 2. Conservation Biology
-- Population viability analysis
-- Extinction dynamics
-- Evolutionary rescue
+### 2. Ecological Evolution
+- Species coevolution
+- Host-parasite dynamics
+- Resource competition
 
-### 3. Synthetic Biology
-- Engineered evolution
-- Artificial selection
-- Evolutionary optimization
-
-## Advanced Mathematical Extensions
-
-### 1. Stochastic Evolutionary Dynamics
-
-```math
-\begin{aligned}
-& \text{Fokker-Planck Equation:} \\
-& \frac{\partial P}{\partial t} = -\frac{\partial}{\partial x}[a(x)P] + \frac{1}{2}\frac{\partial^2}{\partial x^2}[b(x)P] \\
-& \text{Wright-Fisher Process:} \\
-& dp = \sqrt{\frac{p(1-p)}{2N}}dW + sp(1-p)dt
-\end{aligned}
-```
-
-### 2. Information-Theoretic Evolution
-
-```math
-\begin{aligned}
-& \text{Fisher Information:} \\
-& I(\theta) = \mathbb{E}\left[\left(\frac{\partial}{\partial \theta}\ln p(x|\theta)\right)^2\right] \\
-& \text{Maximum Entropy Production:} \\
-& \dot{S} = \sum_i J_i X_i \geq 0
-\end{aligned}
-```
-
-### 3. Quantum Evolutionary Dynamics
-
-```math
-\begin{aligned}
-& \text{Quantum Selection:} \\
-& i\hbar\frac{\partial}{\partial t}|\psi\rangle = H|\psi\rangle \\
-& \text{Quantum Fitness:} \\
-& W_Q = \text{Tr}[\rho H]
-\end{aligned}
-```
+### 3. Cultural Evolution
+- Meme dynamics
+- Social learning
+- Cultural transmission
 
 ## Implementation Considerations
 
 ### 1. Numerical Methods
-- Stochastic integration
-- Adaptive timesteps
-- Parallel evolution simulation
+- Stochastic simulation algorithms
+- Adaptive timestep integration
+- Parallel population updates
 
 ### 2. Optimization Techniques
-- Genetic algorithms
-- Evolutionary strategies
-- Natural gradient methods
+- Gradient-based methods
+- Evolutionary algorithms
+- Multi-objective optimization
 
-### 3. Stability Analysis
-- Lyapunov functions
-- Fixed point analysis
-- Bifurcation theory
+### 3. Visualization Tools
+- Phase space plots
+- Fitness landscapes
+- Phylogenetic trees
 
 ## References
 - [[nowak_2006]] - "Evolutionary Dynamics: Exploring the Equations of Life"
-- [[dieckmann_2007]] - "Elements of Adaptive Dynamics"
-- [[page_2002]] - "The Price Equation"
-- [[levin_2009]] - "Games, Groups, and the Global Good"
+- [[page_2002]] - "The Structure and Dynamics of Evolutionary Systems"
+- [[dieckmann_2000]] - "The Geometry of Ecological Interactions"
+- [[rice_2004]] - "Evolutionary Theory: Mathematical and Conceptual Foundations"
 
 ## See Also
 - [[population_genetics]]
 - [[ecological_dynamics]]
 - [[developmental_systems]]
 - [[evolutionary_game_theory]]
-- [[adaptive_dynamics]] 
+- [[fitness_landscapes]] 

@@ -38,19 +38,8 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
-          },
-          {
-            "id": "7e36f68a10b2479c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -169,12 +158,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "docs/tools/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of index"
             }
           }
         ]
@@ -195,15 +185,33 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "7e36f68a10b2479c",
+  "active": "732e93d9f16fd2e9",
   "lastOpenFiles": [
+    "docs/implmentations/rxinfer/model_specification.md",
+    "docs/implmentations/rxinfer/variational_inference.md",
+    "docs/implmentations/rxinfer/message_passing.md",
+    "docs/implmentations/rxinfer/factor_graphs.md",
+    "docs/implmentations/rxinfer/reactive_programming.md",
+    "docs/implmentations/rxinfer/rxinfer_variational_inference.md",
+    "docs/implmentations/rxinfer/rxinfer)variational_inference.md",
+    "docs/implmentations/rxinfer/streaming_inference.md",
+    "docs/implmentations/rxinfer/getting_started.md",
+    "knowledge_base/biology/insect_population_genetics.md",
+    "knowledge_base/biology/insect_flight_dynamics.md",
+    "knowledge_base/biology/mathematical_entomology.md",
+    "knowledge_base/biology/apidology.md",
+    "knowledge_base/biology/myrmecology.md",
+    "docs/concepts/index.md",
+    "knowledge_base/biology/entomology.md",
     "docs/implmentations/rxinfer/model_macro_paradigm.md",
+    "knowledge_base/mathematics/predictive_coding.md",
+    "knowledge_base/mathematics/free_energy_principle.md",
+    "knowledge_base/mathematics/d_separation.md",
+    "knowledge_base/mathematics/markov_properties.md",
+    "knowledge_base/mathematics/markov_random_fields.md",
+    "knowledge_base/mathematics/bayesian_graph_theory.md",
     "knowledge_base/mathematics/bayesian_networks.md",
     "knowledge_base/mathematics/message_passing.md",
-    "knowledge_base/mathematics/factor_graphs.md",
-    "knowledge_base/mathematics/probabilistic_models.md",
-    "2025-02-12.md",
-    "docs/implmentations/rxinfer/README.md",
-    "InferAnt_Stream_10.md"
+    "knowledge_base/mathematics/factor_graphs.md"
   ]
 }

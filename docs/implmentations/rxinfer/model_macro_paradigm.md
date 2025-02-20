@@ -35,17 +35,46 @@ The `@model` macro follows a declarative programming paradigm where models are s
 ```julia
 @model function simple_model()
     # Prior distribution
-    x ~ [[normal_distribution|Normal]](0.0, 1.0)
+    x ~ Normal(mean = 0.0, precision = 0.1)
     
     # Likelihood function
-    y ~ [[normal_distribution|Normal]](x, 0.1)
+    y ~ Normal(mean = x, precision = 1.0)
 end
 ```
 
 2. **[[probabilistic_relationships|Probabilistic Relationships]]**
-   - Direct dependencies using the `~` operator
-   - [[deterministic_transformations|Deterministic transformations]] using standard Julia syntax
-   - [[conditional_dependencies|Conditional dependencies]] through control flow
+   - Direct dependencies using the `~` operator for stochastic relationships
+   - Deterministic transformations using `:=` operator
+   - Conditional dependencies through control flow
+
+### Model Arguments and Data Handling
+
+1. **Model Arguments**
+```julia
+@model function coin_model(y, a, b)
+    # Prior with hyperparameters
+    θ ~ Beta(a, b)
+    
+    # Observations
+    y .~ Bernoulli(θ)
+end
+```
+
+2. **Data Conditioning**
+```julia
+# Condition on data using | operator
+model = coin_model(a = 1.0, b = 1.0) | (y = [true, false, true],)
+
+# Or using dictionary
+data = Dict(:y => [true, false, true])
+model = coin_model(a = 1.0, b = 1.0) | data
+```
+
+3. **Deferred Data Handling**
+```julia
+# For reactive/streaming inference
+model = coin_model() | (y = RxInfer.DeferredDataHandler(),)
+```
 
 ### Factor Graph Translation
 
@@ -65,16 +94,16 @@ The macro automatically converts model specifications into [[factor_graphs|facto
 
 ### [[model_composition|Model Composition]]
 
-The macro supports hierarchical model construction:
+Support for hierarchical model construction:
 
 ```julia
 @model function component_model(x)
-    y ~ [[normal_distribution|Normal]](x, 1.0)
+    y ~ Normal(mean = x, precision = 1.0)
     return y
 end
 
 @model function composite_model()
-    x ~ [[gamma_distribution|Gamma]](1.0, 1.0)
+    x ~ Gamma(shape = 1.0, rate = 1.0)
     y = component_model(x) # Model composition
 end
 ```
@@ -86,11 +115,11 @@ Support for dynamic models with temporal dependencies:
 ```julia
 @model function streaming_model(T)
     # State evolution
-    x = Vector{[[random_variable|Random]]}(undef, T)
-    x[1] ~ [[normal_distribution|Normal]](0.0, 1.0)
+    x = Vector{Random}(undef, T)
+    x[1] ~ Normal(mean = 0.0, precision = 1.0)
     
     for t in 2:T
-        x[t] ~ [[normal_distribution|Normal]](x[t-1], 0.1)
+        x[t] ~ Normal(mean = x[t-1], precision = 0.1)
     end
 end
 ```
@@ -105,30 +134,22 @@ Integration with variational constraints:
     q(x, y) = q(x)q(y)
     
     # Distribution constraints
-    q(x) :: [[exponential_family|ExponentialFamily]]
-    q(y) :: [[gaussian_family|Gaussian]]
+    q(x) :: ExponentialFamily
+    q(y) :: Gaussian
 end
 ```
 
-### [[macro_metaprogramming|Macro Metaprogramming]]
+### [[initialization|Model Initialization]]
 
-The `@model` macro leverages Julia's metaprogramming capabilities:
+Support for initializing messages and marginals:
 
 ```julia
-macro model(expr)
-    # Parse model expression
-    model_ast = parse_model(expr)
+@initialization begin
+    # Initialize marginal for x
+    q(x) = vague(NormalMeanPrecision)
     
-    # Extract variable declarations
-    variables = extract_variables(model_ast)
-    
-    # Build factor graph
-    graph = construct_factor_graph(variables)
-    
-    # Generate inference code
-    inference_code = generate_inference(graph)
-    
-    return esc(inference_code)
+    # Initialize message for y
+    μ(y) = vague(NormalMeanPrecision)
 end
 ```
 
@@ -213,28 +234,6 @@ function construct_factor_graph(variables, dependencies)
 end
 ```
 
-3. **Code Generation**
-```julia
-function generate_inference_code(graph)
-    # Generate message passing schedule
-    schedule = generate_schedule(graph)
-    
-    # Generate message computations
-    messages = generate_messages(schedule)
-    
-    # Generate belief updates
-    beliefs = generate_beliefs(graph)
-    
-    return quote
-        function infer(data)
-            $schedule
-            $messages
-            $beliefs
-        end
-    end
-end
-```
-
 ### [[type_system_integration|Type System Integration]]
 
 1. **Distribution Types**
@@ -258,110 +257,6 @@ struct Message{T<:Distribution}
     source::Union{Variable,Factor}
     target::Union{Variable,Factor}
     content::T
-end
-```
-
-### [[optimization_techniques|Optimization Techniques]]
-
-1. **Message Caching**
-```julia
-mutable struct CachedMessage
-    value::AbstractArray
-    valid::Bool
-    dependencies::Set{Symbol}
-end
-
-function update_message!(cache::CachedMessage, deps)
-    if !all(d -> is_valid(d), deps)
-        cache.value = recompute_message()
-        cache.valid = true
-    end
-    return cache.value
-end
-```
-
-2. **Parallel Message Passing**
-```julia
-function parallel_message_passing(graph, schedule)
-    @sync begin
-        for (source, target) in schedule
-            @async begin
-                message = compute_message(source, target)
-                update_belief!(target, message)
-            end
-        end
-    end
-end
-```
-
-## Advanced Applications
-
-### [[hierarchical_modeling|Hierarchical Modeling]]
-
-```julia
-@model function hierarchical_inference(data, groups)
-    # Hyperparameters
-    α ~ [[gamma_distribution|Gamma]](1.0, 1.0)
-    β ~ [[gamma_distribution|Gamma]](1.0, 1.0)
-    
-    # Group-level parameters
-    θ = Vector{Random}(undef, length(groups))
-    for g in 1:length(groups)
-        θ[g] ~ [[normal_distribution|Normal]](0.0, sqrt(1/α))
-    end
-    
-    # Observation model
-    for (i, group) in enumerate(groups)
-        data[i] ~ [[normal_distribution|Normal]](θ[group], sqrt(1/β))
-    end
-end
-```
-
-### [[streaming_inference|Streaming Inference]]
-
-```julia
-@model function online_learning(data_stream)
-    # State space model
-    x = [[state_space_model|StateSpace]](dim=3)
-    
-    # Initial state
-    x[1] ~ [[multivariate_normal|MultivariateNormal]](zeros(3), I)
-    
-    # Online updates
-    @streaming for t in 2:∞
-        # State transition
-        x[t] ~ [[transition_model|TransitionModel]](x[t-1])
-        
-        # Observation
-        data_stream[t] ~ [[measurement_model|MeasurementModel]](x[t])
-    end
-end
-```
-
-### [[active_inference|Active Inference Models]]
-
-```julia
-@model function active_inference(observations, actions)
-    # Prior preferences
-    θ ~ [[normal_distribution|Normal]](0.0, 1.0)
-    
-    # Policy selection
-    π ~ [[categorical_distribution|Categorical]](softmax(-θ))
-    
-    # State transition model
-    x = Vector{Random}(undef, length(observations))
-    x[1] ~ [[normal_distribution|Normal]](0.0, 1.0)
-    
-    for t in 2:length(observations)
-        # State dynamics
-        x[t] ~ [[normal_distribution|Normal]](
-            x[t-1] + actions[t-1], 
-            exp(-θ)
-        )
-        
-        # Observation model
-        observations[t] ~ [[normal_distribution|Normal]](x[t], 1.0)
-    end
 end
 ```
 
@@ -412,41 +307,15 @@ Integration with active inference frameworks:
 ```julia
 @model function active_inference_model()
     # Prior preferences
-    θ ~ [[normal_distribution|Normal]](0.0, 1.0)
+    θ ~ Normal(mean = 0.0, precision = 1.0)
     
     # Policy selection
-    π ~ [[categorical_distribution|Categorical]](softmax(-θ))
+    π ~ Categorical(softmax(-θ))
     
     # Observation model
-    y ~ [[normal_distribution|Normal]](π, exp(-θ))
+    y ~ Normal(mean = π, precision = exp(-θ))
 end
 ```
-
-## Future Directions
-
-### [[language_extensions|Language Extensions]]
-
-1. **[[automatic_differentiation|Automatic Differentiation]]**
-   - Gradient-based inference
-   - Parameter optimization
-   - Model learning
-
-2. **[[probabilistic_programming|Probabilistic Programming]]**
-   - Higher-order distributions
-   - Stochastic processes
-   - Causal reasoning
-
-### [[ecosystem_integration|Ecosystem Integration]]
-
-1. **[[julia_packages|Julia Packages]]**
-   - [[differentialequations_jl|DifferentialEquations.jl]]
-   - [[flux_jl|Flux.jl]]
-   - [[distributions_jl|Distributions.jl]]
-
-2. **[[external_tools|External Tools]]**
-   - [[turing_jl|Turing.jl]]
-   - [[gen_jl|Gen.jl]]
-   - [[soss_jl|Soss.jl]]
 
 ## References
 

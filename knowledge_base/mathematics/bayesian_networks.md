@@ -10,6 +10,7 @@ tags:
 semantic_relations:
   - type: foundation
     links: 
+      - [[probabilistic_graphical_models]]
       - [[directed_graphical_models]]
       - [[probability_theory]]
       - [[factor_graphs]]
@@ -28,7 +29,7 @@ semantic_relations:
 
 ## Overview
 
-Bayesian Networks (BNs), also known as [[directed_acyclic_graphs|directed acyclic graphs]] (DAGs), are probabilistic graphical models that represent conditional dependencies between random variables. They provide a compact representation of joint probability distributions through factorization based on conditional independence assumptions.
+Bayesian Networks (BNs), also known as [[directed_acyclic_graphs|directed acyclic graphs]] (DAGs), are a type of [[probabilistic_graphical_models|probabilistic graphical model]] that represents conditional dependencies between random variables. They provide a compact representation of joint probability distributions through factorization based on conditional independence assumptions.
 
 ## Mathematical Foundation
 

@@ -1,306 +1,359 @@
 ---
-type: mathematical_concept
-id: expected_free_energy_001
-created: 2024-02-05
-modified: 2024-03-15
-tags: [mathematics, active-inference, free-energy, policy-selection, decision-theory]
-aliases: [EFE, expected-free-energy, policy-selection-objective]
-complexity: advanced
-processing_priority: 1
+title: Expected Free Energy
+type: concept
+status: stable
+created: 2024-03-20
+tags:
+  - mathematics
+  - active-inference
+  - decision-theory
+  - information-theory
 semantic_relations:
-  - type: implements
+  - type: foundation
     links: 
-      - [[active_inference]]
-      - [[policy_selection]]
-  - type: mathematical_basis
-    links:
+      - [[free_energy_principle]]
       - [[information_theory]]
       - [[decision_theory]]
-      - [[optimization_theory]]
-  - type: relates
+  - type: implements
     links:
-      - [[free_energy]]
-      - [[path_integral_free_energy]]
-      - [[active_inference_control]]
+      - [[active_inference]]
+      - [[policy_selection]]
+      - [[exploration_exploitation]]
+  - type: related
+    links:
+      - [[variational_free_energy]]
+      - [[kl_divergence]]
+      - [[entropy]]
 ---
 
 # Expected Free Energy
 
-## Mathematical Framework
+## Overview
 
-### Core Definition
-The expected free energy $G(\pi)$ for a policy $\pi$ is defined as:
+Expected Free Energy (EFE) is a fundamental quantity in active inference that guides action selection by balancing exploration (information gain) and exploitation (goal-seeking). It extends the [[free_energy_principle|Free Energy Principle]] to future states and actions.
 
-$G(\pi) = \mathbb{E}_{Q(o',s'|\pi)}[\ln Q(s'|\pi) - \ln P(o',s'|\pi)]$
+## Mathematical Foundation
 
+### 1. Basic Definition
+```math
+G(π) = \sum_τ G(π,τ)
+```
 where:
-- $Q(s'|\pi)$ is the predicted state distribution under policy $\pi$
-- $P(o',s'|\pi)$ is the generative model of future outcomes
-- $\mathbb{E}_{Q}$ denotes expectation under $Q$
+- G(π) is the expected free energy for policy π
+- τ indexes future time points
+- G(π,τ) is the expected free energy at time τ
 
-### Decomposition
-The expected free energy can be decomposed into:
-
-$G(\pi) = \underbrace{\mathbb{E}_{Q}[\ln Q(s'|\pi) - \ln P(s'|o',\pi)]}_{\text{Information Gain}} - \underbrace{\mathbb{E}_{Q}[\ln P(o'|\pi)]}_{\text{Expected Value}}$
-
-### Policy Selection
-The optimal policy distribution is given by:
-
-$P(\pi) = \sigma(-\gamma G(\pi))$
-
+### 2. Decomposition
+```math
+G(π,τ) = \underbrace{\mathbb{E}_{q(o_τ,s_τ|π)}[\log q(s_τ|π) - \log p(o_τ,s_τ)]}_{\text{risk}} + \underbrace{\mathbb{E}_{q(o_τ|π)}[\log q(o_τ|π) - \log p(o_τ)]}_{\text{ambiguity}}
+```
 where:
-- $\sigma$ is the softmax function
-- $\gamma$ is the precision parameter
+- q(s_τ|π) is the predicted state distribution
+- p(o_τ,s_τ) is the generative model
+- q(o_τ|π) is the predicted observation distribution
+- p(o_τ) is the prior preference over observations
 
-## Components
+### 3. Policy Selection
+```math
+P(π) = σ(-γG(π))
+```
+where:
+- σ is the softmax function
+- γ is the precision parameter
 
-### 1. Information Gain
-- Epistemic value
-- Uncertainty reduction
-- Exploration drive
-- Precision weighting
+## Implementation
 
-### 2. Expected Value
-- Pragmatic value
-- Goal achievement
-- Preference satisfaction
-- Utility maximization
+### 1. Expected Free Energy Computation
 
-### 3. Policy Precision
-- Decision temperature
-- Exploration-exploitation
-- Confidence scaling
-- Adaptive control
+```julia
+struct ExpectedFreeEnergy
+    # Time horizon
+    T::Int
+    # Precision parameter
+    γ::Float64
+    # Prior preferences
+    p_o::Distribution
+end
 
-## Advanced Implementation
-
-### 1. Policy Evaluation
-```python
-class PolicyEvaluator:
-    def __init__(self):
-        self.components = {
-            'information': InformationGainComputer(
-                method='mutual_information',
-                approximation='monte_carlo'
-            ),
-            'value': ExpectedValueComputer(
-                method='path_integral',
-                horizon='adaptive'
-            ),
-            'precision': PrecisionOptimizer(
-                method='gradient',
-                adaptation='online'
-            )
-        }
+function compute_expected_free_energy(efe::ExpectedFreeEnergy,
+                                   policy::Policy,
+                                   model::GenerativeModel)
+    # Initialize total EFE
+    G_total = 0.0
     
-    def evaluate_policy(
-        self,
-        policy: Policy,
-        model: GenerativeModel,
-        horizon: int
-    ) -> Tuple[float, dict]:
-        """Evaluate policy using expected free energy"""
-        # Compute information gain
-        info_gain = self.components['information'].compute(
-            policy, model, horizon)
-            
-        # Compute expected value
-        exp_value = self.components['value'].compute(
-            policy, model, horizon)
-            
-        # Optimize precision
-        precision = self.components['precision'].optimize(
-            info_gain, exp_value)
-            
-        # Combine terms
-        G = precision * (info_gain - exp_value)
+    # Compute EFE for each future time step
+    for τ in 1:efe.T
+        # Predict states and observations
+        q_s = predict_states(model, policy, τ)
+        q_o = predict_observations(model, q_s)
         
-        metrics = {
-            'information_gain': info_gain,
-            'expected_value': exp_value,
-            'precision': precision
-        }
+        # Compute risk
+        risk = compute_risk(q_s, q_o, model)
         
-        return G, metrics
+        # Compute ambiguity
+        ambiguity = compute_ambiguity(q_o, efe.p_o)
+        
+        # Accumulate
+        G_total += risk + ambiguity
+    end
+    
+    return G_total
+end
 ```
 
-### 2. Path Integration
-```python
-class PathIntegrator:
-    def __init__(self):
-        self.components = {
-            'dynamics': StateTransitionModel(
-                type='stochastic',
-                integration='euler'
-            ),
-            'observation': ObservationModel(
-                type='probabilistic',
-                noise='adaptive'
-            ),
-            'accumulator': PathAccumulator(
-                method='importance_sampling',
-                particles='adaptive'
-            )
-        }
+### 2. Risk Term
+
+```julia
+function compute_risk(q_s::Distribution,
+                     q_o::Distribution,
+                     model::GenerativeModel)
+    # Compute KL divergence between predicted and preferred states
+    risk = expectation(q_s, q_o) do s, o
+        log_q_s = logpdf(q_s, s)
+        log_p_so = logpdf(model.joint, (s, o))
+        return log_q_s - log_p_so
+    end
     
-    def integrate_path(
-        self,
-        policy: Policy,
-        model: GenerativeModel,
-        horizon: int
-    ) -> Tuple[float, dict]:
-        """Compute path integral of expected free energy"""
-        # Initialize path
-        path = self.components['dynamics'].initialize(policy)
-        
-        # Integrate over horizon
-        for t in range(horizon):
-            # Propagate state
-            state = self.components['dynamics'].step(
-                path, policy, t)
-                
-            # Generate observation
-            obs = self.components['observation'].generate(
-                state, policy)
-                
-            # Accumulate free energy
-            path = self.components['accumulator'].update(
-                path, state, obs)
-        
-        return path.total_energy, path.metrics
+    return risk
+end
 ```
 
-### 3. Policy Distribution
-```python
-class PolicyDistribution:
-    def __init__(self):
-        self.components = {
-            'evaluator': PolicyEvaluator(
-                method='expected_free_energy',
-                horizon='adaptive'
-            ),
-            'selector': PolicySelector(
-                method='softmax',
-                temperature='adaptive'
-            ),
-            'optimizer': DistributionOptimizer(
-                method='natural_gradient',
-                constraints='probability'
-            )
-        }
+### 3. Ambiguity Term
+
+```julia
+function compute_ambiguity(q_o::Distribution,
+                          p_o::Distribution)
+    # Compute epistemic value
+    ambiguity = expectation(q_o) do o
+        log_q_o = logpdf(q_o, o)
+        log_p_o = logpdf(p_o, o)
+        return log_q_o - log_p_o
+    end
     
-    def compute_distribution(
-        self,
-        policies: List[Policy],
-        model: GenerativeModel
-    ) -> Tuple[Distribution, dict]:
-        """Compute policy distribution"""
-        # Evaluate policies
-        evaluations = [
-            self.components['evaluator'].evaluate(pi, model)
-            for pi in policies
-        ]
-        
-        # Select policies
-        selection = self.components['selector'].select(
-            evaluations)
-            
-        # Optimize distribution
-        distribution = self.components['optimizer'].optimize(
-            selection)
-            
-        return distribution
+    return ambiguity
+end
 ```
 
-## Advanced Concepts
+## Policy Selection
 
-### 1. Information Theory
-- [[mutual_information]]
-  - State-observation coupling
-  - Uncertainty reduction
-- [[kl_divergence]]
-  - Policy divergence
-  - Distribution matching
+### 1. [[policy_evaluation|Policy Evaluation]]
 
-### 2. Decision Theory
-- [[utility_theory]]
-  - Preference encoding
-  - Value functions
-- [[risk_sensitivity]]
-  - Risk aversion
-  - Uncertainty handling
+```julia
+function evaluate_policies(agent::ActiveInferenceAgent,
+                         policies::Vector{Policy})
+    # Compute EFE for each policy
+    G = zeros(length(policies))
+    
+    for (i, π) in enumerate(policies)
+        G[i] = compute_expected_free_energy(
+            agent.efe,
+            π,
+            agent.gen_model
+        )
+    end
+    
+    return G
+end
+```
 
-### 3. Control Theory
-- [[optimal_control]]
-  - Trajectory optimization
-  - Cost minimization
-- [[stochastic_control]]
-  - Noise handling
-  - Robust control
+### 2. [[action_selection|Action Selection]]
+
+```julia
+function select_action(agent::ActiveInferenceAgent,
+                      observation::Vector{Float64})
+    # Update beliefs
+    update_beliefs!(agent, observation)
+    
+    # Generate policies
+    policies = generate_policies(agent)
+    
+    # Evaluate policies
+    G = evaluate_policies(agent, policies)
+    
+    # Compute policy probabilities
+    P = softmax(-agent.efe.γ * G)
+    
+    # Sample action
+    π = sample_categorical(policies, P)
+    
+    return first_action(π)
+end
+```
+
+### 3. [[exploration_exploitation|Exploration-Exploitation]]
+
+```julia
+function adaptive_exploration(agent::ActiveInferenceAgent,
+                            temperature::Float64)
+    # Modify precision based on uncertainty
+    uncertainty = compute_uncertainty(agent)
+    agent.efe.γ = 1.0 / (temperature * uncertainty)
+    
+    # Generate and evaluate policies
+    policies = generate_policies(agent)
+    G = evaluate_policies(agent, policies)
+    
+    # Select policy with adaptive exploration
+    P = softmax(-agent.efe.γ * G)
+    return sample_categorical(policies, P)
+end
+```
 
 ## Applications
 
-### 1. Planning
-- [[hierarchical_planning]]
-  - Task decomposition
-  - Abstract reasoning
-- [[model_predictive_control]]
-  - Receding horizon
-  - Online optimization
+### 1. [[decision_making|Decision Making]]
 
-### 2. Learning
-- [[exploration_exploitation]]
-  - Strategy adaptation
-  - Knowledge acquisition
-- [[meta_learning]]
-  - Policy adaptation
-  - Transfer learning
+```julia
+function make_decision(agent::ActiveInferenceAgent,
+                      options::Vector{Action},
+                      preferences::Distribution)
+    # Set prior preferences
+    agent.efe.p_o = preferences
+    
+    # Generate single-step policies
+    policies = [Policy([a]) for a in options]
+    
+    # Evaluate expected free energy
+    G = evaluate_policies(agent, policies)
+    
+    # Select option
+    return options[argmin(G)]
+end
+```
 
-### 3. Decision Making
-- [[active_sensing]]
-  - Information seeking
-  - Attention allocation
-- [[goal_directed_behavior]]
-  - Preference satisfaction
-  - Task completion
+### 2. [[active_sensing|Active Sensing]]
 
-## Research Directions
+```julia
+function active_sensing(agent::ActiveInferenceAgent,
+                       environment::Environment)
+    # Initialize information gain
+    total_info_gain = 0.0
+    
+    for t in 1:agent.efe.T
+        # Select action to maximize information gain
+        action = select_information_seeking_action(agent)
+        
+        # Execute action
+        observation = environment.step(action)
+        
+        # Update beliefs and compute information gain
+        info_gain = update_and_compute_gain!(agent, observation)
+        total_info_gain += info_gain
+    end
+    
+    return total_info_gain
+end
+```
 
-### 1. Theoretical Extensions
-- [[quantum_decision_theory]]
-  - Quantum probabilities
-  - Interference effects
-- [[relativistic_decision_theory]]
-  - Causal decision theory
-  - Temporal consistency
+### 3. [[goal_directed_behavior|Goal-Directed Behavior]]
 
-### 2. Computational Methods
-- [[deep_active_inference]]
-  - Neural architectures
-  - End-to-end learning
-- [[symbolic_planning]]
-  - Logical reasoning
-  - Program synthesis
+```julia
+function goal_directed_policy(agent::ActiveInferenceAgent,
+                            goal_state::State)
+    # Set prior preferences to favor goal state
+    set_goal_preference!(agent, goal_state)
+    
+    # Generate multi-step policies
+    policies = generate_goal_directed_policies(agent, goal_state)
+    
+    # Evaluate policies considering both goal and information gain
+    G = zeros(length(policies))
+    for (i, π) in enumerate(policies)
+        # Compute expected free energy
+        G[i] = compute_expected_free_energy(agent.efe, π, agent.gen_model)
+        
+        # Add goal-specific term
+        G[i] += compute_goal_distance(π, goal_state)
+    end
+    
+    return policies[argmin(G)]
+end
+```
 
-### 3. Applications
-- [[robotics_planning]]
-  - Motion planning
-  - Task execution
-- [[cognitive_architectures]]
-  - Decision making
-  - Behavior generation
+## Theoretical Results
+
+### 1. [[optimality|Optimality]]
+
+```julia
+function prove_optimality(efe::ExpectedFreeEnergy)
+    # Demonstrate that minimizing EFE leads to optimal behavior
+    
+    # 1. Information gain is maximized
+    show_information_maximization(efe)
+    
+    # 2. Goal-seeking behavior emerges
+    show_goal_directed_behavior(efe)
+    
+    # 3. Uncertainty is minimized
+    show_uncertainty_reduction(efe)
+end
+```
+
+### 2. [[convergence|Convergence]]
+
+```julia
+function analyze_convergence(agent::ActiveInferenceAgent,
+                           environment::Environment)
+    # Track EFE over time
+    G_history = Float64[]
+    
+    while !converged(agent)
+        # Select and execute action
+        action = select_action(agent, observe(environment))
+        environment.step(action)
+        
+        # Record EFE
+        push!(G_history, compute_current_efe(agent))
+        
+        # Update beliefs
+        update_beliefs!(agent, observe(environment))
+    end
+    
+    return G_history
+end
+```
+
+### 3. [[information_bounds|Information Bounds]]
+
+```julia
+function compute_information_bounds(efe::ExpectedFreeEnergy)
+    # Compute upper bound on information gain
+    max_info_gain = compute_max_information_gain(efe)
+    
+    # Compute lower bound on expected free energy
+    min_efe = compute_minimum_efe(efe)
+    
+    # Compute bounds on policy entropy
+    H_bounds = compute_policy_entropy_bounds(efe)
+    
+    return (max_info_gain, min_efe, H_bounds)
+end
+```
+
+## Best Practices
+
+### 1. Implementation
+- Use numerically stable computations
+- Implement efficient policy search
+- Cache intermediate results
+- Handle edge cases
+
+### 2. Tuning
+- Adjust precision parameter
+- Balance exploration-exploitation
+- Set appropriate time horizon
+- Define meaningful preferences
+
+### 3. Validation
+- Test with known solutions
+- Verify information gains
+- Monitor convergence
+- Validate actions
 
 ## References
-- [[friston_2015]] - "Active inference and epistemic value"
-- [[parr_2019]] - "Generalised free energy and active inference"
-- [[da_costa_2020]] - "Active inference on discrete state-spaces"
-- [[tschantz_2020]] - "Scaling active inference"
 
-## See Also
-- [[active_inference]]
-- [[free_energy]]
-- [[policy_selection]]
-- [[decision_theory]]
-- [[optimal_control]]
-- [[planning_theory]]
-- [[learning_theory]] 
+1. Friston, K. J., et al. (2015). Active inference and epistemic value
+2. Parr, T., & Friston, K. J. (2019). Generalised free energy and active inference
+3. Da Costa, L., et al. (2020). Active inference, stochastic control, and expected free energy
+4. Tschantz, A., et al. (2020). Learning action-oriented models through active inference
+5. Millidge, B., et al. (2021). Expected Free Energy formalizes conflict between exploration and exploitation 

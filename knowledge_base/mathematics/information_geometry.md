@@ -1,431 +1,327 @@
-# Information Geometry in Cognitive Modeling
-
 ---
-type: mathematical_concept
-id: information_geometry_001
-created: 2024-02-06
-modified: 2024-02-06
-tags: [mathematics, information-geometry, differential-geometry, statistics]
-aliases: [statistical-manifolds, fisher-information]
+title: Information Geometry
+type: concept
+status: stable
+created: 2024-03-20
+tags:
+  - mathematics
+  - differential-geometry
+  - information-theory
+  - probability
 semantic_relations:
-  - type: implements
+  - type: foundation
     links: 
-      - [[../../docs/research/research_documentation_index|Research Documentation]]
-      - [[active_inference_theory]]
-  - type: uses
-    links:
       - [[differential_geometry]]
+      - [[information_theory]]
       - [[probability_theory]]
-  - type: documented_by
+  - type: implements
     links:
-      - [[../../docs/guides/implementation_guides_index|Implementation Guides]]
-      - [[../../docs/api/api_documentation_index|API Documentation]]
+      - [[statistical_manifolds]]
+      - [[natural_gradient]]
+      - [[fisher_information]]
+  - type: related
+    links:
+      - [[variational_inference]]
+      - [[exponential_families]]
+      - [[optimal_transport]]
 ---
+
+# Information Geometry
 
 ## Overview
 
-Information geometry provides the mathematical foundation for understanding statistical manifolds and their role in cognitive modeling. This document explores the geometric structure of probability distributions and their applications in active inference.
+Information Geometry studies the geometric structure of probability distributions and statistical models. It provides a rigorous mathematical framework for understanding statistical inference, machine learning, and active inference through the lens of differential geometry.
 
-## Statistical Manifolds
+## Mathematical Foundation
 
-### Manifold Structure
-```python
-class StatisticalManifold:
-    """
-    Statistical manifold implementation.
-    
-    Theory:
-        - [[differential_geometry]]
-        - [[statistical_manifolds]]
-        - [[probability_distributions]]
-    Mathematics:
-        - [[manifold_theory]]
-        - [[tangent_spaces]]
-    """
-    def __init__(self,
-                 distribution_family: DistributionFamily,
-                 parameter_space: ParameterSpace):
-        self.family = distribution_family
-        self.params = parameter_space
-        self.metric = FisherMetric(self)
-        
-    def compute_christoffel_symbols(self,
-                                  point: np.ndarray) -> np.ndarray:
-        """Compute Christoffel symbols at point."""
-        # First kind
-        gamma_1 = self._christoffel_first_kind(point)
-        
-        # Second kind (raised indices)
-        gamma_2 = self._christoffel_second_kind(gamma_1)
-        
-        return gamma_2
-    
-    def parallel_transport(self,
-                         vector: np.ndarray,
-                         curve: Curve) -> np.ndarray:
-        """Parallel transport vector along curve."""
-        return self._solve_parallel_transport(vector, curve)
+### 1. Statistical Manifold
+```math
+\mathcal{M} = \{p_θ : θ ∈ Θ\}
+```
+where:
+- M is the manifold of probability distributions
+- θ are the parameters
+- Θ is the parameter space
+
+### 2. Fisher Information Metric
+```math
+g_{ij}(θ) = \mathbb{E}_{p_θ}\left[\frac{∂\log p_θ}{∂θ^i}\frac{∂\log p_θ}{∂θ^j}\right]
 ```
 
-### Fisher Information
-```python
-class FisherMetric:
-    """
-    Fisher information metric implementation.
-    
-    Theory:
-        - [[fisher_information]]
-        - [[riemannian_metric]]
-        - [[information_geometry]]
-    Mathematics:
-        - [[metric_tensor]]
-        - [[differential_geometry]]
-    """
-    def __init__(self,
-                 manifold: StatisticalManifold):
-        self.manifold = manifold
-        
-    def metric_tensor(self,
-                     point: np.ndarray) -> np.ndarray:
-        """Compute Fisher metric tensor at point."""
-        # Score functions
-        score = self._compute_score_functions(point)
-        
-        # Expectation of outer product
-        G = self._expectation_outer_product(score)
-        
-        return G
-    
-    def geodesic(self,
-                start: np.ndarray,
-                end: np.ndarray,
-                steps: int = 100) -> np.ndarray:
-        """Compute geodesic between points."""
-        # Initial velocity
-        velocity = self._initial_velocity(start, end)
-        
-        # Solve geodesic equation
-        return self._solve_geodesic_equation(start, velocity, steps)
+### 3. α-Connections
+```math
+Γ_{ijk}^{(α)} = \mathbb{E}_{p_θ}\left[\frac{∂^2\log p_θ}{∂θ^j∂θ^k}\frac{∂\log p_θ}{∂θ^i} + \frac{1-α}{2}\frac{∂\log p_θ}{∂θ^i}\frac{∂\log p_θ}{∂θ^j}\frac{∂\log p_θ}{∂θ^k}\right]
 ```
 
-## Connections and Curvature
+## Core Components
 
-### Affine Connections
-```python
-class AffineConnection:
-    """
-    Affine connection implementation.
+### 1. [[statistical_manifolds|Statistical Manifolds]]
+
+```julia
+struct StatisticalManifold{T<:Distribution}
+    # Dimension of parameter space
+    dim::Int
+    # Parameter space
+    Θ::AbstractVector{Float64}
+    # Distribution family
+    family::Type{T}
+    # Metric tensor
+    g::Function
+    # Connection coefficients
+    Γ::Function
+end
+
+function compute_metric(manifold::StatisticalManifold,
+                       θ::Vector{Float64})
+    n = manifold.dim
+    g = zeros(n, n)
     
-    Theory:
-        - [[connection_theory]]
-        - [[parallel_transport]]
-        - [[geodesics]]
-    Mathematics:
-        - [[differential_geometry]]
-        - [[tensor_calculus]]
-    """
-    def __init__(self,
-                 manifold: StatisticalManifold,
-                 alpha: float = 0.0):
-        self.manifold = manifold
-        self.alpha = alpha  # Alpha-connection parameter
-        
-    def connection_coefficients(self,
-                              point: np.ndarray) -> np.ndarray:
-        """Compute connection coefficients."""
-        # Mixture connection
-        if self.alpha == 0:
-            return self._mixture_connection(point)
-        
-        # Exponential connection
-        elif self.alpha == 1:
-            return self._exponential_connection(point)
-        
-        # Alpha connection
-        else:
-            return self._alpha_connection(point)
+    for i in 1:n, j in 1:n
+        g[i,j] = expectation(manifold.family(θ)) do x
+            ∂i = ∂log_likelihood(x, θ, i)
+            ∂j = ∂log_likelihood(x, θ, j)
+            ∂i * ∂j
+        end
+    end
+    
+    return g
+end
 ```
 
-### Curvature Tensors
-```python
-class CurvatureTensor:
-    """
-    Curvature tensor implementation.
+### 2. [[natural_gradient|Natural Gradient]]
+
+```julia
+struct NaturalGradient
+    # Manifold
+    manifold::StatisticalManifold
+    # Learning rate
+    η::Float64
+end
+
+function update!(grad::NaturalGradient,
+                θ::Vector{Float64},
+                ∇L::Vector{Float64})
+    # Compute Fisher information matrix
+    G = compute_metric(grad.manifold, θ)
     
-    Theory:
-        - [[riemann_curvature]]
-        - [[sectional_curvature]]
-        - [[ricci_curvature]]
-    Mathematics:
-        - [[tensor_calculus]]
-        - [[differential_forms]]
-    """
-    def __init__(self,
-                 connection: AffineConnection):
-        self.connection = connection
-        
-    def riemann_tensor(self,
-                      point: np.ndarray) -> np.ndarray:
-        """Compute Riemann curvature tensor."""
-        # Connection coefficients
-        gamma = self.connection.connection_coefficients(point)
-        
-        # Compute Riemann tensor components
-        R = self._compute_riemann_components(gamma)
-        
-        return R
+    # Compute natural gradient
+    ∇̃L = G \ ∇L
     
-    def sectional_curvature(self,
-                           point: np.ndarray,
-                           plane: np.ndarray) -> float:
-        """Compute sectional curvature of plane at point."""
-        # Riemann tensor
-        R = self.riemann_tensor(point)
-        
-        # Project onto plane
-        return self._compute_sectional_curvature(R, plane)
+    # Update parameters
+    return θ - grad.η * ∇̃L
+end
 ```
 
-## Divergence Measures
+### 3. [[geodesics|Geodesics]]
 
-### Statistical Divergences
-```python
-class StatisticalDivergence:
-    """
-    Statistical divergence implementation.
+```julia
+function compute_geodesic(manifold::StatisticalManifold,
+                         θ₀::Vector{Float64},
+                         θ̇₀::Vector{Float64},
+                         T::Float64,
+                         dt::Float64)
+    # Initialize trajectory
+    ts = 0:dt:T
+    θs = Vector{Vector{Float64}}(undef, length(ts))
+    θs[1] = θ₀
     
-    Theory:
-        - [[divergence_measures]]
-        - [[f_divergences]]
-        - [[bregman_divergences]]
-    Mathematics:
-        - [[convex_analysis]]
-        - [[information_theory]]
-    """
-    def __init__(self,
-                 manifold: StatisticalManifold):
-        self.manifold = manifold
+    # Integrate geodesic equation
+    for i in 1:length(ts)-1
+        # Current state
+        θ = θs[i]
         
-    def kl_divergence(self,
-                     p: Distribution,
-                     q: Distribution) -> float:
-        """Compute KL divergence."""
-        return self._compute_kl(p, q)
+        # Compute Christoffel symbols
+        Γ = manifold.Γ(θ)
+        
+        # Update velocity
+        θ̇ = θ̇₀ - 0.5 * sum(Γ .* θ̇₀ .* θ̇₀)
+        
+        # Update position
+        θs[i+1] = θ + dt * θ̇
+    end
     
-    def alpha_divergence(self,
-                        p: Distribution,
-                        q: Distribution,
-                        alpha: float) -> float:
-        """Compute alpha divergence."""
-        return self._compute_alpha_divergence(p, q, alpha)
-    
-    def wasserstein_distance(self,
-                           p: Distribution,
-                           q: Distribution,
-                           order: int = 2) -> float:
-        """Compute Wasserstein distance."""
-        return self._compute_wasserstein(p, q, order)
+    return ts, θs
+end
 ```
 
-### Bregman Divergences
-```python
-class BregmanDivergence:
-    """
-    Bregman divergence implementation.
+## Applications
+
+### 1. [[variational_inference|Variational Inference]]
+
+```julia
+function natural_variational_inference(manifold::StatisticalManifold,
+                                    target::Distribution,
+                                    q_init::Distribution)
+    # Initialize variational parameters
+    θ = parameters(q_init)
     
-    Theory:
-        - [[bregman_divergences]]
-        - [[convex_analysis]]
-        - [[dually_flat_spaces]]
-    Mathematics:
-        - [[convex_functions]]
-        - [[legendre_transform]]
-    """
-    def __init__(self,
-                 potential: Callable):
-        self.F = potential  # Strictly convex function
+    # Natural gradient descent
+    for iter in 1:max_iters
+        # Compute ELBO gradient
+        ∇ELBO = compute_elbo_gradient(q_init, target)
         
-    def compute_divergence(self,
-                         p: np.ndarray,
-                         q: np.ndarray) -> float:
-        """Compute Bregman divergence."""
-        # Gradient at q
-        grad_q = self._gradient(q)
+        # Natural gradient update
+        θ = update!(NaturalGradient(manifold, 0.01), θ, ∇ELBO)
         
-        # Linear approximation
-        linear_term = np.dot(grad_q, p - q)
-        
-        # Difference of potentials
-        potential_diff = self.F(p) - self.F(q)
-        
-        return potential_diff - linear_term
+        # Update variational distribution
+        q_init = manifold.family(θ)
+    end
+    
+    return q_init
+end
 ```
 
-## Applications to Active Inference
+### 2. [[active_inference|Active Inference]]
 
-### Natural Gradient Learning
-```python
-class NaturalGradientDescent:
-    """
-    Natural gradient descent implementation.
+```julia
+function information_geometric_policy_selection(
+    manifold::StatisticalManifold,
+    agent::ActiveInferenceAgent)
     
-    Theory:
-        - [[natural_gradient]]
-        - [[information_geometry]]
-        - [[optimization]]
-    Mathematics:
-        - [[riemannian_optimization]]
-        - [[information_metrics]]
-    """
-    def __init__(self,
-                 manifold: StatisticalManifold,
-                 learning_rate: float = 0.1):
-        self.manifold = manifold
-        self.lr = learning_rate
+    # Generate policies
+    policies = generate_policies(agent)
+    
+    # Compute geodesic distances to preferred states
+    distances = Float64[]
+    for π in policies
+        # Predicted distribution
+        p_pred = predict_distribution(agent, π)
         
-    def step(self,
-            params: np.ndarray,
-            gradients: np.ndarray) -> np.ndarray:
-        """Take natural gradient step."""
+        # Compute geodesic distance
+        d = geodesic_distance(manifold,
+                            p_pred,
+                            agent.preferences)
+        push!(distances, d)
+    end
+    
+    return policies[argmin(distances)]
+end
+```
+
+### 3. [[exponential_families|Exponential Families]]
+
+```julia
+struct ExponentialFamily
+    # Sufficient statistics
+    T::Vector{Function}
+    # Log-partition function
+    A::Function
+    # Base measure
+    h::Function
+    
+    function natural_parameters(η::Vector{Float64})
+        # Compute moment parameters
+        μ = ∇A(η)
+        
         # Compute Fisher information
-        G = self.manifold.metric.metric_tensor(params)
+        G = ∇²A(η)
         
-        # Compute natural gradient
-        natural_grad = np.linalg.solve(G, gradients)
+        return μ, G
+    end
+end
+
+function compute_divergence(ef::ExponentialFamily,
+                          p::Distribution,
+                          q::Distribution)
+    # Get natural parameters
+    η_p = natural_parameters(p)
+    η_q = natural_parameters(q)
+    
+    # Compute Bregman divergence
+    return ef.A(η_q) - ef.A(η_p) - dot(∇A(η_p), η_q - η_p)
+end
+```
+
+## Theoretical Results
+
+### 1. [[dually_flat|Dually Flat Structure]]
+
+```julia
+struct DuallyFlatManifold <: StatisticalManifold
+    # Potential function
+    ψ::Function
+    # Dual potential
+    φ::Function
+    # Legendre transform
+    ∇ψ::Function
+    ∇φ::Function
+    
+    function divergence(self, p::Distribution, q::Distribution)
+        # Compute Bregman divergence
+        η_p = natural_parameters(p)
+        η_q = natural_parameters(q)
+        
+        return self.ψ(η_q) - self.ψ(η_p) - 
+               dot(self.∇ψ(η_p), η_q - η_p)
+    end
+end
+```
+
+### 2. [[information_projection|Information Projection]]
+
+```julia
+function e_projection(manifold::StatisticalManifold,
+                     p::Distribution,
+                     constraint::Function)
+    # Initialize parameters
+    θ = parameters(p)
+    
+    # Minimize KL divergence subject to constraint
+    for iter in 1:max_iters
+        # Compute gradient
+        ∇KL = compute_kl_gradient(p, manifold.family(θ))
+        
+        # Project gradient onto constraint surface
+        ∇proj = project_gradient(∇KL, constraint)
         
         # Update parameters
-        new_params = params - self.lr * natural_grad
-        
-        return new_params
-```
-
-### Information Geometric Inference
-```python
-class InformationGeometricInference:
-    """
-    Information geometric inference implementation.
+        θ = update!(NaturalGradient(manifold, 0.01), θ, ∇proj)
+    end
     
-    Theory:
-        - [[variational_inference]]
-        - [[information_geometry]]
-        - [[natural_gradients]]
-    Mathematics:
-        - [[statistical_manifolds]]
-        - [[optimization]]
-    """
-    def __init__(self,
-                 model: GenerativeModel,
-                 manifold: StatisticalManifold):
-        self.model = model
-        self.manifold = manifold
-        
-    def infer_posterior(self,
-                       observations: np.ndarray,
-                       initial_belief: np.ndarray) -> np.ndarray:
-        """Infer posterior using natural gradient."""
-        optimizer = NaturalGradientDescent(self.manifold)
-        current = initial_belief.copy()
-        
-        while not self._converged():
-            # Compute free energy gradients
-            grads = self._compute_free_energy_gradients(
-                observations, current
-            )
-            
-            # Take natural gradient step
-            current = optimizer.step(current, grads)
-        
-        return current
+    return manifold.family(θ)
+end
 ```
 
-## Geometric Structure of Active Inference
+### 3. [[cramer_rao|Cramér-Rao Bounds]]
 
-### Free Energy Geometry
-```python
-class FreeEnergyGeometry:
-    """
-    Geometric structure of free energy.
+```julia
+function cramer_rao_bound(manifold::StatisticalManifold,
+                         estimator::Function)
+    # Compute Fisher information
+    G = compute_metric(manifold, θ)
     
-    Theory:
-        - [[free_energy_principle]]
-        - [[information_geometry]]
-        - [[statistical_manifolds]]
-    Mathematics:
-        - [[differential_geometry]]
-        - [[optimization]]
-    """
-    def __init__(self,
-                 manifold: StatisticalManifold):
-        self.manifold = manifold
-        
-    def free_energy_metric(self,
-                         belief_state: np.ndarray) -> np.ndarray:
-        """Compute metric induced by free energy."""
-        # Fisher information
-        G_fisher = self.manifold.metric.metric_tensor(belief_state)
-        
-        # Free energy Hessian
-        H = self._free_energy_hessian(belief_state)
-        
-        return G_fisher + H
+    # Compute estimator covariance
+    Σ = cov(estimator)
     
-    def free_energy_geodesic(self,
-                           start: np.ndarray,
-                           end: np.ndarray) -> np.ndarray:
-        """Compute geodesic in free energy geometry."""
-        metric = lambda x: self.free_energy_metric(x)
-        return self._solve_geodesic_equation(start, end, metric)
+    # Check Cramér-Rao inequality
+    return is_positive_definite(Σ - inv(G))
+end
 ```
 
-## Implementation Considerations
+## Best Practices
 
-### Numerical Methods
-```python
-# @numerical_methods
-numerical_implementations = {
-    "geodesics": {
-        "runge_kutta": "4th order RK method",
-        "symplectic": "Symplectic integrators",
-        "variational": "Variational integrators"
-    },
-    "parallel_transport": {
-        "numerical": "Numerical integration",
-        "discrete": "Discrete parallel transport",
-        "schild": "Schild's ladder"
-    },
-    "optimization": {
-        "trust_region": "Trust region methods",
-        "line_search": "Geometric line search",
-        "conjugate": "Geometric conjugate gradient"
-    }
-}
-```
+### 1. Implementation
+- Use stable numerical methods
+- Implement efficient tensor operations
+- Cache geometric quantities
+- Handle singularities
 
-### Computational Efficiency
-```python
-# @efficiency_considerations
-efficiency_methods = {
-    "metric_computation": {
-        "caching": "Cache metric tensors",
-        "approximation": "Low-rank approximations",
-        "sparsity": "Exploit sparsity patterns"
-    },
-    "geodesic_computation": {
-        "adaptive": "Adaptive step size",
-        "local": "Local coordinate systems",
-        "parallel": "Parallel transport methods"
-    }
-}
-```
+### 2. Optimization
+- Monitor metric regularity
+- Adapt learning rates
+- Check geodesic stability
+- Validate projections
 
-## Documentation Links
-- [[../../docs/research/research_documentation_index|Research Documentation]]
-- [[../../docs/guides/implementation_guides_index|Implementation Guides]]
-- [[../../docs/api/api_documentation_index|API Documentation]]
-- [[../../docs/examples/usage_examples_index|Usage Examples]]
+### 3. Validation
+- Test with known geometries
+- Verify invariance properties
+- Check bound satisfaction
+- Monitor convergence
 
 ## References
-- [[amari]] - Information Geometry
-- [[ay]] - Information Geometry and Its Applications
-- [[nielsen]] - Elementary Differential Geometry
-- [[murray]] - Differential Geometry and Statistics 
+
+1. Amari, S. I. (2016). Information Geometry and Its Applications
+2. Ay, N., et al. (2017). Information Geometry
+3. Nielsen, F. (2020). An Elementary Introduction to Information Geometry
+4. Cencov, N. N. (1982). Statistical Decision Rules and Optimal Inference
+5. Lebanon, G. (2005). Information Geometry, the Embedding Principle, and Document Classification 
