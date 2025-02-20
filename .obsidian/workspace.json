@@ -112,6 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/implmentations/rxinfer/model_macro_paradigm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +122,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for model_macro_paradigm"
             }
           },
           {
@@ -130,11 +131,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/implmentations/rxinfer/model_macro_paradigm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from model_macro_paradigm"
             }
           },
           {
@@ -158,13 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/tools/index.md",
+                "file": "docs/implmentations/rxinfer/model_macro_paradigm.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of model_macro_paradigm"
             }
           }
         ]
@@ -185,8 +187,13 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "732e93d9f16fd2e9",
+  "active": "26da5c325ed6eb0c",
   "lastOpenFiles": [
+    "docs/implmentations/rxinfer/free_energy.md",
+    "docs/implmentations/rxinfer/execution_engine.md",
+    "docs/implmentations/rxinfer/compiler_pipeline.md",
+    "docs/implmentations/rxinfer/rxinfer_stack.md",
+    "docs/tools/index.md",
     "docs/implmentations/rxinfer/model_specification.md",
     "docs/implmentations/rxinfer/variational_inference.md",
     "docs/implmentations/rxinfer/message_passing.md",
@@ -207,11 +214,6 @@
     "knowledge_base/mathematics/predictive_coding.md",
     "knowledge_base/mathematics/free_energy_principle.md",
     "knowledge_base/mathematics/d_separation.md",
-    "knowledge_base/mathematics/markov_properties.md",
-    "knowledge_base/mathematics/markov_random_fields.md",
-    "knowledge_base/mathematics/bayesian_graph_theory.md",
-    "knowledge_base/mathematics/bayesian_networks.md",
-    "knowledge_base/mathematics/message_passing.md",
-    "knowledge_base/mathematics/factor_graphs.md"
+    "knowledge_base/mathematics/markov_properties.md"
   ]
 }
