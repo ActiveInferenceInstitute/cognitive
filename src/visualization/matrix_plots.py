@@ -345,12 +345,70 @@ class StateSpacePlotter:
         return fig
 
 class NetworkPlotter:
-    """Plotting utilities for belief networks and relationships."""
+    """Utility class for network visualization."""
     
     def __init__(self, save_dir: Optional[Path] = None):
-        self.save_dir = save_dir
-        if save_dir:
-            save_dir.mkdir(parents=True, exist_ok=True)
+        """Initialize plotter with save directory."""
+        self.save_dir = Path(save_dir) if save_dir else Path.cwd()
+        self.save_dir.mkdir(parents=True, exist_ok=True)
+
+    def plot_message_network_dynamics(self,
+                                    connections: Dict[str, List[str]],
+                                    messages: List[Dict[str, Union[str, Dict]]],
+                                    title: str = "Message Network Dynamics",
+                                    save_name: Optional[str] = None) -> plt.Figure:
+        """Plot network dynamics with message passing visualization.
+        
+        Args:
+            connections: Dictionary mapping node IDs to lists of connected node IDs
+            messages: List of message dictionaries with source, target, and content
+            title: Plot title
+            save_name: Name for saving the plot
+            
+        Returns:
+            Matplotlib figure object
+        """
+        import networkx as nx
+        
+        # Create graph
+        G = nx.DiGraph()
+        
+        # Add nodes and edges
+        for source, targets in connections.items():
+            for target in targets:
+                G.add_edge(source, target)
+        
+        # Create figure
+        fig, ax = plt.subplots(figsize=(10, 8))
+        
+        # Draw network
+        pos = nx.spring_layout(G)
+        nx.draw_networkx_nodes(G, pos, node_color='lightblue', 
+                             node_size=500, alpha=0.8)
+        nx.draw_networkx_labels(G, pos)
+        
+        # Draw edges with different colors for active messages
+        edge_colors = []
+        edge_widths = []
+        edges = list(G.edges())
+        
+        for edge in edges:
+            is_active = any(msg['source'] == edge[0] and msg['target'] == edge[1] 
+                          for msg in messages)
+            edge_colors.append('red' if is_active else 'gray')
+            edge_widths.append(2 if is_active else 1)
+            
+        nx.draw_networkx_edges(G, pos, edge_color=edge_colors, width=edge_widths,
+                             arrowsize=20)
+        
+        # Add title
+        plt.title(title)
+        
+        # Save if requested
+        if save_name:
+            plt.savefig(self.save_dir / f"{save_name}.png")
+            
+        return fig
     
     def plot_belief_network(self,
                           adjacency: np.ndarray,
