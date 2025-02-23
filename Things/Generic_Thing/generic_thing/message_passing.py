@@ -55,20 +55,20 @@ class MessagePassing:
         if target_id == "broadcast" or target_id == self.id:
             return True
             
-        # Check if target exists in connections
-        if target_id in self.connections:
+        # Check if target exists in source's connections
+        if self.id in self.connections and target_id in self.connections[self.id]:
             return True
             
-        # Check if target is connected to any node
-        for connections in self.connections.values():
-            if target_id in connections:
+        # Check if target exists in any connections
+        for source_id, targets in self.connections.items():
+            if target_id == source_id or target_id in targets:
                 return True
                 
         return False
     
     def process_outgoing(self) -> None:
         """Process all messages in the outgoing queue."""
-        processed_ids = set()  # Track processed message IDs
+        processed_ids = set()
         
         while self.outgoing_queue:
             message = self.outgoing_queue.popleft()
@@ -98,7 +98,7 @@ class MessagePassing:
                         broadcast_msg = Message(
                             source_id=message.source_id,
                             target_id=target_id,
-                            content=message.content,
+                            content=message.content.copy(),
                             message_type=message.message_type,
                             timestamp=message.timestamp
                         )
@@ -251,10 +251,11 @@ class MessagePassing:
                 broadcast_msg = Message(
                     source_id=message.source_id,
                     target_id=target_id,
-                    content=message.content.copy(),  # Create a copy of content
+                    content=message.content.copy(),
                     message_type=message.message_type,
                     timestamp=message.timestamp
                 )
+                # Add to outgoing queue and sent messages
                 self.outgoing_queue.append(broadcast_msg)
                 if broadcast_msg not in self.sent_messages:
                     self.sent_messages.append(broadcast_msg)
@@ -269,7 +270,7 @@ class MessagePassing:
             direct_msg = Message(
                 source_id=message.source_id,
                 target_id=message.target_id,
-                content=message.content.copy(),  # Create a copy of content
+                content=message.content.copy(),
                 message_type=message.message_type,
                 timestamp=message.timestamp
             )
