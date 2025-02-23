@@ -6,7 +6,7 @@
       {
         "id": "7d45e3eaaab92d8f",
         "type": "tabs",
-        "dimension": 68.84906960716746,
+        "dimension": 51.75740868366644,
         "children": [
           {
             "id": "26da5c325ed6eb0c",
@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/implementation/rxinfer/factor_graphs.md",
+                "file": "docs/guides/learning_paths/active_inference_whose_on_first_learning_path.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "factor_graphs"
+              "title": "active_inference_whose_on_first_learning_path"
             }
           }
         ]
@@ -27,7 +27,7 @@
       {
         "id": "13c8251f305a54a9",
         "type": "tabs",
-        "dimension": 31.150930392832528,
+        "dimension": 48.24259131633356,
         "children": [
           {
             "id": "4b7c14691fc0c93e",
@@ -184,10 +184,25 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "26da5c325ed6eb0c",
+  "active": "4b7c14691fc0c93e",
   "lastOpenFiles": [
-    "docs/implementation/rxinfer/execution_engine.md",
+    "docs/guides/learning_paths/active_inference_whose_on_first_learning_path.md",
+    "docs/guides/learning_paths/active_inference_experience_method_path.md",
+    "docs/guides/learning_paths/active_inference_economic_learning_path.md",
+    "docs/guides/learning_paths/active_inference_pragmatism_learning_path.md",
+    "docs/implementation/rxinfer/streaming_inference.md",
+    "docs/guides/learning_paths/active_inference_path.md",
+    "docs/other",
+    "docs/implementation/rxinfer/rxinfer_variational_inference.md",
+    "docs/implementation/rxinfer/ast_processing.md",
+    "docs/implementation/rxinfer/rxinfer_stack.md",
+    "docs/implementation/rxinfer/reactive_programming.md",
+    "docs/implementation/rxinfer/model_specification.md",
+    "docs/implementation/rxinfer/model_macro_paradigm.md",
+    "docs/implementation/rxinfer/message_passing.md",
+    "docs/implementation/rxinfer/getting_started.md",
     "docs/implementation/rxinfer/factor_graphs.md",
+    "docs/implementation/rxinfer/execution_engine.md",
     "docs/implementation/rxinfer/free_energy_message_passing_details.md",
     "docs/implementation/rxinfer/free_energy_message_passing_active_inference.md",
     "docs/implementation/rxinfer/free_energy.md",
@@ -198,28 +213,14 @@
     "docs/implementation/rxinfer/advanced_systems_engineering_guidebook.md",
     "docs/implementation/rxinfer/systems_engineering_guidebook.md",
     "docs/implementation/rxinfer/active_inference_examples.md",
-    "docs/implementation/rxinfer/message_passing.md",
-    "docs/implementation/rxinfer/reactive_programming.md",
-    "docs/implementation/rxinfer/README.md",
-    "docs/guides/learning_paths/active_inference_underwriting_learning_path.md",
-    "docs/guides/concepts/risk_assessment.md",
-    "docs/guides/concepts/underwriting_principles.md",
     "docs/guides/concepts",
-    "docs/guides/learning_paths/active_inference_myrmecology_learning_path.md",
-    "docs/guides/learning_paths/active_inference_observation_learning_path.md",
-    "docs/guides/learning_paths/active_inference_neuroscience_learning_path.md",
-    "docs/guides/learning_paths/active_inference_economic_learning_path.md",
-    "docs/guides/learning_paths/active_inference_ecological_learning_path.md",
     "Things/Generic_Thing/generic_thing/visualizations/message_network_20250223_140901.png",
     "Things/Generic_Thing/generic_thing/visualizations/hierarchy_test_20250223_140900.png",
-    "docs/guides/learning_paths/active_inference_biological_learning_path.md",
     "Things/Generic_Thing/generic_thing/visualizations/belief_uncertainty_20250223_140745.png",
     "Things/Generic_Thing/generic_thing/visualizations/free_energy_history_20250223_140740.png",
     "Things/Generic_Thing/generic_thing/visualizations/free_energy_minimization_20250223_140739.png",
-    "knowledge_base/BioFirm/biofirm_active_inference_connections.md",
     "Things/Generic_Thing/generic_thing/visualizations/message_network_20250223_140600.png",
     "Things/Generic_Thing/generic_thing/visualizations/hierarchy_test_20250223_140555.png",
-    "knowledge_base/BioFirm/biofirm_framework.md",
     "Things/Generic_Thing/generic_thing/visualizations/free_energy_minimization_20250223_140443.png",
     "Things/Generic_Thing/generic_thing/visualizations/free_energy_history_20250223_140443.png",
     "Things/Generic_Thing/generic_thing/visualizations/belief_uncertainty_20250223_140441.png",
@@ -230,7 +231,6 @@
     "Things/Generic_Thing/reports/test_results/visual_tests_20250223_135329.html",
     "Things/Generic_Thing/reports/summary_20250223_134851.html",
     "Things/Generic_Thing/reports/code_analysis_20250223_134851.json",
-    "Things/Generic_Thing/reports/test_results/integration_tests_20250223_134851.html",
-    "Things/Generic_Thing/reports/test_results/unit_tests_20250223_134851.html"
+    "Things/Generic_Thing/reports/test_results/integration_tests_20250223_134851.html"
   ]
 }
