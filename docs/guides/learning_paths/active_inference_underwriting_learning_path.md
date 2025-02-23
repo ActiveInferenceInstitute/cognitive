@@ -1,121 +1,121 @@
 # Active Inference & Underwriting Learning Path
 
 ## Introduction
-This learning path provides a comprehensive guide to understanding the intersection of Active Inference and Underwriting, designed for practitioners from both domains seeking to bridge these fields.
+This learning path provides a comprehensive guide to understanding the intersection of [[active_inference]] and [[underwriting]], designed for practitioners from both domains seeking to bridge these fields. The path integrates [[risk_assessment|Risk Assessment Fundamentals]] with modern approaches to decision-making and uncertainty quantification.
 
 ## Prerequisites
-- Basic understanding of probability theory
-- Familiarity with risk assessment concepts
-- Understanding of basic machine learning principles
-- Knowledge of statistical modeling
+- Basic understanding of [[probability_theory]]
+- Familiarity with [[risk_assessment_fundamentals]]
+- Understanding of [[machine_learning_basics]]
+- Knowledge of [[statistical_modeling]]
 
 ## Domain-Specific Ontologies
 
 ### Underwriting Domain Ontology
 #### Core Concepts
-- Risk Assessment
-- Policy Evaluation
-- Claims History
-- Risk Factors
-- Premium Calculation
-- Policy Terms
-- Exclusions
-- Coverage Limits
-- Underwriting Guidelines
-- Risk Appetite
+- [[risk_assessment|Comprehensive Risk Assessment]] - Systematic evaluation of risks and impacts
+- [[policy_evaluation]]
+- [[claims_history]]
+- [[risk_factors]]
+- [[premium_calculation]]
+- [[policy_terms]]
+- [[exclusions]]
+- [[coverage_limits]]
+- [[underwriting_guidelines]]
+- [[risk_appetite]]
 
 #### Key Processes
-- Application Review
-- Risk Classification
-- Premium Rating
-- Policy Issuance
-- Risk Mitigation
-- Portfolio Management
+- [[application_review_process]]
+- [[risk_classification]]
+- [[premium_rating]]
+- [[policy_issuance]]
+- [[risk_mitigation]]
+- [[portfolio_management]]
 
 ### Active Inference Domain Ontology
 #### Fundamental Concepts
-- Free Energy Principle
-- Generative Models
-- Variational Inference
-- Belief Updating
-- Action Selection
-- Expected Free Energy
-- Precision Weighting
-- Prior Beliefs
-- Posterior Beliefs
-- Policy Selection
+- [[free_energy_principle]]
+- [[generative_models]]
+- [[variational_inference]]
+- [[belief_updating]]
+- [[action_selection]]
+- [[expected_free_energy]]
+- [[precision_weighting]]
+- [[prior_beliefs]]
+- [[posterior_beliefs]]
+- [[policy_selection]]
 
 #### Key Processes
-- Perception-Action Cycles
-- Belief Propagation
-- Model Learning
-- Policy Optimization
-- Uncertainty Quantification
+- [[perception_action_cycles]]
+- [[belief_propagation]]
+- [[model_learning]]
+- [[policy_optimization]]
+- [[uncertainty_quantification]]
 
 ## Intersection & Integration
 
 ### Bridging Concepts
 1. **Risk Modeling**
-   - Probabilistic Framework
-   - Uncertainty Quantification
-   - Dynamic Risk Assessment
+   - [[probabilistic_framework]]
+   - [[uncertainty_quantification]]
+   - [[dynamic_risk_assessment]]
 
 2. **Decision Making**
-   - Policy Selection
-   - Action-Perception Loops
-   - Adaptive Strategy
+   - [[policy_selection_algorithms]]
+   - [[action_perception_loops]]
+   - [[adaptive_strategy]]
 
 3. **Learning Systems**
-   - Model Updates
-   - Experience Integration
-   - Continuous Improvement
+   - [[model_updates]]
+   - [[experience_integration]]
+   - [[continuous_improvement]]
 
 ### Application Areas
 1. **Automated Underwriting**
-   - Risk Factor Analysis
-   - Dynamic Policy Pricing
-   - Real-time Adjustment
+   - [[risk_factor_analysis]]
+   - [[dynamic_policy_pricing]]
+   - [[real_time_adjustment]]
 
 2. **Portfolio Management**
-   - Risk Aggregation
-   - Exposure Management
-   - Portfolio Optimization
+   - [[risk_aggregation]]
+   - [[exposure_management]]
+   - [[portfolio_optimization]]
 
 3. **Claims Processing**
-   - Fraud Detection
-   - Severity Assessment
-   - Process Automation
+   - [[fraud_detection]]
+   - [[severity_assessment]]
+   - [[process_automation]]
 
 ## Tools & Technologies
 
 ### Technical Stack
 1. **Data Processing**
-   - Statistical Analysis Tools
-   - Machine Learning Frameworks
-   - Data Visualization Libraries
+   - [[statistical_analysis_tools]]
+   - [[machine_learning_frameworks]]
+   - [[data_visualization]]
 
 2. **Model Implementation**
-   - Probabilistic Programming
-   - Neural Networks
-   - Bayesian Methods
+   - [[probabilistic_programming]]
+   - [[neural_networks]]
+   - [[bayesian_methods]]
 
 3. **Integration Tools**
-   - API Development
-   - Database Management
-   - Workflow Automation
+   - [[api_development]]
+   - [[database_management]]
+   - [[workflow_automation]]
 
 ## Learning Progression
 
 ### Level 1: Foundations
 1. Understanding Basic Concepts
-   - Underwriting Principles
-   - Active Inference Basics
-   - Risk Assessment Fundamentals
+   - [[underwriting_principles|Underwriting Principles]] - Core foundations and modern applications
+   - [[active_inference_basics]]
+   - [[risk_assessment_fundamentals]]
 
 2. Tool Familiarization
-   - Basic Statistical Tools
-   - Programming Environment
-   - Data Analysis Methods
+   - [[statistical_tools]]
+   - [[programming_environment]]
+   - [[data_analysis_methods]]
 
 ### Level 2: Integration
 1. Combining Domains
@@ -143,9 +143,9 @@ This learning path provides a comprehensive guide to understanding the intersect
 
 ### Module 1: Foundations of Risk Assessment
 1. **Interactive Risk Scoring**
-   - Exercise: Build a basic risk scoring model
-   - Implementation: Python notebook with risk factor weighting
-   - Validation: Test against historical data
+   - Exercise: [[risk_scoring_model]]
+   - Implementation: [[python_risk_weighting]]
+   - Validation: [[historical_data_testing]]
 
 2. **Probability Theory in Practice**
    - Exercise: Bayesian updating with underwriting data
@@ -331,52 +331,52 @@ This learning path provides a comprehensive guide to understanding the intersect
 ## Resources
 
 ### Reading Materials
-1. Academic Papers
-2. Industry Reports
-3. Technical Documentation
-4. Case Studies
-5. Best Practices Guides
+1. [[academic_papers]]
+2. [[industry_reports]]
+3. [[technical_documentation]]
+4. [[case_studies]]
+5. [[best_practices]]
 
 ### Tools & Platforms
-1. Software Libraries
-2. Development Frameworks
-3. Analysis Tools
-4. Integration Platforms
+1. [[software_libraries]]
+2. [[development_frameworks]]
+3. [[analysis_tools]]
+4. [[integration_platforms]]
 
 ### Community & Support
-1. Professional Networks
-2. Research Groups
-3. Industry Forums
-4. Conferences
-5. Workshops
+1. [[professional_networks]]
+2. [[research_groups]]
+3. [[industry_forums]]
+4. [[conferences]]
+5. [[workshops]]
 
 ## Assessment & Validation
 
 ### Knowledge Checkpoints
-1. Concept Understanding
-2. Technical Proficiency
-3. Integration Capability
-4. Problem-Solving Skills
+1. [[concept_understanding]]
+2. [[technical_proficiency]]
+3. [[integration_capability]]
+4. [[problem_solving_skills]]
 
 ### Project Milestones
-1. Basic Implementation
-2. Integration Projects
-3. Advanced Applications
-4. Innovation Development
+1. [[basic_implementation]]
+2. [[integration_projects]]
+3. [[advanced_applications]]
+4. [[innovation_development]]
 
 ## Future Directions
 
 ### Research Areas
-1. Novel Applications
-2. Theoretical Advances
-3. Integration Methods
-4. Performance Optimization
+1. [[novel_applications]]
+2. [[theoretical_advances]]
+3. [[integration_methods]]
+4. [[performance_optimization]]
 
 ### Industry Trends
-1. Market Evolution
-2. Technology Adoption
-3. Regulatory Changes
-4. Best Practices
+1. [[market_evolution]]
+2. [[technology_adoption]]
+3. [[regulatory_changes]]
+4. [[best_practices]]
 
 ## Conclusion
-This learning path provides a structured approach to mastering the intersection of Active Inference and Underwriting, enabling practitioners to develop innovative solutions in risk assessment and management. 
+This learning path provides a structured approach to mastering the intersection of [[active_inference]] and [[underwriting]], enabling practitioners to develop innovative solutions in [[risk_assessment]] and [[portfolio_management]]. 

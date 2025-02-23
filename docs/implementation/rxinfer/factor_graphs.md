@@ -16,34 +16,39 @@ semantic_relations:
     links:
       - [[message_passing]]
       - [[model_specification]]
+      - [[variational_inference]]
+      - [[belief_propagation]]
 ---
 
 # Factor Graphs in RxInfer
 
 ## Overview
 
-Factor graphs in RxInfer provide a powerful graphical representation of probabilistic models. They decompose complex probability distributions into simpler factors, enabling efficient inference through [[message_passing|message passing]].
+Factor graphs in RxInfer provide a powerful graphical representation of [[probabilistic_models|probabilistic models]]. They decompose complex probability distributions into simpler factors, enabling efficient inference through [[message_passing|message passing]] algorithms like [[belief_propagation|Belief Propagation]] and [[variational_inference|Variational Message Passing]].
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": { "primaryColor": "#f9f0ff", "secondaryColor": "#e0e0ff", "tertiaryColor": "#fff0f0"}}}%%
 graph TD
-    subgraph Factor Graph Structure
+    subgraph "Factor Graph Structure"
+        direction LR
         V1[Variable Node] --- F1[Factor Node]
         F1 --- V2[Variable Node]
         V2 --- F2[Factor Node]
         F2 --- V3[Variable Node]
+        
+        classDef varNode fill:#f9f0ff,stroke:#333,stroke-width:2px;
+        classDef factorNode fill:#e0e0ff,stroke:#333,stroke-width:2px;
+        
+        class V1,V2,V3 varNode;
+        class F1,F2 factorNode;
     end
-    style V1 fill:#f9f,stroke:#333
-    style V2 fill:#f9f,stroke:#333
-    style V3 fill:#f9f,stroke:#333
-    style F1 fill:#bbf,stroke:#333
-    style F2 fill:#bbf,stroke:#333
 ```
 
 ## Core Components
 
 ### 1. Variable Nodes
 
-Represent random variables in your model:
+Variable nodes represent [[random_variables|random variables]] in your model:
 
 ```julia
 @model function example_model()
@@ -55,57 +60,64 @@ end
 
 ### 2. Factor Nodes
 
-Represent probability distributions or constraints:
+Factor nodes represent [[probabilistic_relationships|probabilistic relationships]] or constraints:
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": { "primaryColor": "#f9f0ff", "secondaryColor": "#e0e0ff"}}}%%
 graph LR
-    subgraph Factor Types
+    subgraph "Factor Types"
+        direction TB
         F1[Prior Factors]
         F2[Likelihood Factors]
         F3[Constraint Factors]
+        
+        classDef factorType fill:#f9f0ff,stroke:#333,stroke-width:2px;
+        class F1,F2,F3 factorType;
     end
-    subgraph Examples
+    
+    subgraph "Examples"
+        direction TB
         E1[Normal(0,1)]
-        E2[y|x ~ Normal(x,1)]
-        E3[x > 0]
+        E2["y|x ~ Normal(x,1)"]
+        E3["x > 0"]
+        
+        classDef example fill:#e0e0ff,stroke:#333,stroke-width:2px;
+        class E1,E2,E3 example;
     end
+    
     F1 --> E1
     F2 --> E2
     F3 --> E3
-    style F1 fill:#f9f
-    style F2 fill:#f9f
-    style F3 fill:#f9f
-    style E1 fill:#bbf
-    style E2 fill:#bbf
-    style E3 fill:#bbf
 ```
 
-### 3. Edges
+### 3. Message Types
 
-Connect variables and factors:
+Messages flow between nodes during inference:
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": { "primaryColor": "#f9f0ff", "secondaryColor": "#e0e0ff", "tertiaryColor": "#e0ffe0"}}}%%
 graph LR
-    subgraph Edge Types
-        E1[Variable-Factor]
-        E2[Message Forward]
-        E3[Message Backward]
+    subgraph "Message Flow"
+        direction LR
+        V1[x] -->|"μ_forward"| F1[p(x)]
+        F1 -->|"μ_backward"| V1
+        F1 -->|"μ_forward"| V2[y]
+        V2 -->|"μ_backward"| F1
+        
+        classDef varNode fill:#f9f0ff,stroke:#333,stroke-width:2px;
+        classDef factorNode fill:#e0e0ff,stroke:#333,stroke-width:2px;
+        classDef messageFlow fill:#e0ffe0,stroke:#333,stroke-width:2px;
+        
+        class V1,V2 varNode;
+        class F1 factorNode;
     end
-    V1[x] --- F1[p(x)]
-    F1 --- V2[y]
-    style V1 fill:#f9f
-    style V2 fill:#f9f
-    style F1 fill:#bbf
-    style E1 fill:#bfb
-    style E2 fill:#bfb
-    style E3 fill:#bfb
 ```
 
 ## Graph Construction
 
 ### 1. Automatic Construction
 
-RxInfer automatically constructs factor graphs from model definitions:
+RxInfer automatically constructs factor graphs from [[model_specification|model definitions]]:
 
 ```julia
 @model function linear_model(x, y)
@@ -118,24 +130,28 @@ RxInfer automatically constructs factor graphs from model definitions:
 end
 ```
 
-### Graph Construction Process
+### 2. Graph Construction Process
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": { "primaryColor": "#f9f0ff", "secondaryColor": "#e0e0ff", "tertiaryColor": "#e0ffe0"}}}%%
 graph TD
-    subgraph Model Definition
+    subgraph "Model Definition"
         M1[Variables]
         M2[Distributions]
         M3[Dependencies]
     end
-    subgraph Graph Construction
+    
+    subgraph "Graph Construction"
         G1[Create Nodes]
         G2[Add Factors]
         G3[Connect Edges]
     end
-    subgraph Result
+    
+    subgraph "Result"
         R1[Factor Graph]
         R2[Message Rules]
     end
+    
     M1 --> G1
     M2 --> G2
     M3 --> G3
@@ -143,56 +159,14 @@ graph TD
     G2 --> R1
     G3 --> R1
     G3 --> R2
-    style M1 fill:#f9f
-    style M2 fill:#f9f
-    style M3 fill:#f9f
-    style G1 fill:#bbf
-    style G2 fill:#bbf
-    style G3 fill:#bbf
-    style R1 fill:#bfb
-    style R2 fill:#bfb
-```
-
-## Factor Types
-
-### 1. Distribution Factors
-
-Represent probability distributions:
-
-```julia
-# Prior factors
-x ~ Normal(0, 1)
-θ ~ Beta(1, 1)
-
-# Likelihood factors
-y ~ Normal(x, 1)
-z ~ Bernoulli(θ)
-```
-
-### 2. Deterministic Factors
-
-Represent deterministic relationships:
-
-```julia
-@model function deterministic_example()
-    x ~ Normal(0, 1)
-    y = 2 * x           # Deterministic factor
-    z ~ Normal(y, 1)    # Uses the deterministic relationship
-end
-```
-
-### 3. Constraint Factors
-
-Impose constraints on variables:
-
-```julia
-@constraints function model_constraints()
-    # Factorization constraints
-    q(x, y) = q(x)q(y)
     
-    # Distribution family constraints
-    q(x) :: NormalMeanPrecision
-end
+    classDef modelDef fill:#f9f0ff,stroke:#333,stroke-width:2px;
+    classDef graphConst fill:#e0e0ff,stroke:#333,stroke-width:2px;
+    classDef result fill:#e0ffe0,stroke:#333,stroke-width:2px;
+    
+    class M1,M2,M3 modelDef;
+    class G1,G2,G3 graphConst;
+    class R1,R2 result;
 ```
 
 ## Graph Patterns
@@ -200,13 +174,15 @@ end
 ### 1. Chain Structure
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": { "primaryColor": "#f9f0ff", "secondaryColor": "#e0e0ff"}}}%%
 graph LR
     X1[x₁] --- F1[f₁] --- X2[x₂] --- F2[f₂] --- X3[x₃]
-    style X1 fill:#f9f
-    style X2 fill:#f9f
-    style X3 fill:#f9f
-    style F1 fill:#bbf
-    style F2 fill:#bbf
+    
+    classDef varNode fill:#f9f0ff,stroke:#333,stroke-width:2px;
+    classDef factorNode fill:#e0e0ff,stroke:#333,stroke-width:2px;
+    
+    class X1,X2,X3 varNode;
+    class F1,F2 factorNode;
 ```
 
 ```julia
@@ -220,17 +196,17 @@ end
 ### 2. Star Structure
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": { "primaryColor": "#f9f0ff", "secondaryColor": "#e0e0ff"}}}%%
 graph TD
     C[Center] --- F1[f₁] --- X1[x₁]
     C --- F2[f₂] --- X2[x₂]
     C --- F3[f₃] --- X3[x₃]
-    style C fill:#f9f
-    style X1 fill:#f9f
-    style X2 fill:#f9f
-    style X3 fill:#f9f
-    style F1 fill:#bbf
-    style F2 fill:#bbf
-    style F3 fill:#bbf
+    
+    classDef varNode fill:#f9f0ff,stroke:#333,stroke-width:2px;
+    classDef factorNode fill:#e0e0ff,stroke:#333,stroke-width:2px;
+    
+    class C,X1,X2,X3 varNode;
+    class F1,F2,F3 factorNode;
 ```
 
 ```julia
@@ -245,18 +221,18 @@ end
 ### 3. Grid Structure
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": { "primaryColor": "#f9f0ff", "secondaryColor": "#e0e0ff"}}}%%
 graph TD
     X11[x₁₁] --- F12[f₁₂] --- X12[x₁₂]
     X11 --- F21[f₂₁] --- X21[x₂₁]
     X12 --- F22[f₂₂] --- X22[x₂₂]
     X21 --- F22
-    style X11 fill:#f9f
-    style X12 fill:#f9f
-    style X21 fill:#f9f
-    style X22 fill:#f9f
-    style F12 fill:#bbf
-    style F21 fill:#bbf
-    style F22 fill:#bbf
+    
+    classDef varNode fill:#f9f0ff,stroke:#333,stroke-width:2px;
+    classDef factorNode fill:#e0e0ff,stroke:#333,stroke-width:2px;
+    
+    class X11,X12,X21,X22 varNode;
+    class F12,F21,F22 factorNode;
 ```
 
 ## Advanced Topics
@@ -265,13 +241,14 @@ graph TD
 
 Techniques for efficient graph structure:
 
-- Node elimination ordering
-- Factor grouping
-- Edge reduction
+- [[node_elimination|Node elimination ordering]]
+- [[factor_grouping|Factor grouping]]
+- [[edge_reduction|Edge reduction]]
+- [[message_scheduling|Message scheduling]]
 
 ### 2. Custom Factor Types
 
-Creating custom factors:
+Creating [[custom_factors|custom factors]]:
 
 ```julia
 struct CustomFactor <: AbstractFactor
@@ -287,7 +264,7 @@ end
 
 ### 3. Graph Visualization
 
-Visualizing factor graphs:
+Visualizing factor graphs with [[graphviz|GraphViz]]:
 
 ```julia
 using GraphViz
@@ -303,9 +280,9 @@ end
 
 ### 1. Graph Design
 
-- Keep graph structure sparse when possible
-- Group related factors
-- Consider message passing efficiency
+- Keep graph structure [[sparse_graphs|sparse]] when possible
+- Group related factors for efficiency
+- Consider [[message_passing_efficiency|message passing efficiency]]
 
 ### 2. Performance Optimization
 
@@ -328,13 +305,15 @@ mindmap
 
 ### 3. Debugging
 
-- Visualize graph structure
-- Check factor connections
-- Monitor message convergence
+- [[graph_visualization|Visualize graph structure]]
+- [[factor_connections|Check factor connections]]
+- [[message_convergence|Monitor message convergence]]
+- Use [[logging|logging]] for debugging
 
 ## References
 
 - [[graphical_models|Graphical Models]]
 - [[message_passing|Message Passing]]
 - [[variational_inference|Variational Inference]]
-- [[model_specification|Model Specification]] 
+- [[model_specification|Model Specification]]
+- [[belief_propagation|Belief Propagation]] 

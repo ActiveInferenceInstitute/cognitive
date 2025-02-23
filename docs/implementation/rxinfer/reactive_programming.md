@@ -251,6 +251,7 @@ mindmap
       Throttling
       Batching
       Scheduling
+      Timing
     Resource Usage
       Memory
       CPU
