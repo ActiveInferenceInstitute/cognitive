@@ -26,63 +26,58 @@ class MarkovBlanket:
     active_weights: Optional[np.ndarray] = None
     learning_rate: float = 0.01  # Learning rate for gradient descent
     
-    def update(self, observation: Dict[str, Any]) -> None:
-        """Update Markov blanket states.
+    def __init__(self, learning_rate: float = 0.01):
+        """Initialize a Markov Blanket.
         
         Args:
-            observation: Dictionary of observations to update states
-            
-        Raises:
-            ValueError: If observation has invalid format
-            TypeError: If observation values have invalid types
+            learning_rate: Learning rate for gradient descent
         """
-        if not isinstance(observation, dict):
-            raise ValueError("Observation must be a dictionary")
+        self.learning_rate = learning_rate
+        self.internal_states = {'state_0': 0.0, 'state_1': 0.0}  # Initialize with default states
+        self.external_states = {'state_0': 0.0, 'state_1': 0.0}
+        self.sensory_states = {'state_0': 0.0, 'state_1': 0.0}
+        self.active_states = {'state_0': 0.0, 'state_1': 0.0}
+        self.free_energies = []
+        self.sensory_weights = None
+        self.active_weights = None
+        
+    def update_states(self, observation: Dict[str, np.ndarray]) -> None:
+        """Update states based on new observation.
+        
+        Args:
+            observation: Dictionary containing state updates
+        """
+        # Update each state dictionary if provided in observation
+        if 'internal_states' in observation:
+            self.internal_states = {
+                f'state_{i}': float(val) if isinstance(val, np.ndarray) else float(val)
+                for i, val in enumerate(observation['internal_states'].flatten())
+            }
             
-        # Check for None values
-        for key, value in observation.items():
-            if value is None:
-                raise TypeError(f"Invalid value type for key {key}: None")
-        
-        # Handle numpy array observations
-        for state_type in ['sensory_states', 'internal_states', 'external_states', 'active_states']:
-            if state_type in observation:
-                value = observation[state_type]
-                if isinstance(value, np.ndarray):
-                    # Convert 2D array to dict with numbered keys
-                    if value.ndim == 2:
-                        self.__dict__[state_type] = {
-                            f'state_{i}': row for i, row in enumerate(value)
-                        }
-                    else:
-                        self.__dict__[state_type] = {
-                            'state': value
-                        }
-                elif isinstance(value, dict):
-                    # Ensure all values are numpy arrays
-                    processed_dict = {}
-                    for k, v in value.items():
-                        if isinstance(v, (list, tuple)):
-                            processed_dict[k] = np.array(v)
-                        elif isinstance(v, np.ndarray):
-                            processed_dict[k] = v
-                        else:
-                            processed_dict[k] = np.array([float(v)])
-                    self.__dict__[state_type] = processed_dict
-                else:
-                    # Handle scalar values
-                    self.__dict__[state_type] = {
-                        'state': np.array([float(value)])
-                    }
-        
-        # Initialize states if empty
+        if 'external_states' in observation:
+            self.external_states = {
+                f'state_{i}': float(val) if isinstance(val, np.ndarray) else float(val)
+                for i, val in enumerate(observation['external_states'].flatten())
+            }
+            
+        if 'sensory_states' in observation:
+            self.sensory_states = {
+                f'state_{i}': float(val) if isinstance(val, np.ndarray) else float(val)
+                for i, val in enumerate(observation['sensory_states'].flatten())
+            }
+            
+        if 'active_states' in observation:
+            self.active_states = {
+                f'state_{i}': float(val) if isinstance(val, np.ndarray) else float(val)
+                for i, val in enumerate(observation['active_states'].flatten())
+            }
+            
+        # Ensure internal states exist
         if not self.internal_states:
-            self.internal_states = {'x': 0.5, 'y': -0.3}  # Default initial state
-        
-        # Update internal states based on sensory input
+            self.internal_states = {'state_0': 0.0, 'state_1': 0.0}
+            
+        # Update internal and active states
         self._update_internal_states()
-        
-        # Update active states based on internal states
         self._update_active_states()
         
         # Compute and store free energy
@@ -99,31 +94,55 @@ class MarkovBlanket:
         # Get current free energy
         current_fe = self.free_energies[-1] if self.free_energies else float('inf')
         
-        # Extract vectors for computation
-        internal_vec = np.array([v for v in self.internal_states.values()])
-        sensory_vec = np.array([v for v in self.sensory_states.values()])
+        # Extract vectors for computation and ensure proper shapes
+        internal_vec = np.array([v for v in self.internal_states.values()]).reshape(-1, 1)  # Make column vector
+        sensory_vec = np.array([v for v in self.sensory_states.values()]).reshape(-1, 1)  # Make column vector
         
-        # Compute gradient of free energy with respect to internal states
-        prediction_error = sensory_vec - np.dot(self.sensory_weights, internal_vec)
-        gradient = -np.dot(self.sensory_weights.T, prediction_error)
-        
-        # Update internal states using gradient descent
-        internal_vec -= self.learning_rate * gradient
-        
-        # Update internal states dictionary
-        for i, key in enumerate(self.internal_states.keys()):
-            self.internal_states[key] = internal_vec[i]
+        # Ensure weights have correct shape
+        if self.sensory_weights is None or self.sensory_weights.shape != (sensory_vec.shape[0], internal_vec.shape[0]):
+            self.sensory_weights = np.random.randn(sensory_vec.shape[0], internal_vec.shape[0])
             
-        # Recompute free energy after update
-        self._compute_free_energy()
+        # Store original state in case we need to revert
+        original_internal = internal_vec.copy()
         
-        # Verify free energy decreased
-        new_fe = self.free_energies[-1]
-        if new_fe >= current_fe:
-            # If free energy didn't decrease, revert the update
+        # Try multiple learning rates if needed
+        learning_rates = [self.learning_rate, self.learning_rate * 0.1, self.learning_rate * 0.01]
+        success = False
+        
+        for lr in learning_rates:
+            # Compute gradient of free energy with respect to internal states
+            prediction_error = sensory_vec - np.dot(self.sensory_weights, internal_vec)
+            gradient = -np.dot(self.sensory_weights.T, prediction_error)
+            
+            # Update internal states using gradient descent
+            internal_vec = original_internal.copy()
+            internal_vec -= lr * gradient
+            
+            # Update internal states dictionary
             for i, key in enumerate(self.internal_states.keys()):
-                self.internal_states[key] = internal_vec[i] + self.learning_rate * gradient
-            self.free_energies.pop()
+                self.internal_states[key] = internal_vec[i, 0]
+                
+            # Recompute free energy after update
+            prev_fe = self.free_energies[-1]
+            self._compute_free_energy()
+            new_fe = self.free_energies[-1]
+            
+            # Check if free energy decreased
+            if new_fe < prev_fe:
+                success = True
+                break
+            else:
+                # Revert changes and remove the new free energy
+                self.free_energies.pop()
+                internal_vec = original_internal.copy()
+                for i, key in enumerate(self.internal_states.keys()):
+                    self.internal_states[key] = internal_vec[i, 0]
+                    
+        if not success:
+            # If no learning rate worked, revert to original state
+            internal_vec = original_internal
+            for i, key in enumerate(self.internal_states.keys()):
+                self.internal_states[key] = internal_vec[i, 0]
             self.free_energies.append(current_fe)
     
     def get_state(self) -> Dict[str, Dict[str, np.ndarray]]:
@@ -141,7 +160,7 @@ class MarkovBlanket:
         if not self.sensory_states:
             return
             
-        # Extract numeric values from sensory states
+        # Extract numeric values from sensory states and ensure consistent shape
         sensory_values = []
         for val in self.sensory_states.values():
             if isinstance(val, (int, float, np.number)):
@@ -154,15 +173,15 @@ class MarkovBlanket:
         if not sensory_values:
             return
             
-        # Convert to numpy array
-        sensory_vector = np.array(sensory_values)
+        # Convert to numpy array and reshape
+        sensory_vector = np.array(sensory_values).reshape(-1, 1)  # Make column vector
         
-        # Initialize or update weights
-        if self.sensory_weights is None or self.sensory_weights.shape[1] != len(sensory_vector):
-            self.sensory_weights = np.random.randn(2, len(sensory_vector))
+        # Initialize or update weights with correct shape
+        if self.sensory_weights is None or self.sensory_weights.shape != (2, sensory_vector.shape[0]):
+            self.sensory_weights = np.random.randn(2, sensory_vector.shape[0])
         
         # Compute internal state updates
-        internal_update = np.dot(self.sensory_weights, sensory_vector)
+        internal_update = np.dot(self.sensory_weights, sensory_vector).flatten()
         
         # Update internal states
         self.internal_states = {
@@ -174,7 +193,7 @@ class MarkovBlanket:
         if not self.internal_states:
             return
             
-        # Extract numeric values from internal states
+        # Extract numeric values from internal states and ensure consistent shape
         internal_values = []
         for val in self.internal_states.values():
             if isinstance(val, (int, float, np.number)):
@@ -187,15 +206,15 @@ class MarkovBlanket:
         if not internal_values:
             return
             
-        # Convert to numpy array
-        internal_vector = np.array(internal_values)
+        # Convert to numpy array and reshape
+        internal_vector = np.array(internal_values).reshape(-1, 1)  # Make column vector
         
-        # Initialize or update weights
-        if self.active_weights is None or self.active_weights.shape[1] != len(internal_vector):
-            self.active_weights = np.random.randn(2, len(internal_vector))
+        # Initialize or update weights with correct shape
+        if self.active_weights is None or self.active_weights.shape != (2, internal_vector.shape[0]):
+            self.active_weights = np.random.randn(2, internal_vector.shape[0])
         
         # Compute active state updates
-        active_update = np.dot(self.active_weights, internal_vector)
+        active_update = np.dot(self.active_weights, internal_vector).flatten()
         
         # Update active states
         self.active_states = {
@@ -207,14 +226,14 @@ class MarkovBlanket:
         if not self.internal_states or not self.sensory_states:
             return
             
-        # Extract vectors for computation
+        # Extract vectors for computation and ensure consistent shapes
         internal_vec = np.array([v.mean() if isinstance(v, np.ndarray) else float(v) 
                                for v in self.internal_states.values()]).reshape(-1, 1)  # Make column vector
         sensory_vec = np.array([v.mean() if isinstance(v, np.ndarray) else float(v)
                                for v in self.sensory_states.values()]).reshape(-1, 1)  # Make column vector
         
-        # Initialize weights if needed
-        if self.sensory_weights is None or self.sensory_weights.shape[1] != internal_vec.shape[0]:
+        # Initialize weights if needed with correct shape
+        if self.sensory_weights is None or self.sensory_weights.shape != (sensory_vec.shape[0], internal_vec.shape[0]):
             self.sensory_weights = np.random.randn(sensory_vec.shape[0], internal_vec.shape[0])
         
         # Compute prediction error

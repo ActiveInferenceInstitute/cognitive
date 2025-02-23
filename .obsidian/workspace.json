@@ -6,7 +6,7 @@
       {
         "id": "7d45e3eaaab92d8f",
         "type": "tabs",
-        "dimension": 43.92971246006389,
+        "dimension": 51.447178002894354,
         "children": [
           {
             "id": "26da5c325ed6eb0c",
@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "InferAnt_Stream.md",
+                "file": "docs/guides/learning_paths/active_inference_economic_learning_path.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "InferAnt_Stream"
+              "title": "active_inference_economic_learning_path"
             }
           }
         ]
@@ -27,7 +27,7 @@
       {
         "id": "13c8251f305a54a9",
         "type": "tabs",
-        "dimension": 56.07028753993611,
+        "dimension": 48.552821997105646,
         "children": [
           {
             "id": "4b7c14691fc0c93e",
@@ -96,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 424.5
   },
   "right": {
     "id": "fd73c31f8883ab7b",
@@ -184,30 +184,31 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "4b7c14691fc0c93e",
+  "active": "26da5c325ed6eb0c",
   "lastOpenFiles": [
-    "InferAnt_Stream.md",
-    "Things/Generic_Thing/reports/summary_20250223_133329.html",
-    "Things/Generic_Thing/reports/code_analysis_20250223_133329.json",
-    "Things/Generic_Thing/reports/test_results/integration_tests_20250223_133329.html",
-    "Things/Generic_Thing/generic_thing/visualizations/hierarchy_test_20250223_133441.png",
-    "Things/Generic_Thing/generic_thing/visualizations/message_network_20250223_133441.png",
-    "Things/Generic_Thing/generic_thing/visualizations/free_energy_history_20250223_133440.png",
-    "Things/Generic_Thing/generic_thing/visualizations/free_energy_minimization_20250223_133440.png",
+    "Things/Generic_Thing/reports/summary_20250223_135329.html",
+    "Things/Generic_Thing/reports/code_analysis_20250223_135329.json",
+    "Things/Generic_Thing/reports/test_results/integration_tests_20250223_135329.html",
+    "Things/Generic_Thing/generic_thing/visualizations/message_network_20250223_135511.png",
+    "Things/Generic_Thing/generic_thing/visualizations/free_energy_history_20250223_135510.png",
+    "Things/Generic_Thing/generic_thing/visualizations/free_energy_minimization_20250223_135509.png",
+    "Things/Generic_Thing/generic_thing/visualizations/hierarchy_test_20250223_135508.png",
+    "Things/Generic_Thing/generic_thing/visualizations/belief_uncertainty_20250223_135346.png",
+    "Things/Generic_Thing/reports/test_results/unit_tests_20250223_135329.html",
+    "Things/Generic_Thing/reports/test_results/visual_tests_20250223_135329.html",
     "Things/Generic_Thing/README.md",
-    "Things/Generic_Thing/generic_thing/visualizations/belief_uncertainty_20250223_133341.png",
-    "Things/Generic_Thing/reports/test_results/unit_tests_20250223_133329.html",
-    "Things/Generic_Thing/reports/test_results/visual_tests_20250223_133329.html",
-    "Things/Generic_Thing/reports/summary_20250223_133044.html",
-    "Things/Generic_Thing/reports/code_analysis_20250223_133044.json",
-    "Things/Generic_Thing/reports/test_results/integration_tests_20250223_133044.html",
-    "Things/Generic_Thing/generic_thing/visualizations/message_network_20250223_133155.png",
-    "Things/Generic_Thing/generic_thing/visualizations/belief_uncertainty_20250223_133100.png",
-    "Things/Generic_Thing/generic_thing/visualizations/hierarchy_test_20250223_133100.png",
-    "Things/Generic_Thing/generic_thing/visualizations/free_energy_history_20250223_133100.png",
-    "Things/Generic_Thing/generic_thing/visualizations/free_energy_minimization_20250223_133059.png",
-    "Things/Generic_Thing/reports/test_results/unit_tests_20250223_133044.html",
-    "Things/Generic_Thing/reports/test_results/visual_tests_20250223_133044.html",
+    "Things/Generic_Thing/reports/summary_20250223_134851.html",
+    "Things/Generic_Thing/reports/code_analysis_20250223_134851.json",
+    "Things/Generic_Thing/reports/test_results/integration_tests_20250223_134851.html",
+    "Things/Generic_Thing/generic_thing/visualizations/belief_uncertainty_20250223_135027.png",
+    "Things/Generic_Thing/generic_thing/visualizations/hierarchy_test_20250223_135025.png",
+    "Things/Generic_Thing/generic_thing/visualizations/message_network_20250223_135025.png",
+    "Things/Generic_Thing/generic_thing/visualizations/free_energy_history_20250223_135024.png",
+    "Things/Generic_Thing/generic_thing/visualizations/free_energy_minimization_20250223_135024.png",
+    "Things/Generic_Thing/reports/test_results/unit_tests_20250223_134851.html",
+    "Things/Generic_Thing/reports/test_results/visual_tests_20250223_134851.html",
+    "Things/Generic_Thing/reports/summary_20250223_134416.html",
+    "InferAnt_Stream.md",
     "Things/Generic_Thing/docs/Active_Inference.md",
     "knowledge_base/cognitive/skill_acquisition.md",
     "Things/Generic_Thing/docs/Free_Energy_Principle.md",

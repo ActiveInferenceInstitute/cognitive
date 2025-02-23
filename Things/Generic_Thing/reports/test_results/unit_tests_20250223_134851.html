@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">unit_tests_20250223_134851.html</title>
+      <style type="text/css">body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  /* do not increase min-width as some may use split screens */
+  min-width: 800px;
+  color: #999;
+}
+
+h1 {
+  font-size: 24px;
+  color: black;
+}
+
+h2 {
+  font-size: 16px;
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+a {
+  color: #999;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/******************************
+ * SUMMARY INFORMATION
+ ******************************/
+#environment td {
+  padding: 5px;
+  border: 1px solid #e6e6e6;
+  vertical-align: top;
+}
+#environment tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+#environment ul {
+  margin: 0;
+  padding: 0 20px;
+}
+
+/******************************
+ * TEST RESULT COLORS
+ ******************************/
+span.passed,
+.passed .col-result {
+  color: green;
+}
+
+span.skipped,
+span.xfailed,
+span.rerun,
+.skipped .col-result,
+.xfailed .col-result,
+.rerun .col-result {
+  color: orange;
+}
+
+span.error,
+span.failed,
+span.xpassed,
+.error .col-result,
+.failed .col-result,
+.xpassed .col-result {
+  color: red;
+}
+
+.col-links__extra {
+  margin-right: 3px;
+}
+
+/******************************
+ * RESULTS TABLE
+ *
+ * 1. Table Layout
+ * 2. Extra
+ * 3. Sorting items
+ *
+ ******************************/
+/*------------------
+ * 1. Table Layout
+ *------------------*/
+#results-table {
+  border: 1px solid #e6e6e6;
+  color: #999;
+  font-size: 12px;
+  width: 100%;
+}
+#results-table th,
+#results-table td {
+  padding: 5px;
+  border: 1px solid #e6e6e6;
+  text-align: left;
+}
+#results-table th {
+  font-weight: bold;
+}
+
+/*------------------
+ * 2. Extra
+ *------------------*/
+.logwrapper {
+  max-height: 230px;
+  overflow-y: scroll;
+  background-color: #e6e6e6;
+}
+.logwrapper.expanded {
+  max-height: none;
+}
+.logwrapper.expanded .logexpander:after {
+  content: "collapse [-]";
+}
+.logwrapper .logexpander {
+  z-index: 1;
+  position: sticky;
+  top: 10px;
+  width: max-content;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 5px 7px;
+  margin: 10px 0 10px calc(100% - 80px);
+  cursor: pointer;
+  background-color: #e6e6e6;
+}
+.logwrapper .logexpander:after {
+  content: "expand [+]";
+}
+.logwrapper .logexpander:hover {
+  color: #000;
+  border-color: #000;
+}
+.logwrapper .log {
+  min-height: 40px;
+  position: relative;
+  top: -50px;
+  height: calc(100% + 50px);
+  border: 1px solid #e6e6e6;
+  color: black;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  padding: 5px;
+  padding-right: 80px;
+  white-space: pre-wrap;
+}
+
+div.media {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin: 0 5px;
+  overflow: hidden;
+  width: 320px;
+}
+
+.media-container {
+  display: grid;
+  grid-template-columns: 25px auto 25px;
+  align-items: center;
+  flex: 1 1;
+  overflow: hidden;
+  height: 200px;
+}
+
+.media-container--fullscreen {
+  grid-template-columns: 0px auto 0px;
+}
+
+.media-container__nav--right,
+.media-container__nav--left {
+  text-align: center;
+  cursor: pointer;
+}
+
+.media-container__viewport {
+  cursor: pointer;
+  text-align: center;
+  height: inherit;
+}
+.media-container__viewport img,
+.media-container__viewport video {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.media__name,
+.media__counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex: 0 0 25px;
+  align-items: center;
+}
+
+.collapsible td:not(.col-links) {
+  cursor: pointer;
+}
+.collapsible td:not(.col-links):hover::after {
+  color: #bbb;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.col-result {
+  width: 130px;
+}
+.col-result:hover::after {
+  content: " (hide details)";
+}
+
+.col-result.collapsed:hover::after {
+  content: " (show details)";
+}
+
+#environment-header h2:hover::after {
+  content: " (hide details)";
+  color: #bbb;
+  font-style: italic;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#environment-header.collapsed h2:hover::after {
+  content: " (show details)";
+  color: #bbb;
+  font-style: italic;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/*------------------
+ * 3. Sorting items
+ *------------------*/
+.sortable {
+  cursor: pointer;
+}
+.sortable.desc:after {
+  content: " ";
+  position: relative;
+  left: 5px;
+  bottom: -12.5px;
+  border: 10px solid #4caf50;
+  border-bottom: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.sortable.asc:after {
+  content: " ";
+  position: relative;
+  left: 5px;
+  bottom: 12.5px;
+  border: 10px solid #4caf50;
+  border-top: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.hidden, .summary__reload__button.hidden {
+  display: none;
+}
+
+.summary__data {
+  flex: 0 0 550px;
+}
+.summary__reload {
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+}
+.summary__reload__button {
+  flex: 0 0 300px;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  background-color: #4caf50;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.summary__reload__button:hover {
+  background-color: #46a049;
+}
+.summary__spacer {
+  flex: 0 0 550px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters,
+.collapse {
+  display: flex;
+  align-items: center;
+}
+.filters button,
+.collapse button {
+  color: #999;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.filters button:hover,
+.collapse button:hover {
+  color: #ccc;
+}
+
+.filter__label {
+  margin-right: 10px;
+}
+
+      </style>
+    
+  </head>
+  <body>
+    <h1 id="title">unit_tests_20250223_134851.html</h1>
+    <p>Report generated on 23-Feb-2025 at 13:50:29 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.1.1</p>
+    <div id="environment-header">
+      <h2>Environment</h2>
+    </div>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_results-table__body--empty">
+      <tbody class="results-table-row">
+        <tr id="not-found-message">
+          <td colspan="4">No results found. Check the filters.</th>
+        </tr>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr class="collapsible">
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  <div class="media-container__nav--left"><</div>
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="media-container__nav--right">></div>
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="logwrapper">
+              <div class="logexpander"></div>
+              <div class="log"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        <div class="additional-summary prefix">
+        </div>
+        <p class="run-count">51 tests took 00:01:22.</p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button hidden" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to get the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+        <div class="controls">
+          <div class="filters">
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" />
+            <span class="failed">8 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" />
+            <span class="passed">43 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
+            <span class="skipped">0 Skipped,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
+            <span class="xfailed">0 Expected failures,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xpassed" disabled/>
+            <span class="xpassed">0 Unexpected passes,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="error" disabled/>
+            <span class="error">0 Errors,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="rerun" disabled/>
+            <span class="rerun">0 Reruns</span>
+          </div>
+          <div class="collapse">
+            <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-summary summary">
+      </div>
+      <div class="additional-summary postfix">
+      </div>
+    </div>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </table>
+  </body>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.10.12&#34;, &#34;Platform&#34;: &#34;Linux-6.9.3-76060903-generic-x86_64-with-glibc2.35&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;8.3.4&#34;, &#34;pluggy&#34;: &#34;1.5.0&#34;}, &#34;Plugins&#34;: {&#34;clarity&#34;: &#34;1.0.1&#34;, &#34;hypothesis&#34;: &#34;6.111.2&#34;, &#34;randomly&#34;: &#34;3.16.0&#34;, &#34;jaxtyping&#34;: &#34;0.2.33&#34;, &#34;anyio&#34;: &#34;4.4.0&#34;, &#34;xdist&#34;: &#34;3.6.1&#34;, &#34;timeout&#34;: &#34;2.3.1&#34;, &#34;mock&#34;: &#34;3.14.0&#34;, &#34;asyncio&#34;: &#34;0.25.3&#34;, &#34;cov&#34;: &#34;6.0.0&#34;, &#34;benchmark&#34;: &#34;5.1.0&#34;, &#34;sugar&#34;: &#34;1.0.0&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;, &#34;typeguard&#34;: &#34;2.13.3&#34;, &#34;html&#34;: &#34;4.1.1&#34;}}, &#34;tests&#34;: {&#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_active_state_computation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_active_state_computation&#34;, &#34;duration&#34;: &#34;6 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_markov_blanket.py::TestMarkovBlanket::test_active_state_computation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;6 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_markov_blanket:test_markov_blanket.py:22 Created MarkovBlanket test instance\nINFO     root:test_utils.py:29 Running test: test_active_state_computation\nINFO     root:test_utils.py:31 Test completed: test_active_state_computation\n\n&#34;}], &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_state_consistency&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_state_consistency&#34;, &#34;duration&#34;: &#34;4 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_markov_blanket.py::TestMarkovBlanket::test_state_consistency&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;4 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;tests/test_markov_blanket.py:126: in test_state_consistency\n    state[&amp;#x27;sensory_states&amp;#x27;][key],\nE   KeyError: &amp;#x27;internal_states&amp;#x27;\n        key        = &amp;#x27;internal_states&amp;#x27;\n        observation = {&amp;#x27;active_states&amp;#x27;: array([[0.05057664, 0.71610228],\n       [0.9381364 , 0.79156873]]),\n &amp;#x27;external_states&amp;#x27;: array([[0.18358947, 0.08656657],\n       [0.13249549, 0.70947457]]),\n &amp;#x27;free_energies&amp;#x27;: array([0.91405916, 0.97438228]),\n &amp;#x27;internal_states&amp;#x27;: array([[0.76543299, 0.06065887, 0.49929537],\n       [0.91318716, 0.2449631 , 0.06530049]]),\n &amp;#x27;internal_states_mb&amp;#x27;: array([[0.57232018, 0.56984563, 0.6129045 ],\n       [0.59209253, 0.72168427, 0.47519592]]),\n &amp;#x27;observations&amp;#x27;: array([[0.86752723, 0.57920869],\n       [0.49809245, 0.83632482]]),\n &amp;#x27;posterior&amp;#x27;: array([[0.74798312, 0.69370029, 0.72598183],\n       [0.31689281, 0.08527856, 0.64750736]]),\n &amp;#x27;prior&amp;#x27;: array([[0.6182045 , 0.40897556, 0.36395055],\n       [0.92533707, 0.90106038, 0.6318239 ]]),\n &amp;#x27;sensory_states&amp;#x27;: array([[0.59560819, 0.16556073],\n       [0.48606079, 0.1654632 ]]),\n &amp;#x27;timesteps&amp;#x27;: array([0, 1])}\n        self       = &amp;lt;Things.Generic_Thing.tests.test_markov_blanket.TestMarkovBlanket testMethod=test_state_consistency&amp;gt;\n        state      = {&amp;#x27;active_states&amp;#x27;: {&amp;#x27;state_0&amp;#x27;: 0.35078087664132174,\n                   &amp;#x27;state_1&amp;#x27;: -0.24947182367963847},\n &amp;#x27;external_states&amp;#x27;: {&amp;#x27;state_0&amp;#x27;: array([0.18358947, 0.08656657]),\n                     &amp;#x27;state_1&amp;#x27;: array([0.13249549, 0.70947457])},\n &amp;#x27;free_energies&amp;#x27;: [2.7532071535219234, 1.51464499093955],\n &amp;#x27;internal_states&amp;#x27;: {&amp;#x27;state_0&amp;#x27;: 1.6323637598147243,\n                     &amp;#x27;state_1&amp;#x27;: 0.3169879793826611},\n &amp;#x27;sensory_states&amp;#x27;: {&amp;#x27;state_0&amp;#x27;: array([0.59560819, 0.16556073]),\n                    &amp;#x27;state_1&amp;#x27;: array([0.48606079, 0.1654632 ])}}\n        value      = array([[0.76543299, 0.06065887, 0.49929537],\n       [0.91318716, 0.2449631 , 0.06530049]])\n\n------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_markov_blanket:test_markov_blanket.py:22 Created MarkovBlanket test instance\nINFO     root:test_utils.py:29 Running test: test_state_consistency\n\n&#34;}], &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_state_update&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_state_update&#34;, &#34;duration&#34;: &#34;7 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_markov_blanket.py::TestMarkovBlanket::test_state_update&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;7 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_markov_blanket:test_markov_blanket.py:22 Created MarkovBlanket test instance\nINFO     root:test_utils.py:29 Running test: test_state_update\nINFO     Things.Generic_Thing.tests.test_markov_blanket:test_markov_blanket.py:60 Updated states with observation: {&amp;#x27;x&amp;#x27;: 0.5, &amp;#x27;y&amp;#x27;: -0.3}\nINFO     root:test_utils.py:31 Test completed: test_state_update\n\n&#34;}], &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_internal_state_computation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_internal_state_computation&#34;, &#34;duration&#34;: &#34;3 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_markov_blanket.py::TestMarkovBlanket::test_internal_state_computation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;3 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_markov_blanket:test_markov_blanket.py:22 Created MarkovBlanket test instance\nINFO     root:test_utils.py:29 Running test: test_internal_state_computation\nINFO     root:test_utils.py:31 Test completed: test_internal_state_computation\n\n&#34;}], &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_initialization&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_initialization&#34;, &#34;duration&#34;: &#34;4 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_markov_blanket.py::TestMarkovBlanket::test_initialization&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;4 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_markov_blanket:test_markov_blanket.py:22 Created MarkovBlanket test instance\nINFO     root:test_utils.py:29 Running test: test_initialization\nINFO     root:test_utils.py:31 Test completed: test_initialization\n\n&#34;}], &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_error_handling&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_error_handling&#34;, &#34;duration&#34;: &#34;5 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_markov_blanket.py::TestMarkovBlanket::test_error_handling&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;5 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_markov_blanket:test_markov_blanket.py:22 Created MarkovBlanket test instance\nINFO     root:test_utils.py:29 Running test: test_error_handling\nINFO     root:test_utils.py:31 Test completed: test_error_handling\n\n&#34;}], &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_weight_updates&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_markov_blanket.py::TestMarkovBlanket::test_weight_updates&#34;, &#34;duration&#34;: &#34;4 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_markov_blanket.py::TestMarkovBlanket::test_weight_updates&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;4 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_markov_blanket:test_markov_blanket.py:22 Created MarkovBlanket test instance\nINFO     root:test_utils.py:29 Running test: test_weight_updates\nINFO     root:test_utils.py:31 Test completed: test_weight_updates\n\n&#34;}], &#34;tests/test_visualization.py::test_plot_free_energy_landscape&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_visualization.py::test_plot_free_energy_landscape&#34;, &#34;duration&#34;: &#34;961 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_visualization.py::test_plot_free_energy_landscape&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;961 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\n\n------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:70 Plotting free energy landscape\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/free_energy_landscape.png\n\n&#34;}], &#34;tests/test_visualization.py::test_plot_markov_blanket_states&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_visualization.py::test_plot_markov_blanket_states&#34;, &#34;duration&#34;: &#34;226 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_visualization.py::test_plot_markov_blanket_states&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;226 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\n\n------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:141 Plotting Markov blanket states\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/markov_blanket.png\n\n&#34;}], &#34;tests/test_visualization.py::test_plot_belief_updates&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_visualization.py::test_plot_belief_updates&#34;, &#34;duration&#34;: &#34;461 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_visualization.py::test_plot_belief_updates&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;461 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\n\n------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:109 Plotting belief updates\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/belief_updates.png\n\n&#34;}], &#34;tests/test_visualization.py::TestVisualization::test_belief_updates&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_visualization.py::TestVisualization::test_belief_updates&#34;, &#34;duration&#34;: &#34;435 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_visualization.py::TestVisualization::test_belief_updates&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;435 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\nINFO     Things.Generic_Thing.tests.test_visualization:test_visualization.py:25 Created Visualizer test instance\nINFO     root:test_utils.py:29 Running test: test_belief_updates\nINFO     generic_thing.visualization:visualization.py:109 Plotting belief updates\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/test_belief_updates.png\nINFO     root:test_utils.py:31 Test completed: test_belief_updates\n\n&#34;}], &#34;tests/test_visualization.py::TestVisualization::test_free_energy_landscape&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_visualization.py::TestVisualization::test_free_energy_landscape&#34;, &#34;duration&#34;: &#34;706 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_visualization.py::TestVisualization::test_free_energy_landscape&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;706 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\nINFO     Things.Generic_Thing.tests.test_visualization:test_visualization.py:25 Created Visualizer test instance\nINFO     root:test_utils.py:29 Running test: test_free_energy_landscape\nINFO     generic_thing.visualization:visualization.py:70 Plotting free energy landscape\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/test_fe_landscape.png\nINFO     root:test_utils.py:31 Test completed: test_free_energy_landscape\n\n&#34;}], &#34;tests/test_visualization.py::TestVisualization::test_message_network_dynamics&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_visualization.py::TestVisualization::test_message_network_dynamics&#34;, &#34;duration&#34;: &#34;440 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_visualization.py::TestVisualization::test_message_network_dynamics&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;440 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\nINFO     Things.Generic_Thing.tests.test_visualization:test_visualization.py:25 Created Visualizer test instance\nINFO     root:test_utils.py:29 Running test: test_message_network_dynamics\nINFO     generic_thing.visualization:visualization.py:182 Plotting message network dynamics\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/test_message_network.png\nINFO     root:test_utils.py:31 Test completed: test_message_network_dynamics\n\n&#34;}], &#34;tests/test_visualization.py::TestVisualization::test_markov_blanket_states&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_visualization.py::TestVisualization::test_markov_blanket_states&#34;, &#34;duration&#34;: &#34;235 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_visualization.py::TestVisualization::test_markov_blanket_states&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;235 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\nINFO     Things.Generic_Thing.tests.test_visualization:test_visualization.py:25 Created Visualizer test instance\nINFO     root:test_utils.py:29 Running test: test_markov_blanket_states\nINFO     generic_thing.visualization:visualization.py:141 Plotting Markov blanket states\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/test_mb_states.png\nINFO     root:test_utils.py:31 Test completed: test_markov_blanket_states\n\n&#34;}], &#34;tests/test_repertoires.py::TestRepertoires::test_temporal_repertoire_evolution&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_repertoires.py::TestRepertoires::test_temporal_repertoire_evolution&#34;, &#34;duration&#34;: &#34;00:00:15&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_repertoires.py::TestRepertoires::test_temporal_repertoire_evolution&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:15&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\nINFO     generic_thing.core:core.py:58 Created Sensor Thing instance\nINFO     generic_thing.core:core.py:58 Created Processor Thing instance\nINFO     generic_thing.core:core.py:58 Created Actuator Thing instance\nINFO     Things.Generic_Thing.tests.test_repertoires:test_repertoires.py:39 Created test Things with repertoires\nINFO     root:test_utils.py:29 Running test: test_temporal_repertoire_evolution\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/repertoire_evolution.png\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/temporal_analysis.png\nINFO     root:test_utils.py:31 Test completed: test_temporal_repertoire_evolution\n\n&#34;}], &#34;tests/test_repertoires.py::TestRepertoires::test_repertoire_interactions&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_repertoires.py::TestRepertoires::test_repertoire_interactions&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_repertoires.py::TestRepertoires::test_repertoire_interactions&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\nINFO     generic_thing.core:core.py:58 Created Sensor Thing instance\nINFO     generic_thing.core:core.py:58 Created Processor Thing instance\nINFO     generic_thing.core:core.py:58 Created Actuator Thing instance\nINFO     Things.Generic_Thing.tests.test_repertoires:test_repertoires.py:39 Created test Things with repertoires\nINFO     root:test_utils.py:29 Running test: test_repertoire_interactions\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/repertoire_interactions.png\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/interaction_analysis.png\nINFO     root:test_utils.py:31 Test completed: test_repertoire_interactions\n\n&#34;}], &#34;tests/test_repertoires.py::TestRepertoires::test_repertoire_visualization&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_repertoires.py::TestRepertoires::test_repertoire_visualization&#34;, &#34;duration&#34;: &#34;00:00:54&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_repertoires.py::TestRepertoires::test_repertoire_visualization&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:54&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\nINFO     generic_thing.core:core.py:58 Created Sensor Thing instance\nINFO     generic_thing.core:core.py:58 Created Processor Thing instance\nINFO     generic_thing.core:core.py:58 Created Actuator Thing instance\nINFO     Things.Generic_Thing.tests.test_repertoires:test_repertoires.py:39 Created test Things with repertoires\nINFO     root:test_utils.py:29 Running test: test_repertoire_visualization\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/sensor_repertoire.png\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/sensor_details.png\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/processor_repertoire.png\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/processor_details.png\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/actuator_repertoire.png\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     matplotlib.category:category.py:223 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/actuator_details.png\nINFO     root:test_utils.py:31 Test completed: test_repertoire_visualization\n\n&#34;}], &#34;tests/test_free_energy.py::TestFreeEnergy::test_expected_free_energy&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_free_energy.py::TestFreeEnergy::test_expected_free_energy&#34;, &#34;duration&#34;: &#34;9 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_free_energy.py::TestFreeEnergy::test_expected_free_energy&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;9 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:23 Created FreeEnergy test instance\nINFO     root:test_utils.py:29 Running test: test_expected_free_energy\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:267 EFE comparison - Good action: 0.12750000000000003, Bad action: 0.6475000000000002\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:268 EFE comparison - Certain: 0.2587375, Uncertain: 0.2554166666666667\nINFO     root:test_utils.py:31 Test completed: test_expected_free_energy\n\n&#34;}], &#34;tests/test_free_energy.py::TestFreeEnergy::test_free_energy_minimization&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_free_energy.py::TestFreeEnergy::test_free_energy_minimization&#34;, &#34;duration&#34;: &#34;685 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_free_energy.py::TestFreeEnergy::test_free_energy_minimization&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;685 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:23 Created FreeEnergy test instance\nINFO     root:test_utils.py:29 Running test: test_free_energy_minimization\nINFO     generic_thing.tests.test_utils:test_utils.py:90 Plotting free energy history\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/free_energy_minimization_20250223_135024.png\nINFO     root:test_utils.py:31 Test completed: test_free_energy_minimization\n\n&#34;}], &#34;tests/test_free_energy.py::TestFreeEnergy::test_parameter_updates&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_free_energy.py::TestFreeEnergy::test_parameter_updates&#34;, &#34;duration&#34;: &#34;5 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_free_energy.py::TestFreeEnergy::test_parameter_updates&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;5 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:23 Created FreeEnergy test instance\nINFO     root:test_utils.py:29 Running test: test_parameter_updates\nINFO     root:test_utils.py:31 Test completed: test_parameter_updates\n\n&#34;}], &#34;tests/test_free_energy.py::TestFreeEnergy::test_free_energy_computation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_free_energy.py::TestFreeEnergy::test_free_energy_computation&#34;, &#34;duration&#34;: &#34;5 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_free_energy.py::TestFreeEnergy::test_free_energy_computation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;5 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:23 Created FreeEnergy test instance\nINFO     root:test_utils.py:29 Running test: test_free_energy_computation\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:67 Computed free energy: 0.15000000000000002\nINFO     root:test_utils.py:31 Test completed: test_free_energy_computation\n\n&#34;}], &#34;tests/test_free_energy.py::TestFreeEnergy::test_error_handling&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_free_energy.py::TestFreeEnergy::test_error_handling&#34;, &#34;duration&#34;: &#34;8 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_free_energy.py::TestFreeEnergy::test_error_handling&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;8 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:23 Created FreeEnergy test instance\nINFO     root:test_utils.py:29 Running test: test_error_handling\nINFO     root:test_utils.py:31 Test completed: test_error_handling\n\n&#34;}], &#34;tests/test_free_energy.py::TestFreeEnergy::test_history_tracking&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_free_energy.py::TestFreeEnergy::test_history_tracking&#34;, &#34;duration&#34;: &#34;622 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_free_energy.py::TestFreeEnergy::test_history_tracking&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;622 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:23 Created FreeEnergy test instance\nINFO     root:test_utils.py:29 Running test: test_history_tracking\nINFO     generic_thing.tests.test_utils:test_utils.py:90 Plotting free energy history\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/free_energy_history_20250223_135024.png\nINFO     root:test_utils.py:31 Test completed: test_history_tracking\n\n&#34;}], &#34;tests/test_free_energy.py::TestFreeEnergy::test_action_selection&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_free_energy.py::TestFreeEnergy::test_action_selection&#34;, &#34;duration&#34;: &#34;8 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_free_energy.py::TestFreeEnergy::test_action_selection&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;8 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:23 Created FreeEnergy test instance\nINFO     root:test_utils.py:29 Running test: test_action_selection\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:126 Selected actions: {&amp;#x27;action_x&amp;#x27;: -0.30000000000000004, &amp;#x27;action_y&amp;#x27;: -0.19999999999999998}\nINFO     root:test_utils.py:31 Test completed: test_action_selection\n\n&#34;}], &#34;tests/test_free_energy.py::TestFreeEnergy::test_initialization&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_free_energy.py::TestFreeEnergy::test_initialization&#34;, &#34;duration&#34;: &#34;6 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_free_energy.py::TestFreeEnergy::test_initialization&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;6 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_free_energy:test_free_energy.py:23 Created FreeEnergy test instance\nINFO     root:test_utils.py:29 Running test: test_initialization\nINFO     root:test_utils.py:31 Test completed: test_initialization\n\n&#34;}], &#34;tests/test_message_passing.py::TestMessagePassing::test_message_receiving&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_message_passing.py::TestMessagePassing::test_message_receiving&#34;, &#34;duration&#34;: &#34;10 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_message_passing.py::TestMessagePassing::test_message_receiving&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;10 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_message_passing:test_message_passing.py:37 Created MessagePassing test instances\nINFO     root:test_utils.py:29 Running test: test_message_receiving\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from thing2 to thing1\nINFO     generic_thing.message_passing:message_passing.py:225 Sent message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for thing2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:225 Sent message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for thing2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:225 Sent message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for thing2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 3 messages for thing2\nINFO     Things.Generic_Thing.tests.test_message_passing:test_message_passing.py:137 Received 3 messages\nINFO     root:test_utils.py:31 Test completed: test_message_receiving\n\n&#34;}], &#34;tests/test_message_passing.py::TestMessagePassing::test_error_handling&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_message_passing.py::TestMessagePassing::test_error_handling&#34;, &#34;duration&#34;: &#34;8 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_message_passing.py::TestMessagePassing::test_error_handling&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;8 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;tests/test_message_passing.py:215: in test_error_handling\n    self.mp1.send_message(Message(\n        self       = &amp;lt;Things.Generic_Thing.tests.test_message_passing.TestMessagePassing testMethod=test_error_handling&amp;gt;\n        test_func  = &amp;lt;function TestMessagePassing.test_error_handling.&amp;lt;locals&amp;gt;.test_func at 0x746ff552a560&amp;gt;\ngeneric_thing/message_passing.py:220: in send_message\n    raise ValueError(f&amp;quot;Invalid target ID: {message.target_id}&amp;quot;)\nE   ValueError: Invalid target ID: thing2\n\n------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_message_passing:test_message_passing.py:37 Created MessagePassing test instances\nINFO     root:test_utils.py:29 Running test: test_error_handling\n\n&#34;}], &#34;tests/test_message_passing.py::TestMessagePassing::test_message_propagation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_message_passing.py::TestMessagePassing::test_message_propagation&#34;, &#34;duration&#34;: &#34;6 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_message_passing.py::TestMessagePassing::test_message_propagation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;6 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;tests/test_message_passing.py:90: in test_message_propagation\n    self.assertEqual(len(self.mp1.outgoing_queue), 1)\nE   AssertionError: 0 != 1\n        message    = Message(source_id=&amp;#x27;thing1&amp;#x27;,\n        target_id=&amp;#x27;thing2&amp;#x27;,\n        content={&amp;#x27;active_states&amp;#x27;: array([[0.05045645, 0.75412526],\n       [0.30160032, 0.09417598],\n       [0.80026956, 0.32913552],\n       [0.09556178, 0.64977016],\n       [0.54700054, 0.34474784],\n       [0.96034082, 0.66891731],\n       [0.2259461 , 0.96284879],\n       [0.18894897, 0.24047028],\n       [0.30747062, 0.09966153],\n       [0.21125117, 0.29008286]]),\n                 &amp;#x27;external_states&amp;#x27;: array([[0.48606079, 0.1654632 ],\n       [0.57232018, 0.56984563],\n       [0.6129045 , 0.59209253],\n       [0.72168427, 0.47519592],\n       [0.05057664, 0.71610228],\n       [0.9381364 , 0.79156873],\n       [0.43497982, 0.62940979],\n       [0.41277537, 0.71528013],\n       [0.44871002, 0.57562563],\n       [0.31224657, 0.34411883]]),\n                 &amp;#x27;free_energies&amp;#x27;: array([0.11096156, 0.0123889 , 0.63121863, 0.40841161, 0.60345925,\n       0.95774102, 0.77512412, 0.16325271, 0.18709737, 0.10369813]),\n                 &amp;#x27;internal_states&amp;#x27;: array([[0.76543299, 0.06065887, 0.49929537],\n       [0.91318716, 0.2449631 , 0.06530049],\n       [0.18358947, 0.08656657, 0.13249549],\n       [0.70947457, 0.91405916, 0.97438228],\n       [0.6182045 , 0.40897556, 0.36395055],\n       [0.92533707, 0.90106038, 0.6318239 ],\n       [0.74798312, 0.69370029, 0.72598183],\n       [0.31689281, 0.08527856, 0.64750736],\n       [0.86752723, 0.57920869, 0.49809245],\n       [0.83632482, 0.59560819, 0.16556073]]),\n                 &amp;#x27;internal_states_mb&amp;#x27;: array([[0.65165239, 0.5216801 , 0.25809186],\n       [0.85535319, 0.54397602, 0.56525292],\n       [0.70256247, 0.73496097, 0.63605119],\n       [0.67951336, 0.43108624, 0.3858815 ],\n       [0.43737691, 0.0503826 , 0.09217713],\n       [0.24690824, 0.01652971, 0.98250021],\n       [0.65423093, 0.83467412, 0.08102381],\n       [0.50497586, 0.45453426, 0.39327032],\n       [0.44381182, 0.56369762, 0.90314176],\n       [0.92404867, 0.0375157 , 0.54875422]]),\n                 &amp;#x27;observations&amp;#x27;: array([[0.09094376, 0.21756385],\n       [0.48610226, 0.48537919],\n       [0.52416829, 0.05243181],\n       [0.02726134, 0.49280177],\n       [0.65643452, 0.37108249],\n       [0.51714537, 0.11644187],\n       [0.17933193, 0.34039521],\n       [0.89852449, 0.66688562],\n       [0.53403096, 0.47426128],\n       [0.25614635, 0.75275418]]),\n                 &amp;#x27;posterior&amp;#x27;: array([[0.0317769 , 0.63450518, 0.0146601 ],\n       [0.25835423, 0.4137909 , 0.85006343],\n       [0.16317517, 0.91110918, 0.91945189],\n       [0.67934409, 0.96477696, 0.25073902],\n       [0.38441468, 0.94053148, 0.82415214],\n       [0.97104639, 0.22452217, 0.39189045],\n       [0.40691176, 0.20613433, 0.57698182],\n       [0.42034991, 0.848934  , 0.92421113],\n       [0.11998806, 0.86134204, 0.02417903],\n       [0.20363814, 0.31684165, 0.50588636]]),\n                 &amp;#x27;prior&amp;#x27;: array([[0.46644279, 0.08832842, 0.60268822],\n       [0.21140408, 0.91355628, 0.86644168],\n       [0.40908268, 0.07164093, 0.68957995],\n       [0.08489622, 0.79569894, 0.42493917],\n       [0.46753774, 0.50046492, 0.83979459],\n       [0.53667533, 0.80599117, 0.64950791],\n       [0.47890591, 0.2521061 , 0.43093626],\n       [0.30312334, 0.57242174, 0.17006519],\n       [0.64087784, 0.33709926, 0.34571985],\n       [0.10760417, 0.61801283, 0.66884087]]),\n                 &amp;#x27;sensory_states&amp;#x27;: array([[0.1873579 , 0.69921175],\n       [0.94488697, 0.53206092],\n       [0.42807303, 0.39449036],\n       [0.15391245, 0.30717228],\n       [0.63120748, 0.94411666],\n       [0.66369459, 0.02640579],\n       [0.49419823, 0.03592833],\n       [0.19952143, 0.15027353],\n       [0.4483714 , 0.46812354],\n       [0.04323992, 0.29311901]]),\n                 &amp;#x27;timesteps&amp;#x27;: array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])},\n        message_type=&amp;#x27;test&amp;#x27;,\n        timestamp=numpy.datetime64(&amp;#x27;2025-02-23T21:50:25&amp;#x27;))\n        self       = &amp;lt;Things.Generic_Thing.tests.test_message_passing.TestMessagePassing testMethod=test_message_propagation&amp;gt;\n\n------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_message_passing:test_message_passing.py:37 Created MessagePassing test instances\nINFO     root:test_utils.py:29 Running test: test_message_propagation\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from thing2 to thing1\nINFO     generic_thing.message_passing:message_passing.py:225 Sent message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for thing2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from thing1 to thing2\n\n&#34;}], &#34;tests/test_message_passing.py::TestMessagePassing::test_message_history&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_message_passing.py::TestMessagePassing::test_message_history&#34;, &#34;duration&#34;: &#34;6 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_message_passing.py::TestMessagePassing::test_message_history&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;6 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_message_passing:test_message_passing.py:37 Created MessagePassing test instances\nINFO     root:test_utils.py:29 Running test: test_message_history\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from thing2 to thing1\nINFO     generic_thing.message_passing:message_passing.py:225 Sent message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for thing2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:225 Sent message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for thing2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:225 Sent message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for thing2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:225 Sent message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for thing2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:225 Sent message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for thing2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from thing1 to thing2\nINFO     root:test_utils.py:31 Test completed: test_message_history\n\n&#34;}], &#34;tests/test_message_passing.py::TestMessagePassing::test_connection_management&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_message_passing.py::TestMessagePassing::test_connection_management&#34;, &#34;duration&#34;: &#34;281 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_message_passing.py::TestMessagePassing::test_connection_management&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;281 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_message_passing:test_message_passing.py:37 Created MessagePassing test instances\nINFO     root:test_utils.py:29 Running test: test_connection_management\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from thing2 to thing1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from thing2 to thing3\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from thing3 to thing2\nINFO     generic_thing.tests.test_utils:test_utils.py:105 Plotting message network\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/message_network_20250223_135025.png\nINFO     generic_thing.message_passing:message_passing.py:155 Removed connection from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:160 Removed connection from thing2 to thing1\nINFO     root:test_utils.py:31 Test completed: test_connection_management\n\n&#34;}], &#34;tests/test_message_passing.py::TestMessagePassing::test_initialization&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_message_passing.py::TestMessagePassing::test_initialization&#34;, &#34;duration&#34;: &#34;7 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_message_passing.py::TestMessagePassing::test_initialization&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;7 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_message_passing:test_message_passing.py:37 Created MessagePassing test instances\nINFO     root:test_utils.py:29 Running test: test_initialization\nINFO     root:test_utils.py:31 Test completed: test_initialization\n\n&#34;}], &#34;tests/test_message_passing.py::TestMessagePassing::test_message_filtering&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_message_passing.py::TestMessagePassing::test_message_filtering&#34;, &#34;duration&#34;: &#34;8 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_message_passing.py::TestMessagePassing::test_message_filtering&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;8 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;tests/test_message_passing.py:156: in test_message_filtering\n    self.mp2.send_message(Message(\n        message1   = {&amp;#x27;data&amp;#x27;: 1}\n        message2   = {&amp;#x27;data&amp;#x27;: 2}\n        self       = &amp;lt;Things.Generic_Thing.tests.test_message_passing.TestMessagePassing testMethod=test_message_filtering&amp;gt;\ngeneric_thing/message_passing.py:220: in send_message\n    raise ValueError(f&amp;quot;Invalid target ID: {message.target_id}&amp;quot;)\nE   ValueError: Invalid target ID: thing1\n        message    = Message(source_id=&amp;#x27;thing2&amp;#x27;,\n        target_id=&amp;#x27;thing1&amp;#x27;,\n        content={&amp;#x27;data&amp;#x27;: 2},\n        message_type=&amp;#x27;test&amp;#x27;,\n        timestamp=numpy.datetime64(&amp;#x27;2025-02-23T21:50:25&amp;#x27;))\n        self       = MessagePassing(id=&amp;#x27;thing2&amp;#x27;,\n               connections={&amp;#x27;thing2&amp;#x27;: []},\n               received_messages=[],\n               sent_messages=[],\n               incoming_queue=deque([]),\n               outgoing_queue=deque([]),\n               message_history=[])\n\n------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_message_passing:test_message_passing.py:37 Created MessagePassing test instances\nINFO     root:test_utils.py:29 Running test: test_message_filtering\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from thing2 to thing1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from thing1 to thing3\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from thing3 to thing1\nINFO     generic_thing.message_passing:message_passing.py:225 Sent message from thing1 to thing2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for thing2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from thing1 to thing2\n\n&#34;}], &#34;tests/test_core.py::TestGenericThing::test_action_generation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_core.py::TestGenericThing::test_action_generation&#34;, &#34;duration&#34;: &#34;7 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_core.py::TestGenericThing::test_action_generation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;7 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.core:core.py:58 Created Test Thing instance\nINFO     Things.Generic_Thing.tests.test_core:test_core.py:27 Created test thing instance\nINFO     root:test_utils.py:29 Running test: test_action_generation\nINFO     Things.Generic_Thing.tests.test_core:test_core.py:94 Generated actions: {&amp;#x27;action_x&amp;#x27;: -0.30000000000000004, &amp;#x27;action_y&amp;#x27;: -0.19999999999999998}\nINFO     root:test_utils.py:31 Test completed: test_action_generation\n\n&#34;}], &#34;tests/test_core.py::TestGenericThing::test_hierarchical_structure&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_core.py::TestGenericThing::test_hierarchical_structure&#34;, &#34;duration&#34;: &#34;461 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_core.py::TestGenericThing::test_hierarchical_structure&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;461 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.core:core.py:58 Created Test Thing instance\nINFO     Things.Generic_Thing.tests.test_core:test_core.py:27 Created test thing instance\nINFO     root:test_utils.py:29 Running test: test_hierarchical_structure\nINFO     generic_thing.core:core.py:58 Created Parent instance\nINFO     generic_thing.core:core.py:58 Created Child 1 instance\nINFO     generic_thing.core:core.py:58 Created Child 2 instance\nINFO     generic_thing.core:core.py:58 Created Grandchild instance\nINFO     generic_thing.core:core.py:119 Added Child 1 as child of Parent\nINFO     generic_thing.core:core.py:119 Added Child 2 as child of Parent\nINFO     generic_thing.core:core.py:119 Added Grandchild as child of Child 1\nINFO     generic_thing.tests.test_utils:test_utils.py:65 Plotting thing hierarchy\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/hierarchy_test_20250223_135025.png\nINFO     root:test_utils.py:31 Test completed: test_hierarchical_structure\n\n&#34;}], &#34;tests/test_core.py::TestGenericThing::test_state_persistence&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_core.py::TestGenericThing::test_state_persistence&#34;, &#34;duration&#34;: &#34;12 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_core.py::TestGenericThing::test_state_persistence&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;12 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.core:core.py:58 Created Test Thing instance\nINFO     Things.Generic_Thing.tests.test_core:test_core.py:27 Created test thing instance\nINFO     root:test_utils.py:29 Running test: test_state_persistence\nINFO     root:test_utils.py:31 Test completed: test_state_persistence\n\n&#34;}], &#34;tests/test_core.py::TestGenericThing::test_initialization&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_core.py::TestGenericThing::test_initialization&#34;, &#34;duration&#34;: &#34;7 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_core.py::TestGenericThing::test_initialization&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;7 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.core:core.py:58 Created Test Thing instance\nINFO     Things.Generic_Thing.tests.test_core:test_core.py:27 Created test thing instance\nINFO     root:test_utils.py:29 Running test: test_initialization\nINFO     root:test_utils.py:31 Test completed: test_initialization\n\n&#34;}], &#34;tests/test_core.py::TestGenericThing::test_error_handling&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_core.py::TestGenericThing::test_error_handling&#34;, &#34;duration&#34;: &#34;4 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_core.py::TestGenericThing::test_error_handling&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;4 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.core:core.py:58 Created Test Thing instance\nINFO     Things.Generic_Thing.tests.test_core:test_core.py:27 Created test thing instance\nINFO     root:test_utils.py:29 Running test: test_error_handling\nINFO     root:test_utils.py:31 Test completed: test_error_handling\n\n&#34;}], &#34;tests/test_core.py::TestGenericThing::test_state_update&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_core.py::TestGenericThing::test_state_update&#34;, &#34;duration&#34;: &#34;655 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_core.py::TestGenericThing::test_state_update&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;655 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.core:core.py:58 Created Test Thing instance\nINFO     Things.Generic_Thing.tests.test_core:test_core.py:27 Created test thing instance\nINFO     root:test_utils.py:29 Running test: test_state_update\nINFO     Things.Generic_Thing.tests.test_core:test_core.py:77 Updated state with observation: {&amp;#x27;internal_states&amp;#x27;: array([[0.76543299, 0.06065887, 0.49929537],\n       [0.91318716, 0.2449631 , 0.06530049],\n       [0.18358947, 0.08656657, 0.13249549],\n       [0.70947457, 0.91405916, 0.97438228],\n       [0.6182045 , 0.40897556, 0.36395055],\n       [0.92533707, 0.90106038, 0.6318239 ],\n       [0.74798312, 0.69370029, 0.72598183],\n       [0.31689281, 0.08527856, 0.64750736],\n       [0.86752723, 0.57920869, 0.49809245],\n       [0.83632482, 0.59560819, 0.16556073]]), &amp;#x27;external_states&amp;#x27;: array([[0.48606079, 0.1654632 ],\n       [0.57232018, 0.56984563],\n       [0.6129045 , 0.59209253],\n       [0.72168427, 0.47519592],\n       [0.05057664, 0.71610228],\n       [0.9381364 , 0.79156873],\n       [0.43497982, 0.62940979],\n       [0.41277537, 0.71528013],\n       [0.44871002, 0.57562563],\n       [0.31224657, 0.34411883]]), &amp;#x27;free_energies&amp;#x27;: array([0.11096156, 0.0123889 , 0.63121863, 0.40841161, 0.60345925,\n       0.95774102, 0.77512412, 0.16325271, 0.18709737, 0.10369813]), &amp;#x27;prior&amp;#x27;: array([[0.46644279, 0.08832842, 0.60268822],\n       [0.21140408, 0.91355628, 0.86644168],\n       [0.40908268, 0.07164093, 0.68957995],\n       [0.08489622, 0.79569894, 0.42493917],\n       [0.46753774, 0.50046492, 0.83979459],\n       [0.53667533, 0.80599117, 0.64950791],\n       [0.47890591, 0.2521061 , 0.43093626],\n       [0.30312334, 0.57242174, 0.17006519],\n       [0.64087784, 0.33709926, 0.34571985],\n       [0.10760417, 0.61801283, 0.66884087]]), &amp;#x27;posterior&amp;#x27;: array([[0.0317769 , 0.63450518, 0.0146601 ],\n       [0.25835423, 0.4137909 , 0.85006343],\n       [0.16317517, 0.91110918, 0.91945189],\n       [0.67934409, 0.96477696, 0.25073902],\n       [0.38441468, 0.94053148, 0.82415214],\n       [0.97104639, 0.22452217, 0.39189045],\n       [0.40691176, 0.20613433, 0.57698182],\n       [0.42034991, 0.848934  , 0.92421113],\n       [0.11998806, 0.86134204, 0.02417903],\n       [0.20363814, 0.31684165, 0.50588636]]), &amp;#x27;observations&amp;#x27;: array([[0.09094376, 0.21756385],\n       [0.48610226, 0.48537919],\n       [0.52416829, 0.05243181],\n       [0.02726134, 0.49280177],\n       [0.65643452, 0.37108249],\n       [0.51714537, 0.11644187],\n       [0.17933193, 0.34039521],\n       [0.89852449, 0.66688562],\n       [0.53403096, 0.47426128],\n       [0.25614635, 0.75275418]]), &amp;#x27;timesteps&amp;#x27;: array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]), &amp;#x27;sensory_states&amp;#x27;: array([[0.1873579 , 0.69921175],\n       [0.94488697, 0.53206092],\n       [0.42807303, 0.39449036],\n       [0.15391245, 0.30717228],\n       [0.63120748, 0.94411666],\n       [0.66369459, 0.02640579],\n       [0.49419823, 0.03592833],\n       [0.19952143, 0.15027353],\n       [0.4483714 , 0.46812354],\n       [0.04323992, 0.29311901]]), &amp;#x27;internal_states_mb&amp;#x27;: array([[0.65165239, 0.5216801 , 0.25809186],\n       [0.85535319, 0.54397602, 0.56525292],\n       [0.70256247, 0.73496097, 0.63605119],\n       [0.67951336, 0.43108624, 0.3858815 ],\n       [0.43737691, 0.0503826 , 0.09217713],\n       [0.24690824, 0.01652971, 0.98250021],\n       [0.65423093, 0.83467412, 0.08102381],\n       [0.50497586, 0.45453426, 0.39327032],\n       [0.44381182, 0.56369762, 0.90314176],\n       [0.92404867, 0.0375157 , 0.54875422]]), &amp;#x27;active_states&amp;#x27;: array([[0.05045645, 0.75412526],\n       [0.30160032, 0.09417598],\n       [0.80026956, 0.32913552],\n       [0.09556178, 0.64977016],\n       [0.54700054, 0.34474784],\n       [0.96034082, 0.66891731],\n       [0.2259461 , 0.96284879],\n       [0.18894897, 0.24047028],\n       [0.30747062, 0.09966153],\n       [0.21125117, 0.29008286]])}\nINFO     root:test_utils.py:31 Test completed: test_state_update\n\n&#34;}], &#34;tests/test_core.py::TestGenericThing::test_child_management&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_core.py::TestGenericThing::test_child_management&#34;, &#34;duration&#34;: &#34;4 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_core.py::TestGenericThing::test_child_management&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;4 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     generic_thing.core:core.py:58 Created Test Thing instance\nINFO     Things.Generic_Thing.tests.test_core:test_core.py:27 Created test thing instance\nINFO     root:test_utils.py:29 Running test: test_child_management\nINFO     generic_thing.core:core.py:58 Created Child instance\nINFO     generic_thing.core:core.py:119 Added Child as child of Test Thing\nINFO     generic_thing.core:core.py:126 Removed Child from Test Thing\nINFO     root:test_utils.py:31 Test completed: test_child_management\n\n&#34;}], &#34;tests/test_thing_interactions.py::TestThingInteractions::test_collective_free_energy_minimization&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_thing_interactions.py::TestThingInteractions::test_collective_free_energy_minimization&#34;, &#34;duration&#34;: &#34;40 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_thing_interactions.py::TestThingInteractions::test_collective_free_energy_minimization&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;40 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;tests/test_thing_interactions.py:326: in test_collective_free_energy_minimization\n    self.assertLess(\nE   AssertionError: 0.06708815176742125 not less than 0.06708815176742125 : Free energy did not decrease: initial=0.06708815176742125, final=0.06708815176742125\n        _          = 4\n        final_fe   = 0.06708815176742125\n        initial_fe = 0.06708815176742125\n        initial_states = {&amp;#x27;active_states&amp;#x27;: {&amp;#x27;state1&amp;#x27;: -0.1, &amp;#x27;state2&amp;#x27;: 0.3},\n &amp;#x27;external_states&amp;#x27;: {&amp;#x27;state1&amp;#x27;: 0.2, &amp;#x27;state2&amp;#x27;: 0.4},\n &amp;#x27;free_energies&amp;#x27;: [0.5],\n &amp;#x27;internal_states&amp;#x27;: {&amp;#x27;state1&amp;#x27;: 0.5, &amp;#x27;state2&amp;#x27;: -0.3},\n &amp;#x27;sensory_states&amp;#x27;: {&amp;#x27;state1&amp;#x27;: 0.1, &amp;#x27;state2&amp;#x27;: -0.2}}\n        message    = Message(source_id=&amp;#x27;child2&amp;#x27;,\n        target_id=&amp;#x27;broadcast&amp;#x27;,\n        content={&amp;#x27;active_states&amp;#x27;: {&amp;#x27;state_0&amp;#x27;: 0.25797118972801536,\n                                   &amp;#x27;state_1&amp;#x27;: 0.22901297732780754},\n                 &amp;#x27;free_energies&amp;#x27;: [0.013402275135268246, 0.01334209901582607],\n                 &amp;#x27;internal_states&amp;#x27;: {&amp;#x27;state_0&amp;#x27;: -0.18582256832712626,\n                                     &amp;#x27;state_1&amp;#x27;: 0.12745625472066074}},\n        message_type=&amp;#x27;fe_update&amp;#x27;,\n        timestamp=numpy.datetime64(&amp;#x27;2025-02-23T21:50:27&amp;#x27;))\n        received   = []\n        self       = &amp;lt;Things.Generic_Thing.tests.test_thing_interactions.TestThingInteractions testMethod=test_collective_free_energy_minimization&amp;gt;\n        source     = GenericThing(id=&amp;#x27;child2&amp;#x27;, name=&amp;#x27;Child 2&amp;#x27;)\n        thing      = GenericThing(id=&amp;#x27;child2&amp;#x27;, name=&amp;#x27;Child 2&amp;#x27;)\n\n------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\nINFO     generic_thing.core:core.py:58 Created Parent instance\nINFO     generic_thing.core:core.py:58 Created Child 1 instance\nINFO     generic_thing.core:core.py:58 Created Child 2 instance\nINFO     generic_thing.core:core.py:58 Created Grandchild 1 instance\nINFO     generic_thing.core:core.py:58 Created Grandchild 2 instance\nINFO     generic_thing.core:core.py:119 Added Child 1 as child of Parent\nINFO     generic_thing.core:core.py:119 Added Child 2 as child of Parent\nINFO     generic_thing.core:core.py:119 Added Grandchild 1 as child of Child 1\nINFO     generic_thing.core:core.py:119 Added Grandchild 2 as child of Child 2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from grandchild1 to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from grandchild2 to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from grandchild1 to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from grandchild2 to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to grandchild2\nINFO     Things.Generic_Thing.tests.test_thing_interactions:test_thing_interactions.py:49 Created test network of interacting Things\nINFO     root:test_utils.py:29 Running test: test_collective_free_energy_minimization\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for parent\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child1\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for parent\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child1\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for parent\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child1\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for parent\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child1\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for parent\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child1\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child2\n\n&#34;}], &#34;tests/test_thing_interactions.py::TestThingInteractions::test_nested_belief_propagation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_thing_interactions.py::TestThingInteractions::test_nested_belief_propagation&#34;, &#34;duration&#34;: &#34;12 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_thing_interactions.py::TestThingInteractions::test_nested_belief_propagation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;12 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;tests/test_thing_interactions.py:361: in test_nested_belief_propagation\n    self.assertTrue(len(received) &amp;gt; 0, f&amp;quot;No messages received by {thing_id}&amp;quot;)\nE   AssertionError: False is not true : No messages received by child1\n        belief     = {&amp;#x27;x&amp;#x27;: 0.4, &amp;#x27;y&amp;#x27;: -0.4}\n        beliefs    = {&amp;#x27;child1&amp;#x27;: {&amp;#x27;x&amp;#x27;: 0.2, &amp;#x27;y&amp;#x27;: 0.4},\n &amp;#x27;child2&amp;#x27;: {&amp;#x27;x&amp;#x27;: 0.1, &amp;#x27;y&amp;#x27;: -0.2},\n &amp;#x27;grandchild1&amp;#x27;: {&amp;#x27;x&amp;#x27;: -0.1, &amp;#x27;y&amp;#x27;: 0.3},\n &amp;#x27;grandchild2&amp;#x27;: {&amp;#x27;x&amp;#x27;: 0.4, &amp;#x27;y&amp;#x27;: -0.4},\n &amp;#x27;parent&amp;#x27;: {&amp;#x27;x&amp;#x27;: 0.5, &amp;#x27;y&amp;#x27;: -0.3}}\n        message    = Message(source_id=&amp;#x27;grandchild2&amp;#x27;,\n        target_id=&amp;#x27;broadcast&amp;#x27;,\n        content={&amp;#x27;beliefs&amp;#x27;: {&amp;#x27;x&amp;#x27;: 0.4, &amp;#x27;y&amp;#x27;: -0.4}},\n        message_type=&amp;#x27;belief_update&amp;#x27;,\n        timestamp=numpy.datetime64(&amp;#x27;2025-02-23T21:50:27&amp;#x27;))\n        received   = []\n        self       = &amp;lt;Things.Generic_Thing.tests.test_thing_interactions.TestThingInteractions testMethod=test_nested_belief_propagation&amp;gt;\n        thing      = GenericThing(id=&amp;#x27;child1&amp;#x27;, name=&amp;#x27;Child 1&amp;#x27;)\n        thing_id   = &amp;#x27;child1&amp;#x27;\n\n------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\nINFO     generic_thing.core:core.py:58 Created Parent instance\nINFO     generic_thing.core:core.py:58 Created Child 1 instance\nINFO     generic_thing.core:core.py:58 Created Child 2 instance\nINFO     generic_thing.core:core.py:58 Created Grandchild 1 instance\nINFO     generic_thing.core:core.py:58 Created Grandchild 2 instance\nINFO     generic_thing.core:core.py:119 Added Child 1 as child of Parent\nINFO     generic_thing.core:core.py:119 Added Child 2 as child of Parent\nINFO     generic_thing.core:core.py:119 Added Grandchild 1 as child of Child 1\nINFO     generic_thing.core:core.py:119 Added Grandchild 2 as child of Child 2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from grandchild1 to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from grandchild2 to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from grandchild1 to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from grandchild2 to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to grandchild2\nINFO     Things.Generic_Thing.tests.test_thing_interactions:test_thing_interactions.py:49 Created test network of interacting Things\nINFO     root:test_utils.py:29 Running test: test_nested_belief_propagation\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for grandchild2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for parent\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from grandchild1 to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from grandchild1 to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from grandchild2 to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from grandchild2 to child2\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child1\n\n&#34;}], &#34;tests/test_thing_interactions.py::TestThingInteractions::test_hierarchical_message_propagation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_thing_interactions.py::TestThingInteractions::test_hierarchical_message_propagation&#34;, &#34;duration&#34;: &#34;9 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_thing_interactions.py::TestThingInteractions::test_hierarchical_message_propagation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;9 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;tests/test_thing_interactions.py:94: in test_hierarchical_message_propagation\n    self.assertTrue(len(received) &amp;gt; 0, f&amp;quot;No messages received by {child.id}&amp;quot;)\nE   AssertionError: False is not true : No messages received by child1\n        child      = GenericThing(id=&amp;#x27;child1&amp;#x27;, name=&amp;#x27;Child 1&amp;#x27;)\n        data       = {&amp;#x27;active_states&amp;#x27;: array([[0.05045645, 0.75412526],\n       [0.30160032, 0.09417598],\n       [0.80026956, 0.32913552],\n       [0.09556178, 0.64977016],\n       [0.54700054, 0.34474784],\n       [0.96034082, 0.66891731],\n       [0.2259461 , 0.96284879],\n       [0.18894897, 0.24047028],\n       [0.30747062, 0.09966153],\n       [0.21125117, 0.29008286]]),\n &amp;#x27;external_states&amp;#x27;: array([[0.48606079, 0.1654632 ],\n       [0.57232018, 0.56984563],\n       [0.6129045 , 0.59209253],\n       [0.72168427, 0.47519592],\n       [0.05057664, 0.71610228],\n       [0.9381364 , 0.79156873],\n       [0.43497982, 0.62940979],\n       [0.41277537, 0.71528013],\n       [0.44871002, 0.57562563],\n       [0.31224657, 0.34411883]]),\n &amp;#x27;free_energies&amp;#x27;: array([0.11096156, 0.0123889 , 0.63121863, 0.40841161, 0.60345925,\n       0.95774102, 0.77512412, 0.16325271, 0.18709737, 0.10369813]),\n &amp;#x27;internal_states&amp;#x27;: array([[0.76543299, 0.06065887, 0.49929537],\n       [0.91318716, 0.2449631 , 0.06530049],\n       [0.18358947, 0.08656657, 0.13249549],\n       [0.70947457, 0.91405916, 0.97438228],\n       [0.6182045 , 0.40897556, 0.36395055],\n       [0.92533707, 0.90106038, 0.6318239 ],\n       [0.74798312, 0.69370029, 0.72598183],\n       [0.31689281, 0.08527856, 0.64750736],\n       [0.86752723, 0.57920869, 0.49809245],\n       [0.83632482, 0.59560819, 0.16556073]]),\n &amp;#x27;internal_states_mb&amp;#x27;: array([[0.65165239, 0.5216801 , 0.25809186],\n       [0.85535319, 0.54397602, 0.56525292],\n       [0.70256247, 0.73496097, 0.63605119],\n       [0.67951336, 0.43108624, 0.3858815 ],\n       [0.43737691, 0.0503826 , 0.09217713],\n       [0.24690824, 0.01652971, 0.98250021],\n       [0.65423093, 0.83467412, 0.08102381],\n       [0.50497586, 0.45453426, 0.39327032],\n       [0.44381182, 0.56369762, 0.90314176],\n       [0.92404867, 0.0375157 , 0.54875422]]),\n &amp;#x27;observations&amp;#x27;: array([[0.09094376, 0.21756385],\n       [0.48610226, 0.48537919],\n       [0.52416829, 0.05243181],\n       [0.02726134, 0.49280177],\n       [0.65643452, 0.37108249],\n       [0.51714537, 0.11644187],\n       [0.17933193, 0.34039521],\n       [0.89852449, 0.66688562],\n       [0.53403096, 0.47426128],\n       [0.25614635, 0.75275418]]),\n &amp;#x27;posterior&amp;#x27;: array([[0.0317769 , 0.63450518, 0.0146601 ],\n       [0.25835423, 0.4137909 , 0.85006343],\n       [0.16317517, 0.91110918, 0.91945189],\n       [0.67934409, 0.96477696, 0.25073902],\n       [0.38441468, 0.94053148, 0.82415214],\n       [0.97104639, 0.22452217, 0.39189045],\n       [0.40691176, 0.20613433, 0.57698182],\n       [0.42034991, 0.848934  , 0.92421113],\n       [0.11998806, 0.86134204, 0.02417903],\n       [0.20363814, 0.31684165, 0.50588636]]),\n &amp;#x27;prior&amp;#x27;: array([[0.46644279, 0.08832842, 0.60268822],\n       [0.21140408, 0.91355628, 0.86644168],\n       [0.40908268, 0.07164093, 0.68957995],\n       [0.08489622, 0.79569894, 0.42493917],\n       [0.46753774, 0.50046492, 0.83979459],\n       [0.53667533, 0.80599117, 0.64950791],\n       [0.47890591, 0.2521061 , 0.43093626],\n       [0.30312334, 0.57242174, 0.17006519],\n       [0.64087784, 0.33709926, 0.34571985],\n       [0.10760417, 0.61801283, 0.66884087]]),\n &amp;#x27;sensory_states&amp;#x27;: array([[0.1873579 , 0.69921175],\n       [0.94488697, 0.53206092],\n       [0.42807303, 0.39449036],\n       [0.15391245, 0.30717228],\n       [0.63120748, 0.94411666],\n       [0.66369459, 0.02640579],\n       [0.49419823, 0.03592833],\n       [0.19952143, 0.15027353],\n       [0.4483714 , 0.46812354],\n       [0.04323992, 0.29311901]]),\n &amp;#x27;timesteps&amp;#x27;: array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])}\n        message    = Message(source_id=&amp;#x27;parent&amp;#x27;,\n        target_id=&amp;#x27;broadcast&amp;#x27;,\n        content={&amp;#x27;active_states&amp;#x27;: array([[0.05045645, 0.75412526],\n       [0.30160032, 0.09417598],\n       [0.80026956, 0.32913552],\n       [0.09556178, 0.64977016],\n       [0.54700054, 0.34474784],\n       [0.96034082, 0.66891731],\n       [0.2259461 , 0.96284879],\n       [0.18894897, 0.24047028],\n       [0.30747062, 0.09966153],\n       [0.21125117, 0.29008286]]),\n                 &amp;#x27;external_states&amp;#x27;: array([[0.48606079, 0.1654632 ],\n       [0.57232018, 0.56984563],\n       [0.6129045 , 0.59209253],\n       [0.72168427, 0.47519592],\n       [0.05057664, 0.71610228],\n       [0.9381364 , 0.79156873],\n       [0.43497982, 0.62940979],\n       [0.41277537, 0.71528013],\n       [0.44871002, 0.57562563],\n       [0.31224657, 0.34411883]]),\n                 &amp;#x27;free_energies&amp;#x27;: array([0.11096156, 0.0123889 , 0.63121863, 0.40841161, 0.60345925,\n       0.95774102, 0.77512412, 0.16325271, 0.18709737, 0.10369813]),\n                 &amp;#x27;internal_states&amp;#x27;: array([[0.76543299, 0.06065887, 0.49929537],\n       [0.91318716, 0.2449631 , 0.06530049],\n       [0.18358947, 0.08656657, 0.13249549],\n       [0.70947457, 0.91405916, 0.97438228],\n       [0.6182045 , 0.40897556, 0.36395055],\n       [0.92533707, 0.90106038, 0.6318239 ],\n       [0.74798312, 0.69370029, 0.72598183],\n       [0.31689281, 0.08527856, 0.64750736],\n       [0.86752723, 0.57920869, 0.49809245],\n       [0.83632482, 0.59560819, 0.16556073]]),\n                 &amp;#x27;internal_states_mb&amp;#x27;: array([[0.65165239, 0.5216801 , 0.25809186],\n       [0.85535319, 0.54397602, 0.56525292],\n       [0.70256247, 0.73496097, 0.63605119],\n       [0.67951336, 0.43108624, 0.3858815 ],\n       [0.43737691, 0.0503826 , 0.09217713],\n       [0.24690824, 0.01652971, 0.98250021],\n       [0.65423093, 0.83467412, 0.08102381],\n       [0.50497586, 0.45453426, 0.39327032],\n       [0.44381182, 0.56369762, 0.90314176],\n       [0.92404867, 0.0375157 , 0.54875422]]),\n                 &amp;#x27;observations&amp;#x27;: array([[0.09094376, 0.21756385],\n       [0.48610226, 0.48537919],\n       [0.52416829, 0.05243181],\n       [0.02726134, 0.49280177],\n       [0.65643452, 0.37108249],\n       [0.51714537, 0.11644187],\n       [0.17933193, 0.34039521],\n       [0.89852449, 0.66688562],\n       [0.53403096, 0.47426128],\n       [0.25614635, 0.75275418]]),\n                 &amp;#x27;posterior&amp;#x27;: array([[0.0317769 , 0.63450518, 0.0146601 ],\n       [0.25835423, 0.4137909 , 0.85006343],\n       [0.16317517, 0.91110918, 0.91945189],\n       [0.67934409, 0.96477696, 0.25073902],\n       [0.38441468, 0.94053148, 0.82415214],\n       [0.97104639, 0.22452217, 0.39189045],\n       [0.40691176, 0.20613433, 0.57698182],\n       [0.42034991, 0.848934  , 0.92421113],\n       [0.11998806, 0.86134204, 0.02417903],\n       [0.20363814, 0.31684165, 0.50588636]]),\n                 &amp;#x27;prior&amp;#x27;: array([[0.46644279, 0.08832842, 0.60268822],\n       [0.21140408, 0.91355628, 0.86644168],\n       [0.40908268, 0.07164093, 0.68957995],\n       [0.08489622, 0.79569894, 0.42493917],\n       [0.46753774, 0.50046492, 0.83979459],\n       [0.53667533, 0.80599117, 0.64950791],\n       [0.47890591, 0.2521061 , 0.43093626],\n       [0.30312334, 0.57242174, 0.17006519],\n       [0.64087784, 0.33709926, 0.34571985],\n       [0.10760417, 0.61801283, 0.66884087]]),\n                 &amp;#x27;sensory_states&amp;#x27;: array([[0.1873579 , 0.69921175],\n       [0.94488697, 0.53206092],\n       [0.42807303, 0.39449036],\n       [0.15391245, 0.30717228],\n       [0.63120748, 0.94411666],\n       [0.66369459, 0.02640579],\n       [0.49419823, 0.03592833],\n       [0.19952143, 0.15027353],\n       [0.4483714 , 0.46812354],\n       [0.04323992, 0.29311901]]),\n                 &amp;#x27;timesteps&amp;#x27;: array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])},\n        message_type=&amp;#x27;update&amp;#x27;,\n        timestamp=numpy.datetime64(&amp;#x27;2025-02-23T21:50:27&amp;#x27;))\n        received   = []\n        self       = &amp;lt;Things.Generic_Thing.tests.test_thing_interactions.TestThingInteractions testMethod=test_hierarchical_message_propagation&amp;gt;\n\n------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\nINFO     generic_thing.core:core.py:58 Created Parent instance\nINFO     generic_thing.core:core.py:58 Created Child 1 instance\nINFO     generic_thing.core:core.py:58 Created Child 2 instance\nINFO     generic_thing.core:core.py:58 Created Grandchild 1 instance\nINFO     generic_thing.core:core.py:58 Created Grandchild 2 instance\nINFO     generic_thing.core:core.py:119 Added Child 1 as child of Parent\nINFO     generic_thing.core:core.py:119 Added Child 2 as child of Parent\nINFO     generic_thing.core:core.py:119 Added Grandchild 1 as child of Child 1\nINFO     generic_thing.core:core.py:119 Added Grandchild 2 as child of Child 2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from grandchild1 to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from grandchild2 to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from grandchild1 to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from grandchild2 to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to grandchild2\nINFO     Things.Generic_Thing.tests.test_thing_interactions:test_thing_interactions.py:49 Created test network of interacting Things\nINFO     root:test_utils.py:29 Running test: test_hierarchical_message_propagation\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:216 Sent broadcast message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child2\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child1\n\n&#34;}], &#34;tests/test_thing_interactions.py::TestThingInteractions::test_markov_blanket_interactions&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_thing_interactions.py::TestThingInteractions::test_markov_blanket_interactions&#34;, &#34;duration&#34;: &#34;17 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_thing_interactions.py::TestThingInteractions::test_markov_blanket_interactions&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;17 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;tests/test_thing_interactions.py:168: in test_markov_blanket_interactions\n    self.assertTrue(len(received) &amp;gt; 0, &amp;quot;No messages received by child1&amp;quot;)\nE   AssertionError: False is not true : No messages received by child1\n        initial_states = {&amp;#x27;active_states&amp;#x27;: {&amp;#x27;state1&amp;#x27;: -0.1, &amp;#x27;state2&amp;#x27;: 0.3},\n &amp;#x27;external_states&amp;#x27;: {&amp;#x27;state1&amp;#x27;: 0.2, &amp;#x27;state2&amp;#x27;: 0.4},\n &amp;#x27;free_energies&amp;#x27;: [0.5],\n &amp;#x27;internal_states&amp;#x27;: {&amp;#x27;state1&amp;#x27;: 0.5, &amp;#x27;state2&amp;#x27;: -0.3},\n &amp;#x27;sensory_states&amp;#x27;: {&amp;#x27;state1&amp;#x27;: 0.1, &amp;#x27;state2&amp;#x27;: -0.2}}\n        message    = Message(source_id=&amp;#x27;parent&amp;#x27;,\n        target_id=&amp;#x27;child1&amp;#x27;,\n        content={&amp;#x27;active_states&amp;#x27;: {&amp;#x27;state1&amp;#x27;: -0.1, &amp;#x27;state2&amp;#x27;: 0.3},\n                 &amp;#x27;internal_states&amp;#x27;: {&amp;#x27;state1&amp;#x27;: 0.5, &amp;#x27;state2&amp;#x27;: -0.3}},\n        message_type=&amp;#x27;mb_update&amp;#x27;,\n        timestamp=numpy.datetime64(&amp;#x27;2025-02-23T21:50:27&amp;#x27;))\n        received   = []\n        self       = &amp;lt;Things.Generic_Thing.tests.test_thing_interactions.TestThingInteractions testMethod=test_markov_blanket_interactions&amp;gt;\n\n------------------------------ Captured log call -------------------------------\nINFO     generic_thing.visualization:visualization.py:32 Initialized visualizer with output directory: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations\nINFO     generic_thing.core:core.py:58 Created Parent instance\nINFO     generic_thing.core:core.py:58 Created Child 1 instance\nINFO     generic_thing.core:core.py:58 Created Child 2 instance\nINFO     generic_thing.core:core.py:58 Created Grandchild 1 instance\nINFO     generic_thing.core:core.py:58 Created Grandchild 2 instance\nINFO     generic_thing.core:core.py:119 Added Child 1 as child of Parent\nINFO     generic_thing.core:core.py:119 Added Child 2 as child of Parent\nINFO     generic_thing.core:core.py:119 Added Grandchild 1 as child of Child 1\nINFO     generic_thing.core:core.py:119 Added Grandchild 2 as child of Child 2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to parent\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to parent\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from parent to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from grandchild1 to child1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from child2 to grandchild2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from grandchild2 to child2\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from grandchild1 to child1\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child1 to grandchild1\nINFO     generic_thing.message_passing:message_passing.py:130 Added connection from grandchild2 to child2\nINFO     generic_thing.message_passing:message_passing.py:134 Added connection from child2 to grandchild2\nINFO     Things.Generic_Thing.tests.test_thing_interactions:test_thing_interactions.py:49 Created test network of interacting Things\nINFO     root:test_utils.py:29 Running test: test_markov_blanket_interactions\nINFO     generic_thing.message_passing:message_passing.py:225 Sent message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:269 Received message for child1\nINFO     generic_thing.message_passing:message_passing.py:72 Processed outgoing message from parent to child1\nINFO     generic_thing.message_passing:message_passing.py:111 Retrieved 0 messages for child1\n\n&#34;}], &#34;tests/test_inference.py::TestFederatedInference::test_initialization&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_inference.py::TestFederatedInference::test_initialization&#34;, &#34;duration&#34;: &#34;6 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_inference.py::TestFederatedInference::test_initialization&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;6 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_inference:test_inference.py:24 Created FederatedInference test instance\nINFO     root:test_utils.py:29 Running test: test_initialization\nINFO     root:test_utils.py:31 Test completed: test_initialization\n\n&#34;}], &#34;tests/test_inference.py::TestFederatedInference::test_belief_reset&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_inference.py::TestFederatedInference::test_belief_reset&#34;, &#34;duration&#34;: &#34;5 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_inference.py::TestFederatedInference::test_belief_reset&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;5 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_inference:test_inference.py:24 Created FederatedInference test instance\nINFO     root:test_utils.py:29 Running test: test_belief_reset\nINFO     root:test_utils.py:31 Test completed: test_belief_reset\n\n&#34;}], &#34;tests/test_inference.py::TestFederatedInference::test_parameter_sharing&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_inference.py::TestFederatedInference::test_parameter_sharing&#34;, &#34;duration&#34;: &#34;5 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_inference.py::TestFederatedInference::test_parameter_sharing&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;5 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_inference:test_inference.py:24 Created FederatedInference test instance\nINFO     root:test_utils.py:29 Running test: test_parameter_sharing\nINFO     root:test_utils.py:31 Test completed: test_parameter_sharing\n\n&#34;}], &#34;tests/test_inference.py::TestFederatedInference::test_consensus_formation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_inference.py::TestFederatedInference::test_consensus_formation&#34;, &#34;duration&#34;: &#34;5 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_inference.py::TestFederatedInference::test_consensus_formation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;5 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_inference:test_inference.py:24 Created FederatedInference test instance\nINFO     root:test_utils.py:29 Running test: test_consensus_formation\nINFO     Things.Generic_Thing.tests.test_inference:test_inference.py:94 Formed consensus: {&amp;#x27;z&amp;#x27;: 1.0425629985148377}\nINFO     root:test_utils.py:31 Test completed: test_consensus_formation\n\n&#34;}], &#34;tests/test_inference.py::TestFederatedInference::test_learning_rate_effects&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_inference.py::TestFederatedInference::test_learning_rate_effects&#34;, &#34;duration&#34;: &#34;5 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_inference.py::TestFederatedInference::test_learning_rate_effects&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;5 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_inference:test_inference.py:24 Created FederatedInference test instance\nINFO     root:test_utils.py:29 Running test: test_learning_rate_effects\nINFO     root:test_utils.py:31 Test completed: test_learning_rate_effects\n\n&#34;}], &#34;tests/test_inference.py::TestFederatedInference::test_evidence_accumulation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_inference.py::TestFederatedInference::test_evidence_accumulation&#34;, &#34;duration&#34;: &#34;6 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_inference.py::TestFederatedInference::test_evidence_accumulation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;6 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_inference:test_inference.py:24 Created FederatedInference test instance\nINFO     root:test_utils.py:29 Running test: test_evidence_accumulation\nINFO     root:test_utils.py:31 Test completed: test_evidence_accumulation\n\n&#34;}], &#34;tests/test_inference.py::TestFederatedInference::test_uncertainty_computation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_inference.py::TestFederatedInference::test_uncertainty_computation&#34;, &#34;duration&#34;: &#34;773 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_inference.py::TestFederatedInference::test_uncertainty_computation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;773 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_inference:test_inference.py:24 Created FederatedInference test instance\nINFO     root:test_utils.py:29 Running test: test_uncertainty_computation\nINFO     generic_thing.tests.test_utils:test_utils.py:132 Plotting belief states and uncertainties\nINFO     generic_thing.visualization:visualization.py:52 Saving visualization to: /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/generic_thing/visualizations/belief_uncertainty_20250223_135027.png\nINFO     root:test_utils.py:31 Test completed: test_uncertainty_computation\n\n&#34;}], &#34;tests/test_inference.py::TestFederatedInference::test_belief_updates&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_inference.py::TestFederatedInference::test_belief_updates&#34;, &#34;duration&#34;: &#34;5 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_inference.py::TestFederatedInference::test_belief_updates&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;5 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     Things.Generic_Thing.tests.test_inference:test_inference.py:24 Created FederatedInference test instance\nINFO     root:test_utils.py:29 Running test: test_belief_updates\nINFO     Things.Generic_Thing.tests.test_inference:test_inference.py:67 Updated beliefs: {&amp;#x27;x&amp;#x27;: 0.29000000000000004, &amp;#x27;y&amp;#x27;: -0.29000000000000004}\nINFO     root:test_utils.py:31 Test completed: test_belief_updates\n\n&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;unit_tests_20250223_134851.html&#34;}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.renderCollapsed)]
+        const collapsedIds = []
+        const tests = Object.values(data.tests).flat().map((test, index) => {
+            const collapsed = collapsedCategories.includes(test.result.toLowerCase())
+            const id = `test_${index}`
+            if (collapsed) {
+                collapsedIds.push(id)
+            }
+            return {
+                ...test,
+                id,
+                collapsed,
+            }
+        })
+        const dataBlob = { ...data, tests }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+        setCollapsedIds(collapsedIds)
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+
+    get environment() {
+        return this.renderData.environment
+    }
+
+    get initialSort() {
+        return this.data.initialSort
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.getElementById('template_environment_row')
+const templateResult = document.getElementById('template_results-table__tbody')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `<ul>${values.map((val) => `<li>${val}</li>`).join('')}<ul>` : `<div>${value}</div>`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getResultTBody: ({ testId, id, log, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(result.toLowerCase())
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.collapsible').dataset.id = id
+
+        resultsTableRow.forEach((html) => {
+            const t = document.createElement('template')
+            t.innerHTML = html
+            resultBody.querySelector('.collapsible').appendChild(t.content)
+        })
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.collapsible > td')?.classList.add('collapsed')
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        } else {
+            resultBody.querySelector('.collapsible > td')?.classList.remove('collapsed')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setup(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+module.exports = {
+    dom,
+    htmlToElements,
+    find,
+    findAll,
+}
+
+},{"./mediaviewer.js":6}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+
+    const sortColumn = storageModule.getSort()
+    doSort(sortColumn, true)
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./sort.js":7,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents, renderStatic } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.getElementById('data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    renderStatic()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { dom, find, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const {
+    getVisible,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    getSortDirection,
+    possibleFilters,
+} = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderEnvironmentTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.getElementById('environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderEnvironmentTable()
+}
+
+const addItemToggleListener = (elem) => {
+    elem.addEventListener('click', ({ target }) => {
+        const id = target.parentElement.dataset.id
+        manager.toggleCollapsedItem(id)
+
+        const collapsedIds = getCollapsedIds()
+        if (collapsedIds.includes(id)) {
+            const updated = collapsedIds.filter((item) => item !== id)
+            setCollapsedIds(updated)
+        } else {
+            collapsedIds.push(id)
+            setCollapsedIds(collapsedIds)
+        }
+        redraw()
+    })
+}
+
+const renderContent = (tests) => {
+    const sortAttr = getSort(manager.initialSort)
+    const sortAsc = JSON.parse(getSortDirection())
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.getElementById('results-table')
+    const tableHeader = document.getElementById('results-table-head')
+
+    const newTable = document.createElement('table')
+    newTable.id = 'results-table'
+
+    // remove all sorting classes and set the relevant
+    findAll('.sortable', tableHeader).forEach((elem) => elem.classList.remove('asc', 'desc'))
+    tableHeader.querySelector(`.sortable[data-column-type="${sortAttr}"]`)?.classList.add(sortAsc ? 'desc' : 'asc')
+    newTable.appendChild(tableHeader)
+
+    if (!rows.length) {
+        const emptyTable = document.getElementById('template_results-table__body--empty').content.cloneNode(true)
+        newTable.appendChild(emptyTable)
+    } else {
+        rows.forEach((row) => {
+            if (!!row) {
+                findAll('.collapsible td:not(.col-links', row).forEach(addItemToggleListener)
+                find('.logexpander', row).addEventListener('click',
+                    (evt) => evt.target.parentNode.classList.toggle('expanded'),
+                )
+                newTable.appendChild(row)
+            }
+        })
+    }
+
+    table.replaceWith(newTable)
+}
+
+const renderDerived = () => {
+    const currentFilter = getVisible()
+    possibleFilters.forEach((result) => {
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        input.checked = currentFilter.includes(result)
+    })
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        const collapsedIds = getCollapsedIds()
+        const updated = manager.renderData.tests.map((test) => {
+            return {
+                ...test,
+                collapsed: collapsedIds.includes(test.id),
+            }
+        })
+        manager.setRender(updated)
+        redraw()
+    }
+
+    const header = document.getElementById('environment-header')
+    header.addEventListener('click', () => {
+        const table = document.getElementById('environment')
+        table.classList.toggle('hidden')
+        header.classList.toggle('collapsed')
+    })
+
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.addEventListener('click', filterColumn)
+    })
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+
+    document.getElementById('show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        setCollapsedIds([])
+        redraw()
+    })
+    document.getElementById('hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        const allIds = manager.renderData.tests.map((test) => test.id)
+        setCollapsedIds(allIds)
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset } = manager
+
+    renderContent(testSubset)
+    renderDerived()
+}
+
+module.exports = {
+    redraw,
+    bindEvents,
+    renderStatic,
+}
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setup = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const container = resultBody.querySelector('.media-container')
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        mediaName.innerText = media?.name
+        counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+    if (assets.length === 1) {
+        container.classList.add('media-container--fullscreen')
+    } else {
+        leftArrow.addEventListener('click', moveLeft)
+        rightArrow.addEventListener('click', doRight)
+    }
+    imageEl.addEventListener('click', openImg)
+}
+
+module.exports = {
+    setup,
+}
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex((item) => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex((item) => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const durationSort = (list, ascending) => {
+    const parseDuration = (duration) => {
+        if (duration.includes(':')) {
+            // If it's in the format "HH:mm:ss"
+            const [hours, minutes, seconds] = duration.split(':').map(Number)
+            return (hours * 3600 + minutes * 60 + seconds) * 1000
+        } else {
+            // If it's in the format "nnn ms"
+            return parseInt(duration)
+        }
+    }
+    const sorted = list.sort((a, b) => parseDuration(a['duration']) - parseDuration(b['duration']))
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort(manager.initialSort)
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        let sortedList
+        switch (type) {
+        case 'duration':
+            sortedList = durationSort(list, ascending)
+            break
+        case 'result':
+            sortedList = genericSort(list, type, ascending, initialOrder)
+            break
+        default:
+            sortedList = genericSort(list, type, ascending)
+            break
+        }
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type, skipDirection) => {
+    const newSortType = storageModule.getSort(manager.initialSort) !== type
+    const currentAsc = storageModule.getSortDirection()
+    let ascending
+    if (skipDirection) {
+        ascending = currentAsc
+    } else {
+        ascending = newSortType ? false : !currentAsc
+    }
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    const list = manager.testSubset
+    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+module.exports = {
+    doInitSort,
+    doSort,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleFilters = [
+    'passed',
+    'skipped',
+    'failed',
+    'error',
+    'xfailed',
+    'xpassed',
+    'rerun',
+]
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible')
+    const lower = (item) => {
+        const lowerItem = item.toLowerCase()
+        if (possibleFilters.includes(lowerItem)) {
+            return lowerItem
+        }
+        return null
+    }
+    return settings === null ?
+        possibleFilters :
+        [...new Set(settings?.split(',').map(lower).filter((item) => item))]
+}
+
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',').filter(Boolean) ||
+        [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = (initialSort) => {
+    const url = new URL(window.location.href)
+    let sort = new URLSearchParams(url.search).get('sort')
+    if (!sort) {
+        sort = initialSort || 'result'
+    }
+    return sort
+}
+
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (renderCollapsed) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+        case !renderCollapsed && collapsedItems === null:
+            categories = ['passed']
+            break
+        case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+            categories = []
+            break
+        case /^all$/.test(collapsedItems) || collapsedItems === null && /^all$/.test(renderCollapsed):
+            categories = [...possibleFilters]
+            break
+        default:
+            categories = collapsedItems?.split(',').map((item) => item.toLowerCase()) || renderCollapsed
+            break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+const getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []
+const setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))
+
+module.exports = {
+    getVisible,
+    hideCategory,
+    showCategory,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    setSort,
+    getSortDirection,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+</html>
