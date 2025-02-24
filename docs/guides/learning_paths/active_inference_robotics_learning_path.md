@@ -8,299 +8,249 @@ processing_priority: 1
 tags:
   - active-inference
   - robotics
-  - control-theory
-  - autonomous-systems
+  - control-systems
+  - embodied-cognition
 semantic_relations:
   - type: specializes
     links: [[active_inference_learning_path]]
   - type: relates
     links:
       - [[robotics_learning_path]]
-      - [[control_theory_learning_path]]
-      - [[autonomous_systems_learning_path]]
+      - [[control_systems_learning_path]]
+      - [[embodied_cognition_learning_path]]
 ---
 
 # Active Inference in Robotics Learning Path
 
 ## Overview
 
-This specialized path focuses on applying Active Inference to robotics and autonomous systems, integrating perception, control, and learning for robust robotic behavior.
+This specialized path explores the application of Active Inference to robotics systems, from basic control to advanced autonomous behaviors. It integrates robotics engineering, control theory, and embodied cognition principles.
 
 ## Prerequisites
 
 ### 1. Robotics Foundations (4 weeks)
-- Robot Kinematics
-  - Forward kinematics
-  - Inverse kinematics
-  - Jacobians
+- Robot Systems
+  - Kinematics
   - Dynamics
+  - Control theory
+  - Sensor integration
 
-- Control Theory
-  - State space control
+- Control Systems
   - Feedback control
-  - Optimal control
-  - Adaptive control
-
-- Perception Systems
-  - Sensor processing
-  - Computer vision
   - State estimation
-  - Sensor fusion
+  - Trajectory planning
+  - System identification
 
-- Planning and Navigation
-  - Path planning
-  - Motion planning
-  - SLAM
-  - Obstacle avoidance
+- Mechanical Systems
+  - Actuators
+  - Sensors
+  - Mechanisms
+  - Power systems
+
+- Software Systems
+  - Robot middleware
+  - Real-time control
+  - System architecture
+  - Safety systems
 
 ### 2. Technical Skills (2 weeks)
-- Programming Tools
-  - Python/C++
+- Robotics Tools
   - ROS/ROS2
   - Simulation environments
-  - Hardware interfaces
+  - Control libraries
+  - Vision systems
 
 ## Core Learning Path
 
-### 1. Robot Implementation (4 weeks)
+### 1. Robot Inference Modeling (4 weeks)
 
-#### Week 1-2: Robot State Estimation
+#### Week 1-2: Robot State Inference
 ```python
 class RobotStateEstimator:
     def __init__(self,
-                 state_dim: int,
-                 sensor_dim: int):
+                 state_dims: int,
+                 sensor_types: List[str]):
         """Initialize robot state estimator."""
-        self.state_model = StateTransitionModel(state_dim)
-        self.sensor_model = SensorModel(state_dim, sensor_dim)
-        self.state = torch.zeros(state_dim)
+        self.state_space = StateSpace(state_dims)
+        self.sensor_fusion = SensorFusion(sensor_types)
+        self.state_monitor = StateMonitor()
         
     def estimate_state(self,
                       sensor_data: torch.Tensor,
-                      action: torch.Tensor) -> torch.Tensor:
-        """Estimate robot state from sensor data."""
-        # Prediction step
-        state_pred = self.state_model(self.state, action)
-        
-        # Update step
-        sensor_pred = self.sensor_model(state_pred)
-        error = sensor_data - sensor_pred
-        
-        # State correction
-        self.state = state_pred + self.compute_update(error)
-        return self.state
+                      control_inputs: torch.Tensor) -> RobotState:
+        """Estimate robot system state."""
+        sensor_state = self.sensor_fusion.integrate_data(
+            sensor_data, control_inputs
+        )
+        filtered_state = self.state_space.filter_state(sensor_state)
+        return self.state_monitor.validate_state(filtered_state)
 ```
 
-#### Week 3-4: Action Generation
+#### Week 3-4: Robot Decision Making
 ```python
-class ActiveInferenceController:
+class RobotDecisionMaker:
     def __init__(self,
-                 action_dim: int,
-                 goal_dim: int):
-        """Initialize active inference controller."""
-        self.policy_network = PolicyNetwork(action_dim)
-        self.goal_prior = GoalPrior(goal_dim)
+                 action_space: ActionSpace,
+                 cost_function: CostFunction):
+        """Initialize robot decision maker."""
+        self.action_repertoire = ActionRepertoire(action_space)
+        self.cost_evaluator = cost_function
+        self.control_policy = ControlPolicy()
         
     def select_action(self,
                      current_state: torch.Tensor,
-                     goal_state: torch.Tensor) -> torch.Tensor:
-        """Select action using active inference."""
-        # Compute expected free energy for policies
-        policies = self.policy_network.generate_policies()
-        G = torch.zeros(len(policies))
-        
-        for i, policy in enumerate(policies):
-            # Simulate policy
-            predicted_states = self.simulate_policy(current_state, policy)
-            # Compute expected free energy
-            G[i] = self.compute_expected_free_energy(
-                predicted_states, goal_state
-            )
-        
-        # Select policy with lowest expected free energy
-        best_policy = policies[torch.argmin(G)]
-        return best_policy[0]  # Return first action
+                     goal_state: torch.Tensor) -> RobotAction:
+        """Select robot action."""
+        actions = self.action_repertoire.generate_options()
+        costs = self.evaluate_action_costs(actions, current_state, goal_state)
+        return self.control_policy.select_action(actions, costs)
 ```
 
-### 2. Robot Systems (6 weeks)
+### 2. Robotics Applications (6 weeks)
 
-#### Week 1-2: Perception Systems
-- Visual Processing
-- Tactile Sensing
-- Force Sensing
-- Multimodal Integration
+#### Week 1-2: Basic Control
+- Position control
+- Velocity control
+- Force control
+- Impedance control
 
-#### Week 3-4: Control Systems
-- Motor Control
-- Force Control
-- Impedance Control
-- Whole-body Control
+#### Week 3-4: Advanced Control
+- Adaptive control
+- Robust control
+- Optimal control
+- Learning control
 
-#### Week 5-6: Learning Systems
-- Skill Learning
-- Task Learning
-- Adaptation
-- Transfer Learning
+#### Week 5-6: Autonomous Systems
+- Path planning
+- Navigation
+- Manipulation
+- Task execution
 
-### 3. Applications (4 weeks)
+### 3. Robot Intelligence (4 weeks)
 
-#### Week 1-2: Manipulation Tasks
+#### Week 1-2: Robot Learning
 ```python
-class ManipulationTask:
+class RobotLearner:
     def __init__(self,
-                 robot: Robot,
-                 environment: Environment):
-        """Initialize manipulation task."""
-        self.robot = robot
-        self.env = environment
-        self.planner = TaskPlanner()
+                 state_dim: int,
+                 learning_rate: float):
+        """Initialize robot learning system."""
+        self.memory = ExperienceMemory(state_dim)
+        self.learning = LearningMechanism()
+        self.adaptation = BehaviorAdaptation(learning_rate)
         
-    def execute_task(self,
-                    task_spec: Dict[str, Any]) -> bool:
-        """Execute manipulation task."""
-        # Generate task plan
-        plan = self.planner.plan_task(task_spec)
-        
-        # Execute actions
-        for action in plan:
-            success = self.robot.execute_action(action)
-            if not success:
-                return self.handle_failure(action)
-        
-        return self.verify_task_completion(task_spec)
+    def learn_behavior(self,
+                      environment: Environment) -> BehaviorPolicy:
+        """Learn through interaction."""
+        experience = self.memory.collect_experience(environment)
+        learned_policy = self.learning.update_policy(experience)
+        return self.adaptation.refine_behavior(learned_policy)
 ```
 
-#### Week 3-4: Navigation Tasks
-- Path Planning
-- Obstacle Avoidance
-- SLAM
-- Multi-robot Coordination
+#### Week 3-4: Robot Systems
+- System integration
+- Behavior synthesis
+- Task learning
+- Skill transfer
 
 ### 4. Advanced Topics (4 weeks)
 
-#### Week 1-2: Human-Robot Interaction
+#### Week 1-2: Robot-Environment Integration
 ```python
-class HumanRobotInteraction:
+class RobotEnvironmentInterface:
     def __init__(self,
-                 robot: Robot,
-                 human_model: HumanModel):
-        """Initialize human-robot interaction."""
-        self.robot = robot
-        self.human = human_model
-        self.interaction_model = InteractionModel()
+                 robot_systems: List[RobotSystem],
+                 integration_params: IntegrationParams):
+        """Initialize robot-environment interface."""
+        self.systems = robot_systems
+        self.integrator = SystemIntegrator(integration_params)
+        self.coordinator = BehaviorCoordinator()
         
-    def adapt_behavior(self,
-                      human_state: torch.Tensor) -> torch.Tensor:
-        """Adapt robot behavior to human."""
-        # Infer human intention
-        intention = self.human.infer_intention(human_state)
-        
-        # Generate adaptive behavior
-        robot_action = self.interaction_model.generate_action(
-            self.robot.state, intention
-        )
-        
-        return robot_action
+    def process_interaction(self,
+                          inputs: Dict[str, torch.Tensor]) -> SystemState:
+        """Process robot-environment interaction."""
+        system_states = {system: system.process(inputs[system.name])
+                        for system in self.systems}
+        integrated_state = self.integrator.combine_states(system_states)
+        return self.coordinator.coordinate_behavior(integrated_state)
 ```
 
-#### Week 3-4: Learning and Adaptation
-- Online Learning
-- Adaptive Control
-- Robust Behavior
-- Safety Constraints
+#### Week 3-4: Advanced Robotics
+- Multi-robot systems
+- Human-robot interaction
+- Social robotics
+- Cognitive robotics
 
 ## Projects
 
-### Manipulation Projects
-1. **Object Manipulation**
-   - Grasping
-   - Assembly
-   - Tool Use
-   - Dexterous Manipulation
+### Robotics Projects
+1. **Control Systems**
+   - Position control
+   - Force control
+   - Impedance control
+   - Adaptive control
 
-2. **Task Learning**
-   - Skill Acquisition
-   - Task Adaptation
-   - Failure Recovery
-   - Generalization
+2. **Autonomous Systems**
+   - Path planning
+   - Navigation
+   - Manipulation
+   - Task execution
 
-### Navigation Projects
-1. **Mobile Robotics**
-   - Indoor Navigation
-   - Outdoor Exploration
-   - Dynamic Environments
-   - Multi-robot Systems
+### Advanced Projects
+1. **Intelligent Robotics**
+   - Learning systems
+   - Adaptive behavior
+   - Skill acquisition
+   - Task generalization
 
-2. **Interactive Tasks**
-   - Human Collaboration
-   - Social Navigation
-   - Gesture Recognition
-   - Natural Interfaces
-
-## Assessment
-
-### Technical Assessment
-1. **System Implementation**
-   - Perception Systems
-   - Control Systems
-   - Learning Systems
-   - Integration
-
-2. **Performance Evaluation**
-   - Task Success
-   - Robustness
-   - Efficiency
-   - Safety
-
-### Final Projects
-1. **Research Project**
-   - Novel Algorithm
-   - System Integration
-   - Experimental Validation
-   - Documentation
-
-2. **Applied Project**
-   - Real Robot Implementation
-   - Task Demonstration
-   - Performance Analysis
-   - User Study
+2. **Interactive Systems**
+   - Human-robot interaction
+   - Social robotics
+   - Multi-robot coordination
+   - Environmental adaptation
 
 ## Resources
+
+### Academic Resources
+1. **Research Papers**
+   - Robot Control
+   - Active Inference
+   - Learning Systems
+   - Autonomous Robotics
+
+2. **Books**
+   - Robot Systems
+   - Control Theory
+   - Learning Control
+   - Cognitive Robotics
 
 ### Technical Resources
 1. **Software Tools**
    - ROS/ROS2
-   - Simulation Environments
+   - Simulation Tools
    - Control Libraries
-   - Vision Libraries
+   - Vision Systems
 
-2. **Hardware Platforms**
-   - Robot Arms
-   - Mobile Platforms
-   - Sensors
-   - Computing Systems
-
-### Learning Resources
-1. **Documentation**
-   - API References
-   - Tutorials
-   - Example Code
-   - Best Practices
-
-2. **Research Papers**
-   - Core Methods
-   - Applications
-   - Case Studies
-   - Benchmarks
+2. **Hardware Resources**
+   - Robot Platforms
+   - Sensor Systems
+   - Control Hardware
+   - Development Kits
 
 ## Next Steps
 
 ### Advanced Topics
-1. [[advanced_robotics_learning_path|Advanced Robotics]]
-2. [[human_robot_interaction_learning_path|Human-Robot Interaction]]
-3. [[robot_learning_learning_path|Robot Learning]]
+1. [[robotics_learning_path|Robotics]]
+2. [[control_systems_learning_path|Control Systems]]
+3. [[embodied_cognition_learning_path|Embodied Cognition]]
 
 ### Research Directions
-1. [[research_guides/robotics|Robotics Research]]
-2. [[research_guides/control_theory|Control Theory Research]]
-3. [[research_guides/autonomous_systems|Autonomous Systems Research]] 
+1. [[research_guides/robot_control|Robot Control Research]]
+2. [[research_guides/autonomous_systems|Autonomous Systems Research]]
+3. [[research_guides/cognitive_robotics|Cognitive Robotics Research]]
+
+## Version History
+- Created: 2024-03-15
+- Last Updated: 2024-03-15
+- Status: Stable
+- Version: 1.0.0 

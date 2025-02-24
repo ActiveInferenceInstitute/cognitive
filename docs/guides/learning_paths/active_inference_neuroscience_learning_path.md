@@ -8,38 +8,38 @@ processing_priority: 1
 tags:
   - active-inference
   - neuroscience
-  - brain-dynamics
-  - cognitive-neuroscience
+  - brain-modeling
+  - neural-computation
 semantic_relations:
   - type: specializes
     links: [[active_inference_learning_path]]
   - type: relates
     links:
-      - [[neural_dynamics_learning_path]]
+      - [[neuroscience_learning_path]]
+      - [[computational_neuroscience_learning_path]]
       - [[cognitive_neuroscience_learning_path]]
-      - [[brain_imaging_learning_path]]
 ---
 
 # Active Inference in Neuroscience Learning Path
 
 ## Overview
 
-This specialized path focuses on applying Active Inference to understand brain function, neural dynamics, and cognitive processes. It integrates neuroscientific theory with computational modeling.
+This specialized path explores the application of Active Inference to understanding neural systems and brain function. It integrates neuroscience, computational modeling, and cognitive theory to explain how the brain implements prediction, learning, and behavior.
 
 ## Prerequisites
 
 ### 1. Neuroscience Foundations (4 weeks)
 - Neural Systems
   - Neuroanatomy
+  - Neurophysiology
   - Neural circuits
-  - Synaptic transmission
   - Brain networks
 
-- Brain Dynamics
-  - Neural oscillations
-  - Population dynamics
-  - Network synchronization
-  - Neuroplasticity
+- Computational Neuroscience
+  - Neural coding
+  - Network dynamics
+  - Information processing
+  - Brain computation
 
 - Cognitive Neuroscience
   - Perception
@@ -48,235 +48,209 @@ This specialized path focuses on applying Active Inference to understand brain f
   - Memory
 
 - Research Methods
-  - Brain imaging
+  - Neuroimaging
   - Electrophysiology
   - Data analysis
-  - Experimental design
+  - Modeling approaches
 
 ### 2. Technical Skills (2 weeks)
-- Computational Tools
-  - Python/MATLAB
-  - Neural data analysis
+- Neuroscience Tools
+  - Neural simulators
+  - Analysis packages
+  - Visualization tools
   - Statistical methods
-  - Visualization
 
 ## Core Learning Path
 
-### 1. Neural Implementations (4 weeks)
+### 1. Neural Inference Modeling (4 weeks)
 
-#### Week 1-2: Neural Message Passing
+#### Week 1-2: Neural State Inference
 ```python
-class NeuralMessagePassing:
+class NeuralStateEstimator:
     def __init__(self,
-                 n_regions: int,
-                 n_features: int):
-        """Initialize neural message passing network."""
-        self.regions = nn.ModuleList([
-            BrainRegion(n_features) for _ in range(n_regions)
-        ])
-        self.connections = self._initialize_connections()
+                 brain_regions: List[str],
+                 connection_types: List[str]):
+        """Initialize neural state estimator."""
+        self.neural_hierarchy = NeuralHierarchy(brain_regions)
+        self.connectivity = NeuralConnectivity(connection_types)
+        self.state_monitor = BrainStateMonitor()
         
-    def forward(self, 
-                sensory_input: torch.Tensor) -> Dict[str, torch.Tensor]:
-        """Propagate predictions and errors through network."""
-        predictions = {}
-        errors = {}
-        
-        # Bottom-up pass
-        for region in self.regions:
-            pred = region.generate_prediction()
-            error = region.compute_error(sensory_input)
-            predictions[region.name] = pred
-            errors[region.name] = error
-            
-        return {'predictions': predictions, 'errors': errors}
+    def estimate_state(self,
+                      neural_activity: torch.Tensor,
+                      sensory_input: torch.Tensor) -> BrainState:
+        """Estimate neural system state."""
+        current_state = self.neural_hierarchy.integrate_activity(
+            neural_activity, sensory_input
+        )
+        processed_state = self.connectivity.process_state(current_state)
+        return self.state_monitor.validate_state(processed_state)
 ```
 
-#### Week 3-4: Neural Dynamics
+#### Week 3-4: Neural Decision Making
 ```python
-class NeuralDynamics:
+class NeuralDecisionMaker:
     def __init__(self,
-                 connectivity: torch.Tensor,
-                 time_constants: torch.Tensor):
-        """Initialize neural dynamics model."""
-        self.connectivity = connectivity
-        self.tau = time_constants
-        self.state = torch.zeros(connectivity.shape[0])
+                 action_space: ActionSpace,
+                 value_function: ValueFunction):
+        """Initialize neural decision maker."""
+        self.action_repertoire = ActionRepertoire(action_space)
+        self.value_evaluator = value_function
+        self.decision_policy = DecisionPolicy()
         
-    def update(self,
-              input_current: torch.Tensor,
-              dt: float = 0.001) -> torch.Tensor:
-        """Update neural state."""
-        dxdt = (-self.state + self.connectivity @ self.state + input_current) / self.tau
-        self.state += dt * dxdt
-        return self.state
+    def select_action(self,
+                     neural_state: torch.Tensor,
+                     goal_state: torch.Tensor) -> NeuralAction:
+        """Select neural action."""
+        actions = self.action_repertoire.generate_options()
+        values = self.evaluate_action_values(actions, neural_state, goal_state)
+        return self.decision_policy.select_action(actions, values)
 ```
 
-### 2. Brain Systems (6 weeks)
+### 2. Neural Applications (6 weeks)
 
-#### Week 1-2: Sensory Systems
-- Visual Processing
-- Auditory Processing
-- Somatosensory Processing
-- Multisensory Integration
+#### Week 1-2: Perception
+- Sensory processing
+- Predictive coding
+- Feature extraction
+- Multimodal integration
 
-#### Week 3-4: Motor Systems
-- Motor Planning
-- Action Selection
-- Movement Control
-- Sensorimotor Integration
+#### Week 3-4: Action
+- Motor control
+- Action selection
+- Movement planning
+- Behavioral adaptation
 
-#### Week 5-6: Cognitive Systems
-- Working Memory
-- Decision Making
-- Learning and Plasticity
-- Executive Control
+#### Week 5-6: Learning
+- Synaptic plasticity
+- Neural adaptation
+- Memory formation
+- Skill acquisition
 
-### 3. Clinical Applications (4 weeks)
+### 3. Brain Intelligence (4 weeks)
 
-#### Week 1-2: Neurological Disorders
+#### Week 1-2: Neural Learning
 ```python
-class DisorderModel:
+class NeuralLearner:
     def __init__(self,
-                 disorder_params: Dict[str, float]):
-        """Initialize disorder model."""
-        self.params = disorder_params
-        self.baseline = self._establish_baseline()
+                 network_size: int,
+                 learning_rate: float):
+        """Initialize neural learning system."""
+        self.network = NeuralNetwork(network_size)
+        self.learning = LearningMechanism()
+        self.adaptation = SynapticAdaptation(learning_rate)
         
-    def simulate_pathology(self,
-                         brain_state: torch.Tensor) -> torch.Tensor:
-        """Simulate disorder effects on brain state."""
-        affected_state = self.apply_disorder_effects(brain_state)
-        return affected_state
+    def learn_patterns(self,
+                      environment: Environment) -> NeuralKnowledge:
+        """Learn through neural plasticity."""
+        activity = self.network.process_input(environment)
+        learned_patterns = self.learning.extract_patterns(activity)
+        return self.adaptation.update_synapses(learned_patterns)
 ```
 
-#### Week 3-4: Therapeutic Interventions
-- Treatment Design
-- Intervention Modeling
-- Outcome Prediction
-- Personalized Medicine
+#### Week 3-4: Neural Systems
+- Network dynamics
+- Information flow
+- Neural coding
+- System integration
 
-### 4. Research Methods (4 weeks)
+### 4. Advanced Topics (4 weeks)
 
-#### Week 1-2: Experimental Design
+#### Week 1-2: Brain-Environment Integration
 ```python
-class NeuroimagingExperiment:
+class BrainEnvironmentInterface:
     def __init__(self,
-                 paradigm: str,
-                 conditions: List[str]):
-        """Initialize neuroimaging experiment."""
-        self.paradigm = paradigm
-        self.conditions = conditions
-        self.design_matrix = self._create_design_matrix()
+                 brain_systems: List[BrainSystem],
+                 integration_params: IntegrationParams):
+        """Initialize brain-environment interface."""
+        self.systems = brain_systems
+        self.integrator = SystemIntegrator(integration_params)
+        self.coordinator = BehaviorCoordinator()
         
-    def run_experiment(self,
-                      subject: Subject) -> Dict[str, np.ndarray]:
-        """Run experimental paradigm."""
-        data = {}
-        for condition in self.conditions:
-            response = self.present_stimulus(subject, condition)
-            data[condition] = self.record_brain_activity(response)
-        return data
+    def process_interaction(self,
+                          inputs: Dict[str, torch.Tensor]) -> SystemState:
+        """Process brain-environment interaction."""
+        system_states = {system: system.process(inputs[system.name])
+                        for system in self.systems}
+        integrated_state = self.integrator.combine_states(system_states)
+        return self.coordinator.coordinate_behavior(integrated_state)
 ```
 
-#### Week 3-4: Data Analysis
-- Neural Data Processing
-- Statistical Analysis
-- Model Comparison
-- Results Interpretation
+#### Week 3-4: Advanced Neuroscience
+- Neural computation
+- Brain networks
+- Cognitive architectures
+- Consciousness studies
 
 ## Projects
 
-### Clinical Projects
-1. **Disorder Modeling**
-   - Schizophrenia
-   - Parkinson's Disease
-   - Depression
-   - Anxiety
+### Neuroscience Projects
+1. **Neural Systems**
+   - Circuit analysis
+   - Network modeling
+   - Information processing
+   - Neural dynamics
 
-2. **Treatment Optimization**
-   - Drug Effects
-   - Brain Stimulation
-   - Behavioral Interventions
-   - Personalized Medicine
+2. **Cognitive Systems**
+   - Perception studies
+   - Action modeling
+   - Learning mechanisms
+   - Memory formation
 
-### Research Projects
-1. **Neural Mechanisms**
-   - Perception Studies
-   - Action Understanding
-   - Learning Experiments
-   - Decision Making
+### Advanced Projects
+1. **Brain Research**
+   - Neural recording
+   - Data analysis
+   - Model development
+   - Theory testing
 
 2. **Clinical Applications**
-   - Biomarker Development
-   - Treatment Response
-   - Disease Progression
-   - Intervention Design
-
-## Assessment
-
-### Knowledge Assessment
-1. **Theoretical Understanding**
-   - Neural Mechanisms
-   - Clinical Applications
-   - Research Methods
-   - Data Analysis
-
-2. **Practical Skills**
-   - Experimental Design
-   - Data Collection
-   - Analysis Methods
-   - Result Interpretation
-
-### Final Projects
-1. **Research Project**
-   - Experimental Design
-   - Data Collection
-   - Analysis
-   - Publication
-
-2. **Clinical Application**
-   - Patient Assessment
-   - Treatment Design
-   - Outcome Prediction
-   - Validation Study
+   - Disorder modeling
+   - Treatment simulation
+   - Intervention design
+   - Outcome prediction
 
 ## Resources
 
-### Scientific Resources
+### Academic Resources
 1. **Research Papers**
-   - Foundational Papers
-   - Clinical Studies
-   - Methods Papers
-   - Reviews
+   - Neural Computation
+   - Active Inference
+   - Brain Theory
+   - Clinical Neuroscience
 
 2. **Books**
-   - Neuroscience
+   - Neural Systems
+   - Brain Function
+   - Cognitive Theory
    - Clinical Applications
-   - Research Methods
-   - Data Analysis
 
 ### Technical Resources
 1. **Software Tools**
+   - Neural Simulators
    - Analysis Packages
-   - Imaging Tools
-   - Statistical Software
    - Visualization Tools
+   - Statistical Methods
 
-2. **Data Resources**
+2. **Research Resources**
    - Brain Databases
-   - Clinical Data
-   - Reference Datasets
-   - Analysis Pipelines
+   - Neural Data
+   - Analysis Tools
+   - Modeling Frameworks
 
 ## Next Steps
 
 ### Advanced Topics
-1. [[computational_psychiatry_learning_path|Computational Psychiatry]]
-2. [[brain_imaging_learning_path|Brain Imaging]]
-3. [[neural_dynamics_learning_path|Neural Dynamics]]
+1. [[neuroscience_learning_path|Neuroscience]]
+2. [[computational_neuroscience_learning_path|Computational Neuroscience]]
+3. [[cognitive_neuroscience_learning_path|Cognitive Neuroscience]]
 
 ### Research Directions
-1. [[research_guides/computational_neuroscience|Computational Neuroscience]]
-2. [[research_guides/clinical_neuroscience|Clinical Neuroscience]]
-3. [[research_guides/cognitive_neuroscience|Cognitive Neuroscience]] 
+1. [[research_guides/neural_computation|Neural Computation Research]]
+2. [[research_guides/brain_theory|Brain Theory Research]]
+3. [[research_guides/clinical_neuroscience|Clinical Neuroscience Research]]
+
+## Version History
+- Created: 2024-03-15
+- Last Updated: 2024-03-15
+- Status: Stable
+- Version: 1.0.0 
