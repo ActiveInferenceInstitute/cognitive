@@ -6,6 +6,7 @@
       {
         "id": "73928c77f9377ff7",
         "type": "tabs",
+        "dimension": 32.45192307692308,
         "children": [
           {
             "id": "6628789c7e1ffd53",
@@ -13,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/guides/learning_paths/active_inference_myrmecology_learning_path.md",
+                "file": "knowledge_base/ontology/hyperspatial/hyperspace_ontology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "active_inference_myrmecology_learning_path"
+              "title": "hyperspace_ontology"
             }
           }
         ]
@@ -26,6 +27,7 @@
       {
         "id": "13c8251f305a54a9",
         "type": "tabs",
+        "dimension": 67.54807692307693,
         "children": [
           {
             "id": "4b7c14691fc0c93e",
@@ -182,8 +184,15 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "732e93d9f16fd2e9",
+  "active": "4b7c14691fc0c93e",
   "lastOpenFiles": [
+    "knowledge_base/ontology/hyperspatial/hyperspace_ontology.md",
+    "knowledge_base/philosophy/philosophy_topics.md",
+    "knowledge_base/ontology/hyperspatial",
+    "knowledge_base/ontology",
+    "knowledge_base/philosophy/operationalism.md",
+    "knowledge_base/philosophy/pragmatism.md",
+    "docs/guides/learning_paths/active_inference_myrmecology_learning_path.md",
     "knowledge_base/philosophy/peircean_semiotics.md",
     "knowledge_base/philosophy",
     "knowledge_base/mathematics/numerical_taylor_methods.md",
@@ -206,20 +215,13 @@
     "knowledge_base/mathematics/homological_algebra.md",
     "knowledge_base/mathematics/algebraic_geometry.md",
     "knowledge_base/mathematics/topology.md",
-    "docs/guides/learning_paths/active_inference_agi_learning_path.md",
-    "docs/guides/learning_paths/active_inference_spatial_web_path.md",
-    "docs/guides/learning_paths/active_inference_learning_path.md",
-    "docs/templates/learning_path_template.md",
     "docs/knowledge_base/systems",
     "docs/knowledge_base",
-    "docs/guides/application/guide_for_cognitive_modeling.md",
     "tools/src/models/matrices/__pycache__/matrix_ops.cpython-310.pyc",
     "tools/src/models/active_inference/config_examples/discrete_variational.yaml",
     "tools/src/models/active_inference/config_examples/continuous_sampling.yaml",
     "tools/src/models/active_inference/__pycache__/dispatcher.cpython-310.pyc",
     "tools/src/models/active_inference/__pycache__/base.cpython-310.pyc",
-    "tools/src/models/active_inference/__pycache__/__init__.cpython-310.pyc",
-    "tools/src/visualization/__pycache__/matrix_plots.cpython-310.pyc",
     "Things/Generic_Thing/generic_thing/visualizations/message_network_20250223_140901.png",
     "Things/Generic_Thing/generic_thing/visualizations/hierarchy_test_20250223_140900.png",
     "Things/Generic_Thing/generic_thing/visualizations/belief_uncertainty_20250223_140745.png",

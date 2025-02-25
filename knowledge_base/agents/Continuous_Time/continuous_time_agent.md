@@ -327,3 +327,471 @@ class ContinuousTimeAgentTest(unittest.TestCase):
    - Climate modeling
    - Financial systems
    - Social systems modeling
+
+## Advanced Implementation Frameworks
+
+### 1. Path Integral Control Integration
+
+The path integral formulation of active inference combines continuous-time dynamics with optimal control:
+
+```math
+P(τ|π) ∝ exp(-S[τ]/λ)
+```
+
+where:
+- τ is the trajectory
+- S[τ] is the path cost
+- λ is the temperature parameter
+
+#### Implementation
+```python
+class PathIntegralInference(ContinuousTimeAgent):
+    def __init__(self, dim_states, dim_obs, dim_action, n_samples=100):
+        super().__init__(dim_states, dim_obs, dim_action)
+        self.n_samples = n_samples
+        
+    def compute_optimal_action(self, observation):
+        # Generate trajectory samples
+        trajectories = self.sample_trajectories()
+        
+        # Compute path costs
+        costs = self.compute_path_costs(trajectories)
+        
+        # Weight trajectories by cost
+        weights = self.softmax(-costs / self.temperature)
+        
+        # Compute weighted average action
+        optimal_action = np.sum(weights[:, None] * trajectories[:, 0, :], axis=0)
+        return optimal_action
+        
+    def sample_trajectories(self):
+        """Sample trajectories using continuous-time dynamics"""
+        trajectories = np.zeros((self.n_samples, self.horizon, self.dim_action))
+        for i in range(self.n_samples):
+            trajectory = self.simulate_trajectory()
+            trajectories[i] = trajectory
+        return trajectories
+```
+
+### 2. Adaptive Learning Framework
+
+Implementing adaptive learning in continuous time:
+
+```python
+class AdaptiveContinuousInference(ContinuousTimeAgent):
+    def __init__(self, dim_states, dim_obs, dim_action):
+        super().__init__(dim_states, dim_obs, dim_action)
+        self.learning_rates = {
+            'state': AdaptiveLearningRate(),
+            'precision': AdaptiveLearningRate(),
+            'action': AdaptiveLearningRate()
+        }
+        
+    def update_learning_rates(self, gradients, errors):
+        """Update learning rates based on gradient history"""
+        for param, lr in self.learning_rates.items():
+            lr.update(gradients[param], errors[param])
+            
+    class AdaptiveLearningRate:
+        def __init__(self, beta1=0.9, beta2=0.999, epsilon=1e-8):
+            self.beta1 = beta1  # Momentum parameter
+            self.beta2 = beta2  # RMSprop parameter
+            self.epsilon = epsilon
+            self.m = 0  # First moment
+            self.v = 0  # Second moment
+            
+        def update(self, gradient, error):
+            # Update moments
+            self.m = self.beta1 * self.m + (1 - self.beta1) * gradient
+            self.v = self.beta2 * self.v + (1 - self.beta2) * gradient**2
+            
+            # Compute adaptive rate
+            return self.m / (np.sqrt(self.v) + self.epsilon)
+```
+
+### 3. Quantum Extensions
+
+Extending to quantum active inference:
+
+```python
+class QuantumContinuousInference(ContinuousTimeAgent):
+    def __init__(self, dim_states, dim_obs, dim_action):
+        super().__init__(dim_states, dim_obs, dim_action)
+        self.quantum_state = QuantumState(dim_states)
+        
+    def quantum_free_energy(self):
+        """Compute quantum free energy"""
+        # Von Neumann entropy term
+        S = -np.trace(self.quantum_state.density @ np.log(self.quantum_state.density))
+        
+        # Energy term
+        E = np.trace(self.quantum_state.density @ self.hamiltonian)
+        
+        return E - self.temperature * S
+        
+    def quantum_belief_update(self, observation):
+        """Update quantum belief state"""
+        # Lindblad master equation
+        dρ = -1j * commutator(self.hamiltonian, self.quantum_state.density)
+        
+        # Add dissipative terms
+        dρ += self.dissipator(self.quantum_state.density)
+        
+        # Update state
+        self.quantum_state.density += self.dt * dρ
+        
+    class QuantumState:
+        def __init__(self, dim):
+            self.density = np.eye(dim) / dim  # Initial maximally mixed state
+            self.hamiltonian = np.zeros((dim, dim))
+            
+        def compute_observables(self):
+            """Compute expectation values of observables"""
+            return {
+                'energy': np.trace(self.density @ self.hamiltonian),
+                'entropy': -np.trace(self.density @ np.log(self.density)),
+                'purity': np.trace(self.density @ self.density)
+            }
+```
+
+## Advanced Applications
+
+### 1. Neuromorphic Implementation
+
+```python
+class NeuromorphicContinuousInference(ContinuousTimeAgent):
+    def __init__(self, dim_states, dim_obs, dim_action):
+        super().__init__(dim_states, dim_obs, dim_action)
+        self.spiking_network = SpikingNetwork(dim_states)
+        
+    def neuromorphic_step(self, observation):
+        """Implement continuous-time inference using spiking neurons"""
+        # Convert observation to spike train
+        spike_train = self.encode_spikes(observation)
+        
+        # Update neural membrane potentials
+        self.spiking_network.update(spike_train)
+        
+        # Decode action from population activity
+        return self.decode_action(self.spiking_network.activity)
+        
+    class SpikingNetwork:
+        def __init__(self, dim):
+            self.neurons = [LIFNeuron() for _ in range(dim)]
+            self.synapses = initialize_synapses(dim)
+            
+        def update(self, input_spikes):
+            """Update neural dynamics"""
+            for neuron, input_spike in zip(self.neurons, input_spikes):
+                neuron.update(input_spike)
+                
+        class LIFNeuron:
+            def __init__(self, tau=20.0, threshold=1.0):
+                self.v = 0.0  # Membrane potential
+                self.tau = tau  # Time constant
+                self.threshold = threshold
+                
+            def update(self, input_current):
+                """Update membrane potential"""
+                self.v += (-self.v + input_current) / self.tau
+                if self.v > self.threshold:
+                    self.v = 0.0  # Reset
+                    return 1  # Spike
+                return 0  # No spike
+```
+
+### 2. Distributed Implementation
+
+```python
+class DistributedContinuousInference:
+    def __init__(self, n_agents, dim_states, dim_obs, dim_action):
+        self.agents = [ContinuousTimeAgent(dim_states, dim_obs, dim_action) 
+                      for _ in range(n_agents)]
+        self.communication_graph = initialize_graph(n_agents)
+        
+    def distributed_step(self, observations):
+        """Perform distributed inference step"""
+        # Local updates
+        local_beliefs = [agent.step(obs) 
+                        for agent, obs in zip(self.agents, observations)]
+        
+        # Belief consensus
+        consensus_beliefs = self.reach_consensus(local_beliefs)
+        
+        # Update all agents
+        for agent, belief in zip(self.agents, consensus_beliefs):
+            agent.update_from_consensus(belief)
+            
+    def reach_consensus(self, local_beliefs):
+        """Implement consensus algorithm"""
+        consensus = local_beliefs.copy()
+        for _ in range(self.consensus_iterations):
+            for i in range(len(self.agents)):
+                # Average over neighbors
+                neighbor_beliefs = [consensus[j] 
+                                  for j in self.communication_graph[i]]
+                consensus[i] = np.mean(neighbor_beliefs, axis=0)
+        return consensus
+```
+
+## Advanced Optimization Techniques
+
+### 1. Natural Gradient Descent
+
+The natural gradient provides a more efficient optimization by accounting for the information geometry:
+
+```python
+class NaturalGradientOptimizer:
+    def __init__(self, learning_rate=0.01):
+        self.learning_rate = learning_rate
+        
+    def compute_natural_gradient(self, gradients, fisher_info):
+        """Compute natural gradient using Fisher information"""
+        return np.linalg.solve(fisher_info + 1e-6 * np.eye(len(gradients)), gradients)
+        
+    def update_parameters(self, parameters, gradients, fisher_info):
+        """Update parameters using natural gradient"""
+        natural_grad = self.compute_natural_gradient(gradients, fisher_info)
+        return parameters - self.learning_rate * natural_grad
+```
+
+### 2. Hamiltonian Monte Carlo
+
+Implementing HMC for more efficient sampling:
+
+```python
+class HamiltonianMonteCarlo:
+    def __init__(self, potential_energy, kinetic_energy, step_size=0.1, n_steps=10):
+        self.potential_energy = potential_energy
+        self.kinetic_energy = kinetic_energy
+        self.step_size = step_size
+        self.n_steps = n_steps
+        
+    def sample_momentum(self, dim):
+        """Sample initial momentum"""
+        return np.random.normal(0, 1, dim)
+        
+    def leapfrog_step(self, position, momentum):
+        """Perform leapfrog integration step"""
+        # Half step for momentum
+        grad_U = self.compute_gradient(position)
+        momentum -= 0.5 * self.step_size * grad_U
+        
+        # Full step for position
+        position += self.step_size * momentum
+        
+        # Half step for momentum
+        grad_U = self.compute_gradient(position)
+        momentum -= 0.5 * self.step_size * grad_U
+        
+        return position, momentum
+```
+
+### 3. Variational Path Integral Control
+
+Advanced path integral control with variational optimization:
+
+```python
+class VariationalPathIntegral:
+    def __init__(self, dim_state, dim_control, horizon):
+        self.dim_state = dim_state
+        self.dim_control = dim_control
+        self.horizon = horizon
+        
+    def optimize_trajectory(self, initial_state, goal_state):
+        """Optimize trajectory using variational path integral"""
+        # Initialize trajectory distribution
+        trajectories = self.initialize_trajectories(initial_state)
+        
+        for iter in range(self.max_iters):
+            # Forward pass - simulate trajectories
+            costs = self.evaluate_trajectories(trajectories)
+            
+            # Backward pass - update control law
+            weights = self.compute_weights(costs)
+            new_control = self.update_control_law(trajectories, weights)
+            
+            # Update trajectories
+            trajectories = self.apply_control(new_control)
+            
+            if self.check_convergence(trajectories, goal_state):
+                break
+                
+        return trajectories
+```
+
+## Real-World Applications
+
+### 1. Robotic Control Systems
+
+Implementation for robotic control:
+
+```python
+class RoboticContinuousInference(ContinuousTimeAgent):
+    def __init__(self, robot_config):
+        super().__init__(robot_config.state_dim, robot_config.obs_dim, robot_config.action_dim)
+        self.robot = RobotInterface(robot_config)
+        
+    def control_loop(self):
+        """Main control loop"""
+        while not self.robot.is_shutdown():
+            # Get sensor observations
+            obs = self.robot.get_observations()
+            
+            # Update beliefs and compute action
+            action = self.step(obs)
+            
+            # Apply action to robot
+            self.robot.apply_action(action)
+            
+            # Update internal models
+            self.update_models(obs, action)
+            
+    class RobotInterface:
+        def __init__(self, config):
+            self.joint_states = np.zeros(config.n_joints)
+            self.sensors = initialize_sensors(config)
+            
+        def get_observations(self):
+            """Get current sensor readings"""
+            return {
+                'joints': self.joint_states,
+                'vision': self.sensors.camera.read(),
+                'force': self.sensors.force_torque.read()
+            }
+```
+
+### 2. Neural Modeling
+
+Implementation for neural systems:
+
+```python
+class NeuralContinuousInference(ContinuousTimeAgent):
+    def __init__(self, brain_region_config):
+        super().__init__(brain_region_config.n_neurons, 
+                        brain_region_config.n_inputs,
+                        brain_region_config.n_outputs)
+        self.neural_population = NeuralPopulation(brain_region_config)
+        
+    def neural_dynamics(self):
+        """Simulate neural dynamics"""
+        while True:
+            # Get synaptic inputs
+            inputs = self.neural_population.get_inputs()
+            
+            # Update neural states
+            self.update_neural_states(inputs)
+            
+            # Generate outputs
+            outputs = self.neural_population.generate_outputs()
+            
+            # Update synaptic weights
+            self.update_synaptic_weights(inputs, outputs)
+            
+    class NeuralPopulation:
+        def __init__(self, config):
+            self.neurons = [Neuron(config) for _ in range(config.n_neurons)]
+            self.synapses = initialize_synapses(config)
+            
+        def update_neural_states(self, inputs):
+            """Update neural population state"""
+            for neuron, input in zip(self.neurons, inputs):
+                neuron.update_state(input)
+```
+
+### 3. Climate Modeling
+
+Implementation for climate systems:
+
+```python
+class ClimateContinuousInference(ContinuousTimeAgent):
+    def __init__(self, climate_config):
+        super().__init__(climate_config.state_dim,
+                        climate_config.obs_dim,
+                        climate_config.action_dim)
+        self.climate_model = ClimateModel(climate_config)
+        
+    def climate_prediction(self):
+        """Run climate prediction"""
+        while True:
+            # Get climate observations
+            obs = self.climate_model.get_observations()
+            
+            # Update climate state estimates
+            self.update_climate_state(obs)
+            
+            # Generate predictions
+            predictions = self.generate_predictions()
+            
+            # Update uncertainty estimates
+            self.update_uncertainties(predictions, obs)
+            
+    class ClimateModel:
+        def __init__(self, config):
+            self.atmosphere = AtmosphereModel(config)
+            self.ocean = OceanModel(config)
+            self.land = LandModel(config)
+            
+        def simulate_dynamics(self):
+            """Simulate coupled climate dynamics"""
+            self.atmosphere.step()
+            self.ocean.step()
+            self.land.step()
+            self.couple_components()
+```
+
+## Performance Benchmarks
+
+### 1. Computational Efficiency
+
+```python
+def benchmark_performance(agent, n_trials=1000):
+    """Benchmark agent performance"""
+    metrics = {
+        'inference_time': [],
+        'action_time': [],
+        'memory_usage': [],
+        'free_energy': []
+    }
+    
+    for _ in range(n_trials):
+        # Generate random observation
+        obs = np.random.randn(agent.dim_obs)
+        
+        # Measure inference time
+        start = time.time()
+        agent.update_beliefs(obs)
+        metrics['inference_time'].append(time.time() - start)
+        
+        # Measure action selection time
+        start = time.time()
+        action = agent.select_action()
+        metrics['action_time'].append(time.time() - start)
+        
+        # Record metrics
+        metrics['memory_usage'].append(get_memory_usage())
+        metrics['free_energy'].append(agent.compute_free_energy())
+        
+    return compute_statistics(metrics)
+```
+
+### 2. Scaling Analysis
+
+```python
+def analyze_scaling(dim_range, n_trials=10):
+    """Analyze how performance scales with dimensionality"""
+    scaling_results = {
+        'dimensions': dim_range,
+        'time_complexity': [],
+        'space_complexity': []
+    }
+    
+    for dim in dim_range:
+        agent = ContinuousTimeAgent(dim, dim, dim)
+        results = benchmark_performance(agent, n_trials)
+        
+        scaling_results['time_complexity'].append(results['total_time'])
+        scaling_results['space_complexity'].append(results['peak_memory'])
+        
+    return fit_scaling_curves(scaling_results)
+```

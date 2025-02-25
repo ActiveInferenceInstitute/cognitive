@@ -469,6 +469,411 @@ end
 - Parameter learning
 - Performance metrics
 
+## RxInfer Integration
+
+### 1. Reactive Message Passing
+
+```julia
+using RxInfer
+
+@model function rxinfer_factor_graph(data)
+    # Prior distributions
+    θ ~ GaussianMeanPrecision(0.0, 1.0)
+    σ ~ GammaShape(1.0, 1.0)
+    
+    # Likelihood factors
+    for i in 1:length(data)
+        y[i] ~ GaussianMeanPrecision(θ, σ)
+    end
+end
+
+# Create inference algorithm
+algorithm = ReactiveMP.messagePassingAlgorithm(
+    model = rxinfer_factor_graph,
+    data = observed_data
+)
+
+# Execute inference
+results = ReactiveMP.infer(algorithm)
+```
+
+### 2. Streaming Factor Graphs
+
+```julia
+struct StreamingFactorGraph
+    base_graph::FactorGraph
+    stream_nodes::Vector{StreamNode}
+    buffer_size::Int
+    
+    function StreamingFactorGraph(model, buffer_size=1000)
+        graph = create_base_graph(model)
+        stream_nodes = initialize_stream_nodes(model)
+        new(graph, stream_nodes, buffer_size)
+    end
+end
+
+function process_stream!(graph::StreamingFactorGraph, data_stream)
+    for batch in data_stream
+        # Update streaming nodes
+        update_stream_nodes!(graph, batch)
+        
+        # Perform message passing
+        propagate_messages!(graph)
+        
+        # Update beliefs
+        update_beliefs!(graph)
+        
+        # Prune old messages if needed
+        prune_old_messages!(graph)
+    end
+end
+```
+
+### 3. Reactive Message Types
+
+```julia
+abstract type ReactiveMessage end
+
+struct GaussianReactiveMessage <: ReactiveMessage
+    mean::Observable{Float64}
+    precision::Observable{Float64}
+    
+    function GaussianReactiveMessage(μ::Observable, τ::Observable)
+        new(μ, τ)
+    end
+end
+
+struct StreamingMessage <: ReactiveMessage
+    distribution::Observable{Distribution}
+    timestamp::Observable{Float64}
+    
+    function StreamingMessage(dist::Observable, ts::Observable)
+        new(dist, ts)
+    end
+end
+```
+
+## Advanced Bayesian Integration
+
+### 1. Hierarchical Bayesian Models
+
+```mermaid
+graph TD
+    subgraph "Hierarchical Factor Structure"
+        A[Global Parameters] --> B[Group Parameters]
+        B --> C[Individual Parameters]
+        C --> D[Observations]
+        E[Hyperpriors] --> A
+    end
+    style A fill:#f9f,stroke:#333
+    style C fill:#bbf,stroke:#333
+    style E fill:#bfb,stroke:#333
+```
+
+### 2. Conjugate Factor Pairs
+
+```julia
+struct ConjugateFactor{T<:Distribution} <: FactorNode
+    prior::T
+    likelihood::Function
+    posterior::T
+    sufficient_stats::Dict{Symbol, Any}
+    
+    function ConjugateFactor(prior::T, likelihood::Function) where T
+        posterior = deepcopy(prior)
+        stats = initialize_sufficient_stats(prior)
+        new{T}(prior, likelihood, posterior, stats)
+    end
+end
+
+function update_conjugate_factor!(factor::ConjugateFactor, data)
+    # Update sufficient statistics
+    update_stats!(factor.sufficient_stats, data)
+    
+    # Compute posterior parameters
+    posterior_params = compute_posterior_params(
+        factor.prior, factor.sufficient_stats)
+    
+    # Update posterior
+    update_posterior!(factor.posterior, posterior_params)
+end
+```
+
+### 3. Non-parametric Extensions
+
+```julia
+struct DirichletProcessFactor <: FactorNode
+    base_measure::Distribution
+    concentration::Float64
+    clusters::Vector{Cluster}
+    assignments::Dict{Int, Int}
+    
+    function DirichletProcessFactor(base::Distribution, α::Float64)
+        new(base, α, Cluster[], Dict())
+    end
+end
+
+function sample_assignment(factor::DirichletProcessFactor, data_point)
+    # Compute cluster probabilities
+    probs = compute_cluster_probabilities(factor, data_point)
+    
+    # Sample new assignment
+    assignment = sample_categorical(probs)
+    
+    # Update clusters if necessary
+    if assignment > length(factor.clusters)
+        create_new_cluster!(factor, data_point)
+    end
+    
+    return assignment
+end
+```
+
+## Advanced Message Passing Schemes
+
+### 1. Stochastic Message Passing
+
+```julia
+struct StochasticMessagePassing
+    n_particles::Int
+    resampling_threshold::Float64
+    
+    function StochasticMessagePassing(n_particles=1000, threshold=0.5)
+        new(n_particles, threshold)
+    end
+end
+
+function propagate_particles!(smp::StochasticMessagePassing, 
+                            factor::FactorNode,
+                            particles::Vector{Particle})
+    # Propagate particles through factor
+    weights = zeros(smp.n_particles)
+    new_particles = similar(particles)
+    
+    for i in 1:smp.n_particles
+        # Sample
+        new_particles[i] = propose_particle(factor, particles[i])
+        
+        # Weight
+        weights[i] = compute_importance_weight(
+            factor, particles[i], new_particles[i])
+    end
+    
+    # Resample if needed
+    if effective_sample_size(weights) < smp.resampling_threshold
+        new_particles = resample_particles(new_particles, weights)
+    end
+    
+    return new_particles
+end
+```
+
+### 2. Distributed Message Passing
+
+```julia
+struct DistributedFactorGraph
+    subgraphs::Vector{FactorGraph}
+    interfaces::Dict{Tuple{Int,Int}, Interface}
+    
+    function DistributedFactorGraph(graph::FactorGraph, n_partitions)
+        # Partition graph
+        subgraphs = partition_graph(graph, n_partitions)
+        
+        # Create interfaces
+        interfaces = create_interfaces(subgraphs)
+        
+        new(subgraphs, interfaces)
+    end
+end
+
+function distributed_inference!(graph::DistributedFactorGraph)
+    # Initialize workers
+    workers = [Worker(subgraph) for subgraph in graph.subgraphs]
+    
+    while !converged(workers)
+        # Local inference
+        @sync for worker in workers
+            @async local_inference!(worker)
+        end
+        
+        # Exchange messages
+        exchange_interface_messages!(graph)
+        
+        # Update beliefs
+        update_worker_beliefs!(workers)
+    end
+end
+```
+
+### 3. Adaptive Message Scheduling
+
+```julia
+struct AdaptiveScheduler
+    priority_queue::PriorityQueue{Message, Float64}
+    residual_threshold::Float64
+    
+    function AdaptiveScheduler(threshold=1e-6)
+        new(PriorityQueue{Message, Float64}(), threshold)
+    end
+end
+
+function schedule_message!(scheduler::AdaptiveScheduler, 
+                         message::Message,
+                         residual::Float64)
+    if residual > scheduler.residual_threshold
+        enqueue!(scheduler.priority_queue, message => residual)
+    end
+end
+
+function process_messages!(scheduler::AdaptiveScheduler)
+    while !isempty(scheduler.priority_queue)
+        # Get highest priority message
+        message = dequeue!(scheduler.priority_queue)
+        
+        # Update message
+        new_message = update_message!(message)
+        
+        # Compute residual and reschedule if needed
+        residual = compute_residual(message, new_message)
+        schedule_message!(scheduler, new_message, residual)
+    end
+end
+```
+
+## Integration with Active Inference
+
+### 1. Free Energy Minimization
+
+```julia
+struct FreeEnergyFactor <: FactorNode
+    internal_states::Vector{VariableNode}
+    external_states::Vector{VariableNode}
+    precision::Matrix{Float64}
+    
+    function FreeEnergyFactor(internal, external, precision)
+        new(internal, external, precision)
+    end
+end
+
+function compute_free_energy(factor::FreeEnergyFactor)
+    # Compute prediction error
+    error = compute_prediction_error(
+        factor.internal_states,
+        factor.external_states
+    )
+    
+    # Weight by precision
+    weighted_error = error' * factor.precision * error
+    
+    # Add complexity penalty
+    complexity = compute_complexity_term(factor.internal_states)
+    
+    return 0.5 * weighted_error + complexity
+end
+```
+
+### 2. Policy Selection
+
+```julia
+struct PolicyFactor <: FactorNode
+    policies::Vector{Policy}
+    expected_free_energy::Vector{Float64}
+    temperature::Float64
+    
+    function PolicyFactor(policies, temperature=1.0)
+        n_policies = length(policies)
+        new(policies, zeros(n_policies), temperature)
+    end
+end
+
+function select_policy(factor::PolicyFactor)
+    # Compute softmax probabilities
+    probs = softmax(-factor.temperature * factor.expected_free_energy)
+    
+    # Sample policy
+    policy_idx = sample_categorical(probs)
+    
+    return factor.policies[policy_idx]
+end
+```
+
+## Performance Optimization
+
+### 1. Message Caching
+
+```julia
+struct MessageCache
+    storage::Dict{Tuple{FactorNode, VariableNode}, Message}
+    max_size::Int
+    eviction_policy::Symbol
+    
+    function MessageCache(max_size=10000, policy=:lru)
+        new(Dict(), max_size, policy)
+    end
+end
+
+function cache_message!(cache::MessageCache,
+                       factor::FactorNode,
+                       variable::VariableNode,
+                       message::Message)
+    key = (factor, variable)
+    
+    # Evict if needed
+    if length(cache.storage) >= cache.max_size
+        evict_message!(cache)
+    end
+    
+    # Store message
+    cache.storage[key] = message
+end
+```
+
+### 2. Parallel Message Updates
+
+```julia
+function parallel_message_passing!(graph::FactorGraph)
+    # Group independent messages
+    message_groups = group_independent_messages(graph)
+    
+    # Update messages in parallel
+    @sync for group in message_groups
+        @async begin
+            for message in group
+                update_message!(message)
+            end
+        end
+    end
+end
+```
+
+### 3. GPU Acceleration
+
+```julia
+struct GPUFactorGraph
+    variables::CuArray{VariableNode}
+    factors::CuArray{FactorNode}
+    messages::CuArray{Message}
+    
+    function GPUFactorGraph(graph::FactorGraph)
+        # Transfer to GPU
+        variables = cu(collect(graph.variables))
+        factors = cu(collect(graph.factors))
+        messages = cu(collect_messages(graph))
+        
+        new(variables, factors, messages)
+    end
+end
+
+function gpu_message_passing!(graph::GPUFactorGraph)
+    # Kernel for parallel message updates
+    @cuda threads=256 blocks=div(length(graph.messages), 256) do
+        update_messages_kernel(graph.messages)
+    end
+    
+    synchronize()
+end
+```
+
 ## References
 
 1. Kschischang, F. R., et al. (2001). Factor Graphs and the Sum-Product Algorithm
