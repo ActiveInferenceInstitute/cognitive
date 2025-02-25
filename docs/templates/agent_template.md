@@ -136,6 +136,31 @@ sequenceDiagram
 - [[agent/agent_1|Agent 1]]
 - [[environment/environment_1|Environment 1]]
 
+## Collaboration
+### Multi-Agent Coordination
+```mermaid
+graph LR
+    A[Agent: {{agent_name}}] --> B[Communication Channel]
+    C[Agent 2] --> B
+    D[Agent 3] --> B
+    B --> E[Shared Knowledge]
+    B --> F[Coordinated Actions]
+    B --> G[Resource Allocation]
+```
+
+### Communication Protocols
+- Message formats
+- Communication frequency
+- Information sharing policies
+- [[protocol/protocol_1|Protocol 1]]
+- [[protocol/protocol_2|Protocol 2]]
+
+### Role in Collective
+- Specialized capabilities
+- Responsibility allocation
+- Authority structure
+- Conflict resolution mechanisms
+
 ## Implementation
 ### Parameters
 ```yaml
@@ -172,6 +197,39 @@ class {{agent_class_name}}(Agent):
     def select_action(self):
         # Select action based on current beliefs and goals
         pass
+```
+
+### Integration Points
+```yaml
+api_endpoints:
+  - name: "belief_update"
+    path: "/api/agent/{{agent_id}}/beliefs/update"
+    method: "POST"
+    description: "Update agent beliefs with new observations"
+    
+  - name: "action_selection"
+    path: "/api/agent/{{agent_id}}/actions/select"
+    method: "GET"
+    description: "Get next action based on current state"
+    
+  - name: "goal_update"
+    path: "/api/agent/{{agent_id}}/goals/update"
+    method: "POST"
+    description: "Update agent goals"
+```
+
+### Deployment Configuration
+```yaml
+deployment:
+  container: "{{container_type}}"
+  resources:
+    cpu: "{{cpu_requirement}}"
+    memory: "{{memory_requirement}}"
+    gpu: "{{gpu_requirement}}"
+  scaling:
+    min_instances: {{min_instances}}
+    max_instances: {{max_instances}}
+    scaling_metric: "{{scaling_metric}}"
 ```
 
 ## Evaluation

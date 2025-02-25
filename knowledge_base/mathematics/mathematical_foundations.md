@@ -66,6 +66,42 @@ The mathematical foundations of cognitive phenomena integrate principles from [[
    - H is entropy
    - P(x) is probability distribution
 
+## Advanced Mathematical Structures
+
+### Differential Geometry
+1. **Riemannian Manifolds**
+   ```math
+   ds² = g_{ij}dx^idx^j
+   ```
+   where:
+   - g_{ij} is metric tensor
+   - dx^i are coordinate differentials
+
+2. **Parallel Transport**
+   ```math
+   ∇_X Y = ∂_X Y^i + Γ^i_{jk}X^jY^k
+   ```
+   where:
+   - ∇_X is covariant derivative
+   - Γ^i_{jk} are Christoffel symbols
+
+### Category Theory
+1. **Functorial Relationships**
+   ```math
+   F: C → D
+   ```
+   where:
+   - F is functor
+   - C, D are categories
+
+2. **Natural Transformations**
+   ```math
+   η: F ⇒ G
+   ```
+   where:
+   - η is natural transformation
+   - F, G are functors
+
 ## Dynamical Systems
 
 ### State Space Dynamics
@@ -88,103 +124,98 @@ The mathematical foundations of cognitive phenomena integrate principles from [[
    - u_t is control at time t
    - g is transition function
 
-### Control Theory
-1. **Optimal Control** ([[optimal_control|control theory]])
+### Stochastic Processes
+1. **Fokker-Planck Equation**
    ```math
-   J = ∫(L(x,u) + λC(u))dt = ∫(F + G)dt
+   ∂p/∂t = -∇·(fp) + (1/2)∇²(Dp)
    ```
    where:
-   - J is cost functional
-   - L is state cost
-   - F is free energy
-   - G is expected free energy
+   - p is probability density
+   - f is drift vector
+   - D is diffusion matrix
 
-2. **Feedback Control** ([[active_inference_loop|active inference loop]])
+2. **Langevin Dynamics**
    ```math
-   u = K(x* - x) + ∫K_i(x*(τ) - x(τ))dτ
+   dx = f(x)dt + σdW
    ```
    where:
-   - K is gain matrix
-   - x* is target state
-   - x is current state
+   - f(x) is drift term
+   - σ is noise amplitude
+   - dW is Wiener process
 
-## Probabilistic Inference
+## Advanced Control Theory
 
-### Bayesian Framework
-1. **Posterior Computation** ([[variational_inference|VI methods]])
+### Optimal Control
+1. **Hamilton-Jacobi-Bellman Equation**
    ```math
-   P(θ|o) = P(o|θ)P(θ)/P(o) ≈ q*(θ)
+   -∂V/∂t = min_u[L(x,u) + (∂V/∂x)·f(x,u)]
    ```
    where:
-   - P(θ|o) is true posterior
-   - q*(θ) is variational approximation
-   - P(o|θ) is likelihood
-   - P(θ) is prior
+   - V is value function
+   - L is cost function
+   - f is dynamics
 
-2. **Variational Approximation** ([[variational_methods|VM framework]])
+2. **Pontryagin's Maximum Principle**
    ```math
-   q*(θ) = argmin_q KL[q(θ)||p(θ|o)]
+   H(x,p,u) = L(x,u) + p·f(x,u)
    ```
    where:
-   - q*(θ) is optimal approximation
-   - KL is Kullback-Leibler divergence
+   - H is Hamiltonian
+   - p is costate
+   - f is dynamics
+
+### Robust Control
+1. **H∞ Control**
+   ```math
+   ||T_{zw}||_∞ ≤ γ
+   ```
+   where:
+   - T_{zw} is transfer matrix
+   - γ is performance bound
+
+2. **Lyapunov Stability**
+   ```math
+   dV/dt ≤ -αV
+   ```
+   where:
+   - V is Lyapunov function
+   - α is decay rate
+
+## Advanced Probabilistic Methods
 
 ### Information Geometry
-1. **Fisher Information** ([[information_geometry|IG principles]])
+1. **Fisher Information Metric**
    ```math
-   I(θ) = -E[∂²ln p(o|θ)/∂θ²]
+   g_{ij}(θ) = E[-∂²ln p(x|θ)/∂θ_i∂θ_j]
    ```
    where:
-   - I(θ) is Fisher information
-   - p(o|θ) is likelihood
-   - E is expectation
+   - g_{ij} is metric tensor
+   - p(x|θ) is likelihood
 
-2. **Natural Gradient** ([[variational_methods|natural gradient descent]])
+2. **Natural Gradient Flow**
    ```math
-   ∇̃F = I(θ)⁻¹∇F
+   dθ/dt = -g^{ij}∂F/∂θ_j
    ```
    where:
-   - ∇̃F is natural gradient
-   - ∇F is Euclidean gradient
+   - g^{ij} is inverse metric
+   - F is objective function
 
-## Systems Theory
-
-### Hierarchical Organization
-1. **Level Coupling** ([[active_inference_theory|hierarchical inference]])
+### Variational Methods
+1. **Wasserstein Distance**
    ```math
-   F_l = E_q[ln q(s_l) - ln p(s_l|s_{l+1}) - ln p(s_{l-1}|s_l)]
+   W_p(μ,ν) = (inf_γ ∫||x-y||^p dγ(x,y))^{1/p}
    ```
    where:
-   - F_l is level-specific free energy
-   - s_l is state at level l
-   - p(s_l|s_{l+1}) is top-down prediction
+   - μ,ν are distributions
+   - γ is transport plan
 
-2. **Scale Separation** ([[variational_calculus|multi-scale dynamics]])
+2. **Normalizing Flows**
    ```math
-   τ_l dx_l/dt = -∂F_l/∂x_l
+   p_K(x) = p_0(f^{-1}_K ∘...∘ f^{-1}_1(x))|det ∏_{k=1}^K ∂f^{-1}_k/∂x|
    ```
    where:
-   - τ_l is characteristic time scale
-   - x_l is state at level l
-   - F_l is level-specific free energy
-
-### Emergence Properties
-1. **Collective Behavior** ([[systems_theory|emergence]])
-   ```math
-   ψ = Φ(x₁,...,xₙ)
-   ```
-   where:
-   - ψ is emergent property
-   - Φ is order parameter
-   - xᵢ are individual states
-
-2. **Self-Organization** ([[free_energy_principle|FEP]])
-   ```math
-   dS/dt ≤ 0
-   ```
-   where:
-   - S is entropy
-   - t is time
+   - p_K is transformed density
+   - f_k are invertible maps
 
 ## Implementation Framework
 
@@ -207,64 +238,126 @@ The mathematical foundations of cognitive phenomena integrate principles from [[
    - κ is update rate
    - ∂F/∂μ is belief gradient
 
-### Optimization Methods
-1. **Policy Selection** ([[policy_selection|policy optimization]])
+### Advanced Optimization
+1. **Natural Policy Gradient**
    ```math
-   π* = argmin_π G(π)
+   θ_{t+1} = θ_t - αF^{-1}∇J(θ_t)
    ```
    where:
-   - π* is optimal policy
-   - G is expected free energy
+   - F is Fisher information
+   - J is objective
+   - α is step size
 
-2. **Parameter Optimization** ([[variational_methods|parameter learning]])
+2. **Trust Region Methods**
    ```math
-   θ* = argmin_θ F(θ)
+   max_θ L(θ) s.t. KL[π_θ||π_{θ_old}] ≤ δ
    ```
    where:
-   - θ* is optimal parameters
-   - F is variational free energy
+   - L is surrogate objective
+   - KL is trust region constraint
+   - δ is step size
 
 ## Applications
 
-### Cognitive Processes
-1. **Perception** ([[active_inference|perceptual inference]])
-   - State estimation
-   - Feature extraction
-   - Pattern recognition
-   - Context integration
+### Cognitive Architectures
+1. **Hierarchical Processing**
+   ```math
+   F_l = E_q[ln q(s_l) - ln p(s_l|s_{l+1}) - ln p(s_{l-1}|s_l)]
+   ```
+   where:
+   - F_l is level-specific free energy
+   - s_l is state at level l
 
-2. **Learning** ([[variational_methods|learning theory]])
-   - Parameter updating
-   - Model selection
-   - Skill acquisition
-   - Memory formation
+2. **Predictive Coding**
+   ```math
+   ε_l = μ_l - g(μ_{l+1})
+   ```
+   where:
+   - ε_l is prediction error
+   - μ_l is expectation
+   - g is generative mapping
 
-### Control Systems
-1. **Motor Control** ([[active_inference|action selection]])
-   - Action selection
-   - Movement planning
-   - Coordination
-   - Error correction
+### Learning Systems
+1. **Meta-Learning**
+   ```math
+   θ* = argmin_θ E_τ[L(τ; θ)]
+   ```
+   where:
+   - θ are meta-parameters
+   - τ are tasks
+   - L is task loss
 
-2. **Cognitive Control** ([[cognitive_control|executive function]])
-   - Resource allocation
-   - Task switching
-   - Performance monitoring
-   - Error regulation
+2. **Active Learning**
+   ```math
+   x* = argmax_x H[y|D,x]
+   ```
+   where:
+   - x* is query point
+   - H is entropy
+   - D is dataset
+
+## Advanced Topics
+
+### Quantum Information
+1. **Von Neumann Entropy**
+   ```math
+   S(ρ) = -Tr(ρ ln ρ)
+   ```
+   where:
+   - ρ is density matrix
+   - Tr is trace
+
+2. **Quantum Channels**
+   ```math
+   Φ(ρ) = ∑_k E_k ρ E_k^†
+   ```
+   where:
+   - Φ is channel
+   - E_k are Kraus operators
+
+### Topological Data Analysis
+1. **Persistent Homology**
+   ```math
+   β_k(ε) = dim H_k(X_ε)
+   ```
+   where:
+   - β_k is Betti number
+   - H_k is homology group
+   - X_ε is filtration
+
+2. **Mapper Algorithm**
+   ```math
+   M(X,f,U,C) = N(f^{-1}(U),C)
+   ```
+   where:
+   - X is dataset
+   - f is filter function
+   - U is cover
+   - C is clustering
 
 ## Future Directions
 
-1. **Theoretical Extensions**
-   - [[quantum_mechanics|Quantum formulations]]
-   - [[statistical_physics|Non-equilibrium dynamics]]
-   - [[complex_systems|Complex networks]]
-   - [[causal_inference|Causal inference]]
+### Emerging Frameworks
+1. **Geometric Deep Learning**
+   - Group equivariance
+   - Manifold learning
+   - Graph neural networks
 
-2. **Practical Applications**
-   - [[neural_engineering|Neural engineering]]
-   - [[cognitive_robotics|Cognitive robotics]]
-   - [[clinical_applications|Clinical interventions]]
-   - [[educational_systems|Educational systems]]
+2. **Causal Learning**
+   - Structural equations
+   - Intervention calculus
+   - Counterfactual reasoning
+
+### Open Problems
+1. **Theoretical Challenges**
+   - Scale separation
+   - Non-equilibrium dynamics
+   - Information bottlenecks
+
+2. **Practical Challenges**
+   - Computational efficiency
+   - Model interpretability
+   - Robustness guarantees
 
 ## Related Concepts
 - [[variational_methods]]

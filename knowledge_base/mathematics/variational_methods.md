@@ -384,3 +384,322 @@ class VariationalMetrics:
 - [[jordan_1999]] - Introduction to Variational Methods
 - [[wainwright_2008]] - Graphical Models
 - [[zhang_2018]] - Natural Gradient Methods 
+
+---
+title: Variational Methods
+type: concept
+status: stable
+created: 2024-02-12
+tags:
+  - mathematics
+  - optimization
+  - inference
+semantic_relations:
+  - type: foundation
+    links: 
+      - [[calculus_of_variations]]
+      - [[optimization_theory]]
+  - type: relates
+    links:
+      - [[variational_inference]]
+      - [[optimal_control]]
+      - [[machine_learning]]
+---
+
+# Variational Methods
+
+## Core Concepts
+
+### Calculus of Variations
+1. **Euler-Lagrange Equation**
+   ```math
+   \frac{d}{dx}\frac{∂L}{∂y'} - \frac{∂L}{∂y} = 0
+   ```
+   where:
+   - L is Lagrangian
+   - y is function
+   - y' is derivative
+
+2. **Hamilton's Principle**
+   ```math
+   δS = δ\int_{t_1}^{t_2} L(q,\dot{q},t)dt = 0
+   ```
+   where:
+   - S is action
+   - L is Lagrangian
+   - q is generalized coordinate
+
+### Variational Optimization
+1. **Functional Gradient**
+   ```math
+   \frac{δF}{δf} = \lim_{ε→0} \frac{F[f + εη] - F[f]}{ε}
+   ```
+   where:
+   - F is functional
+   - f is function
+   - η is test function
+
+2. **Natural Gradient**
+   ```math
+   \nabla_F f = G^{-1}\nabla f
+   ```
+   where:
+   - G is Fisher information matrix
+   - ∇f is Euclidean gradient
+
+## Advanced Methods
+
+### Variational Inference
+1. **Evidence Lower Bound**
+   ```math
+   ELBO(q) = E_q[log p(x,z)] - E_q[log q(z)]
+   ```
+   where:
+   - q(z) is variational distribution
+   - p(x,z) is joint distribution
+
+2. **Reparameterization Trick**
+   ```math
+   z = g_φ(ε,x), ε ~ p(ε)
+   ```
+   where:
+   - g_φ is transformation
+   - ε is noise variable
+   - φ are parameters
+
+### Optimal Transport
+1. **Wasserstein Distance**
+   ```math
+   W_p(μ,ν) = (\inf_γ \int ||x-y||^p dγ(x,y))^{1/p}
+   ```
+   where:
+   - μ,ν are distributions
+   - γ is transport plan
+
+2. **Kantorovich Duality**
+   ```math
+   W_1(μ,ν) = \sup_{||f||_L≤1} \int f d(μ-ν)
+   ```
+   where:
+   - f is potential function
+   - ||f||_L is Lipschitz norm
+
+### Stochastic Methods
+1. **Stochastic Gradient Descent**
+   ```math
+   θ_{t+1} = θ_t - α_t\nabla_θ L(θ_t,x_t)
+   ```
+   where:
+   - θ are parameters
+   - α is learning rate
+   - L is loss function
+
+2. **Stochastic Variational Inference**
+   ```math
+   λ_{t+1} = λ_t + ρ_t\nabla_λ L_t(λ_t)
+   ```
+   where:
+   - λ are variational parameters
+   - ρ is step size
+   - L is local ELBO
+
+## Applications
+
+### Machine Learning
+1. **Variational Autoencoders**
+   ```math
+   L(θ,φ;x) = E_{q_φ(z|x)}[log p_θ(x|z)] - KL(q_φ(z|x)||p(z))
+   ```
+   where:
+   - θ,φ are parameters
+   - q_φ is encoder
+   - p_θ is decoder
+
+2. **Normalizing Flows**
+   ```math
+   log p_K(x) = log p_0(f^{-1}_K ∘...∘ f^{-1}_1(x)) + \sum_{k=1}^K log|det \frac{∂f^{-1}_k}{∂x}|
+   ```
+   where:
+   - p_K is transformed density
+   - f_k are invertible maps
+
+### Physics
+1. **Quantum Mechanics**
+   ```math
+   δ\int ψ^*[-\frac{ℏ^2}{2m}\nabla^2 + V]ψ dx = 0
+   ```
+   where:
+   - ψ is wavefunction
+   - V is potential
+   - ℏ is Planck constant
+
+2. **Field Theory**
+   ```math
+   S[φ] = \int d^4x \mathcal{L}(φ,∂_μφ)
+   ```
+   where:
+   - S is action
+   - φ is field
+   - L is Lagrangian density
+
+### Control Theory
+1. **Linear Quadratic Regulator**
+   ```math
+   J = \int_0^T (x^TQx + u^TRu)dt
+   ```
+   where:
+   - Q,R are cost matrices
+   - x is state
+   - u is control
+
+2. **Model Predictive Control**
+   ```math
+   min_u \sum_{k=0}^{N-1} l(x_k,u_k) + V_f(x_N)
+   ```
+   where:
+   - l is stage cost
+   - V_f is terminal cost
+   - N is horizon
+
+## Implementation
+
+### Optimization Algorithms
+```python
+class VariationalOptimizer:
+    def __init__(self,
+                 objective: Callable,
+                 method: str = 'natural'):
+        """Initialize variational optimizer.
+        
+        Args:
+            objective: Objective functional
+            method: Optimization method
+        """
+        self.objective = objective
+        self.method = method
+        
+    def optimize(self,
+                initial_params: np.ndarray,
+                n_steps: int) -> np.ndarray:
+        """Optimize variational parameters.
+        
+        Args:
+            initial_params: Starting parameters
+            n_steps: Number of optimization steps
+            
+        Returns:
+            optimal_params: Optimized parameters
+        """
+        params = initial_params.copy()
+        
+        for _ in range(n_steps):
+            if self.method == 'natural':
+                grad = self.natural_gradient(params)
+            else:
+                grad = self.euclidean_gradient(params)
+                
+            params = self.update_step(params, grad)
+            
+        return params
+```
+
+### Variational Inference
+```python
+class VariationalInference:
+    def __init__(self,
+                 model: ProbabilisticModel,
+                 guide: VariationalGuide):
+        """Initialize variational inference.
+        
+        Args:
+            model: Probabilistic model
+            guide: Variational guide
+        """
+        self.model = model
+        self.guide = guide
+        
+    def elbo(self,
+             x: torch.Tensor) -> torch.Tensor:
+        """Compute ELBO.
+        
+        Args:
+            x: Observed data
+            
+        Returns:
+            elbo: Evidence lower bound
+        """
+        # Sample from guide
+        z = self.guide.sample(x)
+        
+        # Compute log probabilities
+        log_p = self.model.log_prob(x, z)
+        log_q = self.guide.log_prob(z, x)
+        
+        return log_p - log_q
+```
+
+## Advanced Topics
+
+### Information Geometry
+1. **Statistical Manifolds**
+   ```math
+   ds² = g_{ij}(θ)dθ^idθ^j
+   ```
+   where:
+   - g_{ij} is Fisher metric
+   - θ are statistical parameters
+
+2. **Natural Gradient Flow**
+   ```math
+   \dot{θ} = -g^{ij}∂_jF
+   ```
+   where:
+   - g^{ij} is inverse metric
+   - F is free energy
+
+### Quantum Variational Methods
+1. **Variational Quantum Eigensolver**
+   ```math
+   E(θ) = ⟨ψ(θ)|H|ψ(θ)⟩
+   ```
+   where:
+   - ψ(θ) is parameterized state
+   - H is Hamiltonian
+
+2. **Quantum Approximate Optimization**
+   ```math
+   |ψ(β,γ)⟩ = e^{-iβ_pH_B}e^{-iγ_pH_C}...e^{-iβ_1H_B}e^{-iγ_1H_C}|s⟩
+   ```
+   where:
+   - H_B,H_C are Hamiltonians
+   - β,γ are parameters
+
+## Future Directions
+
+### Emerging Areas
+1. **Deep Variational Methods**
+   - Neural ODEs
+   - Continuous normalizing flows
+   - Variational transformers
+
+2. **Quantum Applications**
+   - Quantum machine learning
+   - Quantum simulation
+   - Quantum control
+
+### Open Problems
+1. **Theoretical Challenges**
+   - Non-convex optimization
+   - Convergence guarantees
+   - Sample complexity
+
+2. **Practical Challenges**
+   - Scalability
+   - Robustness
+   - Model selection
+
+## Related Topics
+1. [[optimization_theory|Optimization Theory]]
+2. [[information_geometry|Information Geometry]]
+3. [[quantum_computing|Quantum Computing]]
+4. [[machine_learning|Machine Learning]] 
