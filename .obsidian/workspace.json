@@ -184,8 +184,10 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "4b7c14691fc0c93e",
+  "active": "26da5c325ed6eb0c",
   "lastOpenFiles": [
+    "docs/templates/belief_template.md",
+    "docs/templates/agent_template.md",
     "docs/guides/learning_paths/active_inference_spatial_web_path.md",
     "docs/guides/application/guide_for_cognitive_modeling.md",
     "knowledge_base/systems/metaverse.md",
@@ -220,8 +222,6 @@
     "knowledge_base/cognitive/machine_readability.md",
     "knowledge_base/cognitive/knowledge_organization.md",
     "knowledge_base/cognitive/key_concepts.md",
-    "knowledge_base/cognitive/graph_visualization.md",
-    "knowledge_base/cognitive/concept_documentation_index.md",
     "Things/Generic_Thing/generic_thing/visualizations/message_network_20250223_140901.png",
     "Things/Generic_Thing/generic_thing/visualizations/hierarchy_test_20250223_140900.png",
     "Things/Generic_Thing/generic_thing/visualizations/belief_uncertainty_20250223_140745.png",
