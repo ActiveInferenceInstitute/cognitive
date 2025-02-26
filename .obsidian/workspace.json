@@ -11,14 +11,10 @@
             "id": "edc32c8263c095f4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/guides/learning_paths/active_inference_social_science_abm_learning_path.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "active_inference_social_science_abm_learning_path"
+              "title": "New tab"
             }
           }
         ]
@@ -184,6 +180,15 @@
   },
   "active": "26da5c325ed6eb0c",
   "lastOpenFiles": [
+    "social_theory_in_computation.md",
+    "python_abm_resources.md",
+    "notebooks/graphRAG_naive.ipynb",
+    "notebooks",
+    "docs/guides/learning_paths/active_inference_social_science_abm_learning_path.md",
+    "complexity_measures.md",
+    "Things/KG_Multi_Agent/Ant_Swarm.md",
+    "Things/KG_Multi_Agent/SWR_Swarm.md",
+    "Things/KG_Multi_Agent",
     "knowledge_base/philosophy/philosophy_topics.md",
     "knowledge_base/philosophy/pragmatism.md",
     "knowledge_base/philosophy/operationalism.md",
@@ -192,16 +197,7 @@
     "knowledge_base/ontology/hyperspatial/hyperspace_ontology.md",
     "knowledge_base/ontology/hyperspatial",
     "knowledge_base/ontology",
-    "notebooks/graphRAG_naive.ipynb",
-    "notebooks",
-    "Things/KG_Multi_Agent/Ant_Swarm.md",
-    "Things/KG_Multi_Agent/SWR_Swarm.md",
-    "Things/KG_Multi_Agent",
-    "social_theory_in_computation.md",
-    "docs/guides/learning_paths/active_inference_social_science_abm_learning_path.md",
-    "python_abm_resources.md",
     "docs/guides/learning_paths/active_inference_learning_path.md",
-    "complexity_measures.md",
     "docs/guides/learning_paths/active_inference_spatial_web_path.md",
     "docs/templates/analysis_template.md",
     "docs/templates/template_index.md",
@@ -216,7 +212,6 @@
     "knowledge_base/systems/metaverse.md",
     "tools/src/models/matrices/__pycache__/matrix_ops.cpython-310.pyc",
     "tools/src/models/active_inference/docs/dispatcher.md",
-    "tools/src/models/active_inference/docs/biofirm_schema.md",
     "tools/src/models/active_inference/config_examples/discrete_variational.yaml",
     "tools/src/models/active_inference/config_examples/continuous_sampling.yaml",
     "tools/src/models/active_inference/__pycache__/dispatcher.cpython-310.pyc",
