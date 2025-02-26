@@ -1,5 +1,5 @@
-# InferAnt Stream 10.2: 
-plain_text too: Learning Paths, Application Guides, and More Things. 
+# InferAnt Stream 10.3: 
+plain_text for three and for me: formally associative speculative analyses.
 
 This stream focuses on advancing our understanding and application of Active Inference and cognitive modeling concepts through learning paths, detailed application guides (initially for RxInfer.jl package), a Generic Thing repo with test suite, and other resources.
 

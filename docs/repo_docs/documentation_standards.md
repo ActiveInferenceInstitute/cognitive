@@ -151,6 +151,62 @@ tags:
 - Highlight important parts
 - Explain complex sections
 
+## Diagram Standards
+
+### Mermaid Diagrams
+```mermaid
+%% Example diagram showing standards
+graph TD
+    A[Start] --> B{Decision}
+    B -->|Yes| C[Action]
+    B -->|No| D[Alternative]
+```
+
+#### Diagram Types
+1. **Flow Diagrams**
+   - Use for processes and workflows
+   - Clear direction flow
+   - Consistent node shapes
+   - Meaningful labels
+
+2. **Sequence Diagrams**
+   - Use for interaction flows
+   - Clear actor naming
+   - Proper message formatting
+   - Time sequence clarity
+
+3. **Class Diagrams**
+   - Use for structure documentation
+   - Clear relationships
+   - Proper inheritance
+   - Complete attributes
+
+#### Style Guidelines
+- Use consistent colors
+- Clear node labels
+- Meaningful relationships
+- Proper spacing
+- Readable font sizes
+
+#### Example Usage
+```mermaid
+sequenceDiagram
+    participant User
+    participant System
+    participant Database
+    
+    User->>System: Request Data
+    System->>Database: Query
+    Database-->>System: Response
+    System-->>User: Display Result
+```
+
+### PlantUML Diagrams
+- Use for complex system diagrams
+- Follow similar style guidelines
+- Maintain consistency with Mermaid
+- Choose appropriate diagram type
+
 ## Best Practices
 
 ### Content
