@@ -2,321 +2,192 @@
 title: Hierarchical Inference
 type: concept
 status: stable
-created: 2024-02-12
+created: 2024-02-14
 tags:
   - cognitive
-  - neuroscience
-  - computation
+  - inference
+  - active_inference
+  - hierarchy
 semantic_relations:
-  - type: foundation
-    links: 
-      - [[predictive_coding]]
-      - [[variational_inference]]
+  - type: implements
+    links: [[active_inference]]
   - type: relates
     links:
-      - [[free_energy_principle]]
-      - [[active_inference]]
-      - [[error_propagation]]
+      - [[generative_model]]
+      - [[predictive_coding]]
+      - [[bayesian_inference]]
 ---
 
 # Hierarchical Inference
 
 ## Overview
 
-Hierarchical Inference is a framework for understanding how the brain processes information across multiple levels of abstraction. It suggests that cognitive processing occurs through a hierarchy of inference levels, where each level makes predictions about the level below and receives prediction errors from it.
+Hierarchical inference in active inference refers to the nested structure of belief updating across multiple levels of abstraction. Each level in the hierarchy makes predictions about the level below and receives prediction errors from it, enabling both top-down and bottom-up information flow.
 
-## Core Concepts
+## Principles
 
-### Hierarchical Generative Model
+### 1. Hierarchical Organization
+- Multiple processing levels
+- Bidirectional information flow
+- Nested predictions
+- Error propagation
+
+### 2. Temporal Scales
+- Fast dynamics at lower levels
+- Slower dynamics at higher levels
+- Temporal integration
+- Time-scale separation
+
+### 3. Abstraction Levels
+- Sensory features
+- Object properties
+- Contextual factors
+- Abstract concepts
+
+## Mathematical Framework
+
+### 1. Hierarchical Model
 ```math
-p(x,h_1,...,h_L) = p(x|h_1)\prod_{l=1}^L p(h_l|h_{l+1})
+P(o,s₁,s₂,...,sₙ) = P(o|s₁)P(s₁|s₂)...P(sₙ₋₁|sₙ)P(sₙ)
 ```
 where:
-- $x$ is observation
-- $h_l$ is hidden state at level $l$
-- $L$ is number of levels
+- o represents observations
+- sᵢ represents states at level i
+- P(sᵢ|sᵢ₊₁) is level-specific likelihood
 
-### Level-wise Inference
+### 2. Hierarchical Free Energy
 ```math
-q(h_l) \propto \exp(-F_l)
+F = ∑ᵢ E_q[log q(sᵢ) - log p(sᵢ₋₁|sᵢ)]
 ```
 where:
-- $q(h_l)$ is approximate posterior
-- $F_l$ is level-specific free energy
+- q(sᵢ) is level-specific posterior
+- p(sᵢ₋₁|sᵢ) is generative mapping
+- E_q is expectation under q
 
 ## Implementation
 
-### Hierarchical Layer
-
+### 1. Basic Structure
 ```python
-import numpy as np
-import torch
-import torch.nn as nn
-from typing import List, Tuple, Optional
+class HierarchicalLayer:
+    def __init__(self, level):
+        self.level = level
+        self.state = None
+        self.prediction = None
+        self.error = None
+        
+    def predict_down(self):
+        """Generate prediction for lower level."""
+        pass
+        
+    def update_up(self, error):
+        """Update beliefs based on prediction error."""
+        pass
 
-class HierarchicalLayer(nn.Module):
-    def __init__(self,
-                 input_size: int,
-                 hidden_size: int,
-                 output_size: int):
-        """Initialize hierarchical layer.
-        
-        Args:
-            input_size: Input dimension
-            hidden_size: Hidden dimension
-            output_size: Output dimension
-        """
-        super().__init__()
-        
-        # Forward model
-        self.forward_model = nn.Sequential(
-            nn.Linear(input_size, hidden_size),
-            nn.ReLU(),
-            nn.Linear(hidden_size, output_size)
-        )
-        
-        # Backward model
-        self.backward_model = nn.Sequential(
-            nn.Linear(output_size, hidden_size),
-            nn.ReLU(),
-            nn.Linear(hidden_size, input_size)
-        )
-        
-        # Precision parameters
-        self.forward_precision = nn.Parameter(
-            torch.ones(output_size)
-        )
-        self.backward_precision = nn.Parameter(
-            torch.ones(input_size)
-        )
-    
-    def forward(self,
-               bottom_input: torch.Tensor,
-               top_input: Optional[torch.Tensor] = None) -> Tuple[torch.Tensor, torch.Tensor]:
-        """Forward pass through layer.
-        
-        Args:
-            bottom_input: Input from lower level
-            top_input: Input from higher level
-            
-        Returns:
-            forward_pred: Forward prediction
-            backward_pred: Backward prediction
-        """
-        # Forward prediction
-        forward_pred = self.forward_model(bottom_input)
-        
-        # Backward prediction
-        if top_input is not None:
-            backward_pred = self.backward_model(top_input)
-        else:
-            backward_pred = self.backward_model(forward_pred)
-        
-        return forward_pred, backward_pred
-    
-    def compute_errors(self,
-                      bottom_input: torch.Tensor,
-                      top_input: Optional[torch.Tensor] = None) -> Tuple[torch.Tensor, torch.Tensor]:
-        """Compute prediction errors.
-        
-        Args:
-            bottom_input: Input from lower level
-            top_input: Input from higher level
-            
-        Returns:
-            forward_error: Forward prediction error
-            backward_error: Backward prediction error
-        """
-        # Get predictions
-        forward_pred, backward_pred = self.forward(
-            bottom_input, top_input
-        )
-        
-        # Compute errors
-        forward_error = (
-            (forward_pred - (top_input if top_input is not None else forward_pred)) *
-            self.forward_precision
-        )
-        backward_error = (
-            (bottom_input - backward_pred) *
-            self.backward_precision
-        )
-        
-        return forward_error, backward_error
-```
-
-### Hierarchical Network
-
-```python
-class HierarchicalNetwork(nn.Module):
-    def __init__(self,
-                 layer_sizes: List[int],
-                 hidden_sizes: List[int]):
-        """Initialize hierarchical network.
-        
-        Args:
-            layer_sizes: List of layer sizes
-            hidden_sizes: List of hidden sizes
-        """
-        super().__init__()
-        
-        # Create layers
-        self.layers = nn.ModuleList([
-            HierarchicalLayer(n1, h, n2)
-            for n1, h, n2 in zip(
-                layer_sizes[:-1],
-                hidden_sizes,
-                layer_sizes[1:]
-            )
-        ])
-        
-        # Initialize states
-        self.layer_states = [
-            torch.zeros(size)
-            for size in layer_sizes
+class HierarchicalNetwork:
+    def __init__(self, num_levels):
+        self.layers = [
+            HierarchicalLayer(i)
+            for i in range(num_levels)
         ]
     
-    def forward(self,
-               input_data: torch.Tensor) -> Tuple[List[torch.Tensor], List[torch.Tensor]]:
-        """Forward pass through network.
-        
-        Args:
-            input_data: Input tensor
-            
-        Returns:
-            predictions: List of predictions
-            errors: List of prediction errors
-        """
+    def process(self, observation):
+        """Process through hierarchy."""
         # Bottom-up pass
-        forward_preds = []
-        forward_errors = []
-        current = input_data
-        
-        for i, layer in enumerate(self.layers):
-            # Forward prediction
-            pred, _ = layer(current)
-            forward_preds.append(pred)
+        for i in range(len(self.layers)):
+            if i == 0:
+                self.layers[i].error = observation
+            else:
+                self.layers[i].error = self.layers[i-1].state
+            self.layers[i].update_up(self.layers[i].error)
             
-            # Compute error
-            error, _ = layer.compute_errors(current)
-            forward_errors.append(error)
-            
-            # Update state and current input
-            self.layer_states[i] = current
-            current = pred
-        
         # Top-down pass
-        backward_preds = []
-        backward_errors = []
-        
         for i in reversed(range(len(self.layers))):
-            # Backward prediction
-            _, pred = self.layers[i](
-                self.layer_states[i],
-                current if i < len(self.layers)-1 else None
-            )
-            backward_preds.append(pred)
-            
-            # Compute error
-            _, error = self.layers[i].compute_errors(
-                self.layer_states[i],
-                current if i < len(self.layers)-1 else None
-            )
-            backward_errors.append(error)
-            
-            # Update current input
-            current = pred
-        
-        return (forward_preds, backward_preds), (forward_errors, backward_errors)
+            self.layers[i].predict_down()
 ```
 
-### Training Loop
+## Properties
 
-```python
-def train_network(network: HierarchicalNetwork,
-                 dataset: torch.Tensor,
-                 n_epochs: int = 100,
-                 learning_rate: float = 0.01) -> List[float]:
-    """Train hierarchical network.
-    
-    Args:
-        network: Hierarchical network
-        dataset: Training data
-        n_epochs: Number of epochs
-        learning_rate: Learning rate
-        
-    Returns:
-        losses: Training losses
-    """
-    optimizer = torch.optim.Adam(
-        network.parameters(),
-        lr=learning_rate
-    )
-    losses = []
-    
-    for epoch in range(n_epochs):
-        total_loss = 0
-        
-        for data in dataset:
-            # Forward pass
-            predictions, errors = network(data)
-            forward_errors, backward_errors = errors
-            
-            # Compute loss
-            loss = sum(
-                torch.mean(error**2)
-                for error in forward_errors + backward_errors
-            )
-            
-            # Update parameters
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-            
-            total_loss += loss.item()
-        
-        avg_loss = total_loss / len(dataset)
-        losses.append(avg_loss)
-        print(f"Epoch {epoch}, Loss: {avg_loss:.4f}")
-    
-    return losses
-```
+### 1. Information Flow
+- Bottom-up error signals
+- Top-down predictions
+- Lateral interactions
+- Recurrent processing
+
+### 2. Learning Dynamics
+- Parameter adaptation
+- Structure learning
+- Meta-learning
+- Hierarchical inference
+
+### 3. Computational Features
+- Parallel processing
+- Distributed computation
+- Message passing
+- Belief propagation
+
+## Applications
+
+### 1. Perception
+- Visual processing
+- Auditory processing
+- Multimodal integration
+- Feature extraction
+
+### 2. Cognition
+- Concept formation
+- Abstract reasoning
+- Planning
+- Decision making
+
+### 3. Learning
+- Skill acquisition
+- Knowledge representation
+- Transfer learning
+- Meta-learning
+
+## Design Considerations
+
+### 1. Architecture
+- Number of levels
+- Layer connectivity
+- Information channels
+- Processing units
+
+### 2. Dynamics
+- Update schedules
+- Learning rates
+- Integration time
+- Stability criteria
+
+### 3. Implementation
+- Computational efficiency
+- Memory requirements
+- Parallelization
+- Scalability
 
 ## Best Practices
 
-### Network Design
-1. Choose appropriate layer sizes
-2. Design prediction functions
-3. Initialize precisions
-4. Consider depth vs. width
+### 1. Design Guidelines
+1. Start with minimal hierarchy
+2. Add levels as needed
+3. Validate each level
+4. Test integration
+5. Monitor performance
 
-### Implementation
-1. Monitor convergence
-2. Handle numerical stability
-3. Validate predictions
-4. Test error propagation
+### 2. Common Challenges
+- Convergence issues
+- Error accumulation
+- Resource constraints
+- Complexity management
 
-### Training
-1. Tune learning rates
-2. Balance layer updates
-3. Monitor error statistics
-4. Validate learning
+### 3. Optimization Tips
+- Efficient message passing
+- Smart caching
+- Parallel computation
+- Adaptive processing
 
-## Common Issues
+## References
 
-### Technical Challenges
-1. Vanishing gradients
-2. Error instability
-3. State divergence
-4. Learning collapse
-
-### Solutions
-1. Skip connections
-2. Layer normalization
-3. Gradient clipping
-4. Careful initialization
-
-## Related Documentation
-- [[predictive_coding]]
-- [[variational_inference]]
-- [[error_propagation]] 
+1. Friston, K. J. (2008). Hierarchical models in the brain
+2. Clark, A. (2013). Whatever next? Predictive brains, situated agents
+3. Parr, T., et al. (2019). Neuronal message passing using Mean-field, Bethe, and Marginal approximations 

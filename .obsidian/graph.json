@@ -1,9 +1,9 @@
 {
-  "collapse-filter": false,
-  "search": "risk_assessment",
+  "collapse-filter": true,
+  "search": "",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": true,
+  "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
   "colorGroups": [],
@@ -12,16 +12,11 @@
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": false,
+  "collapse-forces": true,
   "centerStrength": 0.518713248970312,
   "repelStrength": 10,
   "linkStrength": 1,
-  "linkDistance": 204,
-<<<<<<< HEAD
-  "scale": 0.37914996883865315,
+  "linkDistance": 250,
+  "scale": 0.03901844231062337,
   "close": false
-=======
-  "scale": 0.200225830078125,
-  "close": true
->>>>>>> a3363cb4c753bf29ac386ebf3c0b212e7e7c478c
 }

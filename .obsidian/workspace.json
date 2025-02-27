@@ -180,6 +180,8 @@
   },
   "active": "26da5c325ed6eb0c",
   "lastOpenFiles": [
+    "knowledge_base/cognitive/generative_model.md",
+    "docs/guides/application/parr_2022_chapter_6.md",
     "social_theory_in_computation.md",
     "python_abm_resources.md",
     "notebooks/graphRAG_naive.ipynb",
@@ -211,7 +213,6 @@
     "docs/guides/application/guide_for_cognitive_modeling.md",
     "knowledge_base/systems/metaverse.md",
     "tools/src/models/matrices/__pycache__/matrix_ops.cpython-310.pyc",
-    "tools/src/models/active_inference/docs/dispatcher.md",
     "tools/src/models/active_inference/config_examples/discrete_variational.yaml",
     "tools/src/models/active_inference/config_examples/continuous_sampling.yaml",
     "tools/src/models/active_inference/__pycache__/dispatcher.cpython-310.pyc",
