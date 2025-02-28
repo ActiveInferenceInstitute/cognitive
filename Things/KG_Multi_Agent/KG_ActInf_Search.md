@@ -6,7 +6,7 @@ Thoughtfully design Pythonic pseudo-code Active Inference POMDP agent augmented 
 - The markdown contents of the nodes implicated in the agent's selected policy are then sequentially combined in accordance with the policy and used as graph RAG material for the LLM to answer the original query.
 
 # Pythonic pseudo-code for an Active Inference POMDP agent with LLM augmentation
-
+```
 from pymdp import Agent  # POMDP active inference library
 import obsidian_api  # Hypothetical API for interacting with Obsidian knowledge graphs
 from llm_api import LLM  # Hypothetical API for interacting with the LLM
@@ -59,6 +59,7 @@ def action_perception_loop(query):
     return final_answer
 
 # Helper function to extract key terms from LLM response
+```
 def extract_key_terms(response):
     """
     Parse LLM response to extract structured discrete observations.
@@ -66,7 +67,33 @@ def extract_key_terms(response):
     key_terms = response.get("key_terms", [])
     return key_terms
 
+
 # Example usage of the system
 query = "Explain the relationship between quantum mechanics and general relativity."
 answer = action_perception_loop(query)
 print(answer)
+```
+
+
+
+## Explanation of Key Components
+
+### POMDP Agent Initialization:
+- The agent is initialized using `pymdp` with generative model components $$ A $$, $$ B $$, $$ C $$, and $$ D $$, which define observation likelihoods, transitions, rewards, and priors.
+
+### LLM Integration:
+- The LLM is prompted with a system prompt that specifies how responses should be structured (e.g., returning key terms mapping to graph nodes).
+- The extracted key terms form discrete observations for the POMDP agent.
+
+### Knowledge Graph Interaction:
+- The Obsidian knowledge graph is treated as a set of discrete hidden states.
+- Actions correspond to visiting nodes, and policies dictate sequences of node visits.
+
+### Policy Execution:
+- The selected policy determines which nodes to visit.
+- Markdown content from these nodes is aggregated and used as retrieval-augmented generation (RAG) material for answering the original query.
+
+### Action-Perception Loop:
+- The loop integrates querying the LLM, updating beliefs, inferring policies, executing actions, and using results to refine answers.
+
+This pseudo-code provides a modular framework that combines active inference principles with LLM capabilities within an agentic workflow.
