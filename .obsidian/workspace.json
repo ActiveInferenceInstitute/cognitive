@@ -30,12 +30,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005743_040b2481.md",
+                "file": "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005821_60595800.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "request_20250303_005743_040b2481"
+              "title": "request_20250303_005821_60595800"
             },
             "group": "459829c96231788c"
           }
@@ -186,6 +186,7 @@
   },
   "active": "edc32c8263c095f4",
   "lastOpenFiles": [
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005821_60595800.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005743_040b2481.md",
     "Jenassa.md",
     "BioFirm_project.md",
@@ -213,7 +214,6 @@
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005009_ec8f9627.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_004956_8520fa0d.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/_request_index.json",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/request_20250303_004619_dd92e3d6.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/MKG_utils.py",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/agents",
     "notebooks/graphRAG_naive.ipynb",
