@@ -103,36 +103,102 @@ The system employs a multi-stage extraction process:
 
 The system generates three types of interconnected outputs:
 
-1. **Individual Research Requests**
+1. **Individual Research Request Files (`outputs/research_requests/*.md`)**
    ```yaml
    ---
    source_conversation: "conversation_id"
    source_chunk: "chunk_id"
-   type: "research"
+   type: "research_request"
    created: "YYYY-MM-DD"
    timestamp: "YYYY-MM-DD HH:MM:SS"
+   hypothesis: "Detailed hypothesis statement"
+   rationale: "Reasoning behind the hypothesis"
+   impact: "Expected impact of the research"
    tags: ["tag1", "tag2"]
    agents: ["agent1", "agent2"]
    ---
+
+   # Research Request
+   Created: YYYY-MM-DD
+
+   ## Hypothesis
+   [Hypothesis text]
+
+   ## Rationale
+   [Rationale text]
+
+   ## Expected Impact
+   [Impact text]
+
+   ## Related Agents
+   - [[agent1]]
+   - [[agent2]]
+
+   ## Tags
+   - [[tag1]]
+   - [[tag2]]
+
+   ## Source
+   [[conversation_id]]
    ```
 
-2. **JSON Index**
+2. **Request Index JSON (`_request_index.json`)**
    ```json
    {
-     "request_id": {
-       "title": "type",
+     "request_id_TIMESTAMP": {
+       "title": "Research Request Type",
        "tags": ["tag1", "tag2"],
        "agents": ["agent1", "agent2"],
        "source": "conversation_id",
-       "timestamp": "YYYY-MM-DD HH:MM:SS"
-     }
+       "timestamp": "YYYY-MM-DD HH:MM:SS",
+       "hypothesis": "Hypothesis statement",
+       "rationale": "Rationale text",
+       "impact": "Impact description"
+     },
+     // Additional requests...
    }
    ```
 
-3. **Markdown Index**
-   - Hierarchical organization
-   - Temporal, agent-based, and tag-based views
-   - Obsidian-compatible links
+3. **Research Requests Index (`_research_requests_index.md`)**
+   ```markdown
+   # Research Requests Index
+
+   ## Statistics Summary
+
+   ### Agent Statistics
+   | Agent | Contributions | % of Total |
+   |-------|--------------|------------|
+   | [[agent1]] | 5/10 | 50% |
+   | [[agent2]] | 3/10 | 30% |
+
+   ### Tag Statistics
+   | Tag | Usage | % of Total |
+   |-----|-------|------------|
+   | [[tag1]] | 6/10 | 60% |
+   | [[tag2]] | 4/10 | 40% |
+
+   ## By Date
+   ### YYYY-MM-DD
+   - [[request_id_1]] - Research Request: hypothesis summary...
+   - [[request_id_2]] - Research Request: hypothesis summary...
+
+   ## By Agent
+   ### [[agent1]]
+   - [[request_id_1]] - hypothesis summary... (YYYY-MM-DD HH:MM:SS)
+   - [[request_id_2]] - hypothesis summary... (YYYY-MM-DD HH:MM:SS)
+
+   ## By Tag
+   ### [[tag1]]
+   - [[request_id_1]] - hypothesis summary... (YYYY-MM-DD HH:MM:SS)
+   - [[request_id_2]] - hypothesis summary... (YYYY-MM-DD HH:MM:SS)
+   ```
+
+Key features of the output files:
+- All files use Obsidian-compatible formatting with double-bracket links
+- The JSON index serves as a queryable database of all requests
+- The markdown index provides multiple views (temporal, agent-based, tag-based)
+- Statistics sections show contribution and usage percentages
+- All outputs maintain consistent cross-referencing through request IDs
 
 ## Usage
 

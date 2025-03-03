@@ -1,4 +1,5 @@
 # !pip install ollama
+# install ollama from https://ollama.ai/download
 # !pip install tqdm
 # !pip install pyyaml
 
@@ -8,7 +9,7 @@ import re
 import hashlib
 import yaml
 from datetime import datetime
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 from ollama import Client
 import threading
 import subprocess
@@ -19,7 +20,7 @@ from tqdm import tqdm
 
 # Default configuration
 DEFAULT_PROJECT_PATH = "./Things/KG_Multi_Agent/MKG_Multi_Agent/test1"
-DEFAULT_MODEL_NAME = "llama3.2"
+DEFAULT_MODEL_NAME = "llama3.2"  # Choose one model name
 
 # Reuse the inference query template from infer_queries.py
 inference_query = """###SYSTEM INSTRUCTION###
@@ -161,13 +162,13 @@ def format_request_for_obsidian(request: Dict, source_info: Dict) -> Dict:
     timestamp = datetime.now()
     formatted_timestamp = timestamp.strftime("%Y%m%d_%H%M%S")
     
-    # Generate a unique ID for the request based on content and timestamp
+    # Generate a unique ID for the request
     content_hash = hashlib.md5(
         f"{request['hypothesis']}{request['rationale']}{formatted_timestamp}".encode()
     ).hexdigest()[:8]
     request_id = f"request_{formatted_timestamp}_{content_hash}"
     
-    # Clean up agents and tags before creating frontmatter
+    # Clean up agents and tags
     cleaned_agents = [
         fix_bracket_links(agent.strip()) 
         for agent in request['agents'].split(',')
@@ -179,15 +180,25 @@ def format_request_for_obsidian(request: Dict, source_info: Dict) -> Dict:
         if tag.strip()
     ]
     
-    # Strip [[ and ]] for frontmatter
+    # Create comprehensive frontmatter with all fields
     frontmatter = {
+        # Source information
         "source_conversation": source_info["conversation_file"],
         "source_chunk": source_info.get("chunk_id", "full"),
+        
+        # Core fields from request
         "type": request["intent"].strip("[]"),
+        "hypothesis": request["hypothesis"],
+        "rationale": request["rationale"],
+        "impact": request["impact"],
+        
+        # Cleaned arrays
+        "tags": [tag.strip("[]") for tag in cleaned_tags],
+        "agents": [agent.strip("[]") for agent in cleaned_agents],
+        
+        # Timestamps
         "created": timestamp.strftime("%Y-%m-%d"),
         "timestamp": timestamp.strftime("%Y-%m-%d %H:%M:%S"),
-        "tags": [tag.strip("[]") for tag in cleaned_tags],
-        "agents": [agent.strip("[]") for agent in cleaned_agents]
     }
     
     # Create markdown content with proper link formatting
@@ -198,6 +209,9 @@ def format_request_for_obsidian(request: Dict, source_info: Dict) -> Dict:
 
 ## Created
 {timestamp.strftime("%Y-%m-%d %H:%M:%S")}
+
+## Hypothesis
+{request['hypothesis']}
 
 ## Context and Rationale
 {request['rationale']}
@@ -508,13 +522,58 @@ def process_conversation(conversation_text: str, client: Client, model_name: str
             
     return requests
 
+def merge_request_index(existing_index: Dict, new_requests: List[Dict], output_dir: str) -> Dict:
+    """Merge new requests into existing request index."""
+    merged_index = existing_index.copy() if existing_index else {}
+    
+    # Add new requests to the index
+    for request in new_requests:
+        request_id = request['id']
+        if request_id not in merged_index:  # Only add if not already present
+            merged_index[request_id] = {
+                'title': request['metadata']['type'],
+                'tags': request['metadata']['tags'],
+                'agents': request['metadata']['agents'],
+                'source': request['metadata']['source_conversation'],
+                'timestamp': request['metadata']['timestamp']
+            }
+    
+    return merged_index
+
+def load_existing_requests(output_dir: str) -> Tuple[Dict, List[Dict]]:
+    """Load existing request index and convert to request objects."""
+    index_path = os.path.join(output_dir, "_request_index.json")
+    existing_requests = []
+    existing_index = {}
+    
+    if os.path.exists(index_path):
+        with open(index_path, 'r', encoding='utf-8') as f:
+            existing_index = json.load(f)
+            
+        # Convert index entries back to request objects
+        for request_id, metadata in existing_index.items():
+            request_obj = {
+                'id': request_id,
+                'metadata': {
+                    'type': metadata['title'],
+                    'tags': metadata['tags'],
+                    'agents': metadata['agents'],
+                    'source_conversation': metadata['source'],
+                    'timestamp': metadata['timestamp']
+                },
+                'timestamp': datetime.strptime(metadata['timestamp'], "%Y-%m-%d %H:%M:%S")
+            }
+            existing_requests.append(request_obj)
+    
+    return existing_index, existing_requests
+
 def save_obsidian_files(requests: List[Dict], output_dir: str):
-    """Save formatted requests as individual Obsidian markdown files."""
+    """Save formatted requests as individual Obsidian markdown files and update indexes."""
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
     
-    # Create index for tracking
-    request_index = {}
+    # Load existing data
+    existing_index, existing_requests = load_existing_requests(output_dir)
     
     # Add progress bar for saving files
     with tqdm(total=len(requests), desc="Saving research requests") as pbar:
@@ -523,46 +582,94 @@ def save_obsidian_files(requests: List[Dict], output_dir: str):
             filename = f"{request['id']}.md"
             filepath = os.path.join(output_dir, filename)
             
-            with open(filepath, 'w', encoding='utf-8') as f:
-                f.write(request['content'])
-            
-            # Update index
-            request_index[request['id']] = {
-                'title': request['metadata']['type'],
-                'tags': request['metadata']['tags'],
-                'agents': request['metadata']['agents'],
-                'source': request['metadata']['source_conversation'],
-                'timestamp': request['metadata']['timestamp']
-            }
-            
-            # Print saved file info
-            print(f"\n📝 Saved research request: {filename}")
-            print(f"   Type: {request['metadata']['type']}")
-            print(f"   Tags: {', '.join(request['metadata']['tags'])}")
-            print(f"   Agents: {', '.join(request['metadata']['agents'])}")
-            print(f"   Created: {request['metadata']['timestamp']}\n")
+            # Only write if file doesn't exist (preserve existing files)
+            if not os.path.exists(filepath):
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(request['content'])
+                
+                # Print saved file info
+                print(f"\n📝 Saved research request: {filename}")
+                print(f"   Type: {request['metadata']['type']}")
+                print(f"   Tags: {', '.join(request['metadata']['tags'])}")
+                print(f"   Agents: {', '.join(request['metadata']['agents'])}")
+                print(f"   Created: {request['metadata']['timestamp']}\n")
             
             pbar.update(1)
     
-    # Save JSON index file
+    # Merge and save JSON index
+    merged_index = merge_request_index(existing_index, requests, output_dir)
     index_path = os.path.join(output_dir, "_request_index.json")
     with open(index_path, 'w', encoding='utf-8') as f:
-        json.dump(request_index, f, indent=2)
-    print(f"📚 Saved JSON index: {index_path}")
+        json.dump(merged_index, f, indent=2)
+    print(f"📚 Updated JSON index: {index_path}")
+    
+    # Combine existing and new requests for the markdown index
+    all_requests = existing_requests + requests
     
     # Create and save markdown index
-    create_research_index(requests, output_dir)
-    print(f"📚 Created markdown index: {os.path.join(output_dir, '_research_requests_index.md')}")
+    create_research_index(all_requests, output_dir)
+    print(f"📚 Updated markdown index: {os.path.join(output_dir, '_research_requests_index.md')}")
 
 def create_research_index(requests: List[Dict], output_dir: str):
-    """Create an Obsidian-compatible index file linking all research requests."""
+    """Create or update an Obsidian-compatible index file linking all research requests."""
+    print(f"\nUpdating index with {len(requests)} total requests")
+    
+    # Remove any duplicate requests based on ID
+    seen_ids = set()
+    unique_requests = []
+    for request in requests:
+        if request['id'] not in seen_ids:
+            seen_ids.add(request['id'])
+            unique_requests.append(request)
+    
+    # Calculate statistics
+    total_requests = len(unique_requests)
+    
+    # Agent statistics
+    agent_counts = {}
+    for request in unique_requests:
+        for agent in request['metadata']['agents']:
+            agent_counts[agent] = agent_counts.get(agent, 0) + 1
+    
+    # Tag statistics
+    tag_counts = {}
+    for request in unique_requests:
+        for tag in request['metadata']['tags']:
+            tag_counts[tag] = tag_counts.get(tag, 0) + 1
+    
+    # Create index content with statistics sections
     index_content = """# Research Requests Index
 
-## By Date
+## Statistics Summary
+
+### Agent Statistics
+| Agent | Contributions | Percentage |
+|-------|--------------|------------|
 """
     
-    # Sort requests by timestamp
-    sorted_requests = sorted(requests, key=lambda x: x['timestamp'])
+    # Add agent statistics
+    for agent, count in sorted(agent_counts.items(), key=lambda x: x[1], reverse=True):
+        percentage = (count / total_requests) * 100
+        # Ensure agent is enclosed in [[]] if not already
+        linked_agent = f"[[{agent.strip('[]')}]]"
+        index_content += f"|{linked_agent}|{count}/{total_requests}|{percentage:.1f}%|\n"
+    
+    index_content += "\n### Tag Statistics\n"
+    index_content += "| Tag | Usage | Percentage |\n"
+    index_content += "|-----|-------|------------|\n"
+    
+    # Add tag statistics
+    for tag, count in sorted(tag_counts.items(), key=lambda x: x[1], reverse=True):
+        percentage = (count / total_requests) * 100
+        # Ensure tag is enclosed in [[]] if not already
+        linked_tag = f"[[{tag.strip('[]')}]]"
+        index_content += f"|{linked_tag}|{count}/{total_requests}|{percentage:.1f}%|\n"
+    
+    # Continue with existing sections
+    index_content += "\n## By Date\n"
+    
+    # Sort all requests by timestamp
+    sorted_requests = sorted(unique_requests, key=lambda x: x['timestamp'])
     
     # Group by date
     date_groups = {}
@@ -573,53 +680,52 @@ def create_research_index(requests: List[Dict], output_dir: str):
         date_groups[date].append(request)
     
     # Add date sections
-    for date, date_requests in date_groups.items():
+    for date in sorted(date_groups.keys()):
+        date_requests = date_groups[date]
         index_content += f"\n### {date}\n\n"
-        for request in date_requests:
-            # Create a brief summary from hypothesis (first 100 chars)
-            summary = request['metadata']['type'].capitalize()
-            hypothesis_summary = request['metadata']['hypothesis'][:100] + "..." if len(request['metadata']['hypothesis']) > 100 else request['metadata']['hypothesis']
+        for request in sorted(date_requests, key=lambda x: x['timestamp']):
+            metadata = request['metadata']
+            hypothesis_summary = metadata.get('hypothesis', '')[:100] + "..." if metadata.get('hypothesis', '') else ''
+            type_str = metadata.get('type', '').capitalize()
             
-            index_content += f"- [[{request['id']}]] - {summary}: {hypothesis_summary}\n"
+            index_content += f"- [[{request['id']}]] - {type_str}: {hypothesis_summary}\n"
     
+    # Add agent sections
     index_content += "\n## By Agent\n"
-    
-    # Group by agent
     agent_groups = {}
-    for request in requests:
+    for request in unique_requests:
         for agent in request['metadata']['agents']:
             if agent not in agent_groups:
                 agent_groups[agent] = []
             agent_groups[agent].append(request)
     
-    # Add agent sections
     for agent in sorted(agent_groups.keys()):
         index_content += f"\n### [[{agent}]]\n\n"
         for request in sorted(agent_groups[agent], key=lambda x: x['timestamp'], reverse=True):
-            index_content += f"- [[{request['id']}]] ({request['timestamp'].strftime('%Y-%m-%d %H:%M:%S')})\n"
+            hypothesis_summary = request['metadata'].get('hypothesis', '')[:50] + "..." if request['metadata'].get('hypothesis', '') else ''
+            index_content += f"- [[{request['id']}]] - {hypothesis_summary} ({request['timestamp'].strftime('%Y-%m-%d %H:%M:%S')})\n"
     
+    # Add tag sections
     index_content += "\n## By Tag\n"
-    
-    # Group by tag
     tag_groups = {}
-    for request in requests:
+    for request in unique_requests:
         for tag in request['metadata']['tags']:
             if tag not in tag_groups:
                 tag_groups[tag] = []
             tag_groups[tag].append(request)
     
-    # Add tag sections
     for tag in sorted(tag_groups.keys()):
         index_content += f"\n### [[{tag}]]\n\n"
         for request in sorted(tag_groups[tag], key=lambda x: x['timestamp'], reverse=True):
-            index_content += f"- [[{request['id']}]] ({request['timestamp'].strftime('%Y-%m-%d %H:%M:%S')})\n"
+            hypothesis_summary = request['metadata'].get('hypothesis', '')[:50] + "..." if request['metadata'].get('hypothesis', '') else ''
+            index_content += f"- [[{request['id']}]] - {hypothesis_summary} ({request['timestamp'].strftime('%Y-%m-%d %H:%M:%S')})\n"
     
-    # Save index file directly in output directory
+    # Save index file
     index_path = os.path.join(output_dir, "_research_requests_index.md")
     with open(index_path, 'w', encoding='utf-8') as f:
         f.write(index_content)
     
-    print(f"📚 Created research requests index: {index_path}")
+    print(f"📚 Updated research requests index: {index_path}")
 
 def test_fix_bracket_links():
     """Test the bracket fixing functionality with various cases."""
@@ -724,6 +830,10 @@ def main(project_path: str, model_name: str):
                 requests = process_conversation(conv_text, client, model_name, source_info)
                 all_requests.extend(requests)
                 pbar.update(1)
+        
+        # Add debug info
+        print(f"Found {len(conversations)} conversations to process")
+        print(f"Generated {len(all_requests)} total requests")
         
         if not all_requests:
             print("\n❌ No valid requests were generated. Check the errors above.")
