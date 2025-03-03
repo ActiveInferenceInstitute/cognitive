@@ -1,3 +1,7 @@
+# !pip install ollama
+# !pip install tqdm
+# !pip install pyyaml
+
 import os
 import json
 import re
@@ -19,32 +23,27 @@ DEFAULT_MODEL_NAME = "llama3.2"
 
 # Reuse the inference query template from infer_queries.py
 inference_query = """###SYSTEM INSTRUCTION###
-You are a precise information extraction system. Your task is to analyze conversations and extract EXACTLY 5 structured information requests or hypotheses. You MUST follow the format EXACTLY as shown.
+You are a precise information extraction system. Your task is to analyze the conversation and extract ONE research request or hypothesis. Format your response as a single JSON object.
 
 ###FORMAT REQUIREMENTS###
-- Output EXACTLY 5 requests numbered 1-5
-- Include ALL required sections in order: Agents, Tags, Intent, Hypothesis, Rationale, Impact
-- Use ONLY [[double_bracket]] format for ALL agents and tags
-- Write each section as a SINGLE paragraph (no line breaks)
-- Separate requests with "---" on its own line
-- Use ONLY alphanumeric characters and [ ] _
+- Extract exactly ONE research request
+- Include ALL required fields: agents, tags, intent, hypothesis, rationale, impact
+- Use ONLY [[double_bracket]] format for agents, tags, and intent
+- Each field should be a single string (no line breaks)
+- Use only alphanumeric characters and [ ] _
 
-###CONCRETE EXAMPLE###
-REQUEST 1:
-Agents: [[oskar]], [[saffir]], [[ysolda]]
-Tags: [[active_inference]], [[knowledge_graph]], [[collaboration]]
-Intent: [[research]]
+###OUTPUT FORMAT###
+{
+    "agents": "[[agent1]], [[agent2]]",
+    "tags": "[[tag1]], [[tag2]], [[tag3]]",
+    "intent": "[[research]]",
+    "hypothesis": "Clear hypothesis statement",
+    "rationale": "Clear rationale explanation",
+    "impact": "Clear impact statement"
+}
 
-Hypothesis:
-The integration of active inference principles into the knowledge graph system will enhance collaborative learning and information sharing among team members.
-
-Rationale:
-Understanding how active inference frameworks can be applied to knowledge management will help optimize the way agents interact with and contribute to the shared knowledge base.
-
-Impact:
-This research will enable agents to more effectively update their beliefs and make informed decisions based on the collective knowledge available in the system.
-
----"""
+###CONVERSATION CHUNK###
+"""
 
 def get_ollama_path():
     """Get the path to the Ollama executable based on the operating system."""
@@ -137,16 +136,24 @@ def ensure_model_available(model_name: str):
         return False
 
 def start_ollama_server():
-    """Start the Ollama server in a separate thread."""
-    def run_ollama_serve():
-        try:
-            run_ollama_command("serve")
-        except Exception as e:
-            print(f"Error starting Ollama server: {str(e)}")
+    """Start the Ollama server in a separate thread if not already running."""
+    # Try to connect to Ollama server first to check if it's running
+    try:
+        client = Client(host='http://127.0.0.1:11434')
+        client.list()  # This will fail if server is not running
+        print("Ollama server is already running")
+        return
+    except Exception:
+        print("Starting Ollama server...")
+        def run_ollama_serve():
+            try:
+                run_ollama_command("serve")
+            except Exception as e:
+                print(f"Error starting Ollama server: {str(e)}")
 
-    thread = threading.Thread(target=run_ollama_serve, daemon=True)
-    thread.start()
-    time.sleep(5)  # Wait for server to start
+        thread = threading.Thread(target=run_ollama_serve, daemon=True)
+        thread.start()
+        time.sleep(5)  #
 
 def format_request_for_obsidian(request: Dict, source_info: Dict) -> Dict:
     """Format a research request into Obsidian-compatible markdown structure."""
@@ -262,33 +269,113 @@ def validate_llm_response(response: str) -> Optional[List[Dict]]:
     
     return validated_requests
 
-def process_conversation(conversation_text: str, client: Client, model_name: str, source_info: Dict) -> List[Dict]:
-    """Process a single conversation using the Ollama LLM."""
-    # Combine the inference query with the conversation text
-    full_prompt = f"{inference_query}\n\nConversation:\n{conversation_text}"
+def chunk_conversation(conversation_text: str, max_chunk_size: int = 4000) -> List[str]:
+    """Split conversation into manageable chunks while preserving context."""
+    # Split on message boundaries (e.g. speaker changes)
+    messages = re.split(r'(\w+: )', conversation_text)
+    chunks = []
+    current_chunk = ""
     
+    for i in range(0, len(messages)-1, 2):
+        speaker = messages[i+1]
+        content = messages[i+2] if i+2 < len(messages) else ""
+        message = speaker + content
+        
+        if len(current_chunk) + len(message) > max_chunk_size:
+            if current_chunk:
+                chunks.append(current_chunk)
+            current_chunk = message
+        else:
+            current_chunk += message
+            
+    if current_chunk:
+        chunks.append(current_chunk)
+        
+    return chunks
+
+def extract_json_from_response(response: str) -> Optional[Dict]:
+    """Extract and validate JSON from LLM response with cleanup."""
     try:
-        # Get response from Ollama
-        response = client.generate(model=model_name, prompt=full_prompt)
-        llm_response = response['response']
+        # Find JSON-like content
+        json_match = re.search(r'\{[\s\S]*\}', response)
+        if not json_match:
+            return None
+            
+        json_str = json_match.group(0)
+        # Clean up common JSON formatting issues
+        json_str = re.sub(r'[\n\r]', ' ', json_str)
+        json_str = re.sub(r'\s+', ' ', json_str)
         
-        # Validate the response
-        validated_requests = validate_llm_response(llm_response)
-        if not validated_requests:
-            print("Response validation failed")
-            return []
+        data = json.loads(json_str)
+        return data
+    except Exception:
+        return None
+
+def validate_research_request(request: Dict) -> bool:
+    """Validate research request format and content."""
+    required_fields = ['agents', 'tags', 'intent', 'hypothesis', 'rationale', 'impact']
+    
+    # Check all fields exist
+    if not all(field in request for field in required_fields):
+        return False
         
-        # Format requests for Obsidian
-        obsidian_requests = []
-        for request in validated_requests:
-            formatted = format_request_for_obsidian(request, source_info)
-            obsidian_requests.append(formatted)
+    # Validate [[brackets]] format
+    for field in ['agents', 'tags', 'intent']:
+        if not all('[[' in item and ']]' in item 
+                  for item in request[field].split(',')):
+            return False
+            
+    # Validate content exists
+    if not all(request[field].strip() for field in required_fields):
+        return False
         
-        return obsidian_requests
-        
-    except Exception as e:
-        print(f"Error processing conversation: {str(e)}")
-        return []
+    return True
+
+def process_conversation(conversation_text: str, client: Client, model_name: str, source_info: Dict) -> List[Dict]:
+    """Process conversation chunks and extract research requests."""
+    chunks = chunk_conversation(conversation_text)
+    requests = []
+    
+    # Create progress bar for chunks
+    with tqdm(total=len(chunks), desc="Processing conversation chunks") as pbar:
+        for i, chunk in enumerate(chunks):
+            chunk_info = {
+                **source_info,
+                "chunk_id": f"chunk_{i+1}"
+            }
+            
+            # Combine inference query with chunk
+            prompt = f"{inference_query}\n\n{chunk}"
+            
+            max_retries = 3
+            for attempt in range(max_retries):
+                try:
+                    print(f"\n{'='*80}\nProcessing chunk {i+1}/{len(chunks)} (Attempt {attempt+1})\n{'='*80}")
+                    
+                    response = client.generate(model=model_name, prompt=prompt)
+                    request = extract_json_from_response(response['response'])
+                    
+                    if request and validate_research_request(request):
+                        formatted = format_request_for_obsidian(request, chunk_info)
+                        requests.append(formatted)
+                        
+                        # Pretty print the extracted request
+                        print("\n📋 Extracted Research Request:")
+                        print("----------------------------")
+                        print(json.dumps(request, indent=2))
+                        print("----------------------------\n")
+                        break
+                    else:
+                        print("❌ Failed to validate request format")
+                        
+                except Exception as e:
+                    print(f"⚠️ Error processing chunk {i+1}, attempt {attempt+1}: {str(e)}")
+                    if attempt == max_retries - 1:
+                        print(f"❌ Failed to process chunk {i+1} after {max_retries} attempts")
+            
+            pbar.update(1)
+            
+    return requests
 
 def save_obsidian_files(requests: List[Dict], output_dir: str):
     """Save formatted requests as individual Obsidian markdown files."""
@@ -298,35 +385,50 @@ def save_obsidian_files(requests: List[Dict], output_dir: str):
     # Create index for tracking
     request_index = {}
     
-    for request in requests:
-        # Save markdown file
-        filename = f"{request['id']}.md"
-        filepath = os.path.join(vault_dir, filename)
-        
-        with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(request['content'])
-        
-        # Update index
-        request_index[request['id']] = {
-            'title': request['metadata']['type'],
-            'tags': request['metadata']['tags'],
-            'agents': request['metadata']['agents'],
-            'source': request['metadata']['source_conversation']
-        }
+    # Add progress bar for saving files
+    with tqdm(total=len(requests), desc="Saving research requests") as pbar:
+        for request in requests:
+            # Save markdown file
+            filename = f"{request['id']}.md"
+            filepath = os.path.join(vault_dir, filename)
+            
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(request['content'])
+            
+            # Update index
+            request_index[request['id']] = {
+                'title': request['metadata']['type'],
+                'tags': request['metadata']['tags'],
+                'agents': request['metadata']['agents'],
+                'source': request['metadata']['source_conversation']
+            }
+            
+            # Print saved file info
+            print(f"\n📝 Saved research request: {filename}")
+            print(f"   Type: {request['metadata']['type']}")
+            print(f"   Tags: {', '.join(request['metadata']['tags'])}")
+            print(f"   Agents: {', '.join(request['metadata']['agents'])}\n")
+            
+            pbar.update(1)
     
     # Save index file
     index_path = os.path.join(vault_dir, "_request_index.json")
     with open(index_path, 'w', encoding='utf-8') as f:
         json.dump(request_index, f, indent=2)
+    print(f"📚 Saved index file: {index_path}")
 
 def main(project_path: str, model_name: str):
     try:
+        print(f"\n🚀 Starting research request extraction process")
+        print(f"   Project path: {project_path}")
+        print(f"   Model: {model_name}\n")
+        
         # Start Ollama server
         start_ollama_server()
         
         # Ensure model is available
         if not ensure_model_available(model_name):
-            print("Failed to ensure model availability. Exiting.")
+            print("❌ Failed to ensure model availability. Exiting.")
             return
         
         # Initialize Ollama client
@@ -340,31 +442,39 @@ def main(project_path: str, model_name: str):
         os.makedirs(output_dir, exist_ok=True)
         
         # Read conversations
+        print(f"📖 Reading conversations from: {input_file}")
         with open(input_file, 'r', encoding='utf-8') as f:
             conversations = json.load(f)
         
-        # Process each conversation
+        # Process each conversation with progress bar
         all_requests = []
-        for conv_name, conv_text in conversations.items():
-            print(f"Processing conversation: {conv_name}")
-            source_info = {
-                "conversation_file": conv_name,
-                "chunk_id": "full"  # Could be updated if implementing chunking
-            }
-            
-            requests = process_conversation(conv_text, client, model_name, source_info)
-            all_requests.extend(requests)
+        with tqdm(total=len(conversations), desc="Processing conversations") as pbar:
+            for conv_name, conv_text in conversations.items():
+                print(f"\n\n{'='*80}")
+                print(f"Processing conversation: {conv_name}")
+                print(f"{'='*80}\n")
+                
+                source_info = {
+                    "conversation_file": conv_name,
+                    "chunk_id": "full"
+                }
+                
+                requests = process_conversation(conv_text, client, model_name, source_info)
+                all_requests.extend(requests)
+                pbar.update(1)
         
         if not all_requests:
-            print("No valid requests were generated. Check the errors above.")
+            print("\n❌ No valid requests were generated. Check the errors above.")
             return
         
         # Save as Obsidian vault files
+        print("\n💾 Saving research requests to Obsidian vault format...")
         save_obsidian_files(all_requests, output_dir)
-        print(f"Successfully processed {len(all_requests)} requests into Obsidian vault format")
+        
+        print(f"\n✅ Successfully processed {len(all_requests)} requests into Obsidian vault format")
         
     except Exception as e:
-        print(f"An error occurred: {str(e)}")
+        print(f"\n❌ An error occurred: {str(e)}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process conversations into Obsidian vault research requests.')

@@ -1,0 +1,171 @@
+{
+  "request_2ed50027": {
+    "title": "improve",
+    "tags": [
+      "research",
+      " [[communication",
+      " [[protocol"
+    ],
+    "agents": [
+      "Oskar",
+      " [[Lokir",
+      " [[Sera",
+      " [[Jenassa",
+      " [[Farin Alteris"
+    ],
+    "source": "Saffir.json"
+  },
+  "request_4af8a3a3": {
+    "title": "recommendation",
+    "tags": [
+      "research",
+      " [[test_subject",
+      " [[MKG",
+      " [[intermediary_program"
+    ],
+    "agents": [
+      "Oskar",
+      " [[Saffir",
+      " [[Jenassa",
+      " [[Farin Alteris",
+      " [[Sera"
+    ],
+    "source": "Saffir.json"
+  },
+  "request_49d55913": {
+    "title": "introduce_new_members_and_projects",
+    "tags": [
+      "research_project",
+      " [[new_member",
+      " [[BioFirm"
+    ],
+    "agents": [
+      "Jenassa",
+      " [[Saffir",
+      " [[Oskar",
+      " [[Lokir",
+      " [[Sera"
+    ],
+    "source": "Saffir.json"
+  },
+  "request_0170ace7": {
+    "title": "research",
+    "tags": [
+      "research",
+      " [[collaborative economy",
+      " [[resource inequities",
+      " [[decentralized economic principles"
+    ],
+    "agents": [
+      "Jenassa",
+      " [[Brenuin",
+      " [[Oskar",
+      " [[Ysolda",
+      " [[Lokir",
+      " [[Sera"
+    ],
+    "source": "Saffir.json"
+  },
+  "request_c9ab4884": {
+    "title": "collaboration",
+    "tags": [
+      "research",
+      " [[community needs",
+      " [[consumer behavior",
+      " [[energy management system",
+      " [[sustainability"
+    ],
+    "agents": [
+      "Sera",
+      " [[Oskar",
+      " [[Brenuin",
+      " [[Ysolda",
+      " [[Oskar",
+      " [[Saphir"
+    ],
+    "source": "Saffir.json"
+  },
+  "request_5bb382e8": {
+    "title": "research",
+    "tags": [
+      "Active Inference",
+      " [[Interdisciplinary Research",
+      " [[Trade Dynamics",
+      " [[Equitable Resource Distribution"
+    ],
+    "agents": [
+      "Ysolda",
+      " [[Brenuin",
+      " [[Oskar",
+      " [[Saffir"
+    ],
+    "source": "Saffir.json"
+  },
+  "request_3b5ca792": {
+    "title": "discuss research request",
+    "tags": [
+      "research",
+      " [[community dynamics",
+      " [[nested Markov blankets",
+      " [[trade practices"
+    ],
+    "agents": [
+      "Oskar",
+      " [[Ysolda",
+      " [[Brenuin",
+      " [[Saffir"
+    ],
+    "source": "Saffir.json"
+  },
+  "request_370bef37": {
+    "title": "research_request",
+    "tags": [
+      "research_query",
+      " [[sustainable_trade_practices",
+      " [[equitable_resource_distribution"
+    ],
+    "agents": [
+      "Oskar",
+      " [[Ysolda",
+      " [[Brenuin"
+    ],
+    "source": "Saffir.json"
+  },
+  "request_631c7b9d": {
+    "title": "research",
+    "tags": [
+      "consumer behavior",
+      " [[local markets",
+      " [[seasonal trends",
+      " [[economic changes",
+      " [[community preferences",
+      " [[effective methods for gathering consumer feedback",
+      " [[local economic models",
+      " [[sustainable trade practices",
+      " [[supply and demand dynamics",
+      " [[partnerships between local suppliers and consumers",
+      " [[Active Inference principles"
+    ],
+    "agents": [
+      "Brenuin",
+      " [[Oskar",
+      " [[Ysolda",
+      " [[Saffir"
+    ],
+    "source": "Saffir.json"
+  },
+  "request_81a65141": {
+    "title": "improve_trading_practices",
+    "tags": [
+      "sustainable_trade",
+      " [[equitable_trade",
+      " [[research_collaboration"
+    ],
+    "agents": [
+      "Saffir",
+      " [[Ysolda",
+      " [[Brenuin"
+    ],
+    "source": "Saffir.json"
+  }
+}

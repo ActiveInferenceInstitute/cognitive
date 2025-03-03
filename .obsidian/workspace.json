@@ -6,15 +6,16 @@
       {
         "id": "309e2c1bd6d2aaaf",
         "type": "tabs",
+        "dimension": 42.05168363351605,
         "children": [
           {
             "id": "edc32c8263c095f4",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -22,15 +23,20 @@
       {
         "id": "7d45e3eaaab92d8f",
         "type": "tabs",
+        "dimension": 57.948316366483944,
         "children": [
           {
             "id": "26da5c325ed6eb0c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Things/KG_Multi_Agent/MKG_Multi_Agent/README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ]
@@ -90,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 429.5
+    "width": 214.5
   },
   "right": {
     "id": "fd73c31f8883ab7b",
@@ -178,8 +184,11 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "26da5c325ed6eb0c",
+  "active": "edc32c8263c095f4",
   "lastOpenFiles": [
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/request_631c7b9d.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/README.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/request_4af8a3a3.md",
     "knowledge_base/cognitive/generative_model.md",
     "docs/guides/application/parr_2022_chapter_6.md",
     "social_theory_in_computation.md",
@@ -209,9 +218,6 @@
     "docs/templates/observation_template.md",
     "docs/templates/action_template.md",
     "docs/templates/belief_template.md",
-    "docs/templates/agent_template.md",
-    "docs/guides/application/guide_for_cognitive_modeling.md",
-    "knowledge_base/systems/metaverse.md",
     "tools/src/models/matrices/__pycache__/matrix_ops.cpython-310.pyc",
     "tools/src/models/active_inference/config_examples/discrete_variational.yaml",
     "tools/src/models/active_inference/config_examples/continuous_sampling.yaml",
