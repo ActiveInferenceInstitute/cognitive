@@ -1,304 +1,516 @@
 {
   "summary": {
-    "total_requests": 22,
-    "unique_agents": 10,
-    "unique_tags": 62,
-    "avg_agents_per_request": 4.136363636363637,
-    "avg_tags_per_request": 4.2727272727272725
+    "total_requests": 52,
+    "unique_agents": 8,
+    "unique_tags": 117,
+    "avg_agents_per_request": 4.384615384615385,
+    "avg_tags_per_request": 4.269230769230769
   },
   "agent_participation": {
     "Oskar": {
-      "count": 16,
-      "percentage": 72.72727272727273
+      "count": 45,
+      "percentage": 86.53846153846155
     },
     "Lokir": {
-      "count": 5,
-      "percentage": 22.727272727272727
+      "count": 15,
+      "percentage": 28.846153846153843
     },
     "Sera": {
-      "count": 9,
-      "percentage": 40.909090909090914
+      "count": 21,
+      "percentage": 40.38461538461539
     },
     "Jenassa": {
-      "count": 8,
-      "percentage": 36.36363636363637
+      "count": 21,
+      "percentage": 40.38461538461539
     },
     "Farin Alteris": {
-      "count": 7,
-      "percentage": 31.818181818181817
+      "count": 16,
+      "percentage": 30.76923076923077
     },
     "Saffir": {
-      "count": 12,
-      "percentage": 54.54545454545454
-    },
-    "Brenuin": {
-      "count": 17,
-      "percentage": 77.27272727272727
-    },
-    "Isolda": {
-      "count": 1,
-      "percentage": 4.545454545454546
+      "count": 35,
+      "percentage": 67.3076923076923
     },
     "Ysolda": {
-      "count": 14,
-      "percentage": 63.63636363636363
+      "count": 35,
+      "percentage": 67.3076923076923
     },
-    "Saphir": {
-      "count": 2,
-      "percentage": 9.090909090909092
+    "Brenuin": {
+      "count": 40,
+      "percentage": 76.92307692307693
     }
   },
   "tag_usage": {
-    "BioFirm": {
-      "count": 3,
-      "percentage": 13.636363636363635
+    "research": {
+      "count": 23,
+      "percentage": 44.230769230769226
     },
     "collaboration": {
-      "count": 5,
-      "percentage": 22.727272727272727
+      "count": 4,
+      "percentage": 7.6923076923076925
     },
     "knowledge graph": {
       "count": 2,
-      "percentage": 9.090909090909092
+      "percentage": 3.8461538461538463
     },
-    "research": {
-      "count": 13,
-      "percentage": 59.09090909090909
-    },
-    "test-subject": {
+    "information extraction": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
-    "query-system": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "knowledge-graph": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "iterative_feedback": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "knowledge_graph": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "collaborative_network": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "research_project": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "active_inference": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "sustainable_solutions": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "Collaborative Economic Network System": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "trade systems": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "consumer behavior": {
-      "count": 4,
-      "percentage": 18.181818181818183
-    },
-    "community": {
+    "MKG": {
       "count": 2,
-      "percentage": 9.090909090909092
-    },
-    "sustainability": {
-      "count": 2,
-      "percentage": 9.090909090909092
-    },
-    "Active Inference": {
-      "count": 2,
-      "percentage": 9.090909090909092
-    },
-    "Trade Dynamics": {
-      "count": 2,
-      "percentage": 9.090909090909092
-    },
-    "Equitable Resource Distribution": {
-      "count": 2,
-      "percentage": 9.090909090909092
-    },
-    "community dynamics": {
-      "count": 2,
-      "percentage": 9.090909090909092
-    },
-    "nested Markov blankets": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "trade practices": {
-      "count": 2,
-      "percentage": 9.090909090909092
-    },
-    "empirical research": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "community feedback": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "research_on_sustainable_trade": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "community_behaviors": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "equitable_resource_distribution": {
-      "count": 2,
-      "percentage": 9.090909090909092
-    },
-    "sustainable trade practices": {
-      "count": 2,
-      "percentage": 9.090909090909092
-    },
-    "community engagement": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "sustainable_trade": {
-      "count": 2,
-      "percentage": 9.090909090909092
-    },
-    "protocol": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "communication": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "project management": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "test subject": {
-      "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 3.8461538461538463
     },
     "intermediary program": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
-    "querying process": {
+    "iterative_feedback_process": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
-    "research request": {
+    "user_feedback": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
-    "system design": {
-      "count": 1,
-      "percentage": 4.545454545454546
+    "collaborative_network": {
+      "count": 3,
+      "percentage": 5.769230769230769
     },
-    "project": {
+    "BioFirm": {
+      "count": 4,
+      "percentage": 7.6923076923076925
+    },
+    "project framework": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
+    },
+    "energy dynamics": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "sustainable solutions": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "collaborative economics": {
+      "count": 1,
+      "percentage": 1.9230769230769231
     },
     "resource inequities": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
-    "economic principles": {
+    "decentralized economic principles": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
-    "community needs": {
-      "count": 1,
-      "percentage": 4.545454545454546
+    "sustainability": {
+      "count": 4,
+      "percentage": 7.6923076923076925
     },
-    "energy management system": {
+    "community-based": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
+    },
+    "energy management": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "Active Inference": {
+      "count": 5,
+      "percentage": 9.615384615384617
+    },
+    "interdisciplinary research": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "sustainable trade systems": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "equitable resource distribution": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "community dynamics": {
+      "count": 4,
+      "percentage": 7.6923076923076925
+    },
+    "trade practices": {
+      "count": 5,
+      "percentage": 9.615384615384617
+    },
+    "consumer behavior": {
+      "count": 6,
+      "percentage": 11.538461538461538
+    },
+    "local markets": {
+      "count": 4,
+      "percentage": 7.6923076923076925
+    },
+    "seasonal trends": {
+      "count": 4,
+      "percentage": 7.6923076923076925
+    },
+    "economic changes": {
+      "count": 4,
+      "percentage": 7.6923076923076925
+    },
+    "consumer feedback": {
+      "count": 3,
+      "percentage": 5.769230769230769
+    },
+    "economic models": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "sustainable trade practices": {
+      "count": 4,
+      "percentage": 7.6923076923076925
+    },
+    "community engagement": {
+      "count": 3,
+      "percentage": 5.769230769230769
+    },
+    "Active Inference principles": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "sustainable_trade_systems": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "equitable_trade": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "trade_collaboration": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "query_system": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "Markdown_Knowledge_Graph": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "Knowledge Graph": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "Collaboration Tools": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "research_question": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "test_subject_selection": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "knowledge_graph_query": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "iteration": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "feedback": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "resource management": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "economics": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "community development": {
+      "count": 2,
+      "percentage": 3.8461538461538463
     },
     "Interdisciplinary Research": {
-      "count": 1,
-      "percentage": 4.545454545454546
+      "count": 4,
+      "percentage": 7.6923076923076925
     },
-    "Sustainable Practices": {
+    "Sustainable Trade": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
-    "Markov blanket": {
-      "count": 1,
-      "percentage": 4.545454545454546
+    "Equitable Resource Distribution": {
+      "count": 3,
+      "percentage": 5.769230769230769
+    },
+    "nested Markov blankets": {
+      "count": 3,
+      "percentage": 5.769230769230769
+    },
+    "empirical research": {
+      "count": 3,
+      "percentage": 5.769230769230769
     },
     "resource allocation": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
-    "research_questions": {
-      "count": 1,
-      "percentage": 4.545454545454546
+    "research_request": {
+      "count": 3,
+      "percentage": 5.769230769230769
     },
-    "sustainable_practices": {
-      "count": 1,
-      "percentage": 4.545454545454546
+    "sustainable_trade": {
+      "count": 4,
+      "percentage": 7.6923076923076925
     },
-    "local markets": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "seasonal trends": {
-      "count": 1,
-      "percentage": 4.545454545454546
-    },
-    "economic changes": {
-      "count": 1,
-      "percentage": 4.545454545454546
+    "equitable_resource_distribution": {
+      "count": 3,
+      "percentage": 5.769230769230769
     },
     "community preferences": {
-      "count": 1,
-      "percentage": 4.545454545454546
+      "count": 2,
+      "percentage": 3.8461538461538463
     },
-    "gathering consumer feedback": {
+    "effective methods for gathering consumer feedback": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
     "local economic models": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
     "supply and demand dynamics": {
-      "count": 1,
-      "percentage": 4.545454545454546
+      "count": 2,
+      "percentage": 3.8461538461538463
     },
     "partnerships between local suppliers and consumers": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
-    "Active Inference principles": {
+    "theoretical underpinnings": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     },
-    "equitable_trade": {
+    "equitable_trade_systems": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
+    },
+    "communication": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "project management": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "bioinformatics": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "iterative process": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "project_management": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "energy_efficiency": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "active_inference": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "multi_agent_systems": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "project idea": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "trade systems": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "cross-disciplinary": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "Energy Management System": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "community needs": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "Trade Dynamics": {
+      "count": 3,
+      "percentage": 5.769230769230769
+    },
+    "research_demand": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "sustainable_trade_practices": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "sustainable trade": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "equitable trade": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "research system": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "Markdown Knowledge Graph": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "query template": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "communication protocol": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "test-subject": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "knowledge-graph": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "iterative_feedback": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "research_update": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "research_framework": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "energy_management": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "multi_agent_coordination": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "economic_principles": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "community_members": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "hypothetical": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "energy management system": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "community_dynamics": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "information_flows": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "trade_practices": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "empirical_research": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "equitable trade initiatives": {
+      "count": 2,
+      "percentage": 3.8461538461538463
+    },
+    "research collaboration": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "BioFirm_project": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "test_subject": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "knowledge_graph": {
+      "count": 3,
+      "percentage": 5.769230769230769
+    },
+    "research_process": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "active inference": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "CollaborativeEconomicNetworkSystem": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "resourceinequities": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "decentralizedeconomicprinciples": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "communitydevelopment": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "equitableaccess": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "hypothesis testing": {
+      "count": 1,
+      "percentage": 1.9230769230769231
+    },
+    "experimental_method": {
+      "count": 1,
+      "percentage": 1.9230769230769231
     },
     "trade_systems": {
       "count": 1,
-      "percentage": 4.545454545454546
+      "percentage": 1.9230769230769231
     }
   },
   "temporal_stats": {
-    "2025-03-03": 22
+    "2025-03-03": 52
   }
 }

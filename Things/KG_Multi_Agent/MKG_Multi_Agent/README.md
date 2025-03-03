@@ -1,22 +1,30 @@
 # MKG_Multi_Agent
 
-## Purpose
+## Overview
 
-MKG_Multi_Agent is a specialized component of a larger knowledge graph system that:
-1. Extracts structured research requests and hypotheses from AI conversation logs
-2. Transforms unstructured dialogue into graph-compatible knowledge units
-3. Maintains source traceability and temporal context
-4. Facilitates knowledge discovery through Obsidian-compatible outputs
+MKG_Multi_Agent is a sophisticated knowledge extraction and analysis system that transforms AI agent conversations into structured, analyzable knowledge units. At its core, the system uses advanced NLP techniques to extract research requests, analyze agent interactions, and generate comprehensive visualizations of knowledge patterns.
 
-The system serves as a bridge between conversational AI outputs and structured knowledge representation, enabling:
-- Automated knowledge extraction
-- Hypothesis tracking
-- Research request management
-- Multi-agent interaction analysis
+## Key Features
+
+### 1. Knowledge Extraction
+- Automated extraction of research requests from conversation logs
+- Intelligent chunking of large conversations
+- Advanced entity recognition and linking
+- Fuzzy matching for agent name validation
+
+### 2. Analysis & Visualization
+- Network analysis of agent interactions
+- Statistical visualizations of research patterns
+- Cultural and linguistic analysis
+- Topic modeling and sentiment analysis
+
+### 3. Knowledge Organization
+- Obsidian-compatible markdown generation
+- Automated cross-linking
+- Multi-dimensional indexing
+- Temporal tracking
 
 ## System Architecture
-
-### Components Overview
 
 ```mermaid
 graph TD
@@ -24,270 +32,195 @@ graph TD
     B --> C[conversations_list.json]
     C --> D[infer_queries_batch.py]
     D --> E[Research Requests]
-    D --> F[Indexes]
-    E --> G[Knowledge Graph Integration]
+    D --> F[Network Analysis]
+    D --> G[Cultural Analysis]
+    D --> H[Statistical Analysis]
+    
+    subgraph "Output Directories"
+        E --> I[/research_requests/*.md/]
+        F --> J[/visualizations/]
+        G --> K[/cultural_analysis/]
+        H --> L[/statistics/]
+    end
 ```
 
-### Core Components
+## Core Components
 
-1. **process_conversations.py**
-   - Purpose: Conversation preprocessing and structuring
-   - Input: Raw conversation files (JSON)
-   - Output: Structured conversation list
-   - Key operations:
-     - Conversation parsing
-     - Exchange counting
-     - JSON structure validation
+### infer_queries_batch.py (Primary Component)
 
-2. **infer_queries_batch.py**
-   - Purpose: Research request extraction and formatting
-   - Input: Structured conversations
-   - Output: Markdown files and indexes
-   - Key algorithms:
-     ```python
-     # High-level process flow
-     conversations -> chunk_conversation() 
-                  -> process_chunks() 
-                  -> extract_requests() 
-                  -> validate() 
-                  -> format_output()
-     ```
+#### Input Processing
+- **Conversation Chunking**
+  ```python
+  def chunk_conversation(conversation_text: str, max_chunk_size: int = 4000)
+  ```
+  - Intelligent splitting of conversations
+  - Context preservation
+  - Speaker boundary respect
 
-3. **MKG_utils.py**
-   - Purpose: Shared utilities and helpers
-   - Scope: Cross-component functions
-   - Usage: Support for main processing scripts
+- **Agent Name Validation**
+  ```python
+  def validate_and_correct_agent_name(agent_name: str, 
+                                    conversation_agents: set = None,
+                                    min_similarity: int = None)
+  ```
+  - Fuzzy matching for misspellings
+  - Context-aware correction
+  - Configurable similarity threshold
 
-## Algorithmic Details
+#### Analysis Features
 
-### 1. Conversation Processing
+1. **Network Analysis**
+   - Agent interaction graphs
+   - Centrality metrics
+   - Bridging coefficients
+   - Interactive visualizations
 
-```python
-# Pseudo-algorithm for conversation chunking
-def chunk_conversation(text, max_size=4000):
-    chunks = []
-    messages = split_on_speaker_boundaries(text)
-    current_chunk = ""
-    
-    for message in messages:
-        if len(current_chunk + message) > max_size:
-            chunks.append(current_chunk)
-            current_chunk = message
-        else:
-            current_chunk += message
-    
-    return chunks
-```
+2. **Cultural Analysis**
+   - Topic modeling
+   - Sentiment analysis
+   - Language complexity metrics
+   - Cultural markers tracking
 
-### 2. Request Extraction
+3. **Statistical Analysis**
+   - Agent participation rates
+   - Tag usage patterns
+   - Temporal trends
+   - Request patterns
 
-The system employs a multi-stage extraction process:
+#### Output Generation
 
-1. **Chunking Stage**
-   - Split conversations into manageable segments
-   - Preserve context and speaker information
-   - Maintain temporal ordering
-
-2. **Inference Stage**
-   - LLM prompt engineering for structured extraction
-   - Fixed extraction count (currently 5 per chunk)
-   - Validation against predefined schemas
-
-3. **Processing Stage**
-   - Bracket link normalization
-   - Metadata enrichment
-   - Source tracking
-   - Timestamp management
-
-### 3. Output Generation
-
-The system generates three types of interconnected outputs:
-
-1. **Individual Research Request Files (`outputs/research_requests/*.md`)**
+1. **Research Requests** (`/research_requests/*.md`)
    ```yaml
    ---
    source_conversation: "conversation_id"
-   source_chunk: "chunk_id"
    type: "research_request"
-   created: "YYYY-MM-DD"
-   timestamp: "YYYY-MM-DD HH:MM:SS"
-   hypothesis: "Detailed hypothesis statement"
-   rationale: "Reasoning behind the hypothesis"
-   impact: "Expected impact of the research"
-   tags: ["tag1", "tag2"]
+   hypothesis: "Detailed statement"
+   rationale: "Supporting reasoning"
+   impact: "Expected outcomes"
    agents: ["agent1", "agent2"]
+   tags: ["tag1", "tag2"]
+   timestamp: "YYYY-MM-DD HH:MM:SS"
    ---
-
-   # Research Request
-   Created: YYYY-MM-DD
-
-   ## Hypothesis
-   [Hypothesis text]
-
-   ## Rationale
-   [Rationale text]
-
-   ## Expected Impact
-   [Impact text]
-
-   ## Related Agents
-   - [[agent1]]
-   - [[agent2]]
-
-   ## Tags
-   - [[tag1]]
-   - [[tag2]]
-
-   ## Source
-   [[conversation_id]]
    ```
 
-2. **Request Index JSON (`_request_index.json`)**
-   ```json
-   {
-     "request_id_TIMESTAMP": {
-       "title": "Research Request Type",
-       "tags": ["tag1", "tag2"],
-       "agents": ["agent1", "agent2"],
-       "source": "conversation_id",
-       "timestamp": "YYYY-MM-DD HH:MM:SS",
-       "hypothesis": "Hypothesis statement",
-       "rationale": "Rationale text",
-       "impact": "Impact description"
-     },
-     // Additional requests...
-   }
-   ```
+2. **Visualizations** (`/visualizations/`)
+   - Network graphs (`network_visualization.html`)
+   - Agent participation (`agent_participation.png`)
+   - Tag usage (`tag_usage.png`)
+   - Request timeline (`request_timeline.png`)
 
-3. **Research Requests Index (`_research_requests_index.md`)**
-   ```markdown
-   # Research Requests Index
+3. **Cultural Analysis** (`/cultural_analysis/`)
+   - Topic distributions (`topic_distribution.html`)
+   - Sentiment analysis (`agent_sentiments.html`)
+   - Language complexity (`language_complexity.html`)
+   - Cultural markers (`cultural_markers.html`)
 
-   ## Statistics Summary
-
-   ### Agent Statistics
-   | Agent | Contributions | % of Total |
-   |-------|--------------|------------|
-   | [[agent1]] | 5/10 | 50% |
-   | [[agent2]] | 3/10 | 30% |
-
-   ### Tag Statistics
-   | Tag | Usage | % of Total |
-   |-----|-------|------------|
-   | [[tag1]] | 6/10 | 60% |
-   | [[tag2]] | 4/10 | 40% |
-
-   ## By Date
-   ### YYYY-MM-DD
-   - [[request_id_1]] - Research Request: hypothesis summary...
-   - [[request_id_2]] - Research Request: hypothesis summary...
-
-   ## By Agent
-   ### [[agent1]]
-   - [[request_id_1]] - hypothesis summary... (YYYY-MM-DD HH:MM:SS)
-   - [[request_id_2]] - hypothesis summary... (YYYY-MM-DD HH:MM:SS)
-
-   ## By Tag
-   ### [[tag1]]
-   - [[request_id_1]] - hypothesis summary... (YYYY-MM-DD HH:MM:SS)
-   - [[request_id_2]] - hypothesis summary... (YYYY-MM-DD HH:MM:SS)
-   ```
-
-Key features of the output files:
-- All files use Obsidian-compatible formatting with double-bracket links
-- The JSON index serves as a queryable database of all requests
-- The markdown index provides multiple views (temporal, agent-based, tag-based)
-- Statistics sections show contribution and usage percentages
-- All outputs maintain consistent cross-referencing through request IDs
-
-## Usage
-
-### Prerequisites
-
-```bash
-# Required Python packages
-pip install ollama tqdm pyyaml
-```
-
-### Project Structure
-
-```
-MKG_Multi_Agent/
-├── test1/
-│   ├── inputs/
-│   │   └── conversations/
-│   └── outputs/
-│       ├── conversations/
-│       └── research_requests/
-├── infer_queries_batch.py
-├── process_conversations.py
-└── MKG_utils.py
-```
-
-### Execution Flow
-
-1. **Conversation Processing**
-   ```bash
-   python process_conversations.py --project_path ./test1 --exchanges 50
-   ```
-
-2. **Request Extraction**
-   ```bash
-   python infer_queries_batch.py --project_path ./test1 --model_name llama3.2
-   ```
+4. **Statistics** (`/statistics/`)
+   - Detailed metrics (`statistics.json`)
+   - Network analysis (`network_statistics.md`)
+   - Agent profiles (`cultural_analysis.md`)
 
 ## Configuration
 
-### LLM Settings
-
-```python
-# Default configuration
-DEFAULT_MODEL_NAME = "llama3.2"
-MAX_CHUNK_SIZE = 4000
-REQUESTS_PER_CHUNK = 5
+### Command Line Arguments
+```bash
+python infer_queries_batch.py \
+    --project_path ./test1 \
+    --model_name llama3.2 \
+    --force_links \
+    --similarity_threshold 80
 ```
 
-### Validation Rules
+### Key Parameters
+```python
+# Global Configuration
+DEFAULT_PROJECT_PATH = "./test1"
+DEFAULT_MODEL_NAME = "llama3.2"
+force_links = True  # Enable automatic link creation
+similarity_threshold = 80  # Agent name matching threshold
 
-1. **Request Format**
-   - Required fields: agents, tags, intent, hypothesis, rationale, impact
-   - Bracket format: [[agent]], [[tag]], [[intent]]
-   - Content validation for each field
+# Cultural Markers
+cultural_markers = {
+    'technical': ['algorithm', 'system', 'model'],
+    'collaborative': ['team', 'together', 'share'],
+    'innovative': ['novel', 'unique', 'creative'],
+    'analytical': ['analyze', 'evaluate', 'measure'],
+    'practical': ['implement', 'build', 'deploy']
+}
+```
 
-2. **Link Processing**
-   - Double bracket normalization
-   - Nested bracket resolution
-   - Empty link removal
+## Dependencies
+
+### Core Requirements
+```bash
+pip install ollama tqdm pyyaml plotly networkx matplotlib
+```
+
+### Analysis Requirements
+```bash
+pip install spacy gensim textblob
+python -m spacy download en_core_web_sm
+```
+
+## Project Structure
+```
+MKG_Multi_Agent/
+├── infer_queries_batch.py    # Main processing engine
+├── process_conversations.py   # Conversation preprocessor
+├── MKG_utils.py             # Utility functions
+└── test1/
+    ├── inputs/
+    │   └── conversations/    # Raw conversation files
+    └── outputs/
+        ├── conversations/    # Processed conversations
+        ├── research_requests/# Extracted knowledge
+        ├── visualizations/   # Network and statistical viz
+        ├── cultural_analysis/# Cultural analytics
+        └── statistics/       # Detailed metrics
+```
+
+## Usage Examples
+
+### Basic Extraction
+```bash
+python infer_queries_batch.py --project_path ./test1
+```
+
+### Advanced Analysis
+```bash
+python infer_queries_batch.py \
+    --project_path ./test1 \
+    --model_name llama3.2 \
+    --force_links \
+    --similarity_threshold 90
+```
 
 ## Future Enhancements
 
-1. **Dynamic Request Extraction**
-   - Content-based chunk sizing
-   - Variable request count per chunk
-   - Improved context preservation
+1. **Analysis Expansion**
+   - Advanced sentiment analysis
+   - Cross-conversation topic tracking
+   - Agent personality profiling
+   - Temporal pattern detection
 
-2. **Advanced Processing**
-   - Parallel chunk processing
-   - Incremental updates
-   - Cross-reference validation
+2. **Visualization Improvements**
+   - Interactive topic networks
+   - Real-time analysis updates
+   - Custom visualization themes
+   - Export to various formats
 
-3. **Knowledge Graph Integration**
-   - Automated graph updates
-   - Relationship inference
-   - Temporal analysis
-
-4. **Validation Improvements**
-   - Content quality metrics
-   - Semantic validation
-   - Cross-request consistency
+3. **Integration Features**
+   - API endpoints for live analysis
+   - Real-time agent monitoring
+   - Custom marker definitions
+   - Plugin system for analyses
 
 ## Contributing
 
-When contributing to this project:
-1. Follow the existing code structure
-2. Document algorithmic changes
-3. Update test cases
-4. Maintain backward compatibility
+1. Fork the repository
+2. Create a feature branch
+3. Add tests for new features
+4. Submit a pull request
 
 ## License
 

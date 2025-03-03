@@ -6,6 +6,8 @@
 # !pip install "plotly[express]" networkx matplotlib
 # !pip install spacy
 # python -m spacy download en_core_web_sm
+# !pip install thefuzz
+# !pip install gensim textblob scikit-learn
 
 import os
 import json
@@ -31,11 +33,24 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.colors import LinearSegmentedColormap
 import spacy
+from thefuzz import fuzz, process
+import numpy as np
 
 # Configuration
 force_links = True  # force [[links]] to be created during extraction
+similarity_threshold = 80  # minimum similarity score (0-100) for agent name matching
 DEFAULT_PROJECT_PATH = "./Things/KG_Multi_Agent/MKG_Multi_Agent/test1"
 DEFAULT_MODEL_NAME = "llama3.2"  # Choose one model name
+
+# Known agent names - update this list with all known agents
+KNOWN_AGENTS = {
+    "Saffir",
+    "Oskar",
+    "Jenassa",
+    "Farin Alteris",
+    "Sera",
+    # Add other known agent names here
+}
 
 # Load spaCy model for NER and phrase detection
 try:
@@ -527,7 +542,71 @@ def fix_bracket_links(text: str) -> str:
     
     return result
 
-def extract_json_from_response(response: str) -> Optional[Dict]:
+def validate_and_correct_agent_name(agent_name: str, conversation_agents: set = None, min_similarity: int = None) -> str:
+    """
+    Validate an agent name against known agents and correct it if it's a close match.
+    First checks against agents found in the current conversation, then uses fuzzy matching.
+    
+    Args:
+        agent_name: The agent name to validate
+        conversation_agents: Set of agent names found in the current conversation
+        min_similarity: Minimum similarity score (0-100) to consider a match. If None, uses global threshold.
+        
+    Returns:
+        Corrected agent name if a close match is found, original name otherwise
+    """
+    # Remove brackets if present
+    clean_name = agent_name.strip('[]').strip()
+    
+    # If the name is already in KNOWN_AGENTS, return it as is
+    if clean_name in KNOWN_AGENTS:
+        return agent_name
+        
+    # If we have conversation agents, first try to find the closest match among them
+    # regardless of similarity threshold
+    if conversation_agents:
+        matches = process.extractBests(clean_name, conversation_agents)
+        if matches:
+            best_match = matches[0][0]  # Get the best matching name
+            if agent_name.startswith('[['):
+                return f"[[{best_match}]]"
+            return best_match
+    
+    # If no match found in conversation agents, try KNOWN_AGENTS with threshold
+    if min_similarity is None:
+        min_similarity = similarity_threshold
+    
+    matches = process.extractBests(clean_name, KNOWN_AGENTS, score_cutoff=min_similarity)
+    
+    if matches:
+        best_match = matches[0][0]  # Get the best matching name
+        if agent_name.startswith('[['):
+            return f"[[{best_match}]]"
+        return best_match
+        
+    return agent_name
+
+def validate_and_correct_agent_list(agents_str: str, conversation_agents: set = None) -> str:
+    """
+    Validate and correct a comma-separated list of agent names.
+    
+    Args:
+        agents_str: String containing comma-separated agent names
+        conversation_agents: Set of agent names found in the current conversation
+        
+    Returns:
+        Corrected string with validated agent names
+    """
+    # Split the string into individual agent names
+    agent_names = [name.strip() for name in agents_str.split(',') if name.strip()]
+    
+    # Validate and correct each agent name
+    corrected_names = [validate_and_correct_agent_name(name, conversation_agents) for name in agent_names]
+    
+    # Join the corrected names back into a string
+    return ', '.join(corrected_names)
+
+def extract_json_from_response(response: str, conversation_agents: set = None) -> Optional[Dict]:
     """Extract and validate JSON from LLM response with cleanup."""
     try:
         # Find JSON-like content
@@ -544,18 +623,23 @@ def extract_json_from_response(response: str) -> Optional[Dict]:
         json_str = re.sub(r'[\n\r]', ' ', json_str)
         json_str = re.sub(r'\s+', ' ', json_str)
         
-        # Pretty print the fixed JSON for debugging
-        print("\n🔍 Fixed JSON string:")
-        print("-------------------")
-        print(json_str)
-        print("-------------------\n")
-        
+        # Parse JSON
         data = json.loads(json_str)
         
+        # Validate and correct agent names if present
+        if 'agents' in data:
+            data['agents'] = validate_and_correct_agent_list(data['agents'], conversation_agents)
+            
         # Additional validation for bracket links in specific fields
         for field in ['agents', 'tags', 'intent']:
             if field in data:
                 data[field] = fix_bracket_links(data[field])
+        
+        # Pretty print the fixed JSON for debugging
+        print("\n🔍 Fixed JSON string:")
+        print("-------------------")
+        print(json.dumps(data, indent=2))
+        print("-------------------\n")
         
         return data
     except Exception as e:
@@ -595,6 +679,14 @@ def process_conversation(conversation_text: str, client: Client, model_name: str
     chunks = chunk_conversation(conversation_text)
     requests = []
     
+    # Extract agent names from the conversation
+    conversation_agents = set()
+    for line in conversation_text.split('\n'):
+        if ':' in line:
+            agent = line.split(':', 1)[0].strip()
+            if agent and not agent.lower() in {'system', 'user', 'assistant', 'human'}:
+                conversation_agents.add(agent)
+    
     # Create progress bar for chunks
     with tqdm(total=len(chunks), desc="Processing conversation chunks") as pbar:
         for i, chunk in enumerate(chunks):
@@ -612,7 +704,7 @@ def process_conversation(conversation_text: str, client: Client, model_name: str
                     print(f"\n{'='*80}\nProcessing chunk {i+1}/{len(chunks)} (Attempt {attempt+1})\n{'='*80}")
                     
                     response = client.generate(model=model_name, prompt=prompt)
-                    request = extract_json_from_response(response['response'])
+                    request = extract_json_from_response(response['response'], conversation_agents)
                     
                     if request and validate_research_request(request):
                         formatted = format_request_for_obsidian(request, chunk_info)
@@ -724,6 +816,11 @@ def save_obsidian_files(requests: List[Dict], output_dir: str):
     create_research_index(all_requests, output_dir)
     print(f"📚 Updated markdown index: {os.path.join(output_dir, '_research_requests_index.md')}")
 
+    # Add cultural analysis
+    create_cultural_analysis(requests, output_dir)
+    
+    print(f"📚 Generated cultural and linguistic analysis in: {os.path.join(output_dir, 'cultural_analysis')}")
+
 def create_research_index(requests: List[Dict], output_dir: str):
     """Create or update an Obsidian-compatible index file linking all research requests."""
     print(f"\nUpdating index with {len(requests)} total requests")
@@ -742,13 +839,13 @@ def create_research_index(requests: List[Dict], output_dir: str):
     # Agent statistics
     agent_counts = {}
     for request in unique_requests:
-        for agent in request['metadata']['agents']:
+        for agent in request['metadata'].get('agents', []):
             agent_counts[agent] = agent_counts.get(agent, 0) + 1
     
     # Tag statistics
     tag_counts = {}
     for request in unique_requests:
-        for tag in request['metadata']['tags']:
+        for tag in request['metadata'].get('tags', []):
             tag_counts[tag] = tag_counts.get(tag, 0) + 1
     
     # Create index content with statistics sections
@@ -808,7 +905,7 @@ def create_research_index(requests: List[Dict], output_dir: str):
     index_content += "\n## By Agent\n"
     agent_groups = {}
     for request in unique_requests:
-        for agent in request['metadata']['agents']:
+        for agent in request['metadata'].get('agents', []):
             if agent not in agent_groups:
                 agent_groups[agent] = []
             agent_groups[agent].append(request)
@@ -823,7 +920,7 @@ def create_research_index(requests: List[Dict], output_dir: str):
     index_content += "\n## By Tag\n"
     tag_groups = {}
     for request in unique_requests:
-        for tag in request['metadata']['tags']:
+        for tag in request['metadata'].get('tags', []):
             if tag not in tag_groups:
                 tag_groups[tag] = []
             tag_groups[tag].append(request)
@@ -1326,6 +1423,438 @@ def create_network_visualizations(requests_data: List[Dict], output_dir: str):
         for node, coefficient in sorted_bridging:
             f.write(f"- {node}: {coefficient:.3f}\n")
 
+def preprocess_text_for_topic_modeling(text: str) -> str:
+    """Remove stop words and common terms from text for topic modeling."""
+    try:
+        import nltk
+        from nltk.corpus import stopwords
+        
+        # Ensure we have the stopwords
+        try:
+            stop_words = set(stopwords.words('english'))
+        except LookupError:
+            nltk.download('stopwords', quiet=True)
+            stop_words = set(stopwords.words('english'))
+        
+        # Minimal set of stop words to preserve more meaningful content
+        minimal_stop_words = {
+            'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to',
+            'for', 'of', 'with', 'by'
+        }
+        
+        # Simple word-based tokenization
+        import re
+        # Convert to lowercase and split on whitespace
+        words = text.lower().split()
+        # Remove punctuation but keep apostrophes and hyphens
+        words = [re.sub(r'[^\w\'\-\s]', '', word) for word in words]
+        # Remove only minimal stop words and very short words
+        words = [word for word in words if word and len(word) > 1 and word not in minimal_stop_words]
+        
+        processed_text = ' '.join(words)
+        if not processed_text.strip():
+            print(f"\n⚠️ Warning: Text was empty after preprocessing: {text[:100]}...")
+            return text  # Return original if processed text is empty
+        return processed_text
+        
+    except Exception as e:
+        print(f"\n⚠️ Warning: Using simplified text preprocessing due to error: {str(e)}")
+        # Fallback to very basic preprocessing
+        return ' '.join(word.lower() for word in text.split() if len(word) > 1)
+
+def ensure_textblob_corpora():
+    """Ensure required NLTK data is available for TextBlob."""
+    try:
+        import nltk
+        from textblob import TextBlob
+        
+        # Define required NLTK data
+        required_nltk_data = [
+            ('corpora/wordnet', 'wordnet'),
+            ('sentiment/vader_lexicon', 'vader_lexicon'),
+            ('corpora/stopwords', 'stopwords'),
+            ('tokenizers/punkt', 'punkt'),
+            ('taggers/averaged_perceptron_tagger', 'averaged_perceptron_tagger'),
+            ('chunkers/maxent_ne_chunker', 'maxent_ne_chunker'),
+            ('corpora/words', 'words')
+        ]
+        
+        # Check and download required NLTK data
+        for path, package in required_nltk_data:
+            try:
+                nltk.data.find(path)
+                print(f"✓ Found {package}")
+            except LookupError:
+                print(f"\nDownloading required NLTK data: {package}")
+                nltk.download(package, quiet=True)
+        
+        # Run TextBlob download_corpora command directly
+        import subprocess
+        print("\nEnsuring TextBlob corpora is available...")
+        result = subprocess.run(['python', '-m', 'textblob.download_corpora'], 
+                              capture_output=True, text=True)
+        
+        if "already up to date" in result.stdout.lower():
+            print("✓ TextBlob corpora already up to date")
+        elif "finished" in result.stdout.lower():
+            print("✓ TextBlob corpora downloaded successfully")
+        
+        # Verify TextBlob works with a simple test
+        test_text = "This is a test sentence. Testing sentiment analysis."
+        test_blob = TextBlob(test_text)
+        test_blob.sentiment
+        print("\n✅ TextBlob initialization successful")
+        return True
+        
+    except Exception as e:
+        print(f"\n⚠️ TextBlob initialization failed: {str(e)}")
+        print("Continuing without sentiment analysis...")
+        return False
+
+def create_cultural_analysis(requests_data: List[Dict], output_dir: str):
+    """Create cultural and linguistic analysis of the research requests."""
+    try:
+        # Create cultural_analysis directory if it doesn't exist
+        cultural_dir = os.path.join(output_dir, 'cultural_analysis')
+        os.makedirs(cultural_dir, exist_ok=True)
+        
+        # Initialize TextBlob
+        textblob_available = ensure_textblob_corpora()
+        
+        # Prepare data for topic modeling
+        all_texts = []
+        agent_texts = defaultdict(list)
+        agent_hypotheses = defaultdict(list)
+        
+        print("\nPreparing texts for analysis...")
+        for request in requests_data:
+            # Extract text fields from metadata
+            hypothesis = request['metadata'].get('hypothesis', '')
+            rationale = request['metadata'].get('rationale', '')
+            impact = request['metadata'].get('impact', '')
+            
+            # Debug print for text extraction
+            print(f"\nProcessing request: {request['id']}")
+            print(f"Agents involved: {request['metadata'].get('agents', [])}")
+            
+            # Analyze each field separately to maintain granularity
+            for field, content in [('hypothesis', hypothesis), ('rationale', rationale), ('impact', impact)]:
+                if content.strip():
+                    processed_text = preprocess_text_for_topic_modeling(content)
+                    if processed_text.strip():
+                        all_texts.append(processed_text)
+                        # Add to each involved agent's texts
+                        for agent in request['metadata'].get('agents', []):
+                            agent_texts[agent].append(processed_text)
+                            print(f"Added {field} text for agent {agent} (length: {len(processed_text)})")
+                    else:
+                        print(f"Warning: {field} text was empty after preprocessing")
+                else:
+                    print(f"Warning: {field} text was empty")
+
+        print("\nText collection summary:")
+        for agent in agent_texts:
+            print(f"Agent {agent}: {len(agent_texts[agent])} texts collected")
+        
+        if not all_texts:
+            print("\n⚠️ Warning: No valid texts for analysis after preprocessing")
+        else:
+            # 1. Topic Modeling
+            print("\nPerforming topic modeling...")
+            try:
+                from sklearn.feature_extraction.text import CountVectorizer
+                from sklearn.decomposition import LatentDirichletAllocation
+                
+                # Create document-term matrix with minimal filtering
+                vectorizer = CountVectorizer(
+                    min_df=1,  # Keep terms that appear in at least 1 document
+                    max_df=0.95,  # Remove terms that appear in >95% of documents
+                    stop_words=None,  # We've already handled stop words
+                    token_pattern=r'\b\w+\b'  # Simple word boundary pattern
+                )
+                
+                doc_term_matrix = vectorizer.fit_transform(all_texts)
+                print(f"Document-term matrix shape: {doc_term_matrix.shape}")
+                
+                if doc_term_matrix.shape[1] >= 2:
+                    # Proceed with LDA
+                    n_topics = min(5, len(all_texts))
+                    lda = LatentDirichletAllocation(
+                        n_components=n_topics,
+                        random_state=42
+                    )
+                    
+                    lda_output = lda.fit_transform(doc_term_matrix)
+                    feature_names = vectorizer.get_feature_names_out()
+                    
+                    # Save topic modeling results as markdown
+                    with open(os.path.join(cultural_dir, 'topic_analysis.md'), 'w', encoding='utf-8') as f:
+                        f.write("# Topic Analysis\n\n")
+                        for topic_idx, topic in enumerate(lda.components_):
+                            top_words = [feature_names[i] for i in topic.argsort()[:-10:-1]]
+                            f.write(f"## Topic {topic_idx + 1}\n")
+                            f.write(f"- Keywords: {', '.join(top_words)}\n\n")
+                    
+                    # Create topic visualization
+                    plt.figure(figsize=(15, 8))
+                    
+                    # Create a heatmap of topic-word distributions
+                    top_n_words = 10
+                    top_words_idx = [topic.argsort()[:-top_n_words-1:-1] for topic in lda.components_]
+                    top_words = [[feature_names[i] for i in topic_idx] for topic_idx in top_words_idx]
+                    
+                    # Create topic-word matrix for heatmap
+                    topic_word_weights = np.zeros((n_topics, top_n_words))
+                    for i, topic_idx in enumerate(top_words_idx):
+                        topic_word_weights[i] = lda.components_[i][topic_idx]
+                    
+                    # Normalize weights for better visualization
+                    topic_word_weights = topic_word_weights / topic_word_weights.sum(axis=1)[:, np.newaxis]
+                    
+                    # Create heatmap
+                    plt.imshow(topic_word_weights, aspect='auto', cmap='YlOrRd')
+                    plt.colorbar(label='Normalized Word Weight')
+                    
+                    # Add labels
+                    plt.xticks(range(top_n_words), top_words[0], rotation=45, ha='right')
+                    plt.yticks(range(n_topics), [f'Topic {i+1}' for i in range(n_topics)])
+                    
+                    plt.title('Topic-Word Distribution Heatmap')
+                    plt.tight_layout()
+                    plt.savefig(os.path.join(cultural_dir, 'topic_analysis.png'), dpi=300, bbox_inches='tight')
+                    plt.close()
+                    print("✓ Topic analysis saved")
+                else:
+                    print("\n⚠️ Warning: Not enough unique terms for topic modeling")
+            
+            except Exception as e:
+                print(f"\n⚠️ Warning: Error in topic modeling: {str(e)}")
+        
+        # 2. Sentiment Analysis
+        print("\nPerforming sentiment analysis...")
+        if textblob_available:
+            try:
+                from textblob import TextBlob
+                import nltk
+                from nltk.sentiment.vader import SentimentIntensityAnalyzer
+                
+                # Ensure VADER lexicon is available
+                try:
+                    nltk.data.find('sentiment/vader_lexicon.zip')
+                except LookupError:
+                    nltk.download('vader_lexicon')
+                
+                # Initialize VADER
+                sia = SentimentIntensityAnalyzer()
+                
+                # Calculate sentiment metrics for each agent
+                agent_sentiments = {}
+                agent_emotions = defaultdict(lambda: defaultdict(list))
+                
+                emotion_categories = {
+                    'joy': ['happy', 'joy', 'excited', 'pleased', 'delighted'],
+                    'sadness': ['sad', 'disappointed', 'unhappy', 'depressed'],
+                    'anger': ['angry', 'furious', 'irritated', 'annoyed'],
+                    'fear': ['afraid', 'scared', 'worried', 'anxious'],
+                    'surprise': ['surprised', 'amazed', 'astonished'],
+                    'trust': ['trust', 'confident', 'reliable', 'dependable'],
+                    'anticipation': ['expect', 'anticipate', 'await', 'forward']
+                }
+                
+                for agent, texts in agent_texts.items():
+                    sentiments = []
+                    for text in texts:
+                        # TextBlob sentiment
+                        blob = TextBlob(text)
+                        tb_sentiment = {
+                            'polarity': blob.sentiment.polarity,
+                            'subjectivity': blob.sentiment.subjectivity
+                        }
+                        
+                        # VADER sentiment
+                        vader_scores = sia.polarity_scores(text)
+                        
+                        # Combine sentiments
+                        combined_sentiment = {
+                            **tb_sentiment,
+                            'compound': vader_scores['compound'],
+                            'pos': vader_scores['pos'],
+                            'neg': vader_scores['neg'],
+                            'neu': vader_scores['neu']
+                        }
+                        sentiments.append(combined_sentiment)
+                        
+                        # Calculate emotion scores
+                        for emotion, keywords in emotion_categories.items():
+                            emotion_score = sum(text.lower().count(keyword) for keyword in keywords)
+                            agent_emotions[agent][emotion].append(emotion_score)
+                    
+                    agent_sentiments[agent] = sentiments
+                
+                # Create sentiment visualizations
+                fig = plt.figure(figsize=(15, 10))
+                gs = plt.GridSpec(2, 2)
+                
+                # 1. TextBlob Polarity-Subjectivity scatter plot
+                ax1 = fig.add_subplot(gs[0, 0])
+                
+                # Create a color map for agents
+                num_agents = len(agent_sentiments)
+                colors = plt.cm.rainbow(np.linspace(0, 1, num_agents))
+                
+                # Print debug information about data distribution
+                print("\nSentiment Analysis Data Distribution:")
+                print("-----------------------------------")
+                
+                # Plot each agent's data with consistent colors
+                for (agent, sentiments), color in zip(agent_sentiments.items(), colors):
+                    polarities = [s['polarity'] for s in sentiments]
+                    subjectivities = [s['subjectivity'] for s in sentiments]
+                    
+                    # Print debug info
+                    print(f"Agent: {agent}")
+                    print(f"  Number of texts analyzed: {len(sentiments)}")
+                    print(f"  Number of texts collected: {len(agent_texts[agent])}")
+                    if len(sentiments) != len(agent_texts[agent]):
+                        print(f"  ⚠️ Warning: Mismatch between collected and analyzed texts!")
+                    
+                    if len(sentiments) > 0:
+                        print(f"  Polarity range: {min(polarities):.2f} to {max(polarities):.2f}")
+                        print(f"  Subjectivity range: {min(subjectivities):.2f} to {max(subjectivities):.2f}")
+                        # Print first few words of each text for verification
+                        for i, text in enumerate(agent_texts[agent][:3]):
+                            print(f"  Sample text {i+1}: {text[:50]}...")
+                    print("-----------------------------------")
+                    
+                    # Add stronger jitter to better separate overlapping points
+                    jitter = 0.03  # Increased jitter amount
+                    polarities = [p + np.random.uniform(-jitter, jitter) for p in polarities]
+                    subjectivities = [s + np.random.uniform(-jitter, jitter) for s in subjectivities]
+                    
+                    ax1.scatter(polarities, subjectivities, 
+                              label=f"{agent} ({len(sentiments)} texts)", 
+                              alpha=0.6,  # Reduced opacity
+                              color=color, 
+                              marker='o',
+                              s=50)  # Size of points
+                
+                ax1.set_title('TextBlob Sentiment Analysis\n(one point per text: hypothesis, rationale, or impact)')
+                ax1.set_xlabel('Polarity (-1 to 1)')
+                ax1.set_ylabel('Subjectivity (0 to 1)')
+                ax1.grid(True, alpha=0.3)
+                
+                # Ensure axis limits include all points with some padding for jitter
+                ax1.set_xlim(-1.15, 1.15)  # Slightly wider range to accommodate jitter
+                ax1.set_ylim(-0.15, 1.15)  # Slightly wider range to accommodate jitter
+                
+                # Move legend outside and make it more readable
+                ax1.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=10)
+                
+                # 2. VADER compound scores boxplot
+                ax2 = fig.add_subplot(gs[0, 1])
+                vader_data = [[s['compound'] for s in sentiments] for agent, sentiments in agent_sentiments.items()]
+                ax2.boxplot(vader_data, labels=agent_sentiments.keys())
+                ax2.set_title('VADER Sentiment Distribution')
+                ax2.set_ylabel('Compound Score (-1 to 1)')
+                ax2.tick_params(axis='x', rotation=45)
+                
+                # 3. Emotion radar chart
+                ax3 = fig.add_subplot(gs[1, :], projection='polar')
+                emotions = list(emotion_categories.keys())
+                angles = np.linspace(0, 2*np.pi, len(emotions), endpoint=False)
+                
+                # Close the plot by appending the first value
+                angles = np.concatenate((angles, [angles[0]]))
+                
+                for agent, emotion_data in agent_emotions.items():
+                    # Calculate average emotion scores
+                    values = [np.mean(emotion_data[emotion]) for emotion in emotions]
+                    # Close the plot by appending the first value
+                    values = np.concatenate((values, [values[0]]))
+                    ax3.plot(angles, values, label=agent, linewidth=1, linestyle='solid', marker='o')
+                    ax3.fill(angles, values, alpha=0.1)
+                
+                ax3.set_title('Emotional Profile by Agent')
+                ax3.set_xticks(angles[:-1])
+                ax3.set_xticklabels(emotions)
+                ax3.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1))
+                
+                plt.tight_layout()
+                plt.savefig(os.path.join(cultural_dir, 'sentiment_analysis.png'), dpi=300, bbox_inches='tight')
+                plt.close()
+                print("✓ Sentiment analysis saved")
+                
+            except Exception as e:
+                print(f"\n⚠️ Warning: Error in sentiment analysis: {str(e)}")
+        
+        # 3. Language Complexity Analysis
+        print("\nAnalyzing language complexity...")
+        try:
+            # Calculate complexity metrics for each agent
+            agent_complexity = {}
+            for agent, texts in agent_texts.items():
+                metrics = []
+                for text in texts:
+                    words = text.split()
+                    sentences = text.split('.')
+                    if words and sentences:
+                        metrics.append({
+                            'avg_word_length': sum(len(word) for word in words) / len(words),
+                            'avg_sentence_length': len(words) / len(sentences),
+                            'unique_words': len(set(words))
+                        })
+                agent_complexity[agent] = metrics
+            
+            if agent_complexity:
+                # Create complexity visualizations with three subplots
+                fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(18, 6))
+                
+                # Word length boxplot
+                word_length_data = [
+                    [m['avg_word_length'] for m in metrics]
+                    for agent, metrics in agent_complexity.items()
+                ]
+                ax1.boxplot(word_length_data, tick_labels=agent_complexity.keys())
+                ax1.set_title('Average Word Length by Agent')
+                ax1.set_ylabel('Characters per Word')
+                ax1.tick_params(axis='x', rotation=45)
+                
+                # Sentence length boxplot
+                sentence_length_data = [
+                    [m['avg_sentence_length'] for m in metrics]
+                    for agent, metrics in agent_complexity.items()
+                ]
+                ax2.boxplot(sentence_length_data, tick_labels=agent_complexity.keys())
+                ax2.set_title('Average Sentence Length by Agent')
+                ax2.set_ylabel('Words per Sentence')
+                ax2.tick_params(axis='x', rotation=45)
+                
+                # Unique words boxplot
+                unique_words_data = [
+                    [m['unique_words'] for m in metrics]
+                    for agent, metrics in agent_complexity.items()
+                ]
+                ax3.boxplot(unique_words_data, tick_labels=agent_complexity.keys())
+                ax3.set_title('Unique Words by Agent')
+                ax3.set_ylabel('Number of Unique Words')
+                ax3.tick_params(axis='x', rotation=45)
+                
+                plt.tight_layout()
+                plt.savefig(os.path.join(cultural_dir, 'language_complexity.png'), dpi=300, bbox_inches='tight')
+                plt.close()
+                print("✓ Language complexity analysis saved")
+            else:
+                print("\n⚠️ Warning: No valid complexity metrics to visualize")
+                
+        except Exception as e:
+            print(f"\n⚠️ Warning: Error in complexity analysis: {str(e)}")
+        
+        print("\n✓ Cultural analysis complete")
+        
+    except Exception as e:
+        print(f"\n⚠️ Error in cultural analysis: {str(e)}")
+        print("Cultural analysis may be incomplete")
+
 def test_fix_bracket_links():
     """Test the bracket fixing functionality with various cases."""
     test_cases = [
@@ -1384,16 +1913,18 @@ def test_fix_bracket_links():
         print(f"Result: {'✅ Pass' if success else '❌ Fail'}")
     print("----------------------------\n")
 
-def main(project_path: str, model_name: str, force_links: bool):
+def main(project_path: str, model_name: str, force_links: bool, similarity_threshold: int):
     try:
         print(f"\n🚀 Starting research request extraction process")
         print(f"   Project path: {project_path}")
         print(f"   Model: {model_name}")
-        print(f"   Force links: {'enabled' if force_links else 'disabled'}\n")
+        print(f"   Force links: {'enabled' if force_links else 'disabled'}")
+        print(f"   Similarity threshold: {similarity_threshold}%\n")
         
-        # Update global force_links setting
+        # Update global settings
         globals()['force_links'] = force_links
-        
+        globals()['similarity_threshold'] = similarity_threshold
+
         # Start Ollama server
         start_ollama_server()
         
@@ -1464,6 +1995,8 @@ if __name__ == "__main__":
                       help=f'Name of the Ollama model to use (default: {DEFAULT_MODEL_NAME})')
     parser.add_argument('--force_links', action='store_true', default=force_links,
                       help='Force creation of [[links]] in hypothesis, rationale, and impact sections')
+    parser.add_argument('--similarity_threshold', type=int, default=similarity_threshold,
+                      help='Minimum similarity score (0-100) for agent name matching (default: %(default)s)')
 
     args = parser.parse_args()
-    main(args.project_path, args.model_name, args.force_links) 
+    main(args.project_path, args.model_name, args.force_links, args.similarity_threshold) 
