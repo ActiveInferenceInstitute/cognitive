@@ -1,0 +1,182 @@
+{
+  "request_20250303_005734_c7c66c0f": {
+    "title": "hypothesis_testing",
+    "tags": [
+      "research",
+      "project",
+      "communication"
+    ],
+    "agents": [
+      "Oskar",
+      "Lokir",
+      "Sera",
+      "Jenassa",
+      "Farin Alteris"
+    ],
+    "source": "Saffir.json",
+    "timestamp": "2025-03-03 00:57:34"
+  },
+  "request_20250303_005743_040b2481": {
+    "title": "recommendation",
+    "tags": [
+      "research subject selection",
+      "test subject collaboration",
+      "knowledge graph querying"
+    ],
+    "agents": [
+      "Oskar",
+      "Saffir",
+      "Jenassa",
+      "Farin Alteris",
+      "Sera"
+    ],
+    "source": "Saffir.json",
+    "timestamp": "2025-03-03 00:57:43"
+  },
+  "request_20250303_005752_00a278a8": {
+    "title": "exploration",
+    "tags": [
+      "research",
+      "team_onboarding",
+      "project_introduction"
+    ],
+    "agents": [
+      "Jenassa",
+      "Saffir",
+      "Lokir",
+      "Sera",
+      "Oskar",
+      "Ysolda",
+      "Brenuin"
+    ],
+    "source": "Saffir.json",
+    "timestamp": "2025-03-03 00:57:52"
+  },
+  "request_20250303_005755_b81d9606": {
+    "title": "collaboration",
+    "tags": [
+      "research_project",
+      "economic_systems",
+      "resource_distribution",
+      "trade_dynamics",
+      "community_engagement"
+    ],
+    "agents": [
+      "Jenassa",
+      "Brenuin",
+      "Oskar",
+      "Ysolda",
+      "Lokir",
+      "Sera"
+    ],
+    "source": "Saffir.json",
+    "timestamp": "2025-03-03 00:57:55"
+  },
+  "request_20250303_005802_7e45ca90": {
+    "title": "research",
+    "tags": [
+      "research",
+      "project development",
+      "collaboration",
+      "community needs",
+      "consumer behavior"
+    ],
+    "agents": [
+      "Sera",
+      "Oskar",
+      "Brenuin",
+      "Ysolda",
+      "Brenuin",
+      "Saphir"
+    ],
+    "source": "Saffir.json",
+    "timestamp": "2025-03-03 00:58:02"
+  },
+  "request_20250303_005808_4a2593e8": {
+    "title": "research",
+    "tags": [
+      "research",
+      "active_inference",
+      "agent-based_modeling",
+      "sustainable_trade"
+    ],
+    "agents": [
+      "Oskar",
+      "Ysolda",
+      "Brenuin",
+      "Saffir"
+    ],
+    "source": "Saffir.json",
+    "timestamp": "2025-03-03 00:58:08"
+  },
+  "request_20250303_005810_0c7e45da": {
+    "title": "research",
+    "tags": [
+      "nested Markov blankets",
+      "community dynamics",
+      "trade practices"
+    ],
+    "agents": [
+      "Oskar",
+      "Ysolda",
+      "Brenuin"
+    ],
+    "source": "Saffir.json",
+    "timestamp": "2025-03-03 00:58:10"
+  },
+  "request_20250303_005817_9d682733": {
+    "title": "research",
+    "tags": [
+      "research request",
+      "sustainable trade practices",
+      "equitable resource distribution"
+    ],
+    "agents": [
+      "Oskar",
+      "Ysolda",
+      "Brenuin"
+    ],
+    "source": "Saffir.json",
+    "timestamp": "2025-03-03 00:58:17"
+  },
+  "request_20250303_005821_60595800": {
+    "title": "research",
+    "tags": [
+      "consumer behavior",
+      "local markets",
+      "seasonal trends",
+      "economic changes",
+      "community preferences",
+      "effective methods",
+      "consumer feedback",
+      "local economic models",
+      "sustainable trade practices",
+      "supply and demand dynamics",
+      "partnerships between local suppliers and consumers",
+      "theoretical underpinnings"
+    ],
+    "agents": [
+      "Brenuin",
+      "Oskar",
+      "Ysolda",
+      "Saffir"
+    ],
+    "source": "Saffir.json",
+    "timestamp": "2025-03-03 00:58:21"
+  },
+  "request_20250303_005824_4af2ea7c": {
+    "title": "research",
+    "tags": [
+      "trade_systems",
+      "sustainability",
+      "equity"
+    ],
+    "agents": [
+      "Saffir",
+      "Ysolda",
+      "Brenuin"
+    ],
+    "source": "Saffir.json",
+    "timestamp": "2025-03-03 00:58:24"
+  }
+}

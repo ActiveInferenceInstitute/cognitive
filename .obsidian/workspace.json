@@ -6,7 +6,6 @@
       {
         "id": "309e2c1bd6d2aaaf",
         "type": "tabs",
-        "dimension": 42.05168363351605,
         "children": [
           {
             "id": "edc32c8263c095f4",
@@ -16,28 +15,29 @@
               "state": {},
               "icon": "lucide-git-fork",
               "title": "Graph view"
-            }
+            },
+            "group": "459829c96231788c"
           }
         ]
       },
       {
-        "id": "7d45e3eaaab92d8f",
+        "id": "985cfcb2d1ef3d43",
         "type": "tabs",
-        "dimension": 57.948316366483944,
         "children": [
           {
-            "id": "26da5c325ed6eb0c",
+            "id": "17fad16c247ac610",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Things/KG_Multi_Agent/MKG_Multi_Agent/README.md",
+                "file": "BioFirm_project.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
-            }
+              "title": "BioFirm_project"
+            },
+            "group": "459829c96231788c"
           }
         ]
       }
@@ -96,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5
+    "width": 315.5
   },
   "right": {
     "id": "fd73c31f8883ab7b",
@@ -186,42 +186,42 @@
   },
   "active": "edc32c8263c095f4",
   "lastOpenFiles": [
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/request_631c7b9d.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/README.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/request_4af8a3a3.md",
-    "knowledge_base/cognitive/generative_model.md",
-    "docs/guides/application/parr_2022_chapter_6.md",
-    "social_theory_in_computation.md",
-    "python_abm_resources.md",
+    "BioFirm_project.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005755_b81d9606.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005752_00a278a8.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005743_040b2481.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005734_c7c66c0f.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/_request_index.json",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005301_570026ca.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005259_3cfbe1bd.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005254_44143912.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005242_4f52b468.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005239_614b79f1.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005234_3facf25e.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005229_9a3968c5.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005221_7c78eb52.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005206_2c324677.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005040_4a119236.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005038_fb087b29.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005036_08992eb6.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005033_4e86c057.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005024_2de64225.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005022_5701cec2.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005019_f4827fdf.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005014_944f8273.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005009_ec8f9627.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_004956_8520fa0d.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/_request_index.json",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/request_20250303_004619_dd92e3d6.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/request_20250303_004617_9c7576d9.md",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/MKG_utils.py",
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/agents",
     "notebooks/graphRAG_naive.ipynb",
     "notebooks",
-    "docs/guides/learning_paths/active_inference_social_science_abm_learning_path.md",
-    "complexity_measures.md",
-    "Things/KG_Multi_Agent/Ant_Swarm.md",
-    "Things/KG_Multi_Agent/SWR_Swarm.md",
     "Things/KG_Multi_Agent",
-    "knowledge_base/philosophy/philosophy_topics.md",
-    "knowledge_base/philosophy/pragmatism.md",
-    "knowledge_base/philosophy/operationalism.md",
-    "knowledge_base/philosophy/peircean_semiotics.md",
     "knowledge_base/philosophy",
-    "knowledge_base/ontology/hyperspatial/hyperspace_ontology.md",
     "knowledge_base/ontology/hyperspatial",
     "knowledge_base/ontology",
-    "docs/guides/learning_paths/active_inference_learning_path.md",
-    "docs/guides/learning_paths/active_inference_spatial_web_path.md",
-    "docs/templates/analysis_template.md",
-    "docs/templates/template_index.md",
-    "docs/templates/experiment_template.md",
-    "docs/templates/environment_template.md",
-    "docs/templates/goal_template.md",
-    "docs/templates/observation_template.md",
-    "docs/templates/action_template.md",
-    "docs/templates/belief_template.md",
-    "tools/src/models/matrices/__pycache__/matrix_ops.cpython-310.pyc",
-    "tools/src/models/active_inference/config_examples/discrete_variational.yaml",
-    "tools/src/models/active_inference/config_examples/continuous_sampling.yaml",
-    "tools/src/models/active_inference/__pycache__/dispatcher.cpython-310.pyc",
     "Things/Generic_Thing/generic_thing/visualizations/message_network_20250223_140901.png",
     "Things/Generic_Thing/generic_thing/visualizations/hierarchy_test_20250223_140900.png",
     "Things/Generic_Thing/generic_thing/visualizations/belief_uncertainty_20250223_140745.png",
