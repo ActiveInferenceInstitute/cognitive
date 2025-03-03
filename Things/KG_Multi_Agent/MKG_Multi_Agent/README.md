@@ -1,31 +1,228 @@
 # MKG_Multi_Agent
 
-This is a multi-agent system for a knowledge graph.
+## Purpose
 
-### In-progress troubleshooting
+MKG_Multi_Agent is a specialized component of a larger knowledge graph system that:
+1. Extracts structured research requests and hypotheses from AI conversation logs
+2. Transforms unstructured dialogue into graph-compatible knowledge units
+3. Maintains source traceability and temporal context
+4. Facilitates knowledge discovery through Obsidian-compatible outputs
+
+The system serves as a bridge between conversational AI outputs and structured knowledge representation, enabling:
+- Automated knowledge extraction
+- Hypothesis tracking
+- Research request management
+- Multi-agent interaction analysis
+
+## System Architecture
+
+### Components Overview
+
+```mermaid
+graph TD
+    A[Raw Conversations] --> B[process_conversations.py]
+    B --> C[conversations_list.json]
+    C --> D[infer_queries_batch.py]
+    D --> E[Research Requests]
+    D --> F[Indexes]
+    E --> G[Knowledge Graph Integration]
 ```
-Let's take a step back here and think carefully about the goal of this pipeline you are helping me make. the `conv_text` being sent is a value in the json file @conversations_list.json (right now it only has one key-value because the input to @process_conversations.py only had one file @Saffir.json  ). I simply wish to use an LLM to infer X number of research requests from each conv_text passed. the idea is that the AI whose conversation is recorded in json in the input @Saffir.json can contain requests for information so we are now writing code to extract information requests from the conversation log. It is X research requests because we don't necessarily know how many should be extracted, therefore i am hard-coding 5 for now. what other means could we go about doing this, for example some kind of chunking operation? but importantly, we still need to be able to track the original source of the requests inferred and extracted.
+
+### Core Components
+
+1. **process_conversations.py**
+   - Purpose: Conversation preprocessing and structuring
+   - Input: Raw conversation files (JSON)
+   - Output: Structured conversation list
+   - Key operations:
+     - Conversation parsing
+     - Exchange counting
+     - JSON structure validation
+
+2. **infer_queries_batch.py**
+   - Purpose: Research request extraction and formatting
+   - Input: Structured conversations
+   - Output: Markdown files and indexes
+   - Key algorithms:
+     ```python
+     # High-level process flow
+     conversations -> chunk_conversation() 
+                  -> process_chunks() 
+                  -> extract_requests() 
+                  -> validate() 
+                  -> format_output()
+     ```
+
+3. **MKG_utils.py**
+   - Purpose: Shared utilities and helpers
+   - Scope: Cross-component functions
+   - Usage: Support for main processing scripts
+
+## Algorithmic Details
+
+### 1. Conversation Processing
+
+```python
+# Pseudo-algorithm for conversation chunking
+def chunk_conversation(text, max_size=4000):
+    chunks = []
+    messages = split_on_speaker_boundaries(text)
+    current_chunk = ""
+    
+    for message in messages:
+        if len(current_chunk + message) > max_size:
+            chunks.append(current_chunk)
+            current_chunk = message
+        else:
+            current_chunk += message
+    
+    return chunks
 ```
 
+### 2. Request Extraction
 
+The system employs a multi-stage extraction process:
 
-## How to run
+1. **Chunking Stage**
+   - Split conversations into manageable segments
+   - Preserve context and speaker information
+   - Maintain temporal ordering
 
-### First a subfolder, e.g., "test1" with the following structure:
+2. **Inference Stage**
+   - LLM prompt engineering for structured extraction
+   - Fixed extraction count (currently 5 per chunk)
+   - Validation against predefined schemas
+
+3. **Processing Stage**
+   - Bracket link normalization
+   - Metadata enrichment
+   - Source tracking
+   - Timestamp management
+
+### 3. Output Generation
+
+The system generates three types of interconnected outputs:
+
+1. **Individual Research Requests**
+   ```yaml
+   ---
+   source_conversation: "conversation_id"
+   source_chunk: "chunk_id"
+   type: "research"
+   created: "YYYY-MM-DD"
+   timestamp: "YYYY-MM-DD HH:MM:SS"
+   tags: ["tag1", "tag2"]
+   agents: ["agent1", "agent2"]
+   ---
+   ```
+
+2. **JSON Index**
+   ```json
+   {
+     "request_id": {
+       "title": "type",
+       "tags": ["tag1", "tag2"],
+       "agents": ["agent1", "agent2"],
+       "source": "conversation_id",
+       "timestamp": "YYYY-MM-DD HH:MM:SS"
+     }
+   }
+   ```
+
+3. **Markdown Index**
+   - Hierarchical organization
+   - Temporal, agent-based, and tag-based views
+   - Obsidian-compatible links
+
+## Usage
+
+### Prerequisites
+
+```bash
+# Required Python packages
+pip install ollama tqdm pyyaml
+```
+
+### Project Structure
 
 ```
-test1/
-    inputs/
-    outputs/
+MKG_Multi_Agent/
+├── test1/
+│   ├── inputs/
+│   │   └── conversations/
+│   └── outputs/
+│       ├── conversations/
+│       └── research_requests/
+├── infer_queries_batch.py
+├── process_conversations.py
+└── MKG_utils.py
 ```
 
-### Process conversations
+### Execution Flow
 
+1. **Conversation Processing**
+   ```bash
+   python process_conversations.py --project_path ./test1 --exchanges 50
+   ```
+
+2. **Request Extraction**
+   ```bash
+   python infer_queries_batch.py --project_path ./test1 --model_name llama3.2
+   ```
+
+## Configuration
+
+### LLM Settings
+
+```python
+# Default configuration
+DEFAULT_MODEL_NAME = "llama3.2"
+MAX_CHUNK_SIZE = 4000
+REQUESTS_PER_CHUNK = 5
 ```
-# For default
-`python process_conversations.py`
-# For more control, use the arguments for your project path and the number of exchanges to process
-python process_conversations.py --project_path ./test1 --exchanges 50
-```
 
+### Validation Rules
 
+1. **Request Format**
+   - Required fields: agents, tags, intent, hypothesis, rationale, impact
+   - Bracket format: [[agent]], [[tag]], [[intent]]
+   - Content validation for each field
+
+2. **Link Processing**
+   - Double bracket normalization
+   - Nested bracket resolution
+   - Empty link removal
+
+## Future Enhancements
+
+1. **Dynamic Request Extraction**
+   - Content-based chunk sizing
+   - Variable request count per chunk
+   - Improved context preservation
+
+2. **Advanced Processing**
+   - Parallel chunk processing
+   - Incremental updates
+   - Cross-reference validation
+
+3. **Knowledge Graph Integration**
+   - Automated graph updates
+   - Relationship inference
+   - Temporal analysis
+
+4. **Validation Improvements**
+   - Content quality metrics
+   - Semantic validation
+   - Cross-request consistency
+
+## Contributing
+
+When contributing to this project:
+1. Follow the existing code structure
+2. Document algorithmic changes
+3. Update test cases
+4. Maintain backward compatibility
+
+## License
+
+This project is part of a larger knowledge graph system. See the main repository for licensing information.

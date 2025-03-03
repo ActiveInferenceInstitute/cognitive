@@ -30,12 +30,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BioFirm_project.md",
+                "file": "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005743_040b2481.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BioFirm_project"
+              "title": "request_20250303_005743_040b2481"
             },
             "group": "459829c96231788c"
           }
@@ -186,10 +186,11 @@
   },
   "active": "edc32c8263c095f4",
   "lastOpenFiles": [
+    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005743_040b2481.md",
+    "Jenassa.md",
     "BioFirm_project.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005755_b81d9606.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005752_00a278a8.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005743_040b2481.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005734_c7c66c0f.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/_request_index.json",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_005301_570026ca.md",
@@ -213,7 +214,6 @@
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_004956_8520fa0d.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/_request_index.json",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/request_20250303_004619_dd92e3d6.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/vault/request_20250303_004617_9c7576d9.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/MKG_utils.py",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/agents",
     "notebooks/graphRAG_naive.ipynb",
