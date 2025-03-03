@@ -2,6 +2,10 @@
 # install ollama from https://ollama.ai/download
 # !pip install tqdm
 # !pip install pyyaml
+# !pip install plotly
+# !pip install "plotly[express]" networkx matplotlib
+# !pip install spacy
+# python -m spacy download en_core_web_sm
 
 import os
 import json
@@ -9,7 +13,7 @@ import re
 import hashlib
 import yaml
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple, Any
 from ollama import Client
 import threading
 import subprocess
@@ -17,10 +21,109 @@ import time
 import sys
 import argparse
 from tqdm import tqdm
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import networkx as nx
+from collections import Counter, defaultdict
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+from matplotlib.colors import LinearSegmentedColormap
+import spacy
 
-# Default configuration
+# Configuration
+force_links = True  # force [[links]] to be created during extraction
 DEFAULT_PROJECT_PATH = "./Things/KG_Multi_Agent/MKG_Multi_Agent/test1"
 DEFAULT_MODEL_NAME = "llama3.2"  # Choose one model name
+
+# Load spaCy model for NER and phrase detection
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    print("Downloading spaCy model...")
+    subprocess.run([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+    nlp = spacy.load("en_core_web_sm")
+
+def enhance_text_with_links(text: str) -> str:
+    """
+    Process text to add [[links]] around important phrases using spaCy.
+    This includes:
+    1. Named entities
+    2. Noun phrases
+    3. Technical terms
+    4. Common research-related phrases
+    """
+    # Skip if text is already heavily linked
+    if text.count('[[') > len(text.split()) / 4:  # If more than 25% of words are linked
+        return text
+        
+    doc = nlp(text)
+    
+    # Collect all spans that should be linked
+    spans_to_link = []
+    
+    # Add named entities
+    spans_to_link.extend([(ent.start_char, ent.end_char, ent.text) for ent in doc.ents])
+    
+    # Add noun chunks (phrases)
+    spans_to_link.extend([
+        (chunk.start_char, chunk.end_char, chunk.text) 
+        for chunk in doc.noun_chunks 
+        if len(chunk.text.split()) > 1  # Only multi-word phrases
+    ])
+    
+    # Add custom research-related terms
+    research_terms = [
+        "research", "study", "analysis", "methodology", "framework",
+        "system", "model", "algorithm", "data", "results", "findings",
+        "implementation", "development", "design", "architecture",
+        "evaluation", "testing", "validation", "performance", "efficiency",
+        "optimization", "integration", "interface", "component", "module",
+        "process", "workflow", "pipeline", "infrastructure", "platform",
+        "knowledge graph", "neural network", "machine learning", "artificial intelligence",
+        "database", "query", "api", "service", "protocol", "standard",
+        "test subject", "core team", "program", "application"
+    ]
+    
+    for term in research_terms:
+        for match in re.finditer(r'\b' + re.escape(term) + r'\b', text, re.IGNORECASE):
+            spans_to_link.append((match.start(), match.end(), match.group()))
+    
+    # Sort spans and merge overlapping ones
+    spans_to_link.sort(key=lambda x: x[0])
+    merged_spans = []
+    for span in spans_to_link:
+        if not merged_spans or span[0] > merged_spans[-1][1]:
+            merged_spans.append(span)
+        else:
+            # Merge overlapping spans
+            last_span = merged_spans[-1]
+            merged_spans[-1] = (
+                last_span[0],
+                max(last_span[1], span[1]),
+                text[last_span[0]:max(last_span[1], span[1])]
+            )
+    
+    # Apply links from end to start to preserve character positions
+    result = text
+    for start, end, phrase in reversed(merged_spans):
+        # Skip if already within brackets
+        if (start > 1 and result[start-2:start] == '[[') or \
+           (end < len(result)-1 and result[end:end+2] == ']]'):
+            continue
+        
+        # Skip common words and short phrases
+        if len(phrase.split()) == 1 and phrase.lower() in {
+            'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to',
+            'for', 'of', 'with', 'by', 'from', 'up', 'down', 'over', 'under'
+        }:
+            continue
+            
+        # Add brackets
+        result = result[:start] + '[[' + phrase + ']]' + result[end:]
+    
+    return result
 
 # Reuse the inference query template from infer_queries.py
 inference_query = """###SYSTEM INSTRUCTION###
@@ -174,11 +277,22 @@ def format_request_for_obsidian(request: Dict, source_info: Dict) -> Dict:
         for agent in request['agents'].split(',')
         if agent.strip()
     ]
+    
     cleaned_tags = [
         fix_bracket_links(tag.strip())
         for tag in request['tags'].split(',')
         if tag.strip()
     ]
+    
+    # Enhance text fields with links if force_links is enabled
+    hypothesis = request["hypothesis"]
+    rationale = request["rationale"]
+    impact = request["impact"]
+    
+    if force_links:
+        hypothesis = enhance_text_with_links(hypothesis)
+        rationale = enhance_text_with_links(rationale)
+        impact = enhance_text_with_links(impact)
     
     # Create comprehensive frontmatter with all fields
     frontmatter = {
@@ -188,9 +302,9 @@ def format_request_for_obsidian(request: Dict, source_info: Dict) -> Dict:
         
         # Core fields from request
         "type": request["intent"].strip("[]"),
-        "hypothesis": request["hypothesis"],
-        "rationale": request["rationale"],
-        "impact": request["impact"],
+        "hypothesis": hypothesis,
+        "rationale": rationale,
+        "impact": impact,
         
         # Cleaned arrays
         "tags": [tag.strip("[]") for tag in cleaned_tags],
@@ -205,19 +319,19 @@ def format_request_for_obsidian(request: Dict, source_info: Dict) -> Dict:
     markdown_content = f"""---
 {yaml.dump(frontmatter)}---
 
-# Research Request: {request['hypothesis']}
+# Research Request: {hypothesis}
 
 ## Created
 {timestamp.strftime("%Y-%m-%d %H:%M:%S")}
 
 ## Hypothesis
-{request['hypothesis']}
+{hypothesis}
 
 ## Context and Rationale
-{request['rationale']}
+{rationale}
 
 ## Expected Impact
-{request['impact']}
+{impact}
 
 ## Related Agents
 {', '.join(cleaned_agents)}
@@ -727,6 +841,491 @@ def create_research_index(requests: List[Dict], output_dir: str):
     
     print(f"📚 Updated research requests index: {index_path}")
 
+    # Add visualization generation
+    create_statistics_visualizations(requests, output_dir)
+    create_network_visualizations(requests, output_dir)
+
+def create_statistics_visualizations(requests_data: List[Dict], output_dir: str):
+    """Create and save various statistical visualizations of the research requests data using matplotlib and plotly."""
+    # Create visualizations and statistics directories
+    viz_dir = os.path.join(output_dir, "visualizations")
+    stats_dir = os.path.join(output_dir, "statistics")
+    os.makedirs(viz_dir, exist_ok=True)
+    os.makedirs(stats_dir, exist_ok=True)
+
+    # Calculate basic statistics
+    agent_counts = Counter()
+    tag_counts = Counter()
+    total_requests = len(requests_data)
+    
+    # Create data structures for Sankey diagram
+    agent_tag_flows = defaultdict(lambda: defaultdict(int))
+    
+    for request in requests_data:
+        agents = request['metadata'].get('agents', [])
+        tags = request['metadata'].get('tags', [])
+        
+        # Update counts
+        for agent in agents:
+            agent_counts[agent] = agent_counts.get(agent, 0) + 1
+            # Update agent-tag flows
+            for tag in tags:
+                agent_tag_flows[agent][tag] += 1
+        
+        for tag in tags:
+            tag_counts[tag] = tag_counts.get(tag, 0) + 1
+
+    # Create Sankey diagram
+    agents = list(agent_counts.keys())
+    tags = list(tag_counts.keys())
+    
+    # Create source, target, and value lists for Sankey
+    source = []
+    target = []
+    value = []
+    
+    # Create node labels
+    node_labels = agents + tags
+    
+    # Create mapping of names to indices
+    name_to_index = {name: i for i, name in enumerate(node_labels)}
+    
+    # Add flows from agents to tags
+    for agent in agents:
+        for tag in tags:
+            if agent_tag_flows[agent][tag] > 0:
+                source.append(name_to_index[agent])
+                target.append(name_to_index[tag])
+                value.append(agent_tag_flows[agent][tag])
+    
+    # Create Sankey diagram
+    fig = go.Figure(data=[go.Sankey(
+        node=dict(
+            pad=15,
+            thickness=20,
+            line=dict(color="black", width=0.5),
+            label=node_labels,
+            color=["#ADD8E6"] * len(agents) + ["#90EE90"] * len(tags)  # Light blue for agents, light green for tags
+        ),
+        link=dict(
+            source=source,
+            target=target,
+            value=value,
+            color=["rgba(0,0,255,0.2)"] * len(source)  # Semi-transparent blue
+        )
+    )])
+    
+    fig.update_layout(
+        title_text="Agent-Tag Flow Diagram",
+        font_size=10,
+        height=800
+    )
+    
+    fig.write_html(os.path.join(viz_dir, "agent_tag_flow.html"))
+
+    # Continue with existing matplotlib visualizations...
+    # 1. Agent Participation Bar Chart
+    plt.figure(figsize=(12, 6))
+    participation_rates = [count/total_requests * 100 for count in agent_counts.values()]
+    
+    bars = plt.bar(agents, participation_rates)
+    plt.title('Agent Participation in Research Requests', pad=20)
+    plt.xlabel('Agent')
+    plt.ylabel('Participation Rate (%)')
+    plt.xticks(rotation=45, ha='right')
+    
+    # Add value annotations
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2., height,
+                f'{height:.1f}%',
+                ha='center', va='bottom')
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join(viz_dir, "agent_participation.png"), dpi=300, bbox_inches='tight')
+    plt.close()
+
+    # 2. Tag Usage Bar Chart (Top 15 tags)
+    plt.figure(figsize=(12, 6))
+    top_tags = dict(sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)[:15])
+    
+    bars = plt.bar(top_tags.keys(), [count/total_requests * 100 for count in top_tags.values()])
+    plt.title('Top 15 Tags Usage Distribution', pad=20)
+    plt.xlabel('Tag')
+    plt.ylabel('Usage Rate (%)')
+    plt.xticks(rotation=45, ha='right')
+    
+    # Add value annotations
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2., height,
+                f'{height:.1f}%',
+                ha='center', va='bottom')
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join(viz_dir, "tag_usage.png"), dpi=300, bbox_inches='tight')
+    plt.close()
+
+    # 3. Time Series of Request Activity
+    dates = [request['timestamp'] for request in requests_data]
+    date_counts = Counter(date.date() for date in dates)
+    
+    plt.figure(figsize=(12, 6))
+    plt.plot(sorted(date_counts.keys()), 
+            [date_counts[date] for date in sorted(date_counts.keys())],
+            marker='o')
+    
+    plt.title('Research Request Activity Over Time', pad=20)
+    plt.xlabel('Date')
+    plt.ylabel('Number of Requests')
+    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
+    plt.gcf().autofmt_xdate()  # Rotation and alignment of tick labels
+    
+    # Add value annotations
+    for x, y in zip(sorted(date_counts.keys()), [date_counts[date] for date in sorted(date_counts.keys())]):
+        plt.annotate(str(y), (x, y), textcoords="offset points", xytext=(0,10), ha='center')
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join(viz_dir, "request_timeline.png"), dpi=300, bbox_inches='tight')
+    plt.close()
+
+    # 4. Agent-Tag Heatmap
+    agent_tag_matrix = defaultdict(lambda: defaultdict(int))
+    for request in requests_data:
+        for agent in request['metadata'].get('agents', []):
+            for tag in request['metadata'].get('tags', []):
+                agent_tag_matrix[agent][tag] += 1
+
+    # Convert to matrix format
+    agents = sorted(agent_counts.keys())
+    tags = sorted(tag_counts.keys())
+    heatmap_data = [[agent_tag_matrix[agent][tag] for tag in tags] for agent in agents]
+
+    plt.figure(figsize=(15, 8))
+    plt.imshow(heatmap_data, aspect='auto', cmap='viridis')
+    plt.colorbar(label='Number of Collaborations')
+    
+    plt.title('Agent-Tag Collaboration Heatmap', pad=20)
+    plt.xlabel('Tags')
+    plt.ylabel('Agents')
+    
+    # Customize tick labels
+    plt.xticks(range(len(tags)), tags, rotation=45, ha='right')
+    plt.yticks(range(len(agents)), agents)
+    
+    # Add value annotations where count > 0
+    for i in range(len(agents)):
+        for j in range(len(tags)):
+            if heatmap_data[i][j] > 0:
+                plt.text(j, i, str(heatmap_data[i][j]),
+                        ha='center', va='center',
+                        color='white' if heatmap_data[i][j] > 2 else 'black')
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join(viz_dir, "agent_tag_heatmap.png"), dpi=300, bbox_inches='tight')
+    plt.close()
+
+    # Save detailed statistics to files
+    stats = {
+        'summary': {
+            'total_requests': total_requests,
+            'unique_agents': len(agent_counts),
+            'unique_tags': len(tag_counts),
+            'avg_agents_per_request': sum(len(r['metadata'].get('agents', [])) for r in requests_data) / total_requests,
+            'avg_tags_per_request': sum(len(r['metadata'].get('tags', [])) for r in requests_data) / total_requests
+        },
+        'agent_participation': {
+            agent: {
+                'count': count,
+                'percentage': (count/total_requests) * 100
+            } for agent, count in agent_counts.items()
+        },
+        'tag_usage': {
+            tag: {
+                'count': count,
+                'percentage': (count/total_requests) * 100
+            } for tag, count in tag_counts.items()
+        },
+        'temporal_stats': {
+            str(date): count for date, count in date_counts.items()
+        }
+    }
+
+    # Save statistics as JSON
+    with open(os.path.join(stats_dir, 'statistics.json'), 'w', encoding='utf-8') as f:
+        json.dump(stats, f, indent=2, default=str)
+
+    # Save statistics as markdown for better readability
+    with open(os.path.join(stats_dir, 'statistics.md'), 'w', encoding='utf-8') as f:
+        f.write("# Research Request Statistics\n\n")
+        
+        f.write("## Summary Statistics\n")
+        f.write(f"- Total Requests: {stats['summary']['total_requests']}\n")
+        f.write(f"- Unique Agents: {stats['summary']['unique_agents']}\n")
+        f.write(f"- Unique Tags: {stats['summary']['unique_tags']}\n")
+        f.write(f"- Average Agents per Request: {stats['summary']['avg_agents_per_request']:.2f}\n")
+        f.write(f"- Average Tags per Request: {stats['summary']['avg_tags_per_request']:.2f}\n\n")
+        
+        f.write("## Agent Participation\n")
+        for agent, data in sorted(stats['agent_participation'].items(), key=lambda x: x[1]['count'], reverse=True):
+            f.write(f"- {agent}: {data['count']} requests ({data['percentage']:.1f}%)\n")
+        
+        f.write("\n## Tag Usage\n")
+        for tag, data in sorted(stats['tag_usage'].items(), key=lambda x: x[1]['count'], reverse=True):
+            f.write(f"- {tag}: {data['count']} requests ({data['percentage']:.1f}%)\n")
+        
+        f.write("\n## Daily Activity\n")
+        for date, count in sorted(stats['temporal_stats'].items()):
+            f.write(f"- {date}: {count} requests\n")
+
+def create_network_visualizations(requests_data: List[Dict], output_dir: str):
+    """Create and save network visualizations of the research requests data using both matplotlib and plotly."""
+    viz_dir = os.path.join(output_dir, "visualizations")
+    stats_dir = os.path.join(output_dir, "statistics")
+    os.makedirs(viz_dir, exist_ok=True)
+    os.makedirs(stats_dir, exist_ok=True)
+    
+    # Create a graph
+    G = nx.Graph()
+    
+    # Add nodes and edges with metadata
+    for request in requests_data:
+        request_id = request['id']
+        
+        # Add request node
+        G.add_node(request_id, 
+                  node_type='request',
+                  hypothesis=request['metadata'].get('hypothesis', ''),
+                  timestamp=request['timestamp'])
+        
+        # Add agents and connect to request
+        for agent in request['metadata'].get('agents', []):
+            if not G.has_node(agent):
+                G.add_node(agent, node_type='agent')
+            G.add_edge(agent, request_id, edge_type='agent_request')
+        
+        # Add tags and connect to request
+        for tag in request['metadata'].get('tags', []):
+            if not G.has_node(tag):
+                G.add_node(tag, node_type='tag')
+            G.add_edge(tag, request_id, edge_type='tag_request')
+    
+    # Calculate network metrics
+    degree_centrality = nx.degree_centrality(G)
+    betweenness_centrality = nx.betweenness_centrality(G)
+    node_degrees = dict(G.degree())
+    
+    # Calculate bridging coefficients
+    def calculate_bridging_coefficient(G, node):
+        neighbors = set(G.neighbors(node))
+        if len(neighbors) <= 1:
+            return 0.0
+        
+        # Count edges between neighbors
+        neighbor_edges = sum(1 for n1 in neighbors for n2 in neighbors if G.has_edge(n1, n2))
+        max_possible_edges = len(neighbors) * (len(neighbors) - 1) / 2
+        
+        if max_possible_edges == 0:
+            return 0.0
+        
+        # Bridging coefficient is 1 minus the ratio of actual to possible edges between neighbors
+        return 1.0 - (neighbor_edges / max_possible_edges)
+    
+    bridging_coefficients = {node: calculate_bridging_coefficient(G, node) for node in G.nodes()}
+    
+    # Create matplotlib visualization
+    plt.figure(figsize=(15, 10))
+    
+    # Use spring layout with adjusted parameters for better spacing
+    pos = nx.spring_layout(G, k=1.5, iterations=50)
+    
+    # Draw edges with different colors for different types
+    agent_request_edges = [(u, v) for (u, v, d) in G.edges(data=True) if d.get('edge_type') == 'agent_request']
+    tag_request_edges = [(u, v) for (u, v, d) in G.edges(data=True) if d.get('edge_type') == 'tag_request']
+    
+    nx.draw_networkx_edges(G, pos, edgelist=agent_request_edges, alpha=0.2, edge_color='blue')
+    nx.draw_networkx_edges(G, pos, edgelist=tag_request_edges, alpha=0.2, edge_color='orange')
+    
+    # Draw nodes with different colors and sizes based on type and centrality
+    agent_nodes = [n for n, attr in G.nodes(data=True) if attr.get('node_type') == 'agent']
+    tag_nodes = [n for n, attr in G.nodes(data=True) if attr.get('node_type') == 'tag']
+    request_nodes = [n for n, attr in G.nodes(data=True) if attr.get('node_type') == 'request']
+    
+    # Draw nodes
+    nx.draw_networkx_nodes(G, pos, nodelist=agent_nodes, node_color='lightblue',
+                          node_size=[3000 * degree_centrality[n] for n in agent_nodes],
+                          label='Agents')
+    nx.draw_networkx_nodes(G, pos, nodelist=tag_nodes, node_color='lightgreen',
+                          node_size=[3000 * degree_centrality[n] for n in tag_nodes],
+                          label='Tags')
+    nx.draw_networkx_nodes(G, pos, nodelist=request_nodes, node_color='lightgray',
+                          node_size=[2000 * degree_centrality[n] for n in request_nodes],
+                          label='Requests')
+    
+    # Add labels with smaller font size for better readability
+    nx.draw_networkx_labels(G, pos, font_size=8)
+    
+    plt.title('Research Request Network\nNode size represents degree centrality', pad=20)
+    plt.legend()
+    plt.axis('off')
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join(viz_dir, "network_visualization.png"), dpi=300, bbox_inches='tight')
+    plt.close()
+    
+    # Create interactive Plotly visualization
+    edge_x = []
+    edge_y = []
+    for edge in G.edges():
+        x0, y0 = pos[edge[0]]
+        x1, y1 = pos[edge[1]]
+        edge_x.extend([x0, x1, None])
+        edge_y.extend([y0, y1, None])
+
+    edge_trace = go.Scatter(
+        x=edge_x, y=edge_y,
+        line=dict(width=0.5, color='#888'),
+        hoverinfo='none',
+        mode='lines')
+
+    node_x = []
+    node_y = []
+    node_text = []
+    node_colors = []
+    node_sizes = []
+
+    for node in G.nodes():
+        x, y = pos[node]
+        node_x.append(x)
+        node_y.append(y)
+        
+        node_type = G.nodes[node].get('node_type', 'unknown')
+        node_info = (
+            f"Node: {node}<br>"
+            f"Type: {node_type}<br>"
+            f"Degree: {node_degrees[node]}<br>"
+            f"Degree Centrality: {degree_centrality[node]:.3f}<br>"
+            f"Betweenness Centrality: {betweenness_centrality[node]:.3f}<br>"
+            f"Bridging Coefficient: {bridging_coefficients[node]:.3f}"
+        )
+        
+        if node_type == 'request':
+            node_info += f"<br>Hypothesis: {G.nodes[node].get('hypothesis', 'N/A')}"
+        
+        node_text.append(node_info)
+        
+        # Set node colors based on type
+        if node_type == 'agent':
+            node_colors.append('#ADD8E6')  # lightblue
+            node_sizes.append(20)
+        elif node_type == 'tag':
+            node_colors.append('#90EE90')  # lightgreen
+            node_sizes.append(15)
+        else:  # request
+            node_colors.append('#D3D3D3')  # lightgray
+            node_sizes.append(10)
+
+    node_trace = go.Scatter(
+        x=node_x, y=node_y,
+        mode='markers+text',
+        hoverinfo='text',
+        text=[node if G.nodes[node].get('node_type') in ['agent', 'tag'] else '' for node in G.nodes()],  # Only show labels for agents and tags
+        textposition="top center",
+        hovertext=node_text,
+        marker=dict(
+            color=node_colors,
+            size=node_sizes,
+            line_width=2))
+
+    fig = go.Figure(data=[edge_trace, node_trace],
+                   layout=go.Layout(
+                       title={'text': 'Interactive Research Request Network',
+                             'font': {'size': 16}},
+                       showlegend=False,
+                       hovermode='closest',
+                       margin=dict(b=20,l=5,r=5,t=40),
+                       xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                       yaxis=dict(showgrid=False, zeroline=False, showticklabels=False))
+                   )
+
+    fig.write_html(os.path.join(viz_dir, "network_visualization.html"))
+    
+    # Save network statistics
+    stats = {
+        'network_summary': {
+            'number_of_nodes': len(G.nodes()),
+            'number_of_edges': len(G.edges()),
+            'average_degree': sum(dict(G.degree()).values()) / len(G.nodes()),
+            'network_density': nx.density(G),
+            'average_clustering_coefficient': nx.average_clustering(G),
+        },
+        'centrality_metrics': {
+            'degree_centrality': {node: round(cent, 3) for node, cent in degree_centrality.items()},
+            'betweenness_centrality': {node: round(cent, 3) for node, cent in betweenness_centrality.items()},
+            'node_degrees': node_degrees,
+            'bridging_coefficients': {node: round(coef, 3) for node, coef in bridging_coefficients.items()}
+        },
+        'node_statistics': {
+            'agents': len(agent_nodes),
+            'tags': len(tag_nodes),
+            'requests': len(request_nodes)
+        },
+        'edge_statistics': {
+            'agent_request_connections': len(agent_request_edges),
+            'tag_request_connections': len(tag_request_edges)
+        }
+    }
+    
+    # Save network statistics as JSON
+    with open(os.path.join(stats_dir, 'network_statistics.json'), 'w', encoding='utf-8') as f:
+        json.dump(stats, f, indent=2, default=str)
+    
+    # Save network statistics as markdown
+    with open(os.path.join(stats_dir, 'network_statistics.md'), 'w', encoding='utf-8') as f:
+        f.write("# Network Analysis Statistics\n\n")
+        
+        f.write("## Network Summary\n")
+        f.write(f"- Number of Nodes: {stats['network_summary']['number_of_nodes']}\n")
+        f.write(f"- Number of Edges: {stats['network_summary']['number_of_edges']}\n")
+        f.write(f"- Average Degree: {stats['network_summary']['average_degree']:.2f}\n")
+        f.write(f"- Network Density: {stats['network_summary']['network_density']:.3f}\n")
+        f.write(f"- Average Clustering Coefficient: {stats['network_summary']['average_clustering_coefficient']:.3f}\n\n")
+        
+        f.write("## Node Distribution\n")
+        f.write(f"- Agents: {stats['node_statistics']['agents']}\n")
+        f.write(f"- Tags: {stats['node_statistics']['tags']}\n")
+        f.write(f"- Requests: {stats['node_statistics']['requests']}\n\n")
+        
+        f.write("## Edge Distribution\n")
+        f.write(f"- Agent-Request Connections: {stats['edge_statistics']['agent_request_connections']}\n")
+        f.write(f"- Tag-Request Connections: {stats['edge_statistics']['tag_request_connections']}\n\n")
+        
+        f.write("## Node Metrics\n\n")
+        
+        f.write("### Top Nodes by Degree\n")
+        sorted_degrees = sorted(stats['centrality_metrics']['node_degrees'].items(),
+                              key=lambda x: x[1], reverse=True)[:10]
+        for node, degree in sorted_degrees:
+            f.write(f"- {node}: {degree}\n")
+        
+        f.write("\n### Top Nodes by Degree Centrality\n")
+        sorted_degree = sorted(stats['centrality_metrics']['degree_centrality'].items(),
+                             key=lambda x: x[1], reverse=True)[:10]
+        for node, centrality in sorted_degree:
+            f.write(f"- {node}: {centrality:.3f}\n")
+        
+        f.write("\n### Top Nodes by Betweenness Centrality\n")
+        sorted_betweenness = sorted(stats['centrality_metrics']['betweenness_centrality'].items(),
+                                  key=lambda x: x[1], reverse=True)[:10]
+        for node, centrality in sorted_betweenness:
+            f.write(f"- {node}: {centrality:.3f}\n")
+        
+        f.write("\n### Top Nodes by Bridging Coefficient\n")
+        sorted_bridging = sorted(stats['centrality_metrics']['bridging_coefficients'].items(),
+                               key=lambda x: x[1], reverse=True)[:10]
+        for node, coefficient in sorted_bridging:
+            f.write(f"- {node}: {coefficient:.3f}\n")
+
 def test_fix_bracket_links():
     """Test the bracket fixing functionality with various cases."""
     test_cases = [
@@ -785,11 +1384,15 @@ def test_fix_bracket_links():
         print(f"Result: {'✅ Pass' if success else '❌ Fail'}")
     print("----------------------------\n")
 
-def main(project_path: str, model_name: str):
+def main(project_path: str, model_name: str, force_links: bool):
     try:
         print(f"\n🚀 Starting research request extraction process")
         print(f"   Project path: {project_path}")
-        print(f"   Model: {model_name}\n")
+        print(f"   Model: {model_name}")
+        print(f"   Force links: {'enabled' if force_links else 'disabled'}\n")
+        
+        # Update global force_links setting
+        globals()['force_links'] = force_links
         
         # Start Ollama server
         start_ollama_server()
@@ -859,6 +1462,8 @@ if __name__ == "__main__":
                       help=f'Path to the project directory (default: {DEFAULT_PROJECT_PATH})')
     parser.add_argument('--model_name', type=str, default=DEFAULT_MODEL_NAME,
                       help=f'Name of the Ollama model to use (default: {DEFAULT_MODEL_NAME})')
+    parser.add_argument('--force_links', action='store_true', default=force_links,
+                      help='Force creation of [[links]] in hypothesis, rationale, and impact sections')
 
     args = parser.parse_args()
-    main(args.project_path, args.model_name) 
+    main(args.project_path, args.model_name, args.force_links) 
