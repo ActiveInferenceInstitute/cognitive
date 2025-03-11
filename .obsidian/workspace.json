@@ -8,17 +8,33 @@
         "type": "tabs",
         "children": [
           {
-            "id": "edc32c8263c095f4",
+            "id": "731d60df12d173dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project_structure.md",
+                "file": "docs/guides/application/active_inference_spatial_applications.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "project_structure"
+              "title": "active_inference_spatial_applications"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5f874ec5c2da6d65",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "edc32c8263c095f4",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -94,6 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/guides/application/active_inference_spatial_applications.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for active_inference_spatial_applications"
             }
           },
           {
@@ -140,19 +157,21 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "docs/guides/application/active_inference_spatial_applications.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of active_inference_spatial_applications"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -166,15 +185,17 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "edc32c8263c095f4",
+  "active": "731d60df12d173dc",
   "lastOpenFiles": [
+    "docs/agents/agent_docs_readme.md",
+    "docs/agents",
+    "project_structure.md",
     "This study.md",
     "the NKG.md",
     "Sera.md",
     "social_theory_in_computation.md",
     "query_system.md",
     "python_abm_resources.md",
-    "project_structure.md",
     "Jenassa.md",
     "BioFirm_project.md",
     "complexity_measures.md",
@@ -189,7 +210,6 @@
     "venv/Lib/site-packages/sklearn/utils/__pycache__/_user_interface.cpython-312.pyc",
     "venv/Lib/site-packages/sklearn/utils/__pycache__/_unique.cpython-312.pyc",
     "venv/Lib/site-packages/sklearn/utils/__pycache__/_testing.cpython-312.pyc",
-    "venv/Lib/site-packages/sklearn/utils/__pycache__/_tags.cpython-312.pyc",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_100520_cd7d2a7d.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_100346_90312b31.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_095930_61f28c8e.md",
@@ -211,7 +231,6 @@
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/visualizations/agent_participation.png",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/_research_requests_index.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090547_c91676b8.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090543_b39b9949.md",
     "venv/Lib/site-packages/sklearn/datasets/images/china.jpg",
     "venv/Lib/site-packages/sklearn/datasets/images/flower.jpg"
   ]
