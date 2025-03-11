@@ -13,28 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/guides/application/active_inference_spatial_applications.md",
+                "file": "knowledge_base/mathematics/bayes_theorem.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "active_inference_spatial_applications"
-            }
-          }
-        ]
-      },
-      {
-        "id": "5f874ec5c2da6d65",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "edc32c8263c095f4",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "bayes_theorem"
             }
           }
         ]
@@ -110,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/guides/application/active_inference_spatial_applications.md",
+                "file": "knowledge_base/mathematics/bayes_theorem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for active_inference_spatial_applications"
+              "title": "Backlinks for bayes_theorem"
             }
           },
           {
@@ -157,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/guides/application/active_inference_spatial_applications.md",
+                "file": "knowledge_base/mathematics/bayes_theorem.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of active_inference_spatial_applications"
+              "title": "Outline of bayes_theorem"
             }
           }
         ],
@@ -187,9 +171,18 @@
   },
   "active": "731d60df12d173dc",
   "lastOpenFiles": [
-    "docs/agents/agent_docs_readme.md",
-    "docs/agents",
+    "knowledge_base/mathematics/continuous_discrete_inference.md",
+    "knowledge_base/mathematics/bayesian_renormalization.md",
+    "knowledge_base/mathematics/path_integral_bayesian_inference.md",
+    "docs/tools/statistical_parametric_mapping.md",
+    "knowledge_base/mathematics/bayes_theorem.md",
+    "knowledge_base/mathematics/renormalization_group.md",
     "project_structure.md",
+    "docs/tools/git_tools.md",
+    "docs/tools/model_context_protocol.md",
+    "docs/agents/agent_docs_readme.md",
+    "docs/guides/application/active_inference_spatial_applications.md",
+    "docs/agents",
     "This study.md",
     "the NKG.md",
     "Sera.md",
@@ -214,23 +207,14 @@
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_100346_90312b31.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_095930_61f28c8e.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/statistics/network_statistics.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_094203_82938a96.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/cultural_analysis/topic_analysis.png",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_093103_79acd7e9.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_093058_a86c3499.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_093053_fd7f0433.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_093040_c07e3596.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/cultural_analysis/language_complexity.png",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/cultural_analysis/sentiment_analysis.png",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/cultural_analysis/topic_analysis.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/visualizations/network_visualization.png",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/statistics/statistics.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/visualizations/agent_tag_heatmap.png",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/visualizations/request_timeline.png",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/visualizations/tag_usage.png",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/visualizations/agent_participation.png",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/_research_requests_index.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090547_c91676b8.md",
     "venv/Lib/site-packages/sklearn/datasets/images/china.jpg",
     "venv/Lib/site-packages/sklearn/datasets/images/flower.jpg"
   ]

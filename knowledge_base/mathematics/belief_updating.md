@@ -12,6 +12,7 @@ semantic_relations:
     links: 
       - [[active_inference]]
       - [[bayesian_inference]]
+      - [[bayes_theorem]]
   - type: mathematical_basis
     links:
       - [[probability_theory]]
@@ -22,11 +23,48 @@ semantic_relations:
       - [[belief_initialization]]
       - [[free_energy_principle]]
       - [[predictive_coding]]
+      - [[bayesian_networks]]
+      - [[bayesian_graph_theory]]
 ---
 
 # Belief Updating
 
+```mermaid
+graph TB
+    A[Belief Updating] --> B[Mathematical Framework]
+    A --> C[Components]
+    A --> D[Advanced Implementation]
+    A --> E[Advanced Concepts]
+    A --> F[Applications]
+    A --> G[Research Directions]
+    
+    style A fill:#ff9999,stroke:#05386b
+    style B fill:#d4f1f9,stroke:#05386b
+    style C fill:#dcedc1,stroke:#05386b
+    style D fill:#ffcccb,stroke:#05386b
+    style E fill:#ffd580,stroke:#05386b
+    style F fill:#d8bfd8,stroke:#05386b
+    style G fill:#ffb6c1,stroke:#05386b
+```
+
 ## Mathematical Framework
+
+```mermaid
+graph TB
+    A[Mathematical Framework] --> B[Core Update Equation]
+    A --> C[Free Energy Formulation]
+    A --> D[Hierarchical Extension]
+    
+    B --> B1["Q(s_{t+1}) ∝ P(o_t|s_t)P(s_{t+1}|s_t,a_t)Q(s_t)"]
+    C --> C1["F = E_Q(s)[ln Q(s) - ln P(o,s)]"]
+    C --> C2["ln Q*(s) = ln P(o|s) + ln P(s) + const"]
+    D --> D1["Q(s_l) ∝ P(s_{l-1}|s_l)P(s_l|s_{l+1})Q(s_l)"]
+    
+    style A fill:#d4f1f9,stroke:#05386b
+    style B fill:#dcedc1,stroke:#05386b
+    style C fill:#ffcccb,stroke:#05386b
+    style D fill:#ffd580,stroke:#05386b
+```
 
 ### Core Update Equation
 The belief update equation in Active Inference follows the general form:
@@ -54,6 +92,33 @@ $Q(s_l) \propto P(s_{l-1}|s_l)P(s_l|s_{l+1})Q(s_l)$
 
 ## Components
 
+```mermaid
+graph TB
+    A[Components] --> B[Likelihood Term]
+    A --> C[Transition Term]
+    A --> D[Prior Term]
+    
+    B --> B1[Incorporates observations]
+    B --> B2[A-matrix mapping]
+    B --> B3[Sensory evidence weighting]
+    B --> B4[Precision-weighted updates]
+    
+    C --> C1[Predicts state changes]
+    C --> C2[B-matrix dynamics]
+    C --> C3[Markov property assumptions]
+    C --> C4[Action-conditioned transitions]
+    
+    D --> D1[Previous beliefs]
+    D --> D2[D-matrix initialization]
+    D --> D3[Belief propagation methods]
+    D --> D4[Hierarchical constraints]
+    
+    style A fill:#d4f1f9,stroke:#05386b
+    style B fill:#dcedc1,stroke:#05386b
+    style C fill:#ffcccb,stroke:#05386b
+    style D fill:#ffd580,stroke:#05386b
+```
+
 ### 1. Likelihood Term
 - Incorporates new observations
 - [[A_matrix]] mapping: $P(o|s)$
@@ -73,6 +138,41 @@ $Q(s_l) \propto P(s_{l-1}|s_l)P(s_l|s_{l+1})Q(s_l)$
 - Hierarchical constraints
 
 ## Advanced Implementation
+
+```mermaid
+classDiagram
+    class PrecisionWeightedUpdater {
+        +components: Dict
+        +update_beliefs(observation, action, beliefs, A, B, pi): Tuple
+    }
+    
+    class HierarchicalUpdater {
+        +levels: int
+        +components: Dict
+        +update_hierarchy(observations, beliefs, models): Tuple
+    }
+    
+    class OnlineLearner {
+        +components: Dict
+        +learn_online(observation, action, beliefs, models): Tuple
+    }
+    
+    class Components {
+        +precision: PrecisionEstimator
+        +weighting: PrecisionWeighting
+        +optimization: GradientOptimizer
+        +bottom_up: BottomUpProcessor
+        +top_down: TopDownProcessor
+        +lateral: LateralProcessor
+        +parameter: ParameterLearner
+        +structure: StructureLearner
+        +adaptation: AdaptationController
+    }
+    
+    PrecisionWeightedUpdater --> Components
+    HierarchicalUpdater --> Components
+    OnlineLearner --> Components
+```
 
 ### 1. Precision-Weighted Updates
 ```python
@@ -125,6 +225,27 @@ class PrecisionWeightedUpdater:
 ```
 
 ### 2. Hierarchical Updates
+
+```mermaid
+sequenceDiagram
+    participant L1 as Level 1 (Lower)
+    participant L2 as Level 2 (Middle)
+    participant L3 as Level 3 (Higher)
+    
+    Note over L1,L3: Bottom-Up Pass
+    L1->>L2: Prediction error from data
+    L2->>L3: Prediction error from Level 1
+    
+    Note over L1,L3: Top-Down Pass
+    L3->>L2: Predictions/constraints
+    L2->>L1: Predictions/constraints
+    
+    Note over L1,L3: Lateral Integration
+    L1->>L1: Update based on errors and predictions
+    L2->>L2: Update based on errors and predictions
+    L3->>L3: Update based on errors and predictions
+```
+
 ```python
 class HierarchicalUpdater:
     def __init__(self, levels: int):
@@ -167,6 +288,28 @@ class HierarchicalUpdater:
 ```
 
 ### 3. Online Learning
+
+```mermaid
+flowchart TB
+    A[Online Learning] --> B[Parameter Learning]
+    A --> C[Structure Learning]
+    A --> D[Adaptation Control]
+    
+    B --> B1[Gradient Updates]
+    B --> B2[Probability Constraints]
+    
+    C --> C1[Bayesian Model Selection]
+    C --> C2[Complexity Minimization]
+    
+    D --> D1[Meta-Learning]
+    D --> D2[Performance Monitoring]
+    
+    style A fill:#d4f1f9,stroke:#05386b
+    style B fill:#dcedc1,stroke:#05386b
+    style C fill:#ffcccb,stroke:#05386b
+    style D fill:#ffd580,stroke:#05386b
+```
+
 ```python
 class OnlineLearner:
     def __init__(self):
@@ -210,6 +353,32 @@ class OnlineLearner:
 
 ## Advanced Concepts
 
+```mermaid
+mindmap
+  root((Advanced<br>Concepts))
+    Information Geometry
+      Fisher Information
+        Natural Gradient Descent
+        Metric Tensor Properties
+      Wasserstein Metrics
+        Optimal Transport
+        Geodesic Flows
+    Variational Methods
+      Mean Field Approximation
+        Factorized Posteriors
+        Coordinate Ascent
+      Structured Variational Inference
+        Dependency Preservation
+        Message Passing
+    Stochastic Approaches
+      Particle Methods
+        Sequential Importance Sampling
+        Resampling Strategies
+      Monte Carlo Methods
+        MCMC Sampling
+        Hamiltonian Dynamics
+```
+
 ### 1. Information Geometry
 - [[fisher_information]]
   - Natural gradient descent
@@ -235,6 +404,45 @@ class OnlineLearner:
   - Hamiltonian dynamics
 
 ## Applications
+
+```mermaid
+graph TB
+    A[Applications] --> B[Perception]
+    A --> C[Learning]
+    A --> D[Control]
+    
+    B --> B1[Hierarchical Perception]
+    B --> B2[Multimodal Integration]
+    
+    C --> C1[Structure Learning]
+    C --> C2[Parameter Learning]
+    
+    D --> D1[Active Inference Control]
+    D --> D2[Adaptive Control]
+    
+    B1 --> B1a[Predictive Processing]
+    B1 --> B1b[Error Propagation]
+    
+    B2 --> B2a[Cue Combination]
+    B2 --> B2b[Cross-modal Inference]
+    
+    C1 --> C1a[Model Selection]
+    C1 --> C1b[Complexity Control]
+    
+    C2 --> C2a[Gradient Methods]
+    C2 --> C2b[Empirical Bayes]
+    
+    D1 --> D1a[Policy Selection]
+    D1 --> D1b[Action Optimization]
+    
+    D2 --> D2a[Online Adaptation]
+    D2 --> D2b[Robust Control]
+    
+    style A fill:#d4f1f9,stroke:#05386b
+    style B fill:#dcedc1,stroke:#05386b
+    style C fill:#ffcccb,stroke:#05386b
+    style D fill:#ffd580,stroke:#05386b
+```
 
 ### 1. Perception
 - [[hierarchical_perception]]
@@ -262,6 +470,45 @@ class OnlineLearner:
 
 ## Research Directions
 
+```mermaid
+flowchart TB
+    A[Research Directions] --> B[Theoretical Extensions]
+    A --> C[Computational Methods]
+    A --> D[Applications]
+    
+    B --> B1[Quantum Belief Updating]
+    B --> B2[Relativistic Belief Updating]
+    
+    C --> C1[Neural Belief Updating]
+    C --> C2[Symbolic Belief Updating]
+    
+    D --> D1[Robotics Belief Updating]
+    D --> D2[Neuroscience Belief Updating]
+    
+    B1 --> B1a[Quantum Probabilities]
+    B1 --> B1b[Interference Effects]
+    
+    B2 --> B2a[Causal Structure]
+    B2 --> B2b[Lorentz Invariance]
+    
+    C1 --> C1a[Deep Architectures]
+    C1 --> C1b[End-to-end Learning]
+    
+    C2 --> C2a[Logic Programming]
+    C2 --> C2b[Formal Reasoning]
+    
+    D1 --> D1a[SLAM]
+    D1 --> D1b[Manipulation]
+    
+    D2 --> D2a[Neural Implementations]
+    D2 --> D2b[Experimental Predictions]
+    
+    style A fill:#d4f1f9,stroke:#05386b
+    style B fill:#dcedc1,stroke:#05386b
+    style C fill:#ffcccb,stroke:#05386b
+    style D fill:#ffd580,stroke:#05386b
+```
+
 ### 1. Theoretical Extensions
 - [[quantum_belief_updating]]
   - Quantum probabilities
@@ -286,6 +533,32 @@ class OnlineLearner:
   - Neural implementations
   - Experimental predictions
 
+## Relationship to Bayesian Theory
+
+```mermaid
+graph LR
+    A[Bayes' Theorem] --> B[Bayesian Inference]
+    B --> C[Belief Updating]
+    
+    A --> D[Prior × Likelihood ∝ Posterior]
+    B --> E[Sequential Bayesian Updating]
+    C --> F[Free Energy Minimization]
+    
+    D -.-> E -.-> F
+    
+    G[Bayesian Networks] --> H[Graph-based Inference]
+    H --> C
+    
+    I[Bayesian Graph Theory] --> J[Factor Graphs]
+    J --> C
+    
+    style A fill:#ff9999,stroke:#05386b
+    style B fill:#99ccff,stroke:#05386b
+    style C fill:#99ff99,stroke:#05386b
+    style G fill:#ffcc99,stroke:#05386b
+    style I fill:#cc99ff,stroke:#05386b
+```
+
 ## References
 - [[friston_2010]] - "The free-energy principle: a unified brain theory?"
 - [[bogacz_2017]] - "A tutorial on the free-energy framework for modelling perception and learning"
@@ -299,4 +572,7 @@ class OnlineLearner:
 - [[predictive_coding]]
 - [[variational_inference]]
 - [[belief_initialization]]
-- [[learning_theory]] 
+- [[learning_theory]]
+- [[bayes_theorem]]
+- [[bayesian_networks]]
+- [[bayesian_graph_theory]] 

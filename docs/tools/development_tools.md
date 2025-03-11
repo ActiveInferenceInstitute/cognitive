@@ -75,9 +75,20 @@ This directory contains documentation for development tools, utilities, and auto
 ## Integration Tools
 
 ### Version Control
-- [[git_tools]] - Git utilities
+- [[git_tools]] - Specialized Git tools for cognitive modeling projects
+  - Knowledge-code synchronization tools
+  - Cognitive Git extensions
+  - Obsidian Git integration
+  - Cursor AI integration
+  - Visualization tools for Git history
+- [[git_workflow]] - Comprehensive Git workflow patterns
 - [[changelog_tools]] - Changelog management
 - [[release_tools]] - Release management
+
+### Knowledge Management Integration
+- [[obsidian_integration]] - Obsidian workflow integration
+- [[knowledge_code_sync]] - Knowledge base and code synchronization
+- [[markdown_management]] - Markdown file management utilities
 
 ### CI/CD
 - [[ci_tools]] - Continuous Integration
@@ -88,6 +99,7 @@ This directory contains documentation for development tools, utilities, and auto
 - [[review_tools]] - Code review tools
 - [[documentation_tools]] - Documentation collaboration
 - [[communication_tools]] - Team communication
+- [[cursor_integration]] - AI-assisted collaborative development
 
 ## Research Tools
 
@@ -144,6 +156,49 @@ This directory contains documentation for development tools, utilities, and auto
 - [[../guides/implementation_guides|Implementation Guides]]
 - [[../api/api_documentation|API Documentation]]
 - [[../examples/usage_examples|Usage Examples]]
+- [[../agents/agent_docs_readme|Agent Documentation Clearinghouse]]
 
 ## Contributing
 See [[../templates/tool_template|Tool Documentation Template]] for documenting new tools. 
+
+## Version Control Tools Overview
+
+The cognitive modeling project uses specialized Git tools and workflows to manage both code and knowledge base components. These tools are designed to maintain synchronization between conceptual documentation and implementation.
+
+### Key Git Tools
+
+```mermaid
+graph TD
+    A[Git Tools] --> B[Knowledge-Code Sync]
+    A --> C[Visualization]
+    A --> D[Workflow Tools]
+    A --> E[Integration Tools]
+    
+    B --> B1[KB-Code Linker]
+    B --> B2[Impl-Gap Detector]
+    B --> B3[Doc-Gap Finder]
+    
+    C --> C1[KB-Code Graph]
+    C --> C2[Git History Viz]
+    C --> C3[Contribution Reports]
+    
+    D --> D1[Cognitive Git Extensions]
+    D --> D2[Git Hooks]
+    D --> D3[Pre-commit Hooks]
+    
+    E --> E1[Obsidian Git]
+    E --> E2[Cursor AI]
+    E --> E3[GitHub Actions]
+    
+    style A fill:#f9d5e5,stroke:#333,stroke-width:2px
+    style B fill:#d5f5e3,stroke:#333,stroke-width:1px
+    style C fill:#d4f1f9,stroke:#333,stroke-width:1px
+    style D fill:#fcf3cf,stroke:#333,stroke-width:1px
+    style E fill:#e6e6fa,stroke:#333,stroke-width:1px
+```
+
+For comprehensive documentation on Git tools and workflows, see:
+- [[git_tools|Git Tools for Cognitive Modeling]] - Specialized Git tools
+- [[git_workflow|Git Workflow Guide]] - Workflow patterns and best practices
+- [[obsidian_usage|Obsidian Usage Guidelines]] - Knowledge management with Obsidian
+- [[cursor_integration|Cursor AI Integration]] - AI-assisted development 
