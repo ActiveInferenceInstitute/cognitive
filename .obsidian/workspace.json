@@ -11,10 +11,14 @@
             "id": "edc32c8263c095f4",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "project_structure.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "project_structure"
             }
           }
         ]
@@ -164,6 +168,18 @@
   },
   "active": "edc32c8263c095f4",
   "lastOpenFiles": [
+    "This study.md",
+    "the NKG.md",
+    "Sera.md",
+    "social_theory_in_computation.md",
+    "query_system.md",
+    "python_abm_resources.md",
+    "project_structure.md",
+    "Jenassa.md",
+    "BioFirm_project.md",
+    "complexity_measures.md",
+    "[[Lokir.md",
+    "[[Ysolda.md",
     "venv/Lib/site-packages/__pycache__/threadpoolctl.cpython-312.pyc",
     "venv/Lib/site-packages/sklearn/externals/__pycache__/__init__.cpython-312.pyc",
     "venv/Lib/site-packages/sklearn/externals/__pycache__/_arff.cpython-312.pyc",
@@ -174,7 +190,6 @@
     "venv/Lib/site-packages/sklearn/utils/__pycache__/_unique.cpython-312.pyc",
     "venv/Lib/site-packages/sklearn/utils/__pycache__/_testing.cpython-312.pyc",
     "venv/Lib/site-packages/sklearn/utils/__pycache__/_tags.cpython-312.pyc",
-    "venv/Lib/site-packages/sklearn/utils/__pycache__/_show_versions.cpython-312.pyc",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_100520_cd7d2a7d.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_100346_90312b31.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_095930_61f28c8e.md",
@@ -197,18 +212,7 @@
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/_research_requests_index.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090547_c91676b8.md",
     "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090543_b39b9949.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090525_538fa1dc.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090511_ba364b40.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090458_5e243e25.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090453_a96a8f95.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090444_e9707dd9.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090433_f516c08a.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090425_df63a171.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_090410_17ecd09a.md",
     "venv/Lib/site-packages/sklearn/datasets/images/china.jpg",
-    "venv/Lib/site-packages/sklearn/datasets/images/flower.jpg",
-    "venv/Lib/site-packages/nltk-3.9.1.dist-info/README.md",
-    "venv/Lib/site-packages/nltk-3.9.1.dist-info/AUTHORS.md",
-    "Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/request_20250303_085951_59ffebaa.md"
+    "venv/Lib/site-packages/sklearn/datasets/images/flower.jpg"
   ]
 }
