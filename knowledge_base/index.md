@@ -3,7 +3,7 @@ title: Knowledge Base Index
 type: index
 status: stable
 created: 2024-02-07
-updated: 2024-02-28
+updated: 2024-02-07
 tags:
   - index
   - knowledge
@@ -17,7 +17,9 @@ semantic_relations:
       - [[systems]]
       - [[agents]]
       - [[biology]]
-      - [[technology]]
+      - [[philosophy]]
+      - [[ontology]]
+      - [[citations]]
 ---
 
 # Cognitive Modeling Knowledge Base
@@ -25,75 +27,87 @@ semantic_relations:
 ## Core Domains
 
 ### Mathematics (`mathematics/`)
-- [[mathematics/probability_theory|Probability Theory]]
-- [[mathematics/information_theory|Information Theory]]
-- [[mathematics/variational_methods|Variational Methods]]
-- [[mathematics/free_energy_theory|Free Energy Theory]]
-- [[mathematics/active_inference_theory|Active Inference Theory]]
-- [[mathematics/message_passing|Message Passing Algorithms]]
-- [[mathematics/factor_graphs|Factor Graphs]]
-- [[mathematics/optimization|Optimization Methods]]
-- [[mathematics/statistical_inference|Statistical Inference]]
+- [[mathematics/probability_theory]]
+- [[mathematics/information_theory]]
+- [[mathematics/variational_methods]]
+- [[mathematics/free_energy_theory]]
+- [[mathematics/active_inference_theory]]
+- [[mathematics/message_passing]]
+- [[mathematics/factor_graphs]]
+- [[mathematics/optimization]]
+- [[mathematics/statistical_inference]]
+- [[mathematics/path_integral]]
+- [[mathematics/bayesian_inference]]
+- [[mathematics/expected_free_energy]]
 
 ### Cognitive Science (`cognitive/`)
-- [[cognitive/cognitive_science|Cognitive Science Overview]]
-- [[cognitive/predictive_processing|Predictive Processing]]
-- [[cognitive/active_inference|Active Inference]]
-- [[cognitive/free_energy_principle|Free Energy Principle]]
-- [[cognitive/cognitive_phenomena|Cognitive Phenomena]]
-- [[cognitive/attention|Attention Mechanisms]]
-- [[cognitive/decision_making|Decision Making]]
-- [[cognitive/learning_memory|Learning and Memory]]
-- [[cognitive/social_cognition|Social Cognition]]
+- [[cognitive/cognitive_science]]
+- [[cognitive/predictive_processing]]
+- [[cognitive/active_inference]]
+- [[cognitive/free_energy_principle]]
+- [[cognitive/cognitive_phenomena]]
+- [[cognitive/attention]]
+- [[cognitive/decision_making]]
+- [[cognitive/learning_memory]]
+- [[cognitive/social_cognition]]
+- [[cognitive/hierarchical_inference]]
+- [[cognitive/swarm_intelligence]]
+- [[cognitive/collective_behavior]]
 
 ### Systems Theory (`systems/`)
-- [[systems/systems_theory|Systems Theory Overview]]
-- [[systems/complex_systems|Complex Systems]]
-- [[systems/emergence|Emergence Patterns]]
-- [[systems/dynamical_systems|Dynamical Systems]]
-- [[systems/network_theory|Network Theory]]
-- [[systems/control_systems|Control Systems]]
-- [[systems/adaptive_systems|Adaptive Systems]]
-- [[systems/probabilistic_systems|Probabilistic Systems]]
-- [[systems/message_passing_networks|Message Passing Networks]]
+- [[systems/systems_theory]]
+- [[systems/complex_systems]]
+- [[systems/emergence]]
+- [[systems/dynamical_systems]]
+- [[systems/network_theory]]
+- [[systems/control_systems]]
+- [[systems/adaptive_systems]]
+- [[systems/probabilistic_systems]]
+- [[systems/message_passing_networks]]
 
 ### Agent Architectures (`agents/`)
-- [[agents/architectures/README|Agent Architectures Overview]]
-- [[agents/GenericPOMDP/README|Generic POMDP Framework]]
-- [[agents/Continuous_Time/README|Continuous Time Agents]]
-- [[agents/active_inference/README|Active Inference Agents]]
-- [[agents/multi_agent/README|Multi-Agent Systems]]
-- [[agents/belief_updating/README|Belief Updating]]
-- [[agents/hierarchical/README|Hierarchical Agents]]
-- [[agents/message_passing/README|Message Passing Agents]]
+- [[agents/architectures_overview]]
+- [[agents/GenericPOMDP/README]]
+- [[agents/Continuous_Time/README]]
+- [[agents/index]]
 
 ### Biology (`biology/`)
-- [[biology/neural_systems|Neural Systems]]
-- [[biology/evolutionary_processes|Evolutionary Processes]]
-- [[biology/collective_behavior|Collective Behavior]]
-- [[biology/biological_inference|Biological Inference]]
-- [[biology/adaptation|Adaptation Mechanisms]]
-- [[biology/homeostasis|Homeostasis]]
+- [[biology/neural_systems]]
+- [[biology/evolutionary_processes]]
+- [[biology/collective_behavior]]
+- [[biology/biological_inference]]
+- [[biology/adaptation]]
+- [[biology/homeostasis]]
+- [[biology/myrmecology]]
+- [[biology/evolutionary_dynamics]]
 
-### Technology (`technology/`)
-- [[technology/implementation|Implementation Patterns]]
-- [[technology/optimization|Performance Optimization]]
-- [[technology/testing|Testing Strategies]]
-- [[technology/deployment|Deployment Patterns]]
-- [[technology/integration|Integration Guides]]
-- [[technology/monitoring|System Monitoring]]
+### Philosophy (`philosophy/`)
+- [[philosophy/pragmatism]]
+- [[philosophy/operationalism]]
+- [[philosophy/peircean_semiotics]]
+- [[philosophy/philosophy_topics]]
+
+### Ontology (`ontology/`)
+- [[ontology/cognitive_ontology]]
+- [[ontology/hyperspatial/hyperspace_ontology]]
+
+### Citations & References (`citations/`)
+- [[citations/README]]
+- [[citations/friston_2017]]
+- [[citations/shannon_1948]]
+- [[citations/active_inference_refs]]
 
 ## Cross-Domain Relationships
 
 ### Mathematical Foundations → Implementation
-- [[mathematics/probability_theory]] → [[technology/implementation/probabilistic_programming]]
-- [[mathematics/message_passing]] → [[technology/implementation/message_passing]]
-- [[mathematics/factor_graphs]] → [[technology/implementation/factor_nodes]]
+- [[mathematics/probability_theory]] → Implementation in probabilistic programming
+- [[mathematics/message_passing]] → [[agents/architectures_overview]]
+- [[mathematics/factor_graphs]] → Agent implementations
 
 ### Cognitive Science → Agent Design
-- [[cognitive/active_inference]] → [[agents/active_inference/implementation]]
-- [[cognitive/predictive_processing]] → [[agents/architectures/predictive_agents]]
-- [[cognitive/decision_making]] → [[agents/architectures/decision_making]]
+- [[cognitive/active_inference]] → [[agents/architectures_overview]]
+- [[cognitive/predictive_processing]] → Predictive agent architectures
+- [[cognitive/decision_making]] → Policy selection mechanisms
 
 ### Systems → Biological Implementation
 - [[systems/complex_systems]] → [[biology/collective_behavior]]
@@ -103,44 +117,94 @@ semantic_relations:
 ## Implementation Examples
 
 ### Basic Examples
-- [[examples/active_inference_basic|Basic Active Inference]]
-- [[examples/pomdp_agent|POMDP Agent]]
-- [[examples/belief_updating|Belief Updating]]
-- [[examples/message_passing|Message Passing]]
-- [[examples/factor_graphs|Factor Graphs]]
+- Basic [[cognitive/active_inference]] implementations
+- [[agents/GenericPOMDP/README]] examples
+- [[cognitive/belief_updating]] tutorials
+- [[mathematics/message_passing]] demos
+- [[mathematics/factor_graphs]] applications
 
 ### Advanced Examples
-- [[examples/hierarchical_agents|Hierarchical Agents]]
-- [[examples/multi_agent_systems|Multi-Agent Systems]]
-- [[examples/swarm_intelligence|Swarm Intelligence]]
-- [[examples/neural_networks|Neural Networks]]
-- [[examples/streaming_inference|Streaming Inference]]
+- [[cognitive/hierarchical_inference]] systems
+- Multi-agent coordination
+- [[cognitive/swarm_intelligence]] applications
+- Neural network implementations
+- Streaming inference systems
 
 ### Case Studies
-- [[case_studies/ant_colony|Ant Colony Simulation]]
-- [[case_studies/robotic_control|Robotic Control]]
-- [[case_studies/social_learning|Social Learning]]
-- [[case_studies/emergent_behavior|Emergent Behavior]]
+- Ant colony simulation studies
+- Robotic control applications
+- Social learning scenarios
+- Emergent behavior analysis
 
 ## Research & Development
 
 ### Current Research
-- [[research/active_inference|Active Inference Applications]]
-- [[research/cognitive_architectures|Cognitive Architectures]]
-- [[research/agent_learning|Agent Learning]]
-- [[research/swarm_intelligence|Swarm Intelligence]]
-- [[research/hierarchical_inference|Hierarchical Inference]]
+- [[cognitive/active_inference]] applications
+- Cognitive architectures development
+- Agent learning mechanisms
+- [[cognitive/swarm_intelligence]] research
+- [[cognitive/hierarchical_inference]] studies
 
 ### Development Resources
-- [[development/setup_guide|Setup Guide]]
-- [[development/contribution_guide|Contribution Guide]]
-- [[development/testing_guide|Testing Guide]]
-- [[development/optimization_guide|Optimization Guide]]
-- [[development/deployment_guide|Deployment Guide]]
+- Setup and installation guides
+- Contribution guidelines
+- Testing frameworks
+- Optimization strategies
+- Deployment procedures
+
+## Quality Assurance
+
+### Standards & Guidelines
+- [[linking_standards]] - Obsidian linking conventions
+- [[quality_assessment]] - Comprehensive quality framework
+- Citation standards and formats
+- Content organization principles
+
+### Validation Tools
+- Link integrity checking
+- Content consistency validation
+- Mathematical notation standards
+- Cross-reference verification
 
 ## Documentation Resources
-- [[docs/guides/getting_started|Getting Started]]
-- [[docs/api/reference|API Reference]]
-- [[docs/concepts/overview|Core Concepts]]
-- [[docs/tutorials/index|Tutorials]]
-- [[docs/examples/index|Examples]] 
+- Getting started guides
+- API reference documentation
+- Core concept overviews
+- Tutorial collections
+- Example implementations
+
+## Recent Improvements
+
+### Enhanced Structure
+✅ **Citation Management**: Comprehensive [[citations/README]] system
+✅ **Agent Architectures**: Detailed [[agents/architectures_overview]]
+✅ **Cognitive Ontology**: Structured [[ontology/cognitive_ontology]]
+✅ **Quality Framework**: Systematic [[quality_assessment]]
+✅ **Linking Standards**: Consistent [[linking_standards]]
+
+### Priority Development Areas
+🔄 **Systems Theory**: Filling content gaps and refocusing on core principles
+🔄 **Implementation Guides**: Expanding practical tutorials and examples
+🔄 **Cross-Domain Integration**: Strengthening conceptual connections
+🔄 **Citation Population**: Adding comprehensive reference collections
+
+## Navigation Tools
+
+### Quick Access
+- [[mathematics/free_energy_principle]] - Core mathematical foundation
+- [[cognitive/active_inference]] - Primary cognitive framework
+- [[agents/architectures_overview]] - Implementation architectures
+- [[citations/README]] - Reference management
+- [[ontology/cognitive_ontology]] - Conceptual taxonomy
+
+### Learning Pathways
+1. **Beginner**: Start with [[cognitive/active_inference]] basics
+2. **Mathematical**: Explore [[mathematics/free_energy_principle]]
+3. **Implementation**: Follow [[agents/architectures_overview]]
+4. **Research**: Use [[citations/README]] for literature
+
+### Maintenance
+- Regular link validation using [[linking_standards]]
+- Content quality monitoring via [[quality_assessment]]
+- Citation updates through [[citations/README]]
+- Ontology evolution via [[ontology/cognitive_ontology]] 

@@ -60,21 +60,82 @@ Probabilistic models are mathematical frameworks that describe systems and pheno
 
 ## Mathematical Framework
 
-### 1. Joint Distribution
-```math
-p(x_1, ..., x_n) = \prod_{i=1}^n p(x_i | pa(x_i))
-```
-where pa(x_i) represents the parents of variable x_i
+### 1. Probabilistic Foundation
 
-### 2. Likelihood Function
+**Joint Distribution Factorization:**
+For directed acyclic graphs:
 ```math
-L(θ; x) = p(x | θ)
+p(\mathbf{x}) = \prod_{i=1}^n p(x_i | \text{pa}(x_i))
 ```
 
-### 3. Prior Distribution
+For undirected graphs (Markov Random Fields):
 ```math
-p(θ)
+p(\mathbf{x}) = \frac{1}{Z} \prod_{C} \psi_C(\mathbf{x}_C)
 ```
+
+where:
+- $\text{pa}(x_i)$ are parents of variable $x_i$ 
+- $\psi_C(\mathbf{x}_C)$ are clique potentials
+- $Z$ is the partition function
+
+### 2. Parametric Models
+
+**Likelihood Function:**
+```math
+L(\boldsymbol{\theta}; \mathbf{x}) = p(\mathbf{x} | \boldsymbol{\theta}) = \prod_{i=1}^n p(x_i | \boldsymbol{\theta})
+```
+
+**Log-Likelihood:**
+```math
+\ell(\boldsymbol{\theta}) = \log L(\boldsymbol{\theta}; \mathbf{x}) = \sum_{i=1}^n \log p(x_i | \boldsymbol{\theta})
+```
+
+**Prior Distribution:**
+```math
+p(\boldsymbol{\theta}) = \prod_{j} p(\theta_j)
+```
+
+**Posterior Distribution:**
+```math
+p(\boldsymbol{\theta} | \mathbf{x}) = \frac{p(\mathbf{x} | \boldsymbol{\theta}) p(\boldsymbol{\theta})}{p(\mathbf{x})}
+```
+
+### 3. Exponential Family Models
+
+Many probabilistic models belong to exponential families:
+```math
+p(x | \boldsymbol{\theta}) = h(x) \exp\left(\boldsymbol{\theta}^T \mathbf{t}(x) - A(\boldsymbol{\theta})\right)
+```
+
+where:
+- $\mathbf{t}(x)$ are sufficient statistics
+- $A(\boldsymbol{\theta})$ is the log-partition function
+- $h(x)$ is the base measure
+
+**Properties:**
+- Natural parameters: $\boldsymbol{\theta}$
+- Mean parameters: $\boldsymbol{\mu} = \nabla A(\boldsymbol{\theta})$
+- Variance: $\text{Var}[\mathbf{t}(X)] = \nabla^2 A(\boldsymbol{\theta})$
+
+Related: [[exponential_families]], [[natural_parameters]], [[sufficient_statistics]]
+
+### 4. Hierarchical Structure
+
+**Multi-level Models:**
+```math
+\begin{aligned}
+\text{Level 1: } & y_i | \boldsymbol{\theta}_i \sim p(y_i | \boldsymbol{\theta}_i) \\
+\text{Level 2: } & \boldsymbol{\theta}_i | \boldsymbol{\phi} \sim p(\boldsymbol{\theta}_i | \boldsymbol{\phi}) \\
+\text{Level 3: } & \boldsymbol{\phi} \sim p(\boldsymbol{\phi})
+\end{aligned}
+```
+
+**Advantages:**
+- Parameter sharing across groups
+- Regularization through hierarchical priors
+- Uncertainty propagation across levels
+
+Related: [[hierarchical_models]], [[multilevel_modeling]], [[mixed_effects_models]]
 
 ## Applications
 

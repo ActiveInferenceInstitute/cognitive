@@ -406,3 +406,247 @@ class EconomicNetwork:
 - Content updates
 - Tool enhancement
 - Community feedback
+
+## Centralized Resource Discovery System
+
+### Dynamic Resource Integration Platform
+```python
+class ResourceDiscoveryEngine:
+    def __init__(self):
+        """Initialize centralized resource discovery system."""
+        self.resource_db = ResourceDatabase()
+        self.quality_assessor = ResourceQualityAssessor()
+        self.recommendation_engine = ResourceRecommendationEngine()
+        self.integration_manager = IntegrationManager()
+        
+    def curate_resources(self, concept, learner_profile):
+        """Curate high-quality resources for specific concepts and learners."""
+        # Get base resources
+        raw_resources = self.resource_db.search(concept)
+        
+        # Apply quality filtering
+        quality_filtered = self.quality_assessor.filter_resources(
+            raw_resources, 
+            quality_threshold=4.0  # 1-5 scale
+        )
+        
+        # Apply recency weighting
+        recency_weighted = self.apply_recency_scoring(quality_filtered)
+        
+        # Personalize for learner
+        personalized = self.recommendation_engine.personalize(
+            recency_weighted, 
+            learner_profile
+        )
+        
+        # Integrate across platforms
+        integrated = self.integration_manager.cross_platform_integrate(personalized)
+        
+        return self.format_resource_collection(integrated)
+
+class ResourceQualityAssessor:
+    def __init__(self):
+        self.quality_criteria = {
+            'academic_papers': {
+                'peer_review': 2.0,  # weight
+                'citation_count': 1.5,
+                'journal_impact': 1.8,
+                'recency': 1.2,
+                'relevance': 2.5
+            },
+            'code_repositories': {
+                'github_stars': 1.0,
+                'documentation_quality': 2.0,
+                'test_coverage': 1.8,
+                'maintenance_activity': 1.5,
+                'community_engagement': 1.3
+            },
+            'educational_materials': {
+                'pedagogical_design': 2.5,
+                'interactive_elements': 1.8,
+                'assessment_integration': 2.0,
+                'accessibility': 1.5,
+                'learner_feedback': 2.2
+            }
+        }
+        
+    def assess_quality(self, resource):
+        """Assess resource quality based on type-specific criteria."""
+        criteria = self.quality_criteria[resource.type]
+        score = 0
+        total_weight = sum(criteria.values())
+        
+        for criterion, weight in criteria.items():
+            criterion_score = self.evaluate_criterion(resource, criterion)
+            score += criterion_score * weight
+            
+        return score / total_weight
+
+### Intelligent Resource Recommendations
+resource_matrix = {
+    'economic_fundamentals': {
+        'theory_resources': [
+            {
+                'title': 'Economic Principles for Active Inference',
+                'type': 'academic_paper',
+                'quality_score': 4.5,
+                'recency_score': 0.9,
+                'kb_integration': '[[knowledge_base/economics/microeconomics]]',
+                'cross_references': [
+                    'active_inference_cognitive_learning_path',
+                    'active_inference_social_learning_path'
+                ],
+                'learner_suitability': {
+                    'economics_background': 'intermediate',
+                    'mathematics_level': 'advanced',
+                    'programming_skills': 'not_required'
+                }
+            },
+            {
+                'title': 'Market Dynamics Through Predictive Processing',
+                'type': 'research_synthesis',
+                'quality_score': 4.2,
+                'recency_score': 1.0,
+                'kb_integration': '[[knowledge_base/economics/market_dynamics]]',
+                'interactive_elements': ['simulations', 'case_studies'],
+                'assessment_alignment': ['market_modeling_project', 'theory_integration']
+            }
+        ],
+        'implementation_resources': [
+            {
+                'title': 'EconomicAgent Implementation Framework',
+                'type': 'code_repository',
+                'quality_score': 4.7,
+                'recency_score': 0.95,
+                'features': ['documented_api', 'test_suite', 'examples'],
+                'integration_ready': True,
+                'kb_integration': '[[knowledge_base/tools/economic_modeling]]',
+                'cross_path_usage': [
+                    'active_inference_agi_learning_path',
+                    'active_inference_social_learning_path'
+                ]
+            }
+        ],
+        'assessment_resources': [
+            {
+                'title': 'Economic Modeling Assessment Suite',
+                'type': 'assessment_framework',
+                'quality_score': 4.3,
+                'adaptive_capability': True,
+                'competency_alignment': ['theory', 'implementation', 'application'],
+                'cross_path_compatible': True
+            }
+        ]
+    }
+}
+
+### Cross-Platform Integration Hub
+platform_integrations = {
+    'knowledge_base': {
+        'connection_type': 'semantic_linking',
+        'update_frequency': 'real_time',
+        'bidirectional_sync': True,
+        'integration_apis': [
+            'concept_retrieval',
+            'cross_reference_update', 
+            'usage_analytics'
+        ]
+    },
+    'github_repositories': {
+        'connection_type': 'api_integration',
+        'monitored_metrics': [
+            'commit_activity',
+            'issue_resolution',
+            'community_engagement',
+            'documentation_updates'
+        ],
+        'auto_curation': True
+    },
+    'academic_databases': {
+        'sources': ['arxiv', 'pubmed', 'ieee', 'acm_digital_library'],
+        'search_automation': True,
+        'citation_tracking': True,
+        'relevance_scoring': 'ml_based'
+    },
+    'learning_platforms': {
+        'integrations': ['coursera', 'edx', 'udacity', 'youtube_edu'],
+        'quality_filtering': True,
+        'progress_tracking': True,
+        'competency_mapping': 'automated'
+    }
+}
+```
+
+### Smart Resource Curation Pipeline
+```python
+class SmartCurationPipeline:
+    def __init__(self):
+        """Initialize smart curation pipeline."""
+        self.content_analyzer = ContentAnalyzer()
+        self.quality_validator = QualityValidator()
+        self.relevance_scorer = RelevanceScorer()
+        self.integration_processor = IntegrationProcessor()
+        
+    def process_new_resource(self, resource_url, metadata=None):
+        """Process and integrate new resource into system."""
+        # Content analysis
+        content = self.content_analyzer.extract_content(resource_url)
+        topics = self.content_analyzer.identify_topics(content)
+        complexity = self.content_analyzer.assess_complexity(content)
+        
+        # Quality validation
+        quality_metrics = self.quality_validator.assess(resource_url, content)
+        
+        # Relevance scoring
+        relevance_scores = {}
+        for path in self.get_all_learning_paths():
+            relevance_scores[path] = self.relevance_scorer.score(
+                content, topics, path.concepts
+            )
+        
+        # Integration processing
+        integration_points = self.integration_processor.identify_integration_points(
+            topics, relevance_scores
+        )
+        
+        # Knowledge base linking
+        kb_links = self.generate_kb_links(topics, content)
+        
+        # Cross-path connections
+        cross_connections = self.identify_cross_path_connections(
+            topics, relevance_scores
+        )
+        
+        return {
+            'resource_metadata': {
+                'quality_score': quality_metrics.overall_score,
+                'complexity_level': complexity,
+                'primary_topics': topics,
+                'kb_integration_points': kb_links,
+                'cross_path_connections': cross_connections
+            },
+            'integration_recommendations': integration_points,
+            'suggested_placements': self.suggest_optimal_placement(relevance_scores)
+        }
+
+### Personalized Resource Dashboard
+learning_resource_dashboard = {
+    'current_module_resources': {
+        'essential_readings': 'automatically_curated',
+        'supplementary_materials': 'learner_customizable',
+        'interactive_tools': 'skill_level_adapted',
+        'assessment_resources': 'progress_aligned'
+    },
+    'discovery_recommendations': {
+        'trending_content': 'community_validated',
+        'advanced_materials': 'readiness_based',
+        'cross_disciplinary': 'interest_driven',
+        'career_relevant': 'goal_aligned'
+    },
+    'progress_integrated': {
+        'completed_resources': 'achievement_tracked',
+        'bookmarked_materials': 'revisit_scheduled',
+        'peer_shared': 'collaboration_enhanced',
+        'mentor_recommended': 'guidance_integrated'
+    }
+}

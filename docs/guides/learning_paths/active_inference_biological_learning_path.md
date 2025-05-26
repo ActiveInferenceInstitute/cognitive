@@ -876,4 +876,134 @@ graph LR
 - Community Support
   - Group coordinators
   - Project leaders
-  - Mentorship team 
+  - Mentorship team
+
+## Cross-Path Integration Framework
+
+### Prerequisite Paths
+```mermaid
+graph TB
+    subgraph Prerequisites
+        AI[Active Inference Core] --> BIO[Biological Path]
+        CS[Complex Systems] --> BIO
+        MATH[Mathematical Foundations] --> BIO
+    end
+    
+    subgraph Concurrent Learning
+        BIO -.-> COG[Cognitive Science Path]
+        BIO -.-> ECO[Ecological Systems Path]
+        BIO -.-> NEURO[Neuroscience Path]
+    end
+    
+    subgraph Advanced Integration
+        BIO --> AGI[AGI Applications]
+        BIO --> QUANTUM[Quantum Biology]
+        BIO --> SOCIAL[Social Systems]
+    end
+    
+    style AI fill:#f9f,stroke:#333
+    style BIO fill:#bbf,stroke:#333
+    style AGI fill:#bfb,stroke:#333
+```
+
+### Knowledge Base Deep Integration
+```python
+class BiologicalKnowledgeIntegrator:
+    def __init__(self):
+        """Initialize knowledge base integration system."""
+        self.kb_concepts = {
+            # Core biological concepts
+            'cellular_intelligence': {
+                'kb_link': '[[knowledge_base/biology/cellular_intelligence]]',
+                'related_paths': [
+                    'active_inference_cognitive_learning_path',
+                    'active_inference_neuroscience_learning_path'
+                ],
+                'shared_projects': ['cellular_decision_making', 'neural_computation']
+            },
+            'evolutionary_learning': {
+                'kb_link': '[[knowledge_base/biology/evolutionary_computation]]',
+                'related_paths': [
+                    'active_inference_agi_learning_path',
+                    'active_inference_ecological_learning_path'
+                ],
+                'shared_projects': ['adaptive_algorithms', 'population_dynamics']
+            },
+            'biological_networks': {
+                'kb_link': '[[knowledge_base/systems/biological_networks]]',
+                'related_paths': [
+                    'active_inference_social_learning_path',
+                    'active_inference_economic_learning_path'
+                ],
+                'shared_projects': ['network_dynamics', 'collective_behavior']
+            }
+        }
+        
+    def create_learning_bridges(self):
+        """Create bridges between biological concepts and other domains."""
+        return {
+            'biology_to_cognition': {
+                'concepts': ['neural_computation', 'embodied_cognition'],
+                'activities': ['cross_domain_modeling', 'comparative_analysis'],
+                'assessments': ['integration_project', 'concept_mapping']
+            },
+            'biology_to_agi': {
+                'concepts': ['natural_intelligence', 'bio_inspired_algorithms'],
+                'activities': ['algorithm_design', 'architecture_comparison'],
+                'assessments': ['implementation_project', 'performance_analysis']
+            },
+            'biology_to_social': {
+                'concepts': ['collective_intelligence', 'social_evolution'],
+                'activities': ['multi_agent_modeling', 'social_dynamics'],
+                'assessments': ['simulation_project', 'behavior_analysis']
+            }
+        }
+```
+
+### Shared Learning Components
+```yaml
+cross_path_modules:
+  active_inference_fundamentals:
+    shared_with: [cognitive, neuroscience, agi, ecological]
+    duration: 2_weeks
+    delivery: collaborative_workshops
+    assessment: joint_project
+    
+  complex_systems_modeling:
+    shared_with: [ecological, social, economic]
+    duration: 3_weeks  
+    delivery: interdisciplinary_seminars
+    assessment: system_analysis_project
+    
+  natural_computation:
+    shared_with: [agi, quantum, robotics]
+    duration: 2_weeks
+    delivery: hands_on_labs
+    assessment: algorithm_implementation
+
+integration_projects:
+  bio_cognitive_bridge:
+    description: "Model biological cognition using Active Inference"
+    participants: [biological_path, cognitive_path]
+    duration: 4_weeks
+    deliverables: [research_paper, working_model, presentation]
+    
+  evolution_agi_synthesis:
+    description: "Apply evolutionary principles to AGI development"
+    participants: [biological_path, agi_path]
+    duration: 6_weeks
+    deliverables: [evolutionary_agi_framework, prototype, validation]
+    
+  ecosystem_social_modeling:
+    description: "Model social systems using ecological principles"
+    participants: [biological_path, ecological_path, social_path]
+    duration: 5_weeks
+    deliverables: [multi_scale_model, simulation, analysis]
+```
+
+### Dynamic Knowledge Base Links
+Throughout the path, concepts are automatically linked to knowledge base entries with contextual information:
+
+- **Cellular Intelligence**: [[knowledge_base/biology/cellular_intelligence|Cellular Intelligence]] ⟷ Related in [[active_inference_cognitive_learning_path|Cognitive Path]]
+- **Neural Computation**: [[knowledge_base/cognitive/neural_computation|Neural Computation]] ⟷ Extends to [[active_inference_neuroscience_learning_path|Neuroscience Path]]
+- **Evolutionary Algorithms**: [[knowledge_base/mathematics/evolutionary_algorithms|Evolutionary Algorithms]] ⟷ Applied in [[active_inference_agi_learning_path|AGI Path]] 

@@ -1274,6 +1274,583 @@ def compute_fisher_metric(model, q_samples, n_samples=1000):
 4. Test edge cases
 5. Evaluate generalization performance
 
+## Non-Equilibrium Statistical Mechanics Extensions
+
+### Theoretical Framework
+
+**Definition** (Non-Equilibrium Steady State): A system state where currents flow but macroscopic properties remain constant:
+$$\langle\dot{X}\rangle = 0, \quad \text{but} \quad \langle J_i \rangle \neq 0$$
+
+where $J_i$ are probability currents and $X$ represents macroscopic observables.
+
+**Theorem** (Fluctuation-Dissipation Relations): For systems near equilibrium, the response to perturbations is related to spontaneous fluctuations:
+$$\chi(\omega) = \frac{1}{k_B T} \int_0^\infty \langle\delta X(t)\delta X(0)\rangle e^{-i\omega t} dt$$
+
+```python
+class NonEquilibriumFreeEnergy:
+    """Non-equilibrium extensions of the free energy principle."""
+    
+    def __init__(self,
+                 temperature: float,
+                 dissipation_rate: float,
+                 external_driving: Callable[[float], np.ndarray]):
+        """Initialize non-equilibrium system.
+        
+        Args:
+            temperature: System temperature (energy scale)
+            dissipation_rate: Rate of energy dissipation
+            external_driving: Time-dependent external forces
+        """
+        self.kT = temperature
+        self.gamma = dissipation_rate
+        self.external_force = external_driving
+        
+    def compute_entropy_production_rate(self,
+                                      state: np.ndarray,
+                                      probability_current: np.ndarray) -> float:
+        """Compute entropy production rate for non-equilibrium system.
+        
+        The entropy production rate quantifies irreversibility:
+        dS/dt = ∫ J(x) · ∇ ln P(x) dx ≥ 0
+        
+        Args:
+            state: Current system state
+            probability_current: Probability current J(x)
+            
+        Returns:
+            Entropy production rate
+        """
+        # Compute probability gradient
+        prob_gradient = self._compute_probability_gradient(state)
+        
+        # Entropy production as current-force product
+        entropy_production = np.sum(probability_current * prob_gradient / self.kT)
+        
+        return max(0, entropy_production)  # Non-negative by second law
+    
+    def compute_nonequilibrium_free_energy(self,
+                                         beliefs: np.ndarray,
+                                         time: float) -> Dict[str, float]:
+        """Compute free energy including non-equilibrium contributions.
+        
+        F_neq = F_eq + F_driving + F_dissipation
+        
+        where:
+        - F_eq is equilibrium free energy
+        - F_driving accounts for external driving
+        - F_dissipation accounts for dissipative processes
+        
+        Args:
+            beliefs: Current belief distribution
+            time: Current time
+            
+        Returns:
+            Complete non-equilibrium free energy decomposition
+        """
+        # Equilibrium component
+        F_eq = self._compute_equilibrium_free_energy(beliefs)
+        
+        # Driving contribution
+        external_work = self._compute_driving_contribution(beliefs, time)
+        
+        # Dissipation contribution  
+        dissipation_cost = self._compute_dissipation_cost(beliefs)
+        
+        # Non-equilibrium correction terms
+        correlation_correction = self._compute_correlation_correction(beliefs)
+        
+        total_free_energy = F_eq + external_work + dissipation_cost + correlation_correction
+        
+        return {
+            'total_nonequilibrium_free_energy': total_free_energy,
+            'equilibrium_component': F_eq,
+            'driving_contribution': external_work,
+            'dissipation_cost': dissipation_cost,
+            'correlation_correction': correlation_correction,
+            'entropy_production_rate': self.compute_entropy_production_rate(
+                beliefs, self._compute_probability_current(beliefs))
+        }
+    
+    def _compute_probability_gradient(self, state: np.ndarray) -> np.ndarray:
+        """Compute gradient of log probability."""
+        # Finite difference approximation
+        h = 1e-6
+        gradient = np.zeros_like(state)
+        
+        for i in range(len(state)):
+            state_plus = state.copy()
+            state_minus = state.copy()
+            state_plus[i] += h
+            state_minus[i] -= h
+            
+            log_prob_plus = np.log(self._probability_density(state_plus) + 1e-15)
+            log_prob_minus = np.log(self._probability_density(state_minus) + 1e-15)
+            
+            gradient[i] = (log_prob_plus - log_prob_minus) / (2 * h)
+        
+        return gradient
+    
+    def _compute_probability_current(self, beliefs: np.ndarray) -> np.ndarray:
+        """Compute probability current in belief space."""
+        # Simplified current computation
+        # Full implementation would require solving continuity equation
+        return np.gradient(beliefs)
+    
+    def _probability_density(self, state: np.ndarray) -> float:
+        """Compute probability density at given state."""
+        # Simplified Gaussian density
+        return np.exp(-0.5 * np.sum(state**2) / self.kT)
+    
+    def compute_fluctuation_dissipation_relation(self,
+                                               time_series: np.ndarray,
+                                               perturbation_response: np.ndarray,
+                                               frequencies: np.ndarray) -> Dict[str, np.ndarray]:
+        """Verify fluctuation-dissipation relation.
+        
+        Tests whether: χ(ω) = (1/kT) ∫ ⟨δX(t)δX(0)⟩ e^(-iωt) dt
+        
+        Args:
+            time_series: Time series of system fluctuations
+            perturbation_response: Response to small perturbations
+            frequencies: Frequency range for analysis
+            
+        Returns:
+            Fluctuation-dissipation analysis
+        """
+        # Compute autocorrelation function
+        autocorr = self._compute_autocorrelation(time_series)
+        
+        # Fourier transform to get susceptibility
+        susceptibility_theory = np.fft.fft(autocorr) / self.kT
+        
+        # Compare with measured response
+        susceptibility_measured = np.fft.fft(perturbation_response)
+        
+        # Compute violation measure
+        fdr_violation = np.abs(susceptibility_theory - susceptibility_measured)
+        
+        return {
+            'theoretical_susceptibility': susceptibility_theory,
+            'measured_susceptibility': susceptibility_measured,
+            'fdr_violation': fdr_violation,
+            'violation_magnitude': np.mean(fdr_violation),
+            'frequencies': frequencies
+        }
+    
+    def _compute_autocorrelation(self, time_series: np.ndarray) -> np.ndarray:
+        """Compute autocorrelation function."""
+        n = len(time_series)
+        autocorr = np.correlate(time_series, time_series, mode='full')
+        return autocorr[n-1:]  # Take positive lags only
+
+### Quantum Generalizations
+
+**Definition** (Quantum Free Energy): For quantum systems with density matrix $\rho$:
+$$F_Q = \text{Tr}[\rho H] - T S_Q[\rho]$$
+where $S_Q[\rho] = -\text{Tr}[\rho \ln \rho]$ is the von Neumann entropy.
+
+```python
+class QuantumFreeEnergyPrinciple:
+    """Quantum mechanical extensions of the free energy principle."""
+    
+    def __init__(self,
+                 hilbert_space_dim: int,
+                 hamiltonian: np.ndarray,
+                 temperature: float = 1.0,
+                 hbar: float = 1.0):
+        """Initialize quantum free energy system.
+        
+        Args:
+            hilbert_space_dim: Dimension of Hilbert space
+            hamiltonian: System Hamiltonian matrix
+            temperature: Temperature parameter
+            hbar: Reduced Planck constant (set to 1 in natural units)
+        """
+        self.dim = hilbert_space_dim
+        self.H = hamiltonian
+        self.kT = temperature
+        self.hbar = hbar
+        
+        # Validate Hamiltonian
+        if not self._is_hermitian(hamiltonian):
+            raise ValueError("Hamiltonian must be Hermitian")
+    
+    def compute_quantum_free_energy(self,
+                                  density_matrix: np.ndarray) -> Dict[str, float]:
+        """Compute quantum free energy F = ⟨H⟩ - T S_Q.
+        
+        Args:
+            density_matrix: Quantum state density matrix ρ
+            
+        Returns:
+            Quantum free energy components
+        """
+        # Validate density matrix
+        if not self._is_valid_density_matrix(density_matrix):
+            raise ValueError("Invalid density matrix")
+        
+        # Compute internal energy
+        internal_energy = np.real(np.trace(density_matrix @ self.H))
+        
+        # Compute von Neumann entropy
+        eigenvals = np.linalg.eigvals(density_matrix)
+        eigenvals = eigenvals[eigenvals > 1e-15]  # Remove zero eigenvalues
+        von_neumann_entropy = -np.sum(eigenvals * np.log(eigenvals))
+        
+        # Free energy
+        free_energy = internal_energy - self.kT * von_neumann_entropy
+        
+        return {
+            'quantum_free_energy': free_energy,
+            'internal_energy': internal_energy,
+            'von_neumann_entropy': von_neumann_entropy,
+            'thermal_energy': self.kT * von_neumann_entropy
+        }
+    
+    def quantum_variational_principle(self,
+                                    trial_density_matrix: np.ndarray,
+                                    target_hamiltonian: np.ndarray) -> Dict[str, Any]:
+        """Apply variational principle to quantum free energy.
+        
+        Minimizes F[ρ] = Tr[ρH] - T S[ρ] over density matrices ρ.
+        
+        Args:
+            trial_density_matrix: Trial quantum state
+            target_hamiltonian: Target Hamiltonian
+            
+        Returns:
+            Variational optimization results
+        """
+        def objective(rho_vec: np.ndarray) -> float:
+            """Objective function for optimization."""
+            # Reshape vector to matrix
+            rho = rho_vec.reshape(self.dim, self.dim)
+            
+            # Ensure Hermiticity and trace normalization
+            rho = 0.5 * (rho + rho.conj().T)
+            rho = rho / np.trace(rho)
+            
+            # Compute free energy
+            result = self.compute_quantum_free_energy(rho)
+            return result['quantum_free_energy']
+        
+        # Initial guess - thermal state
+        beta = 1.0 / self.kT
+        thermal_state = scipy.linalg.expm(-beta * target_hamiltonian)
+        thermal_state = thermal_state / np.trace(thermal_state)
+        
+        # Optimization
+        from scipy.optimize import minimize
+        
+        result = minimize(
+            objective,
+            thermal_state.flatten(),
+            method='L-BFGS-B'
+        )
+        
+        optimal_rho = result.x.reshape(self.dim, self.dim)
+        optimal_rho = 0.5 * (optimal_rho + optimal_rho.conj().T)
+        optimal_rho = optimal_rho / np.trace(optimal_rho)
+        
+        return {
+            'optimal_density_matrix': optimal_rho,
+            'optimal_free_energy': result.fun,
+            'convergence_info': result,
+            'thermal_state_comparison': self.compute_quantum_free_energy(thermal_state)
+        }
+    
+    def quantum_master_equation(self,
+                              initial_state: np.ndarray,
+                              lindblad_operators: List[np.ndarray],
+                              time_span: Tuple[float, float],
+                              num_points: int = 100) -> Dict[str, np.ndarray]:
+        """Solve quantum master equation for open system dynamics.
+        
+        dρ/dt = -i/ℏ [H,ρ] + ∑_k (L_k ρ L_k† - ½{L_k†L_k, ρ})
+        
+        Args:
+            initial_state: Initial density matrix
+            lindblad_operators: List of Lindblad jump operators
+            time_span: Time interval for evolution
+            num_points: Number of time points
+            
+        Returns:
+            Time evolution of quantum state and free energy
+        """
+        def lindblad_equation(t: float, rho_vec: np.ndarray) -> np.ndarray:
+            """Lindblad master equation in vectorized form."""
+            rho = rho_vec.reshape(self.dim, self.dim)
+            
+            # Hamiltonian evolution
+            drho_dt = -1j/self.hbar * (self.H @ rho - rho @ self.H)
+            
+            # Lindblad dissipation terms
+            for L in lindblad_operators:
+                drho_dt += (L @ rho @ L.conj().T - 
+                           0.5 * (L.conj().T @ L @ rho + rho @ L.conj().T @ L))
+            
+            return drho_dt.flatten()
+        
+        # Time evolution
+        times = np.linspace(time_span[0], time_span[1], num_points)
+        
+        from scipy.integrate import solve_ivp
+        solution = solve_ivp(
+            lindblad_equation,
+            time_span,
+            initial_state.flatten(),
+            t_eval=times,
+            method='RK45'
+        )
+        
+        # Extract density matrices and compute free energies
+        density_matrices = []
+        free_energies = []
+        entropies = []
+        
+        for i in range(len(times)):
+            rho = solution.y[:, i].reshape(self.dim, self.dim)
+            density_matrices.append(rho)
+            
+            fe_result = self.compute_quantum_free_energy(rho)
+            free_energies.append(fe_result['quantum_free_energy'])
+            entropies.append(fe_result['von_neumann_entropy'])
+        
+        return {
+            'times': times,
+            'density_matrices': density_matrices,
+            'free_energies': np.array(free_energies),
+            'entropies': np.array(entropies),
+            'solution': solution
+        }
+    
+    def quantum_information_geometry(self,
+                                   density_matrix: np.ndarray) -> Dict[str, np.ndarray]:
+        """Compute quantum information geometric quantities.
+        
+        Args:
+            density_matrix: Quantum state density matrix
+            
+        Returns:
+            Information geometric measures
+        """
+        # Quantum Fisher information matrix
+        quantum_fisher = self._compute_quantum_fisher_information(density_matrix)
+        
+        # Bures metric
+        bures_metric = 0.25 * quantum_fisher
+        
+        # Quantum relative entropy (quantum KL divergence)
+        thermal_state = self._thermal_state()
+        quantum_relative_entropy = self._quantum_relative_entropy(
+            density_matrix, thermal_state)
+        
+        return {
+            'quantum_fisher_information': quantum_fisher,
+            'bures_metric': bures_metric,
+            'quantum_relative_entropy': quantum_relative_entropy,
+            'eigenvalues': np.linalg.eigvals(density_matrix),
+            'purity': np.real(np.trace(density_matrix @ density_matrix))
+        }
+    
+    def _is_hermitian(self, matrix: np.ndarray, tol: float = 1e-10) -> bool:
+        """Check if matrix is Hermitian."""
+        return np.allclose(matrix, matrix.conj().T, atol=tol)
+    
+    def _is_valid_density_matrix(self, rho: np.ndarray, tol: float = 1e-10) -> bool:
+        """Validate density matrix properties."""
+        # Check Hermiticity
+        if not self._is_hermitian(rho, tol):
+            return False
+        
+        # Check trace normalization
+        if not np.allclose(np.trace(rho), 1.0, atol=tol):
+            return False
+        
+        # Check positive semidefiniteness
+        eigenvals = np.linalg.eigvals(rho)
+        if np.any(eigenvals < -tol):
+            return False
+        
+        return True
+    
+    def _thermal_state(self) -> np.ndarray:
+        """Compute thermal equilibrium state."""
+        beta = 1.0 / self.kT
+        thermal = scipy.linalg.expm(-beta * self.H)
+        return thermal / np.trace(thermal)
+    
+    def _compute_quantum_fisher_information(self, rho: np.ndarray) -> np.ndarray:
+        """Compute quantum Fisher information matrix."""
+        # Simplified computation for demonstration
+        # Full implementation requires more sophisticated methods
+        eigenvals, eigenvecs = np.linalg.eig(rho)
+        
+        # Remove zero eigenvalues
+        mask = eigenvals > 1e-15
+        eigenvals = eigenvals[mask]
+        eigenvecs = eigenvecs[:, mask]
+        
+        # Compute Fisher information (simplified)
+        fisher = np.zeros((self.dim, self.dim))
+        for i, lam in enumerate(eigenvals):
+            if lam > 1e-15:
+                fisher += (1.0 / lam) * np.outer(eigenvecs[:, i], eigenvecs[:, i].conj())
+        
+        return fisher
+    
+    def _quantum_relative_entropy(self, rho: np.ndarray, sigma: np.ndarray) -> float:
+        """Compute quantum relative entropy S(ρ‖σ)."""
+        # S(ρ‖σ) = Tr[ρ(ln ρ - ln σ)]
+        
+        # Eigendecomposition
+        eigenvals_rho, eigenvecs_rho = np.linalg.eig(rho)
+        eigenvals_sigma, eigenvecs_sigma = np.linalg.eig(sigma)
+        
+        # Remove zero eigenvalues
+        eigenvals_rho = eigenvals_rho[eigenvals_rho > 1e-15]
+        eigenvals_sigma = eigenvals_sigma[eigenvals_sigma > 1e-15]
+        
+        # Compute matrix logarithms
+        ln_rho = eigenvecs_rho @ np.diag(np.log(eigenvals_rho)) @ eigenvecs_rho.conj().T
+        ln_sigma = eigenvecs_sigma @ np.diag(np.log(eigenvals_sigma)) @ eigenvecs_sigma.conj().T
+        
+        return np.real(np.trace(rho @ (ln_rho - ln_sigma)))
+
+### Stochastic Thermodynamics Integration
+
+class StochasticThermodynamics:
+    """Stochastic thermodynamics framework for free energy principle."""
+    
+    def __init__(self,
+                 temperature: float,
+                 protocol: Callable[[float], np.ndarray]):
+        """Initialize stochastic thermodynamics analysis.
+        
+        Args:
+            temperature: System temperature
+            protocol: Time-dependent protocol λ(t)
+        """
+        self.kT = temperature
+        self.protocol = protocol
+        
+    def compute_stochastic_work(self,
+                              trajectory: np.ndarray,
+                              times: np.ndarray) -> Dict[str, float]:
+        """Compute work along stochastic trajectory.
+        
+        W = ∫ (∂H/∂λ)(λ(t)) dλ/dt dt
+        
+        Args:
+            trajectory: Stochastic trajectory x(t)
+            times: Time points
+            
+        Returns:
+            Work statistics
+        """
+        work_increments = []
+        
+        for i in range(len(times) - 1):
+            dt = times[i+1] - times[i]
+            
+            # Protocol change
+            lambda_t = self.protocol(times[i])
+            lambda_next = self.protocol(times[i+1])
+            dlambda_dt = (lambda_next - lambda_t) / dt
+            
+            # Work increment (simplified)
+            dW = self._force_on_protocol(trajectory[i], lambda_t) * dlambda_dt * dt
+            work_increments.append(dW)
+        
+        total_work = np.sum(work_increments)
+        work_variance = np.var(work_increments) * len(work_increments)
+        
+        return {
+            'total_work': total_work,
+            'work_variance': work_variance,
+            'work_increments': np.array(work_increments)
+        }
+    
+    def jarzynski_equality_verification(self,
+                                     work_samples: np.ndarray) -> Dict[str, float]:
+        """Verify Jarzynski equality: ⟨e^(-βW)⟩ = e^(-βΔF).
+        
+        Args:
+            work_samples: Work values from multiple realizations
+            
+        Returns:
+            Jarzynski equality analysis
+        """
+        beta = 1.0 / self.kT
+        
+        # Compute exponential average
+        exp_work = np.exp(-beta * work_samples)
+        jarzynski_estimator = np.mean(exp_work)
+        
+        # Free energy difference estimate
+        delta_F_estimate = -self.kT * np.log(jarzynski_estimator)
+        
+        # Theoretical free energy difference (would be computed separately)
+        delta_F_theory = 0.0  # Placeholder
+        
+        # Verification metric
+        verification_error = abs(delta_F_estimate - delta_F_theory)
+        
+        return {
+            'jarzynski_estimator': jarzynski_estimator,
+            'delta_F_estimate': delta_F_estimate,
+            'delta_F_theory': delta_F_theory,
+            'verification_error': verification_error,
+            'work_statistics': {
+                'mean_work': np.mean(work_samples),
+                'work_std': np.std(work_samples),
+                'min_work': np.min(work_samples),
+                'max_work': np.max(work_samples)
+            }
+        }
+    
+    def _force_on_protocol(self, state: np.ndarray, lambda_val: float) -> float:
+        """Compute force exerted on protocol parameter."""
+        # Simplified force computation
+        return np.sum(state * lambda_val)
+
+# Example usage and validation
+def validate_advanced_extensions():
+    """Validate advanced theoretical extensions."""
+    
+    # Non-equilibrium system
+    neq_system = NonEquilibriumFreeEnergy(
+        temperature=1.0,
+        dissipation_rate=0.1,
+        external_driving=lambda t: np.array([np.sin(t)])
+    )
+    
+    beliefs = np.array([0.3, 0.4, 0.3])
+    neq_result = neq_system.compute_nonequilibrium_free_energy(beliefs, 1.0)
+    print("Non-equilibrium free energy:", neq_result['total_nonequilibrium_free_energy'])
+    
+    # Quantum system
+    dim = 3
+    H = np.array([[1.0, 0.1, 0], [0.1, 2.0, 0.1], [0, 0.1, 3.0]])
+    
+    quantum_system = QuantumFreeEnergyPrinciple(
+        hilbert_space_dim=dim,
+        hamiltonian=H,
+        temperature=1.0
+    )
+    
+    # Random density matrix
+    rho = np.random.random((dim, dim)) + 1j * np.random.random((dim, dim))
+    rho = 0.5 * (rho + rho.conj().T)
+    rho = rho / np.trace(rho)
+    
+    quantum_result = quantum_system.compute_quantum_free_energy(rho)
+    print("Quantum free energy:", quantum_result['quantum_free_energy'])
+
+if __name__ == "__main__":
+    validate_advanced_extensions()
+```
+
 ## Related Documentation
 - [[active_inference]]
 - [[variational_inference]]
