@@ -1,38 +1,73 @@
 ---
+
 title: Metaverse
+
 type: article
+
 status: stable
+
 created: 2024-03-25
+
 tags:
+
   - spatial-computing
+
   - virtual-reality
+
   - augmented-reality
+
   - mixed-reality
+
   - digital-worlds
+
   - systems
+
   - social-computing
+
   - spatial-web
+
 semantic_relations:
+
   - type: relates
+
     links:
+
       - [[knowledge_base/systems/spatial_web|Spatial Web]]
+
       - [[knowledge_base/systems/virtual_reality|Virtual Reality]]
+
       - [[knowledge_base/systems/augmented_reality|Augmented Reality]]
+
       - [[knowledge_base/systems/mixed_reality|Mixed Reality]]
+
       - [[knowledge_base/systems/digital_twins|Digital Twins]]
+
       - [[knowledge_base/systems/active_inference_spatial_applications|Active Inference in Spatial Applications]]
+
   - type: specializes
+
     links:
+
       - [[knowledge_base/systems/spatial_computing|Spatial Computing]]
+
   - type: prerequisite
+
     links:
+
       - [[knowledge_base/systems/virtual_reality|Virtual Reality]]
+
       - [[knowledge_base/systems/internet_of_things|Internet of Things]]
+
   - type: foundation
+
     links:
+
       - [[knowledge_base/systems/distributed_systems|Distributed Systems]]
+
       - [[knowledge_base/systems/computer_graphics|Computer Graphics]]
+
       - [[knowledge_base/cognitive/embodied_cognition|Embodied Cognition]]
+
 ---
 
 # Metaverse
@@ -580,31 +615,48 @@ As we continue this journey of connecting realities, the Metaverse offers both p
 ### 11.1 Foundational Works
 
 1. Stephenson, N. (1992). Snow Crash. Bantam Books.
-2. Castronova, E. (2005). Synthetic Worlds: The Business and Culture of Online Games. University of Chicago Press.
-3. Bailenson, J. (2018). Experience on Demand: What Virtual Reality Is, How It Works, and What It Can Do. W. W. Norton & Company.
-4. Ball, M. (2022). The Metaverse: And How It Will Revolutionize Everything. Liveright.
-5. Smart, J., Cascio, J., & Paffendorf, J. (2007). Metaverse Roadmap: Pathways to the 3D Web. Acceleration Studies Foundation.
+
+1. Castronova, E. (2005). Synthetic Worlds: The Business and Culture of Online Games. University of Chicago Press.
+
+1. Bailenson, J. (2018). Experience on Demand: What Virtual Reality Is, How It Works, and What It Can Do. W. W. Norton & Company.
+
+1. Ball, M. (2022). The Metaverse: And How It Will Revolutionize Everything. Liveright.
+
+1. Smart, J., Cascio, J., & Paffendorf, J. (2007). Metaverse Roadmap: Pathways to the 3D Web. Acceleration Studies Foundation.
 
 ### 11.2 Technical Resources
 
 1. Szeliski, R. (2022). Computer Vision: Algorithms and Applications. Springer.
-2. LaValle, S. M. (2016). Virtual Reality. Cambridge University Press. 
-3. Craig, A. B. (2013). Understanding Augmented Reality: Concepts and Applications. Morgan Kaufmann.
-4. Sherman, W. R., & Craig, A. B. (2018). Understanding Virtual Reality: Interface, Application, and Design. Morgan Kaufmann.
-5. Slater, M., & Sanchez-Vives, M. V. (2016). Enhancing Our Lives with Immersive Virtual Reality. Frontiers in Robotics and AI, 3, 74.
+
+1. LaValle, S. M. (2016). Virtual Reality. Cambridge University Press.
+
+1. Craig, A. B. (2013). Understanding Augmented Reality: Concepts and Applications. Morgan Kaufmann.
+
+1. Sherman, W. R., & Craig, A. B. (2018). Understanding Virtual Reality: Interface, Application, and Design. Morgan Kaufmann.
+
+1. Slater, M., & Sanchez-Vives, M. V. (2016). Enhancing Our Lives with Immersive Virtual Reality. Frontiers in Robotics and AI, 3, 74.
 
 ### 11.3 Active Inference and Cognitive Foundations
 
 1. Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
-2. Clark, A. (2016). Surfing Uncertainty: Prediction, Action, and the Embodied Mind. Oxford University Press.
-3. Seth, A. K. (2021). Being You: A New Science of Consciousness. Dutton.
-4. Ramstead, M. J. D., Kirchhoff, M. D., & Friston, K. J. (2020). A tale of two densities: Active inference is enactive inference. Adaptive Behavior, 28(4), 225-239.
-5. Williams, D. (2020). Predictive minds and small-scale models: Kenneth Craik's contribution to cognitive science. Philosophical Explorations, 23(2), 158-173.
+
+1. Clark, A. (2016). Surfing Uncertainty: Prediction, Action, and the Embodied Mind. Oxford University Press.
+
+1. Seth, A. K. (2021). Being You: A New Science of Consciousness. Dutton.
+
+1. Ramstead, M. J. D., Kirchhoff, M. D., & Friston, K. J. (2020). A tale of two densities: Active inference is enactive inference. Adaptive Behavior, 28(4), 225-239.
+
+1. Williams, D. (2020). Predictive minds and small-scale models: Kenneth Craik's contribution to cognitive science. Philosophical Explorations, 23(2), 158-173.
 
 ### 11.4 Social and Cultural Analysis
 
 1. Boellstorff, T. (2015). Coming of Age in Second Life: An Anthropologist Explores the Virtually Human. Princeton University Press.
-2. Yee, N. (2014). The Proteus Paradox: How Online Games and Virtual Worlds Change Us—And How They Don't. Yale University Press.
-3. Parkin, S. (2020). The Island of Missing Trees. Farrar, Straus and Giroux.
-4. Meadows, M. S. (2007). I, Avatar: The Culture and Consequences of Having a Second Life. New Riders.
-5. Chatfield, T. (2012). How to Thrive in the Digital Age. Pan Macmillan. 
+
+1. Yee, N. (2014). The Proteus Paradox: How Online Games and Virtual Worlds Change Us—And How They Don't. Yale University Press.
+
+1. Parkin, S. (2020). The Island of Missing Trees. Farrar, Straus and Giroux.
+
+1. Meadows, M. S. (2007). I, Avatar: The Culture and Consequences of Having a Second Life. New Riders.
+
+1. Chatfield, T. (2012). How to Thrive in the Digital Age. Pan Macmillan.
+

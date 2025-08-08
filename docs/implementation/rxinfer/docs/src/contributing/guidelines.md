@@ -17,6 +17,7 @@ Check the badge below to see if `RxInfer` can be installed on a Julia nightly ve
 We encourage proposals for new features. Before submitting a feature request, consider the following:
 
 - Determine if the feature necessitates changes to the core `RxInfer` code. If not, such as adding a factor node for a specific application, consider local extensions in your script/notebook or creating a separate repository for your extensions.
+
 - For feature implementations requiring significant changes to the core `RxInfer` code, open a [GitHub issue](https://github.com/reactivebayes/RxInfer.jl/issues) to discuss your proposal before proceeding with implementation. This allows for thorough deliberation and avoids investing time in features that may be challenging to integrate later on.
 
 ## Contributing code
@@ -25,13 +26,16 @@ We encourage proposals for new features. Before submitting a feature request, co
 
 For development purposes, it's recommended to use the `dev` command from the Julia package manager to install `RxInfer`. Use your fork's URL in the dev command to work on your forked version. For example:
 
-```
+```text
+
 ] dev git@github.com:your_username/RxInfer.jl.git
+
 ```
 
 The `dev` command clones `RxInfer` to `~/.julia/dev/RxInfer`. All local changes to `RxInfer` code will be reflected in imported code.
 
 !!! note
+
     It is also might be useful to install [Revise.jl](https://github.com/timholy/Revise.jl) package as it allows you to modify code and use the changes without restarting Julia.
 
 ### Core dependencies
@@ -41,13 +45,17 @@ The `dev` command clones `RxInfer` to `~/.julia/dev/RxInfer`. All local changes 
 ### Committing code
 
 We use the standard [GitHub Flow](https://guides.github.com/introduction/flow/) workflow where all contributions are added through pull requests. To contribute:
+
 - [Fork](https://guides.github.com/activities/forking/) the repository
+
 - Commit your contributions to your fork
+
 - Create a pull request on the `main` branch of the `RxInfer` repository.
 
 Before opening a pull request, ensure all tests pass without errors.
 
 !!! note
+
     Use `make test` and `make docs` commands to verify that all tests and documentation build correctly. See the `Makefile` section below for detailed command descriptions.
 
 ### Style conventions
@@ -55,12 +63,17 @@ Before opening a pull request, ensure all tests pass without errors.
 We use the default [Julia style guide](https://docs.julialang.org/en/v1/manual/style-guide/index.html). There are a couple of important points modifications to the Julia style guide to take into account:
 
 - Use 4 spaces for indentation
+
 - Type names use `UpperCamelCase`. For example: `AbstractFactorNode`, `RandomVariable`, etc..
+
 - Function names are `lowercase` with underscores, when necessary. For example: `activate!`, `randomvar`, `as_variable`, etc..
+
 - Variable names and function arguments use `snake_case`
+
 - The name of a method that modifies its argument(s) must end in `!`
 
 !!! note
+
     The `RxInfer` repository contains scripts to automatically format code according to our guidelines. Use `make format` command to fix code style. This command overwrites files. Use `make lint` to run a linting procedure without overwriting the actual source files.
 
 ### Unit tests
@@ -68,21 +81,27 @@ We use the default [Julia style guide](https://docs.julialang.org/en/v1/manual/s
 We use the test-driven development (TDD) methodology for `RxInfer` development. Aim for comprehensive test coverage, ensuring tests cover each piece of added code.
 
 All unit tests are located in the `/test/` directory. The `/test/` directory follows the structure of the `/src/` directory. Each test file should have the following filename format: `*_tests.jl`. Some tests are also present in `jldoctest` docs annotations directly in the source code.
+
 See [Julia's documentation](https://docs.julialang.org/en/v1/manual/documentation/index.html) about doctests.
 
 The tests can be evaluated by running following command in the Julia REPL:
 
-```
+```text
+
 ] test RxInfer
+
 ```
 
 In addition tests can be evaluated by running following command in the `RxInfer` root directory:
 
 ```bash
+
 make test
+
 ```
 
-!!! note 
+!!! note
+
     Use `make devtest` to use local `dev`-ed versions of the core packages.
 
 ### Makefile
@@ -90,15 +109,26 @@ make test
 `RxInfer.jl` uses `Makefile` for most common operations:
 
 - `make help`: Shows help snippet
+
 - `make test`: Run tests, supports extra arguments
+
   - `make test test_args="distributions:normal_mean_variance"` would run tests only from `distributions/test_normal_mean_variance.jl`
+
   - `make test test_args="distributions:normal_mean_variance models:lgssm"` would run tests both from `distributions/test_normal_mean_variance.jl` and `models/test_lgssm.jl`
+
   - `make test dev=true` would run tests while using `dev-ed` versions of core packages
+
 - `make devtest`: Alias for the `make test dev=true ...`
+
 - `make docs`: Compile documentation
+
 - `make devdocs`: Same as `make docs`, but uses `dev-ed` versions of core packages
+
 - `make lint`: Check codestyle
-- `make format`: Check and fix codestyle 
+
+- `make format`: Check and fix codestyle
 
 !!! note
+
     Core packages include `ReactiveMP.jl`, `GraphPPL.jl` and `Rocket.jl`. When using any of the `dev` commands from the `Makefile` those packages must be present in the `Pkg.devdir()` directory.
+

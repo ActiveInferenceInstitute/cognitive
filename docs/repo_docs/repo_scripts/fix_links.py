@@ -1,6 +1,7 @@
 import json
 import csv
 from pathlib import Path
+import argparse
 from typing import Dict, Set, List, Tuple
 import re
 from collections import defaultdict
@@ -50,7 +51,10 @@ class LinkAnalyzer:
             raise
 
     def _get_existing_files(self) -> Set[str]:
-        """Get set of existing file paths."""
+        """Get set of existing file paths.
+
+        Uses the CSV which stores paths relative to the analyzed root.
+        """
         return {f['path'] for f in self.files}
 
     def _build_link_graph(self) -> Dict[str, Set[str]]:
@@ -67,8 +71,13 @@ class LinkAnalyzer:
         broken_links = defaultdict(set)
         for source, targets in self.link_graph.items():
             for target in targets:
-                target_path = f"knowledge_base/{target}.md"
-                if target_path not in self.existing_files:
+                # Allow links to targets that may live under multiple roots (knowledge_base or docs)
+                candidate_paths = [
+                    f"knowledge_base/{target}.md",
+                    f"docs/{target}.md",
+                    f"{target}.md",
+                ]
+                if not any(cp in self.existing_files for cp in candidate_paths):
                     broken_links[source].add(target)
         return dict(broken_links)
 
@@ -91,10 +100,16 @@ class LinkAnalyzer:
         missing_backlinks = defaultdict(set)
         for source, targets in self.link_graph.items():
             for target in targets:
-                target_path = f"knowledge_base/{target}.md"
-                if target_path in self.existing_files:
-                    if source not in self.link_graph.get(target_path, set()):
-                        missing_backlinks[target_path].add(source)
+                possible_targets = [
+                    f"knowledge_base/{target}.md",
+                    f"docs/{target}.md",
+                    f"{target}.md",
+                ]
+                for target_path in possible_targets:
+                    if target_path in self.existing_files:
+                        if source not in self.link_graph.get(target_path, set()):
+                            missing_backlinks[target_path].add(source)
+                        break
         return dict(missing_backlinks)
 
     def _similarity_score(self, a: str, b: str) -> float:
@@ -175,12 +190,12 @@ semantic_relations:
 [TODO: Add content]
 """
 
-    def apply_fixes(self, fixes: Dict[str, List[Dict]], kb_root: Path) -> List[Dict]:
+    def apply_fixes(self, fixes: Dict[str, List[Dict]], repo_root: Path) -> List[Dict]:
         """Apply suggested fixes to the knowledge base."""
         changes = []
         
         for source, file_fixes in fixes.items():
-            source_path = kb_root / source.lstrip('/')
+            source_path = repo_root / source.lstrip('/')
             if not source_path.exists():
                 continue
                 
@@ -192,7 +207,9 @@ semantic_relations:
                     if fix['suggestions']:
                         # Replace broken link with first suggestion
                         old_link = f"[[{fix['target']}]]"
-                        new_link = f"[[{Path(fix['suggestions'][0]).stem}]]"
+                        # Keep only the stem without directories or extension for wikilink
+                        suggestion_stem = Path(fix['suggestions'][0]).stem
+                        new_link = f"[[{suggestion_stem}]]"
                         if old_link in content:
                             content = content.replace(old_link, new_link)
                             modified = True
@@ -204,7 +221,8 @@ semantic_relations:
                             })
                     else:
                         # Create new file for broken link
-                        new_file = kb_root / f"{fix['target']}.md"
+                        # Prefer knowledge_base/ for new knowledge pages
+                        new_file = repo_root / f"knowledge_base/{fix['target']}.md"
                         if not new_file.exists():
                             new_file.parent.mkdir(parents=True, exist_ok=True)
                             new_file.write_text(
@@ -217,7 +235,7 @@ semantic_relations:
                             })
                 
                 elif fix['type'] == 'missing_backlink':
-                    target_path = kb_root / fix['target'].lstrip('/')
+                    target_path = repo_root / fix['target'].lstrip('/')
                     if target_path.exists():
                         target_content = target_path.read_text(encoding='utf-8')
                         # Add backlink in semantic_relations
@@ -416,12 +434,26 @@ semantic_relations:
         
         return '\n'.join(report)
 
+def _default_repo_root(script_dir: Path) -> Path:
+    """Infer the repository root from this script's location."""
+    try:
+        return script_dir.parents[2]
+    except Exception:
+        return script_dir
+
+
 def main():
     """Main function to analyze and fix links."""
     script_dir = Path(__file__).parent
-    output_dir = script_dir / 'output'
-    kb_root = script_dir.parent / 'knowledge_base'
-    
+
+    parser = argparse.ArgumentParser(description="Analyze and fix wikilinks across the repository.")
+    parser.add_argument("--root", type=str, default=None, help="Repository root to operate on. Defaults to inferred repo root.")
+    parser.add_argument("--output", type=str, default=None, help="Output directory for reports. Defaults to <this_script_dir>/output.")
+    args = parser.parse_args()
+
+    output_dir = Path(args.output) if args.output else (script_dir / 'output')
+    repo_root = Path(args.root) if args.root else _default_repo_root(script_dir)
+
     start_time = time.time()
     
     print("\n🔍 Knowledge Base Link Analysis")
@@ -436,7 +468,7 @@ def main():
         pbar.update(1)
         
         print("\n🛠️  Applying fixes...")
-        changes = analyzer.apply_fixes(fixes, kb_root)
+        changes = analyzer.apply_fixes(fixes, repo_root)
         pbar.update(1)
         
         print("\n📝 Generating reports...")

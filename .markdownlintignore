@@ -1,0 +1,11 @@
+node_modules/
+**/venv/**
+**/.venv/**
+**/.obsidian/**
+**/Output/**
+**/output/**
+**/outputs/**
+**/dist/**
+**/build/**
+**/.cache/**
+

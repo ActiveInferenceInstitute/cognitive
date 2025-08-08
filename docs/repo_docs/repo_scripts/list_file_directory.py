@@ -4,6 +4,7 @@ import csv
 import mimetypes
 import re
 from pathlib import Path
+import argparse
 from typing import Dict, List, Set
 from datetime import datetime
 from tqdm import tqdm
@@ -285,29 +286,44 @@ def print_structure(structure: Dict) -> None:
     
     print("\n" + "=" * 40)
 
+def _default_repo_root(script_dir: Path) -> Path:
+    """Infer the repository root from this script's location.
+
+    The script lives in docs/repo_docs/repo_scripts. Going three parents up
+    reaches the repo root (repo_scripts -> repo_docs -> docs -> REPO_ROOT).
+    """
+    try:
+        return script_dir.parents[2]
+    except Exception:
+        return script_dir
+
+
 def main():
     """Main function to run the directory analysis."""
     start_time = time.time()
-    
-    # Get the script's directory
+
     script_dir = Path(__file__).parent
-    
-    # Analyze the parent directory (knowledge base root)
-    kb_dir = script_dir.parent
-    
-    print("\n🔍 Knowledge Base Directory Analysis")
+
+    parser = argparse.ArgumentParser(description="Analyze repository directory structure and wikilinks.")
+    parser.add_argument("--root", type=str, default=None, help="Path to repository/documentation root to analyze. Defaults to repo root inferred from script location.")
+    parser.add_argument("--output", type=str, default=None, help="Output directory for reports. Defaults to <this_script_dir>/output.")
+    args = parser.parse_args()
+
+    root_dir = Path(args.root) if args.root else _default_repo_root(script_dir)
+
+    print("\n🔍 Knowledge Base / Documentation Directory Analysis")
     print("=" * 40)
-    
-    print(f"\n📂 Analyzing directory: {kb_dir}")
-    structure = list_files_in_directory(kb_dir)
-    
+
+    print(f"\n📂 Analyzing directory: {root_dir}")
+    structure = list_files_in_directory(root_dir)
+
     # Create output directory
-    output_dir = script_dir / 'output'
+    output_dir = Path(args.output) if args.output else (script_dir / 'output')
     export_structure(structure, output_dir)
-    
+
     # Also print to console
     print_structure(structure)
-    
+
     end_time = time.time()
     duration = end_time - start_time
     print(f"\n✨ Analysis completed in {duration:.2f}s\n")
