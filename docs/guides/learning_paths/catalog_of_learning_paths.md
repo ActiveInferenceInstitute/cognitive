@@ -29,46 +29,6 @@ authors:
 
 This catalog presents our comprehensive collection of Active Inference learning paths, each designed as an **educational curriculum** that prioritizes learning outcomes over technical implementation. Every path follows our educational framework ensuring optimal learning experiences.
 
-### Educational Design Standards
-
-All learning paths in this catalog adhere to our core educational principles:
-
-- **40% Theoretical Foundation**: Conceptual understanding and knowledge building
-
-- **35% Practical Application**: Guided exercises and real-world case studies
-
-- **15% Assessment & Reflection**: Knowledge validation and skill demonstration
-
-- **10% Technical Reference**: Minimal, education-focused implementation examples
-
-### Quick Links
-
-- [[index|Learning Paths Index]]
-
-- [[navigation_framework_implementation|Navigation Framework Implementation]]
-
-- [[../../knowledge_base/mathematics/cross_reference_map|Knowledge Base Cross-Reference Map]]
-
-- [[../../knowledge_base/mathematics/mathematics_resources|Mathematics Resources Hub]]
-
-- [[../../knowledge_base/mathematics/worked_examples_index|Worked Examples (VFE/EFE)]]
-
-- External web gateways: see “Centralized External Web Resources Hub” at the end of this page
-
-### Knowledge Base Hubs
-
-- **Mathematics foundations**: [[../../knowledge_base/mathematics/variational_free_energy]] · [[../../knowledge_base/mathematics/expected_free_energy]] · [[../../knowledge_base/mathematics/policy_selection]] · [[../../knowledge_base/mathematics/precision_parameter]] · [[../../knowledge_base/mathematics/softmax_function]] · [[../../knowledge_base/mathematics/numerical_stability]] · [[../../knowledge_base/mathematics/message_passing]] · [[../../knowledge_base/mathematics/bethe_free_energy]]
-
-- **Cognitive science**: [[../../knowledge_base/cognitive/predictive_coding]] · [[../../knowledge_base/cognitive/active_inference]] · [[../../knowledge_base/cognitive/attention_mechanisms]] · [[../../knowledge_base/cognitive/markov_blanket]]
-
-- **Systems and biology**: [[../../knowledge_base/biology/levels_of_organization]] · [[../../knowledge_base/systems/systems_theory]] · [[../../knowledge_base/systems/ecosystem_management]]
-
-### Ontologies and Search
-
-- **Ontology bridges**: [[../../knowledge_base/mathematics/msc_skos|MSC (SKOS)]] · [[../../knowledge_base/mathematics/ontomathpro_ontology|OntoMathPRO]] · [[../../knowledge_base/mathematics/mathgloss_knowledge_graph|MathGloss]]
-
-- **How to tag**: See [[../../knowledge_base/mathematics/mathematics_resources#ontology-and-tagging|Mathematics Resources → Ontology and tagging]]
-
 ## Core Learning Paths
 
 ### 1. Foundation Paths
@@ -442,6 +402,93 @@ All learning paths in this catalog adhere to our core educational principles:
   - Understand uncertainty quantification
 
   - Apply to insurance products
+
+### 7. Extended and Specialized Paths
+
+#### [[active_inference_cognitive_systems_integration_path|Cognitive Systems Integration Path]]
+- Integrates cognitive architectures with systems engineering for multi-module coherence
+
+#### [[active_inference_edge_cognitive_systems_path|Edge Cognitive Systems Path]]
+- Resource-aware Active Inference on embedded and edge devices
+
+#### [[active_inference_environmental_applications_path|Environmental Applications Path]]
+- Environmental decision support and ecological stewardship scenarios
+
+#### [[active_inference_experience_method_path|Experience Method Path]]
+- Learning-by-doing and reflective practice within Active Inference curricula
+
+#### [[active_inference_fuller_learning_path|Fuller Learning Path]]
+- Design-science heuristics (Fuller) fused with adaptive inference-driven planning
+
+#### [[active_inference_information_theory_learning_path|Information Theory Path]]
+- Information-theoretic foundations and educational applications
+
+#### [[active_inference_myrmecology_learning_path|Myrmecology Path]]
+- Ant colony science for collective intelligence and stigmergic coordination
+
+#### [[active_inference_observation_learning_path|Observation Path]]
+- Rigorous observation, measurement, and evidence integration for model refinement
+
+#### [[active_inference_pragmatism_learning_path|Pragmatism Path]]
+- Pragmatist inquiry for action under uncertainty and concept clarification
+
+#### [[active_inference_quantum_cognitive_systems_path|Quantum Cognitive Systems Path]]
+- Quantum cognition perspectives and bridges to Active Inference
+
+#### [[active_inference_resilient_systems_path|Resilient Systems Path]]
+- Robustness, graceful degradation, and recovery in complex adaptive systems
+
+#### [[active_inference_security_cognitive_systems_path|Security for Cognitive Systems Path]]
+- Cognitive-system-specific threat models and protective design patterns
+
+#### [[active_inference_social_science_abm_learning_path|Social Science ABM Path]]
+- Agent-based modeling for social systems analysis and policy experiments
+
+#### [[active_inference_social_systems_learning_path|Social Systems (Extended) Path]]
+- Organizational and institutional lenses on social modeling
+
+#### [[active_inference_spatial_web_path|Spatial Web Path]]
+- Spatial computing standards and embodied Active Inference experiences
+
+#### [[active_inference_whose_on_first_learning_path|Who’s on First Path]]
+- Playful disambiguation, shared context, and communication in learning
+
+## Complete Alphabetical Index (requested set)
+
+- [[active_inference_agi_learning_path]]
+- [[active_inference_bio_inspired_cognitive_systems_path]]
+- [[active_inference_biological_learning_path]]
+- [[active_inference_cognitive_learning_path]]
+- [[active_inference_cognitive_systems_integration_path]]
+- [[active_inference_computational_learning_path]]
+- [[active_inference_ecological_learning_path]]
+- [[active_inference_economic_learning_path]]
+- [[active_inference_edge_cognitive_systems_path]]
+- [[active_inference_educational_programs_path]]
+- [[active_inference_environmental_applications_path]]
+- [[active_inference_ethics_learning_path]]
+- [[active_inference_experience_method_path]]
+- [[active_inference_fuller_learning_path]]
+- [[active_inference_information_theory_learning_path]]
+- [[active_inference_learning_path]]
+- [[active_inference_mathematical_learning_path]]
+- [[active_inference_myrmecology_learning_path]]
+- [[active_inference_neuroscience_learning_path]]
+- [[active_inference_observation_learning_path]]
+- [[active_inference_pragmatism_learning_path]]
+- [[active_inference_quantum_cognitive_systems_path]]
+- [[active_inference_quantum_learning_path]]
+- [[active_inference_resilient_systems_path]]
+- [[active_inference_robotics_learning_path]]
+- [[active_inference_security_cognitive_systems_path]]
+- [[active_inference_security_learning_path]]
+- [[active_inference_simulation_learning_path]]
+- [[active_inference_social_learning_path]]
+- [[active_inference_social_science_abm_learning_path]]
+- [[active_inference_social_systems_learning_path]]
+- [[active_inference_spatial_web_path]]
+- [[active_inference_underwriting_learning_path]]
+- [[active_inference_whose_on_first_learning_path]]
 
 ## Educational Progression Framework
 
