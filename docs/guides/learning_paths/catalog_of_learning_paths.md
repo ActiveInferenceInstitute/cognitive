@@ -406,51 +406,67 @@ This catalog presents our comprehensive collection of Active Inference learning 
 ### 7. Extended and Specialized Paths
 
 #### [[active_inference_cognitive_systems_integration_path|Cognitive Systems Integration Path]]
+
 - Integrates cognitive architectures with systems engineering for multi-module coherence
 
 #### [[active_inference_edge_cognitive_systems_path|Edge Cognitive Systems Path]]
+
 - Resource-aware Active Inference on embedded and edge devices
 
 #### [[active_inference_environmental_applications_path|Environmental Applications Path]]
+
 - Environmental decision support and ecological stewardship scenarios
 
 #### [[active_inference_experience_method_path|Experience Method Path]]
+
 - Learning-by-doing and reflective practice within Active Inference curricula
 
 #### [[active_inference_fuller_learning_path|Fuller Learning Path]]
+
 - Design-science heuristics (Fuller) fused with adaptive inference-driven planning
 
 #### [[active_inference_information_theory_learning_path|Information Theory Path]]
+
 - Information-theoretic foundations and educational applications
 
 #### [[active_inference_myrmecology_learning_path|Myrmecology Path]]
+
 - Ant colony science for collective intelligence and stigmergic coordination
 
 #### [[active_inference_observation_learning_path|Observation Path]]
+
 - Rigorous observation, measurement, and evidence integration for model refinement
 
 #### [[active_inference_pragmatism_learning_path|Pragmatism Path]]
+
 - Pragmatist inquiry for action under uncertainty and concept clarification
 
 #### [[active_inference_quantum_cognitive_systems_path|Quantum Cognitive Systems Path]]
+
 - Quantum cognition perspectives and bridges to Active Inference
 
 #### [[active_inference_resilient_systems_path|Resilient Systems Path]]
+
 - Robustness, graceful degradation, and recovery in complex adaptive systems
 
 #### [[active_inference_security_cognitive_systems_path|Security for Cognitive Systems Path]]
+
 - Cognitive-system-specific threat models and protective design patterns
 
 #### [[active_inference_social_science_abm_learning_path|Social Science ABM Path]]
+
 - Agent-based modeling for social systems analysis and policy experiments
 
 #### [[active_inference_social_systems_learning_path|Social Systems (Extended) Path]]
+
 - Organizational and institutional lenses on social modeling
 
 #### [[active_inference_spatial_web_path|Spatial Web Path]]
+
 - Spatial computing standards and embodied Active Inference experiences
 
 #### [[active_inference_whose_on_first_learning_path|Who’s on First Path]]
+
 - Playful disambiguation, shared context, and communication in learning
 
 ## Complete Alphabetical Index (requested set)
@@ -804,4 +820,3 @@ python3 /home/trim/Documents/GitHub/cognitive/Things/BioFirm/active_inference/di
 python3 /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/ant_colony/main.py --config /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/config/colony_config.yaml
 python3 -m pytest /home/trim/Documents/GitHub/cognitive/tests/visualization/test_continuous_generic.py -q
 ```
-

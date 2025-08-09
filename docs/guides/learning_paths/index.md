@@ -7,7 +7,7 @@ type: index
 status: stable
 
 created: 2024-02-07
-modified: 2025-08-08
+modified: 2025-08-09
 
 tags:
 
@@ -31,7 +31,100 @@ semantic_relations:
 
 ---
 
-# Learning Paths Index
+#
+
+## Browse Learning Paths
+
+### Foundation Paths
+
+- [[active_inference_learning_path|Active Inference Core Path]]
+- [[active_inference_mathematical_learning_path|Mathematical Foundations Path]]
+- [[active_inference_cognitive_learning_path|Cognitive Science Integration Path]]
+- [[active_inference_information_theory_learning_path|Information Theory Path]]
+
+### Domain Application Paths
+
+- [[active_inference_neuroscience_learning_path|Neuroscience Applications Path]]
+- [[active_inference_robotics_learning_path|Robotics and Embodied AI Path]]
+- [[active_inference_social_learning_path|Social Systems Path]]
+- [[active_inference_economic_learning_path|Economic Applications Path]]
+
+### Advanced Specialization Paths
+
+- [[active_inference_agi_learning_path|AGI and Superintelligence Path]]
+- [[active_inference_quantum_learning_path|Quantum Cognitive Systems Path]]
+- [[active_inference_security_learning_path|Security and Robustness Path]]
+
+### Interdisciplinary and Integration Paths
+
+- [[active_inference_biological_learning_path|Biological Intelligence Path]]
+- [[active_inference_bio_inspired_cognitive_systems_path|Bio-Inspired Systems Path]]
+- [[active_inference_ecological_learning_path|Ecological Systems Path]]
+- [[active_inference_cognitive_systems_integration_path|Cognitive Systems Integration Path]]
+- [[active_inference_spatial_web_path|Spatial Web Path]]
+
+### Computational and Technical Paths
+
+- [[active_inference_computational_learning_path|Computational Methods Path]]
+- [[active_inference_simulation_learning_path|Simulation and Modeling Path]]
+- [[active_inference_edge_cognitive_systems_path|Edge Cognitive Systems Path]]
+
+### Applied and Professional Paths
+
+- [[active_inference_educational_programs_path|Educational Applications Path]]
+- [[active_inference_ethics_learning_path|Ethics and Responsible AI Path]]
+- [[active_inference_underwriting_learning_path|Insurance and Risk Assessment Path]]
+- [[active_inference_environmental_applications_path|Environmental Applications Path]]
+
+### Extended and Specialized Paths
+
+- [[active_inference_experience_method_path|Experience Method Path]]
+- [[active_inference_fuller_learning_path|Fuller Learning Path]]
+- [[active_inference_myrmecology_learning_path|Myrmecology Path]]
+- [[active_inference_observation_learning_path|Observation Path]]
+- [[active_inference_pragmatism_learning_path|Pragmatism Path]]
+- [[active_inference_quantum_cognitive_systems_path|Quantum Cognitive Systems (Extended) Path]]
+- [[active_inference_resilient_systems_path|Resilient Systems Path]]
+- [[active_inference_security_cognitive_systems_path|Security for Cognitive Systems Path]]
+- [[active_inference_social_science_abm_learning_path|Social Science ABM Path]]
+- [[active_inference_social_systems_learning_path|Social Systems (Extended) Path]]
+
+## All Learning Paths (A–Z)
+
+- [[active_inference_agi_learning_path]]
+- [[active_inference_bio_inspired_cognitive_systems_path]]
+- [[active_inference_biological_learning_path]]
+- [[active_inference_cognitive_learning_path]]
+- [[active_inference_cognitive_systems_integration_path]]
+- [[active_inference_computational_learning_path]]
+- [[active_inference_ecological_learning_path]]
+- [[active_inference_economic_learning_path]]
+- [[active_inference_edge_cognitive_systems_path]]
+- [[active_inference_educational_programs_path]]
+- [[active_inference_environmental_applications_path]]
+- [[active_inference_ethics_learning_path]]
+- [[active_inference_experience_method_path]]
+- [[active_inference_fuller_learning_path]]
+- [[active_inference_information_theory_learning_path]]
+- [[active_inference_learning_path]]
+- [[active_inference_mathematical_learning_path]]
+- [[active_inference_myrmecology_learning_path]]
+- [[active_inference_neuroscience_learning_path]]
+- [[active_inference_observation_learning_path]]
+- [[active_inference_pragmatism_learning_path]]
+- [[active_inference_quantum_cognitive_systems_path]]
+- [[active_inference_quantum_learning_path]]
+- [[active_inference_resilient_systems_path]]
+- [[active_inference_robotics_learning_path]]
+- [[active_inference_security_cognitive_systems_path]]
+- [[active_inference_security_learning_path]]
+- [[active_inference_simulation_learning_path]]
+- [[active_inference_social_learning_path]]
+- [[active_inference_social_science_abm_learning_path]]
+- [[active_inference_social_systems_learning_path]]
+- [[active_inference_spatial_web_path]]
+- [[active_inference_underwriting_learning_path]]
+- [[active_inference_whose_on_first_learning_path]]
 
 ## Core Learning Paths
 
