@@ -2,7 +2,7 @@
 
 title: Convergence Control in Variational and Policy Optimization
 
-type: concept
+type: mathematical_concept
 
 status: draft
 

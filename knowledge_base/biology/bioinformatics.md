@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[information_theory]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -38,6 +40,8 @@ semantic_relations:
 
       - [[machine_learning]]
 
+      - [[../agents/architectures_overview]]
+
   - type: relates
 
     links:
@@ -47,6 +51,8 @@ semantic_relations:
       - [[systems_biology]]
 
       - [[genetics]]
+
+      - [[bioinformatics]]
 
 ---
 
@@ -448,11 +454,24 @@ class DataIntegration:
 
 ### 3. Multi-omics Integration
 
-- Genomics
+- Genomics and population genetics
+- Transcriptomics and gene expression
+- Proteomics and protein function
+- Metabolomics and metabolic networks
+- Microbiomics and microbial communities
 
-- Transcriptomics
+### 4. Agent-Based Modeling
 
-- Proteomics
+- **Bioinformatics Agents**: Automated data analysis and hypothesis generation
+- **Learning Agents**: Adaptive machine learning for biological discovery
+- **Network Agents**: Dynamic network inference and analysis
+- **Integration Agents**: Multi-modal data fusion and interpretation
+
+### 5. Active Inference Applications
+
+- **Predictive Biology**: Forecasting biological behaviors and outcomes
+- **Adaptive Experimentation**: Optimal experimental design and execution
+- **Knowledge Discovery**: Automated hypothesis generation and testing
 
 ## Advanced Mathematical Extensions
 
@@ -522,6 +541,84 @@ class DataIntegration:
 
 ```
 
+### 4. Modern Computational Methods
+
+```math
+
+\begin{aligned}
+
+& \text{Deep Learning for Sequences:} \\
+
+& h_l = \sigma(W_l h_{l-1} + b_l) \\
+
+& \text{Attention Mechanisms:} \\
+
+& A(Q,K,V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V \\
+
+& \text{Graph Neural Networks:} \\
+
+& h_v^{(l+1)} = \sigma\left(W^{(l)} \sum_{u \in \mathcal{N}(v)} \frac{h_u^{(l)}}{|\mathcal{N}(v)|} + B^{(l)} h_v^{(l)}\right)
+
+\end{aligned}
+
+```
+
+### 5. Active Inference in Computational Biology
+
+```python
+
+class BioinformaticsActiveInference:
+    """Active Inference for biological data analysis"""
+
+    def __init__(self):
+        self.data_model = BiologicalDataModel()
+        self.inference_engine = VariationalInference()
+        self.experiment_design = OptimalExperimentDesign()
+        self.hypothesis_generation = AutomatedHypothesisGeneration()
+
+    def analyze_biological_data(self, dataset: Dict, prior_knowledge: Dict) -> Dict:
+        """Perform Active Inference analysis of biological data"""
+        # Initialize generative model
+        model = self.data_model.initialize_model(dataset, prior_knowledge)
+
+        # Perform variational inference
+        posterior = self.inference_engine.infer_posterior(model, dataset)
+
+        # Compute expected free energy
+        EFE = self.compute_expected_free_energy(posterior, model)
+
+        # Generate hypotheses
+        hypotheses = self.hypothesis_generation.generate_hypotheses(
+            posterior, EFE
+        )
+
+        # Design optimal experiments
+        experiments = self.experiment_design.design_experiments(
+            hypotheses, EFE
+        )
+
+        return {
+            'posterior': posterior,
+            'free_energy': EFE,
+            'hypotheses': hypotheses,
+            'experiments': experiments
+        }
+
+    def compute_expected_free_energy(self, posterior: Dict, model: Dict) -> float:
+        """Compute expected free energy for biological model"""
+        # Epistemic affordance
+        epistemic = self.compute_epistemic_affordance(posterior, model)
+
+        # Extrinsic value
+        extrinsic = self.compute_extrinsic_value(posterior, model)
+
+        # Pragmatic value
+        pragmatic = self.compute_pragmatic_value(posterior, model)
+
+        return epistemic + extrinsic - pragmatic
+
+```
+
 ## Implementation Considerations
 
 ### 1. Computational Methods
@@ -548,25 +645,48 @@ class DataIntegration:
 
 - Documentation
 
+## Cross-References
+
+### Related Biological Concepts
+- [[genetics|Genetics]] - Genetic data analysis
+- [[molecular_biology|Molecular Biology]] - Sequence and structure analysis
+- [[systems_biology|Systems Biology]] - Network modeling
+- [[metabolic_networks|Metabolic Networks]] - Pathway analysis
+- [[gene_regulatory_networks|Gene Regulatory Networks]] - Regulatory inference
+
+### Computational Methods
+- [[../mathematics/machine_learning|Machine Learning]] - Learning algorithms
+- [[../mathematics/information_theory|Information Theory]] - Data analysis
+- [[../mathematics/network_theory|Network Theory]] - Network analysis
+
+### Agent Architecture Applications
+- [[../../tools/src/models/active_inference/|Active Inference Models]]
+- [[../../docs/examples/|Bioinformatics Agent Examples]]
+- [[../../docs/implementation/|Computational Biology Methods]]
+
 ## References
 
+### Foundational Texts
 - [[durbin_1998]] - "Biological Sequence Analysis"
+- [[mount_2004]] - "Bioinformatics: Sequence and Genome Analysis"
+- [[baxevanis_2005]] - "Bioinformatics and Functional Genomics"
 
+### Machine Learning Methods
 - [[bishop_2006]] - "Pattern Recognition and Machine Learning"
-
-- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
-
+- [[murphy_2012]] - "Machine Learning: A Probabilistic Perspective"
 - [[nielsen_2015]] - "Neural Networks and Deep Learning"
+
+### Active Inference Applications
+- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
+- [[parr_2022]] - "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior"
+- [[buckley_2017]] - "The Free Energy Principle for Action and Perception"
 
 ## See Also
 
 - [[active_inference]]
-
 - [[free_energy_principle]]
-
 - [[machine_learning]]
-
 - [[systems_biology]]
-
 - [[computational_biology]]
+- [[../agents/architectures_overview]]
 

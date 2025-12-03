@@ -2,7 +2,7 @@
 
 title: Markov Random Fields
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

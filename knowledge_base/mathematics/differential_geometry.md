@@ -748,7 +748,7 @@ efficiency_methods = {
 
 title: Differential Geometry
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

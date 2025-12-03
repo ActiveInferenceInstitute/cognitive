@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[cell_differentiation]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -38,6 +40,8 @@ semantic_relations:
 
       - [[cellular_automata]]
 
+      - [[../agents/architectures_overview]]
+
   - type: relates
 
     links:
@@ -47,6 +51,8 @@ semantic_relations:
       - [[ecological_dynamics]]
 
       - [[systems_biology]]
+
+      - [[developmental_networks]]
 
 ---
 
@@ -460,11 +466,22 @@ Cell state transitions:
 
 ### 3. Synthetic Development
 
-- Artificial morphogenesis
+- Artificial morphogenesis and biofabrication
+- Engineered tissues and organoids
+- Developmental programming and synthetic biology
 
-- Engineered tissues
+### 4. Morphogenesis Examples
 
-- Developmental programming
+- **Drosophila Embryogenesis**: Segment formation and Hox gene patterning
+- **Vertebrate Limb Development**: Growth factor gradients and skeletal patterning
+- **Neural Tube Formation**: Cell migration and tissue folding
+- **Heart Development**: Chamber formation and valve morphogenesis
+
+### 5. Active Inference in Development
+
+- Predictive tissue patterning
+- Adaptive developmental trajectories
+- Homeostatic developmental control
 
 ## Advanced Mathematical Extensions
 

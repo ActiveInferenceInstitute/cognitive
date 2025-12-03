@@ -2,7 +2,7 @@
 
 title: Non-Equilibrium Thermodynamics
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

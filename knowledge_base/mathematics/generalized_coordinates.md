@@ -1,3 +1,30 @@
+---
+title: Generalized Coordinates
+type: mathematical_concept
+id: generalized_coordinates_001
+created: 2024-02-05
+modified: 2025-12-03
+tags: [active-inference, continuous-time, dynamical-systems, generalized-coordinates, temporal-dynamics]
+aliases: [generalized-coordinates, higher-order-dynamics, continuous-state-space]
+semantic_relations:
+  - type: foundation
+    links:
+      - [[dynamical_systems]]
+      - [[differential_equations]]
+      - [[hamiltonian_mechanics]]
+      - [[lagrangian_mechanics]]
+  - type: implements
+    links:
+      - [[active_inference_theory]]
+      - [[continuous_time_agent]]
+      - [[path_integral_theory]]
+  - type: relates
+    links:
+      - [[advanced_taylor_series]]
+      - [[generalized_motion]]
+      - [[temporal_dynamics]]
+---
+
 # Generalized Coordinates in Active Inference
 
 ## Overview

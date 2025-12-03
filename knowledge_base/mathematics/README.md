@@ -1,563 +1,406 @@
 ---
-
-title: Mathematics Knowledge Base
-
+title: Mathematical Foundations
 type: index
-
-status: active
-
-created: 2025-05-26
-
+status: stable
+created: 2025-01-01
+updated: 2025-01-01
 tags:
-
   - mathematics
-
-  - index
-
-  - knowledge_base
-
+  - foundations
+  - active_inference
+  - free_energy
+  - probability
 semantic_relations:
-
-  - type: index_for
-
+  - type: organizes
     links:
-
-      - [[../cognitive/active_inference]]
-
-      - [[../agents/]]
-
-      - [[../systems/]]
-
+      - [[probability_theory]]
+      - [[information_theory]]
+      - [[free_energy_principle]]
+      - [[variational_inference]]
+      - [[active_inference_theory]]
 ---
 
-# Mathematics Knowledge Base
+# Mathematical Foundations
 
 ## Overview
 
-This knowledge base provides comprehensive mathematical foundations for active inference, cognitive modeling, and computational neuroscience. The content is organized hierarchically from fundamental concepts to advanced applications with extensive cross-linking.
-
-```mermaid
-
-graph TB
-
-    subgraph "Core Foundations"
-
-        A[Statistical Foundations]
-
-        B[Probability Theory]
-
-        C[Information Theory]
-
-        D[Bayesian Methods]
-
-    end
-
-    subgraph "Geometric Structures"
-
-        E[Differential Geometry]
-
-        F[Information Geometry]
-
-        G[Riemannian Manifolds]
-
-        H[Symplectic Geometry]
-
-    end
-
-    subgraph "Dynamical Systems"
-
-        I[Stochastic Processes]
-
-        J[Differential Equations]
-
-        K[Control Theory]
-
-        L[Optimization]
-
-    end
-
-    subgraph "Active Inference"
-
-        M[Free Energy Principle]
-
-        N[Active Inference Theory]
-
-        O[Policy Selection]
-
-        P[Belief Updating]
-
-    end
-
-    A --> M
-
-    B --> N
-
-    C --> O
-
-    D --> P
-
-    E --> F
-
-    F --> M
-
-    I --> J
-
-    J --> K
-
-    K --> L
-
-    L --> O
-
-```
-
-## Quick Navigation
-
-### 🎯 Most Important Concepts
-
-- [[free_energy_principle]] - Core theoretical foundation
-
-- [[active_inference_theory]] - Unified framework
-
-- [[variational_inference]] - Key computational method
-
-- [[information_geometry]] - Geometric perspective
-
-- [[bayesian_inference]] - Statistical foundation
-
-### 🚀 Getting Started
-
-1. **Beginners**: Start with [[statistical_foundations]] → [[probability_theory]] → [[bayes_theorem]]
-
-1. **Intermediate**: [[variational_inference]] → [[message_passing]] → [[free_energy_principle]]
-
-1. **Advanced**: [[information_geometry]] → [[path_integral_theory]] → [[geometric_active_inference]]
-
-## Content Organization
-
-### 📊 Foundational Mathematics
-
-#### Statistical Foundations
-
-- [[statistical_foundations]] - Core statistical concepts and methods
-
-- [[probability_theory]] - Probability spaces, measures, and distributions
-
-- [[bayes_theorem]] - Bayesian inference fundamentals
-
-- [[statistical_physics]] - Thermodynamic connections
-
-#### Information Theory
-
-- [[information_theory]] - Entropy, mutual information, and coding
-
-- [[information_geometry]] - Geometric structures on statistical manifolds
-
-- [[kl_divergence]] - Divergence measures and properties
-
-- [[fisher_information]] - Information metrics and gradients
-
-### 🎯 Core Active Inference
-
-#### Theoretical Framework
-
-- [[free_energy_principle]] - Fundamental organizing principle
-
-- [[active_inference_theory]] - Complete theoretical framework
-
-- [[variational_free_energy]] - Energy functionals and bounds
-
-- [[expected_free_energy]] - Planning and policy selection
-
-#### Computational Methods
-
-- [[variational_inference]] - Approximate inference methods
-
-- [[message_passing]] - Belief propagation algorithms
-
-- [[belief_updating]] - Posterior computation
-
-- [[policy_selection]] - Action selection mechanisms
-
-### 📐 Geometric Perspectives
-
-#### Differential Geometry
-
-- [[differential_geometry]] - Manifolds, tangent spaces, connections
-
-- [[riemannian_geometry]] - Metric structures and geodesics
-
-- [[symplectic_geometry]] - Hamiltonian structures
-
-- [[contact_geometry]] - Odd-dimensional contact structures
+The mathematical foundations knowledge base provides comprehensive theoretical and practical resources for Active Inference and cognitive modeling. This collection of 140+ documents spans probability theory, information theory, dynamical systems, optimization, geometry, and advanced mathematical concepts essential for understanding and implementing sophisticated cognitive systems.
+
+## Key Features
+
+- **📚 Comprehensive Coverage**: 140+ interconnected mathematical concepts
+- **🔗 Semantic Cross-References**: Rich linking between related concepts
+- **💻 Implementation Examples**: Working code examples in Python
+- **🎯 Active Inference Focus**: Specialized mathematical foundations for AI
+- **📖 Progressive Learning**: Structured pathways from basics to advanced topics
+- **🔬 Research Integration**: Direct connections to implementation examples
+
+## Quick Start
+
+### For Beginners
+1. Start with [[probability_theory]] and [[information_theory]]
+2. Learn [[variational_inference]] and [[free_energy_principle]]
+3. Explore [[active_inference_theory]] and core concepts
+
+### For Researchers
+1. Review [[active_inference_pomdp]] for mathematical formulations
+2. Study [[path_integral_theory]] for advanced inference
+3. Examine [[geometric_active_inference]] for geometric approaches
+
+### For Implementers
+1. Check [[active_inference_loop]] for core algorithms
+2. Review [[compute_vfe]] and [[compute_efe]] for implementations
+3. Study [[message_passing]] for scalable inference
+
+## 📐 Core Mathematical Domains
+
+### Probability and Statistics
+
+#### Probability Theory Foundations
+- [[probability_theory]] - Fundamental probability concepts and axioms
+- [[probability_distributions]] - Common distributions and their properties
+- [[statistical_foundations]] - Statistical inference principles
+- [[bayesian_networks]] - Bayesian reasoning and updating
+
+#### Advanced Probabilistic Methods
+- [[probabilistic_models|Probabilistic Models]] - Model-based probabilistic reasoning
+- [[probabilistic_graphical_models|Probabilistic Graphical Models]] - Graph-based probabilistic representations
+- [[stochastic_processes|Stochastic Processes]] - Random processes and their analysis
+- [[stochastic_optimization|Stochastic Optimization]] - Optimization under uncertainty
+
+### Information Theory
+
+#### Information Measures
+- [[information_theory|Information Theory]] - Shannon's information theory foundations
+- [[mutual_information|Mutual Information]] - Information shared between variables
+- [[information_gain|Information Gain]] - Information-theoretic decision making
+- [[entropy_estimators|Mutual Information Estimators]] - Practical estimation techniques
 
 #### Information Geometry
+- [[information_geometry|Information Geometry]] - Geometric approaches to information
+- [[metric_geometry|Metric Geometry]] - Distance and metric concepts in information spaces
+- [[synergetic_information_geometry|Synergetic Information Geometry]] - Synergetic approaches
+- [[tensegrity_information_geometry|Tensegrity Information Geometry]] - Structural information geometry
 
-- [[information_geometry]] - Statistical manifolds and metrics
+### Variational Methods
 
-- [[fisher_information]] - Information metrics
+#### Variational Inference
+- [[variational_inference|Variational Inference]] - Approximate Bayesian inference
+- [[variational_free_energy|Variational Free Energy]] - Variational free energy principles
+- [[variational_methods|Variational Methods]] - General variational techniques
+- [[variational_calculus|Variational Calculus]] - Calculus of variations
+- [[variational_bounds|Variational Bounds]] - Bounds and approximations
 
-- [[natural_gradients]] - Geometric optimization
+#### Active Inference Mathematics
+- [[active_inference_theory|Active Inference Theory]] - Mathematical foundations of Active Inference
+- [[expected_free_energy|Expected Free Energy]] - EFE computation and optimization
+- [[free_energy_principle|Free Energy Principle]] - Foundational principle
+- [[free_energy|Free Energy]] - Free energy formulations
+- [[free_energy_theory|Free Energy Theory]] - Theoretical developments
 
-- [[geodesics]] - Optimal paths on manifolds
+### Optimization and Control
 
-### 🌊 Dynamical Systems
+#### Optimization Theory
+- [[optimization_theory|Optimization Theory]] - General optimization principles
+- [[optimization_strategies|Optimization Strategies]] - Practical optimization approaches
+- [[stochastic_optimization|Stochastic Optimization]] - Optimization under uncertainty
+- [[hyperparameter_optimization|Hyperparameter Optimization]] - Parameter optimization
 
-#### Stochastic Processes
+#### Optimal Control
+- [[optimal_control|Optimal Control]] - Control theory foundations
+- [[policy_search_methods|Policy Search Methods]] - Policy optimization techniques
+- [[policy_selection|Policy Selection]] - Action selection mechanisms
 
-- [[stochastic_processes]] - Random processes and martingales
+### Dynamical Systems
 
-- [[markov_processes]] - Markovian dynamics
+#### System Dynamics
+- [[dynamical_systems|Dynamical Systems]] - Dynamic system theory
+- [[measure_theoretic_active_inference|Measure-Theoretic Active Inference]] - Measure theory in AI
+- [[path_integral_theory|Path Integral Theory]] - Path integral methods
+- [[path_integral_free_energy|Path Integral Free Energy]] - Path integrals and free energy
 
-- [[diffusion_processes]] - Continuous-time processes
+#### Geometric Methods
+- [[geometric_mechanics|Geometric Mechanics]] - Geometric approaches to mechanics
+- [[hamiltonian_mechanics|Hamiltonian Mechanics]] - Hamiltonian formulations
+- [[lagrangian_mechanics|Lagrangian Mechanics]] - Lagrangian approaches
+- [[symplectic_geometry|Symplectic Geometry]] - Symplectic geometric methods
 
-- [[jump_processes]] - Discrete-time transitions
+### Advanced Mathematics
 
-#### Control and Optimization
+#### Geometric Structures
+- [[topology|Topology]] - Topological concepts and applications
+- [[differential_geometry|Differential Geometry]] - Geometric analysis
+- [[riemannian_geometry|Riemannian Geometry]] - Riemannian manifolds
+- [[sub_riemannian_geometry|Sub-Riemannian Geometry]] - Sub-Riemannian structures
 
-- [[control_theory]] - Optimal control and regulation
+#### Advanced Analysis
+- [[functional_analysis|Functional Analysis]] - Function space analysis
+- [[measure_theory|Measure Theory]] - Measure-theoretic foundations
+- [[non_equilibrium_thermodynamics|Non-Equilibrium Thermodynamics]] - Non-equilibrium processes
+- [[statistical_physics|Statistical Physics]] - Statistical mechanical approaches
 
-- [[optimization_theory]] - Convex and non-convex optimization
+## 🧮 Active Inference Mathematics
 
-- [[stochastic_optimization]] - Stochastic gradient methods
+### Core Active Inference Components
 
-- [[variational_methods]] - Calculus of variations
+#### Generative Models
+- [[generative_models|Generative Models]] - Internal world models
+- [[markov_blanket|Markov Blanket]] - Conditional independence boundaries
+- [[hierarchical_models|Hierarchical Models]] - Multi-level model structures
 
-### 🔗 Graph Theory and Networks
+#### Inference Mechanisms
+- [[message_passing|Message Passing]] - Belief propagation algorithms
+- [[belief_propagation|Belief Propagation]] - Probabilistic inference
+- [[factor_graphs|Factor Graphs]] - Graphical model representations
 
-#### Probabilistic Models
+#### Learning and Adaptation
+- [[learning_visualization|Learning Visualization]] - Learning process visualization
+- [[natural_gradients|Natural Gradients]] - Natural gradient optimization
+- [[precision_parameter|Precision Parameter]] - Precision weighting mechanisms
 
-- [[probabilistic_graphical_models]] - Unified framework
+## 📊 Mathematical Tools and Techniques
 
-- [[bayesian_networks]] - Directed acyclic graphs
+### Computational Methods
+- [[numerical_methods|Numerical Methods]] - Numerical computation techniques
+- [[numerical_stability|Numerical Stability]] - Stable numerical algorithms
+- [[numerical_taylor_methods|Numerical Taylor Methods]] - Taylor series approximations
 
-- [[markov_random_fields]] - Undirected graphs
+### Statistical Computing
+- [[statistical_computing_implementations|Statistical Computing]] - Computational statistics
+- [[parameter_tuning|Parameter Tuning]] - Parameter optimization techniques
+- [[sensitivity_analysis|Sensitivity Analysis]] - Parameter sensitivity analysis
 
-- [[factor_graphs]] - Bipartite factor representations
+### Special Functions and Transforms
+- [[softmax_function|Softmax Function]] - Softmax transformations
+- [[path_integral_implementations|Path Integral Implementations]] - Path integral computations
+- [[path_integral_bridge|Path Integral Bridge]] - Path integral connections
 
-#### Network Analysis
+## 🔬 Research Mathematics
 
-- [[graph_theory]] - Graph structures and algorithms
+### Advanced Theoretical Developments
+- [[geometric_active_inference|Geometric Active Inference]] - Geometric approaches to AI
+- [[measure_theoretic_active_inference|Measure-Theoretic Active Inference]] - Measure theory applications
+- [[stochastic_active_inference|Stochastic Active Inference]] - Stochastic formulations
 
-- [[network_science]] - Complex network properties
+### Interdisciplinary Mathematics
+- [[mathematical_foundations_ai_fep|AI & FEP Foundations]] - AI and free energy foundations
+- [[ontomathpro_ontology|OntoMathPro Ontology]] - Mathematical knowledge organization
+- [[mathematics_resources|Mathematics Resources]] - Mathematical resource collections
 
-- [[spectral_graph_theory]] - Eigenvalue methods
+## 📚 Learning Pathways
 
-- [[random_graphs]] - Probabilistic graph models
+### 🟢 Beginner Level (4-6 weeks)
+Focus on fundamental concepts and basic Active Inference understanding.
 
-### 🧮 Advanced Mathematics
+#### Core Sequence
+1. **[[probability_theory|Probability Theory]]** - Foundation of uncertainty quantification
+2. **[[information_theory|Information Theory]]** - Information measures and communication
+3. **[[variational_inference|Variational Inference]]** - Approximate Bayesian computation
+4. **[[free_energy_principle|Free Energy Principle]]** - Core principle of self-organization
 
-#### Path Integrals
+#### Supplementary Topics
+- [[bayes_theorem|Bayes' Theorem]] - Probabilistic updating
+- [[entropy|Entropy]] - Information and uncertainty measures
+- [[kl_divergence|KL Divergence]] - Distribution comparison
 
-- [[path_integral_theory]] - Feynman path integrals
+### 🟡 Intermediate Level (8-12 weeks)
+Build understanding of Active Inference mechanisms and optimization.
 
-- [[path_integral_free_energy]] - Path integral formulations
+#### Core Sequence
+1. **[[active_inference_theory|Active Inference Theory]]** - Unification of perception and action
+2. **[[expected_free_energy|Expected Free Energy]]** - Decision-making objective
+3. **[[optimization_theory|Optimization Theory]]** - Mathematical optimization foundations
+4. **[[dynamical_systems|Dynamical Systems]]** - Time evolution and stability
 
-- [[path_integral_implementations]] - Computational methods
+#### Implementation Focus
+- [[active_inference_loop|Active Inference Loop]] - Core perception-action cycle
+- [[policy_selection|Policy Selection]] - Action choice mechanisms
+- [[belief_updating|Belief Updating]] - State estimation
 
-- [[quantum_field_connections]] - QFT analogies
+### 🟠 Advanced Level (12+ weeks)
+Master sophisticated mathematical techniques and research frontiers.
 
-#### Measure Theory
+#### Theoretical Depth
+1. **[[path_integral_theory|Path Integral Theory]]** - Continuous-time inference
+2. **[[geometric_mechanics|Geometric Mechanics]]** - Geometric formulations
+3. **[[information_geometry|Information Geometry]]** - Statistical manifold theory
+4. **[[non_equilibrium_thermodynamics|Non-Equilibrium Thermodynamics]]** - Irreversible processes
 
-- [[measure_theory]] - Measure spaces and integration
+#### Research Frontiers
+- [[geometric_active_inference|Geometric Active Inference]] - Riemannian approaches
+- [[stochastic_active_inference|Stochastic Active Inference]] - Stochastic formulations
+- [[measure_theoretic_active_inference|Measure-Theoretic Active Inference]] - Measure theory applications
 
-- [[measure_theoretic_active_inference]] - Rigorous foundations
+### 🎯 Specialized Pathways
 
-- [[stochastic_calculus]] - Ito calculus and SDEs
+#### For Machine Learning Practitioners
+1. [[probabilistic_graphical_models|Probabilistic Graphical Models]]
+2. [[variational_free_energy|Variational Free Energy]]
+3. [[natural_gradients|Natural Gradients]]
+4. [[bayesian_generative_models|Bayesian Generative Models]]
 
-- [[martingale_theory]] - Martingales and stopping times
+#### For Control Systems Engineers
+1. [[optimal_control|Optimal Control]]
+2. [[policy_search_methods|Policy Search Methods]]
+3. [[stochastic_control|Stochastic Control]]
+4. [[robust_control|Robust Control]]
 
-### 🏗️ Computational Implementation
+#### For Cognitive Scientists
+1. [[predictive_coding|Predictive Coding]]
+2. [[hierarchical_inference|Hierarchical Inference]]
+3. [[precision_weighting|Precision Weighting]]
+4. [[attention_mechanisms|Attention Mechanisms]]
 
-#### Core Implementations
+## 🛠️ Mathematical Software and Tools
 
-- [[statistical_computing_implementations]] - Complete statistical computing library
+### Implementation Resources
+- [[worked_examples_index|Worked Examples Index]] - Practical mathematical examples
+- [[worked_example_vfe|Variational Free Energy Example]] - VFE worked example
+- [[worked_example_efe|Expected Free Energy Example]] - EFE worked example
+- [[vfe_components|Variational Free Energy Components]] - VFE component analysis
 
-- [[path_integral_implementations]] - Advanced path integral methods
+### Computational Frameworks
+- [[mathematical_foundations|Mathematical Foundations]] - General mathematical frameworks
+- [[mathematics_resources|Mathematics Resources]] - Software and tool resources
+- [[statistical_computing_implementations|Statistical Computing]] - Computational implementations
 
-- [[message_passing]] - Comprehensive message passing algorithms
+## 📖 Key Mathematical Concepts
 
-- [[numerical_methods]] - General computational algorithms
+### Fundamental Concepts
+- **Free Energy Principle**: Systems minimize variational free energy
+- **Active Inference**: Action as inference, perception as prediction
+- **Markov Blankets**: Boundaries of conditional independence
+- **Variational Inference**: Approximate Bayesian inference
 
-#### Numerical Methods
+### Advanced Concepts
+- **Path Integrals**: Continuous-time probabilistic inference
+- **Information Geometry**: Geometric structure of probability spaces
+- **Natural Gradients**: Fisher information-based optimization
+- **Precision Weighting**: Attention and salience mechanisms
 
-- [[monte_carlo_methods]] - Sampling techniques
+## 🔗 Related Documentation
 
-- [[finite_element_methods]] - Discretization approaches
+### Implementation Applications
+- [[../../Things/Generic_Thing/README|Generic Thing]] - Core mathematical implementations
+- [[../../Things/Simple_POMDP/README|Simple POMDP]] - Basic probabilistic implementations
+- [[../../Things/Generic_POMDP/README|Generic POMDP]] - Advanced mathematical agents
+- [[../../Things/Continuous_Generic/README|Continuous Generic]] - Continuous mathematics
 
-- [[spectral_methods]] - Fourier and spectral techniques
+### Theoretical Integration
+- [[../cognitive/active_inference|Active Inference Theory]]
+- [[../cognitive/free_energy_principle|Cognitive Free Energy]]
+- [[../cognitive/predictive_processing|Predictive Processing]]
+- [[../systems/complex_systems|Complex Systems]]
 
-- [[optimization_algorithms]] - Numerical optimization
+### Research Resources
+- [[../../docs/research/|Research Documentation]]
+- [[../../tools/README|Mathematical Tools]]
+- [[../../docs/guides/implementation_guides|Implementation Mathematics]]
 
-#### Algorithmic Foundations
+## 🔗 Cross-References
 
-- [[automatic_differentiation]] - Gradient computation
+### Mathematical Categories
+- **Probability**: [[probability_theory]], [[bayesian_inference]], [[stochastic_processes]]
+- **Information**: [[information_theory]], [[information_geometry]], [[mutual_information]]
+- **Optimization**: [[optimization_theory]], [[stochastic_optimization]], [[natural_gradients]]
+- **Dynamics**: [[dynamical_systems]], [[geometric_mechanics]], [[path_integral_theory]]
 
-- [[parallel_algorithms]] - Distributed computation
+### Active Inference Mathematics
+- **Core Theory**: [[free_energy_principle]], [[active_inference_theory]], [[expected_free_energy]]
+- **Inference**: [[variational_inference]], [[message_passing]], [[belief_propagation]]
+- **Learning**: [[precision_parameter]], [[learning_visualization]], [[parameter_tuning]]
 
-- [[gpu_computation]] - Hardware acceleration
+## 🤝 Contributing
 
-- [[numerical_stability]] - Robust computation
+### Adding New Mathematical Concepts
 
-## Quality Metrics
+1. **Create the File**: Use the standard naming convention (lowercase, underscores)
+2. **Add Metadata**: Include complete YAML header with semantic relations
+3. **Structure Content**: Follow the established format with theory, implementations, and examples
+4. **Cross-Reference**: Add bidirectional links to related concepts
+5. **Validate**: Ensure all links work and content is mathematically sound
 
-### Documentation Standards
+### Quality Standards
 
-- ✅ Mathematical rigor and precision
+- **Mathematical Rigor**: All claims must be mathematically justified
+- **Implementation**: Include working code examples where applicable
+- **Documentation**: Provide clear explanations and references
+- **Cross-References**: Link to related concepts using semantic relations
+- **Updates**: Keep content current with latest research developments
 
-- ✅ Extensive cross-linking
-
-- ✅ Implementation examples
-
-- ✅ Practical applications
-
-- ✅ Visual diagrams and plots
-
-### Content Assessment
+### File Template
 
 ```yaml
+---
+title: Concept Name
+type: mathematical_concept
+id: concept_name_001
+created: 2025-12-03
+modified: 2025-12-03
+tags: [mathematics, relevant-tags]
+aliases: [alternative-names]
+semantic_relations:
+  - type: foundation
+    links: [related-foundations]
+  - type: implements
+    links: [what-this-implements]
+  - type: relates
+    links: [related-concepts]
+---
 
-completeness: 95%
+# Concept Name
 
-accuracy: 98%
+## Overview
+Brief description of the concept and its importance.
 
-cross_linking: 90%
+## Mathematical Formulation
+Core mathematical definitions and theorems.
 
-implementation_coverage: 85%
+## Implementation
+Working code examples and algorithms.
 
-visualization: 80%
+## Applications
+How the concept is used in practice.
 
+## References
+Academic and research references.
 ```
 
-## Learning Paths
-
-### 🎓 Academic Path
-
-1. **Mathematics Foundations**
-
-   - [[calculus]] → [[linear_algebra]] → [[real_analysis]]
-
-   - [[probability_theory]] → [[measure_theory]] → [[stochastic_processes]]
-
-1. **Information Theory**
-
-   - [[information_theory]] → [[information_geometry]] → [[fisher_information]]
-
-   - [[entropy]] → [[mutual_information]] → [[kl_divergence]]
-
-1. **Active Inference Theory**
-
-   - [[bayes_theorem]] → [[variational_inference]] → [[free_energy_principle]]
-
-   - [[active_inference_theory]] → [[policy_selection]] → [[hierarchical_inference]]
-
-### 🛠️ Practical Implementation Path
-
-1. **Computational Foundations**
-
-   - [[numerical_methods]] → [[optimization_theory]] → [[variational_methods]]
-
-   - [[monte_carlo_methods]] → [[importance_sampling]] → [[particle_methods]]
-
-1. **Algorithm Development**
-
-   - [[message_passing]] → [[belief_propagation]] → [[expectation_maximization]]
-
-   - [[natural_gradients]] → [[stochastic_optimization]] → [[adaptive_methods]]
-
-1. **System Integration**
-
-   - [[software_architecture]] → [[parallel_computation]] → [[gpu_acceleration]]
-
-   - [[testing_validation]] → [[performance_optimization]] → [[deployment]]
-
-### 🔬 Research Path
-
-1. **Theoretical Extensions**
-
-   - [[category_theory]] → [[topos_theory]] → [[homotopy_type_theory]]
-
-   - [[geometric_mechanics]] → [[field_theory]] → [[gauge_theory]]
-
-1. **Novel Applications**
-
-   - [[quantum_information]] → [[quantum_computation]] → [[quantum_inference]]
-
-   - [[neuromorphic_computation]] → [[spiking_networks]] → [[embodied_cognition]]
-
-## Integration with Other Domains
-
-### 🧠 Neuroscience
-
-- [[computational_neuroscience]] - Brain modeling applications
-
-- [[neural_coding]] - Information encoding in neurons
-
-- [[brain_dynamics]] - Neural network dynamics
-
-- [[consciousness_models]] - Mathematical theories of consciousness
-
-### 🤖 Artificial Intelligence
-
-- [[machine_learning]] - Statistical learning theory
-
-- [[deep_learning]] - Neural network architectures
-
-- [[reinforcement_learning]] - Sequential decision making
-
-- [[robotics]] - Embodied AI systems
-
-### 🧬 Biology
-
-- [[systems_biology]] - Biological system modeling
-
-- [[evolution_theory]] - Evolutionary dynamics
-
-- [[ecology]] - Ecosystem modeling
-
-- [[biophysics]] - Physical principles in biology
-
-### 🏢 Economics and Social Sciences
-
-- [[game_theory]] - Strategic interactions
-
-- [[behavioral_economics]] - Decision making models
-
-- [[social_networks]] - Social system dynamics
-
-- [[cultural_evolution]] - Cultural transmission models
-
-## Contributing Guidelines
-
-### Content Standards
-
-1. **Mathematical Rigor**: All mathematical content should be precise and well-defined
-
-1. **Cross-References**: Liberal use of [[links]] to related concepts
-
-1. **Examples**: Include concrete examples and applications
-
-1. **Implementations**: Provide code examples where appropriate
-
-1. **Visualizations**: Use diagrams, plots, and animations when helpful
-
-### File Organization
-
-```text
-
-knowledge_base/mathematics/
-
-├── foundations/          # Basic mathematical concepts
-
-├── geometry/            # Geometric structures and methods
-
-├── stochastic/          # Probability and stochastic processes
-
-├── inference/           # Bayesian and variational methods
-
-├── optimization/        # Optimization and control theory
-
-├── networks/           # Graph theory and networks
-
-├── implementations/    # Code and algorithms
-
-└── applications/       # Domain-specific applications
-
-```
+## 🔧 Maintenance
+
+### Regular Updates
+- Review and update cross-references quarterly
+- Validate all mathematical claims and implementations
+- Update metadata and semantic relations as needed
+- Incorporate new research developments
 
 ### Quality Assurance
+- Automated link checking
+- Mathematical proof validation
+- Code example testing
+- Cross-reference consistency verification
 
-- **Peer Review**: All content reviewed by domain experts
-
-- **Validation**: Mathematical proofs and derivations checked
-
-- **Testing**: Code examples tested and validated
-
-- **Updates**: Regular updates based on latest research
-
-## Recent Developments
-
-### 2025 Updates
-
-- **[[statistical_computing_implementations]]**: Complete implementation library with working examples
-
-- **Enhanced [[message_passing]]**: Comprehensive algorithmic treatment with applications
-
-- **Improved [[statistical_foundations]]**: Rigorous mathematical treatment with proofs
-
-- **Extended [[cross_reference_map]]**: Enhanced navigation and linking system
-
-### Implementation Highlights
-
-- **Theory-Practice Integration**: Mathematical concepts directly linked to working code
-
-- **Comprehensive Examples**: Bayesian inference, information theory, and optimization
-
-- **Quality Assurance**: Extensive testing and validation procedures
-
-- **Cross-Reference Network**: Improved bidirectional linking throughout knowledge base
-
-### 2024 Updates
-
-- **Enhanced Path Integral Methods**: New computational approaches
-
-- **Geometric Deep Learning**: Integration with modern ML
-
-- **Quantum Extensions**: Quantum information perspectives
-
-- **Neuromorphic Computing**: Brain-inspired architectures
-
-### Upcoming Features
-
-- **Interactive Visualizations**: Dynamic mathematical plots
-
-- **Computational Notebooks**: Jupyter integration
-
-- **Video Tutorials**: Multimedia learning resources
-
-- **Assessment Tools**: Self-testing and validation
-
-## External Resources
-
-### Reference Materials
-
-- **Textbooks**: Curated list of essential mathematical texts
-
-- **Papers**: Key research papers and reviews
-
-- **Software**: Mathematical software and libraries
-
-- **Datasets**: Example datasets for testing and validation
-
-### Ontologies and Standards
-
-- [[msc_skos]] — Mathematics Subject Classification as SKOS (search/interop)
-
-- [[ontomathpro_ontology]] — Broad mathematics ontology for semantic apps
-
-- [[mathgloss_knowledge_graph]] — Knowledge graph for undergraduate math
-
-### Resource Hubs
-
-- [[mathematics_resources]] — Curated external links, datasets, courses, tools
-
-### Community
-
-- **Discussion Forums**: Mathematical discussion and Q&A
-
-- **Study Groups**: Collaborative learning opportunities
-
-- **Conferences**: Relevant academic conferences
-
-- **Workshops**: Hands-on training sessions
+### Version Control
+- All changes tracked with clear commit messages
+- Major updates versioned appropriately
+- Breaking changes communicated clearly
 
 ---
 
-**Navigation**: Use the links above to explore specific topics, or browse the file tree for a complete listing of available content. For implementation examples, see the `/implementations/` directory. For applications, see `/applications/`.
+> **Comprehensive Foundations**: 140+ mathematical documents providing complete theoretical foundations for Active Inference and cognitive modeling.
 
 ---
 
-> [!note] Open Source and Licensing
-> Repository: [ActiveInferenceInstitute/cognitive](https://github.com/ActiveInferenceInstitute/cognitive)
-> - Documentation and knowledge base content: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-> - Code and examples: MIT License (see `LICENSE`)
+> **Progressive Learning**: Structured learning paths from basic probability to advanced geometric and dynamical systems mathematics with specialized pathways for different backgrounds.
 
+---
+
+> **Research Integration**: Mathematical concepts directly connected to implementation examples and research applications with comprehensive cross-referencing.
+
+---
+
+> **Quality Assurance**: Standardized metadata, semantic relations, and contribution guidelines ensure high-quality, maintainable documentation.
+
+---
+
+> **Implementation Focus**: Working code examples and algorithms throughout the knowledge base enable practical application of theoretical concepts.

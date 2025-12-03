@@ -1,3 +1,29 @@
+---
+title: Renormalization Group
+type: mathematical_concept
+id: renormalization_group_001
+created: 2024-02-05
+modified: 2025-12-03
+tags: [physics, statistical-mechanics, generative-models, scale-invariance, bayesian-inference]
+aliases: [renormalization-group, RG-theory, scale-transformations]
+semantic_relations:
+  - type: foundation
+    links:
+      - [[statistical_physics]]
+      - [[quantum_field_theory]]
+      - [[statistical_mechanics]]
+  - type: implements
+    links:
+      - [[bayesian_inference]]
+      - [[generative_models]]
+      - [[coarse_graining]]
+  - type: relates
+    links:
+      - [[information_theory]]
+      - [[bayesian_renormalization]]
+      - [[critical_phenomena]]
+---
+
 # Renormalization Group and Generative Models
 
 [[Renormalization Groups]] (RG) and [[Generative Models]] are two powerful frameworks that, despite originating from distinct fields—[[statistical_physics|statistical physics]] and [[machine_learning|machine learning]] respectively—share deep conceptual connections. Recent research has increasingly highlighted the intersection between RG methods and [[bayesian_inference|Bayesian inference]], revealing a rich theoretical structure that unifies [[statistical_foundations|statistical inference]], [[information_theory|information theory]], and physical [[coarse-graining]] processes.

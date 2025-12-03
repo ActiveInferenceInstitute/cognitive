@@ -2,7 +2,7 @@
 
 title: Calculus
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

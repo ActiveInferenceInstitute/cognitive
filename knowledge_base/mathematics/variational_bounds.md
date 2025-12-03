@@ -2,7 +2,7 @@
 
 title: Variational Bounds and ELBO
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

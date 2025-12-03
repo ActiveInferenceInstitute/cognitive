@@ -2,7 +2,7 @@
 
 title: Policy Search Methods (Active Inference Lens)
 
-type: concept
+type: mathematical_concept
 
 status: draft
 

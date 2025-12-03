@@ -2,7 +2,7 @@
 
 title: Geometric Mechanics
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

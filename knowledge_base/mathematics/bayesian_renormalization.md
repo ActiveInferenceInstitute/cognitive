@@ -2,7 +2,7 @@
 
 title: Bayesian Renormalization
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

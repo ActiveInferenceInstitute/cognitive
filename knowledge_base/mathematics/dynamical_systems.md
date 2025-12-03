@@ -2,7 +2,7 @@
 
 title: Dynamical Systems
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

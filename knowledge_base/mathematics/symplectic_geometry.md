@@ -2,7 +2,7 @@
 
 title: Symplectic Geometry
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

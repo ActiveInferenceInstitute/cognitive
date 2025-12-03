@@ -2,7 +2,7 @@
 
 title: Factor Graphs
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

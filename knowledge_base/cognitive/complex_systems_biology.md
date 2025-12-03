@@ -26,7 +26,7 @@ semantic_relations:
 
   - type: implements
 
-    links: [[complex_systems]]
+    links: [[../systems/systems_theory]]
 
   - type: related
 

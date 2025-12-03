@@ -2,7 +2,7 @@
 
 title: Complex Geometry
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

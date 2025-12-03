@@ -2,7 +2,7 @@
 
 title: Bayesian Generative Models
 
-type: concept
+type: mathematical_concept
 
 status: draft
 

@@ -568,6 +568,295 @@ for step in range(max_steps):
 
 ```
 
+## Advanced Agent Architectures
+
+### Multi-Agent Active Inference
+```python
+class MultiAgentActiveInference:
+    """Multi-agent active inference system."""
+
+    def __init__(self, n_agents, shared_model=True):
+        self.n_agents = n_agents
+        self.shared_model = shared_model
+
+        # Initialize individual agents
+        self.agents = [ActiveInferenceAgent(config) for _ in range(n_agents)]
+
+        # Shared or individual generative models
+        if shared_model:
+            self.shared_generative_model = GenerativeModel(shared_config)
+        else:
+            self.generative_models = [GenerativeModel(config) for _ in range(n_agents)]
+
+        # Social inference components
+        self.social_inference = SocialInferenceEngine()
+        self.coordination_mechanism = CoordinationMechanism()
+
+    def multi_agent_step(self, observations, social_context):
+        """Perform multi-agent active inference step."""
+
+        # Individual agent processing
+        individual_actions = []
+        individual_beliefs = []
+
+        for i, agent in enumerate(self.agents):
+            action, beliefs = agent.step(observations[i])
+            individual_actions.append(action)
+            individual_beliefs.append(beliefs)
+
+        # Social inference and coordination
+        social_influence = self.social_inference.compute_social_influence(
+            individual_beliefs, social_context
+        )
+
+        coordinated_actions = self.coordination_mechanism.coordinate_actions(
+            individual_actions, social_influence
+        )
+
+        return coordinated_actions, {
+            'individual_actions': individual_actions,
+            'individual_beliefs': individual_beliefs,
+            'social_influence': social_influence
+        }
+```
+
+### Meta-Learning Active Inference Agent
+```python
+class MetaLearningActiveInferenceAgent(ActiveInferenceAgent):
+    """Agent that learns how to learn using active inference."""
+
+    def __init__(self, config):
+        super().__init__(config)
+
+        # Meta-learning components
+        self.meta_model = MetaGenerativeModel()
+        self.learning_strategy_optimizer = LearningStrategyOptimizer()
+        self.meta_beliefs = {}  # Beliefs about learning strategies
+
+    def meta_learn(self, task_distribution, n_episodes=100):
+        """Meta-learn across multiple tasks."""
+
+        meta_performance_history = []
+
+        for episode in range(n_episodes):
+            # Sample task from distribution
+            task = task_distribution.sample()
+
+            # Adapt learning strategy for this task
+            adapted_strategy = self.adapt_learning_strategy(task)
+
+            # Learn on task with adapted strategy
+            task_performance = self.learn_task_with_strategy(task, adapted_strategy)
+
+            # Update meta-beliefs
+            self.update_meta_beliefs(task, adapted_strategy, task_performance)
+
+            meta_performance_history.append(task_performance)
+
+        return meta_performance_history
+
+    def adapt_learning_strategy(self, task):
+        """Adapt learning strategy based on task characteristics."""
+        # Use meta-beliefs to select optimal learning parameters
+        task_features = self.extract_task_features(task)
+
+        optimal_strategy = self.meta_model.infer_optimal_strategy(task_features)
+
+        return optimal_strategy
+
+    def learn_task_with_strategy(self, task, strategy):
+        """Learn a specific task using given strategy."""
+        # Apply learning strategy (e.g., different learning rates, architectures)
+        performance = []
+
+        for trial in range(task.n_trials):
+            # Update agent using strategy-specific parameters
+            trial_performance = self.trial_with_strategy(task, strategy, trial)
+            performance.append(trial_performance)
+
+            # Adapt strategy based on performance
+            strategy = self.learning_strategy_optimizer.update_strategy(
+                strategy, trial_performance
+            )
+
+        return np.mean(performance)
+
+    def update_meta_beliefs(self, task, strategy, performance):
+        """Update beliefs about learning strategies."""
+        # Bayesian update of meta-beliefs
+        likelihood = self.compute_strategy_likelihood(strategy, performance)
+        prior = self.meta_beliefs.get(strategy.id, self.default_prior())
+
+        posterior = self.bayesian_update(prior, likelihood)
+        self.meta_beliefs[strategy.id] = posterior
+```
+
+### Neuromorphic Active Inference Agent
+```python
+class NeuromorphicActiveInferenceAgent:
+    """Neuromorphic implementation using spiking neural networks."""
+
+    def __init__(self, neuron_config, synapse_config):
+        # Spiking neural network components
+        self.input_layer = SpikingInputLayer(neuron_config['input'])
+        self.hidden_layers = [SpikingLayer(config) for config in neuron_config['hidden']]
+        self.output_layer = SpikingOutputLayer(neuron_config['output'])
+
+        # Synaptic plasticity
+        self.synapses = SynapticConnections(synapse_config)
+        self.learning_rule = STDP()  # Spike-timing dependent plasticity
+
+        # Precision and prediction error units
+        self.precision_units = PrecisionPopulation()
+        self.prediction_error_units = PredictionErrorPopulation()
+
+    def neuromorphic_inference(self, spike_input):
+        """Perform active inference using spiking dynamics."""
+
+        # Convert input to spikes
+        input_spikes = self.input_layer.encode(spike_input)
+
+        # Forward pass through hierarchy
+        current_spikes = input_spikes
+        layer_activities = [current_spikes]
+
+        for layer in self.hidden_layers:
+            current_spikes = layer.process(current_spikes)
+            layer_activities.append(current_spikes)
+
+        # Generate predictions and prediction errors
+        predictions = self.output_layer.predict(layer_activities[-1])
+        prediction_errors = self.prediction_error_units.compute_errors(
+            predictions, spike_input
+        )
+
+        # Update precision
+        precision = self.precision_units.update(prediction_errors)
+
+        # Learning and plasticity
+        self.learning_rule.apply_stdp(layer_activities, prediction_errors)
+
+        # Action selection via spiking dynamics
+        action_spikes = self.output_layer.select_action(predictions, precision)
+
+        return self.decode_action(action_spikes)
+```
+
+### Benchmarks and Evaluation
+
+#### Performance Metrics
+```python
+class ActiveInferenceBenchmark:
+    """Comprehensive benchmarking for active inference agents."""
+
+    def __init__(self, agent_class, test_environments):
+        self.agent_class = agent_class
+        self.test_environments = test_environments
+        self.metrics = {
+            'inference_accuracy': InferenceAccuracy(),
+            'policy_efficiency': PolicyEfficiency(),
+            'learning_speed': LearningSpeed(),
+            'adaptation_rate': AdaptationRate(),
+            'energy_efficiency': EnergyEfficiency(),
+            'robustness': RobustnessMeasure()
+        }
+
+    def run_comprehensive_benchmark(self, n_trials=1000):
+        """Run comprehensive benchmark suite."""
+
+        results = {}
+
+        for env_name, environment in self.test_environments.items():
+            env_results = {}
+
+            for trial in range(n_trials):
+                # Initialize agent
+                agent = self.agent_class()
+
+                # Run trial
+                trial_result = self.run_trial(agent, environment)
+
+                # Update metrics
+                for metric_name, metric in self.metrics.items():
+                    metric.update(trial_result)
+
+            # Compute final metric values
+            for metric_name, metric in self.metrics.items():
+                env_results[metric_name] = metric.compute()
+
+            results[env_name] = env_results
+
+        return results
+
+    def run_trial(self, agent, environment):
+        """Run single trial and collect data."""
+        observation = environment.reset()
+        trial_data = {'observations': [], 'actions': [], 'beliefs': []}
+
+        done = False
+        while not done:
+            # Agent step
+            action, beliefs = agent.step(observation)
+
+            # Environment step
+            next_observation, reward, done, info = environment.step(action)
+
+            # Record data
+            trial_data['observations'].append(observation)
+            trial_data['actions'].append(action)
+            trial_data['beliefs'].append(beliefs)
+
+            observation = next_observation
+
+        return trial_data
+```
+
+## Integration with Existing Frameworks
+
+### ROS Integration
+```python
+class ROSActiveInferenceAgent(ActiveInferenceAgent):
+    """Active inference agent integrated with ROS."""
+
+    def __init__(self, config, node_name='active_inference_agent'):
+        super().__init__(config)
+
+        # Initialize ROS node
+        import rclpy
+        rclpy.init()
+        self.node = rclpy.create_node(node_name)
+
+        # ROS publishers and subscribers
+        self.action_publisher = self.node.create_publisher(
+            ActionMessage, 'agent_actions', 10
+        )
+        self.observation_subscriber = self.node.create_subscription(
+            ObservationMessage, 'environment_observations',
+            self.observation_callback, 10
+        )
+        self.belief_publisher = self.node.create_publisher(
+            BeliefMessage, 'agent_beliefs', 10
+        )
+
+    def ros_step(self):
+        """ROS-integrated active inference step."""
+        rclpy.spin_once(self.node, timeout_sec=0.1)
+
+        if self.current_observation is not None:
+            # Perform active inference
+            action, beliefs = self.step(self.current_observation)
+
+            # Publish results
+            self.publish_action(action)
+            self.publish_beliefs(beliefs)
+
+            self.current_observation = None
+
+    def observation_callback(self, msg):
+        """Handle incoming observations."""
+        self.current_observation = self.convert_ros_message(msg)
+```
+
 ## References
 
 - [[knowledge_base/cognitive/active_inference|Active Inference Theory]]

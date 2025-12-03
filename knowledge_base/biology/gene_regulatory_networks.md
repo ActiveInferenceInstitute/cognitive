@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[molecular_biology]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -38,6 +40,8 @@ semantic_relations:
 
       - [[gene_expression]]
 
+      - [[../agents/architectures_overview]]
+
   - type: relates
 
     links:
@@ -47,6 +51,8 @@ semantic_relations:
       - [[systems_biology]]
 
       - [[network_theory]]
+
+      - [[bioinformatics]]
 
 ---
 
@@ -460,11 +466,21 @@ class ExpressionController:
 
 ### 3. Synthetic Biology
 
-- Circuit design
+- Circuit design and genetic engineering
+- Gene therapy and therapeutic applications
+- Metabolic engineering and pathway optimization
 
-- Gene therapy
+### 4. Computational Biology
 
-- Metabolic engineering
+- Network inference from omics data
+- Machine learning for regulatory prediction
+- Systems-level analysis and modeling
+
+### 5. Active Inference Applications
+
+- Predictive modeling of gene expression
+- Adaptive experimental design
+- Regulatory network control and optimization
 
 ## Advanced Mathematical Extensions
 
@@ -560,25 +576,48 @@ class ExpressionController:
 
 - Adaptive methods
 
+## Cross-References
+
+### Related Biological Concepts
+- [[molecular_biology|Molecular Biology]] - Molecular mechanisms
+- [[developmental_networks|Developmental Networks]] - Developmental regulation
+- [[systems_biology|Systems Biology]] - Systems-level analysis
+- [[bioinformatics|Bioinformatics]] - Computational methods
+- [[metabolic_networks|Metabolic Networks]] - Metabolic regulation
+
+### Cognitive Science Connections
+- [[../cognitive/active_inference|Active Inference]] - Network control parallels
+- [[../cognitive/decision_making|Decision Making]] - Regulatory choice processes
+- [[../cognitive/learning_theory|Learning Theory]] - Adaptive regulation
+
+### Agent Architecture Applications
+- [[../../tools/src/models/active_inference/|Regulatory Network Models]]
+- [[../../docs/examples/|Network Agent Examples]]
+- [[../../docs/implementation/|Systems Biology Methods]]
+
 ## References
 
-- [[alon_2019]] - "An Introduction to Systems Biology"
-
-- [[davidson_2006]] - "The Regulatory Genome"
-
-- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
-
+### Foundational Texts
+- [[alon_2019]] - "An Introduction to Systems Biology, 2nd Edition"
+- [[davidson_2006]] - "The Regulatory Genome: Gene Regulatory Networks in Development and Evolution"
 - [[karlebach_2008]] - "Modelling and Analysis of Gene Regulatory Networks"
+
+### Advanced Topics
+- [[de_jong_2002]] - "Modeling and Simulation of Genetic Regulatory Systems"
+- [[smolen_2000]] - "Genetic Control of Cell Division Patterns"
+- [[levchenko_2003]] - "Dynamics of Cell Signaling"
+
+### Computational Methods
+- [[markowetz_2007]] - "Inferring Cellular Networks"
+- [[prill_2010]] - "Towards a Rigorous Assessment of Systems Biology Models"
+- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
 ## See Also
 
 - [[active_inference]]
-
 - [[free_energy_principle]]
-
 - [[molecular_biology]]
-
 - [[systems_biology]]
-
 - [[network_theory]]
+- [[../agents/architectures_overview]]
 

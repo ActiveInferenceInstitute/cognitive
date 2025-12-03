@@ -1,6 +1,6 @@
 ---
 
-type: concept
+type: mathematical_concept
 
 id: free_energy_relationship_001
 

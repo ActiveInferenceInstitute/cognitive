@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[ecosystem_processes]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -38,6 +40,8 @@ semantic_relations:
 
       - [[metacommunity_theory]]
 
+      - [[../agents/architectures_overview]]
+
   - type: relates
 
     links:
@@ -47,6 +51,8 @@ semantic_relations:
       - [[developmental_systems]]
 
       - [[ecological_networks]]
+
+      - [[behavioral_biology]]
 
 ---
 
@@ -438,11 +444,21 @@ Mathematical descriptions of diversity:
 
 ### 3. Global Change
 
-- Climate change impacts
+- Climate change impacts and adaptation
+- Biodiversity loss and conservation
+- Ecosystem resilience and restoration
 
-- Biodiversity loss
+### 4. Agent-Based Modeling
 
-- Ecosystem resilience
+- Individual-based ecological models
+- Spatial ecology and movement patterns
+- Adaptive behavior in ecological contexts
+
+### 5. Active Inference in Ecology
+
+- Ecosystem homeostasis and regulation
+- Adaptive resource management
+- Predictive ecological modeling
 
 ## Advanced Mathematical Extensions
 
@@ -538,25 +554,48 @@ Mathematical descriptions of diversity:
 
 - Approximation schemes
 
+## Cross-References
+
+### Related Biological Concepts
+- [[population_dynamics|Population Dynamics]] - Population-level processes
+- [[community_ecology|Community Ecology]] - Species interactions
+- [[ecosystem_processes|Ecosystem Processes]] - Ecosystem function
+- [[ecological_networks|Ecological Networks]] - Network ecology
+- [[evolutionary_dynamics|Evolutionary Dynamics]] - Eco-evolutionary dynamics
+
+### Cognitive Science Connections
+- [[../cognitive/active_inference|Active Inference]] - Ecological regulation parallels
+- [[../cognitive/decision_making|Decision Making]] - Ecological choice processes
+- [[../cognitive/homeostasis|Homeostasis]] - Ecosystem balance
+
+### Agent Architecture Applications
+- [[../../Things/Ant_Colony/|Ant Colony Ecological Models]]
+- [[../../docs/examples/|Ecological Agent Examples]]
+- [[../../docs/implementation/|Ecosystem Modeling]]
+
 ## References
 
+### Foundational Texts
 - [[may_1976]] - "Theoretical Ecology: Principles and Applications"
+- [[begon_2005]] - "Ecology: From Individuals to Ecosystems"
+- [[odum_1971]] - "Fundamentals of Ecology"
 
+### Advanced Topics
 - [[levin_1992]] - "The Problem of Pattern and Scale in Ecology"
-
 - [[hubbell_2001]] - "The Unified Neutral Theory of Biodiversity"
-
 - [[bascompte_2006]] - "The Structure of Plant-Animal Mutualistic Networks"
+
+### Modern Methods
+- [[grimm_2005]] - "Individual-Based Modeling and Ecology"
+- [[deangelis_2014]] - "Individual-Based Models and Approaches in Ecology"
+- [[railsback_2019]] - "Agent-Based and Individual-Based Modeling"
 
 ## See Also
 
 - [[population_dynamics]]
-
 - [[community_ecology]]
-
 - [[ecosystem_processes]]
-
 - [[food_web_theory]]
-
 - [[metacommunity_theory]]
+- [[../agents/architectures_overview]]
 

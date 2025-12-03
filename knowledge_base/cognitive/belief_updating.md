@@ -28,6 +28,12 @@ semantic_relations:
 
     links: [[bayesian_inference]]
 
+  - type: applies_to
+
+    links:
+
+      - [[../agents/architectures_overview]]
+
   - type: related
 
     links:

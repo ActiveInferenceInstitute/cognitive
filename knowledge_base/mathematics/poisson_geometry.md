@@ -2,7 +2,7 @@
 
 title: Poisson Geometry
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

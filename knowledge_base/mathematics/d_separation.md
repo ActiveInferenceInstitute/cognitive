@@ -2,7 +2,7 @@
 
 title: D-separation
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

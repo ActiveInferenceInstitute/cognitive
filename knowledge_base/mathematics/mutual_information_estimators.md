@@ -2,7 +2,7 @@
 
 title: Mutual Information Estimators
 
-type: concept
+type: mathematical_concept
 
 status: draft
 

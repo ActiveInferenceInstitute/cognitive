@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[neuroscience]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -38,6 +40,8 @@ semantic_relations:
 
       - [[learning_theory]]
 
+      - [[../agents/architectures_overview]]
+
   - type: relates
 
     links:
@@ -47,6 +51,10 @@ semantic_relations:
       - [[systems_biology]]
 
       - [[cognitive_science]]
+
+      - [[apidology]]
+
+      - [[myrmecology]]
 
 ---
 
@@ -450,27 +458,149 @@ class SocialBehavior:
 
 ### 1. Behavioral Ecology
 
-- Foraging strategies
-
-- Territorial behavior
-
-- Mating systems
+- Foraging strategies and optimal resource allocation
+- Territorial behavior and spatial cognition
+- Mating systems and reproductive decision-making
 
 ### 2. Comparative Psychology
 
-- Learning mechanisms
-
-- Social cognition
-
-- Decision making
+- Learning mechanisms and memory systems
+- Social cognition and theory of mind
+- Decision making under uncertainty
 
 ### 3. Behavioral Neuroscience
 
-- Neural control
+- Neural control of behavior
+- Sensorimotor integration and coordination
+- Behavioral plasticity and adaptation
 
-- Sensorimotor integration
+## Agent Architecture Applications
 
-- Behavioral plasticity
+### Active Inference Agents
+
+```python
+class BehavioralActiveInferenceAgent:
+    """Agent implementing behavioral biology principles"""
+
+    def __init__(self, behavioral_params: Dict[str, float]):
+        self.behavioral_model = BehavioralDynamics(behavioral_params)
+        self.inference_engine = ActiveInferenceEngine()
+        self.learning_system = BehavioralLearning()
+
+        # Behavioral state variables
+        self.internal_state = {}
+        self.environmental_beliefs = {}
+        self.action_policies = {}
+
+    def behavioral_inference_cycle(self, observations: np.ndarray) -> Dict:
+        """Complete behavioral inference cycle"""
+        # Update internal state beliefs
+        self.internal_state = self.inference_engine.update_beliefs(
+            observations, self.internal_state
+        )
+
+        # Compute expected free energy for behavioral policies
+        policy_free_energies = {}
+        for policy in self.action_policies:
+            G = self.compute_policy_free_energy(policy)
+            policy_free_energies[policy] = G
+
+        # Select optimal behavioral policy
+        optimal_policy = min(policy_free_energies, key=policy_free_energies.get)
+
+        # Execute behavioral action
+        action = self.execute_behavioral_policy(optimal_policy)
+
+        # Learn from behavioral outcomes
+        self.learning_system.update_model(action, observations)
+
+        return {
+            'action': action,
+            'free_energy': policy_free_energies[optimal_policy],
+            'beliefs': self.internal_state
+        }
+
+    def compute_policy_free_energy(self, policy: Dict) -> float:
+        """Compute expected free energy for behavioral policy"""
+        # Risk term
+        risk = self.compute_epistemic_risk(policy)
+
+        # Ambiguity term
+        ambiguity = self.compute_epistemic_ambiguity(policy)
+
+        # Extrinsic value
+        extrinsic = self.compute_extrinsic_value(policy)
+
+        return risk + ambiguity - extrinsic
+```
+
+### Social Behavior Modeling
+
+```python
+class SocialBehavioralAgent:
+    """Agent modeling social behavioral dynamics"""
+
+    def __init__(self, social_params: Dict[str, float]):
+        self.social_model = SocialBehaviorModel(social_params)
+        self.communication = SocialCommunication()
+        self.coordination = BehavioralCoordination()
+
+    def social_inference(self, social_signals: Dict, group_state: Dict) -> Dict:
+        """Perform social behavioral inference"""
+        # Infer others' intentions and beliefs
+        inferred_states = self.social_model.infer_social_states(
+            social_signals, group_state
+        )
+
+        # Compute social free energy
+        social_G = self.compute_social_free_energy(
+            inferred_states, group_state
+        )
+
+        # Generate appropriate social response
+        response = self.coordination.generate_social_response(
+            social_G, inferred_states
+        )
+
+        return {
+            'response': response,
+            'inferred_states': inferred_states,
+            'social_free_energy': social_G
+        }
+```
+
+### Learning and Adaptation
+
+```python
+class BehavioralLearningAgent:
+    """Agent with behavioral learning capabilities"""
+
+    def __init__(self):
+        self.value_learning = BehavioralValueLearning()
+        self.policy_learning = BehavioralPolicyLearning()
+        self.model_learning = BehavioralModelLearning()
+
+    def learn_behavioral_patterns(self, behavioral_history: List[Dict]) -> Dict:
+        """Learn from behavioral experience"""
+        # Value learning
+        values = self.value_learning.update_values(behavioral_history)
+
+        # Policy learning
+        policies = self.policy_learning.update_policies(
+            behavioral_history, values
+        )
+
+        # Model learning
+        models = self.model_learning.update_models(
+            behavioral_history, policies
+        )
+
+        return {
+            'values': values,
+            'policies': policies,
+            'models': models
+        }
+```
 
 ## Advanced Mathematical Extensions
 
@@ -566,25 +696,49 @@ class SocialBehavior:
 
 - Learning paradigms
 
+## Cross-References
+
+### Related Biological Concepts
+- [[neuroscience|Neuroscience]] - Neural basis of behavior
+- [[evolutionary_dynamics|Evolutionary Dynamics]] - Evolutionary behavioral adaptations
+- [[developmental_systems|Developmental Systems]] - Behavioral development
+- [[apidology|Apidology]] - Social insect behavior
+- [[myrmecology|Myrmecology]] - Ant social behavior
+
+### Cognitive Science Connections
+- [[../cognitive/active_inference|Active Inference]] - Theoretical framework
+- [[../cognitive/decision_making|Decision Making]] - Choice behavior
+- [[../cognitive/learning_theory|Learning Theory]] - Behavioral learning
+- [[../cognitive/social_cognition|Social Cognition]] - Social behavior
+
+### Agent Architecture Applications
+- [[../../Things/Ant_Colony/|Ant Colony Social Behavior]]
+- [[../../Things/BioFirm/|BioFirm Behavioral Models]]
+- [[../../docs/examples/|Behavioral Agent Examples]]
+
 ## References
 
+### Foundational Texts
+- [[krebs_2009]] - "Behavioral Ecology: An Evolutionary Approach"
+- [[alcock_2013]] - "Animal Behavior: An Evolutionary Approach"
+- [[tinbergen_1963]] - "The Study of Instinct"
+
+### Theoretical Frameworks
 - [[dayan_2001]] - "Theoretical Neuroscience"
-
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
+- [[sutton_2018]] - "Reinforcement Learning: An Introduction"
 
-- [[sutton_2018]] - "Reinforcement Learning"
-
-- [[krebs_2009]] - "Behavioral Ecology"
+### Active Inference Applications
+- [[parr_2022]] - "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior"
+- [[buckley_2017]] - "The Free Energy Principle for Action and Perception"
+- [[friston_2017]] - "Active Inference and Learning"
 
 ## See Also
 
 - [[active_inference]]
-
 - [[free_energy_principle]]
-
 - [[neuroscience]]
-
 - [[cognitive_science]]
-
 - [[evolutionary_dynamics]]
+- [[../agents/architectures_overview]]
 

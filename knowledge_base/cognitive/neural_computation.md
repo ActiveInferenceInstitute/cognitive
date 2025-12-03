@@ -30,6 +30,8 @@ semantic_relations:
 
     links:
 
+      - [[../biology/neuroscience]]
+
       - [[information_processing]]
 
       - [[neural_networks]]

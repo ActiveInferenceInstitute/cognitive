@@ -1018,6 +1018,32 @@ update_propagation:
 
 ## Recent Developments (2025)
 
+### December 2025 Comprehensive Review
+
+#### Metadata Standardization
+- **Unified Type System**: All files now use `type: mathematical_concept` for consistency
+- **Enhanced Semantic Relations**: Improved `semantic_relations` with foundation, implements, uses, and relates categories
+- **Standardized Headers**: Consistent YAML metadata format across all 140+ files
+- **Cross-Reference Enhancement**: Bidirectional linking with semantic relationship types
+
+#### Active Inference Core Improvements
+- **[[active_inference_theory]]** - Enhanced with comprehensive mathematical formulations and implementations
+- **[[active_inference_loop]]** - Complete perception-action cycle with working algorithms
+- **[[active_inference_pomdp]]** - Full POMDP formulation with matrix validation and learning algorithms
+- **[[expected_free_energy]]** - Detailed EFE computation with epistemic/pragmatic decomposition
+
+#### Implementation Enhancements
+- **Code Quality**: Standardized Python implementations with type hints and documentation
+- **Algorithm Examples**: Working implementations for key mathematical concepts
+- **Validation Functions**: Matrix validation, convergence checking, and error bounds
+- **Performance Optimization**: Efficient algorithms for large-scale problems
+
+#### Cross-Reference Network Expansion
+- **Semantic Linking**: Enhanced semantic relationships between concepts
+- **Bidirectional References**: All major links now bidirectional for better navigation
+- **Category Organization**: Improved categorization by mathematical domain and application
+- **Learning Pathways**: Structured progression from basic to advanced concepts
+
 ### Enhanced Content
 
 - **[[statistical_foundations]]** - Comprehensive mathematical treatment with proofs and examples
@@ -1028,6 +1054,12 @@ update_propagation:
 
 - **[[probabilistic_models]]** - Extended mathematical framework and applications
 
+- **[[bethe_free_energy]]** - Complete implementation with message passing algorithms
+
+- **[[action_selection]]** - Advanced frameworks with continuous-time bridging
+
+- **[[generalized_coordinates]]** - Full mathematical treatment with Taylor series integration
+
 ### Implementation Improvements
 
 - **Theory-Practice Integration**: Code examples directly linked to mathematical theory
@@ -1037,6 +1069,10 @@ update_propagation:
 - **Quality Standards**: Enhanced documentation standards and validation procedures
 
 - **Practical Examples**: Working demonstrations for all major concepts
+
+- **Type Safety**: Python implementations with proper type annotations
+
+- **Numerical Stability**: Robust algorithms with convergence guarantees
 
 ### Cross-Reference Network Growth
 

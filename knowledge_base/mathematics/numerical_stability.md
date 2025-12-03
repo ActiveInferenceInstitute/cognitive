@@ -2,7 +2,7 @@
 
 title: Numerical Stability in Inference and Control
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

@@ -2,7 +2,7 @@
 
 title: Predictive Coding
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

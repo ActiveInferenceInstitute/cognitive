@@ -2,7 +2,7 @@
 
 title: Expected Free Energy
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

@@ -658,7 +658,7 @@ class VariationalMetrics:
 
 title: Variational Methods
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

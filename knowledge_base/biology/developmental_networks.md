@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[developmental_systems]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -38,6 +40,8 @@ semantic_relations:
 
       - [[cell_fate_dynamics]]
 
+      - [[../agents/architectures_overview]]
+
   - type: relates
 
     links:
@@ -47,6 +51,8 @@ semantic_relations:
       - [[systems_biology]]
 
       - [[network_theory]]
+
+      - [[evolutionary_dynamics]]
 
 ---
 

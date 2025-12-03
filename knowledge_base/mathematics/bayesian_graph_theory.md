@@ -2,7 +2,7 @@
 
 title: Bayesian Graph Theory
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

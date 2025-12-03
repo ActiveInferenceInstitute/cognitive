@@ -338,6 +338,205 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
   - [[attention_support]] - Assistance
 
+## Implementation Examples
+
+### Attention Network Model
+```python
+class AttentionNetwork:
+    """Neural network model of attention mechanisms."""
+
+    def __init__(self, config):
+        # Alerting network components
+        self.alerting_network = AlertingNetwork(config['alerting'])
+
+        # Orienting network components
+        self.orienting_network = OrientingNetwork(config['orienting'])
+
+        # Executive network components
+        self.executive_network = ExecutiveNetwork(config['executive'])
+
+        # Integration mechanisms
+        self.network_integration = NetworkIntegration()
+
+    def process_attention(self, sensory_input, task_goals, context):
+        """Process input through attention networks."""
+
+        # Alerting network: arousal and vigilance
+        arousal_signal = self.alerting_network.compute_arousal(
+            sensory_input, context
+        )
+
+        # Orienting network: spatial and feature selection
+        spatial_map, feature_weights = self.orienting_network.compute_orientation(
+            sensory_input, arousal_signal
+        )
+
+        # Executive network: goal-directed control
+        executive_control = self.executive_network.compute_control(
+            task_goals, sensory_input, spatial_map
+        )
+
+        # Network integration and modulation
+        attention_weights = self.network_integration.integrate_networks(
+            arousal_signal, spatial_map, feature_weights, executive_control
+        )
+
+        return attention_weights, {
+            'arousal': arousal_signal,
+            'spatial_attention': spatial_map,
+            'feature_attention': feature_weights,
+            'executive_control': executive_control
+        }
+```
+
+### Self-Attention Mechanism
+```python
+class SelfAttentionMechanism:
+    """Self-attention mechanism for cognitive processing."""
+
+    def __init__(self, embed_dim, num_heads, dropout=0.1):
+        self.embed_dim = embed_dim
+        self.num_heads = num_heads
+        self.head_dim = embed_dim // num_heads
+
+        # Attention components
+        self.query_projection = nn.Linear(embed_dim, embed_dim)
+        self.key_projection = nn.Linear(embed_dim, embed_dim)
+        self.value_projection = nn.Linear(embed_dim, embed_dim)
+
+        self.dropout = nn.Dropout(dropout)
+        self.output_projection = nn.Linear(embed_dim, embed_dim)
+
+    def forward(self, query, key, value, mask=None):
+        """Compute self-attention."""
+
+        batch_size = query.size(0)
+
+        # Linear projections and reshape
+        Q = self.query_projection(query).view(batch_size, -1, self.num_heads, self.head_dim).transpose(1, 2)
+        K = self.key_projection(key).view(batch_size, -1, self.num_heads, self.head_dim).transpose(1, 2)
+        V = self.value_projection(value).view(batch_size, -1, self.num_heads, self.head_dim).transpose(1, 2)
+
+        # Attention computation
+        scores = torch.matmul(Q, K.transpose(-2, -1)) / (self.head_dim ** 0.5)
+
+        if mask is not None:
+            scores = scores.masked_fill(mask == 0, -1e9)
+
+        attention_weights = F.softmax(scores, dim=-1)
+        attention_weights = self.dropout(attention_weights)
+
+        # Apply attention to values
+        attended_values = torch.matmul(attention_weights, V)
+
+        # Reshape and project
+        attended_values = attended_values.transpose(1, 2).contiguous().view(
+            batch_size, -1, self.embed_dim
+        )
+
+        output = self.output_projection(attended_values)
+
+        return output, attention_weights
+```
+
+### Dynamic Attention Control
+```python
+class DynamicAttentionController:
+    """Dynamic attention control with adaptation."""
+
+    def __init__(self, config):
+        self.config = config
+
+        # Control components
+        self.priority_evaluator = PriorityEvaluator()
+        self.resource_allocator = ResourceAllocator()
+        self.performance_monitor = PerformanceMonitor()
+        self.adaptation_mechanism = AdaptationMechanism()
+
+        # State tracking
+        self.attention_state = {
+            'current_focus': None,
+            'resource_allocation': {},
+            'performance_history': [],
+            'adaptation_triggers': []
+        }
+
+    def control_attention(self, sensory_input, cognitive_demand, context):
+        """Dynamic attention control and adaptation."""
+
+        # Evaluate priorities
+        priorities = self.priority_evaluator.compute_priorities(
+            sensory_input, cognitive_demand, context
+        )
+
+        # Allocate resources
+        resource_allocation = self.resource_allocator.allocate_resources(
+            priorities, self.config['total_resources']
+        )
+
+        # Apply attention control
+        attended_input = self.apply_attention_weights(
+            sensory_input, resource_allocation
+        )
+
+        # Monitor performance
+        performance_metrics = self.performance_monitor.assess_performance(
+            attended_input, cognitive_demand
+        )
+
+        # Trigger adaptation if needed
+        if self.should_adapt(performance_metrics):
+            adaptation = self.adaptation_mechanism.compute_adaptation(
+                performance_metrics, self.attention_state
+            )
+            self.apply_adaptation(adaptation)
+
+        # Update state
+        self.update_attention_state(
+            resource_allocation, performance_metrics, adaptation
+        )
+
+        return attended_input, {
+            'priorities': priorities,
+            'allocation': resource_allocation,
+            'performance': performance_metrics,
+            'adaptation': adaptation
+        }
+```
+
+## Advanced Theoretical Concepts
+
+### Attention as Probabilistic Inference
+```math
+P(A|S) = \frac{P(S|A)P(A)}{P(S)} = \sigma(\gamma(\ln P(S|A) + \ln P(A) - \ln P(S)))
+```
+
+Where:
+- $P(A|S)$: Probability of attending to stimulus A given sensory input S
+- $P(S|A)$: Likelihood of sensory input given attention to A
+- $P(A)$: Prior probability of attending to A
+- $γ$: Precision parameter controlling attention selectivity
+
+### Free Energy Formulation of Attention
+```math
+F = -\ln P(S|A) + D_{KL}[Q(A)||P(A|S)]
+```
+
+Where:
+- $F$: Free energy of attention allocation
+- $Q(A)$: Approximate posterior over attention states
+- Minimization leads to optimal attention allocation
+
+### Precision-Weighted Attention
+```math
+A^* = \arg\min_A \sum_i \pi_i (y_i - \hat{y}_i)^2
+```
+
+Where:
+- $A^*$: Optimal attention allocation
+- $\pi_i$: Precision (inverse variance) of prediction errors
+- Higher precision signals receive more attention
+
 ## Future Directions
 
 ### Current Challenges

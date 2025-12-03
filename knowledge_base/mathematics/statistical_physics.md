@@ -2,7 +2,7 @@
 
 title: Statistical Physics
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

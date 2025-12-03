@@ -22,9 +22,9 @@ semantic_relations:
 
     links:
 
-      - [[GenericPOMDP/README]]
+      - [[GenericPOMDP/agent_config]]
 
-      - [[Continuous_Time/README]]
+      - [[Continuous_Time/continuous_time_agent]]
 
 ---
 
@@ -34,21 +34,12 @@ semantic_relations:
 
 ### POMDP-Based Agents
 
-- [[GenericPOMDP/README|Generic POMDP Framework]]
+- [[GenericPOMDP/agent_config]]
 
-- [[GenericPOMDP/active_inference_agent|Active Inference Agent]]
-
-- [[GenericPOMDP/belief_states|Belief States]]
-
-- [[GenericPOMDP/policy_selection|Policy Selection]]
 
 ### Continuous-Time Agents
 
-- [[Continuous_Time/README|Continuous Time Framework]]
-
-- [[Continuous_Time/differential_agents|Differential Agents]]
-
-- [[Continuous_Time/continuous_inference|Continuous Inference]]
+- [[Continuous_Time/continuous_time_agent]]
 
 - [[Continuous_Time/path_integration|Path Integration]]
 

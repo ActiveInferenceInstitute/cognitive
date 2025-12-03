@@ -2,7 +2,7 @@
 
 title: Statistical Foundations
 
-type: concept
+type: mathematical_concept
 
 status: active
 

@@ -2,7 +2,7 @@
 
 title: Geometric Active Inference
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

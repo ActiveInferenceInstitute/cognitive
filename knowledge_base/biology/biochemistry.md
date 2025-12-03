@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[thermodynamics]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -38,6 +40,8 @@ semantic_relations:
 
       - [[cellular_energetics]]
 
+      - [[../agents/architectures_overview]]
+
   - type: relates
 
     links:
@@ -47,6 +51,8 @@ semantic_relations:
       - [[cell_biology]]
 
       - [[biophysics]]
+
+      - [[gene_regulatory_networks]]
 
 ---
 
@@ -466,27 +472,130 @@ class ThermodynamicCalculator:
 
 ### 1. Drug Development
 
-- Enzyme inhibition
-
-- Drug metabolism
-
-- Pharmacokinetics
+- Enzyme inhibition and drug design
+- Drug metabolism and pharmacokinetic modeling
+- Therapeutic target identification
 
 ### 2. Metabolic Engineering
 
-- Pathway optimization
-
-- Flux control
-
-- Yield improvement
+- Pathway optimization and synthetic biology
+- Metabolic flux control and regulation
+- Yield improvement and production efficiency
 
 ### 3. Disease Mechanisms
 
-- Metabolic disorders
+- Metabolic disorders and biomarker discovery
+- Enzyme deficiencies and genetic diseases
+- Cellular energy metabolism and mitochondrial function
 
-- Enzyme deficiencies
+## Active Inference in Biochemical Systems
 
-- Energy metabolism
+### Metabolic Homeostasis as Free Energy Minimization
+
+```python
+class MetabolicActiveInference:
+    """Active Inference model of metabolic regulation"""
+
+    def __init__(self, metabolic_network: Dict):
+        self.network = metabolic_network
+        self.homeostasis = MetabolicHomeostasis()
+        self.regulation = MetabolicRegulation()
+        self.adaptation = MetabolicAdaptation()
+
+    def metabolic_inference_cycle(self, nutrient_state: Dict) -> Dict:
+        """Metabolic regulation through Active Inference"""
+        # Update metabolic state beliefs
+        metabolic_beliefs = self.homeostasis.update_beliefs(
+            nutrient_state, self.network
+        )
+
+        # Compute metabolic free energy
+        metabolic_G = self.compute_metabolic_free_energy(
+            metabolic_beliefs, self.network
+        )
+
+        # Select regulatory actions
+        regulatory_actions = self.regulation.select_actions(
+            metabolic_G, metabolic_beliefs
+        )
+
+        # Execute metabolic adaptations
+        adaptations = self.adaptation.execute_adaptations(
+            regulatory_actions, self.network
+        )
+
+        return {
+            'beliefs': metabolic_beliefs,
+            'free_energy': metabolic_G,
+            'actions': regulatory_actions,
+            'adaptations': adaptations
+        }
+
+    def compute_metabolic_free_energy(self,
+                                    beliefs: Dict,
+                                    network: Dict) -> float:
+        """Compute free energy for metabolic state"""
+        # Energy balance term
+        energy_balance = self.compute_energy_balance(beliefs, network)
+
+        # Metabolic entropy
+        metabolic_entropy = self.compute_metabolic_entropy(beliefs)
+
+        # Regulatory cost
+        regulatory_cost = self.compute_regulatory_cost(beliefs, network)
+
+        return energy_balance - metabolic_entropy + regulatory_cost
+```
+
+### Enzyme Regulation and Decision Making
+
+```math
+\begin{aligned}
+& \text{Enzyme Free Energy:} \\
+& F_{enz} = -\ln P(\text{bound}) + \beta\Delta G_{bind} \\
+& \text{Regulatory Decision:} \\
+& P(\text{active}) = \frac{1}{1 + e^{\beta(F_{enz} - F_0)}} \\
+& \text{Adaptive Regulation:} \\
+& \frac{d[\text{enzyme}]}{dt} = k_{syn} - k_{deg}[\text{enzyme}] + k_{reg}P(\text{active})
+\end{aligned}
+```
+
+### Metabolic Network Control
+
+```python
+class MetabolicNetworkControl:
+    """Active Inference control of metabolic networks"""
+
+    def __init__(self):
+        self.flux_control = FluxBalanceAnalysis()
+        self.energy_control = EnergyOptimization()
+        self.adaptive_control = AdaptiveMetabolism()
+
+    def optimize_metabolic_network(self,
+                                 metabolic_state: Dict,
+                                 objectives: Dict) -> Dict:
+        """Optimize metabolic network through Active Inference"""
+        # Flux balance optimization
+        fluxes = self.flux_control.optimize_fluxes(
+            metabolic_state, objectives
+        )
+
+        # Energy optimization
+        energy_state = self.energy_control.optimize_energy(
+            fluxes, metabolic_state
+        )
+
+        # Adaptive responses
+        adaptations = self.adaptive_control.generate_adaptations(
+            energy_state, objectives
+        )
+
+        return {
+            'fluxes': fluxes,
+            'energy': energy_state,
+            'adaptations': adaptations
+        }
+```
 
 ## Advanced Mathematical Extensions
 
@@ -582,25 +691,48 @@ class ThermodynamicCalculator:
 
 - Adaptive time stepping
 
+## Cross-References
+
+### Related Biological Concepts
+- [[molecular_biology|Molecular Biology]] - Molecular mechanisms
+- [[cell_biology|Cell Biology]] - Cellular biochemistry
+- [[metabolic_networks|Metabolic Networks]] - Network biochemistry
+- [[gene_regulatory_networks|Gene Regulatory Networks]] - Regulatory biochemistry
+- [[biophysics|Biophysics]] - Physical chemistry of life
+
+### Cognitive Science Connections
+- [[../cognitive/active_inference|Active Inference]] - Metabolic regulation parallels
+- [[../cognitive/decision_making|Decision Making]] - Biochemical choice processes
+- [[../cognitive/homeostasis|Homeostasis]] - Metabolic balance principles
+
+### Agent Architecture Applications
+- [[../../Things/BioFirm/|BioFirm Metabolic Models]]
+- [[../../docs/examples/|Biochemical Agent Examples]]
+- [[../../docs/implementation/|Metabolic Control Systems]]
+
 ## References
 
-- [[voet_2016]] - "Biochemistry"
+### Foundational Texts
+- [[voet_2016]] - "Biochemistry, 5th Edition"
+- [[berg_2015]] - "Biochemistry, 8th Edition"
+- [[lehninger_2013]] - "Lehninger Principles of Biochemistry"
 
-- [[beard_2008]] - "Chemical Biophysics"
-
-- [[qian_2006]] - "Open-System Nonequilibrium Steady State"
-
+### Advanced Topics
+- [[beard_2008]] - "Chemical Biophysics: Quantitative Analysis of Cellular Systems"
+- [[qian_2006]] - "Open-System Nonequilibrium Steady State: Statistical Thermodynamics of Computational Systems"
 - [[heinrich_1996]] - "The Regulation of Cellular Systems"
+
+### Active Inference Applications
+- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
+- [[parr_2022]] - "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior"
+- [[ramstead_2021]] - "On the Free Energy Principle and the Nature of Computation"
 
 ## See Also
 
 - [[molecular_biology]]
-
 - [[metabolism]]
-
 - [[enzyme_kinetics]]
-
 - [[thermodynamics]]
-
 - [[biophysics]]
+- [[../agents/architectures_overview]]
 

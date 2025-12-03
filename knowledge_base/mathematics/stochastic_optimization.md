@@ -2,7 +2,7 @@
 
 title: Stochastic Optimization
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

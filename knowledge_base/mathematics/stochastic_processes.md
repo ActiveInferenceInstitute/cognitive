@@ -2,7 +2,7 @@
 
 title: Stochastic Processes
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

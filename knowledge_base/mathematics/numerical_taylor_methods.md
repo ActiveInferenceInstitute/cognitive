@@ -2,7 +2,7 @@
 
 title: Numerical Methods for Taylor Series in Active Inference
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

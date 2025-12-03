@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[ecological_dynamics]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -38,6 +40,8 @@ semantic_relations:
 
       - [[ecosystem_stability]]
 
+      - [[../agents/architectures_overview]]
+
   - type: relates
 
     links:
@@ -47,6 +51,8 @@ semantic_relations:
       - [[evolutionary_dynamics]]
 
       - [[network_theory]]
+
+      - [[../mathematics/information_theory]]
 
 ---
 
@@ -546,25 +552,53 @@ class NetworkInformation:
 
 - Adaptive methods
 
+## Cross-References
+
+### Related Biological Concepts
+- [[ecological_dynamics|Ecological Dynamics]] - Population and community processes
+- [[systems_biology|Systems Biology]] - Biological network analysis
+- [[evolutionary_dynamics|Evolutionary Dynamics]] - Evolutionary network processes
+- [[apidology|Apidology]] - Pollination network examples
+- [[myrmecology|Myrmecology]] - Social insect networks
+
+### Cognitive Science Connections
+- [[../cognitive/active_inference|Active Inference]] - Network regulation parallels
+- [[../cognitive/information_processing|Information Processing]] - Network information flow
+- [[../cognitive/social_cognition|Social Cognition]] - Collective intelligence
+
+### Agent Architecture Applications
+- [[../../Things/Ant_Colony/|Ant Colony Network Models]]
+- [[../../docs/examples/|Network Agent Examples]]
+- [[../../docs/implementation/|Ecological Network Methods]]
+
 ## References
 
+### Foundational Texts
 - [[bascompte_2006]] - "The Structure of Plant-Animal Mutualistic Networks"
+- [[newman_2010]] - "Networks: An Introduction"
+- [[proulx_2005]] - "Network Thinking in Ecology and Evolution"
 
+### Theoretical Ecology
 - [[may_1972]] - "Will a Large Complex System be Stable?"
+- [[macarthur_1955]] - "On the Relation Between Reproductive Value and Optimal Predation"
+- [[levins_1968]] - "Evolution in Changing Environments"
 
+### Information Theory in Ecology
+- [[utoft_1973]] - "Information Theory in Ecology"
+- [[matsuda_1992]] - "The Role of Information in Complex Systems"
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
-- [[newman_2010]] - "Networks: An Introduction"
+### Network Analysis
+- [[borgatti_2009]] - "Network Analysis for the Social Sciences"
+- [[brandes_2005]] - "Network Analysis: Methodological Foundations"
+- [[barabasi_2016]] - "Network Science"
 
 ## See Also
 
 - [[active_inference]]
-
 - [[free_energy_principle]]
-
 - [[ecological_dynamics]]
-
 - [[network_theory]]
-
 - [[complex_systems]]
+- [[../agents/architectures_overview]]
 

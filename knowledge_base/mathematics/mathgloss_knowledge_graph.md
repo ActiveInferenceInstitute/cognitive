@@ -2,7 +2,7 @@
 
 title: MathGloss Knowledge Graph
 
-type: concept
+type: mathematical_concept
 
 status: draft
 

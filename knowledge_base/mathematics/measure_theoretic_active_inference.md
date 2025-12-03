@@ -2,7 +2,7 @@
 
 title: Measure-Theoretic Active Inference
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

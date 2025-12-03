@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[evolutionary_dynamics]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -38,6 +40,8 @@ semantic_relations:
 
       - [[population_games]]
 
+      - [[../agents/architectures_overview]]
+
   - type: relates
 
     links:
@@ -47,6 +51,8 @@ semantic_relations:
       - [[behavioral_biology]]
 
       - [[systems_biology]]
+
+      - [[../mathematics/game_theory]]
 
 ---
 

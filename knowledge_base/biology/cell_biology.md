@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[biophysics]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -38,6 +40,8 @@ semantic_relations:
 
       - [[cell_signaling]]
 
+      - [[../agents/architectures_overview]]
+
   - type: relates
 
     links:
@@ -47,6 +51,8 @@ semantic_relations:
       - [[systems_biology]]
 
       - [[tissue_mechanics]]
+
+      - [[neuroscience]]
 
 ---
 
@@ -486,11 +492,102 @@ class SignalingNetwork:
 
 ### 3. Cell Death
 
-- Apoptosis pathways
+- Apoptosis pathways and programmed cell death
+- Necrosis and cellular stress responses
+- Autophagy and cellular recycling
 
-- Necrosis
+## Active Inference in Cellular Systems
 
-- Autophagy
+### Cellular Homeostasis as Free Energy Minimization
+
+```python
+class CellularActiveInference:
+    """Active Inference model of cellular regulation"""
+
+    def __init__(self, cell_model: Dict):
+        self.cell = cell_model
+        self.homeostasis = CellularHomeostasis()
+        self.signaling = CellSignaling()
+        self.metabolism = CellularMetabolism()
+
+    def cellular_inference_cycle(self, environment: Dict) -> Dict:
+        """Cellular regulation through Active Inference"""
+        # Update cellular state beliefs
+        beliefs = self.homeostasis.update_beliefs(
+            self.cell, environment
+        )
+
+        # Compute cellular free energy
+        cellular_G = self.compute_cellular_free_energy(beliefs, self.cell)
+
+        # Select cellular actions
+        actions = self.signaling.select_actions(cellular_G, beliefs)
+
+        # Execute metabolic adaptations
+        adaptations = self.metabolism.execute_adaptations(actions, self.cell)
+
+        return {
+            'beliefs': beliefs,
+            'free_energy': cellular_G,
+            'actions': actions,
+            'adaptations': adaptations
+        }
+
+    def compute_cellular_free_energy(self, beliefs: Dict, cell: Dict) -> float:
+        """Compute free energy for cellular state"""
+        # Energy homeostasis
+        energy = self.compute_energy_homeostasis(beliefs, cell)
+
+        # Membrane integrity
+        membrane = self.compute_membrane_integrity(beliefs, cell)
+
+        # Signaling entropy
+        signaling = self.compute_signaling_entropy(beliefs)
+
+        return energy + membrane - signaling
+```
+
+### Cytoskeletal Dynamics and Motor Control
+
+```math
+\begin{aligned}
+& \text{Motor Protein Free Energy:} \\
+& F_{motor} = -\ln P(\text{bound}) + \beta\Delta G_{ATP} \\
+& \text{Force Generation:} \\
+& F = \frac{\partial F_{motor}}{\partial x} \\
+& \text{Cytoskeletal Adaptation:} \\
+& \frac{dL}{dt} = k_{grow} - k_{dep} + \alpha F
+\end{aligned}
+```
+
+### Cell Signaling Networks
+
+```python
+class CellSignalingNetwork:
+    """Active Inference in cell signaling"""
+
+    def __init__(self):
+        self.receptors = ReceptorDynamics()
+        self.cascades = SignalingCascades()
+        self.transcription = GeneRegulation()
+
+    def process_signal(self, ligand: Dict, cell_state: Dict) -> Dict:
+        """Process extracellular signal through Active Inference"""
+        # Receptor binding and activation
+        activation = self.receptors.bind_ligand(ligand, cell_state)
+
+        # Signal transduction
+        transduction = self.cascades.transduce_signal(activation)
+
+        # Transcriptional response
+        response = self.transcription.generate_response(transduction)
+
+        return {
+            'activation': activation,
+            'transduction': transduction,
+            'response': response
+        }
+```
 
 ## Advanced Mathematical Extensions
 
@@ -586,25 +683,47 @@ class SignalingNetwork:
 
 - Adaptive methods
 
+## Cross-References
+
+### Related Biological Concepts
+- [[molecular_biology|Molecular Biology]] - Molecular mechanisms
+- [[biochemistry|Biochemistry]] - Chemical processes
+- [[biophysics|Biophysics]] - Physical principles
+- [[developmental_systems|Developmental Systems]] - Cellular development
+- [[systems_biology|Systems Biology]] - Cellular networks
+
+### Cognitive Science Connections
+- [[../cognitive/active_inference|Active Inference]] - Cellular regulation parallels
+- [[../cognitive/homeostasis|Homeostasis]] - Cellular balance principles
+- [[../cognitive/decision_making|Decision Making]] - Cellular choice processes
+
+### Agent Architecture Applications
+- [[../../Things/BioFirm/|BioFirm Cellular Models]]
+- [[../../docs/examples/|Cellular Agent Examples]]
+- [[../../docs/implementation/|Cell Biology Implementations]]
+
 ## References
 
-- [[alberts_2014]] - "Molecular Biology of the Cell"
+### Foundational Texts
+- [[alberts_2014]] - "Molecular Biology of the Cell, 6th Edition"
+- [[phillips_2012]] - "Physical Biology of the Cell, 2nd Edition"
+- [[pollard_2016]] - "Cell Biology, 3rd Edition"
 
-- [[phillips_2012]] - "Physical Biology of the Cell"
-
+### Specialized Topics
 - [[howard_2001]] - "Mechanics of Motor Proteins and the Cytoskeleton"
+- [[bray_2001]] - "Cell Movements: From Molecules to Motility"
+- [[karp_2010]] - "Cell and Molecular Biology: Concepts and Experiments"
 
-- [[pollard_2016]] - "Cell Biology"
+### Active Inference Applications
+- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
+- [[parr_2022]] - "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior"
 
 ## See Also
 
 - [[molecular_biology]]
-
 - [[biochemistry]]
-
 - [[biophysics]]
-
 - [[developmental_systems]]
-
 - [[systems_biology]]
+- [[../agents/architectures_overview]]
 

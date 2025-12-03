@@ -2,7 +2,7 @@
 
 title: Information Theory
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

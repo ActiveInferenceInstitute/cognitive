@@ -32,6 +32,8 @@ semantic_relations:
 
     links:
 
+      - [[../biology/myrmecology]]
+
       - [[collective_behavior_ants]]
 
       - [[swarm_intelligence]]

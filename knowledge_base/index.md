@@ -64,13 +64,13 @@ semantic_relations:
 
 - [[mathematics/factor_graphs]]
 
-- [[mathematics/optimization]]
+- [[mathematics/optimization_theory]]
 
-- [[mathematics/statistical_inference]]
+- [[mathematics/statistical_foundations]]
 
 - [[mathematics/path_integral]]
 
-- [[mathematics/bayesian_inference]]
+- [[mathematics/bayesian_networks]]
 
 - [[mathematics/expected_free_energy]]
 
@@ -86,11 +86,11 @@ semantic_relations:
 
 - [[cognitive/cognitive_phenomena]]
 
-- [[cognitive/attention]]
+- [[cognitive/attention_mechanisms]]
 
 - [[cognitive/decision_making]]
 
-- [[cognitive/learning_memory]]
+- [[cognitive/learning_mechanisms]]
 
 - [[cognitive/social_cognition]]
 
@@ -104,45 +104,23 @@ semantic_relations:
 
 - [[systems/systems_theory]]
 
-- [[systems/complex_systems]]
+- [[systems/systems_theory]]
 
-- [[systems/emergence]]
 
-- [[systems/dynamical_systems]]
-
-- [[systems/network_theory]]
-
-- [[systems/control_systems]]
-
-- [[systems/adaptive_systems]]
-
-- [[systems/probabilistic_systems]]
-
-- [[systems/message_passing_networks]]
 
 ### Agent Architectures (`agents/`)
 
 - [[agents/architectures_overview]]
 
-- [[agents/GenericPOMDP/README]]
+- [[agents/GenericPOMDP/agent_config]]
 
-- [[agents/Continuous_Time/README]]
+- [[agents/Continuous_Time/continuous_time_agent]]
 
 - [[agents/index]]
 
 ### Biology (`biology/`)
 
-- [[biology/neural_systems]]
-
-- [[biology/evolutionary_processes]]
-
-- [[biology/collective_behavior]]
-
-- [[biology/biological_inference]]
-
-- [[biology/adaptation]]
-
-- [[biology/homeostasis]]
+- [[biology/evolutionary_dynamics]]
 
 - [[biology/myrmecology]]
 
@@ -164,15 +142,6 @@ semantic_relations:
 
 - [[ontology/hyperspatial/hyperspace_ontology]]
 
-### Citations & References (`citations/`)
-
-- [[citations/README]]
-
-- [[citations/friston_2017]]
-
-- [[citations/shannon_1948]]
-
-- [[citations/active_inference_refs]]
 
 ## Cross-Domain Relationships
 
@@ -194,11 +163,11 @@ semantic_relations:
 
 ### Systems → Biological Implementation
 
-- [[systems/complex_systems]] → [[biology/collective_behavior]]
+- [[systems/systems_theory]] → Biological systems implementation
 
-- [[systems/emergence]] → [[biology/evolutionary_processes]]
+- Systems emergence → [[biology/evolutionary_dynamics]]
 
-- [[systems/adaptive_systems]] → [[biology/adaptation]]
+- Adaptive systems → Biological adaptation mechanisms
 
 ## Implementation Examples
 
@@ -206,7 +175,7 @@ semantic_relations:
 
 - Basic [[cognitive/active_inference]] implementations
 
-- [[agents/GenericPOMDP/README]] examples
+- [[agents/GenericPOMDP/agent_config]] examples
 
 - [[cognitive/belief_updating]] tutorials
 
@@ -300,7 +269,7 @@ semantic_relations:
 
 ### Enhanced Structure
 
-✅ **Citation Management**: Comprehensive [[citations/README]] system
+🔄 **Citation Management**: Citation system implementation in progress
 
 ✅ **Agent Architectures**: Detailed [[agents/architectures_overview]]
 
@@ -330,7 +299,7 @@ semantic_relations:
 
 - [[agents/architectures_overview]] - Implementation architectures
 
-- [[citations/README]] - Reference management
+- Citation system - Reference management (planned)
 
 - [[ontology/cognitive_ontology]] - Conceptual taxonomy
 
@@ -342,7 +311,7 @@ semantic_relations:
 
 1. **Implementation**: Follow [[agents/architectures_overview]]
 
-1. **Research**: Use [[citations/README]] for literature
+1. **Research**: Citation system for literature (planned)
 
 ### Maintenance
 
@@ -350,7 +319,7 @@ semantic_relations:
 
 - Content quality monitoring via [[quality_assessment]]
 
-- Citation updates through [[citations/README]]
+- Citation system updates (planned)
 
 - Ontology evolution via [[ontology/cognitive_ontology]]
 

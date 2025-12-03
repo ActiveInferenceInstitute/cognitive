@@ -2,7 +2,7 @@
 
 title: Variational Inference
 
-type: concept
+type: mathematical_concept
 
 status: stable
 
@@ -28,19 +28,41 @@ semantic_relations:
 
       - [[information_theory]]
 
+      - [[optimization_theory]]
+
+  - type: implements
+
+    links:
+
       - [[active_inference]]
+
+      - [[free_energy_principle]]
+
+      - [[variational_free_energy]]
+
+      - [[expected_free_energy]]
+
+  - type: uses
+
+    links:
+
+      - [[kl_divergence]]
+
+      - [[evidence_lower_bound]]
+
+      - [[mean_field_approximation]]
 
   - type: relates
 
     links:
 
-      - [[free_energy_principle]]
-
       - [[predictive_coding]]
 
-      - [[optimization_theory]]
+      - [[message_passing]]
 
-      - [[active_inference_agent]]
+      - [[bayesian_inference]]
+
+      - [[belief_updating]]
 
 ---
 

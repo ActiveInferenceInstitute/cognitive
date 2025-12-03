@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[behavioral_biology]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -35,6 +37,8 @@ semantic_relations:
       - [[population_genetics]]
 
       - [[developmental_systems]]
+
+      - [[../agents/architectures_overview]]
 
   - type: relates
 
@@ -45,6 +49,8 @@ semantic_relations:
       - [[apidology]]
 
       - [[ecological_dynamics]]
+
+      - [[insect_flight_dynamics]]
 
 ---
 

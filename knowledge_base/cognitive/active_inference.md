@@ -28,6 +28,8 @@ semantic_relations:
 
     links:
 
+      - [[../mathematics/active_inference_theory]]
+
       - [[free_energy_principle]]
 
       - [[variational_inference]]
@@ -1608,6 +1610,228 @@ graph TD
 
     style E fill:#bfb,stroke:#333
 
+```
+
+## Recent Developments and Extensions
+
+### Advanced Formulations
+- **Continuous-Time Active Inference**: [[continuous_time_active_inference]] - Temporal dynamics and stochastic differential equations
+- **Deep Active Inference**: Integration with deep learning architectures for scalable inference
+- **Social Active Inference**: Multi-agent frameworks and theory of mind implementations
+- **Quantum Active Inference**: Quantum probability formulations for enhanced uncertainty representation
+
+### Computational Advances
+- **Scalable Inference Algorithms**: Amortized inference and variational approximations
+- **Neuromorphic Implementations**: Hardware-accelerated active inference on specialized chips
+- **Hybrid Systems**: Integration with reinforcement learning and optimal control
+- **Meta-Learning Extensions**: Learning to learn in active inference frameworks
+
+### Applications and Domains
+- **Clinical Applications**: Computational psychiatry and neurological disorder modeling
+- **Robotics**: Autonomous systems and human-robot interaction
+- **Economics**: Decision-making under uncertainty and behavioral economics
+- **Neuroscience**: Large-scale brain simulations and cognitive modeling
+
+## Practical Implementation Guide
+
+### Getting Started
+```python
+# Basic Active Inference Agent Implementation
+import numpy as np
+from scipy.special import softmax
+
+class BasicActiveInferenceAgent:
+    """Minimal active inference agent for educational purposes."""
+
+    def __init__(self, n_states=3, n_actions=2, n_observations=3):
+        # Generative model matrices
+        self.A = np.random.rand(n_observations, n_states)  # Observation model
+        self.A = self.A / self.A.sum(axis=0)  # Normalize columns
+
+        self.B = np.random.rand(n_states, n_states, n_actions)  # Transition model
+        for a in range(n_actions):
+            self.B[:, :, a] = self.B[:, :, a] / self.B[:, :, a].sum(axis=0)
+
+        self.C = np.ones(n_observations) / n_observations  # Prior preferences
+        self.D = np.ones(n_states) / n_states  # Prior beliefs
+        self.E = np.ones(n_actions) / n_actions  # Policy priors
+
+        # Inference parameters
+        self.gamma = 1.0  # Precision parameter
+        self.beliefs = self.D.copy()
+
+    def infer_states(self, observation):
+        """Perform variational state inference."""
+        # Simplified fixed-point iteration
+        for _ in range(10):
+            predicted_obs = self.A @ self.beliefs
+            prediction_error = observation - predicted_obs
+            self.beliefs = self.beliefs * np.exp(self.gamma * self.A.T @ prediction_error)
+            self.beliefs = self.beliefs / self.beliefs.sum()
+        return self.beliefs
+
+    def compute_expected_free_energy(self, policy):
+        """Compute expected free energy for a policy."""
+        G = 0
+        current_beliefs = self.beliefs.copy()
+
+        for t in range(len(policy)):
+            action = policy[t]
+
+            # Expected state transitions
+            next_beliefs = self.B[:, :, action].T @ current_beliefs
+
+            # Expected observations
+            expected_obs = self.A @ next_beliefs
+
+            # Epistemic affordance (information gain)
+            epistemic = np.sum(current_beliefs * np.log(current_beliefs / next_beliefs))
+
+            # Pragmatic value (preference satisfaction)
+            pragmatic = np.sum(expected_obs * np.log(expected_obs / self.C))
+
+            G += epistemic + pragmatic
+            current_beliefs = next_beliefs
+
+        return G
+
+    def select_action(self, observation):
+        """Select action using active inference."""
+        # Update beliefs
+        self.beliefs = self.infer_states(observation)
+
+        # Evaluate all possible policies (simplified single-step)
+        n_policies = 2  # Consider only immediate actions
+        G_values = []
+
+        for action in range(self.E.shape[0]):
+            policy = [action]  # Single-step policy
+            G = self.compute_expected_free_energy(policy)
+            G_values.append(G)
+
+        # Softmax policy selection
+        action_probabilities = softmax(-self.gamma * np.array(G_values))
+        selected_action = np.random.choice(len(action_probabilities), p=action_probabilities)
+
+        return selected_action
+```
+
+### Advanced Implementation Patterns
+
+#### Hierarchical Active Inference
+```python
+class HierarchicalActiveInferenceAgent(BasicActiveInferenceAgent):
+    """Hierarchical extension with multiple temporal scales."""
+
+    def __init__(self, hierarchy_levels=[3, 5, 8]):
+        super().__init__()
+        self.levels = hierarchy_levels
+        self.temporal_scales = [1, 4, 16]  # Increasing temporal horizons
+
+        # Initialize hierarchical generative models
+        self.hierarchical_models = []
+        for i, n_states in enumerate(hierarchy_levels):
+            model = {
+                'n_states': n_states,
+                'A': np.random.rand(3, n_states),  # Shared observation space
+                'B': np.random.rand(n_states, n_states, 2),
+                'time_scale': self.temporal_scales[i]
+            }
+            # Normalize matrices
+            model['A'] = model['A'] / model['A'].sum(axis=0)
+            for a in range(2):
+                model['B'][:, :, a] = model['B'][:, :, a] / model['B'][:, :, a].sum(axis=0)
+
+            self.hierarchical_models.append(model)
+
+    def hierarchical_inference(self, observation):
+        """Perform hierarchical inference across time scales."""
+        beliefs_hierarchy = []
+
+        for level, model in enumerate(self.hierarchical_models):
+            # Level-specific inference
+            level_beliefs = self.infer_states_hierarchical(observation, model)
+            beliefs_hierarchy.append(level_beliefs)
+
+            # Pass expectations to next level
+            if level < len(self.hierarchical_models) - 1:
+                observation = model['A'] @ level_beliefs  # Predictive coding
+
+        return beliefs_hierarchy
+
+    def infer_states_hierarchical(self, observation, model):
+        """Hierarchical state inference with temporal integration."""
+        # Implement temporal smoothing based on level's time scale
+        beliefs = np.ones(model['n_states']) / model['n_states']
+
+        for _ in range(model['time_scale']):
+            predicted_obs = model['A'] @ beliefs
+            prediction_error = observation - predicted_obs
+            beliefs = beliefs * np.exp(0.1 * model['A'].T @ prediction_error)
+            beliefs = beliefs / beliefs.sum()
+
+        return beliefs
+```
+
+#### Active Inference with Learning
+```python
+class LearningActiveInferenceAgent(BasicActiveInferenceAgent):
+    """Active inference agent with online model learning."""
+
+    def __init__(self, learning_rate=0.01):
+        super().__init__()
+        self.learning_rate = learning_rate
+        self.model_history = []  # Track model evolution
+
+    def learn_from_experience(self, observation, action, next_observation):
+        """Update generative model based on experience."""
+
+        # Update transition model B
+        predicted_next_state = self.B[:, :, action].T @ self.beliefs
+        actual_next_beliefs = self.infer_states(next_observation)
+
+        # Learning update for B
+        prediction_error = actual_next_beliefs - predicted_next_state
+        self.B[:, :, action] += self.learning_rate * np.outer(actual_next_beliefs, self.beliefs)
+
+        # Renormalize
+        self.B[:, :, action] = self.B[:, :, action] / self.B[:, :, action].sum(axis=0)
+
+        # Update observation model A
+        predicted_obs = self.A @ self.beliefs
+        obs_prediction_error = next_observation - predicted_obs
+
+        # Learning update for A
+        self.A += self.learning_rate * np.outer(obs_prediction_error, self.beliefs)
+
+        # Ensure non-negative and renormalize
+        self.A = np.maximum(self.A, 0)
+        self.A = self.A / self.A.sum(axis=0)
+
+        # Store model state for analysis
+        self.model_history.append({
+            'A': self.A.copy(),
+            'B': self.B.copy(),
+            'step': len(self.model_history)
+        })
+
+    def reflect_on_learning(self):
+        """Analyze learning progress and model changes."""
+        if len(self.model_history) < 2:
+            return {}
+
+        recent = self.model_history[-1]
+        previous = self.model_history[-2]
+
+        # Compute model change metrics
+        A_change = np.linalg.norm(recent['A'] - previous['A'])
+        B_change = np.linalg.norm(recent['B'] - previous['B'])
+
+        return {
+            'observation_model_change': A_change,
+            'transition_model_change': B_change,
+            'learning_progress': len(self.model_history)
+        }
 ```
 
 ## Related Documentation

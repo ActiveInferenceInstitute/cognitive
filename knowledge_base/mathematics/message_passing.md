@@ -2,7 +2,7 @@
 
 title: Message Passing Algorithms
 
-type: concept
+type: mathematical_concept
 
 status: active
 

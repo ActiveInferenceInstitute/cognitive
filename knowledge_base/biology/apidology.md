@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[ecological_networks]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -35,6 +37,8 @@ semantic_relations:
       - [[population_genetics]]
 
       - [[evolutionary_game_theory]]
+
+      - [[collective_behavior]]
 
   - type: relates
 
@@ -45,6 +49,8 @@ semantic_relations:
       - [[pollination_biology]]
 
       - [[ecological_dynamics]]
+
+      - [[../agents/architectures_overview]]
 
 ---
 
@@ -438,27 +444,121 @@ class ClimateImpacts:
 
 ```
 
+## Active Inference in Bee Cognition
+
+### Predictive Processing in Hive Behavior
+
+```python
+class PredictiveBeeColony:
+    """Active Inference model of bee colony decision-making"""
+
+    def __init__(self, colony_size: int):
+        self.colony_size = colony_size
+        self.internal_model = ColonyInternalModel()
+        self.foraging_policy = ForagingPolicy()
+        self.dance_communication = WaggleDanceCommunication()
+
+    def predict_foraging_success(self, environmental_signals: Dict) -> float:
+        """Predict foraging success using internal model"""
+        # Update beliefs about food availability
+        posterior = self.internal_model.update_beliefs(
+            environmental_signals,
+            self.foraging_policy.current_beliefs
+        )
+
+        # Compute expected free energy
+        G = self.compute_expected_free_energy(posterior)
+
+        # Select optimal foraging policy
+        optimal_policy = self.foraging_policy.select_policy(G)
+
+        return optimal_policy.expected_reward
+
+    def update_colony_knowledge(self, foraging_outcomes: List[Dict]) -> None:
+        """Update colony knowledge through dance communication"""
+        # Process foraging information
+        information_gain = self.dance_communication.process_dances(
+            foraging_outcomes
+        )
+
+        # Update internal model
+        self.internal_model.update_model(information_gain)
+
+        # Refine foraging policy
+        self.foraging_policy.refine_policy(information_gain)
+```
+
+### Swarm Intelligence as Collective Inference
+
+```math
+\begin{aligned}
+& \text{Collective Free Energy:} \\
+& F_{swarm} = \sum_i F_i + \sum_{i,j} I_{ij} \\
+& \text{Consensus Formation:} \\
+& \frac{d\mathbf{x}_i}{dt} = -\nabla_{\mathbf{x}_i} F_{swarm} + \eta_i(t) \\
+& \text{Information Integration:} \\
+& P(\text{decision}|\{\text{dances}\}) = \sigma\left(\sum_i w_i \cdot \text{dance}_i\right)
+\end{aligned}
+```
+
 ## Current Research Trends
 
-1. Bee genomics
+1. **Cognitive Ecology**: Active Inference in bee decision-making
+2. **Neuroscience**: Neural basis of waggle dance communication
+3. **Collective Intelligence**: Swarm algorithms and emergent behavior
+4. **Genomics**: Bee genome evolution and adaptation
+5. **Pesticide Effects**: Neurotoxic impacts on bee cognition
+6. **Disease Resistance**: Immune system responses to pathogens
+7. **Urban Ecology**: Bee adaptation to human-modified environments
+8. **Climate Adaptation**: Phenological responses to environmental change
+9. **Synthetic Biology**: Engineering bee-compatible microbes
+10. **Conservation Genomics**: Genetic diversity and population health
 
-1. Pesticide effects
+## Cognitive Modeling Applications
 
-1. Disease resistance
+### Bee-Inspired Agent Architectures
+- **Swarm Intelligence Agents**: Decentralized decision-making and collective behavior
+- **Communication Networks**: Information flow through symbolic communication systems
+- **Foraging Optimization**: Resource allocation and exploration-exploitation trade-offs
+- **Division of Labor**: Task specialization and adaptive role assignment
 
-1. Urban ecology
+### Active Inference in Social Insects
+- **Collective Inference**: How bee colonies implement collective decision-making
+- **Predictive Coding**: Internal models of resource availability and colony needs
+- **Free Energy Minimization**: Optimal foraging and communication strategies
 
-1. Climate adaptation
+## Cross-References
+
+### Related Biological Concepts
+- [[myrmecology|Ant Biology]] - Comparative social insect systems
+- [[behavioral_biology|Behavioral Biology]] - Animal cognition principles
+- [[collective_behavior|Collective Behavior]] - Group-level biological processes
+- [[ecological_networks|Ecological Networks]] - Pollination and mutualistic networks
+
+### Cognitive Science Connections
+- [[../cognitive/active_inference|Active Inference]] - Theoretical foundation
+- [[../cognitive/decision_making|Decision Making]] - Individual and collective choice
+- [[../cognitive/social_cognition|Social Cognition]] - Intersubjectivity and communication
+
+### Agent Architecture Examples
+- [[../../Things/Ant_Colony/|Ant Colony Implementation]]
+- [[../../docs/examples/|Biological Agent Examples]]
+- [[../../docs/implementation/|Implementation Patterns]]
 
 ## References and Further Reading
 
-1. The Biology of the Honey Bee
+### Foundational Texts
+1. **The Biology of the Honey Bee** (Winston, 1987) - Comprehensive bee biology
+2. **Bee Conservation** (Buchmann & Nabhan, 2012) - Conservation biology approaches
+3. **Pollination Biology** (Real, 1983) - Ecological and evolutionary perspectives
 
-1. Bee Conservation
+### Advanced Topics
+4. **Social Evolution in Bees** (Michener, 1974) - Evolutionary social systems
+5. **Bee Health and Management** (Morse & Calderone, 2000) - Applied apiculture
+6. **The Spirit of the Hive** (Butler, 1979) - Bee cognition and behavior
 
-1. Pollination Biology
-
-1. Social Evolution in Bees
-
-1. Bee Health and Management
+### Modern Research
+7. **Information Processing in Social Insects** (Seeley, 1995) - Collective intelligence
+8. **Cognitive Ecology of Pollination** (Chittka & Thomson, 2001) - Bee learning and memory
+9. **Mathematical Models of Bee Behavior** (Camazine et al., 2003) - Quantitative approaches
 

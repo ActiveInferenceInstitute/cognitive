@@ -2,7 +2,7 @@
 
 title: Hamiltonian Mechanics
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

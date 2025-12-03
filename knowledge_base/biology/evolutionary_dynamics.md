@@ -28,6 +28,8 @@ semantic_relations:
 
       - [[evolutionary_game_theory]]
 
+      - [[../cognitive/active_inference]]
+
   - type: implements
 
     links:
@@ -38,6 +40,8 @@ semantic_relations:
 
       - [[adaptive_dynamics]]
 
+      - [[../agents/architectures_overview]]
+
   - type: relates
 
     links:
@@ -47,6 +51,8 @@ semantic_relations:
       - [[developmental_systems]]
 
       - [[evolutionary_computation]]
+
+      - [[behavioral_biology]]
 
 ---
 
@@ -484,11 +490,21 @@ class EvolutionaryGame:
 
 ### 3. Cultural Evolution
 
-- Meme dynamics
+- Meme dynamics and cultural transmission
+- Social learning and cumulative culture
+- Gene-culture coevolution
 
-- Social learning
+### 4. Evolutionary Computation
 
-- Cultural transmission
+- Genetic algorithms and evolutionary strategies
+- Evolutionary optimization and search
+- Neuroevolution and co-evolutionary algorithms
+
+### 5. Modern Evolutionary Methods
+
+- Evolutionary machine learning integration
+- Large-scale evolutionary simulations
+- Evolutionary game theory in complex networks
 
 ## Implementation Considerations
 
@@ -516,25 +532,48 @@ class EvolutionaryGame:
 
 - Phylogenetic trees
 
+## Cross-References
+
+### Related Biological Concepts
+- [[population_genetics|Population Genetics]] - Genetic variation
+- [[ecological_dynamics|Ecological Dynamics]] - Eco-evolutionary dynamics
+- [[developmental_systems|Developmental Systems]] - Evolutionary development
+- [[evolutionary_game_theory|Evolutionary Game Theory]] - Strategic evolution
+- [[fitness_landscapes|Fitness Landscapes]] - Evolutionary optimization
+
+### Cognitive Science Connections
+- [[../cognitive/active_inference|Active Inference]] - Evolutionary learning parallels
+- [[../cognitive/learning_theory|Learning Theory]] - Evolutionary adaptation
+- [[../cognitive/decision_making|Decision Making]] - Evolutionary choice
+
+### Agent Architecture Applications
+- [[../../tools/src/models/active_inference/|Evolutionary Active Inference]]
+- [[../../docs/examples/|Evolutionary Agent Examples]]
+- [[../../docs/implementation/|Evolutionary Computation]]
+
 ## References
 
+### Foundational Texts
 - [[nowak_2006]] - "Evolutionary Dynamics: Exploring the Equations of Life"
-
-- [[page_2002]] - "The Structure and Dynamics of Evolutionary Systems"
-
-- [[dieckmann_2000]] - "The Geometry of Ecological Interactions"
-
 - [[rice_2004]] - "Evolutionary Theory: Mathematical and Conceptual Foundations"
+- [[hartl_2006]] - "Essential Genetics: From Genes to Genome"
+
+### Advanced Topics
+- [[page_2002]] - "The Structure and Dynamics of Evolutionary Systems"
+- [[dieckmann_2000]] - "The Geometry of Ecological Interactions"
+- [[geritz_1998]] - "Evolutionary Branching and Sympatric Speciation"
+
+### Modern Methods
+- [[back_1996]] - "Evolutionary Computation: Toward a New Philosophy of Machine Intelligence"
+- [[floreano_2008]] - "Bio-Inspired Artificial Intelligence"
+- [[stanley_2019]] - "Designing Artificial Neural Networks through Neuroevolution"
 
 ## See Also
 
 - [[population_genetics]]
-
 - [[ecological_dynamics]]
-
 - [[developmental_systems]]
-
 - [[evolutionary_game_theory]]
-
 - [[fitness_landscapes]]
+- [[../agents/architectures_overview]]
 

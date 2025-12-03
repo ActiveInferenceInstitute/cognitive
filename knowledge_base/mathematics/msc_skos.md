@@ -2,7 +2,7 @@
 
 title: Mathematics Subject Classification (MSC) as SKOS
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

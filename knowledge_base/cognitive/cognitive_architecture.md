@@ -8,437 +8,588 @@ type: concept
 
 status: stable
 
+created: 2024-02-06
+
+updated: 2025-01-01
+
+complexity: advanced
+
+processing_priority: 1
+
 tags:
-
   - cognition
-
   - architecture
-
   - organization
-
   - systems
-
   - computation
+  - design
+  - implementation
 
 semantic_relations:
-
   - type: implements
-
-    links: [[cognitive_systems]]
-
-  - type: related
-
     links:
-
+      - [[cognitive_systems]]
       - [[information_processing]]
-
       - [[neural_computation]]
-
+  - type: foundation_for
+    links:
+      - [[cognitive_modeling_concepts]]
+      - [[agent_architectures]]
+      - [[artificial_intelligence]]
+  - type: related
+    links:
       - [[memory_systems]]
+      - [[attention_mechanisms]]
+      - [[learning_theory]]
+      - [[neural_networks]]
 
 ---
 
 ## Overview
 
-Cognitive Architecture describes the fundamental organization and structure of cognitive systems, specifying how different components interact to produce intelligent behavior. This framework provides a unified theory of how cognitive processes are implemented and coordinated in biological and artificial systems.
+Cognitive Architecture describes the fundamental organization and structure of cognitive systems, specifying how different components interact to produce intelligent behavior. This framework provides a unified theory of how cognitive processes are implemented and coordinated in biological and artificial systems, serving as the blueprint for both natural intelligence and artificial cognitive systems.
 
 ## Core Components
 
 ### Processing Systems
 
-- [[information_processors]] - Think parts
+#### Information Processing Units
+- **Perceptual Systems**: Input processing and sensory integration
+  - Sensory processing and feature extraction
+  - Multimodal integration and binding
+  - Pattern recognition and categorization
 
-  - [[perceptual_systems]] - Input parts
+- **Central Processing**: Core cognitive operations
+  - Working memory and active maintenance
+  - Executive functions and control
+  - Reasoning and problem-solving
 
-    - [[sensory_processing]] - Sense work
+#### Memory Systems
+- **Working Memory**: Active information maintenance
+  - Capacity limits and resource allocation
+  - Content rehearsal and updating
+  - Interference control and protection
 
-    - [[pattern_recognition]] - Find things
-
-  - [[central_systems]] - Main parts
-
-    - [[working_memory]] - Hold now
-
-    - [[long_term_memory]] - Keep long
+- **Long-term Memory**: Knowledge storage and retrieval
+  - Episodic memory for events
+  - Semantic memory for facts
+  - Procedural memory for skills
 
 ### Control Systems
 
-- [[control_mechanisms]] - Manage parts
+#### Executive Control
+- **Goal Management**: Objective setting and maintenance
+  - Goal representation and decomposition
+  - Priority assignment and scheduling
+  - Progress monitoring and adjustment
 
-  - [[executive_control]] - Boss parts
+- **Resource Allocation**: Processing resource management
+  - Attention distribution and focusing
+  - Processing capacity optimization
+  - Energy efficiency and conservation
 
-    - [[goal_management]] - Want handle
+#### Attention Systems
+- **Selective Attention**: Information filtering
+  - Target enhancement and distractor suppression
+  - Feature-based and object-based selection
+  - Spatial and temporal focusing
 
-    - [[resource_allocation]] - Give what
-
-  - [[attention_systems]] - Focus parts
-
-    - [[selective_attention]] - Pick what
-
-    - [[sustained_attention]] - Keep on
+- **Sustained Attention**: Prolonged engagement
+  - Vigilance maintenance and monitoring
+  - Fatigue management and compensation
+  - Performance optimization over time
 
 ### Output Systems
 
-- [[response_systems]] - Do parts
+#### Motor Control
+- **Action Selection**: Decision-to-action translation
+  - Policy evaluation and choice
+  - Motor program initiation
+  - Response preparation and timing
 
-  - [[motor_control]] - Move parts
+- **Movement Execution**: Physical action implementation
+  - Motor coordination and sequencing
+  - Feedback integration and correction
+  - Adaptive motor learning
 
-    - [[action_selection]] - Choose do
-
-    - [[movement_execution]] - Make do
-
-  - [[language_production]] - Say parts
-
-    - [[speech_planning]] - Plan say
-
-    - [[articulation]] - Make say
+#### Communication Systems
+- **Language Production**: Verbal output generation
+  - Message planning and formulation
+  - Articulation and motor control
+  - Prosody and emphasis control
 
 ## Structural Organization
 
 ### Hierarchical Levels
 
-- [[processing_levels]] - Think layers
+#### Low-Level Processing
+- **Feature Processing**: Basic sensory analysis
+  - Edge detection and orientation
+  - Color and motion analysis
+  - Basic pattern recognition
 
-  - [[low_level]] - Basic work
+- **Motor Programs**: Fundamental action patterns
+  - Reflexive and automatic responses
+  - Coordinated movement sequences
+  - Basic motor learning
 
-    - [[feature_processing]] - Thing parts
+#### High-Level Processing
+- **Abstract Processing**: Complex cognition
+  - Conceptual reasoning and abstraction
+  - Metacognitive monitoring
+  - Strategic decision-making
 
-    - [[motor_programs]] - Move plans
-
-  - [[high_level]] - Complex work
-
-    - [[abstract_processing]] - Big think
-
-    - [[strategic_planning]] - Big plan
+- **Strategic Planning**: Long-term organization
+  - Goal decomposition and sequencing
+  - Resource planning and allocation
+  - Contingency preparation
 
 ### Modular Organization
 
-- [[cognitive_modules]] - Think boxes
+#### Specialized Modules
+- **Domain-Specific Processors**:
+  - Language module for linguistic processing
+  - Spatial module for geometric reasoning
+  - Social module for interpersonal cognition
+  - Emotional module for affective processing
 
-  - [[specialized_modules]] - Special jobs
+- **Integration Modules**:
+  - Multimodal integration for cross-sensory binding
+  - Cross-domain integration for interdisciplinary reasoning
+  - Temporal integration for sequence processing
 
-    - [[language_module]] - Talk box
+#### Network Structure
+- **Local Networks**: Specialized processing clusters
+  - Processing units with dedicated functions
+  - Local connectivity for efficient computation
+  - Specialized optimization for domain tasks
 
-    - [[spatial_module]] - Space box
-
-  - [[integration_modules]] - Join boxes
-
-    - [[multimodal]] - Sense join
-
-    - [[cross_domain]] - Kind join
-
-### Network Structure
-
-- [[cognitive_networks]] - Think nets
-
-  - [[local_networks]] - Near nets
-
-    - [[processing_units]] - Work dots
-
-    - [[local_connections]] - Near links
-
-  - [[distributed_networks]] - Far nets
-
-    - [[long_range]] - Far links
-
-    - [[hub_nodes]] - Join points
+- **Distributed Networks**: System-wide coordination
+  - Long-range connections for information routing
+  - Hub nodes for integration and control
+  - Global coordination and synchronization
 
 ## Processing Mechanisms
 
 ### Information Flow
 
-- [[processing_flow]] - Think move
+#### Feedforward Processing
+- **Sequential Processing**: Ordered computation
+  - Stage-by-stage information transformation
+  - Hierarchical feature abstraction
+  - Progressive complexity increase
 
-  - [[feedforward]] - Forward go
+- **Parallel Processing**: Simultaneous computation
+  - Independent processing streams
+  - Concurrent feature analysis
+  - Distributed resource utilization
 
-    - [[sequential]] - Step by step
+#### Feedback Processing
+- **Top-Down Control**: Higher-level guidance
+  - Expectation-driven processing
+  - Context-dependent modulation
+  - Goal-directed attention allocation
 
-    - [[parallel]] - Same time
-
-  - [[feedback]] - Back go
-
-    - [[top_down]] - High to low
-
-    - [[recurrent]] - Loop back
+- **Recurrent Processing**: Iterative refinement
+  - Information cycling and updating
+  - Error correction and optimization
+  - Stability and convergence
 
 ### Resource Management
 
-- [[resource_systems]] - Power use
+#### Attention Resources
+- **Capacity Limits**: Processing constraints
+  - Working memory limitations
+  - Attentional bottlenecks
+  - Processing speed boundaries
 
-  - [[attention_resources]] - Focus power
+- **Allocation Rules**: Resource distribution
+  - Priority-based assignment
+  - Demand-driven allocation
+  - Efficiency optimization
 
-    - [[capacity_limits]] - How much
+#### Processing Resources
+- **Cognitive Load**: Processing demands
+  - Task complexity assessment
+  - Resource requirement estimation
+  - Load balancing strategies
 
-    - [[allocation_rules]] - Give rules
-
-  - [[processing_resources]] - Think power
-
-    - [[cognitive_load]] - Brain full
-
-    - [[efficiency]] - Power good
+- **Efficiency Mechanisms**: Optimization strategies
+  - Automaticity development
+  - Skill acquisition benefits
+  - Expertise advantages
 
 ### Control Processes
 
-- [[control_processes]] - Boss work
+#### Monitoring Systems
+- **Error Detection**: Performance assessment
+  - Accuracy monitoring and feedback
+  - Deviation detection and correction
+  - Quality control mechanisms
 
-  - [[monitoring]] - Watch work
+- **Conflict Resolution**: Competition management
+  - Response conflict detection
+  - Alternative evaluation and selection
+  - Decision optimization
 
-    - [[error_detection]] - Wrong find
+#### Adaptation Mechanisms
+- **Strategy Adjustment**: Method optimization
+  - Performance-based strategy switching
+  - Learning from experience
+  - Contextual adaptation
 
-    - [[conflict_resolution]] - Fix fight
-
-  - [[adaptation]] - Change fit
-
-    - [[strategy_adjustment]] - Way change
-
-    - [[learning_updates]] - Know change
+- **Learning Updates**: Knowledge refinement
+  - Parameter optimization
+  - Model updating and revision
+  - Skill development and improvement
 
 ## Implementation Principles
 
-### Computation
+### Computational Paradigms
 
-- [[cognitive_computation]] - Think math
+#### Symbolic Processing
+- **Rule-Based Systems**: Logical computation
+  - Condition-action rule application
+  - Symbolic manipulation and transformation
+  - Logical inference and deduction
 
-  - [[symbolic_processing]] - Sign work
+- **Semantic Networks**: Knowledge representation
+  - Concept nodes and relational links
+  - Inheritance and property propagation
+  - Associative knowledge structures
 
-    - [[rule_application]] - Use rules
+#### Subsymbolic Processing
+- **Neural Networks**: Distributed computation
+  - Parallel distributed processing
+  - Connectionist architectures
+  - Emergent computational properties
 
-    - [[symbol_manipulation]] - Change signs
-
-  - [[subsymbolic]] - Pattern work
-
-    - [[parallel_distributed]] - Spread work
-
-    - [[emergent_computation]] - Come out
+- **Dynamic Systems**: State-based computation
+  - Continuous state evolution
+  - Attractor dynamics and stability
+  - Self-organizing behavior
 
 ### Memory Organization
 
-- [[memory_architecture]] - Know build
+#### Storage Systems
+- **Buffer Systems**: Temporary storage
+  - Short-term active maintenance
+  - Capacity-limited retention
+  - Rapid access and updating
 
-  - [[storage_systems]] - Keep parts
+- **Long-Term Store**: Permanent storage
+  - Consolidated knowledge retention
+  - Structured organization
+  - Associative retrieval
 
-    - [[buffer_systems]] - Hold short
+#### Access Systems
+- **Encoding Processes**: Information input
+  - Feature extraction and representation
+  - Consolidation and strengthening
+  - Associative linking
 
-    - [[long_term_store]] - Keep long
-
-  - [[access_systems]] - Get parts
-
-    - [[retrieval]] - Find stored
-
-    - [[encoding]] - Put in
+- **Retrieval Processes**: Information output
+  - Cued recall and recognition
+  - Pattern completion and reconstruction
+  - Context-dependent activation
 
 ### Learning Mechanisms
 
-- [[architecture_learning]] - System learn
+#### Structural Learning
+- **Connection Formation**: Network development
+  - Synaptic strengthening and creation
+  - Pathway establishment and reinforcement
+  - Architectural adaptation
 
-  - [[structural_learning]] - Build learn
+- **Pruning Processes**: Network optimization
+  - Unused connection elimination
+  - Efficiency improvement
+  - Resource reallocation
 
-    - [[connection_formation]] - Link make
+#### Functional Learning
+- **Parameter Tuning**: System optimization
+  - Weight adjustment and calibration
+  - Threshold modification
+  - Sensitivity regulation
 
-    - [[pruning]] - Cut extra
-
-  - [[functional_learning]] - Work learn
-
-    - [[parameter_tuning]] - Number fix
-
-    - [[strategy_acquisition]] - Way get
+- **Strategy Acquisition**: Method learning
+  - Problem-solving approach development
+  - Task-specific technique learning
+  - Adaptive behavior acquisition
 
 ## Theoretical Frameworks
 
 ### Classical Architectures
 
-- [[symbolic_systems]] - Sign think
+#### Symbolic Systems
+- **Production Systems**: Rule-based processing
+  - Condition-action production rules
+  - Goal stack management
+  - Pattern matching and execution
 
-  - [[production_systems]] - Rule use
+- **Semantic Networks**: Knowledge structures
+  - Node-link representations
+  - Inheritance hierarchies
+  - Relational knowledge bases
 
-    - [[condition_action]] - If then
+#### Connectionist Systems
+- **Neural Network Models**: Brain-inspired computation
+  - Layered network architectures
+  - Recurrent processing networks
+  - Self-organizing feature maps
 
-    - [[goal_stack]] - Want pile
-
-  - [[semantic_networks]] - Mean nets
-
-    - [[concept_nodes]] - Idea dots
-
-    - [[relations]] - Idea links
-
-### Neural Architectures
-
-- [[brain_inspired]] - Brain like
-
-  - [[neural_networks]] - Brain nets
-
-    - [[layered_networks]] - Layer nets
-
-    - [[recurrent_networks]] - Loop nets
-
-  - [[plasticity_rules]] - Change rules
-
-    - [[hebbian_learning]] - Fire join
-
-    - [[error_driven]] - Wrong fix
+- **Dynamic Neural Fields**: Continuous processing
+  - Activation field dynamics
+  - Interaction and competition
+  - Stability and pattern formation
 
 ### Hybrid Architectures
 
-- [[mixed_systems]] - Both kinds
+#### Symbolic-Neural Integration
+- **Neural Symbol Processing**: Combined approaches
+  - Symbolic representations in neural systems
+  - Neural computation of symbolic operations
+  - Hybrid learning and processing
 
-  - [[symbolic_neural]] - Sign brain
+- **Modular Hybrid Systems**: Component integration
+  - Specialized processing modules
+  - Integration mechanisms and interfaces
+  - Hierarchical control structures
 
-    - [[neural_symbols]] - Brain signs
+#### Advanced Integration
+- **Cognitive Architectures**: Unified frameworks
+  - ACT-R: Adaptive Control of Thought
+  - SOAR: State, Operator, And Result
+  - LIDA: Learning Intelligent Distribution Agent
 
-    - [[symbolic_dynamics]] - Sign change
+## Implementation Examples
 
-  - [[modular_hybrid]] - Box mix
+### Basic Cognitive Architecture
+```python
+class BasicCognitiveArchitecture:
+    """Fundamental cognitive architecture implementation."""
 
-    - [[specialized_modules]] - Job box
+    def __init__(self, config):
+        # Core components
+        self.perception = PerceptionModule(config['perception'])
+        self.memory = MemorySystem(config['memory'])
+        self.reasoning = ReasoningEngine(config['reasoning'])
+        self.action = ActionSystem(config['action'])
 
-    - [[integration_mechanisms]] - Join way
+        # Control systems
+        self.attention = AttentionController(config['attention'])
+        self.executive = ExecutiveController(config['executive'])
+
+        # State management
+        self.working_memory = WorkingMemory(config['working_memory'])
+        self.beliefs = BeliefSystem(config['beliefs'])
+
+    def cognitive_cycle(self, observation, goals):
+        """Complete cognitive processing cycle."""
+
+        # Perception and attention
+        attended_input = self.attention.focus(observation)
+
+        # Memory integration
+        context = self.memory.retrieve_relevant(attended_input, goals)
+        self.working_memory.update(attended_input, context)
+
+        # Reasoning and planning
+        situation_assessment = self.reasoning.assess_situation(
+            self.working_memory.content, goals
+        )
+        plan = self.reasoning.generate_plan(situation_assessment, goals)
+
+        # Action selection and execution
+        action = self.action.select(plan, self.working_memory.content)
+        self.executive.monitor_execution(action, goals)
+
+        # Learning and adaptation
+        self.memory.consolidate_experience(attended_input, action, goals)
+        self.beliefs.update_beliefs(attended_input, action, goals)
+
+        return action
+```
+
+### Hierarchical Cognitive Architecture
+```python
+class HierarchicalCognitiveArchitecture(BasicCognitiveArchitecture):
+    """Hierarchical cognitive architecture with multiple processing levels."""
+
+    def __init__(self, config):
+        super().__init__(config)
+
+        # Hierarchical levels
+        self.levels = []
+        for level_config in config['hierarchy']:
+            level = ProcessingLevel(level_config)
+            self.levels.append(level)
+
+        # Cross-level communication
+        self.message_passing = MessagePassingSystem()
+        self.level_coordination = LevelCoordination()
+
+    def hierarchical_processing(self, input_data):
+        """Process information through hierarchical levels."""
+
+        current_data = input_data
+        level_outputs = []
+
+        # Bottom-up processing
+        for level in self.levels:
+            level_output = level.process_bottom_up(current_data)
+            level_outputs.append(level_output)
+            current_data = level_output  # Pass to next level
+
+        # Top-down modulation
+        top_down_signals = []
+        for level_idx in reversed(range(len(self.levels))):
+            if level_idx == len(self.levels) - 1:
+                # Top level generates top-down expectations
+                top_down = self.levels[level_idx].generate_expectations()
+            else:
+                # Lower levels receive and process top-down signals
+                top_down = self.levels[level_idx].process_top_down(
+                    top_down_signals[-1]
+                )
+            top_down_signals.append(top_down)
+
+        # Level coordination and integration
+        integrated_output = self.level_coordination.integrate_levels(
+            level_outputs, list(reversed(top_down_signals))
+        )
+
+        return integrated_output
+```
+
+### Adaptive Cognitive Architecture
+```python
+class AdaptiveCognitiveArchitecture(HierarchicalCognitiveArchitecture):
+    """Self-adapting cognitive architecture."""
+
+    def __init__(self, config):
+        super().__init__(config)
+
+        # Adaptation components
+        self.performance_monitor = PerformanceMonitor()
+        self.architecture_optimizer = ArchitectureOptimizer()
+        self.learning_advisor = LearningAdvisor()
+
+        # Adaptation state
+        self.adaptation_history = []
+        self.current_performance = {}
+
+    def adaptive_cycle(self, input_data, goals):
+        """Adaptive cognitive processing with self-optimization."""
+
+        # Standard processing
+        output = self.hierarchical_processing(input_data)
+
+        # Performance monitoring
+        performance_metrics = self.performance_monitor.assess_performance(
+            input_data, output, goals
+        )
+
+        # Architecture adaptation
+        if self.should_adapt(performance_metrics):
+            adaptation = self.architecture_optimizer.optimize_architecture(
+                self.levels, performance_metrics, self.adaptation_history
+            )
+            self.apply_adaptation(adaptation)
+
+        # Learning guidance
+        learning_signals = self.learning_advisor.generate_learning_signals(
+            performance_metrics, self.current_performance
+        )
+
+        # Update adaptation state
+        self.update_adaptation_state(performance_metrics, adaptation)
+
+        return output, performance_metrics
+
+    def should_adapt(self, performance_metrics):
+        """Determine if architecture adaptation is needed."""
+        # Check performance thresholds
+        performance_below_threshold = any(
+            metric < threshold
+            for metric, threshold in self.performance_thresholds.items()
+        )
+
+        # Check adaptation frequency
+        time_since_last_adaptation = len(self.adaptation_history)
+        adaptation_due = time_since_last_adaptation > self.adaptation_interval
+
+        return performance_below_threshold or adaptation_due
+
+    def apply_adaptation(self, adaptation):
+        """Apply architectural adaptations."""
+        for level_idx, level_adaptation in adaptation.items():
+            self.levels[level_idx].apply_changes(level_adaptation)
+
+        self.adaptation_history.append(adaptation)
+```
 
 ## Applications
 
 ### Cognitive Modeling
-
-- [[model_systems]] - Think copy
-
-  - [[behavior_models]] - Do copy
-
-    - [[performance]] - How good
-
-    - [[learning]] - Get good
-
-  - [[process_models]] - How copy
-
-    - [[mechanisms]] - Way work
-
-    - [[dynamics]] - Time change
+- **Human Performance Modeling**: Predicting and explaining human behavior
+- **Skill Acquisition**: Understanding learning processes and optimization
+- **Expertise Development**: Modeling expert vs novice performance differences
 
 ### Artificial Intelligence
-
-- [[ai_systems]] - Smart make
-
-  - [[intelligent_agents]] - Smart thing
-
-    - [[reasoning_systems]] - Think smart
-
-    - [[learning_systems]] - Learn smart
-
-  - [[cognitive_robots]] - Smart move
-
-    - [[embodied_ai]] - Body smart
-
-    - [[social_ai]] - People smart
+- **Intelligent Agents**: Building autonomous systems with human-like cognition
+- **Cognitive Robotics**: Embodied intelligence with perception-action integration
+- **Human-AI Collaboration**: Systems that understand and adapt to human cognition
 
 ### Clinical Applications
-
-- [[disorder_models]] - Wrong models
-
-  - [[dysfunction]] - Not work
-
-    - [[process_breakdown]] - Break how
-
-    - [[compensation]] - Fix how
-
-  - [[intervention]] - Help fix
-
-    - [[rehabilitation]] - Work fix
-
-    - [[training]] - Learn fix
+- **Disorder Modeling**: Understanding cognitive dysfunction and impairment
+- **Rehabilitation**: Targeted cognitive training and recovery programs
+- **Assessment**: Standardized cognitive evaluation and diagnosis
 
 ## Research Methods
 
-### Behavioral Studies
-
-- [[behavior_analysis]] - Do look
-
-  - [[task_performance]] - How do
-
-    - [[accuracy]] - How right
-
-    - [[response_time]] - How fast
-
-  - [[strategy_use]] - Way use
-
-    - [[problem_solving]] - Fix how
-
-    - [[skill_learning]] - Get good
+### Behavioral Analysis
+- **Task Performance Studies**: Measuring accuracy, speed, and strategy use
+- **Learning Curve Analysis**: Tracking skill acquisition and improvement
+- **Strategy Assessment**: Understanding problem-solving approaches
 
 ### Neural Methods
-
-- [[brain_measures]] - Brain look
-
-  - [[activity_patterns]] - Fire look
-
-    - [[localization]] - Where work
-
-    - [[connectivity]] - How join
-
-  - [[lesion_studies]] - Break look
-
-    - [[damage_effects]] - Wrong what
-
-    - [[recovery]] - Fix how
+- **Brain Imaging**: fMRI, EEG, MEG for neural architecture mapping
+- **Lesion Studies**: Understanding component functions through impairment
+- **Connectivity Analysis**: Mapping neural network structures
 
 ### Computational Methods
-
-- [[architecture_models]] - Build math
-
-  - [[simulation]] - Fake do
-
-    - [[process_models]] - Step math
-
-    - [[network_models]] - Net math
-
-  - [[formal_analysis]] - Deep look
-
-    - [[complexity]] - Hard how
-
-    - [[optimality]] - Best how
+- **Architecture Simulation**: Testing cognitive models in virtual environments
+- **Formal Analysis**: Mathematical characterization of architectural properties
+- **Optimization Studies**: Finding optimal architectural parameters
 
 ## Future Directions
 
 ### Current Challenges
-
-- [[scaling_issues]] - Big hard
-
-- [[integration_problems]] - Join hard
-
-- [[biological_plausibility]] - Real match
+- **Scalability**: Managing complexity in large-scale cognitive systems
+- **Integration**: Coordinating diverse cognitive components effectively
+- **Biological Plausibility**: Matching human cognitive architecture accurately
 
 ### Emerging Approaches
-
-- [[new_architectures]] - New ways
-
-  - [[quantum_cognitive]] - Quantum think
-
-    - [[quantum_computation]] - Quantum math
-
-    - [[quantum_memory]] - Quantum keep
-
-  - [[embodied_systems]] - Body think
-
-    - [[sensorimotor]] - Feel move
-
-    - [[environmental]] - World use
+- **Quantum Cognitive Architectures**: Leveraging quantum computation for cognition
+- **Embodied Systems**: Integrated perception-action architectures
+- **Social Architectures**: Multi-agent cognitive coordination systems
 
 ## References
 
-- [[newell_unified]]
-
-- [[anderson_act]]
-
-- [[rumelhart_pdp]]
-
-- [[brooks_behavior]]
+- [[newell_unified]] - Unified Theory of Cognition
+- [[anderson_act]] - Adaptive Control of Thought
+- [[rumelhart_pdp]] - Parallel Distributed Processing
+- [[brooks_behavior]] - Behavior-Based Robotics
+- [[sun_integrated]] - Integrated Cognitive Architectures
 
 ## Related Concepts
 
 - [[information_processing]]
-
 - [[neural_computation]]
-
 - [[memory_systems]]
-
-- [[attention]]
-
+- [[attention_mechanisms]]
 - [[learning_theory]]
-
 - [[artificial_intelligence]]
+- [[cognitive_modeling_concepts]]
 

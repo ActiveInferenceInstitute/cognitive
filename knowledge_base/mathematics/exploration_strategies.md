@@ -2,7 +2,7 @@
 
 title: Exploration Strategies
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

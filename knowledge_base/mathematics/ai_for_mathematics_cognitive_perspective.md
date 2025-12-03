@@ -2,7 +2,7 @@
 
 title: AI for Mathematics – A Cognitive Science Perspective
 
-type: concept
+type: mathematical_concept
 
 status: draft
 

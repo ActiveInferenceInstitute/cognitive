@@ -2,7 +2,7 @@
 
 title: Mathematical Foundations of Active Inference and Free Energy Principle
 
-type: concept
+type: mathematical_concept
 
 status: stable
 

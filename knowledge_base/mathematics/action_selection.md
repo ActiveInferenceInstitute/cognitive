@@ -1,3 +1,39 @@
+---
+title: Action Selection
+type: mathematical_concept
+id: action_selection_001
+created: 2024-02-05
+modified: 2025-12-03
+tags: [active-inference, action-selection, policy-selection, decision-making]
+aliases: [policy-selection, action-choice, decision-selection]
+semantic_relations:
+  - type: implements
+    links:
+      - [[expected_free_energy]]
+      - [[policy_selection]]
+      - [[active_inference]]
+      - [[active_inference_loop]]
+  - type: uses
+    links:
+      - [[optimization_theory]]
+      - [[information_theory]]
+      - [[probability_theory]]
+      - [[natural_gradients]]
+  - type: relates
+    links:
+      - [[action_distribution]]
+      - [[behavioral_control]]
+      - [[reinforcement_learning]]
+      - [[decision_theory]]
+      - [[optimal_control]]
+---
+
+# Action Selection
+
+## Overview
+
+Action selection is the process by which an agent chooses actions to maximize expected utility or minimize expected free energy. In active inference, this involves selecting policies that minimize expected free energy while balancing exploration and exploitation.
+
 ## Advanced Action Selection Framework
 
 ### 1. Unified Time Scale Action Selection
