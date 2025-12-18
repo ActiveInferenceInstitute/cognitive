@@ -2,7 +2,7 @@
 
 title: Inference Patterns
 
-type: pattern
+type: concept
 
 status: stable
 

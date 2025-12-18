@@ -29,32 +29,25 @@ tags:
   - cognitive
 
 semantic_relations:
-
   - type: implements
-
-    links: [[documentation_standards]]
-
-  - type: relates
-
     links:
-
-      - [[knowledge_organization]]
-
-      - [[ai_documentation_style]]
-
-      - [[content_management]]
-
-      - [[api_reference]]
-
-      - [[developer_guides]]
-
-      - [[message_passing]]
-
-      - [[variational_inference]]
-
-      - [[model_specification]]
-
-      - [[agent_docs_readme|Autonomous Agent Documentation]]
+      - [[repo_docs/documentation_standards]]
+      - [[repo_docs/ai_documentation_style]]
+  - type: organizes
+    links:
+      - [[README]]
+      - [[AGENTS]]
+      - [[repo_docs/content_management]]
+  - type: plans
+    links:
+      - [[repo_docs/folder_structure]]
+      - [[repo_docs/linking_standards]]
+      - [[repo_docs/obsidian_linking]]
+  - type: documents
+    links:
+      - [[../knowledge_base/index]]
+      - [[agents/agent_docs_readme]]
+      - [[research/AGENTS]]
 
 ---
 
@@ -62,183 +55,114 @@ semantic_relations:
 
 ## Overview
 
-This roadmap outlines the comprehensive structure and organization of the RxInfer documentation system, encompassing knowledge base, implementation guides, API references, and learning resources. It serves as the central reference for documentation architecture and maintenance, focusing on probabilistic programming and message passing algorithms.
+This roadmap outlines the comprehensive structure and organization of the Cognitive Modeling Framework documentation system, encompassing knowledge base, implementation guides, API references, research documentation, and learning resources. It serves as the central reference for documentation architecture and maintenance within the cognitive modeling domain.
 
 > [!info] Connected Resources
-> This roadmap connects with the [[agent_docs_readme|Autonomous Agent Documentation Clearinghouse]], which provides a specialized focus on autonomous agent architectures and implementations.
+> This roadmap integrates with the [[AGENTS|Documentation Framework Agents]], [[agent_docs_readme|Autonomous Agent Documentation Clearinghouse]], and [[../knowledge_base/index|Cognitive Modeling Knowledge Base]] for comprehensive knowledge management.
 
 ## Knowledge Base Structure
 
-### Core Domains
+### Core Knowledge Domains
 
-1. **Cognitive Domain** (`knowledge_base/cognitive/`)
+1. **Cognitive Domain** (`../knowledge_base/cognitive/`)
 
-   - Theoretical foundations
-
-   - Cognitive processes
-
-   - Learning and memory
-
-   - Social cognition
-
-   - Attention mechanisms
-
-   - Decision-making models
-
-   - Perception systems
-
-   - Bayesian inference in cognition
-
+   - Active inference theory and implementation
+   - Cognitive architectures and processes
+   - Learning mechanisms and memory systems
+   - Decision-making and reasoning frameworks
+   - Perception and sensory processing
+   - Social cognition and interaction models
    - Free energy principle applications
 
-1. **Mathematics Domain** (`knowledge_base/mathematics/`)
+2. **Mathematics Domain** (`../knowledge_base/mathematics/`)
 
-   - Probability theory
-
-   - Information theory
-
-   - Free energy principles
-
-   - Optimization methods
-
-   - Statistical inference
-
-   - Variational methods
-
+   - Probability theory and statistical methods
+   - Information theory foundations
+   - Optimization algorithms and techniques
+   - Linear algebra and matrix operations
+   - Bayesian inference methods
+   - Variational inference frameworks
    - Message passing algorithms
 
-   - Factor graphs
+3. **Agents Domain** (`../knowledge_base/agents/`)
 
-   - Belief propagation
-
-   - Expectation propagation
-
-   - Variational message passing
-
-1. **Agents Domain** (`knowledge_base/agents/`)
-
-   - Agent architectures
-
-   - Implementation patterns
-
-   - POMDP framework
-
-   - Active inference agents
-
-   - Multi-agent systems
-
-   - Reinforcement learning
-
+   - Agent architecture patterns
+   - POMDP implementation frameworks
+   - Active inference agent models
+   - Multi-agent coordination systems
    - Belief updating mechanisms
+   - Hierarchical agent structures
+   - Continuous-time agent dynamics
 
-   - Message passing agents
+   > [!tip] Agent Documentation Integration
+   > For comprehensive agent documentation, see the [[agents/agent_docs_readme|Autonomous Agent Documentation Clearinghouse]] and [[agents/AGENTS|Agent Documentation Framework]]
 
-   - Variational agent models
+4. **Systems Domain** (`../knowledge_base/systems/`)
 
-   - Hierarchical inference
+   - Complex systems theory
+   - Emergence and self-organization
+   - Network theory and analysis
+   - Dynamical systems modeling
+   - Adaptive and resilient systems
+   - Social-ecological systems integration
+   - Systems thinking frameworks
 
-   > [!tip] Agent-Specific Documentation
-   > For comprehensive agent-related documentation, see the [[agent_docs_readme|Autonomous Agent Documentation Clearinghouse]]
+5. **Biology Domain** (`../knowledge_base/biology/`)
 
-1. **Systems Domain** (`knowledge_base/systems/`)
+   - Ecological dynamics and networks
+   - Behavioral biology and ethology
+   - Evolutionary systems and genetics
+   - Neural systems and cognition
+   - Population dynamics
+   - Systems biology approaches
 
-   - Systems theory
+6. **Philosophy Domain** (`../knowledge_base/philosophy/`)
 
-   - Complexity science
+   - Philosophy of cognitive science
+   - Complexity and emergence philosophy
+   - Pragmatism and operationalism
+   - Semiotics and meaning systems
+   - Ontology and metaphysics
 
-   - Emergence patterns
+7. **Ontology Domain** (`../knowledge_base/ontology/`)
 
-   - Dynamical systems
+   - Cognitive ontology frameworks
+   - Biological ontology structures
+   - Systems ontology models
+   - Mathematical ontology foundations
+   - Hyperspatial ontology concepts
 
-   - Network theory
+## Framework-Specific Components
 
-   - Control systems
+### 1. Core Cognitive Modeling Concepts
 
-   - Adaptive systems
+- Active inference theory and implementation
+- Free energy principle applications
+- Message passing and belief propagation
+- Variational inference methods
+- Agent-based modeling frameworks
+- Complex systems simulation
+- Bayesian cognitive architectures
 
-   - Probabilistic systems
+### 2. Advanced Implementation Topics
 
-   - Message passing networks
+- Hierarchical agent architectures
+- Multi-agent coordination systems
+- Continuous-time cognitive models
+- Swarm intelligence implementations
+- BioFirm ecological modeling
+- Social-ecological systems integration
+- Adaptive learning mechanisms
 
-   - Inference systems
+### 3. Integration and Deployment Patterns
 
-1. **Implementation Domain** (`knowledge_base/implementation/`)
-
-   - Software architecture
-
-   - Design patterns
-
-   - Performance optimization
-
-   - Testing strategies
-
-   - Deployment patterns
-
-   - Integration guides
-
-   - Benchmarking
-
-   - Julia implementation
-
-   - RxInfer core modules
-
-   - Custom factor nodes
-
-## RxInfer-Specific Components
-
-### 1. Core Concepts
-
-- Message passing framework
-
-- Factor graphs
-
-- Variational inference
-
-- Model specification
-
-- Custom factors
-
-- Inference algorithms
-
-- Performance optimization
-
-- Distribution types
-
-### 2. Advanced Topics
-
-- Custom message passing rules
-
-- Complex model architectures
-
-- Hierarchical models
-
-- Dynamic models
-
-- Conjugate updates
-
-- Non-conjugate approximations
-
-- Streaming inference
-
-- Online learning
-
-### 3. Integration Patterns
-
-- External data sources
-
-- Visualization tools
-
-- Performance monitoring
-
-- Distributed computing
-
-- GPU acceleration
-
-- Model deployment
-
-- System integration
-
-- Real-time processing
+- Real-time cognitive processing
+- Distributed agent coordination
+- Performance monitoring systems
+- Visualization and analysis tools
+- Model validation frameworks
+- Research integration pipelines
+- Educational application development
 
 ## Documentation Organization
 
@@ -436,61 +360,35 @@ This roadmap outlines the comprehensive structure and organization of the RxInfe
 
 ## Implementation Examples
 
-### 1. Basic Examples
+### 1. Basic Cognitive Modeling Examples
 
-- POMDP implementation
+- Generic POMDP agent implementation
+- Active inference belief updating
+- Simple continuous-time agent dynamics
+- Basic swarm intelligence patterns
+- BioFirm ecological state modeling
+- Social-ecological systems integration
 
-- Active inference agent
+### 2. Advanced Implementation Examples
 
-- Belief updating
+- Hierarchical agent architectures
+- Multi-agent coordination systems
+- Complex adaptive systems modeling
+- Ant colony optimization algorithms
+- Neural cognitive architectures
+- Emergent behavior simulation
+- Real-time cognitive processing
 
-- Policy selection
+### 3. Domain-Specific Case Studies
 
-- Linear Gaussian models
-
-- Discrete variable models
-
-- Time series models
-
-- Classification models
-
-### 2. Advanced Examples
-
-- Hierarchical agents
-
-- Multi-agent systems
-
-- Swarm intelligence
-
-- Neural networks
-
-- Deep generative models
-
-- Streaming inference
-
-- Online learning
-
-- Custom message rules
-
-### 3. Case Studies
-
-- Ant colony simulation
-
-- Robotic control
-
-- Social learning
-
-- Emergent behavior
-
-- Financial modeling
-
-- Sensor networks
-
-- Computer vision
-
-- Natural language processing
-
-- Path optimization networks
+- Ant colony active inference simulation
+- BioFirm bioregional stewardship
+- Swarm intelligence applications
+- Social-ecological systems modeling
+- Cognitive agent development
+- Complex systems analysis
+- Ecological network dynamics
+- Adaptive management frameworks
 
 ## Learning Paths
 
@@ -882,85 +780,31 @@ This roadmap outlines the comprehensive structure and organization of the RxInfe
 
 ## Related Resources
 
-### Internal Links
+### Internal Documentation Links
 
-- [[documentation_standards]]
-
-- [[content_management]]
-
-- [[knowledge_organization]]
-
-- [[api_documentation]]
-
-- [[developer_guides]]
-
-- [[testing_framework]]
-
-- [[deployment_guide]]
-
-- [[monitoring_setup]]
-
-- [[message_passing_guide]]
-
-- [[variational_inference_guide]]
-
-- [[model_specification_guide]]
-
-- [[factor_nodes_reference]]
-
-- [[distribution_types]]
-
-- [[performance_optimization]]
-
-- [[agent_docs_readme|Autonomous Agent Documentation]]
-
-- [[active_inference|Active Inference]]
-
-- [[belief_updating|Belief Updating]]
-
-- [[policy_selection|Policy Selection]]
-
-- [[cognitive_agents|Cognitive Agents]]
+- [[AGENTS|Documentation Framework Agents]]
+- [[README|Documentation Overview]]
+- [[repo_docs/documentation_standards|Documentation Standards]]
+- [[repo_docs/content_management|Content Management]]
+- [[repo_docs/ai_documentation_style|AI Documentation Style]]
+- [[../knowledge_base/index|Knowledge Base Index]]
+- [[agents/agent_docs_readme|Agent Documentation Clearinghouse]]
+- [[../knowledge_base/active_inference_implementation|Active Inference Implementation]]
+- [[../knowledge_base/swarm_intelligence_implementation|Swarm Intelligence]]
+- [[research/AGENTS|Research Documentation Framework]]
 
 ### External References
 
-1. Documentation Best Practices
-
-1. Knowledge Management Systems
-
-1. Technical Writing Guidelines
-
-1. API Documentation Standards
-
-1. Accessibility Guidelines (WCAG)
-
-1. DevOps Documentation Patterns
-
-1. Documentation Testing Frameworks
-
-1. Modern Documentation Tools
-
-1. Probabilistic Programming Resources
-
-1. Message Passing Algorithms
-
-1. Variational Inference Papers
-
-1. Factor Graph Theory
-
-1. Active Inference: A Process Theory
-
-1. Free Energy Principle for a Self-organizing Nervous System
-
-1. The Bayesian Brain: Probabilistic Approaches to Neural Coding
-
-1. Mermaid Diagram Documentation
-
-1. Obsidian Knowledge Management
-
-1. Multi-agent Systems: Algorithmic, Game-Theoretic, and Logical Foundations
-
-1. Embodied Cognition: A Field Guide
-
-1. Predictive Processing: A Canonical Cortical Computation
+1. **Active Inference Theory**: Friston, K. (2010). The free-energy principle: a unified brain theory?
+2. **Free Energy Principle**: Friston, K., et al. (2006). A theory of cortical responses
+3. **Complex Systems**: Holland, J. H. (1995). Hidden Order: How Adaptation Builds Complexity
+4. **Swarm Intelligence**: Bonabeau, E., et al. (1999). Swarm Intelligence: From Natural to Artificial Systems
+5. **Agent-Based Modeling**: Epstein, J. M., & Axtell, R. (1996). Growing Artificial Societies
+6. **Documentation Standards**: Microsoft Technical Writing Guidelines
+7. **Knowledge Management**: Obsidian Documentation and Community Resources
+8. **Mermaid Diagrams**: Mermaid.js Official Documentation
+9. **Cognitive Architectures**: Anderson, J. R. (2007). How Can the Human Mind Occur in the Physical Universe?
+10. **Bayesian Brain**: Doya, K., et al. (2007). Bayesian Brain: Probabilistic Approaches to Neural Coding
+11. **Systems Biology**: Kitano, H. (2002). Systems Biology: A Brief Overview
+12. **Ecological Modeling**: Grimm, V., & Railsback, S. F. (2005). Individual-based Modeling and Ecology
 

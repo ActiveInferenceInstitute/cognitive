@@ -64,53 +64,119 @@ class GenericThing:
     def update(self, observation: Dict[str, Any]) -> None:
         """
         Update the thing's state based on new observations.
-        
+
         Args:
             observation: New sensory data to process
-            
+
         Raises:
             TypeError: If observation is None or not a dictionary
-            ValueError: If observation contains invalid values
+            ValueError: If observation contains invalid values or components fail
         """
+        # Comprehensive input validation
         if observation is None:
             raise TypeError("Observation cannot be None")
         if not isinstance(observation, dict):
             raise TypeError("Observation must be a dictionary")
-        
-        # Update Markov blanket with new observation
-        self.markov_blanket.update(observation)
-        
-        # Initialize internal state if needed
-        for key in observation:
-            if key not in self.internal_state:
-                self.internal_state[key] = observation[key]
-        
-        # Minimize free energy
-        self.free_energy.minimize(
-            internal_state=self.internal_state,
-            external_state=self.external_state,
-            observation=observation
-        )
-        
-        # Only propagate messages if connected to other things
-        if self.message_passing.has_connections():
-            self.message_passing.propagate(
-                source=self,
-                message=observation
+        if not observation:
+            raise ValueError("Observation cannot be empty")
+
+        # Validate observation values
+        for key, value in observation.items():
+            if not isinstance(key, str):
+                raise TypeError(f"Observation key '{key}' must be a string")
+            if value is None:
+                raise ValueError(f"Observation value for '{key}' cannot be None")
+
+        try:
+            # Update Markov blanket with new observation
+            self.markov_blanket.update(observation)
+
+            # Initialize internal state if needed
+            for key in observation:
+                if key not in self.internal_state:
+                    self.internal_state[key] = observation[key]
+
+            # Minimize free energy with error handling
+            self.free_energy.minimize(
+                internal_state=self.internal_state,
+                external_state=self.external_state,
+                observation=observation
             )
+
+            # Only propagate messages if connected to other things
+            if self.message_passing.has_connections():
+                self.message_passing.propagate(
+                    source=self,
+                    message=observation
+                )
+
+            # Update state history
+            self._update_state_history()
+
+        except Exception as e:
+            logger.error(f"Failed to update GenericThing {self.id}: {e}")
+            raise ValueError(f"State update failed: {e}") from e
         
     def act(self) -> Dict[str, Any]:
         """
         Generate actions based on current state and predictions.
-        
+
         Returns:
             Dict containing the selected actions
+
+        Raises:
+            RuntimeError: If action selection fails
         """
-        return self.free_energy.select_action(
-            internal_state=self.internal_state,
-            external_state=self.external_state
-        )
-    
+        try:
+            # Validate that we have necessary state
+            if not self.internal_state:
+                raise RuntimeError("Cannot act without internal state")
+
+            action = self.free_energy.select_action(
+                internal_state=self.internal_state,
+                external_state=self.external_state
+            )
+
+            # Validate action result
+            if action is None:
+                raise RuntimeError("Action selection returned None")
+            if not isinstance(action, dict):
+                raise TypeError("Action must be a dictionary")
+
+            logger.debug(f"GenericThing {self.id} selected action: {action}")
+            return action
+
+        except Exception as e:
+            logger.error(f"Failed to generate action for GenericThing {self.id}: {e}")
+            raise RuntimeError(f"Action generation failed: {e}") from e
+
+    def _update_state_history(self) -> None:
+        """
+        Update the state history with current state.
+
+        This method maintains a record of state changes over time for
+        analysis and debugging purposes.
+        """
+        try:
+            current_state = {
+                'internal_state': self.internal_state.copy(),
+                'external_state': self.external_state.copy(),
+                'timestamp': np.datetime64('now'),
+                'free_energy': getattr(self.free_energy, 'current_free_energy', None)
+            }
+
+            self._state_history.append(current_state)
+
+            # Limit history size to prevent memory issues
+            max_history = 1000
+            if len(self._state_history) > max_history:
+                self._state_history = self._state_history[-max_history:]
+
+            self._last_update = current_state['timestamp']
+
+        except Exception as e:
+            logger.warning(f"Failed to update state history for GenericThing {self.id}: {e}")
+
     def add_child(self, child: 'GenericThing') -> None:
         """Add a child thing to create nested structure."""
         if child not in self.children:

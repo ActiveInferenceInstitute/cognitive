@@ -702,3 +702,4 @@ class StandardsImprovementEngine:
 ---
 
 > **Training Required**: New contributors must complete standards training before making significant contributions to the repository.
+

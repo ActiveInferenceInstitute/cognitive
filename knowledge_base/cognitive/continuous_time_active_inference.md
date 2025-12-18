@@ -1,3 +1,31 @@
+---
+title: Continuous-Time Active Inference
+type: concept
+status: stable
+created: 2025-01-01
+tags:
+  - active_inference
+  - continuous_time
+  - dynamical_systems
+  - variational_calculus
+  - free_energy
+semantic_relations:
+  - type: extends
+    links:
+      - [[active_inference]]
+      - [[../mathematics/active_inference_theory]]
+  - type: foundation
+    links:
+      - [[../mathematics/variational_calculus]]
+      - [[../mathematics/path_integral_free_energy]]
+      - [[../mathematics/stochastic_processes]]
+  - type: relates
+    links:
+      - [[../mathematics/continuous_time_models]]
+      - [[../mathematics/stochastic_differential_equations]]
+      - [[../agents/Continuous_Time/]]
+---
+
 # Continuous-Time Active Inference
 
 This note explores the mathematical and cognitive foundations of continuous-time active inference, bridging [[free_energy_principle|free energy principles]] with continuous-time dynamical systems.

@@ -1,22 +1,37 @@
 ---
-
 title: Active Inference
-
 type: concept
-
 status: stable
-
 created: 2024-02-12
-
+updated: 2025-12-18
 tags:
-
-  - cognitive
-
+  - active_inference
+  - cognitive_science
   - neuroscience
-
-  - computation
-
-  - decision_making
+  - free_energy_principle
+  - predictive_processing
+semantic_relations:
+  - type: implements
+    links:
+      - [[../mathematics/free_energy_principle]]
+      - [[../mathematics/active_inference_theory]]
+  - type: foundation
+    links:
+      - [[predictive_processing]]
+      - [[belief_updating]]
+      - [[precision_weighting]]
+  - type: integrates
+    links:
+- [[perception_processing]]
+- [[action_selection]]
+- [[learning_mechanisms]]
+- [[decision_making]]
+  - type: documented_by
+    links:
+      - [[active_inference_agent]]
+      - [[../active_inference_integration]]
+      - [[../active_inference_implementation]]
+---
 
   - bayesian_inference
 

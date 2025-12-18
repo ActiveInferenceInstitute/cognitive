@@ -2,7 +2,7 @@
 
 title: Inattentional Blindness
 
-type: knowledge_base
+type: concept
 
 status: stable
 

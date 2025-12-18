@@ -3,7 +3,7 @@ title: KG Multi-Agent Systems Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - agents
   - multi_agent
@@ -19,7 +19,7 @@ semantic_relations:
 
 # KG Multi-Agent Systems Documentation
 
-Knowledge graph-based multi-agent systems implementing distributed knowledge extraction, analysis, and coordination. These agents transform conversational data into structured knowledge representations through coordinated intelligence and advanced NLP techniques.
+Knowledge graph-based multi-agent systems implementing distributed knowledge extraction, analysis, and coordination. These agents transform conversational data into structured knowledge representations through coordinated intelligence and NLP techniques.
 
 ## 🧠 Agent Architecture
 
@@ -253,3 +253,4 @@ See [[MKG_Multi_Agent/README|MKG Multi-Agent Implementation Details]] for:
 ---
 
 > **Scalable Analysis**: Provides scalable solutions for large-scale knowledge extraction and analysis across distributed agent networks.
+

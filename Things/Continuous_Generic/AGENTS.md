@@ -3,7 +3,7 @@ title: Continuous Generic Agents Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - agents
   - continuous
@@ -22,7 +22,7 @@ semantic_relations:
 
 # Continuous Generic Agents Documentation
 
-Advanced agent implementation using continuous state spaces and differential equation-based cognition. This framework provides real-time Active Inference capabilities for continuous control, neural modeling, and dynamic environments.
+Agent implementation using continuous state spaces and differential equation-based cognition. This framework provides real-time Active Inference capabilities for continuous control, neural modeling, and dynamic environments.
 
 ## 🧠 Agent Architecture
 
@@ -197,7 +197,7 @@ class ContinuousBeliefUpdater:
 - **Memory**: Moderate - scales with state dimension
 - **Processing**: High - requires real-time computing capabilities
 - **Precision**: Double precision for numerical stability
-- **Optimization**: Highly optimized numerical integration
+- **Optimization**: Numerical integration
 
 ## 🔧 Implementation Details
 
@@ -263,3 +263,4 @@ See [[Continuous_Generic_README|Continuous Generic Implementation Details]] for:
 ---
 
 > **Advanced Control**: Implements sophisticated continuous control strategies for complex dynamical systems.
+

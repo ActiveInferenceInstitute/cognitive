@@ -3,7 +3,7 @@ title: Continuous Generic Active Inference Implementation
 type: implementation
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - continuous
   - active_inference
@@ -624,3 +624,4 @@ python continuous_generic.py
 ---
 
 > **Research Platform**: Provides a foundation for advancing Active Inference research in continuous-time, continuous-state domains.
+

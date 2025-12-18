@@ -3,7 +3,7 @@ title: Simple POMDP Implementation
 type: implementation
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - pomdp
   - active_inference
@@ -288,3 +288,4 @@ See [[Simple_POMDP_README|Simple POMDP Implementation Details]] for:
 ---
 
 > **Visualization**: Rich plotting tools help understand the internal workings of Active Inference agents.
+

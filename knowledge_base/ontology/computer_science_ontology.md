@@ -1,18 +1,24 @@
 ---
-
-title: Computer Science Ontology (CSO)
-
-type: knowledge_base
-
+title: Computer Science Ontology
+type: ontology
 status: stable
-
-tags: [ontology, computer-science, knowledge-graph]
-
+created: 2025-01-01
+updated: 2025-12-18
+tags:
+  - ontology
+  - computer_science
+  - knowledge_graph
+  - algorithms
 semantic_relations:
-
   - type: relates
-
-    links: [cross_reference_map, mathematics_resources]
+    links:
+      - [[../mathematics/category_theory]]
+      - [[../systems/complex_systems]]
+      - [[../cognitive/knowledge_representation]]
+  - type: implements
+    links:
+      - [[cognitive_ontology]]
+      - [[mathematical_ontology]]
 
 ---
 

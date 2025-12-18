@@ -13,6 +13,17 @@ semantic_relations:
   - type: documents
     links:
       - [[simulation_config]]
+      - [[AGENTS]]
+  - type: supports
+    links:
+      - [[../development/README]]
+      - [[../implementation/README]]
+      - [[../api/README]]
+  - type: configures
+    links:
+      - [[../../Things/Generic_Thing/AGENTS]]
+      - [[../../Things/Generic_POMDP/AGENTS]]
+      - [[../../docs/agents/AGENTS]]
 ---
 
 # Configuration Documentation
@@ -335,7 +346,7 @@ def test_configuration_performance():
 ## 🔗 Related Documentation
 
 ### Implementation Resources
-- [[../guides/configuration_guide|Configuration Guide]]
+- [[AGENTS|Configuration Agent Documentation]]
 - [[../api/config_api|Configuration API]]
 - [[../tools/config_tools|Configuration Tools]]
 
@@ -374,3 +385,4 @@ def test_configuration_performance():
 ---
 
 > **Documentation and Maintenance**: Well-documented configuration system with clear maintenance procedures and version control practices.
+

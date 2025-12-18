@@ -1,32 +1,24 @@
-# Research and Educational Applications
-
 ---
-
 title: Research and Educational Applications
-
 type: concept
-
 status: stable
-
 created: 2024-02-06
-
 tags:
-
   - research
-
   - education
-
   - knowledge-management
-
-related:
-
-  - [[plain_text_benefits]]
-
-  - [[machine_readability]]
-
-  - [[knowledge_organization]]
-
+semantic_relations:
+  - type: relates
+    links:
+      - plain_text_benefits
+      - machine_readability
+      - knowledge_organization
+  - type: implements
+    links:
+      - [[research_education]]
 ---
+
+# Research and Educational Applications
 
 ## Overview
 

@@ -14,6 +14,17 @@ semantic_relations:
     links:
       - [[usage_examples]]
       - [[../../Things/Generic_Thing/AGENTS]]
+      - [[../../Things/Generic_POMDP/AGENTS]]
+      - [[../../Things/Simple_POMDP/AGENTS]]
+  - type: educates
+    links:
+      - [[../guides/learning_paths|Learning Paths]]
+      - [[../guides/quickstart_guide|Quick Start Guide]]
+  - type: showcases
+    links:
+      - [[../research/ant_colony_active_inference|Ant Colony Research]]
+      - [[../../Things/Ant_Colony/AGENTS]]
+      - [[../../Things/KG_Multi_Agent/AGENTS]]
 ---
 
 # Examples Agent Documentation
@@ -650,3 +661,4 @@ print("Agent development documentation generated")
 ---
 
 > **Progressive Skill Building**: Examples structured to support learning progression from basic concepts to advanced, real-world applications.
+

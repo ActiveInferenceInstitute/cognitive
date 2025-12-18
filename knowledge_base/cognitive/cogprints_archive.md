@@ -8,13 +8,18 @@ status: stable
 
 created: 2025-08-08
 
-tags: [cognitive-science, open-access, literature]
+tags:
+  - cognitive-science
+  - open-access
+  - literature
 
 semantic_relations:
 
   - type: supports
 
-    links: [cognitive_science, research_education]
+    links:
+      - cognitive_science
+      - research_education
 
 ---
 

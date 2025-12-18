@@ -23,7 +23,7 @@ semantic_relations:
 
 # Cognitive Science Knowledge Base
 
-This knowledge base contains 159+ comprehensive documents covering cognitive science, neuroscience, psychology, and related fields as they pertain to Active Inference and cognitive modeling. The content is organized thematically and extensively cross-linked for optimal navigation.
+This knowledge base contains 173 comprehensive documents covering cognitive science, neuroscience, psychology, and related fields as they pertain to Active Inference and cognitive modeling. The content is organized thematically and extensively cross-linked for optimal navigation.
 
 ## 🧠 Overview
 
@@ -251,7 +251,7 @@ The cognitive science knowledge base provides theoretical foundations and empiri
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 159+ comprehensive documents
+- **Coverage**: 173 comprehensive documents
 - **Cross-Linking**: Extensive bidirectional references
 - **Theoretical Depth**: From neural mechanisms to social cognition
 - **Implementation Relevance**: Direct connections to agent architectures
@@ -260,11 +260,17 @@ The cognitive science knowledge base provides theoretical foundations and empiri
 
 ### Enhanced Content Areas
 - ✅ **Neural Processing**: Comprehensive attention and perception models
-- ✅ **Social Cognition**: Extended social and collective behavior theories
+- ✅ **Social Cognition**: Extended social and collective behavior theories, including social learning and self-awareness
 - ✅ **Architectural Frameworks**: Complete cognitive architecture documentation
 - ✅ **Implementation Connections**: Direct links to working code examples
+- ✅ **Mathematical Foundations**: Variational free energy and policy selection mechanisms
+- ✅ **Psychophysical Methods**: Signal detection theory and adaptive psychophysics
+- ✅ **Parallel Processing**: Concurrent cognitive computation models
+- ✅ **Simulation Studies**: Comprehensive validation methodologies
 
 ### Development Focus
+- ✅ **Documentation Standards**: Standardized YAML frontmatter and semantic relations across all files
+- ✅ **Content Completeness**: Added missing content areas and expanded stub files
 - 🔄 **Integration**: Strengthening connections between theory and implementation
 - 🔄 **Visualization**: Adding more diagrams and conceptual illustrations
 - 🔄 **Applications**: Expanding real-world application examples

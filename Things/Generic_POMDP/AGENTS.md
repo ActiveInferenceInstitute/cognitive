@@ -3,7 +3,7 @@ title: Generic POMDP Agents Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - agents
   - pomdp
@@ -22,14 +22,14 @@ semantic_relations:
 
 # Generic POMDP Agents Documentation
 
-Advanced agent implementation providing research-grade Partially Observable Markov Decision Process capabilities with sophisticated Active Inference features. This framework extends basic POMDP concepts with hierarchical processing, robust numerical methods, and comprehensive analysis tools.
+Agent implementation providing Partially Observable Markov Decision Process capabilities with Active Inference features. This framework extends basic POMDP concepts with hierarchical processing, robust numerical methods, and comprehensive analysis tools.
 
 ## 🧠 Agent Architecture
 
 ### Advanced POMDP Framework
 
 #### GenericPOMDP Class
-Research-grade Active Inference agent with production-ready features and comprehensive capabilities.
+Active Inference agent with production-ready features and capabilities.
 
 ```python
 class GenericPOMDP:
@@ -134,7 +134,7 @@ class AdvancedBeliefUpdater:
 ```
 
 #### Hierarchical Planning System
-Multi-horizon planning with sophisticated policy evaluation.
+Multi-horizon planning with policy evaluation.
 
 ```python
 class HierarchicalPlanner:
@@ -264,7 +264,7 @@ class HierarchicalPlanner:
 ## 📈 Advanced Features
 
 ### Numerical Stability Framework
-Comprehensive numerical handling for robust performance across conditions.
+Numerical handling for performance across conditions.
 
 ```python
 class NumericalStabilizer:
@@ -436,3 +436,4 @@ See [[Generic_POMDP_README|Generic POMDP Implementation Details]] for:
 ---
 
 > **Performance**: Optimized for both research flexibility and computational efficiency across different scales and domains.
+

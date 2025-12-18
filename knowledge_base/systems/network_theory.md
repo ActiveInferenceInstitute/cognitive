@@ -108,7 +108,7 @@ Network theory provides a framework for understanding complex systems through th
 ### Social Networks
 - **Social Media Networks**: Online interaction patterns
 - **Collaboration Networks**: Scientific and professional connections
-- **Citation Networks**: Academic knowledge flow
+- **Academic Networks**: Research and knowledge flow
 - **Economic Networks**: Trade and financial relationships
 
 ### Infrastructure Networks
@@ -187,7 +187,7 @@ Network theory provides a framework for understanding complex systems through th
 - **Quantum Communication**: Quantum information networks
 - **Quantum Computing**: Quantum processor architectures
 - **Quantum Internet**: Global quantum network design
-- **Quantum Sensors**: Quantum-enhanced sensing networks
+- **Quantum Sensors**: Quantum sensing networks
 
 ### Bio-Inspired Networks
 - **Swarm Networks**: Insect colony communication patterns
@@ -288,3 +288,4 @@ Network theory provides a framework for understanding complex systems through th
 - [[message_passing_networks]] - Information flow in networks
 - [[../mathematics/graph_theory]] - Mathematical foundations
 - [[../mathematics/network_science]] - Statistical network analysis
+

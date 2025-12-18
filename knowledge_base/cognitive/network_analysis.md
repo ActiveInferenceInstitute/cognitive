@@ -2,17 +2,23 @@
 
 title: Network Analysis
 
-type: knowledge_base
+type: concept
 
 status: stable
 
-tags: [networks, analysis, graphs]
+tags:
+  - networks
+  - analysis
+  - graphs
 
 semantic_relations:
 
   - type: relates
 
-    links: [graph_theory, intelligence_networks, cognitive_architecture]
+    links:
+      - graph_theory
+      - intelligence_networks
+      - cognitive_architecture
 
 ---
 

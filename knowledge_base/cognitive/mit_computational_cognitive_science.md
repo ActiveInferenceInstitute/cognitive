@@ -8,13 +8,20 @@ status: stable
 
 created: 2025-08-08
 
-tags: [cognitive-science, course, bayesian, representation]
+tags:
+  - cognitive-science
+  - course
+  - bayesian
+  - representation
 
 semantic_relations:
 
   - type: supports
 
-    links: [bayesian_inference, knowledge_representation, learning_mechanisms]
+    links:
+      - bayesian_inference
+      - knowledge_representation
+      - learning_mechanisms
 
 ---
 

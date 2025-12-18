@@ -1,22 +1,10 @@
 ---
-
 title: Optimization Theory
-
 type: mathematical_concept
-
-status: stable
-
+id: optimization_theory_001
 created: 2024-03-15
-
-complexity: advanced
-
-processing_priority: 1
-
-tags:
-
-  - mathematics
-
-  - optimization
+modified: 2025-12-18
+tags: [mathematics, optimization]
 
   - variational_methods
 

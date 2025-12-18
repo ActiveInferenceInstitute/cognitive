@@ -2,7 +2,7 @@
 
 title: Pattern Recognition
 
-type: knowledge_base
+type: concept
 
 status: stable
 

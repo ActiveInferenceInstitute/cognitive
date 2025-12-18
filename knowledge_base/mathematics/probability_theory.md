@@ -1,51 +1,15 @@
 ---
-
 title: Probability Theory
-
 type: mathematical_concept
-
-status: stable
-
+id: probability_theory_001
 created: 2024-02-12
-
-tags:
-
-  - mathematics
-
-  - probability
-
-  - foundations
-
-  - statistics
-
-  - measure_theory
-
-  - stochastic_processes
-
-  - information_theory
-
-  - mathematical_analysis
-
-  - functional_analysis
-
-  - dynamical_systems
-
-  - optimization_theory
-
+modified: 2025-12-18
+tags: [mathematics, probability, foundations, statistics, measure_theory, stochastic_processes, information_theory, mathematical_analysis, functional_analysis, dynamical_systems, optimization_theory]
+aliases: [probability, probabilistic_theory]
 semantic_relations:
-
   - type: extends
-
-    links:
-
-      - [[measure_theory]]
-
-      - [[integration_theory]]
-
-      - [[functional_analysis]]
-
+    links: [[measure_theory]], [[integration_theory]], [[functional_analysis]]
   - type: foundation_for
-
     links:
 
       - [[statistics]]

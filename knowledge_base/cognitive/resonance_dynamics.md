@@ -1,4 +1,28 @@
-# [[cognitive/resonance_dynamics|Resonance Dynamics]]
+---
+title: Resonance Dynamics
+type: concept
+status: stable
+created: 2025-01-01
+tags:
+  - neural_systems
+  - adaptive_resonance
+  - pattern_recognition
+  - learning
+  - memory_formation
+semantic_relations:
+  - type: relates
+    links:
+      - adaptive_resonance_theory
+      - neural_synchrony
+      - stability_plasticity
+      - pattern_recognition
+  - type: foundation
+    links:
+      - [[../mathematics/dynamical_systems]]
+      - [[neural_computation]]
+---
+
+# Resonance Dynamics
 
 ## Overview
 

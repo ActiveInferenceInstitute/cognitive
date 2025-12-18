@@ -1044,7 +1044,7 @@ class OperationalAnalysis:
 
     def propose_improved_operations(self) -> List[Operation]:
 
-        """Propose improved operational definitions."""
+        """Propose operational definitions."""
 
         limitations = self.analyze_current_operations().limitations
 

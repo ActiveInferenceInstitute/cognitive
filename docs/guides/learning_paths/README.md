@@ -501,3 +501,4 @@ class LearningPathAnalytics:
 ---
 
 > **Progress Tracking**: Each learning path includes progress tracking and assessment. Complete projects and assessments to earn recognition for your learning achievements.
+

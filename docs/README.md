@@ -1,383 +1,275 @@
 # Cognitive Modeling Documentation
 
-Welcome to the Cognitive Modeling documentation. This documentation is designed to be viewed in Obsidian for optimal navigation and knowledge linking.
+Comprehensive documentation framework for the cognitive modeling system, providing structured knowledge organization, technical references, implementation guidance, and research documentation. This documentation supports the development, maintenance, and dissemination of cognitive modeling technologies through systematic documentation practices.
 
-> [!info] Documentation Network
-> This documentation works in conjunction with the [[agents/agent_docs_readme|Autonomous Agent Documentation Clearinghouse]] which contains comprehensive agent-specific documentation.
+> [!info] Documentation Framework
+> This documentation integrates with the [[AGENTS|Documentation Framework Agents]] and [[agents/agent_docs_readme|Autonomous Agent Documentation Clearinghouse]] for comprehensive technical knowledge management.
 
-## Directory Structure
+## 📚 Documentation Architecture
+
+### Directory Structure
 
 ```mermaid
-
 graph TD
+    A[Documentation Root] --> B[agents/]
+    A --> C[api/]
+    A --> D[config/]
+    A --> E[development/]
+    A --> F[examples/]
+    A --> G[guides/]
+    A --> H[implementation/]
+    A --> I[repo_docs/]
+    A --> J[research/]
+    A --> K[templates/]
+    A --> L[tools/]
 
-    A[Documentation Root] --> B[concepts/]
+    B --> B1[AGENTS.md]
+    B --> B2[agent_docs_readme.md]
 
-    A --> C[guides/]
+    C --> C1[AGENTS.md]
+    C --> C2[README.md]
+    C --> C3[api_documentation.md]
 
-    A --> D[api/]
+    D --> D1[AGENTS.md]
+    D --> D2[README.md]
 
-    A --> E[examples/]
+    E --> E1[AGENTS.md]
+    E --> E2[README.md]
 
-    A --> F[tools/]
+    F --> F1[AGENTS.md]
+    F --> F2[README.md]
 
-    A --> G[templates/]
+    G --> G1[AGENTS.md]
+    G --> G2[README.md]
 
-    A --> H[agents/]
+    H --> H1[AGENTS.md]
+    H --> H2[README.md]
 
-    B --> B1[cognitive_modeling_concepts.md]
+    I --> I1[README.md]
+    I --> I2[ai_documentation_style.md]
 
-    B --> B2[active_inference.md]
+    J --> J1[AGENTS.md]
+    J --> J2[README.md]
 
-    B --> B3[free_energy_principle.md]
+    K --> K1[AGENTS.md]
+    K --> K2[README.md]
 
-    C --> C1[implementation_guides.md]
+    L --> L1[AGENTS.md]
+    L --> L2[README.md]
 
-    C --> C2[installation_guide.md]
-
-    C --> C3[quickstart_guide.md]
-
-    D --> D1[api_documentation.md]
-
-    E --> E1[usage_examples.md]
-
-    E --> E2[quickstart_example.md]
-
-    F --> F1[development_tools.md]
-
-    G --> G1[documentation_templates.md]
-
-    H --> H1[agent_docs_readme.md]
-
-    style A fill:#f9d5e5,stroke:#333,stroke-width:1px
-
-    style H fill:#d5f5e3,stroke:#333,stroke-width:2px
-
-    style H1 fill:#d5f5e3,stroke:#333,stroke-width:2px
-
+    style A fill:#f9d5e5,stroke:#333,stroke-width:2px
+    style B fill:#d5f5e3,stroke:#333,stroke-width:1px
+    style C fill:#e8f4fd,stroke:#333,stroke-width:1px
+    style D fill:#fff2cc,stroke:#333,stroke-width:1px
+    style E fill:#d5f5e3,stroke:#333,stroke-width:1px
 ```
 
-### Core Documentation
+### Core Documentation Domains
 
-- [[concepts/cognitive_modeling_concepts|Concepts]] - Core concepts and theoretical foundations
+#### Agent Documentation
+- [[agents/AGENTS|Agent Documentation Clearinghouse]] - Comprehensive autonomous agent documentation
+- [[agents/agent_docs_readme|Autonomous Agent Documentation]] - Detailed agent implementation guides
 
-- [[guides/implementation_guides|Guides]] - Implementation guides and tutorials
+#### API Documentation
+- [[api/AGENTS|API Agent Documentation]] - Technical API references and interfaces
+- [[api/README|API Documentation Overview]] - API structure and navigation
+- [[api/api_documentation|API Reference]] - Complete API documentation
 
-- [[api/api_documentation|API]] - API reference documentation
+#### Configuration Documentation
+- [[config/AGENTS|Configuration Documentation]] - Configuration management and standards
+- [[config/README|Configuration Overview]] - Configuration guides and examples
 
-- [[examples/usage_examples|Examples]] - Usage examples and tutorials
+#### Development Documentation
+- [[development/AGENTS|Development Documentation]] - Development processes and standards
+- [[development/README|Development Overview]] - Development workflow and tools
 
-- [[tools/development_tools|Tools]] - Development tools and utilities
+#### Examples Documentation
+- [[examples/AGENTS|Examples Documentation]] - Usage examples and tutorials
+- [[examples/README|Examples Overview]] - Example navigation and structure
 
-- [[templates/documentation_templates|Templates]] - Documentation templates
+#### Implementation Documentation
+- [[implementation/AGENTS|Implementation Documentation]] - Implementation patterns and guides
+- [[implementation/README|Implementation Overview]] - Implementation resources and references
 
-- [[agents/agent_docs_readme|Agent Documentation]] - Autonomous agent documentation clearinghouse
-
-## Getting Started
+## 🚀 Getting Started
 
 ### Essential Setup
 
-- [[guides/installation_guide|Installation Guide]]
-
-- [[guides/configuration_guide|Configuration Guide]]
-
-- [[guides/quickstart_guide|Quick Start Guide]]
-
-- [[guides/environment_setup|Environment Setup]]
-
-- [[guides/dependency_management|Dependency Management]]
+- [[repo_docs/getting_started|Getting Started Guide]] - Initial setup and configuration
+- [[development/README|Development Environment]] - Development environment setup
+- [[config/README|Configuration Management]] - System configuration and management
+- [[repo_docs/folder_structure|Repository Structure]] - Understanding the codebase organization
 
 ### Core Concepts
 
-- [[concepts/plain_text_benefits|Plain Text Benefits]]
+- [[../knowledge_base/active_inference_implementation|Active Inference]] - Core active inference principles
+- [[../knowledge_base/free_energy_principle|Free Energy Principle]] - Theoretical foundations
+- [[../knowledge_base/information_processing_integration|Information Processing]] - Data processing frameworks
+- [[../knowledge_base/swarm_intelligence_implementation|Swarm Intelligence]] - Collective intelligence patterns
 
-- [[concepts/machine_readability|Machine Readability]]
+### Documentation Navigation
 
-- [[concepts/research_education|Research and Education]]
+- [[repo_docs/obsidian_usage|Obsidian Usage Guide]] - Knowledge graph navigation
+- [[repo_docs/obsidian_linking|Obsidian Linking Standards]] - Link formatting and management
+- [[repo_docs/content_management|Content Management]] - Documentation maintenance practices
+- [[repo_docs/documentation_standards|Documentation Standards]] - Quality and consistency guidelines
 
-- [[concepts/active_inference|Active Inference]]
+## 🏗️ Development Resources
 
-- [[concepts/free_energy_principle|Free Energy Principle]]
+### Implementation Guidance
 
-- [[concepts/predictive_processing|Predictive Processing]]
+- [[implementation/AGENTS|Implementation Documentation]] - Implementation patterns and techniques
+- [[implementation/README|Implementation Overview]] - Implementation resources and guides
+- [[development/AGENTS|Development Documentation]] - Development processes and standards
+- [[repo_docs/model_implementation|Model Implementation]] - Core model development guides
 
-- [[concepts/variational_inference|Variational Inference]]
-
-- [[concepts/message_passing|Message Passing]]
-
-### Documentation Usage
-
-- [[guides/obsidian_linking|Obsidian Linking Guide]]
-
-- [[guides/package_documentation|Package Documentation]]
-
-- [[guides/pomdp_structure|POMDP Structure]]
-
-- [[guides/mermaid_diagrams|Mermaid Diagram Guide]]
-
-- [[guides/documentation_navigation|Documentation Navigation]]
-
-## Development
-
-### Implementation
-
-- [[guides/model_implementation|Model Implementation]]
-
-- [[guides/system_integration|System Integration]]
-
-- [[guides/testing_guide|Testing Guide]]
-
-- [[guides/performance_optimization|Performance Optimization]]
-
-- [[guides/agent_development|Agent Development]]
-
-- [[guides/environment_creation|Environment Creation]]
-
-### Architecture Overview
+### System Architecture
 
 ```mermaid
-
 graph TB
-
-    subgraph "Core Framework"
-
-        A[Abstract Base Classes]
-
-        B[Common Utilities]
-
-        C[Math Libraries]
-
-        D[Config Management]
-
+    subgraph "Documentation Framework"
+        A[AGENTS.md Files]
+        B[README.md Files]
+        C[Cross-references]
+        D[Semantic Relations]
     end
 
-    subgraph "Agent Models"
-
-        E[POMDP Agents]
-
-        F[Continuous Agents]
-
-        G[Hybrid Agents]
-
-        H[LLM Agents]
-
+    subgraph "Implementation Domains"
+        E[Agent Models]
+        F[API Interfaces]
+        G[Configuration]
+        H[Testing Framework]
     end
 
-    subgraph "Environments"
-
-        I[Simulation Environments]
-
-        J[Real-world Interfaces]
-
-        K[Benchmarks]
-
+    subgraph "Knowledge Domains"
+        I[Cognitive Models]
+        J[Mathematical Foundations]
+        K[Systems Theory]
+        L[Research Methods]
     end
 
     A --> E
-
     A --> F
-
     A --> G
-
-    A --> H
-
     B --> E
-
     B --> F
-
     B --> G
+    C --> I
+    C --> J
+    C --> K
+    D --> I
+    D --> J
+    D --> K
 
-    B --> H
-
-    C --> E
-
-    C --> F
-
-    C --> G
-
-    style A fill:#f9d5e5,stroke:#333,stroke-width:1px
-
-    style B fill:#f9d5e5,stroke:#333,stroke-width:1px
-
-    style C fill:#f9d5e5,stroke:#333,stroke-width:1px
-
-    style D fill:#f9d5e5,stroke:#333,stroke-width:1px
-
+    style A fill:#f9d5e5,stroke:#333,stroke-width:2px
+    style B fill:#e8f4fd,stroke:#333,stroke-width:1px
     style E fill:#d5f5e3,stroke:#333,stroke-width:1px
-
-    style F fill:#d5f5e3,stroke:#333,stroke-width:1px
-
-    style G fill:#d5f5e3,stroke:#333,stroke-width:1px
-
-    style H fill:#d5f5e3,stroke:#333,stroke-width:1px
-
+    style I fill:#fff2cc,stroke:#333,stroke-width:1px
 ```
 
-### Tools
+### Development Tools
 
-- [[tools/setup_tools|Setup Tools]]
+- [[tools/AGENTS|Tools Documentation]] - Development and utility tools
+- [[tools/README|Tools Overview]] - Tool navigation and usage
+- [[repo_docs/unit_testing|Testing Framework]] - Testing standards and practices
+- [[repo_docs/validation|Validation Framework]] - Code and documentation validation
 
-- [[tools/development_tools|Development Tools]]
+### Example Resources
 
-- [[tools/documentation_tools|Documentation Tools]]
+- [[examples/AGENTS|Examples Documentation]] - Comprehensive example documentation
+- [[examples/README|Examples Overview]] - Example navigation and structure
+- [[examples/usage_examples|Usage Examples]] - Practical usage demonstrations
+- [[examples/index|Examples Index]] - Complete example catalog
 
-- [[tools/experiment_tools|Experiment Tools]]
+## 🤝 Contributing
 
-- [[tools/analysis_tools|Analysis Tools]]
+### Documentation Standards
 
-- [[tools/visualization_tools|Visualization Tools]]
+- [[repo_docs/ai_documentation_style|AI Documentation Style]] - Documentation writing standards
+- [[repo_docs/content_management|Content Management]] - Documentation maintenance practices
+- [[repo_docs/documentation_standards|Documentation Standards]] - Quality and consistency guidelines
+- [[development/README|Development Workflow]] - Development and contribution processes
 
-- [[tools/benchmark_tools|Benchmark Tools]]
-
-- [[tools/simulation_tools|Simulation Tools]]
-
-### Examples
-
-- [[examples/quickstart_example|Quick Start Example]]
-
-- [[examples/basic_agent|Basic Agent]]
-
-- [[examples/active_inference_basic|Active Inference]]
-
-- [[examples/multi_agent_system|Multi-Agent System]]
-
-- [[examples/hierarchical_agent|Hierarchical Agent]]
-
-- [[examples/belief_updating|Belief Updating Example]]
-
-- [[examples/policy_selection|Policy Selection Example]]
-
-## Contributing
-
-### Guidelines
-
-- [[guides/contribution_guide|Contribution Guide]]
-
-- [[guides/documentation_guide|Documentation Guide]]
-
-- [[guides/style_guide|Style Guide]]
-
-- [[guides/code_standards|Code Standards]]
-
-- [[guides/testing_guidelines|Testing Guidelines]]
-
-- [[guides/review_process|Review Process]]
-
-### Development Workflow
+### Documentation Workflow
 
 ```mermaid
-
 stateDiagram-v2
+    [*] --> Planning
+    Planning --> Writing
+    Writing --> Review
+    Review --> Validation
+    Validation --> Publishing
+    Publishing --> Maintenance
+    Maintenance --> Planning
+    Maintenance --> [*]
 
-    [*] --> Development
-
-    Development --> Testing
-
-    Testing --> Review
-
-    Review --> Refinement
-
-    Refinement --> Testing
-
-    Review --> Documentation
-
-    Documentation --> Deployment
-
-    Deployment --> [*]
-
+    note right of Review : Technical Review
+    note right of Validation : Link & Content Validation
 ```
 
-### Templates
+### Documentation Templates
 
-- [[templates/concept_template|Concept Template]]
+- [[templates/AGENTS|Templates Documentation]] - Complete template documentation
+- [[templates/README|Templates Overview]] - Template navigation and usage
+- [[templates/template_guide|Template Guide]] - Template usage instructions
+- [[templates/research_document|Research Templates]] - Research documentation templates
 
-- [[templates/guide_template|Guide Template]]
+## 📚 Additional Resources
 
-- [[templates/example_template|Example Template]]
+### Knowledge Base
 
-- [[templates/api_template|API Documentation Template]]
+- [[../knowledge_base/index|Knowledge Base Index]] - Complete knowledge organization
+- [[../knowledge_base/active_inference_implementation|Active Inference Implementation]] - Core implementation guides
+- [[../knowledge_base/swarm_intelligence_implementation|Swarm Intelligence]] - Collective intelligence patterns
+- [[../knowledge_base/learning_roadmap|Learning Roadmap]] - Educational progression paths
 
-- [[templates/implementation_template|Implementation Template]]
+### Research Documentation
 
-- [[templates/agent_template|Agent Template]]
+- [[research/AGENTS|Research Documentation]] - Research framework and methods
+- [[research/README|Research Overview]] - Research resources and navigation
+- [[research/ant_colony_active_inference|Ant Colony Active Inference]] - Specific research implementations
 
-- [[templates/research_template|Research Template]]
+### Repository Documentation
 
-## Additional Resources
+- [[repo_docs/README|Repository Documentation]] - Comprehensive repo documentation
+- [[DOCUMENTATION_ROADMAP|Documentation Roadmap]] - Documentation planning and architecture
+- [[repo_docs/folder_structure|Repository Structure]] - Codebase organization guide
 
-### References
+## 🆘 Support & Community
 
-- [[concepts/active_inference|Active Inference]]
+### Documentation Support
 
-- [[concepts/free_energy_principle|Free Energy Principle]]
+- [[repo_docs/troubleshooting|Troubleshooting Guide]] - Common issues and solutions
+- [[repo_docs/validation|Validation Framework]] - Quality assurance and validation
+- [[repo_docs/linking_validation|Link Validation]] - Link checking and maintenance
 
-- [[concepts/predictive_processing|Predictive Processing]]
+### Development Support
 
-- [[DOCUMENTATION_ROADMAP|Documentation Roadmap]]
+- [[development/README|Development Resources]] - Development environment and tools
+- [[tools/README|Tool Documentation]] - Utility tools and automation
+- [[repo_docs/unit_testing|Testing Framework]] - Testing standards and practices
 
-- [[concepts/bibliography|Bibliography]]
+### Community Resources
 
-- [[concepts/glossary|Glossary of Terms]]
-
-### Research Topics
-
-- [[research/current_projects|Current Research Projects]]
-
-- [[research/publications|Publications]]
-
-- [[research/experimental_results|Experimental Results]]
-
-- [[research/benchmarks|Benchmark Results]]
-
-- [[research/future_directions|Future Research Directions]]
-
-### Related Projects
-
-- [[related/similar_frameworks|Similar Frameworks]]
-
-- [[related/complementary_tools|Complementary Tools]]
-
-- [[related/partner_projects|Partner Projects]]
-
-- [[related/community_extensions|Community Extensions]]
-
-## Support
-
-### Help
-
-- [[guides/troubleshooting|Troubleshooting]]
-
-- [[guides/faq|FAQ]]
-
-- [[guides/support|Support]]
-
-- [[guides/common_errors|Common Errors]]
-
-- [[guides/performance_issues|Performance Issues]]
-
-### Community
-
-- [[guides/community_guide|Community Guide]]
-
-- [[guides/discussion|Discussion]]
-
-- [[guides/feedback|Feedback]]
-
-- [[guides/feature_requests|Feature Requests]]
-
-- [[guides/bug_reporting|Bug Reporting]]
-
-- [[guides/community_extensions|Community Extensions]]
+- [[repo_docs/research|Research Documentation]] - Research collaboration framework
+- [[repo_docs/simulation|Simulation Documentation]] - Simulation setup and usage
+- [[repo_docs/package_documentation|Package Documentation]] - Packaging and deployment guides
 
 ---
 
-> [!tip] Navigation Tip
-> Use Obsidian's graph view and search functionality to explore connections between concepts. The [[agents/agent_docs_readme|Agent Documentation Clearinghouse]] provides comprehensive details on agent implementations.
+> [!tip] Documentation Navigation
+> This documentation is optimized for Obsidian usage. Use graph view to explore concept relationships, search functionality for specific topics, and the [[AGENTS|Documentation Framework Agents]] for technical implementation details.
 
 ---
 
-> [!note] Open Source and Licensing
-> Repository: [ActiveInferenceInstitute/cognitive](https://github.com/ActiveInferenceInstitute/cognitive)
-> - Documentation and knowledge base content: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-> - Code and examples: MIT License (see `LICENSE`)
+> [!info] Documentation Framework
+> This documentation integrates with the broader [[../knowledge_base/index|Cognitive Modeling Knowledge Base]] and [[agents/agent_docs_readme|Agent Documentation Clearinghouse]] for comprehensive knowledge management.
+
+---
+
+> [!note] Repository Information
+> **Repository**: [ActiveInferenceInstitute/cognitive](https://github.com/ActiveInferenceInstitute/cognitive)  
+> **Documentation License**: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
+> **Code License**: MIT License (see `LICENSE`)  
+> **Documentation Framework**: Powered by [[AGENTS|Documentation Framework Agents]]
 

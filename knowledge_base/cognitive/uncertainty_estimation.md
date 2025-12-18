@@ -2,7 +2,7 @@
 
 title: Uncertainty Estimation
 
-type: knowledge_base
+type: concept
 
 status: stable
 

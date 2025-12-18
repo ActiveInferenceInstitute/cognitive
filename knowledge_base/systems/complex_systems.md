@@ -243,3 +243,4 @@ Complex systems theory provides a framework for understanding systems composed o
 - [[self_organization]] - Spontaneous organization
 - [[adaptive_systems]] - Learning and adaptation
 - [[network_theory]] - Network structure and dynamics
+

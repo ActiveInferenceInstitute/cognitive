@@ -1,22 +1,10 @@
 ---
-
 title: Dynamical Systems
-
 type: mathematical_concept
-
-status: stable
-
+id: dynamical_systems_001
 created: 2024-03-15
-
-complexity: advanced
-
-processing_priority: 1
-
-tags:
-
-  - mathematics
-
-  - dynamics
+modified: 2025-12-18
+tags: [mathematics, dynamics]
 
   - systems
 

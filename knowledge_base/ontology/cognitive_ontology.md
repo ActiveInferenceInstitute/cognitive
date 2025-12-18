@@ -1,42 +1,27 @@
 ---
-
 title: Cognitive Ontology
-
 type: ontology
-
 status: active
-
 created: 2024-02-07
-
+updated: 2025-12-18
 tags:
-
   - ontology
-
   - cognitive_science
-
   - taxonomy
-
   - concepts
-
 semantic_relations:
-
   - type: defines
-
     links:
-
       - [[../cognitive/active_inference]]
-
       - [[../cognitive/predictive_processing]]
-
       - [[../cognitive/free_energy_principle]]
-
   - type: relates
-
     links:
-
       - [[../mathematics/information_theory]]
-
       - [[../systems/systems_theory]]
+      - [[../mathematics/category_theory]]
+      - [[../systems/complex_systems]]
+---
 
 ---
 
@@ -452,12 +437,10 @@ mathematical_formulation: "F = E_q[ln q(s) - ln p(o,s)]"
 
 ### Internal Connections
 
+- [[AGENTS|Ontology Agent Architectures]] - Agent implementations based on ontological principles
 - Links to mathematical concept definitions
-
 - Integration with agent architecture specifications
-
 - Alignment with system theory principles
-
 - Connection to biological process taxonomies
 
 ## See Also

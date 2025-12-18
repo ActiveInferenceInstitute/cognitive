@@ -2,7 +2,7 @@
 
 title: Form Perception
 
-type: knowledge_base
+type: concept
 
 status: stable
 

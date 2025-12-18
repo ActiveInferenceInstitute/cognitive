@@ -31,11 +31,26 @@ Agent architectures and cognitive systems derived from philosophical principles,
 Agents based on pragmatic philosophy and practical reasoning.
 
 ```python
-class PragmatistAgent:
-    """Agent architecture based on pragmatic philosophical principles."""
+import logging
+from typing import Dict, List, Any, Tuple
 
-    def __init__(self, pragmatic_framework):
-        """Initialize agent with pragmatic reasoning capabilities."""
+logger = logging.getLogger(__name__)
+
+class PragmatistAgent:
+    """Agent architecture based on pragmatic philosophical principles.
+
+    This agent implements pragmatic reasoning, evaluating actions based on
+    their practical consequences and learning from experience.
+    """
+
+    def __init__(self, pragmatic_framework: Dict[str, Any]) -> None:
+        """Initialize agent with pragmatic reasoning capabilities.
+
+        Args:
+            pragmatic_framework: Configuration for pragmatic reasoning components
+        """
+        logger.info("Initializing PragmatistAgent with pragmatic framework")
+
         # Pragmatic components
         self.belief_system = PragmaticBeliefs(pragmatic_framework)
         self.action_evaluation = ActionEvaluation(pragmatic_framework)
@@ -50,8 +65,20 @@ class PragmatistAgent:
         self.means_ends_reasoning = MeansEndsReasoning()
         self.problem_solving = PragmaticProblemSolving()
 
-    def pragmatic_reasoning_cycle(self, problem_situation, available_actions):
-        """Complete pragmatic reasoning and decision-making cycle."""
+        logger.info("PragmatistAgent initialization complete")
+
+    def pragmatic_reasoning_cycle(self, problem_situation: Dict[str, Any], available_actions: List[Any]) -> Tuple[Any, Dict[str, Any]]:
+        """Execute complete pragmatic reasoning and decision-making cycle.
+
+        Args:
+            problem_situation: Current problem context and constraints
+            available_actions: List of possible actions to consider
+
+        Returns:
+            Tuple of (selected_action, learning_outcome)
+        """
+        logger.debug(f"Starting pragmatic reasoning cycle for {len(available_actions)} available actions")
+
         # Assess current beliefs and situation
         situation_assessment = self.belief_system.assess_situation(problem_situation)
 
@@ -75,6 +102,7 @@ class PragmatistAgent:
             optimal_action, action_result, consequence_evaluations
         )
 
+        logger.debug(f"Pragmatic reasoning cycle complete. Selected action: {optimal_action}")
         return optimal_action, learning_outcome
 ```
 
@@ -357,3 +385,4 @@ See [[pragmatism|Pragmatism]] for:
 ---
 
 > **Fundamental Reasoning**: Enables agents to engage with fundamental questions about knowledge, reality, ethics, and meaning through philosophical frameworks.
+

@@ -2,7 +2,7 @@
 
 title: Selective Attention
 
-type: knowledge_base
+type: concept
 
 status: stable
 

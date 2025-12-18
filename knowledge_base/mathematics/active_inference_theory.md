@@ -1,40 +1,35 @@
-# Active Inference Theory
-
 ---
-
+title: Active Inference Theory
 type: mathematical_concept
-
 id: active_inference_theory_001
-
 created: 2024-02-06
-
-modified: 2024-02-06
-
+modified: 2025-12-18
 tags: [mathematics, active-inference, free-energy, cognitive-modeling]
-
 aliases: [active-inference-framework, free-energy-principle]
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[../../docs/research/research_documentation_index|Research Documentation]]
-
-      - [[free_energy_theory]]
-
-  - type: uses
-
+      - [[free_energy_principle]]
+      - [[../cognitive/active_inference]]
+  - type: foundation
     links:
-
       - [[variational_methods]]
-
       - [[information_theory]]
-
       - [[optimal_control]]
-
+      - [[bayesian_inference]]
   - type: documented_by
+    links:
+      - [[../active_inference_implementation]]
+      - [[../active_inference_integration]]
+      - [[geometric_active_inference]]
+      - [[measure_theoretic_active_inference]]
+      - [[stochastic_active_inference]]
+  - type: extends
+    links:
+      - [[expected_free_energy]]
+      - [[variational_free_energy]]
+      - [[active_inference_loop]]
 
     links:
 

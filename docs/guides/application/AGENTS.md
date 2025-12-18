@@ -338,3 +338,4 @@ See [[parr_2022_chapter_6|Parr (2022) Chapter 6]] for:
 ---
 
 > **Domain Expertise**: Enables agents with specialized capabilities for cognitive modeling, spatial computing, and theoretical research applications.
+

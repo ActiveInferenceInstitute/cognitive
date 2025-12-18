@@ -2,7 +2,7 @@
 
 title: Illusory Contours
 
-type: knowledge_base
+type: concept
 
 status: stable
 

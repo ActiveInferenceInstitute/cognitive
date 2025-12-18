@@ -22,7 +22,7 @@ semantic_relations:
 
 # Systems Theory Knowledge Base
 
-This knowledge base contains 25 comprehensive documents covering systems theory, complex systems, emergence, network dynamics, and related concepts essential for understanding complex adaptive systems in cognitive modeling and Active Inference.
+This knowledge base contains 31 comprehensive documents covering systems theory, complex systems, emergence, network dynamics, and related concepts essential for understanding complex adaptive systems in cognitive modeling and Active Inference.
 
 ## 🔄 Overview
 
@@ -138,6 +138,7 @@ The systems theory knowledge base provides frameworks for understanding how comp
 - [[../cognitive/complex_systems_biology]]
 - [[../agents/architectures_overview]]
 - [[../biology/ecological_dynamics]]
+- [[../philosophy/complexity_and_philosophy|Philosophy of Complexity]]
 
 ### Implementation Examples
 - [[../../Things/Ant_Colony/|Ant Colony Systems]]
@@ -146,7 +147,7 @@ The systems theory knowledge base provides frameworks for understanding how comp
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 25 specialized systems documents
+- **Coverage**: 31 specialized systems documents
 - **Interdisciplinary**: Spans biology, technology, and social systems
 - **Implementation**: Strong connections to practical applications
 - **Integration**: Unified systems perspective across domains
@@ -173,7 +174,7 @@ The systems theory knowledge base provides frameworks for understanding how comp
 - Follow [[../linking_standards|linking standards]]
 
 ### Review Process
-- Systems theory expert validation
+- Systems theory validation
 - Implementation testing for practical relevance
 - Cross-domain integration verification
 

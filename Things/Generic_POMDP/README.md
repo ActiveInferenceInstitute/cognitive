@@ -3,7 +3,7 @@ title: Generic POMDP Framework
 type: implementation
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - pomdp
   - active_inference
@@ -275,3 +275,4 @@ See [[Generic_POMDP_README|Generic POMDP Implementation Details]] for comprehens
 ---
 
 > **Performance**: Optimized for both research flexibility and computational efficiency across different problem scales.
+

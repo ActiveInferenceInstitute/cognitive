@@ -2,17 +2,23 @@
 
 title: Graph Visualization
 
-type: knowledge_base
+type: concept
 
 status: stable
 
-tags: [graphs, visualization, knowledge]
+tags:
+  - graphs
+  - visualization
+  - knowledge
 
 semantic_relations:
 
   - type: relates
 
-    links: [graph_theory, network_analysis, visualization_tools]
+    links:
+      - graph_theory
+      - network_analysis
+      - visualization_tools
 
 ---
 

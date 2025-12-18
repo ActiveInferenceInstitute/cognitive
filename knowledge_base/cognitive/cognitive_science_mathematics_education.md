@@ -8,13 +8,18 @@ status: draft
 
 created: 2025-08-08
 
-tags: [education, cognitive-science, mathematics]
+tags:
+  - education
+  - cognitive-science
+  - mathematics
 
 semantic_relations:
 
   - type: relates
 
-    links: [learning_mechanisms, research_education]
+    links:
+      - learning_mechanisms
+      - research_education
 
 ---
 

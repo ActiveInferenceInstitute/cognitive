@@ -1,0 +1,168 @@
+# Cognitive Modeling Framework - Cursor Rules
+
+## Documentation Requirements
+
+### Folder-Level Documentation
+- Every folder must have an AGENTS.md file for technical documentation
+- Every folder must have a README.md file for overview and navigation
+- AGENTS.md files must be accurate and complete technical documentation for their folder
+- Documentation should be understated and "show not tell"
+
+### Documentation Standards
+- Follow established patterns from existing AGENTS.md files
+- Maintain Obsidian linking standards with proper [[link]] syntax
+- Use semantic_relations in YAML frontmatter for concept relationships
+- Documentation should be professional, effective, and informative
+
+## Code Quality Standards
+
+### Test-Driven Development (TDD)
+- Always use test-driven development with a unified modular approach
+- Write tests before implementation
+- Ensure all modules have corresponding tests
+- No mock methods - always do real data analysis
+
+### Code Organization
+- Use modular, well-documented, clearly reasoned code
+- Follow professional, functional, intelligent, wise, modular, concise, elegant, thoughtful patterns
+- Code should be clearly-commented and interpretable
+- Avoid redundant code sections and scripts
+
+### Method Standards
+- All public methods must have complete docstrings
+- Include type hints for all function parameters and return values
+- Add informative logging to key methods
+- Methods should be professional, effective, and real (not mock)
+- Document methods with clear reasoning and examples where appropriate
+
+### Logging Requirements
+- Add informative logging throughout the codebase
+- Logging should be structured and meaningful
+- Use appropriate log levels (DEBUG, INFO, WARNING, ERROR)
+- Log important state changes and decision points
+
+## Naming Conventions
+
+### Remove Redundant Adjectives
+- Remove non-semantic adjectives from file names, method names, and documentation:
+  - "enhanced", "real", "new", "improved", "better" should be removed
+  - Examples:
+    - "enhanced_method.py" → "method.py"
+    - "get_new_data()" → "get_data()"
+    - "new framework" → "framework"
+- Preserve semantic adjectives that add meaning:
+  - "continuous_time", "discrete_state", "hierarchical_processing" are acceptable
+
+### File Naming
+- Use lowercase with underscores
+- Be descriptive and concise
+- Follow established patterns in the repository
+- Avoid redundant descriptors
+
+### Method Naming
+- Use snake_case for Python methods
+- Be descriptive and action-oriented
+- Avoid redundant adjectives
+- Follow verb_object pattern where appropriate
+
+## Testing Requirements
+
+### Test Structure
+- All tests should be in the tests/ directory
+- Test files should follow test_*.py naming convention
+- Tests should be comprehensive and cover edge cases
+- Integration tests should be documented
+
+### Test Documentation
+- Document test architecture in tests/AGENTS.md
+- Provide test suite overview in tests/README.md
+- Document test utilities and fixtures
+- Include examples of integration tests
+
+## Repository Standards
+
+### Code Review Checklist
+- [ ] Documentation updated (AGENTS.md, README.md)
+- [ ] Tests added and passing
+- [ ] No redundant adjectives in names
+- [ ] Logging added where appropriate
+- [ ] Method docstrings complete
+- [ ] Type hints included
+- [ ] Obsidian links validated
+- [ ] Code follows modular patterns
+
+### Validation Requirements
+- Assess where and how to make intelligent improvements
+- Review methods, logging, documentation for completeness
+- Ensure every folder has accurate and complete AGENTS.md and README.md
+- Scan repo entirely before acting to ensure intelligent decisions
+
+## Development Workflow
+
+### Before Making Changes
+1. Scan the repository to understand context
+2. Assess where improvements can be made
+3. Review existing patterns and conventions
+4. Plan changes thoughtfully
+
+### Making Changes
+1. Follow TDD approach
+2. Update documentation alongside code
+3. Add informative logging
+4. Ensure backward compatibility where possible
+5. Remove redundant code and adjectives
+
+### After Making Changes
+1. Run tests to ensure everything works
+2. Verify documentation is updated
+3. Check that links are valid
+4. Review for any other needed improvements
+5. Add observations and needed edits summary
+
+## Quality Standards
+
+### Code Quality
+- Professional, functional, intelligent, wise code
+- Modular, well-documented, clearly reasoned
+- Clearly-commented and interpretable
+- Avoid redundancy
+
+### Documentation Quality
+- Accurate and complete technical documentation
+- Understated and "show not tell" style
+- Professional and effective
+- Informative logging and signposting
+
+### Architecture Quality
+- Unified modular approach
+- Thoughtful orchestration
+- Comprehensive validation
+- Complete functionality
+
+## Obsidian Integration
+
+### Linking Standards
+- Use [[link]] syntax for internal links
+- Verify links are properly formatted
+- Check for broken internal links
+- Ensure semantic_relations are accurate in YAML frontmatter
+
+### Knowledge Organization
+- Maintain consistent folder structure
+- Follow established linking patterns
+- Use semantic relationships appropriately
+- Keep knowledge base organized and navigable
+
+## Summary
+
+Always consider and review possible improvements to:
+- Methods, tests, documentation, signposting, logging
+- Orchestration, validation, functionality, completeness, accuracy
+- Ensure every folder level has accurate and complete AGENTS.md and README.md
+- Use professional, effective, real methods that are documented, tested, and have informative logging
+- Follow modular, well-documented, clearly reasoned code patterns
+- Documentation and descriptions should be understated and "show not tell"
+- Scan the repo entirely before acting to ensure intelligent decisions
+- Avoid redundant code sections and scripts
+- No mock methods - always do real data analysis
+

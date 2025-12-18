@@ -1,22 +1,10 @@
 ---
-
 title: Information Theory
-
 type: mathematical_concept
-
-status: stable
-
+id: information_theory_001
 created: 2024-02-12
-
-complexity: advanced
-
-processing_priority: 1
-
-tags:
-
-  - mathematics
-
-  - information
+modified: 2025-12-18
+tags: [mathematics, information]
 
   - computation
 

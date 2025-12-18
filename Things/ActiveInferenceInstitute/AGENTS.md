@@ -3,7 +3,7 @@ title: Active Inference Institute Agents Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - agents
   - institute
@@ -356,3 +356,4 @@ See [[active_inference_institute|Active Inference Institute Overview]] for:
 ---
 
 > **Community Focus**: Builds and supports a collaborative ecosystem for Active Inference advancement through education, research, and knowledge sharing.
+

@@ -18,13 +18,16 @@ tags:
 
   - tooling
 
-related:
-
-  - [[plain_text_benefits]]
-
-  - [[automation_tools]]
-
-  - [[ci_cd_pipeline]]
+semantic_relations:
+  - type: relates
+    links:
+      - plain_text_benefits
+      - automation_tools
+      - ci_cd_pipeline
+  - type: implements
+    links:
+      - [[../tools/src/automation/]]
+      - [[machine_readability]]
 
 ---
 

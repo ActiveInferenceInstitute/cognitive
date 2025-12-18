@@ -2,7 +2,7 @@
 
 title: Sensorimotor Coordination
 
-type: knowledge_base
+type: concept
 
 status: stable
 

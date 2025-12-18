@@ -356,3 +356,4 @@ class AgentMonitor:
 ---
 
 > **Extension Point**: New agent architectures should be documented here and added to the implementations in the [[../../Things/|Things directory]].
+

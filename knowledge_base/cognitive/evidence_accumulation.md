@@ -2,7 +2,7 @@
 
 title: Evidence Accumulation
 
-type: knowledge_base
+type: concept
 
 status: stable
 

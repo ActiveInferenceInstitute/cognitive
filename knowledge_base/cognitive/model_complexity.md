@@ -2,7 +2,7 @@
 
 title: Model Complexity
 
-type: knowledge_base
+type: concept
 
 status: stable
 

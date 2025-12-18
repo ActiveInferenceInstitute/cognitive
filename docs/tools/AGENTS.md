@@ -14,6 +14,18 @@ semantic_relations:
     links:
       - [[../../tools/src/models/active_inference/AGENTS]]
       - [[../../docs/development/README]]
+      - [[../development/AGENTS]]
+      - [[../implementation/AGENTS]]
+  - type: automates
+    links:
+      - [[../../tests/README]]
+      - [[../config/AGENTS]]
+      - [[../../tests/run_tests.py]]
+  - type: enhances
+    links:
+      - [[../../tools/README]]
+      - [[../../docs/repo_docs/automation_scripts|Automation Scripts]]
+      - [[../../docs/repo_docs/git_tools|Git Tools]]
 ---
 
 # Tools Agent Documentation
@@ -506,3 +518,4 @@ class CICDAgent(ToolAgent):
 ---
 
 > **Scalability Support**: Tools designed to support development at scale, from individual agents to large multi-agent systems.
+

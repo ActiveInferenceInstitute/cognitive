@@ -2,7 +2,7 @@
 
 title: Attention Networks
 
-type: knowledge_base
+type: concept
 
 status: stable
 

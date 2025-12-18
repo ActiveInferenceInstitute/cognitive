@@ -2,7 +2,7 @@
 
 title: Predictive Network Implementation
 
-type: implementation_guide
+type: concept
 
 status: stable
 

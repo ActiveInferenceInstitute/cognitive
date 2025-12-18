@@ -3,7 +3,7 @@ title: Ant Colony Agents Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - ant_colony
   - agents
@@ -575,3 +575,4 @@ class AntAgentTestingSuite:
 ---
 
 > **Bio-Inspiration**: The implementation draws from real ant biology while adapting principles for computational applications.
+

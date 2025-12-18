@@ -3,7 +3,7 @@ title: Baseball Game Agents Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - agents
   - game_theory
@@ -249,7 +249,7 @@ See [[Baseball_Game_README|Baseball Game Implementation Details]] for:
 
 ---
 
-> **Strategic Intelligence**: Implements advanced game theory and opponent modeling for competitive decision-making in complex environments.
+> **Strategic Intelligence**: Implements game theory and opponent modeling for competitive decision-making in complex environments.
 
 ---
 
@@ -257,4 +257,5 @@ See [[Baseball_Game_README|Baseball Game Implementation Details]] for:
 
 ---
 
-> **Real-time Strategy**: Performs sophisticated strategic analysis and decision-making within real-time constraints.
+> **Real-time Strategy**: Performs strategic analysis and decision-making within real-time constraints.
+

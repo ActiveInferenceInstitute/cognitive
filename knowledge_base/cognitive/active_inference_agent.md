@@ -1,32 +1,30 @@
 ---
-
-title: Implementing Active Inference Agents
-
-type: guide
-
+title: Active Inference Agent Architecture
+type: implementation
 status: stable
-
 created: 2024-02-07
-
+updated: 2025-12-18
 tags:
-
   - active_inference
-
+  - agent_architecture
   - implementation
-
-  - guide
-
+  - cognitive_modeling
 semantic_relations:
-
   - type: implements
-
-    links: [[knowledge_base/cognitive/active_inference]]
-
-  - type: relates
-
     links:
-
-      - [[knowledge_base/mathematics/free_energy_theory]]
+      - [[active_inference]]
+      - [[../mathematics/active_inference_theory]]
+  - type: foundation
+    links:
+      - [[../mathematics/free_energy_principle]]
+      - [[generative_model]]
+      - [[belief_updating]]
+  - type: documented_by
+    links:
+      - [[../active_inference_implementation]]
+      - [[../agents/GenericPOMDP/]]
+      - [[../agents/Continuous_Time/]]
+---
 
       - [[knowledge_base/agents/GenericPOMDP/README]]
 

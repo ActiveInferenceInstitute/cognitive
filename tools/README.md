@@ -659,3 +659,4 @@ visualizer.create_performance_dashboard(final_performance,
 ---
 
 > **Extensibility**: Tools are designed to be extensible. Follow the modular architecture patterns when adding new functionality.
+

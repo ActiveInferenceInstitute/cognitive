@@ -2,7 +2,7 @@
 
 title: Temporal Binding
 
-type: knowledge_base
+type: concept
 
 status: stable
 

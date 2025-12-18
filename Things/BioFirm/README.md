@@ -3,7 +3,7 @@ title: BioFirm Active Inference Implementation
 type: implementation
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - biofirm
   - active_inference
@@ -452,3 +452,4 @@ python biofirm_visualization.py --data results/simulation_data.h5
 ---
 
 > **Scalability**: While demonstrated on a simple 5-state system, the principles extend to much more complex real-world applications with appropriate computational resources.
+

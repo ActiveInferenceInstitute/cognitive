@@ -200,20 +200,6 @@ Link to specific sections within files:
 
 ```
 
-### Citation References
-
-```markdown
-
-[[../citations/friston_2017]]
-
-[[../citations/parr_2019]]
-
-[[../citations/shannon_1948]]
-
-[[../citations/README]]
-
-```
-
 ## Common Link Patterns
 
 ### Cross-Domain Connections

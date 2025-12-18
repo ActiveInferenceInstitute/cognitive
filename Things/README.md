@@ -3,7 +3,7 @@ title: Implementation Examples
 type: index
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - implementations
   - examples
@@ -192,3 +192,4 @@ This directory contains working implementations of cognitive agents and Active I
 ---
 
 > **Getting Started**: Begin with [[Simple_POMDP/README|Simple POMDP]] for an introduction, then explore implementations matching your specific interests and requirements.
+

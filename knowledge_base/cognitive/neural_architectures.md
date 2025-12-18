@@ -2,7 +2,7 @@
 
 title: Neural Architectures
 
-type: pattern
+type: concept
 
 status: stable
 

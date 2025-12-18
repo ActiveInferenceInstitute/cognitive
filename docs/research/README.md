@@ -688,3 +688,4 @@ class ResearchImpactEvaluator:
 ---
 
 > **Collaboration**: Research projects benefit from interdisciplinary collaboration. Use the [[../repo_docs/contribution_guide|contribution guidelines]] for effective collaboration.
+

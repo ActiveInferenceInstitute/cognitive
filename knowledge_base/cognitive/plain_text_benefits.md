@@ -1,34 +1,25 @@
-# Plain Text Benefits in Cognitive Modeling
-
 ---
-
 title: Plain Text Benefits
-
 type: concept
-
 status: stable
-
 created: 2024-02-06
-
 tags:
-
   - methodology
-
   - tools
-
   - best-practices
-
-related:
-
-  - [[git_workflow]]
-
-  - [[obsidian_usage]]
-
-  - [[knowledge_organization]]
-
-  - [[model_generalization]]
-
+semantic_relations:
+  - type: relates
+    links:
+      - git_workflow
+      - obsidian_usage
+      - knowledge_organization
+      - model_generalization
+  - type: implements
+    links:
+      - [[plain_text_benefits]]
 ---
+
+# Plain Text Benefits in Cognitive Modeling
 
 ## Overview
 
@@ -182,11 +173,9 @@ See [[educational_resources]] for examples.
 
 ### 1. Literature Integration
 
-- **Citation Management**
+- **Reference Management**
 
   - [[reference_linking]]
-
-  - [[citation_networks]]
 
   - [[knowledge_graphs]]
 

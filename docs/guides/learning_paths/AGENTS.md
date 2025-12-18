@@ -355,3 +355,4 @@ See [[active_inference_learning_path|Active Inference Learning Path]] for:
 ---
 
 > **Cognitive Development**: Enables agents with systematic cognitive skill building, competency assessment, and progressive knowledge integration across domains.
+

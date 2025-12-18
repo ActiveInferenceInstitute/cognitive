@@ -2,7 +2,7 @@
 
 title: Precision Mechanisms Implementation
 
-type: implementation_guide
+type: concept
 
 status: stable
 

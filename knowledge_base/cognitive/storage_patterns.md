@@ -2,7 +2,7 @@
 
 title: Storage Patterns
 
-type: pattern
+type: concept
 
 status: stable
 

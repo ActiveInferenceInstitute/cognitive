@@ -628,3 +628,4 @@ class ResearchCommunicationAgent(ResearchAgent):
 ---
 
 > **Interdisciplinary Impact**: Research agents bridging cognitive science, neuroscience, and artificial intelligence for comprehensive scientific advancement.
+

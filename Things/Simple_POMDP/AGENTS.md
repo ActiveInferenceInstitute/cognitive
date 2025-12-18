@@ -3,7 +3,7 @@ title: Simple POMDP Agents Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - agents
   - pomdp
@@ -411,3 +411,4 @@ See [[Simple_POMDP_README|Simple POMDP Implementation Details]] for:
 ---
 
 > **Research Foundation**: Provides foundation for understanding more advanced Active Inference implementations.
+

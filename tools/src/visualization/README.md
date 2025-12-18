@@ -679,3 +679,4 @@ class TestMatrixVisualizer:
 ---
 
 > **Interactivity**: Tools support both static publication figures and interactive visualizations for exploratory analysis.
+

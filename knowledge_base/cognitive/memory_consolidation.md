@@ -2,7 +2,7 @@
 
 title: Memory Consolidation
 
-type: knowledge_base
+type: concept
 
 status: stable
 

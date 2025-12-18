@@ -1,4 +1,28 @@
-# [[cognitive/stability_plasticity|Stability-Plasticity Dilemma]]
+---
+title: Stability-Plasticity Dilemma
+type: concept
+status: stable
+created: 2025-01-01
+tags:
+  - learning_systems
+  - stability
+  - plasticity
+  - memory
+  - adaptation
+semantic_relations:
+  - type: relates
+    links:
+      - learning_mechanisms
+      - memory_consolidation
+      - synaptic_plasticity
+      - adaptation_mechanisms
+  - type: foundation
+    links:
+      - [[../mathematics/learning_theory]]
+      - [[neural_plasticity]]
+---
+
+# Stability-Plasticity Dilemma
 
 ## Overview
 

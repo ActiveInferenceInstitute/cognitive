@@ -2,7 +2,7 @@
 
 title: Temporal Attention
 
-type: knowledge_base
+type: concept
 
 status: stable
 

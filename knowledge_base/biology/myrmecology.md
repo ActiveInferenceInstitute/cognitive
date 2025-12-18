@@ -124,6 +124,104 @@ class AntCommunication:
 
 ```
 
+### 4. Species Diversity and Evolution
+```python
+class AntTaxonomy:
+    """Ant species classification and diversity"""
+
+    def __init__(self):
+        # Major ant families
+        self.families = {
+            'Formicidae': {
+                'subfamilies': ['Myrmicinae', 'Formicinae', 'Dolichoderinae',
+                              'Ponerinae', 'Dorylinae', 'Pseudomyrmecinae'],
+                'estimated_species': 15000,
+                'distribution': 'global'
+            }
+        }
+
+        # Notable species examples
+        self.species_examples = {
+            'army_ants': ['Eciton burchellii', 'Dorylus wilverthi'],
+            'harvester_ants': ['Pogonomyrmex barbatus', 'Messor pergandei'],
+            'fire_ants': ['Solenopsis invicta', 'Solenopsis geminata'],
+            'leafcutter_ants': ['Atta cephalotes', 'Acromyrmex octospinosus'],
+            'weaver_ants': ['Oecophylla smaragdina', 'Oecophylla longinoda'],
+            'honeypot_ants': ['Myrmecocystus mexicanus', 'Camponotus inflatus']
+        }
+
+    def get_species_characteristics(self, species_name: str) -> dict:
+        """Get behavioral and ecological characteristics of ant species"""
+        # Implementation would return species-specific traits
+        pass
+```
+
+#### Major Ant Species Groups
+
+- **Army Ants** (`Ecitoninae`, `Dorylinae`): Nomadic predators forming massive raiding swarms
+- **Harvester Ants** (`Pogonomyrmex`): Seed-collecting specialists with complex foraging networks
+- **Fire Ants** (`Solenopsis`): Invasive species with potent venom and mound-building behavior
+- **Leafcutter Ants** (`Atta`, `Acromyrmex`): Agricultural ants cultivating fungus gardens
+- **Weaver Ants** (`Oecophylla`): Tropical arboreal ants using larval silk for nest construction
+- **Honey Ants** (`Myrmecocystus`): Desert species storing liquid food in repletes
+
+#### Evolutionary Adaptations
+
+- **Eusociality**: Complex social organization with reproductive division of labor
+- **Chemical Communication**: Pheromone-based coordination and recognition systems
+- **Polymorphism**: Physical specialization within worker castes
+- **Cooperative Breeding**: Shared parental care and brood rearing
+
+### 5. Behavior Patterns and Ecology
+
+#### Foraging Strategies
+```python
+class AntForagingStrategies:
+    """Diverse foraging behaviors across ant species"""
+
+    def __init__(self):
+        self.strategies = {
+            'individual_foraging': ['many ponerine species'],
+            'trail_recruitment': ['Formicinae', 'Myrmicinae'],
+            'group_raiding': ['army ants', 'driver ants'],
+            'agricultural_farming': ['leafcutter ants'],
+            'seed_harvesting': ['harvester ants'],
+            'nectar_collection': ['honeypot ants']
+        }
+
+    def optimize_foraging_allocation(self, colony_size: int, resource_distribution: dict) -> dict:
+        """Optimize foraging effort allocation based on colony needs"""
+        # Mathematical optimization of foraging strategies
+        pass
+```
+
+#### Nest Architecture and Construction
+- **Soil Mounds**: Above-ground structures (fire ants, thatching ants)
+- **Underground Nests**: Complex tunnel systems with multiple chambers
+- **Arboreal Nests**: Tree-dwelling colonies (weaver ants, some acacia ants)
+- **Carton Nests**: Plant material constructions (tropical arboreal species)
+
+#### Ecological Roles
+```python
+class AntEcologicalFunctions:
+    """Ant contributions to ecosystem processes"""
+
+    def __init__(self):
+        self.functions = {
+            'predation': 'Control of insect populations',
+            'seed_dispersal': 'Myrmecochory - ant-mediated seed dispersal',
+            'soil_modification': 'Soil aeration, nutrient cycling',
+            'plant_protection': 'Defense against herbivores',
+            'pollination': 'Some species contribute to plant pollination',
+            'decomposition': 'Break down organic matter'
+        }
+
+    def quantify_ecosystem_services(self, ant_community: list) -> dict:
+        """Quantify ant contributions to ecosystem services"""
+        # Assessment of ecological impact
+        pass
+```
+
 ## Research Methods
 
 ### 1. Colony Observation

@@ -82,6 +82,7 @@ The philosophy knowledge base provides philosophical foundations that inform cog
 - [[philosophy_of_mathematics]]
 - [[complexity_and_philosophy]]
 - [[../ontology/cognitive_ontology|Ontology]]
+- [[../systems/complex_systems|Complex Systems Theory]]
 
 ### Implementation Examples
 - [[../../tools/src/models/|Model Implementations]]
@@ -116,7 +117,7 @@ The philosophy knowledge base provides philosophical foundations that inform cog
 - Follow [[../linking_standards|linking standards]]
 
 ### Review Process
-- Philosophical expert validation
+- Philosophical validation
 - Interdisciplinary relevance assessment
 - Implementation connection verification
 

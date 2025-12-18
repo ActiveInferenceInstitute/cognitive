@@ -315,3 +315,4 @@ See [[biofirm_framework|BioFirm Framework]] for:
 ---
 
 > **Adaptive Governance**: Supports adaptive, learning-based environmental governance systems inspired by biological firm theory.
+

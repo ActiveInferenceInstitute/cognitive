@@ -1,31 +1,13 @@
 ---
-
 title: Free Energy Principle
-
 type: mathematical_concept
-
-status: stable
-
+id: free_energy_principle_001
 created: 2024-02-10
-
-tags:
-
-  - mathematics
-
-  - bayesian_inference
-
-  - neuroscience
-
-  - cognitive_science
-
-  - thermodynamics
-
-  - information_theory
-
+modified: 2025-12-18
+tags: [mathematics, bayesian_inference, neuroscience, cognitive_science, thermodynamics, information_theory]
+aliases: [free_energy_principle, FEP]
 msc: ["62B10", "94A17", "68T05"]
-
 semantic_relations:
-
   - type: foundation
 
     links:

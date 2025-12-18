@@ -2,7 +2,7 @@
 
 title: Schema Integration
 
-type: knowledge_base
+type: concept
 
 status: stable
 

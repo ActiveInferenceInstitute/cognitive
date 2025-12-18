@@ -3,7 +3,7 @@ title: BioFirm Agents Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - agents
   - biofirm
@@ -268,3 +268,4 @@ See [[BioFirm_README|BioFirm Implementation Details]] for:
 ---
 
 > **Long-Term Optimization**: Optimizes for intergenerational equity and long-term environmental sustainability.
+

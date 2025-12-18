@@ -3,7 +3,7 @@ title: Generic Thing Agents Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - agents
   - active_inference
@@ -22,7 +22,7 @@ semantic_relations:
 
 # Generic Thing Agents Documentation
 
-Comprehensive documentation of the Generic Thing agent architecture, a foundational Active Inference implementation that serves as a universal building block for creating adaptive, intelligent systems through the Free Energy Principle.
+Documentation of the Generic Thing agent architecture, a foundational Active Inference implementation that serves as a universal building block for creating adaptive systems through the Free Energy Principle.
 
 ## 🧠 Agent Architecture
 
@@ -421,3 +421,4 @@ class GenericThingDeveloper:
 ---
 
 > **Scalable Intelligence**: Supports everything from single agents to complex hierarchical and swarm intelligence systems.
+

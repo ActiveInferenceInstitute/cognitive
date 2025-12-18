@@ -14,6 +14,17 @@ semantic_relations:
     links:
       - [[implementation_guides]]
       - [[../../docs/examples/AGENTS]]
+      - [[../development/AGENTS]]
+      - [[../implementation/AGENTS]]
+  - type: educates
+    links:
+      - [[learning_paths/|Learning Paths]]
+      - [[application/|Application Guides]]
+  - type: supports
+    links:
+      - [[../../Things/Generic_Thing/AGENTS]]
+      - [[../../Things/Generic_POMDP/AGENTS]]
+      - [[../../docs/agents/AGENTS]]
 ---
 
 # Guides Agent Documentation
@@ -129,10 +140,10 @@ plot_learning_progress(agent.learning_history)
 - Explore multi-agent scenarios
 ```
 
-#### [[quickstart_guide|Quick Start Guide]]
+#### [[README|Guides Overview]]
 Rapid introduction to the framework with minimal setup and immediate results.
 
-#### [[installation_guide|Installation Guide]]
+#### [[../repo_docs/getting_started|Getting Started]]
 Complete installation and setup instructions for different platforms and use cases.
 
 ### Advanced Implementation Guides
@@ -443,7 +454,7 @@ Guide for conducting thorough code reviews and ensuring implementation quality.
 ## 🔗 Cross-References
 
 ### Guide Categories
-- **Getting Started**: [[quickstart_guide|Quick Start]], [[installation_guide|Installation]]
+- **Getting Started**: [[README|Guides Overview]], [[../repo_docs/getting_started|Getting Started]]
 - **Implementation**: [[implementation_guides|Implementation]], [[agent_development|Agent Development]]
 - **Domain-Specific**: [[application/README|Applications]], [[learning_paths/README|Learning Paths]]
 - **Technical**: [[testing_guide|Testing]], [[performance_optimization|Optimization]]
@@ -465,3 +476,4 @@ Guide for conducting thorough code reviews and ensuring implementation quality.
 ---
 
 > **Progressive Learning**: Structured guidance supporting skill development from beginner to expert levels across different agent types and domains.
+

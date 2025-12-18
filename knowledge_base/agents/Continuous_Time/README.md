@@ -630,3 +630,4 @@ def benchmark_continuous_time_agent():
 ---
 
 > **Research Frontier**: Active area of development with applications in neuroscience, robotics, and complex systems.
+

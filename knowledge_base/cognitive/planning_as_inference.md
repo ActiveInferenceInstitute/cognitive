@@ -1,28 +1,28 @@
 ---
-
 title: Planning as Inference
-
 type: concept
-
 status: stable
-
 created: 2025-03-03
-
+updated: 2025-12-18
 tags:
-
-  - cognitive
-
   - planning
-
-  - probabilistic_inference
-
   - active_inference
-
+  - decision_making
+  - probabilistic_inference
 semantic_relations:
-
-  - type: relates
-
+  - type: implements
     links:
+      - [[active_inference]]
+      - [[../mathematics/expected_free_energy]]
+  - type: relates
+    links:
+      - [[decision_making]]
+      - [[hierarchical_inference]]
+      - [[../mathematics/active_inference_pomdp]]
+  - type: foundation
+    links:
+      - [[../mathematics/bayesian_inference]]
+      - [[../mathematics/optimal_control]]
 
       - [[active_inference]]
 

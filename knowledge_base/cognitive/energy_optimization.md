@@ -2,7 +2,7 @@
 
 title: Energy Optimization
 
-type: knowledge_base
+type: concept
 
 status: stable
 

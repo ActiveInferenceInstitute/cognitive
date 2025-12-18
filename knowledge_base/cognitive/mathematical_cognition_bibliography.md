@@ -8,13 +8,18 @@ status: draft
 
 created: 2025-08-08
 
-tags: [cognitive-science, mathematics, bibliography]
+tags:
+  - cognitive-science
+  - mathematics
+  - bibliography
 
 semantic_relations:
 
   - type: relates
 
-    links: [reasoning_problem_solving, learning_mechanisms]
+    links:
+      - reasoning_problem_solving
+      - learning_mechanisms
 
 ---
 

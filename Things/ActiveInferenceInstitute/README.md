@@ -3,7 +3,7 @@ title: Active Inference Institute Resources
 type: implementation
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2025-12-18
 tags:
   - institute
   - education
@@ -241,3 +241,4 @@ cd Things/ActiveInferenceInstitute
 ---
 
 > **Community Focus**: Building and supporting a vibrant community of Active Inference researchers, practitioners, and learners worldwide.
+

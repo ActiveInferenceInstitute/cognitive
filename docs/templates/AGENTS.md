@@ -565,3 +565,4 @@ class CompositeAgent(HierarchicalAgentTemplate, MultiAgentTemplate):
 ---
 
 > **Extensibility**: Modular, configurable templates supporting easy customization and extension for diverse applications.
+

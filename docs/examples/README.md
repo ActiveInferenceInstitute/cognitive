@@ -15,6 +15,16 @@ semantic_relations:
       - [[usage_examples_index]]
       - [[usage_examples]]
       - [[index]]
+      - [[AGENTS]]
+  - type: demonstrates
+    links:
+      - [[../guides/AGENTS]]
+      - [[../implementation/AGENTS]]
+      - [[../../Things/README]]
+  - type: educates
+    links:
+      - [[../guides/learning_paths/|Learning Paths]]
+      - [[../guides/README|Implementation Guides]]
 ---
 
 # Usage Examples
@@ -243,7 +253,7 @@ python validate_example.py example_output.json
 - [[index|Examples Index]]
 
 ### Related Content
-- [[../guides/quickstart_guide|Quick Start Guide]]
+- [[../guides/README|Implementation Guides]]
 - [[../guides/tutorial_series|Tutorial Series]]
 - [[../research/example_applications|Research Examples]]
 
@@ -258,3 +268,4 @@ python validate_example.py example_output.json
 ---
 
 > **Quality Assurance**: All examples are thoroughly tested, well-documented, and maintained to ensure reliability and educational effectiveness.
+

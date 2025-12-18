@@ -1,4 +1,29 @@
-# [[cognitive/adaptive_resonance_theory|Adaptive Resonance Theory]]
+---
+title: Adaptive Resonance Theory
+type: concept
+status: stable
+created: 2025-01-01
+tags:
+  - neural_networks
+  - learning_theory
+  - pattern_recognition
+  - stability_plasticity
+  - cognitive_architecture
+semantic_relations:
+  - type: relates
+    links:
+      - stability_plasticity
+      - learning_theory
+      - pattern_recognition
+      - neural_networks
+      - cognitive_architecture
+  - type: foundation
+    links:
+      - [[../mathematics/neural_network_theory]]
+      - [[memory_systems]]
+---
+
+# Adaptive Resonance Theory
 
 ## Overview
 

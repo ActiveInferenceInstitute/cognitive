@@ -160,6 +160,133 @@ class PollinationBiology:
 
 ```
 
+### 4. Bee Species Diversity and Evolution
+```python
+class BeeTaxonomy:
+    """Bee species classification and diversity"""
+
+    def __init__(self):
+        # Bee families within Apoidea
+        self.families = {
+            'Apidae': {
+                'subfamilies': ['Apinae', 'Xylocopinae', 'Nomadinae'],
+                'species': ['Honey bees', 'Bumble bees', 'Stingless bees', 'Carpenter bees'],
+                'social_organization': 'Highly social to solitary'
+            },
+            'Halictidae': {
+                'species': ['Sweat bees', 'Mining bees'],
+                'social_organization': 'Solitary to primitively eusocial'
+            },
+            'Andrenidae': {
+                'species': ['Mining bees'],
+                'social_organization': 'Solitary'
+            },
+            'Megachilidae': {
+                'species': ['Leafcutter bees', 'Mason bees', 'Carder bees'],
+                'social_organization': 'Solitary to communal'
+            },
+            'Colletidae': {
+                'species': ['Plasterer bees', 'Masked bees'],
+                'social_organization': 'Solitary to social'
+            },
+            'Melittidae': {
+                'species': ['Oil-collecting bees'],
+                'social_organization': 'Solitary'
+            }
+        }
+
+        # Notable species examples
+        self.species_examples = {
+            'honey_bees': ['Apis mellifera', 'Apis cerana', 'Apis dorsata'],
+            'bumble_bees': ['Bombus terrestris', 'Bombus impatiens', 'Bombus vosnesenskii'],
+            'stingless_bees': ['Melipona beecheii', 'Tetragonisca angustula'],
+            'carpenter_bees': ['Xylocopa virginica', 'Xylocopa californica'],
+            'mason_bees': ['Osmia lignaria', 'Osmia cornifrons'],
+            'leafcutter_bees': ['Megachile rotundata', 'Megachile sculpturalis']
+        }
+
+    def get_species_characteristics(self, species_name: str) -> dict:
+        """Get behavioral and ecological characteristics of bee species"""
+        # Implementation would return species-specific traits
+        pass
+```
+
+#### Major Bee Groups
+
+- **Honey Bees** (`Apis`): Highly eusocial, perennial colonies, honey production
+- **Bumble Bees** (`Bombus`): Primitively eusocial, annual colonies, important pollinators
+- **Stingless Bees** (`Meliponini`): Tropical eusocial bees, honey production without sting
+- **Carpenter Bees** (`Xylocopa`): Large solitary bees, nest in wood
+- **Mason Bees** (`Osmia`): Solitary bees using mud for nest construction
+- **Leafcutter Bees** (`Megachile`): Solitary bees cutting leaves for nests
+- **Sweat Bees** (`Halictus`): Small bees, some social, attracted to human sweat
+
+#### Evolutionary Adaptations
+
+- **Specialized Pollination**: Morphological adaptations for specific plant-pollinator relationships
+- **Social Evolution**: Transition from solitary to highly social organization
+- **Communication Systems**: Development of complex dance languages in honey bees
+- **Resource Storage**: Honey production and pollen storage strategies
+- **Defensive Strategies**: Stinging apparatus and alarm communication
+
+### 5. Bee Behavior Patterns and Ecology
+
+#### Foraging and Pollination Strategies
+```python
+class BeeForagingBehavior:
+    """Bee foraging and pollination strategies"""
+
+    def __init__(self):
+        self.foraging_strategies = {
+            'traplining': 'Regular routes between flowers (solitary bees)',
+            'social_recruitment': 'Dance communication and pheromone trails (social bees)',
+            'scent_marking': 'Chemical markers on depleted flowers',
+            'optimal_foraging': 'Energy maximization strategies'
+        }
+
+        self.pollination_mechanisms = {
+            'buzz_pollination': 'Vibrational pollen release (bumble bees, solitary bees)',
+            'mess_and_sop': 'Pollen collection on body hairs',
+            'brush_mechanism': 'Specialized body parts for pollen transfer'
+        }
+
+    def optimize_foraging_efficiency(self, bee_type: str, floral_resources: dict) -> dict:
+        """Optimize foraging patterns based on bee morphology and floral availability"""
+        # Mathematical optimization of foraging strategies
+        pass
+```
+
+#### Nest Architecture and Construction
+- **Cavity Nesters**: Holes in wood, stems, or soil (carpenter bees, mason bees)
+- **Burrow Nesters**: Underground tunnels (mining bees, sweat bees)
+- **Aerial Nesters**: Exposed comb structures (honey bees, stingless bees)
+- **Leaf Nests**: Cut leaves formed into pouches (leafcutter bees)
+- **Mud Nests**: Mud structures (mason bees)
+
+#### Seasonal Biology
+```python
+class BeePhenology:
+    """Seasonal biology and life cycle patterns"""
+
+    def __init__(self):
+        self.life_cycles = {
+            'annual_species': ['Most bumble bees', 'Many solitary bees'],
+            'perennial_species': ['Honey bees', 'Some stingless bees'],
+            'overwintering_strategies': ['Queen hibernation', 'Worker clustering']
+        }
+
+    def predict_seasonal_activity(self, species: str, climate_data: dict) -> dict:
+        """Predict seasonal foraging and nesting activity based on climate"""
+        # Phenological modeling
+        pass
+```
+
+#### Ecological Roles and Services
+- **Pollination Services**: Essential for crop production and wild plant reproduction
+- **Biodiversity Maintenance**: Support for plant diversity and ecosystem stability
+- **Nutrient Cycling**: Decomposition and soil improvement through nesting activities
+- **Biological Control**: Natural pest regulation in agricultural systems
+
 ## Research Methods
 
 ### 1. Behavioral Studies

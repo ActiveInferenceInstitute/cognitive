@@ -1,3 +1,27 @@
+---
+title: Key Concepts
+type: concept
+status: stable
+created: 2025-01-01
+tags:
+  - concepts
+  - knowledge_structure
+  - active_inference
+  - framework
+semantic_relations:
+  - type: organizes
+    links:
+      - active_inference
+      - cognitive_architecture
+      - knowledge_organization
+      - [[linking_standards]]
+  - type: relates
+    links:
+      - concept_documentation_index
+      - cognitive_science_index
+      - overview
+---
+
 # Key Concepts
 
 ## Overview

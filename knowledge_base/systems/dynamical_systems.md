@@ -116,7 +116,7 @@ Dynamical systems theory provides the mathematical foundation for understanding 
 - **Ott-Grebogi-Yorke Method**: Targeting unstable periodic orbits
 - **Pyragas Control**: Time-delayed feedback control
 - **Synchronization**: Coupling-induced chaos suppression
-- **Chaotic Resonance**: Noise-enhanced signal detection
+- **Chaotic Resonance**: Noise signal detection
 
 ## 🔗 Network Dynamics
 
@@ -257,3 +257,4 @@ Dynamical systems theory provides the mathematical foundation for understanding 
 - [[complex_systems]] - Complex system dynamics
 - [[adaptive_systems]] - Learning and adaptation
 - [[network_theory]] - Network dynamical systems
+

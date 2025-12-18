@@ -1,22 +1,10 @@
 ---
-
 title: Variational Inference
-
 type: mathematical_concept
-
-status: stable
-
+id: variational_inference_001
 created: 2024-02-12
-
-tags:
-
-  - mathematics
-
-  - probability
-
-  - computation
-
-  - active_inference
+modified: 2025-12-18
+tags: [mathematics, probability, computation, active_inference]
 
 semantic_relations:
 

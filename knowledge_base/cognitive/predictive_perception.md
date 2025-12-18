@@ -4,7 +4,7 @@
 
 title: Predictive Perception
 
-type: cognitive_phenomenon
+type: concept
 
 status: stable
 

@@ -2,7 +2,7 @@
 
 title: Perceptual Binding
 
-type: knowledge_base
+type: concept
 
 status: stable
 

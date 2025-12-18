@@ -4,6 +4,7 @@ This module implements a simple POMDP (Partially Observable Markov Decision Proc
 using the principles of Active Inference for decision making and belief updating.
 """
 
+import logging
 import numpy as np
 import yaml
 from pathlib import Path
@@ -11,6 +12,9 @@ from typing import Dict, List, Tuple, Optional, Union, Any
 from dataclasses import dataclass, field
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+# Set up module-level logger
+logger = logging.getLogger(__name__)
 
 from src.models.active_inference.base import ActiveInferenceModel
 from src.utils.matrix_utils import (
@@ -153,16 +157,18 @@ class SimplePOMDP(ActiveInferenceModel):
     def __init__(self, config_path: Union[str, Path]):
         """
         Initialize the SimplePOMDP model.
-        
+
         Args:
             config_path: Path to the YAML configuration file
         """
+        logger.info(f"Initializing SimplePOMDP with config: {config_path}")
         super().__init__(config_path)
         self.plotter = MatrixPlotter(
             self.config['visualization']['output_dir'],
             self.config['visualization']['style']
         )
         self._initialize_state()
+        logger.info("SimplePOMDP initialization completed")
         
     def _load_config(self, config_path: Union[str, Path, Dict]) -> Dict:
         """Load and validate configuration from YAML file or dict.
@@ -301,14 +307,16 @@ class SimplePOMDP(ActiveInferenceModel):
     
     def step(self, action: Optional[int] = None) -> Tuple[int, float]:
         """Take a step in the environment.
-        
+
         Args:
             action: Optional action to take. If None, action will be selected using
                    active inference.
-                   
+
         Returns:
             Tuple of (observation, variational free energy)
         """
+        logger.debug(f"Executing step with action: {action}")
+
         if action is None:
             action, expected_fe = self._select_action()
         else:
@@ -351,15 +359,18 @@ class SimplePOMDP(ActiveInferenceModel):
             epistemic_value=epistemic,
             pragmatic_value=pragmatic
         )
-        
+
+        logger.debug(f"Step completed: observation={observation}, free_energy={variational_fe:.3f}")
         return observation, variational_fe
     
     def _select_action(self) -> Tuple[int, np.ndarray]:
         """Select action using current policy prior."""
+        logger.debug("Selecting action using Active Inference")
+
         # Compute Expected Free Energy for each action
         n_actions = self.config['action_space']['num_actions']
         G = np.zeros(n_actions)
-        
+
         for a in range(n_actions):
             G[a], _, _ = compute_expected_free_energy(
                 A=self.A,
@@ -368,7 +379,7 @@ class SimplePOMDP(ActiveInferenceModel):
                 beliefs=self.state.beliefs,
                 action=a
             )
-        
+
         # Update policy prior using Expected Free Energy
         self.E = update_policy_prior(
             A=self.A,
@@ -379,9 +390,11 @@ class SimplePOMDP(ActiveInferenceModel):
             alpha=self.config['inference']['policy_learning_rate'],
             gamma=self.config['inference']['temperature']
         )
-        
+
         # Sample action from policy distribution
         action = np.random.choice(len(self.E), p=self.E)
+        logger.debug(f"Selected action {action} with EFE values: {G}")
+
         return action, G
     
     def _update_beliefs(self, observation: int, action: int) -> float:

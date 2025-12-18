@@ -301,3 +301,4 @@ Emergence refers to the phenomenon where complex patterns, behaviors, or propert
 - [[self_organization]] - Spontaneous organization processes
 - [[swarm_intelligence]] - Collective problem-solving
 - [[../cognitive/emergence_self_organization]] - Cognitive emergence
+

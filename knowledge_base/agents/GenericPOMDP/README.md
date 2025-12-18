@@ -507,8 +507,8 @@ The POMDP agent integrates with various environment types:
 ## 📖 References
 
 ### Core Papers
-- [[../../citations/friston_2017]] - Active Inference process theory
-- [[../../citations/parr_2019]] - Active Inference tutorial
+- Friston, K. et al. (2017). Active Inference: A Process Theory
+- Parr, T., Pezzulo, G., & Friston, K. (2019). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior
 
 ### Implementation Resources
 - [[../../Things/Generic_POMDP/]] - Working implementation examples
@@ -525,3 +525,4 @@ The POMDP agent integrates with various environment types:
 ---
 
 > **Research Platform**: Serves as a foundation for exploring Active Inference principles in computational implementations.
+

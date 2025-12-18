@@ -2,7 +2,7 @@
 
 title: Error Correction
 
-type: knowledge_base
+type: concept
 
 status: stable
 

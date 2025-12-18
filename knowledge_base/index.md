@@ -40,7 +40,7 @@ semantic_relations:
 
       - [[ontology]]
 
-      - [[citations]]
+      - [[free_energy_principle]]
 
 ---
 
@@ -59,6 +59,16 @@ semantic_relations:
 - [[mathematics/free_energy_theory]]
 
 - [[mathematics/active_inference_theory]]
+
+- [[mathematics/active_inference_loop]]
+
+- [[mathematics/active_inference_pomdp]]
+
+- [[mathematics/geometric_active_inference]]
+
+- [[mathematics/measure_theoretic_active_inference]]
+
+- [[mathematics/stochastic_active_inference]]
 
 - [[mathematics/message_passing]]
 
@@ -81,6 +91,12 @@ semantic_relations:
 - [[cognitive/predictive_processing]]
 
 - [[cognitive/active_inference]]
+
+- [[cognitive/active_inference_agent]]
+
+- [[cognitive/neural_active_inference]]
+
+- [[cognitive/continuous_time_active_inference]]
 
 - [[cognitive/free_energy_principle]]
 
@@ -142,6 +158,109 @@ semantic_relations:
 
 - [[ontology/hyperspatial/hyperspace_ontology]]
 
+## Free Energy Principle (`free_energy_principle/`)
+
+The Free Energy Principle provides a unified mathematical framework for understanding adaptive behavior across biological, cognitive, and artificial systems.
+
+### Core Theory (`free_energy_principle/mathematics/`)
+
+- [[free_energy_principle/mathematics/core_principle]] - Fundamental FEP formulation and mathematical foundation
+
+- [[free_energy_principle/mathematics/variational_free_energy]] - Variational free energy minimization and perception
+
+- [[free_energy_principle/mathematics/expected_free_energy]] - Expected free energy and action selection
+
+- [[free_energy_principle/mathematics/markov_blankets]] - Statistical boundaries and conditional independence
+
+- [[free_energy_principle/mathematics/information_geometry]] - Geometric formulations and Fisher information
+
+- [[free_energy_principle/mathematics/advanced_formulations]] - Advanced mathematical developments and extensions
+
+### Cognitive Applications (`free_energy_principle/cognitive/`)
+
+- [[free_energy_principle/cognitive/perception]] - Perceptual inference and sensory processing
+
+- [[free_energy_principle/cognitive/learning]] - Learning mechanisms and model updating
+
+- [[free_energy_principle/cognitive/decision_making]] - Decision processes and action selection
+
+- [[free_energy_principle/cognitive/consciousness]] - Consciousness theories and self-awareness
+
+- [[free_energy_principle/cognitive/attention]] - Attention mechanisms and resource allocation
+
+- [[free_energy_principle/cognitive/social_cognition]] - Social cognition and theory of mind
+
+### Biological Implementations (`free_energy_principle/biology/`)
+
+- [[free_energy_principle/biology/homeostasis]] - Physiological homeostasis and regulation
+
+- [[free_energy_principle/biology/neural_systems]] - Neural implementations and predictive coding
+
+- [[free_energy_principle/biology/evolution]] - Evolutionary perspectives and adaptation
+
+- [[free_energy_principle/biology/development]] - Developmental processes and ontogenesis
+
+- [[free_energy_principle/biology/immunology]] - Immune system applications
+
+- [[free_energy_principle/biology/ecology]] - Ecological applications and ecosystem dynamics
+
+### Complex Systems (`free_energy_principle/systems/`)
+
+- [[free_energy_principle/systems/self_organization]] - Self-organizing systems and emergence
+
+- [[free_energy_principle/systems/emergence]] - Emergent phenomena and hierarchical organization
+
+- [[free_energy_principle/systems/complex_adaptation]] - Complex adaptive systems
+
+- [[free_energy_principle/systems/network_dynamics]] - Network theory and connectivity
+
+- [[free_energy_principle/systems/critical_phenomena]] - Criticality and phase transitions
+
+- [[free_energy_principle/systems/resilience]] - System resilience and robustness
+
+### Philosophical Implications (`free_energy_principle/philosophy/`)
+
+- [[free_energy_principle/philosophy/mind_body_problem]] - Mind-body relationship and dualism
+
+- [[free_energy_principle/philosophy/epistemology]] - Theory of knowledge and inference
+
+- [[free_energy_principle/philosophy/consciousness_phil]] - Philosophical theories of consciousness
+
+- [[free_energy_principle/philosophy/free_will]] - Agency, free will, and determinism
+
+- [[free_energy_principle/philosophy/causality]] - Causal theories and inference
+
+- [[free_energy_principle/philosophy/metaphysics]] - Metaphysical implications and ontology
+
+### Practical Implementations (`free_energy_principle/implementations/`)
+
+- [[free_energy_principle/implementations/python_framework]] - Python implementation framework
+
+- [[free_energy_principle/implementations/neural_networks]] - Deep learning and neural implementations
+
+- [[free_energy_principle/implementations/robotics]] - Robotic applications and control
+
+- [[free_energy_principle/implementations/simulation]] - Simulation frameworks and environments
+
+- [[free_energy_principle/implementations/benchmarking]] - Performance evaluation and benchmarks
+
+### Domain Applications (`free_energy_principle/applications/`)
+
+- [[free_energy_principle/applications/neuroscience]] - Neuroscience applications and research
+
+- [[free_energy_principle/applications/psychiatry]] - Mental health applications and disorders
+
+- [[free_energy_principle/applications/ai_safety]] - AI safety, alignment, and beneficial AI
+
+- [[free_energy_principle/applications/economics]] - Economic applications and decision-making
+
+- [[free_energy_principle/applications/social_sciences]] - Social science applications
+
+- [[free_energy_principle/applications/education]] - Educational applications and learning
+
+### Agent Architectures (`free_energy_principle/AGENTS.md`)
+
+- [[free_energy_principle/AGENTS]] - Complete FEP agent architectures and implementations
 
 ## Cross-Domain Relationships
 
@@ -172,6 +291,10 @@ semantic_relations:
 ## Implementation Examples
 
 ### Basic Examples
+
+- [[active_inference_implementation|Complete Active Inference Implementation]]
+
+- [[active_inference_integration|Active Inference Integration Across Domains]]
 
 - Basic [[cognitive/active_inference]] implementations
 
@@ -209,7 +332,17 @@ semantic_relations:
 
 ### Current Research
 
-- [[cognitive/active_inference]] applications
+- [[active_inference_integration|Active Inference across scientific domains]]
+
+- [[active_inference_implementation|Active Inference implementation frameworks]]
+
+- [[cognitive/active_inference]] theoretical foundations
+
+- [[mathematics/active_inference_theory]] mathematical formulations
+
+- [[cognitive/continuous_time_active_inference]] temporal dynamics
+
+- [[mathematics/geometric_active_inference]] information geometry
 
 - Cognitive architectures development
 
@@ -239,8 +372,6 @@ semantic_relations:
 
 - [[quality_assessment]] - Comprehensive quality framework
 
-- Citation standards and formats
-
 - Content organization principles
 
 ### Validation Tools
@@ -269,8 +400,6 @@ semantic_relations:
 
 ### Enhanced Structure
 
-🔄 **Citation Management**: Citation system implementation in progress
-
 ✅ **Agent Architectures**: Detailed [[agents/architectures_overview]]
 
 ✅ **Cognitive Ontology**: Structured [[ontology/cognitive_ontology]]
@@ -287,39 +416,61 @@ semantic_relations:
 
 🔄 **Cross-Domain Integration**: Strengthening conceptual connections
 
-🔄 **Citation Population**: Adding comprehensive reference collections
-
 ## Navigation Tools
 
 ### Quick Access
 
-- [[mathematics/free_energy_principle]] - Core mathematical foundation
+- [[free_energy_principle/mathematics/core_principle]] - Core FEP mathematical foundation
+
+- [[free_energy_principle/AGENTS]] - FEP agent architectures
+
+- [[free_energy_principle/cognitive/perception]] - Cognitive applications
+
+- [[free_energy_principle/biology/homeostasis]] - Biological implementations
+
+- [[free_energy_principle/implementations/python_framework]] - Code implementations
+
+- [[mathematics/free_energy_principle]] - Legacy mathematical foundation
+
+- [[active_inference_integration]] - Complete Active Inference framework
+
+- [[active_inference_implementation]] - Practical implementation guide
 
 - [[cognitive/active_inference]] - Primary cognitive framework
 
-- [[agents/architectures_overview]] - Implementation architectures
+- [[mathematics/active_inference_theory]] - Mathematical theory
 
-- Citation system - Reference management (planned)
+- [[agents/architectures_overview]] - Implementation architectures
 
 - [[ontology/cognitive_ontology]] - Conceptual taxonomy
 
 ### Learning Pathways
 
-1. **Beginner**: Start with [[cognitive/active_inference]] basics
+1. **Beginner**: Start with [[free_energy_principle/mathematics/core_principle]] fundamentals
 
-1. **Mathematical**: Explore [[mathematics/free_energy_principle]]
+1. **FEP Foundation**: Study [[free_energy_principle/mathematics/variational_free_energy]] and [[free_energy_principle/mathematics/expected_free_energy]]
 
-1. **Implementation**: Follow [[agents/architectures_overview]]
+1. **Cognitive FEP**: Explore [[free_energy_principle/cognitive/perception]] and [[free_energy_principle/cognitive/decision_making]]
 
-1. **Research**: Citation system for literature (planned)
+1. **Biological FEP**: Learn [[free_energy_principle/biology/homeostasis]] and [[free_energy_principle/biology/neural_systems]]
+
+1. **Implementation**: Follow [[free_energy_principle/implementations/python_framework]] and [[free_energy_principle/AGENTS]]
+
+1. **Advanced**: Study [[free_energy_principle/philosophy/mind_body_problem]] and [[free_energy_principle/systems/self_organization]]
+
+1. **Legacy**: Start with [[active_inference_integration]] overview
+
+1. **Cognitive**: Study [[cognitive/active_inference]] and [[cognitive/active_inference_agent]]
+
+1. **Mathematical**: Explore [[mathematics/free_energy_principle]] and [[mathematics/active_inference_theory]]
+
+1. **Implementation**: Follow [[active_inference_implementation]] and [[agents/architectures_overview]]
 
 ### Maintenance
 
 - Regular link validation using [[linking_standards]]
 
 - Content quality monitoring via [[quality_assessment]]
-
-- Citation system updates (planned)
 
 - Ontology evolution via [[ontology/cognitive_ontology]]
 

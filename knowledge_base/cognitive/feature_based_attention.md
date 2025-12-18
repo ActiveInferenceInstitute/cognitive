@@ -2,7 +2,7 @@
 
 title: Feature-Based Attention
 
-type: knowledge_base
+type: concept
 
 status: stable
 

@@ -953,3 +953,4 @@ class ActiveInferenceAgentTester:
 ---
 
 > **Performance**: The implementation is optimized for both accuracy and computational efficiency, suitable for real-time applications.
+
