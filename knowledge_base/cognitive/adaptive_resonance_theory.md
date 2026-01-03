@@ -2,7 +2,7 @@
 title: Adaptive Resonance Theory
 type: concept
 status: stable
-created: 2025-01-01
+created: 2024-01-01
 tags:
   - neural_networks
   - learning_theory

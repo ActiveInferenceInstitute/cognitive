@@ -2,8 +2,8 @@
 title: Planning as Inference
 type: concept
 status: stable
-created: 2025-03-03
-updated: 2025-12-18
+created: 2024-01-01
+updated: 2026-01-03
 tags:
   - planning
   - active_inference

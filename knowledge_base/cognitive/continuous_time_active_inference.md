@@ -2,7 +2,7 @@
 title: Continuous-Time Active Inference
 type: concept
 status: stable
-created: 2025-01-01
+created: 2024-01-01
 tags:
   - active_inference
   - continuous_time

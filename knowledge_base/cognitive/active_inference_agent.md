@@ -3,7 +3,7 @@ title: Active Inference Agent Architecture
 type: implementation
 status: stable
 created: 2024-02-07
-updated: 2025-12-18
+updated: 2026-01-03
 tags:
   - active_inference
   - agent_architecture

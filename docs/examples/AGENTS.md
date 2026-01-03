@@ -2,8 +2,8 @@
 title: Examples Agent Documentation
 type: agents
 status: stable
-created: 2025-01-01
-updated: 2025-01-01
+created: 2024-01-01
+updated: 2026-01-03
 tags:
   - examples
   - agents
@@ -19,7 +19,7 @@ semantic_relations:
   - type: educates
     links:
       - [[../guides/learning_paths|Learning Paths]]
-      - [[../guides/quickstart_guide|Quick Start Guide]]
+      - [[../guides/README|Implementation Guides]]
   - type: showcases
     links:
       - [[../research/ant_colony_active_inference|Ant Colony Research]]

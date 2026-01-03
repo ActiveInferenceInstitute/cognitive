@@ -2,8 +2,8 @@
 title: Advanced Social Cognition and Theory of Mind
 type: concept
 status: stable
-created: 2025-01-01
-updated: 2025-01-01
+created: 2024-01-01
+updated: 2026-01-03
 tags:
   - social_cognition
   - theory_of_mind

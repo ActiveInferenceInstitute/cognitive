@@ -2,7 +2,7 @@
 title: Key Concepts
 type: concept
 status: stable
-created: 2025-01-01
+created: 2024-01-01
 tags:
   - concepts
   - knowledge_structure

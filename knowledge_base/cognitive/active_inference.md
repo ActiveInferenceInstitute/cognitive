@@ -3,7 +3,7 @@ title: Active Inference
 type: concept
 status: stable
 created: 2024-02-12
-updated: 2025-12-18
+updated: 2026-01-03
 tags:
   - active_inference
   - cognitive_science
@@ -15,74 +15,39 @@ semantic_relations:
     links:
       - [[../mathematics/free_energy_principle]]
       - [[../mathematics/active_inference_theory]]
+      - [[../mathematics/expected_free_energy]]
+      - [[../mathematics/variational_free_energy]]
+      - [[../mathematics/policy_selection]]
   - type: foundation
     links:
       - [[predictive_processing]]
       - [[belief_updating]]
       - [[precision_weighting]]
+      - [[variational_inference]]
+      - [[bayesian_brain_hypothesis]]
   - type: integrates
     links:
-- [[perception_processing]]
-- [[action_selection]]
-- [[learning_mechanisms]]
-- [[decision_making]]
+      - [[perception_processing]]
+      - [[action_selection]]
+      - [[learning_mechanisms]]
+      - [[decision_making]]
   - type: documented_by
     links:
       - [[active_inference_agent]]
       - [[../active_inference_integration]]
       - [[../active_inference_implementation]]
----
-
-  - bayesian_inference
-
-  - control_theory
-
-semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[../mathematics/active_inference_theory]]
-
-      - [[free_energy_principle]]
-
-      - [[variational_inference]]
-
-      - [[bayesian_brain_hypothesis]]
-
-  - type: implements
-
-    links:
-
-      - [[../mathematics/expected_free_energy]]
-
-      - [[../mathematics/variational_free_energy]]
-
-      - [[../mathematics/policy_selection]]
-
   - type: relates
-
     links:
-
       - [[predictive_coding]]
-
       - [[precision_weighting]]
-
-      - [[../mathematics/policy_selection]]
-
       - [[reinforcement_learning]]
-
       - [[optimal_control]]
-
       - [[planning_as_inference]]
-
       - [[../mathematics/markov_blanket]]
-
       - [[../mathematics/active_inference_pomdp]]
-
       - [[continuous_time_active_inference]]
-
+      - [[bayesian_inference]]
+      - [[control_theory]]
 ---
 
 # Active Inference

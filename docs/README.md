@@ -1,4 +1,32 @@
-# Cognitive Modeling Documentation
+---
+title: Documentation Hub
+type: documentation
+status: stable
+created: 2024-01-01
+updated: 2026-01-03
+tags:
+  - documentation
+  - framework
+  - guides
+  - api
+  - examples
+semantic_relations:
+  - type: organizes
+    links:
+      - [[agents/AGENTS]]
+      - [[api/AGENTS]]
+      - [[config/AGENTS]]
+      - [[development/AGENTS]]
+      - [[examples/AGENTS]]
+      - [[guides/AGENTS]]
+      - [[implementation/AGENTS]]
+      - [[research/AGENTS]]
+      - [[tools/AGENTS]]
+      - [[repo_docs/README]]
+      - [[templates/AGENTS]]
+---
+
+# Documentation Hub
 
 Comprehensive documentation framework for the cognitive modeling system, providing structured knowledge organization, technical references, implementation guidance, and research documentation. This documentation supports the development, maintenance, and dissemination of cognitive modeling technologies through systematic documentation practices.
 
@@ -239,7 +267,7 @@ stateDiagram-v2
 
 ### Documentation Support
 
-- [[repo_docs/troubleshooting|Troubleshooting Guide]] - Common issues and solutions
+- [[repo_docs/getting_started|Getting Started Guide]] - Setup and common issues
 - [[repo_docs/validation|Validation Framework]] - Quality assurance and validation
 - [[repo_docs/linking_validation|Link Validation]] - Link checking and maintenance
 

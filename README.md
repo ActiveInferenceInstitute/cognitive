@@ -2,8 +2,8 @@
 title: Cognitive Modeling Framework
 type: overview
 status: stable
-created: 2025-01-01
-updated: 2025-01-01
+created: 2024-01-01
+updated: 2026-01-03
 tags:
   - cognitive
   - active_inference
@@ -21,14 +21,14 @@ semantic_relations:
 
 # Cognitive Modeling Framework
 
-A comprehensive cognitive modeling framework implementing Active Inference principles, developed by the Active Inference Institute. This repository combines theoretical foundations, implementation examples, and extensive documentation to advance understanding and application of cognitive systems.
+A comprehensive framework for cognitive modeling using Active Inference principles. This repository provides theoretical foundations, practical implementations, and extensive documentation to advance understanding and application of cognitive systems.
 
 ## 🎯 Overview
 
-This repository provides a unified framework for cognitive modeling that integrates:
+Active Inference is a mathematical framework that explains how biological and artificial systems learn, perceive, and act by minimizing prediction errors. This repository provides a unified framework for cognitive modeling that integrates:
 
 - **Active Inference Theory**: Probabilistic frameworks for perception, action, and learning
-- **Agent Architectures**: Implementations ranging from simple POMDP agents to complex multi-agent systems
+- **Agent Architectures**: Implementations from simple decision-making agents to complex multi-agent systems
 - **Knowledge Organization**: Structured documentation and theoretical foundations
 - **Implementation Examples**: Working code examples across multiple domains
 - **Development Tools**: Utilities for cognitive modeling and analysis
@@ -38,7 +38,7 @@ This repository provides a unified framework for cognitive modeling that integra
 ### 📚 Core Components
 
 #### [[docs/README|Documentation Hub]]
-- [[docs/concepts/|Concepts]] - Core theoretical foundations
+- [[knowledge_base/cognitive/|Concepts]] - Core theoretical foundations
 - [[docs/guides/|Guides]] - Implementation and usage guides
 - [[docs/api/|API Reference]] - Technical documentation
 - [[docs/examples/|Examples]] - Usage examples and tutorials
@@ -111,29 +111,29 @@ python -m pytest tests/
 ## 🎯 Key Features
 
 ### Theoretical Foundations
-- **Active Inference**: Complete probabilistic framework for cognition
-- **Free Energy Principle**: Mathematical basis for self-organizing systems
+- **Active Inference**: Unified framework for perception, action, and learning
+- **Free Energy Principle**: Mathematical foundation for self-organizing systems
 - **Predictive Processing**: Hierarchical prediction and error minimization
 - **Bayesian Methods**: Statistical inference and uncertainty quantification
 
 ### Agent Implementations
-- **POMDP Agents**: Partially observable Markov decision processes
+- **POMDP Agents**: Partially observable Markov decision process implementations
 - **Continuous Agents**: Differential equation-based cognitive models
-- **Multi-Agent Systems**: Coordination and emergent behavior
-- **Swarm Intelligence**: Collective behavior and stigmergy
+- **Multi-Agent Systems**: Coordination and emergent behavior patterns
+- **Swarm Intelligence**: Collective decision-making and stigmergy
 
 ### Analysis Tools
-- **Visualization**: State space plots, belief evolution, network graphs
-- **Metrics**: Performance evaluation and benchmarking
-- **Simulation**: Environment modeling and scenario testing
-- **Analysis**: Network analysis and pattern recognition
+- **Visualization**: State space plots, belief evolution, and network graphs
+- **Metrics**: Performance evaluation and benchmarking utilities
+- **Simulation**: Environment modeling and scenario testing frameworks
+- **Analysis**: Network analysis and pattern recognition tools
 
 ## 📖 Documentation
 
 ### For New Users
-- [[docs/guides/quickstart_guide|Quick Start Guide]]
-- [[docs/concepts/active_inference|Active Inference Overview]]
-- [[docs/examples/basic_agent|Basic Agent Tutorial]]
+- [[docs/guides/README|Implementation Guides]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Overview]]
+- [[docs/examples/README|Examples and Tutorials]]
 
 ### For Researchers
 - [[docs/research/research_documentation_index|Research Documentation]]

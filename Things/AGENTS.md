@@ -2,8 +2,8 @@
 title: Implementation Examples Agents Documentation
 type: agents
 status: stable
-created: 2025-01-01
-updated: 2025-12-18
+created: 2024-01-01
+updated: 2026-01-03
 tags:
   - agents
   - implementations

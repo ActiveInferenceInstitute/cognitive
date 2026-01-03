@@ -2,8 +2,8 @@
 title: Motor Control and Sensorimotor Integration Through Active Inference
 type: concept
 status: stable
-created: 2025-01-01
-updated: 2025-01-01
+created: 2024-01-01
+updated: 2026-01-03
 tags:
   - motor_control
   - sensorimotor

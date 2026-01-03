@@ -1,7 +1,3 @@
-[[policy_selection]] is over a time horizon of 1 or more timesteps.
-
-[[action_selection]] is sampling a single action, from a probability distribution [[E_matrix]] , habit, or Policy Posterior.
-
 ---
 
 title: Action Selection
@@ -12,7 +8,7 @@ status: stable
 
 created: 2024-02-06
 
-updated: 2024-03-15
+updated: 2026-01-03
 
 complexity: advanced
 
@@ -73,6 +69,8 @@ semantic_relations:
 ## Overview
 
 Action selection is a fundamental process in cognitive systems that involves choosing appropriate actions based on current beliefs, goals, and environmental context. In the active inference framework, action selection emerges from the principle of free energy minimization, where actions are selected to minimize expected free energy over future states.
+
+> **Note**: [[policy_selection]] operates over a time horizon of 1 or more timesteps, while [[action_selection]] involves sampling a single action from a probability distribution ([[E_matrix]]), habit, or policy posterior.
 
 ## Mathematical Framework
 

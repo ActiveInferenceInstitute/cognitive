@@ -1,8 +1,23 @@
-# Attention Mechanisms
-
 ---
-
 title: Attention Mechanisms
+type: concept
+status: stable
+created: 2024-01-01
+updated: 2026-01-03
+tags:
+  - cognition
+  - attention
+  - information_processing
+  - neural_computation
+  - cognitive_control
+semantic_relations:
+  - type: implements
+    links: [[cognitive_control]]
+  - type: related
+    links:
+      - [[working_memory]]
+      - [[perception]]
+      - [[consciousness]]
 
 type: concept
 
