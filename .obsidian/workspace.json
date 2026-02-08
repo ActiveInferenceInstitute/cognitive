@@ -43,9 +43,19 @@
               "icon": "lucide-file",
               "title": "active_inference_agi_learning_path"
             }
+          },
+          {
+            "id": "ddb4e6acb8b556f7",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "bcb8581a3e23ddaa",
@@ -213,13 +223,14 @@
       "3d-graph:3D Graph": false
     }
   },
-  "active": "2f6e3890afc5171e",
+  "active": "732e93d9f16fd2e9",
   "lastOpenFiles": [
+    "Untitled.base",
     "docs/guides/learning_paths/active_inference_agi_learning_path.md",
+    "tests/AGENTS.md",
     "@ref.md",
     "2026-02-08.md",
     "Untitled.canvas",
-    "Untitled.base",
     "docs/implementation/rxinfer/docs/src/manuals/sharpbits/usage-colon-equality.md",
     "knowledge_base/cognitive/enactive_cognition.md",
     "knowledge_base/mathematics/applications_of_free_energy.md",
@@ -241,8 +252,6 @@
     "knowledge_base/systems/spatial_ecology.md",
     "knowledge_base/systems/environmental_monitoring.md",
     "knowledge_base/systems/information_architecture.md",
-    "knowledge_base/systems/human_computer_interaction.md",
-    "knowledge_base/systems/edge_computing.md",
     "fix_broken_links.py",
     "validate_links.py",
     "__pycache__/fix_links.cpython-312.pyc",
