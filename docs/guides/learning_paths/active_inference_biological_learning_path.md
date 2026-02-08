@@ -56,11 +56,9 @@ semantic_relations:
 
     links:
 
-      - [[biological_systems_learning_path]]
 
-      - [[evolutionary_computation_learning_path]]
+      - [[active_inference_bio_inspired_cognitive_systems_path]]
 
-      - [[natural_intelligence_learning_path]]
 
 ---
 
@@ -76,7 +74,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [Active Inference Institute resources](https://www.activeinference.org/research/resources)
 
@@ -160,15 +158,15 @@ By completing this path, learners will be able to:
 
 ## Knowledge Base Anchors
 
-- Bio systems: [[../../knowledge_base/biology/levels_of_organization]] · [[../../knowledge_base/systems/ecosystem_management]]
+- Bio systems: [[knowledge_base/biology/levels_of_organization]] · [[knowledge_base/systems/ecosystem_management]]
 
-- Active inference math: [[../../knowledge_base/mathematics/vfe_components]] · [[../../knowledge_base/mathematics/expected_free_energy]] · [[../../knowledge_base/mathematics/dynamical_systems]]
+- Active inference math: [[knowledge_base/mathematics/vfe_components]] · [[knowledge_base/mathematics/expected_free_energy]] · [[knowledge_base/mathematics/dynamical_systems]]
 
-- Cross-map: [[../../knowledge_base/mathematics/cross_reference_map]]
+- Cross-map: [[knowledge_base/mathematics/cross_reference_map]]
 
 ### Foundations
 
-- [[../../knowledge_base/mathematics/policy_selection]] · [[../../knowledge_base/mathematics/precision_parameter]] · [[../../knowledge_base/mathematics/softmax_function]] · [[../../knowledge_base/mathematics/numerical_stability]] · [[../../knowledge_base/mathematics/message_passing]] · [[../../knowledge_base/mathematics/bethe_free_energy]]
+- [[knowledge_base/mathematics/policy_selection]] · [[knowledge_base/mathematics/precision_parameter]] · [[knowledge_base/mathematics/softmax_function]] · [[knowledge_base/mathematics/numerical_stability]] · [[knowledge_base/mathematics/message_passing]] · [[knowledge_base/mathematics/bethe_free_energy]]
 
 ```mermaid
 
@@ -668,19 +666,19 @@ class BiologicalHierarchy:
 
 ### Advanced Topics
 
-1. [[biological_systems_learning_path|Biological Systems]]
+1. Biological Systems
 
-1. [[evolutionary_computation_learning_path|Evolutionary Computation]]
+1. Evolutionary Computation
 
-1. [[natural_intelligence_learning_path|Natural Intelligence]]
+1. Natural Intelligence
 
 ### Research Directions
 
-1. [[research_guides/biological_intelligence|Biological Intelligence Research]]
+1. [[knowledge_base/research/biological_intelligence|Biological Intelligence Research]]
 
-1. [[research_guides/natural_computation|Natural Computation Research]]
+1. [[knowledge_base/research/natural_computation|Natural Computation Research]]
 
-1. [[research_guides/evolutionary_systems|Evolutionary Systems Research]]
+1. [[knowledge_base/research/evolutionary_systems|Evolutionary Systems Research]]
 
 ## Integration Strategies
 
@@ -1688,7 +1686,7 @@ class BiologicalKnowledgeIntegrator:
 
             'evolutionary_learning': {
 
-                'kb_link': '[[knowledge_base/biology/evolutionary_computation]]',
+                'kb_link': ''knowledge_base/cognitive/active_inference'',
 
                 'related_paths': [
 
@@ -1704,7 +1702,7 @@ class BiologicalKnowledgeIntegrator:
 
             'biological_networks': {
 
-                'kb_link': '[[knowledge_base/systems/biological_networks]]',
+                'kb_link': ''knowledge_base/cognitive/active_inference'',
 
                 'related_paths': [
 

@@ -14,7 +14,7 @@ semantic_relations:
   - type: organizes
     links:
       - [[documentation_standards]]
-      - [[contribution_guide]]
+      - contribution guide
       - [[folder_structure]]
 ---
 
@@ -32,7 +32,7 @@ This directory contains comprehensive standards, guidelines, and procedures for 
 - Content organization principles
 - Quality assurance procedures
 
-#### [[contribution_guide|Contribution Guidelines]]
+#### Contribution Guidelines
 - How to contribute to the project
 - Code submission and review processes
 - Documentation contribution standards
@@ -46,19 +46,19 @@ This directory contains comprehensive standards, guidelines, and procedures for 
 
 ### Quality and Validation Standards
 
-#### [[quality_assessment|Quality Assessment]]
+#### Quality Assessment
 - Comprehensive quality framework
 - Assessment methodologies
 - Quality metrics and benchmarks
 - Continuous improvement processes
 
-#### [[linking_standards|Linking Standards]]
+#### Linking Standards
 - Obsidian linking conventions
 - Cross-reference standards
 - Link validation procedures
 - Navigation consistency rules
 
-#### [[validation_framework|Validation Framework]]
+#### Validation Framework
 - Content validation procedures
 - Automated quality checking
 - Manual review processes
@@ -72,13 +72,13 @@ This directory contains comprehensive standards, guidelines, and procedures for 
 - Test automation procedures
 - Quality assurance integration
 
-#### [[code_standards|Code Standards]]
+#### Code Standards
 - Programming style guidelines
 - Code organization principles
 - Documentation requirements
 - Review and validation procedures
 
-#### [[git_workflow|Git Workflow Standards]]
+#### Git Workflow Standards
 - Version control best practices
 - Branch management strategies
 - Commit message conventions
@@ -666,30 +666,30 @@ class StandardsImprovementEngine:
 
 ### Standards Implementation
 - [[documentation_standards|Documentation Standards]]
-- [[code_standards|Code Standards]]
-- [[contribution_guide|Contribution Guidelines]]
+- Code Standards
+- Contribution Guidelines
 
 ### Quality Assurance
-- [[quality_assessment|Quality Assessment]]
-- [[validation_framework|Validation Framework]]
+- Quality Assessment
+- Validation Framework
 - [[unit_testing|Testing Guidelines]]
 
 ### Development Workflow
-- [[git_workflow|Git Workflow]]
+- Git Workflow
 - [[folder_structure|Folder Structure]]
-- [[linking_standards|Linking Standards]]
+- Linking Standards
 
 ## 🔗 Cross-References
 
 ### Core Standards Components
-- [[../../docs/README|Documentation Index]]
-- [[../../tools/README|Tools Documentation]]
-- [[../../tests/README|Testing Standards]]
+- [[docs/README|Documentation Index]]
+- [[tools/README|Tools Documentation]]
+- [[tests/README|Testing Standards]]
 
 ### Implementation Guides
-- [[../../docs/guides/README|Implementation Guides]]
-- [[../../docs/api/README|API Standards]]
-- [[../../docs/templates/README|Template Standards]]
+- [[docs/guides/README|Implementation Guides]]
+- [[docs/api/README|API Standards]]
+- [[docs/templates/README|Template Standards]]
 
 ---
 

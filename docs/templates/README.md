@@ -53,17 +53,17 @@ This directory contains standardized templates for creating consistent, high-qua
 
 #### Implementation Templates
 - [[implementation_example|Implementation Example Template]]
-- [[api_template|API Documentation Template]]
-- [[code_template|Code Documentation Template]]
+- API Documentation Template
+- Code Documentation Template
 
 #### Educational Templates
 - [[learning_path_template|Learning Path Template]]
-- [[tutorial_template|Tutorial Template]]
+- Tutorial Template
 - [[guide_template|Guide Template]]
 
 #### Conceptual Templates
-- [[concept_template|Concept Documentation Template]]
-- [[architecture_template|Architecture Template]]
+- Concept Documentation Template
+- Architecture Template
 - [[analysis_template|Analysis Template]]
 
 ## 🏗️ Template Framework
@@ -85,8 +85,8 @@ tags:
 semantic_relations:
   - type: [relation_type]
     links:
-      - [[related_document1]]
-      - [[related_document2]]
+      - related document1
+      - related document2
 ---
 
 # [Document Title]
@@ -129,19 +129,19 @@ semantic_relations:
 - **Purpose**: Document theoretical concepts, frameworks, and principles
 - **Usage**: Knowledge base entries, theoretical explanations
 - **Components**: Overview, theory, applications, references
-- **Examples**: [[concept_template]], [[research_document]]
+- **Examples**: concept template, [[research_document]]
 
 #### 2. Implementation Templates
 - **Purpose**: Document code, APIs, and technical implementations
 - **Usage**: API docs, implementation guides, code documentation
 - **Components**: Overview, usage, examples, API reference
-- **Examples**: [[api_template]], [[implementation_example]]
+- **Examples**: api template, [[implementation_example]]
 
 #### 3. Educational Templates
 - **Purpose**: Create learning materials and tutorials
 - **Usage**: Learning paths, tutorials, guides
 - **Components**: Objectives, content, exercises, assessment
-- **Examples**: [[learning_path_template]], [[tutorial_template]]
+- **Examples**: [[learning_path_template]], tutorial template
 
 #### 4. Research Templates
 - **Purpose**: Structure research documentation and findings
@@ -432,24 +432,24 @@ class TemplateUsageTracker:
 ### Complete Template Inventory
 
 #### Conceptual Templates
-- [[concept_template|Concept Template]] - Theoretical concepts
+- Concept Template - Theoretical concepts
 - [[cognitive_concept|Cognitive Concept Template]] - Cognitive science concepts
 - [[research_document|Research Document Template]] - Research documentation
 
 #### Implementation Templates
-- [[api_template|API Template]] - API documentation
+- API Template - API documentation
 - [[implementation_example|Implementation Template]] - Code examples
 - [[guide_template|Guide Template]] - Implementation guides
 
 #### Educational Templates
 - [[learning_path_template|Learning Path Template]] - Educational curricula
-- [[tutorial_template|Tutorial Template]] - Step-by-step tutorials
+- Tutorial Template - Step-by-step tutorials
 - [[guide_template|Guide Template]] - Comprehensive guides
 
 #### Specialized Templates
 - [[experiment_template|Experiment Template]] - Research experiments
 - [[analysis_template|Analysis Template]] - Data analysis documentation
-- [[architecture_template|Architecture Template]] - System architectures
+- Architecture Template - System architectures
 
 ## 🤝 Contributing to Templates
 
@@ -499,31 +499,31 @@ class TemplateUsageTracker:
 ## 📚 Related Documentation
 
 ### Documentation Resources
-- [[../repo_docs/documentation_standards|Documentation Standards]]
-- [[../repo_docs/ai_documentation_style|Documentation Style Guide]]
-- [[../README|Documentation Index]]
+- [[docs/repo_docs/documentation_standards|Documentation Standards]]
+- [[docs/repo_docs/ai_documentation_style|Documentation Style Guide]]
+- [[docs/README|Documentation Index]]
 
 ### Quality Assurance
-- [[../repo_docs/quality_assurance|Quality Assurance Guidelines]]
-- [[../repo_docs/validation_framework|Validation Framework]]
-- [[../repo_docs/linking_standards|Linking Standards]]
+- Quality Assurance Guidelines
+- Validation Framework
+- [[knowledge_base/linking_standards|Linking Standards]]
 
 ### Development Resources
-- [[../development/contribution_guide|Contribution Guidelines]]
-- [[../tools/|Documentation Tools]]
-- [[../templates/|Template Directory]]
+- [[docs/development/contribution_guide|Contribution Guidelines]]
+- [[docs/tools/README|Documentation Tools]]
+- [[docs/templates/README|Template Directory]]
 
 ## 🔗 Cross-References
 
 ### Core Documentation Components
-- [[../guides/README|Implementation Guides]]
-- [[../api/README|API Documentation]]
-- [[../research/README|Research Documentation]]
+- [[docs/guides/README|Implementation Guides]]
+- [[docs/api/README|API Documentation]]
+- [[docs/research/README|Research Documentation]]
 
 ### Template Applications
-- [[../../knowledge_base/|Knowledge Base Templates]]
-- [[../../tools/|Implementation Templates]]
-- [[../../docs/|Documentation Templates]]
+- [[knowledge_base/README|Knowledge Base Templates]]
+- [[tools/README|Implementation Templates]]
+- [[docs/README|Documentation Templates]]
 
 ---
 

@@ -26,7 +26,7 @@ semantic_relations:
 
 # Renormalization Group and Generative Models
 
-[[Renormalization Groups]] (RG) and [[Generative Models]] are two powerful frameworks that, despite originating from distinct fields—[[statistical_physics|statistical physics]] and [[machine_learning|machine learning]] respectively—share deep conceptual connections. Recent research has increasingly highlighted the intersection between RG methods and [[bayesian_inference|Bayesian inference]], revealing a rich theoretical structure that unifies [[statistical_foundations|statistical inference]], [[information_theory|information theory]], and physical [[coarse-graining]] processes.
+[[Renormalization Groups]] (RG) and [[knowledge_base/mathematics/generative_models]] are two powerful frameworks that, despite originating from distinct fields—[[statistical_physics|statistical physics]] and [[machine_learning|machine learning]] respectively—share deep conceptual connections. Recent research has increasingly highlighted the intersection between RG methods and [[bayesian_inference|Bayesian inference]], revealing a rich theoretical structure that unifies [[statistical_foundations|statistical inference]], [[information_theory|information theory]], and physical [[coarse-graining]] processes.
 
 ## Renormalization Groups: Overview and Principles
 
@@ -78,7 +78,7 @@ flowchart LR
 
 ## Bayesian Renormalization: Bridging Bayesian Inference and RG
 
-A particularly compelling development is the explicit connection between RG methods and [[bayesian_networks|Bayesian inference]] through an information-theoretic perspective known as [[Bayesian Renormalization]]. [[belief_updating|Bayesian inference]] involves updating prior probability distributions into posterior distributions using observed data. It quantifies uncertainty about parameters or models given observed data through [[bayes_theorem|Bayes' theorem]]:
+A particularly compelling development is the explicit connection between RG methods and [[bayesian_networks|Bayesian inference]] through an information-theoretic perspective known as [[knowledge_base/mathematics/bayesian_renormalization]]. [[belief_updating|Bayesian inference]] involves updating prior probability distributions into posterior distributions using observed data. It quantifies uncertainty about parameters or models given observed data through [[bayes_theorem|Bayes' theorem]]:
 
 $$P(\theta|D) = \frac{P(D|\theta)P(\theta)}{P(D)}$$
 

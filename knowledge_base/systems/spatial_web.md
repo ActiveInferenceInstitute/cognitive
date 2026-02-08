@@ -48,7 +48,7 @@ semantic_relations:
 
       - [[knowledge_base/systems/complex_systems|Complex Systems]]
 
-      - [[knowledge_base/systems/network_science|Network Science]]
+      - [[knowledge_base/mathematics/network_science|Network Science]]
 
 ---
 

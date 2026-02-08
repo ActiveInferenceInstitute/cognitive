@@ -481,14 +481,14 @@ def safe_agent_interaction(agent, environment):
 ## 📚 Related Documentation
 
 ### Implementation Guides
-- [[../guides/api_implementation|API Implementation Guide]]
-- [[../guides/integration_patterns|Integration Patterns]]
-- [[../guides/best_practices|API Best Practices]]
+- [[docs/guides/api_implementation|API Implementation Guide]]
+- Integration Patterns
+- [[docs/guides/best_practices|API Best Practices]]
 
 ### Examples and Tutorials
-- [[../examples/basic_api_usage|Basic API Usage]]
-- [[../examples/advanced_api_patterns|Advanced API Patterns]]
-- [[../examples/api_integration_examples|API Integration Examples]]
+- [[docs/examples/basic_api_usage|Basic API Usage]]
+- [[docs/examples/advanced_api_patterns|Advanced API Patterns]]
+- [[docs/examples/api_integration_examples|API Integration Examples]]
 
 ### Technical Reference
 - [[api_reference|Complete API Reference]]
@@ -498,14 +498,14 @@ def safe_agent_interaction(agent, environment):
 ## 🔗 Cross-References
 
 ### Core Framework Components
-- [[../../tools/src/models/|Model Implementations]]
-- [[../../Things/Generic_Thing/|Generic Thing Framework]]
-- [[../implementation/|Implementation Documentation]]
+- [[tools/src/models/README|Model Implementations]]
+- [[code/Things/Generic_Thing/README|Generic Thing Framework]]
+- [[docs/implementation/README|Implementation Documentation]]
 
 ### Development Resources
-- [[../repo_docs/api_development|API Development Guide]]
-- [[../repo_docs/testing_guidelines|Testing Guidelines]]
-- [[../repo_docs/documentation_standards|Documentation Standards]]
+- [[docs/repo_docs/api_development|API Development Guide]]
+- [[docs/repo_docs/testing_guidelines|Testing Guidelines]]
+- [[docs/repo_docs/documentation_standards|Documentation Standards]]
 
 ---
 

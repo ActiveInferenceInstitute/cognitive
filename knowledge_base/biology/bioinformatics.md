@@ -28,7 +28,7 @@ semantic_relations:
 
       - [[information_theory]]
 
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
 
   - type: implements
 
@@ -40,7 +40,7 @@ semantic_relations:
 
       - [[machine_learning]]
 
-      - [[../agents/architectures_overview]]
+      - [[knowledge_base/agents/architectures_overview]]
 
   - type: relates
 
@@ -655,14 +655,14 @@ class BioinformaticsActiveInference:
 - [[gene_regulatory_networks|Gene Regulatory Networks]] - Regulatory inference
 
 ### Computational Methods
-- [[../mathematics/machine_learning|Machine Learning]] - Learning algorithms
-- [[../mathematics/information_theory|Information Theory]] - Data analysis
-- [[../mathematics/network_theory|Network Theory]] - Network analysis
+- [[docs/repo_docs/machine_learning|Machine Learning]] - Learning algorithms
+- [[knowledge_base/mathematics/information_theory|Information Theory]] - Data analysis
+- [[knowledge_base/systems/network_theory|Network Theory]] - Network analysis
 
 ### Agent Architecture Applications
-- [[../../tools/src/models/active_inference/|Active Inference Models]]
-- [[../../docs/examples/|Bioinformatics Agent Examples]]
-- [[../../docs/implementation/|Computational Biology Methods]]
+- [[tools/src/models/active_inference|Active Inference Models]]
+- [[docs/examples|Bioinformatics Agent Examples]]
+- [[docs/implementation/README|Computational Biology Methods]]
 
 ## References
 
@@ -688,5 +688,5 @@ class BioinformaticsActiveInference:
 - [[machine_learning]]
 - [[systems_biology]]
 - [[computational_biology]]
-- [[../agents/architectures_overview]]
+- [[knowledge_base/agents/architectures_overview]]
 

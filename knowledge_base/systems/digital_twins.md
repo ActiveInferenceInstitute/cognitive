@@ -32,7 +32,7 @@ semantic_relations:
 
       - [[knowledge_base/systems/internet_of_things|Internet of Things]]
 
-      - [[knowledge_base/systems/simulation|Simulation]]
+      - [[knowledge_base/free_energy_principle/implementations/simulation|Simulation]]
 
   - type: prerequisite_for
 

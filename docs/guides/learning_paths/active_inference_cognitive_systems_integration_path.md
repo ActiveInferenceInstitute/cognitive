@@ -28,17 +28,15 @@ semantic_relations:
 
     links:
 
-      - [[cognitive_architecture_learning_path]]
+      - [[active_inference_cognitive_learning_path]]
 
-      - [[systems_integration_path]]
 
   - type: related
 
     links:
 
-      - [[neural_architecture_learning_path]]
+      - [[active_inference_neuroscience_learning_path]]
 
-      - [[distributed_cognition_path]]
 
 ---
 
@@ -54,7 +52,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - SRE/Resilience references (Google SRE, Chaos Engineering) in the hub for observability patterns
 

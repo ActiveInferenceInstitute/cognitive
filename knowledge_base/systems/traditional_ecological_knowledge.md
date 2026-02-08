@@ -50,7 +50,7 @@ semantic_relations:
 
     links:
 
-      - [[social_ecological_systems]]
+      - [[knowledge_base/systems/Social-Ecological Systems]]
 
       - [[collective_intelligence]]
 
@@ -484,7 +484,7 @@ class CulturalEcologicalSystem:
 
 - [[complex_systems]]
 
-- [[social_ecological_systems]]
+- [[knowledge_base/systems/Social-Ecological Systems]]
 
 - [[cognitive_ecology]]
 

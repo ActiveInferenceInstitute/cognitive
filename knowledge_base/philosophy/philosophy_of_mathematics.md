@@ -146,15 +146,15 @@ Homotopy Type Theory as foundation for mathematics.
 ## Connections to This Repository
 
 ### Probabilistic Foundations
-- [[../mathematics/probability_theory|Probability Theory]] - Philosophical foundations of uncertainty
+- [[knowledge_base/mathematics/probability_theory|Probability Theory]] - Philosophical foundations of uncertainty
 - Bayesian epistemology and rational belief
 
 ### Structural Perspectives
-- [[../mathematics/category_theory|Category Theory]] - Structural approach to mathematics
+- [[knowledge_base/mathematics/category_theory|Category Theory]] - Structural approach to mathematics
 - Functorial relationships between mathematical domains
 
 ### Information-Theoretic Viewpoints
-- [[../mathematics/information_theory|Information Theory]] - Mathematics of communication and computation
+- [[knowledge_base/mathematics/information_theory|Information Theory]] - Mathematics of communication and computation
 - Algorithmic information theory and complexity
 
 ## Conceptual Map

@@ -34,7 +34,7 @@ semantic_relations:
 
       - [[memory_systems]]
 
-      - [[knowledge_base/cognitive/predictive_processing]]
+      - [[predictive_processing]]
 
 ---
 
@@ -304,15 +304,15 @@ Perception processing forms the foundational layer of the cognitive model, respo
 
 - [[memory_systems]] - Memory architecture
 
-- [[knowledge_base/cognitive/predictive_processing]] - Predictive processing
+- [[predictive_processing]] - Predictive processing
 
-- [[patterns/neural_architectures]] - Neural architecture patterns
+- [[neural_architectures]] - Neural architecture patterns
 
 ## References
 
-- [[../research/papers/key_papers|Perception Papers]]
+- [[docs/research/papers/key_papers|Perception Papers]]
 
-- [[../implementations/reference_implementations]]
+- [[knowledge_base/reference_implementations]]
 
-- [[../guides/implementation_guides]]
+- [[docs/implementation/implementation_guides]]
 

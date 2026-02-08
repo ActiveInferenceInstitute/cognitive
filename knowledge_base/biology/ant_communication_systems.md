@@ -561,7 +561,7 @@ Communication systems co-evolve with:
 
 ### Swarm Intelligence Applications
 - [[swarm_intelligence_implementation]] - Computational implementations
-- [[Things/Ant_Colony/]] - Ant colony simulation systems
+- [[code/Things/Ant_Colony/README]] - Ant colony simulation systems
 - [[optimization_patterns]] - Optimization algorithms
 
 ### Cognitive Science Links

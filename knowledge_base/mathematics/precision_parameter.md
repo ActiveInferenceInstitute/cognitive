@@ -84,7 +84,7 @@ Example entropy controller:
 
 ### Policy vs sensory/state precisions
 
-Active inference uses multiple precisions: policy precision γ (decision determinism) and sensory/state precisions Π (weighting of prediction errors). See [[../cognitive/precision_weighting]] for perceptual precisions and how they interact with γ to determine exploration and confidence.
+Active inference uses multiple precisions: policy precision γ (decision determinism) and sensory/state precisions Π (weighting of prediction errors). See [[knowledge_base/cognitive/precision_weighting]] for perceptual precisions and how they interact with γ to determine exploration and confidence.
 
 ### Reference implementation
 
@@ -128,25 +128,25 @@ def policy_posterior_from_efe(expected_free_energy: np.ndarray,
 
 ### Connections
 
-- [[../mathematics/policy_selection]]: posterior formation over policies via softmax.
+- [[knowledge_base/mathematics/policy_selection]]: posterior formation over policies via softmax.
 
-- [[../mathematics/action_distribution]]: action sampling with inverse temperature.
+- [[knowledge_base/mathematics/action_distribution]]: action sampling with inverse temperature.
 
-- [[../mathematics/exploration_exploitation]]: behavioral trade-off induced by \(\gamma\).
+- [[knowledge_base/mathematics/exploration_exploitation]]: behavioral trade-off induced by \(\gamma\).
 
-- [[../mathematics/expected_free_energy]] and [[../mathematics/vfe_components]]: scaling differences in value signals.
+- [[knowledge_base/mathematics/expected_free_energy]] and [[knowledge_base/mathematics/vfe_components]]: scaling differences in value signals.
 
-- [[../cognitive/active_inference]]: end-to-end framework context
+- [[knowledge_base/cognitive/active_inference]]: end-to-end framework context
 
 - [[temperature_parameter]]: direct mapping to temperature T
 
 ## See also
 
-- [[../cognitive/precision_weighting]]
+- [[knowledge_base/cognitive/precision_weighting]]
 
-- [[../mathematics/temperature_parameter]]
+- [[knowledge_base/mathematics/temperature_parameter]]
 
-- [[../../docs/guides/learning_paths/active_inference_security_learning_path|Security Learning Path: precision bounds]]
+- [[docs/guides/learning_paths/active_inference_security_learning_path|Security Learning Path: precision bounds]]
 
 ### Worked example
 
@@ -186,5 +186,5 @@ def policy_posterior_from_efe(G: np.ndarray, gamma: float) -> np.ndarray:
 
 - Softmax temperature control in probabilistic decision making
 
-- Precision weighting in predictive coding and active inference (links: [[../cognitive/precision_weighting]], [[../cognitive/predictive_coding]])
+- Precision weighting in predictive coding and active inference (links: [[knowledge_base/cognitive/precision_weighting]], [[knowledge_base/cognitive/predictive_coding]])
 

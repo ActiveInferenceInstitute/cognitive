@@ -15,22 +15,22 @@ aliases: [python_fep, fep_framework, fep_implementation]
 semantic_relations:
   - type: implements
     links:
-      - [[../mathematics/core_principle]]
-      - [[../mathematics/variational_free_energy]]
-      - [[../cognitive/perception]]
-      - [[../biology/homeostasis]]
+      - [[knowledge_base/free_energy_principle/mathematics/core_principle]]
+      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy]]
+      - [[knowledge_base/free_energy_principle/cognitive/perception]]
+      - [[knowledge_base/free_energy_principle/biology/homeostasis]]
   - type: foundation
     links:
-      - [[../implementations/neural_networks]]
-      - [[../implementations/simulation]]
-      - [[../AGENTS]]
-      - [[../mathematics/expected_free_energy]]
+      - [[knowledge_base/free_energy_principle/implementations/neural_networks]]
+      - [[knowledge_base/free_energy_principle/implementations/simulation]]
+      - [[knowledge_base/free_energy_principle/AGENTS]]
+      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy]]
   - type: relates
     links:
-      - [[../implementations/robotics]]
-      - [[../implementations/benchmarking]]
-      - [[../applications/ai_safety]]
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/free_energy_principle/implementations/robotics]]
+      - [[knowledge_base/free_energy_principle/implementations/benchmarking]]
+      - [[knowledge_base/free_energy_principle/applications/ai_safety]]
+      - [[knowledge_base/cognitive/active_inference]]
 ---
 
 # Python Free Energy Principle Framework

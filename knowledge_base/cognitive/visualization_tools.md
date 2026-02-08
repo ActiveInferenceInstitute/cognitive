@@ -22,11 +22,11 @@ semantic_relations:
       - model_validation
   - type: implements
     links:
-      - [[../mathematics/matrix_operations]]
-      - [[../mathematics/probability_distributions]]
+      - [[knowledge_base/mathematics/matrix_operations]]
+      - [[knowledge_base/mathematics/probability_distributions]]
   - type: foundation
     links:
-      - [[../mathematics/visualization_mathematics]]
+      - [[knowledge_base/mathematics/visualization_mathematics]]
       - [[information_processing]]
 
 ---

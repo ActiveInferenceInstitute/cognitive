@@ -28,7 +28,7 @@ semantic_relations:
 
       - [[evolutionary_game_theory]]
 
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
 
   - type: implements
 
@@ -40,7 +40,7 @@ semantic_relations:
 
       - [[adaptive_dynamics]]
 
-      - [[../agents/architectures_overview]]
+      - [[knowledge_base/agents/architectures_overview]]
 
   - type: relates
 
@@ -542,14 +542,14 @@ class EvolutionaryGame:
 - [[fitness_landscapes|Fitness Landscapes]] - Evolutionary optimization
 
 ### Cognitive Science Connections
-- [[../cognitive/active_inference|Active Inference]] - Evolutionary learning parallels
-- [[../cognitive/learning_theory|Learning Theory]] - Evolutionary adaptation
-- [[../cognitive/decision_making|Decision Making]] - Evolutionary choice
+- [[knowledge_base/cognitive/active_inference|Active Inference]] - Evolutionary learning parallels
+- [[knowledge_base/cognitive/learning_theory|Learning Theory]] - Evolutionary adaptation
+- [[knowledge_base/cognitive/decision_making|Decision Making]] - Evolutionary choice
 
 ### Agent Architecture Applications
-- [[../../tools/src/models/active_inference/|Evolutionary Active Inference]]
-- [[../../docs/examples/|Evolutionary Agent Examples]]
-- [[../../docs/implementation/|Evolutionary Computation]]
+- [[tools/src/models/active_inference|Evolutionary Active Inference]]
+- [[docs/examples|Evolutionary Agent Examples]]
+- [[docs/implementation/README|Evolutionary Computation]]
 
 ## References
 
@@ -575,5 +575,5 @@ class EvolutionaryGame:
 - [[developmental_systems]]
 - [[evolutionary_game_theory]]
 - [[fitness_landscapes]]
-- [[../agents/architectures_overview]]
+- [[knowledge_base/agents/architectures_overview]]
 

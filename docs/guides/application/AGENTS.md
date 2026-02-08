@@ -3,7 +3,7 @@ title: Application Guides Agents Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2026-02-07
 tags:
   - agents
   - guides
@@ -27,6 +27,7 @@ Agent architectures and implementations applied to real-world domains, demonstra
 ### Cognitive Modeling Agents
 
 #### Active Inference Cognitive Modelers
+
 Agents implementing comprehensive cognitive architectures for modeling human cognition.
 
 ```python
@@ -76,6 +77,7 @@ class ActiveInferenceCognitiveModeler:
 ### Spatial Computing Agents
 
 #### Spatial Active Inference Agents
+
 Agents implementing Active Inference in spatial computing environments.
 
 ```python
@@ -126,6 +128,7 @@ class SpatialActiveInferenceAgent:
 ### Theoretical Implementation Agents
 
 #### Parr Framework Implementation Agents
+
 Agents implementing the Parr (2022) theoretical framework for Active Inference.
 
 ```python
@@ -182,24 +185,28 @@ class ParrFrameworkImplementationAgent:
 ## 📊 Agent Capabilities
 
 ### Cognitive Modeling
+
 - **Comprehensive Architectures**: Full cognitive system modeling and implementation
 - **Empirical Validation**: Testing models against real-world cognitive data
 - **Theoretical Integration**: Connecting Active Inference to cognitive psychology
 - **Predictive Accuracy**: Generating testable predictions about cognition
 
 ### Spatial Applications
+
 - **Geometric Reasoning**: Higher-dimensional spatial problem solving
 - **Topological Navigation**: Complex spatial environment navigation
 - **Multimodal Integration**: Combining spatial and non-spatial information
 - **Temporal-Spatial Fusion**: Integrating time and space in decision making
 
 ### Theoretical Implementation
+
 - **Framework Application**: Practical implementation of theoretical frameworks
 - **Mathematical Rigor**: Ensuring mathematical correctness in implementations
 - **Theoretical Validation**: Testing theoretical predictions empirically
 - **Scalable Solutions**: Creating implementations that scale to complex problems
 
 ### Domain-Specific Applications
+
 - **Real-World Deployment**: Applying agents to practical problem domains
 - **Cross-Domain Transfer**: Adapting solutions across different application areas
 - **Performance Optimization**: Optimizing agent performance for specific applications
@@ -208,24 +215,28 @@ class ParrFrameworkImplementationAgent:
 ## 🎯 Applications
 
 ### Cognitive Science Research
+
 - **Human Cognition Modeling**: Creating computational models of human cognitive processes
 - **Comparative Cognition**: Comparing human and artificial cognitive systems
 - **Cognitive Development**: Modeling cognitive development and learning
 - **Clinical Applications**: Applying cognitive models to clinical psychology
 
 ### Spatial Computing Systems
+
 - **Augmented Reality**: Active Inference in AR environments
 - **Virtual Reality**: Cognitive modeling in VR systems
 - **Mixed Reality**: Integration of physical and virtual spaces
 - **Geographic Information Systems**: Spatial reasoning and decision making
 
 ### Theoretical Research
+
 - **Framework Validation**: Testing Active Inference theoretical predictions
 - **Mathematical Implementation**: Converting theoretical mathematics to working code
 - **Computational Modeling**: Creating computational models of theoretical concepts
 - **Empirical Testing**: Designing experiments to test theoretical frameworks
 
 ### Industrial Applications
+
 - **Autonomous Systems**: Active Inference in robotics and autonomous vehicles
 - **Human-Machine Interfaces**: Cognitive modeling for better HCI design
 - **Decision Support Systems**: AI systems for complex decision making
@@ -234,18 +245,21 @@ class ParrFrameworkImplementationAgent:
 ## 📈 Application Frameworks
 
 ### Cognitive Modeling Frameworks
+
 - **Bayesian Cognitive Models**: Probabilistic models of cognition
 - **Neural Network Models**: Connectionist approaches to cognition
 - **Hybrid Models**: Combining symbolic and subsymbolic approaches
 - **Developmental Models**: Models of cognitive development over time
 
 ### Spatial Computing Frameworks
+
 - **Geometric Computing**: Higher-dimensional geometric computations
 - **Topological Methods**: Topology-based spatial reasoning
 - **Multimodal Frameworks**: Integrating multiple sensory modalities
 - **Temporal Integration**: Time-aware spatial computing
 
 ### Implementation Frameworks
+
 - **Software Architectures**: Scalable software systems for agent implementation
 - **Mathematical Libraries**: Efficient mathematical computation libraries
 - **Validation Frameworks**: Systematic testing and validation approaches
@@ -254,18 +268,21 @@ class ParrFrameworkImplementationAgent:
 ## 🔧 Implementation Approaches
 
 ### Cognitive Modeling Implementation
+
 - **Data Collection**: Gathering empirical data for model validation
 - **Model Specification**: Formal specification of cognitive models
 - **Simulation Environments**: Creating environments for model testing
 - **Performance Metrics**: Defining metrics for model evaluation
 
 ### Spatial Computing Implementation
+
 - **Geometric Libraries**: Libraries for geometric computations
 - **Spatial Databases**: Efficient storage and retrieval of spatial data
 - **Visualization Tools**: Tools for spatial data visualization
 - **Real-time Processing**: Efficient algorithms for real-time spatial processing
 
 ### Theoretical Implementation
+
 - **Mathematical Frameworks**: Frameworks for implementing complex mathematics
 - **Symbolic Computation**: Computer algebra systems for theoretical work
 - **Numerical Methods**: Advanced numerical methods for theoretical calculations
@@ -274,21 +291,27 @@ class ParrFrameworkImplementationAgent:
 ## 📚 Documentation
 
 ### Core Application Guides
+
 See [[guide_for_cognitive_modeling|Guide for Cognitive Modeling]] for:
+
 - Active Inference implementation approaches
 - Cognitive modeling methodologies
 - Empirical validation techniques
 - Theoretical framework applications
 
 ### Spatial Applications
+
 See [[active_inference_spatial_applications|Active Inference Spatial Applications]] for:
+
 - Spatial computing implementations
 - Geometric reasoning approaches
 - Topological navigation systems
 - Multimodal integration techniques
 
 ### Theoretical Frameworks
+
 See [[parr_2022_chapter_6|Parr (2022) Chapter 6]] for:
+
 - Expected free energy calculations
 - Variational free energy implementations
 - Precision weighting mechanisms
@@ -297,35 +320,41 @@ See [[parr_2022_chapter_6|Parr (2022) Chapter 6]] for:
 ## 🔗 Related Documentation
 
 ### Implementation Examples
-- [[../../docs/examples/|Implementation Examples]]
-- [[../../tools/src/models/|Model Implementations]]
-- [[../../Things/|Practical Implementations]]
+
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Implementation Examples]]
+- [[tools/src/models/README|Model Implementations]]
+- [[code/Things|Practical Implementations]]
 
 ### Theoretical Integration
-- [[../../knowledge_base/cognitive/|Cognitive Theory]]
-- [[../../knowledge_base/mathematics/|Mathematical Foundations]]
-- [[../../docs/guides/learning_paths/|Learning Paths]]
+
+- [[knowledge_base/cognitive/README|Cognitive Theory]]
+- [[knowledge_base/mathematics/README|Mathematical Foundations]]
+- [[docs/guides/learning_paths/README|Learning Paths]]
 
 ### Research Resources
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/examples/|Application Examples]]
+
+- [[docs/research/README|Research Applications]]
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Application Examples]]
 
 ## 🔗 Cross-References
 
 ### Agent Theory
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
-- [[../../knowledge_base/agents/AGENTS|Agent Architecture Overview]]
-- [[../../docs/guides/implementation_guides|Implementation Guides]]
+
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[knowledge_base/agents/AGENTS|Agent Architecture Overview]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
 ### Application Domains
+
 - [[guide_for_cognitive_modeling|Cognitive Modeling]]
 - [[active_inference_spatial_applications|Spatial Applications]]
 - [[parr_2022_chapter_6|Theoretical Frameworks]]
 
 ### Related Areas
-- [[../../docs/guides/learning_paths/|Learning Paths]]
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/examples/|Implementation Examples]]
+
+- [[docs/guides/learning_paths/README|Learning Paths]]
+- [[docs/research/README|Research Applications]]
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Implementation Examples]]
 
 ---
 
@@ -338,4 +367,3 @@ See [[parr_2022_chapter_6|Parr (2022) Chapter 6]] for:
 ---
 
 > **Domain Expertise**: Enables agents with specialized capabilities for cognitive modeling, spatial computing, and theoretical research applications.
-

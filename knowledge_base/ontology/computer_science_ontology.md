@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[../mathematics/category_theory]]
-      - [[../systems/complex_systems]]
-      - [[../cognitive/knowledge_representation]]
+      - [[knowledge_base/mathematics/category_theory]]
+      - [[knowledge_base/systems/complex_systems]]
+      - [[knowledge_base/cognitive/knowledge_representation]]
   - type: implements
     links:
       - [[cognitive_ontology]]

@@ -13,21 +13,17 @@ semantic_relations:
   - type: implements
     links:
       - [[active_inference]]
-      - [[../mathematics/active_inference_theory]]
+      - [[knowledge_base/mathematics/active_inference_theory]]
   - type: foundation
     links:
-      - [[../mathematics/free_energy_principle]]
+      - [[knowledge_base/mathematics/free_energy_principle]]
       - [[generative_model]]
       - [[belief_updating]]
   - type: documented_by
     links:
-      - [[../active_inference_implementation]]
-      - [[../agents/GenericPOMDP/]]
-      - [[../agents/Continuous_Time/]]
----
-
+      - [[knowledge_base/active_inference_implementation]]
       - [[knowledge_base/agents/GenericPOMDP/README]]
-
+      - [[knowledge_base/agents/Continuous_Time/README]]
 ---
 
 # Implementing Active Inference Agents
@@ -857,11 +853,11 @@ class ROSActiveInferenceAgent(ActiveInferenceAgent):
 
 ## References
 
-- [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
+- [[active_inference|Active Inference Theory]]
 
 - [[knowledge_base/mathematics/free_energy_theory|Free Energy Theory]]
 
 - [[knowledge_base/mathematics/variational_methods|Variational Methods]]
 
-- [[examples/active_inference_basic|Basic Example]]
+- [[docs/examples/active_inference_basic|Basic Example]]
 

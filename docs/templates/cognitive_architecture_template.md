@@ -78,9 +78,9 @@ graph TD
 
 - Research area 3
 
-- [[research/research_1|Research 1]]
+- [[docs/research/research_1|Research 1]]
 
-- [[research/research_2|Research 2]]
+- [[docs/research/research_2|Research 2]]
 
 ## Architecture
 

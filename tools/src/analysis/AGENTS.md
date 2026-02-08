@@ -14,8 +14,8 @@ semantic_relations:
   - type: documents
     links:
       - [[README]]
-      - [[../models/active_inference/AGENTS|Active Inference Models]]
-      - [[../../README|Tools Overview]]
+      - [[tools/src/models/active_inference/AGENTS|Active Inference Models]]
+      - [[tools/README|Tools Overview]]
 ---
 
 # Analysis Tools Agent Documentation
@@ -153,13 +153,13 @@ Network analysis tools for cognitive systems:
 
 ### Implementation Resources
 - [[README|Analysis Tools Overview]]
-- [[../models/active_inference/AGENTS|Active Inference Models]]
-- [[../../README|Tools Overview]]
+- [[tools/src/models/active_inference/AGENTS|Active Inference Models]]
+- [[tools/README|Tools Overview]]
 
 ### Integration Points
-- [[../../../docs/api/README|API Documentation]]
-- [[../../../tests/README|Testing Framework]]
-- [[../../../docs/examples/|Usage Examples]]
+- [[docs/api/README|API Documentation]]
+- [[tests/README|Testing Framework]]
+- [[docs/examples|Usage Examples]]
 
 ---
 

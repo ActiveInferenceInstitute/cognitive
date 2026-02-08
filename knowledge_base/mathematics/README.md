@@ -74,7 +74,7 @@ The mathematical foundations knowledge base provides comprehensive theoretical a
 - [[information_theory|Information Theory]] - Shannon's information theory foundations
 - [[mutual_information|Mutual Information]] - Information shared between variables
 - [[information_gain|Information Gain]] - Information-theoretic decision making
-- [[entropy_estimators|Mutual Information Estimators]] - Practical estimation techniques
+- Mutual Information Estimators - Practical estimation techniques
 
 #### Information Geometry
 - [[information_geometry|Information Geometry]] - Geometric approaches to information
@@ -130,7 +130,7 @@ The mathematical foundations knowledge base provides comprehensive theoretical a
 #### Geometric Structures
 - [[topology|Topology]] - Topological concepts and applications
 - [[differential_geometry|Differential Geometry]] - Geometric analysis
-- [[riemannian_geometry|Riemannian Geometry]] - Riemannian manifolds
+- Riemannian Geometry - Riemannian manifolds
 - [[sub_riemannian_geometry|Sub-Riemannian Geometry]] - Sub-Riemannian structures
 
 #### Advanced Analysis
@@ -146,7 +146,7 @@ The mathematical foundations knowledge base provides comprehensive theoretical a
 #### Generative Models
 - [[generative_models|Generative Models]] - Internal world models
 - [[markov_blanket|Markov Blanket]] - Conditional independence boundaries
-- [[hierarchical_models|Hierarchical Models]] - Multi-level model structures
+- Hierarchical Models - Multi-level model structures
 
 #### Inference Mechanisms
 - [[message_passing|Message Passing]] - Belief propagation algorithms
@@ -242,14 +242,14 @@ Master sophisticated mathematical techniques and research frontiers.
 #### For Control Systems Engineers
 1. [[optimal_control|Optimal Control]]
 2. [[policy_search_methods|Policy Search Methods]]
-3. [[stochastic_control|Stochastic Control]]
-4. [[robust_control|Robust Control]]
+3. Stochastic Control
+4. Robust Control
 
 #### For Cognitive Scientists
 1. [[predictive_coding|Predictive Coding]]
-2. [[hierarchical_inference|Hierarchical Inference]]
-3. [[precision_weighting|Precision Weighting]]
-4. [[attention_mechanisms|Attention Mechanisms]]
+2. Hierarchical Inference
+3. Precision Weighting
+4. Attention Mechanisms
 
 ## 🛠️ Mathematical Software and Tools
 
@@ -281,26 +281,26 @@ Master sophisticated mathematical techniques and research frontiers.
 ## 🔗 Related Documentation
 
 ### Implementation Applications
-- [[../../Things/Generic_Thing/README|Generic Thing]] - Core mathematical implementations
-- [[../../Things/Simple_POMDP/README|Simple POMDP]] - Basic probabilistic implementations
-- [[../../Things/Generic_POMDP/README|Generic POMDP]] - Advanced mathematical agents
-- [[../../Things/Continuous_Generic/README|Continuous Generic]] - Continuous mathematics
+- [[code/Things/Generic_Thing/README|Generic Thing]] - Core mathematical implementations
+- [[code/Things/Simple_POMDP/README|Simple POMDP]] - Basic probabilistic implementations
+- [[code/Things/Generic_POMDP/README|Generic POMDP]] - Advanced mathematical agents
+- [[code/Things/Continuous_Generic/README|Continuous Generic]] - Continuous mathematics
 
 ### Theoretical Integration
-- [[../cognitive/active_inference|Active Inference Theory]]
-- [[../cognitive/free_energy_principle|Cognitive Free Energy]]
-- [[../cognitive/predictive_processing|Predictive Processing]]
-- [[../systems/complex_systems|Complex Systems]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
+- [[knowledge_base/cognitive/free_energy_principle|Cognitive Free Energy]]
+- [[knowledge_base/cognitive/predictive_processing|Predictive Processing]]
+- [[knowledge_base/systems/complex_systems|Complex Systems]]
 
 ### Research Resources
-- [[../../docs/research/|Research Documentation]]
-- [[../../tools/README|Mathematical Tools]]
-- [[../../docs/guides/implementation_guides|Implementation Mathematics]]
+- [[docs/research|Research Documentation]]
+- [[tools/README|Mathematical Tools]]
+- [[docs/implementation/implementation_guides|Implementation Mathematics]]
 
 ## 🔗 Cross-References
 
 ### Mathematical Categories
-- **Probability**: [[probability_theory]], [[bayesian_inference]], [[stochastic_processes]]
+- **Probability**: [[probability_theory]], bayesian inference, [[stochastic_processes]]
 - **Information**: [[information_theory]], [[information_geometry]], [[mutual_information]]
 - **Optimization**: [[optimization_theory]], [[stochastic_optimization]], [[natural_gradients]]
 - **Dynamics**: [[dynamical_systems]], [[geometric_mechanics]], [[path_integral_theory]]

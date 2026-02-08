@@ -26,7 +26,7 @@ semantic_relations:
       - ci_cd_pipeline
   - type: implements
     links:
-      - [[../tools/src/automation/]]
+      - [[code/tools/src/automation]]
       - [[machine_readability]]
 
 ---

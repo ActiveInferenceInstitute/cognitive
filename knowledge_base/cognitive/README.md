@@ -37,7 +37,7 @@ The cognitive science knowledge base provides theoretical foundations and empiri
 - [[active_inference]] - Core theoretical framework and principles
 - [[active_inference_agent]] - Agent-based implementations
 - [[continuous_time_active_inference]] - Temporal dynamics and continuous processes
-- [[../mathematics/stochastic_active_inference]] - Probabilistic formulations
+- [[knowledge_base/mathematics/stochastic_active_inference]] - Probabilistic formulations
 
 #### Free Energy Principle
 - [[free_energy_principle]] - Foundational principle of self-organization
@@ -239,15 +239,15 @@ The cognitive science knowledge base provides theoretical foundations and empiri
 ## 🔗 Cross-References
 
 ### Related Knowledge Domains
-- [[../mathematics/free_energy_principle|Mathematical Foundations]]
-- [[../biology/neuroscience|Neuroscience]]
-- [[../systems/complex_systems|Complex Systems]]
-- [[../agents/architectures_overview|Agent Architectures]]
+- [[knowledge_base/mathematics/free_energy_principle|Mathematical Foundations]]
+- [[knowledge_base/biology/neuroscience|Neuroscience]]
+- [[knowledge_base/systems/complex_systems|Complex Systems]]
+- [[knowledge_base/agents/architectures_overview|Agent Architectures]]
 
 ### Implementation Examples
-- [[../../Things/Generic_Thing/|Generic Thing Implementation]]
-- [[../../Things/Simple_POMDP/|Simple POMDP Agents]]
-- [[../../tools/src/models/active_inference/|Active Inference Models]]
+- [[code/Things/Generic_Thing/README|Generic Thing Implementation]]
+- [[code/Things/Simple_POMDP/README|Simple POMDP Agents]]
+- [[tools/src/models/active_inference|Active Inference Models]]
 
 ## 📈 Quality Metrics
 
@@ -281,7 +281,7 @@ The cognitive science knowledge base provides theoretical foundations and empiri
 - Maintain theoretical rigor and empirical grounding
 - Include cross-references to related concepts
 - Connect theory to implementation examples
-- Follow [[../linking_standards|linking standards]] for consistency
+- Follow [[knowledge_base/linking_standards|linking standards]] for consistency
 
 ### Review Process
 - Peer review for theoretical accuracy

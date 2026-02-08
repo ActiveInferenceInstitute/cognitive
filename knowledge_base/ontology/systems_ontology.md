@@ -12,19 +12,19 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[../systems/AGENTS|Systems Agent Documentation]]
-      - [[../systems/README|Systems Overview]]
-      - [[../systems/complex_systems|Complex Systems Theory]]
+      - [[knowledge_base/systems/AGENTS|Systems Agent Documentation]]
+      - [[knowledge_base/systems/README|Systems Overview]]
+      - [[knowledge_base/systems/complex_systems|Complex Systems Theory]]
   - type: relates
     links:
       - [[cognitive_ontology]]
       - [[mathematical_ontology]]
-      - [[../cognitive/systems_theory]]
-      - [[../mathematics/dynamical_systems]]
+      - [[knowledge_base/systems/systems_theory]]
+      - [[knowledge_base/mathematics/dynamical_systems]]
   - type: implements
     links:
-      - [[../systems/complex_adaptive_systems]]
-      - [[../systems/emergence]]
+      - [[knowledge_base/systems/complex_adaptive_systems]]
+      - [[knowledge_base/systems/emergence]]
 ---
 
 # Systems Ontology
@@ -283,19 +283,19 @@ Engineered Systems
 ## 🔗 Interdisciplinary Connections
 
 ### Systems-Biology Integration
-- [[../biology/systems_biology|Systems Biology]] - Network models of cellular processes
-- [[../biology/ecological_dynamics|Ecological Dynamics]] - Ecosystem-level interactions
-- [[../biology/developmental_systems|Developmental Systems]] - Ontogenetic processes
+- [[knowledge_base/biology/systems_biology|Systems Biology]] - Network models of cellular processes
+- [[knowledge_base/biology/ecological_dynamics|Ecological Dynamics]] - Ecosystem-level interactions
+- [[knowledge_base/biology/developmental_systems|Developmental Systems]] - Ontogenetic processes
 
 ### Systems-Cognitive Science Links
-- [[../cognitive/cognitive_architecture|Cognitive Architecture]] - Information processing systems
-- [[../cognitive/model_architecture|Model Architecture]] - Generative model structures
-- [[../cognitive/swarm_intelligence|Swarm Intelligence]] - Collective cognitive processes
+- [[knowledge_base/cognitive/cognitive_architecture|Cognitive Architecture]] - Information processing systems
+- [[knowledge_base/cognitive/model_architecture|Model Architecture]] - Generative model structures
+- [[knowledge_base/cognitive/swarm_intelligence|Swarm Intelligence]] - Collective cognitive processes
 
 ### Systems-Mathematics Connections
-- [[../mathematics/dynamical_systems|Dynamical Systems]] - Mathematical theory of change
-- [[../mathematics/complex_systems|Complex Systems]] - Mathematical modeling of emergence
-- [[../mathematics/network_science|Network Science]] - Graph theory applications
+- [[knowledge_base/mathematics/dynamical_systems|Dynamical Systems]] - Mathematical theory of change
+- [[knowledge_base/mathematics/complex_systems|Complex Systems]] - Mathematical modeling of emergence
+- [[knowledge_base/mathematics/network_science|Network Science]] - Graph theory applications
 
 ## 📚 Systems Theory Literature
 

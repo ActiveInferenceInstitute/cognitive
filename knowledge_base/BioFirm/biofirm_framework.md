@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-BioFirm is an advanced computational framework that implements [[cognitive/active_inference|Active Inference]] and the [[cognitive/free_energy_principle|Free Energy Principle]] for bioregional stewardship and management. The framework provides a mathematically rigorous, cognitively-inspired approach to understanding and managing complex [[systems/Social-Ecological_Systems|social-ecological systems]] through [[mathematics/variational_methods|variational inference]] and [[cognitive/hierarchical_processing|hierarchical processing]].
+BioFirm is an advanced computational framework that implements [[cognitive/active_inference|Active Inference]] and the [[cognitive/free_energy_principle|Free Energy Principle]] for bioregional stewardship and management. The framework provides a mathematically rigorous, cognitively-inspired approach to understanding and managing complex [[knowledge_base/systems/Social-Ecological Systems|social-ecological systems]] through [[mathematics/variational_methods|variational inference]] and [[cognitive/hierarchical_processing|hierarchical processing]].
 
 ## Core Framework Components
 
@@ -20,33 +20,33 @@ BioFirm is an advanced computational framework that implements [[cognitive/activ
 
 - **Information Processing**: [[cognitive/predictive_coding|Predictive Coding]] ([[mathematics/information_geometry|Information Geometry]])
 
-- **Learning Framework**: [[cognitive/bayesian_brain|Bayesian Brain]] ([[mathematics/bayesian_inference|Inference]])
+- **Learning Framework**: [[cognitive/bayesian_brain|Bayesian Brain]] ([[knowledge_base/cognitive/bayesian_inference|Inference]])
 
 #### 1.2 State Space Representation
 
-- **Core Structure**: [[Active_Inference/Bioregional_State_Space|Bioregional State Space]]
+- **Core Structure**: [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]]
 
-- **Mathematical Foundation**: [[mathematics/measure_theory|Measure Theory]] ([[mathematics/probability_spaces|Probability Spaces]])
+- **Mathematical Foundation**: [[mathematics/measure_theory|Measure Theory]] ([[knowledge_base/mathematics/probability_spaces|Probability Spaces]])
 
 - **Probabilistic Framework**: [[mathematics/probability_theory|Probability Theory]] ([[mathematics/stochastic_processes|Stochastic Processes]])
 
 - **Information Architecture**: [[mathematics/information_theory|Information Theory]] ([[mathematics/entropy|Entropy]])
 
-- **Geometric Structure**: [[mathematics/differential_geometry|Differential Geometry]] ([[mathematics/manifold_theory|Manifolds]])
+- **Geometric Structure**: [[mathematics/differential_geometry|Differential Geometry]] ([[knowledge_base/mathematics/manifold_theory|Manifolds]])
 
-- **Topological Features**: [[mathematics/topology|Topology]] ([[mathematics/algebraic_topology|Algebraic Topology]])
+- **Topological Features**: [[mathematics/topology|Topology]] ([[knowledge_base/mathematics/algebraic_topology|Algebraic Topology]])
 
 #### 1.3 Inference Framework
 
 - **Belief Updating**: [[cognitive/belief_initialization|Belief Systems]] ([[mathematics/belief_propagation|Propagation]])
 
-- **Learning Mechanisms**: [[cognitive/learning_mechanisms|Learning]] ([[cognitive/hebbian_learning|Hebbian]])
+- **Learning Mechanisms**: [[cognitive/learning_mechanisms|Learning]] ([[knowledge_base/cognitive/hebbian_learning|Hebbian]])
 
 - **Uncertainty Handling**: [[mathematics/uncertainty_resolution|Uncertainty Theory]] ([[mathematics/information_theory#uncertainty|Information]])
 
-- **Precision Dynamics**: [[cognitive/precision_weighting|Precision Weighting]] ([[mathematics/precision_matrices|Matrices]])
+- **Precision Dynamics**: [[cognitive/precision_weighting|Precision Weighting]] ([[knowledge_base/mathematics/precision_matrices|Matrices]])
 
-- **Error Minimization**: [[cognitive/prediction_error|Prediction Error]] ([[mathematics/error_minimization|Minimization]])
+- **Error Minimization**: [[cognitive/prediction_error|Prediction Error]] ([[knowledge_base/mathematics/error_minimization|Minimization]])
 
 - **Adaptation Process**: [[cognitive/neural_plasticity|Neural Plasticity]] ([[mathematics/adaptive_systems|Systems]])
 
@@ -62,9 +62,9 @@ class BioFirmCore:
 
     def __init__(self):
 
-        self.state_space = BioregionalStateSpace()  # [[mathematics/state_space_theory|State Space]]
+        self.state_space = BioregionalStateSpace()  # [[knowledge_base/mathematics/state_space_theory|State Space]]
 
-        self.inference_engine = ActiveInferenceEngine()  # [[cognitive/inference_engines|Inference]]
+        self.inference_engine = ActiveInferenceEngine()  # [[knowledge_base/cognitive/inference_engines|Inference]]
 
         self.control_system = AdaptiveController()  # [[mathematics/control_theory|Control]]
 
@@ -72,23 +72,23 @@ class BioFirmCore:
 
         self.optimization_engine = VariationalOptimizer()  # [[mathematics/optimization_theory|Optimization]]
 
-        self.uncertainty_handler = PrecisionManager()  # [[mathematics/uncertainty_quantification|Uncertainty]]
+        self.uncertainty_handler = PrecisionManager()  # [[knowledge_base/mathematics/uncertainty_quantification|Uncertainty]]
 
 ```
 
 #### 2.2 State Management
 
-- **State Representation**: [[mathematics/state_space_theory|State Space Theory]] ([[mathematics/dynamical_systems|Dynamical Systems]])
+- **State Representation**: [[knowledge_base/mathematics/state_space_theory|State Space Theory]] ([[mathematics/dynamical_systems|Dynamical Systems]])
 
-- **Dynamics Modeling**: [[mathematics/differential_geometry|Differential Geometry]] ([[mathematics/lie_groups|Lie Groups]])
+- **Dynamics Modeling**: [[mathematics/differential_geometry|Differential Geometry]] ([[knowledge_base/mathematics/lie_groups|Lie Groups]])
 
-- **Transition Models**: [[mathematics/path_integral_theory|Path Integral Theory]] ([[mathematics/stochastic_differential_equations|SDEs]])
+- **Transition Models**: [[mathematics/path_integral_theory|Path Integral Theory]] ([[knowledge_base/mathematics/stochastic_differential_equations|SDEs]])
 
-- **Observation Models**: [[cognitive/perceptual_inference|Perceptual Inference]] ([[mathematics/sensor_fusion|Sensor Fusion]])
+- **Observation Models**: [[cognitive/perceptual_inference|Perceptual Inference]] ([[knowledge_base/mathematics/sensor_fusion|Sensor Fusion]])
 
-- **Markov Properties**: [[mathematics/markov_processes|Markov Processes]] ([[mathematics/markov_blankets|Blankets]])
+- **Markov Properties**: [[knowledge_base/mathematics/markov_processes|Markov Processes]] ([[mathematics/markov_blankets|Blankets]])
 
-- **Causal Structure**: [[mathematics/causal_inference|Causal Inference]] ([[mathematics/graphical_models|Graphs]])
+- **Causal Structure**: [[knowledge_base/mathematics/causal_inference|Causal Inference]] ([[mathematics/graphical_models|Graphs]])
 
 #### 2.3 Control Systems
 
@@ -98,39 +98,39 @@ class BioFirmCore:
 
 - **Optimization**: [[mathematics/optimal_control|Optimal Control]]
 
-- **Risk Management**: [[mathematics/risk_theory|Risk Theory]]
+- **Risk Management**: [[knowledge_base/mathematics/risk_theory|Risk Theory]]
 
 ### 3. Domain Integration
 
 #### 3.1 Ecological Systems
 
-- **Ecosystem Dynamics**: [[systems/ecosystem_dynamics|Ecosystems]]
+- **Ecosystem Dynamics**: [[knowledge_base/systems/ecosystem_dynamics|Ecosystems]]
 
-- **Biodiversity Models**: [[systems/biodiversity|Biodiversity]]
+- **Biodiversity Models**: [[knowledge_base/systems/biodiversity|Biodiversity]]
 
-- **Resource Flows**: [[systems/resource_dynamics|Resources]]
+- **Resource Flows**: [[knowledge_base/systems/resource_dynamics|Resources]]
 
-- **Stability Analysis**: [[systems/stability_theory|Stability]]
+- **Stability Analysis**: [[knowledge_base/systems/stability_theory|Stability]]
 
 #### 3.2 Social Systems
 
-- **Social Networks**: [[systems/social_networks|Networks]]
+- **Social Networks**: [[knowledge_base/systems/social_networks|Networks]]
 
-- **Knowledge Systems**: [[systems/knowledge_systems|Knowledge]]
+- **Knowledge Systems**: [[knowledge_base/systems/knowledge_systems|Knowledge]]
 
-- **Governance Models**: [[systems/governance|Governance]]
+- **Governance Models**: [[knowledge_base/systems/governance|Governance]]
 
-- **Cultural Evolution**: [[systems/cultural_evolution|Evolution]]
+- **Cultural Evolution**: [[knowledge_base/systems/cultural_evolution|Evolution]]
 
 #### 3.3 Economic Systems
 
-- **Value Assessment**: [[mathematics/utility_theory|Utility Theory]]
+- **Value Assessment**: [[knowledge_base/mathematics/utility_theory|Utility Theory]]
 
 - **Resource Allocation**: [[mathematics/optimization_theory|Optimization]]
 
 - **Market Dynamics**: [[mathematics/dynamical_systems|Dynamical Systems]]
 
-- **Sustainability Metrics**: [[systems/Social-Ecological_Systems|SES Metrics]]
+- **Sustainability Metrics**: [[knowledge_base/systems/Social-Ecological Systems|SES Metrics]]
 
 ## Technical Implementation
 
@@ -218,7 +218,7 @@ framework:
 
 #### 2.1 Data Integration
 
-- **Input Processing**: [[mathematics/data_processing|Data Processing]]
+- **Input Processing**: [[knowledge_base/mathematics/data_processing|Data Processing]]
 
 - **Sensor Networks**: [[cognitive/collective_behavior|Distributed Sensing]]
 
@@ -228,23 +228,23 @@ framework:
 
 #### 2.2 Visualization Systems
 
-- **State Visualization**: [[mathematics/information_visualization|Information Visualization]]
+- **State Visualization**: [[knowledge_base/mathematics/information_visualization|Information Visualization]]
 
-- **Network Analysis**: [[mathematics/network_theory|Network Analysis]]
+- **Network Analysis**: [[knowledge_base/systems/network_theory|Network Analysis]]
 
-- **Time Series**: [[mathematics/temporal_analysis|Temporal Analysis]]
+- **Time Series**: [[knowledge_base/mathematics/temporal_analysis|Temporal Analysis]]
 
-- **Spatial Mapping**: [[mathematics/spatial_statistics|Spatial Statistics]]
+- **Spatial Mapping**: [[knowledge_base/mathematics/spatial_statistics|Spatial Statistics]]
 
 #### 2.3 External Interfaces
 
-- **API Specifications**: [[systems/integration_patterns|Integration Patterns]]
+- **API Specifications**: [[knowledge_base/systems/integration_patterns|Integration Patterns]]
 
 - **Data Exchange**: [[mathematics/information_theory|Information Exchange]]
 
-- **Service Integration**: [[systems/service_architecture|Service Architecture]]
+- **Service Integration**: [[knowledge_base/systems/service_architecture|Service Architecture]]
 
-- **Security Framework**: [[systems/security_patterns|Security Patterns]]
+- **Security Framework**: [[knowledge_base/systems/security_patterns|Security Patterns]]
 
 ## Operational Framework
 
@@ -262,35 +262,35 @@ framework:
 
 #### 1.2 Scaling Considerations
 
-- **Horizontal Scaling**: [[systems/distributed_systems|Distributed Systems]]
+- **Horizontal Scaling**: [[knowledge_base/systems/distributed_systems|Distributed Systems]]
 
-- **Vertical Scaling**: [[systems/performance_optimization|Performance Optimization]]
+- **Vertical Scaling**: [[knowledge_base/cognitive/performance_optimization|Performance Optimization]]
 
-- **Load Balancing**: [[systems/load_balancing|Load Distribution]]
+- **Load Balancing**: [[knowledge_base/systems/load_balancing|Load Distribution]]
 
-- **Resource Management**: [[systems/resource_management|Resource Management]]
+- **Resource Management**: [[knowledge_base/cognitive/resource_management|Resource Management]]
 
 ### 2. Maintenance and Updates
 
 #### 2.1 System Monitoring
 
-- **Performance Metrics**: [[mathematics/performance_analysis|Performance Analysis]]
+- **Performance Metrics**: [[knowledge_base/mathematics/performance_analysis|Performance Analysis]]
 
-- **Health Checks**: [[systems/system_health|System Health]]
+- **Health Checks**: [[knowledge_base/systems/system_health|System Health]]
 
-- **Error Handling**: [[systems/error_management|Error Management]]
+- **Error Handling**: [[knowledge_base/systems/error_management|Error Management]]
 
-- **Recovery Procedures**: [[systems/recovery_patterns|Recovery Patterns]]
+- **Recovery Procedures**: [[knowledge_base/systems/recovery_patterns|Recovery Patterns]]
 
 #### 2.2 Update Procedures
 
-- **Version Control**: [[systems/version_control|Version Management]]
+- **Version Control**: [[knowledge_base/systems/version_control|Version Management]]
 
-- **Deployment Pipeline**: [[systems/deployment_patterns|Deployment Patterns]]
+- **Deployment Pipeline**: [[knowledge_base/systems/deployment_patterns|Deployment Patterns]]
 
-- **Testing Framework**: [[systems/testing_framework|Testing Framework]]
+- **Testing Framework**: [[knowledge_base/systems/testing_framework|Testing Framework]]
 
-- **Documentation System**: [[systems/documentation_patterns|Documentation]]
+- **Documentation System**: [[knowledge_base/systems/documentation_patterns|Documentation]]
 
 ## Intellectual Property
 
@@ -318,13 +318,13 @@ framework:
 
 ### 1. Research Directions
 
-- **Theoretical Extensions**: [[mathematics/advanced_inference|Advanced Inference]]
+- **Theoretical Extensions**: [[knowledge_base/mathematics/advanced_inference|Advanced Inference]]
 
-- **Implementation Advances**: [[cognitive/advanced_learning|Advanced Learning]]
+- **Implementation Advances**: [[knowledge_base/cognitive/advanced_learning|Advanced Learning]]
 
-- **Integration Patterns**: [[systems/integration_advances|Integration Advances]]
+- **Integration Patterns**: [[knowledge_base/systems/integration_advances|Integration Advances]]
 
-- **Optimization Methods**: [[mathematics/optimization_advances|Optimization Advances]]
+- **Optimization Methods**: [[knowledge_base/mathematics/optimization_advances|Optimization Advances]]
 
 ### 2. Development Roadmap
 
@@ -350,11 +350,11 @@ framework:
 
 ### 2. Statistical Methods
 
-- **Bayesian Inference**: [[mathematics/bayesian_inference|Bayes Theory]]
+- **Bayesian Inference**: [[knowledge_base/cognitive/bayesian_inference|Bayes Theory]]
 
 - **Variational Inference**: [[mathematics/variational_inference|VI Methods]]
 
-- **Monte Carlo Methods**: [[mathematics/monte_carlo|MC Methods]]
+- **Monte Carlo Methods**: [[knowledge_base/mathematics/monte_carlo|MC Methods]]
 
 - **Stochastic Processes**: [[mathematics/stochastic_processes|Stochastic Theory]]
 
@@ -364,9 +364,9 @@ framework:
 
 - **Optimal Control**: [[mathematics/optimal_control|Control Theory]]
 
-- **Gradient Descent**: [[mathematics/gradient_methods|Gradient Theory]]
+- **Gradient Descent**: [[knowledge_base/mathematics/gradient_methods|Gradient Theory]]
 
-- **Convex Optimization**: [[mathematics/convex_optimization|Convex Theory]]
+- **Convex Optimization**: [[knowledge_base/mathematics/convex_optimization|Convex Theory]]
 
 ## Cognitive Architecture
 
@@ -398,7 +398,7 @@ framework:
 
 - **Error Correction**: [[cognitive/error_correction|Error Theory]]
 
-- **Adaptation Strategies**: [[cognitive/adaptation|Adaptation]]
+- **Adaptation Strategies**: [[docs/research/complex_systems/adaptation|Adaptation]]
 
 ## Systems Integration
 
@@ -410,61 +410,61 @@ framework:
 
 - **Network Dynamics**: [[systems/network_dynamics|Networks]]
 
-- **Feedback Loops**: [[systems/feedback_systems|Feedback]]
+- **Feedback Loops**: [[knowledge_base/systems/feedback_systems|Feedback]]
 
 ### 2. Ecological Systems
 
-- **Ecosystem Dynamics**: [[systems/ecosystem_dynamics|Ecosystems]]
+- **Ecosystem Dynamics**: [[knowledge_base/systems/ecosystem_dynamics|Ecosystems]]
 
-- **Biodiversity Models**: [[systems/biodiversity|Biodiversity]]
+- **Biodiversity Models**: [[knowledge_base/systems/biodiversity|Biodiversity]]
 
-- **Resource Flows**: [[systems/resource_dynamics|Resources]]
+- **Resource Flows**: [[knowledge_base/systems/resource_dynamics|Resources]]
 
-- **Stability Analysis**: [[systems/stability_theory|Stability]]
+- **Stability Analysis**: [[knowledge_base/systems/stability_theory|Stability]]
 
 ### 3. Social Systems
 
-- **Social Networks**: [[systems/social_networks|Networks]]
+- **Social Networks**: [[knowledge_base/systems/social_networks|Networks]]
 
-- **Knowledge Systems**: [[systems/knowledge_systems|Knowledge]]
+- **Knowledge Systems**: [[knowledge_base/systems/knowledge_systems|Knowledge]]
 
-- **Governance Models**: [[systems/governance|Governance]]
+- **Governance Models**: [[knowledge_base/systems/governance|Governance]]
 
-- **Cultural Evolution**: [[systems/cultural_evolution|Evolution]]
+- **Cultural Evolution**: [[knowledge_base/systems/cultural_evolution|Evolution]]
 
 ## Implementation Extensions
 
 ### 1. Advanced Algorithms
 
-- **Inference Methods**: [[algorithms/inference|Inference]]
+- **Inference Methods**: [[knowledge_base/mathematics/inference|Inference]]
 
-- **Optimization Techniques**: [[algorithms/optimization|Optimization]]
+- **Optimization Techniques**: [[knowledge_base/mathematics/optimization|Optimization]]
 
-- **Learning Algorithms**: [[algorithms/learning|Learning]]
+- **Learning Algorithms**: [[knowledge_base/free_energy_principle/cognitive/learning|Learning]]
 
-- **Control Strategies**: [[algorithms/control|Control]]
+- **Control Strategies**: [[knowledge_base/mathematics/control|Control]]
 
 ### 2. Software Systems
 
-- **Distributed Computing**: [[software/distributed|Distributed]]
+- **Distributed Computing**: [[knowledge_base/systems/distributed|Distributed]]
 
-- **Real-time Processing**: [[software/realtime|Realtime]]
+- **Real-time Processing**: [[knowledge_base/systems/realtime|Realtime]]
 
-- **Data Management**: [[software/data|Data]]
+- **Data Management**: [[knowledge_base/systems/data|Data]]
 
-- **Integration Patterns**: [[software/integration|Integration]]
+- **Integration Patterns**: [[knowledge_base/systems/integration|Integration]]
 
 ## Advanced Implementation Details
 
 ### 1. Inference Mechanisms
 
-- **Variational Methods**: [[mathematics/variational_inference|Variational Inference]] ([[mathematics/variational_bayes|Variational Bayes]])
+- **Variational Methods**: [[mathematics/variational_inference|Variational Inference]] ([[knowledge_base/mathematics/variational_bayes|Variational Bayes]])
 
 - **Message Passing**: [[mathematics/belief_propagation|Belief Propagation]] ([[mathematics/factor_graphs|Factor Graphs]])
 
-- **Sampling Methods**: [[mathematics/monte_carlo_methods|Monte Carlo]] ([[mathematics/importance_sampling|Importance Sampling]])
+- **Sampling Methods**: [[knowledge_base/research/concepts/monte_carlo_methods|Monte Carlo]] ([[knowledge_base/mathematics/importance_sampling|Importance Sampling]])
 
-- **Gradient Estimation**: [[mathematics/stochastic_gradients|Stochastic Gradients]] ([[mathematics/natural_gradients|Natural Gradients]])
+- **Gradient Estimation**: [[knowledge_base/mathematics/stochastic_gradients|Stochastic Gradients]] ([[mathematics/natural_gradients|Natural Gradients]])
 
 ### 2. Learning Architecture
 
@@ -476,9 +476,9 @@ class HierarchicalLearning:
 
     def __init__(self):
 
-        self.parameter_learner = ParameterLearning()  # [[cognitive/parameter_learning|Parameter Learning]]
+        self.parameter_learner = ParameterLearning()  # [[knowledge_base/cognitive/parameter_learning|Parameter Learning]]
 
-        self.structure_learner = StructureLearning()  # [[cognitive/structure_learning|Structure Learning]]
+        self.structure_learner = StructureLearning()  # [[knowledge_base/cognitive/structure_learning|Structure Learning]]
 
         self.meta_learner = MetaLearning()           # [[cognitive/meta_learning|Meta Learning]]
 
@@ -488,29 +488,29 @@ class HierarchicalLearning:
 
 ### 3. Control Framework
 
-- **Policy Optimization**: [[mathematics/policy_optimization|Policy Optimization]]
+- **Policy Optimization**: [[knowledge_base/research/concepts/policy_optimization|Policy Optimization]]
 
-  - Value estimation ([[mathematics/value_functions|Value Functions]])
+  - Value estimation ([[knowledge_base/mathematics/value_functions|Value Functions]])
 
-  - Policy gradients ([[mathematics/policy_gradients|Policy Gradients]])
+  - Policy gradients ([[knowledge_base/mathematics/policy_gradients|Policy Gradients]])
 
   - Action selection ([[cognitive/action_selection|Action Selection]])
 
-- **Multi-objective Control**: [[mathematics/multi_objective_control|Multi-objective Control]]
+- **Multi-objective Control**: [[knowledge_base/mathematics/multi_objective_control|Multi-objective Control]]
 
-  - Pareto optimization ([[mathematics/pareto_optimization|Pareto Optimization]])
+  - Pareto optimization ([[knowledge_base/mathematics/pareto_optimization|Pareto Optimization]])
 
-  - Constraint satisfaction ([[mathematics/constraint_satisfaction|Constraints]])
+  - Constraint satisfaction ([[knowledge_base/mathematics/constraint_satisfaction|Constraints]])
 
-  - Trade-off analysis ([[mathematics/trade_off_analysis|Trade-offs]])
+  - Trade-off analysis ([[knowledge_base/mathematics/trade_off_analysis|Trade-offs]])
 
 ## Theoretical Extensions
 
 ### 1. Information Geometry
 
-- **Statistical Manifolds**: [[mathematics/statistical_manifolds|Statistical Manifolds]]
+- **Statistical Manifolds**: [[knowledge_base/mathematics/statistical_manifolds|Statistical Manifolds]]
 
-- **Natural Gradients**: [[mathematics/natural_gradient_descent|Natural Gradients]]
+- **Natural Gradients**: [[knowledge_base/mathematics/natural_gradient_descent|Natural Gradients]]
 
 - **Fisher Information**: [[mathematics/fisher_information|Fisher Information]]
 
@@ -518,87 +518,87 @@ class HierarchicalLearning:
 
 ### 2. Category Theory Applications
 
-- **Functorial Dynamics**: [[mathematics/functorial_dynamics|Functorial Dynamics]]
+- **Functorial Dynamics**: [[knowledge_base/mathematics/functorial_dynamics|Functorial Dynamics]]
 
-- **Compositional Systems**: [[mathematics/compositional_systems|Compositional Systems]]
+- **Compositional Systems**: [[knowledge_base/mathematics/compositional_systems|Compositional Systems]]
 
-- **Sheaf Theory**: [[mathematics/sheaf_theory|Sheaf Theory]]
+- **Sheaf Theory**: [[knowledge_base/mathematics/sheaf_theory|Sheaf Theory]]
 
-- **Topos Theory**: [[mathematics/topos_theory|Topos Theory]]
+- **Topos Theory**: [[knowledge_base/mathematics/topos_theory|Topos Theory]]
 
 ### 3. Dynamical Systems Analysis
 
-- **Attractor Dynamics**: [[mathematics/attractor_dynamics|Attractor Dynamics]]
+- **Attractor Dynamics**: [[knowledge_base/mathematics/attractor_dynamics|Attractor Dynamics]]
 
-- **Bifurcation Theory**: [[mathematics/bifurcation_theory|Bifurcation Theory]]
+- **Bifurcation Theory**: [[knowledge_base/mathematics/bifurcation_theory|Bifurcation Theory]]
 
-- **Stability Analysis**: [[mathematics/stability_theory|Stability Theory]]
+- **Stability Analysis**: [[knowledge_base/mathematics/stability_theory|Stability Theory]]
 
-- **Chaos Theory**: [[mathematics/chaos_theory|Chaos Theory]]
+- **Chaos Theory**: [[knowledge_base/mathematics/chaos_theory|Chaos Theory]]
 
 ## System Integration Patterns
 
 ### 1. Cross-Domain Integration
 
-- **Ecological-Social Coupling**: [[systems/ecological_social_coupling|Ecological-Social Coupling]]
+- **Ecological-Social Coupling**: [[knowledge_base/systems/ecological_social_coupling|Ecological-Social Coupling]]
 
-- **Economic-Environmental Interface**: [[systems/economic_environmental_interface|Economic-Environmental]]
+- **Economic-Environmental Interface**: [[knowledge_base/systems/economic_environmental_interface|Economic-Environmental]]
 
-- **Social-Technical Systems**: [[systems/socio_technical_systems|Socio-Technical]]
+- **Social-Technical Systems**: [[knowledge_base/systems/socio_technical_systems|Socio-Technical]]
 
-- **Cultural-Ecological Dynamics**: [[systems/cultural_ecological_dynamics|Cultural-Ecological]]
+- **Cultural-Ecological Dynamics**: [[knowledge_base/systems/cultural_ecological_dynamics|Cultural-Ecological]]
 
 ### 2. Scale Integration
 
-- **Micro-Macro Bridging**: [[systems/micro_macro_bridging|Micro-Macro]]
+- **Micro-Macro Bridging**: [[knowledge_base/systems/micro_macro_bridging|Micro-Macro]]
 
-- **Cross-scale Dynamics**: [[systems/cross_scale_dynamics|Cross-scale]]
+- **Cross-scale Dynamics**: [[knowledge_base/systems/cross_scale_dynamics|Cross-scale]]
 
-- **Hierarchical Systems**: [[systems/hierarchical_systems|Hierarchical]]
+- **Hierarchical Systems**: [[knowledge_base/systems/hierarchical_systems|Hierarchical]]
 
-- **Nested Networks**: [[systems/nested_networks|Nested Networks]]
+- **Nested Networks**: [[knowledge_base/systems/nested_networks|Nested Networks]]
 
 ### 3. Temporal Integration
 
-- **Multi-temporal Analysis**: [[systems/multi_temporal_analysis|Multi-temporal]]
+- **Multi-temporal Analysis**: [[knowledge_base/systems/multi_temporal_analysis|Multi-temporal]]
 
-- **Event-driven Systems**: [[systems/event_driven_systems|Event-driven]]
+- **Event-driven Systems**: [[knowledge_base/systems/event_driven_systems|Event-driven]]
 
-- **Adaptive Timesteps**: [[systems/adaptive_timesteps|Adaptive Time]]
+- **Adaptive Timesteps**: [[knowledge_base/systems/adaptive_timesteps|Adaptive Time]]
 
-- **Temporal Hierarchies**: [[systems/temporal_hierarchies|Temporal Hierarchies]]
+- **Temporal Hierarchies**: [[knowledge_base/systems/temporal_hierarchies|Temporal Hierarchies]]
 
 ## Advanced Applications
 
 ### 1. Climate Resilience
 
-- **Adaptation Strategies**: [[systems/climate_adaptation|Climate Adaptation]]
+- **Adaptation Strategies**: [[knowledge_base/systems/climate_adaptation|Climate Adaptation]]
 
-- **Mitigation Planning**: [[systems/climate_mitigation|Climate Mitigation]]
+- **Mitigation Planning**: [[knowledge_base/systems/climate_mitigation|Climate Mitigation]]
 
-- **Vulnerability Assessment**: [[systems/vulnerability_assessment|Vulnerability]]
+- **Vulnerability Assessment**: [[knowledge_base/systems/vulnerability_assessment|Vulnerability]]
 
-- **Transformation Pathways**: [[systems/transformation_pathways|Transformation]]
+- **Transformation Pathways**: [[knowledge_base/systems/transformation_pathways|Transformation]]
 
 ### 2. Biodiversity Conservation
 
-- **Species Protection**: [[systems/species_protection|Species Protection]]
+- **Species Protection**: [[knowledge_base/systems/species_protection|Species Protection]]
 
-- **Habitat Management**: [[systems/habitat_management|Habitat Management]]
+- **Habitat Management**: [[knowledge_base/systems/habitat_management|Habitat Management]]
 
-- **Genetic Diversity**: [[systems/genetic_diversity|Genetic Diversity]]
+- **Genetic Diversity**: [[knowledge_base/systems/genetic_diversity|Genetic Diversity]]
 
-- **Ecosystem Services**: [[systems/ecosystem_services|Ecosystem Services]]
+- **Ecosystem Services**: [[knowledge_base/systems/ecosystem_services|Ecosystem Services]]
 
 ### 3. Sustainable Economics
 
-- **Circular Systems**: [[systems/circular_economics|Circular Economics]]
+- **Circular Systems**: [[knowledge_base/systems/circular_economics|Circular Economics]]
 
-- **Value Networks**: [[systems/value_networks|Value Networks]]
+- **Value Networks**: [[knowledge_base/systems/value_networks|Value Networks]]
 
-- **Resource Efficiency**: [[systems/resource_efficiency|Resource Efficiency]]
+- **Resource Efficiency**: [[knowledge_base/systems/resource_efficiency|Resource Efficiency]]
 
-- **Innovation Systems**: [[systems/innovation_systems|Innovation Systems]]
+- **Innovation Systems**: [[knowledge_base/systems/innovation_systems|Innovation Systems]]
 
 ## Mathematical Foundations
 
@@ -678,11 +678,11 @@ class IntegrationFramework:
 
     def __init__(self):
 
-        self.ecological_system = EcologicalSystem()  # [[systems/ecosystem_dynamics|Ecosystem]]
+        self.ecological_system = EcologicalSystem()  # [[knowledge_base/systems/ecosystem_dynamics|Ecosystem]]
 
-        self.social_system = SocialSystem()         # [[systems/social_networks|Social]]
+        self.social_system = SocialSystem()         # [[knowledge_base/systems/social_networks|Social]]
 
-        self.economic_system = EconomicSystem()     # [[systems/economic_systems|Economic]]
+        self.economic_system = EconomicSystem()     # [[knowledge_base/systems/economic_systems|Economic]]
 
     def integrate_domains(self, state: BioregionalState):
 
@@ -746,7 +746,7 @@ class BeliefPropagator:
 
 ### 2. Adaptive Control
 
-- **Control Architecture**: [[mathematics/adaptive_control|Adaptive Control]]
+- **Control Architecture**: [[knowledge_base/mathematics/adaptive_control|Adaptive Control]]
 
 ```python
 
@@ -952,9 +952,9 @@ class InterventionPlanner:
 
 - [[cognitive/complex_systems_biology|Complex Systems]]
 
-- [[systems/Social-Ecological_Systems|Social-Ecological Systems]]
+- [[knowledge_base/systems/Social-Ecological Systems|Social-Ecological Systems]]
 
-- [[systems/Resilience_Thinking|Resilience Theory]]
+- [[knowledge_base/systems/resilience_thinking|Resilience Theory]]
 
 - [[BioFirm/active_inference_connections|Active Inference Integration]]
 
@@ -978,31 +978,31 @@ class InterventionPlanner:
 
 - [[systems/network_theory|Network Theory]]
 
-- [[cognitive/complex_adaptive_systems|Complex Adaptive Systems]]
+- [[knowledge_base/cognitive/complex_adaptive_systems|Complex Adaptive Systems]]
 
 - [[mathematics/information_geometry|Information Geometry]]
 
-- [[systems/resilience_engineering|Resilience Engineering]]
+- [[knowledge_base/systems/resilience_engineering|Resilience Engineering]]
 
-- [[cognitive/distributed_cognition|Distributed Cognition]]
+- [[knowledge_base/cognitive/distributed_cognition|Distributed Cognition]]
 
-- [[mathematics/optimal_transport|Optimal Transport]]
+- [[knowledge_base/mathematics/optimal_transport|Optimal Transport]]
 
-- [[systems/adaptive_management|Adaptive Management]]
+- [[knowledge_base/systems/adaptive_management|Adaptive Management]]
 
 - [[cognitive/active_inference_implementation|Active Inference Implementation]]
 
-- [[mathematics/variational_methods_advanced|Advanced Variational Methods]]
+- [[knowledge_base/mathematics/variational_methods_advanced|Advanced Variational Methods]]
 
-- [[systems/multi_scale_integration|Multi-scale Integration]]
+- [[knowledge_base/systems/multi_scale_integration|Multi-scale Integration]]
 
-- [[cognitive/hierarchical_learning|Hierarchical Learning]]
+- [[knowledge_base/cognitive/hierarchical_learning|Hierarchical Learning]]
 
-# [[BioFirm_Framework|BioFirm Framework]]
+# [[knowledge_base/BioFirm/biofirm_framework|BioFirm Framework]]
 
 ## Executive Summary
 
-BioFirm is an advanced computational framework that implements [[cognitive/active_inference|Active Inference]] and the [[cognitive/free_energy_principle|Free Energy Principle]] for bioregional stewardship and management. The framework provides a mathematically rigorous, cognitively-inspired approach to understanding and managing complex [[systems/Social-Ecological_Systems|social-ecological systems]] through [[mathematics/variational_methods|variational inference]] and [[cognitive/hierarchical_processing|hierarchical processing]].
+BioFirm is an advanced computational framework that implements [[cognitive/active_inference|Active Inference]] and the [[cognitive/free_energy_principle|Free Energy Principle]] for bioregional stewardship and management. The framework provides a mathematically rigorous, cognitively-inspired approach to understanding and managing complex [[knowledge_base/systems/Social-Ecological Systems|social-ecological systems]] through [[mathematics/variational_methods|variational inference]] and [[cognitive/hierarchical_processing|hierarchical processing]].
 
 ## Core Framework Components
 
@@ -1020,33 +1020,33 @@ BioFirm is an advanced computational framework that implements [[cognitive/activ
 
 - **Information Processing**: [[cognitive/predictive_coding|Predictive Coding]] ([[mathematics/information_geometry|Information Geometry]])
 
-- **Learning Framework**: [[cognitive/bayesian_brain|Bayesian Brain]] ([[mathematics/bayesian_inference|Inference]])
+- **Learning Framework**: [[cognitive/bayesian_brain|Bayesian Brain]] ([[knowledge_base/cognitive/bayesian_inference|Inference]])
 
 #### 1.2 State Space Representation
 
-- **Core Structure**: [[Active_Inference/Bioregional_State_Space|Bioregional State Space]]
+- **Core Structure**: [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]]
 
-- **Mathematical Foundation**: [[mathematics/measure_theory|Measure Theory]] ([[mathematics/probability_spaces|Probability Spaces]])
+- **Mathematical Foundation**: [[mathematics/measure_theory|Measure Theory]] ([[knowledge_base/mathematics/probability_spaces|Probability Spaces]])
 
 - **Probabilistic Framework**: [[mathematics/probability_theory|Probability Theory]] ([[mathematics/stochastic_processes|Stochastic Processes]])
 
 - **Information Architecture**: [[mathematics/information_theory|Information Theory]] ([[mathematics/entropy|Entropy]])
 
-- **Geometric Structure**: [[mathematics/differential_geometry|Differential Geometry]] ([[mathematics/manifold_theory|Manifolds]])
+- **Geometric Structure**: [[mathematics/differential_geometry|Differential Geometry]] ([[knowledge_base/mathematics/manifold_theory|Manifolds]])
 
-- **Topological Features**: [[mathematics/topology|Topology]] ([[mathematics/algebraic_topology|Algebraic Topology]])
+- **Topological Features**: [[mathematics/topology|Topology]] ([[knowledge_base/mathematics/algebraic_topology|Algebraic Topology]])
 
 #### 1.3 Inference Framework
 
 - **Belief Updating**: [[cognitive/belief_initialization|Belief Systems]] ([[mathematics/belief_propagation|Propagation]])
 
-- **Learning Mechanisms**: [[cognitive/learning_mechanisms|Learning]] ([[cognitive/hebbian_learning|Hebbian]])
+- **Learning Mechanisms**: [[cognitive/learning_mechanisms|Learning]] ([[knowledge_base/cognitive/hebbian_learning|Hebbian]])
 
 - **Uncertainty Handling**: [[mathematics/uncertainty_resolution|Uncertainty Theory]] ([[mathematics/information_theory#uncertainty|Information]])
 
-- **Precision Dynamics**: [[cognitive/precision_weighting|Precision Weighting]] ([[mathematics/precision_matrices|Matrices]])
+- **Precision Dynamics**: [[cognitive/precision_weighting|Precision Weighting]] ([[knowledge_base/mathematics/precision_matrices|Matrices]])
 
-- **Error Minimization**: [[cognitive/prediction_error|Prediction Error]] ([[mathematics/error_minimization|Minimization]])
+- **Error Minimization**: [[cognitive/prediction_error|Prediction Error]] ([[knowledge_base/mathematics/error_minimization|Minimization]])
 
 - **Adaptation Process**: [[cognitive/neural_plasticity|Neural Plasticity]] ([[mathematics/adaptive_systems|Systems]])
 
@@ -1062,9 +1062,9 @@ class BioFirmCore:
 
     def __init__(self):
 
-        self.state_space = BioregionalStateSpace()  # [[mathematics/state_space_theory|State Space]]
+        self.state_space = BioregionalStateSpace()  # [[knowledge_base/mathematics/state_space_theory|State Space]]
 
-        self.inference_engine = ActiveInferenceEngine()  # [[cognitive/inference_engines|Inference]]
+        self.inference_engine = ActiveInferenceEngine()  # [[knowledge_base/cognitive/inference_engines|Inference]]
 
         self.control_system = AdaptiveController()  # [[mathematics/control_theory|Control]]
 
@@ -1072,23 +1072,23 @@ class BioFirmCore:
 
         self.optimization_engine = VariationalOptimizer()  # [[mathematics/optimization_theory|Optimization]]
 
-        self.uncertainty_handler = PrecisionManager()  # [[mathematics/uncertainty_quantification|Uncertainty]]
+        self.uncertainty_handler = PrecisionManager()  # [[knowledge_base/mathematics/uncertainty_quantification|Uncertainty]]
 
 ```
 
 #### 2.2 State Management
 
-- **State Representation**: [[mathematics/state_space_theory|State Space Theory]] ([[mathematics/dynamical_systems|Dynamical Systems]])
+- **State Representation**: [[knowledge_base/mathematics/state_space_theory|State Space Theory]] ([[mathematics/dynamical_systems|Dynamical Systems]])
 
-- **Dynamics Modeling**: [[mathematics/differential_geometry|Differential Geometry]] ([[mathematics/lie_groups|Lie Groups]])
+- **Dynamics Modeling**: [[mathematics/differential_geometry|Differential Geometry]] ([[knowledge_base/mathematics/lie_groups|Lie Groups]])
 
-- **Transition Models**: [[mathematics/path_integral_theory|Path Integral Theory]] ([[mathematics/stochastic_differential_equations|SDEs]])
+- **Transition Models**: [[mathematics/path_integral_theory|Path Integral Theory]] ([[knowledge_base/mathematics/stochastic_differential_equations|SDEs]])
 
-- **Observation Models**: [[cognitive/perceptual_inference|Perceptual Inference]] ([[mathematics/sensor_fusion|Sensor Fusion]])
+- **Observation Models**: [[cognitive/perceptual_inference|Perceptual Inference]] ([[knowledge_base/mathematics/sensor_fusion|Sensor Fusion]])
 
-- **Markov Properties**: [[mathematics/markov_processes|Markov Processes]] ([[mathematics/markov_blankets|Blankets]])
+- **Markov Properties**: [[knowledge_base/mathematics/markov_processes|Markov Processes]] ([[mathematics/markov_blankets|Blankets]])
 
-- **Causal Structure**: [[mathematics/causal_inference|Causal Inference]] ([[mathematics/graphical_models|Graphs]])
+- **Causal Structure**: [[knowledge_base/mathematics/causal_inference|Causal Inference]] ([[mathematics/graphical_models|Graphs]])
 
 #### 2.3 Control Systems
 
@@ -1098,39 +1098,39 @@ class BioFirmCore:
 
 - **Optimization**: [[mathematics/optimal_control|Optimal Control]]
 
-- **Risk Management**: [[mathematics/risk_theory|Risk Theory]]
+- **Risk Management**: [[knowledge_base/mathematics/risk_theory|Risk Theory]]
 
 ### 3. Domain Integration
 
 #### 3.1 Ecological Systems
 
-- **Ecosystem Dynamics**: [[systems/ecosystem_dynamics|Ecosystems]]
+- **Ecosystem Dynamics**: [[knowledge_base/systems/ecosystem_dynamics|Ecosystems]]
 
-- **Biodiversity Models**: [[systems/biodiversity|Biodiversity]]
+- **Biodiversity Models**: [[knowledge_base/systems/biodiversity|Biodiversity]]
 
-- **Resource Flows**: [[systems/resource_dynamics|Resources]]
+- **Resource Flows**: [[knowledge_base/systems/resource_dynamics|Resources]]
 
-- **Stability Analysis**: [[systems/stability_theory|Stability]]
+- **Stability Analysis**: [[knowledge_base/systems/stability_theory|Stability]]
 
 #### 3.2 Social Systems
 
-- **Social Networks**: [[systems/social_networks|Networks]]
+- **Social Networks**: [[knowledge_base/systems/social_networks|Networks]]
 
-- **Knowledge Systems**: [[systems/knowledge_systems|Knowledge]]
+- **Knowledge Systems**: [[knowledge_base/systems/knowledge_systems|Knowledge]]
 
-- **Governance Models**: [[systems/governance|Governance]]
+- **Governance Models**: [[knowledge_base/systems/governance|Governance]]
 
-- **Cultural Evolution**: [[systems/cultural_evolution|Evolution]]
+- **Cultural Evolution**: [[knowledge_base/systems/cultural_evolution|Evolution]]
 
 #### 3.3 Economic Systems
 
-- **Value Assessment**: [[mathematics/utility_theory|Utility Theory]]
+- **Value Assessment**: [[knowledge_base/mathematics/utility_theory|Utility Theory]]
 
 - **Resource Allocation**: [[mathematics/optimization_theory|Optimization]]
 
 - **Market Dynamics**: [[mathematics/dynamical_systems|Dynamical Systems]]
 
-- **Sustainability Metrics**: [[systems/Social-Ecological_Systems|SES Metrics]]
+- **Sustainability Metrics**: [[knowledge_base/systems/Social-Ecological Systems|SES Metrics]]
 
 ## Technical Implementation
 
@@ -1218,7 +1218,7 @@ framework:
 
 #### 2.1 Data Integration
 
-- **Input Processing**: [[mathematics/data_processing|Data Processing]]
+- **Input Processing**: [[knowledge_base/mathematics/data_processing|Data Processing]]
 
 - **Sensor Networks**: [[cognitive/collective_behavior|Distributed Sensing]]
 
@@ -1228,23 +1228,23 @@ framework:
 
 #### 2.2 Visualization Systems
 
-- **State Visualization**: [[mathematics/information_visualization|Information Visualization]]
+- **State Visualization**: [[knowledge_base/mathematics/information_visualization|Information Visualization]]
 
-- **Network Analysis**: [[mathematics/network_theory|Network Analysis]]
+- **Network Analysis**: [[knowledge_base/systems/network_theory|Network Analysis]]
 
-- **Time Series**: [[mathematics/temporal_analysis|Temporal Analysis]]
+- **Time Series**: [[knowledge_base/mathematics/temporal_analysis|Temporal Analysis]]
 
-- **Spatial Mapping**: [[mathematics/spatial_statistics|Spatial Statistics]]
+- **Spatial Mapping**: [[knowledge_base/mathematics/spatial_statistics|Spatial Statistics]]
 
 #### 2.3 External Interfaces
 
-- **API Specifications**: [[systems/integration_patterns|Integration Patterns]]
+- **API Specifications**: [[knowledge_base/systems/integration_patterns|Integration Patterns]]
 
 - **Data Exchange**: [[mathematics/information_theory|Information Exchange]]
 
-- **Service Integration**: [[systems/service_architecture|Service Architecture]]
+- **Service Integration**: [[knowledge_base/systems/service_architecture|Service Architecture]]
 
-- **Security Framework**: [[systems/security_patterns|Security Patterns]]
+- **Security Framework**: [[knowledge_base/systems/security_patterns|Security Patterns]]
 
 ## Operational Framework
 
@@ -1262,35 +1262,35 @@ framework:
 
 #### 1.2 Scaling Considerations
 
-- **Horizontal Scaling**: [[systems/distributed_systems|Distributed Systems]]
+- **Horizontal Scaling**: [[knowledge_base/systems/distributed_systems|Distributed Systems]]
 
-- **Vertical Scaling**: [[systems/performance_optimization|Performance Optimization]]
+- **Vertical Scaling**: [[knowledge_base/cognitive/performance_optimization|Performance Optimization]]
 
-- **Load Balancing**: [[systems/load_balancing|Load Distribution]]
+- **Load Balancing**: [[knowledge_base/systems/load_balancing|Load Distribution]]
 
-- **Resource Management**: [[systems/resource_management|Resource Management]]
+- **Resource Management**: [[knowledge_base/cognitive/resource_management|Resource Management]]
 
 ### 2. Maintenance and Updates
 
 #### 2.1 System Monitoring
 
-- **Performance Metrics**: [[mathematics/performance_analysis|Performance Analysis]]
+- **Performance Metrics**: [[knowledge_base/mathematics/performance_analysis|Performance Analysis]]
 
-- **Health Checks**: [[systems/system_health|System Health]]
+- **Health Checks**: [[knowledge_base/systems/system_health|System Health]]
 
-- **Error Handling**: [[systems/error_management|Error Management]]
+- **Error Handling**: [[knowledge_base/systems/error_management|Error Management]]
 
-- **Recovery Procedures**: [[systems/recovery_patterns|Recovery Patterns]]
+- **Recovery Procedures**: [[knowledge_base/systems/recovery_patterns|Recovery Patterns]]
 
 #### 2.2 Update Procedures
 
-- **Version Control**: [[systems/version_control|Version Management]]
+- **Version Control**: [[knowledge_base/systems/version_control|Version Management]]
 
-- **Deployment Pipeline**: [[systems/deployment_patterns|Deployment Patterns]]
+- **Deployment Pipeline**: [[knowledge_base/systems/deployment_patterns|Deployment Patterns]]
 
-- **Testing Framework**: [[systems/testing_framework|Testing Framework]]
+- **Testing Framework**: [[knowledge_base/systems/testing_framework|Testing Framework]]
 
-- **Documentation System**: [[systems/documentation_patterns|Documentation]]
+- **Documentation System**: [[knowledge_base/systems/documentation_patterns|Documentation]]
 
 ## Intellectual Property
 
@@ -1318,13 +1318,13 @@ framework:
 
 ### 1. Research Directions
 
-- **Theoretical Extensions**: [[mathematics/advanced_inference|Advanced Inference]]
+- **Theoretical Extensions**: [[knowledge_base/mathematics/advanced_inference|Advanced Inference]]
 
-- **Implementation Advances**: [[cognitive/advanced_learning|Advanced Learning]]
+- **Implementation Advances**: [[knowledge_base/cognitive/advanced_learning|Advanced Learning]]
 
-- **Integration Patterns**: [[systems/integration_advances|Integration Advances]]
+- **Integration Patterns**: [[knowledge_base/systems/integration_advances|Integration Advances]]
 
-- **Optimization Methods**: [[mathematics/optimization_advances|Optimization Advances]]
+- **Optimization Methods**: [[knowledge_base/mathematics/optimization_advances|Optimization Advances]]
 
 ### 2. Development Roadmap
 
@@ -1350,11 +1350,11 @@ framework:
 
 ### 2. Statistical Methods
 
-- **Bayesian Inference**: [[mathematics/bayesian_inference|Bayes Theory]]
+- **Bayesian Inference**: [[knowledge_base/cognitive/bayesian_inference|Bayes Theory]]
 
 - **Variational Inference**: [[mathematics/variational_inference|VI Methods]]
 
-- **Monte Carlo Methods**: [[mathematics/monte_carlo|MC Methods]]
+- **Monte Carlo Methods**: [[knowledge_base/mathematics/monte_carlo|MC Methods]]
 
 - **Stochastic Processes**: [[mathematics/stochastic_processes|Stochastic Theory]]
 
@@ -1364,9 +1364,9 @@ framework:
 
 - **Optimal Control**: [[mathematics/optimal_control|Control Theory]]
 
-- **Gradient Descent**: [[mathematics/gradient_methods|Gradient Theory]]
+- **Gradient Descent**: [[knowledge_base/mathematics/gradient_methods|Gradient Theory]]
 
-- **Convex Optimization**: [[mathematics/convex_optimization|Convex Theory]]
+- **Convex Optimization**: [[knowledge_base/mathematics/convex_optimization|Convex Theory]]
 
 ## Cognitive Architecture
 
@@ -1398,7 +1398,7 @@ framework:
 
 - **Error Correction**: [[cognitive/error_correction|Error Theory]]
 
-- **Adaptation Strategies**: [[cognitive/adaptation|Adaptation]]
+- **Adaptation Strategies**: [[docs/research/complex_systems/adaptation|Adaptation]]
 
 ## Systems Integration
 
@@ -1410,61 +1410,61 @@ framework:
 
 - **Network Dynamics**: [[systems/network_dynamics|Networks]]
 
-- **Feedback Loops**: [[systems/feedback_systems|Feedback]]
+- **Feedback Loops**: [[knowledge_base/systems/feedback_systems|Feedback]]
 
 ### 2. Ecological Systems
 
-- **Ecosystem Dynamics**: [[systems/ecosystem_dynamics|Ecosystems]]
+- **Ecosystem Dynamics**: [[knowledge_base/systems/ecosystem_dynamics|Ecosystems]]
 
-- **Biodiversity Models**: [[systems/biodiversity|Biodiversity]]
+- **Biodiversity Models**: [[knowledge_base/systems/biodiversity|Biodiversity]]
 
-- **Resource Flows**: [[systems/resource_dynamics|Resources]]
+- **Resource Flows**: [[knowledge_base/systems/resource_dynamics|Resources]]
 
-- **Stability Analysis**: [[systems/stability_theory|Stability]]
+- **Stability Analysis**: [[knowledge_base/systems/stability_theory|Stability]]
 
 ### 3. Social Systems
 
-- **Social Networks**: [[systems/social_networks|Networks]]
+- **Social Networks**: [[knowledge_base/systems/social_networks|Networks]]
 
-- **Knowledge Systems**: [[systems/knowledge_systems|Knowledge]]
+- **Knowledge Systems**: [[knowledge_base/systems/knowledge_systems|Knowledge]]
 
-- **Governance Models**: [[systems/governance|Governance]]
+- **Governance Models**: [[knowledge_base/systems/governance|Governance]]
 
-- **Cultural Evolution**: [[systems/cultural_evolution|Evolution]]
+- **Cultural Evolution**: [[knowledge_base/systems/cultural_evolution|Evolution]]
 
 ## Implementation Extensions
 
 ### 1. Advanced Algorithms
 
-- **Inference Methods**: [[algorithms/inference|Inference]]
+- **Inference Methods**: [[knowledge_base/mathematics/inference|Inference]]
 
-- **Optimization Techniques**: [[algorithms/optimization|Optimization]]
+- **Optimization Techniques**: [[knowledge_base/mathematics/optimization|Optimization]]
 
-- **Learning Algorithms**: [[algorithms/learning|Learning]]
+- **Learning Algorithms**: [[knowledge_base/free_energy_principle/cognitive/learning|Learning]]
 
-- **Control Strategies**: [[algorithms/control|Control]]
+- **Control Strategies**: [[knowledge_base/mathematics/control|Control]]
 
 ### 2. Software Systems
 
-- **Distributed Computing**: [[software/distributed|Distributed]]
+- **Distributed Computing**: [[knowledge_base/systems/distributed|Distributed]]
 
-- **Real-time Processing**: [[software/realtime|Realtime]]
+- **Real-time Processing**: [[knowledge_base/systems/realtime|Realtime]]
 
-- **Data Management**: [[software/data|Data]]
+- **Data Management**: [[knowledge_base/systems/data|Data]]
 
-- **Integration Patterns**: [[software/integration|Integration]]
+- **Integration Patterns**: [[knowledge_base/systems/integration|Integration]]
 
 ## Advanced Implementation Details
 
 ### 1. Inference Mechanisms
 
-- **Variational Methods**: [[mathematics/variational_inference|Variational Inference]] ([[mathematics/variational_bayes|Variational Bayes]])
+- **Variational Methods**: [[mathematics/variational_inference|Variational Inference]] ([[knowledge_base/mathematics/variational_bayes|Variational Bayes]])
 
 - **Message Passing**: [[mathematics/belief_propagation|Belief Propagation]] ([[mathematics/factor_graphs|Factor Graphs]])
 
-- **Sampling Methods**: [[mathematics/monte_carlo_methods|Monte Carlo]] ([[mathematics/importance_sampling|Importance Sampling]])
+- **Sampling Methods**: [[knowledge_base/research/concepts/monte_carlo_methods|Monte Carlo]] ([[knowledge_base/mathematics/importance_sampling|Importance Sampling]])
 
-- **Gradient Estimation**: [[mathematics/stochastic_gradients|Stochastic Gradients]] ([[mathematics/natural_gradients|Natural Gradients]])
+- **Gradient Estimation**: [[knowledge_base/mathematics/stochastic_gradients|Stochastic Gradients]] ([[mathematics/natural_gradients|Natural Gradients]])
 
 ### 2. Learning Architecture
 
@@ -1476,9 +1476,9 @@ class HierarchicalLearning:
 
     def __init__(self):
 
-        self.parameter_learner = ParameterLearning()  # [[cognitive/parameter_learning|Parameter Learning]]
+        self.parameter_learner = ParameterLearning()  # [[knowledge_base/cognitive/parameter_learning|Parameter Learning]]
 
-        self.structure_learner = StructureLearning()  # [[cognitive/structure_learning|Structure Learning]]
+        self.structure_learner = StructureLearning()  # [[knowledge_base/cognitive/structure_learning|Structure Learning]]
 
         self.meta_learner = MetaLearning()           # [[cognitive/meta_learning|Meta Learning]]
 
@@ -1488,29 +1488,29 @@ class HierarchicalLearning:
 
 ### 3. Control Framework
 
-- **Policy Optimization**: [[mathematics/policy_optimization|Policy Optimization]]
+- **Policy Optimization**: [[knowledge_base/research/concepts/policy_optimization|Policy Optimization]]
 
-  - Value estimation ([[mathematics/value_functions|Value Functions]])
+  - Value estimation ([[knowledge_base/mathematics/value_functions|Value Functions]])
 
-  - Policy gradients ([[mathematics/policy_gradients|Policy Gradients]])
+  - Policy gradients ([[knowledge_base/mathematics/policy_gradients|Policy Gradients]])
 
   - Action selection ([[cognitive/action_selection|Action Selection]])
 
-- **Multi-objective Control**: [[mathematics/multi_objective_control|Multi-objective Control]]
+- **Multi-objective Control**: [[knowledge_base/mathematics/multi_objective_control|Multi-objective Control]]
 
-  - Pareto optimization ([[mathematics/pareto_optimization|Pareto Optimization]])
+  - Pareto optimization ([[knowledge_base/mathematics/pareto_optimization|Pareto Optimization]])
 
-  - Constraint satisfaction ([[mathematics/constraint_satisfaction|Constraints]])
+  - Constraint satisfaction ([[knowledge_base/mathematics/constraint_satisfaction|Constraints]])
 
-  - Trade-off analysis ([[mathematics/trade_off_analysis|Trade-offs]])
+  - Trade-off analysis ([[knowledge_base/mathematics/trade_off_analysis|Trade-offs]])
 
 ## Theoretical Extensions
 
 ### 1. Information Geometry
 
-- **Statistical Manifolds**: [[mathematics/statistical_manifolds|Statistical Manifolds]]
+- **Statistical Manifolds**: [[knowledge_base/mathematics/statistical_manifolds|Statistical Manifolds]]
 
-- **Natural Gradients**: [[mathematics/natural_gradient_descent|Natural Gradients]]
+- **Natural Gradients**: [[knowledge_base/mathematics/natural_gradient_descent|Natural Gradients]]
 
 - **Fisher Information**: [[mathematics/fisher_information|Fisher Information]]
 
@@ -1518,87 +1518,87 @@ class HierarchicalLearning:
 
 ### 2. Category Theory Applications
 
-- **Functorial Dynamics**: [[mathematics/functorial_dynamics|Functorial Dynamics]]
+- **Functorial Dynamics**: [[knowledge_base/mathematics/functorial_dynamics|Functorial Dynamics]]
 
-- **Compositional Systems**: [[mathematics/compositional_systems|Compositional Systems]]
+- **Compositional Systems**: [[knowledge_base/mathematics/compositional_systems|Compositional Systems]]
 
-- **Sheaf Theory**: [[mathematics/sheaf_theory|Sheaf Theory]]
+- **Sheaf Theory**: [[knowledge_base/mathematics/sheaf_theory|Sheaf Theory]]
 
-- **Topos Theory**: [[mathematics/topos_theory|Topos Theory]]
+- **Topos Theory**: [[knowledge_base/mathematics/topos_theory|Topos Theory]]
 
 ### 3. Dynamical Systems Analysis
 
-- **Attractor Dynamics**: [[mathematics/attractor_dynamics|Attractor Dynamics]]
+- **Attractor Dynamics**: [[knowledge_base/mathematics/attractor_dynamics|Attractor Dynamics]]
 
-- **Bifurcation Theory**: [[mathematics/bifurcation_theory|Bifurcation Theory]]
+- **Bifurcation Theory**: [[knowledge_base/mathematics/bifurcation_theory|Bifurcation Theory]]
 
-- **Stability Analysis**: [[mathematics/stability_theory|Stability Theory]]
+- **Stability Analysis**: [[knowledge_base/mathematics/stability_theory|Stability Theory]]
 
-- **Chaos Theory**: [[mathematics/chaos_theory|Chaos Theory]]
+- **Chaos Theory**: [[knowledge_base/mathematics/chaos_theory|Chaos Theory]]
 
 ## System Integration Patterns
 
 ### 1. Cross-Domain Integration
 
-- **Ecological-Social Coupling**: [[systems/ecological_social_coupling|Ecological-Social Coupling]]
+- **Ecological-Social Coupling**: [[knowledge_base/systems/ecological_social_coupling|Ecological-Social Coupling]]
 
-- **Economic-Environmental Interface**: [[systems/economic_environmental_interface|Economic-Environmental]]
+- **Economic-Environmental Interface**: [[knowledge_base/systems/economic_environmental_interface|Economic-Environmental]]
 
-- **Social-Technical Systems**: [[systems/socio_technical_systems|Socio-Technical]]
+- **Social-Technical Systems**: [[knowledge_base/systems/socio_technical_systems|Socio-Technical]]
 
-- **Cultural-Ecological Dynamics**: [[systems/cultural_ecological_dynamics|Cultural-Ecological]]
+- **Cultural-Ecological Dynamics**: [[knowledge_base/systems/cultural_ecological_dynamics|Cultural-Ecological]]
 
 ### 2. Scale Integration
 
-- **Micro-Macro Bridging**: [[systems/micro_macro_bridging|Micro-Macro]]
+- **Micro-Macro Bridging**: [[knowledge_base/systems/micro_macro_bridging|Micro-Macro]]
 
-- **Cross-scale Dynamics**: [[systems/cross_scale_dynamics|Cross-scale]]
+- **Cross-scale Dynamics**: [[knowledge_base/systems/cross_scale_dynamics|Cross-scale]]
 
-- **Hierarchical Systems**: [[systems/hierarchical_systems|Hierarchical]]
+- **Hierarchical Systems**: [[knowledge_base/systems/hierarchical_systems|Hierarchical]]
 
-- **Nested Networks**: [[systems/nested_networks|Nested Networks]]
+- **Nested Networks**: [[knowledge_base/systems/nested_networks|Nested Networks]]
 
 ### 3. Temporal Integration
 
-- **Multi-temporal Analysis**: [[systems/multi_temporal_analysis|Multi-temporal]]
+- **Multi-temporal Analysis**: [[knowledge_base/systems/multi_temporal_analysis|Multi-temporal]]
 
-- **Event-driven Systems**: [[systems/event_driven_systems|Event-driven]]
+- **Event-driven Systems**: [[knowledge_base/systems/event_driven_systems|Event-driven]]
 
-- **Adaptive Timesteps**: [[systems/adaptive_timesteps|Adaptive Time]]
+- **Adaptive Timesteps**: [[knowledge_base/systems/adaptive_timesteps|Adaptive Time]]
 
-- **Temporal Hierarchies**: [[systems/temporal_hierarchies|Temporal Hierarchies]]
+- **Temporal Hierarchies**: [[knowledge_base/systems/temporal_hierarchies|Temporal Hierarchies]]
 
 ## Advanced Applications
 
 ### 1. Climate Resilience
 
-- **Adaptation Strategies**: [[systems/climate_adaptation|Climate Adaptation]]
+- **Adaptation Strategies**: [[knowledge_base/systems/climate_adaptation|Climate Adaptation]]
 
-- **Mitigation Planning**: [[systems/climate_mitigation|Climate Mitigation]]
+- **Mitigation Planning**: [[knowledge_base/systems/climate_mitigation|Climate Mitigation]]
 
-- **Vulnerability Assessment**: [[systems/vulnerability_assessment|Vulnerability]]
+- **Vulnerability Assessment**: [[knowledge_base/systems/vulnerability_assessment|Vulnerability]]
 
-- **Transformation Pathways**: [[systems/transformation_pathways|Transformation]]
+- **Transformation Pathways**: [[knowledge_base/systems/transformation_pathways|Transformation]]
 
 ### 2. Biodiversity Conservation
 
-- **Species Protection**: [[systems/species_protection|Species Protection]]
+- **Species Protection**: [[knowledge_base/systems/species_protection|Species Protection]]
 
-- **Habitat Management**: [[systems/habitat_management|Habitat Management]]
+- **Habitat Management**: [[knowledge_base/systems/habitat_management|Habitat Management]]
 
-- **Genetic Diversity**: [[systems/genetic_diversity|Genetic Diversity]]
+- **Genetic Diversity**: [[knowledge_base/systems/genetic_diversity|Genetic Diversity]]
 
-- **Ecosystem Services**: [[systems/ecosystem_services|Ecosystem Services]]
+- **Ecosystem Services**: [[knowledge_base/systems/ecosystem_services|Ecosystem Services]]
 
 ### 3. Sustainable Economics
 
-- **Circular Systems**: [[systems/circular_economics|Circular Economics]]
+- **Circular Systems**: [[knowledge_base/systems/circular_economics|Circular Economics]]
 
-- **Value Networks**: [[systems/value_networks|Value Networks]]
+- **Value Networks**: [[knowledge_base/systems/value_networks|Value Networks]]
 
-- **Resource Efficiency**: [[systems/resource_efficiency|Resource Efficiency]]
+- **Resource Efficiency**: [[knowledge_base/systems/resource_efficiency|Resource Efficiency]]
 
-- **Innovation Systems**: [[systems/innovation_systems|Innovation Systems]]
+- **Innovation Systems**: [[knowledge_base/systems/innovation_systems|Innovation Systems]]
 
 ## Mathematical Foundations
 
@@ -1678,11 +1678,11 @@ class IntegrationFramework:
 
     def __init__(self):
 
-        self.ecological_system = EcologicalSystem()  # [[systems/ecosystem_dynamics|Ecosystem]]
+        self.ecological_system = EcologicalSystem()  # [[knowledge_base/systems/ecosystem_dynamics|Ecosystem]]
 
-        self.social_system = SocialSystem()         # [[systems/social_networks|Social]]
+        self.social_system = SocialSystem()         # [[knowledge_base/systems/social_networks|Social]]
 
-        self.economic_system = EconomicSystem()     # [[systems/economic_systems|Economic]]
+        self.economic_system = EconomicSystem()     # [[knowledge_base/systems/economic_systems|Economic]]
 
     def integrate_domains(self, state: BioregionalState):
 
@@ -1746,7 +1746,7 @@ class BeliefPropagator:
 
 ### 2. Adaptive Control
 
-- **Control Architecture**: [[mathematics/adaptive_control|Adaptive Control]]
+- **Control Architecture**: [[knowledge_base/mathematics/adaptive_control|Adaptive Control]]
 
 ```python
 
@@ -1952,9 +1952,9 @@ class InterventionPlanner:
 
 - [[cognitive/complex_systems_biology|Complex Systems]]
 
-- [[systems/Social-Ecological_Systems|Social-Ecological Systems]]
+- [[knowledge_base/systems/Social-Ecological Systems|Social-Ecological Systems]]
 
-- [[systems/Resilience_Thinking|Resilience Theory]]
+- [[knowledge_base/systems/resilience_thinking|Resilience Theory]]
 
 - [[BioFirm/active_inference_connections|Active Inference Integration]]
 
@@ -1978,23 +1978,23 @@ class InterventionPlanner:
 
 - [[systems/network_theory|Network Theory]]
 
-- [[cognitive/complex_adaptive_systems|Complex Adaptive Systems]]
+- [[knowledge_base/cognitive/complex_adaptive_systems|Complex Adaptive Systems]]
 
 - [[mathematics/information_geometry|Information Geometry]]
 
-- [[systems/resilience_engineering|Resilience Engineering]]
+- [[knowledge_base/systems/resilience_engineering|Resilience Engineering]]
 
-- [[cognitive/distributed_cognition|Distributed Cognition]]
+- [[knowledge_base/cognitive/distributed_cognition|Distributed Cognition]]
 
-- [[mathematics/optimal_transport|Optimal Transport]]
+- [[knowledge_base/mathematics/optimal_transport|Optimal Transport]]
 
-- [[systems/adaptive_management|Adaptive Management]]
+- [[knowledge_base/systems/adaptive_management|Adaptive Management]]
 
 - [[cognitive/active_inference_implementation|Active Inference Implementation]]
 
-- [[mathematics/variational_methods_advanced|Advanced Variational Methods]]
+- [[knowledge_base/mathematics/variational_methods_advanced|Advanced Variational Methods]]
 
-- [[systems/multi_scale_integration|Multi-scale Integration]]
+- [[knowledge_base/systems/multi_scale_integration|Multi-scale Integration]]
 
-- [[cognitive/hierarchical_learning|Hierarchical Learning]]
+- [[knowledge_base/cognitive/hierarchical_learning|Hierarchical Learning]]
 

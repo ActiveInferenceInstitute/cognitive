@@ -30,7 +30,7 @@ semantic_relations:
 
     links:
 
-      - [[../biology/neuroscience]]
+      - [[knowledge_base/biology/neuroscience]]
 
       - [[information_processing]]
 

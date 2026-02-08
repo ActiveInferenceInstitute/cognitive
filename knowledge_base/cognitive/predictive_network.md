@@ -20,7 +20,7 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../../learning_paths/predictive_processing]]
+    links: [[predictive_processing]]
 
   - type: relates
 

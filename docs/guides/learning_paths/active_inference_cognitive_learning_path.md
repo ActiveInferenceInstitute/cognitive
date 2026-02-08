@@ -54,11 +54,7 @@ semantic_relations:
 
     links:
 
-      - [[cognitive_architecture_learning_path]]
-
-      - [[cognitive_psychology_learning_path]]
-
-      - [[computational_psychiatry_learning_path]]
+      - [[active_inference_neuroscience_learning_path]]
 
 ---
 
@@ -74,7 +70,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [Active Inference Institute resources](https://www.activeinference.org/research/resources)
 
@@ -154,15 +150,15 @@ By completing this path, learners will be able to:
 
 ## Knowledge Base Anchors
 
-- Core math: [[../../knowledge_base/mathematics/expected_free_energy]] · [[../../knowledge_base/mathematics/policy_selection]] · [[../../knowledge_base/mathematics/precision_parameter]] · [[../../knowledge_base/mathematics/message_passing]]
+- Core math: [[knowledge_base/mathematics/expected_free_energy]] · [[knowledge_base/mathematics/policy_selection]] · [[knowledge_base/mathematics/precision_parameter]] · [[knowledge_base/mathematics/message_passing]]
 
-- Cognitive core: [[../../knowledge_base/cognitive/predictive_coding]] · [[../../knowledge_base/cognitive/active_inference]] · [[../../knowledge_base/cognitive/attention_mechanisms]]
+- Cognitive core: [[knowledge_base/cognitive/predictive_coding]] · [[knowledge_base/cognitive/active_inference]] · [[knowledge_base/cognitive/attention_mechanisms]]
 
-- Cross-map: [[../../knowledge_base/mathematics/cross_reference_map]]
+- Cross-map: [[knowledge_base/mathematics/cross_reference_map]]
 
 ### Foundations
 
-- [[../../knowledge_base/mathematics/softmax_function]] · [[../../knowledge_base/mathematics/numerical_stability]] · [[../../knowledge_base/mathematics/bethe_free_energy]]
+- [[knowledge_base/mathematics/softmax_function]] · [[knowledge_base/mathematics/numerical_stability]] · [[knowledge_base/mathematics/bethe_free_energy]]
 
 ```mermaid
 
@@ -656,19 +652,19 @@ class SocialCognitionModel:
 
 ### Advanced Topics
 
-1. [[computational_psychiatry_learning_path|Computational Psychiatry]]
+1. Computational Psychiatry
 
-1. [[social_cognition_learning_path|Social Cognition]]
+1. Social Cognition
 
-1. [[metacognition_learning_path|Metacognition]]
+1. Metacognition
 
 ### Research Directions
 
-1. [[research_guides/cognitive_science|Cognitive Science Research]]
+1. [[knowledge_base/cognitive/cognitive_science|Cognitive Science Research]]
 
-1. [[research_guides/clinical_psychology|Clinical Psychology Research]]
+1. [[knowledge_base/cognitive/clinical_psychology|Clinical Psychology Research]]
 
-1. [[research_guides/computational_modeling|Computational Modeling Research]]
+1. [[knowledge_base/research/computational_modeling|Computational Modeling Research]]
 
 ## Integration Strategies
 

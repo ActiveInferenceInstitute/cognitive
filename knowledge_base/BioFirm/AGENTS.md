@@ -13,7 +13,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[../../Things/BioFirm/AGENTS]]
+      - [[code/Things/BioFirm/AGENTS]]
       - [[biofirm_framework]]
       - [[active_inference_connections]]
 ---
@@ -273,26 +273,26 @@ See [[biofirm_framework|BioFirm Framework]] for:
 ## 🔗 Related Documentation
 
 ### Implementation Examples
-- [[../../Things/BioFirm/README|BioFirm Implementation]] - Practical BioFirm agents
-- [[../../Things/BioFirm/AGENTS|BioFirm Agent Systems]] - Implementation architectures
-- [[../../docs/research/ant_colony_active_inference|Swarm Intelligence Research]]
+- [[code/Things/BioFirm/README|BioFirm Implementation]] - Practical BioFirm agents
+- [[code/Things/BioFirm/AGENTS|BioFirm Agent Systems]] - Implementation architectures
+- [[docs/research/ant_colony_active_inference|Swarm Intelligence Research]]
 
 ### Theoretical Integration
-- [[../biology/ecological_dynamics|Ecological Dynamics]]
-- [[../systems/ecosystem_management|Ecosystem Management]]
-- [[../cognitive/social_cognition|Social Cognition]]
+- [[knowledge_base/biology/ecological_dynamics|Ecological Dynamics]]
+- [[knowledge_base/systems/ecosystem_management|Ecosystem Management]]
+- [[knowledge_base/cognitive/social_cognition|Social Cognition]]
 
 ### Research Resources
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/guides/application/|Application Guides]]
-- [[../../docs/examples/|Usage Examples]]
+- [[docs/research|Research Applications]]
+- [[docs/guides/application/README|Application Guides]]
+- [[docs/examples|Usage Examples]]
 
 ## 🔗 Cross-References
 
 ### Agent Theory
-- [[../../Things/BioFirm/AGENTS|BioFirm Implementation Agents]]
-- [[../biology/AGENTS|Biological Agent Systems]]
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[code/Things/BioFirm/AGENTS|BioFirm Implementation Agents]]
+- [[knowledge_base/biology/AGENTS|Biological Agent Systems]]
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
 
 ### Ecological Concepts
 - [[bioregional_state_space|Bioregional State Spaces]]
@@ -300,9 +300,9 @@ See [[biofirm_framework|BioFirm Framework]] for:
 - [[socioeconomic_active_inference|Socioeconomic Active Inference]]
 
 ### Applications
-- [[../../docs/guides/application/|Environmental Applications]]
-- [[../../docs/research/|Ecological Research]]
-- [[../../docs/examples/|BioFirm Examples]]
+- [[docs/guides/application/README|Environmental Applications]]
+- [[docs/research|Ecological Research]]
+- [[docs/examples|BioFirm Examples]]
 
 ---
 

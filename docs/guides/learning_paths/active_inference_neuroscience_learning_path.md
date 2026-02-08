@@ -56,11 +56,6 @@ semantic_relations:
 
     links:
 
-      - [[neuroscience_learning_path]]
-
-      - [[computational_neuroscience_learning_path]]
-
-      - [[cognitive_neuroscience_learning_path]]
 
 ---
 
@@ -76,13 +71,13 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Active Inference Institute resources and neuroimaging best practices (see hub)
 
 ### Foundations
 
-- [[../../knowledge_base/mathematics/expected_free_energy]] · [[../../knowledge_base/mathematics/policy_selection]] · [[../../knowledge_base/mathematics/precision_parameter]] · [[../../knowledge_base/mathematics/softmax_function]] · [[../../knowledge_base/mathematics/numerical_stability]] · [[../../knowledge_base/mathematics/message_passing]] · [[../../knowledge_base/mathematics/bethe_free_energy]]
+- [[knowledge_base/mathematics/expected_free_energy]] · [[knowledge_base/mathematics/policy_selection]] · [[knowledge_base/mathematics/precision_parameter]] · [[knowledge_base/mathematics/softmax_function]] · [[knowledge_base/mathematics/numerical_stability]] · [[knowledge_base/mathematics/message_passing]] · [[knowledge_base/mathematics/bethe_free_energy]]
 
 ## Quick Reference
 
@@ -614,19 +609,19 @@ class BrainEnvironmentInterface:
 
 ### Advanced Topics
 
-1. [[neuroscience_learning_path|Neuroscience]]
+1. Neuroscience
 
-1. [[computational_neuroscience_learning_path|Computational Neuroscience]]
+1. Computational Neuroscience
 
-1. [[cognitive_neuroscience_learning_path|Cognitive Neuroscience]]
+1. Cognitive Neuroscience
 
 ### Research Directions
 
-1. [[research_guides/neural_computation|Neural Computation Research]]
+1. [[knowledge_base/cognitive/neural_computation|Neural Computation Research]]
 
-1. [[research_guides/brain_theory|Brain Theory Research]]
+1. [[knowledge_base/research/brain_theory|Brain Theory Research]]
 
-1. [[research_guides/clinical_neuroscience|Clinical Neuroscience Research]]
+1. [[knowledge_base/research/clinical_neuroscience|Clinical Neuroscience Research]]
 
 ## Version History
 
@@ -2044,11 +2039,11 @@ expert_engagement_formats = {
 
 ## Knowledge Base Anchors
 
-- Neuroscience: [[../../knowledge_base/cognitive/predictive_coding]] · [[../../knowledge_base/cognitive/neural_plasticity]]
+- Neuroscience: [[knowledge_base/cognitive/predictive_coding]] · [[knowledge_base/cognitive/neural_plasticity]]
 
-- Math: [[../../knowledge_base/mathematics/message_passing]] · [[../../knowledge_base/mathematics/information_theory]]
+- Math: [[knowledge_base/mathematics/message_passing]] · [[knowledge_base/mathematics/information_theory]]
 
-- Cross-map: [[../../knowledge_base/mathematics/cross_reference_map]]
+- Cross-map: [[knowledge_base/mathematics/cross_reference_map]]
 
 ```mermaid
 

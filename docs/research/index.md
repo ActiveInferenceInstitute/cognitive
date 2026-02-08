@@ -22,9 +22,9 @@ semantic_relations:
 
     links:
 
-      - [[research_areas]]
+      - research areas
 
-      - [[research_methods]]
+      - research methods
 
 ---
 
@@ -34,65 +34,65 @@ semantic_relations:
 
 ### Active Inference Research
 
-- [[research/active_inference/theory|Theoretical Developments]]
+- Theoretical Developments
 
-- [[research/active_inference/applications|Applications]]
+- Applications
 
-- [[research/active_inference/scaling|Scaling Methods]]
+- Scaling Methods
 
-- [[research/active_inference/hierarchical|Hierarchical Extensions]]
+- Hierarchical Extensions
 
 ### Agent Architectures
 
-- [[research/architectures/pomdp|POMDP Frameworks]]
+- POMDP Frameworks
 
-- [[research/architectures/continuous|Continuous-Time Agents]]
+- Continuous-Time Agents
 
-- [[research/architectures/hierarchical|Hierarchical Agents]]
+- Hierarchical Agents
 
-- [[research/architectures/multi_agent|Multi-Agent Systems]]
+- Multi-Agent Systems
 
 ### Complex Systems
 
-- [[research/complex/emergence|Emergence Studies]]
+- [[docs/research/complex_systems/emergence|Emergence Studies]]
 
-- [[research/complex/self_organization|Self-Organization]]
+- [[docs/research/complex_systems/self_organization|Self-Organization]]
 
-- [[research/complex/collective|Collective Behavior]]
+- [[docs/research/complex_systems/collective|Collective Behavior]]
 
-- [[research/complex/adaptation|Adaptation Mechanisms]]
+- [[docs/research/complex_systems/adaptation|Adaptation Mechanisms]]
 
 ## Research Methodology
 
 ### Experimental Design
 
-- [[research/methods/hypothesis|Hypothesis Formation]]
+- [[docs/research/methodology/hypothesis|Hypothesis Formation]]
 
-- [[research/methods/variables|Variable Control]]
+- [[docs/research/methodology/variables|Variable Control]]
 
-- [[research/methods/sampling|Sampling Methods]]
+- [[docs/research/methodology/sampling|Sampling Methods]]
 
-- [[research/methods/validation|Validation Approaches]]
+- [[docs/research/methodology/validation|Validation Approaches]]
 
 ### Analysis Methods
 
-- [[research/analysis/statistical|Statistical Analysis]]
+- Statistical Analysis
 
-- [[research/analysis/computational|Computational Analysis]]
+- Computational Analysis
 
-- [[research/analysis/qualitative|Qualitative Analysis]]
+- Qualitative Analysis
 
-- [[research/analysis/comparative|Comparative Studies]]
+- Comparative Studies
 
 ### Validation Methods
 
-- [[research/validation/empirical|Empirical Validation]]
+- Empirical Validation
 
-- [[research/validation/theoretical|Theoretical Validation]]
+- Theoretical Validation
 
-- [[research/validation/computational|Computational Validation]]
+- Computational Validation
 
-- [[research/validation/comparative|Comparative Validation]]
+- Comparative Validation
 
 ## Research Tools
 
@@ -208,53 +208,53 @@ class ResearchDocument:
 
 ### Case Studies
 
-- [[research/examples/active_inference|Active Inference Study]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Study]]
 
-- [[research/examples/multi_agent|Multi-Agent Study]]
+- [[docs/research/architectures/multi_agent|Multi-Agent Study]]
 
-- [[research/examples/emergence|Emergence Study]]
+- [[docs/research/complex_systems/emergence|Emergence Study]]
 
 ### Implementation Studies
 
-- [[research/implementations/pomdp|POMDP Implementation]]
+- [[docs/research/architectures/pomdp|POMDP Implementation]]
 
-- [[research/implementations/hierarchical|Hierarchical Implementation]]
+- [[docs/research/active_inference/hierarchical|Hierarchical Implementation]]
 
-- [[research/implementations/continuous|Continuous-Time Implementation]]
+- [[docs/research/architectures/continuous|Continuous-Time Implementation]]
 
 ### Validation Studies
 
-- [[research/validation/theory|Theory Validation]]
+- [[docs/research/active_inference/theory|Theory Validation]]
 
-- [[research/validation/implementation|Implementation Validation]]
+- Implementation Validation
 
-- [[research/validation/comparison|Comparative Validation]]
+- [[docs/implementation/rxinfer/docs/src/manuals/comparison|Comparative Validation]]
 
 ## Research Documentation
 
 ### Documentation Standards
 
-- [[research/standards/methodology|Methodology Standards]]
+- Methodology Standards
 
-- [[research/standards/reporting|Reporting Standards]]
+- Reporting Standards
 
-- [[research/standards/validation|Validation Standards]]
+- [[docs/research/methodology/validation|Validation Standards]]
 
 ### Templates
 
-- [[research/templates/experiment|Experiment Template]]
+- Experiment Template
 
-- [[research/templates/analysis|Analysis Template]]
+- Analysis Template
 
-- [[research/templates/report|Report Template]]
+- Report Template
 
 ### Guidelines
 
-- [[research/guidelines/design|Design Guidelines]]
+- Design Guidelines
 
-- [[research/guidelines/execution|Execution Guidelines]]
+- Execution Guidelines
 
-- [[research/guidelines/reporting|Reporting Guidelines]]
+- Reporting Guidelines
 
 ## Related Resources
 
@@ -268,17 +268,17 @@ class ResearchDocument:
 
 ### Knowledge Base
 
-- [[knowledge_base/research/methodology|Research Methodology]]
+- Research Methodology
 
-- [[knowledge_base/research/tools|Research Tools]]
+- Research Tools
 
-- [[knowledge_base/research/standards|Research Standards]]
+- Research Standards
 
 ### Learning Resources
 
-- [[learning_paths/research|Research Learning Path]]
+- [[docs/repo_docs/research|Research Learning Path]]
 
-- [[tutorials/research|Research Tutorials]]
+- [[docs/repo_docs/research|Research Tutorials]]
 
-- [[guides/research/best_practices|Research Best Practices]]
+- [[docs/guides/best_practices|Research Best Practices]]
 

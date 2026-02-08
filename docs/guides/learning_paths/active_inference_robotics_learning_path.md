@@ -58,11 +58,6 @@ semantic_relations:
 
     links:
 
-      - [[robotics_systems_learning_path]]
-
-      - [[autonomous_systems_learning_path]]
-
-      - [[embodied_cognition_learning_path]]
 
 ---
 
@@ -78,7 +73,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Robotics survey: [arXiv 2112.01871](https://arxiv.org/abs/2112.01871)
 
@@ -1784,19 +1779,19 @@ class RobotEnvironmentInterface:
 
 ### Advanced Topics
 
-1. [[robotics_learning_path|Robotics]]
+1. Robotics
 
-1. [[control_systems_learning_path|Control Systems]]
+1. Control Systems
 
-1. [[embodied_cognition_learning_path|Embodied Cognition]]
+1. Embodied Cognition
 
 ### Research Directions
 
-1. [[research_guides/robot_control|Robot Control Research]]
+1. [[knowledge_base/research/robot_control|Robot Control Research]]
 
-1. [[research_guides/autonomous_systems|Autonomous Systems Research]]
+1. [[knowledge_base/research/autonomous_systems|Autonomous Systems Research]]
 
-1. [[research_guides/cognitive_robotics|Cognitive Robotics Research]]
+1. [[knowledge_base/research/cognitive_robotics|Cognitive Robotics Research]]
 
 ## Version History
 

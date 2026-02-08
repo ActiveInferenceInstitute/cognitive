@@ -15,21 +15,21 @@ semantic_relations:
   - type: foundation
     links:
       - [[core_principle]]
-      - [[../mathematics/variational_inference]]
-      - [[../mathematics/kullback_leibler_divergence]]
-      - [[../mathematics/entropy]]
+      - [[knowledge_base/mathematics/variational_inference]]
+      - [[knowledge_base/mathematics/kullback_leibler_divergence]]
+      - [[knowledge_base/mathematics/entropy]]
   - type: implements
     links:
-      - [[../cognitive/perception]]
-      - [[../cognitive/predictive_coding]]
-      - [[../biology/neural_systems]]
-      - [[../implementations/python_framework]]
+      - [[knowledge_base/free_energy_principle/cognitive/perception]]
+      - [[knowledge_base/cognitive/predictive_coding]]
+      - [[knowledge_base/free_energy_principle/biology/neural_systems]]
+      - [[knowledge_base/free_energy_principle/implementations/python_framework]]
   - type: relates
     links:
       - [[expected_free_energy]]
-      - [[../mathematics/information_geometry]]
-      - [[../mathematics/path_integral]]
-      - [[../mathematics/thermodynamics]]
+      - [[knowledge_base/free_energy_principle/mathematics/information_geometry]]
+      - [[knowledge_base/mathematics/path_integral]]
+      - [[knowledge_base/mathematics/thermodynamics]]
 ---
 
 # Variational Free Energy
@@ -499,21 +499,21 @@ def benchmark_inference_accuracy(vfe_system, test_cases):
 
 ### Foundational Links
 - [[core_principle]] - Core FEP formulation
-- [[../mathematics/variational_inference]] - General variational methods
-- [[../mathematics/kullback_leibler_divergence]] - Information divergence measure
-- [[../mathematics/entropy]] - Information-theoretic entropy
+- [[knowledge_base/mathematics/variational_inference]] - General variational methods
+- [[knowledge_base/mathematics/kullback_leibler_divergence]] - Information divergence measure
+- [[knowledge_base/mathematics/entropy]] - Information-theoretic entropy
 
 ### Implementation Links
-- [[../cognitive/predictive_coding]] - Neural implementation
-- [[../implementations/python_framework]] - Code implementations
+- [[knowledge_base/cognitive/predictive_coding]] - Neural implementation
+- [[knowledge_base/free_energy_principle/implementations/python_framework]] - Code implementations
 - [[expected_free_energy]] - Action selection extension
-- [[../mathematics/information_geometry]] - Geometric formulation
+- [[knowledge_base/free_energy_principle/mathematics/information_geometry]] - Geometric formulation
 
 ### Advanced Links
-- [[../mathematics/path_integral]] - Path integral formulations
-- [[../systems/self_organization]] - Complex systems perspective
-- [[../biology/neural_systems]] - Biological implementations
-- [[../applications/neuroscience]] - Neural applications
+- [[knowledge_base/mathematics/path_integral]] - Path integral formulations
+- [[knowledge_base/free_energy_principle/systems/self_organization]] - Complex systems perspective
+- [[knowledge_base/free_energy_principle/biology/neural_systems]] - Biological implementations
+- [[knowledge_base/free_energy_principle/applications/neuroscience]] - Neural applications
 
 ## 📚 Mathematical References
 

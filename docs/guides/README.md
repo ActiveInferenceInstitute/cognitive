@@ -3,7 +3,7 @@ title: Implementation Guides Index
 type: documentation
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2026-02-07
 tags:
   - guides
   - implementation
@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[application/]]
-      - [[learning_paths/]]
-      - [[../implementation/]]
-      - [[../development/]]
+      - [[application/README]]
+      - [[learning_paths/README]]
+      - [[docs/implementation/README]]
+      - [[docs/development/README]]
 ---
 
 # Implementation Guides Index
@@ -26,25 +26,30 @@ This directory contains comprehensive guides for implementing, understanding, an
 ## 📚 Guides Organization
 
 ### Application Guides (`application/`)
+
 - [[application/active_inference_spatial_applications|Active Inference Spatial Applications]]
 - [[application/guide_for_cognitive_modeling|Guide for Cognitive Modeling]]
 - [[application/parr_2022_chapter_6|Parr 2022 Chapter 6]]
 
 ### Learning Paths (`learning_paths/`)
+
 Comprehensive structured learning paths covering different aspects of cognitive modeling:
 
 #### Core Theoretical Paths
+
 - [[learning_paths/active_inference_learning_path|Active Inference Learning Path]]
 - [[learning_paths/active_inference_mathematical_learning_path|Mathematical Foundations]]
 - [[learning_paths/active_inference_cognitive_learning_path|Cognitive Science Perspective]]
 
 #### Application Domain Paths
+
 - [[learning_paths/active_inference_biological_learning_path|Biological Applications]]
 - [[learning_paths/active_inference_robotics_learning_path|Robotics Applications]]
 - [[learning_paths/active_inference_neuroscience_learning_path|Neuroscience Applications]]
 - [[learning_paths/active_inference_social_learning_path|Social Systems]]
 
 #### Advanced Specialization Paths
+
 - [[learning_paths/active_inference_quantum_learning_path|Quantum Cognitive Systems]]
 - [[learning_paths/active_inference_security_learning_path|Security Applications]]
 - [[learning_paths/active_inference_spatial_web_path|Spatial Web Technologies]]
@@ -53,8 +58,9 @@ Comprehensive structured learning paths covering different aspects of cognitive 
 ## 🧭 Learning Progression
 
 ### Beginner Level
+
 1. **Getting Started**
-   - [[../getting_started|Getting Started Guide]]
+   - [[docs/repo_docs/getting_started|Getting Started Guide]]
    - [[application/guide_for_cognitive_modeling|Guide for Cognitive Modeling]]
    - [[learning_paths/active_inference_learning_path|Active Inference Basics]]
 
@@ -64,8 +70,9 @@ Comprehensive structured learning paths covering different aspects of cognitive 
    - [[application/active_inference_spatial_applications|Spatial Applications]]
 
 ### Intermediate Level
+
 1. **Implementation**
-   - [[../implementation/implementation_guides|Implementation Guides]]
+   - [[docs/implementation/implementation_guides|Implementation Guides]]
    - [[learning_paths/active_inference_biological_learning_path|Biological Applications]]
    - [[learning_paths/active_inference_robotics_learning_path|Robotics Applications]]
 
@@ -75,6 +82,7 @@ Comprehensive structured learning paths covering different aspects of cognitive 
    - [[application/parr_2022_chapter_6|Advanced Active Inference]]
 
 ### Advanced Level
+
 1. **Specialization**
    - [[learning_paths/active_inference_quantum_learning_path|Quantum Systems]]
    - [[learning_paths/active_inference_security_learning_path|Security Applications]]
@@ -88,24 +96,28 @@ Comprehensive structured learning paths covering different aspects of cognitive 
 ## 📖 Guide Categories
 
 ### Theoretical Guides
+
 - **Active Inference Theory**: Core principles and mathematical foundations
 - **Cognitive Architectures**: Agent design and cognitive systems
 - **Information Processing**: Perception, attention, and memory systems
 - **Decision Making**: Policy selection and action planning
 
 ### Implementation Guides
+
 - **Agent Development**: Building cognitive agents from scratch
 - **Environment Creation**: Designing simulation environments
 - **Integration Patterns**: Combining components into systems
 - **Performance Optimization**: Improving efficiency and scalability
 
 ### Application Guides
+
 - **Domain Applications**: Healthcare, finance, robotics, etc.
 - **Industry Solutions**: Real-world problem solving
 - **Research Applications**: Experimental design and analysis
 - **Educational Applications**: Teaching and learning systems
 
 ### Development Guides
+
 - **Code Standards**: Programming best practices
 - **Testing Strategies**: Validation and verification
 - **Documentation**: Writing clear technical documentation
@@ -114,6 +126,7 @@ Comprehensive structured learning paths covering different aspects of cognitive 
 ## 🚀 Quick Start Guides
 
 ### First Steps
+
 ```mermaid
 flowchart TD
     A[Start Here] --> B{Experience Level}
@@ -138,26 +151,27 @@ flowchart TD
 1. **Week 1: Foundations**
    - Read [[application/guide_for_cognitive_modeling]]
    - Complete [[learning_paths/active_inference_learning_path]]
-   - Try basic examples in [[../examples/]]
+   - Try basic examples in [[docs/examples/README]]
 
 2. **Week 2: Core Implementation**
-   - Study [[../implementation/implementation_guides]]
-   - Build simple agent using [[../../Things/Simple_POMDP/]]
-   - Learn testing with [[../repo_docs/unit_testing]]
+   - Study [[docs/implementation/implementation_guides]]
+   - Build simple agent using [[code/Things/Simple_POMDP/README]]
+   - Learn testing with [[docs/repo_docs/unit_testing]]
 
 3. **Week 3: Advanced Applications**
-   - Choose domain from [[learning_paths/]]
+   - Choose domain from [[learning_paths/catalog_of_learning_paths|Learning Path Catalog]]
    - Implement domain-specific agent
-   - Analyze performance with [[../tools/]]
+   - Analyze performance with [[docs/tools/README]]
 
 4. **Week 4: Integration and Deployment**
-   - Study [[../guides/integration_patterns]]
-   - Deploy system using [[../guides/deployment_guide]]
-   - Document work following [[../repo_docs/documentation_standards]]
+   - Study [[docs/implementation/README|Implementation Patterns]]
+   - Review deployment best practices in [[best_practices|Best Practices]]
+   - Document work following [[docs/repo_docs/documentation_standards]]
 
 ## 🛠️ Practical Implementation Guides
 
 ### Agent Development Workflow
+
 ```python
 # Complete agent development example
 def develop_cognitive_agent():
@@ -188,6 +202,7 @@ def develop_cognitive_agent():
 ```
 
 ### Environment Design Patterns
+
 ```python
 # Environment implementation patterns
 class CognitiveEnvironment:
@@ -237,6 +252,7 @@ class CognitiveEnvironment:
 ```
 
 ### Testing and Validation Framework
+
 ```python
 # Comprehensive testing framework
 class AgentValidationSuite:
@@ -295,24 +311,28 @@ class AgentValidationSuite:
 ## 🎯 Domain-Specific Guides
 
 ### Healthcare Applications
+
 - **Medical Decision Support**: Diagnostic assistance systems
 - **Patient Monitoring**: Continuous health state tracking
 - **Treatment Planning**: Personalized therapy optimization
 - **Healthcare Resource Allocation**: Hospital resource management
 
 ### Financial Applications
+
 - **Algorithmic Trading**: Market prediction and execution
 - **Risk Assessment**: Portfolio risk evaluation
 - **Fraud Detection**: Anomaly detection systems
 - **Investment Strategy**: Portfolio optimization
 
 ### Robotics Applications
+
 - **Autonomous Navigation**: Path planning and obstacle avoidance
 - **Manipulation**: Object grasping and manipulation
 - **Human-Robot Interaction**: Natural interaction systems
 - **Swarm Robotics**: Multi-robot coordination
 
 ### Environmental Applications
+
 - **Climate Modeling**: Long-term environmental prediction
 - **Resource Management**: Sustainable resource allocation
 - **Conservation Planning**: Biodiversity protection
@@ -321,12 +341,14 @@ class AgentValidationSuite:
 ## 📊 Guide Quality Metrics
 
 ### Content Assessment
+
 - **Completeness**: Coverage of essential concepts
 - **Accuracy**: Technical correctness and validity
 - **Clarity**: Clear explanations and examples
 - **Practicality**: Real-world applicability
 
 ### Usage Statistics
+
 - **Readability**: Ease of understanding
 - **Actionability**: Ability to implement concepts
 - **Up-to-date**: Currency of information
@@ -335,12 +357,14 @@ class AgentValidationSuite:
 ## 🔄 Guide Maintenance
 
 ### Update Process
+
 1. **Monitor Changes**: Track framework updates and new research
 2. **Review Content**: Regular content review and validation
 3. **Update Examples**: Refresh code examples and implementations
 4. **Add New Content**: Include new domains and applications
 
 ### Quality Assurance
+
 - **Peer Review**: Expert review of technical content
 - **User Testing**: Practical application validation
 - **Cross-Reference Validation**: Link integrity checking
@@ -349,31 +373,36 @@ class AgentValidationSuite:
 ## 📚 Related Resources
 
 ### Core Documentation
-- [[../README|Main Documentation Index]]
-- [[../api/README|API Documentation]]
-- [[../implementation/README|Implementation Guides]]
+
+- [[docs/README|Main Documentation Index]]
+- [[docs/api/README|API Documentation]]
+- [[docs/implementation/README|Implementation Guides]]
 
 ### Learning Resources
-- [[../examples/|Usage Examples]]
-- [[../templates/|Documentation Templates]]
-- [[../repo_docs/|Repository Documentation]]
+
+- [[docs/examples/README|Usage Examples]]
+- [[docs/templates/README|Documentation Templates]]
+- [[docs/repo_docs/README|Repository Documentation]]
 
 ### Community Resources
-- [[../research/|Research Documentation]]
-- [[../tools/|Development Tools]]
-- [[../development/|Development Guides]]
+
+- [[docs/research/README|Research Documentation]]
+- [[docs/tools/README|Development Tools]]
+- [[docs/development/README|Development Guides]]
 
 ## 🔗 Cross-References
 
 ### Implementation References
-- [[../../Things/|Implementation Examples]]
-- [[../../tools/|Development Tools]]
-- [[../../tests/|Testing Framework]]
+
+- [[code/Things|Implementation Examples]]
+- [[tools/README|Development Tools]]
+- [[tests/README|Testing Framework]]
 
 ### Theoretical Foundations
-- [[../../knowledge_base/cognitive/|Cognitive Science]]
-- [[../../knowledge_base/mathematics/|Mathematical Foundations]]
-- [[../../knowledge_base/agents/|Agent Architectures]]
+
+- [[knowledge_base/cognitive/README|Cognitive Science]]
+- [[knowledge_base/mathematics/README|Mathematical Foundations]]
+- [[knowledge_base/agents/README|Agent Architectures]]
 
 ---
 
@@ -381,5 +410,4 @@ class AgentValidationSuite:
 
 ---
 
-> **Contribution**: New guides should follow the established patterns and include practical examples. See [[../repo_docs/documentation_standards|documentation standards]] for guidelines.
-
+> **Contribution**: New guides should follow the established patterns and include practical examples. See [[docs/repo_docs/documentation_standards|Documentation Standards]] for guidelines.

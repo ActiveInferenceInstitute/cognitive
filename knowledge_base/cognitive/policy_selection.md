@@ -17,7 +17,7 @@ semantic_relations:
       - action_selection
   - type: implements
     links:
-      - [[../mathematics/policy_selection]]
+      - [[knowledge_base/mathematics/policy_selection]]
       - [[precision_weighting]]
 ---
 

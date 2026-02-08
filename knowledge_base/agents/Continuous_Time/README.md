@@ -13,14 +13,14 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[../../mathematics/path_integral_theory]]
-      - [[../../cognitive/continuous_time_active_inference]]
+      - [[knowledge_base/mathematics/path_integral_theory]]
+      - [[knowledge_base/cognitive/continuous_time_active_inference]]
   - type: extends
     links:
-      - [[../../mathematics/stochastic_processes]]
+      - [[knowledge_base/mathematics/stochastic_processes]]
   - type: documented_in
     links:
-      - [[../AGENTS]]
+      - [[knowledge_base/agents/AGENTS]]
 ---
 
 # Continuous-Time Active Inference Implementation Guide
@@ -603,9 +603,9 @@ def benchmark_continuous_time_agent():
 - **Kalman Filtering**: Continuous-time state estimation
 
 ### Related Mathematics
-- [[../../mathematics/path_integral_theory]] - Path integral methods
-- [[../../mathematics/stochastic_processes]] - Stochastic process theory
-- [[../../mathematics/optimal_control]] - Optimal control theory
+- [[knowledge_base/mathematics/path_integral_theory]] - Path integral methods
+- [[knowledge_base/mathematics/stochastic_processes]] - Stochastic process theory
+- [[knowledge_base/mathematics/optimal_control]] - Optimal control theory
 
 ## 🔗 Integration and Extensions
 

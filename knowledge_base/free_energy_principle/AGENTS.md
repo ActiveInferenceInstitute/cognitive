@@ -17,19 +17,19 @@ aliases: [fep_agents, free_energy_agents, variational_agents]
 semantic_relations:
   - type: documents
     links:
-      - [[mathematics/free_energy_principle]]
-      - [[cognitive/free_energy_principle]]
-      - [[implementations/active_inference_agent]]
-      - [[applications/physiological_homeostasis]]
+      - free energy principle
+      - free energy principle
+      - [[knowledge_base/cognitive/active_inference_agent]]
+      - physiological homeostasis
   - type: foundation
     links:
-      - [[mathematics/variational_methods]]
-      - [[mathematics/information_theory]]
-      - [[mathematics/thermodynamics]]
-      - [[cognitive/predictive_processing]]
+      - variational methods
+      - information theory
+      - thermodynamics
+      - predictive processing
   - type: implements
     links:
-      - [[cognitive/active_inference]]
+      - active inference
       - [[systems/self_organization]]
       - [[biology/homeostasis]]
       - [[philosophy/mind_body_problem]]
@@ -905,19 +905,19 @@ class FEPBenchmark:
 ## 📚 Documentation Links
 
 ### Core FEP Theory
-- [[mathematics/free_energy_principle]] - Mathematical foundations
-- [[cognitive/free_energy_principle]] - Cognitive applications
-- [[implementations/active_inference_implementation]] - Code implementations
-- [[applications/physiological_homeostasis]] - Biological applications
+- free energy principle - Mathematical foundations
+- free energy principle - Cognitive applications
+- active inference implementation - Code implementations
+- physiological homeostasis - Biological applications
 
 ### Advanced Topics
 - [[mathematics/variational_free_energy]] - Variational formulations
 - [[mathematics/expected_free_energy]] - Action selection theory
-- [[cognitive/predictive_processing]] - Neural implementations
+- predictive processing - Neural implementations
 - [[systems/self_organization]] - Complex systems applications
 
 ### Related Frameworks
-- [[cognitive/active_inference]] - Primary cognitive framework
+- active inference - Primary cognitive framework
 - [[mathematics/information_geometry]] - Geometric interpretations
 - [[philosophy/mind_body_problem]] - Philosophical foundations
 - [[biology/homeostasis]] - Biological implementations

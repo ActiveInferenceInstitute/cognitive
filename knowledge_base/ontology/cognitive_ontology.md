@@ -12,15 +12,15 @@ tags:
 semantic_relations:
   - type: defines
     links:
-      - [[../cognitive/active_inference]]
-      - [[../cognitive/predictive_processing]]
-      - [[../cognitive/free_energy_principle]]
+      - [[knowledge_base/cognitive/active_inference]]
+      - [[knowledge_base/cognitive/predictive_processing]]
+      - [[knowledge_base/cognitive/free_energy_principle]]
   - type: relates
     links:
-      - [[../mathematics/information_theory]]
-      - [[../systems/systems_theory]]
-      - [[../mathematics/category_theory]]
-      - [[../systems/complex_systems]]
+      - [[knowledge_base/mathematics/information_theory]]
+      - [[knowledge_base/systems/systems_theory]]
+      - [[knowledge_base/mathematics/category_theory]]
+      - [[knowledge_base/systems/complex_systems]]
 ---
 
 ---
@@ -447,9 +447,9 @@ mathematical_formulation: "F = E_q[ln q(s) - ln p(o,s)]"
 
 - [[hyperspatial/hyperspace_ontology]]
 
-- [[../cognitive/cognitive_science_index]]
+- [[knowledge_base/cognitive/cognitive_science_index]]
 
-- [[../mathematics/mathematical_foundations]]
+- [[knowledge_base/mathematics/mathematical_foundations]]
 
-- [[../systems/systems_theory]]
+- [[knowledge_base/systems/systems_theory]]
 

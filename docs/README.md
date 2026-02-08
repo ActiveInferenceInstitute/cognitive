@@ -130,10 +130,10 @@ graph TD
 
 ### Core Concepts
 
-- [[../knowledge_base/active_inference_implementation|Active Inference]] - Core active inference principles
-- [[../knowledge_base/free_energy_principle|Free Energy Principle]] - Theoretical foundations
-- [[../knowledge_base/information_processing_integration|Information Processing]] - Data processing frameworks
-- [[../knowledge_base/swarm_intelligence_implementation|Swarm Intelligence]] - Collective intelligence patterns
+- [[knowledge_base/active_inference_implementation|Active Inference]] - Core active inference principles
+- [[knowledge_base/free_energy_principle|Free Energy Principle]] - Theoretical foundations
+- [[knowledge_base/information_processing_integration|Information Processing]] - Data processing frameworks
+- [[knowledge_base/swarm_intelligence_implementation|Swarm Intelligence]] - Collective intelligence patterns
 
 ### Documentation Navigation
 
@@ -246,10 +246,10 @@ stateDiagram-v2
 
 ### Knowledge Base
 
-- [[../knowledge_base/index|Knowledge Base Index]] - Complete knowledge organization
-- [[../knowledge_base/active_inference_implementation|Active Inference Implementation]] - Core implementation guides
-- [[../knowledge_base/swarm_intelligence_implementation|Swarm Intelligence]] - Collective intelligence patterns
-- [[../knowledge_base/learning_roadmap|Learning Roadmap]] - Educational progression paths
+- [[knowledge_base/index|Knowledge Base Index]] - Complete knowledge organization
+- [[knowledge_base/active_inference_implementation|Active Inference Implementation]] - Core implementation guides
+- [[knowledge_base/swarm_intelligence_implementation|Swarm Intelligence]] - Collective intelligence patterns
+- [[knowledge_base/learning_roadmap|Learning Roadmap]] - Educational progression paths
 
 ### Research Documentation
 
@@ -291,7 +291,7 @@ stateDiagram-v2
 ---
 
 > [!info] Documentation Framework
-> This documentation integrates with the broader [[../knowledge_base/index|Cognitive Modeling Knowledge Base]] and [[agents/agent_docs_readme|Agent Documentation Clearinghouse]] for comprehensive knowledge management.
+> This documentation integrates with the broader [[knowledge_base/index|Cognitive Modeling Knowledge Base]] and [[agents/agent_docs_readme|Agent Documentation Clearinghouse]] for comprehensive knowledge management.
 
 ---
 

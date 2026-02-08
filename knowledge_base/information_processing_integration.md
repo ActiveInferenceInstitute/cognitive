@@ -14,7 +14,7 @@ semantic_relations:
     links:
       - [[mathematics/information_theory]]
       - [[cognitive/information_processing]]
-      - [[biology/neural_computation]]
+      - [[knowledge_base/cognitive/neural_computation]]
       - [[systems/network_theory]]
 ---
 
@@ -397,7 +397,7 @@ Medical information systems:
 ### Foundational Works
 - [[mathematics/information_theory|Information Theory]]
 - [[cognitive/information_processing|Cognitive Information Processing]]
-- [[biology/neural_computation|Neural Computation]]
+- [[knowledge_base/cognitive/neural_computation|Neural Computation]]
 - [[systems/network_theory|Network Information Dynamics]]
 
 ### Domain Integration

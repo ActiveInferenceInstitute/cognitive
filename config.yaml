@@ -5,8 +5,8 @@ paths:
   templates: templates/node_templates
   knowledge_base: knowledge_base
   data: data
-  models: src/models
-  utils: src/utils
+  models: code/tools/src/models
+  utils: code/tools/src/utils
 
 # Active Inference Parameters
 active_inference:
@@ -59,20 +59,20 @@ analysis:
 # Integration
 obsidian:
   vault_path: "./"
-  sync_interval: 300  # seconds
+  sync_interval: 300 # seconds
   backup_enabled: true
-  backup_interval: 86400  # daily
+  backup_interval: 86400 # daily
 
 # Logging
 logging:
   level: "INFO"
   file: "logs/cognitive_model.log"
   format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-  max_size: 10485760  # 10MB
+  max_size: 10485760 # 10MB
   backup_count: 5
 
 # Development
 development:
   debug: false
   profile: false
-  test_mode: false 
+  test_mode: false

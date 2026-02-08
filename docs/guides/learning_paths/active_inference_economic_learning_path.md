@@ -40,15 +40,10 @@ semantic_relations:
 
     links:
 
-      - [[economic_systems_learning_path]]
+      - [[active_inference_mathematical_learning_path]]
 
-      - [[market_dynamics_learning_path]]
+      - [[active_inference_resilient_systems_path]]
 
-      - [[decision_theory_learning_path]]
-
-      - [[complex_systems_learning_path]]
-
-      - [[network_economics_learning_path]]
 
 ---
 
@@ -64,7 +59,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [JASSS](https://jasss.soc.surrey.ac.uk/), [ComSES Network](https://www.comses.net/)
 
@@ -72,7 +67,7 @@ semantic_relations:
 
 ### Foundations
 
-- [[../../knowledge_base/mathematics/expected_free_energy]] · [[../../knowledge_base/mathematics/policy_selection]] · [[../../knowledge_base/mathematics/precision_parameter]] · [[../../knowledge_base/mathematics/softmax_function]] · [[../../knowledge_base/mathematics/numerical_stability]] · [[../../knowledge_base/mathematics/message_passing]] · [[../../knowledge_base/mathematics/bethe_free_energy]]
+- [[knowledge_base/mathematics/expected_free_energy]] · [[knowledge_base/mathematics/policy_selection]] · [[knowledge_base/mathematics/precision_parameter]] · [[knowledge_base/mathematics/softmax_function]] · [[knowledge_base/mathematics/numerical_stability]] · [[knowledge_base/mathematics/message_passing]] · [[knowledge_base/mathematics/bethe_free_energy]]
 
 ## Overview
 
@@ -660,19 +655,19 @@ class EconomicNetwork:
 
 ### Advanced Topics
 
-1. [[market_microstructure_learning_path|Market Microstructure]]
+1. Market Microstructure
 
-1. [[financial_economics_learning_path|Financial Economics]]
+1. Financial Economics
 
-1. [[economic_policy_learning_path|Economic Policy]]
+1. Economic Policy
 
 ### Research Directions
 
-1. [[research_guides/market_dynamics|Market Dynamics Research]]
+1. [[knowledge_base/research/market_dynamics|Market Dynamics Research]]
 
-1. [[research_guides/economic_policy|Economic Policy Research]]
+1. [[knowledge_base/research/economic_policy|Economic Policy Research]]
 
-1. [[research_guides/financial_systems|Financial Systems Research]]
+1. [[knowledge_base/research/financial_systems|Financial Systems Research]]
 
 ## Innovation & Integration
 
@@ -850,7 +845,7 @@ resource_matrix = {
 
                 'recency_score': 0.9,
 
-                'kb_integration': '[[knowledge_base/economics/microeconomics]]',
+                'kb_integration': ''knowledge_base/cognitive/active_inference'',
 
                 'cross_references': [
 
@@ -882,7 +877,7 @@ resource_matrix = {
 
                 'recency_score': 1.0,
 
-                'kb_integration': '[[knowledge_base/economics/market_dynamics]]',
+                'kb_integration': ''knowledge_base/cognitive/active_inference'',
 
                 'interactive_elements': ['simulations', 'case_studies'],
 
@@ -908,7 +903,7 @@ resource_matrix = {
 
                 'integration_ready': True,
 
-                'kb_integration': '[[knowledge_base/tools/economic_modeling]]',
+                'kb_integration': ''knowledge_base/cognitive/active_inference'',
 
                 'cross_path_usage': [
 
@@ -1022,11 +1017,11 @@ platform_integrations = {
 
 ## Knowledge Base Anchors
 
-- Economics-related math: [[../../knowledge_base/mathematics/expected_free_energy]] · [[../../knowledge_base/mathematics/optimization_theory]] · [[../../knowledge_base/mathematics/network_science]]
+- Economics-related math: [[knowledge_base/mathematics/expected_free_energy]] · [[knowledge_base/mathematics/optimization_theory]] · [[knowledge_base/mathematics/network_science]]
 
-- Systems perspective: [[../../knowledge_base/systems/systems_theory]]
+- Systems perspective: [[knowledge_base/systems/systems_theory]]
 
-- Cross-map: [[../../knowledge_base/mathematics/cross_reference_map]]
+- Cross-map: [[knowledge_base/mathematics/cross_reference_map]]
 
 ```mermaid
 

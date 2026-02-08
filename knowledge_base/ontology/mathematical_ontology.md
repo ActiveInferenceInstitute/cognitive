@@ -12,19 +12,19 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[../mathematics/AGENTS|Mathematical Foundations]]
-      - [[../mathematics/README|Mathematics Overview]]
+      - [[knowledge_base/mathematics/AGENTS|Mathematical Foundations]]
+      - [[knowledge_base/mathematics/README|Mathematics Overview]]
   - type: relates
     links:
       - [[cognitive_ontology]]
       - [[systems_ontology]]
-      - [[../mathematics/category_theory]]
-      - [[../mathematics/information_theory]]
+      - [[knowledge_base/mathematics/category_theory]]
+      - [[knowledge_base/mathematics/information_theory]]
   - type: provides
     links:
-      - [[../mathematics/probability_theory]]
-      - [[../mathematics/statistics]]
-      - [[../cognitive/free_energy_principle]]
+      - [[knowledge_base/mathematics/probability_theory]]
+      - [[code/Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/statistics/statistics]]
+      - [[knowledge_base/cognitive/free_energy_principle]]
 ---
 
 # Mathematical Ontology
@@ -222,18 +222,18 @@ Mathematical Concepts
 
 ### Cognitive Ontology Integration
 - [[cognitive_ontology|Cognitive Ontology]] - Mental representations and processes
-- [[../cognitive/mathematical_cognition|Mathematical Cognition]] - How mathematics is processed cognitively
-- [[../philosophy/philosophy_of_mathematics|Philosophy of Mathematics]] - Foundational questions
+- [[knowledge_base/cognitive/mathematical_cognition|Mathematical Cognition]] - How mathematics is processed cognitively
+- [[knowledge_base/philosophy/philosophy_of_mathematics|Philosophy of Mathematics]] - Foundational questions
 
 ### Systems Theory Connections
-- [[../systems/systems_theory|Systems Theory]] - Mathematical modeling of complex systems
-- [[../systems/complex_systems|Complex Systems]] - Nonlinear dynamics and emergence
-- [[../systems/dynamical_systems|Dynamical Systems]] - Differential equations and chaos
+- [[knowledge_base/systems/systems_theory|Systems Theory]] - Mathematical modeling of complex systems
+- [[knowledge_base/systems/complex_systems|Complex Systems]] - Nonlinear dynamics and emergence
+- [[knowledge_base/systems/dynamical_systems|Dynamical Systems]] - Differential equations and chaos
 
 ### Biological Applications
-- [[../biology/mathematical_biology|Mathematical Biology]] - Population dynamics and morphogenesis
-- [[../biology/systems_biology|Systems Biology]] - Network models of cellular processes
-- [[../biology/bioinformatics|Bioinformatics]] - Computational analysis of biological data
+- [[knowledge_base/biology/mathematical_biology|Mathematical Biology]] - Population dynamics and morphogenesis
+- [[knowledge_base/biology/systems_biology|Systems Biology]] - Network models of cellular processes
+- [[knowledge_base/biology/bioinformatics|Bioinformatics]] - Computational analysis of biological data
 
 ## 📚 Mathematical Literature Ontology
 

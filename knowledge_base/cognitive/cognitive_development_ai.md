@@ -591,7 +591,7 @@ class LinguisticActiveInference:
             'pragmatic': lambda x: x.get('pragmatic_understanding', 0) > 0.7
         }
 
-        return criteria[stage](processed_experience)
+        return criteria[[processed_experience|stage]]
 ```
 
 ## 🧪 Educational Applications

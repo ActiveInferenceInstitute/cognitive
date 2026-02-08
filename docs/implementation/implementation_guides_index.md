@@ -24,7 +24,7 @@ semantic_relations:
 
       - [[implementation_guides]]
 
-      - [[model_implementation]]
+      - model implementation
 
 ---
 
@@ -34,177 +34,177 @@ semantic_relations:
 
 ### Agent Implementation
 
-- [[guides/implementation/active_inference_agent|Active Inference Agent Guide]]
+- [[knowledge_base/cognitive/active_inference_agent|Active Inference Agent Guide]]
 
-- [[guides/implementation/pomdp_agent|POMDP Agent Guide]]
+- POMDP Agent Guide
 
-- [[guides/implementation/hierarchical_agent|Hierarchical Agent Guide]]
+- Hierarchical Agent Guide
 
 ### Framework Implementation
 
-- [[guides/implementation/pomdp_structure|POMDP Framework]]
+- [[knowledge_base/mathematics/pomdp_structure|POMDP Framework]]
 
-- [[guides/implementation/continuous_time|Continuous Time Framework]]
+- Continuous Time Framework
 
-- [[guides/implementation/swarm_system|Swarm System Framework]]
+- Swarm System Framework
 
 ### Component Implementation
 
-- [[guides/implementation/belief_updating|Belief Updating]]
+- Belief Updating
 
-- [[guides/implementation/policy_selection|Policy Selection]]
+- Policy Selection
 
-- [[guides/implementation/memory_system|Memory System]]
+- Memory System
 
 ## Best Practices
 
 ### Code Organization
 
-- [[guides/ai_file_organization|File Organization]]
+- [[docs/repo_docs/ai_file_organization|File Organization]]
 
-- [[guides/ai_folder_structure|Folder Structure]]
+- [[docs/repo_docs/ai_folder_structure|Folder Structure]]
 
-- [[guides/naming_conventions|Naming Conventions]]
+- [[docs/repo_docs/naming_conventions|Naming Conventions]]
 
 ### Documentation
 
-- [[guides/ai_documentation_style|Documentation Style]]
+- [[docs/repo_docs/ai_documentation_style|Documentation Style]]
 
-- [[guides/package_documentation|Package Documentation]]
+- [[docs/repo_docs/package_documentation|Package Documentation]]
 
-- [[guides/implementation_patterns|Implementation Patterns]]
+- [[docs/implementation/implementation_patterns|Implementation Patterns]]
 
 ### Validation
 
-- [[guides/ai_validation_framework|Validation Framework]]
+- [[docs/repo_docs/ai_validation_framework|Validation Framework]]
 
-- [[guides/linking_validation|Link Validation]]
+- [[docs/repo_docs/linking_validation|Link Validation]]
 
-- [[guides/linking_completeness|Link Completeness]]
+- [[docs/repo_docs/linking_completeness|Link Completeness]]
 
 ## Performance Optimization
 
 ### Core Optimization
 
-- [[guides/implementation/optimization|Optimization Guide]]
+- Optimization Guide
 
-- [[guides/implementation/profiling|Profiling Guide]]
+- Profiling Guide
 
-- [[guides/implementation/memory_management|Memory Management]]
+- Memory Management
 
 ### Advanced Optimization
 
-- [[guides/implementation/parallelization|Parallelization]]
+- Parallelization
 
-- [[guides/implementation/gpu_acceleration|GPU Acceleration]]
+- GPU Acceleration
 
-- [[guides/implementation/distributed_computing|Distributed Computing]]
+- Distributed Computing
 
 ## Testing and Validation
 
 ### Testing Strategies
 
-- [[guides/implementation/unit_testing|Unit Testing]]
+- [[docs/repo_docs/unit_testing|Unit Testing]]
 
-- [[guides/implementation/integration_testing|Integration Testing]]
+- Integration Testing
 
-- [[guides/implementation/system_testing|System Testing]]
+- System Testing
 
 ### Validation Methods
 
-- [[guides/implementation/model_validation|Model Validation]]
+- Model Validation
 
-- [[guides/implementation/performance_validation|Performance Validation]]
+- Performance Validation
 
-- [[guides/implementation/behavior_validation|Behavior Validation]]
+- Behavior Validation
 
 ## Example Implementations
 
 ### Basic Examples
 
-- [[examples/active_inference_basic|Basic Active Inference]]
+- Basic Active Inference
 
-- [[examples/pomdp_basic|Basic POMDP]]
+- Basic POMDP
 
-- [[examples/belief_updating|Belief Updating]]
+- Belief Updating
 
 ### Advanced Examples
 
-- [[examples/ant_colony|Ant Colony Simulation]]
+- Ant Colony Simulation
 
-- [[examples/hierarchical_agent|Hierarchical Agent]]
+- Hierarchical Agent
 
-- [[examples/multi_agent|Multi-Agent System]]
+- [[docs/research/architectures/multi_agent|Multi-Agent System]]
 
 ## Integration Guides
 
 ### System Integration
 
-- [[guides/implementation/environment_integration|Environment Integration]]
+- Environment Integration
 
-- [[guides/implementation/visualization_integration|Visualization Integration]]
+- Visualization Integration
 
-- [[guides/implementation/logging_integration|Logging Integration]]
+- Logging Integration
 
 ### External Tools
 
-- [[guides/implementation/pytorch_integration|PyTorch Integration]]
+- PyTorch Integration
 
-- [[guides/implementation/tensorflow_integration|TensorFlow Integration]]
+- TensorFlow Integration
 
-- [[guides/implementation/jax_integration|JAX Integration]]
+- JAX Integration
 
 ## Debugging and Troubleshooting
 
 ### Debugging Guides
 
-- [[guides/implementation/debugging_strategies|Debugging Strategies]]
+- Debugging Strategies
 
-- [[guides/implementation/error_handling|Error Handling]]
+- Error Handling
 
-- [[guides/implementation/logging_practices|Logging Practices]]
+- Logging Practices
 
 ### Common Issues
 
-- [[guides/implementation/numerical_stability|Numerical Stability]]
+- [[knowledge_base/mathematics/numerical_stability|Numerical Stability]]
 
-- [[guides/implementation/memory_leaks|Memory Leaks]]
+- Memory Leaks
 
-- [[guides/implementation/performance_bottlenecks|Performance Bottlenecks]]
+- Performance Bottlenecks
 
 ## Development Workflow
 
 ### Setup and Configuration
 
-- [[guides/implementation/environment_setup|Environment Setup]]
+- Environment Setup
 
-- [[guides/implementation/dependency_management|Dependency Management]]
+- Dependency Management
 
-- [[guides/implementation/configuration_management|Configuration Management]]
+- Configuration Management
 
 ### Version Control
 
-- [[guides/implementation/git_workflow|Git Workflow]]
+- [[docs/tools/git_workflow|Git Workflow]]
 
-- [[guides/implementation/version_control|Version Control]]
+- Version Control
 
-- [[guides/implementation/release_management|Release Management]]
+- Release Management
 
 ## Related Resources
 
 ### Documentation
 
-- [[docs/api/implementation_api|Implementation API]]
+- Implementation API
 
-- [[docs/examples/implementation_examples|Implementation Examples]]
+- Implementation Examples
 
-- [[docs/research/implementation_research|Implementation Research]]
+- Implementation Research
 
 ### Knowledge Base
 
-- [[knowledge_base/cognitive/implementation_concepts|Implementation Concepts]]
+- Implementation Concepts
 
-- [[knowledge_base/mathematics/implementation_math|Implementation Mathematics]]
+- Implementation Mathematics
 
-- [[knowledge_base/agents/implementation_patterns|Implementation Patterns]]
+- [[docs/implementation/implementation_patterns|Implementation Patterns]]
 

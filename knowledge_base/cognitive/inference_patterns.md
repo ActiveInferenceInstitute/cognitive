@@ -22,17 +22,17 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../cognitive_modeling_concepts]]
+    links: [[cognitive_modeling_concepts]]
 
   - type: relates
 
     links:
 
-      - [[../belief_updating]]
+      - [[belief_updating]]
 
-      - [[../model_architecture]]
+      - [[model_architecture]]
 
-      - [[../../knowledge_base/cognitive/predictive_processing]]
+      - [[predictive_processing]]
 
 ---
 
@@ -306,21 +306,21 @@ Inference patterns define reusable approaches for implementing probabilistic inf
 
 ## Related Concepts
 
-- [[../belief_updating]] - Belief update mechanisms
+- [[belief_updating]] - Belief update mechanisms
 
-- [[../model_architecture]] - System architecture
+- [[model_architecture]] - System architecture
 
 - [[optimization_patterns]] - Optimization patterns
 
-- [[../../knowledge_base/cognitive/predictive_processing]] - Predictive processing
+- [[predictive_processing]] - Predictive processing
 
 - [[neural_architectures]] - Neural architectures
 
 ## References
 
-- [[../../research/papers/key_papers|Inference Papers]]
+- [[docs/research/papers/key_papers|Inference Papers]]
 
-- [[../../implementations/reference_implementations]]
+- [[knowledge_base/reference_implementations]]
 
-- [[../../guides/implementation_guides]]
+- [[docs/implementation/implementation_guides]]
 

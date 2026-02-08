@@ -625,28 +625,28 @@ visualizer.create_performance_dashboard(final_performance,
 ### Core Documentation
 - [[src/README|Source Code Overview]]
 - [[src/models/README|Model Implementations]]
-- [[../docs/README|Main Documentation]]
+- [[docs/README|Main Documentation]]
 
 ### Development Resources
-- [[../docs/api/README|API Documentation]]
-- [[../docs/implementation/README|Implementation Guides]]
-- [[../docs/repo_docs/README|Standards and Guidelines]]
+- [[docs/api/README|API Documentation]]
+- [[docs/implementation/README|Implementation Guides]]
+- [[docs/repo_docs/README|Standards and Guidelines]]
 
 ### Testing and Validation
-- [[../../tests/README|Testing Framework]]
-- [[../docs/repo_docs/unit_testing|Unit Testing Guidelines]]
+- [[tests/README|Testing Framework]]
+- [[docs/repo_docs/unit_testing|Unit Testing Guidelines]]
 
 ## 🔗 Cross-References
 
 ### Tool Components
-- [[src/models/active_inference/|Active Inference Models]]
-- [[src/utils/|Utility Functions]]
-- [[src/visualization/|Visualization Tools]]
+- [[src/models/active_inference|Active Inference Models]]
+- [[code/tools/src/utils/README|Utility Functions]]
+- [[code/tools/src/visualization/README|Visualization Tools]]
 
 ### Integration Points
-- [[../../Things/|Implementation Examples]]
-- [[../../docs/examples/|Usage Examples]]
-- [[../../docs/guides/|Development Guides]]
+- Implementation Examples
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Usage Examples]]
+- [[docs/guides/README|Development Guides]]
 
 ---
 

@@ -67,14 +67,14 @@ The BioFirm knowledge base presents Biological Firm Theory as a synthesis of Act
 ## 🔗 Cross-References
 
 ### Related Knowledge Domains
-- [[../cognitive/active_inference]]
-- [[../biology/ecological_dynamics]]
-- [[../systems/Social-Ecological Systems]]
-- [[../mathematics/free_energy_principle|Free Energy Principle]]
+- [[knowledge_base/cognitive/active_inference]]
+- [[knowledge_base/biology/ecological_dynamics]]
+- [[knowledge_base/systems/Social-Ecological Systems]]
+- [[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]
 
 ### Implementation Examples
-- [[../../Things/BioFirm/|BioFirm Implementation]]
-- [[../../tools/src/models/active_inference/|Active Inference Models]]
+- [[code/Things/BioFirm/README|BioFirm Implementation]]
+- [[tools/src/models/active_inference|Active Inference Models]]
 
 ## 📈 Quality Metrics
 
@@ -102,7 +102,7 @@ The BioFirm knowledge base presents Biological Firm Theory as a synthesis of Act
 - Maintain theoretical rigor in interdisciplinary synthesis
 - Include empirical evidence and practical applications
 - Connect BioFirm concepts to existing economic/ecological theory
-- Follow [[../linking_standards|linking standards]]
+- Follow [[knowledge_base/linking_standards|linking standards]]
 
 ### Review Process
 - Interdisciplinary expert validation

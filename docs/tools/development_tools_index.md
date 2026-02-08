@@ -22,15 +22,15 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../concepts/knowledge_organization]]
+    links: [[knowledge_base/cognitive/knowledge_organization]]
 
   - type: relates
 
     links:
 
-      - [[../guides/implementation_guides_index]]
+      - [[docs/implementation/implementation_guides_index]]
 
-      - [[../api/api_documentation_index]]
+      - [[docs/api/api_documentation_index]]
 
 ---
 
@@ -112,7 +112,7 @@ This directory contains documentation for development tools, utilities, and auto
 
 - [[linting_tools]] - Code linting
 
-- [[quality_metrics]] - Quality measurement
+- quality metrics - Quality measurement
 
 - [[code_review_tools]] - Review assistance
 
@@ -138,7 +138,7 @@ This directory contains documentation for development tools, utilities, and auto
 
 - [[review_tools]] - Code review tools
 
-- [[documentation_tools]] - Documentation collaboration
+- documentation tools - Documentation collaboration
 
 - [[communication_tools]] - Team communication
 
@@ -150,7 +150,7 @@ This directory contains documentation for development tools, utilities, and auto
 
 - [[data_collectors]] - Data collection
 
-- [[analysis_tools]] - Data analysis
+- analysis tools - Data analysis
 
 ### Visualization
 
@@ -218,17 +218,17 @@ This directory contains documentation for development tools, utilities, and auto
 
 - [[usage_guides]] - Usage guides
 
-- [[api_reference]] - API reference
+- api reference - API reference
 
 ## Related Sections
 
-- [[../guides/implementation_guides_index|Implementation Guides]]
+- [[docs/implementation/implementation_guides_index|Implementation Guides]]
 
-- [[../api/api_documentation_index|API Documentation]]
+- [[docs/api/api_documentation_index|API Documentation]]
 
-- [[../examples/usage_examples_index|Usage Examples]]
+- [[docs/examples/usage_examples_index|Usage Examples]]
 
 ## Contributing
 
-See [[../templates/tool_template|Tool Documentation Template]] for documenting new tools.
+See Tool Documentation Template for documenting new tools.
 

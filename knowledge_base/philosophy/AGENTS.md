@@ -342,26 +342,26 @@ See [[pragmatism|Pragmatism]] for:
 ## 🔗 Related Documentation
 
 ### Implementation Examples
-- [[../../docs/guides/learning_paths|Learning Paths]]
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/examples/|Implementation Examples]]
+- [[docs/guides/learning_paths/README|Learning Paths]]
+- [[docs/research|Research Applications]]
+- [[docs/examples|Implementation Examples]]
 
 ### Theoretical Integration
-- [[../cognitive/consciousness_modeling|Consciousness Modeling]]
-- [[../cognitive/ethical_reasoning|Ethical Reasoning]]
-- [[../systems/social_systems|Social Systems]]
+- Consciousness Modeling
+- Ethical Reasoning
+- [[knowledge_base/systems/social_systems|Social Systems]]
 
 ### Research Resources
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/guides/application/|Philosophical Applications]]
-- [[../../docs/examples/|Philosophical Examples]]
+- [[docs/research|Research Applications]]
+- [[docs/guides/application/README|Philosophical Applications]]
+- [[docs/examples|Philosophical Examples]]
 
 ## 🔗 Cross-References
 
 ### Agent Theory
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
-- [[../../knowledge_base/agents/AGENTS|Agent Architecture Overview]]
-- [[../../docs/guides/implementation_guides|Implementation Guides]]
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[knowledge_base/agents/AGENTS|Agent Architecture Overview]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
 ### Philosophical Concepts
 - [[pragmatism|Pragmatism]]
@@ -370,9 +370,9 @@ See [[pragmatism|Pragmatism]] for:
 - [[philosophy_topics|Philosophy Topics]]
 
 ### Applications
-- [[../../docs/guides/application/|Philosophical Applications]]
-- [[../../docs/research/|Philosophical Research]]
-- [[../../docs/examples/|Philosophical Examples]]
+- [[docs/guides/application/README|Philosophical Applications]]
+- [[docs/research|Philosophical Research]]
+- [[docs/examples|Philosophical Examples]]
 
 ---
 

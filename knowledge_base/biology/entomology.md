@@ -28,7 +28,7 @@ semantic_relations:
 
       - [[behavioral_biology]]
 
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
 
   - type: implements
 
@@ -38,7 +38,7 @@ semantic_relations:
 
       - [[developmental_systems]]
 
-      - [[../agents/architectures_overview]]
+      - [[knowledge_base/agents/architectures_overview]]
 
   - type: relates
 

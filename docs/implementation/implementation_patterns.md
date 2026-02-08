@@ -36,7 +36,7 @@ semantic_relations:
 
       - [[docs/api/api_reference|API Reference]]
 
-      - [[docs/concepts/theoretical_foundations|Theoretical Foundations]]
+      - [[knowledge_base/cognitive/theoretical_foundations|Theoretical Foundations]]
 
 ---
 
@@ -146,7 +146,7 @@ class BeliefUpdatePattern:
 
             - [[docs/api/matrix_operations#gradient-descent|Gradient Descent]]
 
-            - [[docs/api/optimization_methods#natural-gradients|Natural Gradients]]
+            - [[knowledge_base/research/concepts/optimization_methods#natural-gradients|Natural Gradients]]
 
         """
 
@@ -194,7 +194,7 @@ class BeliefUpdatePattern:
 
         Implementation:
 
-            - [[docs/api/optimization_methods#variational-optimization|Variational Optimization]]
+            - [[knowledge_base/research/concepts/optimization_methods#variational-optimization|Variational Optimization]]
 
         """
 
@@ -254,7 +254,7 @@ class PolicySelectionPattern:
 
         Implementation:
 
-            - [[docs/api/optimization_methods#policy-optimization|Policy Optimization]]
+            - [[knowledge_base/research/concepts/optimization_methods#policy-optimization|Policy Optimization]]
 
         """
 
@@ -364,9 +364,9 @@ class PerceptionPattern:
 
         Mathematics:
 
-            - [[knowledge_base/mathematics/prediction_error|Prediction Error]]
+            - [[knowledge_base/cognitive/prediction_error|Prediction Error]]
 
-            - [[knowledge_base/mathematics/precision_weighting|Precision Weighting]]
+            - [[knowledge_base/cognitive/precision_weighting|Precision Weighting]]
 
         Implementation:
 
@@ -406,9 +406,9 @@ class PerceptionPattern:
 
         Mathematics:
 
-            - [[knowledge_base/mathematics/error_propagation|Error Propagation]]
+            - [[knowledge_base/cognitive/error_propagation|Error Propagation]]
 
-            - [[knowledge_base/mathematics/hierarchical_inference|Hierarchical Inference]]
+            - [[knowledge_base/cognitive/hierarchical_inference|Hierarchical Inference]]
 
         Implementation:
 
@@ -622,17 +622,17 @@ class TestingPattern:
 
 - Follow [[docs/guides/code_organization|Code Organization Guide]]
 
-- Use [[docs/guides/naming_conventions|Naming Conventions]]
+- Use [[docs/repo_docs/naming_conventions|Naming Conventions]]
 
-- Implement [[docs/guides/documentation_standards|Documentation Standards]]
+- Implement [[docs/repo_docs/documentation_standards|Documentation Standards]]
 
 ### 2. Performance Optimization
 
-- Follow [[docs/guides/performance_optimization|Optimization Guide]]
+- Follow [[knowledge_base/cognitive/performance_optimization|Optimization Guide]]
 
 - Use [[docs/guides/profiling_guide|Profiling Guide]]
 
-- Monitor [[docs/guides/performance_metrics|Performance Metrics]]
+- Monitor [[knowledge_base/cognitive/performance_metrics|Performance Metrics]]
 
 ### 3. Quality Assurance
 
@@ -660,5 +660,5 @@ class TestingPattern:
 
 - [[knowledge_base/cognitive/predictive_processing|Predictive Processing]]
 
-- [[docs/concepts/theoretical_foundations|Theoretical Foundations]]
+- [[knowledge_base/cognitive/theoretical_foundations|Theoretical Foundations]]
 

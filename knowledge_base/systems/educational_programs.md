@@ -42,7 +42,7 @@ semantic_relations:
 
       - [[knowledge_base/cognitive/cognition|Cognition]]
 
-      - [[knowledge_base/cognitive/learning|Learning]]
+      - [[knowledge_base/free_energy_principle/cognitive/learning|Learning]]
 
 ---
 

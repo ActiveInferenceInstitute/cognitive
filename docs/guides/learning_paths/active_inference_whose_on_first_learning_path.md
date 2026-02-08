@@ -10,21 +10,21 @@
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 ## Introduction: The Perfect Game of Mind
 
-Welcome to a unique exploration of [[Active Inference]] and the [[Free Energy Principle]], structured as the immortal "Who's on First?" comedy routine. Just as Abbott and Costello's routine plays with language and expectations, we'll use their format to unpack the fascinating world of how brains make sense of reality.
+Welcome to a unique exploration of [[knowledge_base/cognitive/active_inference]] and the [[knowledge_base/cognitive/free_energy_principle]], structured as the immortal "Who's on First?" comedy routine. Just as Abbott and Costello's routine plays with language and expectations, we'll use their format to unpack the fascinating world of how brains make sense of reality.
 
 > "Baseball is like church. Many attend, few understand." - Leo Durocher, 1939
 
 This learning path interweaves three grand American traditions:
 
-- The science of cognition ([[Active Inference]])
+- The science of cognition ([[knowledge_base/cognitive/active_inference]])
 
-- The art of baseball ([[Baseball Statistics|Sabermetrics]])
+- The art of baseball (Sabermetrics)
 
-- The comedy of [[Abbott and Costello]]
+- The comedy of Abbott and Costello
 
 ## The Setup: At the Ballpark of Cognition (Act I)
 
@@ -68,7 +68,7 @@ F = E_q[\log q(s) - \log p(o,s)]
 
 Where:
 
-- F is the [[Free Energy]]
+- F is the [[docs/implementation/rxinfer/free_energy]]
 
 - q(s) is the recognition density
 
@@ -98,7 +98,7 @@ F = D_{KL}[q(s)||p(s|o)] - \log p(o)
 
 #### Historical Baseball Analogy
 
-Just as [[Bill James]] revolutionized baseball with sabermetrics, [[Karl Friston]] transformed neuroscience with the [[Free Energy Principle]].
+Just as Bill James revolutionized baseball with sabermetrics, Karl Friston transformed neuroscience with the [[knowledge_base/cognitive/free_energy_principle]].
 
 ```mermaid
 
@@ -134,7 +134,7 @@ Q(\pi) = E_{q(s|\pi)}[\log p(o|s) + \log p(s) - \log q(s|\pi)]
 
 ## The Outfield: Extended Concepts
 
-### Left Field: [[Precision Weighting]]
+### Left Field: [[knowledge_base/cognitive/precision_weighting]]
 
 **Lou**: Who's in left field?
 
@@ -144,7 +144,7 @@ Q(\pi) = E_{q(s|\pi)}[\log p(o|s) + \log p(s) - \log q(s|\pi)]
 
 **Abbott**: No, Precision is IN left field!
 
-### Center Field: [[Hierarchical Processing]]
+### Center Field: [[knowledge_base/cognitive/hierarchical_processing]]
 
 **Lou**: Center field?
 
@@ -154,7 +154,7 @@ Q(\pi) = E_{q(s|\pi)}[\log p(o|s) + \log p(s) - \log q(s|\pi)]
 
 **Abbott**: No, Hierarchical Processing!
 
-### Right Field: [[Active Learning]]
+### Right Field: Active Learning
 
 **Lou**: Right field?
 
@@ -172,7 +172,7 @@ Q(\pi) = E_{q(s|\pi)}[\log p(o|s) + \log p(s) - \log q(s|\pi)]
 
    - Implement simple Bayesian updates
 
-   - [[Prediction Error]] minimization games
+   - [[knowledge_base/cognitive/prediction_error]] minimization games
 
 1. "What's the Free Energy?" - Mathematical Workshops
 
@@ -194,11 +194,11 @@ Q(\pi) = E_{q(s|\pi)}[\log p(o|s) + \log p(s) - \log q(s|\pi)]
 
 ### Baseball Statistics Meet Brain Statistics
 
-- [[Babe Ruth]]'s batting average as a probability distribution
+- Babe Ruth's batting average as a probability distribution
 
-- [[Miller Huggins]]' strategy as policy selection
+- Miller Huggins' strategy as policy selection
 
-- The [[1927 Yankees]] as a predictive processing machine
+- The 1927 Yankees as a predictive processing machine
 
 ### Cultural Integration
 
@@ -266,11 +266,11 @@ Where:
 
 Just as SPM normalizes brains to a standard template, baseball analytics normalizes across:
 
-- Ballpark effects ([[Park Factors]])
+- Ballpark effects (Park Factors)
 
-- Era adjustments ([[Era+ Statistics]])
+- Era adjustments (Era+ Statistics)
 
-- Competition level ([[Strength of Schedule]])
+- Competition level (Strength of Schedule)
 
 ```math
 
@@ -436,9 +436,9 @@ model <- lmer(performance ~ condition + (1|subject),
 
 ### 1990s
 
-- SPM development by [[Karl Friston]]
+- SPM development by Karl Friston
 
-- Sabermetrics revolution by [[Bill James]]
+- Sabermetrics revolution by Bill James
 
 ### 2020s and Beyond
 
@@ -468,27 +468,27 @@ model <- lmer(performance ~ condition + (1|subject),
 
 ### Technical Papers
 
-- [[Friston's Free Energy Principle]]
+- Friston's Free Energy Principle
 
-- [[Active Inference: A Process Theory]]
+- Active Inference: A Process Theory
 
-- [[The Mathematics of Baseball]]
+- The Mathematics of Baseball
 
 ### Baseball History
 
-- [[Complete History of Who's on First]]
+- Complete History of Who's on First
 
-- [[Evolution of Baseball Statistics]]
+- Evolution of Baseball Statistics
 
-- [[The Science of Baseball]]
+- The Science of Baseball
 
 ### Interactive Elements
 
-- [[Virtual Baseball Active Inference Simulator]]
+- Virtual Baseball Active Inference Simulator
 
-- [[Free Energy Calculator]]
+- Free Energy Calculator
 
-- [[Policy Selection Training Game]]
+- Policy Selection Training Game
 
 ## Notes for Learners
 

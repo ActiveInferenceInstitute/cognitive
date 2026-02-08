@@ -3,7 +3,7 @@ title: Learning Paths Catalog
 type: documentation
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2026-02-07
 tags:
   - learning_paths
   - education
@@ -27,11 +27,13 @@ This directory contains 37+ structured learning paths that provide comprehensive
 ### Core Learning Path Categories
 
 #### Foundational Theory Paths
+
 - **Active Inference Fundamentals**: Core theoretical framework
 - **Mathematical Foundations**: Mathematical prerequisites and tools
 - **Cognitive Science Basics**: Psychological and cognitive principles
 
 #### Application Domain Paths
+
 - **Biological Systems**: Neuroscience, evolution, ecology applications
 - **Robotics & AI**: Autonomous systems and robot cognition
 - **Healthcare**: Medical decision making and patient care
@@ -39,6 +41,7 @@ This directory contains 37+ structured learning paths that provide comprehensive
 - **Environmental**: Climate modeling and resource management
 
 #### Advanced Specialization Paths
+
 - **Quantum Cognition**: Quantum mechanical approaches to cognition
 - **Social Systems**: Multi-agent and social cognition
 - **Spatial Computing**: Geographic and spatial intelligence
@@ -51,21 +54,25 @@ This directory contains 37+ structured learning paths that provide comprehensive
 Each learning path typically includes:
 
 #### 📖 **Conceptual Modules**
+
 - Core theoretical foundations
 - Mathematical formulations
 - Empirical evidence and validation
 
 #### 🛠️ **Implementation Modules**
+
 - Code examples and implementations
 - Algorithm development
 - System integration patterns
 
 #### 🎯 **Application Modules**
+
 - Domain-specific applications
 - Case studies and examples
 - Real-world problem solving
 
 #### 📊 **Assessment Modules**
+
 - Knowledge checks and quizzes
 - Implementation projects
 - Performance evaluation metrics
@@ -73,24 +80,28 @@ Each learning path typically includes:
 ### Learning Progression Levels
 
 #### **Beginner Level** (🐣)
+
 - No prior knowledge required
 - Fundamental concepts and terminology
 - Basic implementation examples
 - Duration: 2-4 weeks
 
 #### **Intermediate Level** (🚀)
+
 - Basic familiarity assumed
 - Advanced concepts and theory
 - Complex implementations
 - Duration: 4-8 weeks
 
 #### **Advanced Level** (🎓)
+
 - Strong background required
 - Cutting-edge research and theory
 - Research-level implementations
 - Duration: 8-16 weeks
 
 #### **Expert Level** (🔬)
+
 - Domain expertise required
 - Novel research and development
 - Production system implementation
@@ -101,6 +112,7 @@ Each learning path typically includes:
 ### Core Active Inference Paths
 
 #### [[active_inference_learning_path|Active Inference Learning Path]] 🐣
+
 - **Focus**: Core Active Inference theory and practice
 - **Duration**: 6 weeks
 - **Prerequisites**: Basic probability and linear algebra
@@ -108,6 +120,7 @@ Each learning path typically includes:
 - **Projects**: Simple POMDP agent, belief updating system
 
 #### [[active_inference_mathematical_learning_path|Active Inference Mathematical Foundations]] 🚀
+
 - **Focus**: Mathematical underpinnings of Active Inference
 - **Duration**: 8 weeks
 - **Prerequisites**: Calculus, probability theory
@@ -115,6 +128,7 @@ Each learning path typically includes:
 - **Projects**: Variational inference implementation, EFE computation
 
 #### [[active_inference_cognitive_learning_path|Active Inference Cognitive Science]] 🚀
+
 - **Focus**: Cognitive science perspective on Active Inference
 - **Duration**: 8 weeks
 - **Prerequisites**: Psychology or cognitive science background
@@ -124,16 +138,19 @@ Each learning path typically includes:
 ### Domain Application Paths
 
 #### Biological and Life Sciences
+
 - [[active_inference_biological_learning_path|Biological Systems]] 🚀
 - [[active_inference_neuroscience_learning_path|Neuroscience]] 🎓
 - [[active_inference_myrmecology_learning_path|Myrmecology & Swarm Intelligence]] 🚀
 
 #### Technology and Engineering
+
 - [[active_inference_robotics_learning_path|Robotics]] 🚀
 - [[active_inference_edge_cognitive_systems_path|Edge Computing]] 🎓
 - [[active_inference_spatial_web_path|Spatial Web]] 🎓
 
 #### Social and Economic Systems
+
 - [[active_inference_social_learning_path|Social Cognition]] 🚀
 - [[active_inference_economic_learning_path|Economic Systems]] 🚀
 - [[active_inference_social_science_abm_learning_path|Agent-Based Social Modeling]] 🎓
@@ -141,16 +158,19 @@ Each learning path typically includes:
 ### Advanced and Specialized Paths
 
 #### Emerging Technologies
+
 - [[active_inference_quantum_learning_path|Quantum Cognition]] 🔬
 - [[active_inference_quantum_cognitive_systems_path|Quantum Cognitive Systems]] 🔬
 - [[active_inference_security_cognitive_systems_path|Security Cognitive Systems]] 🎓
 
 #### Integrated Applications
+
 - [[active_inference_fuller_learning_path|Fuller Cognitive Framework]] 🎓
 - [[active_inference_environmental_applications_path|Environmental Applications]] 🚀
 - [[active_inference_educational_programs_path|Educational Programs]] 🚀
 
 #### Research and Development
+
 - [[active_inference_agi_learning_path|Artificial General Intelligence]] 🔬
 - [[active_inference_bio_inspired_cognitive_systems_path|Bio-Inspired Systems]] 🎓
 - [[active_inference_simulation_learning_path|Simulation Methods]] 🎓
@@ -160,24 +180,28 @@ Each learning path typically includes:
 ### By Career/Interest Area
 
 #### **Researchers & Academics**
+
 1. [[active_inference_mathematical_learning_path|Mathematical Foundations]]
 2. [[active_inference_cognitive_learning_path|Cognitive Science]]
-3. [[active_inference_research_education|Research Methods]]
+3. [[active_inference_neuroscience_learning_path|Research Methods]]
 4. Domain-specific advanced path
 
 #### **Software Developers**
+
 1. [[active_inference_learning_path|Active Inference Basics]]
 2. [[active_inference_robotics_learning_path|Robotics Applications]]
 3. [[active_inference_edge_cognitive_systems_path|Edge Computing]]
 4. [[active_inference_simulation_learning_path|Simulation Development]]
 
 #### **Domain Experts**
+
 1. [[active_inference_learning_path|Core Concepts]]
 2. Choose relevant domain path (healthcare, finance, environmental)
 3. [[active_inference_agi_learning_path|Advanced Integration]]
 4. Custom application development
 
 #### **Students & Learners**
+
 1. [[active_inference_learning_path|Foundational Path]]
 2. [[catalog_of_learning_paths|Explore Catalog]]
 3. Choose 1-2 domain specializations
@@ -186,21 +210,25 @@ Each learning path typically includes:
 ### Skill-Based Pathways
 
 #### **Mathematical Focus**
+
 ```
 Active Inference Mathematical → Quantum Cognition → Research Methods
 ```
 
 #### **Implementation Focus**
+
 ```
 Active Inference Basics → Robotics → Edge Computing → AGI Development
 ```
 
 #### **Theoretical Focus**
+
 ```
 Active Inference Basics → Cognitive Science → Neuroscience → Quantum Systems
 ```
 
 #### **Applied Focus**
+
 ```
 Domain Selection → Biological Systems → Environmental Applications → Security Systems
 ```
@@ -226,18 +254,21 @@ Domain Selection → Biological Systems → Environmental Applications → Secur
 ### Learning Outcomes by Level
 
 #### Beginner Level Outcomes
+
 - ✅ Understand Active Inference core concepts
 - ✅ Implement basic cognitive agents
 - ✅ Apply concepts to simple problems
 - ✅ Navigate framework documentation
 
 #### Intermediate Level Outcomes
+
 - ✅ Derive mathematical formulations
 - ✅ Build complex multi-agent systems
 - ✅ Apply to domain-specific problems
 - ✅ Contribute to framework development
 
 #### Advanced Level Outcomes
+
 - ✅ Extend theoretical frameworks
 - ✅ Develop novel algorithms
 - ✅ Lead research projects
@@ -360,12 +391,14 @@ Each learning path follows this structure:
 ### Quality Metrics
 
 #### Content Quality
+
 - **Accuracy**: Technical correctness and validity
 - **Completeness**: Coverage of essential topics
 - **Currency**: Up-to-date with latest research
 - **Clarity**: Clear explanations and progression
 
 #### User Experience
+
 - **Engagement**: Interactive and motivating content
 - **Progression**: Logical difficulty scaling
 - **Support**: Available help and resources
@@ -464,31 +497,36 @@ class LearningPathAnalytics:
 ## 📚 Related Resources
 
 ### Core Documentation
-- [[../README|Guides Index]]
-- [[../../README|Main Documentation]]
-- [[../../knowledge_base/index|Knowledge Base]]
+
+- [[docs/guides/README|Guides Index]]
+- [[docs/README|Main Documentation]]
+- [[knowledge_base/index|Knowledge Base]]
 
 ### Implementation Resources
-- [[../../Things/|Implementation Examples]]
-- [[../../tools/|Development Tools]]
-- [[../../examples/|Usage Examples]]
+
+- [[code/Things|Implementation Examples]]
+- [[docs/tools/README|Development Tools]]
+- [[docs/examples/README|Usage Examples]]
 
 ### Community Resources
-- [[../../research/|Research Documentation]]
-- [[../application/|Application Guides]]
-- [[../../templates/|Content Templates]]
+
+- [[docs/research/README|Research Documentation]]
+- [[docs/guides/application/README|Application Guides]]
+- [[docs/templates/README|Content Templates]]
 
 ## 🔗 Cross-References
 
 ### Foundational Content
-- [[../../knowledge_base/cognitive/|Cognitive Science]]
-- [[../../knowledge_base/mathematics/|Mathematical Foundations]]
-- [[../../knowledge_base/agents/|Agent Architectures]]
+
+- [[knowledge_base/cognitive/README|Cognitive Science]]
+- [[knowledge_base/mathematics/README|Mathematical Foundations]]
+- [[knowledge_base/agents/README|Agent Architectures]]
 
 ### Implementation Support
-- [[../../tools/src/|Source Code]]
-- [[../../tests/|Testing Framework]]
-- [[../../docs/api/|API Documentation]]
+
+- [[tools/src/README|Source Code]]
+- [[tests/README|Testing Framework]]
+- [[docs/api/README|API Documentation]]
 
 ---
 
@@ -501,4 +539,3 @@ class LearningPathAnalytics:
 ---
 
 > **Progress Tracking**: Each learning path includes progress tracking and assessment. Complete projects and assessments to earn recognition for your learning achievements.
-

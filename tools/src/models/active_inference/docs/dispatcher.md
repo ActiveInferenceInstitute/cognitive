@@ -196,7 +196,7 @@ policies = dispatcher.dispatch_policy_inference(
 
 ```
 
-See [[Usage Examples]] for more scenarios.
+See [[docs/examples/usage_examples]] for more scenarios.
 
 ## Configuration
 
@@ -298,7 +298,7 @@ To add a new inference method:
 
 - [[Configuration System]]
 
-- [[Visualization Tools]]
+- [[knowledge_base/cognitive/visualization_tools]]
 
 ## Future Development
 
@@ -328,5 +328,5 @@ To add a new inference method:
 
 1. [[Method Specifications]]
 
-1. [[API Documentation]]
+1. [[docs/api/api_documentation]]
 

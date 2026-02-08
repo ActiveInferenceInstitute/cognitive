@@ -24,17 +24,15 @@ semantic_relations:
 
     links:
 
-      - [[edge_computing_path]]
 
-      - [[cognitive_architecture_learning_path]]
+      - [[active_inference_cognitive_learning_path]]
 
   - type: related
 
     links:
 
-      - [[distributed_systems_learning_path]]
 
-      - [[resource_optimization_learning_path]]
+      - [[active_inference_computational_learning_path]]
 
 ---
 
@@ -50,7 +48,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - TinyML Foundation: [tinyml.org](https://www.tinyml.org/)
 

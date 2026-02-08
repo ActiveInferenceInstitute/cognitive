@@ -1,33 +1,19 @@
 ---
-
 title: Reinforcement Learning (Comparison)
-
 type: concept
-
-status: draft
-
+status: stable
 created: 2024-01-01
-
+updated: 2026-02-07
 tags:
-
-  - reinforcement_learning
-
-  - decision_making
-
+  - reinforcement-learning
+  - decision-making
   - comparison
-
 semantic_relations:
-
   - type: relates
-
     links:
-
       - [[active_inference]]
-
       - [[../mathematics/optimal_control]]
-
       - [[../mathematics/expected_free_energy]]
-
 ---
 
 # Reinforcement Learning (Comparison)
@@ -37,14 +23,10 @@ Reinforcement learning (RL) optimizes expected cumulative reward via value funct
 ## Mappings
 
 - Reward ↔ log prior preference over observations
-
 - Value function ↔ negative expected free energy
-
 - Policy gradient ↔ free energy gradient
 
 ## See Also
 
-- [[../mathematics/optimal_control]]
-
-- [[../mathematics/variational_free_energy]]
-
+- [[../mathematics/optimal_control]] — Optimal control theory
+- [[../mathematics/variational_free_energy]] — Variational free energy

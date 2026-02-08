@@ -58,11 +58,7 @@ semantic_relations:
 
     links:
 
-      - [[mathematics_learning_path]]
-
-      - [[probability_theory_learning_path]]
-
-      - [[information_theory_learning_path]]
+      - [[active_inference_information_theory_learning_path]]
 
 ---
 
@@ -78,7 +74,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Core texts (MacKay, Cover & Thomas, Murphy PML) in hub
 

@@ -164,35 +164,35 @@ semantic_relations:
 
 ### Probability and Statistics
 
-- [[mathematics/probability_theory|Probability Theory]]
+- [[../mathematics/probability_theory|Probability Theory]]
 
-- [[mathematics/statistical_foundations|Statistical Foundations]]
+- [[../mathematics/statistical_foundations|Statistical Foundations]]
 
-- [[mathematics/uncertainty_resolution|Uncertainty Resolution]]
+- [[../mathematics/uncertainty_resolution|Uncertainty Resolution]]
 
 ### Information Theory
 
-- [[mathematics/information_theory|Information Theory]]
+- [[../mathematics/information_theory|Information Theory]]
 
-- [[mathematics/information_geometry|Information Geometry]]
+- [[../mathematics/information_geometry|Information Geometry]]
 
-- [[mathematics/information_gain|Information Gain]]
+- [[../mathematics/information_gain|Information Gain]]
 
 ### Free Energy and Variational Methods
 
-- [[mathematics/free_energy_theory|Free Energy Theory]]
+- [[../mathematics/free_energy_theory|Free Energy Theory]]
 
-- [[mathematics/variational_methods|Variational Methods]]
+- [[../mathematics/variational_methods|Variational Methods]]
 
-- [[mathematics/variational_calculus|Variational Calculus]]
+- [[../mathematics/variational_calculus|Variational Calculus]]
 
 ### Active Inference Mathematics
 
-- [[mathematics/active_inference_theory|Active Inference Theory]]
+- [[../mathematics/active_inference_theory|Active Inference Theory]]
 
-- [[mathematics/expected_free_energy|Expected Free Energy]]
+- [[../mathematics/expected_free_energy|Expected Free Energy]]
 
-- [[mathematics/path_integral_theory|Path Integral Theory]]
+- [[../mathematics/path_integral_theory|Path Integral Theory]]
 
 ## Implementation and Applications
 
@@ -200,17 +200,17 @@ semantic_relations:
 
 - [[cognitive_architecture|Cognitive Architecture]]
 
-- [[agents/GenericPOMDP/README|Generic POMDP Framework]]
+- [[../agents/GenericPOMDP/README|Generic POMDP Framework]]
 
-- [[agents/Continuous_Time/README|Continuous Time Agents]]
+- [[../agents/Continuous_Time/README|Continuous Time Agents]]
 
 ### Example Applications
 
 - [[collective_behavior_ants|Ant Colony Example]]
 
-- [[examples/active_inference_basic|Basic Active Inference]]
+- Basic Active Inference
 
-- [[examples/pomdp_agent|POMDP Agent]]
+- POMDP Agent
 
 ## Research Directions
 
@@ -236,9 +236,8 @@ semantic_relations:
 
 ## See Also
 
-- [[systems/systems_theory|Systems Theory]]
+- [[../systems/systems_theory|Systems Theory]]
 
-- [[mathematics/category_theory|Category Theory]]
+- [[../mathematics/category_theory|Category Theory]]
 
-- [[mathematics/differential_geometry|Differential Geometry]]
-
+- [[../mathematics/differential_geometry|Differential Geometry]]

@@ -768,9 +768,9 @@ class DependencyContainer:
 
         if name in self.factories:
 
-            return self.factories[name](*args, **kwargs)
+            return self.factories[[*args, **kwargs|name]]
 
-        return self.components[name](*args, **kwargs)
+        return self.components[[*args, **kwargs|name]]
 
 ```
 

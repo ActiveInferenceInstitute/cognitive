@@ -12,8 +12,8 @@ tags:
 semantic_relations:
   - type: supports
     links:
-      - [[../../docs/guides/AGENTS]]
-      - [[../../tools/AGENTS]]
+      - [[docs/guides/AGENTS]]
+      - [[tools/AGENTS]]
 ---
 
 # Development Agent Documentation
@@ -661,26 +661,26 @@ class ProductivityAnalyticsAgent(DevelopmentAgent):
 
 ### Development Resources
 - [[README|Development Resources Overview]]
-- [[../../docs/guides/AGENTS|Implementation Guides]]
-- [[../../docs/tools/AGENTS|Tools Documentation]]
+- [[docs/guides/AGENTS|Implementation Guides]]
+- [[docs/tools/AGENTS|Tools Documentation]]
 
 ### Technical Resources
-- [[../../tools/src/|Tools Source Code]]
-- [[../../docs/api/AGENTS|API Documentation]]
-- [[../../tests/README|Testing Framework]]
+- [[tools/src/README|Tools Source Code]]
+- [[docs/api/AGENTS|API Documentation]]
+- [[tests/README|Testing Framework]]
 
 ### Community Resources
-- [[../../docs/repo_docs/contribution_guide|Contribution Guidelines]]
-- [[../../docs/repo_docs/code_standards|Code Standards]]
-- [[../../LICENSE|Project License]]
+- [[docs/development/contribution_guide|Contribution Guidelines]]
+- Code Standards
+- [[LICENSE|Project License]]
 
 ## 🔗 Cross-References
 
 ### Agent Types
-- **Code Assistance**: [[CodeReviewAgent|Code Review]], [[DocumentationAgent|Documentation]]
-- **Quality Assurance**: [[BugDetectionAgent|Bug Detection]], [[QualityAssuranceAgent|QA]]
-- **Project Management**: [[ProjectManagementAgent|Project Management]], [[TeamCoordinationAgent|Coordination]]
-- **Analytics**: [[ProductivityAnalyticsAgent|Productivity]], [[OptimizationAgent|Optimization]]
+- **Code Assistance**: Code Review, Documentation
+- **Quality Assurance**: Bug Detection, QA
+- **Project Management**: Project Management, Coordination
+- **Analytics**: Productivity, Optimization
 
 ### Integration Points
 - **Version Control**: Git workflow integration

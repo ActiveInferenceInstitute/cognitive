@@ -56,11 +56,9 @@ semantic_relations:
 
     links:
 
-      - [[agi_systems_learning_path]]
 
-      - [[cognitive_architecture_learning_path]]
+      - [[active_inference_cognitive_learning_path]]
 
-      - [[superintelligence_learning_path]]
 
   - type: prerequisite
 
@@ -94,7 +92,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Foundations and tutorials
 
@@ -898,19 +896,19 @@ Conduct an in-depth study of how AGI intersects with another domain:
 
 ### Advanced Topics
 
-1. [[superintelligence_learning_path|Superintelligence]]
+1. Superintelligence
 
-1. [[universal_intelligence_learning_path|Universal Intelligence]]
+1. Universal Intelligence
 
-1. [[cognitive_safety_learning_path|Cognitive Safety]]
+1. Cognitive Safety
 
 ### Research Directions
 
-1. [[research_guides/agi_development|AGI Development]]
+1. [[knowledge_base/research/agi_development|AGI Development]]
 
-1. [[research_guides/ai_safety|AI Safety Research]]
+1. [[knowledge_base/free_energy_principle/applications/ai_safety|AI Safety Research]]
 
-1. [[research_guides/superintelligence|Superintelligence Research]]
+1. [[knowledge_base/research/superintelligence|Superintelligence Research]]
 
 ## Integration Strategies
 

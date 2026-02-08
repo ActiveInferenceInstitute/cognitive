@@ -198,7 +198,7 @@ class MarkovBlanket:
 
 - Use Markov blanket as a formal security boundary for containment and information flow control
 
-- See: [[../../docs/guides/learning_paths/active_inference_security_learning_path|Security Learning Path]] for containment architectures
+- See: [[docs/guides/learning_paths/active_inference_security_learning_path|Security Learning Path]] for containment architectures
 
 ## Implementation
 

@@ -13,18 +13,18 @@ semantic_relations:
   - type: demonstrates
     links:
       - [[usage_examples]]
-      - [[../../Things/Generic_Thing/AGENTS]]
-      - [[../../Things/Generic_POMDP/AGENTS]]
-      - [[../../Things/Simple_POMDP/AGENTS]]
+      - [[code/Things/Generic_Thing/AGENTS]]
+      - [[code/Things/Generic_POMDP/AGENTS]]
+      - [[code/Things/Simple_POMDP/AGENTS]]
   - type: educates
     links:
-      - [[../guides/learning_paths|Learning Paths]]
-      - [[../guides/README|Implementation Guides]]
+      - [[docs/guides/learning_paths/README|Learning Paths]]
+      - [[docs/guides/README|Implementation Guides]]
   - type: showcases
     links:
-      - [[../research/ant_colony_active_inference|Ant Colony Research]]
-      - [[../../Things/Ant_Colony/AGENTS]]
-      - [[../../Things/KG_Multi_Agent/AGENTS]]
+      - [[docs/research/ant_colony_active_inference|Ant Colony Research]]
+      - [[code/Things/Ant_Colony/AGENTS]]
+      - [[code/Things/KG_Multi_Agent/AGENTS]]
 ---
 
 # Examples Agent Documentation
@@ -621,19 +621,19 @@ print("Agent development documentation generated")
 ## 🔗 Related Documentation
 
 ### Implementation References
-- [[../../Things/README|Implementation Examples]]
-- [[../../docs/guides/implementation_guides|Implementation Guides]]
-- [[../../tools/README|Development Tools]]
+- [[code/Things/README|Implementation Examples]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
+- [[tools/README|Development Tools]]
 
 ### Theoretical Foundations
-- [[../../knowledge_base/cognitive/active_inference|Active Inference Theory]]
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
-- [[../../docs/research/|Research Applications]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[docs/research|Research Applications]]
 
 ### Learning Resources
-- [[../guides/learning_paths|Learning Paths]]
-- [[../guides/quickstart_guide|Quick Start Guide]]
-- [[../guides/tutorial_series|Tutorial Series]]
+- [[docs/guides/learning_paths/README|Learning Paths]]
+- Quick Start Guide
+- Tutorial Series
 
 ## 🔗 Cross-References
 
@@ -644,11 +644,11 @@ print("Agent development documentation generated")
 - **Development Examples**: Agent creation and customization
 
 ### Agent Types Demonstrated
-- [[../../Things/Simple_POMDP/AGENTS|Simple POMDP Agents]]
-- [[../../Things/Generic_POMDP/AGENTS|Generic POMDP Agents]]
-- [[../../Things/Generic_Thing/AGENTS|Generic Thing Agents]]
-- [[../../Things/Ant_Colony/AGENTS|Ant Colony Agents]]
-- [[../../Things/BioFirm/AGENTS|BioFirm Agents]]
+- [[code/Things/Simple_POMDP/AGENTS|Simple POMDP Agents]]
+- [[code/Things/Generic_POMDP/AGENTS|Generic POMDP Agents]]
+- [[code/Things/Generic_Thing/AGENTS|Generic Thing Agents]]
+- [[code/Things/Ant_Colony/AGENTS|Ant Colony Agents]]
+- [[code/Things/BioFirm/AGENTS|BioFirm Agents]]
 
 ---
 

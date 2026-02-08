@@ -28,7 +28,7 @@ semantic_relations:
 
       - [[ecological_networks]]
 
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
 
   - type: implements
 
@@ -50,7 +50,7 @@ semantic_relations:
 
       - [[ecological_dynamics]]
 
-      - [[../agents/architectures_overview]]
+      - [[knowledge_base/agents/architectures_overview]]
 
 ---
 
@@ -663,14 +663,14 @@ class PredictiveBeeColony:
 - [[ecological_networks|Ecological Networks]] - Pollination and mutualistic networks
 
 ### Cognitive Science Connections
-- [[../cognitive/active_inference|Active Inference]] - Theoretical foundation
-- [[../cognitive/decision_making|Decision Making]] - Individual and collective choice
-- [[../cognitive/social_cognition|Social Cognition]] - Intersubjectivity and communication
+- [[knowledge_base/cognitive/active_inference|Active Inference]] - Theoretical foundation
+- [[knowledge_base/cognitive/decision_making|Decision Making]] - Individual and collective choice
+- [[knowledge_base/cognitive/social_cognition|Social Cognition]] - Intersubjectivity and communication
 
 ### Agent Architecture Examples
-- [[../../Things/Ant_Colony/|Ant Colony Implementation]]
-- [[../../docs/examples/|Biological Agent Examples]]
-- [[../../docs/implementation/|Implementation Patterns]]
+- [[code/Things/Ant_Colony/README|Ant Colony Implementation]]
+- [[docs/examples|Biological Agent Examples]]
+- [[docs/implementation/README|Implementation Patterns]]
 
 ## References and Further Reading
 

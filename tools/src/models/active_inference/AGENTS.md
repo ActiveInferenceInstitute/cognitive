@@ -13,9 +13,9 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[../../AGENTS]]
-      - [[../../../README]]
-      - [[../../../../knowledge_base/agents/AGENTS]]
+      - [[AGENTS]]
+      - [[tools/README]]
+      - [[knowledge_base/agents/AGENTS]]
 ---
 
 # Active Inference Agent Implementations
@@ -916,31 +916,31 @@ class ActiveInferenceAgentTester:
 ## 📚 Related Documentation
 
 ### Implementation Details
-- [[../README|Model Implementations Overview]]
-- [[../../README|Tools Overview]]
-- [[../../../README|Source Code Overview]]
+- [[tools/src/models/README|Model Implementations Overview]]
+- [[tools/src/README|Tools Overview]]
+- [[tools/README|Source Code Overview]]
 
 ### Theoretical Foundations
-- [[../../../../knowledge_base/cognitive/active_inference|Active Inference Theory]]
-- [[../../../../knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]
-- [[../../../../knowledge_base/agents/AGENTS|Agent Architectures]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
+- [[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]
+- [[knowledge_base/agents/AGENTS|Agent Architectures]]
 
 ### Usage Examples
-- [[../../../../Things/Generic_Thing/|Generic Thing Implementation]]
-- [[../../../../docs/examples/|Usage Examples]]
-- [[../../../../docs/guides/|Implementation Guides]]
+- [[code/Things/Generic_Thing/README|Generic Thing Implementation]]
+- [[docs/examples|Usage Examples]]
+- [[docs/guides/README|Implementation Guides]]
 
 ## 🔗 Cross-References
 
 ### Core Components
-- [[belief_system|Belief System]]
-- [[policy_system|Policy System]]
-- [[learning_system|Learning System]]
+- Belief System
+- Policy System
+- Learning System
 
 ### Integration Points
-- [[../../utils/|Utility Functions]]
-- [[../../visualization/|Visualization Tools]]
-- [[../../../../docs/api/|API Documentation]]
+- [[tools/src/utils/README|Utility Functions]]
+- [[tools/src/visualization/README|Visualization Tools]]
+- [[docs/api/README|API Documentation]]
 
 ---
 

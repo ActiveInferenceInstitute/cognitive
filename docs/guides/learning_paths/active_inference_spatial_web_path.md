@@ -82,7 +82,7 @@ semantic_relations:
 
       - [[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]
 
-      - [[knowledge_base/systems/active_inference_spatial_applications|Active Inference in Spatial Applications]]
+      - [[docs/guides/application/active_inference_spatial_applications|Active Inference in Spatial Applications]]
 
 ---
 
@@ -98,7 +98,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - OpenXR specification (Khronos): [khronos.org/openxr](https://www.khronos.org/openxr/)
 
@@ -164,11 +164,11 @@ By completing this path, learners will be able to:
 
   - Uncertainty minimization
 
-  - [[knowledge_base/mathematics/bayesian_inference|Bayesian inference]]
+  - [[knowledge_base/cognitive/bayesian_inference|Bayesian inference]]
 
   - Markov blankets
 
-  - [[knowledge_base/cognitive/generative_models|Generative models]]
+  - [[knowledge_base/mathematics/generative_models|Generative models]]
 
 - Predictive Processing
 
@@ -188,7 +188,7 @@ By completing this path, learners will be able to:
 
   - Mutual information
 
-  - [[knowledge_base/cognitive/expected_free_energy|Expected free energy]]
+  - [[knowledge_base/mathematics/expected_free_energy|Expected free energy]]
 
   - Information geometry
 
@@ -280,7 +280,7 @@ By completing this path, learners will be able to:
 
   - [[knowledge_base/cognitive/multisensory_integration|Multisensory integration]]
 
-  - [[knowledge_base/cognitive/attention|Attention allocation]]
+  - [[knowledge_base/free_energy_principle/cognitive/attention|Attention allocation]]
 
 - Human-Computer Interaction
 
@@ -328,13 +328,13 @@ By completing this path, learners will be able to:
 
   - Reading: [[knowledge_base/cognitive/active_inference|Active Inference]]
 
-  - Article: [[knowledge_base/systems/active_inference_spatial_applications|Active Inference in Spatial Applications]]
+  - Article: [[docs/guides/application/active_inference_spatial_applications|Active Inference in Spatial Applications]]
 
   - Tutorial: "Modeling Perceptual Inference in Augmented Reality"
 
 - **Exercises**
 
-  - Design a predictive model for spatial perception in AR using [[knowledge_base/cognitive/generative_models|generative models]]
+  - Design a predictive model for spatial perception in AR using [[knowledge_base/mathematics/generative_models|generative models]]
 
   - Implement a simple hierarchical inference system for object recognition
 
@@ -348,7 +348,7 @@ By completing this path, learners will be able to:
 
   - Embodied interaction with virtual objects
 
-  - Planning as path minimization in [[knowledge_base/cognitive/expected_free_energy|expected free energy]]
+  - Planning as path minimization in [[knowledge_base/mathematics/expected_free_energy|expected free energy]]
 
   - [[knowledge_base/cognitive/policy_selection|Policy selection]] in augmented environments
 
@@ -366,7 +366,7 @@ By completing this path, learners will be able to:
 
   - Design an active inference-based interaction system for VR using [[knowledge_base/cognitive/policy_selection|policy selection]]
 
-  - Develop a [[knowledge_base/cognitive/expected_free_energy|expected free energy]] minimization algorithm for spatial interfaces
+  - Develop a [[knowledge_base/mathematics/expected_free_energy|expected free energy]] minimization algorithm for spatial interfaces
 
   - Create an embodied action-perception model for mixed reality
 
@@ -408,7 +408,7 @@ By completing this path, learners will be able to:
 
   - Generating spatial models through active inference
 
-  - Building scene graphs as hierarchical [[knowledge_base/cognitive/generative_models|generative models]]
+  - Building scene graphs as hierarchical [[knowledge_base/mathematics/generative_models|generative models]]
 
   - Object recognition as hypothesis testing
 
@@ -428,7 +428,7 @@ By completing this path, learners will be able to:
 
   - Develop a hierarchical scene understanding algorithm using [[knowledge_base/cognitive/predictive_coding|predictive coding]]
 
-  - Create a system for representing spatial uncertainty using [[knowledge_base/mathematics/bayesian_inference|Bayesian methods]]
+  - Create a system for representing spatial uncertainty using [[knowledge_base/cognitive/bayesian_inference|Bayesian methods]]
 
   - Implement object recognition using prediction error minimization
 
@@ -468,9 +468,9 @@ By completing this path, learners will be able to:
 
   - Navigation as active inference in spatial environments
 
-  - Cognitive maps as [[knowledge_base/cognitive/generative_models|generative models]]
+  - Cognitive maps as [[knowledge_base/mathematics/generative_models|generative models]]
 
-  - Wayfinding as [[knowledge_base/cognitive/expected_free_energy|expected free energy]] minimization
+  - Wayfinding as [[knowledge_base/mathematics/expected_free_energy|expected free energy]] minimization
 
   - Spatial memory through predictive processing
 
@@ -490,7 +490,7 @@ By completing this path, learners will be able to:
 
   - Create a cognitive map formation model based on active inference
 
-  - Implement a wayfinding system using [[knowledge_base/cognitive/expected_free_energy|expected free energy minimization]]
+  - Implement a wayfinding system using [[knowledge_base/mathematics/expected_free_energy|expected free energy minimization]]
 
 ### Module 3: Interaction Design for Spatial Computing (4 weeks)
 
@@ -518,7 +518,7 @@ By completing this path, learners will be able to:
 
 - **Exercises**
 
-  - Design a predictive interface for augmented reality using [[knowledge_base/systems/active_inference_spatial_applications|active inference principles]]
+  - Design a predictive interface for augmented reality using [[docs/guides/application/active_inference_spatial_applications|active inference principles]]
 
   - Develop an attention guidance system using [[knowledge_base/cognitive/precision_weighting|precision principles]]
 
@@ -550,7 +550,7 @@ By completing this path, learners will be able to:
 
   - Develop a predictive gesture recognition system using [[knowledge_base/cognitive/active_inference|active inference]]
 
-  - Create a movement prediction model for VR based on [[knowledge_base/cognitive/generative_models|generative models]]
+  - Create a movement prediction model for VR based on [[knowledge_base/mathematics/generative_models|generative models]]
 
   - Design an interface that adapts to user movement patterns through [[knowledge_base/cognitive/belief_updating|Bayesian updating]]
 
@@ -578,7 +578,7 @@ By completing this path, learners will be able to:
 
 - **Exercises**
 
-  - Design a collaborative spatial environment using [[knowledge_base/systems/active_inference_spatial_applications|active inference principles]]
+  - Design a collaborative spatial environment using [[docs/guides/application/active_inference_spatial_applications|active inference principles]]
 
   - Develop a shared attention mechanism for mixed reality
 
@@ -632,7 +632,7 @@ By completing this path, learners will be able to:
 
 - **Learning Resources**
 
-  - Reading: [[knowledge_base/systems/data_visualization|Data Visualization]]
+  - Reading: [[knowledge_base/research/concepts/data_visualization|Data Visualization]]
 
   - Article: "Predictive Data Visualization in XR"
 
@@ -670,7 +670,7 @@ By completing this path, learners will be able to:
 
 - **Exercises**
 
-  - Design a [[knowledge_base/systems/digital_twins|digital twin]] architecture using [[knowledge_base/systems/active_inference_spatial_applications|active inference principles]]
+  - Design a [[knowledge_base/systems/digital_twins|digital twin]] architecture using [[docs/guides/application/active_inference_spatial_applications|active inference principles]]
 
   - Develop a synchronization system based on prediction error minimization
 
@@ -704,7 +704,7 @@ By completing this path, learners will be able to:
 
   - Design a user modeling system based on [[knowledge_base/cognitive/active_inference|active inference]]
 
-  - Develop a preference learning algorithm for spatial interfaces using [[knowledge_base/mathematics/bayesian_inference|Bayesian inference]]
+  - Develop a preference learning algorithm for spatial interfaces using [[knowledge_base/cognitive/bayesian_inference|Bayesian inference]]
 
   - Create an adaptive experience that personalizes based on interaction
 
@@ -714,7 +714,7 @@ By completing this path, learners will be able to:
 
   - Virtual agents as [[knowledge_base/cognitive/active_inference|active inference]] systems
 
-  - Assistant behavior through [[knowledge_base/cognitive/expected_free_energy|expected free energy minimization]]
+  - Assistant behavior through [[knowledge_base/mathematics/expected_free_energy|expected free energy minimization]]
 
   - Intent prediction for proactive assistance
 
@@ -736,7 +736,7 @@ By completing this path, learners will be able to:
 
   - Develop an intent prediction system for proactive support
 
-  - Create a learning agent that adapts to user behavior through [[knowledge_base/mathematics/bayesian_inference|Bayesian learning]]
+  - Create a learning agent that adapts to user behavior through [[knowledge_base/cognitive/bayesian_inference|Bayesian learning]]
 
 #### 5.3 Environmental Intelligence
 
@@ -762,9 +762,9 @@ By completing this path, learners will be able to:
 
 - **Exercises**
 
-  - Design an intelligent environment using [[knowledge_base/systems/active_inference_spatial_applications|active inference principles]]
+  - Design an intelligent environment using [[docs/guides/application/active_inference_spatial_applications|active inference principles]]
 
-  - Develop a cross-device coordination system based on shared [[knowledge_base/cognitive/generative_models|generative models]]
+  - Develop a cross-device coordination system based on shared [[knowledge_base/mathematics/generative_models|generative models]]
 
   - Create an adaptive space that predicts and responds to users
 
@@ -1018,7 +1018,7 @@ This hierarchical model illustrates how spatial computing systems process inform
 
 - **Learning Resources**
 
-  - Reading: [[knowledge_base/cognitive/attention|Attention Mechanisms]]
+  - Reading: [[knowledge_base/free_energy_principle/cognitive/attention|Attention Mechanisms]]
 
   - Article: "Computational Models of Visual Attention in XR"
 

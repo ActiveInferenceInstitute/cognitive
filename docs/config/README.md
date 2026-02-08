@@ -12,18 +12,18 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[simulation_config]]
+      - simulation config
       - [[AGENTS]]
   - type: supports
     links:
-      - [[../development/README]]
-      - [[../implementation/README]]
-      - [[../api/README]]
+      - [[docs/development/README]]
+      - [[docs/implementation/README]]
+      - [[docs/api/README]]
   - type: configures
     links:
-      - [[../../Things/Generic_Thing/AGENTS]]
-      - [[../../Things/Generic_POMDP/AGENTS]]
-      - [[../../docs/agents/AGENTS]]
+      - [[code/Things/Generic_Thing/AGENTS]]
+      - [[code/Things/Generic_POMDP/AGENTS]]
+      - [[docs/agents/AGENTS]]
 ---
 
 # Configuration Documentation
@@ -34,7 +34,7 @@ Comprehensive configuration management and documentation for the Active Inferenc
 
 ### Configuration Categories
 
-#### [[simulation_config|Simulation Configuration]]
+#### Simulation Configuration
 Example simulation configuration with parameter definitions and usage guidelines.
 
 ## 🏗️ Configuration Architecture
@@ -347,23 +347,23 @@ def test_configuration_performance():
 
 ### Implementation Resources
 - [[AGENTS|Configuration Agent Documentation]]
-- [[../api/config_api|Configuration API]]
-- [[../tools/config_tools|Configuration Tools]]
+- Configuration API
+- [[docs/tools/config_tools|Configuration Tools]]
 
 ### Development Resources
-- [[../repo_docs/config_standards|Configuration Standards]]
-- [[../development/README|Development Resources]]
-- [[../../tools/src/utils/config|Configuration Utilities]]
+- Configuration Standards
+- [[docs/development/README|Development Resources]]
+- Configuration Utilities
 
 ### Validation Resources
-- [[../../tests/test_config|Configuration Tests]]
-- [[../repo_docs/validation|Configuration Validation]]
-- [[simulation_config|Simulation Configuration]]
+- Configuration Tests
+- [[docs/repo_docs/validation|Configuration Validation]]
+- Simulation Configuration
 
 ## 🔗 Cross-References
 
 ### Configuration Types
-- [[simulation_config|Simulation Configuration]]
+- Simulation Configuration
 - **Agent Configuration**: Agent parameter settings
 - **Environment Configuration**: Environment parameter settings
 - **System Configuration**: Framework system settings

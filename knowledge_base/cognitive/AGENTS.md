@@ -901,14 +901,14 @@ class CognitiveAgentDevelopmentEnvironment:
 - [[hierarchical_processing|Hierarchical Processing]]
 
 ### Implementation Examples
-- [[../../Things/Generic_Thing/|Generic Thing Framework]]
-- [[../../Things/Ant_Colony/|Ant Colony Cognitive Agents]]
-- [[../../tools/src/models/active_inference/|Active Inference Models]]
+- [[code/Things/Generic_Thing/README|Generic Thing Framework]]
+- [[code/Things/Ant_Colony/README|Ant Colony Cognitive Agents]]
+- [[tools/src/models/active_inference|Active Inference Models]]
 
 ### Development Resources
-- [[../../docs/guides/cognitive_agent_development|Cognitive Agent Development Guide]]
-- [[../../docs/api/cognitive_api|Cognitive Agent API]]
-- [[../../docs/examples/cognitive_examples|Cognitive Agent Examples]]
+- Cognitive Agent Development Guide
+- Cognitive Agent API
+- Cognitive Agent Examples
 
 ## 🔗 Cross-References
 
@@ -919,8 +919,8 @@ class CognitiveAgentDevelopmentEnvironment:
 - [[social_cognition|Social Cognition]]
 
 ### Agent Implementation
-- [[../agents/AGENTS|Agent Architectures Overview]]
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[knowledge_base/agents/AGENTS|Agent Architectures Overview]]
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
 
 ---
 
@@ -928,4 +928,4 @@ class CognitiveAgentDevelopmentEnvironment:
 
 ---
 
-> **Implementation Note**: For practical implementations of cognitive agents, see the [[../../Things/|Things directory]] for working examples and the [[../../tools/src/models/|tools/src/models]] directory for core components.
+> **Implementation Note**: For practical implementations of cognitive agents, see the Things directory for working examples and the [[tools/src/models/README|tools/src/models]] directory for core components.

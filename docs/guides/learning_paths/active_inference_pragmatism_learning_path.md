@@ -10,7 +10,7 @@
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [Stanford Encyclopedia of Philosophy: Pragmatism](https://plato.stanford.edu/entries/pragmatism/)
 
@@ -18,155 +18,155 @@
 
 ## Introduction to Pragmatic Active Inference
 
-This learning path explores the deep connections between [[active inference]], [[American pragmatism]], and [[operationalism]], revealing how these frameworks converge on understanding through action and practical consequences.
+This learning path explores the deep connections between [[knowledge_base/cognitive/active_inference]], American pragmatism, and operationalism, revealing how these frameworks converge on understanding through action and practical consequences.
 
 ## 1. Historical Development of American Pragmatism
 
 ### The Metaphysical Club and Origins
 
-- [[The Metaphysical Club|Cambridge Beginnings]] (1872)
+- Cambridge Beginnings (1872)
 
-  - [[Oliver Wendell Holmes Jr.|Holmes]] and legal pragmatism
+  - Holmes and legal pragmatism
 
-  - [[Chauncey Wright]] and scientific method
+  - Chauncey Wright and scientific method
 
-  - [[William James|James]] and [[Charles Sanders Peirce|Peirce's]] early discussions
+  - James and Peirce's early discussions
 
-- [[transcendentalism|Transcendentalist]] influences
+- Transcendentalist influences
 
-  - [[Ralph Waldo Emerson|Emerson's]] impact
+  - Emerson's impact
 
-  - [[American individualism]]
+  - American individualism
 
-  - [[practical idealism]]
+  - practical idealism
 
 ### The Classical Period (1878-1920)
 
-- [[Charles Sanders Peirce|Peirce's]] foundational work
+- Peirce's foundational work
 
-  - "[[How to Make Our Ideas Clear]]" (1878)
+  - "How to Make Our Ideas Clear" (1878)
 
-  - [[semiotics|Theory of Signs]]
+  - Theory of Signs
 
-  - [[scientific method|Scientific Method]]
+  - Scientific Method
 
-  - [[pragmaticism]] distinction
+  - pragmaticism distinction
 
-- [[William James|James's]] popularization
+- James's popularization
 
-  - "[[Pragmatism: A New Name for Some Old Ways of Thinking]]" (1907)
+  - "Pragmatism: A New Name for Some Old Ways of Thinking" (1907)
 
-  - [[radical empiricism]] development
+  - radical empiricism development
 
-  - [[psychology|Psychological]] contributions
+  - Psychological contributions
 
-  - [[religious experience|Religious Experience]]
+  - Religious Experience
 
-- [[John Dewey|Dewey's]] systematic expansion
+- Dewey's systematic expansion
 
-  - [[Chicago School]] of pragmatism
+  - Chicago School of pragmatism
 
-  - [[instrumentalism]] development
+  - instrumentalism development
 
-  - [[democratic theory|Democratic Theory]]
+  - Democratic Theory
 
-  - [[education reform|Educational Reform]]
+  - Educational Reform
 
 ### The Golden Age (1920-1940)
 
 - Major developments
 
-  - [[George Herbert Mead|Mead's]] social psychology
+  - Mead's social psychology
 
-  - [[Jane Addams|Addams']] social pragmatism
+  - Addams' social pragmatism
 
-  - [[C.I. Lewis|Lewis's]] conceptual pragmatism
+  - Lewis's conceptual pragmatism
 
 - Institutional growth
 
-  - [[Columbia University]] influence
+  - Columbia University influence
 
-  - [[Hull House]] experiments
+  - Hull House experiments
 
-  - [[Chicago School|Chicago]] traditions
+  - Chicago traditions
 
 ### Mid-Century Transitions (1940-1970)
 
-- [[logical empiricism|Logical Empiricist]] interactions
+- Logical Empiricist interactions
 
-  - [[Rudolf Carnap|Carnap's]] influence
+  - Carnap's influence
 
-  - [[verification principle]]
+  - verification principle
 
-  - [[scientific empiricism]]
+  - scientific empiricism
 
-- [[ordinary language|Ordinary Language]] connections
+- Ordinary Language connections
 
-  - [[Wittgenstein]] parallels
+  - Wittgenstein parallels
 
-  - [[linguistic pragmatics]]
+  - linguistic pragmatics
 
-  - [[meaning theories]]
+  - meaning theories
 
 ### Contemporary Renaissance (1970-Present)
 
-- [[Richard Rorty|Rorty's]] neo-pragmatism
+- Rorty's neo-pragmatism
 
-  - [[Philosophy and the Mirror of Nature]] (1979)
+  - Philosophy and the Mirror of Nature (1979)
 
-  - [[anti-foundationalism]]
+  - anti-foundationalism
 
-  - [[linguistic turn]]
+  - linguistic turn
 
 - Modern developments
 
-  - [[Hilary Putnam|Putnam's]] pragmatic realism
+  - Putnam's pragmatic realism
 
-  - [[Robert Brandom|Brandom's]] analytic pragmatism
+  - Brandom's analytic pragmatism
 
-  - [[Huw Price|Price's]] subject naturalism
+  - Price's subject naturalism
 
-  - [[Susan Haack|Haack's]] foundherentism
+  - Haack's foundherentism
 
 ## 2. Foundations of Pragmatic Thought
 
 ### Classical American Pragmatism
 
-- [[Charles Sanders Peirce|Peirce's]] foundational principles
+- Peirce's foundational principles
 
-  - [[pragmatic maxim|The Pragmatic Maxim]]
+  - The Pragmatic Maxim
 
-  - [[fallibilism]] and the community of inquiry
+  - fallibilism and the community of inquiry
 
-  - [[scientific method|Scientific Method]] as living inquiry
+  - Scientific Method as living inquiry
 
-  - [[categories|Universal Categories]]
+  - Universal Categories
 
-  - [[abduction|Theory of Abduction]]
+  - Theory of Abduction
 
-- [[William James|James's]] contributions
+- James's contributions
 
-  - [[radical empiricism]]
+  - radical empiricism
 
-  - [[pure experience|Pure Experience]] theory
+  - Pure Experience theory
 
-  - [[cash value]] of ideas
+  - cash value of ideas
 
-  - [[pluralism|Radical Pluralism]]
+  - Radical Pluralism
 
-  - [[meliorism|Melioristic Faith]]
+  - Melioristic Faith
 
-- [[John Dewey|Dewey's]] instrumental naturalism
+- Dewey's instrumental naturalism
 
-  - [[inquiry|Theory of Inquiry]]
+  - Theory of Inquiry
 
-  - [[experience|Experience and Nature]]
+  - Experience and Nature
 
-  - [[reconstruction|Social Reconstruction]]
+  - Social Reconstruction
 
-  - [[democracy|Democratic Vision]]
+  - Democratic Vision
 
-  - [[art|Art as Experience]]
+  - Art as Experience
 
 ### Practical Exercises:
 
@@ -180,21 +180,21 @@ This learning path explores the deep connections between [[active inference]], [
 
 ### Bridging Concepts to Operations
 
-- [[Percy Bridgman|Bridgman's]] operationalism
+- Bridgman's operationalism
 
-  - [[operational definition|Operational Definitions]]
+  - Operational Definitions
 
-  - [[measurement theory|Measurement Theory]]
+  - Measurement Theory
 
-  - [[private operations|Private Operations]]
+  - Private Operations
 
 - Modern interpretations
 
-  - [[neo-operationalism]]
+  - neo-operationalism
 
-  - [[cognitive operations]]
+  - cognitive operations
 
-  - [[scientific practice|Scientific Practice]]
+  - Scientific Practice
 
 ### Hands-on Activities:
 
@@ -208,23 +208,23 @@ This learning path explores the deep connections between [[active inference]], [
 
 ### Convergence of Frameworks
 
-- [[prediction error|Prediction Error]] as pragmatic testing
+- [[knowledge_base/cognitive/prediction_error|Prediction Error]] as pragmatic testing
 
-  - [[inquiry cycles|Cycles of Inquiry]]
+  - Cycles of Inquiry
 
-  - [[experimental logic|Experimental Logic]]
+  - Experimental Logic
 
-- [[free energy principle|Free Energy]] and practical effects
+- [[knowledge_base/cognitive/free_energy_principle|Free Energy]] and practical effects
 
-  - [[adaptive action|Adaptive Action]]
+  - Adaptive Action
 
-  - [[environmental coupling]]
+  - environmental coupling
 
-- [[belief updating|Belief Updating]] as pragmatic learning
+- [[knowledge_base/cognitive/belief_updating|Belief Updating]] as pragmatic learning
 
-  - [[habit formation|Habit Formation]]
+  - Habit Formation
 
-  - [[practical knowledge]]
+  - practical knowledge
 
 ### Integration Exercises:
 
@@ -238,23 +238,23 @@ This learning path explores the deep connections between [[active inference]], [
 
 ### Collective Intelligence and Inquiry
 
-- [[community of inquiry|Community of Inquiry]]
+- Community of Inquiry
 
-  - [[social learning|Social Learning]]
+  - [[knowledge_base/cognitive/social_learning|Social Learning]]
 
-  - [[distributed cognition]]
+  - distributed cognition
 
-- [[intersubjective testing|Intersubjective Verification]]
+- Intersubjective Verification
 
-  - [[consensus reality|Consensus Reality]]
+  - Consensus Reality
 
-  - [[social proof]]
+  - social proof
 
-- [[cultural evolution|Cultural Evolution]]
+- Cultural Evolution
 
-  - [[meme theory|Meme Theory]]
+  - Meme Theory
 
-  - [[cultural learning]]
+  - cultural learning
 
 ### Collaborative Projects:
 
@@ -268,23 +268,23 @@ This learning path explores the deep connections between [[active inference]], [
 
 ### Real-World Implementation
 
-- [[clinical practice|Clinical Applications]]
+- Clinical Applications
 
-  - [[therapeutic change|Therapeutic Change]]
+  - Therapeutic Change
 
-  - [[behavioral modification]]
+  - behavioral modification
 
-- [[education|Educational Design]]
+- Educational Design
 
-  - [[learning environments]]
+  - learning environments
 
-  - [[experiential learning]]
+  - experiential learning
 
-- [[social systems|Social Systems]]
+- [[knowledge_base/systems/social_systems|Social Systems]]
 
-  - [[institutional design]]
+  - institutional design
 
-  - [[policy implementation]]
+  - policy implementation
 
 ### Action Research:
 
@@ -298,23 +298,23 @@ This learning path explores the deep connections between [[active inference]], [
 
 ### Key Synthesis Points
 
-- [[truth|Pragmatic Truth]]
+- Pragmatic Truth
 
   - Correspondence vs. practical adequacy
 
-  - [[verification methods]]
+  - verification methods
 
-- [[meaning|Operational Meaning]]
+- Operational Meaning
 
-  - [[semantic grounding]]
+  - semantic grounding
 
-  - [[practical semantics]]
+  - practical semantics
 
-- [[action|Action-Oriented Cognition]]
+- Action-Oriented Cognition
 
-  - [[embodied cognition]]
+  - [[knowledge_base/cognitive/embodied_cognition]]
 
-  - [[situated learning]]
+  - situated learning
 
 ### Advanced Projects:
 
@@ -328,39 +328,39 @@ This learning path explores the deep connections between [[active inference]], [
 
 ### Essential Readings
 
-- "[[How We Think]]" (Dewey)
+- "How We Think" (Dewey)
 
-- "[[The Logic of Modern Physics]]" (Bridgman)
+- "The Logic of Modern Physics" (Bridgman)
 
-- "[[Pragmatism]]" (James)
+- "[[knowledge_base/philosophy/pragmatism]]" (James)
 
-- "[[The Fixation of Belief]]" (Peirce)
+- "The Fixation of Belief" (Peirce)
 
-- "[[The Active Inference Approach]]" (Various)
+- "The Active Inference Approach" (Various)
 
-- "[[The Metaphysical Club]]" (Menand)
+- "The Metaphysical Club" (Menand)
 
-- "[[The American Evasion of Philosophy]]" (West)
+- "The American Evasion of Philosophy" (West)
 
-- "[[Pragmatism: From Peirce to Davidson]]" (Murphy)
+- "Pragmatism: From Peirce to Davidson" (Murphy)
 
-- "[[The Revival of Pragmatism]]" (Dickstein)
+- "The Revival of Pragmatism" (Dickstein)
 
 ### Contemporary Extensions
 
-- [[neo-pragmatism]] literature
+- neo-pragmatism literature
 
-- [[cognitive science|Cognitive Science]] applications
+- [[knowledge_base/cognitive/cognitive_science|Cognitive Science]] applications
 
-- [[systems theory|Systems Theory]] connections
+- [[knowledge_base/systems/systems_theory|Systems Theory]] connections
 
 ### Online Resources
 
-- [[Stanford Encyclopedia of Philosophy]] entries
+- Stanford Encyclopedia of Philosophy entries
 
-- [[pragmatism forums|Online Communities]]
+- Online Communities
 
-- [[research databases|Research Databases]]
+- Research Databases
 
 ## Reflection Questions
 
@@ -380,25 +380,25 @@ Remember: The pragmatic approach to active inference emphasizes practical conseq
 
 ## Related Paths
 
-- [[epistemology learning path]]
+- epistemology learning path
 
-- [[scientific method path]]
+- scientific method path
 
-- [[social cognition path]]
+- social cognition path
 
-- [[measurement theory path]]
+- measurement theory path
 
-- [[experimental design path]]
+- experimental design path
 
 ## References and Notes
 
-- [[pragmatism bibliography]]
+- pragmatism bibliography
 
-- [[operationalism resources]]
+- operationalism resources
 
-- [[active inference papers]]
+- active inference papers
 
-- [[practical applications]]
+- practical applications
 
-- [[case studies]]
+- case studies
 

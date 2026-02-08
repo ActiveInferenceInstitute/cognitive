@@ -11,7 +11,7 @@ semantic_relations:
   - type: implements
     links:
       - [[free_energy_principle]]
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
   - type: foundation
     links:
       - [[variational_methods]]
@@ -20,8 +20,8 @@ semantic_relations:
       - [[bayesian_inference]]
   - type: documented_by
     links:
-      - [[../active_inference_implementation]]
-      - [[../active_inference_integration]]
+      - [[knowledge_base/active_inference_implementation]]
+      - [[knowledge_base/active_inference_integration]]
       - [[geometric_active_inference]]
       - [[measure_theoretic_active_inference]]
       - [[stochastic_active_inference]]
@@ -33,9 +33,9 @@ semantic_relations:
 
     links:
 
-      - [[../../docs/guides/implementation_guides_index|Implementation Guides]]
+      - [[docs/implementation/implementation_guides_index|Implementation Guides]]
 
-      - [[../../docs/api/api_documentation_index|API Documentation]]
+      - [[docs/api/api_documentation_index|API Documentation]]
 
 ---
 
@@ -685,13 +685,13 @@ numerical_implementations = {
 
 ## Documentation Links
 
-- [[../../docs/research/research_documentation_index|Research Documentation]]
+- [[docs/research/research_documentation_index|Research Documentation]]
 
-- [[../../docs/guides/implementation_guides_index|Implementation Guides]]
+- [[docs/implementation/implementation_guides_index|Implementation Guides]]
 
-- [[../../docs/api/api_documentation_index|API Documentation]]
+- [[docs/api/api_documentation_index|API Documentation]]
 
-- [[../../docs/examples/usage_examples_index|Usage Examples]]
+- [[docs/examples/usage_examples_index|Usage Examples]]
 
 ## References
 

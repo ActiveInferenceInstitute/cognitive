@@ -22,15 +22,15 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../concepts/knowledge_organization]]
+    links: [[knowledge_base/cognitive/knowledge_organization]]
 
   - type: relates
 
     links:
 
-      - [[../guides/implementation_guides_index]]
+      - [[docs/implementation/implementation_guides_index]]
 
-      - [[../concepts/concept_documentation_index]]
+      - [[knowledge_base/cognitive/concept_documentation_index]]
 
 ---
 
@@ -42,23 +42,23 @@ This directory contains templates for creating various types of documentation in
 
 ### Documentation Types
 
-- [[concept_template]] - Core concept documentation
+- concept template - Core concept documentation
 
 - [[guide_template]] - Implementation guide
 
-- [[api_template]] - API documentation
+- api template - API documentation
 
-- [[example_template]] - Usage example
+- example template - Usage example
 
 ### Component Templates
 
-- [[model_template]] - Model documentation
+- model template - Model documentation
 
-- [[algorithm_template]] - Algorithm documentation
+- algorithm template - Algorithm documentation
 
-- [[class_template]] - Class documentation
+- class template - Class documentation
 
-- [[function_template]] - Function documentation
+- function template - Function documentation
 
 ### Research Templates
 
@@ -66,7 +66,7 @@ This directory contains templates for creating various types of documentation in
 
 - [[analysis_template]] - Analysis documentation
 
-- [[results_template]] - Results documentation
+- results template - Results documentation
 
 ## Specialized Templates
 
@@ -74,117 +74,117 @@ This directory contains templates for creating various types of documentation in
 
 - [[package_component]] - Package component
 
-- [[tool_template]] - Tool documentation
+- tool template - Tool documentation
 
-- [[script_template]] - Script documentation
+- script template - Script documentation
 
 ### Testing
 
-- [[test_template]] - Test documentation
+- test template - Test documentation
 
-- [[benchmark_template]] - Benchmark documentation
+- benchmark template - Benchmark documentation
 
-- [[validation_template]] - Validation documentation
+- validation template - Validation documentation
 
 ### Integration
 
-- [[integration_template]] - Integration guide
+- integration template - Integration guide
 
-- [[plugin_template]] - Plugin documentation
+- plugin template - Plugin documentation
 
-- [[extension_template]] - Extension documentation
+- extension template - Extension documentation
 
 ## Content Templates
 
 ### Structure
 
-- [[index_template]] - Index page
+- index template - Index page
 
-- [[overview_template]] - Overview document
+- overview template - Overview document
 
-- [[reference_template]] - Reference document
+- reference template - Reference document
 
 ### Components
 
-- [[section_template]] - Section structure
+- section template - Section structure
 
-- [[example_block]] - Example block
+- example block - Example block
 
-- [[note_block]] - Note block
+- note block - Note block
 
 ### Metadata
 
-- [[frontmatter_template]] - YAML frontmatter
+- frontmatter template - YAML frontmatter
 
-- [[metadata_block]] - Metadata section
+- metadata block - Metadata section
 
-- [[tag_block]] - Tag organization
+- tag block - Tag organization
 
 ## Format Guidelines
 
 ### Markdown
 
-- [[markdown_guide]] - Markdown usage
+- markdown guide - Markdown usage
 
-- [[formatting_guide]] - Text formatting
+- formatting guide - Text formatting
 
-- [[link_guide]] - Link formatting
+- link guide - Link formatting
 
 ### Code
 
-- [[code_block]] - Code formatting
+- code block - Code formatting
 
-- [[comment_block]] - Comment formatting
+- comment block - Comment formatting
 
-- [[docstring_template]] - Docstring format
+- docstring template - Docstring format
 
 ### Diagrams
 
-- [[mermaid_template]] - Mermaid diagrams
+- mermaid template - Mermaid diagrams
 
-- [[graph_template]] - Graph visualization
+- graph template - Graph visualization
 
-- [[flowchart_template]] - Flowchart design
+- flowchart template - Flowchart design
 
 ## Template Usage
 
 ### Getting Started
 
-- [[template_usage]] - How to use templates
+- template usage - How to use templates
 
-- [[template_examples]] - Example usage
+- template examples - Example usage
 
-- [[template_checklist]] - Usage checklist
+- template checklist - Usage checklist
 
 ### Best Practices
 
-- [[naming_conventions]] - Naming guidelines
+- naming conventions - Naming guidelines
 
-- [[structure_guidelines]] - Structure guidelines
+- structure guidelines - Structure guidelines
 
-- [[style_guidelines]] - Style guidelines
+- style guidelines - Style guidelines
 
 ### Customization
 
-- [[template_customization]] - Customization guide
+- template customization - Customization guide
 
-- [[extension_guide]] - Extension guide
+- extension guide - Extension guide
 
-- [[theme_customization]] - Theme customization
+- theme customization - Theme customization
 
 ## Related Sections
 
-- [[../guides/implementation_guides_index|Implementation Guides]]
+- [[docs/implementation/implementation_guides_index|Implementation Guides]]
 
-- [[../concepts/concept_documentation_index|Core Concepts]]
+- [[knowledge_base/cognitive/concept_documentation_index|Core Concepts]]
 
-- [[../examples/usage_examples_index|Usage Examples]]
+- [[docs/examples/usage_examples_index|Usage Examples]]
 
 ## Contributing
 
-- [[template_contribution]] - Contributing new templates
+- template contribution - Contributing new templates
 
-- [[template_review]] - Template review process
+- template review - Template review process
 
-- [[template_maintenance]] - Template maintenance
+- template maintenance - Template maintenance
 

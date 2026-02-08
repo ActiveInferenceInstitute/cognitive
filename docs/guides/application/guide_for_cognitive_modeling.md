@@ -6,7 +6,7 @@ Steps for Cognitive Modeling
 
   1. Research and document the general Background and Context for whichever Settings for Cognitive Modeling you are pursuing.
 
-     - Review foundational theories: [[free_energy_principle]], [[active_inference]], [[predictive_coding]]
+     - Review foundational theories: free energy principle, active inference, predictive coding
 
      - Understand mathematical frameworks: variational inference, information geometry, path integrals
 
@@ -254,15 +254,15 @@ class ActiveInferenceAgent:
 
 Links:
 
-- [[free_energy_principle]]
+- free energy principle
 
-- [[active_inference]]
+- active inference
 
-- [[predictive_coding]]
+- predictive coding
 
-- [[variational_inference]]
+- variational inference
 
-More information at [[active_inference_institute]] Coda:
+More information at active inference institute Coda:
 
 https://coda.io/d/Active-Blockference_dIvNESFmyj6/Cognitive-Modeling_suP0_SCu
 

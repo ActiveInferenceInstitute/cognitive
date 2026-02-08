@@ -10,7 +10,7 @@
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Mesa (Python ABM) docs: [mesa.readthedocs.io](https://mesa.readthedocs.io/)
 
@@ -22,15 +22,15 @@
 
 ### Foundations
 
-- [[../../knowledge_base/mathematics/expected_free_energy]] · [[../../knowledge_base/mathematics/policy_selection]] · [[../../knowledge_base/mathematics/precision_parameter]] · [[../../knowledge_base/mathematics/softmax_function]] · [[../../knowledge_base/mathematics/numerical_stability]] · [[../../knowledge_base/mathematics/message_passing]] · [[../../knowledge_base/mathematics/bethe_free_energy]]
+- [[knowledge_base/mathematics/expected_free_energy]] · [[knowledge_base/mathematics/policy_selection]] · [[knowledge_base/mathematics/precision_parameter]] · [[knowledge_base/mathematics/softmax_function]] · [[knowledge_base/mathematics/numerical_stability]] · [[knowledge_base/mathematics/message_passing]] · [[knowledge_base/mathematics/bethe_free_energy]]
 
 ## Knowledge Base Anchors
 
-- Social systems and networks: [[../../knowledge_base/cognitive/collective_behavior]] · [[../../knowledge_base/cognitive/swarm_intelligence]] · [[../../knowledge_base/cognitive/attention_networks]]
+- Social systems and networks: [[knowledge_base/cognitive/collective_behavior]] · [[knowledge_base/cognitive/swarm_intelligence]] · [[knowledge_base/cognitive/attention_networks]]
 
-- Math core: [[../../knowledge_base/mathematics/message_passing]] · [[../../knowledge_base/mathematics/expected_free_energy]] · [[../../knowledge_base/mathematics/policy_selection]]
+- Math core: [[knowledge_base/mathematics/message_passing]] · [[knowledge_base/mathematics/expected_free_energy]] · [[knowledge_base/mathematics/policy_selection]]
 
-- Cross-map: [[../../knowledge_base/mathematics/cross_reference_map]]
+- Cross-map: [[knowledge_base/mathematics/cross_reference_map]]
 
 ```mermaid
 
@@ -52,65 +52,65 @@ graph LR
 
 ## Introduction
 
-This learning path guide provides a structured approach to understanding and implementing [[abm]] in social science through the lens of [[active_inference]]. It is designed to accommodate learners from both the [[active_inference]] and [[social_science]] communities, acknowledging their distinct [[ontological_frameworks|ontological perspectives]] and methodological backgrounds.
+This learning path guide provides a structured approach to understanding and implementing abm in social science through the lens of active inference. It is designed to accommodate learners from both the active inference and social science communities, acknowledging their distinct ontological perspectives and methodological backgrounds.
 
 ### Purpose and Scope
 
-- Bridge the conceptual gap between [[active_inference]] and [[social_science]]
+- Bridge the conceptual gap between active inference and social science
 
-- Provide practical implementation guidelines for [[abm_development]]
+- Provide practical implementation guidelines for abm development
 
-- Foster [[interdisciplinary_research|interdisciplinary collaboration]] and knowledge exchange
+- Foster interdisciplinary collaboration and knowledge exchange
 
-- Enable robust [[social_simulation]] research
+- Enable robust social simulation research
 
 ### Target Audience
 
-1. **[[social_scientists]]**
+1. **social scientists**
 
-   - Researchers in [[sociology]], [[anthropology]], and [[political_science]]
+   - Researchers in sociology, anthropology, and political science
 
-   - [[policy_analysis|Policy analysts]] and social planners
+   - Policy analysts and social planners
 
-   - [[computational_social_science]] practitioners
+   - computational social science practitioners
 
-1. **[[active_inference]] Researchers**
+1. **active inference Researchers**
 
-   - [[cognitive_science|Cognitive scientists]]
+   - Cognitive scientists
 
-   - [[neuroscience|Neuroscientists]]
+   - Neuroscientists
 
-   - [[machine_learning]] researchers
+   - machine learning researchers
 
-1. **[[abm]] Practitioners**
+1. **abm Practitioners**
 
-   - [[complex_systems]] modelers
+   - complex systems modelers
 
-   - [[simulation]] specialists
+   - simulation specialists
 
-   - [[data_science|Data scientists]]
+   - Data scientists
 
 ### Learning Outcomes
 
 By completing this learning path, you will be able to:
 
-1. Design and implement [[social_abm|social ABMs]] using [[active_inference]] principles
+1. Design and implement social ABMs using active inference principles
 
-1. Analyze [[complex_social_phenomena]] through [[computational_modeling]]
+1. Analyze complex social phenomena through computational modeling
 
-1. [[model_validation|Validate]] and [[model_calibration|calibrate]] social simulations
+1. Validate and calibrate social simulations
 
-1. Contribute to [[interdisciplinary_research]] projects
+1. Contribute to interdisciplinary research projects
 
 ## Prerequisites
 
-- Basic understanding of [[probability_theory]] and [[statistics]]
+- Basic understanding of probability theory and statistics
 
-- Familiarity with at least one [[programming_languages|programming language]] ([[python]] recommended)
+- Familiarity with at least one programming language (python recommended)
 
-- Background in either [[social_science_research_methods]] or [[computational_modeling]]
+- Background in either social science research methods or computational modeling
 
-- Basic understanding of [[complex_systems]] concepts
+- Basic understanding of complex systems concepts
 
 ## Core Concepts and Ontological Frameworks
 
@@ -118,123 +118,123 @@ By completing this learning path, you will be able to:
 
 - **Key Theoretical Frameworks**
 
-  - [[structuration_theory]]
+  - structuration theory
 
-  - [[social_network_analysis]]
+  - social network analysis
 
-  - [[complex_adaptive_systems]]
+  - complex adaptive systems
 
-  - [[emergence]] and [[social_emergence]]
+  - emergence and social emergence
 
-  - [[social_construction_of_reality]]
+  - social construction of reality
 
 - **Methodological Approaches**
 
-  - [[qualitative_research_methods]]
+  - qualitative research methods
 
-  - [[quantitative_research_methods]]
+  - quantitative research methods
 
-  - [[mixed_methods_research]]
+  - mixed methods research
 
-  - [[computational_social_science]]
+  - computational social science
 
 ### 2. Active Inference Foundations
 
 - **Theoretical Components**
 
-  - [[free_energy_principle]]
+  - free energy principle
 
-  - [[variational_free_energy]]
+  - variational free energy
 
-  - [[markov_blankets]]
+  - markov blankets
 
-  - [[generative_models]]
+  - generative models
 
-  - [[belief_updating]]
+  - belief updating
 
-  - [[action_selection]]
+  - action selection
 
 - **Mathematical Prerequisites**
 
-  - [[bayesian_inference]]
+  - bayesian inference
 
-  - [[variational_inference]]
+  - variational inference
 
-  - [[information_theory]]
+  - information theory
 
-  - [[dynamical_systems]]
+  - dynamical systems
 
 ### 3. Agent-Based Modeling Fundamentals
 
 - **Core Concepts**
 
-  - [[emergence_in_abm|Emergence]]
+  - Emergence
 
-  - [[agent_architecture]]
+  - agent architecture
 
-  - [[environment_design]]
+  - environment design
 
-  - [[interaction_rules]]
+  - interaction rules
 
-  - [[model_validation]]
+  - model validation
 
-  - [[calibration_techniques]]
+  - calibration techniques
 
 - **Technical Skills**
 
-  - [[Programming Fundamentals]]
+  - Programming Fundamentals
 
-  - [[ABM Frameworks]]
+  - ABM Frameworks
 
-  - [[Data Structures]]
+  - Data Structures
 
-  - [[Visualization Tools]]
+  - [[knowledge_base/cognitive/visualization_tools]]
 
 - **Advanced Agent Architectures**
 
-  - [[cognitive_architectures]]
+  - cognitive architectures
 
-    - [[bdi_architecture|BDI (Belief-Desire-Intention)]]
+    - BDI (Belief-Desire-Intention)
 
-    - [[soar_architecture|SOAR]]
+    - SOAR
 
-    - [[act_r]]
+    - act r
 
-  - [[social_cognitive_architectures]]
+  - social cognitive architectures
 
-    - [[theory_of_mind_implementation]]
+    - theory of mind implementation
 
-    - [[social_learning_mechanisms]]
+    - social learning mechanisms
 
-    - [[cultural_evolution_models]]
+    - cultural evolution models
 
 - **Environment Modeling Approaches**
 
-  - [[spatial_representations]]
+  - spatial representations
 
-    - [[geographic_information_systems|GIS]]
+    - GIS
 
-    - [[network_topologies]]
+    - network topologies
 
-    - [[hybrid_spaces]]
+    - hybrid spaces
 
-  - [[temporal_dynamics]]
+  - temporal dynamics
 
-    - [[event_driven_simulation]]
+    - event driven simulation
 
-    - [[continuous_time_models]]
+    - continuous time models
 
-    - [[multi_scale_temporal_integration]]
+    - multi scale temporal integration
 
 ### 4. Integration Frameworks
 
 - **Theoretical Integration**
 
-  - [[active_inference_in_social_systems]]
+  - active inference in social systems
 
-  - [[social_theory_in_computation]]
+  - social theory in computation
 
-  - [[multi_scale_integration]]
+  - multi scale integration
 
 - **Technical Integration**
 
@@ -248,21 +248,21 @@ By completing this learning path, you will be able to:
 
 ### Phase 1: Foundations (4-6 weeks)
 
-1. **[[social_science_concepts]]**
+1. **social science concepts**
 
-   - [[social_theory]]
+   - social theory
 
-   - [[research_methods]]
+   - research methods
 
-   - [[data_collection]]
+   - data collection
 
-1. **[[Active Inference Basics]]**
+1. **Active Inference Basics**
 
-   - [[Free Energy Principle|FEP Fundamentals]]
+   - [[knowledge_base/cognitive/free_energy_principle|FEP Fundamentals]]
 
-   - [[Belief Updating|Belief Update Methods]]
+   - [[knowledge_base/cognitive/belief_updating|Belief Update Methods]]
 
-   - [[Action Selection|Action Selection Principles]]
+   - [[knowledge_base/cognitive/action_selection|Action Selection Principles]]
 
 1. **ABM Fundamentals**
 
@@ -294,135 +294,135 @@ By completing this learning path, you will be able to:
 
 ### Phase 2: Integration (6-8 weeks)
 
-1. **[[bridging_concepts]]**
+1. **bridging concepts**
 
-   - [[social_mechanisms_in_active_inference]]
+   - social mechanisms in active inference
 
-   - [[active_inference_in_social_systems]]
+   - active inference in social systems
 
-   - [[multi_agent_active_inference]]
+   - multi agent active inference
 
-1. **[[technical_implementation]]**
+1. **technical implementation**
 
-   - [[programming_tools]]
+   - programming tools
 
-   - [[simulation_frameworks]]
+   - simulation frameworks
 
-   - [[data_analysis_methods]]
+   - data analysis methods
 
 ### Phase 3: Advanced Applications (8-12 weeks)
 
-1. **[[complex_social_phenomena]]**
+1. **complex social phenomena**
 
-   - [[collective_behavior]]
+   - collective behavior
 
-   - [[social_norms]]
+   - social norms
 
-   - [[institution_formation]]
+   - institution formation
 
-1. **[[advanced_modeling]]**
+1. **advanced modeling**
 
-   - [[multi_level_models]]
+   - multi level models
 
-   - [[hybrid_approaches]]
+   - hybrid approaches
 
-   - [[validation_methods]]
+   - validation methods
 
 ### Phase 4: Specialization Tracks (12-16 weeks)
 
-1. **[[social_network_analysis_track]]**
+1. **social network analysis track**
 
-   - [[network_theory_fundamentals]]
+   - network theory fundamentals
 
-   - [[dynamic_network_analysis]]
+   - dynamic network analysis
 
-   - [[social_influence_models]]
+   - social influence models
 
-   - [[network_intervention_design]]
+   - network intervention design
 
-1. **[[policy_analysis_track]]**
+1. **policy analysis track**
 
-   - [[policy_design_principles]]
+   - policy design principles
 
-   - [[impact_assessment]]
+   - impact assessment
 
-   - [[scenario_analysis]]
+   - scenario analysis
 
-   - [[stakeholder_modeling]]
+   - stakeholder modeling
 
-1. **[[cultural_evolution_track]]**
+1. **cultural evolution track**
 
-   - [[cultural_transmission_models]]
+   - cultural transmission models
 
-   - [[innovation_diffusion]]
+   - innovation diffusion
 
-   - [[social_learning_dynamics]]
+   - social learning dynamics
 
-   - [[cultural_attractor_theory]]
+   - cultural attractor theory
 
-1. **[[organizational_dynamics_track]]**
+1. **organizational dynamics track**
 
-   - [[organizational_structure_modeling]]
+   - organizational structure modeling
 
-   - [[decision_making_processes]]
+   - decision making processes
 
-   - [[resource_allocation]]
+   - resource allocation
 
-   - [[institutional_change]]
+   - institutional change
 
 ## Tools and Resources
 
 ### Software Tools
 
-1. **[[abm_platforms]]**
+1. **abm platforms**
 
-   - [[netlogo]]
+   - netlogo
 
-   - [[mesa_python]]
+   - mesa python
 
-   - [[mason]]
+   - mason
 
-   - [[repast]]
+   - repast
 
-   - [[anylogic]]
+   - anylogic
 
-1. **[[programming_languages]]**
+1. **programming languages**
 
-   - [[python_for_abm|Python]]
+   - Python
 
-   - [[julia_for_abm|Julia]]
+   - Julia
 
-   - [[r_for_abm|R]]
+   - R
 
-   - [[matlab_for_abm|MATLAB]]
+   - MATLAB
 
-1. **[[analysis_tools]]**
+1. **analysis tools**
 
-   - [[jupyter_notebooks]]
+   - jupyter notebooks
 
-   - [[statistical_packages]]
+   - statistical packages
 
-   - [[visualization_libraries]]
+   - visualization libraries
 
 ### Learning Resources
 
 #### Books
 
-1. **[[Social Science References]]**
+1. **Social Science References**
 
-   - [[Complex Adaptive Systems - Miller and Page]]
+   - Complex Adaptive Systems - Miller and Page
 
-   - [[Generative Social Science - Epstein]]
+   - Generative Social Science - Epstein
 
-   - [[Agent-Based Models - Gilbert]]
+   - Agent-Based Models - Gilbert
 
-1. **[[Active Inference References]]**
+1. **Active Inference References**
 
-   - [[Active Inference - Parr et al]]
+   - Active Inference - Parr et al
 
-   - [[The Free Energy Principle - Friston]]
+   - The Free Energy Principle - Friston
 
-   - [[Hidden - A Theory of Learning - Friston et al]]
+   - Hidden - A Theory of Learning - Friston et al
 
 #### Online Resources
 
@@ -448,119 +448,119 @@ By completing this learning path, you will be able to:
 
 ### Current Research Directions
 
-1. **[[social_dynamics]]**
+1. **social dynamics**
 
-   - [[opinion_formation]]
+   - opinion formation
 
-   - [[social_network_evolution]]
+   - social network evolution
 
-   - [[cultural_transmission]]
+   - cultural transmission
 
-1. **[[economic_systems]]**
+1. **economic systems**
 
-   - [[market_behavior]]
+   - market behavior
 
-   - [[innovation_diffusion]]
+   - innovation diffusion
 
-   - [[organizational_dynamics]]
+   - organizational dynamics
 
-1. **[[political_processes]]**
+1. **political processes**
 
-   - [[voting_behavior]]
+   - voting behavior
 
-   - [[policy_diffusion]]
+   - policy diffusion
 
-   - [[conflict_dynamics]]
+   - conflict dynamics
 
 ### Methodological Challenges
 
-1. **[[validation_methods]]**
+1. **validation methods**
 
-   - [[empirical_validation]]
+   - empirical validation
 
-   - [[theory_validation]]
+   - theory validation
 
-   - [[cross_validation_techniques]]
+   - cross validation techniques
 
-1. **[[scale_issues]]**
+1. **scale issues**
 
-   - [[micro_macro_links]]
+   - micro macro links
 
-   - [[emergence_properties]]
+   - emergence properties
 
-   - [[computational_complexity]]
+   - computational complexity
 
-1. **[[integration_challenges]]**
+1. **integration challenges**
 
-   - [[data_integration_methods]]
+   - data integration methods
 
-   - [[theory_integration]]
+   - theory integration
 
-   - [[method_integration]]
+   - method integration
 
 ## Best Practices and Guidelines
 
 ### Model Development
 
-1. **[[design_principles]]**
+1. **design principles**
 
-   - [[parsimony_in_modeling]]
+   - parsimony in modeling
 
-   - [[modular_design]]
+   - modular design
 
-   - [[scalable_architecture]]
+   - scalable architecture
 
-   - [[reproducible_research]]
+   - reproducible research
 
-1. **[[documentation_standards]]**
+1. **documentation standards**
 
-   - [[code_documentation]]
+   - code documentation
 
-   - [[model_documentation]]
+   - model documentation
 
-   - [[validation_reports]]
+   - validation reports
 
 ### Research Ethics
 
-1. **[[data_ethics]]**
+1. **data ethics**
 
-   - [[privacy_in_social_simulation]]
+   - privacy in social simulation
 
-   - [[informed_consent]]
+   - informed consent
 
-   - [[representation_ethics]]
+   - representation ethics
 
-1. **[[model_ethics]]**
+1. **model ethics**
 
-   - [[bias_in_social_models]]
+   - bias in social models
 
-   - [[model_transparency]]
+   - model transparency
 
-   - [[ethical_modeling]]
+   - ethical modeling
 
 ## Future Directions
 
 ### Emerging Trends
 
-1. **[[technical_advances]]**
+1. **technical advances**
 
-   - [[deep_learning_in_abm]]
+   - deep learning in abm
 
-   - [[quantum_social_simulation]]
+   - quantum social simulation
 
-   - [[cloud_based_abm]]
+   - cloud based abm
 
-1. **[[theoretical_developments]]**
+1. **theoretical developments**
 
-   - [[extended_active_inference]]
+   - extended active inference
 
-   - [[social_physics]]
+   - social physics
 
-   - [[computational_sociology]]
+   - computational sociology
 
 ## Mathematical Foundations
 
-The [[variational_free_energy]] \( F \) is defined as:
+The variational free energy \( F \) is defined as:
 
 \[ F = \mathbb{E}_{q(s)}[\ln q(s) - \ln p(o,s)] \]
 
@@ -574,7 +574,7 @@ where:
 
 - \( o \) represents observations
 
-For [[multi_agent_systems]], the [[joint_free_energy]] becomes:
+For multi agent systems, the joint free energy becomes:
 
 \[ F_{joint} = \sum_i F_i + \mathcal{I}(s_1,...,s_n) \]
 
@@ -594,7 +594,7 @@ class ActiveInferenceAgent:
 
     """
 
-    Basic implementation of an [[Active Inference]] agent for [[Social ABM]]
+    Basic implementation of an [[knowledge_base/cognitive/active_inference]] agent for Social ABM
 
     """
 
@@ -740,15 +740,15 @@ class SocialActiveInferenceAgent:
 
     """
 
-    Implementation of a [[social_agent]] using [[active_inference]] principles.
+    Implementation of a social agent using [[knowledge_base/cognitive/active_inference]] principles.
 
     Related concepts:
 
-    - [[belief_updating]]
+    - [[knowledge_base/cognitive/belief_updating]]
 
-    - [[social_learning]]
+    - [[knowledge_base/cognitive/social_learning]]
 
-    - [[cultural_evolution]]
+    - cultural evolution
 
     """
 
@@ -1062,31 +1062,31 @@ class AdvancedModelValidator(ModelValidator):
 
 ### Key Papers
 
-1. **[[foundational_works]]**
+1. **foundational works**
 
-   - [[friston_2010|Friston, K. (2010)]]
+   - Friston, K. (2010)
 
-   - [[epstein_2006|Epstein, J. (2006)]]
+   - Epstein, J. (2006)
 
-   - [[miller_page_2007|Miller & Page (2007)]]
+   - Miller & Page (2007)
 
-1. **[[recent_developments]]**
+1. **recent developments**
 
-   - [[social_active_inference_papers|Recent papers]]
+   - Recent papers
 
-   - [[abm_advances|Latest developments]]
+   - Latest developments
 
-   - [[computational_social_science_methods|Methodological advances]]
+   - Methodological advances
 
 ### Software Documentation
 
-- [[netlogo_documentation]]
+- netlogo documentation
 
-- [[mesa_documentation]]
+- mesa documentation
 
-- [[python_abm_resources]]
+- python abm resources
 
-- [[active_inference_tools]]
+- active inference tools
 
 ---
 

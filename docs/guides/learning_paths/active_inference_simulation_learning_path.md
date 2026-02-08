@@ -60,11 +60,10 @@ semantic_relations:
 
     links:
 
-      - [[simulation_modeling_learning_path]]
 
-      - [[virtual_reality_learning_path]]
+      - [[active_inference_spatial_web_path]]
 
-      - [[multi_agent_systems_learning_path]]
+      - [[active_inference_social_learning_path]]
 
 ---
 
@@ -80,7 +79,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Gymnasium (environments, RL scaffolding): [gymnasium.farama.org](https://gymnasium.farama.org/)
 

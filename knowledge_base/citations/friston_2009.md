@@ -19,11 +19,11 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[../cognitive/predictive_coding]]
-      - [[../cognitive/free_energy_principle]]
+      - [[knowledge_base/cognitive/predictive_coding]]
+      - [[knowledge_base/cognitive/free_energy_principle]]
   - type: extends
     links:
-      - [[../mathematics/free_energy_principle]]
+      - [[knowledge_base/mathematics/free_energy_principle]]
   - type: cited_by
     links:
       - [[friston_2017]]

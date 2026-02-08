@@ -12,12 +12,12 @@ tags:
 semantic_relations:
   - type: grounded_in
     links:
-      - [[../mathematics/dynamical_systems]]
+      - [[knowledge_base/mathematics/dynamical_systems]]
   - type: relates
     links:
       - [[complex_systems]]
       - [[adaptive_systems]]
-      - [[../mathematics/path_integral_theory]]
+      - [[knowledge_base/mathematics/path_integral_theory]]
 ---
 
 # Dynamical Systems in Complex Systems
@@ -253,7 +253,7 @@ Dynamical systems theory provides the mathematical foundation for understanding 
 - **Arenas et al. (2008)**: Synchronization in complex networks
 
 ### Related Concepts
-- [[../mathematics/dynamical_systems]] - Mathematical foundations
+- [[knowledge_base/mathematics/dynamical_systems]] - Mathematical foundations
 - [[complex_systems]] - Complex system dynamics
 - [[adaptive_systems]] - Learning and adaptation
 - [[network_theory]] - Network dynamical systems

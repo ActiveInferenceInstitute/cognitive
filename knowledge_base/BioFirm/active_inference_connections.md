@@ -40,7 +40,7 @@ The BioFirm framework implements a specialized application of the [[cognitive/fr
 
   - Social system interfaces ([[cognitive/social_cognition|Social Cognition]])
 
-  - Economic interactions ([[systems/Social-Ecological_Systems|Social-Ecological Systems]])
+  - Economic interactions ([[knowledge_base/systems/Social-Ecological Systems|Social-Ecological Systems]])
 
 ### 3. [[cognitive/predictive_processing|Generative Models]]
 
@@ -58,7 +58,7 @@ The BioFirm framework implements a specialized application of the [[cognitive/fr
 
   - Climate patterns ([[mathematics/statistical_foundations|Statistical Foundations]])
 
-  - Social-ecological interactions ([[systems/Social-Ecological_Systems|Social-Ecological Systems]])
+  - Social-ecological interactions ([[knowledge_base/systems/Social-Ecological Systems|Social-Ecological Systems]])
 
 ## Implementation Framework
 
@@ -136,7 +136,7 @@ class BeliefPropagator:
 
 ```
 
-### 3. [[cognitive/adaptive_control|Adaptive Control]]
+### 3. [[knowledge_base/cognitive/adaptive_control|Adaptive Control]]
 
 ```python
 
@@ -188,7 +188,7 @@ where:
 
 - p(s,o): Generative model ([[cognitive/predictive_coding|Predictive Coding]])
 
-- s: System states ([[mathematics/state_space_theory|State Space]])
+- s: System states ([[knowledge_base/mathematics/state_space_theory|State Space]])
 
 - o: Observations ([[cognitive/perceptual_inference|Perception]])
 
@@ -228,7 +228,7 @@ where:
 
 ## Integration Patterns
 
-### 1. [[systems/cross_scale_integration|Cross-Scale Integration]]
+### 1. [[knowledge_base/systems/cross_scale_integration|Cross-Scale Integration]]
 
 ```python
 
@@ -270,7 +270,7 @@ class CrossScaleIntegrator:
 
 ```
 
-### 2. [[systems/temporal_integration|Temporal Integration]]
+### 2. [[knowledge_base/systems/temporal_integration|Temporal Integration]]
 
 ```python
 
@@ -314,7 +314,7 @@ class TemporalIntegrator:
 
 ```
 
-### 3. [[systems/domain_integration|Domain Integration]]
+### 3. [[knowledge_base/systems/domain_integration|Domain Integration]]
 
 ```python
 
@@ -356,25 +356,25 @@ class DomainIntegrator:
 
 ### 1. [[cognitive/meta_learning|Meta-Learning Extensions]]
 
-- Advanced parameter adaptation ([[cognitive/parameter_learning|Parameter Learning]])
+- Advanced parameter adaptation ([[knowledge_base/cognitive/parameter_learning|Parameter Learning]])
 
-- Structure learning mechanisms ([[cognitive/structure_learning|Structure Learning]])
+- Structure learning mechanisms ([[knowledge_base/cognitive/structure_learning|Structure Learning]])
 
-- Cross-domain transfer ([[cognitive/transfer_learning|Transfer Learning]])
+- Cross-domain transfer ([[knowledge_base/cognitive/transfer_learning|Transfer Learning]])
 
-### 2. [[systems/resilience_patterns|Resilience Patterns]]
+### 2. [[knowledge_base/systems/resilience_patterns|Resilience Patterns]]
 
-- Adaptive capacity enhancement ([[systems/adaptive_capacity|Adaptive Capacity]])
+- Adaptive capacity enhancement ([[knowledge_base/systems/adaptive_capacity|Adaptive Capacity]])
 
-- Recovery mechanisms ([[systems/recovery_dynamics|Recovery]])
+- Recovery mechanisms ([[knowledge_base/systems/recovery_dynamics|Recovery]])
 
-- Transformation pathways ([[systems/transformation_theory|Transformation]])
+- Transformation pathways ([[knowledge_base/systems/transformation_theory|Transformation]])
 
-### 3. [[cognitive/collective_intelligence|Collective Intelligence]]
+### 3. [[knowledge_base/cognitive/collective_intelligence|Collective Intelligence]]
 
 - Multi-agent coordination ([[cognitive/swarm_intelligence|Swarm Intelligence]])
 
-- Distributed learning ([[cognitive/distributed_learning|Distributed Learning]])
+- Distributed learning ([[knowledge_base/cognitive/distributed_learning|Distributed Learning]])
 
 - Emergent behavior ([[systems/emergence|Emergence]])
 
@@ -392,7 +392,7 @@ class DomainIntegrator:
 
 - [[mathematics/information_geometry|Information Geometry]]
 
-- [[systems/adaptive_management|Adaptive Management]]
+- [[knowledge_base/systems/adaptive_management|Adaptive Management]]
 
-- [[cognitive/hierarchical_models|Hierarchical Models]]
+- [[knowledge_base/cognitive/hierarchical_models|Hierarchical Models]]
 

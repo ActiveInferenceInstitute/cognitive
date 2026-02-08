@@ -26,9 +26,9 @@ semantic_relations:
 
     links:
 
-      - [[knowledge_base/cognitive/predictive_processing|Predictive Processing]]
+      - [[predictive_processing|Predictive Processing]]
 
-      - [[knowledge_base/cognitive/active_inference|Active Inference]]
+      - [[active_inference|Active Inference]]
 
   - type: uses
 
@@ -42,7 +42,7 @@ semantic_relations:
 
 ## Overview
 
-Predictive perception is a fundamental cognitive process where the brain actively generates predictions about sensory inputs and updates these predictions based on prediction errors. This framework is central to [[knowledge_base/cognitive/predictive_processing|Predictive Processing]] and [[knowledge_base/cognitive/active_inference|Active Inference]].
+Predictive perception is a fundamental cognitive process where the brain actively generates predictions about sensory inputs and updates these predictions based on prediction errors. This framework is central to [[predictive_processing|Predictive Processing]] and [[active_inference|Active Inference]].
 
 ## Core Principles
 
@@ -60,9 +60,9 @@ class HierarchicalPerception:
 
     Theory:
 
-        - [[knowledge_base/cognitive/predictive_processing|Predictive Processing]]
+        - [[predictive_processing|Predictive Processing]]
 
-        - [[knowledge_base/cognitive/active_inference|Active Inference]]
+        - [[active_inference|Active Inference]]
 
     Mathematics:
 
@@ -172,7 +172,7 @@ class VisualPrediction:
 
     Implementation:
 
-        - [[docs/guides/implementation_patterns#perception-implementation|Perception Pattern]]
+        - [[docs/implementation/implementation_patterns#perception-implementation|Perception Pattern]]
 
         - [[docs/api/perception_api|Perception API]]
 
@@ -204,9 +204,9 @@ class MultimodalIntegration:
 
     Theory:
 
-        - [[knowledge_base/cognitive/active_inference#multimodal-integration|Multimodal Integration]]
+        - [[active_inference#multimodal-integration|Multimodal Integration]]
 
-        - [[knowledge_base/cognitive/predictive_processing#sensory-integration|Sensory Integration]]
+        - [[predictive_processing#sensory-integration|Sensory Integration]]
 
     """
 
@@ -236,9 +236,9 @@ class HierarchicalGenerativeModel:
 
     Theory:
 
-        - [[knowledge_base/cognitive/predictive_processing|Predictive Processing]]
+        - [[predictive_processing|Predictive Processing]]
 
-        - [[knowledge_base/cognitive/active_inference|Active Inference]]
+        - [[active_inference|Active Inference]]
 
     Mathematics:
 
@@ -412,9 +412,9 @@ class ActiveInferencePerception:
 
     Theory:
 
-        - [[knowledge_base/cognitive/active_inference|Active Inference]]
+        - [[active_inference|Active Inference]]
 
-        - [[knowledge_base/cognitive/predictive_processing|Predictive Processing]]
+        - [[predictive_processing|Predictive Processing]]
 
     Mathematics:
 
@@ -768,9 +768,9 @@ class PerceptualTraining:
 
 ## References
 
-- [[knowledge_base/cognitive/active_inference|Active Inference]]
+- [[active_inference|Active Inference]]
 
-- [[knowledge_base/cognitive/predictive_processing|Predictive Processing]]
+- [[predictive_processing|Predictive Processing]]
 
 - [[knowledge_base/mathematics/information_theory|Information Theory]]
 

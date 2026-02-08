@@ -352,7 +352,7 @@ link_patterns = {
 
         "pattern": "[[{category}/{name}]]",
 
-        "example": "[[concepts/active_inference]]",
+        "example": "[[knowledge_base/cognitive/active_inference]]",
 
         "rules": {
 

@@ -14,7 +14,7 @@ semantic_relations:
     links:
       - [[AGENTS]]
       - [[agent_docs_readme]]
-      - [[../README]]
+      - [[docs/README]]
 ---
 
 # Agent Documentation Overview
@@ -41,14 +41,14 @@ This documentation serves multiple audiences:
 ## 🔗 Related Documentation
 
 ### Framework Integration
-- [[../README|Documentation Hub]] - Main documentation navigation
-- [[../implementation/AGENTS|Implementation Guides]] - Technical implementation details
-- [[../examples/AGENTS|Example Implementations]] - Working code examples
+- [[docs/README|Documentation Hub]] - Main documentation navigation
+- [[docs/implementation/AGENTS|Implementation Guides]] - Technical implementation details
+- [[docs/examples/AGENTS|Example Implementations]] - Working code examples
 
 ### Agent Resources
-- [[../../knowledge_base/agents/|Agent Knowledge Base]] - Theoretical foundations
-- [[../../Things/README|Implementation Examples]] - Working agent implementations
-- [[../../tools/README|Development Tools]] - Agent development utilities
+- [[knowledge_base/agents/README|Agent Knowledge Base]] - Theoretical foundations
+- [[code/Things/README|Implementation Examples]] - Working agent implementations
+- [[tools/README|Development Tools]] - Agent development utilities
 
 ---
 

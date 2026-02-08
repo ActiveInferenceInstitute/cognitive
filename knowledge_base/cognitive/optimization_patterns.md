@@ -22,7 +22,7 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../cognitive_modeling_concepts]]
+    links: [[cognitive_modeling_concepts]]
 
   - type: relates
 
@@ -30,9 +30,9 @@ semantic_relations:
 
       - [[inference_patterns]]
 
-      - [[../action_selection]]
+      - [[action_selection]]
 
-      - [[../../knowledge_base/cognitive/active_inference]]
+      - [[active_inference]]
 
 ---
 
@@ -332,19 +332,19 @@ Optimization patterns provide standardized approaches for solving various optimi
 
 - [[inference_patterns]] - Inference patterns
 
-- [[../action_selection]] - Action selection
+- [[action_selection]] - Action selection
 
 - [[neural_architectures]] - Neural architectures
 
-- [[../../knowledge_base/cognitive/active_inference]] - Active inference
+- [[active_inference]] - Active inference
 
-- [[../model_architecture]] - System architecture
+- [[model_architecture]] - System architecture
 
 ## References
 
-- [[../../research/papers/key_papers|Optimization Papers]]
+- [[docs/research/papers/key_papers|Optimization Papers]]
 
-- [[../../implementations/reference_implementations]]
+- [[knowledge_base/reference_implementations]]
 
-- [[../../guides/implementation_guides]]
+- [[docs/implementation/implementation_guides]]
 

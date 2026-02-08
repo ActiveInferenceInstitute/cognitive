@@ -28,7 +28,7 @@ semantic_relations:
 
       - [[neuroscience]]
 
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
 
   - type: implements
 
@@ -40,7 +40,7 @@ semantic_relations:
 
       - [[learning_theory]]
 
-      - [[../agents/architectures_overview]]
+      - [[knowledge_base/agents/architectures_overview]]
 
   - type: relates
 
@@ -706,15 +706,15 @@ class BehavioralLearningAgent:
 - [[myrmecology|Myrmecology]] - Ant social behavior
 
 ### Cognitive Science Connections
-- [[../cognitive/active_inference|Active Inference]] - Theoretical framework
-- [[../cognitive/decision_making|Decision Making]] - Choice behavior
-- [[../cognitive/learning_theory|Learning Theory]] - Behavioral learning
-- [[../cognitive/social_cognition|Social Cognition]] - Social behavior
+- [[knowledge_base/cognitive/active_inference|Active Inference]] - Theoretical framework
+- [[knowledge_base/cognitive/decision_making|Decision Making]] - Choice behavior
+- [[knowledge_base/cognitive/learning_theory|Learning Theory]] - Behavioral learning
+- [[knowledge_base/cognitive/social_cognition|Social Cognition]] - Social behavior
 
 ### Agent Architecture Applications
-- [[../../Things/Ant_Colony/|Ant Colony Social Behavior]]
-- [[../../Things/BioFirm/|BioFirm Behavioral Models]]
-- [[../../docs/examples/|Behavioral Agent Examples]]
+- [[code/Things/Ant_Colony/README|Ant Colony Social Behavior]]
+- [[code/Things/BioFirm/README|BioFirm Behavioral Models]]
+- [[docs/examples|Behavioral Agent Examples]]
 
 ## References
 
@@ -740,5 +740,5 @@ class BehavioralLearningAgent:
 - [[neuroscience]]
 - [[cognitive_science]]
 - [[evolutionary_dynamics]]
-- [[../agents/architectures_overview]]
+- [[knowledge_base/agents/architectures_overview]]
 

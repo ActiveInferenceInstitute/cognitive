@@ -26,7 +26,7 @@ semantic_relations:
 
       - [[README]]
 
-      - [[../ontology/cognitive_ontology]]
+      - [[knowledge_base/ontology/cognitive_ontology]]
 
 ---
 
@@ -1142,7 +1142,7 @@ new_cross_references:
 
 - [[README]] - Main navigation hub
 
-- [[../ontology/cognitive_ontology]] - Conceptual framework
+- [[knowledge_base/ontology/cognitive_ontology]] - Conceptual framework
 
 - Individual mathematical concept files for specific cross-references
 

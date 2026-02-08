@@ -24,27 +24,27 @@ semantic_relations:
 
   - type: documented_by
 
-    links: [[../../docs/concepts/cognitive_modeling_concepts|Documentation Concepts]]
+    links: [[cognitive_modeling_concepts|Documentation Concepts]]
 
   - type: implemented_by
 
-    links: [[../../docs/api/api_documentation|API Documentation]]
+    links: [[docs/api/api_documentation|API Documentation]]
 
   - type: formalized_by
 
     links:
 
-      - [[../mathematics/active_inference_pomdp|Active Inference POMDP]]
+      - [[knowledge_base/mathematics/active_inference_pomdp|Active Inference POMDP]]
 
-      - [[../mathematics/optimization_theory|Optimization Theory]]
+      - [[knowledge_base/mathematics/optimization_theory|Optimization Theory]]
 
-      - [[../mathematics/variational_calculus|Variational Calculus]]
+      - [[knowledge_base/mathematics/variational_calculus|Variational Calculus]]
 
 ---
 
 ## Overview
 
-This knowledge base contains the comprehensive theoretical foundations of cognitive science that underpin our cognitive modeling framework. It provides the deep scientific understanding necessary for cognitive modeling, complementing the [[../../docs/concepts/cognitive_modeling_concepts|implementation concepts]].
+This knowledge base contains the comprehensive theoretical foundations of cognitive science that underpin our cognitive modeling framework. It provides the deep scientific understanding necessary for cognitive modeling, complementing the [[cognitive_modeling_concepts|implementation concepts]].
 
 ## Core Theories
 
@@ -76,7 +76,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Mathematical Foundations
 
-- [[../mathematics/variational_calculus|Variational Calculus]]
+- [[knowledge_base/mathematics/variational_calculus|Variational Calculus]]
 
   - Euler-Lagrange equations
 
@@ -84,7 +84,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Path integrals
 
-- [[../mathematics/information_theory|Information Theory]]
+- [[knowledge_base/mathematics/information_theory|Information Theory]]
 
   - Entropy measures
 
@@ -92,7 +92,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Mutual information
 
-- [[../mathematics/optimal_control|Optimal Control]]
+- [[knowledge_base/mathematics/optimal_control|Optimal Control]]
 
   - Dynamic programming
 
@@ -122,7 +122,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Category Theory
 
-- [[../mathematics/category_theory|Category Theory]] - Mathematical abstraction
+- [[knowledge_base/mathematics/category_theory|Category Theory]] - Mathematical abstraction
 
   - Functorial relationships
 
@@ -140,7 +140,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Dynamical Systems
 
-- [[../mathematics/dynamical_systems|Dynamical Systems]] - System dynamics
+- [[knowledge_base/mathematics/dynamical_systems|Dynamical Systems]] - System dynamics
 
   - Attractor dynamics
 
@@ -158,7 +158,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Statistical Physics
 
-- [[../mathematics/statistical_physics|Statistical Physics]] - Physical principles
+- [[knowledge_base/mathematics/statistical_physics|Statistical Physics]] - Physical principles
 
   - Maximum entropy
 
@@ -204,7 +204,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Optimization Methods
 
-- [[../mathematics/optimization_theory|Optimization Theory]]
+- [[knowledge_base/mathematics/optimization_theory|Optimization Theory]]
 
   - Free energy minimization
 
@@ -212,7 +212,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Gradient methods
 
-- [[../mathematics/variational_methods|Variational Methods]]
+- [[knowledge_base/mathematics/variational_methods|Variational Methods]]
 
   - Variational inference
 
@@ -220,7 +220,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Belief propagation
 
-- [[../mathematics/stochastic_optimization|Stochastic Methods]]
+- [[knowledge_base/mathematics/stochastic_optimization|Stochastic Methods]]
 
   - Monte Carlo sampling
 
@@ -506,7 +506,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Theory Integration
 
-- [[../../docs/research/research_documentation|Research Documentation]]
+- [[docs/research/research_documentation|Research Documentation]]
 
   - Experimental results
 
@@ -514,7 +514,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Model validation
 
-- [[../mathematics/active_inference_pomdp|Mathematical Framework]]
+- [[knowledge_base/mathematics/active_inference_pomdp|Mathematical Framework]]
 
   - POMDP formulation
 
@@ -522,7 +522,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Information geometry
 
-- [[../../docs/concepts/theoretical_foundations|Implementation Theory]]
+- [[theoretical_foundations|Implementation Theory]]
 
   - System design
 
@@ -532,7 +532,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Development Integration
 
-- [[../../docs/guides/implementation_guides|Implementation Guides]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
   - Development patterns
 
@@ -540,7 +540,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Code examples
 
-- [[../../docs/api/api_documentation|API Documentation]]
+- [[docs/api/api_documentation|API Documentation]]
 
   - Interface specifications
 
@@ -548,7 +548,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Usage examples
 
-- [[../../docs/examples/usage_examples|Code Examples]]
+- [[docs/examples/usage_examples|Code Examples]]
 
   - Basic examples
 
@@ -944,5 +944,5 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ## Contributing
 
-See [[../../docs/guides/contribution_guide|Contribution Guide]] for adding to the knowledge base.
+See [[docs/development/contribution_guide|Contribution Guide]] for adding to the knowledge base.
 

@@ -28,7 +28,7 @@ semantic_relations:
 
       - [[cell_differentiation]]
 
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
 
   - type: implements
 
@@ -40,7 +40,7 @@ semantic_relations:
 
       - [[cellular_automata]]
 
-      - [[../agents/architectures_overview]]
+      - [[knowledge_base/agents/architectures_overview]]
 
   - type: relates
 

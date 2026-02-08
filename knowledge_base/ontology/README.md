@@ -13,14 +13,18 @@ tags:
 semantic_relations:
   - type: organizes
     links:
+      - [[biological_ontology]]
       - [[cognitive_ontology]]
       - [[computer_science_ontology]]
+      - [[mathematical_ontology]]
+      - [[philosophical_ontology]]
+      - [[systems_ontology]]
       - [[hyperspatial/hyperspace_ontology]]
 ---
 
 # Ontology Knowledge Base
 
-This knowledge base contains 3 comprehensive documents covering ontological frameworks, knowledge organization, and semantic structures essential for cognitive modeling and knowledge representation. The content focuses on cognitive ontology, computer science ontology, and hyperspatial concepts.
+This knowledge base contains 6 comprehensive documents covering ontological frameworks, knowledge organization, and semantic structures essential for cognitive modeling and knowledge representation. The content spans biological, cognitive, computer science, mathematical, philosophical, and systems ontology, along with hyperspatial concepts.
 
 ## 🧬 Overview
 
@@ -28,47 +32,54 @@ The ontology knowledge base provides frameworks for organizing knowledge, repres
 
 ## 📚 Content Organization
 
-### 🧠 Cognitive Ontology
+### 🧠 Ontological Frameworks
 
-#### Knowledge Frameworks
+#### Core Ontologies
+- [[biological_ontology]] - Biological systems and organisms taxonomy
 - [[cognitive_ontology]] - Cognitive concept organization and taxonomy
 - [[computer_science_ontology]] - Computer science knowledge structures
+- [[mathematical_ontology]] - Mathematical structures and foundations
+- [[philosophical_ontology]] - Philosophical categories and frameworks
+- [[systems_ontology]] - Systems theory ontological structures
 
 #### Advanced Concepts
-- [[hyperspatial/|Hyperspatial Ontology Knowledge Base]] - Higher-dimensional and topological frameworks
+- [[hyperspatial/hyperspace_ontology|Hyperspatial Ontology Knowledge Base]] - Higher-dimensional and topological frameworks
 
 ## 🧭 Navigation Guide
 
 ### For Knowledge Engineers
 1. Start with [[cognitive_ontology]] for cognitive concept organization
 2. Explore [[computer_science_ontology]] for computational frameworks
-3. Study [[hyperspatial/hyperspace_ontology]] for higher-dimensional semantic structures
+3. Review [[mathematical_ontology]] for formal mathematical structures
+4. Study [[hyperspatial/hyperspace_ontology]] for higher-dimensional semantic structures
 
 ### For Cognitive Scientists
 1. Review [[cognitive_ontology]] for cognitive concept taxonomy
-2. Examine [[computer_science_ontology]] for implementation frameworks
-3. Study [[hyperspatial/hyperspace_ontology]] for extended cognition models
+2. Examine [[biological_ontology]] for biological systems frameworks
+3. Study [[philosophical_ontology]] for foundational categories
+4. Explore [[systems_ontology]] for systems-level ontological structures
 
 ### For Ontologists
 1. Focus on [[cognitive_ontology]] for cognitive domain organization
 2. Study [[computer_science_ontology]] for formal knowledge structures
-3. Review [[hyperspatial/hyperspace_ontology]] for higher-dimensional ontological concepts
+3. Review [[mathematical_ontology]] and [[philosophical_ontology]] for foundational frameworks
+4. Explore [[hyperspatial/hyperspace_ontology]] for higher-dimensional ontological concepts
 
 ## 🔗 Cross-References
 
 ### Related Knowledge Domains
-- [[../cognitive/knowledge_organization]]
-- [[../philosophy/philosophy_topics]]
-- [[../mathematics/category_theory]]
-- [[../systems/knowledge_graphs|Knowledge Graphs]]
+- [[knowledge_base/cognitive/knowledge_organization]]
+- [[knowledge_base/philosophy/philosophy_topics]]
+- [[knowledge_base/mathematics/category_theory]]
+- [[knowledge_base/systems/knowledge_graphs|Knowledge Graphs]]
 
 ### Implementation Examples
-- [[../../tools/src/models/|Knowledge Models]]
-- [[../../docs/templates/|Ontology Templates]]
+- [[tools/src/models/README|Knowledge Models]]
+- [[docs/templates/README|Ontology Templates]]
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 3 focused ontological documents
+- **Coverage**: 6 focused ontological documents
 - **Depth**: Comprehensive treatment of key ontological frameworks
 - **Integration**: Strong connections to cognitive modeling
 - **Formalism**: Rigorous ontological structures
@@ -76,10 +87,13 @@ The ontology knowledge base provides frameworks for organizing knowledge, repres
 ## 🔄 Recent Updates
 
 ### Enhanced Content Areas
+- ✅ **Biological Ontology**: Biological systems and organisms taxonomy
 - ✅ **Cognitive Ontology**: Comprehensive cognitive concept taxonomy
 - ✅ **Computer Science Ontology**: Formal knowledge structures
+- ✅ **Mathematical Ontology**: Mathematical structures and foundations
+- ✅ **Philosophical Ontology**: Philosophical categories and frameworks
+- ✅ **Systems Ontology**: Systems theory ontological structures
 - ✅ **Hyperspatial Ontology**: Advanced semantic frameworks
-- ✅ **Integration**: Stronger connections to implementation
 
 ### Development Focus
 - 🔄 **Expansion**: Additional ontological perspectives
@@ -92,7 +106,7 @@ The ontology knowledge base provides frameworks for organizing knowledge, repres
 - Maintain ontological rigor and consistency
 - Include formal definitions and relationships
 - Connect ontological concepts to cognitive applications
-- Follow [[../linking_standards|linking standards]]
+- Follow [[knowledge_base/linking_standards|linking standards]]
 
 ### Review Process
 - Ontological expert validation

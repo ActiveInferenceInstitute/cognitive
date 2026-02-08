@@ -8,11 +8,21 @@ tags: [agents, mathematics, knowledge_base, probability, optimization, active-in
 aliases: [mathematical_agents, cognitive_agents, probabilistic_agents]
 semantic_relations:
   - type: documents
-    links: [[active_inference_theory]], [[free_energy_principle]], [[variational_inference]], [[optimization_theory]]
+    links:
+      - [[active_inference_theory]]
+      - [[free_energy_principle]]
+      - [[variational_inference]]
+      - [[optimization_theory]]
   - type: implements
-    links: [[active_inference]], [[bayesian_inference]], [[reinforcement_learning]]
+    links:
+      - [[knowledge_base/cognitive/active_inference]]
+      - [[knowledge_base/cognitive/bayesian_inference]]
+      - [[knowledge_base/cognitive/reinforcement_learning]]
   - type: foundation
-    links: [[probability_theory]], [[information_theory]], [[dynamical_systems]]
+    links:
+      - [[probability_theory]]
+      - [[information_theory]]
+      - [[dynamical_systems]]
 ---
 
 # Mathematical Knowledge Base Agents Documentation
@@ -292,26 +302,26 @@ See [[README|Mathematical Foundations Overview]] for:
 ## 🔗 Related Documentation
 
 ### Implementation Examples
-- [[../../Things/Generic_POMDP/README|Generic POMDP Implementation]]
-- [[../../Things/Simple_POMDP/README|Simple POMDP Implementation]]
-- [[../../Things/Continuous_Generic/README|Continuous Generic Implementation]]
+- [[code/Things/Generic_POMDP/README|Generic POMDP Implementation]]
+- [[code/Things/Simple_POMDP/README|Simple POMDP Implementation]]
+- [[code/Things/Continuous_Generic/README|Continuous Generic Implementation]]
 
 ### Theoretical Integration
-- [[../cognitive/active_inference|Active Inference Theory]]
-- [[../cognitive/free_energy_principle|Cognitive Free Energy]]
-- [[../systems/complex_systems|Complex Systems]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
+- [[knowledge_base/cognitive/free_energy_principle|Cognitive Free Energy]]
+- [[knowledge_base/systems/complex_systems|Complex Systems]]
 
 ### Research Resources
-- [[../../docs/research/|Research Applications]]
-- [[../../tools/README|Mathematical Tools]]
-- [[../../docs/guides/implementation_guides|Implementation Guides]]
+- [[docs/research|Research Applications]]
+- [[tools/README|Mathematical Tools]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
 ## 🔗 Cross-References
 
 ### Agent Theory
-- [[../../Things/Generic_POMDP/AGENTS|Generic POMDP Agents]]
-- [[../../Things/Simple_POMDP/AGENTS|Simple POMDP Agents]]
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[code/Things/Generic_POMDP/AGENTS|Generic POMDP Agents]]
+- [[code/Things/Simple_POMDP/AGENTS|Simple POMDP Agents]]
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
 
 ### Mathematical Concepts
 - [[probability_theory|Probability Theory]]
@@ -320,9 +330,9 @@ See [[README|Mathematical Foundations Overview]] for:
 - [[dynamical_systems|Dynamical Systems]]
 
 ### Applications
-- [[../../docs/guides/application/|Mathematical Applications]]
-- [[../../docs/research/|Mathematical Research]]
-- [[../../docs/examples/|Mathematical Examples]]
+- [[docs/guides/application/README|Mathematical Applications]]
+- [[docs/research|Mathematical Research]]
+- [[docs/examples|Mathematical Examples]]
 
 ---
 

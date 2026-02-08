@@ -58,11 +58,7 @@ semantic_relations:
 
     links:
 
-      - [[computational_modeling_learning_path]]
-
-      - [[high_performance_computing_learning_path]]
-
-      - [[distributed_systems_learning_path]]
+      - [[active_inference_edge_cognitive_systems_path]]
 
 ---
 
@@ -78,7 +74,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [PyTorch docs](https://pytorch.org)
 

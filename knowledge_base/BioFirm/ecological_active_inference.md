@@ -1,4 +1,4 @@
-# [[Ecological_Active_Inference]]
+# [[knowledge_base/BioFirm/ecological_active_inference]]
 
 ## Overview
 
@@ -16,7 +16,7 @@ This document details the application of [[cognitive/active_inference|Active Inf
 
   - Resource availability ([[mathematics/probability_theory|Probability Theory]])
 
-  - Species interactions ([[mathematics/network_theory|Network Theory]])
+  - Species interactions ([[knowledge_base/systems/network_theory|Network Theory]])
 
 - **Observation Model** ([[cognitive/perceptual_inference|Perceptual Inference]])
 
@@ -60,11 +60,11 @@ class EcologicalDynamics:
 
 - **Belief Updating** ([[cognitive/belief_initialization|Belief Systems]])
 
-  - Species distribution models ([[mathematics/bayesian_brain|Bayesian Models]])
+  - Species distribution models ([[knowledge_base/cognitive/bayesian_brain|Bayesian Models]])
 
   - Population dynamics ([[mathematics/differential_geometry|Dynamical Systems]])
 
-  - Ecosystem services ([[systems/Social-Ecological_Systems|SES Framework]])
+  - Ecosystem services ([[knowledge_base/systems/Social-Ecological Systems|SES Framework]])
 
 - **Uncertainty Handling** ([[mathematics/uncertainty_resolution|Uncertainty Theory]])
 
@@ -112,17 +112,17 @@ class EcologicalController:
 
   - Structure learning ([[cognitive/predictive_coding|Predictive Models]])
 
-  - Response adaptation ([[systems/Resilience_Thinking|Resilience]])
+  - Response adaptation ([[knowledge_base/systems/resilience_thinking|Resilience]])
 
 - **Knowledge Integration** ([[cognitive/metacognition|Meta-learning]])
 
   - Scientific knowledge ([[mathematics/information_theory|Information Integration]])
 
-  - Traditional knowledge ([[systems/Traditional_Ecological_Knowledge|TEK]])
+  - Traditional knowledge ([[knowledge_base/systems/traditional_ecological_knowledge|TEK]])
 
-  - Management experience ([[systems/Adaptive_Comanagement|Adaptive Management]])
+  - Management experience ([[knowledge_base/systems/adaptive_comanagement|Adaptive Management]])
 
-### 3. [[systems/Resilience_Thinking|Ecological Resilience]]
+### 3. [[knowledge_base/systems/resilience_thinking|Ecological Resilience]]
 
 - **Stability Metrics** ([[mathematics/measure_theory|Measurement Theory]])
 
@@ -130,7 +130,7 @@ class EcologicalController:
 
   - Response diversity ([[cognitive/action_selection|Action Diversity]])
 
-  - Recovery capacity ([[systems/Resilience_Thinking|Recovery]])
+  - Recovery capacity ([[knowledge_base/systems/resilience_thinking|Recovery]])
 
 - **Adaptation Mechanisms** ([[cognitive/neural_plasticity|Plasticity]])
 
@@ -138,31 +138,31 @@ class EcologicalController:
 
   - Species turnover ([[mathematics/path_integral_theory|Transition Paths]])
 
-  - Ecosystem engineering ([[systems/Social-Ecological_Systems|System Design]])
+  - Ecosystem engineering ([[knowledge_base/systems/Social-Ecological Systems|System Design]])
 
 ## Applications
 
 ### 1. Conservation Planning
 
-- **Habitat Management** ([[systems/Bioregional_Stewardship_Theory|Stewardship]])
+- **Habitat Management** ([[knowledge_base/systems/bioregional_stewardship_theory|Stewardship]])
 
   - Protected area design ([[mathematics/optimization_theory|Spatial Optimization]])
 
-  - Corridor connectivity ([[mathematics/network_theory|Network Design]])
+  - Corridor connectivity ([[knowledge_base/systems/network_theory|Network Design]])
 
-  - Restoration planning ([[systems/Adaptive_Comanagement|Adaptive Planning]])
+  - Restoration planning ([[knowledge_base/systems/adaptive_comanagement|Adaptive Planning]])
 
 - **Species Protection** ([[cognitive/predictive_perception|Predictive Management]])
 
   - Population viability ([[mathematics/probability_theory|Probability Analysis]])
 
-  - Threat mitigation ([[cognitive/risk_assessment|Risk Management]])
+  - Threat mitigation ([[knowledge_base/systems/risk_assessment|Risk Management]])
 
-  - Recovery planning ([[systems/Resilience_Thinking|Recovery Strategies]])
+  - Recovery planning ([[knowledge_base/systems/resilience_thinking|Recovery Strategies]])
 
 ### 2. Ecosystem Services
 
-- **Service Provision** ([[systems/Social-Ecological_Systems|SES Services]])
+- **Service Provision** ([[knowledge_base/systems/Social-Ecological Systems|SES Services]])
 
   - Pollination services ([[cognitive/collective_behavior|Collective Behavior]])
 
@@ -192,9 +192,9 @@ class EcologicalController:
 
   - Action prioritization ([[mathematics/policy_selection|Policy Selection]])
 
-  - Implementation timing ([[mathematics/temporal_dynamics|Temporal Planning]])
+  - Implementation timing ([[knowledge_base/mathematics/temporal_dynamics|Temporal Planning]])
 
-  - Effect evaluation ([[cognitive/performance_evaluation|Performance Assessment]])
+  - Effect evaluation ([[knowledge_base/cognitive/performance_evaluation|Performance Assessment]])
 
 ## See Also
 
@@ -208,7 +208,7 @@ class EcologicalController:
 
 - [[cognitive/complex_systems_biology|Complex Systems]]
 
-- [[systems/Social-Ecological_Systems|Social-Ecological Systems]]
+- [[knowledge_base/systems/Social-Ecological Systems|Social-Ecological Systems]]
 
-- [[systems/Resilience_Thinking|Resilience Theory]]
+- [[knowledge_base/systems/resilience_thinking|Resilience Theory]]
 

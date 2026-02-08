@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[matrix_ops]]
-      - [[../active_inference/AGENTS|Active Inference Models]]
-      - [[../../README|Tools Overview]]
+      - matrix ops
+      - [[tools/src/models/active_inference/AGENTS|Active Inference Models]]
+      - [[tools/src/README|Tools Overview]]
 ---
 
 # Matrix Operations Agent Documentation
@@ -130,12 +130,12 @@ Matrix operations implement:
 ## 📚 Related Documentation
 
 ### Implementation Resources
-- [[matrix_ops|Matrix Operations Implementation]]
-- [[../active_inference/AGENTS|Active Inference Models]]
-- [[../../README|Tools Overview]]
+- Matrix Operations Implementation
+- [[tools/src/models/active_inference/AGENTS|Active Inference Models]]
+- [[tools/src/README|Tools Overview]]
 
 ### Mathematical Foundations
-- [[../../../knowledge_base/mathematics/AGENTS|Mathematical Foundations]]
+- [[knowledge_base/mathematics/AGENTS|Mathematical Foundations]]
 - Probability theory documentation
 - Information theory references
 

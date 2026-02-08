@@ -22,17 +22,17 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../cognitive_modeling_concepts]]
+    links: [[cognitive_modeling_concepts]]
 
   - type: relates
 
     links:
 
-      - [[../perception_processing]]
+      - [[perception_processing]]
 
       - [[neural_architectures]]
 
-      - [[../../knowledge_base/cognitive/attention_mechanisms]]
+      - [[attention_mechanisms]]
 
 ---
 
@@ -384,21 +384,21 @@ Attention patterns define structured approaches for implementing attention mecha
 
 ## Related Concepts
 
-- [[../perception_processing]] - Perception processing
+- [[perception_processing]] - Perception processing
 
 - [[neural_architectures]] - Neural architectures
 
 - [[optimization_patterns]] - Optimization patterns
 
-- [[../../knowledge_base/cognitive/attention_mechanisms]] - Attention mechanisms
+- [[attention_mechanisms]] - Attention mechanisms
 
-- [[../model_architecture]] - System architecture
+- [[model_architecture]] - System architecture
 
 ## References
 
-- [[../../research/papers/key_papers|Attention Papers]]
+- [[docs/research/papers/key_papers|Attention Papers]]
 
-- [[../../implementations/reference_implementations]]
+- [[knowledge_base/reference_implementations]]
 
-- [[../../guides/implementation_guides]]
+- [[docs/implementation/implementation_guides]]
 

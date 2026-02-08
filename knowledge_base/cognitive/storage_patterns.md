@@ -22,17 +22,17 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../cognitive_modeling_concepts]]
+    links: [[cognitive_modeling_concepts]]
 
   - type: relates
 
     links:
 
-      - [[../memory_systems]]
+      - [[memory_systems]]
 
-      - [[../model_architecture]]
+      - [[model_architecture]]
 
-      - [[../../knowledge_base/cognitive/memory_processes]]
+      - [[memory_processes]]
 
 ---
 
@@ -378,21 +378,21 @@ Storage patterns define standardized approaches for implementing memory and stor
 
 ## Related Concepts
 
-- [[../memory_systems]] - Memory systems
+- [[memory_systems]] - Memory systems
 
-- [[../model_architecture]] - System architecture
+- [[model_architecture]] - System architecture
 
 - [[inference_patterns]] - Inference patterns
 
-- [[../../knowledge_base/cognitive/memory_processes]] - Memory processes
+- [[memory_processes]] - Memory processes
 
 - [[optimization_patterns]] - Optimization patterns
 
 ## References
 
-- [[../../research/papers/key_papers|Storage Papers]]
+- [[docs/research/papers/key_papers|Storage Papers]]
 
-- [[../../implementations/reference_implementations]]
+- [[knowledge_base/reference_implementations]]
 
-- [[../../guides/implementation_guides]]
+- [[docs/implementation/implementation_guides]]
 

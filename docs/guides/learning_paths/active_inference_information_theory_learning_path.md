@@ -56,11 +56,10 @@ semantic_relations:
 
     links:
 
-      - [[information_theory_learning_path]]
 
-      - [[computational_theory_learning_path]]
+      - [[active_inference_computational_learning_path]]
 
-      - [[mathematical_foundations_learning_path]]
+      - [[active_inference_mathematical_learning_path]]
 
 ---
 
@@ -76,7 +75,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - MacKay (online), Cover & Thomas (book site), and Murphy PML (MIT Press) via hub
 

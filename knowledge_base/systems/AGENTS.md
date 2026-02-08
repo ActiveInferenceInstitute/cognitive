@@ -16,7 +16,7 @@ semantic_relations:
       - [[adaptive_systems]]
       - [[emergence]]
       - [[network_theory]]
-      - [[swarm_intelligence]]
+      - swarm intelligence
 ---
 
 # System-Level Agent Documentation
@@ -561,12 +561,12 @@ class SystemAdaptationFramework:
 - [[adaptive_systems|Adaptive Systems]]
 
 ### Agent Implementation
-- [[../agents/AGENTS|Agent Architectures Overview]]
-- [[../../Things/Ant_Colony/|Ant Colony Swarm Systems]]
+- [[knowledge_base/agents/AGENTS|Agent Architectures Overview]]
+- [[code/Things/Ant_Colony/README|Ant Colony Swarm Systems]]
 
 ### Related Documentation
-- [[../../docs/guides/systems_guides|Systems Implementation Guides]]
-- [[../../docs/api/systems_api|Systems API Reference]]
+- Systems Implementation Guides
+- Systems API Reference
 
 ---
 
@@ -574,5 +574,5 @@ class SystemAdaptationFramework:
 
 ---
 
-> **Implementation Note**: For practical implementations of systems-level agents, see the [[../../Things/Ant_Colony/|Ant Colony implementations]] and [[../../tools/src/models/|systems modeling tools]].
+> **Implementation Note**: For practical implementations of systems-level agents, see the [[code/Things/Ant_Colony/README|Ant Colony implementations]] and [[tools/src/models/README|systems modeling tools]].
 

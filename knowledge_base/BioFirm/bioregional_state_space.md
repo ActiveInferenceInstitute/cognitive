@@ -1,46 +1,46 @@
-# [[Active_Inference/Bioregional_State_Space|Bioregional State Space]]
+# [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]]
 
 ## Overview
 
-The [[Active_Inference/Bioregional_State_Space|Bioregional State Space]] represents a comprehensive framework for modeling complex [[Social_Ecological_Systems|social-ecological systems]] through [[Active_Inference/Free_Energy_Principle|active inference]]. It implements a [[Active_Inference/Hierarchical_Models|heterarchical]] nested structure of [[Active_Inference/Federated_Learning|federated]] [[Active_Inference/Markov_Blankets|Markov Blankets]], enabling multi-scale representation and inference across interconnected [[Active_Inference/Environmental_States|ecological]], [[Active_Inference/Climate_States|climatic]], [[Active_Inference/Social_States|social]], and [[Active_Inference/Economic_States|economic]] domains.
+The [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]] represents a comprehensive framework for modeling complex [[knowledge_base/systems/Social-Ecological Systems|social-ecological systems]] through [[knowledge_base/cognitive/free_energy_principle|active inference]]. It implements a [[knowledge_base/cognitive/active_inference/Hierarchical_Models|heterarchical]] nested structure of [[knowledge_base/cognitive/active_inference/Federated_Learning|federated]] [[knowledge_base/mathematics/markov_blankets|Markov Blankets]], enabling multi-scale representation and inference across interconnected [[knowledge_base/cognitive/active_inference/Environmental_States|ecological]], [[knowledge_base/cognitive/active_inference/Climate_States|climatic]], [[knowledge_base/cognitive/active_inference/Social_States|social]], and [[knowledge_base/cognitive/active_inference/Economic_States|economic]] domains.
 
 ## Theoretical Framework
 
-### [[Active_Inference/Hierarchical_Models|Heterarchical Structure]]
+### [[knowledge_base/cognitive/active_inference/Hierarchical_Models|Heterarchical Structure]]
 
-The state space is organized as a heterarchical network of [[Active_Inference/Markov_Blankets|Markov Blankets]], allowing for:
+The state space is organized as a heterarchical network of [[knowledge_base/mathematics/markov_blankets|Markov Blankets]], allowing for:
 
-- [[Active_Inference/Information_Flow|Multi-directional information flow]] between scales
+- [[knowledge_base/cognitive/active_inference/Information_Flow|Multi-directional information flow]] between scales
 
-- [[Active_Inference/Network_Theory|Non-hierarchical interactions]] between domains
+- [[knowledge_base/systems/network_theory|Non-hierarchical interactions]] between domains
 
-- [[Active_Inference/Emergence|Emergent properties]] at different scales
+- [[docs/research/complex_systems/emergence|Emergent properties]] at different scales
 
-- [[Active_Inference/Adaptive_Systems|Dynamic reconfiguration]] based on context
+- [[knowledge_base/cognitive/adaptive_systems|Dynamic reconfiguration]] based on context
 
-### [[Active_Inference/Markov_Blankets|Nested Markov Blankets]]
+### [[knowledge_base/mathematics/markov_blankets|Nested Markov Blankets]]
 
-Each component is encapsulated within nested [[Active_Inference/Markov_Blankets|Markov Blankets]] that define:
+Each component is encapsulated within nested [[knowledge_base/mathematics/markov_blankets|Markov Blankets]] that define:
 
-- [[Active_Inference/Internal_States|Internal states]] (intrinsic variables)
+- [[knowledge_base/cognitive/active_inference/Internal_States|Internal states]] (intrinsic variables)
 
-- [[Active_Inference/External_States|External states]] (environmental conditions)
+- [[knowledge_base/cognitive/active_inference/External_States|External states]] (environmental conditions)
 
-- [[Active_Inference/Active_States|Active states]] (intervention capabilities)
+- [[knowledge_base/cognitive/active_inference/Active_States|Active states]] (intervention capabilities)
 
-- [[Active_Inference/Sensory_States|Sensory states]] (observation channels)
+- [[knowledge_base/cognitive/active_inference/Sensory_States|Sensory states]] (observation channels)
 
-### [[Active_Inference/Federated_Learning|Federation Principles]]
+### [[knowledge_base/cognitive/active_inference/Federated_Learning|Federation Principles]]
 
-The system implements [[Active_Inference/Federated_Learning|federated learning]] and inference through:
+The system implements [[knowledge_base/cognitive/active_inference/Federated_Learning|federated learning]] and inference through:
 
-- [[Active_Inference/Scale_Specific_Representations|Scale-specific state representations]]
+- [[knowledge_base/cognitive/active_inference/Scale_Specific_Representations|Scale-specific state representations]]
 
-- [[Active_Inference/Cross_Scale_Coupling|Cross-scale coupling mechanisms]]
+- [[knowledge_base/cognitive/active_inference/Cross_Scale_Coupling|Cross-scale coupling mechanisms]]
 
-- [[Active_Inference/Distributed_Systems|Distributed update rules]]
+- [[knowledge_base/cognitive/active_inference/Distributed_Systems|Distributed update rules]]
 
-- [[Active_Inference/Collective_Intelligence|Collective intelligence emergence]]
+- [[knowledge_base/cognitive/active_inference/Collective_Intelligence|Collective intelligence emergence]]
 
 ## Core Components
 
@@ -152,7 +152,7 @@ The system implements [[Active_Inference/Federated_Learning|federated learning]]
 
   - [[Monitoring_Systems|Monitoring systems]]
 
-  - [[Adaptation_Strategies|Adaptation strategies]]
+  - [[knowledge_base/cognitive/adaptation_strategies|Adaptation strategies]]
 
 - [[Resource_Governance|Resource governance structures]]
 
@@ -166,7 +166,7 @@ The system implements [[Active_Inference/Federated_Learning|federated learning]]
 
   - [[Adaptive_Capacity|Adaptive capacity]]
 
-  - [[Social_Learning|Social learning]]
+  - [[knowledge_base/cognitive/social_learning|Social learning]]
 
   - [[Response_Diversity|Response diversity]]
 
@@ -202,7 +202,7 @@ The system implements [[Active_Inference/Federated_Learning|federated learning]]
 
   - [[System_Integration|System integration]]
 
-  - [[Performance_Metrics|Performance metrics]]
+  - [[knowledge_base/cognitive/performance_metrics|Performance metrics]]
 
 - [[Resource_Efficiency|Resource efficiency metrics]]
 
@@ -650,7 +650,7 @@ class ActiveInferenceLearner:
 
 - [[mathematics/markov_blankets|Markov Blankets]]
 
-- [[systems/hierarchical_systems|Hierarchical Systems]]
+- [[knowledge_base/systems/hierarchical_systems|Hierarchical Systems]]
 
 - [[mathematics/variational_inference|Variational Inference]]
 

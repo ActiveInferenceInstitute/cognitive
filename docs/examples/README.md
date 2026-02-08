@@ -18,13 +18,13 @@ semantic_relations:
       - [[AGENTS]]
   - type: demonstrates
     links:
-      - [[../guides/AGENTS]]
-      - [[../implementation/AGENTS]]
-      - [[../../Things/README]]
+      - [[docs/guides/AGENTS]]
+      - [[docs/implementation/AGENTS]]
+      - [[code/Things/README]]
   - type: educates
     links:
-      - [[../guides/learning_paths/|Learning Paths]]
-      - [[../guides/README|Implementation Guides]]
+      - [[docs/guides/learning_paths/README|Learning Paths]]
+      - [[docs/guides/README|Implementation Guides]]
 ---
 
 # Usage Examples
@@ -231,19 +231,19 @@ python validate_example.py example_output.json
 ## 🔗 Related Documentation
 
 ### Implementation Resources
-- [[../guides/implementation_guides|Implementation Guides]]
-- [[../api/README|API Documentation]]
-- [[../tools/README|Development Tools]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
+- [[docs/api/README|API Documentation]]
+- [[docs/tools/README|Development Tools]]
 
 ### Learning Resources
-- [[../guides/learning_paths|Learning Paths]]
-- [[../research/|Research Documentation]]
-- [[../../Things/README|Implementation Examples]]
+- [[docs/guides/learning_paths/README|Learning Paths]]
+- [[docs/research|Research Documentation]]
+- [[code/Things/README|Implementation Examples]]
 
 ### Development Resources
-- [[../repo_docs/contribution_guide|Contribution Guidelines]]
-- [[../repo_docs/code_standards|Code Standards]]
-- [[../../tests/README|Testing Framework]]
+- [[docs/development/contribution_guide|Contribution Guidelines]]
+- Code Standards
+- [[tests/README|Testing Framework]]
 
 ## 🔗 Cross-References
 
@@ -253,9 +253,9 @@ python validate_example.py example_output.json
 - [[index|Examples Index]]
 
 ### Related Content
-- [[../guides/README|Implementation Guides]]
-- [[../guides/tutorial_series|Tutorial Series]]
-- [[../research/example_applications|Research Examples]]
+- [[docs/guides/README|Implementation Guides]]
+- Tutorial Series
+- Research Examples
 
 ---
 

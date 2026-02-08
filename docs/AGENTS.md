@@ -16,7 +16,7 @@ semantic_relations:
       - [[README]]
       - [[DOCUMENTATION_ROADMAP]]
       - [[agents/agent_docs_readme]]
-      - [[../knowledge_base/index]]
+      - [[knowledge_base/index]]
 ---
 
 # Documentation Framework Agents
@@ -571,7 +571,7 @@ class DocumentationUsageAnalytics:
 - [[README|Main Documentation Overview]]
 - [[DOCUMENTATION_ROADMAP|Documentation Roadmap and Planning]]
 - [[agents/agent_docs_readme|Agent Documentation Clearinghouse]]
-- [[../knowledge_base/index|Knowledge Base Index]]
+- [[knowledge_base/index|Knowledge Base Index]]
 
 ### Quality Systems
 - [[repo_docs/documentation_standards|Documentation Standards]]

@@ -15,12 +15,12 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[neural_systems]]
-      - [[evolutionary_processes]]
-      - [[collective_behavior]]
-      - [[biological_inference]]
-      - [[../cognitive/active_inference]]
-      - [[../agents/architectures_overview]]
+      - neural systems
+      - evolutionary processes
+      - collective behavior
+      - biological inference
+      - [[knowledge_base/cognitive/active_inference]]
+      - [[knowledge_base/agents/architectures_overview]]
 ---
 
 # Biological Knowledge Base Agents Documentation
@@ -307,32 +307,32 @@ Key biological patterns for cognitive modeling:
 ## 📚 Documentation
 
 ### Biological Foundations
-See [[neural_systems|Neural Systems]] for:
+See Neural Systems for:
 - Neural computation principles and architectures
 - Brain-inspired agent design patterns
 - Predictive processing frameworks
 - Neural learning mechanisms
 
 ### Key Concepts
-- [[evolutionary_processes|Evolutionary Processes]]
-- [[collective_behavior|Collective Behavior]]
-- [[biological_inference|Biological Inference]]
+- Evolutionary Processes
+- Collective Behavior
+- Biological Inference
 - [[levels_of_organization|Biological Organization Levels]]
 
 ## 🔗 Related Documentation
 
 ### Cognitive Integration
-- [[../cognitive/active_inference|Active Inference Framework]]
-- [[../cognitive/neural_computation|Neural Computation]]
-- [[../cognitive/attention_mechanisms|Attention Mechanisms]]
-- [[../cognitive/memory_systems|Memory Systems]]
-- [[../cognitive/decision_making|Decision Making]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Framework]]
+- [[knowledge_base/cognitive/neural_computation|Neural Computation]]
+- [[knowledge_base/cognitive/attention_mechanisms|Attention Mechanisms]]
+- [[knowledge_base/cognitive/memory_systems|Memory Systems]]
+- [[knowledge_base/cognitive/decision_making|Decision Making]]
 
 ### Implementation Examples
-- [[../../Things/Ant_Colony/README|Ant Colony Implementation]]
-- [[../../Things/BioFirm/README|BioFirm Implementation]]
-- [[../../Things/KG_Multi_Agent/README|KG Multi-Agent Implementation]]
-- [[../../tools/src/models/active_inference/|Active Inference Models]]
+- [[code/Things/Ant_Colony/README|Ant Colony Implementation]]
+- [[code/Things/BioFirm/README|BioFirm Implementation]]
+- [[code/Things/KG_Multi_Agent/README|KG Multi-Agent Implementation]]
+- [[tools/src/models/active_inference|Active Inference Models]]
 
 ### Biological Foundations
 - [[neuroscience|Neuroscience]]
@@ -341,18 +341,18 @@ See [[neural_systems|Neural Systems]] for:
 - [[systems_biology|Systems Biology]]
 
 ### Research Resources
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/guides/application/|Biological Applications]]
-- [[../../docs/examples/|Implementation Examples]]
-- [[../../docs/implementation/|Implementation Guides]]
+- [[docs/research|Research Applications]]
+- [[docs/guides/application/README|Biological Applications]]
+- [[docs/examples|Implementation Examples]]
+- [[docs/implementation/README|Implementation Guides]]
 
 ## 🔗 Cross-References
 
 ### Agent Theory & Implementation
-- [[../../Things/Ant_Colony/AGENTS|Ant Colony Agents]]
-- [[../../Things/BioFirm/AGENTS|BioFirm Agents]]
-- [[../../Things/Generic_POMDP/AGENTS|Generic POMDP Agents]]
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[code/Things/Ant_Colony/AGENTS|Ant Colony Agents]]
+- [[code/Things/BioFirm/AGENTS|BioFirm Agents]]
+- [[code/Things/Generic_POMDP/AGENTS|Generic POMDP Agents]]
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
 
 ### Biological Concepts & Foundations
 - [[neuroscience|Neuroscience]]
@@ -365,16 +365,16 @@ See [[neural_systems|Neural Systems]] for:
 - [[entomology|Entomology]]
 
 ### Mathematical Frameworks
-- [[../mathematics/free_energy_principle|Free Energy Principle]]
-- [[../mathematics/information_theory|Information Theory]]
-- [[../mathematics/network_theory|Network Theory]]
-- [[../mathematics/dynamical_systems|Dynamical Systems]]
+- [[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]
+- [[knowledge_base/mathematics/information_theory|Information Theory]]
+- [[knowledge_base/systems/network_theory|Network Theory]]
+- [[knowledge_base/mathematics/dynamical_systems|Dynamical Systems]]
 
 ### Applications & Examples
-- [[../../docs/guides/application/|Biological Applications]]
-- [[../../docs/research/|Biological Research]]
-- [[../../docs/examples/|Biological Examples]]
-- [[../../docs/implementation/|Implementation Guides]]
+- [[docs/guides/application/README|Biological Applications]]
+- [[docs/research|Biological Research]]
+- [[docs/examples|Biological Examples]]
+- [[docs/implementation/README|Implementation Guides]]
 
 ---
 

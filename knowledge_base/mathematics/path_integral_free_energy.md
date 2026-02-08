@@ -802,15 +802,15 @@ class NeuralPathIntegral:
 
             # Encode paths
 
-            latent = self.components['encoder'](training_paths)
+            latent = self.components[[training_paths|'encoder']]
 
             # Learn dynamics
 
-            trajectories = self.components['dynamics'](latent)
+            trajectories = self.components[[latent|'dynamics']]
 
             # Decode paths
 
-            reconstructed = self.components['decoder'](trajectories)
+            reconstructed = self.components[[trajectories|'decoder']]
 
             # Update parameters
 

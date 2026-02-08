@@ -20,7 +20,7 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../documentation_standards]]
+    links: [[docs/repo_docs/documentation_standards]]
 
   - type: relates
 
@@ -746,15 +746,15 @@ FEP.md
 
 ## Related Concepts
 
-- [[../theory/concept_a|Concept A]]
+- [[theory/concept_a|Concept A]]
 
-- [[../implementation/concept_b|Implementation B]]
+- [[implementation/concept_b|Implementation B]]
 
 ## See Also
 
-- [[../guides/related_guide|Related Guide]]
+- [[docs/guides/related_guide|Related Guide]]
 
-- [[../examples/example|Example Usage]]
+- [[docs/examples/example|Example Usage]]
 
 ```
 

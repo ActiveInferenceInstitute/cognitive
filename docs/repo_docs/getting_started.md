@@ -176,9 +176,9 @@ Agents are structured with:
 
 ## Next Steps
 
-1. Read the [[docs/concepts/overview|Core Concepts]] guide
+1. Read the [[docs/implementation/rxinfer/docs/src/examples/overview|Core Concepts]] guide
 
-1. Try the [[docs/tutorials/index|Tutorials]]
+1. Try the [[docs/research/index|Tutorials]]
 
 1. Explore [[docs/examples/index|Example Implementations]]
 

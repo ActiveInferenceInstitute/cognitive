@@ -28,27 +28,27 @@ semantic_relations:
 
     links:
 
-      - [[../guides/ai_documentation_style]]
+      - [[docs/repo_docs/ai_documentation_style]]
 
-      - [[../guides/content_management]]
+      - [[docs/repo_docs/content_management]]
 
 ---
 
 ## Overview
 
-This directory contains foundational concepts and theoretical documentation for the cognitive modeling system. While the [[knowledge_base/cognitive/cognitive_science|Cognitive Science Knowledge Base]] contains the comprehensive cognitive science theory, this directory focuses on the implementation and documentation aspects of these concepts.
+This directory contains foundational concepts and theoretical documentation for the cognitive modeling system. While the [[cognitive_science|Cognitive Science Knowledge Base]] contains the comprehensive cognitive science theory, this directory focuses on the implementation and documentation aspects of these concepts.
 
 ## Core Concepts
 
 ### Theoretical Foundations
 
-- [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]] - Core theoretical foundation
+- [[free_energy_principle|Free Energy Principle]] - Core theoretical foundation
 
-- [[knowledge_base/cognitive/active_inference|Active Inference]] - Computational framework
+- [[active_inference|Active Inference]] - Computational framework
 
-- [[knowledge_base/cognitive/predictive_processing|Predictive Processing]] - Information processing model
+- [[predictive_processing|Predictive Processing]] - Information processing model
 
-- [[knowledge_base/cognitive/cognitive_phenomena|Cognitive Phenomena]] - Comprehensive phenomena catalog
+- [[cognitive_phenomena|Cognitive Phenomena]] - Comprehensive phenomena catalog
 
 ### Mathematical Foundations
 
@@ -68,7 +68,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
 - [[action_selection]] - Action selection processes
 
-- [[state_estimation]] - State estimation methods
+- state estimation - State estimation methods
 
 ### Documentation Framework
 
@@ -84,31 +84,31 @@ This directory contains foundational concepts and theoretical documentation for 
 
 - [[knowledge_organization]] - Knowledge base organization
 
-- [[documentation_standards]] - Documentation guidelines
+- documentation standards - Documentation guidelines
 
-- [[linking_patterns]] - Documentation linking patterns
+- linking patterns - Documentation linking patterns
 
 ### Version Control
 
-- [[git_workflow]] - Git-based version control
+- git workflow - Git-based version control
 
-- [[collaboration_patterns]] - Team collaboration
+- collaboration patterns - Team collaboration
 
-- [[change_management]] - Managing system changes
+- change management - Managing system changes
 
 ### Machine Learning
 
-- [[model_training]] - Training procedures
+- model training - Training procedures
 
-- [[transfer_learning]] - Knowledge transfer
+- transfer learning - Knowledge transfer
 
-- [[model_evaluation]] - Evaluation methods
+- model evaluation - Evaluation methods
 
 ## Integration Points
 
 ### Theory Integration
 
-- [[knowledge_base/cognitive/cognitive_science|Cognitive Science]] - Theoretical foundations
+- [[cognitive_science|Cognitive Science]] - Theoretical foundations
 
 - [[knowledge_base/mathematics/optimization_theory|Optimization Theory]] - Mathematical methods
 
@@ -116,7 +116,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
 ### Implementation Integration
 
-- [[docs/guides/implementation_guides|Implementation Guides]] - Development guides
+- [[docs/implementation/implementation_guides|Implementation Guides]] - Development guides
 
 - [[docs/api/api_documentation|API Documentation]] - API reference
 
@@ -128,9 +128,9 @@ This directory contains foundational concepts and theoretical documentation for 
 
 - [[knowledge_base/mathematics/active_inference_pomdp|Active Inference POMDP]] - Mathematical framework
 
-- [[docs/guides/experiment_design|Experiment Design]] - Experimental methods
+- [[knowledge_base/research/concepts/experiment_design|Experiment Design]] - Experimental methods
 
 ## Contributing
 
-See [[../templates/concept_template|Concept Template]] for creating new concept documentation.
+See Concept Template for creating new concept documentation.
 

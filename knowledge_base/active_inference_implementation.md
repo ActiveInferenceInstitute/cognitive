@@ -14,7 +14,7 @@ semantic_relations:
     links:
       - [[mathematics/free_energy_principle]]
       - [[cognitive/active_inference]]
-      - [[tools/src/models/|Implementation Tools]]
+      - [[tools/src/models/README|Implementation Tools]]
 ---
 
 # Active Inference Implementation Guide
@@ -732,7 +732,7 @@ class MultiAgentActiveInference:
 ### Core Implementation References
 - [[mathematics/free_energy_principle|Free Energy Principle]]
 - [[cognitive/active_inference|Active Inference Theory]]
-- [[tools/src/models/|Existing Implementation Tools]]
+- [[tools/src/models/README|Existing Implementation Tools]]
 
 ### Advanced Topics
 - **Hierarchical Active Inference**: Multi-timescale inference

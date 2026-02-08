@@ -20,13 +20,13 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[../cognitive/active_inference]]
-      - [[../systems/emergence]]
-      - [[../biology/evolutionary_dynamics]]
+      - [[knowledge_base/cognitive/active_inference]]
+      - [[knowledge_base/systems/emergence]]
+      - [[knowledge_base/biology/evolutionary_dynamics]]
   - type: extends
     links:
-      - [[../mathematics/free_energy_principle]]
-      - [[../systems/complex_systems]]
+      - [[knowledge_base/mathematics/free_energy_principle]]
+      - [[knowledge_base/systems/complex_systems]]
   - type: cited_by
     links:
       - [[friston_2017]]

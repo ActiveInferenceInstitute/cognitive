@@ -15,22 +15,22 @@ aliases: [fep_core, variational_free_energy, free_energy_minimization]
 semantic_relations:
   - type: foundation
     links:
-      - [[../mathematics/variational_free_energy]]
-      - [[../mathematics/expected_free_energy]]
-      - [[../mathematics/markov_blankets]]
-      - [[../mathematics/information_geometry]]
+      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy]]
+      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy]]
+      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets]]
+      - [[knowledge_base/free_energy_principle/mathematics/information_geometry]]
   - type: implements
     links:
-      - [[../cognitive/perception]]
-      - [[../cognitive/active_inference]]
-      - [[../biology/homeostasis]]
-      - [[../systems/self_organization]]
+      - [[knowledge_base/free_energy_principle/cognitive/perception]]
+      - [[knowledge_base/cognitive/active_inference]]
+      - [[knowledge_base/free_energy_principle/biology/homeostasis]]
+      - [[knowledge_base/free_energy_principle/systems/self_organization]]
   - type: relates
     links:
-      - [[../mathematics/thermodynamics]]
-      - [[../mathematics/statistical_physics]]
-      - [[../mathematics/information_theory]]
-      - [[../mathematics/bayesian_inference]]
+      - [[knowledge_base/mathematics/thermodynamics]]
+      - [[knowledge_base/mathematics/statistical_physics]]
+      - [[knowledge_base/mathematics/information_theory]]
+      - [[knowledge_base/cognitive/bayesian_inference]]
 ---
 
 # Core Free Energy Principle
@@ -579,22 +579,22 @@ The principle maintains thermodynamic consistency through the fluctuation theore
 ## 🔗 Related Concepts
 
 ### Foundational Links
-- [[../mathematics/variational_inference]] - Approximate Bayesian inference
-- [[../mathematics/bayesian_inference]] - Probabilistic reasoning foundation
-- [[../mathematics/information_theory]] - Information-theoretic measures
-- [[../mathematics/thermodynamics]] - Physical principles
+- [[knowledge_base/mathematics/variational_inference]] - Approximate Bayesian inference
+- [[knowledge_base/cognitive/bayesian_inference]] - Probabilistic reasoning foundation
+- [[knowledge_base/mathematics/information_theory]] - Information-theoretic measures
+- [[knowledge_base/mathematics/thermodynamics]] - Physical principles
 
 ### Implementation Links
-- [[../cognitive/active_inference]] - Action-oriented extension
-- [[../cognitive/predictive_coding]] - Neural implementation
-- [[../biology/homeostasis]] - Biological application
-- [[../implementations/python_framework]] - Code implementations
+- [[knowledge_base/cognitive/active_inference]] - Action-oriented extension
+- [[knowledge_base/cognitive/predictive_coding]] - Neural implementation
+- [[knowledge_base/free_energy_principle/biology/homeostasis]] - Biological application
+- [[knowledge_base/free_energy_principle/implementations/python_framework]] - Code implementations
 
 ### Advanced Links
-- [[../mathematics/information_geometry]] - Geometric formulation
-- [[../systems/self_organization]] - Complex systems perspective
-- [[../philosophy/mind_body_problem]] - Philosophical implications
-- [[../applications/neuroscience]] - Neural applications
+- [[knowledge_base/free_energy_principle/mathematics/information_geometry]] - Geometric formulation
+- [[knowledge_base/free_energy_principle/systems/self_organization]] - Complex systems perspective
+- [[knowledge_base/free_energy_principle/philosophy/mind_body_problem]] - Philosophical implications
+- [[knowledge_base/free_energy_principle/applications/neuroscience]] - Neural applications
 
 ## 📚 Further Reading
 

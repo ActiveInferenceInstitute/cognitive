@@ -12,20 +12,20 @@ tags:
 semantic_relations:
   - type: supports
     links:
-      - [[../../tools/src/models/active_inference/AGENTS]]
-      - [[../../docs/development/README]]
-      - [[../development/AGENTS]]
-      - [[../implementation/AGENTS]]
+      - [[tools/src/models/active_inference/AGENTS]]
+      - [[docs/development/README]]
+      - [[docs/development/AGENTS]]
+      - [[docs/implementation/AGENTS]]
   - type: automates
     links:
-      - [[../../tests/README]]
-      - [[../config/AGENTS]]
-      - [[../../tests/run_tests.py]]
+      - [[tests/README]]
+      - [[docs/config/AGENTS]]
+      - [[code/tests/run_tests.py]]
   - type: enhances
     links:
-      - [[../../tools/README]]
-      - [[../../docs/repo_docs/automation_scripts|Automation Scripts]]
-      - [[../../docs/repo_docs/git_tools|Git Tools]]
+      - [[tools/README]]
+      - [[docs/tools/automation_scripts|Automation Scripts]]
+      - [[docs/tools/git_tools|Git Tools]]
 ---
 
 # Tools Agent Documentation
@@ -480,29 +480,29 @@ class CICDAgent(ToolAgent):
 ## 🔗 Related Documentation
 
 ### Development Resources
-- [[../../docs/development/README|Development Resources]]
-- [[../../docs/guides/AGENTS|Implementation Guides]]
-- [[../../tools/README|Tools Overview]]
+- [[docs/development/README|Development Resources]]
+- [[docs/guides/AGENTS|Implementation Guides]]
+- [[tools/README|Tools Overview]]
 
 ### Technical Resources
-- [[../../tools/src/|Tools Source Code]]
-- [[../../docs/api/AGENTS|API Documentation]]
-- [[../../tests/README|Testing Framework]]
+- [[tools/src/README|Tools Source Code]]
+- [[docs/api/AGENTS|API Documentation]]
+- [[tests/README|Testing Framework]]
 
 ### Integration Resources
-- [[../../docs/config/README|Configuration Documentation]]
-- [[../../docs/templates/AGENTS|Templates Documentation]]
+- [[docs/config/README|Configuration Documentation]]
+- [[docs/templates/AGENTS|Templates Documentation]]
 
 ## 🔗 Cross-References
 
 ### Tool Types
-- **Development**: [[CodeGenerationAgent|Code Generation]], [[TestingAutomationAgent|Testing]]
-- **Deployment**: [[DeploymentAutomationAgent|Deployment]], [[PerformanceMonitoringAgent|Monitoring]]
-- **Analysis**: [[CodeAnalysisAgent|Code Analysis]], [[BenchmarkingAgent|Benchmarking]]
-- **Data**: [[DatasetManagementAgent|Dataset Management]], [[ExperimentTrackingAgent|Experiment Tracking]]
+- **Development**: Code Generation, Testing
+- **Deployment**: Deployment, Monitoring
+- **Analysis**: Code Analysis, Benchmarking
+- **Data**: Dataset Management, Experiment Tracking
 
 ### Integration Points
-- **CI/CD**: [[CICDAgent|CI/CD Integration]]
+- **CI/CD**: CI/CD Integration
 - **IDE**: Development environment integration
 - **Cloud**: Cloud platform integration
 - **Container**: Containerization support

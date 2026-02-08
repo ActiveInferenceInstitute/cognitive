@@ -20,7 +20,7 @@ semantic_relations:
 
     links:
 
-      - [[../../docs/research/research_documentation_index|Research Documentation]]
+      - [[docs/research/research_documentation_index|Research Documentation]]
 
       - [[active_inference_pomdp]]
 
@@ -38,9 +38,9 @@ semantic_relations:
 
     links:
 
-      - [[../../docs/guides/implementation_guides_index|Implementation Guides]]
+      - [[docs/implementation/implementation_guides_index|Implementation Guides]]
 
-      - [[../../docs/api/api_documentation_index|API Documentation]]
+      - [[docs/api/api_documentation_index|API Documentation]]
 
 ---
 
@@ -640,13 +640,13 @@ numerical_implementations = {
 
 ## Documentation Links
 
-- [[../../docs/research/research_documentation_index|Research Documentation]]
+- [[docs/research/research_documentation_index|Research Documentation]]
 
-- [[../../docs/guides/implementation_guides_index|Implementation Guides]]
+- [[docs/implementation/implementation_guides_index|Implementation Guides]]
 
-- [[../../docs/api/api_documentation_index|API Documentation]]
+- [[docs/api/api_documentation_index|API Documentation]]
 
-- [[../../docs/examples/usage_examples_index|Usage Examples]]
+- [[docs/examples/usage_examples_index|Usage Examples]]
 
 ## Advanced Theoretical Framework
 

@@ -322,15 +322,15 @@ class NeuralPathIntegral:
 
         # Encode neural activity into path space
 
-        encoded_paths = self.networks['encoder'](neural_activity)
+        encoded_paths = self.networks[[neural_activity|'encoder']]
 
         # Integrate paths
 
-        integrated_paths = self.networks['integrator'](encoded_paths)
+        integrated_paths = self.networks[[encoded_paths|'integrator']]
 
         # Decode back to neural activity
 
-        decoded_activity = self.networks['decoder'](integrated_paths)
+        decoded_activity = self.networks[[integrated_paths|'decoder']]
 
         return decoded_activity
 

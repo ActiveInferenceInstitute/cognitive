@@ -22,15 +22,15 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../concepts/cognitive_modeling_concepts]]
+    links: [[knowledge_base/cognitive/cognitive_modeling_concepts]]
 
   - type: relates
 
     links:
 
-      - [[../guides/implementation_guides]]
+      - [[docs/implementation/implementation_guides]]
 
-      - [[../api/api_documentation]]
+      - [[docs/api/api_documentation]]
 
 ---
 
@@ -174,11 +174,11 @@ This directory contains templates for creating various types of documentation in
 
 ## Related Sections
 
-- [[../guides/implementation_guides|Implementation Guides]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
-- [[../concepts/cognitive_modeling_concepts|Core Concepts]]
+- [[knowledge_base/cognitive/cognitive_modeling_concepts|Core Concepts]]
 
-- [[../examples/usage_examples|Usage Examples]]
+- [[docs/examples/usage_examples|Usage Examples]]
 
 ## Contributing
 

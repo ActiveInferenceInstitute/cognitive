@@ -25,7 +25,7 @@ semantic_relations:
       - cognitive_flexibility
   - type: foundation
     links:
-      - [[../mathematics/precision_mechanisms]]
+      - [[precision_mechanisms]]
       - [[belief_updating]]
   - type: implements
     links:

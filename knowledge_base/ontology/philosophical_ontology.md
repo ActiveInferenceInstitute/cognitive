@@ -12,19 +12,19 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[../philosophy/AGENTS|Philosophy Agents Documentation]]
-      - [[../philosophy/README|Philosophy Overview]]
-      - [[../philosophy/philosophy_topics|Philosophy Topics]]
+      - [[knowledge_base/philosophy/AGENTS|Philosophy Agents Documentation]]
+      - [[knowledge_base/philosophy/README|Philosophy Overview]]
+      - [[knowledge_base/philosophy/philosophy_topics|Philosophy Topics]]
   - type: relates
     links:
       - [[cognitive_ontology]]
       - [[systems_ontology]]
-      - [[../philosophy/epistemology]]
-      - [[../philosophy/metaphysics]]
+      - [[knowledge_base/free_energy_principle/philosophy/epistemology]]
+      - [[knowledge_base/free_energy_principle/philosophy/metaphysics]]
   - type: influences
     links:
-      - [[../cognitive/free_energy_principle]]
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/free_energy_principle]]
+      - [[knowledge_base/cognitive/active_inference]]
 ---
 
 # Philosophical Ontology
@@ -269,19 +269,19 @@ Philosophical foundations and implications of active inference.
 ## 🔗 Interdisciplinary Connections
 
 ### Philosophy-Mathematics Integration
-- [[../mathematics/philosophy_of_mathematics|Philosophy of Mathematics]] - Foundations of mathematical knowledge
-- [[../mathematics/logic|Logic]] - Formal methods in philosophy
-- [[../mathematics/probability_theory|Probability Theory]] - Uncertainty and rationality
+- [[knowledge_base/philosophy/philosophy_of_mathematics|Philosophy of Mathematics]] - Foundations of mathematical knowledge
+- [[knowledge_base/mathematics/logic|Logic]] - Formal methods in philosophy
+- [[knowledge_base/mathematics/probability_theory|Probability Theory]] - Uncertainty and rationality
 
 ### Philosophy-Cognitive Science Links
-- [[../cognitive/theoretical_foundations|Theoretical Foundations]] - Philosophical basis of cognition
-- [[../cognitive/philosophical_psychology|Philosophical Psychology]] - Mind and behavior
-- [[../cognitive/consciousness|Consciousness Studies]] - Nature of subjective experience
+- [[knowledge_base/cognitive/theoretical_foundations|Theoretical Foundations]] - Philosophical basis of cognition
+- [[knowledge_base/cognitive/philosophical_psychology|Philosophical Psychology]] - Mind and behavior
+- [[knowledge_base/cognitive/consciousness|Consciousness Studies]] - Nature of subjective experience
 
 ### Philosophy-Systems Theory
-- [[../systems/systems_theory|Systems Theory]] - Holistic approaches to complex systems
-- [[../systems/complex_systems|Complex Systems]] - Emergence and self-organization
-- [[../philosophy/operationalism|Operationalism]] - Meaning through measurement and control
+- [[knowledge_base/systems/systems_theory|Systems Theory]] - Holistic approaches to complex systems
+- [[knowledge_base/systems/complex_systems|Complex Systems]] - Emergence and self-organization
+- [[knowledge_base/philosophy/operationalism|Operationalism]] - Meaning through measurement and control
 - [[AGENTS|Ontology Agent Architectures]] - Philosophical foundations for cognitive agents
 
 ## 📚 Philosophical Literature Ontology

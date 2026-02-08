@@ -13,14 +13,14 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[../../mathematics/active_inference_theory]]
-      - [[../../cognitive/active_inference]]
+      - [[knowledge_base/mathematics/active_inference_theory]]
+      - [[knowledge_base/cognitive/active_inference]]
   - type: extends
     links:
-      - [[../../mathematics/pomdp_framework]]
+      - [[knowledge_base/mathematics/pomdp_framework]]
   - type: documented_in
     links:
-      - [[../AGENTS]]
+      - [[knowledge_base/agents/AGENTS]]
 ---
 
 # Generic POMDP Active Inference Implementation
@@ -463,9 +463,9 @@ def benchmark_agent_performance():
 ## 📚 Advanced Topics
 
 ### Theoretical Foundations
-- **Partially Observable Markov Decision Processes**: [[../../mathematics/pomdp_framework]]
-- **Active Inference Theory**: [[../../mathematics/active_inference_theory]]
-- **Free Energy Principle**: [[../../mathematics/free_energy_principle]]
+- **Partially Observable Markov Decision Processes**: [[knowledge_base/mathematics/pomdp_framework]]
+- **Active Inference Theory**: [[knowledge_base/mathematics/active_inference_theory]]
+- **Free Energy Principle**: [[knowledge_base/mathematics/free_energy_principle]]
 
 ### Implementation Considerations
 - **Scalability**: Techniques for large state spaces
@@ -511,8 +511,8 @@ The POMDP agent integrates with various environment types:
 - Parr, T., Pezzulo, G., & Friston, K. (2019). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior
 
 ### Implementation Resources
-- [[../../Things/Generic_POMDP/]] - Working implementation examples
-- [[../../docs/guides/agent_development]] - Development guidelines
+- [[code/Things/Generic_POMDP/README]] - Working implementation examples
+- [[docs/guides/agent_development]] - Development guidelines
 
 ---
 

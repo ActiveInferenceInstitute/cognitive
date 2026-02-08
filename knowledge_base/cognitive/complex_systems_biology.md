@@ -26,7 +26,7 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../systems/systems_theory]]
+    links: [[knowledge_base/systems/systems_theory]]
 
   - type: related
 

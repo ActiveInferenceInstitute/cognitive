@@ -15,22 +15,22 @@ aliases: [fep_homeostasis, homeostasis_fep, physiological_fep]
 semantic_relations:
   - type: foundation
     links:
-      - [[../mathematics/core_principle]]
-      - [[../mathematics/variational_free_energy]]
-      - [[../systems/self_organization]]
-      - [[../biology/autopoiesis]]
+      - [[knowledge_base/free_energy_principle/mathematics/core_principle]]
+      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy]]
+      - [[knowledge_base/free_energy_principle/systems/self_organization]]
+      - [[knowledge_base/biology/autopoiesis]]
   - type: implements
     links:
-      - [[../biology/physiological_homeostasis]]
-      - [[../biology/neural_systems]]
-      - [[../cognitive/perception]]
-      - [[../implementations/simulation]]
+      - [[knowledge_base/biology/physiological_homeostasis]]
+      - [[knowledge_base/free_energy_principle/biology/neural_systems]]
+      - [[knowledge_base/free_energy_principle/cognitive/perception]]
+      - [[knowledge_base/free_energy_principle/implementations/simulation]]
   - type: relates
     links:
-      - [[../biology/evolution]]
-      - [[../biology/development]]
-      - [[../systems/resilience]]
-      - [[../philosophy/mind_body_problem]]
+      - [[knowledge_base/free_energy_principle/biology/evolution]]
+      - [[knowledge_base/free_energy_principle/biology/development]]
+      - [[knowledge_base/free_energy_principle/systems/resilience]]
+      - [[knowledge_base/free_energy_principle/philosophy/mind_body_problem]]
 ---
 
 # Free Energy Principle and Homeostasis
@@ -445,22 +445,22 @@ def assess_allostatic_load(free_energy_trajectory, threshold=1.0):
 ## 🔗 Related Concepts
 
 ### Foundational Links
-- [[../mathematics/core_principle]] - Core FEP formulation
-- [[../mathematics/variational_free_energy]] - Variational inference
-- [[../systems/self_organization]] - Self-organizing systems
-- [[../biology/autopoiesis]] - Self-maintaining systems
+- [[knowledge_base/free_energy_principle/mathematics/core_principle]] - Core FEP formulation
+- [[knowledge_base/free_energy_principle/mathematics/variational_free_energy]] - Variational inference
+- [[knowledge_base/free_energy_principle/systems/self_organization]] - Self-organizing systems
+- [[knowledge_base/biology/autopoiesis]] - Self-maintaining systems
 
 ### Implementation Links
-- [[../biology/physiological_homeostasis]] - Traditional homeostasis
-- [[../biology/neural_systems]] - Nervous system regulation
-- [[../implementations/simulation]] - Simulation frameworks
-- [[../cognitive/perception]] - Interoceptive perception
+- [[knowledge_base/biology/physiological_homeostasis]] - Traditional homeostasis
+- [[knowledge_base/free_energy_principle/biology/neural_systems]] - Nervous system regulation
+- [[knowledge_base/free_energy_principle/implementations/simulation]] - Simulation frameworks
+- [[knowledge_base/free_energy_principle/cognitive/perception]] - Interoceptive perception
 
 ### Advanced Links
-- [[../biology/evolution]] - Evolutionary homeostasis
-- [[../biology/development]] - Developmental processes
-- [[../systems/resilience]] - System resilience
-- [[../philosophy/mind_body_problem]] - Mind-body integration
+- [[knowledge_base/free_energy_principle/biology/evolution]] - Evolutionary homeostasis
+- [[knowledge_base/free_energy_principle/biology/development]] - Developmental processes
+- [[knowledge_base/free_energy_principle/systems/resilience]] - System resilience
+- [[knowledge_base/free_energy_principle/philosophy/mind_body_problem]] - Mind-body integration
 
 ## 📚 References
 

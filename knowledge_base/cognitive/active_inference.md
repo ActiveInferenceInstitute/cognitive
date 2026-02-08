@@ -13,11 +13,11 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[../mathematics/free_energy_principle]]
-      - [[../mathematics/active_inference_theory]]
-      - [[../mathematics/expected_free_energy]]
-      - [[../mathematics/variational_free_energy]]
-      - [[../mathematics/policy_selection]]
+      - [[knowledge_base/mathematics/free_energy_principle]]
+      - [[knowledge_base/mathematics/active_inference_theory]]
+      - [[knowledge_base/mathematics/expected_free_energy]]
+      - [[knowledge_base/mathematics/variational_free_energy]]
+      - [[knowledge_base/mathematics/policy_selection]]
   - type: foundation
     links:
       - [[predictive_processing]]
@@ -34,8 +34,8 @@ semantic_relations:
   - type: documented_by
     links:
       - [[active_inference_agent]]
-      - [[../active_inference_integration]]
-      - [[../active_inference_implementation]]
+      - [[knowledge_base/active_inference_integration]]
+      - [[knowledge_base/active_inference_implementation]]
   - type: relates
     links:
       - [[predictive_coding]]
@@ -43,8 +43,8 @@ semantic_relations:
       - [[reinforcement_learning]]
       - [[optimal_control]]
       - [[planning_as_inference]]
-      - [[../mathematics/markov_blanket]]
-      - [[../mathematics/active_inference_pomdp]]
+      - [[knowledge_base/mathematics/markov_blanket]]
+      - [[knowledge_base/mathematics/active_inference_pomdp]]
       - [[continuous_time_active_inference]]
       - [[bayesian_inference]]
       - [[control_theory]]
@@ -184,7 +184,7 @@ This decomposition reveals two fundamental components:
 
 1. **Pragmatic Value**: Fulfillment of prior preferences (exploitation)
 
-See also: [[../mathematics/expected_free_energy]], [[../mathematics/epistemic_value]], [[../mathematics/pragmatic_value]].
+See also: [[knowledge_base/mathematics/expected_free_energy]], [[knowledge_base/mathematics/epistemic_value]], [[knowledge_base/mathematics/pragmatic_value]].
 
 ### Policy Selection
 
@@ -208,13 +208,13 @@ The parameter $γ$ controls exploration-exploitation:
 
 - Lower $γ$ → more stochastic (exploration)
 
-See also: [[../mathematics/policy_selection]], [[../mathematics/exploration_exploitation]].
+See also: [[knowledge_base/mathematics/policy_selection]], [[knowledge_base/mathematics/exploration_exploitation]].
 
-For inverse temperature details, see [[../mathematics/precision_parameter]].
+For inverse temperature details, see [[knowledge_base/mathematics/precision_parameter]].
 
 ### POMDP Formulation
 
-Active inference is commonly instantiated over POMDPs via a generative model with observation, transition, preference, prior, and policy structures. For a complete reference of matrices \(A, B, C, D, E\), properties, and validation, see [[../mathematics/active_inference_pomdp]].
+Active inference is commonly instantiated over POMDPs via a generative model with observation, transition, preference, prior, and policy structures. For a complete reference of matrices \(A, B, C, D, E\), properties, and validation, see [[knowledge_base/mathematics/active_inference_pomdp]].
 
 ## Theoretical Foundations
 
@@ -558,7 +558,7 @@ f_μ(s,a,μ)
 
 ```
 
-See also: [[../mathematics/markov_blanket]].
+See also: [[knowledge_base/mathematics/markov_blanket]].
 
 ## Technical Foundations
 
@@ -1820,7 +1820,7 @@ class LearningActiveInferenceAgent(BasicActiveInferenceAgent):
 
 - [[predictive_coding]]
 
-- [[../mathematics/policy_selection]]
+- [[knowledge_base/mathematics/policy_selection]]
 
 - [[variational_inference]]
 
@@ -1834,35 +1834,35 @@ class LearningActiveInferenceAgent(BasicActiveInferenceAgent):
 
 - [[precision_weighting]]
 
-- [[../mathematics/variational_free_energy]]
+- [[knowledge_base/mathematics/variational_free_energy]]
 
-- [[../mathematics/expected_free_energy]]
+- [[knowledge_base/mathematics/expected_free_energy]]
 
-- [[../mathematics/epistemic_value]]
+- [[knowledge_base/mathematics/epistemic_value]]
 
-- [[../mathematics/pragmatic_value]]
+- [[knowledge_base/mathematics/pragmatic_value]]
 
-- [[../mathematics/active_inference_pomdp]]
+- [[knowledge_base/mathematics/active_inference_pomdp]]
 
-- [[../mathematics/markov_blanket]]
+- [[knowledge_base/mathematics/markov_blanket]]
 
 - [[continuous_time_active_inference]]
 
-- [[../../Things/ActiveInferenceInstitute/active_inference_institute]]
+- [[code/Things/ActiveInferenceInstitute/active_inference_institute]]
 
 ## Learning Paths
 
-- [[../../docs/guides/learning_paths/index]]
+- [[docs/guides/learning_paths/index]]
 
-- [[../../docs/guides/learning_paths/active_inference_cognitive_learning_path]]
+- [[docs/guides/learning_paths/active_inference_cognitive_learning_path]]
 
-- [[../../docs/guides/learning_paths/active_inference_mathematical_learning_path]]
+- [[docs/guides/learning_paths/active_inference_mathematical_learning_path]]
 
-- [[../../docs/guides/learning_paths/active_inference_robotics_learning_path]]
+- [[docs/guides/learning_paths/active_inference_robotics_learning_path]]
 
-- [[../../docs/guides/learning_paths/active_inference_neuroscience_learning_path]]
+- [[docs/guides/learning_paths/active_inference_neuroscience_learning_path]]
 
-- [[../../docs/guides/learning_paths/active_inference_agi_learning_path]]
+- [[docs/guides/learning_paths/active_inference_agi_learning_path]]
 
 ---
 

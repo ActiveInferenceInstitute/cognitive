@@ -13,8 +13,8 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[../../README]]
-      - [[../../../docs/repo_docs/README]]
+      - [[tools/README]]
+      - [[docs/repo_docs/README]]
 ---
 
 # Visualization Tools Implementation
@@ -643,30 +643,30 @@ class TestMatrixVisualizer:
 ## 📚 Related Documentation
 
 ### Implementation References
-- [[../../README|Tools Overview]]
-- [[../README|Source Code Overview]]
-- [[../../../docs/repo_docs/README|Standards]]
+- [[tools/README|Tools Overview]]
+- [[tools/src/README|Source Code Overview]]
+- [[docs/repo_docs/README|Standards]]
 
 ### Usage Examples
-- [[../../../Things/Generic_Thing/|Generic Thing Implementation]]
-- [[../../../docs/examples/|Usage Examples]]
-- [[../../../docs/guides/|Implementation Guides]]
+- [[code/Things/Generic_Thing/README|Generic Thing Implementation]]
+- [[docs/examples|Usage Examples]]
+- [[docs/guides/README|Implementation Guides]]
 
 ### Testing and Validation
-- [[../../../tests/|Testing Framework]]
-- [[../../../docs/repo_docs/unit_testing|Unit Testing Guidelines]]
+- [[tests/README|Testing Framework]]
+- [[docs/repo_docs/unit_testing|Unit Testing Guidelines]]
 
 ## 🔗 Cross-References
 
 ### Core Components
-- [[../models/active_inference/|Active Inference Models]]
-- [[../utils/|Utility Functions]]
-- [[../../../docs/api/|API Documentation]]
+- [[tools/src/models/active_inference|Active Inference Models]]
+- [[tools/src/utils/README|Utility Functions]]
+- [[docs/api/README|API Documentation]]
 
 ### Integration Points
-- [[../../../Things/|Implementation Examples]]
-- [[../../../docs/implementation/|Implementation Guides]]
-- [[../../../docs/repo_docs/|Standards]]
+- Implementation Examples
+- [[docs/implementation/README|Implementation Guides]]
+- [[docs/repo_docs/README|Standards]]
 
 ---
 

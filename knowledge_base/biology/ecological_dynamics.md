@@ -28,7 +28,7 @@ semantic_relations:
 
       - [[ecosystem_processes]]
 
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
 
   - type: implements
 
@@ -40,7 +40,7 @@ semantic_relations:
 
       - [[metacommunity_theory]]
 
-      - [[../agents/architectures_overview]]
+      - [[knowledge_base/agents/architectures_overview]]
 
   - type: relates
 
@@ -564,14 +564,14 @@ Mathematical descriptions of diversity:
 - [[evolutionary_dynamics|Evolutionary Dynamics]] - Eco-evolutionary dynamics
 
 ### Cognitive Science Connections
-- [[../cognitive/active_inference|Active Inference]] - Ecological regulation parallels
-- [[../cognitive/decision_making|Decision Making]] - Ecological choice processes
-- [[../cognitive/homeostasis|Homeostasis]] - Ecosystem balance
+- [[knowledge_base/cognitive/active_inference|Active Inference]] - Ecological regulation parallels
+- [[knowledge_base/cognitive/decision_making|Decision Making]] - Ecological choice processes
+- [[knowledge_base/biology/homeostasis|Homeostasis]] - Ecosystem balance
 
 ### Agent Architecture Applications
-- [[../../Things/Ant_Colony/|Ant Colony Ecological Models]]
-- [[../../docs/examples/|Ecological Agent Examples]]
-- [[../../docs/implementation/|Ecosystem Modeling]]
+- [[code/Things/Ant_Colony/README|Ant Colony Ecological Models]]
+- [[docs/examples|Ecological Agent Examples]]
+- [[docs/implementation/README|Ecosystem Modeling]]
 
 ## References
 
@@ -597,5 +597,5 @@ Mathematical descriptions of diversity:
 - [[ecosystem_processes]]
 - [[food_web_theory]]
 - [[metacommunity_theory]]
-- [[../agents/architectures_overview]]
+- [[knowledge_base/agents/architectures_overview]]
 

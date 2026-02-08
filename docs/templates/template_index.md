@@ -164,7 +164,7 @@ These templates support learning and knowledge transfer.
 
 ### Learning Paths
 
-- [[learning_path|Learning Path Template]] - Template for creating structured learning paths
+- Learning Path Template - Template for creating structured learning paths
 
 - **Purpose**: Document progressive learning journeys through cognitive concepts
 

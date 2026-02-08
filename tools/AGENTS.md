@@ -15,7 +15,7 @@ semantic_relations:
     links:
       - [[src/models/active_inference/AGENTS]]
       - [[README]]
-      - [[../../knowledge_base/agents/AGENTS]]
+      - [[knowledge_base/agents/AGENTS]]
 ---
 
 # Agent Development Tools Documentation
@@ -920,25 +920,25 @@ class AgentDeploymentFramework:
 
 ### Agent Documentation
 - [[src/models/active_inference/AGENTS|Active Inference Agents]]
-- [[../../knowledge_base/agents/AGENTS|Agent Architectures]]
-- [[../../docs/agents/AGENTS|Agent Documentation]]
+- [[knowledge_base/agents/AGENTS|Agent Architectures]]
+- [[docs/agents/AGENTS|Agent Documentation]]
 
 ### Deployment Resources
-- [[../../docs/implementation/README|Implementation Guides]]
-- [[../../docs/api/README|API Documentation]]
-- [[../../tests/README|Testing Framework]]
+- [[docs/implementation/README|Implementation Guides]]
+- [[docs/api/README|API Documentation]]
+- [[tests/README|Testing Framework]]
 
 ## 🔗 Cross-References
 
 ### Core Tools
-- [[src/models/active_inference/|Active Inference Implementation]]
-- [[src/utils/|Utility Functions]]
-- [[src/visualization/|Visualization Tools]]
+- [[src/models/active_inference|Active Inference Implementation]]
+- [[code/tools/src/utils/README|Utility Functions]]
+- [[code/tools/src/visualization/README|Visualization Tools]]
 
 ### Development Workflow
-- [[../../docs/repo_docs/contribution_guide|Contribution Guidelines]]
-- [[../../docs/repo_docs/git_workflow|Git Workflow]]
-- [[../../docs/repo_docs/code_standards|Code Standards]]
+- [[docs/development/contribution_guide|Contribution Guidelines]]
+- [[docs/tools/git_workflow|Git Workflow]]
+- Code Standards
 
 ---
 

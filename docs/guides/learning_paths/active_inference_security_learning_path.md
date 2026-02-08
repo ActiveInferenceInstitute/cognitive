@@ -32,11 +32,6 @@ semantic_relations:
 
     links:
 
-      - [[cognitive_safety_learning_path]]
-
-      - [[infohazard_management_learning_path]]
-
-      - [[security_protocols_learning_path]]
 
 ---
 
@@ -48,7 +43,7 @@ semantic_relations:
 
 - Define a minimal threat model for your Active Inference component (assets, threats, mitigations)
 
-- Add safety bounds tests (entropy → [[../../knowledge_base/mathematics/information_theory]], action limits → [[../../knowledge_base/mathematics/action_distribution]]) and a red-team regression test
+- Add safety bounds tests (entropy → [[knowledge_base/mathematics/information_theory]], action limits → [[knowledge_base/mathematics/action_distribution]]) and a red-team regression test
 
 ```mermaid
 
@@ -68,7 +63,7 @@ flowchart LR
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - NIST AI Risk Management Framework 1.0: [nist.gov/ai/rmf](https://www.nist.gov/itl/ai-risk-management-framework)
 
@@ -86,27 +81,27 @@ This specialized path focuses on applying Active Inference to cognitive security
 
 ### Core Active Inference References
 
-- [[../../knowledge_base/cognitive/active_inference]]
+- [[knowledge_base/cognitive/active_inference]]
 
-- [[../../knowledge_base/mathematics/expected_free_energy]]
+- [[knowledge_base/mathematics/expected_free_energy]]
 
-- [[../../knowledge_base/mathematics/policy_selection]]
+- [[knowledge_base/mathematics/policy_selection]]
 
-- [[../../knowledge_base/mathematics/precision_parameter]]
+- [[knowledge_base/mathematics/precision_parameter]]
 
- - [[../../knowledge_base/mathematics/numerical_stability]]
+ - [[knowledge_base/mathematics/numerical_stability]]
 
-- [[../../knowledge_base/mathematics/temperature_parameter]]
+- [[knowledge_base/mathematics/temperature_parameter]]
 
-- [[../../knowledge_base/mathematics/markov_blanket]]
+- [[knowledge_base/mathematics/markov_blanket]]
 
-- [[../../knowledge_base/cognitive/predictive_coding]]
+- [[knowledge_base/cognitive/predictive_coding]]
 
-- [[../../knowledge_base/mathematics/convergence_control]]
+- [[knowledge_base/mathematics/convergence_control]]
 
-- [[../../knowledge_base/mathematics/annealing_schedules]]
+- [[knowledge_base/mathematics/annealing_schedules]]
 
- - [[../../knowledge_base/mathematics/softmax_function]]
+ - [[knowledge_base/mathematics/softmax_function]]
 
 ```mermaid
 
@@ -340,7 +335,7 @@ verification:
 
 - Hazard isolation
 
-- Security boundaries ([[../../knowledge_base/mathematics/markov_blanket]])
+- Security boundaries ([[knowledge_base/mathematics/markov_blanket]])
 
 Containment architecture:
 
@@ -420,7 +415,7 @@ Layered design checklist:
 
 - Perception guardrails (input validation, provenance)
 
-- Inference guardrails (precision bounds [[../../knowledge_base/mathematics/precision_parameter]], annealing [[../../knowledge_base/mathematics/annealing_schedules]])
+- Inference guardrails (precision bounds [[knowledge_base/mathematics/precision_parameter]], annealing [[knowledge_base/mathematics/annealing_schedules]])
 
 - Action guardrails (policy entropy bounds, blocking lists)
 
@@ -604,17 +599,17 @@ class CognitiveDefenseSystem:
 
 ### Advanced Topics
 
-1. [[cognitive_safety_learning_path|Cognitive Safety]]
+1. Cognitive Safety
 
-1. [[infohazard_management_learning_path|Infohazard Management]]
+1. Infohazard Management
 
-1. [[security_protocols_learning_path|Security Protocols]]
+1. Security Protocols
 
 ### Research Directions
 
-1. [[research_guides/cognitive_security|Cognitive Security Research]]
+1. [[knowledge_base/research/cognitive_security|Cognitive Security Research]]
 
-1. [[research_guides/infohazard_management|Infohazard Management Research]]
+1. [[knowledge_base/research/infohazard_management|Infohazard Management Research]]
 
-1. [[research_guides/security_evolution|Security Evolution Research]]
+1. [[knowledge_base/research/security_evolution|Security Evolution Research]]
 

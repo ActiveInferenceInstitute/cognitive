@@ -16,8 +16,8 @@ semantic_relations:
       - [[self_organization]]
   - type: relates
     links:
-      - [[../cognitive/emergence_self_organization]]
-      - [[../biology/collective_behavior]]
+      - [[knowledge_base/cognitive/emergence_self_organization]]
+      - [[knowledge_base/cognitive/collective_behavior]]
       - [[swarm_intelligence]]
 ---
 
@@ -300,5 +300,5 @@ Emergence refers to the phenomenon where complex patterns, behaviors, or propert
 - [[complex_systems]] - Complex system foundations
 - [[self_organization]] - Spontaneous organization processes
 - [[swarm_intelligence]] - Collective problem-solving
-- [[../cognitive/emergence_self_organization]] - Cognitive emergence
+- [[knowledge_base/cognitive/emergence_self_organization]] - Cognitive emergence
 

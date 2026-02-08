@@ -13,7 +13,7 @@ semantic_relations:
   - type: templates
     links:
       - [[agent_template]]
-      - [[../../docs/guides/AGENTS]]
+      - [[docs/guides/AGENTS]]
 ---
 
 # Templates Agent Documentation
@@ -277,21 +277,21 @@ Template for creating agent testing and training environments.
 
 ### Advanced Agent Templates
 
-#### [[hierarchical_agent_template|Hierarchical Agent Template]]
+#### Hierarchical Agent Template
 Template for multi-level cognitive agents with hierarchical processing.
 
-#### [[multi_agent_template|Multi-Agent Template]]
+#### Multi-Agent Template
 Template for coordinating multiple agents in shared environments.
 
 ### Domain-Specific Templates
 
-#### [[robotics_agent_template|Robotics Agent Template]]
+#### Robotics Agent Template
 Specialized template for robotic control and navigation agents.
 
-#### [[healthcare_agent_template|Healthcare Agent Template]]
+#### Healthcare Agent Template
 Template for medical decision support and health monitoring agents.
 
-#### [[finance_agent_template|Finance Agent Template]]
+#### Finance Agent Template
 Template for financial decision-making and risk management agents.
 
 ## 🏗️ Template Architecture
@@ -528,25 +528,25 @@ class CompositeAgent(HierarchicalAgentTemplate, MultiAgentTemplate):
 ## 🔗 Related Documentation
 
 ### Implementation Resources
-- [[../../docs/guides/AGENTS|Implementation Guides]]
-- [[../../docs/examples/AGENTS|Examples Documentation]]
-- [[../../tools/README|Development Tools]]
+- [[docs/guides/AGENTS|Implementation Guides]]
+- [[docs/examples/AGENTS|Examples Documentation]]
+- [[tools/README|Development Tools]]
 
 ### Development Resources
-- [[../development/README|Development Resources]]
-- [[../../tests/README|Testing Framework]]
+- [[docs/development/README|Development Resources]]
+- [[tests/README|Testing Framework]]
 
 ### Template Resources
 - [[agent_template|Agent Template]]
 - [[environment_template|Environment Template]]
-- [[hierarchical_agent_template|Hierarchical Template]]
+- Hierarchical Template
 
 ## 🔗 Cross-References
 
 ### Template Types
 - **Basic Templates**: [[agent_template|Basic Agent]], [[environment_template|Environment]]
-- **Advanced Templates**: [[hierarchical_agent_template|Hierarchical]], [[multi_agent_template|Multi-Agent]]
-- **Domain Templates**: [[robotics_agent_template|Robotics]], [[healthcare_agent_template|Healthcare]]
+- **Advanced Templates**: Hierarchical, Multi-Agent
+- **Domain Templates**: Robotics, Healthcare
 
 ### Usage Patterns
 - **Basic Usage**: Standard template instantiation and usage

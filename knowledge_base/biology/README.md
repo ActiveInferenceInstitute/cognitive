@@ -37,17 +37,17 @@ The [[AGENTS|biological agents documentation]] provides specific guidance for im
 
 #### Neural Foundations
 - [[neuroscience]] - Comprehensive neuroscience overview
-- [[neural_systems]] - Neural system organization and function
-- [[neural_plasticity]] - Neural adaptation and learning mechanisms
-- [[synaptic_plasticity]] - Synaptic modification processes
+- neural systems - Neural system organization and function
+- neural plasticity - Neural adaptation and learning mechanisms
+- synaptic plasticity - Synaptic modification processes
 
 #### Sensory and Motor Systems
 - [[insect_flight_dynamics]] - Insect flight control systems
-- [[sensorimotor_coordination]] - Integration of sensing and action
+- sensorimotor coordination - Integration of sensing and action
 
 #### Cognitive Biology
-- [[biological_inference]] - Inference processes in biological systems
-- [[biological_motion]] - Biological motion perception and processing
+- biological inference - Inference processes in biological systems
+- biological motion - Biological motion perception and processing
 
 ### 🧬 Molecular and Cellular Biology
 
@@ -90,19 +90,19 @@ The [[AGENTS|biological agents documentation]] provides specific guidance for im
 - [[evolutionary_dynamics]] - Evolutionary processes and mechanisms
 
 #### Evolutionary Processes
-- [[evolution_theory]] - Evolutionary theory foundations
-- [[evolutionary_processes]] - Evolutionary mechanisms
+- evolution theory - Evolutionary theory foundations
+- evolutionary processes - Evolutionary mechanisms
 
 ### 🌍 Ecological Biology
 
 #### Ecological Dynamics
 - [[ecological_dynamics]] - Ecosystem processes and interactions
 - [[ecological_networks]] - Ecological interaction networks
-- [[collective_behavior]] - Group-level biological behavior
+- collective behavior - Group-level biological behavior
 
 #### Systems Biology
 - [[systems_biology]] - Systems-level biological analysis
-- [[complex_systems_biology]] - Complex systems in biology
+- complex systems biology - Complex systems in biology
 
 ### 🐜 Social Insect Biology
 
@@ -111,22 +111,22 @@ The [[AGENTS|biological agents documentation]] provides specific guidance for im
 - [[apidology]] - Bee biology and cognition
 
 #### Social Insect Cognition
-- [[social_insect_cognition]] - Social insect cognitive processes
-- [[stigmergic_coordination]] - Indirect coordination in social insects
+- social insect cognition - Social insect cognitive processes
+- stigmergic coordination - Indirect coordination in social insects
 
 ### 🏥 Biological Adaptation and Homeostasis
 
 #### Adaptive Processes
-- [[adaptation]] - Biological adaptation mechanisms
+- adaptation - Biological adaptation mechanisms
 - [[homeostasis]] - Physiological balance and regulation
-- [[allostatic_control]] - Allostatic regulation processes
+- allostatic control - Allostatic regulation processes
 
 ## 🧭 Navigation Guide
 
 ### For Cognitive Scientists
 1. Start with [[AGENTS]] for biologically-inspired agent architectures
 2. Explore [[neuroscience]] and [[behavioral_biology]] for neural foundations
-3. Study [[biological_inference]] and [[evolutionary_dynamics]] for inference principles
+3. Study biological inference and [[evolutionary_dynamics]] for inference principles
 
 ### For Biologists
 1. Review [[systems_biology]] and [[AGENTS]] for systems approaches
@@ -137,20 +137,20 @@ The [[AGENTS|biological agents documentation]] provides specific guidance for im
 1. Begin with [[AGENTS]] for agent architecture patterns
 2. Focus on [[gene_regulatory_networks]] and [[evolutionary_game_theory]] for network models
 3. Study [[bioinformatics]] and [[population_genetics]] for computational methods
-4. Review [[active_inference]] connections throughout biological systems
+4. Review active inference connections throughout biological systems
 
 ## 🔗 Cross-References
 
 ### Related Knowledge Domains
-- [[../cognitive/neural_computation]]
-- [[../mathematics/bayesian_networks]]
-- [[../systems/systems_theory]]
-- [[../agents/architectures_overview]]
+- [[knowledge_base/cognitive/neural_computation]]
+- [[knowledge_base/mathematics/bayesian_networks]]
+- [[knowledge_base/systems/systems_theory]]
+- [[knowledge_base/agents/architectures_overview]]
 
 ### Implementation Examples
-- [[../../Things/BioFirm/|BioFirm Models]]
-- [[../../Things/Ant_Colony/|Ant Colony Simulations]]
-- [[../../tools/src/models/active_inference/|Active Inference Models]]
+- [[code/Things/BioFirm/README|BioFirm Models]]
+- [[code/Things/Ant_Colony/README|Ant Colony Simulations]]
+- [[tools/src/models/active_inference|Active Inference Models]]
 
 ## 📈 Quality Metrics
 
@@ -182,7 +182,7 @@ The [[AGENTS|biological agents documentation]] provides specific guidance for im
 - Maintain scientific accuracy and current research with empirical evidence
 - Include mathematical rigor and computational implementations where appropriate
 - Connect biological processes to cognitive applications and Active Inference
-- Follow [[../linking_standards|linking standards]] for consistent cross-referencing
+- Follow [[knowledge_base/linking_standards|linking standards]] for consistent cross-referencing
 - Ensure integration with [[AGENTS]] for agent architecture patterns
 
 ### Review Process

@@ -24,13 +24,13 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../concepts/knowledge_organization]]
+    links: [[knowledge_base/cognitive/knowledge_organization]]
 
   - type: relates
 
     links:
 
-      - [[../concepts/concept_documentation_index]]
+      - [[knowledge_base/cognitive/concept_documentation_index]]
 
       - [[knowledge_base/mathematics/active_inference_pomdp]]
 
@@ -44,183 +44,183 @@ This directory contains research documentation focusing on theoretical foundatio
 
 ### POMDP Framework
 
-- [[active_inference_pomdp]] - Active Inference POMDP formulation
+- active inference pomdp - Active Inference POMDP formulation
 
-- [[belief_updating]] - Belief update mechanisms
+- belief updating - Belief update mechanisms
 
-- [[state_estimation]] - State estimation methods
+- state estimation - State estimation methods
 
-- [[policy_selection]] - Policy selection theory
+- policy selection - Policy selection theory
 
 ### Statistical Theory
 
-- [[variational_methods]] - Variational inference methods
+- variational methods - Variational inference methods
 
-- [[information_theory]] - Information theoretic foundations
+- information theory - Information theoretic foundations
 
-- [[game_theory]] - Game theoretic principles
+- game theory - Game theoretic principles
 
-- [[statistical_foundations]] - Core statistical concepts
+- statistical foundations - Core statistical concepts
 
 ## Mathematical Components
 
 ### Matrix Operations
 
-- [[A_matrix]] - Observation model
+- A matrix - Observation model
 
-- [[B_matrix]] - Transition dynamics
+- B matrix - Transition dynamics
 
-- [[C_matrix]] - Preferences
+- C matrix - Preferences
 
-- [[D_matrix]] - Prior beliefs
+- D matrix - Prior beliefs
 
-- [[E_matrix]] - Action distribution
+- E matrix - Action distribution
 
 ### Free Energy Formulations
 
-- [[variational_free_energy]] - VFE computation
+- variational free energy - VFE computation
 
-- [[expected_free_energy]] - EFE formulation
+- expected free energy - EFE formulation
 
-- [[efe_components]] - EFE decomposition
+- efe components - EFE decomposition
 
-- [[free_energy_principle]] - Theoretical foundation
+- free energy principle - Theoretical foundation
 
 ### Information Measures
 
-- [[epistemic_value]] - Information gain
+- epistemic value - Information gain
 
-- [[pragmatic_value]] - Goal-directed value
+- pragmatic value - Goal-directed value
 
-- [[expected_free_energy_update]] - EFE updates
+- expected free energy update - EFE updates
 
-- [[compute_efe]] - EFE computation
+- compute efe - EFE computation
 
 ## Implementation Theory
 
 ### Core Algorithms
 
-- [[belief_propagation]] - Message passing algorithms
+- belief propagation - Message passing algorithms
 
-- [[variational_inference]] - Variational methods
+- variational inference - Variational methods
 
-- [[monte_carlo_methods]] - Sampling approaches
+- monte carlo methods - Sampling approaches
 
-- [[gradient_descent]] - Optimization techniques
+- gradient descent - Optimization techniques
 
 ### State Space Models
 
-- [[state_spaces]] - State space theory
+- state spaces - State space theory
 
-- [[markov_models]] - Markov processes
+- markov models - Markov processes
 
-- [[hidden_states]] - Hidden state inference
+- hidden states - Hidden state inference
 
-- [[observation_models]] - Observation modeling
+- observation models - Observation modeling
 
 ### Policy Optimization
 
-- [[policy_optimization]] - Policy improvement
+- policy optimization - Policy improvement
 
-- [[action_selection]] - Action selection methods
+- action selection - Action selection methods
 
-- [[exploration_exploitation]] - Exploration strategies
+- exploration exploitation - Exploration strategies
 
-- [[temperature_parameter]] - Temperature scaling
+- temperature parameter - Temperature scaling
 
 ## Validation Framework
 
 ### Statistical Tests
 
-- [[hypothesis_testing]] - Statistical testing
+- hypothesis testing - Statistical testing
 
-- [[model_comparison]] - Model evaluation
+- model comparison - Model evaluation
 
-- [[parameter_estimation]] - Parameter inference
+- parameter estimation - Parameter inference
 
-- [[goodness_of_fit]] - Fit measures
+- goodness of fit - Fit measures
 
 ### Performance Metrics
 
-- [[information_metrics]] - Information measures
+- information metrics - Information measures
 
-- [[prediction_error]] - Error metrics
+- prediction error - Error metrics
 
-- [[convergence_analysis]] - Convergence studies
+- convergence analysis - Convergence studies
 
-- [[stability_analysis]] - Stability measures
+- stability analysis - Stability measures
 
 ## Research Methods
 
 ### Experimental Design
 
-- [[experiment_design]] - Design principles
+- experiment design - Design principles
 
-- [[control_variables]] - Control methods
+- control variables - Control methods
 
-- [[sampling_strategies]] - Sampling approaches
+- sampling strategies - Sampling approaches
 
-- [[power_analysis]] - Statistical power
+- power analysis - Statistical power
 
 ### Data Analysis
 
-- [[statistical_analysis]] - Analysis methods
+- statistical analysis - Analysis methods
 
-- [[bayesian_analysis]] - Bayesian approaches
+- bayesian analysis - Bayesian approaches
 
-- [[frequentist_analysis]] - Frequentist methods
+- frequentist analysis - Frequentist methods
 
-- [[causal_analysis]] - Causality studies
+- causal analysis - Causality studies
 
 ### Visualization
 
-- [[data_visualization]] - Visualization methods
+- data visualization - Visualization methods
 
-- [[belief_evolution]] - Belief trajectories
+- belief evolution - Belief trajectories
 
-- [[free_energy_landscape]] - Energy landscapes
+- free energy landscape - Energy landscapes
 
-- [[policy_visualization]] - Policy analysis
+- policy visualization - Policy analysis
 
 ## Integration Points
 
 ### Theory Integration
 
-- [[active_inference_theory]] - Active inference
+- active inference theory - Active inference
 
-- [[predictive_coding]] - Predictive processing
+- predictive coding - Predictive processing
 
-- [[optimal_control]] - Control theory
+- optimal control - Control theory
 
-- [[reinforcement_learning]] - RL connections
+- reinforcement learning - RL connections
 
 ### Implementation Links
 
-- [[model_implementation]] - Implementation guides
+- model implementation - Implementation guides
 
-- [[numerical_methods]] - Numerical approaches
+- numerical methods - Numerical approaches
 
-- [[optimization_methods]] - Optimization techniques
+- optimization methods - Optimization techniques
 
-- [[validation_methods]] - Validation approaches
+- validation methods - Validation approaches
 
 ## Related Documentation
 
-- [[../concepts/concept_documentation_index|Core Concepts]]
+- [[knowledge_base/cognitive/concept_documentation_index|Core Concepts]]
 
-- [[../guides/implementation_guides_index|Implementation Guides]]
+- [[docs/implementation/implementation_guides_index|Implementation Guides]]
 
-- [[../api/api_documentation_index|API Documentation]]
+- [[docs/api/api_documentation_index|API Documentation]]
 
-- [[../examples/usage_examples_index|Usage Examples]]
+- [[docs/examples/usage_examples_index|Usage Examples]]
 
 ## References
 
-- [[friston_2017]] - Active Inference
+- friston 2017 - Active Inference
 
-- [[da_costa_2020]] - Active Inference POMDP
+- da costa 2020 - Active Inference POMDP
 
-- [[parr_2019]] - Free Energy Theory
+- parr 2019 - Free Energy Theory
 
-- [[buckley_2017]] - Tutorial Paper
+- buckley 2017 - Tutorial Paper
 

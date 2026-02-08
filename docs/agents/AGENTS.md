@@ -14,8 +14,8 @@ semantic_relations:
   - type: complements
     links:
       - [[agent_docs_readme]]
-      - [[../../knowledge_base/agents/AGENTS]]
-      - [[../../Things/Generic_Thing/AGENTS]]
+      - [[knowledge_base/agents/AGENTS]]
+      - [[code/Things/Generic_Thing/AGENTS]]
 ---
 
 # Agent Documentation Clearinghouse
@@ -248,42 +248,42 @@ class MultiAgentCoordinationSystem:
 ### Theoretical Agent Documentation
 
 #### Cognitive Agent Theories
-- [[../../knowledge_base/cognitive/active_inference|Active Inference Theory]]
-- [[../../knowledge_base/cognitive/cognitive_architecture|Cognitive Architectures]]
-- [[../../knowledge_base/cognitive/decision_making|Decision Making Theories]]
-- [[../../knowledge_base/cognitive/social_cognition|Social Cognition]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
+- [[knowledge_base/cognitive/cognitive_architecture|Cognitive Architectures]]
+- [[knowledge_base/cognitive/decision_making|Decision Making Theories]]
+- [[knowledge_base/cognitive/social_cognition|Social Cognition]]
 
 #### Agent Learning Theories
-- [[../../knowledge_base/cognitive/learning_mechanisms|Learning Mechanisms]]
-- [[../../knowledge_base/cognitive/adaptation_mechanisms|Adaptation Mechanisms]]
-- [[../../knowledge_base/cognitive/memory_systems|Memory Systems]]
-- [[../../knowledge_base/cognitive/metacognition|Metacognition]]
+- [[knowledge_base/cognitive/learning_mechanisms|Learning Mechanisms]]
+- [[knowledge_base/cognitive/adaptation_mechanisms|Adaptation Mechanisms]]
+- [[knowledge_base/cognitive/memory_systems|Memory Systems]]
+- [[knowledge_base/cognitive/metacognition|Metacognition]]
 
 ### Implementation Agent Documentation
 
 #### Agent Framework Implementations
-- [[../../Things/Generic_Thing/AGENTS|Generic Thing Framework]]
-- [[../../Things/Simple_POMDP/AGENTS|Simple POMDP Agents]]
-- [[../../Things/Generic_POMDP/AGENTS|Generic POMDP Framework]]
-- [[../../Things/Continuous_Generic/AGENTS|Continuous State Agents]]
+- [[code/Things/Generic_Thing/AGENTS|Generic Thing Framework]]
+- [[code/Things/Simple_POMDP/AGENTS|Simple POMDP Agents]]
+- [[code/Things/Generic_POMDP/AGENTS|Generic POMDP Framework]]
+- [[code/Things/Continuous_Generic/AGENTS|Continuous State Agents]]
 
 #### Specialized Agent Implementations
-- [[../../Things/Ant_Colony/AGENTS|Ant Colony Agents]]
-- [[../../Things/BioFirm/AGENTS|BioFirm Agents]]
-- [[../../Things/KG_Multi_Agent/AGENTS|Knowledge Graph Multi-Agents]]
-- [[../../Things/Path_Network/AGENTS|Path Network Agents]]
+- [[code/Things/Ant_Colony/AGENTS|Ant Colony Agents]]
+- [[code/Things/BioFirm/AGENTS|BioFirm Agents]]
+- [[code/Things/KG_Multi_Agent/AGENTS|Knowledge Graph Multi-Agents]]
+- [[code/Things/Path_Network/AGENTS|Path Network Agents]]
 
 ### Application Agent Documentation
 
 #### Domain-Specific Applications
-- [[../../docs/guides/application/active_inference_spatial_applications|Spatial Applications]]
-- [[../../docs/guides/application/guide_for_cognitive_modeling|General Applications]]
-- [[../../docs/research/ant_colony_active_inference|Swarm Intelligence]]
+- [[docs/guides/application/active_inference_spatial_applications|Spatial Applications]]
+- [[docs/guides/application/guide_for_cognitive_modeling|General Applications]]
+- [[docs/research/ant_colony_active_inference|Swarm Intelligence]]
 
 #### Industry Applications
-- [[../../docs/guides/application/|Healthcare, Finance, Robotics]]
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/examples/|Usage Examples]]
+- [[docs/guides/application/README|Healthcare, Finance, Robotics]]
+- [[docs/research|Research Applications]]
+- [[docs/examples|Usage Examples]]
 
 ## 🔧 Agent Development Tools
 
@@ -538,35 +538,35 @@ class EthicalAgentFramework:
 ## 📚 Related Documentation
 
 ### Agent Implementation
-- [[../../knowledge_base/agents/AGENTS|Agent Architectures]]
-- [[../../Things/README|Implementation Examples]]
-- [[../../tools/src/models/active_inference/AGENTS|Active Inference Agents]]
+- [[knowledge_base/agents/AGENTS|Agent Architectures]]
+- [[code/Things/README|Implementation Examples]]
+- [[tools/src/models/active_inference/AGENTS|Active Inference Agents]]
 
 ### Development Resources
-- [[../api/README|API Documentation]]
-- [[../implementation/README|Implementation Guides]]
-- [[../guides/README|Usage Guides]]
+- [[docs/api/README|API Documentation]]
+- [[docs/implementation/README|Implementation Guides]]
+- [[docs/guides/README|Usage Guides]]
 
 ### Research and Theory
-- [[../../knowledge_base/cognitive/AGENTS|Cognitive Agent Theory]]
-- [[../../docs/research/README|Agent Research]]
-- [[../../docs/examples/README|Agent Examples]]
+- [[knowledge_base/cognitive/AGENTS|Cognitive Agent Theory]]
+- [[docs/research/README|Agent Research]]
+- [[docs/examples/README|Agent Examples]]
 
 ## 🔗 Cross-References
 
 ### Core Agent Components
-- [[../../tools/src/models/|Agent Models]]
-- [[../../tests/|Agent Testing]]
-- [[../../docs/api/|Agent APIs]]
+- [[tools/src/models/README|Agent Models]]
+- [[tests/README|Agent Testing]]
+- [[docs/api/README|Agent APIs]]
 
 ### Application Domains
-- [[../../docs/guides/application/|Application Guides]]
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/examples/|Usage Examples]]
+- [[docs/guides/application/README|Application Guides]]
+- [[docs/research|Research Applications]]
+- [[docs/examples|Usage Examples]]
 
 ---
 
-> **Agent Development**: Start with the [[../../Things/Generic_Thing/|Generic Thing framework]] for basic agent development, then explore specialized implementations.
+> **Agent Development**: Start with the [[code/Things/Generic_Thing/README|Generic Thing framework]] for basic agent development, then explore specialized implementations.
 
 ---
 
@@ -574,5 +574,5 @@ class EthicalAgentFramework:
 
 ---
 
-> **Advanced Topics**: For cutting-edge agent research, explore [[../../docs/research/|research documentation]] and [[../../knowledge_base/agents/|theoretical foundations]].
+> **Advanced Topics**: For cutting-edge agent research, explore [[docs/research|research documentation]] and [[knowledge_base/agents/README|theoretical foundations]].
 

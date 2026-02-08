@@ -18,9 +18,9 @@ semantic_relations:
       - [[bayesian_brain_hypothesis]]
   - type: foundation
     links:
-      - [[../biology/neuroscience]]
-      - [[../mathematics/free_energy_principle]]
-      - [[../mathematics/predictive_coding]]
+      - [[knowledge_base/biology/neuroscience]]
+      - [[knowledge_base/mathematics/free_energy_principle]]
+      - [[knowledge_base/mathematics/predictive_coding]]
   - type: relates
     links:
       - [[attention_mechanisms]]
@@ -449,9 +449,9 @@ class BasalGangliaActiveInference:
 - [[precision_weighting]] - Neuromodulatory precision control
 
 ### Related Domains
-- [[../biology/neuroscience]] - Broader neural science context
-- [[../mathematics/variational_inference]] - Mathematical inference methods
-- [[../systems/complex_systems]] - Systems-level neural dynamics
+- [[knowledge_base/biology/neuroscience]] - Broader neural science context
+- [[knowledge_base/mathematics/variational_inference]] - Mathematical inference methods
+- [[knowledge_base/systems/complex_systems]] - Systems-level neural dynamics
 
 ---
 

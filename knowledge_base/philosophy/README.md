@@ -78,15 +78,15 @@ The philosophy knowledge base provides philosophical foundations that inform cog
 ## 🔗 Cross-References
 
 ### Related Knowledge Domains
-- [[../cognitive/cognitive_science]]
+- [[knowledge_base/cognitive/cognitive_science]]
 - [[philosophy_of_mathematics]]
 - [[complexity_and_philosophy]]
-- [[../ontology/cognitive_ontology|Ontology]]
-- [[../systems/complex_systems|Complex Systems Theory]]
+- [[knowledge_base/ontology/cognitive_ontology|Ontology]]
+- [[knowledge_base/systems/complex_systems|Complex Systems Theory]]
 
 ### Implementation Examples
-- [[../../tools/src/models/|Model Implementations]]
-- [[../../docs/guides/philosophical_guides|Philosophical Guides]]
+- [[tools/src/models/README|Model Implementations]]
+- Philosophical Guides
 
 ## 📈 Quality Metrics
 
@@ -114,7 +114,7 @@ The philosophy knowledge base provides philosophical foundations that inform cog
 - Maintain philosophical rigor and accuracy
 - Include historical context and contemporary relevance
 - Connect philosophical concepts to cognitive applications
-- Follow [[../linking_standards|linking standards]]
+- Follow [[knowledge_base/linking_standards|linking standards]]
 
 ### Review Process
 - Philosophical validation

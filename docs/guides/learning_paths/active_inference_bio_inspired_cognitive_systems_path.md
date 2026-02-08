@@ -52,9 +52,9 @@ semantic_relations:
 
     links:
 
-      - [[biological_systems_learning_path]]
+      - [[active_inference_biological_learning_path]]
 
-      - [[cognitive_architecture_learning_path]]
+      - [[active_inference_cognitive_learning_path]]
 
   - type: specializes
 
@@ -64,9 +64,8 @@ semantic_relations:
 
     links:
 
-      - [[evolutionary_computation_learning_path]]
 
-      - [[neural_networks_learning_path]]
+      - [[active_inference_computational_learning_path]]
 
       - [[active_inference_biological_learning_path]]
 
@@ -92,7 +91,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Ant Colony Optimization background (book reference at MIT Press); myrmecology journals (see hub pointers)
 
@@ -174,15 +173,15 @@ By completing this path, learners will be able to:
 
 ### Foundations
 
-- [[../../knowledge_base/mathematics/expected_free_energy]] · [[../../knowledge_base/mathematics/policy_selection]] · [[../../knowledge_base/mathematics/precision_parameter]] · [[../../knowledge_base/mathematics/softmax_function]] · [[../../knowledge_base/mathematics/numerical_stability]] · [[../../knowledge_base/mathematics/message_passing]] · [[../../knowledge_base/mathematics/bethe_free_energy]]
+- [[knowledge_base/mathematics/expected_free_energy]] · [[knowledge_base/mathematics/policy_selection]] · [[knowledge_base/mathematics/precision_parameter]] · [[knowledge_base/mathematics/softmax_function]] · [[knowledge_base/mathematics/numerical_stability]] · [[knowledge_base/mathematics/message_passing]] · [[knowledge_base/mathematics/bethe_free_energy]]
 
 ## Knowledge Base Anchors
 
-- Bio-inspired: [[../../knowledge_base/cognitive/collective_behavior]] · [[../../knowledge_base/cognitive/swarm_intelligence]] · [[../../knowledge_base/cognitive/stigmergic_coordination]]
+- Bio-inspired: [[knowledge_base/cognitive/collective_behavior]] · [[knowledge_base/cognitive/swarm_intelligence]] · [[knowledge_base/cognitive/stigmergic_coordination]]
 
-- Math: [[../../knowledge_base/mathematics/policy_selection]] · [[../../knowledge_base/mathematics/dynamical_systems]]
+- Math: [[knowledge_base/mathematics/policy_selection]] · [[knowledge_base/mathematics/dynamical_systems]]
 
-- Cross-map: [[../../knowledge_base/mathematics/cross_reference_map]]
+- Cross-map: [[knowledge_base/mathematics/cross_reference_map]]
 
 ```mermaid
 

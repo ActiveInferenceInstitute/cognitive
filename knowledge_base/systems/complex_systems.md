@@ -18,9 +18,9 @@ semantic_relations:
       - [[adaptive_systems]]
   - type: relates
     links:
-      - [[../mathematics/dynamical_systems]]
-      - [[../biology/ecological_dynamics]]
-      - [[../cognitive/complex_systems_biology]]
+      - [[knowledge_base/mathematics/dynamical_systems]]
+      - [[knowledge_base/biology/ecological_dynamics]]
+      - [[knowledge_base/cognitive/complex_systems_biology]]
 ---
 
 # Complex Systems Theory

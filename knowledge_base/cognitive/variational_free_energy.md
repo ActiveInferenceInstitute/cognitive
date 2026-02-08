@@ -4,10 +4,10 @@ type: concept
 status: stable
 created: 2024-01-01
 tags:
-  - active_inference
-  - variational_inference
-  - free_energy
-  - bayesian_inference
+  - active-inference
+  - variational-inference
+  - free-energy
+  - bayesian-inference
 semantic_relations:
   - type: relates
     links:
@@ -34,6 +34,7 @@ The variational free energy F is defined as:
 F(θ,μ) = E_{q(θ)}[ln q(θ) - ln p(y,θ)] + H[q(θ)]
 
 Where:
+
 - θ represents latent variables (hidden states)
 - μ represents variational parameters
 - y represents observed data

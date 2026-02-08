@@ -13,9 +13,9 @@ tags:
 semantic_relations:
   - type: guides
     links:
-      - [[../../Things/Generic_Thing/AGENTS]]
-      - [[../../docs/agents/AGENTS]]
-      - [[../../knowledge_base/agents/AGENTS]]
+      - [[code/Things/Generic_Thing/AGENTS]]
+      - [[docs/agents/AGENTS]]
+      - [[knowledge_base/agents/AGENTS]]
 ---
 
 # Agent Implementation Guide
@@ -781,34 +781,34 @@ class RealTimeAgent:
 
 ### Implementation Resources
 - [[README|Implementation Guides Index]]
-- [[../../Things/|Implementation Examples]]
-- [[../../tools/|Development Tools]]
+- Implementation Examples
+- [[tools/README|Development Tools]]
 
 ### Agent Architecture
-- [[../../docs/agents/AGENTS|Agent Documentation]]
-- [[../../knowledge_base/agents/AGENTS|Agent Theory]]
-- [[../../docs/api/README|Agent APIs]]
+- [[docs/agents/AGENTS|Agent Documentation]]
+- [[knowledge_base/agents/AGENTS|Agent Theory]]
+- [[docs/api/README|Agent APIs]]
 
 ### Development Guides
-- [[../../docs/guides/README|General Guides]]
-- [[../../docs/repo_docs/README|Standards]]
-- [[../../tests/README|Testing]]
+- [[docs/guides/README|General Guides]]
+- [[docs/repo_docs/README|Standards]]
+- [[tests/README|Testing]]
 
 ## 🔗 Cross-References
 
 ### Core Implementation
-- [[../../tools/src/models/|Model Implementations]]
-- [[../../tools/src/|Source Code]]
-- [[../../docs/api/|APIs]]
+- [[tools/src/models/README|Model Implementations]]
+- [[tools/src/README|Source Code]]
+- [[docs/api/README|APIs]]
 
 ### Agent Components
-- [[../../Things/Generic_Thing/|Generic Framework]]
-- [[../../Things/Simple_POMDP/|POMDP Agents]]
-- [[../../docs/examples/|Examples]]
+- [[code/Things/Generic_Thing/README|Generic Framework]]
+- [[code/Things/Simple_POMDP/README|POMDP Agents]]
+- [[docs/examples|Examples]]
 
 ---
 
-> **Implementation Strategy**: Start with the [[../../Things/Generic_Thing/|Generic Thing framework]] for basic agent implementation, then specialize based on requirements.
+> **Implementation Strategy**: Start with the [[code/Things/Generic_Thing/README|Generic Thing framework]] for basic agent implementation, then specialize based on requirements.
 
 ---
 
@@ -816,5 +816,5 @@ class RealTimeAgent:
 
 ---
 
-> **Testing**: Implement comprehensive testing throughout the development process, using the frameworks outlined in [[../../tests/README|testing documentation]].
+> **Testing**: Implement comprehensive testing throughout the development process, using the frameworks outlined in [[tests/README|testing documentation]].
 

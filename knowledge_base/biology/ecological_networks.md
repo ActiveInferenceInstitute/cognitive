@@ -28,7 +28,7 @@ semantic_relations:
 
       - [[ecological_dynamics]]
 
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
 
   - type: implements
 
@@ -40,7 +40,7 @@ semantic_relations:
 
       - [[ecosystem_stability]]
 
-      - [[../agents/architectures_overview]]
+      - [[knowledge_base/agents/architectures_overview]]
 
   - type: relates
 
@@ -52,7 +52,7 @@ semantic_relations:
 
       - [[network_theory]]
 
-      - [[../mathematics/information_theory]]
+      - [[knowledge_base/mathematics/information_theory]]
 
 ---
 
@@ -562,14 +562,14 @@ class NetworkInformation:
 - [[myrmecology|Myrmecology]] - Social insect networks
 
 ### Cognitive Science Connections
-- [[../cognitive/active_inference|Active Inference]] - Network regulation parallels
-- [[../cognitive/information_processing|Information Processing]] - Network information flow
-- [[../cognitive/social_cognition|Social Cognition]] - Collective intelligence
+- [[knowledge_base/cognitive/active_inference|Active Inference]] - Network regulation parallels
+- [[knowledge_base/cognitive/information_processing|Information Processing]] - Network information flow
+- [[knowledge_base/cognitive/social_cognition|Social Cognition]] - Collective intelligence
 
 ### Agent Architecture Applications
-- [[../../Things/Ant_Colony/|Ant Colony Network Models]]
-- [[../../docs/examples/|Network Agent Examples]]
-- [[../../docs/implementation/|Ecological Network Methods]]
+- [[code/Things/Ant_Colony/README|Ant Colony Network Models]]
+- [[docs/examples|Network Agent Examples]]
+- [[docs/implementation/README|Ecological Network Methods]]
 
 ## References
 
@@ -600,5 +600,5 @@ class NetworkInformation:
 - [[ecological_dynamics]]
 - [[network_theory]]
 - [[complex_systems]]
-- [[../agents/architectures_overview]]
+- [[knowledge_base/agents/architectures_overview]]
 

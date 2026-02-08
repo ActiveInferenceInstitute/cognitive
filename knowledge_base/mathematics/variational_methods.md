@@ -76,9 +76,9 @@ semantic_relations:
 
     links:
 
-      - [[../../docs/guides/implementation_guides_index|Implementation Guides]]
+      - [[docs/implementation/implementation_guides_index|Implementation Guides]]
 
-      - [[../../docs/api/api_documentation_index|API Documentation]]
+      - [[docs/api/api_documentation_index|API Documentation]]
 
 ---
 
@@ -186,7 +186,7 @@ class VariationalAutoencoder:
 
         # Encode input
 
-        mu, log_var = self.components['encoder'](x)
+        mu, log_var = self.components[[x|'encoder']]
 
         # Sample latent variables
 
@@ -194,7 +194,7 @@ class VariationalAutoencoder:
 
         # Decode samples
 
-        x_recon = self.components['decoder'](z)
+        x_recon = self.components[[z|'decoder']]
 
         # Compute ELBO terms
 
@@ -322,7 +322,7 @@ class AmortizedInference:
 
         # Get variational parameters
 
-        params = self.components['inference_network'](x)
+        params = self.components[[x|'inference_network']]
 
         # Sample from variational distribution
 
@@ -638,13 +638,13 @@ class VariationalMetrics:
 
 ## Documentation Links
 
-- [[../../docs/research/research_documentation_index|Research Documentation]]
+- [[docs/research/research_documentation_index|Research Documentation]]
 
-- [[../../docs/guides/implementation_guides_index|Implementation Guides]]
+- [[docs/implementation/implementation_guides_index|Implementation Guides]]
 
-- [[../../docs/api/api_documentation_index|API Documentation]]
+- [[docs/api/api_documentation_index|API Documentation]]
 
-- [[../../docs/examples/usage_examples_index|Usage Examples]]
+- [[docs/examples/usage_examples_index|Usage Examples]]
 
 ## References
 

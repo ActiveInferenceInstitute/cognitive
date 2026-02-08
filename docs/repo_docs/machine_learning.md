@@ -346,5 +346,5 @@ model.train_continual(data_stream)
 
 - [[knowledge_base/mathematics/variational_inference]]
 
-- [[docs/guides/ai_validation_framework]]
+- [[docs/repo_docs/ai_validation_framework]]
 

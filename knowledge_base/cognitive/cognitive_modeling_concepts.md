@@ -34,25 +34,25 @@ semantic_relations:
 
     links:
 
-      - [[../guides/ai_documentation_style]]
+      - [[docs/repo_docs/ai_documentation_style]]
 
-      - [[../guides/content_management]]
+      - [[docs/repo_docs/content_management]]
 
-      - [[../research/cognitive_architectures]]
+      - [[docs/research/cognitive_architectures]]
 
-      - [[../implementations/model_implementations]]
+      - [[knowledge_base/model_implementations]]
 
 ---
 
 ## Overview
 
-This directory contains foundational concepts and theoretical documentation for the cognitive modeling system. While the [[knowledge_base/cognitive/cognitive_phenomena|knowledge base]] contains the comprehensive cognitive science theory, this directory focuses on the implementation and documentation aspects of these concepts.
+This directory contains foundational concepts and theoretical documentation for the cognitive modeling system. While the [[cognitive_phenomena|knowledge base]] contains the comprehensive cognitive science theory, this directory focuses on the implementation and documentation aspects of these concepts.
 
 ## Core Concepts
 
 ### Theoretical Foundations
 
-- [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]] - Core theoretical foundation
+- [[free_energy_principle|Free Energy Principle]] - Core theoretical foundation
 
   - Variational free energy
 
@@ -60,7 +60,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
   - Information geometry
 
-- [[knowledge_base/cognitive/active_inference|Active Inference]] - Computational framework
+- [[active_inference|Active Inference]] - Computational framework
 
   - Policy selection
 
@@ -68,7 +68,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
   - Belief updating
 
-- [[knowledge_base/cognitive/predictive_processing|Predictive Processing]] - Information processing model
+- [[predictive_processing|Predictive Processing]] - Information processing model
 
   - Hierarchical prediction
 
@@ -76,7 +76,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
   - Error minimization
 
-- [[knowledge_base/cognitive/cognitive_phenomena|Cognitive Phenomena]] - Comprehensive phenomena catalog
+- [[cognitive_phenomena|Cognitive Phenomena]] - Comprehensive phenomena catalog
 
   - Attention mechanisms
 
@@ -246,7 +246,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
 ### Cognitive Architecture
 
-- [[cognitive_architecture/hierarchical_processing]] - Hierarchical processing
+- [[hierarchical_processing]] - Hierarchical processing
 
   - Layer organization
 
@@ -254,7 +254,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
   - Feedback mechanisms
 
-- [[cognitive_architecture/attention_mechanisms]] - Attention systems
+- [[attention_mechanisms]] - Attention systems
 
   - Resource allocation
 
@@ -262,7 +262,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
   - Focus control
 
-- [[cognitive_architecture/learning_systems]] - Learning mechanisms
+- [[cognitive_architecture]] - Learning mechanisms
 
   - Hebbian learning
 
@@ -272,7 +272,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
 ### Implementation Patterns
 
-- [[patterns/inference_patterns]] - Inference patterns
+- [[inference_patterns]] - Inference patterns
 
   - Variational inference
 
@@ -280,7 +280,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
   - Approximate inference
 
-- [[patterns/optimization_patterns]] - Optimization strategies
+- [[optimization_patterns]] - Optimization strategies
 
   - Gradient-based methods
 
@@ -288,7 +288,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
   - Multi-objective optimization
 
-- [[patterns/integration_patterns]] - System integration
+- [[docs/integration_patterns]] - System integration
 
   - Component coupling
 
@@ -298,21 +298,21 @@ This directory contains foundational concepts and theoretical documentation for 
 
 ## Related Sections
 
-- [[../guides/implementation_guides|Implementation Guides]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
-- [[../api/api_documentation|API Documentation]]
+- [[docs/api/api_documentation|API Documentation]]
 
-- [[../examples/usage_examples|Usage Examples]]
+- [[docs/examples/usage_examples|Usage Examples]]
 
-- [[knowledge_base/cognitive/cognitive_science|Cognitive Science Knowledge Base]]
+- [[cognitive_science|Cognitive Science Knowledge Base]]
 
-- [[../research/current_research|Current Research]]
+- [[docs/research/current_research|Current Research]]
 
-- [[../implementations/reference_implementations|Reference Implementations]]
+- [[knowledge_base/reference_implementations|Reference Implementations]]
 
 ## Contributing
 
-See [[../templates/concept_template|Concept Template]] for creating new concept documentation.
+See [[docs/templates/concept_template|Concept Template]] for creating new concept documentation.
 
 ### Contribution Guidelines
 
@@ -340,9 +340,9 @@ See [[../templates/concept_template|Concept Template]] for creating new concept 
 
 ## References
 
-- [[../research/papers/key_papers|Key Papers]]
+- [[docs/research/papers/key_papers|Key Papers]]
 
-- [[../research/external_resources|External Resources]]
+- [[docs/research/external_resources|External Resources]]
 
-- [[../guides/best_practices|Best Practices]]
+- [[docs/guides/best_practices|Best Practices]]
 

@@ -70,7 +70,7 @@ graph LR
 
 - [[exploration_exploitation]]
 
- - See also: [[../../docs/guides/learning_paths/active_inference_security_learning_path|Security: precision bounds]]
+ - See also: [[docs/guides/learning_paths/active_inference_security_learning_path|Security: precision bounds]]
 
 ## Implementation
 

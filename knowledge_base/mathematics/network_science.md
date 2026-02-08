@@ -32,7 +32,7 @@ semantic_relations:
 
       - [[complex_systems]]
 
-      - [[social_ecological_systems]]
+      - [[knowledge_base/systems/Social-Ecological Systems]]
 
       - [[neural_networks]]
 
@@ -508,7 +508,7 @@ class TemporalNetwork:
 
 - [[ecological_networks]]
 
-- [[social_ecological_systems]]
+- [[knowledge_base/systems/Social-Ecological Systems]]
 
 - [[collective_intelligence]]
 

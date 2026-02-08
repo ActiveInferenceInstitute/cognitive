@@ -28,7 +28,7 @@ semantic_relations:
 
       - [[molecular_biology]]
 
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
 
   - type: implements
 
@@ -40,7 +40,7 @@ semantic_relations:
 
       - [[gene_expression]]
 
-      - [[../agents/architectures_overview]]
+      - [[knowledge_base/agents/architectures_overview]]
 
   - type: relates
 
@@ -586,14 +586,14 @@ class ExpressionController:
 - [[metabolic_networks|Metabolic Networks]] - Metabolic regulation
 
 ### Cognitive Science Connections
-- [[../cognitive/active_inference|Active Inference]] - Network control parallels
-- [[../cognitive/decision_making|Decision Making]] - Regulatory choice processes
-- [[../cognitive/learning_theory|Learning Theory]] - Adaptive regulation
+- [[knowledge_base/cognitive/active_inference|Active Inference]] - Network control parallels
+- [[knowledge_base/cognitive/decision_making|Decision Making]] - Regulatory choice processes
+- [[knowledge_base/cognitive/learning_theory|Learning Theory]] - Adaptive regulation
 
 ### Agent Architecture Applications
-- [[../../tools/src/models/active_inference/|Regulatory Network Models]]
-- [[../../docs/examples/|Network Agent Examples]]
-- [[../../docs/implementation/|Systems Biology Methods]]
+- [[tools/src/models/active_inference|Regulatory Network Models]]
+- [[docs/examples|Network Agent Examples]]
+- [[docs/implementation/README|Systems Biology Methods]]
 
 ## References
 
@@ -619,5 +619,5 @@ class ExpressionController:
 - [[molecular_biology]]
 - [[systems_biology]]
 - [[network_theory]]
-- [[../agents/architectures_overview]]
+- [[knowledge_base/agents/architectures_overview]]
 

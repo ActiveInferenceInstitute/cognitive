@@ -13,8 +13,8 @@ semantic_relations:
   - type: documents
     links:
       - [[README]]
-      - [[../tools/src/models/active_inference/AGENTS|Active Inference Models]]
-      - [[../docs/repo_docs/unit_testing|Unit Testing Guide]]
+      - [[tools/src/models/active_inference/AGENTS|Active Inference Models]]
+      - [[docs/repo_docs/unit_testing|Unit Testing Guide]]
 ---
 
 # Test Suite Agent Documentation
@@ -174,13 +174,13 @@ pytest tests/ --cov=src --cov-report=html
 
 ### Testing Resources
 - [[README|Test Suite Overview]]
-- [[../docs/repo_docs/unit_testing|Unit Testing Guide]]
-- [[../docs/development/contribution_guide|Contribution Guide]]
+- [[docs/repo_docs/unit_testing|Unit Testing Guide]]
+- [[docs/development/contribution_guide|Contribution Guide]]
 
 ### Implementation Resources
-- [[../tools/src/models/active_inference/AGENTS|Active Inference Models]]
-- [[../tools/src/models/matrices/AGENTS|Matrix Operations]]
-- [[../tools/src/visualization/AGENTS|Visualization Tools]]
+- [[tools/src/models/active_inference/AGENTS|Active Inference Models]]
+- [[tools/src/models/matrices/AGENTS|Matrix Operations]]
+- [[tools/src/utils/visualization/AGENTS|Visualization Tools]]
 
 ---
 

@@ -34,9 +34,9 @@ semantic_relations:
 
     links:
 
-      - [[docs/api/numerical_methods|Numerical Methods]]
+      - [[knowledge_base/mathematics/numerical_methods|Numerical Methods]]
 
-      - [[docs/guides/implementation_patterns|Implementation Patterns]]
+      - [[docs/implementation/implementation_patterns|Implementation Patterns]]
 
 ---
 
@@ -110,7 +110,7 @@ def sample_paths(
 
     Implementation:
 
-        - [[docs/api/numerical_methods#path-sampling|Path Sampling]]
+        - [[knowledge_base/mathematics/numerical_methods#path-sampling|Path Sampling]]
 
     """
 
@@ -158,7 +158,7 @@ def compute_action(
 
     Implementation:
 
-        - [[docs/api/numerical_methods#action-computation|Action Computation]]
+        - [[knowledge_base/mathematics/numerical_methods#action-computation|Action Computation]]
 
     """
 
@@ -210,7 +210,7 @@ def evaluate_policy_path(
 
     Implementation:
 
-        - [[docs/guides/implementation_patterns#policy-evaluation|Policy Evaluation]]
+        - [[docs/implementation/implementation_patterns#policy-evaluation|Policy Evaluation]]
 
     """
 
@@ -260,7 +260,7 @@ def optimize_trajectory(
 
     Implementation:
 
-        - [[docs/api/optimization_methods#trajectory-optimization|Trajectory Optimization]]
+        - [[knowledge_base/research/concepts/optimization_methods#trajectory-optimization|Trajectory Optimization]]
 
     """
 
@@ -358,7 +358,7 @@ def stochastic_path_optimization(
 
         - [[knowledge_base/mathematics/stochastic_optimization|Stochastic Optimization]]
 
-        - [[knowledge_base/mathematics/gradient_descent|Gradient Descent]]
+        - [[knowledge_base/research/concepts/gradient_descent|Gradient Descent]]
 
     """
 
@@ -424,7 +424,7 @@ def stochastic_path_optimization(
 
 - [[knowledge_base/mathematics/expected_free_energy|Expected Free Energy]]
 
-- [[docs/guides/implementation_patterns|Implementation Patterns]]
+- [[docs/implementation/implementation_patterns|Implementation Patterns]]
 
-- [[docs/api/numerical_methods|Numerical Methods]]
+- [[knowledge_base/mathematics/numerical_methods|Numerical Methods]]
 

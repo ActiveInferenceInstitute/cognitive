@@ -32,7 +32,7 @@ semantic_relations:
 
     links:
 
-      - [[../biology/myrmecology]]
+      - [[knowledge_base/biology/myrmecology]]
 
       - [[collective_behavior_ants]]
 

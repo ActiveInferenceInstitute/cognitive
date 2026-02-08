@@ -204,7 +204,7 @@ mindmap
 
 ### Implementation Domains
 
-- [[Generic_Thing|Generic Agent Framework]] - Base implementation
+- [[code/Things/Generic_Thing/generic_thing|Generic Agent Framework]] - Base implementation
 
 - [[Simple_POMDP|Simple POMDP Agents]] - Basic POMDP implementation
 
@@ -224,7 +224,7 @@ mindmap
 
 - [[Hierarchical_Planning|Hierarchical Planning]] - Multi-level planning systems
 
-- [[Social_Learning|Social Learning Models]] - Imitation and cultural transmission
+- [[knowledge_base/cognitive/social_learning|Social Learning Models]] - Imitation and cultural transmission
 
 - [[Resource_Competition|Resource Competition]] - Competition dynamics models
 
@@ -608,7 +608,7 @@ flowchart TD
 > - **Assigned To:** [[team_member|Team Member]]
 > [!example] Research Task
 > - **Research Question:** [Question]
-> - **Background Reading:** [[papers/relevant_paper|Relevant Paper]]
+> - **Background Reading:** [[knowledge_base/citations/relevant_paper|Relevant Paper]]
 > - **Methodology:** [Approach]
 > - **Expected Outcomes:** [Insights/Artifacts]
 > - **Related Work:** [[related_research|Related Research]]
@@ -1275,7 +1275,7 @@ flowchart TD
 
 ### Contribution Process
 
-1. **Knowledge Expansion**: Add to [[knowledge_base|Knowledge Base]]
+1. **Knowledge Expansion**: Add to [[knowledge_base/README|Knowledge Base]]
 
 1. **Implementation**: Develop in `tools/src/`
 

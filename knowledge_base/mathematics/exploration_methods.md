@@ -221,7 +221,7 @@ class ModelExplorer:
         likelihoods = np.zeros(len(self.models))
 
         for i, model in enumerate(self.models):
-            likelihoods[i] = model['likelihood_fn'](observation, action, reward)
+            likelihoods[i] = model[[observation, action, reward|'likelihood_fn']]
 
         # Update posteriors
         unnormalized_posteriors = self.model_posteriors * likelihoods

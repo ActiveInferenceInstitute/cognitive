@@ -13,7 +13,7 @@ semantic_relations:
   - type: documents
     links:
       - [[api_documentation]]
-      - [[../../tools/src/models/active_inference/AGENTS]]
+      - [[tools/src/models/active_inference/AGENTS]]
 ---
 
 # API Agent Documentation
@@ -597,27 +597,27 @@ print(report)
 ## 🔗 Related Documentation
 
 ### Implementation References
-- [[../../tools/src/models/active_inference/|Active Inference Models]]
-- [[../../Things/Generic_Thing/README|Generic Thing Implementation]]
-- [[../../Things/Generic_POMDP/README|Generic POMDP Implementation]]
+- [[tools/src/models/active_inference|Active Inference Models]]
+- [[code/Things/Generic_Thing/README|Generic Thing Implementation]]
+- [[code/Things/Generic_POMDP/README|Generic POMDP Implementation]]
 
 ### Configuration Resources
-- [[../config/README|Configuration Documentation]]
-- [[simulation_config|Simulation Configuration]]
-- [[../../tools/src/utils/config|Configuration Utilities]]
+- [[docs/config/README|Configuration Documentation]]
+- Simulation Configuration
+- Configuration Utilities
 
 ### Testing and Validation
-- [[../../tests/README|Testing Framework]]
-- [[../../tests/test_api|API Tests]]
-- [[../repo_docs/api_testing|API Testing Guidelines]]
+- [[tests/README|Testing Framework]]
+- API Tests
+- API Testing Guidelines
 
 ## 🔗 Cross-References
 
 ### Agent Types
-- [[../../Things/Generic_Thing/AGENTS|Generic Thing Agents]]
-- [[../../Things/Simple_POMDP/AGENTS|Simple POMDP Agents]]
-- [[../../Things/Generic_POMDP/AGENTS|Generic POMDP Agents]]
-- [[../../Things/Continuous_Generic/AGENTS|Continuous Generic Agents]]
+- [[code/Things/Generic_Thing/AGENTS|Generic Thing Agents]]
+- [[code/Things/Simple_POMDP/AGENTS|Simple POMDP Agents]]
+- [[code/Things/Generic_POMDP/AGENTS|Generic POMDP Agents]]
+- [[code/Things/Continuous_Generic/AGENTS|Continuous Generic Agents]]
 
 ### API Components
 - **Agent Interfaces**: Core agent interaction contracts

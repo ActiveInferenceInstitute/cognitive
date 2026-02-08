@@ -18,7 +18,7 @@ semantic_relations:
       - adaptation_mechanisms
   - type: foundation
     links:
-      - [[../mathematics/learning_theory]]
+      - [[learning_theory]]
       - [[neural_plasticity]]
 ---
 
@@ -26,17 +26,17 @@ semantic_relations:
 
 ## Overview
 
-The [[cognitive/stability_plasticity|Stability-Plasticity Dilemma]] refers to the fundamental challenge in [[cognitive/learning_systems|learning systems]] of balancing between two competing requirements:
+The [[cognitive/stability_plasticity|Stability-Plasticity Dilemma]] refers to the fundamental challenge in [[learning_systems|learning systems]] of balancing between two competing requirements:
 
-1. **Stability**: The ability to maintain existing knowledge ([[cognitive/memory_stability|memory stability]])
+1. **Stability**: The ability to maintain existing knowledge ([[memory_stability|memory stability]])
 
 1. **Plasticity**: The capacity to learn new information ([[cognitive/neural_plasticity|neural plasticity]])
 
-This dilemma is central to understanding how biological and artificial neural systems can continuously learn while preventing [[cognitive/catastrophic_forgetting|catastrophic forgetting]].
+This dilemma is central to understanding how biological and artificial neural systems can continuously learn while preventing [[catastrophic_forgetting|catastrophic forgetting]].
 
 ## Theoretical Framework
 
-### 1. [[cognitive/learning_dynamics|Learning Dynamics]]
+### 1. [[learning_dynamics|Learning Dynamics]]
 
 ```python
 
@@ -86,21 +86,21 @@ class StabilityPlasticityDynamics:
 
 - **Consolidation Mechanisms**:
 
-  - [[cognitive/synaptic_consolidation|Synaptic Consolidation]]
+  - [[synaptic_consolidation|Synaptic Consolidation]]
 
-  - [[cognitive/systems_consolidation|Systems Consolidation]]
+  - [[systems_consolidation|Systems Consolidation]]
 
-  - [[cognitive/behavioral_consolidation|Behavioral Consolidation]]
+  - [[behavioral_consolidation|Behavioral Consolidation]]
 
 - **Temporal Dynamics**:
 
-  - [[cognitive/short_term_dynamics|Short-term Dynamics]]
+  - [[short_term_dynamics|Short-term Dynamics]]
 
-  - [[cognitive/intermediate_term|Intermediate-term]]
+  - [[intermediate_term|Intermediate-term]]
 
-  - [[cognitive/long_term_dynamics|Long-term Dynamics]]
+  - [[long_term_dynamics|Long-term Dynamics]]
 
-### 3. [[cognitive/adaptive_mechanisms|Adaptive Mechanisms]]
+### 3. [[adaptive_mechanisms|Adaptive Mechanisms]]
 
 ```python
 
@@ -146,7 +146,7 @@ class AdaptivePlasticity:
 
 ## Mathematical Framework
 
-### 1. [[cognitive/plasticity_equations|Plasticity Equations]]
+### 1. [[plasticity_equations|Plasticity Equations]]
 
 The general form of plasticity-modulated learning:
 
@@ -166,7 +166,7 @@ where:
 
 - g(w_{ij}): Weight decay function
 
-### 2. [[cognitive/stability_metrics|Stability Metrics]]
+### 2. [[stability_metrics|Stability Metrics]]
 
 Stability index computation:
 
@@ -186,7 +186,7 @@ where:
 
 - N: Number of weight vectors
 
-### 3. [[cognitive/balance_optimization|Balance Optimization]]
+### 3. [[balance_optimization|Balance Optimization]]
 
 Optimization objective:
 
@@ -208,7 +208,7 @@ where:
 
 ## Implementation Strategies
 
-### 1. [[cognitive/architectural_solutions|Architectural Solutions]]
+### 1. [[architectural_solutions|Architectural Solutions]]
 
 ```python
 
@@ -262,135 +262,135 @@ class DualMemoryArchitecture:
 
 ```
 
-### 2. [[cognitive/regulatory_mechanisms|Regulatory Mechanisms]]
+### 2. [[regulatory_mechanisms|Regulatory Mechanisms]]
 
 - **Homeostatic Regulation**:
 
-  - [[cognitive/synaptic_scaling|Synaptic Scaling]]
+  - [[synaptic_scaling|Synaptic Scaling]]
 
-  - [[cognitive/threshold_regulation|Threshold Regulation]]
+  - [[threshold_regulation|Threshold Regulation]]
 
-  - [[cognitive/metaplasticity|Metaplasticity]]
+  - [[metaplasticity|Metaplasticity]]
 
 - **Activity Control**:
 
-  - [[cognitive/inhibitory_control|Inhibitory Control]]
+  - [[inhibitory_control|Inhibitory Control]]
 
-  - [[cognitive/excitatory_balance|Excitatory Balance]]
+  - [[excitatory_balance|Excitatory Balance]]
 
-  - [[cognitive/neuromodulation|Neuromodulation]]
+  - [[neuromodulation|Neuromodulation]]
 
-### 3. [[cognitive/learning_strategies|Learning Strategies]]
+### 3. [[learning_strategies|Learning Strategies]]
 
 - **Pattern Separation**:
 
-  - [[cognitive/orthogonalization|Orthogonalization]]
+  - [[orthogonalization|Orthogonalization]]
 
-  - [[cognitive/sparse_coding|Sparse Coding]]
+  - [[sparse_coding|Sparse Coding]]
 
-  - [[cognitive/pattern_completion|Pattern Completion]]
+  - [[pattern_completion|Pattern Completion]]
 
 - **Memory Integration**:
 
   - [[cognitive/schema_integration|Schema Integration]]
 
-  - [[cognitive/knowledge_consolidation|Knowledge Consolidation]]
+  - [[knowledge_consolidation|Knowledge Consolidation]]
 
-  - [[cognitive/transfer_learning|Transfer Learning]]
+  - [[transfer_learning|Transfer Learning]]
 
 ## Applications
 
-### 1. [[cognitive/neural_networks|Neural Networks]]
+### 1. [[knowledge_base/free_energy_principle/implementations/neural_networks|Neural Networks]]
 
 - **Architecture Design**:
 
-  - [[cognitive/complementary_learning|Complementary Learning Systems]]
+  - [[complementary_learning|Complementary Learning Systems]]
 
-  - [[cognitive/adaptive_resonance|Adaptive Resonance Theory]]
+  - [[adaptive_resonance|Adaptive Resonance Theory]]
 
-  - [[cognitive/hierarchical_memory|Hierarchical Memory Networks]]
+  - [[hierarchical_memory|Hierarchical Memory Networks]]
 
 - **Learning Algorithms**:
 
-  - [[cognitive/elastic_weight_consolidation|Elastic Weight Consolidation]]
+  - [[elastic_weight_consolidation|Elastic Weight Consolidation]]
 
-  - [[cognitive/progressive_neural_networks|Progressive Neural Networks]]
+  - [[progressive_neural_networks|Progressive Neural Networks]]
 
-  - [[cognitive/continual_learning|Continual Learning]]
+  - [[continual_learning|Continual Learning]]
 
-### 2. [[cognitive/biological_systems|Biological Systems]]
+### 2. [[biological_systems|Biological Systems]]
 
 - **Neural Plasticity**:
 
-  - [[cognitive/hebbian_learning|Hebbian Learning]]
+  - [[hebbian_learning|Hebbian Learning]]
 
-  - [[cognitive/spike_timing_plasticity|Spike Timing-Dependent Plasticity]]
+  - [[spike_timing_plasticity|Spike Timing-Dependent Plasticity]]
 
-  - [[cognitive/structural_plasticity|Structural Plasticity]]
+  - [[structural_plasticity|Structural Plasticity]]
 
 - **Memory Systems**:
 
-  - [[cognitive/hippocampal_memory|Hippocampal Memory]]
+  - [[hippocampal_memory|Hippocampal Memory]]
 
-  - [[cognitive/cortical_memory|Cortical Memory]]
+  - [[cortical_memory|Cortical Memory]]
 
   - [[cognitive/working_memory|Working Memory]]
 
-### 3. [[cognitive/practical_applications|Practical Applications]]
+### 3. [[practical_applications|Practical Applications]]
 
 - **Machine Learning**:
 
-  - [[cognitive/lifelong_learning|Lifelong Learning]]
+  - [[lifelong_learning|Lifelong Learning]]
 
-  - [[cognitive/incremental_learning|Incremental Learning]]
+  - [[incremental_learning|Incremental Learning]]
 
-  - [[cognitive/online_learning|Online Learning]]
+  - [[online_learning|Online Learning]]
 
 - **Robotics**:
 
-  - [[cognitive/adaptive_control|Adaptive Control]]
+  - [[adaptive_control|Adaptive Control]]
 
   - [[cognitive/skill_acquisition|Skill Acquisition]]
 
-  - [[cognitive/motor_learning|Motor Learning]]
+  - [[motor_learning|Motor Learning]]
 
 ## Research Directions
 
-### 1. [[cognitive/theoretical_advances|Theoretical Advances]]
+### 1. [[theoretical_advances|Theoretical Advances]]
 
 - **Mathematical Models**:
 
   - [[cognitive/dynamical_systems|Dynamical Systems Theory]]
 
-  - [[cognitive/information_theory|Information Theory]]
+  - [[knowledge_base/mathematics/information_theory|Information Theory]]
 
   - [[cognitive/statistical_learning|Statistical Learning]]
 
 - **Biological Insights**:
 
-  - [[cognitive/neural_mechanisms|Neural Mechanisms]]
+  - [[neural_mechanisms|Neural Mechanisms]]
 
-  - [[cognitive/synaptic_dynamics|Synaptic Dynamics]]
+  - [[synaptic_dynamics|Synaptic Dynamics]]
 
-  - [[cognitive/network_plasticity|Network Plasticity]]
+  - [[network_plasticity|Network Plasticity]]
 
-### 2. [[cognitive/computational_approaches|Computational Approaches]]
+### 2. [[computational_approaches|Computational Approaches]]
 
 - **Algorithm Development**:
 
   - [[cognitive/meta_learning|Meta-Learning]]
 
-  - [[cognitive/adaptive_algorithms|Adaptive Algorithms]]
+  - [[adaptive_algorithms|Adaptive Algorithms]]
 
-  - [[cognitive/hybrid_approaches|Hybrid Approaches]]
+  - [[hybrid_approaches|Hybrid Approaches]]
 
 - **System Design**:
 
-  - [[cognitive/modular_systems|Modular Systems]]
+  - [[modular_systems|Modular Systems]]
 
-  - [[cognitive/adaptive_architectures|Adaptive Architectures]]
+  - [[adaptive_architectures|Adaptive Architectures]]
 
-  - [[cognitive/distributed_learning|Distributed Learning]]
+  - [[distributed_learning|Distributed Learning]]
 
 ## See Also
 
@@ -402,9 +402,9 @@ class DualMemoryArchitecture:
 
 - [[cognitive/adaptive_resonance_theory|Adaptive Resonance Theory]]
 
-- [[cognitive/catastrophic_forgetting|Catastrophic Forgetting]]
+- [[catastrophic_forgetting|Catastrophic Forgetting]]
 
 - [[cognitive/synaptic_plasticity|Synaptic Plasticity]]
 
-- [[cognitive/learning_dynamics|Learning Dynamics]]
+- [[learning_dynamics|Learning Dynamics]]
 

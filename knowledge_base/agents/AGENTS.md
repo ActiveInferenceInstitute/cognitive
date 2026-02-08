@@ -324,30 +324,30 @@ class AgentMonitor:
 ### Implementation Guides
 - [[GenericPOMDP/README|Generic POMDP Implementation]]
 - [[Continuous_Time/README|Continuous-Time Agent Guide]]
-- [[../../docs/guides/agent_development|Agent Development Guide]]
+- [[docs/guides/agent_development|Agent Development Guide]]
 
 ### Theoretical Foundations
-- [[../cognitive/active_inference|Active Inference Theory]]
-- [[../mathematics/free_energy_principle|Free Energy Principle]]
-- [[../systems/adaptive_systems|Adaptive Systems]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
+- [[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]
+- [[knowledge_base/systems/adaptive_systems|Adaptive Systems]]
 
 ### API Documentation
-- [[../../docs/api/agent_api|Agent API Reference]]
-- [[../../docs/api/environment_api|Environment API]]
-- [[../../docs/api/visualization_api|Visualization Tools]]
+- [[docs/api/agent_api|Agent API Reference]]
+- Environment API
+- Visualization Tools
 
 ## 🔗 Cross-References
 
 ### Core Concepts
-- [[belief_updating|Belief Updating Mechanisms]]
-- [[policy_selection|Policy Selection Algorithms]]
-- [[hierarchical_inference|Hierarchical Inference]]
-- [[precision_weighting|Precision Weighting]]
+- Belief Updating Mechanisms
+- Policy Selection Algorithms
+- Hierarchical Inference
+- Precision Weighting
 
 ### Implementation Examples
-- [[../../Things/Generic_Thing/|Generic Thing Framework]]
-- [[../../Things/Simple_POMDP/|Simple POMDP Implementation]]
-- [[../../Things/Ant_Colony/|Ant Colony Optimization]]
+- [[code/Things/Generic_Thing/README|Generic Thing Framework]]
+- [[code/Things/Simple_POMDP/README|Simple POMDP Implementation]]
+- [[code/Things/Ant_Colony/README|Ant Colony Optimization]]
 
 ---
 
@@ -355,5 +355,5 @@ class AgentMonitor:
 
 ---
 
-> **Extension Point**: New agent architectures should be documented here and added to the implementations in the [[../../Things/|Things directory]].
+> **Extension Point**: New agent architectures should be documented here and added to the implementations in the Things directory.
 

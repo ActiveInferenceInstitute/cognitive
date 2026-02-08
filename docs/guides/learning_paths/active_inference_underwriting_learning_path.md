@@ -10,7 +10,7 @@
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Society of Actuaries (SOA): [soa.org](https://www.soa.org/)
 
@@ -20,17 +20,17 @@
 
 ## Introduction
 
-This learning path provides a comprehensive guide to understanding the intersection of [[active_inference]] and [[underwriting]], designed for practitioners from both domains seeking to bridge these fields. The path integrates [[risk_assessment|Risk Assessment Fundamentals]] with modern approaches to decision-making and uncertainty quantification.
+This learning path provides a comprehensive guide to understanding the intersection of active inference and underwriting, designed for practitioners from both domains seeking to bridge these fields. The path integrates Risk Assessment Fundamentals with modern approaches to decision-making and uncertainty quantification.
 
 ## Prerequisites
 
-- Basic understanding of [[probability_theory]]
+- Basic understanding of probability theory
 
-- Familiarity with [[risk_assessment_fundamentals]]
+- Familiarity with risk assessment fundamentals
 
-- Understanding of [[machine_learning_basics]]
+- Understanding of machine learning basics
 
-- Knowledge of [[statistical_modeling]]
+- Knowledge of statistical modeling
 
 ## Domain-Specific Ontologies
 
@@ -38,75 +38,75 @@ This learning path provides a comprehensive guide to understanding the intersect
 
 #### Core Concepts
 
-- [[risk_assessment|Comprehensive Risk Assessment]] - Systematic evaluation of risks and impacts
+- Comprehensive Risk Assessment - Systematic evaluation of risks and impacts
 
-- [[policy_evaluation]]
+- policy evaluation
 
-- [[claims_history]]
+- claims history
 
-- [[risk_factors]]
+- risk factors
 
-- [[premium_calculation]]
+- premium calculation
 
-- [[policy_terms]]
+- policy terms
 
-- [[exclusions]]
+- exclusions
 
-- [[coverage_limits]]
+- coverage limits
 
-- [[underwriting_guidelines]]
+- underwriting guidelines
 
-- [[risk_appetite]]
+- risk appetite
 
 #### Key Processes
 
-- [[application_review_process]]
+- application review process
 
-- [[risk_classification]]
+- risk classification
 
-- [[premium_rating]]
+- premium rating
 
-- [[policy_issuance]]
+- policy issuance
 
-- [[risk_mitigation]]
+- risk mitigation
 
-- [[portfolio_management]]
+- portfolio management
 
 ### Active Inference Domain Ontology
 
 #### Fundamental Concepts
 
-- [[free_energy_principle]]
+- free energy principle
 
-- [[generative_models]]
+- generative models
 
-- [[variational_inference]]
+- variational inference
 
-- [[belief_updating]]
+- belief updating
 
-- [[action_selection]]
+- action selection
 
-- [[expected_free_energy]]
+- expected free energy
 
-- [[precision_weighting]]
+- precision weighting
 
-- [[prior_beliefs]]
+- prior beliefs
 
-- [[posterior_beliefs]]
+- posterior beliefs
 
-- [[policy_selection]]
+- policy selection
 
 #### Key Processes
 
-- [[perception_action_cycles]]
+- perception action cycles
 
-- [[belief_propagation]]
+- belief propagation
 
-- [[model_learning]]
+- model learning
 
-- [[policy_optimization]]
+- policy optimization
 
-- [[uncertainty_quantification]]
+- uncertainty quantification
 
 ## Intersection & Integration
 
@@ -114,53 +114,53 @@ This learning path provides a comprehensive guide to understanding the intersect
 
 1. **Risk Modeling**
 
-   - [[probabilistic_framework]]
+   - probabilistic framework
 
-   - [[uncertainty_quantification]]
+   - uncertainty quantification
 
-   - [[dynamic_risk_assessment]]
+   - dynamic risk assessment
 
 1. **Decision Making**
 
-   - [[policy_selection_algorithms]]
+   - policy selection algorithms
 
-   - [[action_perception_loops]]
+   - action perception loops
 
-   - [[adaptive_strategy]]
+   - adaptive strategy
 
 1. **Learning Systems**
 
-   - [[model_updates]]
+   - model updates
 
-   - [[experience_integration]]
+   - experience integration
 
-   - [[continuous_improvement]]
+   - continuous improvement
 
 ### Application Areas
 
 1. **Automated Underwriting**
 
-   - [[risk_factor_analysis]]
+   - risk factor analysis
 
-   - [[dynamic_policy_pricing]]
+   - dynamic policy pricing
 
-   - [[real_time_adjustment]]
+   - real time adjustment
 
 1. **Portfolio Management**
 
-   - [[risk_aggregation]]
+   - risk aggregation
 
-   - [[exposure_management]]
+   - exposure management
 
-   - [[portfolio_optimization]]
+   - portfolio optimization
 
 1. **Claims Processing**
 
-   - [[fraud_detection]]
+   - fraud detection
 
-   - [[severity_assessment]]
+   - severity assessment
 
-   - [[process_automation]]
+   - process automation
 
 ## Tools & Technologies
 
@@ -168,27 +168,27 @@ This learning path provides a comprehensive guide to understanding the intersect
 
 1. **Data Processing**
 
-   - [[statistical_analysis_tools]]
+   - statistical analysis tools
 
-   - [[machine_learning_frameworks]]
+   - machine learning frameworks
 
-   - [[data_visualization]]
+   - data visualization
 
 1. **Model Implementation**
 
-   - [[probabilistic_programming]]
+   - probabilistic programming
 
-   - [[neural_networks]]
+   - neural networks
 
-   - [[bayesian_methods]]
+   - bayesian methods
 
 1. **Integration Tools**
 
-   - [[api_development]]
+   - api development
 
-   - [[database_management]]
+   - database management
 
-   - [[workflow_automation]]
+   - workflow automation
 
 ## Learning Progression
 
@@ -196,19 +196,19 @@ This learning path provides a comprehensive guide to understanding the intersect
 
 1. Understanding Basic Concepts
 
-   - [[underwriting_principles|Underwriting Principles]] - Core foundations and modern applications
+   - Underwriting Principles - Core foundations and modern applications
 
-   - [[active_inference_basics]]
+   - active inference basics
 
-   - [[risk_assessment_fundamentals]]
+   - risk assessment fundamentals
 
 1. Tool Familiarization
 
-   - [[statistical_tools]]
+   - statistical tools
 
-   - [[programming_environment]]
+   - programming environment
 
-   - [[data_analysis_methods]]
+   - data analysis methods
 
 ### Level 2: Integration
 
@@ -252,11 +252,11 @@ This learning path provides a comprehensive guide to understanding the intersect
 
 1. **Interactive Risk Scoring**
 
-   - Exercise: [[risk_scoring_model]]
+   - Exercise: risk scoring model
 
-   - Implementation: [[python_risk_weighting]]
+   - Implementation: python risk weighting
 
-   - Validation: [[historical_data_testing]]
+   - Validation: historical data testing
 
 1. **Probability Theory in Practice**
 
@@ -548,83 +548,83 @@ This learning path provides a comprehensive guide to understanding the intersect
 
 ### Reading Materials
 
-1. [[academic_papers]]
+1. academic papers
 
-1. [[industry_reports]]
+1. industry reports
 
-1. [[technical_documentation]]
+1. technical documentation
 
-1. [[case_studies]]
+1. case studies
 
-1. [[best_practices]]
+1. best practices
 
 ### Tools & Platforms
 
-1. [[software_libraries]]
+1. software libraries
 
-1. [[development_frameworks]]
+1. development frameworks
 
-1. [[analysis_tools]]
+1. analysis tools
 
-1. [[integration_platforms]]
+1. integration platforms
 
 ### Community & Support
 
-1. [[professional_networks]]
+1. professional networks
 
-1. [[research_groups]]
+1. research groups
 
-1. [[industry_forums]]
+1. industry forums
 
-1. [[conferences]]
+1. conferences
 
-1. [[workshops]]
+1. workshops
 
 ## Assessment & Validation
 
 ### Knowledge Checkpoints
 
-1. [[concept_understanding]]
+1. concept understanding
 
-1. [[technical_proficiency]]
+1. technical proficiency
 
-1. [[integration_capability]]
+1. integration capability
 
-1. [[problem_solving_skills]]
+1. problem solving skills
 
 ### Project Milestones
 
-1. [[basic_implementation]]
+1. basic implementation
 
-1. [[integration_projects]]
+1. integration projects
 
-1. [[advanced_applications]]
+1. advanced applications
 
-1. [[innovation_development]]
+1. innovation development
 
 ## Future Directions
 
 ### Research Areas
 
-1. [[novel_applications]]
+1. novel applications
 
-1. [[theoretical_advances]]
+1. theoretical advances
 
-1. [[integration_methods]]
+1. integration methods
 
-1. [[performance_optimization]]
+1. performance optimization
 
 ### Industry Trends
 
-1. [[market_evolution]]
+1. market evolution
 
-1. [[technology_adoption]]
+1. technology adoption
 
-1. [[regulatory_changes]]
+1. regulatory changes
 
-1. [[best_practices]]
+1. best practices
 
 ## Conclusion
 
-This learning path provides a structured approach to mastering the intersection of [[active_inference]] and [[underwriting]], enabling practitioners to develop innovative solutions in [[risk_assessment]] and [[portfolio_management]].
+This learning path provides a structured approach to mastering the intersection of active inference and underwriting, enabling practitioners to develop innovative solutions in risk assessment and portfolio management.
 

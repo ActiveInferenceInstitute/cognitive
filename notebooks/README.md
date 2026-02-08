@@ -12,8 +12,8 @@ semantic_relations:
   - type: documents
     links:
       - [[AGENTS]]
-      - [[graphRAG_naive]]
-      - [[../docs/examples/README|Usage Examples]]
+      - graphRAG naive
+      - [[docs/examples/README|Usage Examples]]
 ---
 
 # Notebooks Overview
@@ -93,13 +93,13 @@ Graph-based retrieval augmented generation exploration:
 
 ### Notebook Resources
 - [[AGENTS|Notebooks Agent Documentation]]
-- [[graphRAG_naive|GraphRAG Exploration]]
+- GraphRAG Exploration
 - Jupyter notebook best practices
 
 ### Framework Integration
-- [[../tools/src/models/active_inference/AGENTS|Active Inference Models]]
-- [[../knowledge_base/README|Knowledge Base]]
-- [[../docs/examples/README|Usage Examples]]
+- [[tools/src/models/active_inference/AGENTS|Active Inference Models]]
+- [[knowledge_base/README|Knowledge Base]]
+- [[docs/examples/README|Usage Examples]]
 
 ---
 

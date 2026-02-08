@@ -30,9 +30,9 @@ semantic_relations:
 
     links:
 
-      - [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
+      - [[active_inference|Active Inference Theory]]
 
-      - [[knowledge_base/cognitive/cognitive_phenomena|Cognitive Phenomena]]
+      - [[cognitive_phenomena|Cognitive Phenomena]]
 
       - [[machine_readability]]
 
@@ -40,7 +40,7 @@ semantic_relations:
 
 ## Overview
 
-This document outlines the theoretical foundations that underpin our cognitive modeling framework's documentation system, integrating principles from cognitive science, knowledge representation, and machine learning. For comprehensive cognitive science theory, see the [[knowledge_base/cognitive/cognitive_science|Cognitive Science Knowledge Base]].
+This document outlines the theoretical foundations that underpin our cognitive modeling framework's documentation system, integrating principles from cognitive science, knowledge representation, and machine learning. For comprehensive cognitive science theory, see the [[cognitive_science|Cognitive Science Knowledge Base]].
 
 ## Core Principles
 
@@ -54,9 +54,9 @@ knowledge_model = {
 
     "hierarchical": {
 
-        "concepts": ["[[knowledge_base/cognitive/cognitive_phenomena|Cognitive Phenomena]]", "[[theoretical_foundations]]"],
+        "concepts": ["[[cognitive_phenomena|Cognitive Phenomena]]", "[[theoretical_foundations]]"],
 
-        "implementations": ["[[knowledge_base/cognitive/active_inference|Active Inference]]", "[[belief_updating]]"],
+        "implementations": ["[[active_inference|Active Inference]]", "[[belief_updating]]"],
 
         "validations": ["[[validation_framework]]", "[[testing_guide]]"]
 
@@ -78,15 +78,15 @@ knowledge_model = {
 
 ### 2. Cognitive Architecture
 
-See [[knowledge_base/cognitive/cognitive_phenomena|Cognitive Phenomena]] for detailed theory.
+See [[cognitive_phenomena|Cognitive Phenomena]] for detailed theory.
 
 #### Active Inference Framework
 
-- [[knowledge_base/cognitive/active_inference|Active Inference]] - Core computational theory
+- [[active_inference|Active Inference]] - Core computational theory
 
-- [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]] - Theoretical foundation
+- [[free_energy_principle|Free Energy Principle]] - Theoretical foundation
 
-- [[knowledge_base/cognitive/predictive_processing|Predictive Processing]] - Information processing model
+- [[predictive_processing|Predictive Processing]] - Information processing model
 
 #### Belief Systems
 
@@ -462,9 +462,9 @@ validation_rules = {
 
 ## References
 
-- [[knowledge_base/cognitive/cognitive_phenomena|Cognitive Phenomena]]
+- [[cognitive_phenomena|Cognitive Phenomena]]
 
-- [[knowledge_base/cognitive/active_inference|Active Inference]]
+- [[active_inference|Active Inference]]
 
 - [[machine_readability]]
 

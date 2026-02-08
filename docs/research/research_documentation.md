@@ -24,13 +24,13 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../concepts/cognitive_modeling_concepts]]
+    links: [[knowledge_base/cognitive/cognitive_modeling_concepts]]
 
   - type: relates
 
     links:
 
-      - [[../concepts/cognitive_modeling_concepts]]
+      - [[knowledge_base/cognitive/cognitive_modeling_concepts]]
 
       - [[knowledge_base/mathematics/active_inference_pomdp]]
 
@@ -206,13 +206,13 @@ This directory contains research documentation focusing on theoretical foundatio
 
 ## Related Documentation
 
-- [[../concepts/cognitive_modeling_concepts|Core Concepts]]
+- [[knowledge_base/cognitive/cognitive_modeling_concepts|Core Concepts]]
 
-- [[../guides/implementation_guides|Implementation Guides]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
-- [[../api/api_documentation|API Documentation]]
+- [[docs/api/api_documentation|API Documentation]]
 
-- [[../examples/usage_examples|Usage Examples]]
+- [[docs/examples/usage_examples|Usage Examples]]
 
 ## References
 

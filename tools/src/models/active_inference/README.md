@@ -13,9 +13,9 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[../../../knowledge_base/cognitive/active_inference]]
-      - [[../README]]
-      - [[../../README]]
+      - [[knowledge_base/cognitive/active_inference]]
+      - [[tools/src/models/README]]
+      - [[tools/src/README]]
 ---
 
 # Active Inference Models Implementation
@@ -982,30 +982,30 @@ class TestActiveInferenceAgent:
 ## 📚 Related Documentation
 
 ### Implementation References
-- [[../../../knowledge_base/cognitive/active_inference|Active Inference Theory]]
-- [[../README|Models Overview]]
-- [[../../README|Source Code Overview]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
+- [[tools/src/models/README|Models Overview]]
+- [[tools/src/README|Source Code Overview]]
 
 ### Usage Examples
-- [[../../../../Things/Generic_Thing/|Generic Thing Implementation]]
-- [[../../../../docs/examples/|Usage Examples]]
-- [[../../../../docs/guides/|Implementation Guides]]
+- [[code/Things/Generic_Thing/README|Generic Thing Implementation]]
+- [[docs/examples|Usage Examples]]
+- [[docs/guides/README|Implementation Guides]]
 
 ### Testing and Validation
-- [[../../../../tests/|Testing Framework]]
-- [[../../../../docs/repo_docs/unit_testing|Unit Testing Guidelines]]
+- [[tests/README|Testing Framework]]
+- [[docs/repo_docs/unit_testing|Unit Testing Guidelines]]
 
 ## 🔗 Cross-References
 
 ### Core Components
-- [[../belief_system|Belief System]]
-- [[../policy_system|Policy System]]
-- [[../learning_system|Learning System]]
+- Belief System
+- Policy System
+- Learning System
 
 ### Integration Points
-- [[../../../../Things/|Implementation Examples]]
-- [[../../../../docs/api/|API Documentation]]
-- [[../../../../docs/implementation/|Implementation Guides]]
+- Implementation Examples
+- [[docs/api/README|API Documentation]]
+- [[docs/implementation/README|Implementation Guides]]
 
 ---
 

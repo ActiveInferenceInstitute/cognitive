@@ -16,13 +16,13 @@ semantic_relations:
       - [[cognitive/active_inference]]
       - [[mathematics/free_energy_principle]]
       - [[systems/complex_systems]]
-      - [[biology/homeostatic_regulation]]
+      - [[knowledge_base/cognitive/homeostatic_regulation]]
   - type: documents
     links:
       - [[active_inference_integration]]
       - [[active_inference_implementation]]
-      - [[active_inference_agent]]
-      - [[continuous_time_active_inference]]
+      - active inference agent
+      - continuous time active inference
   - type: foundation
     links:
       - [[mathematics/active_inference_theory]]
@@ -84,13 +84,13 @@ Active Inference represents a unified mathematical framework for understanding a
 - [[cognitive/active_inference_agent|Active Inference Agent Architecture]]
 - [[agents/GenericPOMDP/agent_config|Generic POMDP Implementation]]
 - [[agents/Continuous_Time/continuous_time_agent|Continuous-Time Agent]]
-- [[agents/GenericPOMDP/|Generic POMDP Framework]]
-- [[agents/Continuous_Time/|Continuous-Time Framework]]
+- [[knowledge_base/agents/GenericPOMDP/README|Generic POMDP Framework]]
+- [[knowledge_base/agents/Continuous_Time/README|Continuous-Time Framework]]
 
 ### Domain Applications
 
 #### Biological Systems
-- [[biology/homeostatic_regulation|Homeostatic Regulation]]
+- [[knowledge_base/cognitive/homeostatic_regulation|Homeostatic Regulation]]
 - [[biology/evolutionary_dynamics|Evolutionary Dynamics]]
 - [[biology/ecological_networks|Biological Network Dynamics]]
 - [[cognitive/social_insect_cognition|Social Insect Cognition]]
@@ -155,7 +155,7 @@ Biological Active Inference from cells to ecosystems:
 
 ```
 Biological Scales
-├── Cellular Homeostasis [[biology/homeostatic_regulation]]
+├── Cellular Homeostasis [[knowledge_base/cognitive/homeostatic_regulation]]
 ├── Organism Behavior [[biology/evolutionary_dynamics]]
 ├── Social Systems [[cognitive/social_insect_cognition]]
 └── Ecosystems [[systems/Social-Ecological Systems]]
@@ -215,8 +215,8 @@ class ActionSelector:
 | **Mathematics** | Complete | [[mathematics/free_energy_principle]], [[mathematics/active_inference_theory]] |
 | **Cognitive Science** | Comprehensive | [[cognitive/active_inference]], [[cognitive/free_energy_principle]] |
 | **Systems Theory** | Extensive | [[systems/complex_systems]], [[active_inference_integration]] |
-| **Biology** | Thorough | [[biology/homeostatic_regulation]], [[biology/evolutionary_dynamics]] |
-| **Implementation** | Practical | [[active_inference_implementation]], [[active_inference_agent]] |
+| **Biology** | Thorough | [[knowledge_base/cognitive/homeostatic_regulation]], [[biology/evolutionary_dynamics]] |
+| **Implementation** | Practical | [[active_inference_implementation]], active inference agent |
 
 ### Implementation Status
 - ✅ **Theoretical Foundations**: Complete mathematical formulation
@@ -257,10 +257,10 @@ class ActionSelector:
 4. **Applications**: Explore [[active_inference_integration]]
 
 ### Development Tools
-- [[tools/src/models/active_inference/|Active Inference Models]]
-- [[agents/GenericPOMDP/|Generic POMDP Framework]]
-- [[agents/Continuous_Time/|Continuous-Time Framework]]
-- [[BioFirm/|Biological Active Inference]]
+- [[tools/src/models/active_inference/README|Active Inference Models]]
+- [[knowledge_base/agents/GenericPOMDP/README|Generic POMDP Framework]]
+- [[knowledge_base/agents/Continuous_Time/README|Continuous-Time Framework]]
+- [[BioFirm|Biological Active Inference]]
 
 ### Testing and Validation
 - [[cognitive/simulation_studies|Simulation Studies]]
@@ -280,7 +280,7 @@ class ActionSelector:
 - ✅ **AGENTS.md Files**: Every directory has complete technical documentation
 - ✅ **README.md Files**: Navigation and overview for each section
 - ✅ **Semantic Relations**: Proper YAML frontmatter with relationship metadata
-- ✅ **Linking Standards**: Consistent Obsidian-style [[link]] syntax
+- ✅ **Linking Standards**: Consistent Obsidian-style link syntax
 - ✅ **Quality Assessment**: Comprehensive validation framework
 
 ## 🔗 Key Relationships and Dependencies
@@ -300,13 +300,13 @@ Practical Applications [[active_inference_implementation]]
 
 ### Implementation Dependencies
 ```
-Mathematical Foundations [[mathematics/]]
+Mathematical Foundations [[mathematics]]
     ↓
-Agent Architectures [[agents/]]
+Agent Architectures [[AGENTS]]
     ↓
-Implementation Examples [[tools/src/models/]]
+Implementation Examples [[tools/src/models/README]]
     ↓
-Testing Frameworks [[tests/]]
+Testing Frameworks [[tests/README]]
 ```
 
 ## 🚀 Future Development
@@ -341,13 +341,13 @@ Testing Frameworks [[tests/]]
 1. [[mathematics/active_inference_theory|Advanced Theory]]
 2. [[mathematics/geometric_active_inference|Geometric Methods]]
 3. [[cognitive/hierarchical_inference|Hierarchical Systems]]
-4. [[active_inference_agent|Agent Architecture Design]]
+4. Agent Architecture Design
 
 ### Implementation Path
 1. [[active_inference_implementation|Core Implementation]]
-2. [[agents/GenericPOMDP/|POMDP Framework]]
-3. [[agents/Continuous_Time/|Continuous-Time Systems]]
-4. [[tools/src/models/|Advanced Models]]
+2. [[knowledge_base/agents/GenericPOMDP/README|POMDP Framework]]
+3. [[knowledge_base/agents/Continuous_Time/README|Continuous-Time Systems]]
+4. [[tools/src/models/README|Advanced Models]]
 
 ## 🔍 Quality Assurance
 

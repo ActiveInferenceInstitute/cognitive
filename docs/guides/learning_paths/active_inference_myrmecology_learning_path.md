@@ -60,11 +60,11 @@ semantic_relations:
 
     links:
 
-      - [[biological_systems_learning_path]]
+      - [[active_inference_biological_learning_path]]
 
-      - [[collective_intelligence_learning_path]]
+      - [[active_inference_social_learning_path]]
 
-      - [[complex_systems_learning_path]]
+      - [[active_inference_resilient_systems_path]]
 
 ---
 
@@ -80,7 +80,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [Myrmecological News](https://myrmecologicalnews.org/)
 
@@ -2990,19 +2990,19 @@ class KnowledgeIntegrator:
 
 ### Advanced Topics
 
-1. [[evolutionary_computation_learning_path|Evolutionary Computation]]
+1. Evolutionary Computation
 
-1. [[collective_intelligence_learning_path|Collective Intelligence]]
+1. Collective Intelligence
 
-1. [[complex_systems_learning_path|Complex Systems]]
+1. Complex Systems
 
 ### Research Directions
 
-1. [[research_guides/myrmecology|Myrmecology Research]]
+1. [[knowledge_base/biology/myrmecology|Myrmecology Research]]
 
-1. [[research_guides/collective_behavior|Collective Behavior Research]]
+1. [[knowledge_base/cognitive/collective_behavior|Collective Behavior Research]]
 
-1. [[research_guides/bio_inspired_computing|Bio-inspired Computing Research]]
+1. [[knowledge_base/research/bio_inspired_computing|Bio-inspired Computing Research]]
 
 ## Diagram Types to Master
 
@@ -3592,11 +3592,11 @@ mindmap
 
 ## Knowledge Base Anchors
 
-- Myrmecology + cognition: [[../../knowledge_base/cognitive/collective_behavior_ants]] · [[../../knowledge_base/cognitive/collective_behavior]] · [[../../knowledge_base/cognitive/swarm_intelligence]]
+- Myrmecology + cognition: [[knowledge_base/cognitive/collective_behavior_ants]] · [[knowledge_base/cognitive/collective_behavior]] · [[knowledge_base/cognitive/swarm_intelligence]]
 
-- Math: [[../../knowledge_base/mathematics/expected_free_energy]] · [[../../knowledge_base/mathematics/policy_selection]] · [[../../knowledge_base/mathematics/precision_parameter]] · [[../../knowledge_base/mathematics/message_passing]]
+- Math: [[knowledge_base/mathematics/expected_free_energy]] · [[knowledge_base/mathematics/policy_selection]] · [[knowledge_base/mathematics/precision_parameter]] · [[knowledge_base/mathematics/message_passing]]
 
-- Cross-map: [[../../knowledge_base/mathematics/cross_reference_map]]
+- Cross-map: [[knowledge_base/mathematics/cross_reference_map]]
 
 ```mermaid
 

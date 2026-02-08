@@ -15,22 +15,22 @@ aliases: [fep_perception, perception_fep, predictive_perception]
 semantic_relations:
   - type: foundation
     links:
-      - [[../mathematics/core_principle]]
-      - [[../mathematics/variational_free_energy]]
-      - [[../cognitive/predictive_coding]]
-      - [[../cognitive/attention_mechanisms]]
+      - [[knowledge_base/free_energy_principle/mathematics/core_principle]]
+      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy]]
+      - [[knowledge_base/cognitive/predictive_coding]]
+      - [[knowledge_base/cognitive/attention_mechanisms]]
   - type: implements
     links:
-      - [[../cognitive/perceptual_inference]]
-      - [[../biology/neural_systems]]
-      - [[../implementations/neural_networks]]
+      - [[knowledge_base/cognitive/perceptual_inference]]
+      - [[knowledge_base/free_energy_principle/biology/neural_systems]]
+      - [[knowledge_base/free_energy_principle/implementations/neural_networks]]
       - [[attention]]
   - type: relates
     links:
       - [[learning]]
       - [[decision_making]]
       - [[consciousness]]
-      - [[../mathematics/information_geometry]]
+      - [[knowledge_base/free_energy_principle/mathematics/information_geometry]]
 ---
 
 # Free Energy Principle and Perception
@@ -408,22 +408,22 @@ def evaluate_attention_mechanism(attention_system, attention_tasks):
 ## 🔗 Related Concepts
 
 ### Foundational Links
-- [[../mathematics/core_principle]] - Core FEP formulation
-- [[../mathematics/variational_free_energy]] - Variational inference foundation
-- [[../cognitive/predictive_coding]] - Neural implementation
-- [[../cognitive/attention_mechanisms]] - Attention systems
+- [[knowledge_base/free_energy_principle/mathematics/core_principle]] - Core FEP formulation
+- [[knowledge_base/free_energy_principle/mathematics/variational_free_energy]] - Variational inference foundation
+- [[knowledge_base/cognitive/predictive_coding]] - Neural implementation
+- [[knowledge_base/cognitive/attention_mechanisms]] - Attention systems
 
 ### Implementation Links
-- [[../biology/neural_systems]] - Biological basis
-- [[../implementations/neural_networks]] - Code implementations
+- [[knowledge_base/free_energy_principle/biology/neural_systems]] - Biological basis
+- [[knowledge_base/free_energy_principle/implementations/neural_networks]] - Code implementations
 - [[learning]] - Learning mechanisms
 - [[decision_making]] - Action selection
 
 ### Advanced Links
 - [[consciousness]] - Self-awareness
-- [[../philosophy/epistemology]] - Knowledge construction
-- [[../systems/emergence]] - Emergent perception
-- [[../applications/neuroscience]] - Neural applications
+- [[knowledge_base/free_energy_principle/philosophy/epistemology]] - Knowledge construction
+- [[knowledge_base/free_energy_principle/systems/emergence]] - Emergent perception
+- [[knowledge_base/free_energy_principle/applications/neuroscience]] - Neural applications
 
 ## 📚 References
 

@@ -28,7 +28,7 @@ semantic_relations:
 
       - [[biophysics]]
 
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
 
   - type: implements
 
@@ -40,7 +40,7 @@ semantic_relations:
 
       - [[cell_signaling]]
 
-      - [[../agents/architectures_overview]]
+      - [[knowledge_base/agents/architectures_overview]]
 
   - type: relates
 
@@ -693,14 +693,14 @@ class CellSignalingNetwork:
 - [[systems_biology|Systems Biology]] - Cellular networks
 
 ### Cognitive Science Connections
-- [[../cognitive/active_inference|Active Inference]] - Cellular regulation parallels
-- [[../cognitive/homeostasis|Homeostasis]] - Cellular balance principles
-- [[../cognitive/decision_making|Decision Making]] - Cellular choice processes
+- [[knowledge_base/cognitive/active_inference|Active Inference]] - Cellular regulation parallels
+- [[knowledge_base/biology/homeostasis|Homeostasis]] - Cellular balance principles
+- [[knowledge_base/cognitive/decision_making|Decision Making]] - Cellular choice processes
 
 ### Agent Architecture Applications
-- [[../../Things/BioFirm/|BioFirm Cellular Models]]
-- [[../../docs/examples/|Cellular Agent Examples]]
-- [[../../docs/implementation/|Cell Biology Implementations]]
+- [[code/Things/BioFirm/README|BioFirm Cellular Models]]
+- [[docs/examples|Cellular Agent Examples]]
+- [[docs/implementation/README|Cell Biology Implementations]]
 
 ## References
 
@@ -725,5 +725,5 @@ class CellSignalingNetwork:
 - [[biophysics]]
 - [[developmental_systems]]
 - [[systems_biology]]
-- [[../agents/architectures_overview]]
+- [[knowledge_base/agents/architectures_overview]]
 

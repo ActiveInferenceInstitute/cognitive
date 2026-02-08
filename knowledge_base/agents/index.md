@@ -22,11 +22,11 @@ semantic_relations:
 
     links:
 
-      - [[active_inference_agents]]
+      - active inference agents
 
-      - [[pomdp_agents]]
+      - pomdp agents
 
-      - [[swarm_agents]]
+      - swarm agents
 
 ---
 
@@ -156,33 +156,33 @@ class SwarmAgent:
 
 ### Hierarchical Agents
 
-- [[agents/architectures/hierarchical|Hierarchical Architecture]]
+- [[docs/research/architectures/hierarchical|Hierarchical Architecture]]
 
-- [[agents/architectures/temporal|Temporal Hierarchy]]
+- Temporal Hierarchy
 
-- [[agents/architectures/spatial|Spatial Hierarchy]]
+- Spatial Hierarchy
 
-- [[agents/architectures/conceptual|Conceptual Hierarchy]]
+- Conceptual Hierarchy
 
 ### Memory-Based Agents
 
-- [[agents/architectures/episodic|Episodic Memory]]
+- Episodic Memory
 
-- [[agents/architectures/semantic|Semantic Memory]]
+- Semantic Memory
 
-- [[agents/architectures/working|Working Memory]]
+- Working Memory
 
-- [[agents/architectures/procedural|Procedural Memory]]
+- Procedural Memory
 
 ### Learning Agents
 
-- [[agents/architectures/reinforcement|Reinforcement Learning]]
+- Reinforcement Learning
 
-- [[agents/architectures/supervised|Supervised Learning]]
+- Supervised Learning
 
-- [[agents/architectures/unsupervised|Unsupervised Learning]]
+- Unsupervised Learning
 
-- [[agents/architectures/meta|Meta-Learning]]
+- Meta-Learning
 
 ## Implementation Components
 
@@ -314,77 +314,77 @@ class EnvironmentInterface:
 
 ### Basic Examples
 
-- [[agents/examples/active_inference|Active Inference Example]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Example]]
 
-- [[agents/examples/pomdp|POMDP Example]]
+- [[docs/research/architectures/pomdp|POMDP Example]]
 
-- [[agents/examples/swarm|Swarm Example]]
+- Swarm Example
 
 ### Advanced Examples
 
-- [[agents/examples/hierarchical|Hierarchical Example]]
+- Hierarchical Example
 
-- [[agents/examples/memory|Memory Example]]
+- Memory Example
 
-- [[agents/examples/learning|Learning Example]]
+- [[knowledge_base/free_energy_principle/cognitive/learning|Learning Example]]
 
 ### Integration Examples
 
-- [[agents/examples/environment|Environment Integration]]
+- Environment Integration
 
-- [[agents/examples/multi_agent|Multi-Agent System]]
+- [[docs/research/architectures/multi_agent|Multi-Agent System]]
 
-- [[agents/examples/hybrid|Hybrid Architecture]]
+- Hybrid Architecture
 
 ## Applications
 
 ### Robotics
 
-- [[agents/applications/robot_control|Robot Control]]
+- Robot Control
 
-- [[agents/applications/navigation|Navigation]]
+- Navigation
 
-- [[agents/applications/manipulation|Manipulation]]
+- Manipulation
 
 ### Cognitive Systems
 
-- [[agents/applications/perception|Perception]]
+- [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
 
-- [[agents/applications/decision|Decision Making]]
+- Decision Making
 
-- [[agents/applications/learning|Learning Systems]]
+- [[knowledge_base/free_energy_principle/cognitive/learning|Learning Systems]]
 
 ### Swarm Systems
 
-- [[agents/applications/swarm_robotics|Swarm Robotics]]
+- Swarm Robotics
 
-- [[agents/applications/collective|Collective Behavior]]
+- [[docs/research/complex_systems/collective|Collective Behavior]]
 
-- [[agents/applications/distributed|Distributed Systems]]
+- Distributed Systems
 
 ## Research Directions
 
 ### Current Research
 
-- [[agents/research/scaling|Scaling Methods]]
+- [[docs/research/active_inference/scaling|Scaling Methods]]
 
-- [[agents/research/hierarchical|Hierarchical Systems]]
+- [[docs/research/active_inference/hierarchical|Hierarchical Systems]]
 
-- [[agents/research/multi_agent|Multi-Agent Systems]]
+- [[docs/research/architectures/multi_agent|Multi-Agent Systems]]
 
 ### Open Questions
 
-- [[agents/questions/emergence|Emergence]]
+- Emergence
 
-- [[agents/questions/learning|Learning]]
+- [[knowledge_base/free_energy_principle/cognitive/learning|Learning]]
 
-- [[agents/questions/adaptation|Adaptation]]
+- [[docs/research/complex_systems/adaptation|Adaptation]]
 
 ## Related Resources
 
 ### Documentation
 
-- [[docs/guides/agent_guides|Agent Guides]]
+- Agent Guides
 
 - [[docs/api/agent_api|Agent API]]
 
@@ -392,17 +392,17 @@ class EnvironmentInterface:
 
 ### Knowledge Base
 
-- [[knowledge_base/agents/concepts|Agent Concepts]]
+- Agent Concepts
 
-- [[knowledge_base/agents/methods|Agent Methods]]
+- Agent Methods
 
-- [[knowledge_base/agents/applications|Agent Applications]]
+- [[docs/research/active_inference/applications|Agent Applications]]
 
 ### Learning Resources
 
-- [[learning_paths/agents|Agent Learning Path]]
+- [[docs/guides/learning_paths/AGENTS|Agent Learning Path]]
 
-- [[tutorials/agents|Agent Tutorials]]
+- [[AGENTS|Agent Tutorials]]
 
-- [[guides/agents/best_practices|Agent Best Practices]]
+- [[docs/guides/best_practices|Agent Best Practices]]
 

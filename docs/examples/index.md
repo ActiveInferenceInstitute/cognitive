@@ -22,7 +22,7 @@ semantic_relations:
 
     links:
 
-      - [[implementation_examples]]
+      - implementation examples
 
       - [[usage_examples]]
 
@@ -34,27 +34,27 @@ semantic_relations:
 
 ### Active Inference Examples
 
-- [[examples/active_inference/basic|Basic Active Inference]]
+- Basic Active Inference
 
-- [[examples/active_inference/hierarchical|Hierarchical Active Inference]]
+- [[docs/research/active_inference/hierarchical|Hierarchical Active Inference]]
 
-- [[examples/active_inference/multi_agent|Multi-Agent Active Inference]]
+- [[docs/research/architectures/multi_agent|Multi-Agent Active Inference]]
 
 ### POMDP Examples
 
-- [[examples/pomdp/basic|Basic POMDP]]
+- Basic POMDP
 
-- [[examples/pomdp/belief_updating|Belief Updating]]
+- Belief Updating
 
-- [[examples/pomdp/policy_selection|Policy Selection]]
+- Policy Selection
 
 ### Swarm Intelligence Examples
 
-- [[examples/swarm/ant_colony|Ant Colony Simulation]]
+- Ant Colony Simulation
 
-- [[examples/swarm/particle_swarm|Particle Swarm]]
+- Particle Swarm
 
-- [[examples/swarm/flocking|Flocking Behavior]]
+- Flocking Behavior
 
 ## Implementation Examples
 
@@ -146,79 +146,79 @@ def run_simulation(config):
 
 ### Hierarchical Systems
 
-- [[examples/hierarchical/perception|Hierarchical Perception]]
+- [[knowledge_base/free_energy_principle/cognitive/perception|Hierarchical Perception]]
 
-- [[examples/hierarchical/control|Hierarchical Control]]
+- Hierarchical Control
 
-- [[examples/hierarchical/learning|Hierarchical Learning]]
+- [[knowledge_base/free_energy_principle/cognitive/learning|Hierarchical Learning]]
 
 ### Multi-Agent Systems
 
-- [[examples/multi_agent/coordination|Agent Coordination]]
+- Agent Coordination
 
-- [[examples/multi_agent/communication|Agent Communication]]
+- [[knowledge_base/cognitive/communication|Agent Communication]]
 
-- [[examples/multi_agent/learning|Collective Learning]]
+- [[knowledge_base/free_energy_principle/cognitive/learning|Collective Learning]]
 
 ### Complex Systems
 
-- [[examples/complex/emergence|Emergence Patterns]]
+- Emergence Patterns
 
-- [[examples/complex/adaptation|System Adaptation]]
+- [[docs/research/complex_systems/adaptation|System Adaptation]]
 
-- [[examples/complex/evolution|System Evolution]]
+- [[knowledge_base/free_energy_principle/biology/evolution|System Evolution]]
 
 ## Application Examples
 
 ### Robotics Applications
 
-- [[examples/robotics/control|Robot Control]]
+- Robot Control
 
-- [[examples/robotics/navigation|Robot Navigation]]
+- Robot Navigation
 
-- [[examples/robotics/manipulation|Robot Manipulation]]
+- Robot Manipulation
 
 ### Cognitive Applications
 
-- [[examples/cognitive/learning|Learning Systems]]
+- [[knowledge_base/free_energy_principle/cognitive/learning|Learning Systems]]
 
-- [[examples/cognitive/memory|Memory Systems]]
+- Memory Systems
 
-- [[examples/cognitive/attention|Attention Systems]]
+- [[knowledge_base/free_energy_principle/cognitive/attention|Attention Systems]]
 
 ### Biological Applications
 
-- [[examples/biological/neural|Neural Systems]]
+- Neural Systems
 
-- [[examples/biological/collective|Collective Behavior]]
+- [[docs/research/complex_systems/collective|Collective Behavior]]
 
-- [[examples/biological/adaptation|Adaptive Behavior]]
+- [[docs/research/complex_systems/adaptation|Adaptive Behavior]]
 
 ## Integration Examples
 
 ### Framework Integration
 
-- [[examples/integration/pytorch|PyTorch Integration]]
+- PyTorch Integration
 
-- [[examples/integration/tensorflow|TensorFlow Integration]]
+- TensorFlow Integration
 
-- [[examples/integration/jax|JAX Integration]]
+- JAX Integration
 
 ### Tool Integration
 
-- [[examples/tools/visualization|Visualization Tools]]
+- Visualization Tools
 
-- [[examples/tools/analysis|Analysis Tools]]
+- Analysis Tools
 
-- [[examples/tools/profiling|Profiling Tools]]
+- Profiling Tools
 
 ### System Integration
 
-- [[examples/systems/environment|Environment Integration]]
+- Environment Integration
 
-- [[examples/systems/hardware|Hardware Integration]]
+- Hardware Integration
 
-- [[examples/systems/distributed|Distributed Systems]]
+- Distributed Systems
 
 ## Testing Examples
 
@@ -296,25 +296,25 @@ def test_performance():
 
 ### Documentation
 
-- [[docs/guides/implementation_guides|Implementation Guides]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
-- [[docs/api/implementation_api|Implementation API]]
+- Implementation API
 
-- [[docs/research/implementation_research|Implementation Research]]
+- Implementation Research
 
 ### Knowledge Base
 
-- [[knowledge_base/cognitive/implementation_concepts|Implementation Concepts]]
+- Implementation Concepts
 
-- [[knowledge_base/mathematics/implementation_math|Implementation Mathematics]]
+- Implementation Mathematics
 
-- [[knowledge_base/agents/implementation_patterns|Implementation Patterns]]
+- [[docs/implementation/implementation_patterns|Implementation Patterns]]
 
 ### Learning Resources
 
-- [[learning_paths/implementation|Implementation Learning Path]]
+- Implementation Learning Path
 
-- [[tutorials/implementation|Implementation Tutorials]]
+- Implementation Tutorials
 
-- [[guides/implementation/best_practices|Implementation Best Practices]]
+- [[docs/guides/best_practices|Implementation Best Practices]]
 

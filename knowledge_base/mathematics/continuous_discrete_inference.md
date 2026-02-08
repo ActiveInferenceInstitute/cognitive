@@ -924,7 +924,7 @@ function particle_filter(model::SwitchingStateSpaceModel, observations, n_partic
 
             # Propagate continuous state with mode-specific dynamics
 
-            new_state = model.dynamics[new_mode](state) + 0.1*randn(2)
+            new_state = model.dynamics[[state|new_mode]] + 0.1*randn(2)
 
             particles[i] = (new_state, new_mode)
 

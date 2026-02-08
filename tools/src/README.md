@@ -873,28 +873,28 @@ class PerformanceMonitor:
 ### Implementation References
 - [[models/README|Models Overview]]
 - [[utils/README|Utilities Overview]]
-- [[../README|Tools Overview]]
+- [[tools/README|Tools Overview]]
 
 ### Development Resources
-- [[../../docs/api/README|API Documentation]]
-- [[../../docs/implementation/README|Implementation Guides]]
-- [[../../tests/README|Testing Framework]]
+- [[docs/api/README|API Documentation]]
+- [[docs/implementation/README|Implementation Guides]]
+- [[tests/README|Testing Framework]]
 
 ### Quality Assurance
-- [[../../docs/repo_docs/code_standards|Code Standards]]
-- [[../../docs/repo_docs/unit_testing|Testing Guidelines]]
+- Code Standards
+- [[docs/repo_docs/unit_testing|Testing Guidelines]]
 
 ## 🔗 Cross-References
 
 ### Core Components
-- [[models/active_inference/|Active Inference Implementation]]
-- [[models/matrices/|Matrix Operations]]
-- [[utils/visualization/|Visualization Utilities]]
+- [[models/active_inference|Active Inference Implementation]]
+- Matrix Operations
+- [[code/tools/src/visualization|Visualization Utilities]]
 
 ### Integration Points
-- [[../../Things/|Implementation Examples]]
-- [[../../docs/examples/|Usage Examples]]
-- [[../../docs/guides/|Development Guides]]
+- Implementation Examples
+- [[docs/examples|Usage Examples]]
+- [[docs/guides/README|Development Guides]]
 
 ---
 

@@ -3,7 +3,7 @@ title: Learning Paths Agents Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2026-02-07
 tags:
   - agents
   - learning_paths
@@ -27,6 +27,7 @@ Agent architectures and cognitive systems designed for educational progression, 
 ### Educational Progression Agents
 
 #### Active Inference Learning Path Guides
+
 Agents implementing structured learning progression through Active Inference concepts.
 
 ```python
@@ -85,6 +86,7 @@ class ActiveInferenceLearningPathAgent:
 ### Cognitive Development Agents
 
 #### Skill Acquisition Framework Agents
+
 Agents implementing cognitive skill development through structured learning experiences.
 
 ```python
@@ -139,6 +141,7 @@ class SkillAcquisitionFrameworkAgent:
 ### Knowledge Navigation Agents
 
 #### Learning Path Navigation Agents
+
 Agents providing intelligent navigation through complex knowledge landscapes.
 
 ```python
@@ -193,24 +196,28 @@ class LearningPathNavigationAgent:
 ## 📊 Agent Capabilities
 
 ### Educational Progression
+
 - **Structured Learning**: Organized progression through complex knowledge domains
 - **Adaptive Curriculum**: Dynamic adjustment of learning content and difficulty
 - **Progress Tracking**: Comprehensive monitoring of learning advancement
 - **Competency Assessment**: Evaluation of skill mastery and knowledge acquisition
 
 ### Skill Development
+
 - **Cognitive Skill Building**: Systematic development of cognitive abilities
 - **Experience Design**: Creation of optimal learning experiences
 - **Practice Optimization**: Efficient scheduling and delivery of practice activities
 - **Challenge Adaptation**: Dynamic adjustment of learning challenges
 
 ### Knowledge Navigation
+
 - **Path Optimization**: Finding optimal routes through knowledge landscapes
 - **Personalization**: Tailoring learning experiences to individual needs
 - **Progress Prediction**: Forecasting learning outcomes and timelines
 - **Resource Optimization**: Recommending optimal learning resources
 
 ### Learning Analytics
+
 - **Performance Analytics**: Detailed analysis of learning performance
 - **Knowledge Gap Identification**: Detection of learning deficiencies
 - **Learning Pattern Recognition**: Identification of effective learning strategies
@@ -219,24 +226,28 @@ class LearningPathNavigationAgent:
 ## 🎯 Applications
 
 ### Academic Education
+
 - **University Curricula**: Structured learning paths for academic disciplines
 - **Professional Certification**: Competency-based certification programs
 - **Continuing Education**: Lifelong learning and skill development
 - **Specialized Training**: Domain-specific skill acquisition programs
 
 ### Cognitive Development
+
 - **Child Development**: Age-appropriate cognitive skill progression
 - **Expertise Development**: Pathways to expert-level knowledge and skills
 - **Cognitive Rehabilitation**: Recovery and development of cognitive abilities
 - **Talent Development**: Accelerated development of exceptional abilities
 
 ### Professional Training
+
 - **Workforce Development**: Industry-specific skill development programs
 - **Leadership Training**: Executive and management skill progression
 - **Technical Training**: Specialized technical skill acquisition
 - **Entrepreneurial Education**: Business and innovation skill development
 
 ### Personal Development
+
 - **Self-Directed Learning**: Autonomous learning path navigation
 - **Hobby and Interest Development**: Skill development in recreational domains
 - **Cultural Education**: Cross-cultural knowledge and skill acquisition
@@ -245,24 +256,28 @@ class LearningPathNavigationAgent:
 ## 📈 Learning Framework Foundations
 
 ### Pedagogical Theories
+
 - **Constructivist Learning**: Building knowledge through active construction
 - **Experiential Learning**: Learning through direct experience and reflection
 - **Social Learning**: Knowledge acquisition through social interaction
 - **Cognitive Apprenticeship**: Learning through guided expertise development
 
 ### Skill Acquisition Models
+
 - **Dreyfus Model**: Progressive skill development from novice to expert
 - **Bloom's Taxonomy**: Hierarchical organization of learning objectives
 - **Anderson's ACT-R**: Cognitive architecture for skill acquisition
 - **Fitts' Learning Curve**: Quantitative models of skill improvement
 
 ### Adaptive Learning Systems
+
 - **Intelligent Tutoring**: AI-driven personalized instruction
 - **Competency-Based Education**: Learning focused on demonstrated abilities
 - **Microlearning**: Bite-sized learning experiences
 - **Gamified Learning**: Game-based learning motivation and engagement
 
 ### Knowledge Organization
+
 - **Concept Maps**: Visual representation of knowledge structures
 - **Learning Objectives**: Clear articulation of learning goals
 - **Prerequisite Chains**: Sequential knowledge dependencies
@@ -271,18 +286,21 @@ class LearningPathNavigationAgent:
 ## 🔧 Implementation Approaches
 
 ### Learning Management Systems
+
 - **Course Authoring**: Creation of structured learning content
 - **Progress Tracking**: Monitoring learner advancement
 - **Assessment Systems**: Evaluation of learning outcomes
 - **Analytics Dashboards**: Visualization of learning metrics
 
 ### Adaptive Learning Platforms
+
 - **Personalization Engines**: Dynamic content adaptation
 - **Recommendation Systems**: Optimal resource suggestion
 - **Difficulty Scaling**: Automatic challenge adjustment
 - **Feedback Systems**: Immediate and constructive feedback
 
 ### Intelligent Tutoring Systems
+
 - **Knowledge Tracers**: Modeling learner knowledge states
 - **Problem Selection**: Optimal problem sequencing
 - **Hint Generation**: Contextual learning support
@@ -291,21 +309,27 @@ class LearningPathNavigationAgent:
 ## 📚 Documentation
 
 ### Learning Path Catalog
+
 See [[catalog_of_learning_paths|Catalog of Learning Paths]] for:
+
 - Comprehensive learning path directory
 - Domain-specific learning trajectories
 - Skill development frameworks
 - Educational resource mappings
 
 ### Navigation Framework
+
 See [[navigation_framework_implementation|Navigation Framework Implementation]] for:
+
 - Learning path navigation systems
 - Progress tracking mechanisms
 - Adaptive learning algorithms
 - User experience design principles
 
 ### Core Learning Paths
+
 See [[active_inference_learning_path|Active Inference Learning Path]] for:
+
 - Fundamental Active Inference concepts
 - Progressive skill development
 - Practical implementation guides
@@ -314,35 +338,41 @@ See [[active_inference_learning_path|Active Inference Learning Path]] for:
 ## 🔗 Related Documentation
 
 ### Implementation Examples
-- [[../../docs/examples/|Learning Examples]]
-- [[../../tools/src/models/|Educational Models]]
-- [[../../docs/templates/|Learning Templates]]
+
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Learning Examples]]
+- [[tools/src/models/README|Educational Models]]
+- [[docs/templates/README|Learning Templates]]
 
 ### Theoretical Integration
-- [[../../knowledge_base/cognitive/|Cognitive Development]]
-- [[../../docs/guides/implementation_guides|Implementation Guides]]
-- [[../../docs/research/|Educational Research]]
+
+- [[knowledge_base/cognitive/README|Cognitive Development]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
+- [[docs/research/README|Educational Research]]
 
 ### Educational Resources
-- [[../../docs/examples/|Educational Examples]]
-- [[../../docs/templates/|Learning Templates]]
+
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Educational Examples]]
+- [[docs/templates/README|Learning Templates]]
 
 ## 🔗 Cross-References
 
 ### Agent Theory
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
-- [[../../knowledge_base/agents/AGENTS|Agent Architecture Overview]]
-- [[../../docs/guides/implementation_guides|Implementation Guides]]
+
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[knowledge_base/agents/AGENTS|Agent Architecture Overview]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
 ### Learning Domains
+
 - [[catalog_of_learning_paths|Learning Path Catalog]]
 - [[navigation_framework_implementation|Navigation Framework]]
 - [[active_inference_learning_path|Active Inference Path]]
 
 ### Related Areas
-- [[../../docs/guides/application/|Application Guides]]
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/examples/|Implementation Examples]]
+
+- [[docs/guides/application/README|Application Guides]]
+- [[docs/research/README|Research Applications]]
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Implementation Examples]]
 
 ---
 
@@ -355,4 +385,3 @@ See [[active_inference_learning_path|Active Inference Learning Path]] for:
 ---
 
 > **Cognitive Development**: Enables agents with systematic cognitive skill building, competency assessment, and progressive knowledge integration across domains.
-

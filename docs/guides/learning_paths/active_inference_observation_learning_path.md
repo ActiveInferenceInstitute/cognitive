@@ -38,13 +38,13 @@ semantic_relations:
 
     links:
 
-      - [[predictive_processing]]
+      - [[knowledge_base/cognitive/predictive_processing]]
 
       - [[active_inference_learning_path]]
 
-      - [[phenomenology_learning_path]]
+      - [[active_inference_pragmatism_learning_path]]
 
-      - [[consciousness_studies_learning_path]]
+      - [[active_inference_cognitive_learning_path]]
 
 ---
 
@@ -60,7 +60,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [Stanford Encyclopedia of Philosophy: Phenomenology](https://plato.stanford.edu/entries/phenomenology/)
 
@@ -74,7 +74,7 @@ This learning path explores the profound relationship between observation, human
 
 ### 1. Foundations of Observation (2 weeks)
 
-- [[phenomenology|Phenomenological Approaches]]
+- Phenomenological Approaches
 
   - Direct perception
 
@@ -82,7 +82,7 @@ This learning path explores the profound relationship between observation, human
 
   - First-person experience
 
-- [[scientific_observation|Scientific Observation]]
+- Scientific Observation
 
   - Systematic observation methods
 
@@ -92,7 +92,7 @@ This learning path explores the profound relationship between observation, human
 
 ### 2. Active Inference Basics (3 weeks)
 
-- [[free_energy_principle|Free Energy Principle]]
+- Free Energy Principle
 
   - Variational free energy
 
@@ -100,7 +100,7 @@ This learning path explores the profound relationship between observation, human
 
   - Action-perception cycles
 
-- [[predictive_processing|Predictive Processing]]
+- Predictive Processing
 
   - Hierarchical predictive coding
 
@@ -112,7 +112,7 @@ This learning path explores the profound relationship between observation, human
 
 ### 1. The Observer Effect (2 weeks)
 
-- [[quantum_measurement|Quantum Measurement Theory]]
+- Quantum Measurement Theory
 
   - Wave function collapse
 
@@ -120,7 +120,7 @@ This learning path explores the profound relationship between observation, human
 
   - Observer-dependent reality
 
-- [[social_observation|Social Observer Effects]]
+- Social Observer Effects
 
   - Hawthorne effect
 
@@ -130,7 +130,7 @@ This learning path explores the profound relationship between observation, human
 
 ### 2. Active Inference and Self-Perception (3 weeks)
 
-- [[belief_updating|Belief Updating in Active Inference]]
+- Belief Updating in Active Inference
 
   - Self-modeling
 
@@ -138,7 +138,7 @@ This learning path explores the profound relationship between observation, human
 
   - Belief hierarchies
 
-- [[interoception|Interoceptive Active Inference]]
+- Interoceptive Active Inference
 
   - Body awareness
 
@@ -148,7 +148,7 @@ This learning path explores the profound relationship between observation, human
 
 ### 3. The Art of Observation (2 weeks)
 
-- [[mindfulness|Mindfulness and Attention]]
+- Mindfulness and Attention
 
   - Focused attention
 
@@ -156,7 +156,7 @@ This learning path explores the profound relationship between observation, human
 
   - Non-judgmental awareness
 
-- [[observation_techniques|Advanced Observation Techniques]]
+- Advanced Observation Techniques
 
   - Pattern recognition
 
@@ -168,7 +168,7 @@ This learning path explores the profound relationship between observation, human
 
 ### 1. Computational Models (3 weeks)
 
-- [[active_inference_agents|Active Inference Agents]]
+- Active Inference Agents
 
   - Self-modeling architectures
 
@@ -176,7 +176,7 @@ This learning path explores the profound relationship between observation, human
 
   - Action selection mechanisms
 
-- [[observation_models|Computational Observation Models]]
+- Computational Observation Models
 
   - Attention mechanisms
 
@@ -186,7 +186,7 @@ This learning path explores the profound relationship between observation, human
 
 ### 2. Applications and Implications (2 weeks)
 
-- [[scientific_method|Scientific Applications]]
+- Scientific Applications
 
   - Research methodology
 
@@ -194,7 +194,7 @@ This learning path explores the profound relationship between observation, human
 
   - Experimental design
 
-- [[consciousness_studies|Consciousness and Observation]]
+- Consciousness and Observation
 
   - Self-awareness
 
@@ -592,7 +592,7 @@ After completing this path, consider exploring:
 
 - [[active_inference_cognitive_learning_path]]
 
-- [[consciousness_studies_learning_path]]
+- consciousness studies learning path
 
-- [[phenomenology_learning_path]]
+- phenomenology learning path
 

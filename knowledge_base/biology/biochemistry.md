@@ -28,7 +28,7 @@ semantic_relations:
 
       - [[thermodynamics]]
 
-      - [[../cognitive/active_inference]]
+      - [[knowledge_base/cognitive/active_inference]]
 
   - type: implements
 
@@ -40,7 +40,7 @@ semantic_relations:
 
       - [[cellular_energetics]]
 
-      - [[../agents/architectures_overview]]
+      - [[knowledge_base/agents/architectures_overview]]
 
   - type: relates
 
@@ -701,14 +701,14 @@ class MetabolicNetworkControl:
 - [[biophysics|Biophysics]] - Physical chemistry of life
 
 ### Cognitive Science Connections
-- [[../cognitive/active_inference|Active Inference]] - Metabolic regulation parallels
-- [[../cognitive/decision_making|Decision Making]] - Biochemical choice processes
-- [[../cognitive/homeostasis|Homeostasis]] - Metabolic balance principles
+- [[knowledge_base/cognitive/active_inference|Active Inference]] - Metabolic regulation parallels
+- [[knowledge_base/cognitive/decision_making|Decision Making]] - Biochemical choice processes
+- [[knowledge_base/biology/homeostasis|Homeostasis]] - Metabolic balance principles
 
 ### Agent Architecture Applications
-- [[../../Things/BioFirm/|BioFirm Metabolic Models]]
-- [[../../docs/examples/|Biochemical Agent Examples]]
-- [[../../docs/implementation/|Metabolic Control Systems]]
+- [[code/Things/BioFirm/README|BioFirm Metabolic Models]]
+- [[docs/examples|Biochemical Agent Examples]]
+- [[docs/implementation/README|Metabolic Control Systems]]
 
 ## References
 
@@ -734,5 +734,5 @@ class MetabolicNetworkControl:
 - [[enzyme_kinetics]]
 - [[thermodynamics]]
 - [[biophysics]]
-- [[../agents/architectures_overview]]
+- [[knowledge_base/agents/architectures_overview]]
 

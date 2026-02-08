@@ -17,7 +17,7 @@ semantic_relations:
       - simulation_studies
   - type: implements
     links:
-      - [[../tools/src/validation/]]
+      - [[docs/repo_docs/validation]]
       - [[benchmarking]]
 ---
 

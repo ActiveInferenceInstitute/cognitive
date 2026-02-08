@@ -60,11 +60,7 @@ semantic_relations:
 
     links:
 
-      - [[social_psychology_learning_path]]
-
-      - [[group_dynamics_learning_path]]
-
-      - [[cultural_systems_learning_path]]
+      - [[active_inference_social_systems_learning_path]]
 
 ---
 
@@ -80,7 +76,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [JASSS](https://jasss.soc.surrey.ac.uk/), [ComSES](https://www.comses.net/)
 
@@ -1466,17 +1462,17 @@ class InstitutionalDynamics:
 
 ### Advanced Topics
 
-1. [[social_network_analysis_learning_path|Social Network Analysis]]
+1. Social Network Analysis
 
-1. [[cultural_evolution_learning_path|Cultural Evolution]]
+1. Cultural Evolution
 
-1. [[collective_intelligence_learning_path|Collective Intelligence]]
+1. Collective Intelligence
 
 ### Research Directions
 
-1. [[research_guides/social_systems|Social Systems Research]]
+1. [[knowledge_base/systems/social_systems|Social Systems Research]]
 
-1. [[research_guides/cultural_evolution|Cultural Evolution Research]]
+1. [[knowledge_base/research/cultural_evolution|Cultural Evolution Research]]
 
-1. [[research_guides/collective_behavior|Collective Behavior Research]]
+1. [[knowledge_base/cognitive/collective_behavior|Collective Behavior Research]]
 

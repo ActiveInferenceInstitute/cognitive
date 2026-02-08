@@ -1518,7 +1518,7 @@ graph TD
 
    & \text{Convolution:} \\
 
-   & [f *_G k](x) = \int_G k(g^{-1}x)f(g)dg \\
+   & [[x|f *_G k]] = \int_G k(g^{-1}x)f(g)dg \\
 
    & \text{Attention:} \\
 

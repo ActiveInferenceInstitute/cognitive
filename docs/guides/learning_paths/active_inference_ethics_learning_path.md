@@ -58,11 +58,6 @@ semantic_relations:
 
     links:
 
-      - [[ai_ethics_learning_path]]
-
-      - [[responsible_ai_learning_path]]
-
-      - [[fairness_ml_learning_path]]
 
 ---
 
@@ -78,7 +73,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 

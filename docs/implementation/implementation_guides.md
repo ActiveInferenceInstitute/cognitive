@@ -22,15 +22,15 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../concepts/cognitive_modeling_concepts]]
+    links: [[knowledge_base/cognitive/cognitive_modeling_concepts]]
 
   - type: relates
 
     links:
 
-      - [[../api/api_documentation]]
+      - [[docs/api/api_documentation]]
 
-      - [[../examples/usage_examples]]
+      - [[docs/examples/usage_examples]]
 
 ---
 
@@ -128,13 +128,13 @@ This directory contains practical guides and tutorials for implementing and usin
 
 ## Related Sections
 
-- [[../concepts/cognitive_modeling_concepts|Core Concepts]]
+- [[knowledge_base/cognitive/cognitive_modeling_concepts|Core Concepts]]
 
-- [[../examples/usage_examples|Usage Examples]]
+- [[docs/examples/usage_examples|Usage Examples]]
 
-- [[../api/api_documentation|API Reference]]
+- [[docs/api/api_documentation|API Reference]]
 
 ## Contributing
 
-See [[../templates/guide_template|Guide Template]] for creating new guides.
+See [[docs/templates/guide_template|Guide Template]] for creating new guides.
 

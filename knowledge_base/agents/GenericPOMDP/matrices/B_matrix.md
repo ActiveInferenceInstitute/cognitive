@@ -556,9 +556,9 @@ def simulate_trajectory(self,
 
 ## See Also
 
-- [[a_matrix]] - Action model
+- [[knowledge_base/agents/GenericPOMDP/matrices/A_matrix]] - Action model
 
-- [[d_matrix]] - Prior preferences
+- [[knowledge_base/agents/GenericPOMDP/matrices/D_matrix]] - Prior preferences
 
 - [[state_space]] - State representation
 

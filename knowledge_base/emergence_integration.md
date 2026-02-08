@@ -407,7 +407,7 @@ Emergence raises fundamental questions about reality and knowledge.
 ### Domain-Specific Studies
 - Friston, K. (2013). Life as We Know It
 - [[systems/complex_systems|Complex Systems Theory]]
-- [[biology/swarm_intelligence|Swarm Intelligence]]
+- [[knowledge_base/cognitive/swarm_intelligence|Swarm Intelligence]]
 - [[cognitive/swarm_intelligence|Cognitive Swarm Intelligence]]
 
 ### Integration Papers

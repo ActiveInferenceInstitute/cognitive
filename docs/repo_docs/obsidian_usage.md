@@ -26,9 +26,9 @@ semantic_relations:
 
     links:
 
-      - [[obsidian/folder_structure]]
+      - [[docs/repo_docs/folder_structure]]
 
-      - [[obsidian/linking_patterns]]
+      - [[docs/repo_docs/linking_patterns]]
 
 ---
 
@@ -64,7 +64,7 @@ This guide provides a comprehensive overview of using Obsidian for knowledge man
 
 ### Directory Structure
 
-See [[obsidian/folder_structure|Folder Structure Guide]] for complete details.
+See [[docs/repo_docs/folder_structure|Folder Structure Guide]] for complete details.
 
 ```text
 
@@ -112,7 +112,7 @@ cognitive/
 
 ### Link Types
 
-See [[obsidian/linking_patterns|Linking Patterns Guide]] for complete details.
+See [[docs/repo_docs/linking_patterns|Linking Patterns Guide]] for complete details.
 
 ```markdown
 
@@ -220,7 +220,7 @@ See [[templates/template_guide|Template Guide]] for complete details.
 
 ### Community Plugins
 
-See [[plugins/plugin_guide|Plugin Guide]] for complete details.
+See [[docs/tools/plugin_guide|Plugin Guide]] for complete details.
 
 1. Essential Plugins
 
@@ -366,11 +366,11 @@ See [[plugins/plugin_guide|Plugin Guide]] for complete details.
 
 ## Related Documentation
 
-- [[obsidian/folder_structure|Folder Structure Guide]]
+- [[docs/repo_docs/folder_structure|Folder Structure Guide]]
 
-- [[obsidian/linking_patterns|Linking Patterns Guide]]
+- [[docs/repo_docs/linking_patterns|Linking Patterns Guide]]
 
 - [[templates/template_guide|Template Guide]]
 
-- [[plugins/plugin_guide|Plugin Guide]]
+- [[docs/tools/plugin_guide|Plugin Guide]]
 

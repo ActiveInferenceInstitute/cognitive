@@ -20,7 +20,7 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../documentation_standards]]
+    links: [[docs/repo_docs/documentation_standards]]
 
   - type: relates
 
@@ -76,7 +76,7 @@ semantic_relations:
 
    ```markdown
 
-   [[../parent_folder/filename]]
+   [[parent_folder/filename]]
 
    [[./current_folder/filename]]
 

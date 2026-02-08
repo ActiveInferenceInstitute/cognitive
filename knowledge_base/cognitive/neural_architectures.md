@@ -22,17 +22,17 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../cognitive_modeling_concepts]]
+    links: [[cognitive_modeling_concepts]]
 
   - type: relates
 
     links:
 
-      - [[../perception_processing]]
+      - [[perception_processing]]
 
-      - [[../belief_updating]]
+      - [[belief_updating]]
 
-      - [[../../knowledge_base/cognitive/predictive_processing]]
+      - [[predictive_processing]]
 
 ---
 
@@ -338,21 +338,21 @@ Neural architecture patterns define structured approaches for implementing neura
 
 ## Related Concepts
 
-- [[../perception_processing]] - Perception processing
+- [[perception_processing]] - Perception processing
 
-- [[../belief_updating]] - Belief updating
+- [[belief_updating]] - Belief updating
 
 - [[inference_patterns]] - Inference patterns
 
 - [[optimization_patterns]] - Optimization patterns
 
-- [[../../knowledge_base/cognitive/predictive_processing]] - Predictive processing
+- [[predictive_processing]] - Predictive processing
 
 ## References
 
-- [[../../research/papers/key_papers|Neural Architecture Papers]]
+- [[docs/research/papers/key_papers|Neural Architecture Papers]]
 
-- [[../../implementations/reference_implementations]]
+- [[knowledge_base/reference_implementations]]
 
-- [[../../guides/implementation_guides]]
+- [[docs/implementation/implementation_guides]]
 

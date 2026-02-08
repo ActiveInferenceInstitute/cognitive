@@ -86,7 +86,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [Ecological Forecasting Initiative](https://ecoforecast.org/)
 
@@ -462,7 +462,7 @@ This learning path explores the application of active inference principles to en
 
 - **Learning Resources**
 
-  - Reading: [[knowledge_base/cognitive/generative_models|Generative Models]]
+  - Reading: [[knowledge_base/mathematics/generative_models|Generative Models]]
 
   - Article: "Generative Models in Ecosystem Science"
 
@@ -720,7 +720,7 @@ This learning path explores the application of active inference principles to en
 
 - **Learning Resources**
 
-  - Reading: [[knowledge_base/systems/social_ecological_systems|Social-Ecological Systems]]
+  - Reading: [[knowledge_base/systems/Social-Ecological Systems|Social-Ecological Systems]]
 
   - Article: "Active Inference in Human-Nature Interactions"
 

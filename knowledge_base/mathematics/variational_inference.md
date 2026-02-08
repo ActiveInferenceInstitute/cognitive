@@ -1006,7 +1006,7 @@ def visualize_flow_transformation(
 
         # Transform samples
 
-        z, _ = flow.flows[i](z)
+        z, _ = flow.flows[[z|i]]
 
         # Plot distribution
 

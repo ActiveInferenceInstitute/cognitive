@@ -646,9 +646,9 @@ class MetacognitiveMonitor:
 - [[self_organization]] - Consciousness emergence
 
 ### Related Domains
-- [[../philosophy/consciousness]] - Philosophical approaches
-- [[../biology/neuroscience]] - Neural basis
-- [[../systems/complex_systems]] - Emergence of consciousness
+- [[consciousness]] - Philosophical approaches
+- [[knowledge_base/biology/neuroscience]] - Neural basis
+- [[knowledge_base/systems/complex_systems]] - Emergence of consciousness
 
 ---
 

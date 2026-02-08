@@ -682,8 +682,8 @@ class AnxietyDepressionSocialCognition:
 - [[attention_mechanisms]] - Social attention
 
 ### Neural Basis
-- [[../biology/neuroscience]] - Neural mechanisms
-- [[../biology/social_insect_cognition]] - Comparative social cognition
+- [[knowledge_base/biology/neuroscience]] - Neural mechanisms
+- [[social_insect_cognition]] - Comparative social cognition
 - [[neural_active_inference]] - Neural implementation
 
 ---

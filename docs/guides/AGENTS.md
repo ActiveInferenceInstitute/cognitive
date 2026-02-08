@@ -12,19 +12,19 @@ tags:
 semantic_relations:
   - type: guides
     links:
-      - [[implementation_guides]]
-      - [[../../docs/examples/AGENTS]]
-      - [[../development/AGENTS]]
-      - [[../implementation/AGENTS]]
+      - [[docs/implementation/implementation_guides]]
+      - [[docs/examples/AGENTS]]
+      - [[docs/development/AGENTS]]
+      - [[docs/implementation/AGENTS]]
   - type: educates
     links:
-      - [[learning_paths/|Learning Paths]]
-      - [[application/|Application Guides]]
+      - [[learning_paths/README|Learning Paths]]
+      - [[application/README|Application Guides]]
   - type: supports
     links:
-      - [[../../Things/Generic_Thing/AGENTS]]
-      - [[../../Things/Generic_POMDP/AGENTS]]
-      - [[../../docs/agents/AGENTS]]
+      - [[code/Things/Generic_Thing/AGENTS]]
+      - [[code/Things/Generic_POMDP/AGENTS]]
+      - [[docs/agents/AGENTS]]
 ---
 
 # Guides Agent Documentation
@@ -35,10 +35,12 @@ Comprehensive guides for implementing, configuring, and deploying cognitive agen
 
 ### Getting Started Guides
 
-#### [[implementation_guides|Implementation Guides]]
+#### [[docs/implementation/implementation_guides|Implementation Guides]]
+
 Complete guide for implementing Active Inference agents from basic concepts to advanced architectures.
 
 ##### Basic Agent Implementation Guide
+
 ```markdown
 # Basic Agent Implementation Guide
 
@@ -65,6 +67,7 @@ pip install cognitive-modeling-framework
 ```
 
 ## Step 2: Basic Agent Structure
+
 ```python
 from cognitive_modeling import BaseAgent
 
@@ -101,6 +104,7 @@ class MyFirstAgent(BaseAgent):
 ```
 
 ## Step 3: Configuration and Testing
+
 ```python
 # Configuration
 config = {
@@ -123,6 +127,7 @@ for episode in range(10):
 ```
 
 ## Step 4: Analysis and Visualization
+
 ```python
 # Analyze agent performance
 performance_metrics = analyze_agent_performance(agent)
@@ -134,16 +139,18 @@ plot_learning_progress(agent.learning_history)
 ```
 
 ## Next Steps
+
 - Experiment with different state space sizes
 - Implement more sophisticated belief updating
 - Add planning capabilities
 - Explore multi-agent scenarios
+
 ```
 
 #### [[README|Guides Overview]]
 Rapid introduction to the framework with minimal setup and immediate results.
 
-#### [[../repo_docs/getting_started|Getting Started]]
+#### [[docs/repo_docs/getting_started|Getting Started]]
 Complete installation and setup instructions for different platforms and use cases.
 
 ### Advanced Implementation Guides
@@ -214,6 +221,7 @@ class HierarchicalCognitiveAgent(BaseAgent):
 ```
 
 ### Communication Between Levels
+
 ```python
 class HierarchicalCommunication:
     """Manages communication between hierarchical levels."""
@@ -237,12 +245,15 @@ class HierarchicalCommunication:
 ## 🎯 Domain-Specific Guides
 
 ### [[application/README|Application Guides]]
+
 Specialized guides for implementing agents in specific application domains.
 
 #### [[application/active_inference_spatial_applications|Spatial Applications Guide]]
+
 Guide for implementing agents in spatial reasoning and navigation tasks.
 
 ##### Spatial Navigation Agent Implementation
+
 ```python
 class SpatialNavigationAgent(HierarchicalCognitiveAgent):
     """Agent specialized for spatial navigation and mapping."""
@@ -280,15 +291,19 @@ class SpatialNavigationAgent(HierarchicalCognitiveAgent):
 ```
 
 #### [[application/guide_for_cognitive_modeling|Cognitive Modeling Guide]]
+
 Guide for using agents in cognitive modeling and psychological research.
 
 ### [[learning_paths/README|Learning Paths]]
+
 Structured educational progression from basic concepts to advanced implementations.
 
-#### [[learning_paths/|Active Inference Learning Path]]
+#### [[learning_paths|Active Inference Learning Path]]
+
 Comprehensive learning progression for mastering Active Inference agent development.
 
 ##### Learning Path Structure
+
 1. **Foundation Level**: Basic concepts and simple implementations
 2. **Intermediate Level**: Advanced architectures and multi-agent systems
 3. **Advanced Level**: Research applications and novel implementations
@@ -296,10 +311,12 @@ Comprehensive learning progression for mastering Active Inference agent developm
 
 ## 🔧 Technical Guides
 
-### [[environment_creation|Environment Creation Guide]]
+### Agent Development Workflow Guide
+
 Guide for creating custom environments for agent training and evaluation.
 
 #### Custom Environment Development
+
 ```python
 class CustomEnvironment(BaseEnvironment):
     """Example custom environment for agent training."""
@@ -338,10 +355,12 @@ class CustomEnvironment(BaseEnvironment):
         return observation
 ```
 
-### [[testing_guide|Testing Guide]]
+### Agent Testing Guide
+
 Comprehensive guide for testing agent implementations and validating performance.
 
 #### Agent Testing Framework
+
 ```python
 class AgentTestingSuite:
     """Comprehensive testing framework for cognitive agents."""
@@ -380,15 +399,18 @@ class AgentTestingSuite:
         pass
 ```
 
-### [[performance_optimization|Performance Optimization Guide]]
+### Performance Optimization Guide
+
 Guide for optimizing agent performance and computational efficiency.
 
 ## 🌐 Multi-Agent Guides
 
-### [[multi_agent|Multi-Agent Systems Guide]]
+### Multi-Agent Systems Guide
+
 Guide for implementing and coordinating multiple cognitive agents.
 
 #### Multi-Agent Coordination Patterns
+
 ```python
 class MultiAgentCoordinator:
     """Coordinates multiple cognitive agents in shared environments."""
@@ -422,48 +444,57 @@ class MultiAgentCoordinator:
         return results
 ```
 
-### [[federated_agents|Federated Learning Guide]]
+### Federated Learning Guide
+
 Guide for implementing federated learning across distributed agent populations.
 
 ## 📊 Best Practices Guides
 
-### [[code_standards|Code Standards Guide]]
+### Code Standards Guide
+
 Guide for maintaining high-quality, consistent code across agent implementations.
 
-### [[documentation_guide|Documentation Guide]]
+### Documentation Guide
+
 Guide for creating comprehensive documentation for agent implementations.
 
-### [[review_process|Review Process Guide]]
+### Review Process Guide
+
 Guide for conducting thorough code reviews and ensuring implementation quality.
 
 ## 🔗 Related Documentation
 
 ### Implementation Resources
-- [[../examples/AGENTS|Examples Agent Documentation]]
-- [[../api/AGENTS|API Agent Documentation]]
-- [[../../tools/README|Development Tools]]
+
+- [[docs/examples/AGENTS|Examples Agent Documentation]]
+- [[docs/api/AGENTS|API Agent Documentation]]
+- [[tools/README|Development Tools]]
 
 ### Theoretical Foundations
-- [[../../knowledge_base/cognitive/active_inference|Active Inference Theory]]
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+
+- [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
 
 ### Development Resources
-- [[../development/README|Development Resources]]
-- [[../../tests/README|Testing Framework]]
+
+- [[docs/development/README|Development Resources]]
+- [[tests/README|Testing Framework]]
 
 ## 🔗 Cross-References
 
 ### Guide Categories
-- **Getting Started**: [[README|Guides Overview]], [[../repo_docs/getting_started|Getting Started]]
-- **Implementation**: [[implementation_guides|Implementation]], [[agent_development|Agent Development]]
+
+- **Getting Started**: [[README|Guides Overview]], [[docs/repo_docs/getting_started|Getting Started]]
+- **Implementation**: [[docs/implementation/implementation_guides|Implementation]], [[agent_development|Agent Development]]
 - **Domain-Specific**: [[application/README|Applications]], [[learning_paths/README|Learning Paths]]
-- **Technical**: [[testing_guide|Testing]], [[performance_optimization|Optimization]]
+- **Technical**: [[best_practices|Best Practices]]
 
 ### Agent Types Covered
-- [[../../Things/Simple_POMDP/AGENTS|Simple POMDP Agents]]
-- [[../../Things/Generic_POMDP/AGENTS|Generic POMDP Agents]]
-- [[../../Things/Generic_Thing/AGENTS|Generic Thing Agents]]
-- [[../../Things/Ant_Colony/AGENTS|Ant Colony Agents]]
+
+- [[code/Things/Simple_POMDP/AGENTS|Simple POMDP Agents]]
+- [[code/Things/Generic_POMDP/AGENTS|Generic POMDP Agents]]
+- [[code/Things/Generic_Thing/AGENTS|Generic Thing Agents]]
+- [[code/Things/Ant_Colony/AGENTS|Ant Colony Agents]]
 
 ---
 
@@ -476,4 +507,3 @@ Guide for conducting thorough code reviews and ensuring implementation quality.
 ---
 
 > **Progressive Learning**: Structured guidance supporting skill development from beginner to expert levels across different agent types and domains.
-

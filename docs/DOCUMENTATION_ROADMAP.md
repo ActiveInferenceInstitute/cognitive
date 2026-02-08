@@ -41,11 +41,11 @@ semantic_relations:
   - type: plans
     links:
       - [[repo_docs/folder_structure]]
-      - [[repo_docs/linking_standards]]
+      - [[knowledge_base/linking_standards]]
       - [[repo_docs/obsidian_linking]]
   - type: documents
     links:
-      - [[../knowledge_base/index]]
+      - [[knowledge_base/index]]
       - [[agents/agent_docs_readme]]
       - [[research/AGENTS]]
 
@@ -58,7 +58,7 @@ semantic_relations:
 This roadmap outlines the comprehensive structure and organization of the Cognitive Modeling Framework documentation system, encompassing knowledge base, implementation guides, API references, research documentation, and learning resources. It serves as the central reference for documentation architecture and maintenance within the cognitive modeling domain.
 
 > [!info] Connected Resources
-> This roadmap integrates with the [[AGENTS|Documentation Framework Agents]], [[agent_docs_readme|Autonomous Agent Documentation Clearinghouse]], and [[../knowledge_base/index|Cognitive Modeling Knowledge Base]] for comprehensive knowledge management.
+> This roadmap integrates with the [[AGENTS|Documentation Framework Agents]], [[agent_docs_readme|Autonomous Agent Documentation Clearinghouse]], and [[knowledge_base/index|Cognitive Modeling Knowledge Base]] for comprehensive knowledge management.
 
 ## Knowledge Base Structure
 
@@ -787,10 +787,10 @@ This roadmap outlines the comprehensive structure and organization of the Cognit
 - [[repo_docs/documentation_standards|Documentation Standards]]
 - [[repo_docs/content_management|Content Management]]
 - [[repo_docs/ai_documentation_style|AI Documentation Style]]
-- [[../knowledge_base/index|Knowledge Base Index]]
+- [[knowledge_base/index|Knowledge Base Index]]
 - [[agents/agent_docs_readme|Agent Documentation Clearinghouse]]
-- [[../knowledge_base/active_inference_implementation|Active Inference Implementation]]
-- [[../knowledge_base/swarm_intelligence_implementation|Swarm Intelligence]]
+- [[knowledge_base/active_inference_implementation|Active Inference Implementation]]
+- [[knowledge_base/swarm_intelligence_implementation|Swarm Intelligence]]
 - [[research/AGENTS|Research Documentation Framework]]
 
 ### External References

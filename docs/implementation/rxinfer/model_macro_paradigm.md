@@ -192,7 +192,7 @@ end
 
 ```
 
-### [[constraints_specification|Constraints Specification]]
+### [[docs/implementation/rxinfer/docs/src/manuals/constraints-specification|Constraints Specification]]
 
 Integration with variational constraints:
 

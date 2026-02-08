@@ -36,7 +36,7 @@ The systems theory knowledge base provides frameworks for understanding how comp
 - [[systems_theory]] - Foundational systems theory principles
 - [[complex_systems]] - Complex system characteristics and behaviors
 - [[emergence]] - Emergence of complex patterns from simple rules
-- [[self_organization]] - Spontaneous organization in systems
+- self organization - Spontaneous organization in systems
 - [[adaptive_systems]] - Systems that adapt to changing environments
 
 #### System Properties
@@ -46,15 +46,15 @@ The systems theory knowledge base provides frameworks for understanding how comp
 
 #### Control and Regulation
 - [[control_systems]] - System control and feedback mechanisms
-- [[homeostatic_regulation]] - Balance maintenance in systems
-- [[allostatic_control]] - Adaptive regulation processes
+- homeostatic regulation - Balance maintenance in systems
+- allostatic control - Adaptive regulation processes
 
 ### 🌐 Network Theory and Analysis
 
 #### Network Structures
 - [[network_theory]] - Network theory foundations
 - [[message_passing_networks]] - Information flow in networks
-- [[network_science]] - Large-scale network analysis
+- network science - Large-scale network analysis
 
 #### Network Applications
 - [[internet_of_things]] - IoT system architectures
@@ -69,9 +69,9 @@ The systems theory knowledge base provides frameworks for understanding how comp
 - [[nonlinear_dynamics]] - Nonlinear system behaviors
 
 #### Emergent Phenomena
-- [[emergence_self_organization]] - Self-organizing emergence
-- [[collective_behavior]] - Group-level system behaviors
-- [[swarm_intelligence]] - Collective intelligence mechanisms
+- emergence self organization - Self-organizing emergence
+- collective behavior - Group-level system behaviors
+- swarm intelligence - Collective intelligence mechanisms
 
 ### 🏢 Applied Systems
 
@@ -100,19 +100,19 @@ The systems theory knowledge base provides frameworks for understanding how comp
 ### 🧬 Biological Systems Integration
 
 #### Systems Biology
-- [[complex_systems_biology]] - Biological complex systems
-- [[developmental_systems]] - Developmental system dynamics
-- [[developmental_networks]] - Developmental regulatory networks
+- complex systems biology - Biological complex systems
+- developmental systems - Developmental system dynamics
+- developmental networks - Developmental regulatory networks
 
 #### Ecological Systems
-- [[ecological_networks]] - Ecosystem interaction networks
-- [[ecological_dynamics]] - Ecosystem process dynamics
+- ecological networks - Ecosystem interaction networks
+- ecological dynamics - Ecosystem process dynamics
 
 ### 🛠️ Implementation and Tools
 
 #### Analysis Tools
-- [[network_analysis]] - Network analysis methodologies
-- [[statistical_parametric_mapping]] - Statistical analysis techniques
+- network analysis - Network analysis methodologies
+- statistical parametric mapping - Statistical analysis techniques
 
 ## 🧭 Navigation Guide
 
@@ -128,22 +128,22 @@ The systems theory knowledge base provides frameworks for understanding how comp
 
 ### For Implementers
 1. Focus on [[message_passing_networks]] for communication
-2. Study [[swarm_intelligence]] for collective behavior
+2. Study swarm intelligence for collective behavior
 3. Review [[digital_twins]] for system simulation
 
 ## 🔗 Cross-References
 
 ### Related Knowledge Domains
-- [[../mathematics/dynamical_systems]]
-- [[../cognitive/complex_systems_biology]]
-- [[../agents/architectures_overview]]
-- [[../biology/ecological_dynamics]]
-- [[../philosophy/complexity_and_philosophy|Philosophy of Complexity]]
+- [[knowledge_base/mathematics/dynamical_systems]]
+- [[knowledge_base/cognitive/complex_systems_biology]]
+- [[knowledge_base/agents/architectures_overview]]
+- [[knowledge_base/biology/ecological_dynamics]]
+- [[knowledge_base/philosophy/complexity_and_philosophy|Philosophy of Complexity]]
 
 ### Implementation Examples
-- [[../../Things/Ant_Colony/|Ant Colony Systems]]
-- [[../../Things/BioFirm/|BioFirm Models]]
-- [[../../tools/src/models/|System Models]]
+- [[code/Things/Ant_Colony/README|Ant Colony Systems]]
+- [[code/Things/BioFirm/README|BioFirm Models]]
+- [[tools/src/models/README|System Models]]
 
 ## 📈 Quality Metrics
 
@@ -171,7 +171,7 @@ The systems theory knowledge base provides frameworks for understanding how comp
 - Maintain theoretical rigor in systems concepts
 - Include practical applications and examples
 - Connect systems theory to cognitive modeling
-- Follow [[../linking_standards|linking standards]]
+- Follow [[knowledge_base/linking_standards|linking standards]]
 
 ### Review Process
 - Systems theory validation

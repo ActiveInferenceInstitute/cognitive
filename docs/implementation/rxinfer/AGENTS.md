@@ -317,24 +317,24 @@ See [[factor_graphs|Factor Graphs]] for:
 
 ### Implementation Examples
 - [[active_inference_examples|Active Inference Examples]]
-- [[../../docs/examples/|RxInfer Examples]]
-- [[../../tools/src/models/|Model Implementations]]
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|RxInfer Examples]]
+- [[docs/tools/src/models|Model Implementations]]
 
 ### Theoretical Integration
-- [[../../knowledge_base/mathematics/|Mathematical Foundations]]
-- [[../../docs/guides/implementation_guides|Implementation Guides]]
+- [[docs/knowledge_base/mathematics|Mathematical Foundations]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 - [[free_energy_message_passing_active_inference|Free Energy Message Passing]]
 
 ### Research Resources
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/examples/|Implementation Examples]]
+- [[docs/repo_docs/research|Research Applications]]
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Implementation Examples]]
 
 ## 🔗 Cross-References
 
 ### Agent Theory
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
-- [[../../knowledge_base/agents/AGENTS|Agent Architecture Overview]]
-- [[../../docs/guides/implementation_guides|Implementation Guides]]
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[knowledge_base/agents/AGENTS|Agent Architecture Overview]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
 ### RxInfer Components
 - [[model_specification|Model Specification]]
@@ -343,9 +343,9 @@ See [[factor_graphs|Factor Graphs]] for:
 - [[factor_graphs|Factor Graphs]]
 
 ### Related Areas
-- [[../../docs/guides/learning_paths/|Learning Paths]]
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/examples/|Implementation Examples]]
+- [[docs/guides/learning_paths|Learning Paths]]
+- [[docs/repo_docs/research|Research Applications]]
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Implementation Examples]]
 
 ---
 

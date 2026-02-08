@@ -34,7 +34,7 @@ semantic_relations:
 
     links:
 
-      - [[docs/guides/implementation_patterns|Implementation Patterns]]
+      - [[docs/implementation/implementation_patterns|Implementation Patterns]]
 
       - [[docs/api/api_reference|API Reference]]
 
@@ -60,7 +60,7 @@ class CognitiveModel:
 
     Theory: [[knowledge_base/cognitive/cognitive_phenomena#model-architecture|Model Architecture]]
 
-    Patterns: [[docs/guides/implementation_patterns#core-implementation-patterns|Implementation Patterns]]
+    Patterns: [[docs/implementation/implementation_patterns#core-implementation-patterns|Implementation Patterns]]
 
     """
 
@@ -94,7 +94,7 @@ def initialize_state(self):
 
     Theory: [[knowledge_base/cognitive/predictive_processing#state-initialization|State Initialization]]
 
-    Implementation: [[docs/guides/implementation_patterns#state-management|State Management]]
+    Implementation: [[docs/implementation/implementation_patterns#state-management|State Management]]
 
     """
 
@@ -134,7 +134,7 @@ class BeliefModel:
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/bayesian_inference|Bayesian Inference]]
+        - [[knowledge_base/cognitive/bayesian_inference|Bayesian Inference]]
 
         - [[knowledge_base/mathematics/variational_methods|Variational Methods]]
 
@@ -158,13 +158,13 @@ class BeliefModel:
 
             - [[knowledge_base/mathematics/message_passing|Message Passing]]
 
-            - [[knowledge_base/mathematics/gradient_descent|Gradient Descent]]
+            - [[knowledge_base/research/concepts/gradient_descent|Gradient Descent]]
 
         Implementation:
 
             - [[docs/api/matrix_operations#belief-update|Belief Update Operations]]
 
-            - [[docs/api/optimization_methods#belief-optimization|Belief Optimization]]
+            - [[knowledge_base/research/concepts/optimization_methods#belief-optimization|Belief Optimization]]
 
         """
 
@@ -174,7 +174,7 @@ class BeliefModel:
 
             observation,
 
-            method="precision_weighted"  # [[knowledge_base/mathematics/precision_weighting]]
+            method="precision_weighted"  # [[knowledge_base/cognitive/precision_weighting]]
 
         )
 
@@ -240,7 +240,7 @@ class PolicyModel:
 
         Implementation:
 
-            - [[docs/api/optimization_methods#policy-selection|Policy Selection]]
+            - [[knowledge_base/research/concepts/optimization_methods#policy-selection|Policy Selection]]
 
             - [[docs/api/probability_utils#softmax|Softmax Implementation]]
 
@@ -298,7 +298,7 @@ class PerceptionModel:
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/hierarchical_inference|Hierarchical Inference]]
+        - [[knowledge_base/cognitive/hierarchical_inference|Hierarchical Inference]]
 
         - [[knowledge_base/mathematics/message_passing|Message Passing]]
 
@@ -320,9 +320,9 @@ class PerceptionModel:
 
         Mathematics:
 
-            - [[knowledge_base/mathematics/error_propagation|Error Propagation]]
+            - [[knowledge_base/cognitive/error_propagation|Error Propagation]]
 
-            - [[knowledge_base/mathematics/precision_weighting|Precision Weighting]]
+            - [[knowledge_base/cognitive/precision_weighting|Precision Weighting]]
 
         Implementation:
 
@@ -338,7 +338,7 @@ class PerceptionModel:
 
             sensory_input,
 
-            method="hierarchical"  # [[knowledge_base/mathematics/hierarchical_processing]]
+            method="hierarchical"  # [[knowledge_base/cognitive/hierarchical_processing]]
 
         )
 
@@ -358,7 +358,7 @@ class PerceptionModel:
 
             predictions,
 
-            method="precision_weighted"  # [[knowledge_base/mathematics/precision_weighting]]
+            method="precision_weighted"  # [[knowledge_base/cognitive/precision_weighting]]
 
         )
 
@@ -520,17 +520,17 @@ def test_model(self) -> TestResults:
 
 ### 1. Implementation Guidelines
 
-- Follow [[docs/guides/implementation_patterns|Implementation Patterns]]
+- Follow [[docs/implementation/implementation_patterns|Implementation Patterns]]
 
 - Use [[docs/guides/code_organization|Code Organization]]
 
-- Apply [[docs/guides/documentation_standards|Documentation Standards]]
+- Apply [[docs/repo_docs/documentation_standards|Documentation Standards]]
 
 ### 2. Performance Optimization
 
-- Implement [[docs/guides/performance_optimization|Optimization Guidelines]]
+- Implement [[knowledge_base/cognitive/performance_optimization|Optimization Guidelines]]
 
-- Monitor [[docs/guides/performance_metrics|Performance Metrics]]
+- Monitor [[knowledge_base/cognitive/performance_metrics|Performance Metrics]]
 
 - Profile using [[docs/guides/profiling_guide|Profiling Guide]]
 
@@ -548,7 +548,7 @@ def test_model(self) -> TestResults:
 
 - [[docs/api/api_reference|API Reference]]
 
-- [[docs/guides/implementation_patterns|Implementation Patterns]]
+- [[docs/implementation/implementation_patterns|Implementation Patterns]]
 
 - [[docs/guides/system_integration|System Integration]]
 
@@ -560,5 +560,5 @@ def test_model(self) -> TestResults:
 
 - [[knowledge_base/cognitive/predictive_processing|Predictive Processing]]
 
-- [[docs/concepts/theoretical_foundations|Theoretical Foundations]]
+- [[knowledge_base/cognitive/theoretical_foundations|Theoretical Foundations]]
 

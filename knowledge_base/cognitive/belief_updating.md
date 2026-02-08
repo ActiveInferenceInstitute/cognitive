@@ -517,4 +517,3 @@ Belief updating represents the process by which cognitive systems revise their b
 - [[computational_modeling]]
 
 - [[clinical_applications]]
-

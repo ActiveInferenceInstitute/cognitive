@@ -134,7 +134,7 @@ This guide outlines research methodologies, best practices, and workflows for co
 
    - Power analysis
 
-   - See [[knowledge_base/mathematics/statistical_analysis]]
+   - See [[knowledge_base/research/concepts/statistical_analysis]]
 
 1. Model Comparison
 
@@ -144,7 +144,7 @@ This guide outlines research methodologies, best practices, and workflows for co
 
    - Cross-validation
 
-   - See [[knowledge_base/mathematics/model_comparison]]
+   - See [[knowledge_base/research/concepts/model_comparison]]
 
 1. Performance Metrics
 
@@ -154,7 +154,7 @@ This guide outlines research methodologies, best practices, and workflows for co
 
    - Robustness tests
 
-   - See [[docs/concepts/quality_metrics]]
+   - See [[knowledge_base/cognitive/quality_metrics]]
 
 ## Research Workflow
 
@@ -406,11 +406,11 @@ This guide outlines research methodologies, best practices, and workflows for co
 
 ## Related Documentation
 
-- [[docs/guides/machine_learning]]
+- [[docs/repo_docs/machine_learning]]
 
-- [[docs/guides/ai_validation_framework]]
+- [[docs/repo_docs/ai_validation_framework]]
 
-- [[docs/guides/documentation_standards]]
+- [[docs/repo_docs/documentation_standards]]
 
 - [[docs/guides/code_documentation]]
 

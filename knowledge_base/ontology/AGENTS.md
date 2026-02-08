@@ -369,26 +369,26 @@ See [[cognitive_ontology|Cognitive Ontology]] for:
 ## 🔗 Related Documentation
 
 ### Implementation Examples
-- [[../../Things/KG_Multi_Agent/README|KG Multi-Agent Implementation]]
-- [[../../docs/guides/implementation_guides|Implementation Guides]]
-- [[../../tools/README|Development Tools]]
+- [[code/Things/KG_Multi_Agent/README|KG Multi-Agent Implementation]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
+- [[tools/README|Development Tools]]
 
 ### Theoretical Integration
-- [[../cognitive/conceptual_hierarchies|Conceptual Hierarchies]]
-- [[../../Things/KG_Multi_Agent/README|Knowledge Graphs]]
-- [[../cognitive/semantic_memory|Semantic Memory]]
+- Conceptual Hierarchies
+- [[code/Things/KG_Multi_Agent/README|Knowledge Graphs]]
+- [[knowledge_base/cognitive/semantic_memory|Semantic Memory]]
 
 ### Research Resources
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/guides/application/|Ontology Applications]]
-- [[../../docs/examples/|Implementation Examples]]
+- [[docs/research|Research Applications]]
+- [[docs/guides/application/README|Ontology Applications]]
+- [[docs/examples|Implementation Examples]]
 
 ## 🔗 Cross-References
 
 ### Agent Theory
-- [[../../Things/KG_Multi_Agent/AGENTS|KG Multi-Agent Systems]]
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
-- [[../../knowledge_base/agents/AGENTS|Agent Architecture Overview]]
+- [[code/Things/KG_Multi_Agent/AGENTS|KG Multi-Agent Systems]]
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[knowledge_base/agents/AGENTS|Agent Architecture Overview]]
 
 ### Ontological Concepts
 - [[cognitive_ontology|Cognitive Ontology]]
@@ -396,9 +396,9 @@ See [[cognitive_ontology|Cognitive Ontology]] for:
 - [[hyperspatial/hyperspace_ontology|Hyperspace Ontology]]
 
 ### Applications
-- [[../../docs/guides/application/|Ontology Applications]]
-- [[../../docs/research/|Ontology Research]]
-- [[../../docs/examples/|Ontology Examples]]
+- [[docs/guides/application/README|Ontology Applications]]
+- [[docs/research|Ontology Research]]
+- [[docs/examples|Ontology Examples]]
 
 ---
 

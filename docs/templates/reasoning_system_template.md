@@ -568,9 +568,9 @@ api:
 
 - Limitations comparison
 
-- [[cognitive/cognitive_1|Cognitive Aspect 1]]
+- [[knowledge_base/cognitive/cognitive_1|Cognitive Aspect 1]]
 
-- [[cognitive/cognitive_2|Cognitive Aspect 2]]
+- [[knowledge_base/cognitive/cognitive_2|Cognitive Aspect 2]]
 
 ### Metacognition
 

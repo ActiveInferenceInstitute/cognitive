@@ -22,15 +22,15 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../concepts/cognitive_modeling_concepts]]
+    links: [[knowledge_base/cognitive/cognitive_modeling_concepts]]
 
   - type: relates
 
     links:
 
-      - [[../guides/implementation_guides]]
+      - [[docs/implementation/implementation_guides]]
 
-      - [[../api/api_documentation]]
+      - [[docs/api/api_documentation]]
 
 ---
 
@@ -244,17 +244,17 @@ This directory contains documentation for development tools, utilities, and auto
 
 ## Related Sections
 
-- [[../guides/implementation_guides|Implementation Guides]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
-- [[../api/api_documentation|API Documentation]]
+- [[docs/api/api_documentation|API Documentation]]
 
-- [[../examples/usage_examples|Usage Examples]]
+- [[docs/examples/usage_examples|Usage Examples]]
 
-- [[../agents/agent_docs_readme|Agent Documentation Clearinghouse]]
+- [[docs/agents/agent_docs_readme|Agent Documentation Clearinghouse]]
 
 ## Contributing
 
-See [[../templates/tool_template|Tool Documentation Template]] for documenting new tools.
+See [[docs/templates/tool_template|Tool Documentation Template]] for documenting new tools.
 
 ## Version Control Tools Overview
 

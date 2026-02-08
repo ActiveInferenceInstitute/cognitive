@@ -20,7 +20,7 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../guides/documentation_standards]]
+    links: [[docs/repo_docs/documentation_standards]]
 
   - type: relates
 

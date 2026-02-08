@@ -13,8 +13,8 @@ semantic_relations:
   - type: documents
     links:
       - [[README]]
-      - [[graphRAG_naive]]
-      - [[../tools/src/models/active_inference/AGENTS|Active Inference Models]]
+      - graphRAG naive
+      - [[tools/src/models/active_inference/AGENTS|Active Inference Models]]
 ---
 
 # Notebooks Agent Documentation
@@ -104,13 +104,13 @@ The notebooks directory contains:
 
 ### Notebook Resources
 - [[README|Notebooks Overview]]
-- [[graphRAG_naive|GraphRAG Exploration]]
+- GraphRAG Exploration
 - Jupyter notebook best practices
 
 ### Framework Integration
-- [[../tools/src/models/active_inference/AGENTS|Active Inference Models]]
-- [[../knowledge_base/README|Knowledge Base]]
-- [[../docs/examples/README|Usage Examples]]
+- [[tools/src/models/active_inference/AGENTS|Active Inference Models]]
+- [[knowledge_base/README|Knowledge Base]]
+- [[docs/examples/README|Usage Examples]]
 
 ---
 

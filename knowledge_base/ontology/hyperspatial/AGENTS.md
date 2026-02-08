@@ -297,36 +297,36 @@ See [[hyperspace_ontology|Hyperspace Ontology]] for:
 ## 🔗 Related Documentation
 
 ### Implementation Examples
-- [[../../docs/guides/learning_paths|Learning Paths]]
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/examples/|Implementation Examples]]
+- [[docs/guides/learning_paths/README|Learning Paths]]
+- [[docs/repo_docs/research|Research Applications]]
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Implementation Examples]]
 
 ### Theoretical Integration
-- [[../cognitive_ontology|Cognitive Ontology]]
-- [[../computer_science_ontology|Computer Science Ontology]]
-- [[../../mathematics/category_theory|Category Theory]]
+- [[knowledge_base/ontology/cognitive_ontology|Cognitive Ontology]]
+- [[knowledge_base/ontology/computer_science_ontology|Computer Science Ontology]]
+- [[knowledge_base/mathematics/category_theory|Category Theory]]
 
 ### Research Resources
-- [[../../docs/research/|Research Applications]]
-- [[../../docs/guides/application/|Hyperspatial Applications]]
-- [[../../docs/examples/|Hyperspatial Examples]]
+- [[docs/repo_docs/research|Research Applications]]
+- [[docs/guides/application/README|Hyperspatial Applications]]
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Hyperspatial Examples]]
 
 ## 🔗 Cross-References
 
 ### Agent Theory
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
-- [[../../knowledge_base/agents/AGENTS|Agent Architecture Overview]]
-- [[../../docs/guides/implementation_guides|Implementation Guides]]
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[knowledge_base/agents/AGENTS|Agent Architecture Overview]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
 ### Hyperspatial Concepts
 - [[hyperspace_ontology|Hyperspace Ontology]]
-- [[../../mathematics/differential_geometry|Differential Geometry]]
-- [[../../mathematics/topology|Topology]]
+- [[knowledge_base/mathematics/differential_geometry|Differential Geometry]]
+- [[knowledge_base/mathematics/topology|Topology]]
 
 ### Applications
-- [[../../docs/guides/application/|Hyperspatial Applications]]
-- [[../../docs/research/|Hyperspatial Research]]
-- [[../../docs/examples/|Hyperspatial Examples]]
+- [[docs/guides/application/README|Hyperspatial Applications]]
+- [[docs/repo_docs/research|Hyperspatial Research]]
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Hyperspatial Examples]]
 
 ---
 

@@ -1,12 +1,12 @@
-# [[Socioeconomic_Active_Inference]]
+# [[knowledge_base/BioFirm/socioeconomic_active_inference]]
 
 ## Overview
 
-This document outlines the application of [[Active_Inference|Active Inference]] principles to socioeconomic systems within the [[biofirm_framework|BioFirm]]. It demonstrates how the [[Active_Inference/Free_Energy_Principle|Free Energy Principle]] can be used to understand and guide social and economic dynamics in bioregional contexts.
+This document outlines the application of [[knowledge_base/cognitive/active_inference|Active Inference]] principles to socioeconomic systems within the [[biofirm_framework|BioFirm]]. It demonstrates how the [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]] can be used to understand and guide social and economic dynamics in bioregional contexts.
 
 ## Theoretical Framework
 
-### 1. [[Active_Inference/Social_States|Social State Space]]
+### 1. [[knowledge_base/cognitive/active_inference/Social_States|Social State Space]]
 
 - **Community Dynamics**
 
@@ -28,7 +28,7 @@ This document outlines the application of [[Active_Inference|Active Inference]] 
 
   - Investment patterns
 
-### 2. [[Active_Inference/Socioeconomic_Dynamics|Socioeconomic Dynamics]]
+### 2. [[knowledge_base/cognitive/active_inference/Socioeconomic_Dynamics|Socioeconomic Dynamics]]
 
 ```python
 
@@ -56,7 +56,7 @@ class SocioeconomicDynamics:
 
 ```
 
-### 3. [[Active_Inference/Social_Learning|Social Learning]]
+### 3. [[knowledge_base/cognitive/social_learning|Social Learning]]
 
 - **Knowledge Integration**
 
@@ -76,7 +76,7 @@ class SocioeconomicDynamics:
 
 ## Implementation Framework
 
-### 1. [[Active_Inference/Social_Control|Social Control]]
+### 1. [[knowledge_base/cognitive/active_inference/Social_Control|Social Control]]
 
 ```python
 
@@ -104,7 +104,7 @@ class SocialController:
 
 ```
 
-### 2. [[Active_Inference/Economic_Control|Economic Control]]
+### 2. [[knowledge_base/cognitive/active_inference/Economic_Control|Economic Control]]
 
 ```python
 
@@ -132,7 +132,7 @@ class EconomicController:
 
 ```
 
-### 3. [[Active_Inference/Socioeconomic_Learning|Socioeconomic Learning]]
+### 3. [[knowledge_base/cognitive/active_inference/Socioeconomic_Learning|Socioeconomic Learning]]
 
 - **System Adaptation**
 
@@ -374,11 +374,11 @@ where:
 
 ## See Also
 
-- [[Active_Inference]]
+- [[knowledge_base/cognitive/active_inference]]
 
 - [[biofirm_framework]]
 
-- [[Social_Systems]]
+- [[knowledge_base/systems/social_systems]]
 
 - [[Economic_Systems]]
 

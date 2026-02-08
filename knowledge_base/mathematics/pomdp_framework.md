@@ -66,11 +66,11 @@ This learning path guides you through understanding and implementing Partially O
 
 - [[knowledge_base/agents/GenericPOMDP/belief_states|Belief States]]
 
-- [[knowledge_base/agents/GenericPOMDP/policy_selection|Policy Selection]]
+- [[knowledge_base/cognitive/policy_selection|Policy Selection]]
 
 #### Practical Exercises
 
-- [[examples/basic_pomdp|Basic POMDP Implementation]]
+- [[docs/examples/basic_pomdp|Basic POMDP Implementation]]
 
 - [[examples/belief_updating|Belief Updating Exercise]]
 
@@ -94,9 +94,9 @@ This learning path guides you through understanding and implementing Partially O
 
 #### Implementation Practice
 
-- [[examples/active_inference_pomdp|Active Inference POMDP]]
+- [[knowledge_base/mathematics/active_inference_pomdp|Active Inference POMDP]]
 
-- [[examples/free_energy_policy|Free Energy Policy Selection]]
+- [[docs/examples/free_energy_policy|Free Energy Policy Selection]]
 
 #### Learning Objectives
 
@@ -118,9 +118,9 @@ This learning path guides you through understanding and implementing Partially O
 
 #### Projects
 
-- [[examples/hierarchical_pomdp|Hierarchical POMDP]]
+- [[docs/examples/hierarchical_pomdp|Hierarchical POMDP]]
 
-- [[examples/multi_agent_pomdp|Multi-Agent POMDP]]
+- [[docs/examples/multi_agent_pomdp|Multi-Agent POMDP]]
 
 #### Learning Objectives
 
@@ -226,11 +226,11 @@ class ActiveInferencePOMDP:
 
 ### Code Examples
 
-- [[examples/basic_pomdp|Basic POMDP]]
+- [[docs/examples/basic_pomdp|Basic POMDP]]
 
-- [[examples/active_inference_pomdp|Active Inference POMDP]]
+- [[knowledge_base/mathematics/active_inference_pomdp|Active Inference POMDP]]
 
-- [[examples/hierarchical_pomdp|Hierarchical POMDP]]
+- [[docs/examples/hierarchical_pomdp|Hierarchical POMDP]]
 
 ### Additional Resources
 
@@ -274,33 +274,33 @@ class ActiveInferencePOMDP:
 
 ### Advanced Paths
 
-- [[learning_paths/advanced_pomdp|Advanced POMDP]]
+- [[docs/guides/learning_paths/advanced_pomdp|Advanced POMDP]]
 
-- [[learning_paths/multi_agent_systems|Multi-Agent Systems]]
+- [[docs/guides/learning_paths/multi_agent_systems|Multi-Agent Systems]]
 
-- [[learning_paths/robotics_control|Robotics Control]]
+- [[docs/guides/learning_paths/robotics_control|Robotics Control]]
 
 ### Specializations
 
-- [[specializations/reinforcement_learning|Reinforcement Learning]]
+- [[knowledge_base/cognitive/reinforcement_learning|Reinforcement Learning]]
 
-- [[specializations/robotics|Robotics]]
+- [[knowledge_base/free_energy_principle/implementations/robotics|Robotics]]
 
-- [[specializations/ai|Artificial Intelligence]]
+- [[knowledge_base/ai|Artificial Intelligence]]
 
 ## Related Paths
 
 ### Prerequisites
 
-- [[learning_paths/probability_theory|Probability Theory]]
+- [[knowledge_base/mathematics/probability_theory|Probability Theory]]
 
-- [[learning_paths/reinforcement_learning|Reinforcement Learning]]
+- [[knowledge_base/cognitive/reinforcement_learning|Reinforcement Learning]]
 
 ### Follow-up Paths
 
-- [[learning_paths/advanced_ai|Advanced AI]]
+- [[docs/guides/learning_paths/advanced_ai|Advanced AI]]
 
-- [[learning_paths/robotics|Robotics]]
+- [[knowledge_base/free_energy_principle/implementations/robotics|Robotics]]
 
 ## Common Challenges
 

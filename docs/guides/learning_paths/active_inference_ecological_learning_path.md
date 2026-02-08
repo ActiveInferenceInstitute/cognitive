@@ -32,11 +32,10 @@ semantic_relations:
 
     links:
 
-      - [[ecological_systems_learning_path]]
 
-      - [[complex_systems_learning_path]]
+      - [[active_inference_resilient_systems_path]]
 
-      - [[environmental_science_learning_path]]
+      - [[active_inference_environmental_applications_path]]
 
 ---
 
@@ -52,7 +51,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Ecological Forecasting Initiative: [ecoforecast.org](https://ecoforecast.org/)
 
@@ -546,17 +545,17 @@ class EcologicalNetworkAnalysis:
 
 ### Advanced Topics
 
-1. [[ecosystem_modeling_learning_path|Ecosystem Modeling]]
+1. Ecosystem Modeling
 
-1. [[conservation_biology_learning_path|Conservation Biology]]
+1. Conservation Biology
 
-1. [[environmental_management_learning_path|Environmental Management]]
+1. Environmental Management
 
 ### Research Directions
 
-1. [[research_guides/ecology|Ecology Research]]
+1. [[knowledge_base/free_energy_principle/biology/ecology|Ecology Research]]
 
-1. [[research_guides/environmental_science|Environmental Science Research]]
+1. [[knowledge_base/research/environmental_science|Environmental Science Research]]
 
-1. [[research_guides/conservation_biology|Conservation Biology Research]]
+1. [[knowledge_base/research/conservation_biology|Conservation Biology Research]]
 

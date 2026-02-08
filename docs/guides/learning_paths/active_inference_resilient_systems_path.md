@@ -58,7 +58,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Google SRE book (online), Principles of Chaos Engineering (site) via hub
 

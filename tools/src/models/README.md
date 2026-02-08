@@ -14,7 +14,7 @@ semantic_relations:
   - type: organizes
     links:
       - [[active_inference/README]]
-      - [[../../src/README]]
+      - [[tools/src/README]]
 ---
 
 # Model Implementations Overview
@@ -790,7 +790,7 @@ class ModelTestingFramework:
         agent = agent_class(scenario['config'])
 
         # Initialize environment
-        environment = scenario['environment_class'](scenario['environment_config'])
+        environment = scenario[[scenario['environment_config']|'environment_class']]
 
         # Run test episodes
         episode_results = []
@@ -933,29 +933,29 @@ class ModelTestingFramework:
 
 ### Implementation Details
 - [[active_inference/README|Active Inference Implementation]]
-- [[../../src/README|Source Code Overview]]
-- [[../../README|Tools Overview]]
+- [[tools/src/README|Source Code Overview]]
+- [[tools/README|Tools Overview]]
 
 ### Usage Examples
-- [[../../../Things/Generic_Thing/|Generic Thing Implementation]]
-- [[../../../docs/examples/|Usage Examples]]
-- [[../../../docs/guides/|Implementation Guides]]
+- [[code/Things/Generic_Thing/README|Generic Thing Implementation]]
+- [[docs/examples|Usage Examples]]
+- [[docs/guides/README|Implementation Guides]]
 
 ### Testing and Validation
-- [[../../../tests/README|Testing Framework]]
-- [[../../../docs/repo_docs/unit_testing|Unit Testing Guidelines]]
+- [[tests/README|Testing Framework]]
+- [[docs/repo_docs/unit_testing|Unit Testing Guidelines]]
 
 ## 🔗 Cross-References
 
 ### Core Components
-- [[active_inference/|Active Inference Models]]
-- [[../../utils/|Utility Functions]]
-- [[../../visualization/|Visualization Tools]]
+- [[active_inference|Active Inference Models]]
+- Utility Functions
+- Visualization Tools
 
 ### Integration Points
-- [[../../../Things/|Implementation Examples]]
-- [[../../../docs/api/|API Documentation]]
-- [[../../../docs/implementation/|Implementation Guides]]
+- Implementation Examples
+- [[docs/api/README|API Documentation]]
+- [[docs/implementation/README|Implementation Guides]]
 
 ---
 

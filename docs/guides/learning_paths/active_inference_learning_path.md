@@ -52,27 +52,24 @@ semantic_relations:
 
     links:
 
-      - [[predictive_processing_learning_path]]
 
-      - [[cognitive_architecture_learning_path]]
+      - [[active_inference_cognitive_learning_path]]
 
   - type: implements
 
     links:
 
-      - [[free_energy_principle_learning_path]]
 
-      - [[variational_inference_learning_path]]
+      - [[active_inference_mathematical_learning_path]]
 
   - type: relates
 
     links:
 
-      - [[dynamical_systems_learning_path]]
+      - [[active_inference_mathematical_learning_path]]
 
-      - [[stochastic_processes_learning_path]]
 
-      - [[information_theory_learning_path]]
+      - [[active_inference_information_theory_learning_path]]
 
 ---
 
@@ -88,7 +85,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [`pymdp` tutorial notebook](https://pymdp-rtd.readthedocs.io/en/master/notebooks/active_inference_from_scratch.html)
 
@@ -195,7 +192,7 @@ By completing this path, learners will be able to:
 
 #### Core Competencies
 
-- [[mathematics_foundations|Mathematics]] - Proficiency Level: 9/10
+- Mathematics - Proficiency Level: 9/10
 
   - Key concepts needed:
 
@@ -213,7 +210,7 @@ By completing this path, learners will be able to:
 
     - Review key papers in variational inference
 
-- [[programming_skills|Programming]] - Proficiency Level: 8/10
+- Programming - Proficiency Level: 8/10
 
   - Python expertise
 
@@ -1059,19 +1056,19 @@ graph TB
 
 ### Advanced Paths
 
-1. [[predictive_processing_learning_path|Predictive Processing]]
+1. Predictive Processing
 
-1. [[cognitive_architecture_learning_path|Cognitive Architecture]]
+1. Cognitive Architecture
 
-1. [[free_energy_principle_learning_path|Free Energy Principle]]
+1. Free Energy Principle
 
 ### Research Directions
 
-1. [[research_guides/active_inference|Active Inference Research]]
+1. [[knowledge_base/cognitive/active_inference|Active Inference Research]]
 
-1. [[research_guides/cognitive_science|Cognitive Science Research]]
+1. [[knowledge_base/cognitive/cognitive_science|Cognitive Science Research]]
 
-1. [[research_guides/machine_learning|Machine Learning Research]]
+1. [[docs/repo_docs/machine_learning|Machine Learning Research]]
 
 ### Path Interconnections
 

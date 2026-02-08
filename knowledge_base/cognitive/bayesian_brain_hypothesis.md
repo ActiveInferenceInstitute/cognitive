@@ -32,7 +32,7 @@ semantic_relations:
 
 ## Bayesian Brain Hypothesis
 
-The Bayesian brain hypothesis proposes that neural systems encode and update probabilistic beliefs about hidden causes of sensory input. It underpins frameworks such as [[../cognitive/predictive_coding]] and [[active_inference]], where the brain performs approximate [[../mathematics/variational_inference]] to minimize prediction error and free energy.
+The Bayesian brain hypothesis proposes that neural systems encode and update probabilistic beliefs about hidden causes of sensory input. It underpins frameworks such as [[predictive_coding]] and [[active_inference]], where the brain performs approximate [[knowledge_base/mathematics/variational_inference]] to minimize prediction error and free energy.
 
 ## Key Ideas
 
@@ -44,7 +44,7 @@ The Bayesian brain hypothesis proposes that neural systems encode and update pro
 
 ## Related
 
-- [[../cognitive/free_energy_principle]]
+- [[free_energy_principle]]
 
-- [[../mathematics/information_theory]]
+- [[knowledge_base/mathematics/information_theory]]
 

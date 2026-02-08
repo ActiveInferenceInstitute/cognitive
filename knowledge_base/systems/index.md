@@ -36,33 +36,33 @@ semantic_relations:
 
 ### Fundamental Concepts
 
-- [[systems/fundamentals/systems_theory|Systems Theory]]
+- [[knowledge_base/systems/systems_theory|Systems Theory]]
 
-- [[systems/fundamentals/complexity|Complexity]]
+- Complexity
 
-- [[systems/fundamentals/emergence|Emergence]]
+- [[knowledge_base/systems/emergence|Emergence]]
 
-- [[systems/fundamentals/self_organization|Self-Organization]]
+- [[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]
 
 ### System Properties
 
-- [[systems/properties/wholeness|Wholeness]]
+- Wholeness
 
-- [[systems/properties/hierarchy|Hierarchy]]
+- Hierarchy
 
-- [[systems/properties/feedback|Feedback]]
+- Feedback
 
-- [[systems/properties/homeostasis|Homeostasis]]
+- Homeostasis
 
 ### System Dynamics
 
-- [[systems/dynamics/nonlinear|Nonlinear Dynamics]]
+- Nonlinear Dynamics
 
-- [[systems/dynamics/attractors|Attractors]]
+- Attractors
 
-- [[systems/dynamics/bifurcations|Bifurcations]]
+- Bifurcations
 
-- [[systems/dynamics/stability|Stability]]
+- Stability
 
 ## Complex Systems
 
@@ -292,111 +292,111 @@ class SwarmSystem:
 
 ### Dynamical Systems
 
-- [[systems/mathematics/differential_equations|Differential Equations]]
+- [[knowledge_base/mathematics/differential_equations|Differential Equations]]
 
-- [[systems/mathematics/phase_space|Phase Space]]
+- Phase Space
 
-- [[systems/mathematics/stability_analysis|Stability Analysis]]
+- [[knowledge_base/research/concepts/stability_analysis|Stability Analysis]]
 
-- [[systems/mathematics/bifurcation_theory|Bifurcation Theory]]
+- Bifurcation Theory
 
 ### Network Theory
 
-- [[systems/mathematics/graph_theory|Graph Theory]]
+- [[knowledge_base/mathematics/graph_theory|Graph Theory]]
 
-- [[systems/mathematics/network_metrics|Network Metrics]]
+- Network Metrics
 
-- [[systems/mathematics/network_dynamics|Network Dynamics]]
+- [[knowledge_base/free_energy_principle/systems/network_dynamics|Network Dynamics]]
 
-- [[systems/mathematics/network_topology|Network Topology]]
+- Network Topology
 
 ### Statistical Physics
 
-- [[systems/mathematics/statistical_mechanics|Statistical Mechanics]]
+- Statistical Mechanics
 
-- [[systems/mathematics/entropy|Entropy]]
+- [[knowledge_base/mathematics/entropy|Entropy]]
 
-- [[systems/mathematics/phase_transitions|Phase Transitions]]
+- Phase Transitions
 
-- [[systems/mathematics/criticality|Criticality]]
+- Criticality
 
 ## Applications
 
 ### Biological Systems
 
-- [[systems/applications/neural_systems|Neural Systems]]
+- [[knowledge_base/free_energy_principle/biology/neural_systems|Neural Systems]]
 
-- [[systems/applications/ecological_systems|Ecological Systems]]
+- [[knowledge_base/mathematics/ecological_systems|Ecological Systems]]
 
-- [[systems/applications/cellular_systems|Cellular Systems]]
+- Cellular Systems
 
-- [[systems/applications/evolutionary_systems|Evolutionary Systems]]
+- Evolutionary Systems
 
 ### Social Systems
 
-- [[systems/applications/social_networks|Social Networks]]
+- Social Networks
 
-- [[systems/applications/organizational_systems|Organizational Systems]]
+- Organizational Systems
 
-- [[systems/applications/economic_systems|Economic Systems]]
+- Economic Systems
 
-- [[systems/applications/cultural_systems|Cultural Systems]]
+- Cultural Systems
 
 ### Artificial Systems
 
-- [[systems/applications/artificial_life|Artificial Life]]
+- Artificial Life
 
-- [[systems/applications/robotic_systems|Robotic Systems]]
+- Robotic Systems
 
-- [[systems/applications/adaptive_systems|Adaptive Systems]]
+- [[knowledge_base/systems/adaptive_systems|Adaptive Systems]]
 
-- [[systems/applications/learning_systems|Learning Systems]]
+- Learning Systems
 
 ## Research Directions
 
 ### Current Research
 
-- [[systems/research/emergence_computation|Emergence and Computation]]
+- Emergence and Computation
 
-- [[systems/research/collective_intelligence|Collective Intelligence]]
+- Collective Intelligence
 
-- [[systems/research/adaptive_systems|Adaptive Systems]]
+- [[knowledge_base/systems/adaptive_systems|Adaptive Systems]]
 
-- [[systems/research/complex_networks|Complex Networks]]
+- Complex Networks
 
 ### Open Questions
 
-- [[systems/questions/emergence_causation|Emergence and Causation]]
+- Emergence and Causation
 
-- [[systems/questions/complexity_measures|Complexity Measures]]
+- Complexity Measures
 
-- [[systems/questions/self_organization|Self-Organization]]
+- [[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]
 
-- [[systems/questions/criticality|Criticality]]
+- Criticality
 
 ## Related Resources
 
 ### Documentation
 
-- [[docs/guides/systems_guides|Systems Guides]]
+- Systems Guides
 
-- [[docs/api/systems_api|Systems API]]
+- Systems API
 
-- [[docs/examples/systems_examples|Systems Examples]]
+- Systems Examples
 
 ### Knowledge Base
 
-- [[knowledge_base/systems/concepts|Systems Concepts]]
+- Systems Concepts
 
-- [[knowledge_base/systems/methods|Systems Methods]]
+- Systems Methods
 
-- [[knowledge_base/systems/applications|Systems Applications]]
+- [[docs/research/active_inference/applications|Systems Applications]]
 
 ### Learning Resources
 
-- [[learning_paths/systems|Systems Learning Path]]
+- Systems Learning Path
 
-- [[tutorials/systems|Systems Tutorials]]
+- Systems Tutorials
 
-- [[guides/systems/best_practices|Systems Best Practices]]
+- [[docs/guides/best_practices|Systems Best Practices]]
 

@@ -24,17 +24,16 @@ semantic_relations:
 
     links:
 
-      - [[quantum_computing_learning_path]]
+      - [[active_inference_quantum_learning_path]]
 
-      - [[cognitive_science_learning_path]]
+      - [[active_inference_cognitive_learning_path]]
 
   - type: related
 
     links:
 
-      - [[quantum_information_learning_path]]
+      - [[active_inference_quantum_learning_path]]
 
-      - [[quantum_algorithms_learning_path]]
 
 ---
 
@@ -50,7 +49,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Quantum cognition review (2013): Psychological Bulletin overview: [APA PsycNet](https://psycnet.apa.org/record/2013-06753-001)
 

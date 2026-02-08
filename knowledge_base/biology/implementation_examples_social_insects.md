@@ -23,8 +23,8 @@ semantic_relations:
       - [[swarm_intelligence_implementation]]
   - type: implements
     links:
-      - [[Things/Ant_Colony/]]
-      - [[Things/Ant_Colony/AGENTS]]
+      - [[code/Things/Ant_Colony/README]]
+      - [[code/Things/Ant_Colony/AGENTS]]
   - type: relates
     links:
       - [[foraging_optimization]]

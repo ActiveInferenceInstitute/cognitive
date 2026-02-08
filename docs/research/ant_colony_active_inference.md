@@ -410,11 +410,11 @@ agent:
 
 ### Code References
 
-- [[Things/Ant_Colony/simulation.py|Main Simulation]]
+- [[code/Things/Ant_Colony/simulation.py|Main Simulation]]
 
-- [[Things/Ant_Colony/agents/nestmate.py|Agent Implementation]]
+- [[code/Things/Ant_Colony/agents/nestmate.py|Agent Implementation]]
 
-- [[Things/Ant_Colony/visualization/renderer.py|Visualization]]
+- [[code/Things/Ant_Colony/visualization/renderer.py|Visualization]]
 
 ### Documentation
 
@@ -428,13 +428,13 @@ agent:
 
 ### Prerequisites
 
-- [[research/active_inference_foundations|Active Inference Foundations]]
+- [[docs/research/active_inference_foundations|Active Inference Foundations]]
 
-- [[research/collective_behavior_basics|Collective Behavior Basics]]
+- [[docs/research/collective_behavior_basics|Collective Behavior Basics]]
 
 ### Follow-up Work
 
-- [[research/hierarchical_swarms|Hierarchical Swarm Behavior]]
+- [[docs/research/hierarchical_swarms|Hierarchical Swarm Behavior]]
 
-- [[research/multi_colony_systems|Multi-Colony Systems]]
+- [[docs/research/multi_colony_systems|Multi-Colony Systems]]
 

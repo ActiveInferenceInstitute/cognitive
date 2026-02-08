@@ -372,15 +372,15 @@ class PolicySelection:
 
 ## Related Concepts
 
-- [[mathematics/information_theory|Information Theory]]
+- [[../mathematics/information_theory|Information Theory]]
 
-- [[mathematics/optimization|Optimization Methods]]
+- [[../mathematics/optimization|Optimization Methods]]
 
-- [[cognitive/predictive_processing|Predictive Processing]]
+- [[predictive_processing|Predictive Processing]]
 
-- [[systems/complex_systems|Complex Systems]]
+- [[../systems/complex_systems|Complex Systems]]
 
-- [[agents/architectures|Agent Architectures]]
+- [[../agents/architectures_overview|Agent Architectures]]
 
 ## Further Reading
 
@@ -394,7 +394,7 @@ class PolicySelection:
 
 1. Implementation Guides
 
-   - [[docs/guides/implementation_guides|Implementation Guides]]
+   - [[docs/implementation/implementation_guides|Implementation Guides]]
 
    - [[docs/api/reference|API Reference]]
 
@@ -402,9 +402,8 @@ class PolicySelection:
 
 1. Advanced Topics
 
-   - [[docs/concepts/hierarchical_models|Hierarchical Models]]
+   - Hierarchical Models
 
-   - [[docs/concepts/multi_agent_systems|Multi-Agent Systems]]
+   - Multi-Agent Systems
 
-   - [[docs/concepts/learning_adaptation|Learning and Adaptation]]
-
+   - Learning and Adaptation

@@ -22,15 +22,15 @@ semantic_relations:
 
 - type: implements
 
-    links: [[../concepts/cognitive_modeling_concepts]]
+    links: [[knowledge_base/cognitive/cognitive_modeling_concepts]]
 
 - type: relates
 
     links:
 
-  - [[../guides/implementation_guides]]
+  - [[docs/implementation/implementation_guides]]
 
-  - [[../examples/usage_examples]]
+  - [[docs/examples/usage_examples]]
 
 ---
 
@@ -164,13 +164,13 @@ This directory contains comprehensive API documentation for the cognitive modeli
 
 ## Related Sections
 
-- [[../guides/implementation_guides|Implementation Guides]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 
-- [[../examples/usage_examples|Usage Examples]]
+- [[docs/examples/usage_examples|Usage Examples]]
 
-- [[../concepts/cognitive_modeling_concepts|Core Concepts]]
+- [[knowledge_base/cognitive/cognitive_modeling_concepts|Core Concepts]]
 
 ## Contributing
 
-See [[../templates/api_template|API Documentation Template]] for documenting new APIs.
+See [[docs/templates/api_template|API Documentation Template]] for documenting new APIs.
 

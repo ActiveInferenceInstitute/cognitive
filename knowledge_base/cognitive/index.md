@@ -22,7 +22,7 @@ semantic_relations:
 
   - type: documented_by
 
-    links: [[docs/concepts/cognitive_modeling_concepts|Documentation Concepts]]
+    links: [[cognitive_modeling_concepts|Documentation Concepts]]
 
   - type: implemented_by
 
@@ -32,7 +32,7 @@ semantic_relations:
 
 ## Overview
 
-This knowledge base contains the comprehensive theoretical foundations of cognitive science that underpin our cognitive modeling framework. While the [[docs/concepts/cognitive_modeling_concepts|documentation concepts]] focus on implementation and documentation aspects, this knowledge base provides the deep scientific understanding necessary for cognitive modeling.
+This knowledge base contains the comprehensive theoretical foundations of cognitive science that underpin our cognitive modeling framework. While the [[cognitive_modeling_concepts|documentation concepts]] focus on implementation and documentation aspects, this knowledge base provides the deep scientific understanding necessary for cognitive modeling.
 
 ## Core Theories
 
@@ -66,7 +66,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Documentation Links
 
-- [[docs/concepts/cognitive_modeling_concepts|Implementation Theory]] - Implementation aspects
+- [[cognitive_modeling_concepts|Implementation Theory]] - Implementation aspects
 
 - [[docs/api/api_documentation|API Reference]] - Technical implementation
 
@@ -74,37 +74,37 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Development Resources
 
-- [[docs/guides/implementation_guides|Model Implementation]] - Implementation guide
+- [[docs/implementation/implementation_guides|Model Implementation]] - Implementation guide
 
-- [[docs/guides/system_integration|System Integration]] - Integration guide
+- System Integration - Integration guide
 
-- [[docs/guides/validation_guide|Validation]] - Validation methodology
+- Validation - Validation methodology
 
 ## Research Integration
 
 ### Experimental Framework
 
-- [[experiment_design]] - Experimental methodology
+- experiment design - Experimental methodology
 
-- [[data_collection]] - Data collection protocols
+- data collection - Data collection protocols
 
-- [[analysis_methods]] - Analysis techniques
+- analysis methods - Analysis techniques
 
 ### Documentation Support
 
 - [[docs/research/research_documentation|Research Documentation]] - Research documentation
 
-- [[docs/guides/research_integration|Research Integration]] - Integration guide
+- Research Integration - Integration guide
 
 - [[docs/templates/experiment_template|Experiment Template]] - Experiment documentation
 
 ## Related Resources
 
-- [[docs/concepts/research_education|Research and Education]]
+- [[research_education|Research and Education]]
 
-- [[docs/guides/documentation_standards|Documentation Standards]]
+- [[docs/repo_docs/documentation_standards|Documentation Standards]]
 
-- [[docs/guides/content_management|Content Management]]
+- [[docs/repo_docs/content_management|Content Management]]
 
 ## External Resources
 
@@ -116,13 +116,13 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ## Interdisciplinary Integration
 
-- [[ai_for_mathematics_cognitive_perspective]] — Building AI for math from a cognitive science view
+- ai for mathematics cognitive perspective — Building AI for math from a cognitive science view
 
 - [[cognitive_science_mathematics_education]] — Insights for math instruction
 
 ## Contributing
 
-See [[docs/guides/contribution_guide|Contribution Guide]] for adding to the knowledge base.
+See [[docs/development/contribution_guide|Contribution Guide]] for adding to the knowledge base.
 
 ---
 

@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[../biology/AGENTS|Biological Systems Agents]]
-      - [[../biology/README|Biology Overview]]
-      - [[../biology/levels_of_organization|Biological Organization Levels]]
+      - [[knowledge_base/biology/AGENTS|Biological Systems Agents]]
+      - [[knowledge_base/biology/README|Biology Overview]]
+      - [[knowledge_base/biology/levels_of_organization|Biological Organization Levels]]
 ---
 
 # Biological Ontology
@@ -259,19 +259,19 @@ Domain → Kingdom → Phylum → Class → Order → Family → Genus → Speci
 ## 🔗 Interdisciplinary Connections
 
 ### Biology-Mathematics Integration
-- [[../mathematics/mathematical_biology|Mathematical Biology]] - Population dynamics, epidemiology
-- [[../mathematics/systems_biology|Systems Biology]] - Network modeling, pathway analysis
-- [[../mathematics/complex_systems|Complex Systems]] - Emergence, self-organization
+- [[knowledge_base/mathematics/mathematical_biology|Mathematical Biology]] - Population dynamics, epidemiology
+- [[knowledge_base/biology/systems_biology|Systems Biology]] - Network modeling, pathway analysis
+- [[knowledge_base/mathematics/complex_systems|Complex Systems]] - Emergence, self-organization
 
 ### Biology-Cognitive Science Links
-- [[../cognitive/neural_computation|Neural Computation]] - Brain-inspired computing
-- [[../cognitive/swarm_intelligence|Swarm Intelligence]] - Collective behavior
-- [[../cognitive/attention_mechanisms|Attention Mechanisms]] - Selective processing
+- [[knowledge_base/cognitive/neural_computation|Neural Computation]] - Brain-inspired computing
+- [[knowledge_base/cognitive/swarm_intelligence|Swarm Intelligence]] - Collective behavior
+- [[knowledge_base/cognitive/attention_mechanisms|Attention Mechanisms]] - Selective processing
 
 ### Biology-Systems Theory
-- [[../systems/complex_systems|Complex Systems]] - Ecosystem dynamics
-- [[../systems/emergence|Emergence]] - Self-organizing biological systems
-- [[../systems/network_theory|Network Theory]] - Food webs, neural networks
+- [[knowledge_base/systems/complex_systems|Complex Systems]] - Ecosystem dynamics
+- [[knowledge_base/systems/emergence|Emergence]] - Self-organizing biological systems
+- [[knowledge_base/systems/network_theory|Network Theory]] - Food webs, neural networks
 
 ## 📚 Biological Literature Ontology
 

@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[../repo_docs/contribution_guide]]
-      - [[../repo_docs/development_standards]]
-      - [[../repo_docs/git_workflow]]
+      - [[docs/development/contribution_guide]]
+      - development standards
+      - [[docs/tools/git_workflow]]
 ---
 
 # Development Resources
@@ -25,13 +25,13 @@ Comprehensive development resources, guidelines, and workflows for contributing 
 
 ### Development Categories
 
-#### [[../repo_docs/contribution_guide|Contribution Guidelines]]
+#### [[docs/development/contribution_guide|Contribution Guidelines]]
 Complete guide for contributing to the project, including coding standards, testing requirements, and submission processes.
 
-#### [[../repo_docs/development_standards|Development Standards]]
+#### Development Standards
 Technical standards and best practices for code quality, documentation, and project organization.
 
-#### [[../repo_docs/git_workflow|Git Workflow]]
+#### [[docs/tools/git_workflow|Git Workflow]]
 Version control practices, branching strategies, and collaboration workflows for the project.
 
 ## 🚀 Getting Started with Development
@@ -260,31 +260,31 @@ graph TD
 ## 🔗 Related Documentation
 
 ### Project Resources
-- [[../README|Main Documentation]]
-- [[../repo_docs/README|Repository Documentation]]
-- [[../../README|Project README]]
+- [[docs/README|Main Documentation]]
+- [[docs/repo_docs/README|Repository Documentation]]
+- [[README|Project README]]
 
 ### Development Tools
-- [[../../tools/README|Development Tools]]
-- [[../../tests/README|Testing Framework]]
-- [[../api/README|API Documentation]]
+- [[tools/README|Development Tools]]
+- [[tests/README|Testing Framework]]
+- [[docs/api/README|API Documentation]]
 
 ### Community Resources
-- [[../repo_docs/contribution_guide|Contribution Guide]]
-- [[../guides/community_guide|Community Guidelines]]
-- [[../../LICENSE|Project License]]
+- [[docs/development/contribution_guide|Contribution Guide]]
+- Community Guidelines
+- [[LICENSE|Project License]]
 
 ## 🔗 Cross-References
 
 ### Development Resources
-- [[../repo_docs/contribution_guide|Contribution Guidelines]]
-- [[../repo_docs/development_standards|Development Standards]]
-- [[../repo_docs/git_workflow|Git Workflow]]
+- [[docs/development/contribution_guide|Contribution Guidelines]]
+- Development Standards
+- [[docs/tools/git_workflow|Git Workflow]]
 
 ### Quality Assurance
-- [[../../tests/README|Testing Framework]]
-- [[../repo_docs/code_standards|Code Standards]]
-- [[../repo_docs/testing_guidelines|Testing Guidelines]]
+- [[tests/README|Testing Framework]]
+- Code Standards
+- [[docs/repo_docs/testing_guidelines|Testing Guidelines]]
 
 ---
 

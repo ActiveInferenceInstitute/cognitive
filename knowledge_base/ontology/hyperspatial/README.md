@@ -51,15 +51,15 @@ The hyperspatial ontology knowledge base provides frameworks for understanding h
 ## 🔗 Cross-References
 
 ### Related Knowledge Domains
-- [[../cognitive_ontology|Cognitive Ontology]]
-- [[../computer_science_ontology|Computer Science Ontology]]
-- [[../../mathematics/differential_geometry|Differential Geometry]]
-- [[../../mathematics/topology|Topology]]
-- [[../../mathematics/category_theory|Category Theory]]
+- [[knowledge_base/ontology/cognitive_ontology|Cognitive Ontology]]
+- [[knowledge_base/ontology/computer_science_ontology|Computer Science Ontology]]
+- [[knowledge_base/mathematics/differential_geometry|Differential Geometry]]
+- [[knowledge_base/mathematics/topology|Topology]]
+- [[knowledge_base/mathematics/category_theory|Category Theory]]
 
 ### Implementation Examples
-- [[../../tools/src/models/|Advanced Model Implementations]]
-- [[../../docs/templates/|Ontology Templates]]
+- [[tools/src/models/README|Advanced Model Implementations]]
+- [[docs/templates/README|Ontology Templates]]
 
 ## 📈 Quality Metrics
 
@@ -86,7 +86,7 @@ The hyperspatial ontology knowledge base provides frameworks for understanding h
 - Maintain rigorous mathematical foundations
 - Include higher-dimensional geometric and topological concepts
 - Connect hyperspace concepts to cognitive applications
-- Follow [[../../linking_standards|linking standards]]
+- Follow [[knowledge_base/linking_standards|linking standards]]
 
 ### Review Process
 - Mathematical expert validation

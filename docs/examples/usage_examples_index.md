@@ -22,15 +22,15 @@ semantic_relations:
 
   - type: implements
 
-    links: [[../concepts/knowledge_organization]]
+    links: [[knowledge_base/cognitive/knowledge_organization]]
 
   - type: relates
 
     links:
 
-      - [[../guides/implementation_guides_index]]
+      - [[docs/implementation/implementation_guides_index]]
 
-      - [[../api/api_documentation_index]]
+      - [[docs/api/api_documentation_index]]
 
 ---
 
@@ -42,151 +42,151 @@ This directory contains practical examples, tutorials, and sample implementation
 
 ### Basic Examples
 
-- [[quickstart_example]] - Quick start tutorial
+- quickstart example - Quick start tutorial
 
-- [[hello_world]] - Minimal working example
+- hello world - Minimal working example
 
-- [[basic_agent]] - Basic agent implementation
+- basic agent - Basic agent implementation
 
 ### Core Concepts
 
-- [[belief_example]] - Belief system example
+- belief example - Belief system example
 
-- [[action_example]] - Action selection example
+- action example - Action selection example
 
-- [[perception_example]] - Perception system example
+- perception example - Perception system example
 
 ## Model Examples
 
 ### Active Inference
 
-- [[active_inference_basic]] - Basic active inference
+- active inference basic - Basic active inference
 
-- [[active_inference_advanced]] - Advanced implementations
+- active inference advanced - Advanced implementations
 
-- [[custom_generative_model]] - Custom generative models
+- custom generative model - Custom generative models
 
 ### Cognitive Models
 
-- [[decision_making]] - Decision-making examples
+- decision making - Decision-making examples
 
-- [[learning_model]] - Learning model examples
+- learning model - Learning model examples
 
-- [[memory_model]] - Memory model examples
+- memory model - Memory model examples
 
 ### Integration Examples
 
-- [[system_integration]] - System integration
+- system integration - System integration
 
-- [[plugin_example]] - Plugin development
+- plugin example - Plugin development
 
-- [[api_usage]] - API usage patterns
+- api usage - API usage patterns
 
 ## Research Examples
 
 ### Experiments
 
-- [[experiment_setup]] - Experiment setup
+- experiment setup - Experiment setup
 
-- [[data_collection]] - Data collection
+- data collection - Data collection
 
-- [[analysis_example]] - Data analysis
+- analysis example - Data analysis
 
 ### Visualization
 
-- [[basic_plots]] - Basic plotting
+- basic plots - Basic plotting
 
-- [[advanced_visualization]] - Advanced visualization
+- advanced visualization - Advanced visualization
 
-- [[interactive_plots]] - Interactive visualization
+- interactive plots - Interactive visualization
 
 ### Evaluation
 
-- [[model_evaluation]] - Model evaluation
+- model evaluation - Model evaluation
 
-- [[performance_testing]] - Performance testing
+- performance testing - Performance testing
 
-- [[comparison_study]] - Model comparison
+- comparison study - Model comparison
 
 ## Advanced Examples
 
 ### Optimization
 
-- [[performance_optimization]] - Performance tuning
+- performance optimization - Performance tuning
 
-- [[memory_optimization]] - Memory optimization
+- memory optimization - Memory optimization
 
-- [[parallel_processing]] - Parallel processing
+- parallel processing - Parallel processing
 
 ### Custom Components
 
-- [[custom_inference]] - Custom inference methods
+- custom inference - Custom inference methods
 
-- [[custom_optimizer]] - Custom optimizers
+- custom optimizer - Custom optimizers
 
-- [[custom_metrics]] - Custom evaluation metrics
+- custom metrics - Custom evaluation metrics
 
 ### Extensions
 
-- [[plugin_development]] - Plugin development
+- plugin development - Plugin development
 
-- [[api_extension]] - API extensions
+- api extension - API extensions
 
-- [[tool_integration]] - Tool integration
+- tool integration - Tool integration
 
 ## Tutorial Series
 
 ### Beginner Series
 
-- [[tutorial_1_basics]] - Basic concepts
+- tutorial 1 basics - Basic concepts
 
-- [[tutorial_2_implementation]] - Implementation
+- tutorial 2 implementation - Implementation
 
-- [[tutorial_3_testing]] - Testing
+- tutorial 3 testing - Testing
 
 ### Intermediate Series
 
-- [[tutorial_4_advanced]] - Advanced concepts
+- tutorial 4 advanced - Advanced concepts
 
-- [[tutorial_5_optimization]] - Optimization
+- tutorial 5 optimization - Optimization
 
-- [[tutorial_6_integration]] - Integration
+- tutorial 6 integration - Integration
 
 ### Advanced Series
 
-- [[tutorial_7_research]] - Research applications
+- tutorial 7 research - Research applications
 
-- [[tutorial_8_custom]] - Custom development
+- tutorial 8 custom - Custom development
 
-- [[tutorial_9_deployment]] - Deployment
+- tutorial 9 deployment - Deployment
 
 ## Sample Projects
 
 ### Applications
 
-- [[cognitive_robot]] - Robotic control
+- cognitive robot - Robotic control
 
-- [[decision_agent]] - Decision-making agent
+- decision agent - Decision-making agent
 
-- [[learning_system]] - Learning system
+- learning system - Learning system
 
 ### Research Projects
 
-- [[research_project_1]] - Example research setup
+- research project 1 - Example research setup
 
-- [[research_project_2]] - Advanced research
+- research project 2 - Advanced research
 
-- [[benchmark_study]] - Benchmarking study
+- benchmark study - Benchmarking study
 
 ## Related Sections
 
-- [[../guides/implementation_guides_index|Implementation Guides]]
+- [[docs/implementation/implementation_guides_index|Implementation Guides]]
 
-- [[../api/api_documentation_index|API Documentation]]
+- [[docs/api/api_documentation_index|API Documentation]]
 
-- [[../concepts/concept_documentation_index|Core Concepts]]
+- [[knowledge_base/cognitive/concept_documentation_index|Core Concepts]]
 
 ## Contributing
 
-See [[../templates/example_template|Example Template]] for creating new examples.
+See Example Template for creating new examples.
 

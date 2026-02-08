@@ -593,31 +593,31 @@ class ImplementationTestSuite:
 ## 📚 Related Documentation
 
 ### Technical References
-- [[../api/README|API Documentation]]
-- [[../guides/README|Implementation Guides]]
-- [[../../tools/README|Development Tools]]
+- [[docs/api/README|API Documentation]]
+- [[docs/guides/README|Implementation Guides]]
+- [[tools/README|Development Tools]]
 
 ### Framework Documentation
 - [[rxinfer/README|RxInfer Framework]]
-- [[../../knowledge_base/mathematics/|Mathematical Foundations]]
-- [[../../tests/README|Testing Framework]]
+- [[knowledge_base/mathematics/README|Mathematical Foundations]]
+- [[tests/README|Testing Framework]]
 
 ### Examples and Tutorials
-- [[../../Things/|Implementation Examples]]
-- [[../../examples/|Usage Examples]]
-- [[../../templates/|Code Templates]]
+- Implementation Examples
+- [[docs/implementation/rxinfer/docs/src/contributing/examples|Usage Examples]]
+- Code Templates
 
 ## 🔗 Cross-References
 
 ### Core Components
-- [[../../tools/src/models/|Model Implementations]]
-- [[../../tools/src/|Source Code]]
-- [[../../docs/api/|API Documentation]]
+- [[tools/src/models/README|Model Implementations]]
+- [[tools/src/README|Source Code]]
+- [[docs/api/README|API Documentation]]
 
 ### Development Resources
-- [[../repo_docs/|Repository Documentation]]
-- [[../development/|Development Guides]]
-- [[../../tests/|Testing Framework]]
+- [[docs/repo_docs/README|Repository Documentation]]
+- [[docs/development|Development Guides]]
+- [[tests/README|Testing Framework]]
 
 ---
 
@@ -629,5 +629,5 @@ class ImplementationTestSuite:
 
 ---
 
-> **Testing**: Always implement comprehensive testing as outlined in the [[../repo_docs/unit_testing|testing guidelines]] before deploying implementations.
+> **Testing**: Always implement comprehensive testing as outlined in the [[docs/repo_docs/unit_testing|testing guidelines]] before deploying implementations.
 

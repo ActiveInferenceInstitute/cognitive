@@ -18,7 +18,7 @@ Advanced linking in Obsidian goes beyond simple note connections to create rich,
 
 - [[external_links]] - Outside references
 
-  - URLs `[text](url)`
+  - URLs `[[url|text]]`
 
   - File links
 

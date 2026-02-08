@@ -56,11 +56,7 @@ semantic_relations:
 
     links:
 
-      - [[quantum_computing_learning_path]]
-
-      - [[quantum_machine_learning_path]]
-
-      - [[information_theory_learning_path]]
+      - [[active_inference_information_theory_learning_path]]
 
 ---
 
@@ -76,7 +72,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - Qiskit documentation: [qiskit.org/documentation](https://qiskit.org/documentation/)
 
@@ -1710,19 +1706,19 @@ class QuantumClassicalBridge:
 
 ### Advanced Topics
 
-1. [[quantum_computing_learning_path|Quantum Computing]]
+1. Quantum Computing
 
-1. [[quantum_information_learning_path|Quantum Information]]
+1. Quantum Information
 
-1. [[quantum_cognition_learning_path|Quantum Cognition]]
+1. Quantum Cognition
 
 ### Research Directions
 
-1. [[research_guides/quantum_systems|Quantum Systems Research]]
+1. [[knowledge_base/research/quantum_systems|Quantum Systems Research]]
 
-1. [[research_guides/quantum_computation|Quantum Computation Research]]
+1. [[knowledge_base/research/quantum_computation|Quantum Computation Research]]
 
-1. [[research_guides/quantum_cognition|Quantum Cognition Research]]
+1. [[knowledge_base/research/quantum_cognition|Quantum Cognition Research]]
 
 ## Version History
 

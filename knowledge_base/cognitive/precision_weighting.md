@@ -318,11 +318,7 @@ class PrecisionNetwork(nn.Module):
 
         # Final layer precision
 
-        weighted_error, precision = self.precision_layers[-1](
-
-            current, current
-
-        )
+        weighted_error, precision = self.precision_layers[[current, current|-1]]
 
         weighted_errors.append(weighted_error)
 

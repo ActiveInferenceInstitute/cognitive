@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: guides
     links:
-      - [[mathematics/|Mathematics Foundations]]
-      - [[cognitive/|Cognitive Science]]
-      - [[systems/|Systems Theory]]
-      - [[biology/|Biology]]
+      - [[mathematics|Mathematics Foundations]]
+      - [[cognitive|Cognitive Science]]
+      - [[systems|Systems Theory]]
+      - [[biology|Biology]]
 ---
 
 # Cognitive Modeling Learning Roadmap
@@ -49,7 +49,7 @@ Core Concepts → Applications → Practice
 ```
 - **Required Reading**:
   - [[mathematics/probability_theory|Probability Theory]]
-  - [[mathematics/bayesian_inference|Bayesian Inference]]
+  - [[knowledge_base/cognitive/bayesian_inference|Bayesian Inference]]
   - [[mathematics/information_theory|Information Theory]]
 
 - **Key Topics**:
@@ -155,7 +155,7 @@ Memory Systems → Learning → Plasticity
 - **Required Reading**:
   - [[cognitive/learning_mechanisms|Learning Mechanisms]]
   - [[cognitive/memory_systems|Memory Systems]]
-  - [[biology/synaptic_plasticity|Synaptic Plasticity]]
+  - [[knowledge_base/cognitive/synaptic_plasticity|Synaptic Plasticity]]
 
 - **Key Topics**:
   - Working memory and long-term memory
@@ -241,7 +241,7 @@ Adaptation → Evolution → Coevolution
 - **Required Reading**:
   - [[systems/adaptive_systems|Adaptive Systems]]
   - [[biology/evolutionary_dynamics|Evolutionary Dynamics]]
-  - [[systems/evolutionary_systems|Evolutionary Systems]]
+  - [[knowledge_base/systems/evolutionary_systems|Evolutionary Systems]]
 
 - **Key Topics**:
   - Adaptive capacity and resilience
@@ -261,7 +261,7 @@ Adaptation → Evolution → Coevolution
 Multi-Agent Systems → Social Inference → Collective Behavior
 ```
 - **Required Reading**:
-  - [[systems/multi_agent_systems|Multi-Agent Systems]]
+  - [[knowledge_base/systems/multi_agent_systems|Multi-Agent Systems]]
   - [[cognitive/social_cognition|Social Cognition]]
   - [[cognitive/collective_behavior|Collective Behavior]]
 
@@ -281,8 +281,8 @@ Neural Active Inference → Dynamic Causal Modeling → Consciousness
 ```
 - **Required Reading**:
   - [[cognitive/neural_computation|Neural Computation]]
-  - [[systems/dynamic_causal_modeling|Dynamic Causal Modeling]]
-  - [[cognitive/consciousness_biology|Consciousness Biology]]
+  - [[knowledge_base/systems/dynamic_causal_modeling|Dynamic Causal Modeling]]
+  - [[knowledge_base/cognitive/consciousness_biology|Consciousness Biology]]
 
 - **Key Topics**:
   - Neural implementation of active inference
@@ -321,7 +321,7 @@ Biology-Cognition → Systems-Cognition → Mathematics-Cognition
 Clinical Applications → AI Development → Research Methods
 ```
 - **Required Reading**:
-  - [[cognitive/clinical_applications|Clinical Applications]]
+  - [[knowledge_base/cognitive/clinical_applications|Clinical Applications]]
   - [[cognitive/artificial_intelligence|Artificial Intelligence]]
   - [[research_methodology|Research Methodology]]
 
@@ -356,9 +356,9 @@ Clinical Applications → AI Development → Research Methods
 **Focus**: Neural implementation and brain-inspired computing.
 
 #### Advanced Topics
-- **Neural Dynamics**: [[biology/neural_dynamics|Neural Dynamics]]
-- **Brain Imaging**: [[cognitive/brain_imaging|Brain Imaging]]
-- **Neural Engineering**: [[cognitive/neural_engineering|Neural Engineering]]
+- **Neural Dynamics**: [[knowledge_base/mathematics/neural_dynamics|Neural Dynamics]]
+- **Brain Imaging**: [[knowledge_base/cognitive/brain_imaging|Brain Imaging]]
+- **Neural Engineering**: [[knowledge_base/cognitive/neural_engineering|Neural Engineering]]
 
 #### Research Skills
 - Neural data analysis
@@ -370,8 +370,8 @@ Clinical Applications → AI Development → Research Methods
 
 #### Advanced Topics
 - **Reinforcement Learning**: [[cognitive/reinforcement_learning|Reinforcement Learning]]
-- **Robotics**: [[systems/robotics|Robotics]]
-- **Human-AI Interaction**: [[cognitive/human_ai_interaction|Human-AI Interaction]]
+- **Robotics**: [[knowledge_base/free_energy_principle/implementations/robotics|Robotics]]
+- **Human-AI Interaction**: [[knowledge_base/cognitive/human_ai_interaction|Human-AI Interaction]]
 
 #### Research Skills
 - AI system implementation
@@ -383,8 +383,8 @@ Clinical Applications → AI Development → Research Methods
 
 #### Advanced Topics
 - **Systems Biology**: [[biology/systems_biology|Systems Biology]]
-- **Ecological Modeling**: [[biology/ecological_modeling|Ecological Modeling]]
-- **Conservation Biology**: [[biology/conservation_biology|Conservation Biology]]
+- **Ecological Modeling**: [[knowledge_base/biology/ecological_modeling|Ecological Modeling]]
+- **Conservation Biology**: [[knowledge_base/biology/conservation_biology|Conservation Biology]]
 
 #### Research Skills
 - Biological network analysis

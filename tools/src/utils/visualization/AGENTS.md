@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[network_viz]]
-      - [[../../visualization/AGENTS|Visualization Tools]]
-      - [[../../../README|Tools Overview]]
+      - network viz
+      - [[tools/src/utils/visualization/AGENTS|Visualization Tools]]
+      - [[tools/README|Tools Overview]]
 ---
 
 # Network Visualization Agent Documentation
@@ -52,7 +52,7 @@ Main class for network visualization:
 ### Knowledge Network Construction
 
 #### Link Extraction
-- Obsidian link pattern recognition (`[[link]]` syntax)
+- Obsidian link pattern recognition (`link` syntax)
 - Link parsing from markdown files
 - Bidirectional link detection
 - Link validation
@@ -106,12 +106,12 @@ Uses configuration system for:
 ## 📚 Related Documentation
 
 ### Implementation Resources
-- [[network_viz|Network Visualization Implementation]]
-- [[../../visualization/AGENTS|Visualization Tools]]
-- [[../../../README|Tools Overview]]
+- Network Visualization Implementation
+- [[tools/src/utils/visualization/AGENTS|Visualization Tools]]
+- [[tools/README|Tools Overview]]
 
 ### Knowledge Base Integration
-- [[../../../knowledge_base/README|Knowledge Base Overview]]
+- [[knowledge_base/README|Knowledge Base Overview]]
 - Obsidian linking standards
 - Semantic relationship documentation
 

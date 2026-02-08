@@ -3,7 +3,7 @@ title: Application Guides Index
 type: documentation
 status: stable
 created: 2025-01-01
-updated: 2025-01-01
+updated: 2026-02-07
 tags:
   - application
   - guides
@@ -27,21 +27,27 @@ This directory contains practical application guides that demonstrate how to imp
 ### Core Application Guides
 
 #### Active Inference Spatial Applications
+
 [[active_inference_spatial_applications|Active Inference Spatial Applications]]
+
 - Spatial cognition and navigation
 - Geographic information processing
 - Spatial decision making
 - Location-based reasoning
 
 #### Guide for Cognitive Modeling
+
 [[guide_for_cognitive_modeling|Guide for Cognitive Modeling]]
+
 - Fundamental cognitive modeling principles
 - Agent design patterns
 - Implementation strategies
 - Best practices for cognitive systems
 
 #### Parr 2022 Chapter 6
+
 [[parr_2022_chapter_6|Parr 2022 Chapter 6]]
+
 - Advanced Active Inference theory
 - Mathematical formulations
 - Implementation considerations
@@ -50,30 +56,35 @@ This directory contains practical application guides that demonstrate how to imp
 ## 🎯 Application Domains
 
 ### Spatial and Geographic Applications
+
 - **Navigation Systems**: GPS-free navigation, path planning
 - **Environmental Monitoring**: Spatial data analysis, resource tracking
 - **Urban Planning**: City modeling, traffic optimization
 - **Geographic Information Systems**: Spatial reasoning, location intelligence
 
 ### Healthcare and Medical Applications
+
 - **Diagnostic Systems**: Medical decision support, symptom analysis
 - **Treatment Planning**: Personalized medicine, therapy optimization
 - **Patient Monitoring**: Continuous health tracking, anomaly detection
 - **Healthcare Management**: Resource allocation, scheduling optimization
 
 ### Financial and Economic Applications
+
 - **Trading Systems**: Algorithmic trading, market prediction
 - **Risk Management**: Portfolio optimization, fraud detection
 - **Economic Modeling**: Market simulation, behavioral economics
 - **Investment Strategy**: Asset allocation, risk assessment
 
 ### Robotics and Autonomous Systems
+
 - **Mobile Robotics**: Autonomous navigation, obstacle avoidance
 - **Manipulation Systems**: Object grasping, dexterous manipulation
 - **Human-Robot Interaction**: Natural interfaces, collaborative robotics
 - **Swarm Robotics**: Multi-robot coordination, collective behavior
 
 ### Environmental and Sustainability Applications
+
 - **Climate Modeling**: Long-term environmental prediction
 - **Resource Management**: Sustainable allocation, conservation planning
 - **Ecosystem Monitoring**: Biodiversity tracking, habitat analysis
@@ -84,6 +95,7 @@ This directory contains practical application guides that demonstrate how to imp
 ### Domain-Specific Architectures
 
 #### Spatial Intelligence Framework
+
 ```python
 class SpatialIntelligenceAgent:
     """Agent with spatial cognition capabilities."""
@@ -121,6 +133,7 @@ class SpatialIntelligenceAgent:
 ```
 
 #### Medical Decision Support Framework
+
 ```python
 class MedicalDecisionAgent:
     """Agent for medical decision support."""
@@ -162,6 +175,7 @@ class MedicalDecisionAgent:
 ```
 
 #### Financial Trading Framework
+
 ```python
 class FinancialTradingAgent:
     """Agent for financial trading and investment."""
@@ -326,6 +340,7 @@ class DomainSpecificAgent:
 ## 🎯 Application Case Studies
 
 ### Autonomous Navigation System
+
 - **Domain**: Robotics navigation in unknown environments
 - **Challenge**: GPS-denied navigation, obstacle avoidance
 - **Solution**: Spatial Active Inference agent with SLAM
@@ -333,6 +348,7 @@ class DomainSpecificAgent:
 - **Impact**: Enables reliable autonomous operation
 
 ### Medical Diagnostic Assistant
+
 - **Domain**: Healthcare diagnostic support
 - **Challenge**: Complex symptom-disease mapping, uncertainty
 - **Solution**: Bayesian diagnostic agent with medical knowledge base
@@ -340,6 +356,7 @@ class DomainSpecificAgent:
 - **Impact**: Enhanced clinical decision making
 
 ### Algorithmic Trading System
+
 - **Domain**: Financial markets and trading
 - **Challenge**: Market uncertainty, risk management
 - **Solution**: Predictive Active Inference trading agent
@@ -347,6 +364,7 @@ class DomainSpecificAgent:
 - **Impact**: Improved investment performance
 
 ### Smart City Management
+
 - **Domain**: Urban infrastructure optimization
 - **Challenge**: Multi-objective optimization, resource constraints
 - **Solution**: Multi-agent city management system
@@ -358,18 +376,21 @@ class DomainSpecificAgent:
 ### Performance Optimization Strategies
 
 #### Computational Efficiency
+
 - **Algorithm Selection**: Choose appropriate inference algorithms
 - **Parallel Processing**: Utilize multi-core and distributed computing
 - **Approximation Methods**: Use variational approximations for speed
 - **Caching Strategies**: Implement intelligent result caching
 
 #### Memory Optimization
+
 - **Sparse Representations**: Use sparse data structures for efficiency
 - **Hierarchical Storage**: Implement multi-level memory systems
 - **Compression Techniques**: Apply data compression for storage
 - **Garbage Collection**: Optimize memory management
 
 #### Scalability Considerations
+
 - **Modular Design**: Build composable system components
 - **Distributed Architectures**: Design for distributed computation
 - **Load Balancing**: Implement intelligent resource allocation
@@ -378,6 +399,7 @@ class DomainSpecificAgent:
 ### Monitoring and Maintenance
 
 #### Performance Monitoring
+
 ```python
 class ApplicationMonitor:
     """Monitor application performance and health."""
@@ -411,18 +433,21 @@ class ApplicationMonitor:
 ## 🤝 Application Development Best Practices
 
 ### Design Principles
+
 1. **Domain Expertise Integration**: Deep collaboration with domain experts
 2. **Iterative Development**: Incremental implementation and testing
 3. **User-Centered Design**: Focus on end-user needs and workflows
 4. **Ethical Considerations**: Address ethical implications of AI applications
 
 ### Implementation Guidelines
+
 1. **Modular Architecture**: Build reusable, composable components
 2. **Comprehensive Testing**: Test all components and integrations
 3. **Documentation**: Maintain clear documentation and examples
 4. **Version Control**: Use proper versioning for deployments
 
 ### Deployment Considerations
+
 1. **Scalability Planning**: Design for growth and increased load
 2. **Security Measures**: Implement appropriate security controls
 3. **Monitoring Setup**: Establish comprehensive monitoring systems
@@ -431,31 +456,36 @@ class ApplicationMonitor:
 ## 📚 Related Resources
 
 ### Implementation Examples
-- [[../../../Things/|Implementation Examples]]
-- [[../../../tools/|Development Tools]]
-- [[../learning_paths/|Learning Paths]]
+
+- [[code/Things|Implementation Examples]]
+- [[tools/README|Development Tools]]
+- [[docs/guides/learning_paths/README|Learning Paths]]
 
 ### Technical Documentation
-- [[../README|Guides Index]]
-- [[../../api/README|API Documentation]]
-- [[../../implementation/README|Implementation Guides]]
+
+- [[docs/guides/README|Guides Index]]
+- [[docs/api/README|API Documentation]]
+- [[docs/implementation/README|Implementation Guides]]
 
 ### Research and Theory
-- [[../../../knowledge_base/cognitive/|Cognitive Science]]
-- [[../../../knowledge_base/mathematics/|Mathematical Foundations]]
-- [[../../research/|Research Documentation]]
+
+- [[knowledge_base/cognitive/README|Cognitive Science]]
+- [[knowledge_base/mathematics/README|Mathematical Foundations]]
+- [[docs/research/README|Research Documentation]]
 
 ## 🔗 Cross-References
 
 ### Core Components
-- [[../../../tools/src/models/|Model Implementations]]
-- [[../../../tests/|Testing Framework]]
-- [[../../repo_docs/|Repository Documentation]]
+
+- [[tools/src/models/README|Model Implementations]]
+- [[tests/README|Testing Framework]]
+- [[docs/repo_docs/README|Repository Documentation]]
 
 ### Application Domains
-- [[../learning_paths/|Domain-Specific Learning Paths]]
-- [[../../examples/|Usage Examples]]
-- [[../../templates/|Implementation Templates]]
+
+- [[docs/guides/learning_paths/README|Domain-Specific Learning Paths]]
+- [[docs/examples/README|Usage Examples]]
+- [[docs/templates/README|Implementation Templates]]
 
 ---
 
@@ -464,4 +494,3 @@ class ApplicationMonitor:
 ---
 
 > **Performance Note**: Application performance depends on both algorithmic efficiency and domain-specific optimizations. Profile and optimize based on actual usage patterns.
-

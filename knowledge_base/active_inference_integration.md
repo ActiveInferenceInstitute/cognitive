@@ -311,9 +311,9 @@ Active inference has profound implications for philosophy of mind and science.
 - Parr, T., Pezzulo, G., & Friston, K. (2019). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior
 
 ### Integration Works
-- [[../cognitive/active_inference_agent|Active Inference Agent Architecture]]
-- [[../systems/complex_systems|Complex Systems Theory]]
-- [[../biology/ecological_networks|Biological Network Dynamics]]
+- [[knowledge_base/cognitive/active_inference_agent|Active Inference Agent Architecture]]
+- [[knowledge_base/systems/complex_systems|Complex Systems Theory]]
+- [[knowledge_base/biology/ecological_networks|Biological Network Dynamics]]
 
 ---
 

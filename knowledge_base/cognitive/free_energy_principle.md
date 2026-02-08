@@ -96,7 +96,7 @@ semantic_relations:
 
   - type: extends
 
-    links: [[../mathematics/variational_inference]]
+    links: [[knowledge_base/mathematics/variational_inference]]
 
 ---
 

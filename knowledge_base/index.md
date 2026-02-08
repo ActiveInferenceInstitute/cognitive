@@ -32,7 +32,7 @@ semantic_relations:
 
       - [[systems]]
 
-      - [[agents]]
+      - [[AGENTS]]
 
       - [[biology]]
 

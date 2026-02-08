@@ -16,7 +16,7 @@ semantic_relations:
       - [[docs/README]]
       - [[knowledge_base/index]]
       - [[tools/README]]
-      - [[Things/README]]
+      - [[code/Things/README]]
 ---
 
 # Cognitive Modeling Framework
@@ -38,32 +38,35 @@ Active Inference is a mathematical framework that explains how biological and ar
 ### 📚 Core Components
 
 #### [[docs/README|Documentation Hub]]
-- [[knowledge_base/cognitive/|Concepts]] - Core theoretical foundations
-- [[docs/guides/|Guides]] - Implementation and usage guides
-- [[docs/api/|API Reference]] - Technical documentation
-- [[docs/examples/|Examples]] - Usage examples and tutorials
-- [[docs/agents/|Agent Documentation]] - Autonomous agent frameworks
+- [[knowledge_base/cognitive/README|Concepts]] - Core theoretical foundations
+- [[docs/guides/README|Guides]] - Implementation and usage guides
+- [[docs/api/README|API Reference]] - Technical documentation
+- [[docs/examples/README|Examples]] - Usage examples and tutorials
+- [[docs/agents/README|Agent Documentation]] - Autonomous agent frameworks
 
 #### [[knowledge_base/index|Knowledge Base]]
-- [[knowledge_base/cognitive/|Cognitive Science]] - Cognitive concepts and theories
-- [[knowledge_base/mathematics/|Mathematics]] - Mathematical foundations
-- [[knowledge_base/biology/|Biology]] - Biological foundations
-- [[knowledge_base/systems/|Systems Theory]] - Systems and complex systems
-- [[knowledge_base/agents/|Agent Architectures]] - Agent design patterns
+- [[knowledge_base/cognitive/README|Cognitive Science]] - Cognitive concepts and theories
+- [[knowledge_base/mathematics/README|Mathematics]] - Mathematical foundations
+- [[knowledge_base/biology/README|Biology]] - Biological foundations
+- [[knowledge_base/systems/README|Systems Theory]] - Systems and complex systems
+- [[knowledge_base/agents/README|Agent Architectures]] - Agent design patterns
 
 #### [[tools/README|Implementation Tools]]
-- [[tools/src/|Source Code]] - Core implementations
-- [[tools/src/models/|Models]] - Agent and cognitive models
-- [[tools/src/visualization/|Visualization]] - Analysis and plotting tools
-- [[tools/src/utils/|Utilities]] - Helper functions and utilities
+- [[tools/src/README|Source Code]] - Core implementations
+- [[tools/src/models/README|Models]] - Agent and cognitive models
+- [[tools/src/visualization/README|Visualization]] - Analysis and plotting tools
+- [[tools/src/utils/README|Utilities]] - Helper functions and utilities
 
-#### [[Things/README|Implementation Examples]]
-- [[Things/Generic_Thing/|Generic Thing]] - Base cognitive agent framework
-- [[Things/Simple_POMDP/|Simple POMDP]] - Basic POMDP implementations
-- [[Things/Generic_POMDP/|Generic POMDP]] - Extended POMDP framework
-- [[Things/Continuous_Generic/|Continuous Generic]] - Continuous state space models
-- [[Things/Ant_Colony/|Ant Colony]] - Swarm intelligence implementations
-- [[Things/BioFirm/|BioFirm]] - Biological firm theory models
+#### [[code/Things/README|Implementation Examples]]
+- [[code/Things/Generic_Thing/README|Generic Thing]] - Base cognitive agent framework
+- [[code/Things/Simple_POMDP/README|Simple POMDP]] - Basic POMDP implementations
+- [[code/Things/Generic_POMDP/README|Generic POMDP]] - Extended POMDP framework
+- [[code/Things/Continuous_Generic/README|Continuous Generic]] - Continuous state space models
+- [[code/Things/Ant_Colony/README|Ant Colony]] - Swarm intelligence implementations
+- [[code/Things/BioFirm/README|BioFirm]] - Biological firm theory models
+- [[code/Things/Baseball_Game/README|Baseball Game]] - Sports decision-making simulation
+- [[code/Things/KG_Multi_Agent/README|KG Multi-Agent]] - Knowledge graph multi-agent system
+- [[code/Things/Path_Network/README|Path Network]] - Path network agent
 
 ### 🧪 Testing & Validation
 
@@ -72,11 +75,6 @@ Active Inference is a mathematical framework that explains how biological and ar
 - Integration tests for system interactions
 - Visualization test outputs
 - Performance benchmarks
-
-#### [[Output/README|Generated Outputs]]
-- Test results and visualizations
-- Performance metrics
-- Analysis reports
 
 ## 🚀 Quick Start
 
@@ -94,19 +92,19 @@ git clone https://github.com/ActiveInferenceInstitute/cognitive.git
 cd cognitive
 
 # Install dependencies for specific implementations
-cd Things/Generic_Thing
+cd code/Things/Generic_Thing
 pip install -r requirements.txt
 
 # Run basic tests
-python -m pytest tests/
+python -m pytest code/tests/
 ```
 
 ### First Steps
 
 1. **Explore Documentation**: Start with [[docs/README]] for overview
 2. **Understanding Theory**: Read [[knowledge_base/index]] for foundations
-3. **Try Examples**: Run implementations in [[Things/Generic_Thing/]]
-4. **Learn Concepts**: Follow learning paths in [[docs/guides/learning_paths/]]
+3. **Try Examples**: Run implementations in [[code/Things/Generic_Thing/README]]
+4. **Learn Concepts**: Follow learning paths in [[docs/guides/learning_paths/README]]
 
 ## 🎯 Key Features
 
@@ -142,7 +140,7 @@ python -m pytest tests/
 
 ### For Developers
 - [[docs/api/api_documentation|API Reference]]
-- [[docs/guides/implementation_guides|Implementation Guides]]
+- [[docs/implementation/implementation_guides|Implementation Guides]]
 - [[tools/src/README|Source Code Overview]]
 
 ## 🔬 Research Areas
@@ -221,9 +219,9 @@ python -m pytest tests/
 - **BioFirm**: Biological firm theory implementations
 
 ### Learning Resources
-- [[docs/guides/learning_paths/|Learning Paths]] - Structured educational content
-- [[docs/examples/|Examples]] - Practical implementations
-- [[docs/research/|Research Documentation]] - Academic foundations
+- [[docs/guides/learning_paths/README|Learning Paths]] - Structured educational content
+- [[docs/examples/README|Examples]] - Practical implementations
+- [[docs/research/README|Research Documentation]] - Academic foundations
 
 ## 📄 License
 

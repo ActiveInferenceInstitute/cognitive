@@ -19,14 +19,14 @@ semantic_relations:
       - [[AGENTS]]
   - type: supports
     links:
-      - [[../development/README]]
-      - [[../../tests/README]]
-      - [[../repo_docs/automation_scripts]]
+      - [[docs/development/README]]
+      - [[tests/README]]
+      - [[docs/tools/automation_scripts]]
   - type: enhances
     links:
-      - [[../../tools/README]]
-      - [[../repo_docs/git_tools]]
-      - [[../repo_docs/automation_scripts]]
+      - [[tools/README]]
+      - [[docs/tools/git_tools]]
+      - [[docs/tools/automation_scripts]]
 ---
 
 # Development Tools Documentation Index
@@ -648,31 +648,31 @@ class ToolEcosystemManager:
 ## 📚 Related Documentation
 
 ### Tool Integration
-- [[../../tools/README|Tools Implementation]]
-- [[../../tools/src/README|Source Code Tools]]
-- [[../api/README|API Documentation]]
+- [[tools/README|Tools Implementation]]
+- [[tools/src/README|Source Code Tools]]
+- [[docs/api/README|API Documentation]]
 
 ### Development Workflow
-- [[../repo_docs/contribution_guide|Contribution Guidelines]]
-- [[../repo_docs/git_workflow|Git Workflow]]
-- [[../development/README|Development Guides]]
+- [[docs/development/contribution_guide|Contribution Guidelines]]
+- [[docs/tools/git_workflow|Git Workflow]]
+- [[docs/development/README|Development Guides]]
 
 ### Quality Assurance
-- [[../repo_docs/testing_guidelines|Testing Guidelines]]
-- [[../repo_docs/code_standards|Code Standards]]
-- [[../../tests/README|Testing Framework]]
+- [[docs/repo_docs/testing_guidelines|Testing Guidelines]]
+- Code Standards
+- [[tests/README|Testing Framework]]
 
 ## 🔗 Cross-References
 
 ### Core Tool Components
-- [[../../tools/src/models/|Model Development Tools]]
-- [[../../tools/src/visualization/|Visualization Tools]]
-- [[../../tools/src/utils/|Utility Tools]]
+- [[tools/src/models/README|Model Development Tools]]
+- [[tools/src/visualization/README|Visualization Tools]]
+- [[tools/src/utils/README|Utility Tools]]
 
 ### Documentation Tools
-- [[../../docs/repo_docs/|Repository Documentation Tools]]
-- [[../../docs/templates/|Template Tools]]
-- [[../repo_docs/|Documentation Standards]]
+- [[docs/repo_docs/README|Repository Documentation Tools]]
+- [[docs/templates/README|Template Tools]]
+- [[docs/repo_docs/README|Documentation Standards]]
 
 ---
 

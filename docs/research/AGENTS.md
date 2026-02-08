@@ -13,7 +13,7 @@ semantic_relations:
   - type: investigates
     links:
       - [[ant_colony_active_inference]]
-      - [[../../docs/examples/AGENTS]]
+      - [[docs/examples/AGENTS]]
 ---
 
 # Research Agent Documentation
@@ -594,23 +594,23 @@ class ResearchCommunicationAgent(ResearchAgent):
 
 ### Research Resources
 - [[ant_colony_active_inference|Ant Colony Active Inference]]
-- [[../../docs/examples/AGENTS|Examples Documentation]]
-- [[../../docs/guides/AGENTS|Implementation Guides]]
+- [[docs/examples/AGENTS|Examples Documentation]]
+- [[docs/guides/AGENTS|Implementation Guides]]
 
 ### Theoretical Foundations
-- [[../../knowledge_base/cognitive/active_inference|Active Inference Theory]]
-- [[../../docs/agents/AGENTS|Agent Documentation Clearinghouse]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
+- [[docs/agents/AGENTS|Agent Documentation Clearinghouse]]
 
 ### Methodology Resources
-- [[../../docs/guides/research_methodology|Research Methodology]]
-- [[../../tools/research_tools|Research Tools]]
+- Research Methodology
+- Research Tools
 
 ## 🔗 Cross-References
 
 ### Research Types
 - **Experimental Research**: [[ant_colony_active_inference|Ant Colony Research]]
-- **Theoretical Research**: [[../../knowledge_base/cognitive/active_inference|Theory Development]]
-- **Applied Research**: [[../../docs/examples/AGENTS|Application Examples]]
+- **Theoretical Research**: [[knowledge_base/cognitive/active_inference|Theory Development]]
+- **Applied Research**: [[docs/examples/AGENTS|Application Examples]]
 
 ### Research Domains
 - **Cognitive Science**: Consciousness and decision-making research

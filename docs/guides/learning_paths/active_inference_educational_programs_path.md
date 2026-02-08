@@ -64,7 +64,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [Kolb experiential learning cycle](https://www.simplypsychology.org/kolb-learning-styles.html)
 
@@ -268,7 +268,7 @@ This learning path explores the application of active inference principles to ed
 
 - **Learning Resources**
 
-  - Reading: [[knowledge_base/cognitive/generative_models|Generative Models]]
+  - Reading: [[knowledge_base/mathematics/generative_models|Generative Models]]
 
   - Article: "Conceptual Change Through Prediction Error"
 
@@ -670,7 +670,7 @@ This learning path explores the application of active inference principles to ed
 
 - **Learning Resources**
 
-  - Reading: [[knowledge_base/cognitive/neuroscience|Neuroscience]]
+  - Reading: [[knowledge_base/biology/neuroscience|Neuroscience]]
 
   - Article: "Neuroeducation Through Active Inference"
 

@@ -651,31 +651,31 @@ class ResearchImpactEvaluator:
 ## 📚 Related Documentation
 
 ### Research Resources
-- [[../guides/learning_paths/|Learning Paths]]
-- [[../implementation/|Implementation Guides]]
-- [[../../knowledge_base/|Knowledge Base]]
+- [[docs/guides/learning_paths/README|Learning Paths]]
+- [[docs/implementation/README|Implementation Guides]]
+- [[knowledge_base/README|Knowledge Base]]
 
 ### Publication Resources
-- [[../repo_docs/documentation_standards|Documentation Standards]]
-- [[../templates/research_document|Research Templates]]
-- [[../development/|Development Guides]]
+- [[docs/repo_docs/documentation_standards|Documentation Standards]]
+- [[docs/templates/research_document|Research Templates]]
+- [[docs/development|Development Guides]]
 
 ### Collaboration Resources
-- [[../repo_docs/contribution_guide|Contribution Guidelines]]
-- [[../repo_docs/code_standards|Code Standards]]
-- [[../../tests/|Testing Framework]]
+- [[docs/development/contribution_guide|Contribution Guidelines]]
+- Code Standards
+- [[tests/README|Testing Framework]]
 
 ## 🔗 Cross-References
 
 ### Core Research Components
-- [[../../knowledge_base/cognitive/|Cognitive Science Research]]
-- [[../../knowledge_base/mathematics/|Mathematical Research]]
-- [[../../tools/|Research Tools]]
+- [[knowledge_base/cognitive/README|Cognitive Science Research]]
+- [[knowledge_base/mathematics/README|Mathematical Research]]
+- [[tools/README|Research Tools]]
 
 ### Implementation Support
-- [[../../Things/|Research Implementations]]
-- [[../../tools/src/models/|Research Models]]
-- [[../api/|Research APIs]]
+- Research Implementations
+- [[tools/src/models/README|Research Models]]
+- [[docs/api/README|Research APIs]]
 
 ---
 
@@ -687,5 +687,5 @@ class ResearchImpactEvaluator:
 
 ---
 
-> **Collaboration**: Research projects benefit from interdisciplinary collaboration. Use the [[../repo_docs/contribution_guide|contribution guidelines]] for effective collaboration.
+> **Collaboration**: Research projects benefit from interdisciplinary collaboration. Use the [[docs/development/contribution_guide|contribution guidelines]] for effective collaboration.
 

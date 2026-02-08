@@ -42,7 +42,7 @@ semantic_relations:
 
       - [[knowledge_base/systems/digital_twins|Digital Twins]]
 
-      - [[knowledge_base/systems/active_inference_spatial_applications|Active Inference in Spatial Applications]]
+      - [[docs/guides/application/active_inference_spatial_applications|Active Inference in Spatial Applications]]
 
   - type: specializes
 

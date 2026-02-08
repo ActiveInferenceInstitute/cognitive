@@ -14,11 +14,11 @@ semantic_relations:
     links:
       - [[index]]
       - [[AGENTS]]
-      - [[cognitive/]]
-      - [[mathematics/]]
-      - [[biology/]]
-      - [[systems/]]
-      - [[agents/]]
+      - [[cognitive]]
+      - [[mathematics]]
+      - [[biology]]
+      - [[systems]]
+      - [[AGENTS]]
 ---
 
 # Knowledge Base Overview
@@ -39,24 +39,24 @@ The knowledge base provides structured, interconnected documentation that suppor
 
 ### Core Domains
 
-#### [[cognitive/|Cognitive Science]]
+#### [[cognitive|Cognitive Science]]
 Theoretical foundations of cognition, perception, action, and learning. Covers Active Inference applications in neuroscience, psychology, and artificial intelligence.
 
-#### [[mathematics/|Mathematics]]
+#### [[mathematics|Mathematics]]
 Mathematical frameworks underlying cognitive modeling, including probability theory, information theory, variational methods, and optimization approaches.
 
-#### [[biology/|Biology]]
+#### [[biology|Biology]]
 Biological foundations of cognition, including neural implementation, homeostasis, adaptation mechanisms, and evolutionary perspectives.
 
-#### [[systems/|Systems Theory]]
+#### [[systems|Systems Theory]]
 Complex systems approaches to cognition, emergence, self-organization, and multi-scale interactions.
 
-#### [[agents/|Agent Architectures]]
+#### [[AGENTS|Agent Architectures]]
 Design patterns, implementation strategies, and architectural principles for cognitive agents.
 
 ### Integration Topics
 
-#### [[free_energy_principle/|Free Energy Principle]]
+#### [[free_energy_principle|Free Energy Principle]]
 Core theoretical foundation unifying biological self-organization, cognition, and adaptation.
 
 #### [[active_inference_implementation|Active Inference Implementation]]
@@ -73,14 +73,14 @@ Integration of emergence principles with cognitive modeling frameworks.
 - Review [[agents/README|Agent Architectures]]
 
 ### For Researchers
-- Access [[mathematics/|Mathematical Foundations]]
+- Access [[mathematics|Mathematical Foundations]]
 - Study [[cognitive/neural_active_inference|Neural Implementations]]
-- Review [[research.md|Research Directions]]
+- Review [[research|Research Directions]]
 
 ### For Implementers
 - Follow [[active_inference_implementation|Implementation Guides]]
-- Use [[agents/GenericPOMDP/|POMDP Frameworks]]
-- Reference [[continuous_time_active_inference|Continuous-Time Models]]
+- Use [[knowledge_base/agents/GenericPOMDP/README|POMDP Frameworks]]
+- Reference Continuous-Time Models
 
 ## 🔗 Key Concepts
 
@@ -105,7 +105,7 @@ Integration of emergence principles with cognitive modeling frameworks.
 ## 🤝 Contributing
 
 ### Documentation Standards
-- Follow [[../docs/repo_docs/documentation_standards|Documentation Standards]]
+- Follow [[docs/repo_docs/documentation_standards|Documentation Standards]]
 - Maintain [[linking_standards|Linking Standards]]
 - Use proper [[glossary|Terminology]]
 
@@ -128,9 +128,9 @@ Integration of emergence principles with cognitive modeling frameworks.
 - [[citations/friston_2013|Friston (2013)]] - Life as Inference
 
 ### Key Resources
-- [[../docs/research/|Research Documentation]]
-- [[../docs/implementation/|Implementation Guides]]
-- [[../Things/|Working Examples]]
+- [[docs/research|Research Documentation]]
+- [[docs/implementation/README|Implementation Guides]]
+- Working Examples
 
 ---
 
@@ -138,4 +138,4 @@ Integration of emergence principles with cognitive modeling frameworks.
 
 ---
 
-> **Integration Note**: This knowledge base integrates with the broader [[../docs/README|Documentation Framework]] and [[../tools/README|Implementation Tools]] for complete cognitive modeling support.
+> **Integration Note**: This knowledge base integrates with the broader [[docs/README|Documentation Framework]] and [[tools/README|Implementation Tools]] for complete cognitive modeling support.

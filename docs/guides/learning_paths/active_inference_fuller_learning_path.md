@@ -34,13 +34,8 @@ semantic_relations:
 
     links:
 
-      - [[systems_theory_learning_path]]
+      - [[active_inference_resilient_systems_path]]
 
-      - [[design_science_learning_path]]
-
-      - [[geodesic_structures_learning_path]]
-
-      - [[dymaxion_systems_learning_path]]
 
 ---
 
@@ -56,7 +51,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [Buckminster Fuller Institute](https://www.bfi.org/)
 
@@ -1116,27 +1111,27 @@ class EnvironmentalSynergy:
 
 ### Advanced Topics
 
-1. [[tensegrity_learning_path|Advanced Tensegrity]]
+1. Advanced Tensegrity
 
-1. [[synergetics_learning_path|Comprehensive Synergetics]]
+1. Comprehensive Synergetics
 
-1. [[dymaxion_learning_path|Dymaxion Systems]]
+1. Dymaxion Systems
 
-1. [[design_science_learning_path|Design Science]]
+1. Design Science
 
-1. [[global_solutions_learning_path|Global Solutions]]
+1. Global Solutions
 
 ### Research Directions
 
-1. [[research_guides/tensegrity_systems|Tensegrity Research]]
+1. [[knowledge_base/research/tensegrity_systems|Tensegrity Research]]
 
-1. [[research_guides/synergetics|Synergetics Research]]
+1. [[knowledge_base/systems/synergetics|Synergetics Research]]
 
-1. [[research_guides/dymaxion_systems|Dymaxion Research]]
+1. [[knowledge_base/research/dymaxion_systems|Dymaxion Research]]
 
-1. [[research_guides/design_science|Design Science Research]]
+1. [[knowledge_base/research/design_science|Design Science Research]]
 
-1. [[research_guides/global_solutions|Global Solutions Research]]
+1. [[knowledge_base/research/global_solutions|Global Solutions Research]]
 
 ## Version History
 

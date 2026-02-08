@@ -24,17 +24,15 @@ semantic_relations:
 
     links:
 
-      - [[cognitive_safety_learning_path]]
+      - [[active_inference_security_learning_path]]
 
-      - [[security_protocols_learning_path]]
 
   - type: related
 
     links:
 
-      - [[infohazard_management_learning_path]]
+      - [[active_inference_security_learning_path]]
 
-      - [[security_patterns_learning_path]]
 
 ---
 
@@ -50,7 +48,7 @@ semantic_relations:
 
 ## External Web Resources
 
-- [Centralized resources hub](./index.md#centralized-external-web-resources)
+- [[index#centralized-external-web-resources|Centralized resources hub]]
 
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 

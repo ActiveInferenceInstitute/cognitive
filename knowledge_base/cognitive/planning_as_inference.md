@@ -3,12 +3,12 @@ title: Planning as Inference
 type: concept
 status: stable
 created: 2024-01-01
-updated: 2026-01-03
+updated: 2026-02-07
 tags:
   - planning
-  - active_inference
-  - decision_making
-  - probabilistic_inference
+  - active-inference
+  - decision-making
+  - probabilistic-inference
 semantic_relations:
   - type: implements
     links:
@@ -21,19 +21,10 @@ semantic_relations:
       - [[../mathematics/active_inference_pomdp]]
   - type: foundation
     links:
-      - [[../mathematics/bayesian_inference]]
+      - [[bayesian_inference]]
       - [[../mathematics/optimal_control]]
-
-      - [[active_inference]]
-
-      - [[../mathematics/expected_free_energy]]
-
-      - [[../mathematics/policy_selection]]
-
       - [[predictive_coding]]
-
       - [[../mathematics/variational_free_energy]]
-
 ---
 
 ## Planning as Inference
@@ -51,22 +42,16 @@ P(\pi) \propto \exp\big(-\gamma\,G(\pi)\big),\quad G(\pi)=\sum_{\tau} G(\pi,\tau
 ```
 
 - [[../mathematics/expected_free_energy]]: balances epistemic and pragmatic value
-
 - [[../mathematics/policy_selection]]: softmax over negative EFE
-
 - [[../mathematics/variational_free_energy]]: perceptual inference objective
 
 ## Connections
 
 - [[active_inference]]: unified scheme for perception and action
-
-- [[../cognitive/predictive_coding]]: message passing implementation
-
+- [[predictive_coding]]: message passing implementation
 - [[../mathematics/active_inference_pomdp]]: discrete POMDP instantiation
 
 ## See Also
 
-- [[../mathematics/epistemic_value]]
-
-- [[../mathematics/pragmatic_value]]
-
+- [[../mathematics/epistemic_value]] — Epistemic value computation
+- [[../mathematics/pragmatic_value]] — Pragmatic value computation

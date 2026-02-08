@@ -12,8 +12,8 @@ tags:
 semantic_relations:
   - type: grounded_in
     links:
-      - [[../mathematics/graph_theory]]
-      - [[../mathematics/network_science]]
+      - [[knowledge_base/mathematics/graph_theory]]
+      - [[knowledge_base/mathematics/network_science]]
   - type: relates
     links:
       - [[complex_systems]]
@@ -286,6 +286,6 @@ Network theory provides a framework for understanding complex systems through th
 ### Related Concepts
 - [[complex_systems]] - Network-based complex systems
 - [[message_passing_networks]] - Information flow in networks
-- [[../mathematics/graph_theory]] - Mathematical foundations
-- [[../mathematics/network_science]] - Statistical network analysis
+- [[knowledge_base/mathematics/graph_theory]] - Mathematical foundations
+- [[knowledge_base/mathematics/network_science]] - Statistical network analysis
 

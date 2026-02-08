@@ -503,17 +503,17 @@ class ArchitectureValidator:
 ### Implementation Guides
 - [[GenericPOMDP/README]] - Generic POMDP implementation
 - [[Continuous_Time/README]] - Continuous-time implementation
-- [[../../docs/guides/agent_development]] - General development guide
+- [[docs/guides/agent_development]] - General development guide
 
 ### Theoretical Foundations
-- [[../../mathematics/active_inference_theory]] - Mathematical foundations
-- [[../../cognitive/active_inference]] - Cognitive theory
-- [[../../systems/complex_systems]] - Complex systems theory
+- [[knowledge_base/mathematics/active_inference_theory]] - Mathematical foundations
+- [[knowledge_base/cognitive/active_inference]] - Cognitive theory
+- [[knowledge_base/systems/complex_systems]] - Complex systems theory
 
 ### Applications
-- [[../../Things/Generic_POMDP/]] - Working implementations
-- [[../../Things/Ant_Colony/]] - Swarm intelligence examples
-- [[../../docs/examples/agent_examples]] - Agent examples
+- [[code/Things/Generic_POMDP/README]] - Working implementations
+- [[code/Things/Ant_Colony/README]] - Swarm intelligence examples
+- [[docs/examples/agent_examples]] - Agent examples
 
 ---
 

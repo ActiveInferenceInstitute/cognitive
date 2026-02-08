@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes the implementation of [[Active Inference]] methods in the cognitive modeling framework. The implementation provides a flexible and extensible architecture for different inference approaches and policy types.
+This document describes the implementation of [[knowledge_base/cognitive/active_inference]] methods in the cognitive modeling framework. The implementation provides a flexible and extensible architecture for different inference approaches and policy types.
 
 ## Core Components
 
@@ -36,7 +36,7 @@ The [[ActiveInferenceDispatcher]] serves as the main interface for routing opera
 
 Three main inference methods are supported:
 
-1. [[Variational Inference]]
+1. [[docs/implementation/rxinfer/variational_inference]]
 
    - Gradient-based belief updates
 
@@ -128,7 +128,7 @@ updated_beliefs = dispatcher.dispatch_belief_update(
 
 ### Free Energy Calculation
 
-The [[Expected Free Energy]] calculation combines:
+The [[knowledge_base/mathematics/expected_free_energy]] calculation combines:
 
 1. Pragmatic value (goal-directed behavior)
 
@@ -264,7 +264,7 @@ custom_params:
 
 ## Best Practices
 
-### [[Performance Optimization]]
+### [[knowledge_base/cognitive/performance_optimization]]
 
 1. Use appropriate number of samples
 
@@ -272,7 +272,7 @@ custom_params:
 
 1. Tune precision updates
 
-### [[Numerical Stability]]
+### [[knowledge_base/mathematics/numerical_stability]]
 
 1. Add small constants to denominators
 
@@ -290,9 +290,9 @@ custom_params:
 
 ## Related Topics
 
-- [[Free Energy Principle]]
+- [[knowledge_base/cognitive/free_energy_principle]]
 
-- [[Active Inference Theory]]
+- [[knowledge_base/mathematics/active_inference_theory]]
 
 - [[Variational Bayes]]
 

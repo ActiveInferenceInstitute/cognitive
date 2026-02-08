@@ -41,7 +41,7 @@ semantic_relations:
 
 - [[Continuous_Time/continuous_time_agent]]
 
-- [[Continuous_Time/path_integration|Path Integration]]
+- Path Integration
 
 ## Agent Types
 
@@ -57,13 +57,13 @@ semantic_relations:
 
 ### Specialized Agents
 
-- [[../cognitive/social_insect_cognition|Social Insect Agents]]
+- [[knowledge_base/cognitive/social_insect_cognition|Social Insect Agents]]
 
-- [[../cognitive/swarm_intelligence|Swarm Agents]]
+- [[knowledge_base/cognitive/swarm_intelligence|Swarm Agents]]
 
-- [[../cognitive/collective_behavior|Collective Behavior Agents]]
+- [[knowledge_base/cognitive/collective_behavior|Collective Behavior Agents]]
 
-- [[../cognitive/stigmergic_coordination|Stigmergic Agents]]
+- [[knowledge_base/cognitive/stigmergic_coordination|Stigmergic Agents]]
 
 ## Implementation Components
 
@@ -91,55 +91,55 @@ semantic_relations:
 
 ### Basic Examples
 
-- [[examples/active_inference_basic|Basic Active Inference]]
+- Basic Active Inference
 
-- [[examples/pomdp_agent|POMDP Agent]]
+- POMDP Agent
 
-- [[examples/continuous_time|Continuous Time Agent]]
+- Continuous Time Agent
 
 ### Advanced Examples
 
-- [[examples/ant_colony|Ant Colony Simulation]]
+- Ant Colony Simulation
 
-- [[examples/swarm_robotics|Swarm Robotics]]
+- Swarm Robotics
 
-- [[examples/social_agents|Social Agents]]
+- Social Agents
 
 ## Mathematical Foundations
 
 ### POMDP Mathematics
 
-- [[../mathematics/active_inference_pomdp|Active Inference POMDP]]
+- [[knowledge_base/mathematics/active_inference_pomdp|Active Inference POMDP]]
 
-- [[../mathematics/belief_updating|Belief Updating]]
+- [[knowledge_base/mathematics/belief_updating|Belief Updating]]
 
-- [[../mathematics/policy_selection|Policy Selection]]
+- [[knowledge_base/mathematics/policy_selection|Policy Selection]]
 
 ### Continuous-Time Mathematics
 
-- [[../mathematics/differential_geometry|Differential Geometry]]
+- [[knowledge_base/mathematics/differential_geometry|Differential Geometry]]
 
-- [[../mathematics/path_integral_theory|Path Integral Theory]]
+- [[knowledge_base/mathematics/path_integral_theory|Path Integral Theory]]
 
-- [[../mathematics/generalized_coordinates|Generalized Coordinates]]
+- [[knowledge_base/mathematics/generalized_coordinates|Generalized Coordinates]]
 
 ## Cognitive Foundations
 
 ### Theoretical Bases
 
-- [[../cognitive/active_inference|Active Inference]]
+- [[knowledge_base/cognitive/active_inference|Active Inference]]
 
-- [[../cognitive/free_energy_principle|Free Energy Principle]]
+- [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]]
 
-- [[../cognitive/predictive_processing|Predictive Processing]]
+- [[knowledge_base/cognitive/predictive_processing|Predictive Processing]]
 
 ### Cognitive Architectures
 
-- [[../cognitive/cognitive_architecture|Cognitive Architecture]]
+- [[knowledge_base/cognitive/cognitive_architecture|Cognitive Architecture]]
 
-- [[../cognitive/hierarchical_processing|Hierarchical Processing]]
+- [[knowledge_base/cognitive/hierarchical_processing|Hierarchical Processing]]
 
-- [[../cognitive/memory_systems|Memory Systems]]
+- [[knowledge_base/cognitive/memory_systems|Memory Systems]]
 
 ## Implementation Guides
 
@@ -189,11 +189,11 @@ semantic_relations:
 
 ### Documentation
 
-- [[../docs/api/agent_api|Agent API Documentation]]
+- [[docs/api/agent_api|Agent API Documentation]]
 
-- [[../docs/guides/agent_guides|Agent Implementation Guides]]
+- Agent Implementation Guides
 
-- [[../docs/examples/agent_examples|Agent Examples]]
+- [[docs/examples/agent_examples|Agent Examples]]
 
 ### External Resources
 

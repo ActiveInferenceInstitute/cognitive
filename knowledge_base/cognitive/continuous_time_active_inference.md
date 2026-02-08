@@ -4,11 +4,11 @@ type: concept
 status: stable
 created: 2024-01-01
 tags:
-  - active_inference
-  - continuous_time
-  - dynamical_systems
-  - variational_calculus
-  - free_energy
+  - active-inference
+  - continuous-time
+  - dynamical-systems
+  - variational-calculus
+  - free-energy
 semantic_relations:
   - type: extends
     links:
@@ -23,7 +23,6 @@ semantic_relations:
     links:
       - [[../mathematics/continuous_time_models]]
       - [[../mathematics/stochastic_differential_equations]]
-      - [[../agents/Continuous_Time/]]
 ---
 
 # Continuous-Time Active Inference
@@ -217,4 +216,3 @@ The continuous-time formulation generalizes [[active_inference_pomdp|discrete PO
 1. Buckley, C. L., et al. (2017). The free energy principle for action and perception: A mathematical review.
 
 1. Tschantz, A., et al. (2020). Learning action-oriented models through active inference.
-

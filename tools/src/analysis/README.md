@@ -13,8 +13,8 @@ tags:
 semantic_relations:
   - type: placeholder
     links:
-      - [[../../README]]
-      - [[../../../docs/repo_docs/README]]
+      - [[tools/README]]
+      - [[docs/repo_docs/README]]
 ---
 
 # Analysis Tools Implementation
@@ -183,26 +183,26 @@ class NetworkAnalyzer:
 ## 📚 Related Documentation
 
 ### Current References
-- [[../../README|Tools Overview]]
-- [[../../../docs/repo_docs/README|Repository Standards]]
-- [[../../../docs/implementation/README|Implementation Guides]]
+- [[tools/README|Tools Overview]]
+- [[docs/repo_docs/README|Repository Standards]]
+- [[docs/implementation/README|Implementation Guides]]
 
 ### Future Integration
-- [[../../../docs/api/README|API Documentation]]
-- [[../../../tests/README|Testing Framework]]
-- [[../../../docs/examples/|Usage Examples]]
+- [[docs/api/README|API Documentation]]
+- [[tests/README|Testing Framework]]
+- [[docs/examples|Usage Examples]]
 
 ## 🔗 Cross-References
 
 ### Planned Integration Points
-- [[../active_inference/|Active Inference Models]]
-- [[../../utils/|Utility Functions]]
-- [[../../visualization/|Visualization Tools]]
+- [[knowledge_base/cognitive/active_inference|Active Inference Models]]
+- Utility Functions
+- Visualization Tools
 
 ### Related Frameworks
-- [[../../../docs/research/README|Research Documentation]]
-- [[../../../knowledge_base/mathematics/|Mathematical Foundations]]
-- [[../../../Things/|Implementation Examples]]
+- [[docs/research/README|Research Documentation]]
+- [[knowledge_base/mathematics/README|Mathematical Foundations]]
+- Implementation Examples
 
 ---
 

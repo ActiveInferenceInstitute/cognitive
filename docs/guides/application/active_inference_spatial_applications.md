@@ -66,9 +66,9 @@ semantic_relations:
 
     links:
 
-      - [[knowledge_base/mathematics/bayesian_inference|Bayesian Inference]]
+      - [[knowledge_base/cognitive/bayesian_inference|Bayesian Inference]]
 
-      - [[knowledge_base/cognitive/generative_models|Generative Models]]
+      - [[knowledge_base/mathematics/generative_models|Generative Models]]
 
       - [[knowledge_base/cognitive/predictive_coding|Predictive Coding]]
 
@@ -172,7 +172,7 @@ Spatial experiences engage multiple sensory modalities, requiring integration me
 
 - Generate coherent multisensory predictions about spatial events
 
-[[Knowledge_base/cognitive/precision_weighting|Precision weighting]] plays a crucial role in this process, dynamically adjusting the influence of different sensory channels based on their reliability in different contexts.
+[[knowledge_base/cognitive/precision_weighting|Precision weighting]] plays a crucial role in this process, dynamically adjusting the influence of different sensory channels based on their reliability in different contexts.
 
 ### 2.3 Attention Allocation in Spatial Environments
 
@@ -380,7 +380,7 @@ These distributed architectures enable scalable and responsive spatial experienc
 
 ### 6.1 Augmented Reality Applications
 
-[[Knowledge_base/systems/augmented_reality|Augmented reality]] (AR) particularly benefits from Active Inference approaches:
+[[knowledge_base/systems/augmented_reality|Augmented reality]] (AR) particularly benefits from Active Inference approaches:
 
 - Predictive placement of virtual content based on user attention models
 
@@ -394,7 +394,7 @@ These capabilities enhance AR usability by creating experiences that align with 
 
 ### 6.2 Virtual Reality Systems
 
-[[Knowledge_base/systems/virtual_reality|Virtual reality]] (VR) implementations leverage Active Inference for:
+[[knowledge_base/systems/virtual_reality|Virtual reality]] (VR) implementations leverage Active Inference for:
 
 - Predictive rendering based on anticipated viewpoints
 
@@ -408,7 +408,7 @@ These approaches improve both performance and comfort in virtual environments.
 
 ### 6.3 Mixed Reality Integration
 
-[[Knowledge_base/systems/mixed_reality|Mixed reality]] (MR) represents a particularly rich domain for Active Inference:
+[[knowledge_base/systems/mixed_reality|Mixed reality]] (MR) represents a particularly rich domain for Active Inference:
 
 - Seamless blending of physical and digital based on predictive models
 
@@ -422,7 +422,7 @@ Active Inference provides principles for creating coherent experiences that span
 
 ### 6.4 Digital Twins and Simulation
 
-[[Knowledge_base/systems/digital_twins|Digital twins]] benefit from Active Inference through:
+[[knowledge_base/systems/digital_twins|Digital twins]] benefit from Active Inference through:
 
 - Predictive modeling of physical system behavior
 

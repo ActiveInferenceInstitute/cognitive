@@ -13,18 +13,18 @@ semantic_relations:
   - type: documents
     links:
       - [[README]]
-      - [[simulation_config]]
-      - [[../../tools/src/utils/config|Configuration Utilities]]
+      - simulation config
+      - Configuration Utilities
   - type: supports
     links:
-      - [[../development/AGENTS]]
-      - [[../api/AGENTS]]
-      - [[../implementation/AGENTS]]
+      - [[docs/development/AGENTS]]
+      - [[docs/api/AGENTS]]
+      - [[docs/implementation/AGENTS]]
   - type: configures
     links:
-      - [[../../Things/Generic_Thing/AGENTS]]
-      - [[../../Things/Generic_POMDP/AGENTS]]
-      - [[../../Things/Continuous_Generic/AGENTS]]
+      - [[code/Things/Generic_Thing/AGENTS]]
+      - [[code/Things/Generic_POMDP/AGENTS]]
+      - [[code/Things/Continuous_Generic/AGENTS]]
 ---
 
 # Configuration Agent Documentation
@@ -175,13 +175,13 @@ Configuration integration testing:
 
 ### Configuration Resources
 - [[README|Configuration Documentation Overview]]
-- [[simulation_config|Simulation Configuration Example]]
+- Simulation Configuration Example
 - Configuration API documentation
 - Configuration tools documentation
 
 ### Implementation Resources
-- [[../../tools/src/utils/config|Configuration Utilities]]
-- [[../../tests/test_config|Configuration Tests]]
+- Configuration Utilities
+- Configuration Tests
 - Configuration validation framework
 
 ---
