@@ -358,11 +358,11 @@ agent:
 
 ### Code Repository
 
-- Repository: cognitive/Things/Ant_Colony
+- Repository: `code/Things/Ant_Colony/`
 
-- Main simulation: simulation.py
+- Current implementation notes: `README.md` and `Ant_Colony_README.md`
 
-- Agent implementation: agents/nestmate.py
+- Agent guidance: `AGENTS.md`
 
 ### Data
 
@@ -410,11 +410,11 @@ agent:
 
 ### Code References
 
-- [[code/Things/Ant_Colony/simulation.py|Main Simulation]]
+- [[code/Things/Ant_Colony/README|Ant Colony Overview]]
 
-- [[code/Things/Ant_Colony/agents/nestmate.py|Agent Implementation]]
+- [[code/Things/Ant_Colony/Ant_Colony_README|Model Notes]]
 
-- [[code/Things/Ant_Colony/visualization/renderer.py|Visualization]]
+- [[code/Things/Ant_Colony/AGENTS|Agent Instructions]]
 
 ### Documentation
 
@@ -437,4 +437,3 @@ agent:
 - [[docs/research/hierarchical_swarms|Hierarchical Swarm Behavior]]
 
 - [[docs/research/multi_colony_systems|Multi-Colony Systems]]
-

@@ -1,11 +1,12 @@
 {
-  "timestamp": "2026-06-28 18:22:21",
-  "duration": "50.34s",
+  "timestamp": "2026-06-28 18:38:04",
+  "duration": "66.37s",
   "test_files": [
     "test_active_inference_api.py",
     "test_matrix_ops.py",
     "test_simple_pomdp.py",
     "test_utils.py",
+    "test_verify_links.py",
     "test_visualization.py",
     "visualization/test_continuous_generic.py"
   ],
