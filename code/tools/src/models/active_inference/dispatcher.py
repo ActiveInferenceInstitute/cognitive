@@ -4,14 +4,16 @@ Provides a clean interface for dispatching active inference operations
 to appropriate low-level implementations.
 """
 
-from enum import Enum
-from typing import Dict, List, Optional, Tuple, Union, Any, Callable
-import numpy as np
 from dataclasses import dataclass
+from enum import Enum
 from pathlib import Path
+from typing import Any
 
-from .base import ActiveInferenceModel, ModelState
-from ..matrices.matrix_ops import MatrixOps, MatrixInitializer
+import numpy as np
+
+from ..matrices.matrix_ops import MatrixInitializer, MatrixOps
+from .base import ModelState
+
 
 class InferenceMethod(Enum):
     """Supported inference methods."""
@@ -36,7 +38,7 @@ class InferenceConfig:
     use_gpu: bool = False
     num_samples: int = 1000  # For sampling-based methods
     temperature: float = 1.0  # For policy selection
-    custom_params: Optional[Dict[str, Any]] = None
+    custom_params: dict[str, Any] | None = None
 
 class ActiveInferenceDispatcher:
     """
@@ -93,7 +95,7 @@ class ActiveInferenceDispatcher:
         
     def dispatch_policy_inference(self,
                                 state: ModelState,
-                                goal_prior: Optional[np.ndarray] = None,
+                                goal_prior: np.ndarray | None = None,
                                 **kwargs) -> np.ndarray:
         """
         Dispatch policy inference to appropriate implementation.
@@ -127,10 +129,11 @@ class ActiveInferenceDispatcher:
         """Sampling-based implementation of belief updates using particle filtering."""
         num_samples = self.config.num_samples
         generative_matrix = kwargs.get('generative_matrix', np.eye(len(state.beliefs)))
+        particle_prior = np.maximum(state.beliefs, 1e-8)
+        particle_prior = particle_prior / np.sum(particle_prior)
         
-        # Initialize particles
         particles = self._rng.dirichlet(
-            state.beliefs * num_samples,
+            particle_prior * num_samples,
             size=num_samples
         )
         
@@ -139,7 +142,11 @@ class ActiveInferenceDispatcher:
             self._compute_likelihood(observation, p, generative_matrix)
             for p in particles
         ])
-        weights = likelihoods / np.sum(likelihoods)
+        total_likelihood = np.sum(likelihoods)
+        if total_likelihood <= 1e-12:
+            weights = np.ones(num_samples) / num_samples
+        else:
+            weights = likelihoods / total_likelihood
         
         # Resample particles
         resampled_indices = self._rng.choice(
@@ -165,12 +172,21 @@ class ActiveInferenceDispatcher:
                                 state: ModelState,
                                 **kwargs) -> np.ndarray:
         """Mean-field implementation of belief updates."""
-        # Implementation for mean-field updates
-        raise NotImplementedError("Mean-field belief updates not yet implemented")
+        generative_matrix = kwargs.get('generative_matrix', np.eye(len(state.beliefs)))
+        learning_rate = kwargs.get('learning_rate', self.config.learning_rate)
+        prediction = np.dot(state.beliefs, generative_matrix)
+        prediction_error = observation - prediction
+        field = np.dot(generative_matrix, prediction_error)
+        log_beliefs = np.log(np.maximum(state.beliefs, 1e-12))
+        posterior = np.exp(log_beliefs + learning_rate * state.precision * field)
+        total = np.sum(posterior)
+        if total <= 1e-12:
+            return np.ones_like(state.beliefs) / len(state.beliefs)
+        return posterior / total
         
     def _variational_policy_inference(self,
                                     state: ModelState,
-                                    goal_prior: Optional[np.ndarray] = None,
+                                    goal_prior: np.ndarray | None = None,
                                     **kwargs) -> np.ndarray:
         """Variational implementation of policy inference."""
         # Implementation for variational policy inference
@@ -183,7 +199,7 @@ class ActiveInferenceDispatcher:
         
     def _sampling_policy_inference(self,
                                  state: ModelState,
-                                 goal_prior: Optional[np.ndarray] = None,
+                                 goal_prior: np.ndarray | None = None,
                                  **kwargs) -> np.ndarray:
         """Sampling-based implementation of policy inference using MCMC."""
         if goal_prior is None:
@@ -214,7 +230,11 @@ class ActiveInferenceDispatcher:
     def _propose_policy(self, current: np.ndarray) -> np.ndarray:
         """Generate policy proposal for MCMC."""
         proposal = current + self._rng.normal(0, 0.1, size=current.shape)
-        return self.matrix_ops.normalize_rows(np.maximum(proposal, 0))
+        proposal = np.maximum(proposal, 0)
+        total = np.sum(proposal)
+        if total <= 1e-12:
+            return np.ones_like(current) / len(current)
+        return proposal / total
         
     def _policy_energy(self,
                       policies: np.ndarray,
@@ -227,10 +247,17 @@ class ActiveInferenceDispatcher:
         
     def _mean_field_policy_inference(self,
                                    state: ModelState,
-                                   goal_prior: Optional[np.ndarray] = None,
+                                   goal_prior: np.ndarray | None = None,
                                    **kwargs) -> np.ndarray:
         """Mean-field implementation of policy inference."""
-        raise NotImplementedError("Mean-field policy inference not yet implemented")
+        if goal_prior is None:
+            goal_prior = np.ones(len(state.policies)) / len(state.policies)
+        goal_prior = np.maximum(goal_prior, 1e-12)
+        goal_prior = goal_prior / np.sum(goal_prior)
+        expected_free_energy = self._calculate_expected_free_energy(
+            state, goal_prior, **kwargs)
+        logits = np.log(goal_prior) - expected_free_energy / max(self.config.temperature, 1e-8)
+        return self.matrix_ops.softmax(logits)
         
     def _calculate_expected_free_energy(self,
                                       state: ModelState,
@@ -284,10 +311,10 @@ class ActiveInferenceFactory:
         return ActiveInferenceDispatcher(config)
     
     @staticmethod
-    def create_from_yaml(config_path: Union[str, Path]) -> ActiveInferenceDispatcher:
+    def create_from_yaml(config_path: str | Path) -> ActiveInferenceDispatcher:
         """Create an Active Inference dispatcher from YAML configuration."""
         import yaml
-        with open(config_path, 'r') as f:
+        with open(config_path) as f:
             config_dict = yaml.safe_load(f)
         
         config = InferenceConfig(
@@ -301,4 +328,4 @@ class ActiveInferenceFactory:
             temperature=config_dict.get('temperature', 1.0),
             custom_params=config_dict.get('custom_params', None)
         )
-        return ActiveInferenceFactory.create(config) 
+        return ActiveInferenceFactory.create(config)

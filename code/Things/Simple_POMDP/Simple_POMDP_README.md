@@ -178,7 +178,7 @@ visualization:
 
 ```python
 
-from Things.SimplePOMDP.simple_pomdp import SimplePOMDP
+from Things.Simple_POMDP import SimplePOMDP
 
 # Initialize the model
 
@@ -208,15 +208,15 @@ model.visualize("policy_evaluation")
 
 # Run all tests
 
-pytest tests/test_simple_pomdp.py
+python -m pytest code/tests/test_simple_pomdp.py
 
 # Run specific test
 
-pytest tests/test_simple_pomdp.py::test_initialization
+python -m pytest code/tests/test_simple_pomdp.py::test_initialization
 
 # Run with coverage
 
-pytest tests/test_simple_pomdp.py --cov=Things.SimplePOMDP
+python -m pytest code/tests/test_simple_pomdp.py --cov=Things.Simple_POMDP
 
 ```
 
@@ -408,19 +408,19 @@ The test suite provides comprehensive coverage of the implementation:
 
 # Run all tests
 
-pytest tests/test_simple_pomdp.py
+python -m pytest code/tests/test_simple_pomdp.py
 
 # Run specific test categories
 
-pytest tests/test_simple_pomdp.py -k "test_belief"  # Belief-related tests
+python -m pytest code/tests/test_simple_pomdp.py -k "test_belief"  # Belief-related tests
 
-pytest tests/test_simple_pomdp.py -k "test_visualization"  # Visualization tests
+python -m pytest code/tests/test_simple_pomdp.py -k "test_visualization"  # Visualization tests
 
-pytest tests/test_simple_pomdp.py -k "test_edge"  # Edge case tests
+python -m pytest code/tests/test_simple_pomdp.py -k "test_edge"  # Edge case tests
 
 # Run with coverage report
 
-pytest tests/test_simple_pomdp.py --cov=Things.SimplePOMDP --cov-report=html
+python -m pytest code/tests/test_simple_pomdp.py --cov=Things.Simple_POMDP --cov-report=html
 
 ```
 
@@ -537,4 +537,3 @@ When contributing to this implementation:
 - PyYAML: Configuration file parsing
 
 - pytest: Testing framework
-

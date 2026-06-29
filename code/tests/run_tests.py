@@ -3,19 +3,21 @@
 Test runner with detailed reporting.
 """
 
-import pytest
-import sys
-from pathlib import Path
-import time
+import io
 import json
-from typing import Dict, List
+import sys
+import time
+from pathlib import Path
+
+import pytest
+
 
 class TestRunner:
     """Manages test execution and reporting."""
     
     def __init__(self, test_dir: Path):
         self.test_dir = test_dir
-        self.results: Dict = {}
+        self.results: dict = {}
         self.start_time = 0.0
         self.end_time = 0.0
     
@@ -32,14 +34,14 @@ class TestRunner:
             '--tb=short',
             '--cov=src',
             '--cov-report=term-missing',
-            '--junit-xml=test-results.xml'
+            f'--junit-xml={self.test_dir / "test-results.xml"}'
         ])
         
         self.end_time = time.time()
         
         return exit_code == 0
     
-    def generate_report(self) -> Dict:
+    def generate_report(self, success: bool) -> dict:
         """Generate detailed test report."""
         duration = self.end_time - self.start_time
         
@@ -48,30 +50,42 @@ class TestRunner:
             'duration': f"{duration:.2f}s",
             'test_files': self._collect_test_files(),
             'coverage': self._parse_coverage(),
-            'status': 'PASSED' if self.run_tests() else 'FAILED'
+            'status': 'PASSED' if success else 'FAILED'
         }
         
         return report
     
-    def _collect_test_files(self) -> List[str]:
+    def _collect_test_files(self) -> list[str]:
         """Collect all test files."""
         return [
             str(f.relative_to(self.test_dir))
-            for f in self.test_dir.glob('test_*.py')
+            for f in sorted(self.test_dir.rglob('test_*.py'))
         ]
     
-    def _parse_coverage(self) -> Dict:
+    def _parse_coverage(self) -> dict:
         """Parse coverage data if available."""
         try:
-            with open('.coverage', 'r') as f:
-                return json.load(f)
-        except:
+            from coverage import Coverage
+
+            coverage_path = Path('.coverage')
+            if not coverage_path.exists():
+                return {}
+            coverage = Coverage(data_file=str(coverage_path))
+            coverage.load()
+            stream = io.StringIO()
+            total = coverage.report(file=stream, show_missing=False)
+            return {
+                'total_percent': round(total, 2),
+                'summary': stream.getvalue().strip().splitlines()[-1]
+            }
+        except Exception:
             return {}
     
-    def save_report(self, report: Dict, output_file: Path):
+    def save_report(self, report: dict, output_file: Path):
         """Save test report to file."""
         with open(output_file, 'w') as f:
             json.dump(report, f, indent=2)
+            f.write('\n')
         print(f"\nTest report saved to: {output_file}")
 
 def main():
@@ -81,7 +95,7 @@ def main():
     runner = TestRunner(test_dir)
     success = runner.run_tests()
     
-    report = runner.generate_report()
+    report = runner.generate_report(success)
     runner.save_report(report, test_dir / 'test_report.json')
     
     print("\n=== Test Summary ===")
@@ -92,4 +106,4 @@ def main():
     return 0 if success else 1
 
 if __name__ == '__main__':
-    sys.exit(main()) 
+    sys.exit(main())

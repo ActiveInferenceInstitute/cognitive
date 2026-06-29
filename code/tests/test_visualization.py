@@ -2,10 +2,11 @@
 Tests for visualization components.
 """
 
-import pytest
-import numpy as np
-from src.visualization.matrix_plots import MatrixPlotter, StateSpacePlotter, NetworkPlotter
 import matplotlib.pyplot as plt
+import numpy as np
+import pytest
+from src.visualization.matrix_plots import MatrixPlotter, NetworkPlotter, StateSpacePlotter
+
 
 @pytest.fixture
 def style_config():

@@ -8,15 +8,35 @@ from .dispatcher import (
     ActiveInferenceFactory,
     InferenceConfig,
     InferenceMethod,
-    PolicyType
+    PolicyType,
+)
+from .homeostatic import (
+    AdaptiveControl,
+    ControlMode,
+    HomeostaticControl,
+    HomeostaticFactory,
+    HomeostaticInference,
+    HomestaticControl,
+    ObservationModel,
+    StateSpace,
+    TransitionModel,
 )
 
 __all__ = [
-    'ActiveInferenceModel',
-    'ModelState',
-    'ActiveInferenceDispatcher',
-    'ActiveInferenceFactory',
-    'InferenceConfig',
-    'InferenceMethod',
-    'PolicyType'
-] 
+    "ActiveInferenceModel",
+    "ModelState",
+    "ActiveInferenceDispatcher",
+    "ActiveInferenceFactory",
+    "InferenceConfig",
+    "InferenceMethod",
+    "PolicyType",
+    "AdaptiveControl",
+    "ControlMode",
+    "HomeostaticControl",
+    "HomeostaticFactory",
+    "HomeostaticInference",
+    "HomestaticControl",
+    "ObservationModel",
+    "StateSpace",
+    "TransitionModel",
+]

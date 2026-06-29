@@ -2,14 +2,46 @@
 Active Inference Framework for Cognitive Modeling.
 """
 
-from .models.active_inference.base import ActiveInferenceModel
+from .models.active_inference import (
+    ActiveInferenceDispatcher,
+    ActiveInferenceFactory,
+    ActiveInferenceModel,
+    AdaptiveControl,
+    HomeostaticControl,
+    HomeostaticFactory,
+    HomeostaticInference,
+    InferenceConfig,
+    InferenceMethod,
+    ModelState,
+    PolicyType,
+)
 from .utils.matrix_utils import (
-    ensure_matrix_properties,
     compute_entropy,
-    softmax,
+    ensure_matrix_properties,
+    expected_free_energy,
     kl_divergence,
-    expected_free_energy
+    softmax,
 )
 from .visualization.matrix_plots import MatrixPlotter
 
-__version__ = '0.1.0' 
+__version__ = "0.1.0"
+
+__all__ = [
+    "ActiveInferenceDispatcher",
+    "ActiveInferenceFactory",
+    "ActiveInferenceModel",
+    "AdaptiveControl",
+    "HomeostaticControl",
+    "HomeostaticFactory",
+    "HomeostaticInference",
+    "InferenceConfig",
+    "InferenceMethod",
+    "MatrixPlotter",
+    "ModelState",
+    "PolicyType",
+    "compute_entropy",
+    "ensure_matrix_properties",
+    "expected_free_energy",
+    "kl_divergence",
+    "softmax",
+]

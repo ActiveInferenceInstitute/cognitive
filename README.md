@@ -96,7 +96,7 @@ cd code/Things/Generic_Thing
 pip install -r requirements.txt
 
 # Run basic tests
-python -m pytest code/tests/
+python -m pytest
 ```
 
 ### First Steps

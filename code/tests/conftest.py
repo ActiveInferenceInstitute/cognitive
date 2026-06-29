@@ -2,42 +2,21 @@
 Pytest configuration and shared fixtures.
 """
 
-import pytest
-import numpy as np
-from pathlib import Path
 import tempfile
-import yaml
-import shutil
-import os
+from pathlib import Path
+
 import matplotlib
+import numpy as np
+import pytest
+
 matplotlib.use('Agg')  # Use non-interactive backend
 
 @pytest.fixture(scope="session")
-def output_dir():
+def output_dir(tmp_path_factory):
     """Provide dedicated output directory for test artifacts."""
-    output_path = Path("Output").absolute()
-    # Create directory if it doesn't exist
+    output_path = tmp_path_factory.mktemp("visualization_output")
     output_path.mkdir(parents=True, exist_ok=True)
-    print(f"\nTest outputs will be saved to: {output_path}")
-    
-    # Clean previous test outputs
-    for file in output_path.glob("*"):
-        if file.is_file():
-            print(f"Cleaning up previous test file: {file}")
-            file.unlink()
-    
     yield output_path
-    
-    # Report saved files after tests complete
-    saved_files = list(output_path.glob("*"))
-    if saved_files:
-        print("\nFiles generated during testing:")
-        for file in saved_files:
-            print(f"  - {file.absolute()}")
-            print(f"    Size: {file.stat().st_size} bytes")
-            print(f"    Type: {file.suffix[1:] if file.suffix else 'unknown'}")
-    else:
-        print("\nNo files were generated during testing.")
 
 @pytest.fixture
 def temp_dir():
@@ -109,4 +88,4 @@ def sample_matrix_data(tmp_path):
         [0.1, 0.1, 0.8]
     ])
     np.save(data_file, matrix)
-    return data_file 
+    return data_file

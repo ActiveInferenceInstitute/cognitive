@@ -147,13 +147,13 @@ The test suite is organized into:
 #### Basic Test Execution
 ```bash
 # Run all tests
-pytest tests/
+python -m pytest
 
 # Run specific test file
-pytest tests/test_matrix_ops.py
+python -m pytest code/tests/test_matrix_ops.py
 
 # Run with coverage
-pytest tests/ --cov=src --cov-report=html
+python -m pytest --cov=src --cov-report=html
 ```
 
 #### Test Reporting
@@ -189,4 +189,3 @@ pytest tests/ --cov=src --cov-report=html
 ---
 
 > **Test-Driven Development**: Tests are written before implementation, ensuring code quality and reliability.
-

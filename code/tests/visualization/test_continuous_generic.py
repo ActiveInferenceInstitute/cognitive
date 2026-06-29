@@ -1,11 +1,11 @@
 """Comprehensive visualization tests for continuous-time active inference."""
 
-import pytest
-import numpy as np
-import matplotlib.pyplot as plt
-from pathlib import Path
-import sys
 import os
+import sys
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pytest
 
 # Add the parent directory to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
@@ -13,14 +13,17 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 from Things.Continuous_Generic.continuous_generic import ContinuousActiveInference
 from Things.Continuous_Generic.visualization import ContinuousVisualizer
 
-# Test output directory
-TEST_OUTPUT_DIR = Path("Output/tests/visualization")
-TEST_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 @pytest.fixture
-def visualizer():
+def test_output_dir(tmp_path):
+    output_dir = tmp_path / "visualization"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    return output_dir
+
+@pytest.fixture
+def visualizer(test_output_dir):
     """Create test visualizer."""
-    return ContinuousVisualizer(TEST_OUTPUT_DIR)
+    return ContinuousVisualizer(test_output_dir)
 
 @pytest.fixture
 def agent():
@@ -69,7 +72,7 @@ def generate_oscillatory_data(agent, n_steps=1000):
 class TestBasicVisualization:
     """Test basic visualization capabilities."""
     
-    def test_belief_evolution(self, agent, visualizer):
+    def test_belief_evolution(self, agent, visualizer, test_output_dir):
         """Test belief evolution visualization."""
         history = generate_oscillatory_data(agent)
         
@@ -77,7 +80,7 @@ class TestBasicVisualization:
         visualizer.plot_belief_evolution(
             history['belief_means'],
             history['belief_precisions'],
-            TEST_OUTPUT_DIR / 'belief_evolution.png'
+            test_output_dir / 'belief_evolution.png'
         )
         
         # Enhanced belief evolution with uncertainty
@@ -96,14 +99,14 @@ class TestBasicVisualization:
         plt.ylabel('State Value')
         plt.legend()
         plt.grid(True)
-        plt.savefig(TEST_OUTPUT_DIR / 'belief_evolution_with_uncertainty.png')
+        plt.savefig(test_output_dir / 'belief_evolution_with_uncertainty.png')
         plt.close()
 
 @pytest.mark.visualization
 class TestPhaseSpaceVisualization:
     """Test phase space visualization capabilities."""
     
-    def test_phase_space_plots(self, agent, visualizer):
+    def test_phase_space_plots(self, agent, visualizer, test_output_dir):
         """Test phase space visualization."""
         history = generate_oscillatory_data(agent)
         
@@ -128,7 +131,7 @@ class TestPhaseSpaceVisualization:
         plt.ylabel('Velocity')
         plt.legend()
         plt.grid(True)
-        plt.savefig(TEST_OUTPUT_DIR / 'phase_space_with_vectors.png')
+        plt.savefig(test_output_dir / 'phase_space_with_vectors.png')
         plt.close()
         
         # Energy contours in phase space
@@ -147,14 +150,14 @@ class TestPhaseSpaceVisualization:
         plt.ylabel('Velocity')
         plt.legend()
         plt.grid(True)
-        plt.savefig(TEST_OUTPUT_DIR / 'phase_space_energy.png')
+        plt.savefig(test_output_dir / 'phase_space_energy.png')
         plt.close()
 
 @pytest.mark.visualization
 class TestEnergyVisualization:
     """Test energy-related visualization capabilities."""
     
-    def test_energy_plots(self, agent, visualizer):
+    def test_energy_plots(self, agent, visualizer, test_output_dir):
         """Test energy visualization."""
         history = generate_oscillatory_data(agent)
         means = np.array([b[:,0] for b in history['belief_means']])
@@ -176,7 +179,7 @@ class TestEnergyVisualization:
         plt.ylabel('Energy')
         plt.legend()
         plt.grid(True)
-        plt.savefig(TEST_OUTPUT_DIR / 'energy_components.png')
+        plt.savefig(test_output_dir / 'energy_components.png')
         plt.close()
         
         # Energy ratio plot
@@ -189,14 +192,14 @@ class TestEnergyVisualization:
         plt.ylabel('KE/PE Ratio')
         plt.legend()
         plt.grid(True)
-        plt.savefig(TEST_OUTPUT_DIR / 'energy_ratio.png')
+        plt.savefig(test_output_dir / 'energy_ratio.png')
         plt.close()
 
 @pytest.mark.visualization
 class TestGeneralizedCoordinates:
     """Test visualization of generalized coordinates relationships."""
     
-    def test_coordinate_relationships(self, agent, visualizer):
+    def test_coordinate_relationships(self, agent, visualizer, test_output_dir):
         """Test generalized coordinates visualization."""
         history = generate_oscillatory_data(agent)
         
@@ -204,13 +207,13 @@ class TestGeneralizedCoordinates:
         visualizer.plot_generalized_coordinates_relationships(
             history['belief_means'],
             np.array(history['time']),
-            TEST_OUTPUT_DIR / 'generalized_coordinates.png'
+            test_output_dir / 'generalized_coordinates.png'
         )
         
         # Create animation
         visualizer.save_animation(
             history,
-            TEST_OUTPUT_DIR / 'belief_animation.gif',
+            test_output_dir / 'belief_animation.gif',
             fps=30
         )
 
@@ -218,7 +221,7 @@ class TestGeneralizedCoordinates:
 class TestFreeEnergyLandscape:
     """Test visualization of free energy landscape."""
     
-    def test_free_energy_landscape(self, agent, visualizer):
+    def test_free_energy_landscape(self, agent, visualizer, test_output_dir):
         """Test free energy landscape visualization."""
         # Generate grid of beliefs
         x = np.linspace(-0.2, 0.2, 50)
@@ -247,14 +250,14 @@ class TestFreeEnergyLandscape:
         plt.ylabel('State 2')
         plt.legend()
         plt.grid(True)
-        plt.savefig(TEST_OUTPUT_DIR / 'free_energy_landscape.png')
+        plt.savefig(test_output_dir / 'free_energy_landscape.png')
         plt.close()
 
 @pytest.mark.visualization
 class TestActionVisualization:
     """Test visualization of action selection."""
     
-    def test_action_plots(self, agent, visualizer):
+    def test_action_plots(self, agent, visualizer, test_output_dir):
         """Test action visualization."""
         history = generate_oscillatory_data(agent)
         actions = np.array(history['actions'])
@@ -270,7 +273,7 @@ class TestActionVisualization:
         plt.ylabel('Action Value')
         plt.legend()
         plt.grid(True)
-        plt.savefig(TEST_OUTPUT_DIR / 'action_evolution.png')
+        plt.savefig(test_output_dir / 'action_evolution.png')
         plt.close()
         
         # Action phase space
@@ -285,21 +288,21 @@ class TestActionVisualization:
             plt.ylabel('Action 2')
             plt.legend()
             plt.grid(True)
-            plt.savefig(TEST_OUTPUT_DIR / 'action_phase_space.png')
+            plt.savefig(test_output_dir / 'action_phase_space.png')
             plt.close()
 
 @pytest.mark.visualization
 class TestSummaryVisualization:
     """Test comprehensive summary visualization."""
     
-    def test_summary_plots(self, agent, visualizer):
+    def test_summary_plots(self, agent, visualizer, test_output_dir):
         """Test summary visualization."""
         history = generate_oscillatory_data(agent)
         
         # Create comprehensive summary plot
         visualizer.create_summary_plot(
             history,
-            TEST_OUTPUT_DIR / 'summary.png'
+            test_output_dir / 'summary.png'
         )
         
         # Create detailed diagnostic plots
@@ -389,5 +392,5 @@ class TestSummaryVisualization:
         plt.grid(True)
         
         plt.tight_layout()
-        plt.savefig(TEST_OUTPUT_DIR / 'detailed_summary.png')
-        plt.close() 
+        plt.savefig(test_output_dir / 'detailed_summary.png')
+        plt.close()
