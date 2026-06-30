@@ -1,0 +1,38 @@
+# AII sidecar — InstituteOS metadata. Schema: instituteos.platform.aii_sidecar
+meta:
+  updated: '2026-06-30'
+repo:
+  name: cognitive
+  slug: cognitive
+  full_name: ActiveInferenceInstitute/cognitive
+  description: 'title: Cognitive Modeling Framework type: overview status: stable
+    created: 2024-01-01 updated: 2026-01-03 tags: semantic_relations: links:'
+institute:
+  category: research-software
+  maturity: released
+  steward: Active Inference Institute
+ecosystem:
+  links:
+    github: https://github.com/ActiveInferenceInstitute/cognitive
+    website: https://www.activeinference.org
+artifacts:
+- path: README.md
+  kind: doc
+  description: Repository overview.
+- path: LICENSE
+  kind: doc
+  description: License.
+provenance:
+  license: MIT
+instituteos:
+  tags:
+  - cognitive
+  - title
+  - modeling
+  - framework
+  - type
+  - python
+capabilities:
+- tested
+- documentation
+- dataset
