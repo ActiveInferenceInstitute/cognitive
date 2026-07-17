@@ -2,7 +2,7 @@
 
 ## Overview
 
-The [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]] represents a comprehensive framework for modeling complex [[knowledge_base/systems/Social-Ecological Systems|social-ecological systems]] through [[knowledge_base/cognitive/free_energy_principle|active inference]]. It implements a [[knowledge_base/cognitive/active_inference/Hierarchical_Models|heterarchical]] nested structure of [[knowledge_base/cognitive/active_inference/Federated_Learning|federated]] [[knowledge_base/mathematics/markov_blankets|Markov Blankets]], enabling multi-scale representation and inference across interconnected [[knowledge_base/cognitive/active_inference/Environmental_States|ecological]], [[knowledge_base/cognitive/active_inference/Climate_States|climatic]], [[knowledge_base/cognitive/active_inference/Social_States|social]], and [[knowledge_base/cognitive/active_inference/Economic_States|economic]] domains.
+The [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]] represents a comprehensive framework for modeling complex [[knowledge_base/systems/Social-Ecological Systems|social-ecological systems]] through [[knowledge_base/cognitive/free_energy_principle|active inference]]. It implements a [[knowledge_base/cognitive/active_inference/Hierarchical_Models|heterarchical]] nested structure of federated [[knowledge_base/mathematics/markov_blankets|Markov Blankets]], enabling multi-scale representation and inference across interconnected ecological, climatic, social, and economic domains.
 
 ## Theoretical Framework
 
@@ -10,7 +10,7 @@ The [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]] r
 
 The state space is organized as a heterarchical network of [[knowledge_base/mathematics/markov_blankets|Markov Blankets]], allowing for:
 
-- [[knowledge_base/cognitive/active_inference/Information_Flow|Multi-directional information flow]] between scales
+- Multi-directional information flow between scales
 
 - [[knowledge_base/systems/network_theory|Non-hierarchical interactions]] between domains
 
@@ -22,25 +22,25 @@ The state space is organized as a heterarchical network of [[knowledge_base/math
 
 Each component is encapsulated within nested [[knowledge_base/mathematics/markov_blankets|Markov Blankets]] that define:
 
-- [[knowledge_base/cognitive/active_inference/Internal_States|Internal states]] (intrinsic variables)
+- Internal states (intrinsic variables)
 
-- [[knowledge_base/cognitive/active_inference/External_States|External states]] (environmental conditions)
+- External states (environmental conditions)
 
-- [[knowledge_base/cognitive/active_inference/Active_States|Active states]] (intervention capabilities)
+- Active states (intervention capabilities)
 
-- [[knowledge_base/cognitive/active_inference/Sensory_States|Sensory states]] (observation channels)
+- Sensory states (observation channels)
 
-### [[knowledge_base/cognitive/active_inference/Federated_Learning|Federation Principles]]
+### Federation Principles
 
-The system implements [[knowledge_base/cognitive/active_inference/Federated_Learning|federated learning]] and inference through:
+The system implements federated learning and inference through:
 
-- [[knowledge_base/cognitive/active_inference/Scale_Specific_Representations|Scale-specific state representations]]
+- Scale-specific state representations
 
-- [[knowledge_base/cognitive/active_inference/Cross_Scale_Coupling|Cross-scale coupling mechanisms]]
+- Cross-scale coupling mechanisms
 
-- [[knowledge_base/cognitive/active_inference/Distributed_Systems|Distributed update rules]]
+- Distributed update rules
 
-- [[knowledge_base/cognitive/active_inference/Collective_Intelligence|Collective intelligence emergence]]
+- Collective intelligence emergence
 
 ## Core Components
 
@@ -650,7 +650,7 @@ class ActiveInferenceLearner:
 
 - [[mathematics/markov_blankets|Markov Blankets]]
 
-- [[knowledge_base/systems/hierarchical_systems|Hierarchical Systems]]
+- Hierarchical Systems
 
 - [[mathematics/variational_inference|Variational Inference]]
 

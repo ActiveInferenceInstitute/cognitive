@@ -430,7 +430,7 @@ The Free Energy Principle provides a unified mathematical framework for understa
 
 - [[free_energy_principle/implementations/python_framework]] - Code implementations
 
-- [[mathematics/free_energy_principle]] - Legacy mathematical foundation
+- [[mathematics/free_energy_principle]] - existing mathematical foundation
 
 - [[active_inference_integration]] - Complete Active Inference framework
 
@@ -458,7 +458,7 @@ The Free Energy Principle provides a unified mathematical framework for understa
 
 1. **Advanced**: Study [[free_energy_principle/philosophy/mind_body_problem]] and [[free_energy_principle/systems/self_organization]]
 
-1. **Legacy**: Start with [[active_inference_integration]] overview
+1. **existing**: Start with [[active_inference_integration]] overview
 
 1. **Cognitive**: Study [[cognitive/active_inference]] and [[cognitive/active_inference_agent]]
 

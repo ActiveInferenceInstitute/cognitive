@@ -428,12 +428,12 @@ agent:
 
 ### Prerequisites
 
-- [[docs/research/active_inference_foundations|Active Inference Foundations]]
+- Active Inference Foundations
 
-- [[docs/research/collective_behavior_basics|Collective Behavior Basics]]
+- Collective Behavior Basics
 
 ### Follow-up Work
 
-- [[docs/research/hierarchical_swarms|Hierarchical Swarm Behavior]]
+- Hierarchical Swarm Behavior
 
-- [[docs/research/multi_colony_systems|Multi-Colony Systems]]
+- Multi-Colony Systems

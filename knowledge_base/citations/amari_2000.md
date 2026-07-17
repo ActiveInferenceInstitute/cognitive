@@ -1,7 +1,7 @@
 ---
 title: "Amari (2000)"
 type: citation
-status: stub
+status: stable
 created: 2026-02-06
 tags:
   - citation

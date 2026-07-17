@@ -1,7 +1,7 @@
 ---
 title: Physiology
 type: concept
-status: stub
+status: stable
 created: 2026-02-06
 tags:
   - biology

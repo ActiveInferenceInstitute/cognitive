@@ -2,7 +2,7 @@
 
 # Paths
 paths:
-  templates: templates/node_templates
+  templates: docs/templates
   knowledge_base: knowledge_base
   data: data
   models: code/tools/src/models
@@ -40,6 +40,7 @@ templates:
 # Visualization
 visualization:
   network_layout: "force_directed"
+  seed: 0
   node_size_factor: 1.0
   edge_width_factor: 1.0
   color_scheme: "default"

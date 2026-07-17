@@ -188,5 +188,5 @@ This directory contains practical examples, tutorials, and sample implementation
 
 ## Contributing
 
-See [[docs/templates/example_template|Example Template]] for creating new examples.
+See Example Template for creating new examples.
 

@@ -1,15 +1,7 @@
 ---
-title: Gradient Descent
-type: concept
+title: "Gradient Descent"
+type: "concept"
 status: stable
-created: 2024-02-12
-updated: 2026-02-07
-tags: [optimization, gradient, learning, numerical_methods]
-semantic_relations:
-  - type: implements
-    links: [[knowledge_base/mathematics/optimization_theory]]
-  - type: relates
-    links: [[knowledge_base/mathematics/natural_gradients]], [[knowledge_base/mathematics/numerical_methods]], [[convergence_analysis]]]
 ---
 
 # Gradient Descent

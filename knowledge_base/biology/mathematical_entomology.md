@@ -112,65 +112,8 @@ N_t^{adult}
 
 ### 2. Spatial Distribution Models
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class SpatialDistribution:
-
-    def __init__(self):
-
-        self.grid = np.zeros((100, 100))
-
-        self.parameters = {
-
-            'diffusion_rate': 0.1,
-
-            'growth_rate': 0.05,
-
-            'carrying_capacity': 100
-
-        }
-
-    def simulate_dispersal(self,
-
-                         time_steps: int,
-
-                         initial_population: np.ndarray) -> np.ndarray:
-
-        """Simulate population dispersal using reaction-diffusion"""
-
-        current_state = initial_population.copy()
-
-        D = self.parameters['diffusion_rate']
-
-        r = self.parameters['growth_rate']
-
-        K = self.parameters['carrying_capacity']
-
-        for _ in range(time_steps):
-
-            # Diffusion term
-
-            laplacian = np.roll(current_state, 1, axis=0) + \
-
-                       np.roll(current_state, -1, axis=0) + \
-
-                       np.roll(current_state, 1, axis=1) + \
-
-                       np.roll(current_state, -1, axis=1) - \
-
-                       4 * current_state
-
-            # Growth term
-
-            growth = r * current_state * (1 - current_state/K)
-
-            # Update state
-
-            current_state += D * laplacian + growth
-
-        return current_state
-
-```
 
 ### 3. Behavioral Mathematics
 

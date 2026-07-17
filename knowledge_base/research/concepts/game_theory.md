@@ -1,13 +1,7 @@
 ---
-title: Game Theory
-type: concept
+title: "Game Theory"
+type: "concept"
 status: stable
-created: 2024-02-12
-updated: 2026-02-07
-tags: [game_theory, multi_agent, strategic_interaction, active_inference, social]
-semantic_relations:
-  - type: relates
-    links: [[knowledge_base/mathematics/game_theory]], [[knowledge_base/cognitive/multi_agent_active_inference]], [[knowledge_base/cognitive/social_cognition]], [[knowledge_base/cognitive/collective_behavior]]]
 ---
 
 # Game Theory

@@ -396,9 +396,9 @@ Attention patterns define structured approaches for implementing attention mecha
 
 ## References
 
-- [[docs/research/papers/key_papers|Attention Papers]]
+- Attention Papers
 
-- [[knowledge_base/reference_implementations]]
+- knowledge_base/reference_implementations
 
 - [[docs/implementation/implementation_guides]]
 

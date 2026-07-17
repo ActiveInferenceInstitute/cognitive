@@ -42,7 +42,7 @@ semantic_relations:
 
 ### Mathematical Framework
 
-- [[knowledge_base/mathematics/relevant_math_concept|Mathematical Foundation]]
+- Mathematical Foundation
 
 - Key equations and formulations
 

@@ -642,7 +642,7 @@ if __name__ == "__main__":
 
    - Flag implementation gaps with `impl-gap` tool
 
-   - Create implementation TODOs for unimplemented concepts
+   - Create implementation notes for unimplemented concepts
 
 1. **Use consistent linking patterns**
 

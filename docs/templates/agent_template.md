@@ -4,9 +4,9 @@ type: agent
 
 id: "{{agent_id}}"
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [agent, cognitive-model, ai-component]
 
@@ -76,9 +76,9 @@ graph TD
 
 - Related beliefs:
 
-  - [[belief/belief_1|Belief 1]]
+  - Belief 1
 
-  - [[belief/belief_2|Belief 2]]
+  - Belief 2
 
 ### Goals
 
@@ -92,9 +92,9 @@ graph TD
 
 - Related goals:
 
-  - [[goal/goal_1|Goal 1]]
+  - Goal 1
 
-  - [[goal/goal_2|Goal 2]]
+  - Goal 2
 
 ### Actions
 
@@ -108,9 +108,9 @@ graph TD
 
 - Related actions:
 
-  - [[action/action_1|Action 1]]
+  - Action 1
 
-  - [[action/action_2|Action 2]]
+  - Action 2
 
 ### Observations
 
@@ -124,9 +124,9 @@ graph TD
 
 - Related observations:
 
-  - [[observation/observation_1|Observation 1]]
+  - Observation 1
 
-  - [[observation/observation_2|Observation 2]]
+  - Observation 2
 
 ## State
 
@@ -222,9 +222,9 @@ sequenceDiagram
 
 - External dependencies
 
-- [[dependency/dependency_1|Dependency 1]]
+- Dependency 1
 
-- [[dependency/dependency_2|Dependency 2]]
+- Dependency 2
 
 ### Interactions
 
@@ -232,9 +232,9 @@ sequenceDiagram
 
 - Environment interactions
 
-- [[agent/agent_1|Agent 1]]
+- Agent 1
 
-- [[environment/environment_1|Environment 1]]
+- Environment 1
 
 ## Collaboration
 
@@ -266,9 +266,9 @@ graph LR
 
 - Information sharing policies
 
-- [[protocol/protocol_1|Protocol 1]]
+- Protocol 1
 
-- [[protocol/protocol_2|Protocol 2]]
+- Protocol 2
 
 ### Role in Collective
 
@@ -316,35 +316,8 @@ belief_update_rate: 0.2
 
 ### Code Reference
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class {{agent_class_name}}(Agent):
-
-    def __init__(self, config):
-
-        super().__init__(config)
-
-        self.beliefs = initialize_beliefs(config.initial_beliefs)
-
-        self.goals = initialize_goals(config.goals)
-
-        self.action_space = ActionSpace(config.actions)
-
-        self.observation_model = ObservationModel(config.observation_space)
-
-    def update_beliefs(self, observation):
-
-        # Update beliefs based on new observation
-
-        pass
-
-    def select_action(self):
-
-        # Select action based on current beliefs and goals
-
-        pass
-
-```
 
 ### Integration Points
 
@@ -440,13 +413,13 @@ deployment:
 
 - External resources
 
-- [[reference/reference_1|Reference 1]]
+- Reference 1
 
-- [[reference/reference_2|Reference 2]]
+- Reference 2
 
 ## Related Components
 
-- [[component/component_1|Component 1]]
+- Component 1
 
-- [[component/component_2|Component 2]]
+- Component 2
 

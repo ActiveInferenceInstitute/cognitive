@@ -6,9 +6,9 @@ id: C_matrix_001
 
 matrix_type: preference
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [matrix, preference, active-inference]
 
@@ -44,19 +44,8 @@ shape_constraints:
 
 ## Mathematical Form
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-# Preference encoding
-
-C[o,τ] = ln P(o_τ)  # Log-probability of desired observation o at time τ
-
-# Properties
-
-C ∈ ℝ              # Real-valued preferences
-
-exp(C) ∈ [0,1]     # Corresponding probabilities
-
-```
 
 ## Data Structure
 

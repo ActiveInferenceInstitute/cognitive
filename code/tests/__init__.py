@@ -1,1 +1,1 @@
-"""Tests package for Generic Thing.""" 
+"""Tests package for Generic Thing."""

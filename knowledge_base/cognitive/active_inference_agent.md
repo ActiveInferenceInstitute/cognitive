@@ -859,5 +859,5 @@ class ROSActiveInferenceAgent(ActiveInferenceAgent):
 
 - [[knowledge_base/mathematics/variational_methods|Variational Methods]]
 
-- [[docs/examples/active_inference_basic|Basic Example]]
+- Basic Example
 

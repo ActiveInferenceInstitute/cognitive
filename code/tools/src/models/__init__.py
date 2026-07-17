@@ -4,4 +4,4 @@ Models package containing matrix operations and Active Inference model implement
 
 """
 Model implementations for Active Inference.
-""" 
+"""

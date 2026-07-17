@@ -2,7 +2,7 @@
 
 ## Core Abstractions
 
-### [[knowledge_base/cognitive/active_inference/State_Space|State Space Abstraction]]
+### State Space Abstraction
 
 The state space implementation follows the [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]] and incorporates [[knowledge_base/mathematics/markov_blankets|Markov Blankets]] at multiple scales.
 
@@ -30,7 +30,7 @@ class StateSpace:
 
 ### [[knowledge_base/BioFirm/bioregional_state_space]]
 
-Implements a [[knowledge_base/cognitive/active_inference/Hierarchical_State_Space|hierarchical state space]] for bioregional systems.
+Implements a hierarchical state space for bioregional systems.
 
 ```python
 
@@ -52,7 +52,7 @@ class BioregionalState:
 
 ### [[knowledge_base/cognitive/observation_model|Observation Model]]
 
-Implements the [[knowledge_base/cognitive/active_inference/Likelihood_Mapping|likelihood mapping]] between hidden states and observations.
+Implements the likelihood mapping between hidden states and observations.
 
 ```python
 
@@ -76,7 +76,7 @@ class ObservationModel:
 
 ### [[knowledge_base/cognitive/transition_model|Transition Model]]
 
-Implements the [[knowledge_base/cognitive/active_inference/State_Transitions|state transition dynamics]].
+Implements the state transition dynamics.
 
 ```python
 
@@ -106,11 +106,11 @@ class TransitionModel:
 
 ```
 
-## [[knowledge_base/cognitive/active_inference/Homeostatic_Control|Homeostatic Control Framework]]
+## Homeostatic Control Framework
 
 ### 1. [[knowledge_base/cognitive/system_definition|System Definition]]
 
-Defines the [[knowledge_base/cognitive/active_inference/System_Configuration|system configuration]] and [[knowledge_base/cognitive/active_inference/Control_Parameters|control parameters]].
+Defines the system configuration and control parameters.
 
 ```yaml
 
@@ -206,7 +206,7 @@ inference:
 
 ### 3. [[knowledge_base/cognitive/matrix_specifications|Matrix Specifications]]
 
-Defines the [[knowledge_base/cognitive/active_inference/Generative_Model_Matrices|generative model matrices]].
+Defines the generative model matrices.
 
 ```yaml
 
@@ -262,11 +262,11 @@ matrices:
 
 ```
 
-## [[knowledge_base/cognitive/active_inference/Analysis_Framework|Analysis Framework]]
+## Analysis Framework
 
 ### 1. [[knowledge_base/cognitive/performance_metrics|Performance Metrics]]
 
-Implements [[knowledge_base/cognitive/active_inference/Performance_Evaluation|performance evaluation]] metrics.
+Implements performance evaluation metrics.
 
 ```python
 
@@ -288,7 +288,7 @@ class BioregionalMetrics:
 
 ```
 
-### 2. [[knowledge_base/cognitive/active_inference/Visualization|Visualization Suite]]
+### 2. Visualization Suite
 
 Provides [[knowledge_base/cognitive/visualization_tools|visualization tools]] for analysis.
 
@@ -346,9 +346,9 @@ class BioregionalVisualization:
 
 ```
 
-## [[knowledge_base/cognitive/active_inference/Extension_Points|Extension Points]]
+## Extension Points
 
-### 1. [[knowledge_base/cognitive/active_inference/Stewardship_Modes|Stewardship Modes]]
+### 1. Stewardship Modes
 
 ```python
 

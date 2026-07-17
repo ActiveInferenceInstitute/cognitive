@@ -318,10 +318,10 @@ See [[factor_graphs|Factor Graphs]] for:
 ### Implementation Examples
 - [[active_inference_examples|Active Inference Examples]]
 - [[docs/implementation/rxinfer/docs/src/contributing/examples|RxInfer Examples]]
-- [[docs/tools/src/models|Model Implementations]]
+- Model Implementations
 
 ### Theoretical Integration
-- [[docs/knowledge_base/mathematics|Mathematical Foundations]]
+- Mathematical Foundations
 - [[docs/implementation/implementation_guides|Implementation Guides]]
 - [[free_energy_message_passing_active_inference|Free Energy Message Passing]]
 

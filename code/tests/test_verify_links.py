@@ -26,11 +26,13 @@ def test_existing_wiki_targets_resolve_by_path_directory_and_alias(tmp_path):
     write_markdown(tmp_path / "folder" / "index.md", "# Folder")
     write_markdown(
         tmp_path / "index.md",
-        "\n".join([
-            "[[docs/README|Documentation]]",
-            "[[knowledge_base/concept#Heading]]",
-            "[[folder]]",
-        ]),
+        "\n".join(
+            [
+                "[[docs/README|Documentation]]",
+                "[[knowledge_base/concept#Heading]]",
+                "[[folder]]",
+            ]
+        ),
     )
 
     report = verify_link_report(tmp_path)
@@ -44,11 +46,13 @@ def test_missing_explicit_markdown_file_is_broken(tmp_path):
 
     broken = verify_links(tmp_path)
 
-    assert broken == [{
-        "source": "index.md",
-        "link": "missing.md",
-        "target": "missing.md",
-    }]
+    assert broken == [
+        {
+            "source": "index.md",
+            "link": "missing.md",
+            "target": "missing.md",
+        }
+    ]
 
 
 def test_missing_explicit_non_markdown_file_is_broken(tmp_path):
@@ -57,11 +61,13 @@ def test_missing_explicit_non_markdown_file_is_broken(tmp_path):
 
     broken = verify_links(tmp_path)
 
-    assert broken == [{
-        "source": "index.md",
-        "link": "simulation.py",
-        "target": "simulation.py",
-    }]
+    assert broken == [
+        {
+            "source": "index.md",
+            "link": "simulation.py",
+            "target": "simulation.py",
+        }
+    ]
 
 
 def test_generated_output_directories_are_not_scanned(tmp_path):
@@ -82,11 +88,13 @@ def test_strict_wiki_mode_reports_unresolved_concepts(tmp_path):
 
     report = verify_link_report(tmp_path, strict_wiki_links=True)
 
-    assert report.broken_links == [{
-        "source": "index.md",
-        "link": "systems_engineering",
-        "target": "systems_engineering",
-    }]
+    assert report.broken_links == [
+        {
+            "source": "index.md",
+            "link": "systems_engineering",
+            "target": "systems_engineering",
+        }
+    ]
     assert report.skipped_concept_links == 0
 
 

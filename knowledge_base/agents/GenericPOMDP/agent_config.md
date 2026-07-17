@@ -4,9 +4,9 @@ type: agent_config
 
 id: generic_pomdp_001
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [agent, pomdp, active-inference]
 

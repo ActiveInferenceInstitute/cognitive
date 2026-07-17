@@ -36,7 +36,6 @@ The BioFirm knowledge base presents Biological Firm Theory as a synthesis of Act
 - [[active_inference_connections]] - Active Inference applications to BioFirm
 
 #### Schema and Structure
-- [[biofirm_schema]] - BioFirm conceptual schema and relationships
 
 ### 🌍 Ecological and Socioeconomic Integration
 
@@ -62,7 +61,6 @@ The BioFirm knowledge base presents Biological Firm Theory as a synthesis of Act
 ### For Cognitive Scientists
 1. Focus on [[biofirm_active_inference_connections]] for Active Inference applications
 2. Review [[active_inference_connections]] for theoretical integration
-3. Study [[biofirm_schema]] for conceptual framework
 
 ## 🔗 Cross-References
 

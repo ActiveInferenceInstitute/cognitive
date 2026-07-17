@@ -374,7 +374,7 @@ class PolicySelection:
 
 - [[../mathematics/information_theory|Information Theory]]
 
-- [[../mathematics/optimization|Optimization Methods]]
+- Optimization Methods
 
 - [[predictive_processing|Predictive Processing]]
 
@@ -396,7 +396,7 @@ class PolicySelection:
 
    - [[docs/implementation/implementation_guides|Implementation Guides]]
 
-   - [[docs/api/reference|API Reference]]
+   - API Reference
 
    - [[docs/examples/index|Example Implementations]]
 

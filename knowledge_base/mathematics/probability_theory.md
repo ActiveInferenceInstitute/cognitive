@@ -1,43 +1,7 @@
 ---
-title: Probability Theory
-type: mathematical_concept
-id: probability_theory_001
-created: 2024-02-12
-modified: 2025-12-18
-tags: [mathematics, probability, foundations, statistics, measure_theory, stochastic_processes, information_theory, mathematical_analysis, functional_analysis, dynamical_systems, optimization_theory]
-aliases: [probability, probabilistic_theory]
-semantic_relations:
-  - type: extends
-    links: [[measure_theory]], [[integration_theory]], [[functional_analysis]]
-  - type: foundation_for
-    links:
-
-      - [[statistics]]
-
-      - [[information_theory]]
-
-      - [[stochastic_processes]]
-
-      - [[machine_learning]]
-
-      - [[quantum_mechanics]]
-
-  - type: relates
-
-    links:
-
-      - [[bayesian_inference]]
-
-      - [[statistical_learning]]
-
-      - [[random_variables]]
-
-      - [[probability_distributions]]
-
-      - [[martingale_theory]]
-
-      - [[ergodic_theory]]
-
+title: "Probability Theory"
+type: "mathematical_concept"
+status: stable
 ---
 
 # Probability Theory
@@ -826,87 +790,8 @@ class LevyProcess:
 
 ### Diffusion Processes
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class DiffusionProcess:
-
-    def __init__(self,
-
-                 drift: Callable,
-
-                 diffusion: Callable):
-
-        """Initialize diffusion process.
-
-        Args:
-
-            drift: Drift function μ(x,t)
-
-            diffusion: Diffusion function σ(x,t)
-
-        """
-
-        self.mu = drift
-
-        self.sigma = diffusion
-
-    def simulate_path(self,
-
-                     x0: float,
-
-                     n_steps: int,
-
-                     dt: float,
-
-                     scheme: str = 'milstein') -> np.ndarray:
-
-        """Simulate diffusion path.
-
-        Args:
-
-            x0: Initial value
-
-            n_steps: Number of steps
-
-            dt: Time step
-
-            scheme: Integration scheme
-
-        Returns:
-
-            path: Simulated path
-
-        """
-
-        x = np.zeros(n_steps)
-
-        x[0] = x0
-
-        t = np.arange(n_steps) * dt
-
-        for i in range(n_steps-1):
-
-            dW = np.random.normal(0, np.sqrt(dt))
-
-            if scheme == 'euler':
-
-                x[i+1] = x[i] + self.mu(x[i],t[i])*dt + \
-
-                         self.sigma(x[i],t[i])*dW
-
-            elif scheme == 'milstein':
-
-                sigma_prime = grad(self.sigma, 0)
-
-                x[i+1] = x[i] + self.mu(x[i],t[i])*dt + \
-
-                         self.sigma(x[i],t[i])*dW + \
-
-                         0.5*self.sigma(x[i],t[i])*sigma_prime(x[i],t[i])*(dW**2 - dt)
-
-        return x
-
-```
 
 ### Markov Chain Monte Carlo
 
@@ -1670,79 +1555,8 @@ class MonteCarloSampler:
 
 ### Information Theory
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class InformationTheory:
-
-    @staticmethod
-
-    def entropy(p: np.ndarray) -> float:
-
-        """Compute Shannon entropy.
-
-    Args:
-
-        p: Probability distribution
-
-    Returns:
-
-        H: Entropy value
-
-    """
-
-        return -np.sum(p * np.log2(p + 1e-10))
-
-    @staticmethod
-
-    def kl_divergence(p: np.ndarray,
-
-                     q: np.ndarray) -> float:
-
-    """Compute KL divergence.
-
-    Args:
-
-        p: First distribution
-
-        q: Second distribution
-
-    Returns:
-
-        KL: KL divergence
-
-    """
-
-        return np.sum(p * np.log2((p + 1e-10) / (q + 1e-10)))
-
-    @staticmethod
-
-    def mutual_information(joint: np.ndarray) -> float:
-
-        """Compute mutual information.
-
-        Args:
-
-            joint: Joint distribution
-
-        Returns:
-
-            I: Mutual information
-
-        """
-
-        p_x = np.sum(joint, axis=1)
-
-        p_y = np.sum(joint, axis=0)
-
-        H_x = InformationTheory.entropy(p_x)
-
-        H_y = InformationTheory.entropy(p_y)
-
-        H_xy = InformationTheory.entropy(joint.flatten())
-
-        return H_x + H_y - H_xy
-
-```
 
 ### Stochastic Processes
 

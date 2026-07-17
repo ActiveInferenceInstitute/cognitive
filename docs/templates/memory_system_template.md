@@ -4,9 +4,9 @@ type: memory-system
 
 id: "{{memory_id}}"
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [memory, cognitive-model, knowledge-representation]
 
@@ -106,9 +106,9 @@ components:
 
 - Retrieval structures
 
-- [[data_structure/structure_1|Data Structure 1]]
+- Data Structure 1
 
-- [[data_structure/structure_2|Data Structure 2]]
+- Data Structure 2
 
 ## Operations
 
@@ -146,55 +146,8 @@ flowchart LR
 
 ### Implementation
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class {{memory_class_name}}(MemorySystem):
-
-    def __init__(self, config):
-
-        super().__init__(config)
-
-        self.working_memory = WorkingMemory(config.working_memory)
-
-        self.long_term_memory = LongTermMemory(config.long_term_memory)
-
-        self.episodic_memory = EpisodicMemory(config.episodic_memory)
-
-        self.semantic_memory = SemanticMemory(config.semantic_memory)
-
-        self.procedural_memory = ProceduralMemory(config.procedural_memory)
-
-    def encode(self, information, context=None):
-
-        # Encode information into memory
-
-        attention_filtered = self.working_memory.filter(information)
-
-        if self.should_store_long_term(attention_filtered):
-
-            self.long_term_memory.store(attention_filtered, context)
-
-    def retrieve(self, query, context=None):
-
-        # Retrieve information from memory
-
-        working_results = self.working_memory.query(query)
-
-        if not self.is_sufficient(working_results):
-
-            long_term_results = self.long_term_memory.query(query, context)
-
-            return self.integrate_results(working_results, long_term_results)
-
-        return working_results
-
-    def forget(self, pattern, strength=0.5):
-
-        # Implement forgetting mechanism
-
-        pass
-
-```
 
 ### Core Functions
 
@@ -250,9 +203,9 @@ stateDiagram-v2
 
 - Reinforcement mechanisms
 
-- [[dynamic/dynamic_1|Dynamic Process 1]]
+- Dynamic Process 1
 
-- [[dynamic/dynamic_2|Dynamic Process 2]]
+- Dynamic Process 2
 
 ### Attention Mechanisms
 
@@ -476,9 +429,9 @@ api:
 
 - Emotional influence
 
-- [[effect/effect_1|Memory Effect 1]]
+- Memory Effect 1
 
-- [[effect/effect_2|Memory Effect 2]]
+- Memory Effect 2
 
 ### Cognitive Biases
 
@@ -490,9 +443,9 @@ api:
 
 - Other relevant biases
 
-- [[bias/bias_1|Cognitive Bias 1]]
+- Cognitive Bias 1
 
-- [[bias/bias_2|Cognitive Bias 2]]
+- Cognitive Bias 2
 
 ### Learning Integration
 
@@ -590,13 +543,13 @@ storage:
 
 - External resources
 
-- [[reference/reference_1|Reference 1]]
+- Reference 1
 
-- [[reference/reference_2|Reference 2]]
+- Reference 2
 
 ## Related Memory Systems
 
-- [[memory/related_1|Related Memory System 1]]
+- Related Memory System 1
 
-- [[memory/related_2|Related Memory System 2]]
+- Related Memory System 2
 

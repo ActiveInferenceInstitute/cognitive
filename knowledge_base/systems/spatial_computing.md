@@ -48,7 +48,7 @@ semantic_relations:
 
     links:
 
-      - [[knowledge_base/systems/computer_vision|Computer Vision]]
+      - Computer Vision
 
       - [[knowledge_base/systems/human_computer_interaction|Human-Computer Interaction]]
 
@@ -494,7 +494,7 @@ Cross-system compatibility approaches:
 
   - **Cloud Service Integration**: Remote capability incorporation
 
-  - **Legacy System Connectivity**: Existing technology connection
+  - **existing System Connectivity**: Existing technology connection
 
 ## Implementation Domains
 

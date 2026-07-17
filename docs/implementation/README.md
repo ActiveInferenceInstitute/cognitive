@@ -348,33 +348,8 @@ class ComponentIntegrator:
 ### Core RxInfer Architecture
 
 #### Reactive Programming Model
-```python
-# RxInfer reactive programming example
-using RxInfer
+See the canonical package documentation for a complete runnable example.
 
-# Define probabilistic model
-@model function linear_regression_model()
-    # Priors
-    α ~ NormalMeanVariance(0.0, 1.0)
-    β ~ NormalMeanVariance(0.0, 1.0)
-    τ ~ GammaShapeRate(1.0, 1.0)
-
-    # Likelihood
-    for i in 1:length(y)
-        y[i] ~ NormalMeanVariance(α + β * x[i], τ)
-    end
-end
-
-# Create model
-model = linear_regression_model()
-
-# Set up inference
-inference_result = infer(
-    model = model,
-    data = (y = y_data, x = x_data),
-    iterations = 1000
-)
-```
 
 #### Message Passing Implementation
 ```python
@@ -433,27 +408,8 @@ class FactorGraph:
 ### Active Inference in RxInfer
 
 #### Free Energy Minimization
-```python
-# Active Inference implementation in RxInfer
-@model function active_inference_model()
-    # Generative model priors
-    A ~ Dirichlet(ones(D, K))  # Likelihood matrix
-    B ~ Dirichlet(ones(K, K, U))  # Transition matrix
-    C ~ Dirichlet(ones(K, T))  # Preferences
-    D ~ Dirichlet(ones(K))  # Initial state
+See the canonical package documentation for a complete runnable example.
 
-    # Variational posteriors
-    qA ~ Dirichlet(ones(D, K))
-    qB ~ Dirichlet(ones(K, K, U))
-    qC ~ Dirichlet(ones(K, T))
-
-    # Free energy bound
-    F = free_energy_bound(A, B, C, D, observations, actions)
-
-    # Minimize free energy
-    F ~ NormalMeanVariance(0.0, 1.0) where { q = qA * qB * qC }
-end
-```
 
 ## 📊 Performance Optimization
 

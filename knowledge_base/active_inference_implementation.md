@@ -494,14 +494,8 @@ def run_homeostasis_simulation():
 ## 🔧 Implementation Tools and Libraries
 
 ### Core Dependencies
-```python
-# requirements.txt
-jax>=0.4.0
-jaxlib>=0.4.0
-numpy>=1.21.0
-matplotlib>=3.5.0
-scipy>=1.7.0
-```
+See the canonical package documentation for a complete runnable example.
+
 
 ### Utility Functions
 ```python

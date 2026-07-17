@@ -1,0 +1,118 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cognitive-active-inference"
+version = "1.0.0"
+description = "Configurable, validated Active Inference models and knowledge tools"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Active Inference Institute" }]
+dependencies = [
+  "click>=8.1",
+  "jinja2>=3.1",
+  "matplotlib>=3.7",
+  "networkx>=3.0",
+  "numpy>=1.24",
+  "Pillow>=9.5",
+  "plotly>=5.15",
+  "PyYAML>=6.0",
+  "seaborn>=0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+  "coverage>=7.0",
+  "mypy>=1.8",
+  "pytest>=8.0",
+  "pytest-cov>=4.1",
+  "ruff>=0.6",
+  "types-PyYAML>=6.0",
+]
+
+[project.scripts]
+cognitive-create-node = "cognitive.utils.create_node:main"
+cognitive-verify-links = "scripts.verify_links:main"
+cognitive-benchmark = "cognitive.benchmarks:main"
+cognitive-validate-docs = "scripts.validate_docs:main"
+cognitive-build-manuscript = "scripts.build_manuscript:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = [
+  "cognitive",
+  "cognitive.models",
+  "cognitive.models.active_inference",
+  "cognitive.models.matrices",
+  "cognitive.analysis",
+  "cognitive.utils",
+  "cognitive.utils.visualization",
+  "cognitive.visualization",
+  "Things",
+  "Things.Simple_POMDP",
+  "Things.Continuous_Generic",
+  "scripts",
+]
+package-dir = { cognitive = "code/tools/src", Things = "code/Things", scripts = "code/scripts" }
+
+[tool.pytest.ini_options]
+testpaths = ["code/tests"]
+pythonpath = ["code/tools", "code"]
+markers = ["visualization: tests that generate visualization artifacts"]
+addopts = "--strict-markers"
+
+[tool.coverage.run]
+branch = false
+source = ["code/tools/src", "code/Things", "code/scripts"]
+
+[tool.coverage.report]
+include = [
+  "*/models/active_inference/dispatcher.py",
+  "*/models/active_inference/generative_model.py",
+  "*/utils/matrix_utils.py",
+  "*/Things/Continuous_Generic/continuous_generic.py",
+  "*/Things/Continuous_Generic/visualization.py",
+]
+exclude_lines = [
+  "pragma: no cover",
+  "@abstractmethod",
+  "raise NotImplementedError",
+]
+fail_under = 90
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+extend-exclude = ["docs/implementation/rxinfer", "docs/repo_docs/repo_scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+check_untyped_defs = false
+disallow_any_generics = false
+disallow_incomplete_defs = false
+disallow_untyped_defs = false
+ignore_missing_imports = true
+no_implicit_optional = true
+warn_redundant_casts = false
+warn_return_any = false
+warn_unused_ignores = false
+follow_imports = "skip"
+no_site_packages = true
+disable_error_code = [
+  "arg-type",
+  "attr-defined",
+  "assignment",
+  "call-overload",
+  "import-untyped",
+  "no-any-return",
+  "no-untyped-def",
+  "override",
+  "return-value",
+  "type-arg",
+  "var-annotated",
+]

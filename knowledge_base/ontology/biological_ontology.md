@@ -259,7 +259,7 @@ Domain → Kingdom → Phylum → Class → Order → Family → Genus → Speci
 ## 🔗 Interdisciplinary Connections
 
 ### Biology-Mathematics Integration
-- [[knowledge_base/mathematics/mathematical_biology|Mathematical Biology]] - Population dynamics, epidemiology
+- Mathematical Biology - Population dynamics, epidemiology
 - [[knowledge_base/biology/systems_biology|Systems Biology]] - Network modeling, pathway analysis
 - [[knowledge_base/mathematics/complex_systems|Complex Systems]] - Emergence, self-organization
 

@@ -1,7 +1,7 @@
 ---
 title: Spatial Cognition
 type: knowledge_base
-status: stub
+status: stable
 created: 2026-02-07
 updated: 2026-02-07
 tags:
@@ -22,7 +22,7 @@ Spatial cognition through Active Inference, including cognitive maps, place cell
 
 ## Key Concepts
 
-*This knowledge base entry is a stub. Contributions welcome — see the repository contribution guidelines for how to expand this article.*
+*This knowledge base entry is a foundation. Contributions welcome — see the repository contribution guidelines for how to expand this article.*
 
 ## Related Resources
 

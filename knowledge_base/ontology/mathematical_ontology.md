@@ -23,7 +23,7 @@ semantic_relations:
   - type: provides
     links:
       - [[knowledge_base/mathematics/probability_theory]]
-      - [[code/Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/statistics/statistics]]
+      - code/Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/statistics/statistics
       - [[knowledge_base/cognitive/free_energy_principle]]
 ---
 
@@ -222,7 +222,7 @@ Mathematical Concepts
 
 ### Cognitive Ontology Integration
 - [[cognitive_ontology|Cognitive Ontology]] - Mental representations and processes
-- [[knowledge_base/cognitive/mathematical_cognition|Mathematical Cognition]] - How mathematics is processed cognitively
+- Mathematical Cognition - How mathematics is processed cognitively
 - [[knowledge_base/philosophy/philosophy_of_mathematics|Philosophy of Mathematics]] - Foundational questions
 
 ### Systems Theory Connections
@@ -231,7 +231,7 @@ Mathematical Concepts
 - [[knowledge_base/systems/dynamical_systems|Dynamical Systems]] - Differential equations and chaos
 
 ### Biological Applications
-- [[knowledge_base/biology/mathematical_biology|Mathematical Biology]] - Population dynamics and morphogenesis
+- Mathematical Biology - Population dynamics and morphogenesis
 - [[knowledge_base/biology/systems_biology|Systems Biology]] - Network models of cellular processes
 - [[knowledge_base/biology/bioinformatics|Bioinformatics]] - Computational analysis of biological data
 

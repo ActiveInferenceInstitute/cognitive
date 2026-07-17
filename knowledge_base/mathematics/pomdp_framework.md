@@ -64,13 +64,13 @@ This learning path guides you through understanding and implementing Partially O
 
 - [[knowledge_base/mathematics/probability_theory|Probability Theory]]
 
-- [[knowledge_base/agents/GenericPOMDP/belief_states|Belief States]]
+- Belief States
 
 - [[knowledge_base/cognitive/policy_selection|Policy Selection]]
 
 #### Practical Exercises
 
-- [[docs/examples/basic_pomdp|Basic POMDP Implementation]]
+- Basic POMDP Implementation
 
 - [[examples/belief_updating|Belief Updating Exercise]]
 
@@ -96,7 +96,7 @@ This learning path guides you through understanding and implementing Partially O
 
 - [[knowledge_base/mathematics/active_inference_pomdp|Active Inference POMDP]]
 
-- [[docs/examples/free_energy_policy|Free Energy Policy Selection]]
+- Free Energy Policy Selection
 
 #### Learning Objectives
 
@@ -118,9 +118,9 @@ This learning path guides you through understanding and implementing Partially O
 
 #### Projects
 
-- [[docs/examples/hierarchical_pomdp|Hierarchical POMDP]]
+- Hierarchical POMDP
 
-- [[docs/examples/multi_agent_pomdp|Multi-Agent POMDP]]
+- Multi-Agent POMDP
 
 #### Learning Objectives
 
@@ -226,11 +226,11 @@ class ActiveInferencePOMDP:
 
 ### Code Examples
 
-- [[docs/examples/basic_pomdp|Basic POMDP]]
+- Basic POMDP
 
 - [[knowledge_base/mathematics/active_inference_pomdp|Active Inference POMDP]]
 
-- [[docs/examples/hierarchical_pomdp|Hierarchical POMDP]]
+- Hierarchical POMDP
 
 ### Additional Resources
 
@@ -274,11 +274,11 @@ class ActiveInferencePOMDP:
 
 ### Advanced Paths
 
-- [[docs/guides/learning_paths/advanced_pomdp|Advanced POMDP]]
+- Advanced POMDP
 
-- [[docs/guides/learning_paths/multi_agent_systems|Multi-Agent Systems]]
+- Multi-Agent Systems
 
-- [[docs/guides/learning_paths/robotics_control|Robotics Control]]
+- Robotics Control
 
 ### Specializations
 
@@ -286,7 +286,7 @@ class ActiveInferencePOMDP:
 
 - [[knowledge_base/free_energy_principle/implementations/robotics|Robotics]]
 
-- [[knowledge_base/ai|Artificial Intelligence]]
+- Artificial Intelligence
 
 ## Related Paths
 
@@ -298,7 +298,7 @@ class ActiveInferencePOMDP:
 
 ### Follow-up Paths
 
-- [[docs/guides/learning_paths/advanced_ai|Advanced AI]]
+- Advanced AI
 
 - [[knowledge_base/free_energy_principle/implementations/robotics|Robotics]]
 

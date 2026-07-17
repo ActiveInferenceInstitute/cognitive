@@ -1,20 +1,7 @@
 ---
-title: Annealing Schedules
-type: mathematical_concept
-id: annealing_schedules_001
-created: 2025-08-08
-modified: 2025-12-03
-tags: [mathematics, optimization, schedules, stability, active-inference, machine-learning]
-aliases: [temperature_schedules, cooling_schedules, simulated_annealing]
-semantic_relations:
-  - type: implements
-    links: [[variational_inference]], [[policy_selection]], [[optimization_theory]]
-  - type: foundation
-    links: [[probability_theory]], [[statistical_physics]]
-  - type: relates
-    links: [[precision_parameter]], [[convergence_control]], [[exploration_exploitation]], [[temperature_parameter]]
-  - type: used_by
-    links: [[active_inference]], [[reinforcement_learning]], [[machine_learning]]
+title: "Annealing Schedules"
+type: "mathematical_concept"
+status: stable
 ---
 
 # Annealing Schedules

@@ -1060,9 +1060,9 @@ Maintain synchronization between knowledge base and implementation:
 
 ./scripts/sync_kb_with_code.py
 
-# Generate implementation TODOs from knowledge base gaps
+# Generate implementation notes from knowledge base gaps
 
-./scripts/generate_todos_from_kb.py
+./scripts/generate_notes_from_kb.py
 
 # Validate code implementation against concept documentation
 

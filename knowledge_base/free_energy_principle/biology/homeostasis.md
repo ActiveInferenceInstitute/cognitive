@@ -18,10 +18,10 @@ semantic_relations:
       - [[knowledge_base/free_energy_principle/mathematics/core_principle]]
       - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy]]
       - [[knowledge_base/free_energy_principle/systems/self_organization]]
-      - [[knowledge_base/biology/autopoiesis]]
+      - knowledge_base/biology/autopoiesis
   - type: implements
     links:
-      - [[knowledge_base/biology/physiological_homeostasis]]
+      - knowledge_base/biology/physiological_homeostasis
       - [[knowledge_base/free_energy_principle/biology/neural_systems]]
       - [[knowledge_base/free_energy_principle/cognitive/perception]]
       - [[knowledge_base/free_energy_principle/implementations/simulation]]
@@ -448,10 +448,10 @@ def assess_allostatic_load(free_energy_trajectory, threshold=1.0):
 - [[knowledge_base/free_energy_principle/mathematics/core_principle]] - Core FEP formulation
 - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy]] - Variational inference
 - [[knowledge_base/free_energy_principle/systems/self_organization]] - Self-organizing systems
-- [[knowledge_base/biology/autopoiesis]] - Self-maintaining systems
+- knowledge_base/biology/autopoiesis - Self-maintaining systems
 
 ### Implementation Links
-- [[knowledge_base/biology/physiological_homeostasis]] - Traditional homeostasis
+- knowledge_base/biology/physiological_homeostasis - Traditional homeostasis
 - [[knowledge_base/free_energy_principle/biology/neural_systems]] - Nervous system regulation
 - [[knowledge_base/free_energy_principle/implementations/simulation]] - Simulation frameworks
 - [[knowledge_base/free_energy_principle/cognitive/perception]] - Interoceptive perception

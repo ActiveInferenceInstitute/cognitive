@@ -1,16 +1,7 @@
 ---
-title: Functional Analysis
-type: mathematical_concept
-id: functional_analysis_001
-created: 2025-12-18
-modified: 2025-12-18
-tags: [mathematics, functional_analysis, banach_spaces, hilbert_spaces, operators, spectral_theory]
-aliases: [functional_analysis, operator_theory]
-semantic_relations:
-  - type: foundation_for
-    links: [[probability_theory]], [[dynamical_systems]], [[optimization_theory]], [[quantum_mechanics]]
-  - type: relates
-    links: [[linear_algebra]], [[measure_theory]], [[differential_equations]], [[calculus]]
+title: "Functional Analysis"
+type: "mathematical_concept"
+status: stable
 ---
 
 # Functional Analysis

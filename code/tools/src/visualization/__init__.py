@@ -2,4 +2,6 @@
 Visualization tools for Active Inference models.
 """
 
-from .matrix_plots import MatrixPlotter 
+from .matrix_plots import MatrixPlotter
+
+__all__ = ["MatrixPlotter"]

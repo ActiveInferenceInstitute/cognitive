@@ -4,9 +4,9 @@ type: reasoning-system
 
 id: "{{reasoning_id}}"
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [reasoning, inference, decision-making, problem-solving]
 
@@ -44,9 +44,9 @@ related_systems: ["{{related_system_1}}", "{{related_system_2}}"]
 
 - Key assumptions
 
-- [[paradigm/paradigm_1|Reasoning Paradigm 1]]
+- Reasoning Paradigm 1
 
-- [[paradigm/paradigm_2|Reasoning Paradigm 2]]
+- Reasoning Paradigm 2
 
 ### Formal Framework
 
@@ -168,9 +168,9 @@ components:
 
 - Causal reasoning
 
-- [[method/method_1|Inference Method 1]]
+- Inference Method 1
 
-- [[method/method_2|Inference Method 2]]
+- Inference Method 2
 
 ### Reasoning Process
 
@@ -204,65 +204,8 @@ flowchart LR
 
 ### Implementation
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class {{reasoning_class_name}}(ReasoningSystem):
-
-    def __init__(self, config):
-
-        super().__init__(config)
-
-        self.knowledge_base = KnowledgeBase(config.knowledge_base)
-
-        self.inference_engine = InferenceEngine(config.inference_engine)
-
-        self.working_memory = WorkingMemory(config.working_memory)
-
-        self.explanation_module = ExplanationModule(config.explanation)
-
-    def reason(self, problem, context=None):
-
-        # Formulate the problem
-
-        formulated_problem = self.formulate_problem(problem, context)
-
-        # Retrieve relevant knowledge
-
-        relevant_knowledge = self.knowledge_base.retrieve(formulated_problem)
-
-        # Apply inference rules
-
-        self.working_memory.initialize(formulated_problem, relevant_knowledge)
-
-        inference_result = self.inference_engine.apply(self.working_memory)
-
-        # Check consistency
-
-        if not self.check_consistency(inference_result):
-
-            return self.handle_inconsistency(inference_result)
-
-        # Generate conclusion and explanation
-
-        conclusion = self.generate_conclusion(inference_result)
-
-        explanation = self.explanation_module.generate(
-
-            problem, relevant_knowledge, inference_result, conclusion
-
-        )
-
-        return {
-
-            'conclusion': conclusion,
-
-            'explanation': explanation,
-
-            'confidence': self.calculate_confidence(inference_result)
-
-        }
-
-```
 
 ## Knowledge Integration
 
@@ -398,9 +341,9 @@ criteria:
 
 - Optimization
 
-- [[problem/problem_1|Problem Type 1]]
+- Problem Type 1
 
-- [[problem/problem_2|Problem Type 2]]
+- Problem Type 2
 
 ### Solution Strategies
 
@@ -442,9 +385,9 @@ mindmap
 
 - Meta-reasoning heuristics
 
-- [[heuristic/heuristic_1|Heuristic 1]]
+- Heuristic 1
 
-- [[heuristic/heuristic_2|Heuristic 2]]
+- Heuristic 2
 
 ## Integration
 
@@ -568,9 +511,9 @@ api:
 
 - Limitations comparison
 
-- [[knowledge_base/cognitive/cognitive_1|Cognitive Aspect 1]]
+- Cognitive Aspect 1
 
-- [[knowledge_base/cognitive/cognitive_2|Cognitive Aspect 2]]
+- Cognitive Aspect 2
 
 ### Metacognition
 
@@ -642,9 +585,9 @@ metrics:
 
 - Comparative evaluation
 
-- [[benchmark/benchmark_1|Benchmark 1]]
+- Benchmark 1
 
-- [[benchmark/benchmark_2|Benchmark 2]]
+- Benchmark 2
 
 ### Validation Methods
 
@@ -666,9 +609,9 @@ metrics:
 
 - Domain 3 applications
 
-- [[use_case/use_case_1|Use Case 1]]
+- Use Case 1
 
-- [[use_case/use_case_2|Use Case 2]]
+- Use Case 2
 
 ### Case Studies
 
@@ -724,13 +667,13 @@ metrics:
 
 - External resources
 
-- [[reference/reference_1|Reference 1]]
+- Reference 1
 
-- [[reference/reference_2|Reference 2]]
+- Reference 2
 
 ## Related Systems
 
-- [[system/related_1|Related System 1]]
+- Related System 1
 
-- [[system/related_2|Related System 2]]
+- Related System 2
 

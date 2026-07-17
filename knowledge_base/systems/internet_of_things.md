@@ -46,9 +46,9 @@ semantic_relations:
 
     links:
 
-      - [[knowledge_base/systems/embedded_systems|Embedded Systems]]
+      - Embedded Systems
 
-      - [[knowledge_base/systems/networks|Networks]]
+      - Networks
 
 ---
 
@@ -968,7 +968,7 @@ Cross-system connection approaches:
 
   - **CRM Integration**: Customer management connection
 
-  - **Legacy System Integration**: Existing technology connection
+  - **existing System Integration**: Existing technology connection
 
   - **Business Process Integration**: Workflow connection
 
@@ -1220,7 +1220,7 @@ Deployment obstacles and constraints:
 
   - **Skill Shortages**: Expertise limitations
 
-  - **Legacy Integration Costs**: Existing system connection expenses
+  - **existing Integration Costs**: Existing system connection expenses
 
   - **Market Fragmentation**: Industry division challenges
 

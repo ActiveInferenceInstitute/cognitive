@@ -270,12 +270,12 @@ Philosophical foundations and implications of active inference.
 
 ### Philosophy-Mathematics Integration
 - [[knowledge_base/philosophy/philosophy_of_mathematics|Philosophy of Mathematics]] - Foundations of mathematical knowledge
-- [[knowledge_base/mathematics/logic|Logic]] - Formal methods in philosophy
+- Logic - Formal methods in philosophy
 - [[knowledge_base/mathematics/probability_theory|Probability Theory]] - Uncertainty and rationality
 
 ### Philosophy-Cognitive Science Links
 - [[knowledge_base/cognitive/theoretical_foundations|Theoretical Foundations]] - Philosophical basis of cognition
-- [[knowledge_base/cognitive/philosophical_psychology|Philosophical Psychology]] - Mind and behavior
+- Philosophical Psychology - Mind and behavior
 - [[knowledge_base/cognitive/consciousness|Consciousness Studies]] - Nature of subjective experience
 
 ### Philosophy-Systems Theory

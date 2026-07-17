@@ -254,7 +254,7 @@ This directory contains documentation for development tools, utilities, and auto
 
 ## Contributing
 
-See [[docs/templates/tool_template|Tool Documentation Template]] for documenting new tools.
+See Tool Documentation Template for documenting new tools.
 
 ## Version Control Tools Overview
 

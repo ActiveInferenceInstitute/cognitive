@@ -3,9 +3,17 @@ Utility functions for Active Inference models.
 """
 
 from .matrix_utils import (
-    ensure_matrix_properties,
     compute_entropy,
-    softmax,
+    ensure_matrix_properties,
+    expected_free_energy,
     kl_divergence,
-    expected_free_energy
-) 
+    softmax,
+)
+
+__all__ = [
+    "compute_entropy",
+    "ensure_matrix_properties",
+    "expected_free_energy",
+    "kl_divergence",
+    "softmax",
+]

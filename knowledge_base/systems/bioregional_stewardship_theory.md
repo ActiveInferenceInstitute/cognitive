@@ -134,7 +134,7 @@ A bioregion is a geographical area defined by natural ecological and cultural bo
 - **Freshwater Ecosystems**: Largest freshwater system in North America
 - **Indigenous Stewardship**: Native American watershed management
 - **Cross-Border Governance**: US-Canada bioregional cooperation
-- **Industrial Legacy**: Remediation of polluted ecosystems
+- **Industrial existing**: Remediation of polluted ecosystems
 
 ### Mediterranean Basins
 - **Climate Adaptation**: Drought-resistant stewardship practices

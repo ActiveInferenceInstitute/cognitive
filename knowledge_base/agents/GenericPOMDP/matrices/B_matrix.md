@@ -186,27 +186,8 @@ class BMatrix:
 
 #### Advanced Features
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-    def get_transition_distribution(self, state: int, action: int) -> Distribution:
-
-        """Get probability distribution over next states"""
-
-        return Distribution(self.B[:, state, action])
-
-    def sample_next_state(self, state: int, action: int) -> int:
-
-        """Sample next state from transition distribution"""
-
-        return np.random.choice(
-
-            self.num_states,
-
-            p=self.B[:, state, action]
-
-        )
-
-```
 
 ### Storage Formats
 
@@ -238,29 +219,8 @@ class BMatrix:
 
 #### Maximum Likelihood
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-def update_transitions_ml(self, 
-
-                        state: int, 
-
-                        action: int, 
-
-                        next_state: int,
-
-                        learning_rate: float):
-
-    """Update transitions using maximum likelihood"""
-
-    target = np.zeros(self.num_states)
-
-    target[next_state] = 1
-
-    self.B[:, state, action] = (1 - learning_rate) * self.B[:, state, action] + \
-
-                              learning_rate * target
-
-```
 
 #### Bayesian Updates
 

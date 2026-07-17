@@ -44,7 +44,7 @@ semantic_relations:
 
     links:
 
-      - [[knowledge_base/systems/computer_vision|Computer Vision]]
+      - Computer Vision
 
       - [[knowledge_base/systems/human_computer_interaction|Human-Computer Interaction]]
 
@@ -1588,7 +1588,7 @@ Solutions for multi-system function:
 
   - **Enterprise Service Bus Integration**: Corporate system connection
 
-  - **Legacy System Connectors**: Established technology integration
+  - **existing System Connectors**: Established technology integration
 
   - **Cross-Platform Identity Management**: User authentication across systems
 

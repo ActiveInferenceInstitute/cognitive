@@ -1,18 +1,27 @@
-# Continuous Generic Agent
+# Continuous generalized-coordinate agent
 
-A generic agent operating in continuous state and action spaces using Active Inference. This agent uses differential equations to model dynamics and continuous belief updating.
+`ContinuousActiveInference` performs precision-weighted updates over a state
+matrix shaped `(n_states, n_orders)`. The zeroth order is the latent state;
+higher orders are generalized derivatives. Configuration can provide an
+observation matrix, dynamics matrix, observation precision, state precision,
+precision learning rate, and seed.
 
-## Contents
+`ContinuousVisualizer.save_animation` uses Matplotlib `FuncAnimation` and
+`PillowWriter`. It validates the history and writes one rendered frame per
+sample rather than a fixed image header.
 
-- **`AGENTS.md`**: Agent architecture and continuous-time design.
-- **`Output/`**: Simulation results including test visualizations (phase space, energy analysis, convergence).
+```python
+import numpy as np
 
-For full source code and detailed documentation, see [[code/Things/Continuous_Generic/README|Knowledge Base: Continuous Generic]].
+from Things.Continuous_Generic import ContinuousActiveInference, ContinuousVisualizer
 
-## Related Resources
-
-- [[code/Things/Continuous_Generic/Continuous_Generic_README|Detailed Documentation]]
-- [[knowledge_base/cognitive/continuous_time_active_inference|Continuous-Time Active Inference]]
-- [[knowledge_base/agents/Continuous_Time/continuous_time_agent|Continuous-Time Agent Architecture]]
-- [[knowledge_base/mathematics/generalized_coordinates|Generalized Coordinates]]
-- [[code/Things/Continuous_Generic/AGENTS|Agent Details]]
+agent = ContinuousActiveInference(n_states=2, n_obs=2, n_orders=3, seed=11)
+history = {"belief_means": [], "time": []}
+for _ in range(4):
+    history["belief_means"].append(agent.state.belief_means.copy())
+    history["time"].append(agent.state.time)
+    agent.step(np.zeros(2))
+ContinuousVisualizer("/tmp/cognitive-visuals").save_animation(
+    history, "/tmp/cognitive-visuals/beliefs.gif", fps=10
+)
+```

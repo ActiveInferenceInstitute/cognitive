@@ -1,269 +1,206 @@
-"""
-Core matrix operations for Active Inference computations.
-"""
+"""Validated numerical operations for Active Inference probability matrices."""
+
+from __future__ import annotations
+
+import logging
+from pathlib import Path
+from typing import Any
 
 import numpy as np
-from typing import Dict, Optional, Tuple, Union
-from pathlib import Path
 import yaml
-import logging
 
 logger = logging.getLogger(__name__)
+EPS = 1e-12
+
+
+def _validate_numeric(array: np.ndarray, name: str) -> np.ndarray:
+    values = np.asarray(array, dtype=float)
+    if values.size == 0 or not np.all(np.isfinite(values)):
+        raise ValueError(f"{name} must be a non-empty finite numeric array")
+    return values
+
+
+def _normalize_axis(array: np.ndarray, axis: int) -> np.ndarray:
+    values = np.maximum(_validate_numeric(array, "array"), 0.0)
+    sums = values.sum(axis=axis, keepdims=True)
+    count = values.shape[axis]
+    return np.divide(
+        values,
+        np.where(sums > EPS, sums, 1.0),
+        out=np.full_like(values, 1.0 / count),
+        where=sums > EPS,
+    )
+
 
 class MatrixOps:
-    """Core matrix operations for Active Inference."""
-    
+    """Core matrix operations with explicit probability contracts."""
+
     @staticmethod
     def normalize_columns(matrix: np.ndarray) -> np.ndarray:
-        """Normalize matrix columns to sum to 1.
-        
-        Args:
-            matrix: Input matrix to normalize
-            
-        Returns:
-            Normalized matrix with columns summing to 1
-            
-        Example:
-            >>> matrix = np.array([[1, 2], [3, 4]])
-            >>> normalized = MatrixOps.normalize_columns(matrix)
-            >>> np.allclose(normalized.sum(axis=0), 1.0)
-            True
-        """
-        logger.debug(f"Normalizing columns of matrix with shape {matrix.shape}")
-        result = matrix / (matrix.sum(axis=0) + 1e-12)
-        logger.debug(f"Column normalization complete. Column sums: {result.sum(axis=0)}")
-        return result
-    
+        """Normalize non-negative values along the first axis."""
+        return _normalize_axis(matrix, axis=0)
+
     @staticmethod
     def normalize_rows(matrix: np.ndarray) -> np.ndarray:
-        """Normalize matrix rows to sum to 1.
-        
-        Args:
-            matrix: Input matrix to normalize
-            
-        Returns:
-            Normalized matrix with rows summing to 1
-            
-        Example:
-            >>> matrix = np.array([[1, 2], [3, 4]])
-            >>> normalized = MatrixOps.normalize_rows(matrix)
-            >>> np.allclose(normalized.sum(axis=1), 1.0)
-            True
-        """
-        logger.debug(f"Normalizing rows of matrix with shape {matrix.shape}")
-        result = matrix / (matrix.sum(axis=1, keepdims=True) + 1e-12)
-        logger.debug(f"Row normalization complete. Row sums: {result.sum(axis=1)}")
-        return result
-    
+        """Normalize non-negative values along the last axis for 2-D matrices."""
+        values = _validate_numeric(matrix, "matrix")
+        if values.ndim != 2:
+            raise ValueError("normalize_rows expects a two-dimensional matrix")
+        return _normalize_axis(values, axis=1)
+
     @staticmethod
     def ensure_probability_distribution(matrix: np.ndarray) -> np.ndarray:
-        """Ensure matrix represents valid probability distribution.
-        
-        Ensures non-negative values and normalizes columns to sum to 1.
-        
-        Args:
-            matrix: Input matrix to validate and normalize
-            
-        Returns:
-            Valid probability distribution matrix
-            
-        Example:
-            >>> matrix = np.array([[-1, 2], [3, 4]])
-            >>> prob_dist = MatrixOps.ensure_probability_distribution(matrix)
-            >>> np.all(prob_dist >= 0) and np.allclose(prob_dist.sum(axis=0), 1.0)
-            True
-        """
-        logger.debug(f"Ensuring probability distribution for matrix with shape {matrix.shape}")
-        if np.any(matrix < 0):
-            logger.warning(f"Found {np.sum(matrix < 0)} negative values, setting to zero")
-        matrix = np.maximum(matrix, 0)  # Non-negative
-        result = MatrixOps.normalize_columns(matrix)
-        logger.debug(f"Probability distribution validation complete. Column sums: {result.sum(axis=0)}")
-        return result
-    
+        """Clamp non-negative values and normalize columns."""
+        return MatrixOps.normalize_columns(matrix)
+
     @staticmethod
-    def compute_entropy(distribution: np.ndarray) -> float:
-        """Compute entropy of probability distribution.
-        
-        Computes Shannon entropy: H(X) = -Σ p(x) * log(p(x))
-        
-        Args:
-            distribution: Probability distribution array
-            
-        Returns:
-            Entropy value in bits (using natural log)
-            
-        Example:
-            >>> uniform = np.array([0.25, 0.25, 0.25, 0.25])
-            >>> entropy = MatrixOps.compute_entropy(uniform)
-            >>> np.isclose(entropy, -4 * 0.25 * np.log(0.25))
-            True
-        """
-        logger.debug(f"Computing entropy for distribution with shape {distribution.shape}")
-        # Handle zero probabilities
-        nonzero_probs = distribution[distribution > 0]
-        if len(nonzero_probs) == 0:
-            logger.debug("Distribution has no non-zero probabilities, entropy is 0")
-            return 0.0
-        entropy = -np.sum(nonzero_probs * np.log(nonzero_probs))
-        logger.debug(f"Computed entropy: {entropy:.4f}")
-        return entropy
-    
+    def compute_entropy(distribution: np.ndarray, axis: int | None = None) -> float | np.ndarray:
+        """Compute Shannon entropy for a valid probability distribution."""
+        values = _validate_numeric(distribution, "distribution")
+        if np.any(values < 0):
+            raise ValueError("distribution must be non-negative")
+        sums = values.sum(axis=axis, keepdims=axis is not None)
+        if not np.allclose(sums, 1.0):
+            raise ValueError("distribution must sum to one")
+        safe_values = np.where(values > 0, values, 1.0)
+        terms = np.where(values > 0, values * np.log(safe_values), 0.0)
+        result = -np.sum(terms, axis=axis)
+        return float(result) if axis is None else result
+
     @staticmethod
     def compute_kl_divergence(P: np.ndarray, Q: np.ndarray) -> float:
-        """Compute KL divergence between distributions.
-        
-        Computes D_KL(P || Q) = Σ P(x) * log(P(x) / Q(x))
-        
-        Args:
-            P: First probability distribution
-            Q: Second probability distribution (must have same shape as P)
-            
-        Returns:
-            KL divergence value (non-negative)
-            
-        Raises:
-            ValueError: If P and Q have different shapes
-            
-        Example:
-            >>> P = np.array([0.5, 0.5])
-            >>> Q = np.array([0.25, 0.75])
-            >>> kl = MatrixOps.compute_kl_divergence(P, Q)
-            >>> kl > 0
-            True
-        """
-        if P.shape != Q.shape:
-            logger.error(f"Shape mismatch: P has shape {P.shape}, Q has shape {Q.shape}")
-            raise ValueError(f"Distributions must have same shape. Got P: {P.shape}, Q: {Q.shape}")
-        logger.debug(f"Computing KL divergence between distributions with shape {P.shape}")
-        kl = np.sum(P * (np.log(P + 1e-12) - np.log(Q + 1e-12)))
-        logger.debug(f"Computed KL divergence: {kl:.4f}")
-        return kl
-    
+        """Compute ``D_KL(P || Q)`` for same-shaped distributions."""
+        p = _validate_numeric(P, "P")
+        q = _validate_numeric(Q, "Q")
+        if p.shape != q.shape:
+            raise ValueError(f"Distributions must have same shape. Got P: {p.shape}, Q: {q.shape}")
+        if (
+            np.any(p < 0)
+            or np.any(q < 0)
+            or not np.isclose(p.sum(), 1.0)
+            or not np.isclose(q.sum(), 1.0)
+        ):
+            raise ValueError("P and Q must be non-negative distributions that sum to one")
+        return float(np.sum(np.where(p > 0, p * np.log((p + EPS) / (q + EPS)), 0.0)))
+
     @staticmethod
-    def softmax(x: np.ndarray, axis: int = -1) -> np.ndarray:
-        """Apply softmax along specified axis."""
-        exp_x = np.exp(x - np.max(x, axis=axis, keepdims=True))
-        return exp_x / np.sum(exp_x, axis=axis, keepdims=True)
+    def softmax(x: np.ndarray, axis: int = -1, temperature: float = 1.0) -> np.ndarray:
+        """Apply numerically stable softmax along ``axis``."""
+        if temperature <= 0 or not np.isfinite(temperature):
+            raise ValueError("temperature must be finite and positive")
+        values = _validate_numeric(x, "x") / temperature
+        shifted = values - np.max(values, axis=axis, keepdims=True)
+        exponentials = np.exp(np.clip(shifted, -745.0, 709.0))
+        return exponentials / exponentials.sum(axis=axis, keepdims=True)
+
 
 class MatrixLoader:
-    """Utility for loading and validating matrices."""
-    
+    """Load and validate matrix specifications and NumPy arrays."""
+
     @staticmethod
-    def load_spec(spec_path: Path) -> Dict:
-        """Load matrix specification from markdown file."""
-        with open(spec_path, 'r') as f:
-            content = f.read()
-            
-        # Extract YAML frontmatter
-        if content.startswith('---'):
-            _, frontmatter, _ = content.split('---', 2)
-            return yaml.safe_load(frontmatter)
-        return {}
-    
+    def load_spec(spec_path: Path) -> dict[str, Any]:
+        content = Path(spec_path).read_text(encoding="utf-8")
+        if not content.startswith("---"):
+            return {}
+        _, _, remainder = content.partition("---")
+        frontmatter, marker, _ = remainder.partition("---")
+        if not marker:
+            raise ValueError(f"Missing YAML frontmatter terminator: {spec_path}")
+        parsed = yaml.safe_load(frontmatter) or {}
+        if not isinstance(parsed, dict):
+            raise ValueError("Matrix frontmatter must be a mapping")
+        return parsed
+
     @staticmethod
     def load_matrix(data_path: Path) -> np.ndarray:
-        """Load matrix data from storage."""
-        return np.load(data_path)
-    
+        return np.asarray(np.load(data_path, allow_pickle=False), dtype=float)
+
     @staticmethod
-    def validate_matrix(matrix: np.ndarray, spec: Dict) -> bool:
-        """Validate matrix against its specification.
-        
-        Checks matrix dimensions and constraints against specification.
-        
-        Args:
-            matrix: Matrix to validate
-            spec: Specification dictionary with 'dimensions' and 'shape_constraints'
-            
-        Returns:
-            True if matrix matches specification, False otherwise
-            
-        Example:
-            >>> matrix = np.array([[0.5, 0.5], [0.3, 0.7]])
-            >>> spec = {'dimensions': {'rows': 2, 'cols': 2}, 
-            ...         'shape_constraints': ['sum(cols) == 1.0', 'all_values >= 0']}
-            >>> MatrixLoader.validate_matrix(matrix, spec)
-            True
-        """
-        logger.debug(f"Validating matrix with shape {matrix.shape} against specification")
-        
-        # Check dimensions
-        if 'dimensions' in spec:
-            expected_shape = [spec['dimensions'][d] for d in ['rows', 'cols']]
-            if matrix.shape != tuple(expected_shape):
-                logger.warning(f"Dimension mismatch: expected {expected_shape}, got {matrix.shape}")
+    def validate_matrix(matrix: np.ndarray, spec: dict[str, Any]) -> bool:
+        values = np.asarray(matrix, dtype=float)
+        if not np.all(np.isfinite(values)):
+            return False
+        dimensions = spec.get("dimensions")
+        if dimensions:
+            if "shape" in dimensions:
+                expected_shape = tuple(int(value) for value in dimensions["shape"])
+            else:
+                expected_shape = tuple(int(dimensions[key]) for key in ("rows", "cols"))
+            if values.shape != expected_shape:
                 return False
-            logger.debug(f"Dimension check passed: {matrix.shape}")
-        
-        # Check constraints
-        if 'shape_constraints' in spec:
-            constraints = spec['shape_constraints']
-            if 'sum(cols) == 1.0' in constraints:
-                col_sums = matrix.sum(axis=0)
-                if not np.allclose(col_sums, 1.0):
-                    logger.warning(f"Column sum constraint violated. Column sums: {col_sums}")
-                    return False
-                logger.debug("Column sum constraint satisfied")
-            if 'all_values >= 0' in constraints:
-                if not np.all(matrix >= 0):
-                    negative_count = np.sum(matrix < 0)
-                    logger.warning(f"Non-negativity constraint violated. Found {negative_count} negative values")
-                    return False
-                logger.debug("Non-negativity constraint satisfied")
-        
-        logger.debug("Matrix validation passed")
-        return True
+        constraints = set(spec.get("shape_constraints", []))
+        supported = {"sum(cols) == 1.0", "sum(rows) == 1.0", "all_values >= 0"}
+        unknown = constraints.difference(supported)
+        if unknown:
+            raise ValueError(f"Unsupported matrix constraints: {sorted(unknown)}")
+        if "all_values >= 0" in constraints and np.any(values < 0):
+            return False
+        if "sum(cols) == 1.0" in constraints and not np.allclose(values.sum(axis=0), 1.0):
+            return False
+        return not ("sum(rows) == 1.0" in constraints and not np.allclose(values.sum(axis=1), 1.0))
+
 
 class MatrixInitializer:
-    """Initialize matrices with specific properties."""
-    
+    """Initialize finite, non-negative matrices reproducibly."""
+
     @staticmethod
-    def random_stochastic(shape: Tuple[int, ...]) -> np.ndarray:
-        """Initialize random stochastic matrix."""
-        matrix = np.random.rand(*shape)
-        return MatrixOps.normalize_columns(matrix)
-    
+    def random_stochastic(
+        shape: tuple[int, ...], rng: np.random.Generator | None = None
+    ) -> np.ndarray:
+        if any(int(value) < 1 for value in shape):
+            raise ValueError("shape dimensions must be positive")
+        generator = rng or np.random.default_rng()
+        return MatrixOps.normalize_columns(generator.random(shape))
+
     @staticmethod
-    def identity_based(shape: Tuple[int, ...], strength: float = 0.9) -> np.ndarray:
-        """Initialize near-identity transition matrix."""
-        n = shape[0]
-        # Ensure off-diagonal elements are small enough to preserve strength after normalization
-        off_diag_strength = (1 - strength) / (n - 1)
-        matrix = np.full(shape, off_diag_strength)
+    def identity_based(
+        shape: tuple[int, ...],
+        strength: float = 0.9,
+    ) -> np.ndarray:
+        if len(shape) != 2 or shape[0] != shape[1] or shape[0] < 1:
+            raise ValueError("identity_based requires a square, positive 2-D shape")
+        if not 0.0 <= strength <= 1.0:
+            raise ValueError("strength must be in [0, 1]")
+        size = shape[0]
+        if size == 1:
+            return np.ones(shape, dtype=float)
+        matrix = np.full(shape, (1.0 - strength) / (size - 1), dtype=float)
         np.fill_diagonal(matrix, strength)
-        return matrix  # Already normalized by construction
-    
+        return MatrixOps.normalize_columns(matrix)
+
     @staticmethod
-    def uniform(shape: Tuple[int, ...]) -> np.ndarray:
-        """Initialize uniform distribution matrix."""
-        return np.ones(shape) / np.prod(shape)
+    def uniform(shape: tuple[int, ...]) -> np.ndarray:
+        if any(int(value) < 1 for value in shape):
+            raise ValueError("shape dimensions must be positive")
+        return np.full(shape, 1.0 / float(np.prod(shape)), dtype=float)
+
 
 class MatrixVisualizer:
-    """Visualization utilities for matrices."""
-    
+    """Small data adapters used by plotting code."""
+
     @staticmethod
-    def prepare_heatmap_data(matrix: np.ndarray) -> Dict:
-        """Prepare matrix data for heatmap visualization."""
+    def prepare_heatmap_data(matrix: np.ndarray) -> dict[str, Any]:
+        values = np.asarray(matrix)
+        if values.ndim != 2:
+            raise ValueError("heatmap data must be two-dimensional")
         return {
-            'data': matrix,
-            'x_ticks': range(matrix.shape[1]),
-            'y_ticks': range(matrix.shape[0])
+            "data": values,
+            "x_ticks": range(values.shape[1]),
+            "y_ticks": range(values.shape[0]),
         }
-    
+
     @staticmethod
-    def prepare_bar_data(vector: np.ndarray) -> Dict:
-        """Prepare vector data for bar visualization."""
+    def prepare_bar_data(vector: np.ndarray) -> dict[str, Any]:
+        values = np.asarray(vector).reshape(-1)
+        return {"data": values, "x_ticks": range(len(values))}
+
+    @staticmethod
+    def prepare_multi_heatmap_data(tensor: np.ndarray) -> dict[str, Any]:
+        values = np.asarray(tensor)
+        if values.ndim != 3:
+            raise ValueError("multi-heatmap data must be three-dimensional")
         return {
-            'data': vector,
-            'x_ticks': range(len(vector))
+            "slices": [values[index] for index in range(values.shape[0])],
+            "x_ticks": range(values.shape[2]),
+            "y_ticks": range(values.shape[1]),
         }
-    
-    @staticmethod
-    def prepare_multi_heatmap_data(tensor: np.ndarray) -> Dict:
-        """Prepare 3D tensor data for multiple heatmap visualization."""
-        return {
-            'slices': [tensor[i] for i in range(tensor.shape[0])],
-            'x_ticks': range(tensor.shape[2]),
-            'y_ticks': range(tensor.shape[1])
-        } 

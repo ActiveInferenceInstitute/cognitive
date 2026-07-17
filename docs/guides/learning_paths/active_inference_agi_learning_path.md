@@ -680,7 +680,7 @@ AGI development could represent one of the most significant technological transi
 
 - **Resilience Planning**: Design strategies for maintaining beneficial trajectories
 
-- **Legacy Thinking**: Consider what we want to leave for future generations
+- **existing Thinking**: Consider what we want to leave for future generations
 
 #### Knowledge Integration
 

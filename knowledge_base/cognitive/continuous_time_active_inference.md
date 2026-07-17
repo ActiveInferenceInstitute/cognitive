@@ -21,8 +21,8 @@ semantic_relations:
       - [[../mathematics/stochastic_processes]]
   - type: relates
     links:
-      - [[../mathematics/continuous_time_models]]
-      - [[../mathematics/stochastic_differential_equations]]
+      - ../mathematics/continuous_time_models
+      - ../mathematics/stochastic_differential_equations
 ---
 
 # Continuous-Time Active Inference

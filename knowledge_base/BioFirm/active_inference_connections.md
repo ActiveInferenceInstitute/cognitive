@@ -136,7 +136,7 @@ class BeliefPropagator:
 
 ```
 
-### 3. [[knowledge_base/cognitive/adaptive_control|Adaptive Control]]
+### 3. Adaptive Control
 
 ```python
 
@@ -188,7 +188,7 @@ where:
 
 - p(s,o): Generative model ([[cognitive/predictive_coding|Predictive Coding]])
 
-- s: System states ([[knowledge_base/mathematics/state_space_theory|State Space]])
+- s: System states (State Space)
 
 - o: Observations ([[cognitive/perceptual_inference|Perception]])
 
@@ -228,7 +228,7 @@ where:
 
 ## Integration Patterns
 
-### 1. [[knowledge_base/systems/cross_scale_integration|Cross-Scale Integration]]
+### 1. Cross-Scale Integration
 
 ```python
 
@@ -270,7 +270,7 @@ class CrossScaleIntegrator:
 
 ```
 
-### 2. [[knowledge_base/systems/temporal_integration|Temporal Integration]]
+### 2. Temporal Integration
 
 ```python
 
@@ -314,7 +314,7 @@ class TemporalIntegrator:
 
 ```
 
-### 3. [[knowledge_base/systems/domain_integration|Domain Integration]]
+### 3. Domain Integration
 
 ```python
 
@@ -356,25 +356,25 @@ class DomainIntegrator:
 
 ### 1. [[cognitive/meta_learning|Meta-Learning Extensions]]
 
-- Advanced parameter adaptation ([[knowledge_base/cognitive/parameter_learning|Parameter Learning]])
+- Advanced parameter adaptation (Parameter Learning)
 
-- Structure learning mechanisms ([[knowledge_base/cognitive/structure_learning|Structure Learning]])
+- Structure learning mechanisms (Structure Learning)
 
-- Cross-domain transfer ([[knowledge_base/cognitive/transfer_learning|Transfer Learning]])
+- Cross-domain transfer (Transfer Learning)
 
-### 2. [[knowledge_base/systems/resilience_patterns|Resilience Patterns]]
+### 2. Resilience Patterns
 
-- Adaptive capacity enhancement ([[knowledge_base/systems/adaptive_capacity|Adaptive Capacity]])
+- Adaptive capacity enhancement (Adaptive Capacity)
 
-- Recovery mechanisms ([[knowledge_base/systems/recovery_dynamics|Recovery]])
+- Recovery mechanisms (Recovery)
 
-- Transformation pathways ([[knowledge_base/systems/transformation_theory|Transformation]])
+- Transformation pathways (Transformation)
 
-### 3. [[knowledge_base/cognitive/collective_intelligence|Collective Intelligence]]
+### 3. Collective Intelligence
 
 - Multi-agent coordination ([[cognitive/swarm_intelligence|Swarm Intelligence]])
 
-- Distributed learning ([[knowledge_base/cognitive/distributed_learning|Distributed Learning]])
+- Distributed learning (Distributed Learning)
 
 - Emergent behavior ([[systems/emergence|Emergence]])
 
@@ -392,7 +392,7 @@ class DomainIntegrator:
 
 - [[mathematics/information_geometry|Information Geometry]]
 
-- [[knowledge_base/systems/adaptive_management|Adaptive Management]]
+- Adaptive Management
 
 - [[knowledge_base/cognitive/hierarchical_models|Hierarchical Models]]
 

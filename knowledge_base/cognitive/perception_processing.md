@@ -310,9 +310,9 @@ Perception processing forms the foundational layer of the cognitive model, respo
 
 ## References
 
-- [[docs/research/papers/key_papers|Perception Papers]]
+- Perception Papers
 
-- [[knowledge_base/reference_implementations]]
+- knowledge_base/reference_implementations
 
 - [[docs/implementation/implementation_guides]]
 

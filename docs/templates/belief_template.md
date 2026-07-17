@@ -4,9 +4,9 @@ type: belief
 
 id: "{{belief_id}}"
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [belief, cognitive-model, knowledge-representation]
 
@@ -82,9 +82,9 @@ parameters:
 
 - Causal relationships
 
-- [[belief/dependency_1|Dependency 1]]
+- Dependency 1
 
-- [[belief/dependency_2|Dependency 2]]
+- Dependency 2
 
 ## Content
 
@@ -106,9 +106,9 @@ parameters:
 
 - Confidence metrics
 
-- [[evidence/evidence_1|Evidence 1]]
+- Evidence 1
 
-- [[evidence/evidence_2|Evidence 2]]
+- Evidence 2
 
 ## Dynamics
 
@@ -166,9 +166,9 @@ sequenceDiagram
 
 - Decision impact
 
-- [[belief/influenced_1|Influenced Belief 1]]
+- Influenced Belief 1
 
-- [[action/influenced_1|Influenced Action 1]]
+- Influenced Action 1
 
 ### Sources
 
@@ -178,9 +178,9 @@ sequenceDiagram
 
 - Source diversity
 
-- [[source/source_1|Source 1]]
+- Source 1
 
-- [[source/source_2|Source 2]]
+- Source 2
 
 ## Implementation
 
@@ -222,31 +222,8 @@ prediction_error_sensitivity: {{sensitivity}}
 
 ### Code Reference
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class {{belief_class_name}}(Belief):
-
-    def __init__(self, prior_params):
-
-        super().__init__(prior_params)
-
-        self.distribution = Distribution(prior_params)
-
-    def update(self, evidence):
-
-        # Bayesian update based on new evidence
-
-        likelihood = self.compute_likelihood(evidence)
-
-        self.distribution = self.distribution.bayesian_update(likelihood)
-
-    def compute_likelihood(self, evidence):
-
-        # Compute likelihood of evidence given current belief
-
-        pass
-
-```
 
 ## Evaluation
 
@@ -284,13 +261,13 @@ class {{belief_class_name}}(Belief):
 
 - Research basis
 
-- [[reference/reference_1|Reference 1]]
+- Reference 1
 
-- [[reference/reference_2|Reference 2]]
+- Reference 2
 
 ## Related Beliefs
 
-- [[belief/related_1|Related Belief 1]]
+- Related Belief 1
 
-- [[belief/related_2|Related Belief 2]]
+- Related Belief 2
 

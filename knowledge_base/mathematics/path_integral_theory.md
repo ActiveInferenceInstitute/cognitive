@@ -80,19 +80,8 @@ where:
 
 ### Fluctuation Theory
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-def fluctuation_dissipation(response_function, correlation):
-
-    """Implement fluctuation-dissipation theorem."""
-
-    omega = frequency_grid()
-
-    return beta * omega * imaginary(response_function) == \
-
-           fourier_transform(correlation)
-
-```
 
 Links to:
 

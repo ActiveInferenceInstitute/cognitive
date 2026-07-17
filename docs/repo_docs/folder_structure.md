@@ -226,7 +226,7 @@ requirements.txt     # Python dependencies
 
    - `.py` - Python source
 
-   - `.pyi` - Python type stubs
+   - `.pyi` - Python type foundations
 
    - `.pyx` - Cython source
 

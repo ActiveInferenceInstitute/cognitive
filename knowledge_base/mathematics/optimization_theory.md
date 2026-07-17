@@ -1,51 +1,7 @@
 ---
-title: Optimization Theory
-type: mathematical_concept
-id: optimization_theory_001
-created: 2024-03-15
-modified: 2025-12-18
-tags: [mathematics, optimization]
-
-  - variational_methods
-
-  - machine_learning
-
-semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[control_theory]]
-
-      - [[machine_learning]]
-
-      - [[active_inference]]
-
-      - [[variational_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[calculus]]
-
-      - [[linear_algebra]]
-
-      - [[probability_theory]]
-
-  - type: relates
-
-    links:
-
-      - [[statistical_physics]]
-
-      - [[information_theory]]
-
-      - [[free_energy_principle]]
-
-      - [[dynamical_systems]]
-
+title: "Optimization Theory"
+type: "mathematical_concept"
+status: stable
 ---
 
 # Optimization Theory

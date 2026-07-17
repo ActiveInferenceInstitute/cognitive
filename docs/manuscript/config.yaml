@@ -1,0 +1,48 @@
+paper:
+  title: "Validated Discrete and Continuous Active Inference in Python"
+  subtitle: "A reproducible implementation audit from generative model to manuscript"
+  version: "1.0.0"
+  date: "2026-07-17"
+
+authors:
+  - name: "Active Inference Institute"
+    affiliation: "Active Inference Institute"
+    corresponding: true
+
+publication:
+  repository: "ActiveInferenceInstitute/cognitive"
+  license: "MIT"
+
+keywords:
+  - "active inference"
+  - "Bayesian inference"
+  - "generative models"
+  - "partially observable decision processes"
+  - "generalized coordinates"
+  - "reproducible research"
+
+metadata:
+  language: "en"
+  audience: "research software and computational cognitive science"
+
+render:
+  formats:
+    markdown: true
+    html: true
+    pdf: true
+
+experiment:
+  seed: 7
+  horizon: 2
+  observations: [0, 1, 1, 0, 1]
+  continuous_steps: 12
+  model:
+    A:
+      - [0.9, 0.1]
+      - [0.1, 0.9]
+    B:
+      - [[1.0, 0.1], [0.0, 0.9]]
+      - [[0.0, 0.9], [1.0, 0.1]]
+    C: [0.0, 1.0]
+    D: [0.5, 0.5]
+    E: [0.5, 0.5]

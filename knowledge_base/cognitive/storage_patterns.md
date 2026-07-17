@@ -390,9 +390,9 @@ Storage patterns define standardized approaches for implementing memory and stor
 
 ## References
 
-- [[docs/research/papers/key_papers|Storage Papers]]
+- Storage Papers
 
-- [[knowledge_base/reference_implementations]]
+- knowledge_base/reference_implementations
 
 - [[docs/implementation/implementation_guides]]
 

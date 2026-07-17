@@ -7,6 +7,7 @@ from .models.active_inference import (
     ActiveInferenceFactory,
     ActiveInferenceModel,
     AdaptiveControl,
+    DiscreteGenerativeModel,
     HomeostaticControl,
     HomeostaticFactory,
     HomeostaticInference,
@@ -24,13 +25,14 @@ from .utils.matrix_utils import (
 )
 from .visualization.matrix_plots import MatrixPlotter
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 __all__ = [
     "ActiveInferenceDispatcher",
     "ActiveInferenceFactory",
     "ActiveInferenceModel",
     "AdaptiveControl",
+    "DiscreteGenerativeModel",
     "HomeostaticControl",
     "HomeostaticFactory",
     "HomeostaticInference",

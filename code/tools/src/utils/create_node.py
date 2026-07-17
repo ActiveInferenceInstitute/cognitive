@@ -1,111 +1,148 @@
-#!/usr/bin/env python3
-"""
-Utility script for creating new nodes from templates.
-"""
+"""Create knowledge-base nodes from the repository's documented templates."""
 
-import os
-import sys
-import yaml
-import click
-from datetime import datetime
-from jinja2 import Environment, FileSystemLoader
+from __future__ import annotations
+
+import re
+from collections.abc import Mapping
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Any
+
+import click
+import yaml
+from jinja2 import Environment, FileSystemLoader, TemplateNotFound
+
 
 class NodeCreator:
-    """Creates new nodes from templates."""
-    
-    def __init__(self, config_path: str = "config.yaml"):
-        """Initialize the node creator.
-        
-        Args:
-            config_path: Path to configuration file
-        """
-        self.config = self._load_config(config_path)
-        self.template_path = Path(self.config['paths']['templates'])
-        self.knowledge_base_path = Path(self.config['paths']['knowledge_base'])
-        
-        # Set up Jinja environment
+    """Render a node template using paths relative to its configuration file."""
+
+    _PLURAL_TYPES = {
+        "agent": "agents",
+        "belief": "beliefs",
+        "goal": "goals",
+        "action": "actions",
+        "observation": "observations",
+        "environment": "environments",
+    }
+
+    def __init__(self, config_path: str | Path = "config.yaml") -> None:
+        self.config_path = Path(config_path).expanduser().resolve()
+        self.config = self._load_config(self.config_path)
+        paths = self.config.get("paths")
+        if not isinstance(paths, dict):
+            raise ValueError("Configuration must contain a paths mapping")
+        self.template_path = self._resolve_path(paths, "templates")
+        self.knowledge_base_path = self._resolve_path(paths, "knowledge_base")
         self.env = Environment(
             loader=FileSystemLoader(self.template_path),
             trim_blocks=True,
-            lstrip_blocks=True
+            lstrip_blocks=True,
+            autoescape=False,
         )
-    
-    def _load_config(self, config_path: str) -> Dict:
-        """Load configuration from YAML file."""
-        with open(config_path, 'r') as f:
-            return yaml.safe_load(f)
-    
-    def _generate_id(self, prefix: str) -> str:
-        """Generate a unique ID for the node."""
-        timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-        return f"{prefix}_{timestamp}"
-    
-    def _ensure_directory(self, path: Path):
-        """Ensure directory exists."""
-        path.mkdir(parents=True, exist_ok=True)
-    
-    def create_node(self, 
-                   node_type: str, 
-                   name: str, 
-                   template_vars: Optional[Dict] = None) -> Path:
-        """Create a new node from template.
-        
-        Args:
-            node_type: Type of node to create
-            name: Name of the node
-            template_vars: Additional template variables
-            
-        Returns:
-            Path to created node file
-        """
-        # Load template
+
+    @staticmethod
+    def _load_config(config_path: Path) -> dict[str, Any]:
+        try:
+            with config_path.open(encoding="utf-8") as config_file:
+                config = yaml.safe_load(config_file) or {}
+        except OSError as exc:
+            raise ValueError(f"Unable to read configuration {config_path}: {exc}") from exc
+        if not isinstance(config, dict):
+            raise ValueError("Configuration must be a YAML mapping")
+        return config
+
+    def _resolve_path(self, paths: Mapping[str, Any], key: str) -> Path:
+        value = paths.get(key)
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f"paths.{key} must be a non-empty path")
+        candidate = Path(value).expanduser()
+        if not candidate.is_absolute():
+            candidate = self.config_path.parent / candidate
+        return candidate.resolve()
+
+    @staticmethod
+    def _safe_name(name: str) -> str:
+        candidate = name.strip()
+        if not candidate or candidate in {".", ".."}:
+            raise ValueError("name must be non-empty")
+        if Path(candidate).name != candidate or "/" in candidate or "\\" in candidate:
+            raise ValueError("name must be a single filename, not a path")
+        safe = re.sub(r"[^A-Za-z0-9._ -]", "_", candidate).strip(" .")
+        if not safe:
+            raise ValueError("name does not contain filename-safe characters")
+        return safe
+
+    @staticmethod
+    def _generate_id(prefix: str) -> str:
+        timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+        safe_prefix = re.sub(r"[^A-Za-z0-9_-]", "_", prefix.strip())
+        return f"{safe_prefix}_{timestamp}"
+
+    def create_node(
+        self,
+        node_type: str,
+        name: str,
+        template_vars: Mapping[str, Any] | None = None,
+    ) -> Path:
+        """Render and write one node, returning its absolute path."""
+        node_type = node_type.strip().lower()
+        if not re.fullmatch(r"[a-z][a-z0-9_-]*", node_type):
+            raise ValueError("node_type must contain lowercase letters, digits, '_' or '-'")
+        safe_name = self._safe_name(name)
         template_name = f"{node_type}_template.md"
-        template = self.env.get_template(f"node_templates/{template_name}")
-        
-        # Prepare variables
-        vars_dict = template_vars or {}
-        vars_dict.update({
-            'node_id': self._generate_id(node_type),
-            'node_name': name,
-            'date': datetime.now().isoformat(),
-            'type': node_type
-        })
-        
-        # Generate content
-        content = template.render(**vars_dict)
-        
-        # Create output file
-        output_dir = self.knowledge_base_path / node_type + 's'
-        self._ensure_directory(output_dir)
-        
-        output_file = output_dir / f"{name}.md"
-        with open(output_file, 'w') as f:
-            f.write(content)
-        
+        try:
+            template = self.env.get_template(template_name)
+        except TemplateNotFound as exc:
+            raise FileNotFoundError(
+                f"No template for node type '{node_type}': expected "
+                f"{self.template_path / template_name}"
+            ) from exc
+
+        variables = dict(template_vars or {})
+        now = datetime.now(timezone.utc).isoformat()
+        variables.update(
+            {
+                "node_id": self._generate_id(node_type),
+                "node_name": safe_name,
+                "date": now,
+                "type": node_type,
+            }
+        )
+        node_id = variables["node_id"]
+        variables.setdefault(f"{node_type}_id", node_id)
+        variables.setdefault(f"{node_type}_name", safe_name)
+        content = template.render(**variables)
+        output_dir = self.knowledge_base_path / self._PLURAL_TYPES.get(node_type, f"{node_type}s")
+        output_dir.mkdir(parents=True, exist_ok=True)
+        output_file = output_dir / f"{safe_name}.md"
+        if output_file.exists():
+            raise FileExistsError(f"Node already exists: {output_file}")
+        output_file.write_text(content, encoding="utf-8")
         return output_file
 
-@click.command()
-@click.option('--type', '-t', required=True, help='Type of node to create')
-@click.option('--name', '-n', required=True, help='Name of the node')
-@click.option('--config', '-c', default='config.yaml', help='Path to config file')
-@click.option('--vars', '-v', multiple=True, help='Additional template variables in key=value format')
-def main(type: str, name: str, config: str, vars: tuple):
-    """Create a new node from template."""
-    # Parse template variables
-    template_vars = {}
-    for var in vars:
-        key, value = var.split('=', 1)
-        template_vars[key.strip()] = value.strip()
-    
-    try:
-        creator = NodeCreator(config)
-        output_file = creator.create_node(type, name, template_vars)
-        click.echo(f"Created node at: {output_file}")
-    except Exception as e:
-        click.echo(f"Error creating node: {str(e)}", err=True)
-        sys.exit(1)
 
-if __name__ == '__main__':
-    main() 
+@click.command()
+@click.option("--type", "node_type", required=True, help="Template type to render")
+@click.option("--name", required=True, help="Filename and display name")
+@click.option("--config", default="config.yaml", show_default=True, help="YAML configuration path")
+@click.option("--var", "variables", multiple=True, help="Template variable in key=value form")
+def main(node_type: str, name: str, config: str, variables: tuple[str, ...]) -> None:
+    """Create a knowledge-base node from a configured template."""
+    template_vars: dict[str, str] = {}
+    for variable in variables:
+        if "=" not in variable:
+            raise click.ClickException(f"Variable must use key=value syntax: {variable}")
+        key, value = variable.split("=", 1)
+        key = key.strip()
+        if not key:
+            raise click.ClickException("Variable names cannot be empty")
+        template_vars[key] = value.strip()
+    try:
+        output_file = NodeCreator(config).create_node(node_type, name, template_vars)
+    except (OSError, ValueError, FileExistsError) as exc:
+        raise click.ClickException(str(exc)) from exc
+    click.echo(str(output_file))
+
+
+if __name__ == "__main__":
+    main()

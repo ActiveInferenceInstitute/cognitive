@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Create and append the trigger input
         const searchTrigger = document.createElement('input');
-        searchTrigger.setAttribute('placeholder', 'Search with Gemini');
+        searchTrigger.setAttribute('aria-label', 'Search with Gemini');
         searchTrigger.setAttribute('id', 'searchWidgetTrigger');
         searchTrigger.classList.add('docs-search-query','input','is-rounded','is-small','is-clickable','my-2','py-1','px-2');
         

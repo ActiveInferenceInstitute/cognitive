@@ -1,18 +1,7 @@
 ---
-title: Exploration Methods
-type: mathematical_concept
-id: exploration_methods_001
-created: 2025-03-03
-modified: 2025-12-03
-tags: [mathematics, exploration, algorithms, active-inference, reinforcement-learning]
-aliases: [exploration_algorithms, discovery_methods]
-semantic_relations:
-  - type: implements
-    links: [[active_inference]], [[reinforcement_learning]]
-  - type: foundation
-    links: [[probability_theory]], [[decision_theory]]
-  - type: relates
-    links: [[exploration_strategies]], [[precision_parameter]], [[expected_free_energy]], [[policy_selection]]
+title: "Exploration Methods"
+type: "mathematical_concept"
+status: stable
 ---
 
 # Exploration Methods

@@ -14,7 +14,7 @@ semantic_relations:
     links:
       - [[knowledge_base/mathematics/category_theory]]
       - [[knowledge_base/systems/complex_systems]]
-      - [[knowledge_base/cognitive/knowledge_representation]]
+      - knowledge_base/cognitive/knowledge_representation
   - type: implements
     links:
       - [[cognitive_ontology]]

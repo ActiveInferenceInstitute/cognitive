@@ -318,9 +318,9 @@ Inference patterns define reusable approaches for implementing probabilistic inf
 
 ## References
 
-- [[docs/research/papers/key_papers|Inference Papers]]
+- Inference Papers
 
-- [[knowledge_base/reference_implementations]]
+- knowledge_base/reference_implementations
 
 - [[docs/implementation/implementation_guides]]
 

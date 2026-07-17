@@ -765,78 +765,8 @@ class DynamicSwarmOptimization:
 ## 📊 Performance Analysis
 
 ### Benchmark Functions
-```python
-def ackley_function(x: np.ndarray) -> float:
-    """Ackley function: multimodal with many local minima."""
-    a, b, c = 20, 0.2, 2 * np.pi
-    d = len(x)
-    term1 = -a * np.exp(-b * np.sqrt(np.sum(x**2) / d))
-    term2 = -np.exp(np.sum(np.cos(c * x)) / d)
-    return term1 + term2 + a + np.exp(1)
+See the canonical package documentation for a complete runnable example.
 
-def griewank_function(x: np.ndarray) -> float:
-    """Griewank function: multimodal optimization problem."""
-    sum_term = np.sum(x**2) / 4000
-    prod_term = np.prod(np.cos(x / np.sqrt(np.arange(1, len(x) + 1))))
-    return sum_term - prod_term + 1
-
-def run_swarm_comparison():
-    """Compare different swarm algorithms on benchmark functions."""
-    algorithms = {
-        'ACO': lambda: AntColonyOptimization(n_ants=50, n_iterations=100, evaporation_rate=0.1),
-        'PSO': lambda: ParticleSwarmOptimization(n_particles=50, n_dimensions=10, n_iterations=100, bounds=(-5, 5)),
-        'ABC': lambda: ArtificialBeeColony(n_bees=50, n_dimensions=10, n_iterations=100, bounds=(-5, 5))
-    }
-
-    benchmark_functions = [
-        (sphere_function, (-5, 5), "Sphere"),
-        (ackley_function, (-5, 5), "Ackley"),
-        (griewank_function, (-5, 5), "Griewank")
-    ]
-
-    results = {}
-
-    for algo_name, algo_factory in algorithms.items():
-        print(f"\nRunning {algo_name}...")
-        algo_results = {}
-
-        for fitness_fn, bounds, fn_name in benchmark_functions:
-            print(f"  Optimizing {fn_name}...")
-
-            if algo_name == 'ACO':
-                # ACO needs special setup for continuous optimization
-                # (would need continuous ACO variant)
-                continue
-
-            algorithm = algo_factory()
-            if hasattr(algorithm, 'bounds'):
-                algorithm.bounds = bounds
-
-            best_pos, best_fit = algorithm.optimize(fitness_fn)
-            algo_results[fn_name] = best_fit
-
-        results[algo_name] = algo_results
-
-    # Print comparison table
-    print("\n" + "="*50)
-    print("Algorithm Comparison Results")
-    print("="*50)
-    print("<10"    for fn_name in ["Sphere", "Ackley", "Griewank"]:
-        print("<10", end="")
-    print()
-    print("-"*50)
-
-    for algo_name, algo_results in results.items():
-        print("<10", end="")
-        for fn_name in ["Sphere", "Ackley", "Griewank"]:
-            if fn_name in algo_results:
-                print("<10.4f", end="")
-            else:
-                print("<10", end="")
-        print()
-
-    return results
-```
 
 ## 🔧 Implementation Tools
 
@@ -1018,7 +948,7 @@ class SwarmOptimizationProblems:
             # params = [learning_rate, batch_size, hidden_units, ...]
             # Train network with these parameters and return validation loss
             # (Simplified - actual implementation would train a real network)
-            return np.random.random()  # Placeholder
+            return np.random.random()  # example value
 
         return fitness
 ```

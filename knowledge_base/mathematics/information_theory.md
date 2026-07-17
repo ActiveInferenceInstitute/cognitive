@@ -1,51 +1,7 @@
 ---
-title: Information Theory
-type: mathematical_concept
-id: information_theory_001
-created: 2024-02-12
-modified: 2025-12-18
-tags: [mathematics, information]
-
-  - computation
-
-  - probability
-
-semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[free_energy_principle]]
-
-      - [[predictive_coding]]
-
-      - [[active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[probability_theory]]
-
-      - [[statistical_physics]]
-
-      - [[entropy_production]]
-
-  - type: relates
-
-    links:
-
-      - [[thermodynamics]]
-
-      - [[stochastic_processes]]
-
-      - [[coding_theory]]
-
-      - [[communication_theory]]
-
-      - [[complexity_theory]]
-
+title: "Information Theory"
+type: "mathematical_concept"
+status: stable
 ---
 
 # Information Theory

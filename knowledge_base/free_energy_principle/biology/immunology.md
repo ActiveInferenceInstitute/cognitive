@@ -74,7 +74,7 @@ TLR3: p(dsRNA | virus) -- Toll-like receptor for double-stranded RNA
 NOD2: p(MDP | bacteria) -- intracellular receptor for bacterial peptidoglycan
 ```
 
-These are genetically encoded priors -- the evolutionary legacy of ancestral pathogen encounters. They provide a "prior model of danger" that does not require learning.
+These are genetically encoded priors -- the evolutionary existing of ancestral pathogen encounters. They provide a "prior model of danger" that does not require learning.
 
 ### Inflammation as Active Inference
 

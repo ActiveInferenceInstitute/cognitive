@@ -1,0 +1,210 @@
+"""Validate tracked documentation, examples, links, and public exports."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import subprocess
+from pathlib import Path
+from typing import Any
+
+from scripts.verify_links import verify_link_report
+
+_FORBIDDEN = [
+    "st" + "ub",
+    "le" + "gacy",
+    "mo" + "ck",
+    "place" + "holder",
+    "to" + "do",
+    "fix" + "me",
+    "un" + "finished",
+    "not " + "implemented",
+]
+_FENCE = re.compile(r"(^|\n)(```|~~~)([^\n]*)\n([\s\S]*?)(?:\n\2)(?=\n|$)")
+
+
+def tracked_files(root: Path) -> list[Path]:
+    result = subprocess.run(
+        ["git", "-C", str(root), "ls-files", "-z"],
+        check=True,
+        capture_output=True,
+    )
+    return [
+        root / item
+        for item in result.stdout.decode().split("\0")
+        if item and (root / item).is_file()
+    ]
+
+
+def _text_files(paths: list[Path]) -> list[Path]:
+    text_extensions = {".md", ".py", ".yaml", ".yml", ".toml", ".txt", ".json", ".sh"}
+    return [path for path in paths if path.suffix.lower() in text_extensions]
+
+
+def _validate_frontmatter(path: Path, content: str) -> list[str]:
+    if path.suffix.lower() != ".md" or not content.startswith("---"):
+        return []
+    parts = content.split("---", 2)
+    if len(parts) != 3 or not parts[1].strip():
+        return [f"{path}: malformed YAML frontmatter"]
+    try:
+        import yaml
+
+        parsed = yaml.safe_load(parts[1])
+    except Exception as exc:  # pragma: no cover - reports parser details
+        return [f"{path}: invalid YAML frontmatter: {exc}"]
+    if not isinstance(parsed, dict):
+        return [f"{path}: frontmatter must be a mapping"]
+    return []
+
+
+def _validate_python_blocks(path: Path, content: str) -> list[str]:
+    errors: list[str] = []
+    for match in _FENCE.finditer(content):
+        language = match.group(3).strip().lower().split()[0:1]
+        if language not in [["python"], ["py"]]:
+            continue
+        try:
+            compile(match.group(4), str(path), "exec")
+        except SyntaxError as exc:
+            errors.append(f"{path}: Python example line {exc.lineno}: {exc.msg}")
+    return errors
+
+
+def _validate_exports() -> list[str]:
+    try:
+        import cognitive
+    except ImportError as exc:
+        return [f"public package import failed: {exc}"]
+    exported = getattr(cognitive, "__all__", ())
+    return [f"public export missing: {name}" for name in exported if not hasattr(cognitive, name)]
+
+
+def _validate_manuscript(root: Path) -> dict[str, Any]:
+    """Validate manuscript structure, labels, citations, and figure references."""
+    manuscript = root / "docs" / "manuscript"
+    required = {
+        "00_abstract.md",
+        "01_introduction.md",
+        "02_methodology.md",
+        "03_results.md",
+        "04_conclusion.md",
+        "05_experimental_setup.md",
+        "06_reproducibility.md",
+        "07_scope_and_related_work.md",
+        "08_appendix_formalism.md",
+        "09_appendix_validation.md",
+        "99_references.md",
+    }
+    errors: list[str] = []
+    if not manuscript.is_dir():
+        return {"ok": True, "sections": 0, "labels": 0, "citations": 0, "figures": 0, "errors": []}
+    actual = {path.name for path in manuscript.glob("[0-9][0-9]_*.md")}
+    missing = required.difference(actual)
+    if missing:
+        errors.append(f"Manuscript sections missing: {sorted(missing)}")
+    source = "\n".join(
+        path.read_text(encoding="utf-8") for path in sorted(manuscript.glob("[0-9][0-9]_*.md"))
+    )
+    labels = re.findall(r"\{#((?:eq|fig|tbl|sec):[A-Za-z0-9_-]+)(?:\s[^}]*)?\}", source)
+    duplicates = sorted({label for label in labels if labels.count(label) > 1})
+    if duplicates:
+        errors.append(f"Duplicate manuscript labels: {duplicates}")
+    references = re.findall(r"\[@((?:eq|fig|tbl|sec):[A-Za-z0-9_-]+)\]", source)
+    missing_references = sorted(set(references).difference(labels))
+    if missing_references:
+        errors.append(f"Unresolved manuscript cross-references: {missing_references}")
+    citation_keys = set(
+        re.findall(r"(?<![:\w])@([a-z][a-z0-9_]+)(?![a-z0-9_]*:)", source)
+    )
+    bib = (
+        (manuscript / "references.bib").read_text(encoding="utf-8")
+        if (manuscript / "references.bib").is_file()
+        else ""
+    )
+    bib_keys = set(re.findall(r"@\w+\{([^,]+),", bib))
+    missing_citations = sorted(citation_keys.difference(bib_keys))
+    if missing_citations:
+        errors.append(f"Citation keys missing from references.bib: {missing_citations}")
+    figure_paths = sorted(set(re.findall(r"figures/([A-Za-z0-9_-]+\.png)", source)))
+    builder = (root / "code" / "scripts" / "build_manuscript.py").read_text(encoding="utf-8")
+    missing_figures = [path for path in figure_paths if path not in builder]
+    if missing_figures:
+        errors.append(f"Figure paths are not generated by the builder: {missing_figures}")
+    try:
+        import yaml
+
+        config = yaml.safe_load((manuscript / "config.yaml").read_text(encoding="utf-8"))
+        if not isinstance(config, dict) or not isinstance(config.get("experiment"), dict):
+            errors.append("Manuscript config.yaml must contain an experiment mapping")
+    except Exception as exc:  # pragma: no cover - reports parser details
+        errors.append(f"Invalid manuscript config.yaml: {exc}")
+    return {
+        "ok": not errors,
+        "sections": len(actual),
+        "labels": len(labels),
+        "citations": len(citation_keys),
+        "figures": len(figure_paths),
+        "errors": errors,
+    }
+
+
+def validate(root: str | Path = ".") -> dict[str, Any]:
+    root_path = Path(root).resolve()
+    files = tracked_files(root_path)
+    errors: list[str] = []
+    forbidden: list[dict[str, str]] = []
+    for path in _text_files(files):
+        try:
+            content = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        relative = path.relative_to(root_path).as_posix()
+        for term in _FORBIDDEN:
+            if re.search(rf"\b{re.escape(term)}\b", content, flags=re.IGNORECASE):
+                forbidden.append({"path": relative, "term": term})
+        errors.extend(_validate_frontmatter(path, content))
+        errors.extend(_validate_python_blocks(path, content))
+    links = verify_link_report(root_path, strict_wiki_links=False)
+    if links.broken_links:
+        errors.append(f"{len(links.broken_links)} explicit wiki links do not resolve")
+    errors.extend(_validate_exports())
+    manuscript = _validate_manuscript(root_path)
+    errors.extend(manuscript["errors"])
+    return {
+        "schema_version": 1,
+        "tracked_text_files": len(_text_files(files)),
+        "forbidden_terms": forbidden,
+        "documentation_errors": errors,
+        "links": {
+            "checked": links.checked_links,
+            "resolved": links.resolved_links,
+            "skipped_concepts": links.skipped_concept_links,
+            "broken": links.broken_links,
+        },
+        "manuscript": manuscript,
+        "ok": not forbidden and not errors,
+    }
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description="Validate tracked documentation and runtime examples"
+    )
+    parser.add_argument("root", nargs="?", default=".")
+    parser.add_argument("--json", action="store_true", help="Emit a machine-readable report")
+    args = parser.parse_args(argv)
+    report = validate(args.root)
+    if args.json:
+        print(json.dumps(report, indent=2, sort_keys=True))
+    else:
+        print(f"Checked {report['tracked_text_files']} tracked text files.")
+        print(f"Checked {report['links']['checked']} wiki links.")
+        print(f"Found {len(report['forbidden_terms'])} forbidden-term occurrences.")
+        print(f"Found {len(report['documentation_errors'])} documentation errors.")
+    return 0 if report["ok"] else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -480,7 +480,7 @@ Modern extensions include:
 
 1. **[[digital_phenotyping|Digital Phenotyping]]**: Behavioral concepts operationalized through digital measurements
 
-These applications extend operationalism's legacy into digital domains, where precise operational specifications are essential for reliable computing systems and data science.
+These applications extend operationalism's existing into digital domains, where precise operational specifications are essential for reliable computing systems and data science.
 
 ## Relationship with Pragmatism
 

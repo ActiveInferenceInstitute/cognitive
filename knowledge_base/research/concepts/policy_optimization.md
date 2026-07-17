@@ -1,13 +1,7 @@
 ---
-title: Policy Optimization
-type: concept
+title: "Policy Optimization"
+type: "concept"
 status: stable
-created: 2024-02-12
-updated: 2026-02-07
-tags: [policy, optimization, active_inference, planning, decision_making]
-semantic_relations:
-  - type: relates
-    links: [[knowledge_base/mathematics/policy_selection]], [[knowledge_base/cognitive/policy_selection]], [[knowledge_base/mathematics/expected_free_energy]], [[knowledge_base/mathematics/exploration_exploitation]], [[knowledge_base/cognitive/action_selection]]]
 ---
 
 # Policy Optimization

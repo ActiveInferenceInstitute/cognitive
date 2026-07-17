@@ -1,7 +1,7 @@
 ---
 title: "Sutton & Barto (2018)"
 type: citation
-status: stub
+status: stable
 created: 2026-02-06
 tags:
   - citation

@@ -4,9 +4,9 @@ type: goal
 
 id: "{{goal_id}}"
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [goal, cognitive-model, motivation]
 
@@ -86,9 +86,9 @@ parameters:
 
 - Measurement methods
 
-- [[criterion/criterion_1|Criterion 1]]
+- Criterion 1
 
-- [[criterion/criterion_2|Criterion 2]]
+- Criterion 2
 
 ## Planning
 
@@ -118,37 +118,8 @@ gantt
 
 ### Implementation
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class {{goal_class_name}}(Goal):
-
-    def __init__(self, parameters):
-
-        super().__init__(parameters)
-
-        self.sub_goals = self.initialize_sub_goals(parameters.sub_goals)
-
-        self.success_criteria = parameters.success_criteria
-
-    def is_achieved(self, agent_state, environment_state):
-
-        # Check if goal has been achieved
-
-        pass
-
-    def get_utility(self, agent_state, environment_state):
-
-        # Calculate current utility of this goal
-
-        pass
-
-    def get_next_actions(self, agent_state, environment_state):
-
-        # Determine next actions to achieve this goal
-
-        pass
-
-```
 
 ### Planning Strategies
 
@@ -198,9 +169,9 @@ graph LR
 
 - Temporal discounting
 
-- [[motivation/factor_1|Motivation Factor 1]]
+- Motivation Factor 1
 
-- [[motivation/factor_2|Motivation Factor 2]]
+- Motivation Factor 2
 
 ## Decision Process
 
@@ -240,9 +211,9 @@ sequenceDiagram
 
 - Exploration strategies
 
-- [[policy/policy_1|Policy 1]]
+- Policy 1
 
-- [[policy/policy_2|Policy 2]]
+- Policy 2
 
 ### Conflict Resolution
 
@@ -264,9 +235,9 @@ sequenceDiagram
 
 - External dependencies
 
-- [[dependency/dependency_1|Dependency 1]]
+- Dependency 1
 
-- [[dependency/dependency_2|Dependency 2]]
+- Dependency 2
 
 ### Interactions
 
@@ -276,9 +247,9 @@ sequenceDiagram
 
 - Action interactions
 
-- [[interaction/interaction_1|Interaction 1]]
+- Interaction 1
 
-- [[interaction/interaction_2|Interaction 2]]
+- Interaction 2
 
 ## Evaluation
 
@@ -350,13 +321,13 @@ exploration_factor: {{exploration_factor}}
 
 - External resources
 
-- [[reference/reference_1|Reference 1]]
+- Reference 1
 
-- [[reference/reference_2|Reference 2]]
+- Reference 2
 
 ## Related Goals
 
-- [[goal/related_1|Related Goal 1]]
+- Related Goal 1
 
-- [[goal/related_2|Related Goal 2]]
+- Related Goal 2
 

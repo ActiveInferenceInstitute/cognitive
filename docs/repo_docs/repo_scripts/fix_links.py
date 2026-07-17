@@ -179,7 +179,7 @@ type: knowledge_base
 status: draft
 created: {datetime.now().strftime('%Y-%m-%d')}
 tags:
-  - todo
+  - note
 semantic_relations:
   - type: related
     links: []
@@ -187,7 +187,7 @@ semantic_relations:
 
 # {link_name.replace('_', ' ').title()}
 
-[TODO: Add content]
+[note: Add content]
 """
 
     def apply_fixes(self, fixes: Dict[str, List[Dict]], repo_root: Path) -> List[Dict]:

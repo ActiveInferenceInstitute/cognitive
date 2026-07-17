@@ -238,7 +238,7 @@ class ContinuousTimeActiveInferenceAgent:
     def step(self, observation):
         """Main agent step: observe, plan, act."""
         # Update beliefs
-        action = np.zeros(self.n_actions)  # Placeholder action
+        action = np.zeros(self.n_actions)  # example value action
         self.update_beliefs(observation, action)
 
         # Select policy

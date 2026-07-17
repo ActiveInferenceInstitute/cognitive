@@ -6,9 +6,9 @@ id: A_matrix_001
 
 matrix_type: perception
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [matrix, perception, active-inference]
 
@@ -44,19 +44,8 @@ shape_constraints:
 
 ## Mathematical Form
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-# Likelihood mapping
-
-P(o|s) = A[o, s]
-
-# Constraints
-
-∀s: ∑_o A[o,s] = 1  # Column-wise normalization
-
-A[o,s] ≥ 0          # Non-negative probabilities
-
-```
 
 ## Data Structure
 

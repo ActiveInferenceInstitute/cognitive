@@ -232,7 +232,7 @@ def test_parameterized(input, expected):
 
 - pytest-benchmark for performance
 
-- pytest-mock for mocking
+- pytest-test fixture for test fixtureing
 
 ### Assertion Libraries
 
@@ -244,11 +244,11 @@ def test_parameterized(input, expected):
 
 - torch.testing
 
-### Mocking
+### test fixtureing
 
-- unittest.mock
+- unittest.test fixture
 
-- pytest-mock
+- pytest-test fixture
 
 - responses for HTTP
 

@@ -1,268 +1,42 @@
-Steps for Cognitive Modeling
-
-1. Take a Structural Approach
-
-  1. Completing a Catechism at the project or sub-project scale, to have comprehensive and communicable understandings of the work to be done (see Catechism Database).
-
-  1. Research and document the general Background and Context for whichever Settings for Cognitive Modeling you are pursuing.
-
-     - Review foundational theories: free energy principle, active inference, predictive coding
-
-     - Understand mathematical frameworks: variational inference, information geometry, path integrals
-
-     - Consider implementation approaches: discrete vs continuous time, hierarchical vs flat models
-
-  1. Specifically for your work — What is being considered as System of Interest, and target phenomena? What is not being addressed?
-
-     - Define scope of cognitive modeling (perception, action, learning, or combination)
-
-     - Specify temporal dynamics (discrete/continuous) and state spaces
-
-     - Identify key uncertainties and constraints
-
-  1. Address the system from a structural perspective (different flavors: ab initio systems design, modular case study, open-ended natural scenario, etc), culminating in system Mega-views, Multi-views, whatever is appropriate for the case in question.
-
-     - Develop hierarchical decomposition of system components
-
-     - Map information flows and causal relationships
-
-     - Identify key interfaces and dependencies
-
-  1. Consider Generalized Notation Notation (GNN) or some other defined model syntax/semantics
-
-     - Mathematical formalization (e.g., free energy functionals, belief dynamics)
-
-     - Computational graph representation
-
-     - Interface specifications
-
-1. Derive Cognitive Models
-
-  1. Translate from the Generalized Notation Notation (GNN) or schema, into the appropriate ActInf Implementations in whichever language.
-
-     - Core mathematical components:
-
-       ```math
-
-       F = E_q[ln q(s) - ln p(s,o)] = D_{KL}[q(s)||p(s|o)] - ln p(o)  # Variational Free Energy
-
-       G(π) = ∑_τ G(π,τ)  # Expected Free Energy
-
-       P(π) = σ(-γG(π))   # Policy Selection
-
-       ```
-
-     - Implementation considerations:
-
-       - Numerical stability and precision
-
-       - Gradient computation and optimization
-
-       - State/action space representations
-
-  1. Analyze or elaborate the structural model in terms of Entities (as per Active Entity Ontology for Science (AEOS)). Where relevant entity schema already exist, use and improve those extant templates. Where relevant schema do not exist, confirm the novelty and document/contribute appropriately.
-
-    1. For Active Entities, characterize their Generative Model as per ActInf Textbook Chapter 6+.
-
-       - State transition models: p(s_t|s_{t-1}, a_{t-1})
-
-       - Observation models: p(o_t|s_t)
-
-       - Prior preferences: p(s_t)
-
-       - Policy space: π ∈ Π
-
-    1. For Informational Entities, characterize their syntax and semantics.
-
-       - Message passing protocols
-
-       - Belief representation formats
-
-       - Uncertainty quantification methods
-
-    1. Assess the extent, type, and interactions of Active and Informational entities, in light of the approach you are taking towards the Generative Process.
-
-       - Hierarchical message passing
-
-       - Precision weighting of prediction errors
-
-       - Action-perception cycles
-
-    1. Consider how and where data will inform the modeling as per ActInf Textbook Chapter 9.
-
-       - Learning mechanisms and objectives
-
-       - Data preprocessing and feature extraction
-
-       - Model validation approaches
-
-  1. Where minimal sub-systems can be completely verified and validated (e.g. where a subroutine or aspect can be simulated end-to-end), start there. Build modular components:
-
-     - Perception module (state inference)
-
-     - Action selection module (policy optimization)
-
-     - Learning module (parameter updates)
-
-     - Integration tests for combined functionality
-
-1. Apply Cognitive Models
-
-  1. Use case implementation:
-
-     - Define specific scenarios and objectives
-
-     - Set up environment interfaces
-
-     - Configure model parameters
-
-     - Implement monitoring and logging
-
-  1. Testnet / Sandbox:
-
-     - Create controlled test environments
-
-     - Develop benchmark tasks
-
-     - Measure performance metrics
-
-     - Debug and optimize
-
-  1. Lifecycle perspective on operations:
-
-     - Deployment strategies
-
-     - Maintenance procedures
-
-     - Performance monitoring
-
-     - Continuous improvement process
-
-1. Feedback and Followup
-
-  1. Add comments, additions, questions to this document.
-
-  1. Document lessons learned and best practices
-
-  1. Contribute improvements to shared components
-
-  1. Update mathematical foundations as needed
-
-## Mathematical Framework
-
-### Discrete Time Active Inference
-
-```math
-
-F_t = KL[q(s_t)||p(s_t|o_{1:t})] - ln p(o_t|o_{1:t-1})  # State inference
-
-a_t^* = argmin_a E_{q(s_t)}[F_{t+1}(a)]                 # Action selection
-
-P(π) = σ(-γG(π)) where G(π) = ∑_τ F_τ(π)               # Policy selection
-
-```
-
-### Continuous Time Active Inference
-
-```math
-
-dF = (∂F/∂s)ds + (1/2)tr(∂²F/∂s²D)dt                   # State dynamics
-
-a^* = argmin_a ∫_t^{t+dt} L(s(τ), ṡ(τ), a) dτ          # Action selection
-
-P(π) = σ(-γ ∫_t^{t+T} L_π dτ)                          # Policy selection
-
-```
-
-## Implementation Components
-
-### Core Classes
+---
+title: Guide for cognitive modelling
+type: guide
+status: stable
+---
+
+# Guide for cognitive modelling
+
+## From theory to executable model
+
+Start by defining the hidden state, observation, and action sets. For a finite
+model, encode them in `A`, `B`, `C`, `D`, and `E` using the conventions in
+`docs/manuscript/01_introduction.md`. Validate the model before running
+inference; the constructor rejects incompatible shapes and invalid mass.
 
 ```python
+import numpy as np
 
-class ActiveInferenceAgent:
+from cognitive import DiscreteGenerativeModel
 
-    def __init__(self, state_dim, obs_dim, n_actions):
-
-        self.state_dim = state_dim
-
-        self.obs_dim = obs_dim
-
-        self.n_actions = n_actions
-
-        self.init_model()
-
-    def infer_state(self, observation):
-
-        """Perform state inference through VFE minimization."""
-
-        pass
-
-    def select_action(self, belief_state):
-
-        """Select action through EFE minimization."""
-
-        pass
-
-    def update_model(self, observation, action, reward):
-
-        """Update model parameters through learning."""
-
-        pass
-
+model = DiscreteGenerativeModel(
+    A=np.eye(2),
+    B=np.stack([np.eye(2)], axis=2),
+    C=np.array([0.0, 1.0]),
+    D=np.array([0.5, 0.5]),
+    E=np.array([1.0]),
+)
+posterior = model.posterior(0, model.D)
+assert np.isclose(posterior.sum(), 1.0)
 ```
 
-## Best Practices
+Use `ActiveInferenceDispatcher` for belief and policy inference, or
+`HomeostaticFactory` when the state space has labels and control bounds. Use
+`ContinuousActiveInference` when the latent variables are continuous and a
+generalized-coordinate update is appropriate.
 
-1. Model Design
+## Reporting
 
-   - Choose appropriate state/action spaces
-
-   - Set reasonable priors and hyperparameters
-
-   - Consider computational efficiency
-
-1. Implementation
-
-   - Use stable numerical methods
-
-   - Implement gradient clipping
-
-   - Monitor convergence
-
-   - Cache intermediate results
-
-1. Validation
-
-   - Test with synthetic data
-
-   - Verify predictions
-
-   - Monitor free energy
-
-   - Validate actions
-
-1. Documentation
-
-   - Mathematical foundations
-
-   - Implementation details
-
-   - Usage examples
-
-   - Performance metrics
-
-Links:
-
-- free energy principle
-
-- active inference
-
-- predictive coding
-
-- variational inference
-
-More information at active inference institute Coda:
-
-https://coda.io/d/Active-Blockference_dIvNESFmyj6/Cognitive-Modeling_suP0_SCu
-
+Record the configuration, seed, matrix shapes, inference method, policy
+horizon, and output hashes. The executable manuscript under
+`docs/manuscript/` provides a complete publication pattern with formal
+equations, bibliography, figures, and validation evidence.

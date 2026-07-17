@@ -194,7 +194,7 @@ class BasicAgentTemplate(BaseAgent):
         """
         Compute likelihood of observation given each state.
 
-        This is a placeholder implementation - override in subclasses
+        This is a example value implementation - override in subclasses
         for specific observation models.
 
         Args:
@@ -203,7 +203,7 @@ class BasicAgentTemplate(BaseAgent):
         Returns:
             np.ndarray: Likelihood for each state
         """
-        # Simple placeholder: uniform likelihood
+        # Simple example value: uniform likelihood
         return np.ones(self.state_space_size) / self.state_space_size
 
     def _compute_expected_free_energy(self) -> np.ndarray:

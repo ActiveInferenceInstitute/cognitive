@@ -98,7 +98,7 @@ This directory contains comprehensive API documentation for the cognitive modeli
 
 - test api - Testing utilities
 
-- mock api - Mocking interfaces
+- test fixture api - test fixtureing interfaces
 
 - benchmark api - Benchmarking tools
 

@@ -574,35 +574,8 @@ class AmortizedInference:
 
 ### Quality Metrics
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class VariationalMetrics:
-
-    """Quality metrics for variational methods."""
-
-    @staticmethod
-
-    def compute_kl_divergence(p: np.ndarray, q: np.ndarray) -> float:
-
-        """Compute KL divergence between distributions."""
-
-        return np.sum(p * (np.log(p + 1e-10) - np.log(q + 1e-10)))
-
-    @staticmethod
-
-    def compute_elbo(model: GenerativeModel,
-
-                    variational_dist: Distribution,
-
-                    data: np.ndarray) -> float:
-
-        """Compute Evidence Lower BOund."""
-
-        return model.expected_log_likelihood(data, variational_dist) - \
-
-               model.kl_divergence(variational_dist)
-
-```
 
 ### Performance Analysis
 

@@ -19,7 +19,7 @@ semantic_relations:
       - cognitive_architecture
   - type: foundation
     links:
-      - [[knowledge_base/mathematics/neural_network_theory]]
+      - knowledge_base/mathematics/neural_network_theory
       - [[memory_systems]]
 ---
 

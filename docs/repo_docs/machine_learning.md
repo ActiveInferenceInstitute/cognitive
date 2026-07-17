@@ -198,7 +198,7 @@ class LearningModule:
 
 - Knowledge transfer
 
-- See [[knowledge_base/cognitive/transfer_learning]]
+- See knowledge_base/cognitive/transfer_learning
 
 ### Meta-Learning
 
@@ -218,7 +218,7 @@ class LearningModule:
 
 - Stability-plasticity
 
-- See [[knowledge_base/cognitive/continual_learning]]
+- See knowledge_base/cognitive/continual_learning
 
 ## Integration
 

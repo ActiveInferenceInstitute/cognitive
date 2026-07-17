@@ -316,7 +316,7 @@ Where:
 
 ### Connection to KL Control
 
-In the continuous case, EFE minimization is closely related to **KL control** (Todorov, 2007):
+In the continuous case, EFE minimization is closely related to **KL control** (noterov, 2007):
 
 ```
 min_pi D_KL[q(tau | pi) || p(tau)]

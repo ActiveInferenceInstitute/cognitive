@@ -1,13 +1,7 @@
 ---
-title: Information Metrics
-type: concept
+title: "Information Metrics"
+type: "concept"
 status: stable
-created: 2024-02-12
-updated: 2026-02-07
-tags: [information_theory, metrics, entropy, mutual_information]
-semantic_relations:
-  - type: relates
-    links: [[knowledge_base/mathematics/information_theory]], [[knowledge_base/mathematics/entropy]], [[knowledge_base/mathematics/mutual_information]], [[knowledge_base/mathematics/kl_divergence]]]
 ---
 
 # Information Metrics

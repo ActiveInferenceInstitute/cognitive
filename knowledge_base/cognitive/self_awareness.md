@@ -17,7 +17,7 @@ semantic_relations:
       - theory_of_mind
   - type: foundation
     links:
-      - [[knowledge_base/mathematics/self_modeling]]
+      - knowledge_base/mathematics/self_modeling
       - [[social_cognition]]
 ---
 

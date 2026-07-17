@@ -220,7 +220,7 @@ See [[templates/template_guide|Template Guide]] for complete details.
 
 ### Community Plugins
 
-See [[docs/tools/plugin_guide|Plugin Guide]] for complete details.
+See Plugin Guide for complete details.
 
 1. Essential Plugins
 
@@ -372,5 +372,5 @@ See [[docs/tools/plugin_guide|Plugin Guide]] for complete details.
 
 - [[templates/template_guide|Template Guide]]
 
-- [[docs/tools/plugin_guide|Plugin Guide]]
+- Plugin Guide
 

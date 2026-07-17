@@ -1,18 +1,7 @@
 ---
-title: Ecological Systems
-type: mathematical_concept
-id: ecological_systems_001
-created: 2025-12-18
-modified: 2025-12-18
-tags: [mathematics, ecology, complex_systems, dynamical_systems, population_dynamics]
-aliases: [ecological_dynamics, ecosystem_dynamics]
-semantic_relations:
-  - type: foundation
-    links: [[dynamical_systems]], [[differential_equations]], [[stochastic_processes]]
-  - type: relates
-    links: [[complex_systems]], [[network_science]], [[statistical_physics]]
-  - type: implements
-    links: [[active_inference]], [[reinforcement_learning]]
+title: "Ecological Systems"
+type: "mathematical_concept"
+status: stable
 ---
 
 # Ecological Systems

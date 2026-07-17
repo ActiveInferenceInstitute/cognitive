@@ -2090,43 +2090,8 @@ Concepts:
 
 ### 1. Differential Geometric Methods
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class GeometricIntegrator:
-
-    def __init__(self):
-
-        self.manifold = SymplecticManifold()
-
-        self.connection = SymplecticConnection()
-
-        self.hamiltonian = HamiltonianSystem()
-
-    def symplectic_integrate(self, initial_state, time_span):
-
-        def vector_field(t, z):
-
-            q, p = z[:self.dim], z[self.dim:]
-
-            dH_dq = grad(self.hamiltonian.potential)(q)
-
-            dH_dp = self.hamiltonian.mass_matrix_inverse @ p
-
-            return np.concatenate([-dH_dp, dH_dq])
-
-        return self.integrate_preserving_structure(vector_field, initial_state, time_span)
-
-    def variational_integrate(self, lagrangian, initial_state, time_span):
-
-        def discrete_euler_lagrange(q):
-
-            return grad(lagrangian)(q) + \
-
-                   self.connection.christoffel_symbols(q) @ grad(lagrangian)(q)
-
-        return self.solve_boundary_value_problem(discrete_euler_lagrange, initial_state, time_span)
-
-```
 
 ### 2. Statistical Learning Methods
 

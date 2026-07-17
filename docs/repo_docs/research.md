@@ -168,7 +168,7 @@ This guide outlines research methodologies, best practices, and workflows for co
 
    - Citation management
 
-   - See [[docs/guides/literature_review]]
+   - See docs/guides/literature_review
 
 1. Research Design
 
@@ -178,7 +178,7 @@ This guide outlines research methodologies, best practices, and workflows for co
 
    - Variable control
 
-   - See [[docs/guides/research_design]]
+   - See docs/guides/research_design
 
 1. Protocol Development
 
@@ -188,7 +188,7 @@ This guide outlines research methodologies, best practices, and workflows for co
 
    - Analysis plans
 
-   - See [[docs/guides/research_protocol]]
+   - See docs/guides/research_protocol
 
 ### Execution Phase
 
@@ -250,7 +250,7 @@ This guide outlines research methodologies, best practices, and workflows for co
 
    - Figure generation
 
-   - See [[docs/guides/results_documentation]]
+   - See docs/guides/results_documentation
 
 1. Paper Writing
 
@@ -260,7 +260,7 @@ This guide outlines research methodologies, best practices, and workflows for co
 
    - Citation format
 
-   - See [[docs/guides/paper_writing]]
+   - See docs/guides/paper_writing
 
 1. Code Documentation
 
@@ -270,7 +270,7 @@ This guide outlines research methodologies, best practices, and workflows for co
 
    - API documentation
 
-   - See [[docs/guides/code_documentation]]
+   - See docs/guides/code_documentation
 
 ## Best Practices
 
@@ -412,5 +412,5 @@ This guide outlines research methodologies, best practices, and workflows for co
 
 - [[docs/repo_docs/documentation_standards]]
 
-- [[docs/guides/code_documentation]]
+- docs/guides/code_documentation
 

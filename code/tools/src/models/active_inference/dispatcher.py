@@ -1,331 +1,288 @@
-"""
-Active Inference method dispatcher and high-level abstractions.
-Provides a clean interface for dispatching active inference operations
-to appropriate low-level implementations.
-"""
+"""Validated inference dispatch for discrete Active Inference models."""
 
-from dataclasses import dataclass
+from __future__ import annotations
+
+from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
 from typing import Any
 
 import numpy as np
+import yaml
 
-from ..matrices.matrix_ops import MatrixInitializer, MatrixOps
 from .base import ModelState
+from .generative_model import DiscreteGenerativeModel
 
 
-class InferenceMethod(Enum):
-    """Supported inference methods."""
+class InferenceMethod(str, Enum):
+    """Implemented belief and policy inference methods."""
+
     VARIATIONAL = "variational"
     SAMPLING = "sampling"
     MEAN_FIELD = "mean_field"
-    
-class PolicyType(Enum):
-    """Supported policy types."""
+
+
+class PolicyType(str, Enum):
+    """Policy representation supported by the discrete dispatcher."""
+
     DISCRETE = "discrete"
-    CONTINUOUS = "continuous"
-    HIERARCHICAL = "hierarchical"
+
 
 @dataclass
 class InferenceConfig:
-    """Configuration for inference method dispatch."""
+    """Validated configuration for inference dispatch."""
+
     method: InferenceMethod
     policy_type: PolicyType
     temporal_horizon: int
     learning_rate: float
     precision_init: float
-    use_gpu: bool = False
-    num_samples: int = 1000  # For sampling-based methods
-    temperature: float = 1.0  # For policy selection
-    custom_params: dict[str, Any] | None = None
+    num_samples: int = 256
+    temperature: float = 1.0
+    discount_factor: float = 0.95
+    exploration_weight: float = 0.5
+    policy_limit: int = 4096
+    seed: int | None = 0
+    custom_params: dict[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        self.method = InferenceMethod(self.method)
+        self.policy_type = PolicyType(self.policy_type)
+        if self.policy_type is not PolicyType.DISCRETE:
+            raise ValueError("Only discrete policies are implemented by this dispatcher")
+        if self.temporal_horizon < 1:
+            raise ValueError("temporal_horizon must be at least one")
+        if not 0.0 < self.learning_rate <= 1.0:
+            raise ValueError("learning_rate must be in (0, 1]")
+        if self.precision_init <= 0 or not np.isfinite(self.precision_init):
+            raise ValueError("precision_init must be finite and positive")
+        if self.num_samples < 2:
+            raise ValueError("num_samples must be at least two")
+        if self.temperature <= 0 or not np.isfinite(self.temperature):
+            raise ValueError("temperature must be finite and positive")
+        if not 0.0 < self.discount_factor <= 1.0:
+            raise ValueError("discount_factor must be in (0, 1]")
+        if not 0.0 <= self.exploration_weight <= 1.0:
+            raise ValueError("exploration_weight must be in [0, 1]")
+        if self.policy_limit < 1:
+            raise ValueError("policy_limit must be positive")
+        self.custom_params = dict(self.custom_params)
+
 
 class ActiveInferenceDispatcher:
-    """
-    Dispatcher for Active Inference operations.
-    Provides high-level interface and handles routing to specific implementations.
-    """
-    
-    def __init__(self, config: InferenceConfig):
-        """Initialize dispatcher with configuration."""
+    """Dispatch validated inference methods over one discrete generative model."""
+
+    def __init__(
+        self,
+        config: InferenceConfig,
+        model: DiscreteGenerativeModel,
+        rng: np.random.Generator | None = None,
+    ) -> None:
         self.config = config
-        self._setup_implementations()
-        self._initialize_matrices()
-        self._rng = np.random.default_rng()  # For sampling methods
-        
-    def _setup_implementations(self):
-        """Set up mapping of operations to implementations."""
-        self._implementations = {
-            InferenceMethod.VARIATIONAL: {
-                'belief_update': self._variational_belief_update,
-                'policy_inference': self._variational_policy_inference
-            },
-            InferenceMethod.SAMPLING: {
-                'belief_update': self._sampling_belief_update,
-                'policy_inference': self._sampling_policy_inference
-            },
-            InferenceMethod.MEAN_FIELD: {
-                'belief_update': self._mean_field_belief_update,
-                'policy_inference': self._mean_field_policy_inference
-            }
-        }
-        
-    def _initialize_matrices(self):
-        """Initialize required matrices based on configuration."""
-        self.matrix_ops = MatrixOps()
-        self.matrix_init = MatrixInitializer()
-        
-    def dispatch_belief_update(self, 
-                             observation: np.ndarray,
-                             current_state: ModelState,
-                             **kwargs) -> np.ndarray:
-        """
-        Dispatch belief update to appropriate implementation.
-        
-        Args:
-            observation: Current observation
-            current_state: Current model state
-            **kwargs: Additional parameters for specific implementations
-            
-        Returns:
-            Updated beliefs
-        """
-        update_fn = self._implementations[self.config.method]['belief_update']
-        return update_fn(observation, current_state, **kwargs)
-        
-    def dispatch_policy_inference(self,
-                                state: ModelState,
-                                goal_prior: np.ndarray | None = None,
-                                **kwargs) -> np.ndarray:
-        """
-        Dispatch policy inference to appropriate implementation.
-        
-        Args:
-            state: Current model state
-            goal_prior: Optional prior over goal states
-            **kwargs: Additional parameters for specific implementations
-            
-        Returns:
-            Inferred policy distributions
-        """
-        inference_fn = self._implementations[self.config.method]['policy_inference']
-        return inference_fn(state, goal_prior, **kwargs)
-    
-    def _variational_belief_update(self,
-                                 observation: np.ndarray,
-                                 state: ModelState,
-                                 **kwargs) -> np.ndarray:
-        """Variational implementation of belief updates."""
-        # Implementation details for variational belief updates
-        prediction = np.dot(state.beliefs, kwargs.get('generative_matrix', np.eye(len(state.beliefs))))
-        prediction_error = observation - prediction
-        belief_update = state.precision * prediction_error
-        return state.beliefs + belief_update
-        
-    def _sampling_belief_update(self,
-                              observation: np.ndarray,
-                              state: ModelState,
-                              **kwargs) -> np.ndarray:
-        """Sampling-based implementation of belief updates using particle filtering."""
-        num_samples = self.config.num_samples
-        generative_matrix = kwargs.get('generative_matrix', np.eye(len(state.beliefs)))
-        particle_prior = np.maximum(state.beliefs, 1e-8)
-        particle_prior = particle_prior / np.sum(particle_prior)
-        
-        particles = self._rng.dirichlet(
-            particle_prior * num_samples,
-            size=num_samples
+        self.model = model
+        self._rng = rng or np.random.default_rng(config.seed)
+
+    def dispatch_belief_update(
+        self,
+        observation: int | np.ndarray,
+        current_state: ModelState,
+    ) -> np.ndarray:
+        """Return a finite, normalized posterior without mutating ``current_state``."""
+        update_fn = {
+            InferenceMethod.VARIATIONAL: self._variational_belief_update,
+            InferenceMethod.SAMPLING: self._sampling_belief_update,
+            InferenceMethod.MEAN_FIELD: self._mean_field_belief_update,
+        }[self.config.method]
+        beliefs = update_fn(observation, current_state)
+        return self._normalize(beliefs, self.model.num_states)
+
+    def dispatch_policy_inference(
+        self,
+        state: ModelState,
+        goal_prior: np.ndarray | None = None,
+    ) -> np.ndarray:
+        """Return the inferred distribution over the first action of each policy."""
+        update_fn = {
+            InferenceMethod.VARIATIONAL: self._variational_policy_inference,
+            InferenceMethod.SAMPLING: self._sampling_policy_inference,
+            InferenceMethod.MEAN_FIELD: self._mean_field_policy_inference,
+        }[self.config.method]
+        policies = update_fn(state, goal_prior)
+        return self._normalize(policies, self.model.num_actions)
+
+    def _variational_belief_update(
+        self, observation: int | np.ndarray, state: ModelState
+    ) -> np.ndarray:
+        posterior = self.model.posterior(observation, state.beliefs)
+        return self._blend(state.beliefs, posterior)
+
+    def _mean_field_belief_update(
+        self, observation: int | np.ndarray, state: ModelState
+    ) -> np.ndarray:
+        posterior = self.model.posterior(observation, state.beliefs)
+        log_q = np.log(np.maximum(self._normalize(state.beliefs, self.model.num_states), 1e-12))
+        log_posterior = np.log(np.maximum(posterior, 1e-12))
+        logits = log_q + self.config.learning_rate * state.precision * (log_posterior - log_q)
+        return self._softmax(logits)
+
+    def _sampling_belief_update(
+        self, observation: int | np.ndarray, state: ModelState
+    ) -> np.ndarray:
+        posterior = self.model.posterior(observation, state.beliefs)
+        concentration = max(float(self.config.num_samples), 2.0)
+        particles = self._rng.dirichlet(posterior * concentration, size=self.config.num_samples)
+        return self._normalize(np.mean(particles, axis=0), self.model.num_states)
+
+    def _variational_policy_inference(
+        self, state: ModelState, goal_prior: np.ndarray | None
+    ) -> np.ndarray:
+        energies = self._calculate_expected_free_energy(state, goal_prior)
+        return self._softmax(-energies / self.config.temperature)
+
+    def _mean_field_policy_inference(
+        self, state: ModelState, goal_prior: np.ndarray | None
+    ) -> np.ndarray:
+        energies = self._calculate_expected_free_energy(state, goal_prior)
+        prior = self._action_prior(goal_prior)
+        logits = np.log(prior + 1e-12) - energies / self.config.temperature
+        return self._softmax(logits)
+
+    def _sampling_policy_inference(
+        self, state: ModelState, goal_prior: np.ndarray | None
+    ) -> np.ndarray:
+        energies = self._calculate_expected_free_energy(state, goal_prior)
+        target = self._softmax(-energies / self.config.temperature)
+        samples = self._rng.choice(
+            self.model.num_actions,
+            size=self.config.num_samples,
+            p=target,
         )
-        
-        # Compute weights based on likelihood
-        likelihoods = np.array([
-            self._compute_likelihood(observation, p, generative_matrix)
-            for p in particles
-        ])
-        total_likelihood = np.sum(likelihoods)
-        if total_likelihood <= 1e-12:
-            weights = np.ones(num_samples) / num_samples
-        else:
-            weights = likelihoods / total_likelihood
-        
-        # Resample particles
-        resampled_indices = self._rng.choice(
-            num_samples,
-            size=num_samples,
-            p=weights
+        counts = np.bincount(samples, minlength=self.model.num_actions).astype(float)
+        return self._normalize(counts + 1e-6, self.model.num_actions)
+
+    def _calculate_expected_free_energy(
+        self, state: ModelState, goal_prior: np.ndarray | None = None
+    ) -> np.ndarray:
+        policies = self.model.enumerate_policies(
+            self.config.temporal_horizon,
+            self.config.policy_limit,
         )
-        particles = particles[resampled_indices]
-        
-        # Return mean belief state
-        return np.mean(particles, axis=0)
-        
-    def _compute_likelihood(self,
-                          observation: np.ndarray,
-                          particle: np.ndarray,
-                          generative_matrix: np.ndarray) -> float:
-        """Compute likelihood of observation given particle state."""
-        prediction = np.dot(particle, generative_matrix)
-        return np.exp(-0.5 * np.sum(np.square(observation - prediction)))
-        
-    def _mean_field_belief_update(self,
-                                observation: np.ndarray,
-                                state: ModelState,
-                                **kwargs) -> np.ndarray:
-        """Mean-field implementation of belief updates."""
-        generative_matrix = kwargs.get('generative_matrix', np.eye(len(state.beliefs)))
-        learning_rate = kwargs.get('learning_rate', self.config.learning_rate)
-        prediction = np.dot(state.beliefs, generative_matrix)
-        prediction_error = observation - prediction
-        field = np.dot(generative_matrix, prediction_error)
-        log_beliefs = np.log(np.maximum(state.beliefs, 1e-12))
-        posterior = np.exp(log_beliefs + learning_rate * state.precision * field)
-        total = np.sum(posterior)
-        if total <= 1e-12:
-            return np.ones_like(state.beliefs) / len(state.beliefs)
-        return posterior / total
-        
-    def _variational_policy_inference(self,
-                                    state: ModelState,
-                                    goal_prior: np.ndarray | None = None,
-                                    **kwargs) -> np.ndarray:
-        """Variational implementation of policy inference."""
-        # Implementation for variational policy inference
-        if goal_prior is None:
-            goal_prior = np.ones(len(state.policies)) / len(state.policies)
-        
-        expected_free_energy = self._calculate_expected_free_energy(
-            state, goal_prior, **kwargs)
-        return self.matrix_ops.softmax(-expected_free_energy)
-        
-    def _sampling_policy_inference(self,
-                                 state: ModelState,
-                                 goal_prior: np.ndarray | None = None,
-                                 **kwargs) -> np.ndarray:
-        """Sampling-based implementation of policy inference using MCMC."""
-        if goal_prior is None:
-            goal_prior = np.ones(len(state.policies)) / len(state.policies)
-            
-        num_samples = self.config.num_samples
-        current_policies = state.policies.copy()
-        accepted_policies = []
-        
-        # MCMC sampling
-        for _ in range(num_samples):
-            # Propose new policy distribution
-            proposal = self._propose_policy(current_policies)
-            
-            # Compute acceptance ratio
-            current_energy = self._policy_energy(current_policies, state, goal_prior)
-            proposal_energy = self._policy_energy(proposal, state, goal_prior)
-            
-            # Accept/reject
-            if np.log(self._rng.random()) < proposal_energy - current_energy:
-                current_policies = proposal
-            
-            accepted_policies.append(current_policies.copy())
-            
-        # Return mean policy distribution
-        return np.mean(accepted_policies, axis=0)
-        
-    def _propose_policy(self, current: np.ndarray) -> np.ndarray:
-        """Generate policy proposal for MCMC."""
-        proposal = current + self._rng.normal(0, 0.1, size=current.shape)
-        proposal = np.maximum(proposal, 0)
-        total = np.sum(proposal)
-        if total <= 1e-12:
-            return np.ones_like(current) / len(current)
-        return proposal / total
-        
-    def _policy_energy(self,
-                      policies: np.ndarray,
-                      state: ModelState,
-                      goal_prior: np.ndarray) -> float:
-        """Compute energy (negative log probability) for policy distribution."""
-        expected_free_energy = self._calculate_expected_free_energy(
-            state, goal_prior)
-        return np.sum(policies * expected_free_energy)
-        
-    def _mean_field_policy_inference(self,
-                                   state: ModelState,
-                                   goal_prior: np.ndarray | None = None,
-                                   **kwargs) -> np.ndarray:
-        """Mean-field implementation of policy inference."""
-        if goal_prior is None:
-            goal_prior = np.ones(len(state.policies)) / len(state.policies)
-        goal_prior = np.maximum(goal_prior, 1e-12)
-        goal_prior = goal_prior / np.sum(goal_prior)
-        expected_free_energy = self._calculate_expected_free_energy(
-            state, goal_prior, **kwargs)
-        logits = np.log(goal_prior) - expected_free_energy / max(self.config.temperature, 1e-8)
-        return self.matrix_ops.softmax(logits)
-        
-    def _calculate_expected_free_energy(self,
-                                      state: ModelState,
-                                      goal_prior: np.ndarray,
-                                      **kwargs) -> np.ndarray:
-        """Calculate expected free energy for policy evaluation."""
-        # Enhanced implementation with both pragmatic and epistemic value
-        pragmatic_value = self._calculate_pragmatic_value(state, goal_prior)
-        epistemic_value = self._calculate_epistemic_value(state)
-        
-        # Weight between exploration and exploitation
-        exploration_weight = kwargs.get('exploration_weight', 0.5)
-        return (1 - exploration_weight) * pragmatic_value + exploration_weight * epistemic_value
-        
-    def _calculate_pragmatic_value(self,
-                                 state: ModelState,
-                                 goal_prior: np.ndarray) -> np.ndarray:
-        """Calculate pragmatic value component of expected free energy."""
-        # KL divergence from current state to goal state
-        return -np.log(goal_prior + 1e-8)
-        
-    def _calculate_epistemic_value(self, state: ModelState) -> np.ndarray:
-        """Calculate epistemic value component of expected free energy."""
-        # Information gain approximation
-        uncertainty = -np.sum(state.beliefs * np.log(state.beliefs + 1e-8))
-        return -uncertainty * np.ones(len(state.policies))
-        
+        values = np.zeros(len(policies), dtype=float)
+        for index, policy in enumerate(policies):
+            values[index] = self.model.evaluate_policy(
+                state.beliefs,
+                policy,
+                self.config.discount_factor,
+            )
+        first_action_values = np.full(self.model.num_actions, np.inf, dtype=float)
+        for action in range(self.model.num_actions):
+            candidates = [
+                value
+                for policy, value in zip(policies, values, strict=False)
+                if policy[0] == action
+            ]
+            first_action_values[action] = min(candidates) if candidates else np.inf
+        if goal_prior is not None:
+            prior = self._action_prior(goal_prior)
+            first_action_values -= np.log(prior + 1e-12)
+        return first_action_values
+
     def update_precision(self, prediction_error: float) -> float:
-        """Update precision parameter based on prediction errors."""
-        if self.config.method == InferenceMethod.VARIATIONAL:
-            # Precision updates for variational method
-            self.config.precision_init = (
-                0.9 * self.config.precision_init +
-                0.1 / (prediction_error + 1e-8)
-            )
-        elif self.config.method == InferenceMethod.SAMPLING:
-            # Adaptive step size for sampling method
-            self.config.precision_init = np.clip(
-                1.0 / (prediction_error + 1e-8),
-                0.1,
-                10.0
-            )
+        """Update precision using a bounded reciprocal prediction error."""
+        error = float(prediction_error)
+        if error < 0 or not np.isfinite(error):
+            raise ValueError("prediction_error must be finite and non-negative")
+        target = 1.0 / (error + 1e-8)
+        self.config.precision_init = float(
+            np.clip(0.9 * self.config.precision_init + 0.1 * target, 0.1, 1e6)
+        )
         return self.config.precision_init
 
-class ActiveInferenceFactory:
-    """Factory for creating Active Inference instances with specific configurations."""
-    
+    def _blend(self, prior: np.ndarray, posterior: np.ndarray) -> np.ndarray:
+        prior_vector = self._normalize(prior, self.model.num_states)
+        posterior_vector = self._normalize(posterior, self.model.num_states)
+        return self._normalize(
+            (1.0 - self.config.learning_rate) * prior_vector
+            + self.config.learning_rate * posterior_vector,
+            self.model.num_states,
+        )
+
+    def _action_prior(self, goal_prior: np.ndarray | None) -> np.ndarray:
+        if goal_prior is None:
+            return self.model.E.copy()
+        candidate = np.asarray(goal_prior, dtype=float).reshape(-1)
+        if candidate.shape != (self.model.num_actions,):
+            raise ValueError(f"goal_prior must have shape {(self.model.num_actions,)}")
+        return self._normalize(candidate, self.model.num_actions)
+
     @staticmethod
-    def create(config: InferenceConfig) -> ActiveInferenceDispatcher:
-        """Create an Active Inference dispatcher with specified configuration."""
-        return ActiveInferenceDispatcher(config)
-    
+    def _normalize(values: np.ndarray, size: int) -> np.ndarray:
+        array = np.asarray(values, dtype=float).reshape(-1)
+        if array.size != size or not np.all(np.isfinite(array)):
+            raise ValueError(f"Expected {size} finite values")
+        array = np.maximum(array, 0.0)
+        total = float(array.sum())
+        if total <= 1e-12:
+            return np.full(size, 1.0 / size)
+        return array / total
+
+    @staticmethod
+    def _softmax(values: np.ndarray) -> np.ndarray:
+        logits = np.asarray(values, dtype=float)
+        shifted = logits - np.max(logits)
+        exp_values = np.exp(np.clip(shifted, -745.0, 709.0))
+        return exp_values / exp_values.sum()
+
+
+class ActiveInferenceFactory:
+    """Factory for configured discrete Active Inference dispatchers."""
+
+    @staticmethod
+    def create(
+        config: InferenceConfig, model: DiscreteGenerativeModel
+    ) -> ActiveInferenceDispatcher:
+        return ActiveInferenceDispatcher(config, model)
+
     @staticmethod
     def create_from_yaml(config_path: str | Path) -> ActiveInferenceDispatcher:
-        """Create an Active Inference dispatcher from YAML configuration."""
-        import yaml
-        with open(config_path) as f:
-            config_dict = yaml.safe_load(f)
-        
-        config = InferenceConfig(
-            method=InferenceMethod(config_dict['method']),
-            policy_type=PolicyType(config_dict['policy_type']),
-            temporal_horizon=config_dict['temporal_horizon'],
-            learning_rate=config_dict['learning_rate'],
-            precision_init=config_dict['precision_init'],
-            use_gpu=config_dict.get('use_gpu', False),
-            num_samples=config_dict.get('num_samples', 1000),
-            temperature=config_dict.get('temperature', 1.0),
-            custom_params=config_dict.get('custom_params', None)
+        path = Path(config_path)
+        with path.open(encoding="utf-8") as config_file:
+            raw = yaml.safe_load(config_file) or {}
+        if not isinstance(raw, dict):
+            raise ValueError("Dispatcher configuration must be a mapping")
+        model_config = raw.get("generative_model", raw.get("model"))
+        if not isinstance(model_config, dict):
+            raise ValueError("Configuration must contain a generative_model mapping")
+        model = DiscreteGenerativeModel.from_config(model_config)
+        config_fields = {
+            "method",
+            "policy_type",
+            "temporal_horizon",
+            "learning_rate",
+            "precision_init",
+            "num_samples",
+            "temperature",
+            "discount_factor",
+            "exploration_weight",
+            "policy_limit",
+            "seed",
+            "custom_params",
+        }
+        config_values = {key: value for key, value in raw.items() if key in config_fields}
+        missing = config_fields.difference(config_values).difference(
+            {
+                "num_samples",
+                "temperature",
+                "discount_factor",
+                "exploration_weight",
+                "policy_limit",
+                "seed",
+                "custom_params",
+            }
         )
-        return ActiveInferenceFactory.create(config)
+        if missing:
+            raise ValueError(f"Missing dispatcher configuration fields: {sorted(missing)}")
+        unknown = set(raw).difference(config_fields | {"generative_model", "model"})
+        if unknown:
+            raise ValueError(f"Unknown dispatcher configuration fields: {sorted(unknown)}")
+        return ActiveInferenceFactory.create(InferenceConfig(**config_values), model)

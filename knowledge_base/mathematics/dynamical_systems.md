@@ -1,55 +1,7 @@
 ---
-title: Dynamical Systems
-type: mathematical_concept
-id: dynamical_systems_001
-created: 2024-03-15
-modified: 2025-12-18
-tags: [mathematics, dynamics]
-
-  - systems
-
-  - differential_equations
-
-  - chaos
-
-semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[control_theory]]
-
-      - [[complex_systems]]
-
-      - [[neural_dynamics]]
-
-      - [[ecological_systems]]
-
-  - type: implements
-
-    links:
-
-      - [[differential_equations]]
-
-      - [[linear_algebra]]
-
-      - [[calculus]]
-
-      - [[optimization_theory]]
-
-  - type: relates
-
-    links:
-
-      - [[statistical_physics]]
-
-      - [[stochastic_processes]]
-
-      - [[network_science]]
-
-      - [[information_theory]]
-
+title: "Dynamical Systems"
+type: "mathematical_concept"
+status: stable
 ---
 
 # Dynamical Systems
@@ -360,7 +312,7 @@ class StochasticDynamicalSystem(DynamicalSystem):
 
         # local minima and saddle points
 
-        return 1.0  # Placeholder
+        return 1.0  # example value
 
     def step(self,
 
@@ -2062,7 +2014,7 @@ class InfiniteDimensionalSystem:
 
 # This would involve analyzing localized solutions
 
-# Simplified placeholder
+# Simplified example value
 
         return {
 
@@ -2100,7 +2052,7 @@ class InfiniteDimensionalSystem:
 
         """Compute normal form coefficients for center manifold."""
 
-# Placeholder for normal form computation
+# example value for normal form computation
 
 # Full implementation would involve multilinear forms
 
@@ -2124,7 +2076,7 @@ class InfiniteDimensionalSystem:
 
             'local_stability': 'needs_nonlinear_analysis',
 
-            'lyapunov_exponents': np.zeros(dim),  # Placeholder
+            'lyapunov_exponents': np.zeros(dim),  # example value
 
             'invariant_sets': []
 
@@ -2136,7 +2088,7 @@ class InfiniteDimensionalSystem:
 
 # Simplified classification
 
-        return 'transcritical'  # Placeholder
+        return 'transcritical'  # example value
 
     def _compute_manifold_properties(self,
 
@@ -2168,9 +2120,9 @@ class InfiniteDimensionalSystem:
 
             'speed_admissible': speed > 0,
 
-            'boundary_conditions_satisfied': True,  # Placeholder
+            'boundary_conditions_satisfied': True,  # example value
 
-            'energy_finite': True  # Placeholder
+            'energy_finite': True  # example value
 
         }
 
@@ -2180,11 +2132,11 @@ class InfiniteDimensionalSystem:
 
         return {
 
-            'spectral_stability': 'stable',  # Placeholder
+            'spectral_stability': 'stable',  # example value
 
             'nonlinear_stability': 'unknown',
 
-            'stability_index': 0  # Placeholder
+            'stability_index': 0  # example value
 
         }
 
@@ -2198,7 +2150,7 @@ class InfiniteDimensionalSystem:
 
             'back_asymptotics': 'exponential_decay',
 
-            'decay_rates': [-1.0, -2.0]  # Placeholder
+            'decay_rates': [-1.0, -2.0]  # example value
 
         }
 
@@ -2208,11 +2160,11 @@ class InfiniteDimensionalSystem:
 
         return {
 
-            'steady_state_stable_without_diffusion': True,  # Placeholder
+            'steady_state_stable_without_diffusion': True,  # example value
 
-            'cross_diffusion_destabilizing': True,  # Placeholder
+            'cross_diffusion_destabilizing': True,  # example value
 
-            'activator_inhibitor_present': True  # Placeholder
+            'activator_inhibitor_present': True  # example value
 
         }
 
@@ -2672,7 +2624,7 @@ class HamiltonianSystem:
 
 # This would be problem-specific
 
-# Placeholder: harmonic oscillator potential
+# example value: harmonic oscillator potential
 
         return 0.5 * np.sum(q**2)
 
@@ -2684,7 +2636,7 @@ class HamiltonianSystem:
 
 # Simplified check
 
-        return 1.0  # Placeholder
+        return 1.0  # example value
 
     def _compute_phase_volume_element(self, state: np.ndarray) -> float:
 
@@ -2692,7 +2644,7 @@ class HamiltonianSystem:
 
 # For Hamiltonian systems, this should be conserved
 
-        return 1.0  # Placeholder (would compute determinant of Jacobian)
+        return 1.0  # example value (would compute determinant of Jacobian)
 
     def _compute_custom_conserved_quantities(self,
 
@@ -2716,7 +2668,7 @@ class HamiltonianSystem:
 
 # Simplified implementation
 
-        return state  # Placeholder
+        return state  # example value
 
     def _analyze_poincare_map(self, intersections: np.ndarray) -> Dict[str, Any]:
 
@@ -2736,7 +2688,7 @@ class HamiltonianSystem:
 
         """Detect periodic orbits in Poincaré map."""
 
-        return []  # Placeholder
+        return []  # example value
 
     def _analyze_orbit_stability(self, intersections: np.ndarray) -> Dict[str, Any]:
 

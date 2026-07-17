@@ -178,7 +178,7 @@ Approaches for creating virtual representations:
 
   - **Process Models**: Operational sequence representation
 
-  - **Functional Mock-up Interfaces**: Behavioral model integration
+  - **Functional test fixture-up Interfaces**: Behavioral model integration
 
 ### AI and Analytics Integration
 
@@ -502,7 +502,7 @@ Important factors in Digital Twin deployment:
 
   - **Integration Complexity**: Connection difficulty
 
-  - **Legacy System Compatibility**: Existing technology constraints
+  - **existing System Compatibility**: Existing technology constraints
 
   - **Skill and Knowledge Gaps**: Expertise limitations
 
@@ -962,7 +962,7 @@ Obstacles in Digital Twin development and operation:
 
 - **Integration Challenges**: Connection-related difficulties
 
-  - **Legacy System Integration**: Existing technology connection
+  - **existing System Integration**: Existing technology connection
 
   - **Cross-Platform Compatibility**: Multiple system harmony
 

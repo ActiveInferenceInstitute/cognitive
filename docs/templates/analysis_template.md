@@ -4,9 +4,9 @@ type: analysis
 
 id: "{{analysis_id}}"
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [analysis, cognitive-model, data-science]
 
@@ -40,7 +40,7 @@ related_analyses: ["{{related_analysis_1}}", "{{related_analysis_2}}"]
 
 ### Experiment Data
 
-- **Experiment**: [[experiment/{{experiment_id}}|{{experiment_name}}]]
+- **Experiment**: {{experiment_name}}
 
 - **Data Collection Date**: {{data_collection_date}}
 
@@ -114,53 +114,8 @@ flowchart LR
 
 ### Implementation
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class {{analysis_class_name}}:
-
-    def __init__(self, data_path, config):
-
-        self.data = self.load_data(data_path)
-
-        self.config = config
-
-    def load_data(self, data_path):
-
-        # Load and validate data
-
-        pass
-
-    def preprocess(self):
-
-        # Clean and preprocess data
-
-        pass
-
-    def explore(self):
-
-        # Exploratory data analysis
-
-        pass
-
-    def analyze(self):
-
-        # Core analysis methods
-
-        pass
-
-    def visualize(self):
-
-        # Generate visualizations
-
-        pass
-
-    def report(self):
-
-        # Generate analysis report
-
-        pass
-
-```
 
 ### Data Preprocessing
 
@@ -488,13 +443,13 @@ def create_results_plots(results):
 
 - External resources
 
-- [[reference/reference_1|Reference 1]]
+- Reference 1
 
-- [[reference/reference_2|Reference 2]]
+- Reference 2
 
 ## Related Analyses
 
-- [[analysis/related_1|Related Analysis 1]]
+- Related Analysis 1
 
-- [[analysis/related_2|Related Analysis 2]]
+- Related Analysis 2
 

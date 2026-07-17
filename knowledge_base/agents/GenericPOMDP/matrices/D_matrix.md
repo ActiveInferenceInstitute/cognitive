@@ -6,9 +6,9 @@ id: D_matrix_001
 
 matrix_type: prior
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [matrix, prior, active-inference]
 
@@ -40,19 +40,8 @@ shape_constraints:
 
 ## Mathematical Form
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-# Prior probability
-
-P(s₁) = D[s]
-
-# Constraints
-
-∑_s D[s] = 1     # Normalization
-
-D[s] ≥ 0         # Non-negative probabilities
-
-```
 
 ## Data Structure
 

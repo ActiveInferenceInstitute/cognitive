@@ -16,7 +16,7 @@ semantic_relations:
     links:
       - [[core_principle]]
       - [[knowledge_base/mathematics/variational_inference]]
-      - [[knowledge_base/mathematics/kullback_leibler_divergence]]
+      - knowledge_base/mathematics/kullback_leibler_divergence
       - [[knowledge_base/mathematics/entropy]]
   - type: implements
     links:
@@ -500,7 +500,7 @@ def benchmark_inference_accuracy(vfe_system, test_cases):
 ### Foundational Links
 - [[core_principle]] - Core FEP formulation
 - [[knowledge_base/mathematics/variational_inference]] - General variational methods
-- [[knowledge_base/mathematics/kullback_leibler_divergence]] - Information divergence measure
+- knowledge_base/mathematics/kullback_leibler_divergence - Information divergence measure
 - [[knowledge_base/mathematics/entropy]] - Information-theoretic entropy
 
 ### Implementation Links

@@ -6,7 +6,7 @@ This document outlines the application of [[knowledge_base/cognitive/active_infe
 
 ## Theoretical Framework
 
-### 1. [[knowledge_base/cognitive/active_inference/Social_States|Social State Space]]
+### 1. Social State Space
 
 - **Community Dynamics**
 
@@ -28,7 +28,7 @@ This document outlines the application of [[knowledge_base/cognitive/active_infe
 
   - Investment patterns
 
-### 2. [[knowledge_base/cognitive/active_inference/Socioeconomic_Dynamics|Socioeconomic Dynamics]]
+### 2. Socioeconomic Dynamics
 
 ```python
 
@@ -76,7 +76,7 @@ class SocioeconomicDynamics:
 
 ## Implementation Framework
 
-### 1. [[knowledge_base/cognitive/active_inference/Social_Control|Social Control]]
+### 1. Social Control
 
 ```python
 
@@ -104,7 +104,7 @@ class SocialController:
 
 ```
 
-### 2. [[knowledge_base/cognitive/active_inference/Economic_Control|Economic Control]]
+### 2. Economic Control
 
 ```python
 
@@ -132,7 +132,7 @@ class EconomicController:
 
 ```
 
-### 3. [[knowledge_base/cognitive/active_inference/Socioeconomic_Learning|Socioeconomic Learning]]
+### 3. Socioeconomic Learning
 
 - **System Adaptation**
 

@@ -647,7 +647,7 @@ class ExperimentConfig:
 
 1. Heins, C., Millidge, B., Demekas, D., Klein, B., Friston, K., Couzin, I. D., & Tschantz, A. (2022). pymdp: A Python library for active inference in discrete state spaces. *Journal of Open Source Software*, 7(73), 4098.
 2. Brockman, G., Cheung, V., Pettersson, L., Schneider, J., Schulman, J., Tang, J., & Zaremba, W. (2016). OpenAI Gym. *arXiv preprint* arXiv:1606.01540.
-3. Todorov, E., Erez, T., & Tassa, Y. (2012). MuJoCo: A physics engine for model-based control. *IEEE/RSJ International Conference on Intelligent Robots and Systems*.
+3. noterov, E., Erez, T., & Tassa, Y. (2012). MuJoCo: A physics engine for model-based control. *IEEE/RSJ International Conference on Intelligent Robots and Systems*.
 4. Coumans, E., & Bai, Y. (2016-2021). PyBullet, a Python module for physics simulation for games, robotics and machine learning. http://pybullet.org
 5. Tassa, Y., et al. (2018). DeepMind Control Suite. *arXiv preprint* arXiv:1801.00690.
 6. Terry, J. K., et al. (2021). PettingZoo: Gym for multi-agent reinforcement learning. *NeurIPS*.

@@ -34,11 +34,11 @@ semantic_relations:
 
 ### Core Concepts
 
-- [[knowledge_base/concept1|Related Concept 1]]
+- Related Concept 1
 
-- [[knowledge_base/concept2|Related Concept 2]]
+- Related Concept 2
 
-- [[knowledge_base/concept3|Related Concept 3]]
+- Related Concept 3
 
 ### Mathematical Foundation
 
@@ -270,11 +270,11 @@ def visualize_results(results):
 
 ### Documentation
 
-- [[docs/guide1|Implementation Guide]]
+- Implementation Guide
 
-- [[docs/api1|API Reference]]
+- API Reference
 
-- [[docs/concept1|Concept Documentation]]
+- Concept Documentation
 
 ## See Also
 

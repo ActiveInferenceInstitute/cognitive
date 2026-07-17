@@ -1,32 +1,7 @@
 ---
-
-title: Softmax Function
-
-type: mathematical_concept
-id: softmax_function_001
-
+title: "Softmax Function"
+type: "mathematical_concept"
 status: stable
-
-created: 2025-08-08
-modified: 2025-12-03
-
-tags: [mathematics, probability, optimization, normalization, active-inference]
-aliases: [softargmax, normalized_exponential]
-
-semantic_relations:
-
-  - type: implements
-
-    links: [[policy_selection]], [[action_distribution]]
-
-  - type: foundation
-
-    links: [[probability_theory]], [[information_theory]]
-
-  - type: relates
-
-    links: [[temperature_parameter]], [[precision_parameter]], [[numerical_stability]], [[exploration_exploitation]]
-
 ---
 
 # Softmax Function

@@ -192,9 +192,9 @@ class EcologicalController:
 
   - Action prioritization ([[mathematics/policy_selection|Policy Selection]])
 
-  - Implementation timing ([[knowledge_base/mathematics/temporal_dynamics|Temporal Planning]])
+  - Implementation timing (Temporal Planning)
 
-  - Effect evaluation ([[knowledge_base/cognitive/performance_evaluation|Performance Assessment]])
+  - Effect evaluation (Performance Assessment)
 
 ## See Also
 

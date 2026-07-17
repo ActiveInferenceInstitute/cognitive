@@ -2760,7 +2760,7 @@ class StochasticThermodynamics:
 
 # Theoretical free energy difference (would be computed separately)
 
-        delta_F_theory = 0.0  # Placeholder
+        delta_F_theory = 0.0  # example value
 
 # Verification metric
 

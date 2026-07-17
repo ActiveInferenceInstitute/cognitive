@@ -1,176 +1,23 @@
-# API Documentation
-
 ---
-
-title: API Documentation
-
+title: API documentation overview
 type: index
-
 status: stable
-
-created: 2024-02-06
-
-tags:
-
-- api
-
-- reference
-
-- documentation
-
-semantic_relations:
-
-- type: implements
-
-    links: [[knowledge_base/cognitive/cognitive_modeling_concepts]]
-
-- type: relates
-
-    links:
-
-  - [[docs/implementation/implementation_guides]]
-
-  - [[docs/examples/usage_examples]]
-
 ---
 
-## Overview
-
-This directory contains comprehensive API documentation for the cognitive modeling system.
-
-## Core APIs
-
-### Model Components
-
-- [[agent_api]] - Agent interface and implementation
-
-- [[belief_api]] - Belief system API
-
-- [[action_api]] - Action selection API
-
-- [[perception_api]] - Perception system API
-
-### Mathematical Framework
-
-- [[free_energy_api]] - Free energy computations
-
-- [[inference_api]] - Inference algorithms
-
-- [[optimization_api]] - Optimization methods
-
-### Utilities
-
-- [[matrix_api]] - Matrix operations
-
-- [[probability_api]] - Probability computations
-
-- [[visualization_api]] - Visualization tools
-
-## Integration APIs
-
-### System Integration
-
-- [[model_integration]] - Model integration interfaces
-
-- [[pipeline_api]] - Processing pipeline API
-
-- [[plugin_api]] - Plugin system API
-
-### Data Management
-
-- [[data_api]] - Data handling interfaces
-
-- [[storage_api]] - Storage interfaces
-
-- [[cache_api]] - Caching system
-
-### External Interfaces
-
-- [[rest_api]] - REST API specification
-
-- [[websocket_api]] - WebSocket interface
-
-- [[cli_api]] - Command-line interface
-
-## Development Tools
-
-### Testing
-
-- [[test_api]] - Testing utilities
-
-- [[mock_api]] - Mocking interfaces
-
-- [[benchmark_api]] - Benchmarking tools
-
-### Debugging
-
-- [[debug_api]] - Debugging utilities
-
-- [[logging_api]] - Logging system
-
-- [[profiling_api]] - Profiling tools
-
-### Documentation
-
-- [[doc_generation]] - Documentation generation
-
-- [[example_generation]] - Example generation
-
-- [[validation_api]] - API validation
-
-## Extension Points
-
-### Plugin Development
-
-- [[plugin_development]] - Plugin development guide
-
-- [[extension_points]] - Available extension points
-
-- [[hook_api]] - Hook system API
-
-### Custom Components
-
-- [[custom_models]] - Custom model development
-
-- [[custom_inference]] - Custom inference methods
-
-- [[custom_optimizers]] - Custom optimizers
-
-### Integration Tools
-
-- [[integration_utils]] - Integration utilities
-
-- [[compatibility_api]] - Compatibility layers
-
-- [[conversion_api]] - Data conversion tools
-
-## Version Information
-
-### API Versions
-
-- [[current_version]] - Current API version
-
-- [[version_history]] - Version history
-
-- [[deprecation_notes]] - Deprecation notices
-
-### Compatibility
-
-- [[compatibility_matrix]] - Version compatibility
-
-- [[migration_guides]] - Migration guides
-
-- [[breaking_changes]] - Breaking changes
-
-## Related Sections
-
-- [[docs/implementation/implementation_guides|Implementation Guides]]
-
-- [[docs/examples/usage_examples|Usage Examples]]
-
-- [[knowledge_base/cognitive/cognitive_modeling_concepts|Core Concepts]]
-
-## Contributing
-
-See [[docs/templates/api_template|API Documentation Template]] for documenting new APIs.
-
+# API documentation overview
+
+The runtime API is organized around validated probability models and explicit
+agent families:
+
+1. `cognitive.models.active_inference` contains discrete inference,
+   homeostatic control, lifecycle state, and persistence.
+2. `cognitive.models.matrices` contains matrix operations, loaders,
+   initializers, and plotting data adapters.
+3. `cognitive.utils` contains probability helpers, node creation, and
+   knowledge-network construction.
+4. `Things.Simple_POMDP` and `Things.Continuous_Generic` contain the two
+   maintained concrete agent families.
+
+Use [`api_reference.md`](api_reference.md) for signatures and
+[`../../README.md`](../../README.md) for a runnable example. Theory remains in
+`knowledge_base/`; it is not treated as a runtime import surface.

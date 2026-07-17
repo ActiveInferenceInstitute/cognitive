@@ -182,7 +182,7 @@ Agents are structured with:
 
 1. Explore [[docs/examples/index|Example Implementations]]
 
-1. Review the [[docs/api/reference|API Reference]]
+1. Review the API Reference
 
 ## Running Tests (TDD)
 
@@ -326,7 +326,7 @@ def select_action(agent):
 
 ## Getting Help
 
-- Check the [[docs/troubleshooting|Troubleshooting Guide]]
+- Check the Troubleshooting Guide
 
 - Join our [Community Forum](https://forum.example.com)
 

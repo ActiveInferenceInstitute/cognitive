@@ -1,13 +1,7 @@
 ---
-title: Belief Evolution
-type: concept
+title: "Belief Evolution"
+type: "concept"
 status: stable
-created: 2024-02-12
-updated: 2026-02-07
-tags: [beliefs, temporal_dynamics, inference, active_inference, variational]
-semantic_relations:
-  - type: relates
-    links: [[knowledge_base/cognitive/belief_updating]], [[convergence_analysis]], [[state_estimation]], [[knowledge_base/cognitive/active_inference]], [[stability_analysis]]]
 ---
 
 # Belief Evolution

@@ -4,9 +4,9 @@ type: action
 
 id: "{{action_id}}"
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [action, cognitive-model, behavior]
 
@@ -86,9 +86,9 @@ parameters:
 
 - Contextual conditions
 
-- [[precondition/precondition_1|Precondition 1]]
+- Precondition 1
 
-- [[precondition/precondition_2|Precondition 2]]
+- Precondition 2
 
 ## Execution
 
@@ -120,35 +120,8 @@ sequenceDiagram
 
 ### Implementation
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class {{action_class_name}}(Action):
-
-    def __init__(self, parameters):
-
-        super().__init__(parameters)
-
-        self.parameters = self.validate_parameters(parameters)
-
-    def can_execute(self, agent_state, environment_state):
-
-        # Check if preconditions are satisfied
-
-        pass
-
-    def execute(self, agent_state, environment_state):
-
-        # Execute the action and return effects
-
-        pass
-
-    def predict_outcome(self, agent_state, environment_state):
-
-        # Predict the outcome without executing
-
-        pass
-
-```
 
 ### Execution Modes
 
@@ -168,9 +141,9 @@ class {{action_class_name}}(Action):
 
 - State changes
 
-- [[effect/effect_1|Effect 1]]
+- Effect 1
 
-- [[effect/effect_2|Effect 2]]
+- Effect 2
 
 ### Side Effects
 
@@ -178,9 +151,9 @@ class {{action_class_name}}(Action):
 
 - Emergent effects
 
-- [[side_effect/side_effect_1|Side Effect 1]]
+- Side Effect 1
 
-- [[side_effect/side_effect_2|Side Effect 2]]
+- Side Effect 2
 
 ### Temporal Dynamics
 
@@ -224,9 +197,9 @@ gantt
 
 - Selection probability
 
-- [[policy/policy_1|Policy 1]]
+- Policy 1
 
-- [[policy/policy_2|Policy 2]]
+- Policy 2
 
 ## Relationships
 
@@ -236,9 +209,9 @@ gantt
 
 - External dependencies
 
-- [[dependency/dependency_1|Dependency 1]]
+- Dependency 1
 
-- [[dependency/dependency_2|Dependency 2]]
+- Dependency 2
 
 ### Interactions
 
@@ -248,9 +221,9 @@ gantt
 
 - Action combinations
 
-- [[interaction/interaction_1|Interaction 1]]
+- Interaction 1
 
-- [[interaction/interaction_2|Interaction 2]]
+- Interaction 2
 
 ## Evaluation
 
@@ -320,13 +293,13 @@ temporal_horizon: {{temporal_horizon}}
 
 - External resources
 
-- [[reference/reference_1|Reference 1]]
+- Reference 1
 
-- [[reference/reference_2|Reference 2]]
+- Reference 2
 
 ## Related Actions
 
-- [[action/related_1|Related Action 1]]
+- Related Action 1
 
-- [[action/related_2|Related Action 2]]
+- Related Action 2
 

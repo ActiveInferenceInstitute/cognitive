@@ -1,18 +1,7 @@
 ---
-title: Neural Dynamics
-type: mathematical_concept
-id: neural_dynamics_001
-created: 2025-12-18
-modified: 2025-12-18
-tags: [mathematics, neuroscience, dynamical_systems, neural_networks, cognitive_modeling]
-aliases: [neural_dynamics, brain_dynamics]
-semantic_relations:
-  - type: foundation
-    links: [[dynamical_systems]], [[differential_equations]], [[stochastic_processes]]
-  - type: implements
-    links: [[predictive_coding]], [[active_inference]], [[free_energy_principle]]
-  - type: relates
-    links: [[neural_mass_models]], [[mean_field_theory]], [[synaptic_plasticity]]
+title: "Neural Dynamics"
+type: "mathematical_concept"
+status: stable
 ---
 
 # Neural Dynamics

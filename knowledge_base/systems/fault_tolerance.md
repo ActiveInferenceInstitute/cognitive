@@ -34,7 +34,7 @@ semantic_relations:
 
     links:
 
-      - [[docs/guides/learning_paths/resilient_systems_path|Resilient Systems Learning Path]]
+      - Resilient Systems Learning Path
 
   - type: builds_on
 

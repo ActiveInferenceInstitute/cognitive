@@ -23,7 +23,7 @@ semantic_relations:
       - [[knowledge_base/mathematics/dynamical_systems]]
   - type: implements
     links:
-      - [[knowledge_base/systems/complex_adaptive_systems]]
+      - knowledge_base/systems/complex_adaptive_systems
       - [[knowledge_base/systems/emergence]]
 ---
 

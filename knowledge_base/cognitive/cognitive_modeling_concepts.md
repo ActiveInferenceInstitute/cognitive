@@ -38,9 +38,9 @@ semantic_relations:
 
       - [[docs/repo_docs/content_management]]
 
-      - [[docs/research/cognitive_architectures]]
+      - docs/research/cognitive_architectures
 
-      - [[knowledge_base/model_implementations]]
+      - knowledge_base/model_implementations
 
 ---
 
@@ -288,7 +288,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
   - Multi-objective optimization
 
-- [[docs/integration_patterns]] - System integration
+- docs/integration_patterns - System integration
 
   - Component coupling
 
@@ -306,13 +306,13 @@ This directory contains foundational concepts and theoretical documentation for 
 
 - [[cognitive_science|Cognitive Science Knowledge Base]]
 
-- [[docs/research/current_research|Current Research]]
+- Current Research
 
-- [[knowledge_base/reference_implementations|Reference Implementations]]
+- Reference Implementations
 
 ## Contributing
 
-See [[docs/templates/concept_template|Concept Template]] for creating new concept documentation.
+See Concept Template for creating new concept documentation.
 
 ### Contribution Guidelines
 
@@ -340,9 +340,9 @@ See [[docs/templates/concept_template|Concept Template]] for creating new concep
 
 ## References
 
-- [[docs/research/papers/key_papers|Key Papers]]
+- Key Papers
 
-- [[docs/research/external_resources|External Resources]]
+- External Resources
 
 - [[docs/guides/best_practices|Best Practices]]
 

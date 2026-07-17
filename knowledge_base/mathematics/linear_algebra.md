@@ -1,16 +1,7 @@
 ---
-title: Linear Algebra
-type: mathematical_concept
-id: linear_algebra_001
-created: 2025-12-18
-modified: 2025-12-18
-tags: [mathematics, linear_algebra, vectors, matrices, eigenvalues, vector_spaces]
-aliases: [linear_algebra, matrix_theory]
-semantic_relations:
-  - type: foundation_for
-    links: [[dynamical_systems]], [[optimization_theory]], [[differential_equations]], [[probability_theory]], [[information_geometry]]
-  - type: relates
-    links: [[calculus]], [[functional_analysis]], [[differential_geometry]]
+title: "Linear Algebra"
+type: "mathematical_concept"
+status: stable
 ---
 
 # Linear Algebra

@@ -4,9 +4,9 @@ type: environment
 
 id: "{{environment_id}}"
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [environment, cognitive-model, simulation]
 
@@ -96,9 +96,9 @@ state_variables:
 
 - Action effects
 
-- [[action/action_1|Action 1]]
+- Action 1
 
-- [[action/action_2|Action 2]]
+- Action 2
 
 ## Dynamics
 
@@ -124,43 +124,8 @@ stateDiagram-v2
 
 ### Implementation
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class {{environment_class_name}}(Environment):
-
-    def __init__(self, config):
-
-        super().__init__(config)
-
-        self.state = self.initialize_state(config.initial_state)
-
-        self.agents = self.initialize_agents(config.agents)
-
-    def step(self, actions):
-
-        # Update environment state based on actions
-
-        next_state = self.transition_function(self.state, actions)
-
-        observations = self.observation_function(next_state)
-
-        rewards = self.reward_function(self.state, actions, next_state)
-
-        done = self.termination_condition(next_state)
-
-        self.state = next_state
-
-        return observations, rewards, done, {}
-
-    def reset(self):
-
-        # Reset environment to initial state
-
-        self.state = self.initialize_state(self.config.initial_state)
-
-        return self.observation_function(self.state)
-
-```
 
 ### Stochasticity
 
@@ -202,9 +167,9 @@ flowchart LR
 
 - Penalty systems
 
-- [[reward/reward_1|Reward Function 1]]
+- Reward Function 1
 
-- [[reward/reward_2|Reward Function 2]]
+- Reward Function 2
 
 ### Multi-Agent Dynamics
 
@@ -254,9 +219,9 @@ termination_conditions:
 
 - Scenario 3: Description
 
-- [[scenario/scenario_1|Scenario 1]]
+- Scenario 1
 
-- [[scenario/scenario_2|Scenario 2]]
+- Scenario 2
 
 ## Evaluation
 
@@ -328,13 +293,13 @@ computational_requirements:
 
 - External resources
 
-- [[reference/reference_1|Reference 1]]
+- Reference 1
 
-- [[reference/reference_2|Reference 2]]
+- Reference 2
 
 ## Related Environments
 
-- [[environment/related_1|Related Environment 1]]
+- Related Environment 1
 
-- [[environment/related_2|Related Environment 2]]
+- Related Environment 2
 

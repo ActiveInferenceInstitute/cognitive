@@ -60,7 +60,7 @@ Below you can find a list of **exported** methods from RxInfer.jl. All methods (
 
 !!! note
 
-    Some exported names are (for legacy reasons) intended for private usage only. As a result some of these methods do not have a proper associated documentation with them. We constantly improve RxInfer.jl library and continue to add better documentation for many exported methods, but a small portion of these methods could be removed from this list in the future.
+    Some exported names are (for existing reasons) intended for private usage only. As a result some of these methods do not have a proper associated documentation with them. We constantly improve RxInfer.jl library and continue to add better documentation for many exported methods, but a small portion of these methods could be removed from this list in the future.
 
 ```@example list
 

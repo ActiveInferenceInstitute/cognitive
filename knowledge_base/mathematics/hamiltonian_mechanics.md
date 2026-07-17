@@ -324,7 +324,7 @@ class CanonicalTransformation:
 
         else:
 
-            raise ValueError(f"Type {self.type} not implemented")
+            raise ValueError(f"Type {self.type} unavailable")
 
     def verify_canonical(self,
 

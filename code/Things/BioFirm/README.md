@@ -18,7 +18,6 @@ For full source code and detailed documentation, see [[code/Things/BioFirm/READM
 ## Related Resources
 
 - [[knowledge_base/BioFirm/biofirm_framework|BioFirm Framework]]
-- [[knowledge_base/BioFirm/biofirm_schema|BioFirm Schema]]
 - [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]]
 - [[knowledge_base/BioFirm/ecological_active_inference|Ecological Active Inference]]
 - [[knowledge_base/free_energy_principle/biology/homeostasis|Homeostasis (FEP)]]

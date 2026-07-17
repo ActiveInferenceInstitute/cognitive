@@ -1,13 +1,7 @@
 ---
-title: Causal Analysis
-type: concept
+title: "Causal Analysis"
+type: "concept"
 status: stable
-created: 2024-02-12
-updated: 2026-02-07
-tags: [causality, intervention, counterfactual, active_inference]
-semantic_relations:
-  - type: relates
-    links: [[knowledge_base/mathematics/bayesian_networks]], [[experiment_design]], [[hidden_states]], [[knowledge_base/mathematics/d_separation]]]
 ---
 
 # Causal Analysis

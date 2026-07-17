@@ -608,7 +608,7 @@ flowchart TD
 > - **Assigned To:** [[team_member|Team Member]]
 > [!example] Research Task
 > - **Research Question:** [Question]
-> - **Background Reading:** [[knowledge_base/citations/relevant_paper|Relevant Paper]]
+> - **Background Reading:** Relevant Paper
 > - **Methodology:** [Approach]
 > - **Expected Outcomes:** [Insights/Artifacts]
 > - **Related Work:** [[related_research|Related Research]]

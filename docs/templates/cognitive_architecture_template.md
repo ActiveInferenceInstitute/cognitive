@@ -4,9 +4,9 @@ type: cognitive-architecture
 
 id: "{{architecture_id}}"
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [cognitive-architecture, system, integration]
 
@@ -46,9 +46,9 @@ related_architectures: ["{{related_architecture_1}}", "{{related_architecture_2}
 
 - Principle 3: Description
 
-- [[principle/principle_1|Principle 1]]
+- Principle 1
 
-- [[principle/principle_2|Principle 2]]
+- Principle 2
 
 ### Theoretical Framework
 
@@ -78,9 +78,9 @@ graph TD
 
 - Research area 3
 
-- [[docs/research/research_1|Research 1]]
+- Research 1
 
-- [[docs/research/research_2|Research 2]]
+- Research 2
 
 ## Architecture
 
@@ -182,29 +182,29 @@ sequenceDiagram
 
 ### Agents
 
-- [[agent/agent_1|Agent 1]]: Description
+- Agent 1: Description
 
-- [[agent/agent_2|Agent 2]]: Description
+- Agent 2: Description
 
-- [[agent/agent_3|Agent 3]]: Description
+- Agent 3: Description
 
 ### Belief Systems
 
-- [[belief_system/belief_system_1|Belief System 1]]: Description
+- Belief System 1: Description
 
-- [[belief_system/belief_system_2|Belief System 2]]: Description
+- Belief System 2: Description
 
 ### Memory Structures
 
-- [[memory/memory_1|Memory Structure 1]]: Description
+- Memory Structure 1: Description
 
-- [[memory/memory_2|Memory Structure 2]]: Description
+- Memory Structure 2: Description
 
 ### Learning Mechanisms
 
-- [[learning/learning_1|Learning Mechanism 1]]: Description
+- Learning Mechanism 1: Description
 
-- [[learning/learning_2|Learning Mechanism 2]]: Description
+- Learning Mechanism 2: Description
 
 ## Integration
 
@@ -298,47 +298,8 @@ requirements:
 
 ### Code Structure
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class {{architecture_class_name}}:
-
-    def __init__(self, config):
-
-        self.perception = PerceptionModule(config.perception)
-
-        self.cognition = CognitionModule(config.cognition)
-
-        self.memory = MemoryModule(config.memory)
-
-        self.action = ActionModule(config.action)
-
-        self.learning = LearningModule(config.learning)
-
-    def initialize(self):
-
-        # Initialize all components
-
-        pass
-
-    def process_input(self, sensory_input):
-
-        # Process input through the architecture
-
-        perception_output = self.perception.process(sensory_input)
-
-        memory_context = self.memory.retrieve_relevant(perception_output)
-
-        cognitive_result = self.cognition.reason(perception_output, memory_context)
-
-        self.memory.update(cognitive_result)
-
-        action = self.action.select(cognitive_result)
-
-        self.learning.update(sensory_input, action, cognitive_result)
-
-        return action
-
-```
 
 ### Deployment Architecture
 
@@ -456,9 +417,9 @@ metrics:
 
 ### Case Studies
 
-- [[case_study/case_study_1|Case Study 1]]: Summary
+- Case Study 1: Summary
 
-- [[case_study/case_study_2|Case Study 2]]: Summary
+- Case Study 2: Summary
 
 ### Deployment Examples
 
@@ -532,13 +493,13 @@ gantt
 
 - External resources
 
-- [[reference/reference_1|Reference 1]]
+- Reference 1
 
-- [[reference/reference_2|Reference 2]]
+- Reference 2
 
 ## Related Architectures
 
-- [[architecture/related_1|Related Architecture 1]]
+- Related Architecture 1
 
-- [[architecture/related_2|Related Architecture 2]]
+- Related Architecture 2
 

@@ -22,11 +22,11 @@ semantic_relations:
       - model_comparison
   - type: implements
     links:
-      - [[knowledge_base/mathematics/statistical_modeling]]
-      - [[knowledge_base/mathematics/computational_methods]]
+      - knowledge_base/mathematics/statistical_modeling
+      - knowledge_base/mathematics/computational_methods
   - type: foundation
     links:
-      - [[knowledge_base/mathematics/scientific_computing]]
+      - knowledge_base/mathematics/scientific_computing
       - [[research_education]]
 
 ---

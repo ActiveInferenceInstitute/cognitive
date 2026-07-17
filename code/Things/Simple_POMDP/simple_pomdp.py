@@ -7,6 +7,7 @@ from typing import Any
 import matplotlib.pyplot as plt
 import numpy as np
 import yaml
+from cognitive.models.active_inference.generative_model import DiscreteGenerativeModel
 
 EPS = 1e-12
 
@@ -31,7 +32,10 @@ class SimplePOMDPState:
 
 
 def _normalize(vector: np.ndarray) -> np.ndarray:
-    vector = np.maximum(np.asarray(vector, dtype=float), 0.0)
+    vector = np.asarray(vector, dtype=float).reshape(-1)
+    if vector.size == 0 or not np.all(np.isfinite(vector)):
+        raise ValueError("Probability vector must be finite and non-empty")
+    vector = np.maximum(vector, 0.0)
     total = float(vector.sum())
     if total <= EPS:
         return np.ones_like(vector, dtype=float) / vector.size
@@ -39,7 +43,9 @@ def _normalize(vector: np.ndarray) -> np.ndarray:
 
 
 def _softmax(values: np.ndarray, temperature: float = 1.0) -> np.ndarray:
-    temperature = max(float(temperature), EPS)
+    temperature = float(temperature)
+    if temperature <= 0 or not np.isfinite(temperature):
+        raise ValueError("temperature must be finite and positive")
     scaled = np.asarray(values, dtype=float) / temperature
     shifted = scaled - np.max(scaled)
     exp_values = np.exp(shifted)
@@ -53,15 +59,16 @@ def compute_expected_free_energy(
     beliefs: np.ndarray,
     action: int,
 ) -> tuple[float, float, float]:
-    predicted_states = B[:, :, action] @ _normalize(beliefs)
-    expected_observations = _normalize(A @ predicted_states)
-    preferences = _softmax(C)
-
-    epistemic = -float(np.sum(expected_observations * np.log(expected_observations + EPS)))
-    pragmatic = float(
-        np.sum(expected_observations * (np.log(expected_observations + EPS) - np.log(preferences + EPS)))
+    model = DiscreteGenerativeModel(
+        np.asarray(A, dtype=float),
+        np.asarray(B, dtype=float),
+        np.asarray(C, dtype=float),
+        np.full(np.asarray(B).shape[0], 1.0 / np.asarray(B).shape[0]),
+        np.full(np.asarray(B).shape[2], 1.0 / np.asarray(B).shape[2]),
     )
-    return epistemic + pragmatic, epistemic, pragmatic
+    total, risk, ambiguity, epistemic_gain = model.expected_free_energy(beliefs, action)
+    pragmatic = risk + ambiguity
+    return float(total), float(epistemic_gain), float(pragmatic)
 
 
 class SimplePOMDP:
@@ -94,21 +101,80 @@ class SimplePOMDP:
 
     def _load_config(self, config: str | Path | dict[str, Any]) -> dict[str, Any]:
         if isinstance(config, dict):
-            return config
-        with open(config, encoding="utf-8") as config_file:
+            return dict(config)
+        config_path = Path(config).expanduser().resolve()
+        with config_path.open(encoding="utf-8") as config_file:
             loaded = yaml.safe_load(config_file)
         if not isinstance(loaded, dict):
             raise ValueError("Configuration file must contain a mapping")
+        visualization = loaded.get("visualization")
+        if isinstance(visualization, dict) and isinstance(visualization.get("output_dir"), str):
+            output_path = Path(visualization["output_dir"]).expanduser()
+            if not output_path.is_absolute():
+                visualization["output_dir"] = str((config_path.parent / output_path).resolve())
         return loaded
 
     def _validate_config(self) -> None:
         missing = self.REQUIRED_SECTIONS.difference(self.config)
         if missing:
             raise ValueError(f"Missing required configuration sections: {sorted(missing)}")
+        allowed_root = self.REQUIRED_SECTIONS | {"seed"}
+        unknown_root = set(self.config).difference(allowed_root)
+        if unknown_root:
+            raise ValueError(f"Unknown configuration sections: {sorted(unknown_root)}")
+        self._validate_section("model", {"name", "description", "version"})
+        self._validate_section("state_space", {"num_states", "state_labels", "initial_state"})
+        self._validate_section("observation_space", {"num_observations", "observation_labels"})
+        self._validate_section("action_space", {"num_actions", "action_labels"})
+        self._validate_section(
+            "inference",
+            {
+                "time_horizon",
+                "temporal_horizon",
+                "num_iterations",
+                "learning_rate",
+                "temperature",
+                "policy_learning_rate",
+                "seed",
+            },
+        )
+        self._validate_section("visualization", {"output_dir", "formats", "dpi", "style"})
+        matrices = self.config.get("matrices")
+        if not isinstance(matrices, dict):
+            raise ValueError("matrices must be a mapping")
+        expected_matrices = {"A_matrix", "B_matrix", "C_matrix", "D_matrix", "E_matrix"}
+        if set(matrices) != expected_matrices:
+            raise ValueError(
+                "matrices must define exactly A_matrix, B_matrix, C_matrix, D_matrix, and E_matrix"
+            )
+        for name, spec in matrices.items():
+            if not isinstance(spec, dict):
+                raise ValueError(f"{name} must be a mapping")
+            allowed = {
+                "shape",
+                "initialization",
+                "initialization_params",
+                "constraints",
+                "description",
+                "learning_rate",
+            }
+            unknown = set(spec).difference(allowed)
+            if unknown:
+                raise ValueError(f"Unknown {name} fields: {sorted(unknown)}")
+
+    def _validate_section(self, name: str, allowed: set[str]) -> None:
+        value = self.config.get(name)
+        if not isinstance(value, dict):
+            raise ValueError(f"{name} must be a mapping")
+        unknown = set(value).difference(allowed)
+        if unknown:
+            raise ValueError(f"Unknown {name} fields: {sorted(unknown)}")
 
     def _initialize_matrix(self, name: str) -> np.ndarray:
         spec = self.config["matrices"][name]
         shape = tuple(spec["shape"])
+        if not shape or any(int(value) < 1 for value in shape):
+            raise ValueError(f"{name} must have a positive shape")
         init = spec.get("initialization", "uniform")
         params = spec.get("initialization_params", {})
 
@@ -131,9 +197,13 @@ class SimplePOMDP:
         return np.asarray(matrix, dtype=float)
 
     def _identity_based(self, shape: tuple[int, ...], strength: float) -> np.ndarray:
+        if not 0.0 <= strength <= 1.0:
+            raise ValueError("identity strength must be in [0, 1]")
         if len(shape) == 2:
             n_rows, n_cols = shape
             matrix = np.zeros(shape, dtype=float)
+            if n_rows == 1:
+                return np.ones(shape, dtype=float)
             for col in range(n_cols):
                 matrix[col % n_rows, col] = strength
                 remainder = max(1.0 - strength, 0.0)
@@ -166,9 +236,16 @@ class SimplePOMDP:
             return self._column_normalize(matrix)
         if constraint == "row_stochastic":
             if matrix.ndim == 3:
-                return self._normalize_transition_tensor(matrix)
+                raise ValueError("B_matrix uses column_stochastic, not row_stochastic")
             return self._row_normalize(matrix)
-        return matrix
+        if constraint in {"sum_to_one", "non_negative"}:
+            if constraint == "sum_to_one":
+                total = float(matrix.sum())
+                if total <= EPS:
+                    raise ValueError("sum_to_one cannot normalize an all-zero matrix")
+                return matrix / total
+            return np.maximum(matrix, 0.0)
+        raise ValueError(f"Unsupported matrix constraint: {constraint}")
 
     @staticmethod
     def _column_normalize(matrix: np.ndarray) -> np.ndarray:
@@ -199,25 +276,36 @@ class SimplePOMDP:
 
         if self.A.shape != (num_observations, num_states):
             raise ValueError("A matrix shape must match observation and state spaces")
-        if not np.all(self.A >= 0) or not np.allclose(self.A.sum(axis=0), 1.0):
+        if (
+            not np.all(np.isfinite(self.A))
+            or not np.all(self.A >= 0)
+            or not np.allclose(self.A.sum(axis=0), 1.0)
+        ):
             raise ValueError("A matrix must be column stochastic")
 
         if self.B.shape != (num_states, num_states, num_actions):
             raise ValueError("B matrix shape must match state and action spaces")
         for action in range(num_actions):
-            if not np.all(self.B[:, :, action] >= 0) or not np.allclose(
-                self.B[:, :, action].sum(axis=0), 1.0
+            if (
+                not np.all(np.isfinite(self.B[:, :, action]))
+                or not np.all(self.B[:, :, action] >= 0)
+                or not np.allclose(self.B[:, :, action].sum(axis=0), 1.0)
             ):
                 raise ValueError("B matrix must be column stochastic")
 
         if self.C.shape != (num_observations,):
             raise ValueError("C matrix must define one preference per observation")
+        if not np.all(np.isfinite(self.C)):
+            raise ValueError("C matrix must contain finite preferences")
         if self.D.shape != (num_states,):
             raise ValueError("D matrix must define one prior per state")
         self.D = _normalize(self.D)
         if self.E.shape != (num_actions,):
             raise ValueError("E matrix must define one prior per action")
         self.E = _normalize(self.E)
+        initial_state = int(self.config["state_space"].get("initial_state", 0))
+        if not 0 <= initial_state < num_states:
+            raise ValueError("initial_state is out of range")
 
     def step(self, action: int | None = None) -> tuple[int, float]:
         if action is None:
@@ -246,6 +334,61 @@ class SimplePOMDP:
 
         return observation, float(free_energy)
 
+    def run(self, steps: int, actions: list[int] | None = None) -> list[tuple[int, float]]:
+        """Run a deterministic-length simulation and return observations/free energies."""
+        if steps < 0:
+            raise ValueError("steps must be non-negative")
+        if actions is not None and len(actions) != steps:
+            raise ValueError("actions must contain exactly one action per step")
+        return [self.step(None if actions is None else actions[index]) for index in range(steps)]
+
+    def reset(self) -> None:
+        """Reset beliefs, time, and history to the configured prior."""
+        initial_state = int(self.config["state_space"].get("initial_state", 0))
+        self.state = SimplePOMDPState(initial_state, self.D.copy())
+
+    def save_state(self, path: str | Path) -> Path:
+        """Persist model state and history as versioned YAML."""
+        destination = Path(path)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "schema_version": 1,
+            "current_state": self.state.current_state,
+            "beliefs": self.state.beliefs.tolist(),
+            "time_step": self.state.time_step,
+            "history": {
+                key: [
+                    value.tolist() if isinstance(value, np.ndarray) else value for value in values
+                ]
+                for key, values in self.state.history.items()
+            },
+        }
+        temporary = destination.with_name(f".{destination.name}.tmp")
+        with temporary.open("w", encoding="utf-8") as state_file:
+            yaml.safe_dump(payload, state_file, sort_keys=True)
+        temporary.replace(destination)
+        return destination
+
+    def load_state(self, path: str | Path) -> None:
+        """Load a validated model state and history."""
+        with Path(path).open(encoding="utf-8") as state_file:
+            payload = yaml.safe_load(state_file)
+        if not isinstance(payload, dict) or payload.get("schema_version") != 1:
+            raise ValueError("Unsupported or malformed POMDP state")
+        current_state = int(payload["current_state"])
+        beliefs = _normalize(np.asarray(payload["beliefs"], dtype=float))
+        if current_state < 0 or current_state >= self.B.shape[0] or beliefs.shape != self.D.shape:
+            raise ValueError("Saved state dimensions are incompatible with this model")
+        history = payload.get("history")
+        if not isinstance(history, dict) or set(history) != set(self.state.history):
+            raise ValueError("Saved history fields are incompatible with this model")
+        self.state = SimplePOMDPState(
+            current_state=current_state,
+            beliefs=beliefs,
+            time_step=int(payload["time_step"]),
+            history={key: list(values) for key, values in history.items()},
+        )
+
     def _get_observation(self, state: int) -> int:
         probabilities = _normalize(self.A[:, state])
         return int(self.rng.choice(len(probabilities), p=probabilities))
@@ -256,7 +399,9 @@ class SimplePOMDP:
         posterior = _normalize(predicted * likelihood)
         learning_rate = float(self.config["inference"].get("learning_rate", 1.0))
         learning_rate = float(np.clip(learning_rate, 0.0, 1.0))
-        self.state.beliefs = _normalize((1.0 - learning_rate) * self.state.beliefs + learning_rate * posterior)
+        self.state.beliefs = _normalize(
+            (1.0 - learning_rate) * self.state.beliefs + learning_rate * posterior
+        )
         return -float(np.log(np.dot(likelihood, predicted) + EPS))
 
     def _select_action(self) -> tuple[int, np.ndarray]:
@@ -376,7 +521,7 @@ class _SimplePOMDPPlotter:
             ("Epistemic Value", epistemic),
             ("Pragmatic Value", pragmatic),
         ]
-        for ax, (title, values) in zip(axes, series):
+        for ax, (title, values) in zip(axes, series, strict=False):
             ax.bar(np.arange(values.size), values)
             ax.set_title(title)
             ax.set_xlabel("Policy Index")
@@ -407,12 +552,17 @@ class _SimplePOMDPPlotter:
         return fig
 
     def _plot_efe_components_detailed(self) -> plt.Figure:
-        total = np.asarray(self.model.state.history["efe_total"] or [self.model._expected_free_energy_components()[0]])
+        total = np.asarray(
+            self.model.state.history["efe_total"]
+            or [self.model._expected_free_energy_components()[0]]
+        )
         epistemic = np.asarray(
-            self.model.state.history["efe_epistemic"] or [self.model._expected_free_energy_components()[1]]
+            self.model.state.history["efe_epistemic"]
+            or [self.model._expected_free_energy_components()[1]]
         )
         pragmatic = np.asarray(
-            self.model.state.history["efe_pragmatic"] or [self.model._expected_free_energy_components()[2]]
+            self.model.state.history["efe_pragmatic"]
+            or [self.model._expected_free_energy_components()[2]]
         )
         selected_total = np.min(total, axis=1)
         selected_epistemic = np.mean(epistemic, axis=1)
@@ -427,7 +577,9 @@ class _SimplePOMDPPlotter:
         axes[0].set_xlabel("Time Step")
         axes[0].set_ylabel("Value")
 
-        axes[1].stackplot(time, selected_epistemic, selected_pragmatic, labels=["Epistemic", "Pragmatic"])
+        axes[1].stackplot(
+            time, selected_epistemic, selected_pragmatic, labels=["Epistemic", "Pragmatic"]
+        )
         axes[1].set_title("EFE Components")
         axes[1].set_xlabel("Time Step")
         axes[1].set_ylabel("Value")

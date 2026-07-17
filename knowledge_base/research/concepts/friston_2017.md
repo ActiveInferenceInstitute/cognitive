@@ -1,15 +1,7 @@
 ---
-title: "Friston et al. (2017): Active Inference: A Process Theory"
-type: reference
+title: "\"Friston et al. (2017): Active Inference: A Process Theory\""
+type: "reference"
 status: stable
-created: 2024-02-12
-updated: 2026-02-07
-tags: [active_inference, process_theory, POMDP, reference, foundational]
-semantic_relations:
-  - type: foundational_for
-    links: [[knowledge_base/cognitive/active_inference]], [[knowledge_base/mathematics/active_inference_pomdp]], [[knowledge_base/mathematics/expected_free_energy]]]
-  - type: cites
-    links: [[[parr_2019]], [[knowledge_base/mathematics/variational_free_energy]], [[knowledge_base/mathematics/free_energy_principle]]]
 ---
 
 # Friston et al. (2017): Active Inference — A Process Theory

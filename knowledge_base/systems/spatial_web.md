@@ -604,7 +604,7 @@ Obstacles in spatial web development:
 
   - **Cross-Platform Compatibility**: Function across systems
 
-  - **Legacy System Integration**: Connecting with existing technology
+  - **existing System Integration**: Connecting with existing technology
 
   - **Standards Fragmentation**: Competing technical approaches
 

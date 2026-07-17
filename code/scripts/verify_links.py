@@ -80,10 +80,7 @@ class LinkIndex:
 
 def _iter_files(root_dir: Path):
     for dirpath, dirnames, filenames in os.walk(root_dir):
-        dirnames[:] = [
-            name for name in dirnames
-            if name not in IGNORED_DIRECTORIES
-        ]
+        dirnames[:] = [name for name in dirnames if name not in IGNORED_DIRECTORIES]
         current_dir = Path(dirpath)
         for filename in filenames:
             yield current_dir / filename
@@ -113,9 +110,7 @@ def _build_index(root_dir: Path) -> LinkIndex:
 
         stem_key = _normalise_key(path.stem)
         markdown_by_stem.setdefault(stem_key, []).append(rel_path)
-        markdown_by_rel_no_suffix[
-            _normalise_key(rel_path.with_suffix("").as_posix())
-        ] = rel_path
+        markdown_by_rel_no_suffix[_normalise_key(rel_path.with_suffix("").as_posix())] = rel_path
 
     return LinkIndex(
         markdown_by_stem=markdown_by_stem,
@@ -137,7 +132,9 @@ def _has_file_suffix(target: str) -> bool:
 def _is_explicit_file_reference(target: str) -> bool:
     if _has_file_suffix(target):
         return True
-    return target.endswith("/")
+    # A slash is an explicit path signal even when the author omitted the
+    # Markdown suffix, for example ``tools/README``.
+    return target.endswith("/") or "/" in target or "\\" in target
 
 
 def _candidate_paths(root_dir: Path, source_path: Path, target: str) -> list[Path]:
@@ -221,11 +218,13 @@ def verify_link_report(
                 report.skipped_concept_links += 1
                 continue
 
-            report.broken_links.append({
-                "source": filepath.relative_to(root_path).as_posix(),
-                "link": match,
-                "target": target,
-            })
+            report.broken_links.append(
+                {
+                    "source": filepath.relative_to(root_path).as_posix(),
+                    "link": match,
+                    "target": target,
+                }
+            )
 
     return report
 
@@ -255,6 +254,11 @@ def _build_parser() -> argparse.ArgumentParser:
             "unresolved extensionless wiki targets are treated as concept links."
         ),
     )
+    parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Emit the complete machine-readable report as JSON.",
+    )
     return parser
 
 
@@ -264,6 +268,24 @@ def main(argv: list[str] | None = None) -> int:
         args.root,
         strict_wiki_links=args.strict_wiki_links,
     )
+
+    if args.json:
+        import json
+
+        print(
+            json.dumps(
+                {
+                    "broken_links": report.broken_links,
+                    "checked_links": report.checked_links,
+                    "resolved_links": report.resolved_links,
+                    "skipped_concept_links": report.skipped_concept_links,
+                    "indexed_markdown_files": report.indexed_markdown_files,
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
+        return int(bool(report.broken_links))
 
     print(f"Index built with {report.indexed_markdown_files} markdown files.")
     print(f"Checked {report.checked_links} wiki links.")

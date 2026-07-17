@@ -62,9 +62,9 @@ semantic_relations:
 
     links:
 
-      - [[knowledge_base/systems/distributed_systems|Distributed Systems]]
+      - Distributed Systems
 
-      - [[knowledge_base/systems/computer_graphics|Computer Graphics]]
+      - Computer Graphics
 
       - [[knowledge_base/cognitive/embodied_cognition|Embodied Cognition]]
 

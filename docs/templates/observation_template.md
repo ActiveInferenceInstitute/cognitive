@@ -4,9 +4,9 @@ type: observation
 
 id: "{{observation_id}}"
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [observation, cognitive-model, perception]
 
@@ -88,9 +88,9 @@ data:
 
 - Multimodal integration
 
-- [[modality/modality_1|Modality 1]]
+- Modality 1
 
-- [[modality/modality_2|Modality 2]]
+- Modality 2
 
 ## Processing
 
@@ -114,35 +114,8 @@ flowchart LR
 
 ### Implementation
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class {{observation_class_name}}(Observation):
-
-    def __init__(self, data, metadata):
-
-        super().__init__(data, metadata)
-
-        self.features = self.extract_features(data)
-
-    def extract_features(self, data):
-
-        # Extract relevant features from raw data
-
-        pass
-
-    def get_likelihood(self, belief):
-
-        # Calculate likelihood of this observation given a belief
-
-        pass
-
-    def get_surprise(self, prior_beliefs):
-
-        # Calculate surprise value relative to prior beliefs
-
-        pass
-
-```
 
 ### Processing Stages
 
@@ -166,9 +139,9 @@ class {{observation_class_name}}(Observation):
 
 - Ambiguity resolution
 
-- [[interpretation/interpretation_1|Interpretation 1]]
+- Interpretation 1
 
-- [[interpretation/interpretation_2|Interpretation 2]]
+- Interpretation 2
 
 ### Uncertainty
 
@@ -234,9 +207,9 @@ sequenceDiagram
 
 - Precision factors
 
-- [[precision/precision_1|Precision Factor 1]]
+- Precision Factor 1
 
-- [[precision/precision_2|Precision Factor 2]]
+- Precision Factor 2
 
 ### Prediction Error
 
@@ -246,9 +219,9 @@ sequenceDiagram
 
 - Error propagation
 
-- [[prediction_error/error_1|Prediction Error 1]]
+- Prediction Error 1
 
-- [[prediction_error/error_2|Prediction Error 2]]
+- Prediction Error 2
 
 ## Relationships
 
@@ -260,9 +233,9 @@ sequenceDiagram
 
 - Source reliability
 
-- [[source/source_1|Source 1]]
+- Source 1
 
-- [[source/source_2|Source 2]]
+- Source 2
 
 ### Influenced Beliefs
 
@@ -272,9 +245,9 @@ sequenceDiagram
 
 - Belief conflicts
 
-- [[belief/belief_1|Belief 1]]
+- Belief 1
 
-- [[belief/belief_2|Belief 2]]
+- Belief 2
 
 ## Evaluation
 
@@ -344,13 +317,13 @@ precision_weight: {{precision_weight}}
 
 - External resources
 
-- [[reference/reference_1|Reference 1]]
+- Reference 1
 
-- [[reference/reference_2|Reference 2]]
+- Reference 2
 
 ## Related Observations
 
-- [[observation/related_1|Related Observation 1]]
+- Related Observation 1
 
-- [[observation/related_2|Related Observation 2]]
+- Related Observation 2
 

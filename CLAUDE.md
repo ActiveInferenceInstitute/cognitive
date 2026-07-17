@@ -76,7 +76,7 @@ Python 3.8+. Core dependencies: `numpy`, `scipy`, `matplotlib`, `pyyaml`, `pytes
 
 ### Code Style
 - Python: snake_case for files and methods. Type hints required. Complete docstrings on public methods.
-- **No mock methods in tests** - always use real data/computation.
+- **No test fixture methods in tests** - always use real data/computation.
 - Remove non-semantic adjectives from names ("enhanced_", "new_", "improved_" are banned; "continuous_time", "hierarchical_" are fine).
 
 ### Configuration

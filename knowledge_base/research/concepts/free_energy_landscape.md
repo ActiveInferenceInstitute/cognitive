@@ -1,13 +1,7 @@
 ---
-title: Free Energy Landscape
-type: concept
+title: "Free Energy Landscape"
+type: "concept"
 status: stable
-created: 2024-02-12
-updated: 2026-02-07
-tags: [free_energy, landscape, optimization, attractors]
-semantic_relations:
-  - type: relates
-    links: [[knowledge_base/mathematics/free_energy]], [[knowledge_base/mathematics/variational_free_energy]], [[stability_analysis]], [[knowledge_base/cognitive/free_energy_minimization]]]
 ---
 
 # Free Energy Landscape

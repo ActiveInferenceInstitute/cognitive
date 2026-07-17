@@ -342,9 +342,9 @@ Optimization patterns provide standardized approaches for solving various optimi
 
 ## References
 
-- [[docs/research/papers/key_papers|Optimization Papers]]
+- Optimization Papers
 
-- [[knowledge_base/reference_implementations]]
+- knowledge_base/reference_implementations
 
 - [[docs/implementation/implementation_guides]]
 

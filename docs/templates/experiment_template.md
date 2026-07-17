@@ -4,9 +4,9 @@ type: experiment
 
 id: "{{experiment_id}}"
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [experiment, cognitive-model, evaluation]
 
@@ -138,9 +138,9 @@ control_variables:
 
 - Condition 3: Description
 
-- [[condition/condition_1|Condition 1]]
+- Condition 1
 
-- [[condition/condition_2|Condition 2]]
+- Condition 2
 
 ## Implementation
 
@@ -172,51 +172,8 @@ flowchart LR
 
 ### Code Implementation
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-class {{experiment_class_name}}(Experiment):
-
-    def __init__(self, config):
-
-        super().__init__(config)
-
-        self.agents = self.initialize_agents(config.agents)
-
-        self.environment = self.initialize_environment(config.environment)
-
-        self.metrics = self.initialize_metrics(config.metrics)
-
-    def run(self):
-
-        # Run the experiment
-
-        results = []
-
-        for condition in self.config.conditions:
-
-            condition_results = self.run_condition(condition)
-
-            results.append(condition_results)
-
-        return results
-
-    def run_condition(self, condition):
-
-        # Run a single experimental condition
-
-        self.setup_condition(condition)
-
-        condition_results = []
-
-        for trial in range(condition.num_trials):
-
-            trial_results = self.run_trial(trial, condition)
-
-            condition_results.append(trial_results)
-
-        return self.aggregate_results(condition_results)
-
-```
 
 ### Experimental Protocol
 
@@ -240,9 +197,9 @@ class {{experiment_class_name}}(Experiment):
 
 - Metric 3: Description and measurement method
 
-- [[metric/metric_1|Metric 1]]
+- Metric 1
 
-- [[metric/metric_2|Metric 2]]
+- Metric 2
 
 ### Data Processing
 
@@ -284,9 +241,9 @@ flowchart LR
 
 - Method 3: Description and purpose
 
-- [[method/method_1|Method 1]]
+- Method 1
 
-- [[method/method_2|Method 2]]
+- Method 2
 
 ### Visualization
 
@@ -424,9 +381,9 @@ primary_results:
 
 - New research questions
 
-- [[experiment/followup_1|Follow-up Experiment 1]]
+- Follow-up Experiment 1
 
-- [[experiment/followup_2|Follow-up Experiment 2]]
+- Follow-up Experiment 2
 
 ## References
 
@@ -436,13 +393,13 @@ primary_results:
 
 - External resources
 
-- [[reference/reference_1|Reference 1]]
+- Reference 1
 
-- [[reference/reference_2|Reference 2]]
+- Reference 2
 
 ## Related Experiments
 
-- [[experiment/related_1|Related Experiment 1]]
+- Related Experiment 1
 
-- [[experiment/related_2|Related Experiment 2]]
+- Related Experiment 2
 

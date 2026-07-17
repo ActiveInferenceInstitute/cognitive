@@ -350,9 +350,9 @@ Neural architecture patterns define structured approaches for implementing neura
 
 ## References
 
-- [[docs/research/papers/key_papers|Neural Architecture Papers]]
+- Neural Architecture Papers
 
-- [[knowledge_base/reference_implementations]]
+- knowledge_base/reference_implementations
 
 - [[docs/implementation/implementation_guides]]
 

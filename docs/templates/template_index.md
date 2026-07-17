@@ -6,9 +6,9 @@ type: index
 
 status: stable
 
-created: {{date}}
+created: "{{date}}"
 
-modified: {{date}}
+modified: "{{date}}"
 
 tags: [template, index, documentation]
 

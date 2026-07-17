@@ -1,16 +1,7 @@
 ---
-title: Decision Visualization
-type: mathematical_concept
-id: decision_visualization_001
-created: 2025-03-03
-modified: 2025-12-03
-tags: [mathematics, visualization, decision_making, active-inference, analysis]
-aliases: [policy_visualization, action_selection_plots]
-semantic_relations:
-  - type: implements
-    links: [[active_inference]], [[policy_selection]]
-  - type: relates
-    links: [[exploration_visualization]], [[learning_visualization]], [[belief_evolution]], [[expected_free_energy]]
+title: "Decision Visualization"
+type: "mathematical_concept"
+status: stable
 ---
 
 # Decision Visualization

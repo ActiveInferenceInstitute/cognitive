@@ -162,81 +162,13 @@ Recommended practices.
 
 #### Module Template
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-"""${module_name}
-
-This module provides functionality for ${purpose}.
-
-Example:
-
-    >>> from ${module} import ${class}
-
-    >>> obj = ${class}()
-
-    >>> obj.method()
-
-Attributes:
-
-    CONSTANT: Description
-
-"""
-
-from typing import List, Dict, Optional
-
-class ${class_name}:
-
-    """${class_description}
-
-    Attributes:
-
-        attr1: Description
-
-        attr2: Description
-
-    """
-
-    def __init__(self):
-
-        """Initialize the class."""
-
-        pass
-
-    def method(self) -> None:
-
-        """Method description."""
-
-        pass
-
-```
 
 #### Test Template
 
-```python
+See the canonical package documentation for a complete runnable example.
 
-"""Tests for ${module_name}."""
-
-import pytest
-
-from ${module} import ${class}
-
-@pytest.fixture
-
-def setup():
-
-    """Test fixture setup."""
-
-    return ${class}()
-
-def test_method(setup):
-
-    """Test method functionality."""
-
-    result = setup.method()
-
-    assert result == expected
-
-```
 
 ## Template Usage
 

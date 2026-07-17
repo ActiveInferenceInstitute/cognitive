@@ -40,9 +40,9 @@ semantic_relations:
 
     links:
 
-      - [[knowledge_base/cognitive/cognition|Cognition]]
+      - Cognition
 
-      - [[knowledge_base/systems/innovation|Innovation]]
+      - Innovation
 
 ---
 

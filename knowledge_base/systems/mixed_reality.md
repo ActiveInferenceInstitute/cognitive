@@ -48,7 +48,7 @@ semantic_relations:
 
     links:
 
-      - [[knowledge_base/systems/computer_vision|Computer Vision]]
+      - Computer Vision
 
       - [[knowledge_base/systems/human_computer_interaction|Human-Computer Interaction]]
 
@@ -1592,7 +1592,7 @@ Recommended implementation approaches:
 
   - **API Design for MR Systems**: Interface development
 
-  - **Legacy System Connection**: Existing technology integration
+  - **existing System Connection**: Existing technology integration
 
   - **Cross-Platform Synchronization**: Multi-device consistency
 

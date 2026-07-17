@@ -1,23 +1,35 @@
+import cognitive
 import matplotlib.pyplot as plt
 import numpy as np
-import src
+import pytest
 import yaml
-from src.models import active_inference
-from src.models.active_inference.base import ModelState
-from src.models.active_inference.dispatcher import (
+from cognitive.models import active_inference
+from cognitive.models.active_inference.base import ModelState
+from cognitive.models.active_inference.dispatcher import (
     ActiveInferenceDispatcher,
     InferenceConfig,
     InferenceMethod,
     PolicyType,
 )
-from src.models.active_inference.homeostatic import (
+from cognitive.models.active_inference.generative_model import DiscreteGenerativeModel
+from cognitive.models.active_inference.homeostatic import (
     HomeostaticControl,
     HomeostaticFactory,
-    HomestaticControl,
 )
 
 
-def test_mean_field_dispatcher_updates_normalized_beliefs_and_policies():
+@pytest.fixture
+def generative_model():
+    return DiscreteGenerativeModel(
+        A=np.array([[0.9, 0.1], [0.1, 0.9]]),
+        B=np.stack([np.eye(2), np.array([[0.1, 0.9], [0.9, 0.1]])], axis=2),
+        C=np.array([0.2, 1.0]),
+        D=np.array([0.5, 0.5]),
+        E=np.array([0.5, 0.5]),
+    )
+
+
+def test_mean_field_dispatcher_updates_normalized_beliefs_and_policies(generative_model):
     dispatcher = ActiveInferenceDispatcher(
         InferenceConfig(
             method=InferenceMethod.MEAN_FIELD,
@@ -26,7 +38,8 @@ def test_mean_field_dispatcher_updates_normalized_beliefs_and_policies():
             learning_rate=0.5,
             precision_init=1.0,
             temperature=1.0,
-        )
+        ),
+        generative_model,
     )
     state = ModelState(
         beliefs=np.array([0.55, 0.45]),
@@ -39,12 +52,10 @@ def test_mean_field_dispatcher_updates_normalized_beliefs_and_policies():
     beliefs = dispatcher.dispatch_belief_update(
         np.array([0.85, 0.15]),
         state,
-        generative_matrix=np.eye(2),
     )
     policies = dispatcher.dispatch_policy_inference(
         state,
         goal_prior=np.array([0.8, 0.2]),
-        exploration_weight=0.0,
     )
 
     assert np.all(np.isfinite(beliefs))
@@ -55,7 +66,7 @@ def test_mean_field_dispatcher_updates_normalized_beliefs_and_policies():
     assert policies[0] > policies[1]
 
 
-def test_sampling_policy_proposal_handles_zero_vector():
+def test_sampling_policy_proposal_handles_zero_vector(generative_model):
     dispatcher = ActiveInferenceDispatcher(
         InferenceConfig(
             method=InferenceMethod.SAMPLING,
@@ -64,10 +75,14 @@ def test_sampling_policy_proposal_handles_zero_vector():
             learning_rate=0.1,
             precision_init=1.0,
             num_samples=8,
-        )
+        ),
+        generative_model,
     )
 
-    proposal = dispatcher._propose_policy(np.zeros(3))
+    proposal = dispatcher._sampling_policy_inference(
+        ModelState(np.array([0.5, 0.5]), np.array([0.5, 0.5]), 1.0, 0.0, 0.0),
+        None,
+    )
 
     assert np.all(np.isfinite(proposal))
     assert np.isclose(np.sum(proposal), 1.0)
@@ -96,9 +111,7 @@ def test_homeostatic_factory_creates_step_capable_model(tmp_path):
                         "mappings": {"identity": [[1.0, 0.0], [0.0, 1.0]]},
                     },
                 },
-                "observation_model": {
-                    "likelihood_matrix": [[0.9, 0.1], [0.1, 0.9]]
-                },
+                "observation_model": {"likelihood_matrix": [[0.9, 0.1], [0.1, 0.9]]},
                 "transition_model": {
                     "transition_matrices": {
                         "stay": [[0.9, 0.1], [0.1, 0.9]],
@@ -123,7 +136,6 @@ def test_homeostatic_factory_creates_step_capable_model(tmp_path):
     observation, free_energy = model.step()
     fig = model.visualize("beliefs")
 
-    assert HomestaticControl is HomeostaticControl
     assert model.state_space.validate()
     assert model.observation_space.validate()
     assert model.action_space.validate()
@@ -136,7 +148,7 @@ def test_homeostatic_factory_creates_step_capable_model(tmp_path):
 
 
 def test_active_inference_package_exports_public_api():
-    assert src.ActiveInferenceDispatcher is active_inference.ActiveInferenceDispatcher
-    assert src.HomeostaticFactory is active_inference.HomeostaticFactory
+    assert cognitive.ActiveInferenceDispatcher is active_inference.ActiveInferenceDispatcher
+    assert cognitive.HomeostaticFactory is active_inference.HomeostaticFactory
     assert active_inference.HomeostaticControl is HomeostaticControl
-    assert active_inference.HomestaticControl is HomeostaticControl
+    assert not hasattr(active_inference, "HomestaticControl")

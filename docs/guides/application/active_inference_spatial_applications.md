@@ -588,7 +588,7 @@ Practical adoption requires integration with established technologies:
 
 - APIs for accessing predictive components from standard applications
 
-- Middleware for adding predictive capabilities to legacy systems
+- Middleware for adding predictive capabilities to existing systems
 
 - Standardized formats for sharing predictive models
 

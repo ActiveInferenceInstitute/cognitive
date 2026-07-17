@@ -1,15 +1,7 @@
 ---
-title: Belief Propagation
-type: concept
+title: "Belief Propagation"
+type: "concept"
 status: stable
-created: 2024-02-12
-updated: 2026-02-07
-tags: [message_passing, graphical_models, inference, variational]
-semantic_relations:
-  - type: implements
-    links: [[knowledge_base/mathematics/message_passing]]
-  - type: relates
-    links: [[knowledge_base/mathematics/factor_graphs]], [[knowledge_base/mathematics/graphical_models]], [[knowledge_base/cognitive/predictive_coding]]]
 ---
 
 # Belief Propagation

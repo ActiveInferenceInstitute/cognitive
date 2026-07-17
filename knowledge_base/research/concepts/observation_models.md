@@ -1,13 +1,7 @@
 ---
-title: Observation Models
-type: concept
+title: "Observation Models"
+type: "concept"
 status: stable
-created: 2024-02-12
-updated: 2026-02-07
-tags: [observation, likelihood, sensory, research, generative_model]
-semantic_relations:
-  - type: relates
-    links: [[knowledge_base/cognitive/observation_model]], [[hidden_states]], [[knowledge_base/mathematics/active_inference_pomdp]], [[information_metrics]]]
 ---
 
 # Observation Models

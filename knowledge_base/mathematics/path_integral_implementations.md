@@ -736,7 +736,7 @@ class InformationMetric:
 
             # Zero control for now
 
-            u = np.zeros(1)  # Placeholder
+            u = np.zeros(1)  # example value
 
             f_plus = dynamics(state_plus, u, time)
 

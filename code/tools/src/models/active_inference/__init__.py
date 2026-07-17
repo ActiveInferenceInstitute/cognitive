@@ -10,13 +10,13 @@ from .dispatcher import (
     InferenceMethod,
     PolicyType,
 )
+from .generative_model import DiscreteGenerativeModel
 from .homeostatic import (
     AdaptiveControl,
     ControlMode,
     HomeostaticControl,
     HomeostaticFactory,
     HomeostaticInference,
-    HomestaticControl,
     ObservationModel,
     StateSpace,
     TransitionModel,
@@ -27,6 +27,7 @@ __all__ = [
     "ModelState",
     "ActiveInferenceDispatcher",
     "ActiveInferenceFactory",
+    "DiscreteGenerativeModel",
     "InferenceConfig",
     "InferenceMethod",
     "PolicyType",
@@ -35,7 +36,6 @@ __all__ = [
     "HomeostaticControl",
     "HomeostaticFactory",
     "HomeostaticInference",
-    "HomestaticControl",
     "ObservationModel",
     "StateSpace",
     "TransitionModel",

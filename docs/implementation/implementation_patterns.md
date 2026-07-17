@@ -510,7 +510,7 @@ class IntegrationPattern:
 
     Pattern for component integration.
 
-    See [[docs/guides/system_integration|System Integration]]
+    See System Integration
 
     """
 
@@ -568,7 +568,7 @@ class ValidationPattern:
 
     Pattern for model validation.
 
-    See [[docs/guides/validation_guide|Validation Guide]]
+    See Validation Guide
 
     """
 
@@ -620,7 +620,7 @@ class TestingPattern:
 
 ### 1. Code Organization
 
-- Follow [[docs/guides/code_organization|Code Organization Guide]]
+- Follow Code Organization Guide
 
 - Use [[docs/repo_docs/naming_conventions|Naming Conventions]]
 
@@ -630,17 +630,17 @@ class TestingPattern:
 
 - Follow [[knowledge_base/cognitive/performance_optimization|Optimization Guide]]
 
-- Use [[docs/guides/profiling_guide|Profiling Guide]]
+- Use Profiling Guide
 
 - Monitor [[knowledge_base/cognitive/performance_metrics|Performance Metrics]]
 
 ### 3. Quality Assurance
 
-- Implement [[docs/guides/testing_guide|Testing Guidelines]]
+- Implement Testing Guidelines
 
-- Follow [[docs/guides/code_review|Code Review Process]]
+- Follow Code Review Process
 
-- Use [[docs/guides/validation_framework|Validation Framework]]
+- Use Validation Framework
 
 ## Related Documentation
 
@@ -648,9 +648,9 @@ class TestingPattern:
 
 - [[docs/api/api_reference|API Reference]]
 
-- [[docs/guides/system_integration|System Integration]]
+- System Integration
 
-- [[docs/guides/validation_guide|Validation Guide]]
+- Validation Guide
 
 ## References
 

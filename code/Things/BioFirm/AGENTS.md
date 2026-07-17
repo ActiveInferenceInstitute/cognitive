@@ -30,6 +30,5 @@ The BioFirm agent represents an organization or a bioregional system modeled thr
 
 ## Related
 
-- [[knowledge_base/BioFirm/biofirm_schema|BioFirm Schema]]
 - [[knowledge_base/BioFirm/ecological_active_inference|Ecological Active Inference]]
 - [[knowledge_base/free_energy_principle/biology/homeostasis|Homeostasis (FEP)]]
