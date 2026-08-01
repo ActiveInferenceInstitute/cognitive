@@ -42,6 +42,10 @@ semantic_relations:
 
       - [[free_energy_principle]]
 
+      - [[research]]
+
+      - [[citations]]
+
 ---
 
 # Cognitive Modeling Knowledge Base

@@ -18,7 +18,12 @@ semantic_relations:
       - [[mathematics]]
       - [[biology]]
       - [[systems]]
-      - [[AGENTS]]
+      - [[philosophy]]
+      - [[ontology]]
+      - [[research]]
+      - [[citations]]
+      - [[agents]]
+      - [[free_energy_principle]]
 ---
 
 # Knowledge Base Overview
@@ -57,13 +62,27 @@ Design patterns, implementation strategies, and architectural principles for cog
 ### Integration Topics
 
 #### [[free_energy_principle|Free Energy Principle]]
-Core theoretical foundation unifying biological self-organization, cognition, and adaptation.
+Core theoretical foundation unifying biological self-organization, cognition, and adaptation. Its subfolders hold focused treatments of mathematics, cognition, biology, philosophy, systems, applications, and implementations.
 
-#### [[active_inference_implementation|Active Inference Implementation]]
+#### [[research/active_inference_implementation|Active Inference Implementation]]
 Practical approaches for implementing Active Inference in computational systems.
 
-#### [[emergence_integration|Emergence and Self-Organization]]
+#### [[research/emergence_integration|Emergence and Self-Organization]]
 Integration of emergence principles with cognitive modeling frameworks.
+
+### Secondary Domains
+
+#### [[philosophy|Philosophy]]
+Conceptual and philosophical treatments of active inference, free energy, and cognitive modeling.
+
+#### [[ontology|Ontology]]
+Formal ontology and categorical structure used to organize the conceptual framework.
+
+#### [[research|Research]]
+Application-area research notes and [[research/concepts|methodology concepts]] used across the framework.
+
+#### [[citations|Citations]]
+Author-date reference notes for the primary literature on active inference and the free energy principle.
 
 ## 📚 Navigation
 
