@@ -65,7 +65,9 @@ Test configuration is in `code/tests/test_config.yaml`. Shared fixtures (sample 
 
 ## Dependencies
 
-Python 3.8+. Core dependencies: `numpy`, `scipy`, `matplotlib`, `pyyaml`, `pytest`, `pytest-cov`. No global requirements.txt exists; some Things have their own (e.g., Path_Network).
+Python 3.10+. Core dependencies (per `pyproject.toml`): `click`, `jinja2`,
+`matplotlib`, `networkx`, `numpy`, `Pillow`, `plotly`, `PyYAML`, `seaborn`.
+No global requirements.txt exists; some Things have their own (e.g., Path_Network).
 
 ## Conventions
 

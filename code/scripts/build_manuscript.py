@@ -422,6 +422,36 @@ def _render(
             subprocess.run(pdf_command, check=True, cwd=output)
 
 
+def _is_build_output(path: Path) -> bool:
+    """True when the path looks like an artifact produced by this builder."""
+    return (path / "build_manifest.json").is_file() or (
+        path / "figure_registry.json"
+    ).is_file()
+
+
+def _prepare_output(output: Path) -> None:
+    """Create the output directory, refusing to silently delete non-build dirs.
+
+    The builder replaces its own previous output (identified by the manifest it
+    writes), but must never recursively delete a directory the caller pointed
+    at by mistake (repo root, docs tree, a source directory).
+    """
+    if output.exists():
+        if _is_build_output(output):
+            shutil.rmtree(output)
+        elif output == Path.cwd().resolve():
+            raise ValueError(f"Refusing to delete the working directory: {output}")
+        elif any(output.iterdir()):
+            raise ValueError(
+                f"Refusing to delete non-build directory {output}: it is not empty and "
+                "contains no build_manifest.json / figure_registry.json. Choose an empty "
+                "or previously generated output path (or a path under build/)."
+            )
+        else:
+            output.rmdir()
+    output.mkdir(parents=True)
+
+
 def build(
     config_path: str | Path | None = None,
     output_path: str | Path | None = None,
@@ -440,9 +470,7 @@ def build(
         if output_path is not None
         else Path.cwd() / "build" / "manuscript"
     )
-    if output.exists():
-        shutil.rmtree(output)
-    output.mkdir(parents=True)
+    _prepare_output(output)
     model, results = _model_and_results(config)
     registry = _save_figures(output, model, results)
     variables = _variables(config, model, results, len(registry))

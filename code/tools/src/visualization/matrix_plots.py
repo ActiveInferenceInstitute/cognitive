@@ -32,11 +32,6 @@ class MatrixPlotter:
         self.figure_size = self.style_config.get("figure_size", (8, 6))
         self.dpi = self.style_config.get("dpi", 100)
 
-        # Configure logging
-        logging.basicConfig(
-            level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-        )
-
     def plot_heatmap(
         self,
         matrix: np.ndarray,

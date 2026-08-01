@@ -28,6 +28,7 @@ from cognitive.utils import (
 from cognitive.utils.create_node import NodeCreator
 from cognitive.utils.visualization.network_viz import NetworkVisualizer
 from PIL import Image
+from scripts.build_manuscript import _is_build_output, _prepare_output
 from scripts.verify_links import verify_link_report
 from Things.Continuous_Generic import ContinuousActiveInference, ContinuousVisualizer
 from Things.Simple_POMDP import SimplePOMDP
@@ -96,6 +97,30 @@ def test_sampling_seed_is_reproducible() -> None:
         dispatcher.update_precision(-1)
     with pytest.raises(ValueError):
         dispatcher.dispatch_policy_inference(state, np.array([1.0]))
+
+
+def test_goal_prior_is_applied_exactly_once_by_policy_methods() -> None:
+    """A non-uniform goal prior must enter the action softmax exactly once.
+
+    The mean-field path previously double-counted the action prior: it was
+    baked into the expected free energy *and* applied through the logits,
+    producing a policy far more concentrated than variational inference with
+    the same prior. All three methods should agree on a single application.
+    """
+    model = discrete_model()
+    state = ModelState(model.D.copy(), model.E.copy(), 1.0, 0.0, 0.0)
+    goal_prior = np.array([0.9, 0.1])
+    policies = {}
+    for method in ("variational", "mean_field", "sampling"):
+        policies[method] = ActiveInferenceDispatcher(
+            InferenceConfig(method, "discrete", 1, 0.5, 1.0, num_samples=64, seed=7), model
+        ).dispatch_policy_inference(state, goal_prior)
+        assert np.allclose(policies[method].sum(), 1.0)
+        assert policies[method][0] > 0.5  # prior favours action 0
+    # Mean-field (single-count) must match variational; both apply the same
+    # prior once. Sampling is stochastic, so it is only checked loosely.
+    assert np.allclose(policies["mean_field"], policies["variational"], atol=1e-6)
+    assert policies["sampling"][0] > 0.5
 
 
 def test_invalid_distributions_and_one_state_initializer_are_rejected_or_valid() -> None:
@@ -178,6 +203,32 @@ def test_simple_pomdp_one_state_and_state_round_trip(tmp_path: Path) -> None:
     invalid["unexpected"] = True
     with pytest.raises(ValueError, match="Unknown configuration"):
         SimplePOMDP(invalid)
+
+
+def test_policy_limit_too_low_raises_instead_of_silently_zeroing_actions() -> None:
+    """A policy_limit that truncates enumeration must fail fast.
+
+    Previously a first action with no enumerated policy stayed at ``inf``
+    expected free energy, so the softmax silently assigned it zero probability
+    purely because of a performance cap. That masking is a correctness hazard,
+    so the dispatcher must raise instead.
+    """
+    model = DiscreteGenerativeModel(
+        A=np.eye(3),
+        B=np.stack(
+            [np.roll(np.eye(3), shift, axis=0) for shift in range(3)], axis=2
+        ),
+        C=np.zeros(3),
+        D=np.array([1 / 3, 1 / 3, 1 / 3]),
+        E=np.array([1 / 3, 1 / 3, 1 / 3]),
+    )
+    state = ModelState(model.D.copy(), model.E.copy(), 1.0, 0.0, 0.0)
+    # horizon=1 -> 3 single-step policies; limit=2 drops the policy for action 2.
+    dispatcher = ActiveInferenceDispatcher(
+        InferenceConfig("variational", "discrete", 1, 0.5, 1.0, policy_limit=2), model
+    )
+    with pytest.raises(ValueError, match="policy_limit=2 is too low"):
+        dispatcher.dispatch_policy_inference(state)
 
 
 def test_generative_model_prediction_policy_and_information_paths() -> None:
@@ -309,6 +360,33 @@ def test_node_creation_relative_paths_and_network_aliases(tmp_path: Path) -> Non
     graph = NetworkVisualizer(graph_config).build_network()
     assert len(graph) == 2
     assert graph.number_of_edges() == 1
+
+
+def test_manuscript_output_directory_guards_against_recursive_deletion(tmp_path: Path) -> None:
+    """build_manuscript must never silently delete a non-build directory."""
+    # Non-empty directory with no builder manifest -> refuse (data-destruction guard).
+    data_dir = tmp_path / "docs"
+    data_dir.mkdir()
+    (data_dir / "index.md").write_text("# docs", encoding="utf-8")
+    with pytest.raises(ValueError, match="Refusing to delete non-build directory"):
+        _prepare_output(data_dir)
+    assert (data_dir / "index.md").exists()
+
+    # A previous build output (has the manifest) is replaced.
+    build_dir = tmp_path / "build" / "manuscript"
+    build_dir.mkdir(parents=True)
+    (build_dir / "build_manifest.json").write_text("{}", encoding="utf-8")
+    (build_dir / "stale.png").write_bytes(b"stale")
+    assert _is_build_output(build_dir)
+    _prepare_output(build_dir)
+    assert build_dir.is_dir()
+    assert not (build_dir / "stale.png").exists()  # replaced, not the old content
+
+    # An empty directory is recreated cleanly.
+    empty_dir = tmp_path / "empty"
+    empty_dir.mkdir()
+    _prepare_output(empty_dir)
+    assert empty_dir.is_dir()
 
 
 def test_continuous_animation_has_multiple_frames(tmp_path: Path) -> None:

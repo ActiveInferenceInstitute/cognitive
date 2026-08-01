@@ -147,6 +147,52 @@ def test_homeostatic_factory_creates_step_capable_model(tmp_path):
     plt.close(fig)
 
 
+def test_homeostatic_missing_transition_matrix_is_rejected(tmp_path):
+    """A config that omits a transition matrix for an action must fail fast."""
+    config_path = tmp_path / "homeostatic_bad.yaml"
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                "state_spaces": {
+                    "environment": {
+                        "dimensions": [2],
+                        "labels": {"states": ["LOW", "HIGH"]},
+                        "mappings": {"identity": [[1.0, 0.0], [0.0, 1.0]]},
+                    },
+                    "observation": {
+                        "dimensions": [2],
+                        "labels": {"observations": ["low", "high"]},
+                        "mappings": {"identity": [[1.0, 0.0], [0.0, 1.0]]},
+                    },
+                    "action": {
+                        "dimensions": [2],
+                        "labels": {"actions": ["stay", "switch"]},
+                        "mappings": {"identity": [[1.0, 0.0], [0.0, 1.0]]},
+                    },
+                },
+                "observation_model": {"likelihood_matrix": [[0.9, 0.1], [0.1, 0.9]]},
+                "transition_model": {
+                    # Only "stay" is declared; "switch" is missing.
+                    "transition_matrices": {"stay": [[0.9, 0.1], [0.1, 0.9]]},
+                    "temporal_horizon": 1,
+                },
+                "inference": {
+                    "method": "variational",
+                    "policy_type": "discrete",
+                    "temporal_horizon": 1,
+                    "learning_rate": 0.2,
+                    "precision_init": 1.0,
+                },
+                "target_state": [0.8, 0.2],
+                "initial_beliefs": [0.5, 0.5],
+            }
+        )
+    )
+
+    with pytest.raises(ValueError, match="missing.*switch"):
+        HomeostaticFactory.create_basic(config_path)
+
+
 def test_active_inference_package_exports_public_api():
     assert cognitive.ActiveInferenceDispatcher is active_inference.ActiveInferenceDispatcher
     assert cognitive.HomeostaticFactory is active_inference.HomeostaticFactory

@@ -41,6 +41,8 @@ class InferenceConfig:
     temperature: float = 1.0
     discount_factor: float = 0.95
     exploration_weight: float = 0.5
+    # If policy_limit truncates enumeration below one policy per first action,
+    # dispatch_policy_inference raises instead of silently zeroing that action.
     policy_limit: int = 4096
     seed: int | None = 0
     custom_params: dict[str, Any] = field(default_factory=dict)
@@ -136,13 +138,17 @@ class ActiveInferenceDispatcher:
     def _variational_policy_inference(
         self, state: ModelState, goal_prior: np.ndarray | None
     ) -> np.ndarray:
-        energies = self._calculate_expected_free_energy(state, goal_prior)
+        energies = self.calculate_expected_free_energy(state, goal_prior)
         return self._softmax(-energies / self.config.temperature)
 
     def _mean_field_policy_inference(
         self, state: ModelState, goal_prior: np.ndarray | None
     ) -> np.ndarray:
-        energies = self._calculate_expected_free_energy(state, goal_prior)
+        # Compute the expected free energy without baking the action prior into
+        # it, then apply the prior exactly once through the mean-field logits.
+        # Passing goal_prior into calculate_expected_free_energy as well would
+        # double-count it (the prior would enter the softmax twice).
+        energies = self.calculate_expected_free_energy(state)
         prior = self._action_prior(goal_prior)
         logits = np.log(prior + 1e-12) - energies / self.config.temperature
         return self._softmax(logits)
@@ -150,7 +156,7 @@ class ActiveInferenceDispatcher:
     def _sampling_policy_inference(
         self, state: ModelState, goal_prior: np.ndarray | None
     ) -> np.ndarray:
-        energies = self._calculate_expected_free_energy(state, goal_prior)
+        energies = self.calculate_expected_free_energy(state, goal_prior)
         target = self._softmax(-energies / self.config.temperature)
         samples = self._rng.choice(
             self.model.num_actions,
@@ -160,9 +166,15 @@ class ActiveInferenceDispatcher:
         counts = np.bincount(samples, minlength=self.model.num_actions).astype(float)
         return self._normalize(counts + 1e-6, self.model.num_actions)
 
-    def _calculate_expected_free_energy(
+    def calculate_expected_free_energy(
         self, state: ModelState, goal_prior: np.ndarray | None = None
     ) -> np.ndarray:
+        """Return per-action expected free energy for the given beliefs.
+
+        This public method lets model classes (such as
+        ``ActiveInferenceModel``) compute expected free energy without reaching
+        into private dispatcher internals.
+        """
         policies = self.model.enumerate_policies(
             self.config.temporal_horizon,
             self.config.policy_limit,
@@ -181,7 +193,14 @@ class ActiveInferenceDispatcher:
                 for policy, value in zip(policies, values, strict=False)
                 if policy[0] == action
             ]
-            first_action_values[action] = min(candidates) if candidates else np.inf
+            if not candidates:
+                raise ValueError(
+                    f"policy_limit={self.config.policy_limit} is too low to enumerate a "
+                    f"policy that starts with action {action}. Raise policy_limit or reduce "
+                    "temporal_horizon; leaving this action implicit would silently give it "
+                    "zero policy probability."
+                )
+            first_action_values[action] = min(candidates)
         if goal_prior is not None:
             prior = self._action_prior(goal_prior)
             first_action_values -= np.log(prior + 1e-12)

@@ -118,7 +118,7 @@ class ActiveInferenceModel(ABC):
             raise RuntimeError(
                 "The model must provide a dispatcher to calculate expected free energy"
             )
-        return dispatcher._calculate_expected_free_energy(self.state)
+        return dispatcher.calculate_expected_free_energy(self.state)
 
     @staticmethod
     def _softmax(values: np.ndarray, temperature: float = 1.0) -> np.ndarray:

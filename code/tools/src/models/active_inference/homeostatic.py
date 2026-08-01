@@ -217,6 +217,18 @@ class HomeostaticInference(ActiveInferenceModel):
         )
         if unknown:
             raise ValueError(f"Unknown transition_model fields: {sorted(unknown)}")
+        action_labels = spaces["action"]["labels"].get("actions")
+        transitions = transition_model.get("transition_matrices")
+        if not isinstance(action_labels, list) or not action_labels:
+            raise ValueError("state_spaces.action.labels.actions must be a non-empty list")
+        if not isinstance(transitions, dict):
+            raise ValueError("transition_model.transition_matrices must be a mapping")
+        missing_transitions = {label for label in action_labels if label not in transitions}
+        if missing_transitions:
+            raise ValueError(
+                "A transition matrix is required for every action label; "
+                f"missing: {sorted(missing_transitions)}"
+            )
         inference = config["inference"]
         if not isinstance(inference, dict):
             raise ValueError("inference must be a mapping")

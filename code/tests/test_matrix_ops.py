@@ -84,9 +84,20 @@ class TestMatrixLoader:
         """Test matrix validation against specification."""
         assert MatrixLoader.validate_matrix(sample_matrix_2d, sample_matrix_spec)
 
-        # Test invalid matrix
-        invalid_matrix = np.array([[1.1, -0.1], [0.2, 1.2]])
-        assert not MatrixLoader.validate_matrix(invalid_matrix, sample_matrix_spec)
+        # Wrong shape should fail
+        invalid_shape = np.array([[1.1, -0.1], [0.2, 1.2]])
+        assert not MatrixLoader.validate_matrix(invalid_shape, sample_matrix_spec)
+
+        # Correct shape but a column violates the sum(cols) == 1.0 constraint
+        invalid_stochastic = sample_matrix_2d.copy()
+        invalid_stochastic[:, 0] = [0.9, 0.9, 0.9]
+        assert invalid_stochastic.shape == (3, 3)
+        assert not MatrixLoader.validate_matrix(invalid_stochastic, sample_matrix_spec)
+
+        # Correct shape but a negative value violates all_values >= 0
+        invalid_negative = sample_matrix_2d.copy()
+        invalid_negative[0, 0] = -0.1
+        assert not MatrixLoader.validate_matrix(invalid_negative, sample_matrix_spec)
 
 
 class TestMatrixInitializer:
