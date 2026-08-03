@@ -8,7 +8,15 @@ status: stable
 
 ## Executive Summary
 
-BioFirm is an advanced computational framework that implements [[cognitive/active_inference|Active Inference]] and the [[cognitive/free_energy_principle|Free Energy Principle]] for bioregional stewardship and management. The framework provides a mathematically rigorous, cognitively-inspired approach to understanding and managing complex [[knowledge_base/systems/Social-Ecological Systems|social-ecological systems]] through [[mathematics/variational_methods|variational inference]] and [[cognitive/hierarchical_processing|hierarchical processing]].
+> [!note] Conceptual framework
+> BioFirm is a conceptual framework — a proposed architecture — applying
+> [[cognitive/active_inference|Active Inference]] and the
+> [[cognitive/free_energy_principle|Free Energy Principle]] to
+> bioregional stewardship. It is documented here as theory: no BioFirm
+> runtime is shipped in this repository. The executable reference
+> implementation is the `cognitive` package (see the root `README.md`);
+> the code blocks in this page are illustrative pseudocode, not package
+> API.
 
 ## Core Framework Components
 
@@ -48,7 +56,7 @@ BioFirm is an advanced computational framework that implements [[cognitive/activ
 
 - **Learning Mechanisms**: [[cognitive/learning_mechanisms|Learning]] (Hebbian)
 
-- **Uncertainty Handling**: [[mathematics/uncertainty_resolution|Uncertainty Theory]] ([[mathematics/information_theory#uncertainty|Information]])
+- **Uncertainty Handling**: [[mathematics/uncertainty_resolution|Uncertainty Theory]] ([[mathematics/information_theory|Information]])
 
 - **Precision Dynamics**: [[cognitive/precision_weighting|Precision Weighting]] (Matrices)
 
@@ -68,17 +76,17 @@ class BioFirmCore:
 
     def __init__(self):
 
-        self.state_space = BioregionalStateSpace()  # [[knowledge_base/mathematics/state_space_theory|State Space]]
+        self.state_space = BioregionalStateSpace()  # State Space
 
-        self.inference_engine = ActiveInferenceEngine()  # [[knowledge_base/cognitive/inference_engines|Inference]]
+        self.inference_engine = ActiveInferenceEngine()  # Inference
 
-        self.control_system = AdaptiveController()  # [[mathematics/control_theory|Control]]
+        self.control_system = AdaptiveController()  # Control
 
-        self.learning_system = LearningMechanism()  # [[cognitive/learning_theory|Learning]]
+        self.learning_system = LearningMechanism()  # Learning
 
-        self.optimization_engine = VariationalOptimizer()  # [[mathematics/optimization_theory|Optimization]]
+        self.optimization_engine = VariationalOptimizer()  # Optimization
 
-        self.uncertainty_handler = PrecisionManager()  # [[knowledge_base/mathematics/uncertainty_quantification|Uncertainty]]
+        self.uncertainty_handler = PrecisionManager()  # Uncertainty
 
 ```
 
@@ -482,13 +490,13 @@ class HierarchicalLearning:
 
     def __init__(self):
 
-        self.parameter_learner = ParameterLearning()  # [[knowledge_base/cognitive/parameter_learning|Parameter Learning]]
+        self.parameter_learner = ParameterLearning()  # Parameter Learning
 
-        self.structure_learner = StructureLearning()  # [[knowledge_base/cognitive/structure_learning|Structure Learning]]
+        self.structure_learner = StructureLearning()  # Structure Learning
 
-        self.meta_learner = MetaLearning()           # [[cognitive/meta_learning|Meta Learning]]
+        self.meta_learner = MetaLearning()           # Meta Learning
 
-        self.adaptation_system = AdaptiveSystem()     # [[cognitive/adaptive_systems|Adaptive Systems]]
+        self.adaptation_system = AdaptiveSystem()     # Adaptive Systems
 
 ```
 
@@ -684,11 +692,11 @@ class IntegrationFramework:
 
     def __init__(self):
 
-        self.ecological_system = EcologicalSystem()  # [[knowledge_base/systems/ecosystem_dynamics|Ecosystem]]
+        self.ecological_system = EcologicalSystem()  # Ecosystem
 
-        self.social_system = SocialSystem()         # [[knowledge_base/systems/social_networks|Social]]
+        self.social_system = SocialSystem()         # Social
 
-        self.economic_system = EconomicSystem()     # [[knowledge_base/systems/economic_systems|Economic]]
+        self.economic_system = EconomicSystem()     # Economic
 
     def integrate_domains(self, state: BioregionalState):
 
@@ -1008,7 +1016,15 @@ class InterventionPlanner:
 
 ## Executive Summary
 
-BioFirm is an advanced computational framework that implements [[cognitive/active_inference|Active Inference]] and the [[cognitive/free_energy_principle|Free Energy Principle]] for bioregional stewardship and management. The framework provides a mathematically rigorous, cognitively-inspired approach to understanding and managing complex [[knowledge_base/systems/Social-Ecological Systems|social-ecological systems]] through [[mathematics/variational_methods|variational inference]] and [[cognitive/hierarchical_processing|hierarchical processing]].
+> [!note] Conceptual framework
+> BioFirm is a conceptual framework — a proposed architecture — applying
+> [[cognitive/active_inference|Active Inference]] and the
+> [[cognitive/free_energy_principle|Free Energy Principle]] to
+> bioregional stewardship. It is documented here as theory: no BioFirm
+> runtime is shipped in this repository. The executable reference
+> implementation is the `cognitive` package (see the root `README.md`);
+> the code blocks in this page are illustrative pseudocode, not package
+> API.
 
 ## Core Framework Components
 
@@ -1048,7 +1064,7 @@ BioFirm is an advanced computational framework that implements [[cognitive/activ
 
 - **Learning Mechanisms**: [[cognitive/learning_mechanisms|Learning]] (Hebbian)
 
-- **Uncertainty Handling**: [[mathematics/uncertainty_resolution|Uncertainty Theory]] ([[mathematics/information_theory#uncertainty|Information]])
+- **Uncertainty Handling**: [[mathematics/uncertainty_resolution|Uncertainty Theory]] ([[mathematics/information_theory|Information]])
 
 - **Precision Dynamics**: [[cognitive/precision_weighting|Precision Weighting]] (Matrices)
 
@@ -1068,17 +1084,17 @@ class BioFirmCore:
 
     def __init__(self):
 
-        self.state_space = BioregionalStateSpace()  # [[knowledge_base/mathematics/state_space_theory|State Space]]
+        self.state_space = BioregionalStateSpace()  # State Space
 
-        self.inference_engine = ActiveInferenceEngine()  # [[knowledge_base/cognitive/inference_engines|Inference]]
+        self.inference_engine = ActiveInferenceEngine()  # Inference
 
-        self.control_system = AdaptiveController()  # [[mathematics/control_theory|Control]]
+        self.control_system = AdaptiveController()  # Control
 
-        self.learning_system = LearningMechanism()  # [[cognitive/learning_theory|Learning]]
+        self.learning_system = LearningMechanism()  # Learning
 
-        self.optimization_engine = VariationalOptimizer()  # [[mathematics/optimization_theory|Optimization]]
+        self.optimization_engine = VariationalOptimizer()  # Optimization
 
-        self.uncertainty_handler = PrecisionManager()  # [[knowledge_base/mathematics/uncertainty_quantification|Uncertainty]]
+        self.uncertainty_handler = PrecisionManager()  # Uncertainty
 
 ```
 
@@ -1482,13 +1498,13 @@ class HierarchicalLearning:
 
     def __init__(self):
 
-        self.parameter_learner = ParameterLearning()  # [[knowledge_base/cognitive/parameter_learning|Parameter Learning]]
+        self.parameter_learner = ParameterLearning()  # Parameter Learning
 
-        self.structure_learner = StructureLearning()  # [[knowledge_base/cognitive/structure_learning|Structure Learning]]
+        self.structure_learner = StructureLearning()  # Structure Learning
 
-        self.meta_learner = MetaLearning()           # [[cognitive/meta_learning|Meta Learning]]
+        self.meta_learner = MetaLearning()           # Meta Learning
 
-        self.adaptation_system = AdaptiveSystem()     # [[cognitive/adaptive_systems|Adaptive Systems]]
+        self.adaptation_system = AdaptiveSystem()     # Adaptive Systems
 
 ```
 
@@ -1684,11 +1700,11 @@ class IntegrationFramework:
 
     def __init__(self):
 
-        self.ecological_system = EcologicalSystem()  # [[knowledge_base/systems/ecosystem_dynamics|Ecosystem]]
+        self.ecological_system = EcologicalSystem()  # Ecosystem
 
-        self.social_system = SocialSystem()         # [[knowledge_base/systems/social_networks|Social]]
+        self.social_system = SocialSystem()         # Social
 
-        self.economic_system = EconomicSystem()     # [[knowledge_base/systems/economic_systems|Economic]]
+        self.economic_system = EconomicSystem()     # Economic
 
     def integrate_domains(self, state: BioregionalState):
 

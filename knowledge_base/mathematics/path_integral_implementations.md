@@ -151,17 +151,17 @@ class PathIntegralSampler:
 
     Mathematical Foundation:
 
-        - [[stochastic_processes]] - Random trajectory generation
+        - stochastic_processes - Random trajectory generation
 
-        - [[monte_carlo_methods]] - Sampling techniques
+        - monte_carlo_methods - Sampling techniques
 
-        - [[importance_sampling]] - Weighted sampling
+        - importance_sampling - Weighted sampling
 
     Related Methods:
 
-        - [[message_passing]] - Belief propagation
+        - message_passing - Belief propagation
 
-        - [[variational_inference]] - Approximate inference
+        - variational_inference - Approximate inference
 
     """
 
@@ -229,7 +229,7 @@ class PathIntegralSampler:
 
             - Uses Euler-Maruyama scheme for noise integration
 
-            - Related to [[stochastic_calculus]]
+            - Related to stochastic_calculus
 
         Args:
 
@@ -307,7 +307,7 @@ class PathIntegralSampler:
 
             - Implements exp(-S/temperature) weighting
 
-            - Related to [[statistical_physics]] and [[boltzmann_distribution]]
+            - Related to statistical_physics and boltzmann_distribution
 
         Args:
 
@@ -369,11 +369,11 @@ class PathOptimizer:
 
     Theoretical Foundation:
 
-        - [[variational_methods]] - Calculus of variations
+        - variational_methods - Calculus of variations
 
-        - [[optimal_control]] - Control theory principles
+        - optimal_control - Control theory principles
 
-        - [[information_geometry]] - Natural gradient methods
+        - information_geometry - Natural gradient methods
 
     """
 
@@ -419,9 +419,9 @@ class PathOptimizer:
 
             - Implements natural gradient descent on path space
 
-            - Uses [[fisher_information]] metric for natural gradients
+            - Uses fisher_information metric for natural gradients
 
-            - Related to [[riemannian_optimization]]
+            - Related to riemannian_optimization
 
         Args:
 
@@ -527,7 +527,7 @@ class PathOptimizer:
 
             - Implements variational derivative δS/δx(t)
 
-            - Uses [[functional_derivatives]] and [[calculus_of_variations]]
+            - Uses functional_derivatives and calculus_of_variations
 
         """
 
@@ -595,11 +595,11 @@ class InformationMetric:
 
     Theory:
 
-        - [[information_geometry]] - Statistical manifolds
+        - information_geometry - Statistical manifolds
 
-        - [[fisher_information]] - Information metrics
+        - fisher_information - Information metrics
 
-        - [[natural_gradients]] - Geometric optimization
+        - natural_gradients - Geometric optimization
 
     """
 
@@ -621,7 +621,7 @@ class InformationMetric:
 
             - For stochastic dynamics with Gaussian noise
 
-            - Related to [[riemannian_geometry]]
+            - Related to riemannian_geometry
 
         Args:
 
@@ -733,11 +733,11 @@ class PrecisionOptimizer:
 
     Mathematical Foundation:
 
-        - [[hierarchical_inference]] - Multi-level optimization
+        - hierarchical_inference - Multi-level optimization
 
-        - [[hyperparameter_optimization]] - Parameter learning
+        - hyperparameter_optimization - Parameter learning
 
-        - [[empirical_bayes]] - Evidence-based parameter selection
+        - empirical_bayes - Evidence-based parameter selection
 
     """
 
@@ -777,9 +777,9 @@ class PrecisionOptimizer:
 
             - Maximizes evidence lower bound (ELBO)
 
-            - Uses [[automatic_differentiation]] for gradients
+            - Uses automatic_differentiation for gradients
 
-            - Related to [[variational_em]] algorithm
+            - Related to variational_em algorithm
 
         Args:
 
@@ -885,11 +885,11 @@ def free_energy_path_integral_example():
 
     Theory:
 
-        - [[free_energy_principle]] - Minimization principle
+        - free_energy_principle - Minimization principle
 
-        - [[active_inference]] - Action through inference
+        - active_inference - Action through inference
 
-        - [[policy_optimization]] - Optimal behavior
+        - policy_optimization - Optimal behavior
 
     """
 
@@ -1079,11 +1079,11 @@ def belief_trajectory_optimization():
 
     Mathematical Framework:
 
-        - [[belief_space]] - Space of probability distributions
+        - belief_space - Space of probability distributions
 
-        - [[information_geometry]] - Geometric structure on beliefs
+        - information_geometry - Geometric structure on beliefs
 
-        - [[fisher_information]] - Natural metric on belief space
+        - fisher_information - Natural metric on belief space
 
     """
 
@@ -1121,7 +1121,7 @@ def belief_trajectory_optimization():
 
             - db/dt = -G^(-1) ∇F(b) where G is Fisher metric
 
-            - Related to [[natural_gradient_flow]]
+            - Related to natural_gradient_flow
 
         """
 
@@ -1509,3 +1509,6 @@ Extend to multi-scale planning:
 
 **See Also**: [[README]] for overview, [[path_integral_theory]] for theory, [[monte_carlo_methods]] for sampling
 
+## See also
+
+- [[path_integral_implementation|Path Integral Implementation]] - companion page

@@ -54,8 +54,6 @@ This document provides practical implementation examples using the existing Ant 
 # Example 1: Basic ant colony foraging simulation
 import numpy as np
 import matplotlib.pyplot as plt
-from Things.Ant_Colony.ant_colony.ant_colony import AntColony
-from Things.Ant_Colony.ant_colony.environment import AntColonyEnvironment
 
 def run_basic_foraging_simulation():
     """Demonstrate basic ant colony foraging behavior"""
@@ -162,7 +160,7 @@ if __name__ == "__main__":
 
 ### Multi-Colony Competition
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ## Advanced Ant Colony Features
@@ -316,7 +314,7 @@ if __name__ == "__main__":
 
 ### Traveling Salesman Problem with Ants
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### Bee-Inspired Function Optimization
@@ -626,7 +624,7 @@ if __name__ == "__main__":
 
 ### Swarm Algorithm Benchmarking
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ## Summary and Applications

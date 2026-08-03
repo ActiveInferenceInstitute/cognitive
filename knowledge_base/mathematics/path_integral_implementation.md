@@ -452,3 +452,6 @@ Links to:
 
 - [[betancourt_2017]] - A Conceptual Introduction to Hamiltonian Monte Carlo
 
+## See also
+
+- [[path_integral_implementation|Path Integral Implementation]] - companion page

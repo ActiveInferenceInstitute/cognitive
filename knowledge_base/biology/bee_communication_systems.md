@@ -86,7 +86,7 @@ d = k \times t_w
 where:
 - $d$ is distance to food source (meters)
 - $t_w$ is waggle phase duration (seconds)
-- $k = 0.95$ (calibration constant)
+- $k = 1.0  # approximate waggle calibration (illustrative)$ (calibration constant)
 
 **Direction Encoding:**
 ```math

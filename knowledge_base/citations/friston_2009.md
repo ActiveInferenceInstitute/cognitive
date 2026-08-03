@@ -167,7 +167,7 @@ Synaptic plasticity implements learning of model parameters:
 - **Active Inference**: Modern implementations
 
 ## Citations and Influence
-This paper has been cited over 800 times and established predictive coding as the canonical implementation of the free energy principle in neuroscience. It provides the computational foundation for understanding hierarchical perception and learning in the brain.
+This paper has been widely cited and established predictive coding as the canonical implementation of the free energy principle in neuroscience. It provides the computational foundation for understanding hierarchical perception and learning in the brain.
 
 ## Reading Guide
 1. **Introduction**: Free energy principle overview

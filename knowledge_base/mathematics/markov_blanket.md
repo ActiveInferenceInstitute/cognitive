@@ -345,3 +345,6 @@ class MarkovBlanketSystem:
 
 - [[probabilistic_graphical_models]]
 
+## See also
+
+- [[markov_blanket|Markov Blanket]] - companion page

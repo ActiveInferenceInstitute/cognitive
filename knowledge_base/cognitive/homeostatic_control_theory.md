@@ -11,7 +11,11 @@ semantic_relations:
   - type: implements
     links: [[free_energy_principle]]
   - type: relates
-    links: [[[basic_homeostatic_control]], [[active_inference_for_control]], [[knowledge_base/mathematics/control_theory]], [[adaptation_strategies]]]
+    links:
+      - "[[basic_homeostatic_control]]"
+      - "[[active_inference_for_control]]"
+      - "[[knowledge_base/mathematics/control_theory]]"
+      - "[[adaptation_strategies]]"
 ---
 
 # Homeostatic Control Theory

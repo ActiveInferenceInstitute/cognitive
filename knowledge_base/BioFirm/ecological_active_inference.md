@@ -12,13 +12,13 @@ This document details the application of [[cognitive/active_inference|Active Inf
 
 ## Theoretical Framework
 
-### 1. [[cognitive/active_inference#Ecological_States|Ecological State Space]]
+### 1. [[cognitive/active_inference|Ecological State Space]]
 
 - **State Variables** ([[mathematics/measure_theory|State Space Theory]])
 
   - Biodiversity metrics ([[mathematics/information_theory|Information Measures]])
 
-  - Ecosystem functions ([[systems/systems_theory#Functions|System Functions]])
+  - Ecosystem functions ([[systems/systems_theory|System Functions]])
 
   - Resource availability ([[mathematics/probability_theory|Probability Theory]])
 
@@ -34,7 +34,7 @@ This document details the application of [[cognitive/active_inference|Active Inf
 
   - Remote sensing ([[mathematics/information_theory|Information Processing]])
 
-### 2. [[cognitive/active_inference#Ecological_Dynamics|Ecological Dynamics]]
+### 2. [[cognitive/active_inference|Ecological Dynamics]]
 
 ```python
 
@@ -62,7 +62,7 @@ class EcologicalDynamics:
 
 ```
 
-### 3. [[cognitive/active_inference#Ecological_Inference|Ecological Inference]]
+### 3. [[cognitive/active_inference|Ecological Inference]]
 
 - **Belief Updating** ([[cognitive/belief_initialization|Belief Systems]])
 
@@ -82,7 +82,7 @@ class EcologicalDynamics:
 
 ## Implementation Details
 
-### 1. [[cognitive/active_inference#Ecological_Control|Ecological Control]]
+### 1. [[cognitive/active_inference|Ecological Control]]
 
 ```python
 

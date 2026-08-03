@@ -39,6 +39,12 @@ semantic_relations:
 
 Social insects, particularly ants and bees, provide essential ecosystem services that maintain biodiversity, support agriculture, and regulate ecological processes. Their collective behaviors create complex ecological networks that influence everything from soil fertility to global food production. Understanding these services is crucial for conservation and sustainable ecosystem management.
 
+> [!note] Quantitative ranges
+> Percentage figures in this page (for example soil-infiltration,
+> macroporosity, and decomposition ranges) are indicative ranges from the
+> ecological literature without specific citations. They are not
+> measurements from this repository.
+
 ## Ant Ecosystem Services
 
 ### Soil Ecosystem Engineering

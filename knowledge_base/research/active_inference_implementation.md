@@ -25,7 +25,13 @@ This document provides practical implementations of active inference principles,
 
 ### Core Active Inference Components
 
-#### Generative Model Definition
+#> [!note] Illustrative pseudocode
+> The JAX-based code in this section is an illustrative implementation
+> sketch; `jax` is not a dependency of this repository's `cognitive`
+> package. For the installed implementation, see the canonical example in
+> the root `README.md`.
+
+### Generative Model Definition
 
 ```python
 import numpy as np
@@ -501,7 +507,7 @@ def run_homeostasis_simulation():
 
 ### Core Dependencies
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### Utility Functions
@@ -769,7 +775,7 @@ class MultiAgentActiveInference:
 
 ---
 
-> **Re- [[knowledge_base/agents/README|Swarm Intelligence Implementation]] - Collective Active Inference in real systems.
+> **Related**: [[knowledge_base/agents/README|Swarm Intelligence Implementation]] - Collective Active Inference in real systems.
 
 ---
 

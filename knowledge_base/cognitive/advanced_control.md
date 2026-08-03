@@ -9,7 +9,11 @@ semantic_relations:
   - type: extends
     links: [[active_inference_for_control]]
   - type: relates
-    links: [[[basic_homeostatic_control]], [[custom_control_modes]], [[knowledge_base/mathematics/optimal_control]], [[hierarchical_inference]]]
+    links:
+      - "[[basic_homeostatic_control]]"
+      - "[[custom_control_modes]]"
+      - "[[knowledge_base/mathematics/optimal_control]]"
+      - "[[hierarchical_inference]]"
 ---
 
 # Advanced Control

@@ -18,19 +18,19 @@ The state space implementation follows the [[knowledge_base/cognitive/free_energ
 
 class StateSpace:
 
-    """Abstract representation of state spaces in [[knowledge_base/mathematics/generative_models|active inference models]]."""
+    """Abstract representation of state spaces in active inference models."""
 
-    dimensions: List[int]  # [[knowledge_base/cognitive/active_inference/State_Dimensionality|State dimensions]]
+    dimensions: List[int]  # State dimensions
 
-    labels: Dict[str, List[str]]  # [[knowledge_base/cognitive/active_inference/State_Labels|State labels]]
+    labels: Dict[str, List[str]]  # State labels
 
-    mappings: Dict[str, np.ndarray]  # [[knowledge_base/cognitive/active_inference/State_Mappings|State mappings]]
+    mappings: Dict[str, np.ndarray]  # State mappings
 
-    hierarchical_levels: Optional[int] = 1  # [[knowledge_base/cognitive/active_inference/Hierarchical_Models|Hierarchical levels]]
+    hierarchical_levels: Optional[int] = 1  # Hierarchical levels
 
-    scale: Optional[str] = None  # [[knowledge_base/cognitive/active_inference/Spatial_Scale|Spatial scale]]
+    scale: Optional[str] = None  # Spatial scale
 
-    temporal_resolution: Optional[str] = None  # [[knowledge_base/cognitive/active_inference/Temporal_Scale|Temporal resolution]]
+    temporal_resolution: Optional[str] = None  # Temporal resolution
 
 ```
 
@@ -44,15 +44,15 @@ Implements a hierarchical state space for bioregional systems.
 
 class BioregionalState:
 
-    """[[knowledge_base/cognitive/active_inference/State_Representation|Comprehensive state representation]]."""
+    """Comprehensive state representation."""
 
-    ecological_state: Dict[str, float]  # [[knowledge_base/cognitive/active_inference/Environmental_States|Environmental states]]
+    ecological_state: Dict[str, float]  # Environmental states
 
-    climate_state: Dict[str, float]     # [[knowledge_base/cognitive/active_inference/Climate_States|Climate states]]
+    climate_state: Dict[str, float]     # Climate states
 
-    social_state: Dict[str, float]      # [[knowledge_base/cognitive/active_inference/Social_States|Social states]]
+    social_state: Dict[str, float]      # Social states
 
-    economic_state: Dict[str, float]    # [[knowledge_base/cognitive/active_inference/Economic_States|Economic states]]
+    economic_state: Dict[str, float]    # Economic states
 
 ```
 
@@ -66,17 +66,17 @@ Implements the likelihood mapping between hidden states and observations.
 
 class ObservationModel:
 
-    """[[knowledge_base/cognitive/active_inference/Generative_Process|Generalized observation model]]."""
+    """Generalized observation model."""
 
-    state_space: StateSpace  # [[knowledge_base/research/concepts/hidden_states|Hidden states]]
+    state_space: StateSpace  # Hidden states
 
-    observation_space: StateSpace  # [[knowledge_base/cognitive/active_inference/Sensory_States|Sensory states]]
+    observation_space: StateSpace  # Sensory states
 
-    likelihood_matrix: np.ndarray  # [[knowledge_base/agents/GenericPOMDP/matrices/A_matrix|A matrix]]
+    likelihood_matrix: np.ndarray  # A matrix
 
-    noise_model: str = "gaussian"  # [[knowledge_base/cognitive/active_inference/Observation_Noise|Observation noise]]
+    noise_model: str = "gaussian"  # Observation noise
 
-    precision: float = 1.0  # [[knowledge_base/cognitive/active_inference/Sensory_Precision|Sensory precision]]
+    precision: float = 1.0  # Sensory precision
 
 ```
 
@@ -90,23 +90,23 @@ Implements the state transition dynamics.
 
 class TransitionModel:
 
-    """[[knowledge_base/cognitive/active_inference/Dynamic_Model|Dynamic transition model]]."""
+    """Dynamic transition model."""
 
-    state_space: StateSpace  # [[knowledge_base/cognitive/active_inference/State_Space|State space]]
+    state_space: StateSpace  # State space
 
-    action_space: StateSpace  # [[knowledge_base/cognitive/active_inference/Action_Space|Action space]]
+    action_space: StateSpace  # Action space
 
-    transition_matrices: Dict[str, np.ndarray]  # [[knowledge_base/agents/GenericPOMDP/matrices/B_matrix|B matrices]]
+    transition_matrices: Dict[str, np.ndarray]  # B matrices
 
-    temporal_horizon: int  # [[knowledge_base/cognitive/active_inference/Planning_Horizon|Planning horizon]]
+    temporal_horizon: int  # Planning horizon
 
-    control_modes: List[str] = [  # [[knowledge_base/cognitive/active_inference/Control_Modes|Control modes]]
+    control_modes: List[str] = [  # Control modes
 
-        "homeostatic",  # [[knowledge_base/cognitive/active_inference/Homeostatic_Control|Homeostatic]]
+        "homeostatic",  # Homeostatic
 
-        "goal_directed",  # [[knowledge_base/cognitive/active_inference/Goal_Directed_Control|Goal-directed]]
+        "goal_directed",  # Goal-directed
 
-        "exploratory"  # [[knowledge_base/cognitive/active_inference/Exploratory_Behavior|Exploratory]]
+        "exploratory"  # Exploratory
 
     ]
 
@@ -128,7 +128,7 @@ system:
 
   state_spaces:
 
-    bioregional:  # [[knowledge_base/cognitive/active_inference/Bioregional_States|Bioregional states]]
+    bioregional:  # Bioregional states
 
       dimensions: [20]
 
@@ -138,7 +138,7 @@ system:
 
       scales: ["local", "landscape", "regional", "bioregional"]
 
-    observation:  # [[knowledge_base/cognitive/active_inference/Observation_Space|Observation space]]
+    observation:  # Observation space
 
       dimensions: [5]
 
@@ -148,7 +148,7 @@ system:
 
       uncertainty: "heteroscedastic"
 
-    action:  # [[knowledge_base/cognitive/active_inference/Action_Space|Action space]]
+    action:  # Action space
 
       dimensions: [4]
 
@@ -158,7 +158,7 @@ system:
 
       coupling: "cross_scale"
 
-  control_parameters:  # [[knowledge_base/cognitive/active_inference/Control_Parameters|Control parameters]]
+  control_parameters:  # Control parameters
 
     temporal_horizon: 20
 
@@ -182,25 +182,25 @@ Configures the [[docs/implementation/rxinfer/variational_inference|variational i
 
 inference:
 
-  method: "variational"  # [[knowledge_base/cognitive/active_inference/Inference_Methods|Inference methods]]
+  method: "variational"  # Inference methods
 
-  policy_type: "discrete"  # [[knowledge_base/cognitive/active_inference/Policy_Types|Policy types]]
+  policy_type: "discrete"  # Policy types
 
-  variational_parameters:  # [[knowledge_base/cognitive/active_inference/Variational_Parameters|Variational parameters]]
+  variational_parameters:  # Variational parameters
 
-    free_energy_type: "expected"  # [[knowledge_base/cognitive/active_inference/Free_Energy_Types|Free energy types]]
+    free_energy_type: "expected"  # Free energy types
 
     inference_iterations: 10
 
     convergence_threshold: 1e-6
 
-  belief_initialization:  # [[knowledge_base/cognitive/belief_initialization|Belief initialization]]
+  belief_initialization:  # Belief initialization
 
     type: "uniform"
 
     prior_strength: 1.0
 
-  precision_dynamics:  # [[knowledge_base/cognitive/active_inference/Precision_Dynamics|Precision dynamics]]
+  precision_dynamics:  # Precision dynamics
 
     update_rule: "adaptive"
 
@@ -218,7 +218,7 @@ Defines the generative model matrices.
 
 matrices:
 
-  observation_model:  # [[knowledge_base/agents/GenericPOMDP/matrices/A_matrix|A Matrix]]
+  observation_model:  # A Matrix
 
     type: "hierarchical_probabilistic"
 
@@ -228,7 +228,7 @@ matrices:
 
     initialization: "informed_ecological"
 
-  transition_model:  # [[knowledge_base/agents/GenericPOMDP/matrices/B_matrix|B Matrix]]
+  transition_model:  # B Matrix
 
     type: "coupled_markov"
 
@@ -238,7 +238,7 @@ matrices:
 
     initialization: "ecosystem_based"
 
-  preference_model:  # [[knowledge_base/agents/GenericPOMDP/matrices/C_matrix|C Matrix]]
+  preference_model:  # C Matrix
 
     type: "multi_objective"
 
@@ -258,7 +258,7 @@ matrices:
 
       economic: 0.3
 
-  prior_beliefs:  # [[knowledge_base/agents/GenericPOMDP/matrices/D_matrix|D Matrix]]
+  prior_beliefs:  # D Matrix
 
     type: "hierarchical_distribution"
 
@@ -280,17 +280,17 @@ Implements performance evaluation metrics.
 
 class BioregionalMetrics:
 
-    """[[knowledge_base/cognitive/active_inference/Performance_Tracking|Performance tracking]]."""
+    """Performance tracking."""
 
-    ecological_metrics: Dict[str, float]  # [[knowledge_base/cognitive/active_inference/Ecological_Metrics|Ecological metrics]]
+    ecological_metrics: Dict[str, float]  # Ecological metrics
 
-    climate_metrics: Dict[str, float]     # [[knowledge_base/cognitive/active_inference/Climate_Metrics|Climate metrics]]
+    climate_metrics: Dict[str, float]     # Climate metrics
 
-    social_metrics: Dict[str, float]      # [[knowledge_base/cognitive/active_inference/Social_Metrics|Social metrics]]
+    social_metrics: Dict[str, float]      # Social metrics
 
-    economic_metrics: Dict[str, float]    # [[knowledge_base/cognitive/active_inference/Economic_Metrics|Economic metrics]]
+    economic_metrics: Dict[str, float]    # Economic metrics
 
-    stewardship_metrics: Dict[str, float] # [[knowledge_base/cognitive/active_inference/Stewardship_Metrics|Stewardship metrics]]
+    stewardship_metrics: Dict[str, float] # Stewardship metrics
 
 ```
 
@@ -302,7 +302,7 @@ Provides [[knowledge_base/cognitive/visualization_tools|visualization tools]] fo
 
 class BioregionalVisualization:
 
-    """[[knowledge_base/cognitive/visualization_tools|Visualization tools]]."""
+    """Visualization tools."""
 
     @staticmethod
 
@@ -314,7 +314,7 @@ class BioregionalVisualization:
 
     ) -> plt.Figure:
 
-        """[[knowledge_base/cognitive/active_inference/State_Visualization|State visualization]]."""
+        """State visualization."""
 
         pass
 
@@ -330,7 +330,7 @@ class BioregionalVisualization:
 
     ) -> plt.Figure:
 
-        """[[knowledge_base/cognitive/active_inference/Intervention_Analysis|Intervention analysis]]."""
+        """Intervention analysis."""
 
         pass
 
@@ -346,7 +346,7 @@ class BioregionalVisualization:
 
     ) -> plt.Figure:
 
-        """[[knowledge_base/cognitive/active_inference/Cross_Scale_Analysis|Cross-scale analysis]]."""
+        """Cross-scale analysis."""
 
         pass
 
@@ -440,17 +440,17 @@ class AdaptationStrategy(ABC):
 
 ```python
 
-# Configure bioregional stewardship
+# Configure bioregional stewardship with the installed package API
+
+from cognitive.models.active_inference import InferenceConfig, InferenceMethod, PolicyType
 
 config = InferenceConfig(
 
-    method=InferenceMethod.HIERARCHICAL_SAMPLING,
+    method=InferenceMethod.VARIATIONAL,
 
-    policy_type=PolicyType.MIXED,
+    policy_type=PolicyType.DISCRETE,
 
     temporal_horizon=20,
-
-    spatial_scales=["local", "landscape", "regional"],
 
     learning_rate=0.01,
 
@@ -486,9 +486,9 @@ config = InferenceConfig(
 
 )
 
-# Create bioregional stewardship dispatcher
+# Create the dispatcher from a generative model (see the root README)
 
-dispatcher = BioregionalStewardshipFactory.create(config)
+dispatcher = ActiveInferenceFactory.create(config, model)
 
 ```
 
@@ -496,13 +496,13 @@ dispatcher = BioregionalStewardshipFactory.create(config)
 
 ```python
 
-# Configure advanced stewardship with learning
+# Configure advanced stewardship with sampling-based inference
 
 config = InferenceConfig(
 
-    method=InferenceMethod.PARTICIPATORY_SAMPLING,
+    method=InferenceMethod.SAMPLING,
 
-    policy_type=PolicyType.ADAPTIVE,
+    policy_type=PolicyType.DISCRETE,
 
     temporal_horizon=50,
 
@@ -524,9 +524,7 @@ config = InferenceConfig(
 
 )
 
-# Create dispatcher with social-ecological learning
-
-dispatcher = BioregionalStewardshipFactory.create_with_learning(config)
+dispatcher = ActiveInferenceFactory.create(config, model)
 
 ```
 

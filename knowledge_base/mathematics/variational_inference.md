@@ -255,9 +255,14 @@ class VariationalDistribution(nn.Module):
 
 ### Active Inference Implementation
 
+> [!note] Illustrative pseudocode
+> The class below is a conceptual neural-network sketch; it is not the
+> installed API. The real `cognitive.ActiveInferenceModel` is an abstract
+> base whose constructor takes a `config_path`.
+
 ```python
 
-class ActiveInferenceModel(nn.Module):
+class VariationalAIModel(nn.Module):
 
     def __init__(self,
 

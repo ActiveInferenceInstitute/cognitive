@@ -212,7 +212,7 @@ Where self-evidencing drives conscious experience.
 - **Synthetic Biology Tools**: Gene circuit design software
 
 ## Citations and Influence
-This paper has been cited over 400 times and represents a significant extension of the free energy principle to biology. It provides a unified theoretical framework that connects neuroscience, evolutionary biology, and ecology through the lens of variational inference.
+This paper has been widely cited and represents a significant extension of the free energy principle to biology. It provides a unified theoretical framework that connects neuroscience, evolutionary biology, and ecology through the lens of variational inference.
 
 ## Reading Guide
 1. **Introduction**: Life as a self-organizing system

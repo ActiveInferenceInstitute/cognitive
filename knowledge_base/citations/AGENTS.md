@@ -46,7 +46,8 @@ semantic_relations:
       - "[[sutton_2018|Sutton & Barto (2018)]]"
       - "[[tschantz_2020|Reinforcement Learning through Active Inference]]"
     parent:
-      - "[[knowledge_base/AGENTS|Knowledge Base]]"---
+      - "[[knowledge_base/AGENTS|Knowledge Base]]"
+---
 
 # Citations Reference Notes
 

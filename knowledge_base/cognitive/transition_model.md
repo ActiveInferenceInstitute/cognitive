@@ -9,7 +9,11 @@ semantic_relations:
   - type: component_of
     links: [[matrix_specifications]]
   - type: relates
-    links: [[[observation_model]], [[system_definition]], [[../mathematics/active_inference_pomdp]], [[learning_mechanisms]]]
+    links:
+      - "[[observation_model]]"
+      - "[[system_definition]]"
+      - "[[../mathematics/active_inference_pomdp]]"
+      - "[[learning_mechanisms]]"
 ---
 
 # Transition Model

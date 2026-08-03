@@ -31,8 +31,8 @@ semantic_relations:
   - - - knowledge_base/systems/internet_of_things|Internet of Things
 - type: foundation
   links:
-  - Distributed Systems
-  - Computer Graphics
+  - - - [[distributed_systems|Distributed Systems]]
+  - - - [[computer_graphics|Computer Graphics]]
   - - - knowledge_base/cognitive/embodied_cognition|Embodied Cognition
 ---
 

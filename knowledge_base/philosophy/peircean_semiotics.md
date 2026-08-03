@@ -702,6 +702,8 @@ graph TD
 
 ```python
 
+import torch.nn as nn  # illustrative example
+
 class NeuralSemiotics(nn.Module):
 
     def __init__(self,

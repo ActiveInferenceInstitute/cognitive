@@ -1,16 +1,13 @@
 ---
 type: matrix_spec
-id: unique_identifier
+id: pomdp_structure_001
 matrix_type: perception
-created: timestamp
-modified: timestamp
+created: 2024-02-05
+modified: 2026-08-02
 tags:
 - matrix
-- type
+- pomdp
 - active-inference
-related_spaces:
-- space1
-- space2
 ---
 
 
@@ -201,59 +198,16 @@ example.
 
 ### Active Inference Implementation
 
-```python
-
-class ActiveInferencePOMDP:
-
-    def __init__(self, agent_spec: str):
-
-        self.A = MatrixLoader.load("A_matrix")
-
-        self.B = MatrixLoader.load("B_matrix")
-
-        self.C = MatrixLoader.load("C_matrix")
-
-        self.D = MatrixLoader.load("D_matrix")
-
-        self.E = MatrixLoader.load("E_matrix")
-
-    def infer_state(self, observation):
-
-        """Perform state inference"""
-
-        pass
-
-    def select_policy(self):
-
-        """Select optimal policy"""
-
-        pass
-
-```
+The repository's executable active-inference implementation is the
+`cognitive` package (canonical example in the root `README.md`); the
+generative model matrices it uses are documented in
+`knowledge_base/mathematics/matrix_specifications.md`.
 
 ### Visualization Generation
 
-```python
-
-class POMDPVisualizer:
-
-    def __init__(self, agent_spec: str):
-
-        self.spec = load_spec(agent_spec)
-
-    def plot_matrices(self):
-
-        """Generate matrix plots"""
-
-        pass
-
-    def plot_state_space(self):
-
-        """Visualize state space"""
-
-        pass
-
-```
+Matrix and knowledge-graph figures are produced by
+`cognitive.MatrixPlotter` and `cognitive.utils.visualization.network_viz`
+from the installed package; see `docs/tools/plotting_tools.md`.
 
 ## Best Practices
 

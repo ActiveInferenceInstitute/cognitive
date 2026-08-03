@@ -154,7 +154,7 @@ The [[AGENTS|biological agents documentation]] provides specific guidance for im
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 45 specialized biological documents with comprehensive agent architectures
+- **Coverage**: 47 specialized biological documents with comprehensive agent architectures
 - **Integration**: Strong connections to cognitive modeling and Active Inference
 - **Depth**: From molecular mechanisms to ecosystem dynamics with mathematical rigor
 - **Applications**: Direct relevance to agent architectures and implementation examples

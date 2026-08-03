@@ -43,15 +43,15 @@ class HierarchicalPerception:
 
     Theory:
 
-        - [[predictive_processing|Predictive Processing]]
+        - Predictive Processing
 
-        - [[active_inference|Active Inference]]
+        - Active Inference
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/information_theory|Information Theory]]
+        - Information Theory
 
-        - [[knowledge_base/mathematics/path_integral|Path Integrals]]
+        - Path Integrals
 
     """
 
@@ -81,9 +81,9 @@ def compute_prediction_error(prediction: np.ndarray,
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/information_theory#kl-divergence|KL Divergence]]
+        - KL Divergence
 
-        - [[knowledge_base/mathematics/variational_methods|Variational Methods]]
+        - Variational Methods
 
     """
 
@@ -127,13 +127,13 @@ graph TD
 
 - [[knowledge_base/mathematics/information_theory#entropy|Entropy]] - Uncertainty quantification
 
-- [[knowledge_base/mathematics/information_theory#kl-divergence|KL Divergence]] - Prediction error measure
+- [[knowledge_base/mathematics/information_theory#divergence-measures|KL Divergence]] - Prediction error measure
 
 - [[knowledge_base/mathematics/information_theory#mutual-information|Mutual Information]] - Information gain
 
 ### Variational Methods
 
-- [[knowledge_base/mathematics/variational_methods#variational-free-energy|Free Energy]] - Error minimization
+- [[knowledge_base/mathematics/variational_methods#variational-inference-framework|Free Energy]] - Error minimization
 
 - [[knowledge_base/mathematics/path_integral#action-computation|Action Computation]] - Trajectory optimization
 
@@ -155,9 +155,9 @@ class VisualPrediction:
 
     Implementation:
 
-        - [[docs/implementation/implementation_patterns#perception-implementation|Perception Pattern]]
+        - Perception Pattern
 
-        - [[docs/api/perception_api|Perception API]]
+        - Perception API
 
     """
 
@@ -187,9 +187,9 @@ class MultimodalIntegration:
 
     Theory:
 
-        - [[active_inference#multimodal-integration|Multimodal Integration]]
+        - Multimodal Integration
 
-        - [[predictive_processing#sensory-integration|Sensory Integration]]
+        - Sensory Integration
 
     """
 
@@ -219,15 +219,15 @@ class HierarchicalGenerativeModel:
 
     Theory:
 
-        - [[predictive_processing|Predictive Processing]]
+        - Predictive Processing
 
-        - [[active_inference|Active Inference]]
+        - Active Inference
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/variational_methods|Variational Methods]]
+        - Variational Methods
 
-        - [[knowledge_base/mathematics/information_theory|Information Theory]]
+        - Information Theory
 
     """
 
@@ -329,9 +329,9 @@ class PrecisionModule:
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/information_theory#fisher-information|Fisher Information]]
+        - Fisher Information
 
-        - [[knowledge_base/mathematics/variational_methods#precision|Precision]]
+        - Precision
 
     """
 
@@ -365,7 +365,7 @@ class PrecisionModule:
 
         """Compute Fisher information matrix from errors."""
 
-        # Implementation using [[knowledge_base/mathematics/information_theory]]
+        # Implementation using knowledge_base/mathematics/information_theory
 
         return np.cov(np.array(errors).T)
 
@@ -375,7 +375,7 @@ class PrecisionModule:
 
         """Optimize precision using Fisher information."""
 
-        # Implementation using [[knowledge_base/mathematics/variational_methods]]
+        # Implementation using knowledge_base/mathematics/variational_methods
 
         return np.linalg.inv(fisher)
 
@@ -395,15 +395,15 @@ class ActiveInferencePerception:
 
     Theory:
 
-        - [[active_inference|Active Inference]]
+        - Active Inference
 
-        - [[predictive_processing|Predictive Processing]]
+        - Predictive Processing
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/expected_free_energy|Expected Free Energy]]
+        - Expected Free Energy
 
-        - [[knowledge_base/mathematics/path_integral|Path Integrals]]
+        - Path Integrals
 
     """
 
@@ -489,13 +489,13 @@ class PerceptualRehabilitation:
 
     Applications:
 
-        - [[docs/examples/clinical/visual_rehabilitation|Visual Rehabilitation]]
+        - Visual Rehabilitation
 
-        - [[docs/examples/clinical/auditory_training|Auditory Training]]
+        - Auditory Training
 
     Clinical:
 
-        - [[docs/guides/clinical_applications#perceptual-disorders|Clinical Guide]]
+        - Clinical Guide
 
     """
 
@@ -579,9 +579,9 @@ class PerceptualDiagnostics:
 
     Applications:
 
-        - [[docs/examples/clinical/perceptual_assessment|Perceptual Assessment]]
+        - Perceptual Assessment
 
-        - [[docs/examples/clinical/disorder_classification|Disorder Classification]]
+        - Disorder Classification
 
     """
 
@@ -701,9 +701,9 @@ class PerceptualTraining:
 
     Applications:
 
-        - [[docs/examples/clinical/perceptual_training|Training Examples]]
+        - Training Examples
 
-        - [[docs/guides/clinical_applications|Clinical Guide]]
+        - Clinical Guide
 
     """
 

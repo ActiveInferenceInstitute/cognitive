@@ -12,7 +12,7 @@ The BioFirm framework implements a specialized application of the [[cognitive/fr
 
 ## Core Theoretical Connections
 
-### 1. [[cognitive/active_inference#Markov_Blankets|Markov Blankets]] in BioFirm
+### 1. [[cognitive/active_inference|Markov Blankets]] in BioFirm
 
 - **Hierarchical Implementation**
 
@@ -34,7 +34,7 @@ The BioFirm framework implements a specialized application of the [[cognitive/fr
 
 - **Variational Free Energy** ([[mathematics/variational_methods|Variational Methods]])
 
-  - Ecological surprise minimization ([[mathematics/information_theory#Surprise|Information Surprise]])
+  - Ecological surprise minimization ([[mathematics/information_theory|Information Surprise]])
 
   - Multi-scale belief updating ([[cognitive/belief_initialization|Belief Initialization]])
 
@@ -42,7 +42,7 @@ The BioFirm framework implements a specialized application of the [[cognitive/fr
 
 - **System Boundaries**
 
-  - Ecological boundaries ([[systems/systems_theory#Boundaries|System Boundaries]])
+  - Ecological boundaries ([[systems/systems_theory|System Boundaries]])
 
   - Social system interfaces ([[cognitive/social_cognition|Social Cognition]])
 
@@ -65,6 +65,11 @@ The BioFirm framework implements a specialized application of the [[cognitive/fr
   - Climate patterns ([[mathematics/statistical_foundations|Statistical Foundations]])
 
   - Social-ecological interactions ([[knowledge_base/systems/Social-Ecological Systems|Social-Ecological Systems]])
+
+> [!note] Illustrative pseudocode
+> The classes in this section are illustrative sketches of a proposed
+> BioFirm architecture. They are not part of the installed `cognitive`
+> package, and no BioFirm runtime exists in this repository.
 
 ## Implementation Framework
 

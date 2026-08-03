@@ -25,7 +25,7 @@ semantic_relations:
 
 # Generic POMDP Active Inference Implementation
 
-This directory contains a comprehensive implementation of Partially Observable Markov Decision Process (POMDP) agents using Active Inference principles. The GenericPOMDP framework provides a modular, extensible architecture for building cognitive agents that can learn and act in uncertain environments.
+This directory documents the architecture and components of Partially Observable Markov Decision Process (POMDP) agents under Active Inference. The folder is documentation: the executable reference implementation is `cognitive.DiscreteGenerativeModel` and `Things.Simple_POMDP` (see the root `README.md`).
 
 ## 🏗️ Architecture Overview
 
@@ -80,7 +80,6 @@ graph TD
 - `[[guides/b_matrix_enthusiast]]` - Advanced state transitions
 - `[[guides/o_space_enthusiast]]` - Observation space design
 - `[[guides/s_space_enthusiast]]` - State space optimization
-- `[[guides/a_space_enthusiast]]` - Action space configuration
 
 ## 🚀 Quick Start Implementation
 
@@ -454,7 +453,6 @@ def benchmark_agent_performance():
     end_time = time.time()
 
     print(f"Processed {len(test_observations)} observations")
-    print(".3f")
     print(f"Average inference time: {(end_time - start_time) / len(test_observations) * 1000:.2f} ms")
 
     return actions
@@ -508,7 +506,7 @@ The POMDP agent integrates with various environment types:
 
 ### Core Papers
 - Friston, K. et al. (2017). Active Inference: A Process Theory
-- Parr, T., Pezzulo, G., & Friston, K. (2019). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior
+- Parr, T., Pezzulo, G., & Friston, K. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.
 
 ### Implementation Resources
 - [[code/Things/Generic_POMDP/README]] - Working implementation examples

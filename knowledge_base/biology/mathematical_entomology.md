@@ -95,7 +95,7 @@ N_t^{adult}
 
 ### 2. Spatial Distribution Models
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### 3. Behavioral Mathematics

@@ -11,7 +11,10 @@ semantic_relations:
   - type: extends
     links: [[homeostatic_regulation]]
   - type: relates
-    links: [[[active_inference_for_control]], [[advanced_control]], [[knowledge_base/mathematics/control_theory]]]
+    links:
+      - "[[active_inference_for_control]]"
+      - "[[advanced_control]]"
+      - "[[knowledge_base/mathematics/control_theory]]"
 ---
 
 # Basic Homeostatic Control

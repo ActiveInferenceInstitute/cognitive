@@ -3,7 +3,7 @@ title: Conservation Biology of Social Insects
 type: concept
 status: stable
 created: 2024-12-18
-updated: 2024-12-18
+updated: 2026-08-02
 tags:
   - conservation
   - ants
@@ -38,6 +38,12 @@ semantic_relations:
 ## Overview
 
 The conservation of social insects, particularly ants and bees, is critical for maintaining biodiversity, ecosystem services, and ecological stability. These species face multiple anthropogenic threats that have led to significant population declines and local extinctions. Effective conservation requires understanding species-specific vulnerabilities, implementing targeted protection strategies, and integrating conservation with sustainable land management practices.
+
+> [!note] Quantitative ranges
+> Percentage ranges in this page (for example habitat-loss, pesticide,
+> and colony-loss figures) are indicative ranges summarized from the
+> conservation literature without specific citations. They are not
+> measurements from this repository.
 
 ## Threat Assessment Framework
 

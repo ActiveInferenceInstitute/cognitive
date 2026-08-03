@@ -9,7 +9,11 @@ semantic_relations:
   - type: specifies
     links: [[knowledge_base/mathematics/active_inference_pomdp]]
   - type: relates
-    links: [[[observation_model]], [[transition_model]], [[system_definition]], [[inference_configuration]]]
+    links:
+      - "[[observation_model]]"
+      - "[[transition_model]]"
+      - "[[system_definition]]"
+      - "[[inference_configuration]]"
 ---
 
 # Matrix Specifications
@@ -54,12 +58,12 @@ Prior beliefs about the initial state: $p(s_0)$
 D_i = p(s_0 = i), \\quad \\sum_i D_i = 1
 ```
 
-### E Vector — Policy Prior (Habits)
+### E Vector — Action Prior (Habits)
 
-Prior over policies before evidence: $p(\\pi)$
+Prior over actions before evidence: $p(a)$
 
 ```math
-E_k = p(\\pi = k), \\quad \\sum_k E_k = 1
+E_a = p(a), \quad \sum_a E_a = 1
 ```
 
 ## Example Specification
@@ -79,10 +83,11 @@ def create_t_maze_model():
     A[2, 2] = 1.0                   # center: no reward
     A[3, 3] = 1.0                   # cue location: cue
 
-    B = np.zeros((num_actions, num_states, num_states))
-    B[0] = np.eye(num_states)[[0, 0, 0, 3]]  # go-left
-    B[1] = np.eye(num_states)[[1, 1, 1, 3]]  # go-right
-    B[2] = np.eye(num_states)                  # stay
+    # B[s_next, s_prev, a] = P(s_next | s_prev, a); column-stochastic per action
+    B = np.zeros((num_states, num_states, num_actions))
+    B[0, :, 0] = 1.0                 # go-left: absorb into left arm
+    B[1, :, 1] = 1.0                 # go-right: absorb into right arm
+    B[:, :, 2] = np.eye(num_states)  # stay
 
     C = np.array([2.0, 2.0, -2.0, 0.0])  # prefer rewards
 
@@ -96,10 +101,10 @@ def create_t_maze_model():
 | Matrix | Shape | Constraint | Validation |
 | --- | --- | --- | --- |
 | A | (obs, states) | Column-stochastic | `assert np.allclose(A.sum(0), 1)` |
-| B | (actions, states, states) | Column-stochastic per action | `assert np.allclose(B.sum(1), 1)` |
+| B | (states, states, actions) | Column-stochastic per action | `assert np.allclose(B[:, :, a].sum(0), 1)` |
 | C | (obs,) | Real-valued log prefs | No strict constraint |
 | D | (states,) | Sums to 1 | `assert np.isclose(D.sum(), 1)` |
-| E | (policies,) | Sums to 1 | `assert np.isclose(E.sum(), 1)` |
+| E | (actions,) | Action prior; sums to 1 | `assert np.isclose(E.sum(), 1)` |
 
 ## Related Topics
 

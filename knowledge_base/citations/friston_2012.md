@@ -197,7 +197,7 @@ Knowledge as temporal prediction:
 - **Cognitive Architectures**: Temporal processing modules
 
 ## Citations and Influence
-This paper has been cited over 300 times and provides a foundational framework for understanding temporal aspects of cognition. It bridges neuroscience, psychology, and artificial intelligence through the concept of temporal prediction.
+This paper has been widely cited and provides a foundational framework for understanding temporal aspects of cognition. It bridges neuroscience, psychology, and artificial intelligence through the concept of temporal prediction.
 
 ## Reading Guide
 1. **Introduction**: Predictive brain hypothesis

@@ -82,7 +82,8 @@ Active inference extends the FEP to include action selection:
 
 ### 1. Probabilistic Programming
 
-Our framework uses probabilistic programming to:
+Probabilistic programming expresses generative models as random variables
+and factor graphs:
 
 - Define generative models
 
@@ -92,21 +93,21 @@ Our framework uses probabilistic programming to:
 
 - Handle uncertainty
 
-Key components:
+> [!note] Illustrative pseudocode
+> The following sketch shows the general idea; it is not the `cognitive`
+> package API. The repository's real model construction uses
+> `DiscreteGenerativeModel` and `InferenceConfig` (see the root
+> `README.md` example).
 
 ```python
 
-# Define random variables
+# Illustrative pseudocode — not the package API
 
 x = RandomVariable("x", distribution="gaussian")
 
 y = RandomVariable("y", distribution="categorical")
 
-# Specify dependencies
-
 model.add_edge(x, y)
-
-# Define factor nodes
 
 factor = FactorNode(function=gaussian_likelihood)
 

@@ -48,8 +48,14 @@ Inference configuration specifies the hyperparameters that govern how an Active 
 
 ## Implementation
 
+> [!note] Illustrative pseudocode
+> The class below is a conceptual sketch of configuration parameters; it
+> is not the installed API. The real `cognitive.InferenceConfig` is a
+> dataclass with `method`, `policy_type`, `temporal_horizon`, and related
+> fields (see the root `README.md`).
+
 ```python
-class InferenceConfig:
+class CustomInferenceConfig:
     def __init__(self):
         # Inference
         self.gamma = 16.0          # Policy precision

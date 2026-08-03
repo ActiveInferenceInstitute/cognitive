@@ -29,8 +29,13 @@ Custom control modes allow Active Inference agents to dynamically switch between
 
 ### Mode Definition
 
+> [!note] Illustrative pseudocode
+> The class below is a conceptual sketch; the installed package's abstract
+> `cognitive.models.active_inference.ControlMode` contract differs (it
+> requires `compute_policy_prior(state, goal)`).
+
 ```python
-class ControlMode:
+class ModeConfig:
     def __init__(self, name, gamma, planning_depth, lr, precision_over_obs):
         self.name = name
         self.gamma = gamma                    # Policy precision
@@ -45,10 +50,10 @@ class ControlMode:
         agent.sensory_precision = self.precision_obs
 
 # Pre-defined modes
-EXPLORE_MODE = ControlMode("explore", gamma=1.0, planning_depth=1, lr=1.0, precision_over_obs=0.5)
-EXPLOIT_MODE = ControlMode("exploit", gamma=32.0, planning_depth=5, lr=0.01, precision_over_obs=2.0)
-LEARN_MODE = ControlMode("learn", gamma=4.0, planning_depth=2, lr=2.0, precision_over_obs=1.0)
-EMERGENCY_MODE = ControlMode("emergency", gamma=64.0, planning_depth=1, lr=0.0, precision_over_obs=4.0)
+EXPLORE_MODE = ModeConfig("explore", gamma=1.0, planning_depth=1, lr=1.0, precision_over_obs=0.5)
+EXPLOIT_MODE = ModeConfig("exploit", gamma=32.0, planning_depth=5, lr=0.01, precision_over_obs=2.0)
+LEARN_MODE = ModeConfig("learn", gamma=4.0, planning_depth=2, lr=2.0, precision_over_obs=1.0)
+EMERGENCY_MODE = ModeConfig("emergency", gamma=64.0, planning_depth=1, lr=0.0, precision_over_obs=4.0)
 ```
 
 ### Mode Switching Logic

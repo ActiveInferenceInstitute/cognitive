@@ -44,7 +44,8 @@ semantic_relations:
       - "[[statistical_analysis|Statistical Analysis]]"
       - "[[validation_methods|Validation Methods]]"
     parent:
-      - "[[research/AGENTS|Research]]"---
+      - "[[research/AGENTS|Research]]"
+---
 
 # Research Methodology Concepts
 

@@ -73,7 +73,7 @@ z_0 + R\sin(\phi)
 
 ### 2. Aerodynamic Forces
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### 3. Flight Stability Analysis

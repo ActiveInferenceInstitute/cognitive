@@ -39,31 +39,31 @@ knowledge_tree = {
 
     "concepts": {
 
-        "theoretical": ["[[theoretical_foundations]]", "[[cognitive_phenomena]]"],
+        "theoretical": ["theoretical_foundations", "cognitive_phenomena"],
 
-        "computational": ["[[active_inference]]", "[[predictive_processing]]"],
+        "computational": ["active_inference", "predictive_processing"],
 
-        "implementation": ["[[implementation_patterns]]", "[[code_organization]]"]
+        "implementation": ["implementation_patterns", "code_organization"]
 
     },
 
     "documentation": {
 
-        "guides": ["[[documentation_standards]]", "[[api_documentation]]"],
+        "guides": ["documentation_standards", "api_documentation"],
 
-        "references": ["[[api_reference]]", "[[package_documentation]]"],
+        "references": ["api_reference", "package_documentation"],
 
-        "examples": ["[[example_writing]]", "[[integration_examples]]"]
+        "examples": ["example_writing", "integration_examples"]
 
     },
 
     "validation": {
 
-        "frameworks": ["[[validation_framework]]", "[[quality_metrics]]"],
+        "frameworks": ["validation_framework", "quality_metrics"],
 
-        "tools": ["[[validation_tools]]", "[[analysis_tools]]"],
+        "tools": ["validation_tools", "analysis_tools"],
 
-        "reports": ["[[validation_reports]]", "[[performance_metrics]]"]
+        "reports": ["validation_reports", "performance_metrics"]
 
     }
 
@@ -125,31 +125,31 @@ documentation_structure = {
 
     "theoretical": {
 
-        "concepts": "[[theoretical_foundations]]",
+        "concepts": "theoretical_foundations",
 
-        "principles": "[[cognitive_phenomena]]",
+        "principles": "cognitive_phenomena",
 
-        "architecture": "[[model_architecture]]"
+        "architecture": "model_architecture"
 
     },
 
     "practical": {
 
-        "implementation": "[[implementation_guide]]",
+        "implementation": "implementation_guide",
 
-        "examples": "[[example_writing]]",
+        "examples": "example_writing",
 
-        "validation": "[[validation_framework]]"
+        "validation": "validation_framework"
 
     },
 
     "reference": {
 
-        "api": "[[api_reference]]",
+        "api": "api_reference",
 
-        "package": "[[package_documentation]]",
+        "package": "package_documentation",
 
-        "tools": "[[tool_documentation]]"
+        "tools": "tool_documentation"
 
     }
 
@@ -255,7 +255,7 @@ class InformationArchitecture:
 
     Core information architecture.
 
-    See [[ai_documentation_style]] for guidelines.
+    See ai_documentation_style for guidelines.
 
     """
 
@@ -273,7 +273,7 @@ class InformationArchitecture:
 
         Organize content according to guidelines.
 
-        See [[documentation_standards]] for rules.
+        See documentation_standards for rules.
 
         """
 
@@ -295,7 +295,7 @@ class ContentManager:
 
     Content management system.
 
-    See [[content_management]] for details.
+    See content_management for details.
 
     """
 
@@ -313,7 +313,7 @@ class ContentManager:
 
         Process and validate content.
 
-        See [[validation_framework]] for rules.
+        See validation_framework for rules.
 
         """
 
@@ -383,7 +383,7 @@ naming_patterns = {
 
     "sections": "## {Category} {Name}",
 
-    "links": "[[{category}/{name}]]",
+    "links": "{category}/{name}",
 
     "code": "{category}_{name}_{version}"
 
