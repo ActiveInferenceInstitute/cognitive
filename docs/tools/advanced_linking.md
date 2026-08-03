@@ -204,11 +204,6 @@ Advanced linking in Obsidian goes beyond simple note connections to create rich,
 
   - Link analyzers
 
-- [[automation_tools]] - Processing
-
-  - Link generation
-
-  - Link validation
 
   - Link maintenance
 

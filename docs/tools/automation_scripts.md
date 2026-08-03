@@ -186,13 +186,6 @@ Automation and scripting in Obsidian enables powerful workflows for knowledge ma
 
   - Data exchange
 
-- [[tool_integration]] - Other tools
-
-  - Calendar
-
-  - Task managers
-
-  - Note apps
 
 ### System Integration
 
@@ -304,11 +297,6 @@ Automation and scripting in Obsidian enables powerful workflows for knowledge ma
 
 ### Debugging
 
-- [[debug_tools]] - Development tools
-
-  - Console
-
-  - Debugger
 
   - Logging
 
@@ -448,7 +436,6 @@ Automation and scripting in Obsidian enables powerful workflows for knowledge ma
 
 - [[workflow_optimization]]
 
-- [[development_tools]]
 
 - [[system_integration]]
 

@@ -176,7 +176,7 @@ semantic_relations:
 
 - [[docs/research/tools/analysis_tools|Analysis Tools]]
 
-- [[docs/tools/development_tools|Development Tools]]
+- [[docs/tools/README|Development Tools]]
 
 ## Learning Resources
 

@@ -1,5 +1,13 @@
 # Git Workflow Guide
 
+> [!note] Scope
+> This guide describes general Git workflow patterns for cognitive modeling
+> projects. Any external services, URLs, or integration tools it names are
+> illustrative; the repository's actual conventions are the development loop
+> and gates in `docs/development/README.md`, the commit style in
+> `docs/tools/git_tools.md`, and the workflow scripts in `code/scripts/` and
+> `docs/repo_docs/repo_scripts/`.
+
 ## Overview
 
 This guide outlines our Git workflow for managing cognitive modeling projects, integrating with both [[cursor_integration]] and [[obsidian_usage]].

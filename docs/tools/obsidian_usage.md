@@ -782,13 +782,3 @@ See [[troubleshooting]] for solutions.
 
 - [[frontmatter_templates]] - Metadata templates
 
-- [[script_templates]] - Code templates
-
-### Glossary
-
-- [[terminology]] - Key terms
-
-- [[abbreviations]] - Common shortcuts
-
-- [[file_formats]] - Supported formats
-
