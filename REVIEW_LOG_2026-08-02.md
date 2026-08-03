@@ -14,7 +14,7 @@ against the files and fixed:
   `BioregionalStewardshipFactory` (rewritten with the real
   `ActiveInferenceFactory.create(config, model)`); `overview.md` claimed
   "our framework uses probabilistic programming" with a fictional API
-  (reframed); `pomdp_structure.md` placeholder frontmatter and remaining
+  (reframed); `pomdp_structure.md` template frontmatter values and remaining
   fictional classes removed; `matrix_specifications.md` B-matrix example
   corrected to the package's `B[s_next, s_prev, a]` convention and E
   corrected from policy prior to action prior.
@@ -40,7 +40,7 @@ against the files and fixed:
   `[[[name]]]` triple-bracket frontmatter links normalized to block YAML
   in 5 files; citation "cited over N times" counts removed; two stale
   counts corrected; `metaverse.md` links format normalized;
-  `cellular_intelligence.md` expanded from a stub; two same-folder
+  `cellular_intelligence.md` expanded from a minimal entry; two same-folder
   duplicate-stem pairs cross-linked; dangling "Re- " fragment fixed.
 
 Final gate: 102 tests passed; ruff clean; mypy clean; `validate_docs.py`
