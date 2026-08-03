@@ -46,6 +46,13 @@ README/AGENTS.md files, manuscript sources, configuration, and CI.
 - ✓ Replace the oversized documentation hub with a concise navigation spine that
   points only to current repository domains and entry points. File: `docs/README.md`.
   Completed in this pass.
+- ✓ Knowledge-base deep pass: normalized frontmatter on 69 files, corrected
+  stale document counts in 5 domain READMEs, collapsed 2 byte-identical
+  duplicate pairs into `redirect` stubs, linked all 20 orphaned pages into
+  navigation, cross-linked 23 duplicate-topic groups with mutual "See also"
+  sections, replaced unrendered `{{date}}` placeholders, and added honest
+  scope notes to the two pages with illustrative code. Files: `knowledge_base/`
+  (131 files touched). Completed in this pass.
 
 ## Major
 
@@ -73,10 +80,15 @@ README/AGENTS.md files, manuscript sources, configuration, and CI.
   points and `code/scripts/`; a dedicated triage pass should merge or remove
   pages whose topics have no real tooling. Rewriting all ~80 pages in one
   pass was judged disproportionate churn.
-- Deferred: knowledge-base concept pages (outside `AGENTS.md`/`README.md`)
-  may contain illustrative pseudocode. They are scholarship content; a
-  page-by-page editorial pass is the appropriate venue for labelling or
-  removing those snippets, not a mechanical sweep.
+- Deferred: 345 knowledge-base files use an "airy" frontmatter style (blank
+  line between every YAML key). It is valid and gate-clean; the 4 navigation
+  index files were normalized, and a sweep of the rest is available as a
+  mechanical formatting follow-up if desired.
+- Deferred: knowledge-base concept pages may contain illustrative pseudocode
+  (now framed by the notes added to the two heaviest offenders and by the
+  authoring rules in `knowledge_base/AGENTS.md`). Page-by-page editorial
+  review of ~700 scholarship pages is a standing maintenance activity, not a
+  single-pass migration.
 
 ## Verification record
 

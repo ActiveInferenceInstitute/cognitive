@@ -1,5 +1,45 @@
 # Documentation deep review — 2026-08-02
 
+## Knowledge-base deep pass (same day)
+
+Repository-wide knowledge-base review (`knowledge_base/`, 699 tracked files;
+the `active-inference-journal/` and `journal-transcripts/` entries are
+symlinks to external sibling repositories and were left untouched). Audits
+run: frontmatter validity, wiki-link and standard-link resolution, inbound
+link/orphan detection, duplicate stems and byte-identical files, stale
+document-count claims, templater placeholders, and Python code blocks.
+
+Implemented:
+
+- Moved 53 misplaced YAML frontmatter blocks to the top of their files and
+  added minimal frontmatter to 16 files that had none (69 files total; 6
+  generated titles were fixed for YAML quoting).
+- Replaced 10 unrendered `{{date}}` templater placeholders in the
+  GenericPOMDP matrix/config/state-space notes with the folder creation date.
+- Corrected stale document counts: cognitive 173->213, systems 31->46,
+  biology 30+->45, philosophy 6->10, mathematics 140+->150+.
+- Collapsed two byte-identical duplicate pairs into canonical pages with
+  `redirect` frontmatter (systems/swarm_intelligence_implementation.md ->
+  root; BioFirm/biofirm_active_inference_connections.md ->
+  active_inference_connections.md).
+- Linked all 20 orphaned pages (no inbound links) into navigation: 19 added
+  to domain READMEs, `learning_roadmap` and `quality_assessment` added to
+  the knowledge-base README.
+- Cross-linked 23 duplicate-stem topic groups (48 files) with mutual
+  "See also" sections; all pairs are distinct cross-domain treatments.
+- Added illustrative-pseudocode scope notes to
+  `cognitive/overview.md` and an honest scope banner to
+  `biology/implementation_examples_social_insects.md` (its Ant Colony
+  imports reference a runtime that is not shipped in this repository).
+- Normalized frontmatter formatting of the 4 navigation index files.
+
+Audit conclusion: the knowledge base contains no fabricated Python classes
+(the earlier 1,317 "class" hits were Mermaid diagram declarations) and its
+explicit wiki links resolve (23,502 checked, 0 broken).
+
+Final gate: 96 tests passed; ruff clean; mypy clean; `validate_docs.py` ok
+(0 errors, 0 forbidden terms, 0 broken links, 0 anchor warnings).
+
 ## Follow-up pass (same day)
 
 Open major items from the first pass were implemented:
