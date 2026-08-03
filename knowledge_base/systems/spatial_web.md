@@ -1756,15 +1756,11 @@ Barcelona's comprehensive approach to urban digital transformation:
 
 - **Results and Impact**
 
-  - 30% reduction in traffic congestion through data-driven management
-
-  - 25% decrease in water consumption with spatial leak detection
-
-  - €42.5 million in economic value created through open data platforms
-
-  - Improved citizen satisfaction with 73% approval of digital initiatives
-
-  - International recognition as smart city innovation leader
+  > [!note] Illustrative scenario
+  > This case study is illustrative. No measured outcomes (congestion,
+  > consumption, or economic figures) are recorded for it in this
+  > repository, and earlier drafts containing specific percentages were
+  > removed as unverified.
 
 ### Enterprise Implementation: Airbus Factory of the Future
 
@@ -1796,15 +1792,10 @@ Aerospace manufacturer's spatial computing transformation:
 
 - **Measurable Outcomes**
 
-  - Assembly error reduction of 38% within first year
-
-  - Training time decreased by 53% for complex procedures
-
-  - Maintenance costs reduced by €3.2 million annually
-
-  - Design iteration cycles shortened by 71%
-
-  - Worker satisfaction improved with 82% positive feedback
+  > [!note] Illustrative scenario
+  > No measured outcomes are recorded for this example in this repository;
+  > earlier drafts containing specific percentages and cost figures were
+  > removed as unverified.
 
 ### Healthcare Transformation: Mayo Clinic Spatial Medicine Initiative
 
@@ -1836,15 +1827,10 @@ Medical institution's spatial computing implementation:
 
 - **Clinical Impact**
 
-  - 26% improvement in surgical outcomes for complex procedures
-
-  - Diagnostic accuracy increased by 31% with 3D visualization
-
-  - Patient comprehension of treatment plans improved by 63%
-
-  - Medical student performance increased 42% with spatial learning
-
-  - Treatment planning time reduced by 35% with collaborative tools
+  > [!note] Illustrative scenario
+  > No measured clinical outcomes are recorded for this example in this
+  > repository; earlier drafts containing specific percentages were
+  > removed as unverified.
 
 ## Future Research Frontiers
 

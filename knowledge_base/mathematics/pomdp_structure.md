@@ -127,33 +127,31 @@ constraints:
 
 ```python
 
-from src.models.matrices import MatrixLoader
+from pathlib import Path
 
-# Load matrix specification
+from cognitive.models.matrices import MatrixLoader, MatrixOps
 
-A = MatrixLoader.load("A_matrix")
+# Load and validate a matrix specification and data file
 
-# Perform operations
+spec = MatrixLoader.load_spec(Path("spec.yaml"))
 
-result = A.update(observation)
+A = MatrixLoader.load_matrix(Path("A.npy"))
+
+MatrixLoader.validate_matrix(A, spec)
+
+# Normalize columns to a probability distribution
+
+A_norm = MatrixOps.normalize_columns(A)
 
 ```
 
 ### State Space Interface
 
-```python
-
-from src.models.spaces import StateSpace
-
-# Initialize space
-
-s_space = StateSpace.from_spec("s_space")
-
-# Update beliefs
-
-s_space.update_belief(evidence)
-
-```
+State spaces are the dimensions of the generative model's matrices
+(`A[o, s]`, `B[s_next, s_prev, a]`), validated by
+`DiscreteGenerativeModel` from the installed `cognitive` package. There is
+no separate `spaces` module; see the root `README.md` for the canonical
+example.
 
 ## Visualization Pipeline
 
