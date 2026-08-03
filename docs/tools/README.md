@@ -40,8 +40,10 @@ Helper scripts for documentation maintenance live in
 
 ## Related pages
 
-- `development_tools_index.md` and `development_tools.md` — older tool
-  documentation pages; treat them as conceptual unless the tool they name
-  exists in `code/scripts/` or `pyproject.toml`.
-- Individual topic pages (for example `git_tools.md`) may describe
-  speculative tooling; see `AGENTS.md` for the accuracy rules.
+- Topic pages (for example `link_checker.md`, `benchmark_tools.md`,
+  `plotting_tools.md`) document the real tooling for each topic; the
+  conceptual pages (`model_context_protocol.md`, `obsidian_usage.md`,
+  `network_analysis.md`, `advanced_linking.md`, `automation_scripts.md`,
+  `cursor_integration.md`) describe external standards and conventions with
+  the repository's actual surface.
+- See `AGENTS.md` for the accuracy rules.
