@@ -92,6 +92,8 @@ ruff check .
 mypy code/tools/src code/Things code/scripts
 python -m compileall -q code
 python code/scripts/validate_docs.py --json
+python code/scripts/verify_links.py . --json
+python code/scripts/check_markdown_links.py . --json
 ```
 
 The complete executable manuscript lives in

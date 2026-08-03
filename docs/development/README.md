@@ -23,7 +23,12 @@ mypy code/tools/src code/Things code/scripts
 python -m compileall -q code
 python code/scripts/validate_docs.py --json
 python code/scripts/verify_links.py . --json
+python code/scripts/check_markdown_links.py . --json
 ```
+
+`validate_docs.py` already includes the standard Markdown link check; the
+standalone `check_markdown_links.py` script also reports heading-anchor
+warnings (renderer-dependent) that the gate treats as advisory.
 
 Use temporary directories for figures, animations, benchmark JSON, and
 manuscript renders. The CI workflow in `.github/workflows/quality.yml` runs

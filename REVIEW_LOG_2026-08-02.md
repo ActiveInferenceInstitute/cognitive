@@ -1,5 +1,27 @@
 # Documentation deep review — 2026-08-02
 
+## Follow-up pass (same day)
+
+Open major items from the first pass were implemented:
+
+- Migrated all remaining expansive pre-existing `AGENTS.md` files to accurate
+  instruction/overview documents: 11 in `docs/`, 11 knowledge-base domain
+  overviews, 4 archived `code/Things/` overviews, plus accuracy fixes in
+  `code/tests/AGENTS.md` and `CLAUDE.md`. Also rewrote 8 fictional
+  `docs/**/README.md` navigation files, added the missing
+  AGENTS.md/README.md pairs under `docs/research/`, added
+  `docs/manuscript/AGENTS.md`, and added a scope banner to
+  `docs/tools/git_tools.md`.
+- Added `code/scripts/check_markdown_links.py` (standard Markdown link and
+  anchor validator), wired it into `validate_docs.py`, added
+  `code/tests/test_check_markdown_links.py` (10 tests), and documented the
+  gate in `docs/development/README.md`.
+
+Final gate (all measured): 96 tests passed; ruff clean; mypy clean;
+`validate_docs.py` ok (0 errors, 0 forbidden terms, 0 broken wiki links, 0
+broken standard links); `check_markdown_links.py` 67 links checked with 0
+anchor warnings.
+
 ## Scope
 
 Repository-wide review of Markdown documentation, README files, AGENTS.md files,

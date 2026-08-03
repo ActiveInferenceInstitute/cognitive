@@ -49,19 +49,34 @@ README/AGENTS.md files, manuscript sources, configuration, and CI.
 
 ## Major
 
-- Open / deferred: migrate the remaining expansive pre-existing `AGENTS.md` and
-  knowledge-base pseudo-code into either verified executable examples or clearly
-  labelled conceptual pseudocode. The remaining surface is large (many hundreds
-  of pages) and includes scholarship and domain notes; deleting it or rewriting
-  it mechanically would risk losing meaning. The new authoring rules in
-  `docs/guides/AGENTS.md`, `docs/examples/AGENTS.md`, and `docs/api/AGENTS.md`
-  establish the boundary for a dedicated follow-up editorial migration.
-- Open / deferred: add a first-class Markdown-link/anchor validator for standard
-  Markdown links. The repository currently gates explicit Obsidian wiki links;
-  the remaining standard links include intentional build-time figure paths and a
-  vendored Documenter.jl syntax that requires renderer-aware handling. A safe
-  validator should be introduced with allowlists for those contracts rather than
-  failing on valid generated references.
+- ✓ Migrate the expansive pre-existing `AGENTS.md` pseudo-code into accurate
+  instruction or overview documents. All `docs/` instruction files
+  (`docs/AGENTS.md`, agents, config, development, examples, guides,
+  learning_paths, implementation, rxinfer, repo_docs, research, templates,
+  tools), all knowledge-base domain overviews (`knowledge_base/AGENTS.md`,
+  BioFirm, agents, biology, cognitive, free_energy_principle, mathematics,
+  ontology, hyperspatial, philosophy, systems), and the archived
+  `code/Things/` overviews (Baseball_Game, KG_Multi_Agent, Path_Network,
+  ActiveInferenceInstitute) now describe only real repository content.
+  Completed in this pass.
+- ✓ Add a first-class validator for standard Markdown links and anchors.
+  `code/scripts/check_markdown_links.py` checks `[text](path)` and image
+  references (file existence) and reports heading-slug anchor mismatches as
+  advisory warnings; it is wired into `validate_docs.py` and covered by
+  `code/tests/test_check_markdown_links.py`. Completed in this pass.
+
+## Open / deferred
+
+- Deferred: the individual `docs/tools/*.md` topic pages (for example
+  `git_tools.md`, `development_tools.md`) still describe speculative tooling.
+  They now carry scope banners pointing to the real `cognitive-*` entry
+  points and `code/scripts/`; a dedicated triage pass should merge or remove
+  pages whose topics have no real tooling. Rewriting all ~80 pages in one
+  pass was judged disproportionate churn.
+- Deferred: knowledge-base concept pages (outside `AGENTS.md`/`README.md`)
+  may contain illustrative pseudocode. They are scholarship content; a
+  page-by-page editorial pass is the appropriate venue for labelling or
+  removing those snippets, not a mechanical sweep.
 
 ## Verification record
 
