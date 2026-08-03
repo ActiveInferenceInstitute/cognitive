@@ -41,66 +41,49 @@ semantic_relations:
 ```text
 
 cognitive/                  # Root project directory
-
-├── knowledge_base/        # Primary knowledge content
-
-│   ├── cognitive/        # Cognitive science concepts
-
-│   ├── mathematics/      # Mathematical foundations
-
-│   ├── systems/         # Systems theory
-
-│   ├── biology/        # Biological concepts
-
-│   ├── BioFirm/       # BioFirm specific content
-
-│   ├── agents/        # Agent-based models
-
-│   ├── citations/     # Citation management
-
-│   └── index.md       # Knowledge base index
-
-├── docs/               # Documentation
-
-│   ├── api/          # API documentation
-
-│   ├── guides/       # User guides
-
-│   ├── examples/     # Usage examples
-
-│   ├── repo_docs/    # Repository documentation
-
-│   ├── templates/    # Documentation templates
-
-│   ├── implementation/ # Implementation docs
-
-│   ├── development/  # Development guides
-
-│   ├── tools/       # Documentation tools
-
-│   ├── config/      # Configuration docs
-
-│   ├── research/    # Research documentation
-
-│   └── README.md    # Documentation overview
-
-├── tests/             # Test suite
-
-├── tools/             # Development tools
-
-├── .obsidian/         # Obsidian configuration
-
-├── Things/            # Project management
-
-├── Output/            # Generated outputs
-
-├── .benchmarks/       # Performance benchmarks
-
-├── config.yaml        # Project configuration
-
-├── project_structure.md # Project structure doc
-
-└── LICENSE            # Project license
+├── code/                   # Source code
+│   ├── tools/src/          # The installable `cognitive` package
+│   │   ├── models/         #   active inference and matrix models
+│   │   ├── utils/          #   helpers (matrix_utils, create_node, visualization)
+│   │   ├── visualization/  #   matrix plots
+│   │   └── benchmarks.py   #   cognitive-benchmark entry point
+│   ├── Things/             # Self-contained agent folders (Simple_POMDP, Continuous_Generic, ...)
+│   ├── tests/              # Central pytest suite
+│   └── scripts/            # Validators and build scripts (validate_docs, verify_links, ...)
+├── knowledge_base/         # Obsidian knowledge vault (conceptual content)
+│   ├── cognitive/          # Cognitive science concepts
+│   ├── mathematics/        # Mathematical foundations
+│   ├── systems/            # Systems theory
+│   ├── biology/            # Biological concepts
+│   ├── philosophy/         # Philosophy notes
+│   ├── ontology/           # Ontology frameworks
+│   ├── research/           # Research notes and concepts
+│   ├── agents/             # Agent architecture notes
+│   ├── citations/          # Citation reference notes
+│   ├── free_energy_principle/  # FEP subdomains
+│   ├── BioFirm/            # BioFirm content
+│   ├── index.md            # Knowledge base index
+│   └── README.md           # Knowledge base overview
+├── docs/                   # Repository documentation
+│   ├── api/                # API documentation
+│   ├── guides/             # Guides and learning paths
+│   ├── examples/           # Example commands
+│   ├── repo_docs/          # Repository documentation standards
+│   ├── templates/          # Documentation templates
+│   ├── implementation/     # Implementation docs and RxInfer notes
+│   ├── development/        # Development guides
+│   ├── tools/              # Tool documentation
+│   ├── config/             # Configuration docs
+│   ├── research/           # Research documentation
+│   ├── manuscript/         # Executable manuscript source
+│   └── README.md           # Documentation overview
+├── pyproject.toml          # Package configuration and CLI entry points
+├── config.yaml             # Repository configuration
+├── AGENTS.md               # Agent index
+├── CLAUDE.md               # Working guidance
+├── Backlog                 # Project backlog file
+├── .aii/                   # InstituteOS sidecar metadata
+└── LICENSE                 # License
 
 # Development Files
 

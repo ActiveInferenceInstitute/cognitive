@@ -1,334 +1,58 @@
 ---
-
-title: Simulation Guide
-
-type: guide
-
-status: draft
-
-created: 2024-02-12
-
+title: Simulation
+type: documentation
+status: stable
+created: 2024-01-01
+updated: 2026-08-02
 tags:
-
   - simulation
-
-  - modeling
-
-  - framework
-
+  - documentation
+  - benchmarks
 semantic_relations:
-
-  - type: implements
-
-    links: [[model_implementation]]
-
-  - type: relates
-
+  - type: documents
     links:
-
-      - [[implementation_guides]]
-
-      - [[ai_validation_framework]]
-
+      - '[[getting_started|Getting started]]'
+      - '[[unit_testing|Testing]]'
+      - '[[../../manuscript/README|Executable manuscript]]'
 ---
 
-# Simulation Framework Guide
+# Simulation
 
-## Overview
+This repository validates its runtime behavior through deterministic
+simulation: seeded models, reproducible benchmarks, and an executable
+manuscript. There is no separate `cognitive.simulation` module; the
+simulation surface is the package API plus the tooling below.
 
-This guide provides comprehensive documentation for running simulations in the cognitive modeling framework. It covers simulation setup, execution, analysis, and visualization.
+## Running the benchmarks
 
-## Simulation Components
-
-### Core Elements
-
-1. Model Configuration
-
-   - Parameter settings
-
-   - Initial conditions
-
-   - Environment setup
-
-   - Agent definitions
-
-1. Execution Pipeline
-
-   - Simulation steps
-
-   - State updates
-
-   - Event handling
-
-   - Data collection
-
-1. Analysis Tools
-
-   - Data processing
-
-   - Statistical analysis
-
-   - Performance metrics
-
-   - Result validation
-
-### Configuration
-
-```yaml
-
-simulation:
-
-  name: cognitive_simulation
-
-  duration: 1000  # timesteps
-
-  agents: 10
-
-  environment:
-
-    type: dynamic
-
-    dimensions: [100, 100]
-
-  parameters:
-
-    learning_rate: 0.01
-
-    noise_level: 0.1
-
-    update_interval: 5
-
+```bash
+cognitive-benchmark --repetitions 1
 ```
 
-## Running Simulations
-
-### Basic Usage
-
-```python
-
-from cognitive.simulation import Simulator
-
-# Create simulator
-
-sim = Simulator(config_path="config.yaml")
-
-# Run simulation
-
-results = sim.run()
-
-# Analyze results
-
-analysis = sim.analyze(results)
-
-# Visualize
-
-sim.visualize(analysis)
-
-```
-
-### Repo-Specific Entrypoints
-
-- Ant Colony simulation and visualization:
-
-  ```bash
-
-  # Run the Ant Colony simulation (writes .h5 outputs under Things/Ant_Colony/output)
-
-  python3 Things/Ant_Colony/ant_colony/main.py --config Things/Ant_Colony/config/colony_config.yaml
-
-  ```
-
-  Visualizations are available in `Things/Ant_Colony/visualization/renderer.py` and under `Things/Ant_Colony/output/`.
-
-- Generic POMDP execution:
-
-  ```bash
-
-  python3 Things/Generic_POMDP/generic_pomdp.py --config Things/Generic_POMDP/configuration.yaml
-
-  ```
-
-  Plots are written to `Things/Generic_POMDP/Output/plots/` and `.../efe_components/`.
-
-- Simple POMDP example:
-
-  ```bash
-
-  python3 Things/Simple_POMDP/run_simple_pomdp.py --config Things/Simple_POMDP/configuration.yaml
-
-  ```
-
-### Advanced Features
-
-1. Batch Processing
-
-   ```python
-
-   # Run multiple simulations
-
-   batch_results = sim.run_batch(
-
-       num_runs=10,
-
-       parallel=True
-
-   )
-
-   ```
-
-1. Parameter Sweeps
-
-   ```python
-
-   # Test different parameters
-
-   param_results = sim.parameter_sweep(
-
-       parameter="learning_rate",
-
-       values=[0.01, 0.05, 0.1]
-
-   )
-
-   ```
-
-1. Custom Callbacks
-
-   ```python
-
-   # Add custom monitoring
-
-   @sim.on_step
-
-   def monitor_state(state):
-
-       log_metrics(state)
-
-   ```
-
-## Analysis Tools
-
-### Data Processing
-
-- Time series analysis
-
-- State space analysis
-
-- Agent behavior analysis
-
-- Environment dynamics
-
-### Visualization
-
-- State trajectories
-
-- Agent interactions
-
-- Performance metrics
-
-- Network dynamics
-
-### Metrics
-
-- Convergence rates
-
-- Stability measures
-
-- Efficiency metrics
-
-- Error analysis
-
-## Best Practices
-
-### Performance
-
-- Use vectorized operations
-
-- Enable parallel processing
-
-- Optimize memory usage
-
-- Profile critical sections
-
-### Reproducibility
-
-- Set random seeds
-
-- Version configurations
-
-- Document parameters
-
-- Archive results
-
-### Validation
-
-- Unit test components
-
-- Verify constraints
-
-- Check conservation laws
-
-- Validate outputs
-
-## Advanced Topics
-
-### Custom Models
-
-- Extending base classes
-
-- Adding new behaviors
-
-- Custom environments
-
-- Specialized metrics
-
-### Distributed Simulation
-
-- Multi-node execution
-
-- Load balancing
-
-- Data synchronization
-
-- Result aggregation
-
-### Real-time Analysis
-
-- Live monitoring
-
-- Interactive visualization
-
-- Dynamic adjustment
-
-- Event handling
-
-## Integration Points
-
-### Data Pipeline
-
-- Input preprocessing
-
-- Result postprocessing
-
-- Data storage
-
-- Export formats
-
-### External Tools
-
-- Visualization libraries
-
-- Analysis packages
-
-- Storage backends
-
-- Monitoring systems
-
-## Related Documentation
-
-- [[model_implementation]]
-
-- [[implementation_guides]]
-
-- [[ai_validation_framework]]
-
+`cognitive-benchmark` runs the repository's benchmark suite (discrete
+inference, continuous agent, visualization, and knowledge-base tooling) and
+emits a JSON-serializable report. See `cognitive.benchmarks` in the package
+source for details.
+
+## Deterministic model runs
+
+The discrete dispatcher is seeded through `InferenceConfig(seed=...)`; the
+root `README.md` example is the canonical minimal simulation. Model
+parameters are supplied in Python (matrix arrays, configuration objects),
+not read from a global simulation config file.
+
+## Reproducible experiments
+
+- `code/tests/` — behavior checks; tests write artifacts only to temporary
+  directories.
+- `docs/manuscript/` — the executable manuscript hydrates its numeric
+  results and figures from the package API via
+  `cognitive-build-manuscript --output build/manuscript`.
+- `cognitive.benchmarks` (`code/tools/src/benchmarks.py`) — benchmark sources
+  behind the `cognitive-benchmark` entry point.
+
+## Related
+
+- [[getting_started]] — install and first run.
+- [[unit_testing]] — test conventions.
+- `docs/manuscript/README.md` — end-to-end reproducible build.
