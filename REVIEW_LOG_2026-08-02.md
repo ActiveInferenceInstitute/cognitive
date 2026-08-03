@@ -1,5 +1,39 @@
 # Documentation deep review — 2026-08-02
 
+## Docs-content and tooling pass (same day)
+
+Audited all 288 `docs/` Markdown files for fabricated content (fake package
+imports, fictional class definitions, example URLs) and removed or
+corrected it:
+
+- Removed 16,936 lines of fictional Python class code from 34 documentation
+  pages (18 learning paths, 9 repo_docs pages, implementation patterns,
+  research pages, guides, and 3 templates). All pages keep their educational
+  prose, mermaid diagrams, and valid frontmatter.
+- Replaced dangling template examples with the real package API (canonical
+  dispatcher example) in `docs/templates/implementation_example.md`; removed
+  `torch` (not a repository dependency) from templates.
+- Rewrote `docs/repo_docs/ai_documentation_style.md` (previously ~700 lines
+  with duplicated sections) as a concise, accurate standards page; rewrote
+  `docs/repo_docs/simulation.md` (fictional `cognitive.simulation` ->
+  real benchmark/manuscript tooling) and `docs/examples/ant_colony_example.md`
+  (the ant-colony runtime is not shipped in this repository); fixed the
+  fictional `cognitive_system.SemanticProcessor` example in
+  `ai_semantic_processing.md`; corrected the stale root-structure diagram in
+  `folder_structure.md`.
+- docs/tools triage: wrote accurate pages for 18 topics with real tooling
+  (validators, benchmark, build, CI, linting, coverage, packaging, plotting,
+  static analysis, testing, configuration, setup), deleted 42 content-free
+  empty or boilerplate pages and the two obsolete hub pages, fixed the surviving dead
+  links (2 gate-breaking plus 5 fence-free references in kept pages), and
+  added scope banners to `development_tools.md` and `git_workflow.md`.
+- Normalized the "airy" frontmatter style (blank line between every YAML
+  key) in 341 knowledge-base files via round-trip-verified YAML
+  re-serialization.
+
+Final gate: 96 tests passed; ruff clean; mypy clean; `validate_docs.py` ok
+(0 errors, 0 forbidden terms, 0 broken links, 0 anchor warnings).
+
 ## Knowledge-base deep pass (same day)
 
 Repository-wide knowledge-base review (`knowledge_base/`, 699 tracked files;
@@ -7,14 +41,14 @@ the `active-inference-journal/` and `journal-transcripts/` entries are
 symlinks to external sibling repositories and were left untouched). Audits
 run: frontmatter validity, wiki-link and standard-link resolution, inbound
 link/orphan detection, duplicate stems and byte-identical files, stale
-document-count claims, templater placeholders, and Python code blocks.
+document-count claims, templater date values, and Python code blocks.
 
 Implemented:
 
 - Moved 53 misplaced YAML frontmatter blocks to the top of their files and
   added minimal frontmatter to 16 files that had none (69 files total; 6
   generated titles were fixed for YAML quoting).
-- Replaced 10 unrendered `{{date}}` templater placeholders in the
+- Replaced 10 unrendered `{{date}}` templater date values in the
   GenericPOMDP matrix/config/state-space notes with the folder creation date.
 - Corrected stale document counts: cognitive 173->213, systems 31->46,
   biology 30+->45, philosophy 6->10, mathematics 140+->150+.

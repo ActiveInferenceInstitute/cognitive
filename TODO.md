@@ -48,11 +48,23 @@ README/AGENTS.md files, manuscript sources, configuration, and CI.
   Completed in this pass.
 - ✓ Knowledge-base deep pass: normalized frontmatter on 69 files, corrected
   stale document counts in 5 domain READMEs, collapsed 2 byte-identical
-  duplicate pairs into `redirect` stubs, linked all 20 orphaned pages into
+  duplicate pairs into `redirect` pages, linked all 20 orphaned pages into
   navigation, cross-linked 23 duplicate-topic groups with mutual "See also"
-  sections, replaced unrendered `{{date}}` placeholders, and added honest
+  sections, replaced unrendered `{{date}}` values, and added honest
   scope notes to the two pages with illustrative code. Files: `knowledge_base/`
   (131 files touched). Completed in this pass.
+- ✓ Docs-content pass: removed 16,936 lines of fictional class-based code
+  from 34 documentation pages; rewrote `ai_documentation_style.md`,
+  `simulation.md`, `ant_colony_example.md`, and the stale root-structure
+  diagram in `folder_structure.md`; replaced fictional template examples with
+  the real package API; and normalized the "airy" frontmatter style in 341
+  knowledge-base files. Completed in this pass.
+- ✓ Tools-folder triage: wrote 18 accurate tool pages mapping to real
+  tooling (validators, benchmark, build, CI, linting, coverage, packaging,
+  plotting, static analysis, testing, configuration, setup), deleted 42
+  content-free empty or boilerplate pages and 2 obsolete hub pages, fixed surviving
+  dead links, and added scope banners to the kept conceptual pages.
+  Completed in this pass.
 
 ## Major
 
@@ -74,16 +86,11 @@ README/AGENTS.md files, manuscript sources, configuration, and CI.
 
 ## Open / deferred
 
-- Deferred: the individual `docs/tools/*.md` topic pages (for example
-  `git_tools.md`, `development_tools.md`) still describe speculative tooling.
-  They now carry scope banners pointing to the real `cognitive-*` entry
-  points and `code/scripts/`; a dedicated triage pass should merge or remove
-  pages whose topics have no real tooling. Rewriting all ~80 pages in one
-  pass was judged disproportionate churn.
-- Deferred: 345 knowledge-base files use an "airy" frontmatter style (blank
-  line between every YAML key). It is valid and gate-clean; the 4 navigation
-  index files were normalized, and a sweep of the rest is available as a
-  mechanical formatting follow-up if desired.
+- Deferred: a handful of kept conceptual `docs/tools/` pages
+  (`model_context_protocol.md`, `obsidian_usage.md`, `network_analysis.md`,
+  `advanced_linking.md`, `automation_scripts.md`, `cursor_integration.md`)
+  remain broad conceptual write-ups. They are gate-clean and no longer
+  reference deleted pages; a future editorial pass may consolidate them.
 - Deferred: knowledge-base concept pages may contain illustrative pseudocode
   (now framed by the notes added to the two heaviest offenders and by the
   authoring rules in `knowledge_base/AGENTS.md`). Page-by-page editorial
