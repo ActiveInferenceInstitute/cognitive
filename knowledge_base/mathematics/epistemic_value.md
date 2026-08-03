@@ -2262,11 +2262,11 @@ class EpistemicMatrixOps:
 
         Links to:
 
-        - [[probability_axioms]]
+        - probability_axioms
 
-        - [[matrix_properties]]
+        - matrix_properties
 
-        - [[numerical_validation]]
+        - numerical_validation
 
         Args:
 
@@ -2312,11 +2312,11 @@ class EpistemicMatrixOps:
 
         Links to:
 
-        - [[numerical_stability]]
+        - numerical_stability
 
-        - [[probability_constraints]]
+        - probability_constraints
 
-        - [[matrix_normalization]]
+        - matrix_normalization
 
         Args:
 
@@ -2348,11 +2348,11 @@ class EpistemicMatrixOps:
 
         Links to:
 
-        - [[information_theory]]
+        - information_theory
 
-        - [[entropy_measures]]
+        - entropy_measures
 
-        - [[divergence_metrics]]
+        - divergence_metrics
 
         Args:
 
@@ -2426,11 +2426,11 @@ class EnhancedEpistemicValue:
 
     Links to:
 
-    - [[epistemic_value]]
+    - epistemic_value
 
-    - [[information_theory]]
+    - information_theory
 
-    - [[active_inference]]
+    - active_inference
 
     """
 
@@ -2478,11 +2478,11 @@ class EnhancedEpistemicValue:
 
         Links to:
 
-        - [[information_gain]]
+        - information_gain
 
-        - [[uncertainty_resolution]]
+        - uncertainty_resolution
 
-        - [[exploration_exploitation]]
+        - exploration_exploitation
 
         Args:
 
@@ -2550,11 +2550,11 @@ class ActiveInferenceValidator:
 
     Links to:
 
-    - [[active_inference]]
+    - active_inference
 
-    - [[free_energy_principle]]
+    - free_energy_principle
 
-    - [[matrix_validation]]
+    - matrix_validation
 
     """
 
@@ -2588,13 +2588,13 @@ class ActiveInferenceValidator:
 
         Links to:
 
-        - [[A_matrix]] - Observation model
+        - A_matrix - Observation model
 
-        - [[B_matrix]] - Transition dynamics
+        - B_matrix - Transition dynamics
 
-        - [[C_matrix]] - Preferences
+        - C_matrix - Preferences
 
-        - [[D_matrix]] - Prior beliefs
+        - D_matrix - Prior beliefs
 
         Args:
 
@@ -2654,11 +2654,11 @@ class EnhancedActiveInference:
 
     Links to:
 
-    - [[active_inference]]
+    - active_inference
 
-    - [[epistemic_value]]
+    - epistemic_value
 
-    - [[free_energy_principle]]
+    - free_energy_principle
 
     """
 
@@ -2752,11 +2752,11 @@ class EnhancedActiveInference:
 
         Links to:
 
-        - [[expected_free_energy]]
+        - expected_free_energy
 
-        - [[epistemic_value]]
+        - epistemic_value
 
-        - [[pragmatic_value]]
+        - pragmatic_value
 
         Args:
 
@@ -2828,11 +2828,11 @@ class EnhancedActiveInference:
 
         Links to:
 
-        - [[belief_updating]]
+        - belief_updating
 
-        - [[free_energy_minimization]]
+        - free_energy_minimization
 
-        - [[variational_inference]]
+        - variational_inference
 
         Args:
 
@@ -2886,4 +2886,4 @@ class EnhancedActiveInference:
 
 ### Enhanced Information Geometric Components
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.

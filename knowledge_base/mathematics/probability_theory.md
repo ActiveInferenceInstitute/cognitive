@@ -790,7 +790,7 @@ class LevyProcess:
 
 ### Diffusion Processes
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### Markov Chain Monte Carlo
@@ -1555,7 +1555,7 @@ class MonteCarloSampler:
 
 ### Information Theory
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### Stochastic Processes

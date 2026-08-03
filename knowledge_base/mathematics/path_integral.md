@@ -87,13 +87,13 @@ def sample_paths(
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/stochastic_processes|Stochastic Processes]]
+        - Stochastic Processes
 
-        - [[knowledge_base/mathematics/importance_sampling|Importance Sampling]]
+        - Importance Sampling
 
     Implementation:
 
-        - [[knowledge_base/mathematics/numerical_methods#path-sampling|Path Sampling]]
+        - Path Sampling
 
     """
 
@@ -135,13 +135,13 @@ def compute_action(
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/action_principle|Action Principle]]
+        - Action Principle
 
-        - [[knowledge_base/mathematics/numerical_integration|Numerical Integration]]
+        - Numerical Integration
 
     Implementation:
 
-        - [[knowledge_base/mathematics/numerical_methods#action-computation|Action Computation]]
+        - Action Computation
 
     """
 
@@ -187,13 +187,13 @@ def evaluate_policy_path(
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/expected_free_energy|Expected Free Energy]]
+        - Expected Free Energy
 
-        - [[knowledge_base/mathematics/monte_carlo|Monte Carlo Methods]]
+        - Monte Carlo Methods
 
     Implementation:
 
-        - [[docs/implementation/implementation_patterns#policy-evaluation|Policy Evaluation]]
+        - Policy Evaluation
 
     """
 
@@ -237,13 +237,13 @@ def optimize_trajectory(
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/optimal_control|Optimal Control]]
+        - Optimal Control
 
-        - [[knowledge_base/mathematics/variational_principles|Variational Principles]]
+        - Variational Principles
 
     Implementation:
 
-        - [[knowledge_base/research/concepts/optimization_methods#trajectory-optimization|Trajectory Optimization]]
+        - Trajectory Optimization
 
     """
 
@@ -295,9 +295,9 @@ def monte_carlo_path_integral(
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/monte_carlo|Monte Carlo Methods]]
+        - Monte Carlo Methods
 
-        - [[knowledge_base/mathematics/importance_sampling|Importance Sampling]]
+        - Importance Sampling
 
     """
 
@@ -339,9 +339,9 @@ def stochastic_path_optimization(
 
     Mathematics:
 
-        - [[knowledge_base/mathematics/stochastic_optimization|Stochastic Optimization]]
+        - Stochastic Optimization
 
-        - [[knowledge_base/research/concepts/gradient_descent|Gradient Descent]]
+        - Gradient Descent
 
     """
 

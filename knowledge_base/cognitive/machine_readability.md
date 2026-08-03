@@ -39,7 +39,7 @@ def extract_parameters(markdown_file):
 
     """Extract model parameters from markdown documentation.
 
-    See [[parameter_extraction]] for details."""
+    See parameter_extraction for details."""
 
     parameters = {}
 
@@ -87,7 +87,7 @@ def validate_docs():
 
     Validates documentation structure and links.
 
-    See [[documentation_validation]] for rules.
+    See documentation_validation for rules.
 
     """
 
@@ -133,7 +133,7 @@ def prepare_training_data():
 
     Extracts training examples from documentation.
 
-    See [[training_data_preparation]].
+    See training_data_preparation.
 
     """
 
@@ -235,7 +235,7 @@ def mine_concepts():
 
     Identifies key concepts and relationships.
 
-    See [[concept_mining]].
+    See concept_mining.
 
     """
 
@@ -285,7 +285,7 @@ def generate_api_docs():
 
     Generates API documentation from source code.
 
-    See [[api_documentation]].
+    See api_documentation.
 
     """
 

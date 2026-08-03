@@ -48,17 +48,17 @@ class StateSpaceModel:
 
     Theory:
 
-        - [[state_space]]
+        - state_space
 
-        - [[dynamical_systems]]
+        - dynamical_systems
 
-        - [[control_systems]]
+        - control_systems
 
     Mathematics:
 
-        - [[differential_equations]]
+        - differential_equations
 
-        - [[control_theory]]
+        - control_theory
 
     """
 
@@ -116,17 +116,17 @@ class ControlledSystem:
 
     Theory:
 
-        - [[control_systems]]
+        - control_systems
 
-        - [[feedback_control]]
+        - feedback_control
 
-        - [[stability_theory]]
+        - stability_theory
 
     Mathematics:
 
-        - [[control_theory]]
+        - control_theory
 
-        - [[lyapunov_theory]]
+        - lyapunov_theory
 
     """
 
@@ -188,17 +188,17 @@ class HJBSolver:
 
     Theory:
 
-        - [[optimal_control]]
+        - optimal_control
 
-        - [[dynamic_programming]]
+        - dynamic_programming
 
-        - [[hamilton_jacobi_bellman]]
+        - hamilton_jacobi_bellman
 
     Mathematics:
 
-        - [[partial_differential_equations]]
+        - partial_differential_equations
 
-        - [[viscosity_solutions]]
+        - viscosity_solutions
 
     """
 
@@ -252,17 +252,17 @@ class PontryaginSolver:
 
     Theory:
 
-        - [[maximum_principle]]
+        - maximum_principle
 
-        - [[optimal_control]]
+        - optimal_control
 
-        - [[calculus_of_variations]]
+        - calculus_of_variations
 
     Mathematics:
 
-        - [[hamiltonian_mechanics]]
+        - hamiltonian_mechanics
 
-        - [[boundary_value_problems]]
+        - boundary_value_problems
 
     """
 
@@ -330,17 +330,17 @@ class LQRController:
 
     Theory:
 
-        - [[lqr_control]]
+        - lqr_control
 
-        - [[optimal_control]]
+        - optimal_control
 
-        - [[feedback_control]]
+        - feedback_control
 
     Mathematics:
 
-        - [[riccati_equations]]
+        - riccati_equations
 
-        - [[linear_systems]]
+        - linear_systems
 
     """
 
@@ -400,17 +400,17 @@ class MPController:
 
     Theory:
 
-        - [[model_predictive_control]]
+        - model_predictive_control
 
-        - [[receding_horizon]]
+        - receding_horizon
 
-        - [[optimal_control]]
+        - optimal_control
 
     Mathematics:
 
-        - [[optimization]]
+        - optimization
 
-        - [[numerical_methods]]
+        - numerical_methods
 
     """
 
@@ -478,17 +478,17 @@ class FreeEnergyController:
 
     Theory:
 
-        - [[active_inference]]
+        - active_inference
 
-        - [[free_energy_principle]]
+        - free_energy_principle
 
-        - [[optimal_control]]
+        - optimal_control
 
     Mathematics:
 
-        - [[information_theory]]
+        - information_theory
 
-        - [[control_theory]]
+        - control_theory
 
     """
 
@@ -566,17 +566,17 @@ class ActiveInferenceController:
 
     Theory:
 
-        - [[active_inference]]
+        - active_inference
 
-        - [[optimal_control]]
+        - optimal_control
 
-        - [[belief_updating]]
+        - belief_updating
 
     Mathematics:
 
-        - [[control_theory]]
+        - control_theory
 
-        - [[information_geometry]]
+        - information_geometry
 
     """
 

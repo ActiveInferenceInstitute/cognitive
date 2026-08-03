@@ -274,9 +274,9 @@ kb-git-automator watch --kb-dir knowledge_base/ --auto-commit
 
 <!-- Reference related concept documentation -->
 
-- [ ] [[concept1]]
+- [ ] concept1
 
-- [ ] [[concept2]]
+- [ ] concept2
 
 ## Implementation Details
 

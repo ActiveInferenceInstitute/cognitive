@@ -52,31 +52,31 @@ content_workflow = {
 
     "planning": {
 
-        "needs_analysis": ["[[documentation_standards]]", "[[knowledge_organization]]"],
+        "needs_analysis": ["documentation_standards", "knowledge_organization"],
 
-        "structure_design": ["[[ai_documentation_style]]", "[[linking_patterns]]"],
+        "structure_design": ["ai_documentation_style", "linking_patterns"],
 
-        "template_selection": ["[[ai_concept_template]]", "[[package_component]]"]
+        "template_selection": ["ai_concept_template", "package_component"]
 
     },
 
     "development": {
 
-        "content_writing": ["[[documentation_guide]]", "[[example_writing]]"],
+        "content_writing": ["documentation_guide", "example_writing"],
 
-        "review_process": ["[[validation_framework]]", "[[quality_metrics]]"],
+        "review_process": ["validation_framework", "quality_metrics"],
 
-        "integration": ["[[linking_completeness]]", "[[knowledge_organization]]"]
+        "integration": ["linking_completeness", "knowledge_organization"]
 
     },
 
     "publication": {
 
-        "validation": ["[[validation_tools]]", "[[quality_metrics]]"],
+        "validation": ["validation_tools", "quality_metrics"],
 
-        "deployment": ["[[git_workflow]]", "[[version_control]]"],
+        "deployment": ["git_workflow", "version_control"],
 
-        "announcement": ["[[changelog]]", "[[release_management]]"]
+        "announcement": ["changelog", "release_management"]
 
     }
 
@@ -106,7 +106,7 @@ maintenance_process = {
 
         ],
 
-        "tools": ["[[validation_tools]]", "[[analysis_tools]]"]
+        "tools": ["validation_tools", "analysis_tools"]
 
     },
 
@@ -124,7 +124,7 @@ maintenance_process = {
 
         ],
 
-        "process": ["[[version_control]]", "[[changelog]]"]
+        "process": ["version_control", "changelog"]
 
     },
 
@@ -142,7 +142,7 @@ maintenance_process = {
 
         ],
 
-        "tools": ["[[archival_tools]]", "[[migration_guide]]"]
+        "tools": ["archival_tools", "migration_guide"]
 
     }
 
@@ -166,9 +166,9 @@ content_structure = {
 
         "location": "docs/",
 
-        "organization": "[[knowledge_organization]]",
+        "organization": "knowledge_organization",
 
-        "management": "[[version_control]]"
+        "management": "version_control"
 
     },
 
@@ -176,9 +176,9 @@ content_structure = {
 
         "location": "archive/",
 
-        "organization": "[[archival_structure]]",
+        "organization": "archival_structure",
 
-        "management": "[[archival_policy]]"
+        "management": "archival_policy"
 
     },
 
@@ -186,9 +186,9 @@ content_structure = {
 
         "location": "drafts/",
 
-        "organization": "[[draft_management]]",
+        "organization": "draft_management",
 
-        "management": "[[review_process]]"
+        "management": "review_process"
 
     }
 
@@ -222,9 +222,9 @@ version_strategy = {
 
         "pattern": "v{major}.{minor}.{patch}",
 
-        "rules": "[[versioning_standards]]",
+        "rules": "versioning_standards",
 
-        "process": "[[release_management]]"
+        "process": "release_management"
 
     }
 
@@ -348,17 +348,17 @@ update_workflow = {
 
         ],
 
-        "process": "[[update_process]]"
+        "process": "update_process"
 
     },
 
     "version_control": {
 
-        "branching": "[[git_workflow]]",
+        "branching": "git_workflow",
 
-        "releases": "[[release_management]]",
+        "releases": "release_management",
 
-        "changelog": "[[changelog]]"
+        "changelog": "changelog"
 
     }
 

@@ -762,35 +762,35 @@ class CrossReferenceExample:
 
     Mathematical Foundation:
 
-        - [[variational_inference]] - Core VI theory
+        - variational_inference - Core VI theory
 
-        - [[natural_gradients]] - Geometric optimization
+        - natural_gradients - Geometric optimization
 
-        - [[fisher_information]] - Information metric
+        - fisher_information - Information metric
 
     Implementation Details:
 
-        - [[automatic_differentiation]] - Gradient computation
+        - automatic_differentiation - Gradient computation
 
-        - [[numerical_optimization]] - Optimization algorithms
+        - numerical_optimization - Optimization algorithms
 
-        - [[convergence_analysis]] - Theoretical guarantees
+        - convergence_analysis - Theoretical guarantees
 
     Applications:
 
-        - [[active_inference]] - AI applications
+        - active_inference - AI applications
 
-        - [[machine_learning]] - ML applications
+        - machine_learning - ML applications
 
-        - [[robotics]] - Robotics applications
+        - robotics - Robotics applications
 
     Related Implementations:
 
-        - [[message_passing_implementations]]
+        - message_passing_implementations
 
-        - [[belief_updating_algorithms]]
+        - belief_updating_algorithms
 
-        - [[policy_optimization_methods]]
+        - policy_optimization_methods
 
     """
 

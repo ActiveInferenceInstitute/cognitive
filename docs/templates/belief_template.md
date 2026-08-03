@@ -222,7 +222,7 @@ prediction_error_sensitivity: {{sensitivity}}
 
 ### Code Reference
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ## Evaluation

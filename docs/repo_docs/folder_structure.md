@@ -311,9 +311,9 @@ semantic_relations:
 
     links:
 
-      - [[related_doc]]
+      - related_doc
 
-      - [[another_doc]]
+      - another_doc
 
 ---
 
@@ -729,15 +729,15 @@ FEP.md
 
 ## Related Concepts
 
-- [[theory/concept_a|Concept A]]
+- Concept A
 
-- [[implementation/concept_b|Implementation B]]
+- Implementation B
 
 ## See Also
 
-- [[docs/guides/related_guide|Related Guide]]
+- Related Guide
 
-- [[docs/examples/example|Example Usage]]
+- Example Usage
 
 ```
 

@@ -42,17 +42,17 @@ paper:
 
   key_concepts:
 
-    - [[free_energy_principle]]
+    - free_energy_principle
 
-    - [[active_inference]]
+    - active_inference
 
-    - [[predictive_processing]]
+    - predictive_processing
 
   implementations:
 
-    - [[basic_active_inference]]
+    - basic_active_inference
 
-    - [[advanced_models]]
+    - advanced_models
 
 ---
 
@@ -120,11 +120,11 @@ class ActiveInferenceAgent:
 
     Learn about Active Inference:
 
-    1. [[free_energy_principle]]
+    1. free_energy_principle
 
-    2. [[belief_updating]]
+    2. belief_updating
 
-    3. [[action_selection]]
+    3. action_selection
 
     """
 
@@ -154,19 +154,19 @@ class ActiveInferenceAgent:
 
 ## Active Inference
 
-- [[theoretical_foundation]]
+- theoretical_foundation
 
   - Mathematical Framework
 
   - Key Principles
 
-- [[practical_implementation]]
+- practical_implementation
 
   - Code Examples
 
   - Case Studies
 
-- [[exercises]]
+- exercises
 
   - Basic Problems
 
@@ -196,7 +196,7 @@ def analyze_literature():
 
     Analyze research papers and extract key concepts.
 
-    See [[literature_analysis]] for methodology.
+    See literature_analysis for methodology.
 
     """
 
@@ -242,7 +242,7 @@ def generate_tutorial():
 
     Generate interactive tutorials from documentation.
 
-    See [[tutorial_generation]] for details.
+    See tutorial_generation for details.
 
     """
 
@@ -358,13 +358,13 @@ project:
 
   components:
 
-    - [[literature_review]]
+    - literature_review
 
-    - [[experiment_design]]
+    - experiment_design
 
-    - [[data_analysis]]
+    - data_analysis
 
-    - [[publication]]
+    - publication
 
 ```
 
@@ -378,11 +378,11 @@ module:
 
   sections:
 
-    - [[theoretical_background]]
+    - theoretical_background
 
-    - [[practical_exercises]]
+    - practical_exercises
 
-    - [[assessments]]
+    - assessments
 
 ```
 

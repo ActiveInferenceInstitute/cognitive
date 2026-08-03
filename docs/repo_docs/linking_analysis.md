@@ -48,19 +48,19 @@ link_types:
 
     - parent_child:     # Concept hierarchies
 
-        pattern: "[[parent]] -> [[child]]"
+        pattern: "parent -> child"
 
         validation: "bidirectional"
 
     - implementation:   # Concept to implementation
 
-        pattern: "[[concept]] -> [[implementation]]"
+        pattern: "concept -> implementation"
 
         validation: "traceable"
 
     - documentation:    # Documentation relationships
 
-        pattern: "[[guide]] -> [[reference]]"
+        pattern: "guide -> reference"
 
         validation: "consistent"
 
@@ -68,19 +68,19 @@ link_types:
 
     - prerequisite:     # Required knowledge
 
-        pattern: "[[prereq]] -> [[concept]]"
+        pattern: "prereq -> concept"
 
         confidence: 0.8
 
     - related:         # Related concepts
 
-        pattern: "[[concept_a]] <-> [[concept_b]]"
+        pattern: "concept_a <-> concept_b"
 
         similarity: 0.7
 
     - extends:         # Extension relationships
 
-        pattern: "[[base]] -> [[extension]]"
+        pattern: "base -> extension"
 
         validation: "complete"
 

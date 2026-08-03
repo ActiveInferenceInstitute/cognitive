@@ -50,11 +50,11 @@ semantic_relations:
 
   - type: implements
 
-    links: [[base_concept]]
+    links: base_concept
 
   - type: extends
 
-    links: [[parent_concept]]
+    links: parent_concept
 
   # Dependencies (Required)
 
@@ -62,15 +62,15 @@ semantic_relations:
 
     links: 
 
-      - [[dependency1]]
+      - dependency1
 
-      - [[dependency2]]
+      - dependency2
 
   # Related Content (Optional)
 
   - type: related
 
-    links: [[related_content]]
+    links: related_content
 
 ---
 
@@ -82,13 +82,13 @@ semantic_relations:
 
 #BEGIN_CONCEPT_LINKS
 
-- Parent Concept: [[parent_concept]]
+- Parent Concept: parent_concept
 
-- Core Implementation: [[implementation]]
+- Core Implementation: implementation
 
-- Validation: [[validation_spec]]
+- Validation: validation_spec
 
-- Examples: [[usage_examples]]
+- Examples: usage_examples
 
 #END_CONCEPT_LINKS
 
@@ -100,13 +100,13 @@ semantic_relations:
 
 #BEGIN_IMPLEMENTATION_LINKS
 
-- Interface: [[api_spec]]
+- Interface: api_spec
 
-- Tests: [[test_suite]]
+- Tests: test_suite
 
-- Examples: [[implementation_examples]]
+- Examples: implementation_examples
 
-- Validation: [[implementation_validation]]
+- Validation: implementation_validation
 
 #END_IMPLEMENTATION_LINKS
 
@@ -118,11 +118,11 @@ semantic_relations:
 
 #BEGIN_KNOWLEDGE_LINKS
 
-- Ontology: [[domain_ontology]]
+- Ontology: domain_ontology
 
-- Classification: [[concept_classification]]
+- Classification: concept_classification
 
-- Relationships: [[concept_relationships]]
+- Relationships: concept_relationships
 
 #END_KNOWLEDGE_LINKS
 
@@ -136,19 +136,19 @@ semantic_relations:
 
 ## Hierarchy
 
-- Parent: [[parent_concept]]
+- Parent: parent_concept
 
 - Children:
 
-  - [[child_concept_1]]
+  - child_concept_1
 
-  - [[child_concept_2]]
+  - child_concept_2
 
 - Siblings:
 
-  - [[sibling_1]]
+  - sibling_1
 
-  - [[sibling_2]]
+  - sibling_2
 
 ```
 
@@ -158,19 +158,19 @@ semantic_relations:
 
 ## Implementation
 
-- Core: [[core_implementation]]
+- Core: core_implementation
 
 - Extensions:
 
-  - [[extension_1]]
+  - extension_1
 
-  - [[extension_2]]
+  - extension_2
 
 - Tests:
 
-  - [[test_suite]]
+  - test_suite
 
-  - [[benchmarks]]
+  - benchmarks
 
 ```
 
@@ -180,13 +180,13 @@ semantic_relations:
 
 ## Documentation
 
-- Guide: [[user_guide]]
+- Guide: user_guide
 
-- API: [[api_reference]]
+- API: api_reference
 
-- Examples: [[example_collection]]
+- Examples: example_collection
 
-- Tutorials: [[tutorial_series]]
+- Tutorials: tutorial_series
 
 ```
 
@@ -196,13 +196,13 @@ semantic_relations:
 
 ## Research
 
-- Papers: [[research_papers]]
+- Papers: research_papers
 
-- Experiments: [[experiment_results]]
+- Experiments: experiment_results
 
-- Analysis: [[data_analysis]]
+- Analysis: data_analysis
 
-- Citations: [[citations]]
+- Citations: citations
 
 ```
 
@@ -212,11 +212,11 @@ semantic_relations:
 
 ```markdown
 
-- [[concept]] {type: prerequisite, confidence: 0.9}
+- concept {type: prerequisite, confidence: 0.9}
 
-- [[implementation]] {type: implements, version: "1.0"}
+- implementation {type: implements, version: "1.0"}
 
-- [[test]] {type: validates, coverage: 0.95}
+- test {type: validates, coverage: 0.95}
 
 ```
 
@@ -224,11 +224,11 @@ semantic_relations:
 
 ```markdown
 
-- [[concept]] {context: "theoretical_foundation"}
+- concept {context: "theoretical_foundation"}
 
-- [[example]] {context: "practical_application"}
+- example {context: "practical_application"}
 
-- [[test]] {context: "validation"}
+- test {context: "validation"}
 
 ```
 
@@ -236,11 +236,11 @@ semantic_relations:
 
 ```markdown
 
-- [[feature]] {status: "stable", since: "1.0"}
+- feature {status: "stable", since: "1.0"}
 
-- [[api]] {status: "deprecated", replaced_by: "[[new_api]]"}
+- api {status: "deprecated", replaced_by: "new_api"}
 
-- [[concept]] {status: "draft", review_required: true}
+- concept {status: "draft", review_required: true}
 
 ```
 
@@ -296,27 +296,27 @@ semantic_relations:
 
 ## Core Links
 
-- Theory: [[free_energy_principle]]
+- Theory: free_energy_principle
 
-- Implementation: [[active_inference_impl]]
+- Implementation: active_inference_impl
 
-- Validation: [[active_inference_tests]]
+- Validation: active_inference_tests
 
 ## Related Concepts
 
-- [[predictive_coding]]
+- predictive_coding
 
-- [[belief_updating]]
+- belief_updating
 
-- [[action_selection]]
+- action_selection
 
 ## Applications
 
-- [[robot_control]]
+- robot_control
 
-- [[decision_making]]
+- decision_making
 
-- [[learning_systems]]
+- learning_systems
 
 ```
 
@@ -328,25 +328,25 @@ semantic_relations:
 
 ## Specification Links
 
-- Design: [[belief_update_design]]
+- Design: belief_update_design
 
-- Interface: [[belief_update_api]]
+- Interface: belief_update_api
 
-- Tests: [[belief_update_tests]]
+- Tests: belief_update_tests
 
 ## Dependencies
 
-- [[matrix_operations]]
+- matrix_operations
 
-- [[probability_utils]]
+- probability_utils
 
-- [[optimization_methods]]
+- optimization_methods
 
 ## Examples
 
-- [[basic_belief_update]]
+- basic_belief_update
 
-- [[advanced_scenarios]]
+- advanced_scenarios
 
 ```
 
@@ -358,27 +358,27 @@ semantic_relations:
 
 ## Component Links
 
-- [[architecture_overview]]
+- architecture_overview
 
-- [[component_interactions]]
+- component_interactions
 
-- [[deployment_guide]]
+- deployment_guide
 
 ## Implementation Links
 
-- [[core_components]]
+- core_components
 
-- [[extension_points]]
+- extension_points
 
-- [[integration_patterns]]
+- integration_patterns
 
 ## Reference Links
 
-- [[api_documentation]]
+- api_documentation
 
-- [[example_collection]]
+- example_collection
 
-- [[troubleshooting_guide]]
+- troubleshooting_guide
 
 ```
 

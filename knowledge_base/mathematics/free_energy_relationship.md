@@ -327,7 +327,7 @@ where $\pi^*$ is the optimal policy.
 
 **Proof Sketch**: By the ergodic theorem and the optimality of the free energy principle, long-term averages of VFE and EFE converge under stationary conditions.
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### Spectral Analysis of Free Energy Dynamics

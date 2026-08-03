@@ -316,7 +316,7 @@ belief_update_rate: 0.2
 
 ### Code Reference
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### Integration Points

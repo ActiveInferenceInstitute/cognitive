@@ -94,9 +94,9 @@ Usage examples and patterns.
 
 ## Related Concepts
 
-- [[related_concept_1]]
+- related_concept_1
 
-- [[related_concept_2]]
+- related_concept_2
 
 ```
 
@@ -152,9 +152,9 @@ Recommended practices.
 
 ## Related Guides
 
-- [[related_guide_1]]
+- related_guide_1
 
-- [[related_guide_2]]
+- related_guide_2
 
 ```
 
@@ -162,12 +162,12 @@ Recommended practices.
 
 #### Module Template
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 #### Test Template
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ## Template Usage

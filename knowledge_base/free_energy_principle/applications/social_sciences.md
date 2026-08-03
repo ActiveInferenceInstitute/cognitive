@@ -532,7 +532,7 @@ Connecting cultural models to mental health:
   - Cultural priors shape what counts as "aberrant" precision
   - Same computational profile may be pathological in one culture, adaptive in another
   - Cultural affordances shape available policies for free energy reduction
-  See [[psychiatry]] for clinical details
+  See psychiatry for clinical details
 ```
 
 ### Digital Societies

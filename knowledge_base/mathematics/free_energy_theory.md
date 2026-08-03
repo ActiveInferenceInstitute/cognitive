@@ -50,17 +50,17 @@ class StatisticalMechanics:
 
     Theory:
 
-        - [[helmholtz_free_energy]]
+        - helmholtz_free_energy
 
-        - [[gibbs_free_energy]]
+        - gibbs_free_energy
 
-        - [[partition_function]]
+        - partition_function
 
     Physics:
 
-        - [[statistical_mechanics]]
+        - statistical_mechanics
 
-        - [[thermodynamics]]
+        - thermodynamics
 
     """
 
@@ -108,17 +108,17 @@ class ThermodynamicFreeEnergy:
 
     Theory:
 
-        - [[thermodynamic_potentials]]
+        - thermodynamic_potentials
 
-        - [[legendre_transform]]
+        - legendre_transform
 
-        - [[maxwell_relations]]
+        - maxwell_relations
 
     Physics:
 
-        - [[thermodynamics]]
+        - thermodynamics
 
-        - [[statistical_physics]]
+        - statistical_physics
 
     """
 
@@ -174,17 +174,17 @@ class VariationalFreeEnergy:
 
     Theory:
 
-        - [[variational_inference]]
+        - variational_inference
 
-        - [[kl_divergence]]
+        - kl_divergence
 
-        - [[evidence_lower_bound]]
+        - evidence_lower_bound
 
     Mathematics:
 
-        - [[information_theory]]
+        - information_theory
 
-        - [[probability_theory]]
+        - probability_theory
 
     """
 
@@ -268,17 +268,17 @@ class ExpectedFreeEnergy:
 
     Theory:
 
-        - [[expected_free_energy]]
+        - expected_free_energy
 
-        - [[epistemic_value]]
+        - epistemic_value
 
-        - [[pragmatic_value]]
+        - pragmatic_value
 
     Mathematics:
 
-        - [[information_theory]]
+        - information_theory
 
-        - [[optimal_control]]
+        - optimal_control
 
     """
 
@@ -364,17 +364,17 @@ class FreeEnergyFunctor:
 
     Theory:
 
-        - [[category_theory]]
+        - category_theory
 
-        - [[functor]]
+        - functor
 
-        - [[natural_transformation]]
+        - natural_transformation
 
     Mathematics:
 
-        - [[categorical_probability]]
+        - categorical_probability
 
-        - [[monoidal_categories]]
+        - monoidal_categories
 
     """
 
@@ -416,17 +416,17 @@ class FreeEnergyTransformation:
 
     Theory:
 
-        - [[natural_transformation]]
+        - natural_transformation
 
-        - [[categorical_inference]]
+        - categorical_inference
 
-        - [[bayesian_functors]]
+        - bayesian_functors
 
     Mathematics:
 
-        - [[category_theory]]
+        - category_theory
 
-        - [[information_geometry]]
+        - information_geometry
 
     """
 
@@ -472,17 +472,17 @@ class ActiveInferenceEngine:
 
     Theory:
 
-        - [[active_inference]]
+        - active_inference
 
-        - [[free_energy_principle]]
+        - free_energy_principle
 
-        - [[predictive_processing]]
+        - predictive_processing
 
     Applications:
 
-        - [[cognitive_modeling]]
+        - cognitive_modeling
 
-        - [[decision_making]]
+        - decision_making
 
     """
 

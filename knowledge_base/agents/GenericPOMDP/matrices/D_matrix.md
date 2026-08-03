@@ -25,7 +25,7 @@ The D-matrix encodes prior beliefs about hidden states, representing P(s₁) for
 
 dimensions:
 
-  size: num_states    # From [[s_space]]
+  size: num_states    # From s_space
 
 shape_constraints:
 
@@ -37,7 +37,7 @@ shape_constraints:
 
 ## Mathematical Form
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ## Data Structure

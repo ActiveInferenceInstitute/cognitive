@@ -228,15 +228,15 @@ The system implements federated learning and inference through:
 
 class BioregionalState:
 
-    """[[Bioregional_State]] implementation"""
+    """Bioregional_State implementation"""
 
-    ecological_state: Dict[str, float]  # [[Ecological_Variables]]
+    ecological_state: Dict[str, float]  # Ecological_Variables
 
-    climate_state: Dict[str, float]     # [[Climate_Variables]]
+    climate_state: Dict[str, float]     # Climate_Variables
 
-    social_state: Dict[str, float]      # [[Social_Variables]]
+    social_state: Dict[str, float]      # Social_Variables
 
-    economic_state: Dict[str, float]    # [[Economic_Variables]]
+    economic_state: Dict[str, float]    # Economic_Variables
 
     def to_vector(self) -> np.ndarray:
 
@@ -282,7 +282,7 @@ class BioregionalState:
 
 class LocalMarkovBlanket:
 
-    """[[Local_Scale_Markov_Blanket]]"""
+    """Local_Scale_Markov_Blanket"""
 
     def __init__(self,
 
@@ -322,7 +322,7 @@ class LocalMarkovBlanket:
 
 class LandscapeMarkovBlanket:
 
-    """[[Landscape_Scale_Markov_Blanket]]"""
+    """Landscape_Scale_Markov_Blanket"""
 
     def __init__(self,
 
@@ -356,7 +356,7 @@ class LandscapeMarkovBlanket:
 
 class RegionalMarkovBlanket:
 
-    """[[Regional_Scale_Markov_Blanket]]"""
+    """Regional_Scale_Markov_Blanket"""
 
     def __init__(self,
 

@@ -56,7 +56,7 @@ link_categories:
 
       validation: strict
 
-      pattern: "[[parent_concept]] -> [[child_concept]]"
+      pattern: "parent_concept -> child_concept"
 
     - type: implementation
 
@@ -64,7 +64,7 @@ link_categories:
 
       validation: strict
 
-      pattern: "[[concept]] -> [[implementation]]"
+      pattern: "concept -> implementation"
 
   research:
 
@@ -74,7 +74,7 @@ link_categories:
 
       validation: flexible
 
-      pattern: "[[theory]] -> [[experiment]] -> [[results]]"
+      pattern: "theory -> experiment -> results"
 
     - type: literature
 
@@ -82,7 +82,7 @@ link_categories:
 
       validation: flexible
 
-      pattern: "[[paper]] -> [[findings]] -> [[integration]]"
+      pattern: "paper -> findings -> integration"
 
   documentation:
 
@@ -92,7 +92,7 @@ link_categories:
 
       validation: strict
 
-      pattern: "[[guide]] -> [[reference]] -> [[example]]"
+      pattern: "guide -> reference -> example"
 
     - type: api_documentation
 
@@ -100,7 +100,7 @@ link_categories:
 
       validation: strict
 
-      pattern: "[[api]] -> [[implementation]] -> [[test]]"
+      pattern: "api -> implementation -> test"
 
 ```
 

@@ -536,15 +536,15 @@ class FreeEnergyOptimizer:
 
     Theory:
 
-        - [[variational_methods]]
+        - variational_methods
 
-        - [[free_energy_principle]]
+        - free_energy_principle
 
     Mathematics:
 
-        - [[information_theory]]
+        - information_theory
 
-        - [[natural_gradients]]
+        - natural_gradients
 
     """
 
@@ -612,15 +612,15 @@ class PolicyOptimizer:
 
     Theory:
 
-        - [[active_inference_pomdp]]
+        - active_inference_pomdp
 
-        - [[expected_free_energy]]
+        - expected_free_energy
 
     Mathematics:
 
-        - [[path_integral]]
+        - path_integral
 
-        - [[information_theory]]
+        - information_theory
 
     """
 
@@ -674,15 +674,15 @@ class NaturalGradientOptimizer:
 
     Theory:
 
-        - [[natural_gradients]]
+        - natural_gradients
 
-        - [[information_geometry]]
+        - information_geometry
 
     Mathematics:
 
-        - [[fisher_information]]
+        - fisher_information
 
-        - [[riemannian_geometry]]
+        - riemannian_geometry
 
     """
 
@@ -730,15 +730,15 @@ class StochasticOptimizer:
 
     Theory:
 
-        - [[stochastic_optimization]]
+        - stochastic_optimization
 
-        - [[monte_carlo_methods]]
+        - monte_carlo_methods
 
     Mathematics:
 
-        - [[stochastic_approximation]]
+        - stochastic_approximation
 
-        - [[variance_reduction]]
+        - variance_reduction
 
     """
 
@@ -790,15 +790,15 @@ class ValueIterator:
 
     Theory:
 
-        - [[dynamic_programming]]
+        - dynamic_programming
 
-        - [[bellman_equation]]
+        - bellman_equation
 
     Mathematics:
 
-        - [[markov_decision_process]]
+        - markov_decision_process
 
-        - [[value_functions]]
+        - value_functions
 
     """
 

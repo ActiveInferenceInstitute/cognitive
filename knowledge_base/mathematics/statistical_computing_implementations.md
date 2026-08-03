@@ -112,11 +112,11 @@ class ExponentialFamily:
 
     Mathematical Foundation:
 
-        - [[exponential_families]] - Exponential family theory
+        - exponential_families - Exponential family theory
 
-        - [[natural_parameters]] - Natural parameterization
+        - natural_parameters - Natural parameterization
 
-        - [[sufficient_statistics]] - Sufficient statistics
+        - sufficient_statistics - Sufficient statistics
 
     Form: p(x|θ) = h(x) exp(θ^T t(x) - A(θ))
 
@@ -170,7 +170,7 @@ class ExponentialFamily:
 
         Uses automatic differentiation for gradient computation.
 
-        Related to [[fisher_information]] metric.
+        Related to fisher_information metric.
 
         """
 
@@ -202,9 +202,9 @@ class ExponentialFamily:
 
         Mathematical Foundation:
 
-            - [[fisher_information]] - Information metric
+            - fisher_information - Information metric
 
-            - [[information_geometry]] - Geometric perspective
+            - information_geometry - Geometric perspective
 
         """
 
@@ -332,11 +332,11 @@ class BayesianInference:
 
     Mathematical Foundation:
 
-        - [[bayesian_inference]] - Bayesian framework
+        - bayesian_inference - Bayesian framework
 
-        - [[posterior_computation]] - Posterior calculation
+        - posterior_computation - Posterior calculation
 
-        - [[model_selection]] - Model comparison
+        - model_selection - Model comparison
 
     """
 
@@ -382,7 +382,7 @@ class BayesianInference:
 
             p(θ|x) ≈ N(θ|θ_MAP, Σ) where Σ = -[∇²log p(θ|x)]^(-1)
 
-        Related to [[variational_inference]] and [[gaussian_approximation]].
+        Related to variational_inference and gaussian_approximation.
 
         """
 
@@ -466,7 +466,7 @@ class BayesianInference:
 
             where w_i = p(θ_i|x) / q(θ_i)
 
-        Related to [[importance_sampling]] and [[monte_carlo_methods]].
+        Related to importance_sampling and monte_carlo_methods.
 
         """
 
@@ -510,9 +510,9 @@ class BayesianInference:
 
         Applications:
 
-            - [[model_selection]] - Bayesian model comparison
+            - model_selection - Bayesian model comparison
 
-            - [[bayes_factors]] - Evidence ratios
+            - bayes_factors - Evidence ratios
 
         """
 
@@ -632,7 +632,7 @@ if __name__ == "__main__":
 
 ### 3. Information Theory Implementations
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ## Advanced Computational Methods

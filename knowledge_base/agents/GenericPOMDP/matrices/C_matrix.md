@@ -25,7 +25,7 @@ The C-matrix defines the agent's preferences over observations, representing exp
 
 dimensions:
 
-  rows: num_observations    # From [[o_space]]
+  rows: num_observations    # From o_space
 
   cols: num_time_points    # Planning horizon
 
@@ -41,7 +41,7 @@ shape_constraints:
 
 ## Mathematical Form
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ## Data Structure

@@ -39,21 +39,21 @@ knowledge_model = {
 
     "hierarchical": {
 
-        "concepts": ["[[cognitive_phenomena|Cognitive Phenomena]]", "[[theoretical_foundations]]"],
+        "concepts": ["Cognitive Phenomena", "theoretical_foundations"],
 
-        "implementations": ["[[active_inference|Active Inference]]", "[[belief_updating]]"],
+        "implementations": ["Active Inference", "belief_updating"],
 
-        "validations": ["[[validation_framework]]", "[[testing_guide]]"]
+        "validations": ["validation_framework", "testing_guide"]
 
     },
 
     "relational": {
 
-        "bidirectional": ["[[linking_completeness]]", "[[linking_patterns]]"],
+        "bidirectional": ["linking_completeness", "linking_patterns"],
 
-        "semantic": ["[[ai_semantic_processing]]", "[[machine_readability]]"],
+        "semantic": ["ai_semantic_processing", "machine_readability"],
 
-        "temporal": ["[[version_control]]", "[[changelog]]"]
+        "temporal": ["version_control", "changelog"]
 
     }
 
@@ -103,21 +103,21 @@ doc_structure = {
 
     "semantic_markup": {
 
-        "concepts": "[[concept_template]]",
+        "concepts": "concept_template",
 
-        "implementations": "[[implementation_template]]",
+        "implementations": "implementation_template",
 
-        "relationships": "[[relationship_template]]"
+        "relationships": "relationship_template"
 
     },
 
     "validation_rules": {
 
-        "completeness": "[[validation_framework]]",
+        "completeness": "validation_framework",
 
-        "consistency": "[[linking_validation]]",
+        "consistency": "linking_validation",
 
-        "quality": "[[quality_metrics]]"
+        "quality": "quality_metrics"
 
     }
 
@@ -157,21 +157,21 @@ version_structure = {
 
     "documentation": {
 
-        "current": "[[api_reference]]",
+        "current": "api_reference",
 
-        "history": "[[changelog]]",
+        "history": "changelog",
 
-        "migrations": "[[migration_guide]]"
+        "migrations": "migration_guide"
 
     },
 
     "code": {
 
-        "releases": "[[release_management]]",
+        "releases": "release_management",
 
-        "branches": "[[branching_strategy]]",
+        "branches": "branching_strategy",
 
-        "tags": "[[version_tags]]"
+        "tags": "version_tags"
 
     }
 
@@ -193,7 +193,7 @@ class DocumentationSystem:
 
     Core documentation system architecture.
 
-    See [[documentation_standards]] for guidelines.
+    See documentation_standards for guidelines.
 
     """
 
@@ -211,7 +211,7 @@ class DocumentationSystem:
 
         Process and validate documentation.
 
-        See [[ai_validation_framework]] for details.
+        See ai_validation_framework for details.
 
         """
 
@@ -233,7 +233,7 @@ class KnowledgeGraph:
 
     Knowledge graph implementation.
 
-    See [[knowledge_organization]] for structure.
+    See knowledge_organization for structure.
 
     """
 
@@ -251,7 +251,7 @@ class KnowledgeGraph:
 
         Add semantic relationship.
 
-        See [[linking_patterns]] for valid types.
+        See linking_patterns for valid types.
 
         """
 
@@ -273,7 +273,7 @@ class ValidationSystem:
 
     Documentation validation system.
 
-    See [[validation_framework]] for rules.
+    See validation_framework for rules.
 
     """
 
@@ -289,7 +289,7 @@ class ValidationSystem:
 
         Validate documentation against rules.
 
-        See [[quality_metrics]] for criteria.
+        See quality_metrics for criteria.
 
         """
 

@@ -118,7 +118,7 @@ Model architecture defines the structural organization and design principles for
 
 ### 1. Core Components
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ## Design Methodology
@@ -423,7 +423,7 @@ See the canonical package documentation for a complete runnable example.
 
 ### 1. Dependency Injection
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### 2. Event-Driven Architecture

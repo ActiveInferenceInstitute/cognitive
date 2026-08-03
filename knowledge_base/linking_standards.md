@@ -25,11 +25,11 @@ Use double brackets for all internal references:
 
 ```markdown
 
-[[filename]]
+filename
 
-[[directory/filename]]
+directory/filename
 
-[[relative/path/filename]]
+relative/path/filename
 
 ```
 
@@ -41,11 +41,11 @@ Obsidian supports display text, but for consistency, prefer the simple format:
 
 # Preferred
 
-[[free_energy_principle]]
+free_energy_principle
 
 # Avoid unless necessary
 
-[[free_energy_principle|Free Energy Principle]]
+Free Energy Principle
 
 ```
 
@@ -55,9 +55,9 @@ Link to specific sections within files:
 
 ```markdown
 
-[[filename#section-heading]]
+filename#section-heading
 
-[[knowledge_base/cognitive/active_inference#mathematical-framework]]
+knowledge_base/cognitive/active_inference#mathematical-framework
 
 ```
 
@@ -67,29 +67,29 @@ Link to specific sections within files:
 
 ```markdown
 
-[[knowledge_base/mathematics/free_energy_principle]]
+knowledge_base/mathematics/free_energy_principle
 
-[[knowledge_base/cognitive/bayesian_inference]]
+knowledge_base/cognitive/bayesian_inference
 
-[[knowledge_base/mathematics/variational_inference]]
+knowledge_base/mathematics/variational_inference
 
-[[knowledge_base/mathematics/information_theory]]
+knowledge_base/mathematics/information_theory
 
-[[knowledge_base/mathematics/probability_theory]]
+knowledge_base/mathematics/probability_theory
 
-[[knowledge_base/mathematics/message_passing]]
+knowledge_base/mathematics/message_passing
 
-[[knowledge_base/mathematics/factor_graphs]]
+knowledge_base/mathematics/factor_graphs
 
-[[knowledge_base/mathematics/expected_free_energy]]
+knowledge_base/mathematics/expected_free_energy
 
-[[knowledge_base/mathematics/path_integral]]
+knowledge_base/mathematics/path_integral
 
-[[knowledge_base/mathematics/stochastic_processes]]
+knowledge_base/mathematics/stochastic_processes
 
-[[knowledge_base/mathematics/dynamical_systems]]
+knowledge_base/mathematics/dynamical_systems
 
-[[knowledge_base/mathematics/optimization_theory]]
+knowledge_base/mathematics/optimization_theory
 
 ```
 
@@ -97,27 +97,27 @@ Link to specific sections within files:
 
 ```markdown
 
-[[knowledge_base/cognitive/active_inference]]
+knowledge_base/cognitive/active_inference
 
-[[knowledge_base/cognitive/predictive_processing]]
+knowledge_base/cognitive/predictive_processing
 
-[[knowledge_base/cognitive/free_energy_principle]]
+knowledge_base/cognitive/free_energy_principle
 
-[[knowledge_base/cognitive/generative_model]]
+knowledge_base/cognitive/generative_model
 
-[[knowledge_base/cognitive/hierarchical_inference]]
+knowledge_base/cognitive/hierarchical_inference
 
-[[knowledge_base/cognitive/attention_patterns]]
+knowledge_base/cognitive/attention_patterns
 
-[[knowledge_base/cognitive/learning_mechanisms]]
+knowledge_base/cognitive/learning_mechanisms
 
-[[knowledge_base/cognitive/decision_making]]
+knowledge_base/cognitive/decision_making
 
-[[knowledge_base/cognitive/swarm_intelligence]]
+knowledge_base/cognitive/swarm_intelligence
 
-[[knowledge_base/cognitive/collective_behavior]]
+knowledge_base/cognitive/collective_behavior
 
-[[knowledge_base/cognitive/social_cognition]]
+knowledge_base/cognitive/social_cognition
 
 ```
 
@@ -125,13 +125,13 @@ Link to specific sections within files:
 
 ```markdown
 
-[[knowledge_base/agents/GenericPOMDP/README]]
+knowledge_base/agents/GenericPOMDP/README
 
-[[knowledge_base/agents/Continuous_Time/README]]
+knowledge_base/agents/Continuous_Time/README
 
-[[knowledge_base/agents/architectures_overview]]
+knowledge_base/agents/architectures_overview
 
-[[knowledge_base/agents/index]]
+knowledge_base/agents/index
 
 ```
 
@@ -139,15 +139,15 @@ Link to specific sections within files:
 
 ```markdown
 
-[[knowledge_base/systems/systems_theory]]
+knowledge_base/systems/systems_theory
 
-[[knowledge_base/systems/complex_systems]]
+knowledge_base/systems/complex_systems
 
-[[knowledge_base/systems/emergence]]
+knowledge_base/systems/emergence
 
-[[knowledge_base/systems/network_theory]]
+knowledge_base/systems/network_theory
 
-[[knowledge_base/systems/adaptive_systems]]
+knowledge_base/systems/adaptive_systems
 
 ```
 
@@ -155,17 +155,17 @@ Link to specific sections within files:
 
 ```markdown
 
-[[knowledge_base/biology/evolutionary_dynamics]]
+knowledge_base/biology/evolutionary_dynamics
 
-[[knowledge_base/free_energy_principle/biology/neural_systems]]
+knowledge_base/free_energy_principle/biology/neural_systems
 
-[[knowledge_base/cognitive/collective_behavior]]
+knowledge_base/cognitive/collective_behavior
 
-[[docs/research/complex_systems/adaptation]]
+docs/research/complex_systems/adaptation
 
-[[knowledge_base/biology/myrmecology]]
+knowledge_base/biology/myrmecology
 
-[[knowledge_base/cognitive/swarm_intelligence]]
+knowledge_base/cognitive/swarm_intelligence
 
 ```
 
@@ -173,11 +173,11 @@ Link to specific sections within files:
 
 ```markdown
 
-[[knowledge_base/philosophy/pragmatism]]
+knowledge_base/philosophy/pragmatism
 
-[[knowledge_base/philosophy/operationalism]]
+knowledge_base/philosophy/operationalism
 
-[[knowledge_base/philosophy/peircean_semiotics]]
+knowledge_base/philosophy/peircean_semiotics
 
 ```
 
@@ -185,9 +185,9 @@ Link to specific sections within files:
 
 ```markdown
 
-[[knowledge_base/ontology/cognitive_ontology]]
+knowledge_base/ontology/cognitive_ontology
 
-[[knowledge_base/ontology/hyperspatial/hyperspace_ontology]]
+knowledge_base/ontology/hyperspatial/hyperspace_ontology
 
 ```
 
@@ -201,17 +201,17 @@ When linking between domains, use clear relative paths:
 
 # From mathematics to cognitive
 
-[[knowledge_base/cognitive/active_inference]]
+knowledge_base/cognitive/active_inference
 
 # From cognitive to mathematics  
 
-[[knowledge_base/mathematics/free_energy_principle]]
+knowledge_base/mathematics/free_energy_principle
 
 # From agents to both
 
-[[knowledge_base/cognitive/active_inference]]
+knowledge_base/cognitive/active_inference
 
-[[knowledge_base/mathematics/expected_free_energy]]
+knowledge_base/mathematics/expected_free_energy
 
 ```
 
@@ -223,11 +223,11 @@ Ensure concepts link to each other:
 
 # In active_inference.md
 
-Related concepts: [[knowledge_base/mathematics/free_energy_principle]], [[knowledge_base/cognitive/bayesian_inference]]
+Related concepts: knowledge_base/mathematics/free_energy_principle, knowledge_base/cognitive/bayesian_inference
 
 # In free_energy_principle.md  
 
-Applications: [[knowledge_base/cognitive/active_inference]], [[knowledge_base/cognitive/predictive_processing]]
+Applications: knowledge_base/cognitive/active_inference, knowledge_base/cognitive/predictive_processing
 
 ```
 
@@ -239,15 +239,15 @@ Link upward and downward in concept hierarchies:
 
 # Parent concept
 
-[[knowledge_base/cognitive/learning_mechanisms]]
+knowledge_base/cognitive/learning_mechanisms
 
 # Child concepts
 
-[[knowledge_base/cognitive/reinforcement_learning]]
+knowledge_base/cognitive/reinforcement_learning
 
-[[knowledge_base/cognitive/associative_learning]]
+knowledge_base/cognitive/associative_learning
 
-[[knowledge_base/cognitive/social_learning]]
+knowledge_base/cognitive/social_learning
 
 ```
 
@@ -325,7 +325,7 @@ while read file; do
 
     echo "Checking links in: $file"
 
-    grep -o "\[\[[^]]*\]\]" "$file" | sort | uniq
+    grep -o "\[\^*\]\]" "$file" | sort | uniq
 
 done
 
@@ -369,13 +369,13 @@ done
 
 The free energy principle has important applications in:
 
-- [[knowledge_base/cognitive/active_inference]]
+- knowledge_base/cognitive/active_inference
 
-- [[knowledge_base/cognitive/predictive_processing]]
+- knowledge_base/cognitive/predictive_processing
 
-- [[knowledge_base/cognitive/attention_patterns]]
+- knowledge_base/cognitive/attention_patterns
 
-- [[knowledge_base/agents/architectures_overview]]
+- knowledge_base/agents/architectures_overview
 
 ```
 
@@ -389,21 +389,21 @@ The free energy principle has important applications in:
 
 Active inference builds on several mathematical concepts:
 
-- [[knowledge_base/mathematics/free_energy_principle]]
+- knowledge_base/mathematics/free_energy_principle
 
-- [[knowledge_base/cognitive/bayesian_inference]]
+- knowledge_base/cognitive/bayesian_inference
 
-- [[knowledge_base/mathematics/expected_free_energy]]
+- knowledge_base/mathematics/expected_free_energy
 
-- [[knowledge_base/mathematics/variational_inference]]
+- knowledge_base/mathematics/variational_inference
 
 ## Related Cognitive Concepts
 
-- [[predictive_processing]]
+- predictive_processing
 
-- [[attention_patterns]]
+- attention_patterns
 
-- [[decision_making]]
+- decision_making
 
 ```
 
@@ -415,19 +415,19 @@ Active inference builds on several mathematical concepts:
 
 ## Mathematical Foundations
 
-- [[knowledge_base/mathematics/free_energy_principle]]
+- knowledge_base/mathematics/free_energy_principle
 
-- [[knowledge_base/mathematics/active_inference_theory]]
+- knowledge_base/mathematics/active_inference_theory
 
-- [[knowledge_base/mathematics/pomdp_framework]]
+- knowledge_base/mathematics/pomdp_framework
 
 ## Cognitive Principles
 
-- [[knowledge_base/cognitive/active_inference]]
+- knowledge_base/cognitive/active_inference
 
-- [[knowledge_base/cognitive/hierarchical_inference]]
+- knowledge_base/cognitive/hierarchical_inference
 
-- [[knowledge_base/cognitive/learning_mechanisms]]
+- knowledge_base/cognitive/learning_mechanisms
 
 ```
 

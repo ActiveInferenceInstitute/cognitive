@@ -61,9 +61,9 @@ def initialize_state(self):
 
     Initialize model state.
 
-    Theory: [[knowledge_base/cognitive/predictive_processing#state-initialization|State Initialization]]
+    Theory: State Initialization
 
-    Implementation: [[docs/implementation/implementation_patterns#state-management|State Management]]
+    Implementation: State Management
 
     """
 
@@ -136,7 +136,7 @@ def process_cycle(self, input_data: Input) -> Action:
 
     Process single cognitive cycle.
 
-    Theory: [[knowledge_base/cognitive/active_inference#cognitive-cycle|Cognitive Cycle]]
+    Theory: Cognitive Cycle
 
     """
 
@@ -174,7 +174,7 @@ def validate_model(self) -> ValidationResult:
 
     Validate model implementation.
 
-    See [[docs/guides/validation_guide|Validation Guide]]
+    See Validation Guide
 
     """
 
@@ -214,7 +214,7 @@ def test_model(self) -> TestResults:
 
     Test model implementation.
 
-    See [[docs/guides/testing_guide|Testing Guide]]
+    See Testing Guide
 
     """
 

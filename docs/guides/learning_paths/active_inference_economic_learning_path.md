@@ -577,7 +577,7 @@ This learning path is designed as a co-learning program between Economics depart
 
 ### Dynamic Resource Integration Platform
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### Smart Resource Curation Pipeline

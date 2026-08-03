@@ -993,7 +993,7 @@ $$d\tilde{x}^{(n)} = f^{(n)}(\tilde{x}^{(0)}, \ldots, \tilde{x}^{(n)}) dt + \sig
 
 where $W_t$ is a Wiener process and $\sigma^{(n)}$ is the noise amplitude matrix.
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ## Related Documentation

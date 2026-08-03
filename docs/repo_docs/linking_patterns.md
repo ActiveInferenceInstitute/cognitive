@@ -42,7 +42,7 @@ semantic_relations:
 
    ```markdown
 
-   [[filename]]
+   filename
 
    ```
 
@@ -50,7 +50,7 @@ semantic_relations:
 
    ```markdown
 
-   [[filename|Display Text]]
+   Display Text
 
    ```
 
@@ -58,7 +58,7 @@ semantic_relations:
 
    ```markdown
 
-   [[filename#Section Name]]
+   filename#Section Name
 
    ```
 
@@ -66,7 +66,7 @@ semantic_relations:
 
    ```markdown
 
-   [[filename#^block-id]]
+   filename#^block-id
 
    ```
 
@@ -76,9 +76,9 @@ semantic_relations:
 
    ```markdown
 
-   [[parent_folder/filename]]
+   parent_folder/filename
 
-   [[./current_folder/filename]]
+   ./current_folder/filename
 
    ```
 
@@ -86,7 +86,7 @@ semantic_relations:
 
    ```markdown
 
-   [[filename#section1#subsection]]
+   filename#section1#subsection
 
    ```
 
@@ -94,9 +94,9 @@ semantic_relations:
 
    ```markdown
 
-   ![[filename]]
+   !filename
 
-   ![[filename#section]]
+   !filename#section
 
    ```
 
@@ -108,15 +108,15 @@ semantic_relations:
 
 ## Theory
 
-- [[active_inference|Active Inference Theory]]
+- Active Inference Theory
 
-- [[free_energy|Free Energy Principle]]
+- Free Energy Principle
 
 ## Implementation
 
-- [[active_inference_impl|Implementation Details]]
+- Implementation Details
 
-- [[free_energy_calc|Calculations]]
+- Calculations
 
 ```
 
@@ -126,15 +126,15 @@ semantic_relations:
 
 ## Core Concepts
 
-- [[parent_concept]]
+- parent_concept
 
-  - [[child_concept_1]]
+  - child_concept_1
 
-  - [[child_concept_2]]
+  - child_concept_2
 
-    - [[grandchild_1]]
+    - grandchild_1
 
-    - [[grandchild_2]]
+    - grandchild_2
 
 ```
 
@@ -146,13 +146,13 @@ semantic_relations:
 
 ## Concept Definition
 
-- Base: [[concept_name]]
+- Base: concept_name
 
-- Theory: [[concept_theory]]
+- Theory: concept_theory
 
-- Implementation: [[concept_implementation]]
+- Implementation: concept_implementation
 
-- Examples: [[concept_examples]]
+- Examples: concept_examples
 
 ```
 
@@ -162,13 +162,13 @@ semantic_relations:
 
 ## Documentation Structure
 
-- Guide: [[user_guide]]
+- Guide: user_guide
 
-- API: [[api_documentation]]
+- API: api_documentation
 
-- Examples: [[usage_examples]]
+- Examples: usage_examples
 
-- Tests: [[test_documentation]]
+- Tests: test_documentation
 
 ```
 
@@ -178,13 +178,13 @@ semantic_relations:
 
 ## Code References
 
-- Source: [[source_file]]
+- Source: source_file
 
-- Tests: [[test_file]]
+- Tests: test_file
 
-- Examples: [[example_file]]
+- Examples: example_file
 
-- Benchmarks: [[benchmark_file]]
+- Benchmarks: benchmark_file
 
 ```
 
@@ -198,21 +198,21 @@ semantic_relations:
 
 related_concepts:
 
-  - [[concept_a]]
+  - concept_a
 
-  - [[concept_b]]
+  - concept_b
 
 dependencies:
 
-  - [[dependency_1]]
+  - dependency_1
 
-  - [[dependency_2]]
+  - dependency_2
 
 implementations:
 
-  - [[impl_1]]
+  - impl_1
 
-  - [[impl_2]]
+  - impl_2
 
 ---
 
@@ -224,21 +224,21 @@ implementations:
 
 ## Theoretical Links
 
-- [[theory_a]]
+- theory_a
 
-- [[theory_b]]
+- theory_b
 
 ## Implementation Links
 
-- [[impl_x]]
+- impl_x
 
-- [[impl_y]]
+- impl_y
 
 ## Test Links
 
-- [[test_1]]
+- test_1
 
-- [[test_2]]
+- test_2
 
 ```
 
@@ -304,11 +304,11 @@ def generate_backlinks(source: str, target: str) -> str:
 
     // In {source}:
 
-    [[{target}]]
+    {target}
 
     // In {target}:
 
-    [[{source}]]
+    {source}
 
     """
 
@@ -322,11 +322,11 @@ def generate_backlinks(source: str, target: str) -> str:
 
 ## Theoretical Foundation
 
-- Base Theory: [[base_theory]]
+- Base Theory: base_theory
 
-- Extensions: [[theory_extension]]
+- Extensions: theory_extension
 
-- Applications: [[theory_application]]
+- Applications: theory_application
 
 ```
 
@@ -336,11 +336,11 @@ def generate_backlinks(source: str, target: str) -> str:
 
 ## Implementation Details
 
-- Core: [[core_implementation]]
+- Core: core_implementation
 
-- Modules: [[module_documentation]]
+- Modules: module_documentation
 
-- Tests: [[test_documentation]]
+- Tests: test_documentation
 
 ```
 
@@ -350,11 +350,11 @@ def generate_backlinks(source: str, target: str) -> str:
 
 ## Research Notes
 
-- Papers: [[research_papers]]
+- Papers: research_papers
 
-- Experiments: [[experiment_notes]]
+- Experiments: experiment_notes
 
-- Results: [[research_results]]
+- Results: research_results
 
 ```
 

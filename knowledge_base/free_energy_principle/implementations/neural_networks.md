@@ -523,8 +523,8 @@ for step in range(1000):
     # Store experience and learn
     # (In practice, use a replay buffer)
     metrics = agent.learn(
-        obs_batch=np.array([[obs, next_obs]]),
-        action_batch=np.array([[action, np.zeros_like(action)]])
+        obs_batch=np.array(obs, next_obs),
+        action_batch=np.array(action, np.zeros_like(action))
     )
 
     print(f"Step {step}: F={metrics['free_energy']:.4f}, "

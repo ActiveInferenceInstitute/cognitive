@@ -48,17 +48,17 @@ class DifferentiableManifold:
 
     Theory:
 
-        - [[manifold_theory]]
+        - manifold_theory
 
-        - [[differential_topology]]
+        - differential_topology
 
-        - [[smooth_structures]]
+        - smooth_structures
 
     Mathematics:
 
-        - [[topology]]
+        - topology
 
-        - [[calculus_on_manifolds]]
+        - calculus_on_manifolds
 
     """
 
@@ -114,17 +114,17 @@ class RiemannianMetric:
 
     Theory:
 
-        - [[riemannian_geometry]]
+        - riemannian_geometry
 
-        - [[metric_tensor]]
+        - metric_tensor
 
-        - [[inner_product]]
+        - inner_product
 
     Mathematics:
 
-        - [[differential_geometry]]
+        - differential_geometry
 
-        - [[tensor_calculus]]
+        - tensor_calculus
 
     """
 
@@ -186,17 +186,17 @@ class LeviCivitaConnection:
 
     Theory:
 
-        - [[riemannian_connection]]
+        - riemannian_connection
 
-        - [[parallel_transport]]
+        - parallel_transport
 
-        - [[geodesics]]
+        - geodesics
 
     Mathematics:
 
-        - [[differential_geometry]]
+        - differential_geometry
 
-        - [[tensor_calculus]]
+        - tensor_calculus
 
     """
 
@@ -250,17 +250,17 @@ class GeodesicFlow:
 
     Theory:
 
-        - [[geodesic_equation]]
+        - geodesic_equation
 
-        - [[exponential_map]]
+        - exponential_map
 
-        - [[hamiltonian_flow]]
+        - hamiltonian_flow
 
     Mathematics:
 
-        - [[differential_geometry]]
+        - differential_geometry
 
-        - [[symplectic_geometry]]
+        - symplectic_geometry
 
     """
 
@@ -320,17 +320,17 @@ class RiemannCurvature:
 
     Theory:
 
-        - [[curvature_tensor]]
+        - curvature_tensor
 
-        - [[sectional_curvature]]
+        - sectional_curvature
 
-        - [[ricci_curvature]]
+        - ricci_curvature
 
     Mathematics:
 
-        - [[differential_geometry]]
+        - differential_geometry
 
-        - [[tensor_calculus]]
+        - tensor_calculus
 
     """
 
@@ -394,17 +394,17 @@ class LieGroup:
 
     Theory:
 
-        - [[lie_groups]]
+        - lie_groups
 
-        - [[lie_algebras]]
+        - lie_algebras
 
-        - [[exponential_map]]
+        - exponential_map
 
     Mathematics:
 
-        - [[differential_geometry]]
+        - differential_geometry
 
-        - [[group_theory]]
+        - group_theory
 
     """
 
@@ -456,17 +456,17 @@ class PrincipalBundle:
 
     Theory:
 
-        - [[fiber_bundles]]
+        - fiber_bundles
 
-        - [[principal_connections]]
+        - principal_connections
 
-        - [[gauge_theory]]
+        - gauge_theory
 
     Mathematics:
 
-        - [[differential_geometry]]
+        - differential_geometry
 
-        - [[lie_theory]]
+        - lie_theory
 
     """
 
@@ -516,17 +516,17 @@ class BeliefManifold:
 
     Theory:
 
-        - [[statistical_manifolds]]
+        - statistical_manifolds
 
-        - [[information_geometry]]
+        - information_geometry
 
-        - [[belief_space]]
+        - belief_space
 
     Mathematics:
 
-        - [[differential_geometry]]
+        - differential_geometry
 
-        - [[probability_theory]]
+        - probability_theory
 
     """
 
@@ -574,17 +574,17 @@ class FreeEnergyGeometry:
 
     Theory:
 
-        - [[free_energy_principle]]
+        - free_energy_principle
 
-        - [[information_geometry]]
+        - information_geometry
 
-        - [[optimal_control]]
+        - optimal_control
 
     Mathematics:
 
-        - [[differential_geometry]]
+        - differential_geometry
 
-        - [[symplectic_geometry]]
+        - symplectic_geometry
 
     """
 

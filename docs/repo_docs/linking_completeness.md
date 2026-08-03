@@ -104,21 +104,21 @@ concept_links:
 
   required:
 
-    - theoretical_foundation: [[theory_docs]]
+    - theoretical_foundation: theory_docs
 
-    - implementation: [[implementation_docs]]
+    - implementation: implementation_docs
 
-    - validation: [[validation_docs]]
+    - validation: validation_docs
 
-    - examples: [[example_docs]]
+    - examples: example_docs
 
   optional:
 
-    - related_research: [[research_docs]]
+    - related_research: research_docs
 
-    - extensions: [[extension_docs]]
+    - extensions: extension_docs
 
-    - applications: [[application_docs]]
+    - applications: application_docs
 
 ```
 
@@ -130,21 +130,21 @@ implementation_links:
 
   required:
 
-    - interface_spec: [[api_docs]]
+    - interface_spec: api_docs
 
-    - test_suite: [[test_docs]]
+    - test_suite: test_docs
 
-    - validation: [[validation_docs]]
+    - validation: validation_docs
 
-    - usage: [[usage_docs]]
+    - usage: usage_docs
 
   optional:
 
-    - performance: [[performance_docs]]
+    - performance: performance_docs
 
-    - optimization: [[optimization_docs]]
+    - optimization: optimization_docs
 
-    - extensions: [[extension_docs]]
+    - extensions: extension_docs
 
 ```
 
@@ -276,13 +276,13 @@ graph LR
 
 style_guide_links:
 
-  format: "[[document_name]]"
+  format: "document_name"
 
-  alias: "[[document_name|display_text]]"
+  alias: "display_text"
 
-  section: "[[document_name#section]]"
+  section: "document_name#section"
 
-  block: "[[document_name#^block-id]]"
+  block: "document_name#^block-id"
 
 ```
 

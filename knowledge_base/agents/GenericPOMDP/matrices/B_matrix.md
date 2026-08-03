@@ -156,7 +156,7 @@ class BMatrix:
 
 #### Advanced Features
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### Storage Formats
@@ -189,7 +189,7 @@ See the canonical package documentation for a complete runnable example.
 
 #### Maximum Likelihood
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 #### Bayesian Updates

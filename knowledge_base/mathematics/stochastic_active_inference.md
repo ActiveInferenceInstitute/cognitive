@@ -199,7 +199,7 @@ G_t = \underbrace{\mathbb{E}_{q_t}[D_{KL}[q_t(s|\pi)||p_t(s|o,\pi)]]}_{\text{epi
 
 ### 1. Stochastic Integration
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### 2. Path Integral Methods

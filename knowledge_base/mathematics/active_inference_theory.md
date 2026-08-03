@@ -55,17 +55,17 @@ class GenerativeModel:
 
     Theory:
 
-        - [[state_space_model]]
+        - state_space_model
 
-        - [[markov_blanket]]
+        - markov_blanket
 
-        - [[hierarchical_model]]
+        - hierarchical_model
 
     Mathematics:
 
-        - [[probability_theory]]
+        - probability_theory
 
-        - [[graphical_models]]
+        - graphical_models
 
     """
 
@@ -125,17 +125,17 @@ class VariationalInference:
 
     Theory:
 
-        - [[variational_bayes]]
+        - variational_bayes
 
-        - [[mean_field]]
+        - mean_field
 
-        - [[message_passing]]
+        - message_passing
 
     Mathematics:
 
-        - [[variational_methods]]
+        - variational_methods
 
-        - [[information_geometry]]
+        - information_geometry
 
     """
 
@@ -197,17 +197,17 @@ class ExpectedFreeEnergy:
 
     Theory:
 
-        - [[expected_free_energy]]
+        - expected_free_energy
 
-        - [[epistemic_value]]
+        - epistemic_value
 
-        - [[pragmatic_value]]
+        - pragmatic_value
 
     Mathematics:
 
-        - [[information_theory]]
+        - information_theory
 
-        - [[decision_theory]]
+        - decision_theory
 
     """
 
@@ -327,17 +327,17 @@ class PolicySpace:
 
     Theory:
 
-        - [[policy_selection]]
+        - policy_selection
 
-        - [[action_space]]
+        - action_space
 
-        - [[planning]]
+        - planning
 
     Mathematics:
 
-        - [[optimal_control]]
+        - optimal_control
 
-        - [[decision_theory]]
+        - decision_theory
 
     """
 
@@ -395,17 +395,17 @@ class ActionSelection:
 
     Theory:
 
-        - [[active_inference]]
+        - active_inference
 
-        - [[policy_selection]]
+        - policy_selection
 
-        - [[exploration_exploitation]]
+        - exploration_exploitation
 
     Mathematics:
 
-        - [[decision_theory]]
+        - decision_theory
 
-        - [[information_theory]]
+        - information_theory
 
     """
 
@@ -459,17 +459,17 @@ class ParameterLearning:
 
     Theory:
 
-        - [[variational_learning]]
+        - variational_learning
 
-        - [[empirical_bayes]]
+        - empirical_bayes
 
-        - [[hierarchical_inference]]
+        - hierarchical_inference
 
     Mathematics:
 
-        - [[variational_methods]]
+        - variational_methods
 
-        - [[information_geometry]]
+        - information_geometry
 
     """
 
@@ -519,17 +519,17 @@ class NaturalGradient:
 
     Theory:
 
-        - [[information_geometry]]
+        - information_geometry
 
-        - [[fisher_information]]
+        - fisher_information
 
-        - [[natural_gradient]]
+        - natural_gradient
 
     Mathematics:
 
-        - [[riemannian_geometry]]
+        - riemannian_geometry
 
-        - [[differential_geometry]]
+        - differential_geometry
 
     """
 

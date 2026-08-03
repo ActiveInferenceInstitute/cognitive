@@ -976,19 +976,19 @@ class BifurcationAnalyzer:
 
 ## Related Documentation
 
-- [[control_theory]]
+- control_theory
 
-- [[differential_equations]]
+- differential_equations
 
-- [[complex_systems]]
+- complex_systems
 
-- [[statistical_physics]]
+- statistical_physics
 
-- [[neural_dynamics]]
+- neural_dynamics
 
-- [[network_science]]
+- network_science
 
-- [[ecological_systems]]
+- ecological_systems
 
 ## Learning Paths
 
@@ -996,7 +996,7 @@ class BifurcationAnalyzer:
 
 #### Week 1: Calculus and Linear Algebra
 
-- [[calculus|Differential and Integral Calculus]]
+- Differential and Integral Calculus
 
   - Derivatives and integrals
 
@@ -1004,7 +1004,7 @@ class BifurcationAnalyzer:
 
   - Differential forms
 
-- [[linear_algebra|Linear Algebra]]
+- Linear Algebra
 
   - Vector spaces
 
@@ -1014,7 +1014,7 @@ class BifurcationAnalyzer:
 
 #### Week 2: Differential Equations
 
-- [[differential_equations|Ordinary Differential Equations]]
+- Ordinary Differential Equations
 
   - First-order systems
 
@@ -1022,7 +1022,7 @@ class BifurcationAnalyzer:
 
   - Phase plane analysis
 
-- [[partial_differential_equations|Partial Differential Equations]]
+- Partial Differential Equations
 
   - Boundary value problems
 
@@ -1032,7 +1032,7 @@ class BifurcationAnalyzer:
 
 #### Week 3: Geometry and Topology
 
-- [[differential_geometry|Differential Geometry]]
+- Differential Geometry
 
   - Manifolds
 
@@ -1040,7 +1040,7 @@ class BifurcationAnalyzer:
 
   - Lie derivatives
 
-- [[topology|Topological Methods]]
+- Topological Methods
 
   - Fixed point theory
 
@@ -1050,7 +1050,7 @@ class BifurcationAnalyzer:
 
 #### Week 4: Measure Theory and Probability
 
-- [[measure_theory|Measure Theory]]
+- Measure Theory
 
   - Measurable spaces
 
@@ -1058,7 +1058,7 @@ class BifurcationAnalyzer:
 
   - Lebesgue measures
 
-- [[probability_theory|Probability Theory]]
+- Probability Theory
 
   - Random variables
 

@@ -26,9 +26,9 @@ The A-matrix defines the mapping between hidden states ([[s_space]]) and observa
 
 dimensions:
 
-  rows: num_observations    # From [[o_space]]
+  rows: num_observations    # From o_space
 
-  cols: num_states         # From [[s_space]]
+  cols: num_states         # From s_space
 
 shape_constraints:
 
@@ -42,7 +42,7 @@ shape_constraints:
 
 ## Mathematical Form
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ## Data Structure

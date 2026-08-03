@@ -357,7 +357,7 @@ knowledge_integration:
 
   concept_links:
 
-    format: "[[knowledge_base/domain/concept|Concept Name]]"
+    format: "Concept Name"
 
     purpose: "Deepen understanding through curated resources"
 
@@ -365,7 +365,7 @@ knowledge_integration:
 
   cross_path_connections:
 
-    format: "Related learning: [[path_name|Path Title]]"
+    format: "Related learning: Path Title"
 
     purpose: "Show interdisciplinary connections"
 

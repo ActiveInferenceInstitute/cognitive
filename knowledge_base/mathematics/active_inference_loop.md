@@ -77,15 +77,15 @@ class ActiveInferenceLoop:
 
         self,
 
-        A: np.ndarray,           # Observation model from [[A_matrix]]
+        A: np.ndarray,           # Observation model from A_matrix
 
-        B: np.ndarray,           # Transition model from [[B_matrix]]
+        B: np.ndarray,           # Transition model from B_matrix
 
-        C: np.ndarray,           # Preferences from [[C_matrix]]
+        C: np.ndarray,           # Preferences from C_matrix
 
-        D: np.ndarray,           # Prior beliefs from [[D_matrix]]
+        D: np.ndarray,           # Prior beliefs from D_matrix
 
-        E: np.ndarray,           # Policies from [[E_matrix]]
+        E: np.ndarray,           # Policies from E_matrix
 
         learning_rate: float = 0.1,
 

@@ -2042,7 +2042,7 @@ Concepts:
 
 ### 1. Differential Geometric Methods
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### 2. Statistical Learning Methods

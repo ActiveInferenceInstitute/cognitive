@@ -118,7 +118,7 @@ gantt
 
 ### Implementation
 
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ### Planning Strategies

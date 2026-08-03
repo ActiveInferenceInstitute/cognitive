@@ -439,7 +439,7 @@ class FloerHomology:
 
    ```math
 
-   QH^*(M) = H^*(M) \otimes \mathbb{C}[[q]]
+   QH^*(M) = H^*(M) \otimes \mathbb{C}q
 
    ```
 

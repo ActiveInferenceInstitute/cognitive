@@ -765,7 +765,7 @@ class DynamicSwarmOptimization:
 ## 📊 Performance Analysis
 
 ### Benchmark Functions
-See the canonical package documentation for a complete runnable example.
+See `docs/examples/README.md` for runnable examples.
 
 
 ## 🔧 Implementation Tools

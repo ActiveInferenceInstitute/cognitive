@@ -350,9 +350,9 @@ link_patterns = {
 
     "internal": {
 
-        "pattern": "[[{category}/{name}]]",
+        "pattern": "{category}/{name}",
 
-        "example": "[[knowledge_base/cognitive/active_inference]]",
+        "example": "knowledge_base/cognitive/active_inference",
 
         "rules": {
 
@@ -366,9 +366,9 @@ link_patterns = {
 
     "aliased": {
 
-        "pattern": "[[{path}|{display}]]",
+        "pattern": "{display}",
 
-        "example": "[[active_inference|Active Inference]]",
+        "example": "Active Inference",
 
         "rules": {
 
@@ -424,13 +424,13 @@ frontmatter:
 
       type: "{relationship_type}"
 
-      links: ["[[{target}]]"]
+      links: ["{target}"]
 
     example:
 
       type: "implements"
 
-      links: ["[[active_inference]]"]
+      links: ["active_inference"]
 
 ```
 
@@ -448,7 +448,7 @@ docstring_patterns = {
 
         {Description}
 
-        See [[{concept}]] for theoretical background.
+        See {concept} for theoretical background.
 
         Attributes:
 
@@ -472,7 +472,7 @@ docstring_patterns = {
 
         {Description}
 
-        See [[{implementation}]] for details.
+        See {implementation} for details.
 
         Args:
 

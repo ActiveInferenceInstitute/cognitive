@@ -54,9 +54,9 @@ def update_beliefs(observation: np.ndarray, prior: np.ndarray) -> np.ndarray:
 
     See Also:
 
-        [[belief_update_algorithm]]
+        belief_update_algorithm
 
-        [[free_energy_computation]]
+        free_energy_computation
 
     """
 
@@ -86,7 +86,7 @@ Example: `concepts/free_energy.md`:
 
 ## Implementation
 
-See [[free_energy_impl]] for code implementation.
+See free_energy_impl for code implementation.
 
 ```
 
@@ -136,9 +136,9 @@ status: stable
 
 related:
 
-  - [[docstring_guide]]
+  - docstring_guide
 
-  - [[api_reference]]
+  - api_reference
 
 tags:
 
@@ -161,7 +161,7 @@ tags:
 
 See implementation in `src/models/belief_update.py`:
 
-[[belief_update_impl#update_method]]
+belief_update_impl#update_method
 
 ```
 
@@ -171,7 +171,7 @@ See implementation in `src/models/belief_update.py`:
 
 def test_belief_update():
 
-    """Test case described in [[belief_update_tests]]"""
+    """Test case described in belief_update_tests"""
 
     pass
 

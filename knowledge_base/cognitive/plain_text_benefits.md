@@ -117,11 +117,11 @@ See [[model_specification]] for details.
 
 ## Cognitive Architecture
 
-- [[belief_updating]]
+- belief_updating
 
-  - [[prediction_error]]
+  - prediction_error
 
-  - [[precision_weighting]]
+  - precision_weighting
 
 ```
 
@@ -189,11 +189,11 @@ experiment:
 
   id: exp001
 
-  hypothesis: "[[active_inference_hypothesis]]"
+  hypothesis: "active_inference_hypothesis"
 
-  methods: "[[experimental_design]]"
+  methods: "experimental_design"
 
-  results: "[[data_analysis]]"
+  results: "data_analysis"
 
 ---
 
@@ -229,7 +229,7 @@ experiment:
 
 def belief_update(observation):
 
-    """See [[belief_update_theory]] for mathematical details"""
+    """See belief_update_theory for mathematical details"""
 
     pass
 

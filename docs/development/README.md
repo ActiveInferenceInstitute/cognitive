@@ -28,7 +28,10 @@ python code/scripts/check_markdown_links.py . --json
 
 `validate_docs.py` already includes the standard Markdown link check; the
 standalone `check_markdown_links.py` script also reports heading-anchor
-warnings (renderer-dependent) that the gate treats as advisory.
+mismatches for standard links, and `verify_links.py` reports
+`anchor_warnings` for wiki links whose `#fragment` does not match a
+heading slug. Both are advisory (informational; they do not fail the
+gate).
 
 Use temporary directories for figures, animations, benchmark JSON, and
 manuscript renders. The CI workflow in `.github/workflows/quality.yml` runs

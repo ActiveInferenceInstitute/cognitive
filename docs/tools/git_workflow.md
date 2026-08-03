@@ -1192,7 +1192,7 @@ Extend the branching strategy with specialized branches:
 
         "name": "Knowledge Base",
 
-        "template": "kb({{scope}}): {{subject}}\n\n{{body}}\n\nLinks: [[{{related_nodes}}]]"
+        "template": "kb({{scope}}): {{subject}}\n\n{{body}}\n\nLinks: {{related_nodes}}"
 
       }
 
