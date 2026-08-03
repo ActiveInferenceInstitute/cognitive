@@ -154,15 +154,6 @@ tags:
 
 ### Code-to-Doc Links
 
-```python
-
-# Implementation of algorithm described in [[algorithm_spec]]
-
-class BeliefUpdater:
-
-    pass
-
-```
 
 ### Doc-to-Code Links
 
@@ -299,4 +290,3 @@ def test_belief_update():
 - [[obsidian_integration]]
 
 - [[documentation_tools]]
-

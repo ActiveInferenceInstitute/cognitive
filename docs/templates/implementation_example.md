@@ -54,61 +54,46 @@ semantic_relations:
 
 ```python
 
-# Required packages
+# Required packages (repository dependencies, see pyproject.toml)
 
 import numpy as np
 
-import torch
-
 import matplotlib.pyplot as plt
-
-# Add other dependencies
 
 ```
 
 ### Core Implementation
 
+Document the component's public constructor and its required arguments.
+For a package component, the example must use symbols from the installed
+`cognitive` or `Things` packages, for example the canonical dispatcher:
+
 ```python
 
-class ExampleImplementation:
+import numpy as np
 
-    """
+from cognitive import ActiveInferenceDispatcher, DiscreteGenerativeModel, InferenceConfig, ModelState
 
-    Main implementation class.
-
-    Attributes:
-
-        param1: Description of parameter 1
-
-        param2: Description of parameter 2
-
-    """
-
-    def __init__(self, parameters):
-
-        """Initialize with configuration."""
-
-        self.parameters = parameters
-
-    def core_method(self, input_data):
-
-        """
-
-        Core computation method.
-
-        Args:
-
-            input_data: Description of input
-
-        Returns:
-
-            Processed output
-
-        """
-
-        # Implementation
-
-        pass
+model = DiscreteGenerativeModel(
+    A=np.array([[0.9, 0.1], [0.1, 0.9]]),
+    B=np.stack([np.eye(2), np.array([[0.1, 0.9], [0.9, 0.1]])], axis=2),
+    C=np.array([0.0, 1.0]),
+    D=np.array([0.5, 0.5]),
+    E=np.array([0.5, 0.5]),
+)
+dispatcher = ActiveInferenceDispatcher(
+    InferenceConfig(
+        method="variational",
+        policy_type="discrete",
+        temporal_horizon=2,
+        learning_rate=0.5,
+        precision_init=1.0,
+        seed=7,
+    ),
+    model,
+)
+state = ModelState(model.D.copy(), model.E.copy(), 1.0, 0.0, 0.0)
+beliefs = dispatcher.dispatch_belief_update(1, state)
 
 ```
 
@@ -116,19 +101,9 @@ class ExampleImplementation:
 
 ```python
 
-# Example usage
+# Example usage against the real package
 
-parameters = {
-
-    'param1': value1,
-
-    'param2': value2
-
-}
-
-implementation = ExampleImplementation(parameters)
-
-result = implementation.core_method(input_data)
+assert np.isclose(beliefs.sum(), 1.0)
 
 ```
 
@@ -283,4 +258,3 @@ def visualize_results(results):
 - [[related_example2|Related Example 2]]
 
 - [[related_example3|Related Example 3]]
-

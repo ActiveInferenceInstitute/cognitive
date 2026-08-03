@@ -106,65 +106,6 @@ def compute_expected_free_energy(beliefs, policies):
 
 ### Implementation
 
-```python
-
-class Nestmate:
-
-    """
-
-    Individual ant agent using active inference.
-
-    Attributes:
-
-        position: Current position in environment
-
-        beliefs: Beliefs about environment state
-
-        policies: Available action policies
-
-    """
-
-    def __init__(self, config):
-
-        """Initialize agent with configuration."""
-
-        self.position = Position(x, y, theta)
-
-        self.beliefs = initialize_beliefs()
-
-        self.policies = generate_policies()
-
-    def update(self, dt, world_state):
-
-        """Update agent state and take action."""
-
-        # Update beliefs based on observations
-
-        observation = self.observe(world_state)
-
-        self.update_beliefs(observation)
-
-        # Select and execute action
-
-        action = self.select_action()
-
-        self.execute_action(action, dt)
-
-    def update_beliefs(self, observation):
-
-        """Update beliefs using variational inference."""
-
-        pass
-
-    def select_action(self):
-
-        """Select action using expected free energy."""
-
-        G = compute_expected_free_energy(self.beliefs, self.policies)
-
-        return select_policy(G)
-
-```
 
 ### Validation Methods
 

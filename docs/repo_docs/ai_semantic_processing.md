@@ -120,35 +120,6 @@ semantic_markers:
 
 ### Graph Structure
 
-```python
-
-# @graph_specification
-
-class KnowledgeGraphNode:
-
-    """
-
-    Knowledge graph node with semantic embeddings
-
-    """
-
-    def __init__(self):
-
-        self.embeddings = {
-
-            "text": np.ndarray,    # Text embedding
-
-            "code": np.ndarray,    # Code embedding
-
-            "graph": np.ndarray    # Graph structure embedding
-
-        }
-
-        self.relationships = []    # Typed edges
-
-        self.metadata = {}         # Node metadata
-
-```
 
 ### Relationship Types
 
@@ -496,71 +467,22 @@ validation_config = {
 
 ### Knowledge Base Integration
 
-```python
+The repository's real knowledge-node tooling is `cognitive-create-node`
+(backed by `cognitive.utils.create_node.NodeCreator`), which creates a node
+from a YAML template with validated frontmatter:
 
-# Example of knowledge base integration
+```bash
 
-from cognitive_system import SemanticProcessor
+# Create a knowledge node from a template (see --help for options)
 
-processor = SemanticProcessor(config=embedding_config)
-
-# Process document
-
-doc_embeddings = processor.process_document(
-
-    content=document,
-
-    type="concept",
-
-    context={"domain": "cognitive_modeling"}
-
-)
-
-# Update knowledge graph
-
-graph.add_node(
-
-    embeddings=doc_embeddings,
-
-    relationships=inferred_relationships,
-
-    metadata=document_metadata
-
-)
+cognitive-create-node --help
 
 ```
 
-### Query Integration
-
-```python
-
-# Example of semantic query
-
-results = processor.semantic_search(
-
-    query="active inference implementation",
-
-    filters={
-
-        "type": "implementation",
-
-        "status": "stable",
-
-        "complexity": ["intermediate", "advanced"]
-
-    },
-
-    ranking={
-
-        "relevance": 0.7,
-
-        "recency": 0.3
-
-    }
-
-)
-
-```
+Frontmatter `semantic_relations` provide the integration links; the
+documentation validators (`python code/scripts/validate_docs.py --json` and
+`python code/scripts/verify_links.py . --json`) check that explicit links
+resolve.
 
 ## Related Documentation
 
@@ -581,4 +503,3 @@ results = processor.semantic_search(
 - [[graph_algorithms]]
 
 - [[optimization_strategies]]
-

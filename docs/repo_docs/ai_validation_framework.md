@@ -214,31 +214,6 @@ def validate_embeddings(embeddings: dict) -> ValidationResult:
 
 ### Automated Checks
 
-```python
-
-# @automated_qa
-
-class QualityAssurance:
-
-    def check_documentation(self):
-
-        """Documentation quality checks"""
-
-        pass
-
-    def check_knowledge_graph(self):
-
-        """Knowledge graph quality checks"""
-
-        pass
-
-    def check_embeddings(self):
-
-        """Embedding quality checks"""
-
-        pass
-
-```
 
 ### Continuous Validation
 
@@ -326,63 +301,9 @@ python3 docs/repo_docs/repo_scripts/fix_links.py --root . --output docs/repo_doc
 
 ### Documentation Integration
 
-```python
-
-# @documentation_integration
-
-class DocumentationValidator:
-
-    def validate(self, doc: Document) -> ValidationResult:
-
-        """
-
-        Validate documentation
-
-        Steps:
-
-        1. Structure check
-
-        2. Content check
-
-        3. Link check
-
-        4. Quality assessment
-
-        """
-
-        pass
-
-```
 
 ### Knowledge Graph Integration
 
-```python
-
-# @graph_integration
-
-class GraphValidator:
-
-    def validate(self, graph: KnowledgeGraph) -> ValidationResult:
-
-        """
-
-        Validate knowledge graph
-
-        Steps:
-
-        1. Node validation
-
-        2. Edge validation
-
-        3. Property validation
-
-        4. Consistency check
-
-        """
-
-        pass
-
-```
 
 ## Reporting Framework
 
@@ -547,4 +468,3 @@ def enhance_quality(target: str) -> EnhancementPlan:
 - [[metric_analysis]]
 
 - [[improvement_strategies]]
-

@@ -138,71 +138,9 @@ def validate_results(results, criteria):
 
 ### Implementation Tools
 
-```python
-
-# Research implementation framework
-
-class ExperimentFramework:
-
-    def __init__(self, config):
-
-        self.config = config
-
-        self.data = []
-
-        self.results = {}
-
-    def run_experiment(self):
-
-        """Run research experiment."""
-
-        for trial in range(self.config.trials):
-
-            data = self.execute_trial()
-
-            self.data.append(data)
-
-        self.results = analyze_results(self.data)
-
-        return self.results
-
-```
 
 ### Documentation Tools
 
-```python
-
-# Research documentation
-
-class ResearchDocument:
-
-    def __init__(self):
-
-        self.sections = {
-
-            'abstract': '',
-
-            'introduction': '',
-
-            'methods': '',
-
-            'results': '',
-
-            'discussion': '',
-
-            'conclusion': ''
-
-        }
-
-    def generate_report(self):
-
-        """Generate research report."""
-
-        report = compile_sections(self.sections)
-
-        return format_report(report)
-
-```
 
 ## Research Examples
 
@@ -281,4 +219,3 @@ class ResearchDocument:
 - [[docs/repo_docs/research|Research Tutorials]]
 
 - [[docs/guides/best_practices|Research Best Practices]]
-

@@ -125,127 +125,9 @@ This specialized path focuses on applying Active Inference to understand ecologi
 
 #### Week 1-2: System State Estimation
 
-```python
-
-class EcosystemStateEstimator:
-
-    def __init__(self,
-
-                 n_species: int,
-
-                 n_resources: int):
-
-        """Initialize ecosystem state estimator."""
-
-        self.species_model = SpeciesDynamics(n_species)
-
-        self.resource_model = ResourceDynamics(n_resources)
-
-        self.interaction_matrix = self._initialize_interactions()
-
-    def estimate_state(self,
-
-                      observations: torch.Tensor,
-
-                      time_scale: float) -> Dict[str, torch.Tensor]:
-
-        """Estimate ecosystem state."""
-
-        # Update species dynamics
-
-        species_state = self.species_model.update(
-
-            observations['species'],
-
-            self.interaction_matrix,
-
-            time_scale
-
-        )
-
-        # Update resource dynamics
-
-        resource_state = self.resource_model.update(
-
-            observations['resources'],
-
-            species_state,
-
-            time_scale
-
-        )
-
-        return {
-
-            'species': species_state,
-
-            'resources': resource_state
-
-        }
-
-```
 
 #### Week 3-4: Intervention Planning
 
-```python
-
-class EcologicalController:
-
-    def __init__(self,
-
-                 n_interventions: int,
-
-                 system_model: EcosystemModel):
-
-        """Initialize ecological controller."""
-
-        self.interventions = InterventionSet(n_interventions)
-
-        self.model = system_model
-
-        self.objectives = MultiObjectiveFunction()
-
-    def plan_intervention(self,
-
-                        current_state: torch.Tensor,
-
-                        target_state: torch.Tensor) -> Dict[str, Any]:
-
-        """Plan ecological intervention."""
-
-        # Generate intervention policies
-
-        policies = self.interventions.generate_policies(current_state)
-
-        # Evaluate expected free energy
-
-        G = torch.zeros(len(policies))
-
-        for i, policy in enumerate(policies):
-
-            # Simulate intervention effects
-
-            future_states = self.model.simulate_policy(
-
-                current_state, policy
-
-            )
-
-            # Compute expected free energy
-
-            G[i] = self.compute_expected_free_energy(
-
-                future_states, target_state
-
-            )
-
-        # Select optimal intervention
-
-        best_policy = policies[torch.argmin(G)]
-
-        return self.create_intervention_plan(best_policy)
-
-```
 
 ### 2. Ecological Applications (6 weeks)
 
@@ -283,57 +165,6 @@ class EcologicalController:
 
 #### Week 1-2: Climate Response
 
-```python
-
-class ClimateResponseModel:
-
-    def __init__(self,
-
-                 climate_vars: List[str],
-
-                 ecosystem_vars: List[str]):
-
-        """Initialize climate response model."""
-
-        self.climate = ClimateModel(climate_vars)
-
-        self.ecosystem = EcosystemModel(ecosystem_vars)
-
-        self.coupling = self._initialize_coupling()
-
-    def predict_response(self,
-
-                        climate_scenario: torch.Tensor,
-
-                        time_horizon: int) -> Dict[str, torch.Tensor]:
-
-        """Predict ecosystem response to climate scenario."""
-
-        responses = []
-
-        state = self.ecosystem.get_state()
-
-        for t in range(time_horizon):
-
-            # Update climate
-
-            climate_state = self.climate.step(climate_scenario[t])
-
-            # Update ecosystem
-
-            ecosystem_response = self.ecosystem.respond_to_climate(
-
-                state, climate_state
-
-            )
-
-            responses.append(ecosystem_response)
-
-            state = ecosystem_response
-
-        return self.analyze_responses(responses)
-
-```
 
 #### Week 3-4: Adaptation Planning
 
@@ -349,49 +180,6 @@ class ClimateResponseModel:
 
 #### Week 1-2: Complex Systems Analysis
 
-```python
-
-class EcologicalNetworkAnalysis:
-
-    def __init__(self,
-
-                 network: nx.Graph,
-
-                 dynamics: Dict[str, Callable]):
-
-        """Initialize ecological network analysis."""
-
-        self.network = network
-
-        self.dynamics = dynamics
-
-        self.metrics = NetworkMetrics()
-
-    def analyze_stability(self,
-
-                         perturbation: torch.Tensor) -> Dict[str, float]:
-
-        """Analyze network stability under perturbation."""
-
-        # Compute network properties
-
-        properties = self.metrics.compute_properties(self.network)
-
-        # Simulate perturbation
-
-        response = self.simulate_perturbation(perturbation)
-
-        # Analyze stability
-
-        stability = self.metrics.analyze_stability(
-
-            properties, response
-
-        )
-
-        return stability
-
-```
 
 #### Week 3-4: Socio-Ecological Systems
 
@@ -558,4 +346,3 @@ class EcologicalNetworkAnalysis:
 1. [[knowledge_base/research/environmental_science|Environmental Science Research]]
 
 1. [[knowledge_base/research/conservation_biology|Conservation Biology Research]]
-

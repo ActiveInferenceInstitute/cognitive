@@ -52,18 +52,6 @@ semantic_relations:
 
 ### Logging
 
-```python
-import logging
-
-logger = logging.getLogger(__name__)
-
-class Agent:
-    def infer_states(self, observation):
-        logger.debug(f"Observation received: {observation}")
-        posterior = self._variational_update(observation)
-        logger.info(f"Posterior entropy: {self._entropy(posterior):.4f}")
-        return posterior
-```
 
 - Log at appropriate levels: DEBUG for internals, INFO for flow, WARNING for anomalies
 - Include free energy values in logs to track convergence

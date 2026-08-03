@@ -86,37 +86,6 @@ def theoretical_framework():
 
 ### Implementation
 
-```python
-
-# Core implementation
-
-class ExperimentalSetup:
-
-    def __init__(self, parameters):
-
-        self.parameters = parameters
-
-    def run_experiment(self):
-
-        """
-
-        Experimental procedure.
-
-        """
-
-        pass
-
-    def collect_data(self):
-
-        """
-
-        Data collection.
-
-        """
-
-        pass
-
-```
 
 ### Validation Methods
 
@@ -214,11 +183,9 @@ python setup.py develop
 
 ```python
 
-# Required packages
+# Required packages (repository dependencies, see pyproject.toml)
 
 import numpy as np
-
-import torch
 
 import matplotlib.pyplot as plt
 
@@ -321,4 +288,3 @@ parameters:
 - [[followup1|Follow-up Research 1]]
 
 - [[followup2|Follow-up Research 2]]
-

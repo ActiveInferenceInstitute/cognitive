@@ -370,79 +370,9 @@ graph TB
 
 #### Week 1-2: Natural State Inference
 
-```python
-
-class BiologicalStateEstimator:
-
-    def __init__(self,
-
-                 system_levels: List[str],
-
-                 adaptation_rate: float):
-
-        """Initialize biological state estimator."""
-
-        self.system_hierarchy = SystemHierarchy(system_levels)
-
-        self.adaptation_mechanism = AdaptationMechanism(adaptation_rate)
-
-        self.homeostasis_monitor = HomeostasisMonitor()
-
-    def estimate_state(self,
-
-                      environmental_signals: torch.Tensor,
-
-                      internal_state: torch.Tensor) -> BiologicalState:
-
-        """Estimate biological system state."""
-
-        current_state = self.system_hierarchy.integrate_signals(
-
-            environmental_signals, internal_state
-
-        )
-
-        adapted_state = self.adaptation_mechanism.update(current_state)
-
-        return self.homeostasis_monitor.validate_state(adapted_state)
-
-```
 
 #### Week 3-4: Natural Decision Making
 
-```python
-
-class BiologicalDecisionMaker:
-
-    def __init__(self,
-
-                 behavior_space: BehaviorSpace,
-
-                 fitness_function: FitnessFunction):
-
-        """Initialize biological decision maker."""
-
-        self.behavior_repertoire = BehaviorRepertoire(behavior_space)
-
-        self.fitness_evaluator = fitness_function
-
-        self.adaptation_policy = AdaptationPolicy()
-
-    def select_behavior(self,
-
-                       environmental_state: torch.Tensor,
-
-                       internal_needs: torch.Tensor) -> Behavior:
-
-        """Select adaptive behavior."""
-
-        options = self.behavior_repertoire.generate_options()
-
-        fitness_scores = self.evaluate_fitness(options, environmental_state)
-
-        return self.adaptation_policy.select_action(options, fitness_scores)
-
-```
 
 ### 2. Natural Applications (6 weeks)
 
@@ -480,37 +410,6 @@ class BiologicalDecisionMaker:
 
 #### Week 1-2: Evolutionary Learning
 
-```python
-
-class EvolutionaryLearner:
-
-    def __init__(self,
-
-                 population_size: int,
-
-                 mutation_rate: float):
-
-        """Initialize evolutionary learning system."""
-
-        self.population = Population(population_size)
-
-        self.selection = NaturalSelection()
-
-        self.variation = VariationOperator(mutation_rate)
-
-    def evolve_generation(self,
-
-                         environment: Environment) -> Population:
-
-        """Evolve population through one generation."""
-
-        fitness = self.evaluate_fitness(self.population, environment)
-
-        selected = self.selection.select(self.population, fitness)
-
-        return self.variation.create_offspring(selected)
-
-```
 
 #### Week 3-4: Adaptive Systems
 
@@ -526,39 +425,6 @@ class EvolutionaryLearner:
 
 #### Week 1-2: Multi-scale Integration
 
-```python
-
-class BiologicalHierarchy:
-
-    def __init__(self,
-
-                 scale_levels: List[ScaleLevel],
-
-                 integration_params: IntegrationParams):
-
-        """Initialize biological hierarchy."""
-
-        self.levels = scale_levels
-
-        self.integrator = ScaleIntegrator(integration_params)
-
-        self.coordinator = SystemCoordinator()
-
-    def process_information(self,
-
-                          inputs: Dict[str, torch.Tensor]) -> SystemState:
-
-        """Process information across scales."""
-
-        level_states = {level: level.process(inputs[level.name])
-
-                       for level in self.levels}
-
-        integrated_state = self.integrator.combine_states(level_states)
-
-        return self.coordinator.coordinate_responses(integrated_state)
-
-```
 
 #### Week 3-4: Natural Computation
 
@@ -1738,4 +1604,3 @@ Throughout the path, concepts are automatically linked to knowledge base entries
 - **Neural Computation**: [[knowledge_base/cognitive/neural_computation|Neural Computation]] ⟷ Extends to [[active_inference_neuroscience_learning_path|Neuroscience Path]]
 
 - **Evolutionary Algorithms**: [[knowledge_base/mathematics/evolutionary_algorithms|Evolutionary Algorithms]] ⟷ Applied in [[active_inference_agi_learning_path|AGI Path]]
-

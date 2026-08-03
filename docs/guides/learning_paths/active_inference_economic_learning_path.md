@@ -163,73 +163,9 @@ This learning path is designed as a co-learning program between Economics depart
 
 ##### Market State Inference
 
-```python
-
-class MarketStateEstimator:
-
-    def __init__(self,
-
-                 n_agents: int,
-
-                 market_dim: int):
-
-        """Initialize market state estimator."""
-
-        self.agents = [EconomicAgent() for _ in range(n_agents)]
-
-        self.market_state = torch.zeros(market_dim)
-
-        self.trading_network = self._build_network()
-
-    def estimate_state(self,
-
-                      market_data: torch.Tensor) -> torch.Tensor:
-
-        """Estimate market state from data."""
-
-        beliefs = self._update_agent_beliefs(market_data)
-
-        market_state = self._aggregate_beliefs(beliefs)
-
-        return market_state
-
-```
 
 ##### Economic Decision Making
 
-```python
-
-class EconomicController:
-
-    def __init__(self,
-
-                 action_space: int,
-
-                 utility_model: UtilityFunction):
-
-        """Initialize economic controller."""
-
-        self.policy = EconomicPolicy(action_space)
-
-        self.utility = utility_model
-
-        self.risk_model = RiskAssessment()
-
-    def select_action(self,
-
-                     market_state: torch.Tensor,
-
-                     uncertainty: torch.Tensor) -> torch.Tensor:
-
-        """Select economic action under uncertainty."""
-
-        expected_utility = self._compute_expected_utility(market_state)
-
-        risk_adjusted_policy = self._adjust_for_risk(expected_utility, uncertainty)
-
-        return self.policy.sample(risk_adjusted_policy)
-
-```
 
 - Price Formation
 
@@ -263,73 +199,9 @@ class EconomicController:
 
 ##### Policy Design
 
-```python
-
-class PolicyDesigner:
-
-    def __init__(self,
-
-                 economy_model: EconomyModel,
-
-                 policy_objectives: List[Objective]):
-
-        """Initialize policy designer."""
-
-        self.model = economy_model
-
-        self.objectives = policy_objectives
-
-        self.constraints = PolicyConstraints()
-
-    def design_policy(self,
-
-                     current_state: torch.Tensor,
-
-                     target_state: torch.Tensor) -> Policy:
-
-        """Design optimal policy intervention."""
-
-        policy_space = self._generate_policy_space()
-
-        evaluated_policies = self._evaluate_policies(policy_space)
-
-        return self._select_optimal_policy(evaluated_policies)
-
-```
 
 ##### Complex Economic Networks
 
-```python
-
-class EconomicNetwork:
-
-    def __init__(self,
-
-                 n_institutions: int,
-
-                 network_topology: str):
-
-        """Initialize economic network."""
-
-        self.institutions = [Institution() for _ in range(n_institutions)]
-
-        self.topology = self._build_topology(network_topology)
-
-        self.dynamics = NetworkDynamics()
-
-    def simulate_contagion(self,
-
-                          initial_shock: torch.Tensor) -> torch.Tensor:
-
-        """Simulate economic contagion through network."""
-
-        propagation = self.dynamics.simulate(initial_shock)
-
-        systemic_impact = self._assess_impact(propagation)
-
-        return systemic_impact
-
-```
 
 ##### Impact Analysis
 
@@ -863,4 +735,3 @@ learning_resource_dashboard = {
     }
 
 }
-

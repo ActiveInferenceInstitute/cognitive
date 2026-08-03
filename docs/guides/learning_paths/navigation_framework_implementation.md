@@ -230,53 +230,6 @@ Each learning module should follow this educational template:
 
 **Code Example Format:**
 
-```python
-
-# Educational Purpose: Demonstrates concept X in Active Inference
-
-# Learning Focus: Understanding how Y relates to Z
-
-# Next Steps: Learners will explore this concept through...
-
-class ConceptualExample:
-
-    """
-
-    This example illustrates [specific concept].
-
-    Focus on understanding [key principle] rather than implementation.
-
-    """
-
-    def __init__(self):
-
-        # Key concept: [explanation]
-
-        pass
-
-    def demonstrate_concept(self):
-
-        """
-
-        Learning objective: Show how [concept] works
-
-        Educational value: Understanding [principle]
-
-        """
-
-        # Simplified demonstration focusing on concept
-
-        pass
-
-# Reflection Questions:
-
-# 1. How does this relate to Active Inference principles?
-
-# 2. What real-world applications can you envision?
-
-# 3. How would you explain this concept to a peer?
-
-```
 
 ### Assessment and Evaluation Framework
 
@@ -743,4 +696,3 @@ improvement_cycle:
 ```
 
 This framework ensures all learning paths maintain their educational integrity while providing practical, applicable knowledge in Active Inference across all domains.
-

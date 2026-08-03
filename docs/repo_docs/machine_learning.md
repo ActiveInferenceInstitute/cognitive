@@ -78,35 +78,9 @@ This guide covers machine learning concepts, implementations, and best practices
 
 #### Base Components
 
-```python
-
-class CognitiveModel:
-
-    def __init__(self):
-
-        self.belief_network = BeliefNetwork()
-
-        self.action_policy = ActionPolicy()
-
-        self.perception_model = PerceptionModel()
-
-```
 
 #### Learning Components
 
-```python
-
-class LearningModule:
-
-    def __init__(self):
-
-        self.optimizer = FreeEnergyOptimizer()
-
-        self.inference = VariationalInference()
-
-        self.memory = EpisodicMemory()
-
-```
 
 ### Training Process
 
@@ -224,35 +198,9 @@ class LearningModule:
 
 ### With Active Inference
 
-```python
-
-class ActiveInferenceLearner:
-
-    """Integrate learning with active inference."""
-
-    def __init__(self):
-
-        self.model = ActiveInferenceModel()
-
-        self.learner = LearningModule()
-
-```
 
 ### With Predictive Processing
 
-```python
-
-class PredictiveLearner:
-
-    """Integrate learning with predictive processing."""
-
-    def __init__(self):
-
-        self.model = PredictiveModel()
-
-        self.learner = LearningModule()
-
-```
 
 ## Validation
 
@@ -347,4 +295,3 @@ model.train_continual(data_stream)
 - [[knowledge_base/mathematics/variational_inference]]
 
 - [[docs/repo_docs/ai_validation_framework]]
-

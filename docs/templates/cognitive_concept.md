@@ -52,23 +52,6 @@ semantic_relations:
 
 ### Computational Model
 
-```python
-
-# Example implementation
-
-class ConceptModel:
-
-    def __init__(self, parameters):
-
-        self.parameters = parameters
-
-    def compute(self, input_data):
-
-        # Core computation
-
-        pass
-
-```
 
 ### Key Components
 
@@ -167,4 +150,3 @@ class ConceptModel:
 - [[related_concept2|Related Concept 2]]
 
 - [[related_concept3|Related Concept 3]]
-

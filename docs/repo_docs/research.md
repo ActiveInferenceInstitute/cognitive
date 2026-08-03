@@ -78,51 +78,12 @@ This guide outlines research methodologies, best practices, and workflows for co
 
 1. Hypothesis Formation
 
-   ```python
-
-   class ResearchHypothesis:
-
-       def __init__(self):
-
-           self.theory = Theory()
-
-           self.predictions = Predictions()
-
-           self.variables = Variables()
-
-   ```
 
 1. Experimental Setup
 
-   ```python
-
-   class Experiment:
-
-       def __init__(self):
-
-           self.conditions = Conditions()
-
-           self.controls = Controls()
-
-           self.measures = Measures()
-
-   ```
 
 1. Data Collection
 
-   ```python
-
-   class DataCollection:
-
-       def __init__(self):
-
-           self.sensors = Sensors()
-
-           self.loggers = Loggers()
-
-           self.storage = Storage()
-
-   ```
 
 ### Analysis Methods
 
@@ -413,4 +374,3 @@ This guide outlines research methodologies, best practices, and workflows for co
 - [[docs/repo_docs/documentation_standards]]
 
 - docs/guides/code_documentation
-

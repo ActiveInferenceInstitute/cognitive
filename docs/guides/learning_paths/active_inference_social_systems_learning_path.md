@@ -314,79 +314,9 @@ graph TB
 
 #### Week 1-2: Social State Inference
 
-```python
-
-class SocialStateEstimator:
-
-    def __init__(self,
-
-                 social_levels: List[str],
-
-                 learning_rate: float):
-
-        """Initialize social state estimator."""
-
-        self.social_hierarchy = SocialHierarchy(social_levels)
-
-        self.learning_mechanism = SocialLearning(learning_rate)
-
-        self.norm_monitor = NormMonitor()
-
-    def estimate_state(self,
-
-                      social_signals: torch.Tensor,
-
-                      group_state: torch.Tensor) -> SocialState:
-
-        """Estimate social system state."""
-
-        current_state = self.social_hierarchy.integrate_signals(
-
-            social_signals, group_state
-
-        )
-
-        learned_state = self.learning_mechanism.update(current_state)
-
-        return self.norm_monitor.validate_state(learned_state)
-
-```
 
 #### Week 3-4: Collective Decision Making
 
-```python
-
-class CollectiveDecisionMaker:
-
-    def __init__(self,
-
-                 action_space: ActionSpace,
-
-                 social_utility: SocialUtility):
-
-        """Initialize collective decision maker."""
-
-        self.action_repertoire = ActionRepertoire(action_space)
-
-        self.utility_evaluator = social_utility
-
-        self.coordination_policy = CoordinationPolicy()
-
-    def select_action(self,
-
-                     social_state: torch.Tensor,
-
-                     group_goals: torch.Tensor) -> Action:
-
-        """Select collective action."""
-
-        options = self.action_repertoire.generate_options()
-
-        utilities = self.evaluate_social_utility(options, social_state)
-
-        return self.coordination_policy.select_action(options, utilities)
-
-```
 
 ### 2. Social Applications (6 weeks)
 
@@ -424,37 +354,6 @@ class CollectiveDecisionMaker:
 
 #### Week 1-2: Social Learning
 
-```python
-
-class SocialLearner:
-
-    def __init__(self,
-
-                 group_size: int,
-
-                 learning_rate: float):
-
-        """Initialize social learning system."""
-
-        self.group = SocialGroup(group_size)
-
-        self.learning = SocialLearningMechanism()
-
-        self.adaptation = AdaptationOperator(learning_rate)
-
-    def learn_collectively(self,
-
-                         environment: Environment) -> GroupKnowledge:
-
-        """Learn through social interaction."""
-
-        observations = self.group.observe_environment(environment)
-
-        shared_knowledge = self.learning.aggregate_knowledge(observations)
-
-        return self.adaptation.update_group_knowledge(shared_knowledge)
-
-```
 
 #### Week 3-4: Collective Systems
 
@@ -470,39 +369,6 @@ class SocialLearner:
 
 #### Week 1-2: Multi-scale Social Integration
 
-```python
-
-class SocialHierarchy:
-
-    def __init__(self,
-
-                 scale_levels: List[ScaleLevel],
-
-                 integration_params: IntegrationParams):
-
-        """Initialize social hierarchy."""
-
-        self.levels = scale_levels
-
-        self.integrator = ScaleIntegrator(integration_params)
-
-        self.coordinator = SocialCoordinator()
-
-    def process_social_information(self,
-
-                                 inputs: Dict[str, torch.Tensor]) -> SystemState:
-
-        """Process information across social scales."""
-
-        level_states = {level: level.process(inputs[level.name])
-
-                       for level in self.levels}
-
-        integrated_state = self.integrator.combine_states(level_states)
-
-        return self.coordinator.coordinate_responses(integrated_state)
-
-```
 
 #### Week 3-4: Social Computation
 
@@ -1553,4 +1419,3 @@ graph LR
   - Data analysts
 
   - Integration experts
-
