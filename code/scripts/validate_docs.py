@@ -57,6 +57,10 @@ def _validate_frontmatter(path: Path, content: str) -> list[str]:
         return [f"{path}: invalid YAML frontmatter: {exc}"]
     if not isinstance(parsed, dict):
         return [f"{path}: frontmatter must be a mapping"]
+    template_values = {"unique_identifier", "timestamp", "lorem_ipsum"}
+    for key, value in parsed.items():
+        if isinstance(value, str) and value.strip().lower() in template_values:
+            return [f"{path}: template frontmatter value for '{key}': '{value.strip()}'"]
     return []
 
 
@@ -116,9 +120,7 @@ def _validate_manuscript(root: Path) -> dict[str, Any]:
     missing_references = sorted(set(references).difference(labels))
     if missing_references:
         errors.append(f"Unresolved manuscript cross-references: {missing_references}")
-    citation_keys = set(
-        re.findall(r"(?<![:\w])@([a-z][a-z0-9_]+)(?![a-z0-9_]*:)", source)
-    )
+    citation_keys = set(re.findall(r"(?<![:\w])@([a-z][a-z0-9_]+)(?![a-z0-9_]*:)", source))
     bib = (
         (manuscript / "references.bib").read_text(encoding="utf-8")
         if (manuscript / "references.bib").is_file()
@@ -172,9 +174,7 @@ def validate(root: str | Path = ".") -> dict[str, Any]:
         errors.append(f"{len(links.broken_links)} explicit wiki links do not resolve")
     markdown_links = verify_markdown_link_report(root_path)
     if markdown_links.broken_links:
-        errors.append(
-            f"{len(markdown_links.broken_links)} standard Markdown links do not resolve"
-        )
+        errors.append(f"{len(markdown_links.broken_links)} standard Markdown links do not resolve")
     errors.extend(_validate_exports())
     manuscript = _validate_manuscript(root_path)
     errors.extend(manuscript["errors"])
@@ -188,6 +188,7 @@ def validate(root: str | Path = ".") -> dict[str, Any]:
             "resolved": links.resolved_links,
             "skipped_concepts": links.skipped_concept_links,
             "broken": links.broken_links,
+            "anchor_warnings": links.anchor_warnings,
         },
         "markdown_links": {
             "checked": markdown_links.checked_links,
@@ -212,10 +213,7 @@ def main(argv: list[str] | None = None) -> int:
     else:
         print(f"Checked {report['tracked_text_files']} tracked text files.")
         print(f"Checked {report['links']['checked']} wiki links.")
-        print(
-            "Checked "
-            f"{report['markdown_links']['checked']} standard Markdown links."
-        )
+        print(f"Checked {report['markdown_links']['checked']} standard Markdown links.")
         print(f"Found {len(report['forbidden_terms'])} forbidden-term occurrences.")
         print(f"Found {len(report['documentation_errors'])} documentation errors.")
     return 0 if report["ok"] else 1

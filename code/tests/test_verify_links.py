@@ -106,3 +106,41 @@ def test_cli_defaults_to_concept_aware_validation(tmp_path, capsys):
     output = capsys.readouterr().out
     assert exit_code == 0
     assert "Skipped 1 unresolved concept/wiki links" in output
+
+
+def test_valid_anchor_fragment_does_not_warn(tmp_path):
+    write_markdown(tmp_path / "concept.md", "# Concept\n\n## Sub Section\n")
+    write_markdown(
+        tmp_path / "index.md",
+        "See [[concept#Sub-Section|the subsection]].",
+    )
+
+    report = verify_link_report(tmp_path)
+
+    assert report.broken_links == []
+    assert report.anchor_warnings == []
+
+
+def test_missing_anchor_fragment_warns(tmp_path):
+    write_markdown(tmp_path / "concept.md", "# Concept\n")
+    write_markdown(
+        tmp_path / "index.md",
+        "See [[concept#Missing-Anchor|missing]].",
+    )
+
+    report = verify_link_report(tmp_path)
+
+    assert report.broken_links == []
+    assert len(report.anchor_warnings) == 1
+    assert report.anchor_warnings[0]["fragment"] == "Missing-Anchor"
+    assert report.anchor_warnings[0]["source"] == "index.md"
+
+
+def test_stem_ambiguous_concept_link_is_not_broken(tmp_path):
+    write_markdown(tmp_path / "a" / "README.md", "# A")
+    write_markdown(tmp_path / "b" / "README.md", "# B")
+    write_markdown(tmp_path / "index.md", "See [[README]].")
+
+    report = verify_link_report(tmp_path)
+
+    assert report.broken_links == []

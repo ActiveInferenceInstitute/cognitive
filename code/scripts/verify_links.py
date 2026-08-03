@@ -69,6 +69,7 @@ class LinkReport:
     resolved_links: int = 0
     skipped_concept_links: int = 0
     indexed_markdown_files: int = 0
+    anchor_warnings: list[dict[str, str]] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
@@ -122,6 +123,40 @@ def _build_index(root_dir: Path) -> LinkIndex:
 def _extract_wiki_target(match: str) -> str:
     target = match.split("|", 1)[0].split("#", 1)[0]
     return target.strip()
+
+
+def _extract_wiki_fragment(match: str) -> str | None:
+    """Return the ``#fragment`` anchor of a wiki link, if present."""
+    before_pipe = match.split("|", 1)[0]
+    if "#" not in before_pipe:
+        return None
+    fragment = before_pipe.split("#", 1)[1].strip()
+    return fragment or None
+
+
+def _slugify(value: str) -> str:
+    slug = re.sub(r"[^\w\s-]", "", value).strip().lower()
+    return re.sub(r"[\s_]+", "-", slug)
+
+
+def _heading_slugs(filepath: Path) -> set[str]:
+    """Slugs for Markdown headings in a file, GFM/Obsidian style."""
+    slugs: set[str] = set()
+    try:
+        content = filepath.read_text(encoding="utf-8")
+    except OSError:
+        return slugs
+    for line in content.splitlines():
+        stripped = line.strip()
+        if not stripped.startswith("#") or stripped.startswith("#!"):
+            continue
+        heading = stripped.lstrip("#").strip()
+        if not heading:
+            continue
+        slug = _slugify(heading)
+        if slug:
+            slugs.add(slug)
+    return slugs
 
 
 def _has_file_suffix(target: str) -> bool:
@@ -181,6 +216,43 @@ def _target_exists(
     return basename_key in index.markdown_by_stem
 
 
+def _resolve_target_path(
+    root_dir: Path,
+    source_path: Path,
+    target: str,
+    index: LinkIndex,
+) -> Path | None:
+    """Resolve a wiki target to a file path, or ``None``.
+
+    Mirrors :func:`_target_exists` but returns the resolved file so
+    callers can inspect its headings for anchor validation.
+    """
+    seen: set[str] = set()
+    for candidate in _candidate_paths(root_dir, source_path, target):
+        key = _normalise_key(str(candidate))
+        if key in seen:
+            continue
+        seen.add(key)
+        if candidate.is_file():
+            return candidate
+
+    rel_key = _normalise_key(target)
+    if rel_key in index.all_files_by_rel:
+        return root_dir / target
+
+    if rel_key in index.markdown_by_rel_no_suffix:
+        return index.markdown_by_rel_no_suffix[rel_key]
+
+    if _has_file_suffix(target):
+        return None
+
+    basename_key = _normalise_key(Path(target).stem)
+    matches = index.markdown_by_stem.get(basename_key, [])
+    if matches:
+        return matches[0]
+    return None
+
+
 def verify_link_report(
     root_dir: str | Path,
     *,
@@ -210,8 +282,21 @@ def verify_link_report(
                 continue
 
             report.checked_links += 1
-            if _target_exists(root_path, filepath, target, index):
+            resolved = _resolve_target_path(root_path, filepath, target, index)
+            if resolved is not None:
                 report.resolved_links += 1
+                fragment = _extract_wiki_fragment(match)
+                if fragment:
+                    slugs = _heading_slugs(resolved)
+                    if _slugify(fragment) not in slugs:
+                        report.anchor_warnings.append(
+                            {
+                                "source": filepath.relative_to(root_path).as_posix(),
+                                "link": match,
+                                "target": target,
+                                "fragment": fragment,
+                            }
+                        )
                 continue
 
             if not strict_wiki_links and not _is_explicit_file_reference(target):
@@ -280,6 +365,7 @@ def main(argv: list[str] | None = None) -> int:
                     "resolved_links": report.resolved_links,
                     "skipped_concept_links": report.skipped_concept_links,
                     "indexed_markdown_files": report.indexed_markdown_files,
+                    "anchor_warnings": report.anchor_warnings,
                 },
                 indent=2,
                 sort_keys=True,
@@ -296,6 +382,14 @@ def main(argv: list[str] | None = None) -> int:
             f"{report.skipped_concept_links} unresolved concept/wiki links "
             "(use --strict-wiki-links to audit them)."
         )
+
+    if report.anchor_warnings:
+        print(f"Found {len(report.anchor_warnings)} anchor warnings:")
+        for warning in report.anchor_warnings:
+            print(f"  Source: {warning['source']}")
+            print(f"  Link: [[{warning['link']}]]")
+            print(f"  Fragment: #{warning['fragment']}")
+            print("-" * 20)
 
     if report.broken_links:
         print(f"Found {len(report.broken_links)} broken file links:")
