@@ -58,7 +58,7 @@ python -m pytest code/tests/ -v --cov=code/tools/src --cov-report=term-missing
 python code/tests/run_tests.py
 
 # Run benchmarks
-python code/tests/run_benchmarks.py
+cognitive-benchmark --repetitions 1
 ```
 
 Test configuration is in `code/tests/test_config.yaml`. Shared fixtures (sample matrices, belief vectors, output directories) are in `code/tests/conftest.py`. Matplotlib is set to `Agg` backend in conftest for non-interactive test runs.

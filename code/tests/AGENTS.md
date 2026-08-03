@@ -67,7 +67,7 @@ The test suite is organized into:
 
 #### Test Execution
 - `run_tests.py`: Test runner with detailed reporting
-- `run_benchmarks.py`: Performance benchmark execution
+- `cognitive-benchmark`: Performance benchmark execution (installed CLI entry point; see `pyproject.toml`)
 - Coverage reporting
 - Test result generation
 
@@ -153,7 +153,7 @@ python -m pytest
 python -m pytest code/tests/test_matrix_ops.py
 
 # Run with coverage
-python -m pytest --cov=src --cov-report=html
+python -m pytest -q --cov=code/tools/src --cov-report=term-missing
 ```
 
 #### Test Reporting
