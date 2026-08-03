@@ -28,3 +28,8 @@ Research on social cognition through the lens of Active Inference, including the
 
 - [[knowledge_base/cognitive/active_inference]]
 - [[knowledge_base/systems/social_systems]]
+
+## See also
+
+- [[knowledge_base/cognitive/social_cognition|Social Cognition]]
+- [[knowledge_base/free_energy_principle/cognitive/social_cognition|Social Cognition as Mutual Active Inference]]

@@ -2776,3 +2776,6 @@ if __name__ == "__main__":
 
 ```text
 
+## See also
+
+- [[knowledge_base/systems/dynamical_systems|Dynamical Systems in Complex Systems]]

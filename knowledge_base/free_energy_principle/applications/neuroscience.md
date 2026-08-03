@@ -489,3 +489,7 @@ Neuromorphic chips (Intel Loihi, IBM TrueNorth):
 - [[knowledge_base/free_energy_principle/biology/neural_systems|Neural Systems]]
 - [[psychiatry|Psychiatric Applications]]
 - [[knowledge_base/free_energy_principle/implementations/robotics|Robotics Implementations]]
+
+## See also
+
+- [[knowledge_base/biology/neuroscience|Neuroscience]]

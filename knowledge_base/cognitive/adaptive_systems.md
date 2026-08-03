@@ -134,3 +134,7 @@ class AdaptiveSystem:
 
 - Friston, K. (2013). Life as we know it. *Journal of the Royal Society Interface*, 10(86).
 - Ramstead, M. J. D., et al. (2018). Answering Schrödinger's question: A free-energy formulation.
+
+## See also
+
+- [[knowledge_base/systems/adaptive_systems|Adaptive Systems]]

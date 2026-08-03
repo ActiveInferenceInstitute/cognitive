@@ -69,3 +69,7 @@ def belief_propagation(factors, variables, max_iter=100, tol=1e-6):
 - [[knowledge_base/mathematics/factor_graphs]] — Factor graph structures
 - [[knowledge_base/mathematics/graphical_models]] — Graphical model theory
 - [[knowledge_base/cognitive/predictive_coding]] — Predictive coding architecture
+
+## See also
+
+- [[knowledge_base/mathematics/belief_propagation|Belief Propagation]]

@@ -100,3 +100,7 @@ Through repeated interactions, Active Inference agents can develop cooperative s
 - [[knowledge_base/cognitive/multi_agent_active_inference]] — Multi-agent Active Inference
 - [[knowledge_base/cognitive/social_cognition]] — Social inference mechanisms
 - [[knowledge_base/cognitive/collective_behavior]] — Collective behavior dynamics\n
+
+## See also
+
+- [[knowledge_base/mathematics/game_theory|Game Theory]]

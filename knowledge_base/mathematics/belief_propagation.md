@@ -156,3 +156,7 @@ In [[active_inference_theory|active inference]], belief propagation operates on 
 - Yedidia, J. S., Freeman, W. T., & Weiss, Y. (2003). Understanding belief propagation and its generalizations
 - Friston, K. J. et al. (2017). Active inference and belief propagation
 - Parr, T. & Friston, K. J. (2019). Generalised free energy and active inference
+
+## See also
+
+- [[knowledge_base/research/concepts/belief_propagation|Belief Propagation]]

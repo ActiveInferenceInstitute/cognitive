@@ -34,6 +34,14 @@ semantic_relations:
 
 # Implementation Examples Using Social Insect Code
 
+> [!note] Scope
+> The ant-colony runtime is not shipped in this repository:
+> `code/Things/Ant_Colony/` contains documentation only. The Python examples
+> below illustrate the intended API of that external implementation and are
+> not runnable from this checkout. For runnable examples of the installed
+> `Things` package, see the root `README.md`, `docs/examples/README.md`, and
+> `docs/manuscript/README.md`.
+
 ## Overview
 
 This document provides practical implementation examples using the existing Ant Colony and swarm intelligence code. These examples demonstrate how to apply the biological knowledge of ants and bees to build working cognitive systems, optimization algorithms, and multi-agent simulations. The examples bridge theoretical biology with practical programming, showing how social insect principles can be implemented in code.

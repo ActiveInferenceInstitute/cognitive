@@ -36,6 +36,12 @@ semantic_relations:
 
 # Core Concepts Overview
 
+> [!note] Illustrative code
+> The code blocks in this page are illustrative pseudocode that explains
+> concepts (factor graphs, variational inference, generative models). They
+> are not the API of the installed `cognitive` package. For executable
+> examples, see the root `README.md` and `docs/manuscript/README.md`.
+
 This document provides a comprehensive overview of the core concepts underlying our cognitive modeling framework. Understanding these concepts is essential for effectively working with the framework.
 
 ## Theoretical Foundation

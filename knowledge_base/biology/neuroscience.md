@@ -588,3 +588,6 @@ class NeuralCircuit:
 
 - [[computational_neuroscience]]
 
+## See also
+
+- [[knowledge_base/free_energy_principle/applications/neuroscience|Neuroscience Applications of the Free Energy Principle]]

@@ -22,7 +22,7 @@ semantic_relations:
 
 # Philosophy Knowledge Base
 
-This knowledge base contains 6 focused documents exploring philosophical foundations relevant to cognitive modeling, Active Inference, and scientific methodology. The content emphasizes pragmatism, operationalism, and Peircean semiotics as frameworks for understanding cognition and knowledge.
+This knowledge base contains 10 focused documents exploring philosophical foundations relevant to cognitive modeling, Active Inference, and scientific methodology. The content emphasizes pragmatism, operationalism, and Peircean semiotics as frameworks for understanding cognition and knowledge.
 
 ## 🧠 Overview
 
@@ -90,7 +90,7 @@ The philosophy knowledge base provides philosophical foundations that inform cog
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 6 focused philosophical documents
+- **Coverage**: 10 focused philosophical documents
 - **Depth**: Comprehensive treatment of key philosophical frameworks
 - **Relevance**: Strong connections to cognitive modeling
 - **Integration**: Well-integrated with scientific methodology

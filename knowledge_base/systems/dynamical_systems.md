@@ -258,3 +258,6 @@ Dynamical systems theory provides the mathematical foundation for understanding 
 - [[adaptive_systems]] - Learning and adaptation
 - [[network_theory]] - Network dynamical systems
 
+## See also
+
+- [[knowledge_base/mathematics/dynamical_systems|Dynamical Systems]]

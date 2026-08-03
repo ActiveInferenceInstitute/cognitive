@@ -90,3 +90,7 @@ PPL inference algorithms correspond to Active Inference update rules:
 - [[knowledge_base/mathematics/probability_distributions]] — Probability distributions
 - [[computational_neuroscience]] — Computational approaches
 - [[active_inference]] — Active Inference framework
+
+## See also
+
+- [[knowledge_base/mathematics/probabilistic_programming|Probabilistic Programming]]

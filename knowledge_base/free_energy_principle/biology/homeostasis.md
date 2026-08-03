@@ -494,3 +494,7 @@ def assess_allostatic_load(free_energy_trajectory, threshold=1.0):
 ---
 
 > **Pathological Breakdown**: Disease states emerge when homeostatic free energy minimization fails, leading to increased physiological variability and decreased resilience.
+
+## See also
+
+- [[knowledge_base/biology/homeostasis|Homeostasis]]

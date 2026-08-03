@@ -452,3 +452,7 @@ The question of whether Markov blankets define the "identity" of a system has ph
 - [[mathematics/fokker_planck|Fokker-Planck Equation]] - Density dynamics at NESS
 - [[cognitive/embodied_cognition|Embodied Cognition]] - Blankets as body boundaries
 - [[biology/morphogenesis|Morphogenesis]] - Blankets in developmental biology
+
+## See also
+
+- [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets: Statistical Boundaries and Bayesian Mechanics]]

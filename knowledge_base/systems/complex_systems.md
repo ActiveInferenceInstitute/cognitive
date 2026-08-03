@@ -244,3 +244,6 @@ Complex systems theory provides a framework for understanding systems composed o
 - [[adaptive_systems]] - Learning and adaptation
 - [[network_theory]] - Network structure and dynamics
 
+## See also
+
+- [[knowledge_base/mathematics/complex_systems|Complex Systems]]

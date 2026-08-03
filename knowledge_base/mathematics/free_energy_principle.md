@@ -2876,3 +2876,6 @@ if __name__ == "__main__":
 
 - [[autopoiesis]]
 
+## See also
+
+- [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]]

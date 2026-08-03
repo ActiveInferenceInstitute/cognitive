@@ -572,3 +572,6 @@ class ImmuneNetwork:
 
 - [[developmental_systems]]
 
+## See also
+
+- [[knowledge_base/free_energy_principle/biology/immunology|The Immune System as an Inference Engine]]

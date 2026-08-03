@@ -950,3 +950,6 @@ graph LR
 
 - [[bayesian_graph_theory]]
 
+## See also
+
+- [[knowledge_base/cognitive/belief_updating|Belief Updating]]

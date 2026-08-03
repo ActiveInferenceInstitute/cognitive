@@ -90,11 +90,13 @@ Author-date reference notes for the primary literature on active inference and t
 - Start with [[cognitive/active_inference|Active Inference Overview]]
 - Explore [[mathematics/free_energy_principle|Free Energy Principle]]
 - Review [[agents/README|Agent Architectures]]
+- Follow [[learning_roadmap|Cognitive Modeling Learning Roadmap]]
 
 ### For Researchers
 - Access [[mathematics|Mathematical Foundations]]
 - Study [[cognitive/neural_active_inference|Neural Implementations]]
 - Review [[research|Research Directions]]
+- Consult [[quality_assessment|Knowledge Base Quality Assessment]]
 
 ### For Implementers
 - Follow [[active_inference_implementation|Implementation Guides]]

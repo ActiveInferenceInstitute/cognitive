@@ -261,3 +261,7 @@ corresponds to the change in (negative) expected free energy after observing a r
 3. Schwartenbeck, P., FitzGerald, T., Dolan, R. J., & Friston, K. (2013). Exploration, novelty, surprise, and free energy minimization. *Frontiers in Psychology*, 4, 710.
 4. Da Costa, L., et al. (2020). Active inference on discrete state-spaces: A synthesis. *Journal of Mathematical Psychology*, 99, 102447.
 5. Parr, T., Pezzulo, G., & Friston, K. J. (2022). *Active Inference*. MIT Press. Chapters 7-9.
+
+## See also
+
+- [[knowledge_base/cognitive/decision_making|Decision Making]]

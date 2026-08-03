@@ -1564,3 +1564,6 @@ where:
 
 - [[agent_based_modeling]]
 
+## See also
+
+- [[knowledge_base/systems/complex_systems|Complex Systems Theory]]

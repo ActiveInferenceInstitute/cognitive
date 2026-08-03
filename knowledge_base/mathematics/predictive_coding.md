@@ -526,3 +526,6 @@ end
 
 1. Buckley, C. L., et al. (2017). The free energy principle for action and perception: A mathematical review
 
+## See also
+
+- [[knowledge_base/cognitive/predictive_coding|Predictive Coding]]

@@ -148,3 +148,7 @@ Connects to [[knowledge_base/biology/evolutionary_biology|evolutionary biology]]
 - Nash, J. (1950). Equilibrium Points in N-Person Games
 - Maynard Smith, J. (1982). Evolution and the Theory of Games
 - Yoshida, W. et al. (2008). Game Theory of Mind
+
+## See also
+
+- [[knowledge_base/research/concepts/game_theory|Game Theory]]

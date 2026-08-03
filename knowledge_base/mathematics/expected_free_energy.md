@@ -1328,3 +1328,6 @@ class RobustPolicyOptimization:
 
         }
 
+## See also
+
+- [[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy: Planning, Curiosity, and Goal-Directed Behavior]]

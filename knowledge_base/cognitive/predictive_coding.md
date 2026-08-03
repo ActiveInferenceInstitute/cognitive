@@ -324,3 +324,6 @@ class PredictiveCodingNetwork:
 
 1. Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science
 
+## See also
+
+- [[knowledge_base/mathematics/predictive_coding|Predictive Coding]]

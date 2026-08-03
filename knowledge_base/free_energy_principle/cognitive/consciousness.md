@@ -236,3 +236,7 @@ See [[knowledge_base/free_energy_principle/philosophy/mind_body_problem]] for ex
 5. Williford, K., Bennequin, D., Friston, K., & Rudrauf, D. (2018). The projective consciousness model and phenomenal selfhood. *Frontiers in Psychology*, 9, 2571.
 6. Solms, M. (2021). *The Hidden Spring: A Journey to the Source of Consciousness*. Norton.
 7. Chang, A. Y., Biehl, M., Yu, Y., & Kanai, R. (2020). Information closure theory of consciousness. *Frontiers in Psychology*, 11, 1504.
+
+## See also
+
+- [[knowledge_base/cognitive/consciousness|Consciousness]]

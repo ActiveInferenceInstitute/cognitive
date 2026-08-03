@@ -22,7 +22,7 @@ semantic_relations:
 
 # Biology Knowledge Base
 
-This knowledge base contains 30+ comprehensive documents covering biological principles, processes, and systems relevant to cognitive modeling and Active Inference. The content spans from molecular biology to ecosystem dynamics, with particular emphasis on neuroscience, evolution, ecological systems, and agent architectures.
+This knowledge base contains 45 comprehensive documents covering biological principles, processes, and systems relevant to cognitive modeling and Active Inference. The content spans from molecular biology to ecosystem dynamics, with particular emphasis on neuroscience, evolution, ecological systems, and agent architectures.
 
 ## 🧬 Overview
 
@@ -154,7 +154,7 @@ The [[AGENTS|biological agents documentation]] provides specific guidance for im
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 30+ specialized biological documents with comprehensive agent architectures
+- **Coverage**: 45 specialized biological documents with comprehensive agent architectures
 - **Integration**: Strong connections to cognitive modeling and Active Inference
 - **Depth**: From molecular mechanisms to ecosystem dynamics with mathematical rigor
 - **Applications**: Direct relevance to agent architectures and implementation examples
@@ -202,3 +202,9 @@ The [[AGENTS|biological agents documentation]] provides specific guidance for im
 ---
 
 > **Coverage**: This knowledge base emphasizes biological principles most relevant to cognitive modeling and Active Inference, while maintaining comprehensive coverage of foundational biological processes with direct applications to agent architectures.
+
+## Related pages
+
+- [[bee_communication_systems|Bee Communication Systems]]
+- [[comparative_social_insect_analysis|Comparative Analysis of Ant and Bee Social Systems]]
+- [[implementation_examples_social_insects|Implementation Examples Using Social Insect Code]]

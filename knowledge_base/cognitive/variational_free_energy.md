@@ -542,3 +542,8 @@ class ScalableVariationalInference:
 - [[predictive_coding]] - Neural implementation
 - [[variational_inference]] - General inference framework
 - [[bayesian_inference]] - Probabilistic reasoning
+
+## See also
+
+- [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]
+- [[knowledge_base/mathematics/variational_free_energy|Variational Free Energy]]

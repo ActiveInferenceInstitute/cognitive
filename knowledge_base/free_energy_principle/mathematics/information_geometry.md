@@ -391,3 +391,7 @@ Information geometry suggests:
 5. Caticha, A. (2015). The basics of information geometry. In *AIP Conference Proceedings* (Vol. 1641, pp. 15-26).
 6. Nielsen, F. (2020). An elementary introduction to information geometry. *Entropy*, 22(10), 1100.
 7. Da Costa, L., Parr, T., Sengupta, B., & Friston, K. (2021). Neural dynamics under active inference: plausibility and efficiency of energy minimization. *Entropy*, 23(4), 454.
+
+## See also
+
+- [[knowledge_base/mathematics/information_geometry|Information Geometry]]

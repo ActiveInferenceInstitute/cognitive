@@ -23,7 +23,7 @@ semantic_relations:
 
 # Cognitive Science Knowledge Base
 
-This knowledge base contains 173 comprehensive documents covering cognitive science, neuroscience, psychology, and related fields as they pertain to Active Inference and cognitive modeling. The content is organized thematically and extensively cross-linked for optimal navigation.
+This knowledge base contains 213 comprehensive documents covering cognitive science, neuroscience, psychology, and related fields as they pertain to Active Inference and cognitive modeling. The content is organized thematically and extensively cross-linked for optimal navigation.
 
 ## 🧠 Overview
 
@@ -295,3 +295,15 @@ The cognitive science knowledge base provides theoretical foundations and empiri
 ---
 
 > **Note**: This knowledge base is continuously updated with new research findings and theoretical developments. Check the [[quality_assessment]] for current coverage metrics and development priorities.
+
+## Related pages
+
+- [[overview|Core Concepts Overview]]
+- [[attention_patterns|Attention Patterns]]
+- [[cognitive_development_ai|Cognitive Development Through Active Inference]]
+- [[emotional_processing_ai|Emotional Processing Through Active Inference]]
+- [[information_theory_in_control|Information Theory in Control]]
+- [[motor_control_ai|Motor Control and Sensorimotor Integration Through Active Inference]]
+- [[sleep_memory_ai|Sleep and Memory Consolidation Through Active Inference]]
+- [[social_cognition_advanced|Advanced Social Cognition and Theory of Mind]]
+- [[storage_patterns|Storage Patterns]]

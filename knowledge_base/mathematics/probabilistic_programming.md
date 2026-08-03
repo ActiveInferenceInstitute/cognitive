@@ -142,3 +142,7 @@ The [[docs/implementation/rxinfer/README|RxInfer]] framework provides:
 - Ghahramani, Z. (2015). Probabilistic machine learning and artificial intelligence
 - Bagaev, D. et al. (2023). RxInfer: A Julia package for reactive real-time Bayesian inference
 - Goodman, N. D. & Stuhlmuller, A. (2014). The Design and Implementation of Probabilistic Programming Languages
+
+## See also
+
+- [[knowledge_base/cognitive/probabilistic_programming|Probabilistic Programming]]

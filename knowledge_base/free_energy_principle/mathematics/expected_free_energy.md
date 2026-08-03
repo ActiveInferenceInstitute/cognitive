@@ -427,3 +427,7 @@ This corresponds to the transition from **model-based** to **model-free** contro
 5. Millidge, B., Tschantz, A., & Buckley, C. L. (2021). Whence the expected free energy? *Neural Computation*, 33(2), 447-482.
 6. Sajid, N., Ball, P. J., Parr, T., & Friston, K. J. (2021). Active inference: demystified and compared. *Neural Computation*, 33(3), 674-712.
 7. Tschantz, A., Baltieri, M., Seth, A. K., & Buckley, C. L. (2020). Scaling active inference. In *International Conference on Artificial General Intelligence* (pp. 399-409). Springer.
+
+## See also
+
+- [[knowledge_base/mathematics/expected_free_energy|Expected Free Energy]]

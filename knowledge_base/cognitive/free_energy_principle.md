@@ -2661,3 +2661,6 @@ Frameworks:
 
 - [[hierarchical_inference]]
 
+## See also
+
+- [[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]

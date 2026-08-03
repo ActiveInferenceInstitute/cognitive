@@ -197,3 +197,7 @@ This bidirectional communication enables coordinated inference:
 3. Pradeu, T. (2012). *The Limits of the Self: Immunology and Biological Identity*. Oxford University Press.
 4. Cohen, I. R. (2000). *Tending Adam's Garden: Evolving the Cognitive Immune Self*. Academic Press.
 5. Tracey, K. J. (2009). Reflex control of immunity. *Nature Reviews Immunology*, 9(6), 418-428.
+
+## See also
+
+- [[knowledge_base/biology/immunology|Immunology]]

@@ -24,11 +24,11 @@ semantic_relations:
 
 ## Overview
 
-The mathematical foundations knowledge base provides comprehensive theoretical and practical resources for Active Inference and cognitive modeling. This collection of 140+ documents spans probability theory, information theory, dynamical systems, optimization, geometry, and advanced mathematical concepts essential for understanding and implementing sophisticated cognitive systems.
+The mathematical foundations knowledge base provides comprehensive theoretical and practical resources for Active Inference and cognitive modeling. This collection of 150+ documents spans probability theory, information theory, dynamical systems, optimization, geometry, and advanced mathematical concepts essential for understanding and implementing sophisticated cognitive systems.
 
 ## Key Features
 
-- **📚 Comprehensive Coverage**: 140+ interconnected mathematical concepts
+- **📚 Comprehensive Coverage**: 150+ interconnected mathematical concepts
 - **🔗 Semantic Cross-References**: Rich linking between related concepts
 - **💻 Implementation Examples**: Working code examples in Python
 - **🎯 Active Inference Focus**: Specialized mathematical foundations for AI
@@ -387,7 +387,7 @@ Academic and research references.
 
 ---
 
-> **Comprehensive Foundations**: 140+ mathematical documents providing complete theoretical foundations for Active Inference and cognitive modeling.
+> **Comprehensive Foundations**: 150+ mathematical documents providing complete theoretical foundations for Active Inference and cognitive modeling.
 
 ---
 
@@ -404,3 +404,13 @@ Academic and research references.
 ---
 
 > **Implementation Focus**: Working code examples and algorithms throughout the knowledge base enable practical application of theoretical concepts.
+
+## Related pages
+
+- [[ai_for_mathematics_cognitive_perspective|AI for Mathematics – A Cognitive Science Perspective]]
+- [[exponential_family|Exponential Family Distributions]]
+- [[free_energy_relationship|Relationship Between VFE and EFE]]
+- [[mutual_information_estimators|Mutual Information Estimators]]
+- [[path_integral_connections|Path Integral Connections]]
+- [[path_integral_verification|Path Integral Documentation Verification]]
+- [[taylor_series|Taylor Series in Active Inference]]

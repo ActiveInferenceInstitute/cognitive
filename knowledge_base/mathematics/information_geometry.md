@@ -520,3 +520,6 @@ end
 
 1. Lebanon, G. (2005). Information Geometry, the Embedding Principle, and Document Classification
 
+## See also
+
+- [[knowledge_base/free_energy_principle/mathematics/information_geometry|Information Geometry and the Free Energy Principle]]

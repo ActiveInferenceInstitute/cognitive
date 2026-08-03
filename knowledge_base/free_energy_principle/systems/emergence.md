@@ -207,3 +207,7 @@ This is because the FEP follows from general principles (ergodicity, Markov blan
 3. Rosas, F. E., Mediano, P. A. M., Jensen, H. J., Seth, A. K., Barrett, A. B., Carhart-Harris, R. L., & Bor, D. (2020). Reconciling emergences: An information-theoretic approach to identify causal emergence in multivariate data. *PLoS Computational Biology*, 16(12), e1008289.
 4. Hoel, E. P. (2017). When the map is better than the territory. *Entropy*, 19(5), 188.
 5. Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrodinger's question. *Physics of Life Reviews*, 24, 1-16.
+
+## See also
+
+- [[knowledge_base/systems/emergence|Emergence in Complex Systems]]

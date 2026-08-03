@@ -232,3 +232,8 @@ The deceiver acts to make the other agent's beliefs about the world diverge from
 3. Veissiere, S. P., Constant, A., Ramstead, M. J. D., Friston, K. J., & Kirmayer, L. J. (2020). Thinking through other minds: A variational approach to cognition and culture. *Behavioral and Brain Sciences*, 43, e90.
 4. Moutoussis, M., Fearon, P., El-Deredy, W., Dolan, R. J., & Friston, K. J. (2014). Bayesian inferences about the self (and others): A review. *Consciousness and Cognition*, 25, 67-76.
 5. Parr, T., Pezzulo, G., & Friston, K. J. (2022). *Active Inference*. MIT Press. Chapter 11.
+
+## See also
+
+- [[knowledge_base/cognitive/social_cognition|Social Cognition]]
+- [[knowledge_base/research/social_cognition|Social Cognition]]

@@ -1082,3 +1082,7 @@ class StochasticPathIntegralComputer:
 
 - [[topological_quantum_field_theory]]
 
+## See also
+
+- [[knowledge_base/cognitive/variational_free_energy|Variational Free Energy]]
+- [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]

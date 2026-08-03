@@ -547,3 +547,8 @@ def benchmark_inference_accuracy(vfe_system, test_cases):
 ---
 
 > **Optimization Objective**: Enables gradient-based optimization methods that respect the information geometry of probability distributions.
+
+## See also
+
+- [[knowledge_base/cognitive/variational_free_energy|Variational Free Energy]]
+- [[knowledge_base/mathematics/variational_free_energy|Variational Free Energy]]
