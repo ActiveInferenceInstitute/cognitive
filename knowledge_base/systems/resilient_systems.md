@@ -1,48 +1,27 @@
 ---
-
 title: Resilient Systems
-
 type: article
-
 created: 2024-03-25
-
 status: stable
-
 tags:
-
-  - systems
-
-  - resilience
-
-  - fault-tolerance
-
-  - reliability
-
-  - robustness
-
+- systems
+- resilience
+- fault-tolerance
+- reliability
+- robustness
 semantic_relations:
-
-  - type: related_to
-
-    links:
-
-      - [[knowledge_base/systems/fault_tolerance|Fault Tolerance]]
-
-      - [[knowledge_base/systems/systems_theory|Systems Theory]]
-
-  - type: prerequisite_for
-
-    links:
-
-      - Resilient Systems Learning Path
-
-  - type: builds_on
-
-    links:
-
-      - [[knowledge_base/systems/systems_theory|Systems Theory]]
-
+- type: related_to
+  links:
+  - - - knowledge_base/systems/fault_tolerance|Fault Tolerance
+  - - - knowledge_base/systems/systems_theory|Systems Theory
+- type: prerequisite_for
+  links:
+  - Resilient Systems Learning Path
+- type: builds_on
+  links:
+  - - - knowledge_base/systems/systems_theory|Systems Theory
 ---
+
 
 # Resilient Systems
 

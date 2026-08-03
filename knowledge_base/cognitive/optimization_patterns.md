@@ -1,40 +1,24 @@
 ---
-
 title: Optimization Patterns
-
 type: concept
-
 status: stable
-
 created: 2024-02-23
-
 tags:
-
-  - patterns
-
-  - optimization
-
-  - cognitive_modeling
-
-  - algorithms
-
+- patterns
+- optimization
+- cognitive_modeling
+- algorithms
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_modeling_concepts]]
-
-  - type: relates
-
-    links:
-
-      - [[inference_patterns]]
-
-      - [[action_selection]]
-
-      - [[active_inference]]
-
+- type: implements
+  links:
+  - - cognitive_modeling_concepts
+- type: relates
+  links:
+  - - - inference_patterns
+  - - - action_selection
+  - - - active_inference
 ---
+
 
 # Optimization Patterns
 

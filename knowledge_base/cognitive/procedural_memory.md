@@ -1,46 +1,28 @@
 ---
-
 title: Procedural Memory
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - memory
-
-  - motor_learning
-
-  - skill
-
+- cognition
+- memory
+- motor_learning
+- skill
 semantic_relations:
-
-  - type: implements
-
-    links: [[memory_systems]]
-
-  - type: extends
-
-    links: [[motor_learning]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[motor_control]]
-
-      - [[skill_acquisition]]
-
+- type: implements
+  links:
+  - - memory_systems
+- type: extends
+  links:
+  - - motor_learning
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - motor_control
+  - - - skill_acquisition
 ---
+
 
 # Procedural Memory
 

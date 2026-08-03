@@ -1,36 +1,22 @@
 ---
-
 title: Precision Mechanisms Implementation
-
 type: concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - implementation
-
-  - predictive-processing
-
-  - precision
-
+- implementation
+- predictive-processing
+- precision
 semantic_relations:
-
-  - type: implements
-
-    links: [[predictive_processing]]
-
-  - type: relates
-
-    links:
-
-      - [[predictive_network]]
-
-      - [[error_propagation]]
-
+- type: implements
+  links:
+  - - predictive_processing
+- type: relates
+  links:
+  - - - predictive_network
+  - - - error_propagation
 ---
+
 
 # Precision Mechanisms Implementation
 

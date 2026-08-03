@@ -1,46 +1,28 @@
 ---
-
 title: Evidence Accumulation
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - computation
-
-  - decision
-
-  - inference
-
+- cognition
+- computation
+- decision
+- inference
 semantic_relations:
-
-  - type: implements
-
-    links: [[model_selection]]
-
-  - type: extends
-
-    links: [[information_processing]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[bayesian_inference]]
-
-      - [[decision_making]]
-
+- type: implements
+  links:
+  - - model_selection
+- type: extends
+  links:
+  - - information_processing
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - bayesian_inference
+  - - - decision_making
 ---
+
 
 # Evidence Accumulation
 

@@ -1,44 +1,25 @@
 ---
-
 title: Sub-Riemannian Geometry
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - geometry
-
-  - control
-
-  - metric
-
+- mathematics
+- geometry
+- control
+- metric
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[differential_geometry]]
-
-      - [[contact_geometry]]
-
-  - type: relates
-
-    links:
-
-      - [[control_theory]]
-
-      - [[metric_geometry]]
-
-      - [[geometric_mechanics]]
-
+- type: foundation
+  links:
+  - - - differential_geometry
+  - - - contact_geometry
+- type: relates
+  links:
+  - - - control_theory
+  - - - metric_geometry
+  - - - geometric_mechanics
 ---
+
 
 # Sub-Riemannian Geometry
 

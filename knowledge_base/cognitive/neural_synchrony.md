@@ -1,46 +1,28 @@
 ---
-
 title: Neural Synchrony
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - neuroscience
-
-  - computation
-
-  - dynamics
-
+- cognition
+- neuroscience
+- computation
+- dynamics
 semantic_relations:
-
-  - type: implements
-
-    links: [[neural_dynamics]]
-
-  - type: extends
-
-    links: [[neural_computation]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[temporal_binding]]
-
-      - [[perceptual_binding]]
-
+- type: implements
+  links:
+  - - neural_dynamics
+- type: extends
+  links:
+  - - neural_computation
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - temporal_binding
+  - - - perceptual_binding
 ---
+
 
 # Neural Synchrony
 

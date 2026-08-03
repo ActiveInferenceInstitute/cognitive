@@ -1,18 +1,18 @@
 ---
-
 type: mathematical_concept
-
 id: path_integral_theory_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [path-integrals, statistical-mechanics, field-theory, active-inference]
-
-aliases: [path-theory, integral-formulation]
-
+tags:
+- path-integrals
+- statistical-mechanics
+- field-theory
+- active-inference
+aliases:
+- path-theory
+- integral-formulation
 ---
+
 
 # Theoretical Foundations of Path Integrals
 

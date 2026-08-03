@@ -1,46 +1,28 @@
 ---
-
 title: Object-Based Attention
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - attention
-
-  - perception
-
-  - objects
-
+- cognition
+- attention
+- perception
+- objects
 semantic_relations:
-
-  - type: implements
-
-    links: [[attention_mechanisms]]
-
-  - type: extends
-
-    links: [[selective_attention]]
-
-  - type: related
-
-    links:
-
-      - [[spatial_attention]]
-
-      - [[feature_based_attention]]
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
+- type: implements
+  links:
+  - - attention_mechanisms
+- type: extends
+  links:
+  - - selective_attention
+- type: related
+  links:
+  - - - spatial_attention
+  - - - feature_based_attention
+  - - - active_inference
+  - - - free_energy_principle
 ---
+
 
 # Object-Based Attention
 

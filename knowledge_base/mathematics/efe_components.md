@@ -1,18 +1,19 @@
 ---
-
 type: visualization
-
 id: efe_components_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [active-inference, free-energy, visualization, policy-selection]
-
-aliases: [efe-components, efe-visualization, expected-free-energy-components]
-
+tags:
+- active-inference
+- free-energy
+- visualization
+- policy-selection
+aliases:
+- efe-components
+- efe-visualization
+- expected-free-energy-components
 ---
+
 
 # Expected Free Energy Components
 

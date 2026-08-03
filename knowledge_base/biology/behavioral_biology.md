@@ -1,62 +1,40 @@
 ---
-
 type: concept
-
 id: behavioral_biology_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [behavioral-biology, active-inference, free-energy-principle, neuroscience]
-
-aliases: [animal-behavior, behavioral-science]
-
+tags:
+- behavioral-biology
+- active-inference
+- free-energy-principle
+- neuroscience
+aliases:
+- animal-behavior
+- behavioral-science
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[neuroscience]]
-
-      - [[knowledge_base/cognitive/active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[behavioral_dynamics]]
-
-      - [[decision_making]]
-
-      - [[learning_theory]]
-
-      - [[knowledge_base/agents/architectures_overview]]
-
-  - type: relates
-
-    links:
-
-      - [[evolutionary_dynamics]]
-
-      - [[systems_biology]]
-
-      - [[cognitive_science]]
-
-      - [[apidology]]
-
-      - [[myrmecology]]
-
+- type: foundation
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - neuroscience
+  - - - knowledge_base/cognitive/active_inference
+- type: implements
+  links:
+  - - - behavioral_dynamics
+  - - - decision_making
+  - - - learning_theory
+  - - - knowledge_base/agents/architectures_overview
+- type: relates
+  links:
+  - - - evolutionary_dynamics
+  - - - systems_biology
+  - - - cognitive_science
+  - - - apidology
+  - - - myrmecology
 ---
+
 
 # Behavioral Biology
 

@@ -1,46 +1,28 @@
 ---
-
 title: Sensorimotor Coordination
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - action
-
-  - motor_control
-
+- cognition
+- perception
+- action
+- motor_control
 semantic_relations:
-
-  - type: implements
-
-    links: [[sensory_processing]]
-
-  - type: extends
-
-    links: [[motor_control]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[multisensory_integration]]
-
-      - [[motor_learning]]
-
+- type: implements
+  links:
+  - - sensory_processing
+- type: extends
+  links:
+  - - motor_control
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - multisensory_integration
+  - - - motor_learning
 ---
+
 
 # Sensorimotor Coordination
 

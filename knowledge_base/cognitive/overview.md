@@ -1,38 +1,22 @@
 ---
-
 title: Core Concepts Overview
-
 type: concept
-
 status: stable
-
 created: 2024-02-28
-
 tags:
-
-  - concepts
-
-  - theory
-
-  - overview
-
-  - documentation
-
+- concepts
+- theory
+- overview
+- documentation
 semantic_relations:
-
-  - type: explains
-
-    links:
-
-      - [[active_inference]]
-
-      - [[message_passing]]
-
-      - [[factor_graphs]]
-
-      - [[variational_inference]]
-
+- type: explains
+  links:
+  - - - active_inference
+  - - - message_passing
+  - - - factor_graphs
+  - - - variational_inference
 ---
+
 
 # Core Concepts Overview
 

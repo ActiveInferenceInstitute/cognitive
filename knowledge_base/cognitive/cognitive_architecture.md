@@ -1,47 +1,38 @@
 ---
-
 title: Cognitive Architecture
-
 type: concept
-
 status: stable
-
 created: 2024-02-06
-
 updated: 2026-01-03
-
 complexity: advanced
-
 processing_priority: 1
-
 tags:
-  - cognition
-  - architecture
-  - organization
-  - systems
-  - computation
-  - design
-  - implementation
-
+- cognition
+- architecture
+- organization
+- systems
+- computation
+- design
+- implementation
 semantic_relations:
-  - type: implements
-    links:
-      - [[cognitive_systems]]
-      - [[information_processing]]
-      - [[neural_computation]]
-  - type: foundation_for
-    links:
-      - [[cognitive_modeling_concepts]]
-      - [[agent_architectures]]
-      - [[artificial_intelligence]]
-  - type: related
-    links:
-      - [[memory_systems]]
-      - [[attention_mechanisms]]
-      - [[learning_theory]]
-      - [[neural_networks]]
-
+- type: implements
+  links:
+  - - - cognitive_systems
+  - - - information_processing
+  - - - neural_computation
+- type: foundation_for
+  links:
+  - - - cognitive_modeling_concepts
+  - - - agent_architectures
+  - - - artificial_intelligence
+- type: related
+  links:
+  - - - memory_systems
+  - - - attention_mechanisms
+  - - - learning_theory
+  - - - neural_networks
 ---
+
 
 # Cognitive Architecture
 

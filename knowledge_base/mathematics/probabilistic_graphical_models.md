@@ -1,56 +1,31 @@
 ---
-
 title: Probabilistic Graphical Models
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - graphical-models
-
-  - machine-learning
-
+- mathematics
+- probability
+- graphical-models
+- machine-learning
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[probability_theory]]
-
-      - [[graph_theory]]
-
-      - [[information_theory]]
-
-  - type: implements
-
-    links:
-
-      - [[bayesian_networks]]
-
-      - [[markov_random_fields]]
-
-      - [[factor_graphs]]
-
-  - type: related
-
-    links:
-
-      - [[message_passing]]
-
-      - [[variational_inference]]
-
-      - [[causal_inference]]
-
+- type: foundation
+  links:
+  - - - probability_theory
+  - - - graph_theory
+  - - - information_theory
+- type: implements
+  links:
+  - - - bayesian_networks
+  - - - markov_random_fields
+  - - - factor_graphs
+- type: related
+  links:
+  - - - message_passing
+  - - - variational_inference
+  - - - causal_inference
 ---
+
 
 # Probabilistic Graphical Models
 

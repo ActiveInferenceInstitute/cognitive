@@ -1,60 +1,39 @@
 ---
-
 type: concept
-
 id: cell_biology_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [cell-biology, molecular-biology, biophysics, systems-biology]
-
-aliases: [cellular-biology, cytology]
-
+tags:
+- cell-biology
+- molecular-biology
+- biophysics
+- systems-biology
+aliases:
+- cellular-biology
+- cytology
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[molecular_biology]]
-
-      - [[biochemistry]]
-
-      - [[biophysics]]
-
-      - [[knowledge_base/cognitive/active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[membrane_dynamics]]
-
-      - [[cytoskeleton]]
-
-      - [[cell_signaling]]
-
-      - [[knowledge_base/agents/architectures_overview]]
-
-  - type: relates
-
-    links:
-
-      - [[developmental_systems]]
-
-      - [[systems_biology]]
-
-      - [[tissue_mechanics]]
-
-      - [[neuroscience]]
-
+- type: foundation
+  links:
+  - - - molecular_biology
+  - - - biochemistry
+  - - - biophysics
+  - - - knowledge_base/cognitive/active_inference
+- type: implements
+  links:
+  - - - membrane_dynamics
+  - - - cytoskeleton
+  - - - cell_signaling
+  - - - knowledge_base/agents/architectures_overview
+- type: relates
+  links:
+  - - - developmental_systems
+  - - - systems_biology
+  - - - tissue_mechanics
+  - - - neuroscience
 ---
+
 
 # Cell Biology
 

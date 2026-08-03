@@ -1,20 +1,19 @@
 ---
-
 title: Levels of Organization in Biology
-
 type: knowledge_base
-
 status: stable
-
-tags: [biology, hierarchy, systems]
-
+tags:
+- biology
+- hierarchy
+- systems
 semantic_relations:
-
-  - type: relates
-
-    links: [systems_biology, ecological_networks, systems_theory]
-
+- type: relates
+  links:
+  - systems_biology
+  - ecological_networks
+  - systems_theory
 ---
+
 
 # Levels of Organization in Biology
 

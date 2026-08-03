@@ -1,54 +1,36 @@
 ---
-
 type: concept
-
 id: systems_biology_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [systems-biology, active-inference, free-energy-principle, complex-systems]
-
-aliases: [biological-systems, integrative-biology]
-
+tags:
+- systems-biology
+- active-inference
+- free-energy-principle
+- complex-systems
+aliases:
+- biological-systems
+- integrative-biology
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[complex_systems]]
-
-  - type: implements
-
-    links:
-
-      - [[biological_networks]]
-
-      - [[cellular_systems]]
-
-      - [[metabolic_networks]]
-
-  - type: relates
-
-    links:
-
-      - [[molecular_biology]]
-
-      - [[cell_biology]]
-
-      - [[evolutionary_dynamics]]
-
+- type: foundation
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - complex_systems
+- type: implements
+  links:
+  - - - biological_networks
+  - - - cellular_systems
+  - - - metabolic_networks
+- type: relates
+  links:
+  - - - molecular_biology
+  - - - cell_biology
+  - - - evolutionary_dynamics
 ---
+
 
 # Systems Biology
 

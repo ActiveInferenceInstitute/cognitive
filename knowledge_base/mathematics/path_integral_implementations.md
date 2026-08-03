@@ -1,60 +1,33 @@
 ---
-
 title: Path Integral Implementations
-
 type: implementation
-
 status: active
-
 created: 2024-02-06
-
 modified: 2024-02-07
-
 tags:
-
-  - mathematics
-
-  - path_integrals
-
-  - implementation
-
-  - numerical_methods
-
-  - active_inference
-
+- mathematics
+- path_integrals
+- implementation
+- numerical_methods
+- active_inference
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[path_integral_theory]]
-
-      - [[path_integral_free_energy]]
-
-      - [[stochastic_processes]]
-
-  - type: uses
-
-    links:
-
-      - [[monte_carlo_methods]]
-
-      - [[numerical_methods]]
-
-      - [[optimization_theory]]
-
-  - type: applied_in
-
-    links:
-
-      - [[active_inference_theory]]
-
-      - [[expected_free_energy]]
-
-      - [[policy_selection]]
-
+- type: implements
+  links:
+  - - - path_integral_theory
+  - - - path_integral_free_energy
+  - - - stochastic_processes
+- type: uses
+  links:
+  - - - monte_carlo_methods
+  - - - numerical_methods
+  - - - optimization_theory
+- type: applied_in
+  links:
+  - - - active_inference_theory
+  - - - expected_free_energy
+  - - - policy_selection
 ---
+
 
 # Path Integral Implementations
 

@@ -1,18 +1,18 @@
 ---
-
 type: mathematical_concept
-
 id: policy_selection_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [mathematics, active-inference, policy-selection, decision-making]
-
-aliases: [action-selection, policy-inference]
-
+tags:
+- mathematics
+- active-inference
+- policy-selection
+- decision-making
+aliases:
+- action-selection
+- policy-inference
 ---
+
 
 # Policy Selection
 

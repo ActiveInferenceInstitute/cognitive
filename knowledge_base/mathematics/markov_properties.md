@@ -1,56 +1,31 @@
 ---
-
 title: Markov Properties
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - graphical-models
-
-  - markov-theory
-
+- mathematics
+- probability
+- graphical-models
+- markov-theory
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[probability_theory]]
-
-      - [[graph_theory]]
-
-      - [[conditional_independence]]
-
-  - type: used_by
-
-    links:
-
-      - [[markov_random_fields]]
-
-      - [[bayesian_networks]]
-
-      - [[probabilistic_graphical_models]]
-
-  - type: related
-
-    links:
-
-      - [[hammersley_clifford_theorem]]
-
-      - [[gibbs_distributions]]
-
-      - [[graphical_separation]]
-
+- type: foundation
+  links:
+  - - - probability_theory
+  - - - graph_theory
+  - - - conditional_independence
+- type: used_by
+  links:
+  - - - markov_random_fields
+  - - - bayesian_networks
+  - - - probabilistic_graphical_models
+- type: related
+  links:
+  - - - hammersley_clifford_theorem
+  - - - gibbs_distributions
+  - - - graphical_separation
 ---
+
 
 # Markov Properties
 

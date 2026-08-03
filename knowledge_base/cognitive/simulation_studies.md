@@ -1,35 +1,30 @@
 ---
-
 title: Simulation Studies
-
 type: concept
-
 status: stable
-
 tags:
-  - simulation
-  - validation
-  - benchmarking
-
+- simulation
+- validation
+- benchmarking
 semantic_relations:
-  - type: relates
-    links:
-      - implementation_patterns
-      - validation
-      - benchmarks
-      - model_validation
-      - sensitivity_analysis
-      - model_comparison
-  - type: implements
-    links:
-      - knowledge_base/mathematics/statistical_modeling
-      - knowledge_base/mathematics/computational_methods
-  - type: foundation
-    links:
-      - knowledge_base/mathematics/scientific_computing
-      - [[research_education]]
-
+- type: relates
+  links:
+  - implementation_patterns
+  - validation
+  - benchmarks
+  - model_validation
+  - sensitivity_analysis
+  - model_comparison
+- type: implements
+  links:
+  - knowledge_base/mathematics/statistical_modeling
+  - knowledge_base/mathematics/computational_methods
+- type: foundation
+  links:
+  - knowledge_base/mathematics/scientific_computing
+  - - - research_education
 ---
+
 
 # Simulation Studies
 

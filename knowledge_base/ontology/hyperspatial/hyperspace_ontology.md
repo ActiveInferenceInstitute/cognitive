@@ -1,56 +1,31 @@
 ---
-
 title: HyperSpace Ontology
-
 type: ontology
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - ontology
-
-  - spatial_computing
-
-  - active_inference
-
+- mathematics
+- ontology
+- spatial_computing
+- active_inference
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[category_theory]]
-
-      - [[differential_geometry]]
-
-      - [[information_geometry]]
-
-  - type: implements
-
-    links:
-
-      - [[spatial_web]]
-
-      - [[augmented_reality]]
-
-      - [[virtual_reality]]
-
-  - type: relates
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[geometric_unity]]
-
+- type: foundation
+  links:
+  - - - category_theory
+  - - - differential_geometry
+  - - - information_geometry
+- type: implements
+  links:
+  - - - spatial_web
+  - - - augmented_reality
+  - - - virtual_reality
+- type: relates
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - geometric_unity
 ---
+
 
 # HyperSpace Ontology
 

@@ -1,38 +1,33 @@
 ---
-
 title: Task Switching
-
 type: concept
-
 status: stable
-
 tags:
-  - executive_function
-  - control
-  - attention
-
+- executive_function
+- control
+- attention
 semantic_relations:
-  - type: relates
-    links:
-      - attentional_control
-      - cognitive_control
-      - active_inference
-      - executive_functions
-      - working_memory
-      - selective_attention
-      - sustained_attention
-      - divided_attention
-      - cognitive_flexibility
-  - type: foundation
-    links:
-      - [[precision_mechanisms]]
-      - [[belief_updating]]
-  - type: implements
-    links:
-      - [[precision_weighting]]
-      - [[hierarchical_inference]]
-
+- type: relates
+  links:
+  - attentional_control
+  - cognitive_control
+  - active_inference
+  - executive_functions
+  - working_memory
+  - selective_attention
+  - sustained_attention
+  - divided_attention
+  - cognitive_flexibility
+- type: foundation
+  links:
+  - - - precision_mechanisms
+  - - - belief_updating
+- type: implements
+  links:
+  - - - precision_weighting
+  - - - hierarchical_inference
 ---
+
 
 # Task Switching
 

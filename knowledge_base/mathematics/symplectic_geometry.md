@@ -1,44 +1,25 @@
 ---
-
 title: Symplectic Geometry
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - geometry
-
-  - mechanics
-
-  - physics
-
+- mathematics
+- geometry
+- mechanics
+- physics
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[differential_geometry]]
-
-      - [[hamiltonian_mechanics]]
-
-  - type: relates
-
-    links:
-
-      - [[complex_geometry]]
-
-      - [[poisson_geometry]]
-
-      - [[contact_geometry]]
-
+- type: foundation
+  links:
+  - - - differential_geometry
+  - - - hamiltonian_mechanics
+- type: relates
+  links:
+  - - - complex_geometry
+  - - - poisson_geometry
+  - - - contact_geometry
 ---
+
 
 # Symplectic Geometry
 

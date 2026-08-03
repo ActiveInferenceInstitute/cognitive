@@ -1,60 +1,33 @@
 ---
-
 title: Statistical Foundations
-
 type: mathematical_concept
-
 status: active
-
 created: 2024-02-05
-
 modified: 2025-01-26
-
 tags:
-
-  - mathematics
-
-  - statistics
-
-  - probability
-
-  - inference
-
-  - foundations
-
+- mathematics
+- statistics
+- probability
+- inference
+- foundations
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[active_inference_theory]]
-
-      - [[bayesian_inference]]
-
-      - [[variational_inference]]
-
-      - [[free_energy_principle]]
-
-  - type: uses
-
-    links:
-
-      - [[information_theory]]
-
-      - [[probability_theory]]
-
-      - [[measure_theory]]
-
-  - type: implements
-
-    links:
-
-      - [[variational_methods]]
-
-      - [[optimization_theory]]
-
+- type: foundation_for
+  links:
+  - - - active_inference_theory
+  - - - bayesian_inference
+  - - - variational_inference
+  - - - free_energy_principle
+- type: uses
+  links:
+  - - - information_theory
+  - - - probability_theory
+  - - - measure_theory
+- type: implements
+  links:
+  - - - variational_methods
+  - - - optimization_theory
 ---
+
 
 # Statistical Foundations
 

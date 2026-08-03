@@ -1,46 +1,28 @@
 ---
-
 title: Model Selection
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - computation
-
-  - optimization
-
-  - inference
-
+- cognition
+- computation
+- optimization
+- inference
 semantic_relations:
-
-  - type: implements
-
-    links: [[model_complexity]]
-
-  - type: extends
-
-    links: [[computational_efficiency]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[evidence_accumulation]]
-
-      - [[bayesian_inference]]
-
+- type: implements
+  links:
+  - - model_complexity
+- type: extends
+  links:
+  - - computational_efficiency
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - evidence_accumulation
+  - - - bayesian_inference
 ---
+
 
 # Model Selection
 

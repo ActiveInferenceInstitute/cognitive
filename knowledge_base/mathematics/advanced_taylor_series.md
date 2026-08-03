@@ -1,54 +1,30 @@
 ---
-
 title: Advanced Taylor Series in Active Inference
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - active_inference
-
-  - continuous_time
-
-  - generalized_coordinates
-
+- mathematics
+- active_inference
+- continuous_time
+- generalized_coordinates
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[continuous_time_agent]]
-
-      - [[generalized_coordinates]]
-
-      - [[differential_equations]]
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-  - type: relates
-
-    links:
-
-      - [[path_integral_free_energy]]
-
-      - [[variational_methods]]
-
-      - [[dynamical_systems]]
-
+- type: foundation
+  links:
+  - - - continuous_time_agent
+  - - - generalized_coordinates
+  - - - differential_equations
+- type: implements
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+- type: relates
+  links:
+  - - - path_integral_free_energy
+  - - - variational_methods
+  - - - dynamical_systems
 ---
+
 
 # Advanced Taylor Series in Active Inference
 

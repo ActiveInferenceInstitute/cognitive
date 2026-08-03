@@ -1,58 +1,40 @@
 ---
-
 type: mathematical_concept
-
 id: path_integral_bridge_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [path-integrals, active-inference, free-energy, cognitive-architectures, dynamical-systems, integration-framework]
-
-aliases: [path-integral-framework, cognitive-path-integrals]
-
+tags:
+- path-integrals
+- active-inference
+- free-energy
+- cognitive-architectures
+- dynamical-systems
+- integration-framework
+aliases:
+- path-integral-framework
+- cognitive-path-integrals
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: integrates
-
-    links:
-
-      - [[path_integral_free_energy]]
-
-      - [[continuous_time_active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[cognitive_architectures]]
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[predictive_processing]]
-
-      - [[hierarchical_inference]]
-
-  - type: mathematical_basis
-
-    links:
-
-      - [[differential_geometry]]
-
-      - [[information_geometry]]
-
-      - [[dynamical_systems]]
-
-      - [[stochastic_processes]]
-
+- type: integrates
+  links:
+  - - - path_integral_free_energy
+  - - - continuous_time_active_inference
+  - - - free_energy_principle
+  - - - cognitive_architectures
+- type: implements
+  links:
+  - - - active_inference
+  - - - predictive_processing
+  - - - hierarchical_inference
+- type: mathematical_basis
+  links:
+  - - - differential_geometry
+  - - - information_geometry
+  - - - dynamical_systems
+  - - - stochastic_processes
 ---
+
 
 # Path Integral Integration Framework
 

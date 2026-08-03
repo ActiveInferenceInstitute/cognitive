@@ -1,26 +1,19 @@
 ---
-
 title: Quality Metrics
-
 type: concept
-
 status: stable
-
 tags:
-  - metrics
-  - evaluation
-  - calibration
-
+- metrics
+- evaluation
+- calibration
 semantic_relations:
-
-  - type: relates
-
-    links:
-      - validation
-      - information_theory
-      - expected_free_energy
-
+- type: relates
+  links:
+  - validation
+  - information_theory
+  - expected_free_energy
 ---
+
 
 # Quality Metrics
 

@@ -1,16 +1,13 @@
 ---
-
 title: Hyperparameter Optimization
-
 type: guide
-
 status: stable
-
 created: 2025-03-03
-
-tags: [optimization, bayesian_optimization]
-
+tags:
+- optimization
+- bayesian_optimization
 ---
+
 
 # Hyperparameter Optimization
 

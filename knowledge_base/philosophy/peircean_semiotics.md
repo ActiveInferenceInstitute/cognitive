@@ -1,50 +1,28 @@
 ---
-
 title: Peircean Semiotics
-
 type: concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - philosophy
-
-  - semiotics
-
-  - logic
-
-  - cognition
-
-  - epistemology
-
+- philosophy
+- semiotics
+- logic
+- cognition
+- epistemology
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[pragmaticism]]
-
-      - [[logic]]
-
-      - [[epistemology]]
-
-  - type: relates
-
-    links:
-
-      - [[active_inference]]
-
-      - [[information_theory]]
-
-      - [[category_theory]]
-
-      - [[phenomenology]]
-
+- type: foundation
+  links:
+  - - - pragmaticism
+  - - - logic
+  - - - epistemology
+- type: relates
+  links:
+  - - - active_inference
+  - - - information_theory
+  - - - category_theory
+  - - - phenomenology
 ---
+
 
 # Peircean Semiotics
 

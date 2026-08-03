@@ -1,18 +1,17 @@
 ---
-
 type: mathematical_concept
-
 id: free_energy_relationship_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [active-inference, free-energy, theory]
-
-aliases: [vfe-efe-relationship, free-energy-duality]
-
+tags:
+- active-inference
+- free-energy
+- theory
+aliases:
+- vfe-efe-relationship
+- free-energy-duality
 ---
+
 
 # Relationship Between VFE and EFE
 

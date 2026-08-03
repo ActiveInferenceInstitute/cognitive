@@ -1,20 +1,17 @@
 ---
-
 type: matrix_spec
-
 id: D_matrix_001
-
 matrix_type: prior
-
 created: 2025-01-01
-
 modified: 2025-01-01
-
-tags: [matrix, prior, active-inference]
-
-related_spaces: [s_space]
-
+tags:
+- matrix
+- prior
+- active-inference
+related_spaces:
+- s_space
 ---
+
 
 # D-Matrix (Prior Beliefs)
 

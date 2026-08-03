@@ -1,54 +1,31 @@
 ---
-
 title: Digital Twins
-
 type: article
-
 created: 2024-03-25
-
 status: stable
-
 tags:
-
-  - spatial-computing
-
-  - digital-twin
-
-  - simulation
-
-  - modeling
-
-  - systems
-
-  - IoT
-
+- spatial-computing
+- digital-twin
+- simulation
+- modeling
+- systems
+- IoT
 semantic_relations:
-
-  - type: related_to
-
-    links:
-
-      - [[knowledge_base/systems/spatial_web|Spatial Web]]
-
-      - [[knowledge_base/systems/internet_of_things|Internet of Things]]
-
-      - [[knowledge_base/free_energy_principle/implementations/simulation|Simulation]]
-
-  - type: prerequisite_for
-
-    links:
-
-      - [[docs/guides/learning_paths/active_inference_spatial_web_path|Active Inference in Spatial Web]]
-
-  - type: builds_on
-
-    links:
-
-      - [[knowledge_base/systems/complex_systems|Complex Systems]]
-
-      - [[knowledge_base/systems/systems_theory|Systems Theory]]
-
+- type: related_to
+  links:
+  - - - knowledge_base/systems/spatial_web|Spatial Web
+  - - - knowledge_base/systems/internet_of_things|Internet of Things
+  - - - knowledge_base/free_energy_principle/implementations/simulation|Simulation
+- type: prerequisite_for
+  links:
+  - - - docs/guides/learning_paths/active_inference_spatial_web_path|Active Inference
+        in Spatial Web
+- type: builds_on
+  links:
+  - - - knowledge_base/systems/complex_systems|Complex Systems
+  - - - knowledge_base/systems/systems_theory|Systems Theory
 ---
+
 
 # Digital Twins
 

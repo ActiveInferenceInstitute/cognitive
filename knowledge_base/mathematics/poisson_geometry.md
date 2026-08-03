@@ -1,44 +1,25 @@
 ---
-
 title: Poisson Geometry
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - geometry
-
-  - mechanics
-
-  - algebra
-
+- mathematics
+- geometry
+- mechanics
+- algebra
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[symplectic_geometry]]
-
-      - [[lie_theory]]
-
-  - type: relates
-
-    links:
-
-      - [[quantum_groups]]
-
-      - [[deformation_quantization]]
-
-      - [[integrable_systems]]
-
+- type: foundation
+  links:
+  - - - symplectic_geometry
+  - - - lie_theory
+- type: relates
+  links:
+  - - - quantum_groups
+  - - - deformation_quantization
+  - - - integrable_systems
 ---
+
 
 # Poisson Geometry
 

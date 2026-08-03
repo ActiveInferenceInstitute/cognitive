@@ -1,42 +1,24 @@
 ---
-
 title: Measure Theory
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - foundations
-
+- mathematics
+- probability
+- foundations
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[probability_theory]]
-
-      - [[functional_analysis]]
-
-  - type: relates
-
-    links:
-
-      - [[information_theory]]
-
-      - [[optimization_theory]]
-
-      - [[stochastic_processes]]
-
+- type: foundation
+  links:
+  - - - probability_theory
+  - - - functional_analysis
+- type: relates
+  links:
+  - - - information_theory
+  - - - optimization_theory
+  - - - stochastic_processes
 ---
+
 
 # Measure Theory
 

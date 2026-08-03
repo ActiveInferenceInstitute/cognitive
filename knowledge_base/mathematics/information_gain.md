@@ -1,18 +1,18 @@
 ---
-
 type: mathematical_concept
-
 id: information_gain_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [information-theory, active-inference, uncertainty]
-
-aliases: [information-gain, mutual-information, uncertainty-reduction]
-
+tags:
+- information-theory
+- active-inference
+- uncertainty
+aliases:
+- information-gain
+- mutual-information
+- uncertainty-reduction
 ---
+
 
 # Information Gain
 

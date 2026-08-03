@@ -1,46 +1,28 @@
 ---
-
 title: Homeostatic Regulation
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - regulation
-
-  - adaptation
-
-  - control
-
+- cognition
+- regulation
+- adaptation
+- control
 semantic_relations:
-
-  - type: implements
-
-    links: [[control_processes]]
-
-  - type: extends
-
-    links: [[adaptation_mechanisms]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[allostatic_control]]
-
-      - [[error_correction]]
-
+- type: implements
+  links:
+  - - control_processes
+- type: extends
+  links:
+  - - adaptation_mechanisms
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - allostatic_control
+  - - - error_correction
 ---
+
 
 # Homeostatic Regulation
 

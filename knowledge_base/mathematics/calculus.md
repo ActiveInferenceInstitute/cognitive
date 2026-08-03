@@ -1,42 +1,24 @@
 ---
-
 title: Calculus
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - computation
-
-  - foundations
-
+- mathematics
+- computation
+- foundations
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[real_analysis]]
-
-      - [[linear_algebra]]
-
-  - type: relates
-
-    links:
-
-      - [[differential_equations]]
-
-      - [[optimization_theory]]
-
-      - [[numerical_methods]]
-
+- type: foundation
+  links:
+  - - - real_analysis
+  - - - linear_algebra
+- type: relates
+  links:
+  - - - differential_equations
+  - - - optimization_theory
+  - - - numerical_methods
 ---
+
 
 # Calculus
 

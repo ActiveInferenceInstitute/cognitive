@@ -1,24 +1,15 @@
 ---
-
 title: Obsidian Linking Standards
-
 type: guide
-
 status: active
-
 created: 2024-02-07
-
 tags:
-
-  - linking
-
-  - standards
-
-  - obsidian
-
-  - navigation
-
+- linking
+- standards
+- obsidian
+- navigation
 ---
+
 
 # Obsidian Linking Standards
 

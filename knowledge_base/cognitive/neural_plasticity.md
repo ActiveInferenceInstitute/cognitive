@@ -1,40 +1,24 @@
 ---
-
 title: Neural Plasticity
-
 type: concept
-
 status: stable
-
 tags:
-
-  - neuroscience
-
-  - plasticity
-
-  - learning
-
-  - development
-
-  - adaptation
-
+- neuroscience
+- plasticity
+- learning
+- development
+- adaptation
 semantic_relations:
-
-  - type: implements
-
-    links: [[brain_function]]
-
-  - type: related
-
-    links:
-
-      - [[learning_mechanisms]]
-
-      - [[memory_formation]]
-
-      - [[development]]
-
+- type: implements
+  links:
+  - - brain_function
+- type: related
+  links:
+  - - - learning_mechanisms
+  - - - memory_formation
+  - - - development
 ---
+
 
 # Neural Plasticity
 

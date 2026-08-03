@@ -1,46 +1,33 @@
 ---
-
 type: mathematical_concept
-
 id: free_energy_theory_001
-
 created: 2024-02-06
-
 modified: 2024-02-06
-
-tags: [mathematics, free-energy, variational-methods, physics, category-theory]
-
-aliases: [free-energy-principle, variational-free-energy]
-
+tags:
+- mathematics
+- free-energy
+- variational-methods
+- physics
+- category-theory
+aliases:
+- free-energy-principle
+- variational-free-energy
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[docs/research/research_documentation_index|Research Documentation]]
-
-      - [[active_inference_pomdp]]
-
-  - type: uses
-
-    links:
-
-      - [[variational_methods]]
-
-      - [[information_theory]]
-
-      - [[category_theory]]
-
-  - type: documented_by
-
-    links:
-
-      - [[docs/implementation/implementation_guides_index|Implementation Guides]]
-
-      - [[docs/api/api_documentation_index|API Documentation]]
-
+- type: implements
+  links:
+  - - - docs/research/research_documentation_index|Research Documentation
+  - - - active_inference_pomdp
+- type: uses
+  links:
+  - - - variational_methods
+  - - - information_theory
+  - - - category_theory
+- type: documented_by
+  links:
+  - - - docs/implementation/implementation_guides_index|Implementation Guides
+  - - - docs/api/api_documentation_index|API Documentation
 ---
+
 
 # Free Energy Theory in Cognitive Modeling
 

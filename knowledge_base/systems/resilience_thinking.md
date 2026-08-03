@@ -1,20 +1,19 @@
 ---
-
 title: Resilience Thinking
-
 type: systems
-
 status: stable
-
-tags: [resilience, SES, adaptability]
-
+tags:
+- resilience
+- SES
+- adaptability
 semantic_relations:
-
-  - type: relates
-
-    links: [adaptive_comanagement, ecosystem_management, traditional_ecological_knowledge]
-
+- type: relates
+  links:
+  - adaptive_comanagement
+  - ecosystem_management
+  - traditional_ecological_knowledge
 ---
+
 
 # Resilience Thinking
 

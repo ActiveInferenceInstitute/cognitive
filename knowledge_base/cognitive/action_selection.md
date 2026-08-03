@@ -1,70 +1,38 @@
 ---
-
 title: Action Selection
-
 type: concept
-
 status: stable
-
 created: 2024-02-06
-
 updated: 2026-01-03
-
 complexity: advanced
-
 processing_priority: 1
-
 tags:
-
-  - cognition
-
-  - decision_making
-
-  - control
-
-  - optimization
-
-  - behavior
-
-  - motor_control
-
-  - planning
-
+- cognition
+- decision_making
+- control
+- optimization
+- behavior
+- motor_control
+- planning
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[optimal_control]]
-
-      - [[policy_selection]]
-
-  - type: relates
-
-    links:
-
-      - [[decision_making]]
-
-      - [[motor_control]]
-
-      - [[planning]]
-
-      - [[reinforcement_learning]]
-
-  - type: mathematical_basis
-
-    links:
-
-      - [[expected_free_energy]]
-
-      - [[path_integral_control]]
-
-      - [[optimization_theory]]
-
+- type: implements
+  links:
+  - - - active_inference
+  - - - optimal_control
+  - - - policy_selection
+- type: relates
+  links:
+  - - - decision_making
+  - - - motor_control
+  - - - planning
+  - - - reinforcement_learning
+- type: mathematical_basis
+  links:
+  - - - expected_free_energy
+  - - - path_integral_control
+  - - - optimization_theory
 ---
+
 
 ## Overview
 

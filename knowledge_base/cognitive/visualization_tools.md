@@ -1,35 +1,30 @@
 ---
-
 title: Visualization Tools
-
 type: concept
-
 status: stable
-
 tags:
-  - visualization
-  - tools
-  - analysis
-
+- visualization
+- tools
+- analysis
 semantic_relations:
-  - type: relates
-    links:
-      - graph_visualization
-      - matrix_plots
-      - diagnostics
-      - network_analysis
-      - performance_optimization
-      - model_validation
-  - type: implements
-    links:
-      - knowledge_base/mathematics/matrix_operations
-      - [[knowledge_base/mathematics/probability_distributions]]
-  - type: foundation
-    links:
-      - knowledge_base/mathematics/visualization_mathematics
-      - [[information_processing]]
-
+- type: relates
+  links:
+  - graph_visualization
+  - matrix_plots
+  - diagnostics
+  - network_analysis
+  - performance_optimization
+  - model_validation
+- type: implements
+  links:
+  - knowledge_base/mathematics/matrix_operations
+  - - - knowledge_base/mathematics/probability_distributions
+- type: foundation
+  links:
+  - knowledge_base/mathematics/visualization_mathematics
+  - - - information_processing
 ---
+
 
 # Visualization Tools
 

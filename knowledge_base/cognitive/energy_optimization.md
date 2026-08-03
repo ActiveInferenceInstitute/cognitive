@@ -1,46 +1,28 @@
 ---
-
 title: Energy Optimization
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - optimization
-
-  - efficiency
-
-  - metabolism
-
+- cognition
+- optimization
+- efficiency
+- metabolism
 semantic_relations:
-
-  - type: implements
-
-    links: [[resource_management]]
-
-  - type: extends
-
-    links: [[performance_optimization]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[metabolic_efficiency]]
-
-      - [[resource_allocation]]
-
+- type: implements
+  links:
+  - - resource_management
+- type: extends
+  links:
+  - - performance_optimization
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - metabolic_efficiency
+  - - - resource_allocation
 ---
+
 
 # Energy Optimization
 

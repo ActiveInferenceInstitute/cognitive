@@ -1,33 +1,24 @@
 ---
-
 title: Machine Readability and Automation
-
 type: concept
-
 status: stable
-
 created: 2024-02-06
-
 tags:
-
-  - automation
-
-  - machine-learning
-
-  - tooling
-
+- automation
+- machine-learning
+- tooling
 semantic_relations:
-  - type: relates
-    links:
-      - plain_text_benefits
-      - automation_tools
-      - ci_cd_pipeline
-  - type: implements
-    links:
-      - code/tools/src/automation
-      - [[machine_readability]]
-
+- type: relates
+  links:
+  - plain_text_benefits
+  - automation_tools
+  - ci_cd_pipeline
+- type: implements
+  links:
+  - code/tools/src/automation
+  - - - machine_readability
 ---
+
 
 # Machine Readability and Automation
 

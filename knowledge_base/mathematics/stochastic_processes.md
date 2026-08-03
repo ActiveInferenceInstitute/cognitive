@@ -1,64 +1,35 @@
 ---
-
 title: Stochastic Processes
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-15
-
 complexity: advanced
-
 processing_priority: 1
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - dynamics
-
-  - random_processes
-
-  - uncertainty
-
+- mathematics
+- probability
+- dynamics
+- random_processes
+- uncertainty
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[dynamical_systems]]
-
-      - [[network_science]]
-
-      - [[statistical_physics]]
-
-  - type: implements
-
-    links:
-
-      - [[probability_theory]]
-
-      - [[measure_theory]]
-
-      - [[differential_equations]]
-
-  - type: relates
-
-    links:
-
-      - [[information_theory]]
-
-      - [[optimization_theory]]
-
-      - [[control_theory]]
-
-      - [[complex_systems]]
-
+- type: foundation_for
+  links:
+  - - - dynamical_systems
+  - - - network_science
+  - - - statistical_physics
+- type: implements
+  links:
+  - - - probability_theory
+  - - - measure_theory
+  - - - differential_equations
+- type: relates
+  links:
+  - - - information_theory
+  - - - optimization_theory
+  - - - control_theory
+  - - - complex_systems
 ---
+
 
 # Stochastic Processes
 

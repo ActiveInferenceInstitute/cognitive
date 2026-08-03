@@ -1,56 +1,31 @@
 ---
-
 title: Measure-Theoretic Active Inference
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - measure_theory
-
-  - probability_theory
-
-  - active_inference
-
+- mathematics
+- measure_theory
+- probability_theory
+- active_inference
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[measure_theory]]
-
-      - [[probability_theory]]
-
-      - [[functional_analysis]]
-
-      - [[integration_theory]]
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-  - type: relates
-
-    links:
-
-      - [[path_integral_free_energy]]
-
-      - [[variational_methods]]
-
-      - [[stochastic_processes]]
-
+- type: foundation
+  links:
+  - - - measure_theory
+  - - - probability_theory
+  - - - functional_analysis
+  - - - integration_theory
+- type: implements
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+- type: relates
+  links:
+  - - - path_integral_free_energy
+  - - - variational_methods
+  - - - stochastic_processes
 ---
+
 
 # Measure-Theoretic Active Inference
 

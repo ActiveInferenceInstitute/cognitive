@@ -1,16 +1,14 @@
 ---
-
 type: agent_config
-
 id: generic_pomdp_001
-
 created: 2025-01-01
-
 modified: 2025-01-01
-
-tags: [agent, pomdp, active-inference]
-
+tags:
+- agent
+- pomdp
+- active-inference
 ---
+
 
 # Generic POMDP Agent
 

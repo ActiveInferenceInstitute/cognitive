@@ -1,22 +1,17 @@
 ---
-
 title: Worked Example — Variational Free Energy
-
 type: example
-
 status: draft
-
 created: 2025-08-08
-
-tags: [example, vfe]
-
+tags:
+- example
+- vfe
 semantic_relations:
-
-  - type: demonstrates
-
-    links: [variational_free_energy]
-
+- type: demonstrates
+  links:
+  - variational_free_energy
 ---
+
 
 ## VFE on a simple categorical model
 

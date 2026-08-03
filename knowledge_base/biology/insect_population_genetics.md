@@ -1,54 +1,37 @@
 ---
-
 type: concept
-
 id: insect_population_genetics_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [population_genetics, entomology, evolution, mathematical_biology, genetics]
-
-aliases: [insect-genetics, evolutionary-entomology]
-
+tags:
+- population_genetics
+- entomology
+- evolution
+- mathematical_biology
+- genetics
+aliases:
+- insect-genetics
+- evolutionary-entomology
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[mathematical_entomology]]
-
-      - [[population_genetics]]
-
-      - [[evolutionary_dynamics]]
-
-  - type: implements
-
-    links:
-
-      - [[statistical_methods]]
-
-      - [[bioinformatics]]
-
-      - [[genomics]]
-
-  - type: relates
-
-    links:
-
-      - [[ecological_networks]]
-
-      - [[speciation]]
-
-      - [[adaptation]]
-
+- type: foundation
+  links:
+  - - - mathematical_entomology
+  - - - population_genetics
+  - - - evolutionary_dynamics
+- type: implements
+  links:
+  - - - statistical_methods
+  - - - bioinformatics
+  - - - genomics
+- type: relates
+  links:
+  - - - ecological_networks
+  - - - speciation
+  - - - adaptation
 ---
+
 
 # Population Genetics in Insects
 

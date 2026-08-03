@@ -1,46 +1,28 @@
 ---
-
 title: Path Integral Connections
-
 type: knowledge_base
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - path_integrals
-
-  - connections
-
-  - synthesis
-
+- mathematics
+- path_integrals
+- connections
+- synthesis
 semantic_relations:
-
-  - type: implements
-
-    links: [[path_integral_information]]
-
-  - type: extends
-
-    links: [[mathematical_foundations]]
-
-  - type: related
-
-    links:
-
-      - [[information_theory]]
-
-      - [[variational_methods]]
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
+- type: implements
+  links:
+  - - path_integral_information
+- type: extends
+  links:
+  - - mathematical_foundations
+- type: related
+  links:
+  - - - information_theory
+  - - - variational_methods
+  - - - active_inference
+  - - - free_energy_principle
 ---
+
 
 # Path Integral Connections
 

@@ -1,26 +1,19 @@
 ---
-
 title: Communication
-
 type: concept
-
 status: stable
-
 tags:
-  - communication
-  - information
-  - pragmatics
-
+- communication
+- information
+- pragmatics
 semantic_relations:
-
-  - type: relates
-
-    links:
-      - information_processing
-      - bayesian_brain
-      - active_inference
-
+- type: relates
+  links:
+  - information_processing
+  - bayesian_brain
+  - active_inference
 ---
+
 
 # Communication
 

@@ -1,44 +1,25 @@
 ---
-
 title: Hamiltonian Mechanics
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - mechanics
-
-  - physics
-
-  - dynamics
-
+- mathematics
+- mechanics
+- physics
+- dynamics
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[symplectic_geometry]]
-
-      - [[geometric_mechanics]]
-
-  - type: relates
-
-    links:
-
-      - [[lagrangian_mechanics]]
-
-      - [[quantum_mechanics]]
-
-      - [[integrable_systems]]
-
+- type: foundation
+  links:
+  - - - symplectic_geometry
+  - - - geometric_mechanics
+- type: relates
+  links:
+  - - - lagrangian_mechanics
+  - - - quantum_mechanics
+  - - - integrable_systems
 ---
+
 
 # Hamiltonian Mechanics
 

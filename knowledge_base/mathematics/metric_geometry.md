@@ -1,44 +1,25 @@
 ---
-
 title: Metric Geometry
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - geometry
-
-  - metric
-
-  - analysis
-
+- mathematics
+- geometry
+- metric
+- analysis
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[differential_geometry]]
-
-      - [[topology]]
-
-  - type: relates
-
-    links:
-
-      - [[sub_riemannian_geometry]]
-
-      - [[geometric_group_theory]]
-
-      - [[optimal_transport]]
-
+- type: foundation
+  links:
+  - - - differential_geometry
+  - - - topology
+- type: relates
+  links:
+  - - - sub_riemannian_geometry
+  - - - geometric_group_theory
+  - - - optimal_transport
 ---
+
 
 # Metric Geometry
 

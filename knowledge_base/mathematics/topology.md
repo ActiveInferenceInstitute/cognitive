@@ -1,44 +1,25 @@
 ---
-
 title: Topology
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - topology
-
-  - geometry
-
-  - analysis
-
+- mathematics
+- topology
+- geometry
+- analysis
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[differential_geometry]]
-
-      - [[algebraic_topology]]
-
-  - type: relates
-
-    links:
-
-      - [[manifold_theory]]
-
-      - [[homology_theory]]
-
-      - [[homotopy_theory]]
-
+- type: foundation
+  links:
+  - - - differential_geometry
+  - - - algebraic_topology
+- type: relates
+  links:
+  - - - manifold_theory
+  - - - homology_theory
+  - - - homotopy_theory
 ---
+
 
 # Topology
 

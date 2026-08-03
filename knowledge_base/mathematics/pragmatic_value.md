@@ -1,18 +1,18 @@
 ---
-
 type: mathematical_concept
-
 id: pragmatic_value_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [active-inference, utility-theory, goal-directed]
-
-aliases: [pragmatic-value, utility-value, goal-satisfaction]
-
+tags:
+- active-inference
+- utility-theory
+- goal-directed
+aliases:
+- pragmatic-value
+- utility-value
+- goal-satisfaction
 ---
+
 
 # Pragmatic Value
 

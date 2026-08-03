@@ -1,56 +1,31 @@
 ---
-
 title: Predictive Coding
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - neuroscience
-
-  - machine-learning
-
-  - inference
-
+- mathematics
+- neuroscience
+- machine-learning
+- inference
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[free_energy_principle]]
-
-      - [[bayesian_inference]]
-
-      - [[hierarchical_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[variational_inference]]
-
-      - [[message_passing]]
-
-  - type: related
-
-    links:
-
-      - [[error_propagation]]
-
-      - [[hierarchical_models]]
-
-      - [[precision_weighting]]
-
+- type: foundation
+  links:
+  - - - free_energy_principle
+  - - - bayesian_inference
+  - - - hierarchical_inference
+- type: implements
+  links:
+  - - - active_inference
+  - - - variational_inference
+  - - - message_passing
+- type: related
+  links:
+  - - - error_propagation
+  - - - hierarchical_models
+  - - - precision_weighting
 ---
+
 
 # Predictive Coding
 

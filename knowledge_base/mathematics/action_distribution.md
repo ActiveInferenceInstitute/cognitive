@@ -1,35 +1,34 @@
 ---
-
 type: mathematical_concept
-
 id: action_distribution_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [active-inference, probability, action-selection, affordances]
-
-aliases: [action-probabilities, policy-distribution]
-
+tags:
+- active-inference
+- probability
+- action-selection
+- affordances
+aliases:
+- action-probabilities
+- policy-distribution
 semantic_relations:
-  - type: implements
-    links:
-      - [[policy_selection]]
-      - [[expected_free_energy]]
-      - [[active_inference]]
-  - type: uses
-    links:
-      - [[probability_theory]]
-      - [[softmax_function]]
-      - [[information_theory]]
-  - type: relates
-    links:
-      - [[action_selection]]
-      - [[exploration_exploitation]]
-      - [[precision_parameter]]
-
+- type: implements
+  links:
+  - - - policy_selection
+  - - - expected_free_energy
+  - - - active_inference
+- type: uses
+  links:
+  - - - probability_theory
+  - - - softmax_function
+  - - - information_theory
+- type: relates
+  links:
+  - - - action_selection
+  - - - exploration_exploitation
+  - - - precision_parameter
 ---
+
 
 # Action Probability Distribution
 

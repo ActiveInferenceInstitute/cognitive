@@ -1,36 +1,22 @@
 ---
-
 title: Predictive Network Implementation
-
 type: concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - implementation
-
-  - predictive-processing
-
-  - neural-networks
-
+- implementation
+- predictive-processing
+- neural-networks
 semantic_relations:
-
-  - type: implements
-
-    links: [[predictive_processing]]
-
-  - type: relates
-
-    links:
-
-      - [[error_propagation]]
-
-      - [[precision_mechanisms]]
-
+- type: implements
+  links:
+  - - predictive_processing
+- type: relates
+  links:
+  - - - error_propagation
+  - - - precision_mechanisms
 ---
+
 
 # Predictive Network Implementation
 

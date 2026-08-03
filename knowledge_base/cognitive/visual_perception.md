@@ -1,46 +1,28 @@
 ---
-
 title: Visual Perception
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - vision
-
-  - neuroscience
-
+- cognition
+- perception
+- vision
+- neuroscience
 semantic_relations:
-
-  - type: implements
-
-    links: [[perception_attention]]
-
-  - type: extends
-
-    links: [[sensory_processing]]
-
-  - type: related
-
-    links:
-
-      - [[pattern_recognition]]
-
-      - [[depth_perception]]
-
-      - [[motion_perception]]
-
-      - [[color_processing]]
-
+- type: implements
+  links:
+  - - perception_attention
+- type: extends
+  links:
+  - - sensory_processing
+- type: related
+  links:
+  - - - pattern_recognition
+  - - - depth_perception
+  - - - motion_perception
+  - - - color_processing
 ---
+
 
 # Visual Perception
 

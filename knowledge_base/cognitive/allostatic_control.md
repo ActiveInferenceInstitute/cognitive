@@ -1,28 +1,21 @@
 ---
-
 title: Allostatic Control
-
 type: concept
-
 status: stable
-
 tags:
-  - cognition
-  - control
-  - homeostasis
-  - adaptation
-
+- cognition
+- control
+- homeostasis
+- adaptation
 semantic_relations:
-
-  - type: relates
-
-    links:
-      - homeostatic_regulation
-      - adaptation_mechanisms
-      - precision_weighting
-      - active_inference
-
+- type: relates
+  links:
+  - homeostatic_regulation
+  - adaptation_mechanisms
+  - precision_weighting
+  - active_inference
 ---
+
 
 # Allostatic Control
 

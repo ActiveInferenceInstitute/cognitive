@@ -1,48 +1,28 @@
 ---
-
 title: Temporal Models
-
 type: concept
-
 status: stable
-
 created: 2024-02-14
-
 tags:
-
-  - cognitive
-
-  - temporal
-
-  - active_inference
-
-  - modeling
-
+- cognitive
+- temporal
+- active_inference
+- modeling
 semantic_relations:
-
-  - type: implements
-
-    links: [[active_inference]]
-
-  - type: relates
-
-    links:
-
-      - [[generative_model]]
-
-      - [[predictive_coding]]
-
-      - [[hierarchical_inference]]
-
-      - [[model_architecture]]
-
-      - [[continuous_time_active_inference]]
-
-      - [[model_selection]]
-
-      - [[evidence_accumulation]]
-
+- type: implements
+  links:
+  - - active_inference
+- type: relates
+  links:
+  - - - generative_model
+  - - - predictive_coding
+  - - - hierarchical_inference
+  - - - model_architecture
+  - - - continuous_time_active_inference
+  - - - model_selection
+  - - - evidence_accumulation
 ---
+
 
 # Temporal Models
 

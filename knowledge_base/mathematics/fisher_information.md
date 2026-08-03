@@ -1,26 +1,23 @@
 ---
-
 title: Fisher Information
-
 type: mathematical_concept
-
 status: stable
-
 created: 2025-08-08
-
-tags: [information-theory, estimation, geometry]
-
+tags:
+- information-theory
+- estimation
+- geometry
 semantic_relations:
-
-  - type: relates
-
-    links: [information_geometry, natural_gradients]
-
-  - type: supports
-
-    links: [policy_selection, action_distribution]
-
+- type: relates
+  links:
+  - information_geometry
+  - natural_gradients
+- type: supports
+  links:
+  - policy_selection
+  - action_distribution
 ---
+
 
 ## Fisher Information
 

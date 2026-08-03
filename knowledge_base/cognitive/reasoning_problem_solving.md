@@ -1,40 +1,24 @@
 ---
-
 title: Reasoning and Problem Solving
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - reasoning
-
-  - problem_solving
-
-  - decision_making
-
-  - logic
-
+- cognition
+- reasoning
+- problem_solving
+- decision_making
+- logic
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_functions]]
-
-  - type: related
-
-    links:
-
-      - [[decision_making]]
-
-      - [[executive_functions]]
-
-      - [[learning_mechanisms]]
-
+- type: implements
+  links:
+  - - cognitive_functions
+- type: related
+  links:
+  - - - decision_making
+  - - - executive_functions
+  - - - learning_mechanisms
 ---
+
 
 # Reasoning and Problem Solving
 

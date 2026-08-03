@@ -1,26 +1,24 @@
 ---
-
 title: Numerical Stability in Inference and Control
-
 type: mathematical_concept
-
 status: stable
-
 created: 2025-08-08
-
-tags: [numerics, stability, optimization]
-
+tags:
+- numerics
+- stability
+- optimization
 semantic_relations:
-
-  - type: supports
-
-    links: [variational_inference, policy_selection, action_distribution]
-
-  - type: relates
-
-    links: [softmax_function, precision_parameter]
-
+- type: supports
+  links:
+  - variational_inference
+  - policy_selection
+  - action_distribution
+- type: relates
+  links:
+  - softmax_function
+  - precision_parameter
 ---
+
 
 ## Numerical Stability
 

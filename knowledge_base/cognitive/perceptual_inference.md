@@ -1,40 +1,24 @@
 ---
-
 title: Perceptual Inference
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - inference
-
-  - predictive_processing
-
-  - neural_computation
-
+- cognition
+- perception
+- inference
+- predictive_processing
+- neural_computation
 semantic_relations:
-
-  - type: implements
-
-    links: [[predictive_processing]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[sensory_processing]]
-
-      - [[bayesian_brain]]
-
+- type: implements
+  links:
+  - - predictive_processing
+- type: related
+  links:
+  - - - active_inference
+  - - - sensory_processing
+  - - - bayesian_brain
 ---
+
 
 # Perceptual Inference
 

@@ -1,62 +1,36 @@
 ---
-
 title: Message Passing Algorithms
-
 type: mathematical_concept
-
 status: active
-
 created: 2024-03-20
-
 modified: 2025-01-26
-
 tags:
-
-  - mathematics
-
-  - algorithms
-
-  - inference
-
-  - graphical_models
-
-  - belief_propagation
-
-msc: ["68T05", "62H12"]
-
+- mathematics
+- algorithms
+- inference
+- graphical_models
+- belief_propagation
+msc:
+- 68T05
+- 62H12
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[factor_graphs]]
-
-      - [[belief_propagation]]
-
-      - [[variational_inference]]
-
-  - type: foundation_for
-
-    links:
-
-      - [[active_inference_theory]]
-
-      - [[free_energy_principle]]
-
-      - [[probabilistic_inference]]
-
-  - type: uses
-
-    links:
-
-      - [[probability_theory]]
-
-      - [[information_theory]]
-
-      - [[graph_theory]]
-
+- type: implements
+  links:
+  - - - factor_graphs
+  - - - belief_propagation
+  - - - variational_inference
+- type: foundation_for
+  links:
+  - - - active_inference_theory
+  - - - free_energy_principle
+  - - - probabilistic_inference
+- type: uses
+  links:
+  - - - probability_theory
+  - - - information_theory
+  - - - graph_theory
 ---
+
 
 # Message Passing Algorithms
 

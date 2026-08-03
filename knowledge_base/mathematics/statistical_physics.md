@@ -1,70 +1,38 @@
 ---
-
 title: Statistical Physics
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-15
-
 complexity: advanced
-
 processing_priority: 1
-
 tags:
-
-  - mathematics
-
-  - physics
-
-  - thermodynamics
-
-  - statistical_mechanics
-
-  - complexity
-
-  - emergence
-
+- mathematics
+- physics
+- thermodynamics
+- statistical_mechanics
+- complexity
+- emergence
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[complex_systems]]
-
-      - [[network_science]]
-
-      - [[free_energy_principle]]
-
-      - [[active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[thermodynamics]]
-
-      - [[information_theory]]
-
-      - [[probability_theory]]
-
-      - [[stochastic_processes]]
-
-  - type: relates
-
-    links:
-
-      - [[dynamical_systems]]
-
-      - [[non_equilibrium_thermodynamics]]
-
-      - [[optimization_theory]]
-
-      - [[variational_inference]]
-
+- type: foundation_for
+  links:
+  - - - complex_systems
+  - - - network_science
+  - - - free_energy_principle
+  - - - active_inference
+- type: implements
+  links:
+  - - - thermodynamics
+  - - - information_theory
+  - - - probability_theory
+  - - - stochastic_processes
+- type: relates
+  links:
+  - - - dynamical_systems
+  - - - non_equilibrium_thermodynamics
+  - - - optimization_theory
+  - - - variational_inference
 ---
+
 
 # Statistical Physics
 

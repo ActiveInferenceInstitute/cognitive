@@ -1,26 +1,24 @@
 ---
-
 title: AI for Mathematics – A Cognitive Science Perspective
-
 type: mathematical_concept
-
 status: draft
-
 created: 2025-08-08
-
-tags: [ai, mathematics, cognitive-science, reasoning]
-
+tags:
+- ai
+- mathematics
+- cognitive-science
+- reasoning
 semantic_relations:
-
-  - type: relates
-
-    links: [bayesian_generative_models, reasoning_problem_solving, information_geometry]
-
-  - type: supports
-
-    links: [active_inference_theory]
-
+- type: relates
+  links:
+  - bayesian_generative_models
+  - reasoning_problem_solving
+  - information_geometry
+- type: supports
+  links:
+  - active_inference_theory
 ---
+
 
 ## AI for Mathematics – Cognitive Perspective
 

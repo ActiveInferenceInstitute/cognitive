@@ -4,41 +4,38 @@ type: mathematical_concept
 id: free_energy_principle_001
 created: 2024-02-10
 modified: 2025-12-18
-tags: [mathematics, bayesian_inference, neuroscience, cognitive_science, thermodynamics, information_theory]
-aliases: [free_energy_principle, FEP]
-msc: ["62B10", "94A17", "68T05"]
+tags:
+- mathematics
+- bayesian_inference
+- neuroscience
+- cognitive_science
+- thermodynamics
+- information_theory
+aliases:
+- free_energy_principle
+- FEP
+msc:
+- 62B10
+- 94A17
+- 68T05
 semantic_relations:
-  - type: foundation
-
-    links:
-
-      - [[bayesian_inference]]
-
-      - [[information_theory]]
-
-      - [[statistical_physics]]
-
-      - [[variational_methods]]
-
-  - type: relates
-
-    links:
-
-      - [[active_inference]]
-
-      - [[predictive_coding]]
-
-      - [[bayesian_brain_hypothesis]]
-
-      - [[markov_blanket]]
-
-      - [[variational_inference]]
-
-      - [[self_organization]]
-
-      - [[autopoiesis]]
-
+- type: foundation
+  links:
+  - - - bayesian_inference
+  - - - information_theory
+  - - - statistical_physics
+  - - - variational_methods
+- type: relates
+  links:
+  - - - active_inference
+  - - - predictive_coding
+  - - - bayesian_brain_hypothesis
+  - - - markov_blanket
+  - - - variational_inference
+  - - - self_organization
+  - - - autopoiesis
 ---
+
 
 # Free Energy Principle
 

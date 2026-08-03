@@ -1,54 +1,38 @@
 ---
-
 type: mathematical_concept
-
 id: variational_free_energy_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [free-energy, variational-methods, active-inference, statistical-mechanics, information-theory]
-
-aliases: [VFE, evidence-lower-bound, ELBO]
-
+tags:
+- free-energy
+- variational-methods
+- active-inference
+- statistical-mechanics
+- information-theory
+aliases:
+- VFE
+- evidence-lower-bound
+- ELBO
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[policy_selection]]
-
-  - type: mathematical_basis
-
-    links:
-
-      - [[variational_calculus]]
-
-      - [[information_geometry]]
-
-      - [[statistical_mechanics]]
-
-  - type: relates
-
-    links:
-
-      - [[expected_free_energy]]
-
-      - [[path_integral_free_energy]]
-
-      - [[belief_updating]]
-
+- type: implements
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - policy_selection
+- type: mathematical_basis
+  links:
+  - - - variational_calculus
+  - - - information_geometry
+  - - - statistical_mechanics
+- type: relates
+  links:
+  - - - expected_free_energy
+  - - - path_integral_free_energy
+  - - - belief_updating
 ---
+
 
 # Variational Free Energy
 

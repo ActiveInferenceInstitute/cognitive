@@ -1,66 +1,48 @@
 ---
-
 type: mathematical_concept
-
 id: path_integral_free_energy_001
-
 created: 2024-02-05
-
 modified: 2024-03-15
-
-tags: [free-energy, path-integrals, active-inference, statistical-mechanics, quantum-mechanics, variational-methods, dynamical-systems, control-theory]
-
-aliases: [path-integral-FEP, FEP-path-formulation, action-principle, hamiltonian-FEP]
-
+tags:
+- free-energy
+- path-integrals
+- active-inference
+- statistical-mechanics
+- quantum-mechanics
+- variational-methods
+- dynamical-systems
+- control-theory
+aliases:
+- path-integral-FEP
+- FEP-path-formulation
+- action-principle
+- hamiltonian-FEP
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[optimal_control]]
-
-  - type: mathematical_basis
-
-    links:
-
-      - [[quantum_mechanics]]
-
-      - [[statistical_mechanics]]
-
-      - [[information_geometry]]
-
-      - [[dynamical_systems]]
-
-      - [[differential_geometry]]
-
-      - [[variational_calculus]]
-
-  - type: relates
-
-    links:
-
-      - [[variational_free_energy]]
-
-      - [[expected_free_energy]]
-
-      - [[stochastic_thermodynamics]]
-
-      - [[path_integral_control]]
-
-      - [[hamiltonian_mechanics]]
-
-      - [[lagrangian_mechanics]]
-
+- type: implements
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - optimal_control
+- type: mathematical_basis
+  links:
+  - - - quantum_mechanics
+  - - - statistical_mechanics
+  - - - information_geometry
+  - - - dynamical_systems
+  - - - differential_geometry
+  - - - variational_calculus
+- type: relates
+  links:
+  - - - variational_free_energy
+  - - - expected_free_energy
+  - - - stochastic_thermodynamics
+  - - - path_integral_control
+  - - - hamiltonian_mechanics
+  - - - lagrangian_mechanics
 ---
+
 
 # Path Integral Formulation of the Free Energy Principle
 

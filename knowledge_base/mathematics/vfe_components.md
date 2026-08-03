@@ -1,18 +1,17 @@
 ---
-
 type: visualization
-
 id: vfe_components_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [active-inference, free-energy, visualization]
-
-aliases: [vfe-components, vfe-visualization]
-
+tags:
+- active-inference
+- free-energy
+- visualization
+aliases:
+- vfe-components
+- vfe-visualization
 ---
+
 
 # Variational Free Energy Components
 

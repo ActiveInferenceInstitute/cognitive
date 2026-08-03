@@ -1,40 +1,24 @@
 ---
-
 title: Metacognition
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - self_awareness
-
-  - monitoring
-
-  - control
-
-  - reflection
-
+- cognition
+- self_awareness
+- monitoring
+- control
+- reflection
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_functions]]
-
-  - type: related
-
-    links:
-
-      - [[executive_functions]]
-
-      - [[consciousness]]
-
-      - [[self_regulation]]
-
+- type: implements
+  links:
+  - - cognitive_functions
+- type: related
+  links:
+  - - - executive_functions
+  - - - consciousness
+  - - - self_regulation
 ---
+
 
 # Metacognition
 

@@ -1,26 +1,19 @@
 ---
-
 title: Psychophysics
-
 type: concept
-
 status: stable
-
 tags:
-  - psychophysics
-  - perception
-  - thresholds
-
+- psychophysics
+- perception
+- thresholds
 semantic_relations:
-
-  - type: relates
-
-    links:
-      - perception_processing
-      - information_theory
-      - active_inference
-
+- type: relates
+  links:
+  - perception_processing
+  - information_theory
+  - active_inference
 ---
+
 
 # Psychophysics
 

@@ -1,18 +1,18 @@
 ---
-
 type: mathematical_concept
-
 id: uncertainty_resolution_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [uncertainty, information-theory, active-inference]
-
-aliases: [uncertainty-reduction, information-seeking, uncertainty-minimization]
-
+tags:
+- uncertainty
+- information-theory
+- active-inference
+aliases:
+- uncertainty-reduction
+- information-seeking
+- uncertainty-minimization
 ---
+
 
 # Uncertainty Resolution
 

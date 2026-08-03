@@ -1,74 +1,41 @@
 ---
-
 title: Metaverse
-
 type: article
-
 status: stable
-
 created: 2024-03-25
-
 tags:
-
-  - spatial-computing
-
-  - virtual-reality
-
-  - augmented-reality
-
-  - mixed-reality
-
-  - digital-worlds
-
-  - systems
-
-  - social-computing
-
-  - spatial-web
-
+- spatial-computing
+- virtual-reality
+- augmented-reality
+- mixed-reality
+- digital-worlds
+- systems
+- social-computing
+- spatial-web
 semantic_relations:
-
-  - type: relates
-
-    links:
-
-      - [[knowledge_base/systems/spatial_web|Spatial Web]]
-
-      - [[knowledge_base/systems/virtual_reality|Virtual Reality]]
-
-      - [[knowledge_base/systems/augmented_reality|Augmented Reality]]
-
-      - [[knowledge_base/systems/mixed_reality|Mixed Reality]]
-
-      - [[knowledge_base/systems/digital_twins|Digital Twins]]
-
-      - [[docs/guides/application/active_inference_spatial_applications|Active Inference in Spatial Applications]]
-
-  - type: specializes
-
-    links:
-
-      - [[knowledge_base/systems/spatial_computing|Spatial Computing]]
-
-  - type: prerequisite
-
-    links:
-
-      - [[knowledge_base/systems/virtual_reality|Virtual Reality]]
-
-      - [[knowledge_base/systems/internet_of_things|Internet of Things]]
-
-  - type: foundation
-
-    links:
-
-      - Distributed Systems
-
-      - Computer Graphics
-
-      - [[knowledge_base/cognitive/embodied_cognition|Embodied Cognition]]
-
+- type: relates
+  links:
+  - - - knowledge_base/systems/spatial_web|Spatial Web
+  - - - knowledge_base/systems/virtual_reality|Virtual Reality
+  - - - knowledge_base/systems/augmented_reality|Augmented Reality
+  - - - knowledge_base/systems/mixed_reality|Mixed Reality
+  - - - knowledge_base/systems/digital_twins|Digital Twins
+  - - - docs/guides/application/active_inference_spatial_applications|Active Inference
+        in Spatial Applications
+- type: specializes
+  links:
+  - - - knowledge_base/systems/spatial_computing|Spatial Computing
+- type: prerequisite
+  links:
+  - - - knowledge_base/systems/virtual_reality|Virtual Reality
+  - - - knowledge_base/systems/internet_of_things|Internet of Things
+- type: foundation
+  links:
+  - Distributed Systems
+  - Computer Graphics
+  - - - knowledge_base/cognitive/embodied_cognition|Embodied Cognition
 ---
+
 
 # Metaverse
 

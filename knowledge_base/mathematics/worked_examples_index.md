@@ -1,22 +1,19 @@
 ---
-
 title: Worked Examples Index
-
 type: index
-
 status: stable
-
 created: 2025-08-08
-
-tags: [examples, vfe, efe]
-
+tags:
+- examples
+- vfe
+- efe
 semantic_relations:
-
-  - type: aggregates
-
-    links: [worked_example_vfe, worked_example_efe]
-
+- type: aggregates
+  links:
+  - worked_example_vfe
+  - worked_example_efe
 ---
+
 
 ## Worked Examples
 

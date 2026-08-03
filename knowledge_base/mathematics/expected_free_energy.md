@@ -1,58 +1,35 @@
 ---
-
 title: Expected Free Energy
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - active-inference
-
-  - decision-theory
-
-  - information-theory
-
-msc: ["62F15", "94A17", "68T05"]
-
+- mathematics
+- active-inference
+- decision-theory
+- information-theory
+msc:
+- 62F15
+- 94A17
+- 68T05
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[free_energy_principle]]
-
-      - [[information_theory]]
-
-      - [[decision_theory]]
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[policy_selection]]
-
-      - [[exploration_exploitation]]
-
-  - type: related
-
-    links:
-
-      - [[variational_free_energy]]
-
-      - [[kl_divergence]]
-
-      - [[entropy]]
-
+- type: foundation
+  links:
+  - - - free_energy_principle
+  - - - information_theory
+  - - - decision_theory
+- type: implements
+  links:
+  - - - active_inference
+  - - - policy_selection
+  - - - exploration_exploitation
+- type: related
+  links:
+  - - - variational_free_energy
+  - - - kl_divergence
+  - - - entropy
 ---
+
 
 # Expected Free Energy
 

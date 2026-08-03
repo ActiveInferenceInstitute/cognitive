@@ -1,18 +1,18 @@
 ---
-
 type: verification
-
 id: path_integral_verification_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [verification, path-integrals, technical-accuracy, documentation]
-
-aliases: [path-verification, documentation-verification]
-
+tags:
+- verification
+- path-integrals
+- technical-accuracy
+- documentation
+aliases:
+- path-verification
+- documentation-verification
 ---
+
 
 # Path Integral Documentation Verification
 

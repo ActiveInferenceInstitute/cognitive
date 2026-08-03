@@ -1,44 +1,27 @@
 ---
-
 title: Depth Perception
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - vision
-
-  - spatial_processing
-
+- cognition
+- perception
+- vision
+- spatial_processing
 semantic_relations:
-
-  - type: implements
-
-    links: [[visual_perception]]
-
-  - type: extends
-
-    links: [[spatial_processing]]
-
-  - type: related
-
-    links:
-
-      - [[motion_perception]]
-
-      - [[binocular_vision]]
-
-      - [[spatial_attention]]
-
+- type: implements
+  links:
+  - - visual_perception
+- type: extends
+  links:
+  - - spatial_processing
+- type: related
+  links:
+  - - - motion_perception
+  - - - binocular_vision
+  - - - spatial_attention
 ---
+
 
 # Depth Perception
 

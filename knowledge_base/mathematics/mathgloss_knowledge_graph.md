@@ -1,26 +1,25 @@
 ---
-
 title: MathGloss Knowledge Graph
-
 type: mathematical_concept
-
 status: draft
-
 created: 2025-08-08
-
-tags: [mathematics, knowledge-graph, ontology, education]
-
+tags:
+- mathematics
+- knowledge-graph
+- ontology
+- education
 semantic_relations:
-
-  - type: relates
-
-    links: [probability_theory, calculus, linear_algebra]
-
-  - type: integrates
-
-    links: [cross_reference_map, mathematics_resources]
-
+- type: relates
+  links:
+  - probability_theory
+  - calculus
+  - linear_algebra
+- type: integrates
+  links:
+  - cross_reference_map
+  - mathematics_resources
 ---
+
 
 ## MathGloss Knowledge Graph
 

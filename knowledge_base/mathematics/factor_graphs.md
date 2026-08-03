@@ -1,54 +1,30 @@
 ---
-
 title: Factor Graphs
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - graphical-models
-
-  - inference
-
+- mathematics
+- graphical-models
+- inference
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[graphical_models]]
-
-      - [[probabilistic_models]]
-
-      - [[bayesian_networks]]
-
-  - type: implements
-
-    links:
-
-      - [[message_passing]]
-
-      - [[belief_propagation]]
-
-      - [[variational_inference]]
-
-  - type: related
-
-    links:
-
-      - [[markov_random_fields]]
-
-      - [[conditional_random_fields]]
-
-      - [[probabilistic_programming]]
-
+- type: foundation
+  links:
+  - - - graphical_models
+  - - - probabilistic_models
+  - - - bayesian_networks
+- type: implements
+  links:
+  - - - message_passing
+  - - - belief_propagation
+  - - - variational_inference
+- type: related
+  links:
+  - - - markov_random_fields
+  - - - conditional_random_fields
+  - - - probabilistic_programming
 ---
+
 
 # Factor Graphs
 

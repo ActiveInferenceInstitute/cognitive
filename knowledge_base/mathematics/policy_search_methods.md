@@ -1,22 +1,18 @@
 ---
-
 title: Policy Search Methods (Active Inference Lens)
-
 type: mathematical_concept
-
 status: draft
-
 created: 2025-08-08
-
-tags: [policy-optimization]
-
+tags:
+- policy-optimization
 semantic_relations:
-
-  - type: relates
-
-    links: [policy_selection, expected_free_energy, natural_gradients]
-
+- type: relates
+  links:
+  - policy_selection
+  - expected_free_energy
+  - natural_gradients
 ---
+
 
 ## Policy Search Methods
 

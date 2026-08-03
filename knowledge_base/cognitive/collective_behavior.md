@@ -1,33 +1,24 @@
 ---
-
 title: Collective Behavior
-
 type: concept
-
 status: stable
-
 tags:
-  - collective
-  - swarm
-  - coordination
-  - multi-agent
-
+- collective
+- swarm
+- coordination
+- multi-agent
 semantic_relations:
-
-  - type: extends
-
-    links:
-      - swarm_intelligence
-      - stigmergic_coordination
-
-  - type: relates
-
-    links:
-      - social_insect_cognition
-      - cooperation
-      - active_inference
-
+- type: extends
+  links:
+  - swarm_intelligence
+  - stigmergic_coordination
+- type: relates
+  links:
+  - social_insect_cognition
+  - cooperation
+  - active_inference
 ---
+
 
 # Collective Behavior
 

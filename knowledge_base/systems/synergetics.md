@@ -1,54 +1,37 @@
 ---
-
 type: concept
-
 id: synergetics_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [synergetics, active-inference, geometry, complex-systems]
-
-aliases: [fuller-geometry, energetic-geometry, synergetic-mathematics]
-
+tags:
+- synergetics
+- active-inference
+- geometry
+- complex-systems
+aliases:
+- fuller-geometry
+- energetic-geometry
+- synergetic-mathematics
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[geometric_unity]]
-
-  - type: implements
-
-    links:
-
-      - [[tensegrity]]
-
-      - [[geodesic_geometry]]
-
-      - [[vector_equilibrium]]
-
-  - type: relates
-
-    links:
-
-      - [[complex_systems]]
-
-      - [[information_geometry]]
-
-      - [[network_theory]]
-
+- type: foundation
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - geometric_unity
+- type: implements
+  links:
+  - - - tensegrity
+  - - - geodesic_geometry
+  - - - vector_equilibrium
+- type: relates
+  links:
+  - - - complex_systems
+  - - - information_geometry
+  - - - network_theory
 ---
+
 
 # Synergetics
 

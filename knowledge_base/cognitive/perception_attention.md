@@ -1,40 +1,24 @@
 ---
-
 title: Perception and Attention
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - attention
-
-  - sensory_processing
-
-  - neural_systems
-
+- cognition
+- perception
+- attention
+- sensory_processing
+- neural_systems
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_functions]]
-
-  - type: related
-
-    links:
-
-      - [[sensory_systems]]
-
-      - [[attention_mechanisms]]
-
-      - [[consciousness]]
-
+- type: implements
+  links:
+  - - cognitive_functions
+- type: related
+  links:
+  - - - sensory_systems
+  - - - attention_mechanisms
+  - - - consciousness
 ---
+
 
 # Perception and Attention
 

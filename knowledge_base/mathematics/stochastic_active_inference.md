@@ -1,56 +1,31 @@
 ---
-
 title: Stochastic Active Inference
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - stochastic_processes
-
-  - probability_theory
-
-  - active_inference
-
+- mathematics
+- stochastic_processes
+- probability_theory
+- active_inference
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[stochastic_processes]]
-
-      - [[probability_theory]]
-
-      - [[measure_theory]]
-
-      - [[statistical_physics]]
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-  - type: relates
-
-    links:
-
-      - [[path_integral_free_energy]]
-
-      - [[variational_methods]]
-
-      - [[optimal_control]]
-
+- type: foundation
+  links:
+  - - - stochastic_processes
+  - - - probability_theory
+  - - - measure_theory
+  - - - statistical_physics
+- type: implements
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+- type: relates
+  links:
+  - - - path_integral_free_energy
+  - - - variational_methods
+  - - - optimal_control
 ---
+
 
 # Stochastic Active Inference
 

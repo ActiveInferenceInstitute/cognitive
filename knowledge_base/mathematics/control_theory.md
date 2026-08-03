@@ -1,64 +1,35 @@
 ---
-
 title: Control Theory
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-15
-
 complexity: advanced
-
 processing_priority: 1
-
 tags:
-
-  - mathematics
-
-  - systems
-
-  - dynamics
-
-  - optimization
-
-  - feedback
-
+- mathematics
+- systems
+- dynamics
+- optimization
+- feedback
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[active_inference]]
-
-      - [[optimal_control]]
-
-      - [[adaptive_control]]
-
-  - type: implements
-
-    links:
-
-      - [[dynamical_systems]]
-
-      - [[optimization_theory]]
-
-      - [[differential_equations]]
-
-  - type: relates
-
-    links:
-
-      - [[statistical_physics]]
-
-      - [[information_theory]]
-
-      - [[free_energy_principle]]
-
-      - [[stochastic_processes]]
-
+- type: foundation_for
+  links:
+  - - - active_inference
+  - - - optimal_control
+  - - - adaptive_control
+- type: implements
+  links:
+  - - - dynamical_systems
+  - - - optimization_theory
+  - - - differential_equations
+- type: relates
+  links:
+  - - - statistical_physics
+  - - - information_theory
+  - - - free_energy_principle
+  - - - stochastic_processes
 ---
+
 
 # Control Theory
 

@@ -1,60 +1,39 @@
 ---
-
 type: concept
-
 id: bioinformatics_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [bioinformatics, active-inference, free-energy-principle, computational-biology]
-
-aliases: [computational-biology, biological-data-science]
-
+tags:
+- bioinformatics
+- active-inference
+- free-energy-principle
+- computational-biology
+aliases:
+- computational-biology
+- biological-data-science
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[information_theory]]
-
-      - [[knowledge_base/cognitive/active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[sequence_analysis]]
-
-      - [[network_inference]]
-
-      - [[machine_learning]]
-
-      - [[knowledge_base/agents/architectures_overview]]
-
-  - type: relates
-
-    links:
-
-      - [[molecular_biology]]
-
-      - [[systems_biology]]
-
-      - [[genetics]]
-
-      - [[bioinformatics]]
-
+- type: foundation
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - information_theory
+  - - - knowledge_base/cognitive/active_inference
+- type: implements
+  links:
+  - - - sequence_analysis
+  - - - network_inference
+  - - - machine_learning
+  - - - knowledge_base/agents/architectures_overview
+- type: relates
+  links:
+  - - - molecular_biology
+  - - - systems_biology
+  - - - genetics
+  - - - bioinformatics
 ---
+
 
 # Bioinformatics
 

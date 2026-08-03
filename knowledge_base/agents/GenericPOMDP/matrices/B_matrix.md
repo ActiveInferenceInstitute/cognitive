@@ -1,66 +1,36 @@
 ---
-
 type: matrix_spec
-
 id: B_matrix_001
-
 matrix_type: transition
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
 complexity: advanced
-
 tags:
-
-  - matrix
-
-  - transition
-
-  - active-inference
-
-  - dynamics
-
-  - probability
-
-  - control
-
+- matrix
+- transition
+- active-inference
+- dynamics
+- probability
+- control
 related_spaces:
-
-  - [[s_space]]
-
-  - [[pi_space]]
-
-  - [[belief_space]]
-
+- - - s_space
+- - - pi_space
+- - - belief_space
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[markov_property]]
-
-      - [[transition_model]]
-
-  - type: influences
-
-    links:
-
-      - [[policy_selection]]
-
-      - [[state_prediction]]
-
-  - type: relates_to
-
-    links:
-
-      - [[dynamics_model]]
-
-      - [[control_theory]]
-
+- type: implements
+  links:
+  - - - markov_property
+  - - - transition_model
+- type: influences
+  links:
+  - - - policy_selection
+  - - - state_prediction
+- type: relates_to
+  links:
+  - - - dynamics_model
+  - - - control_theory
 ---
+
 
 ## Overview
 

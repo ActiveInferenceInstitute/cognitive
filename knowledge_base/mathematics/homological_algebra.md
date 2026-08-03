@@ -1,44 +1,25 @@
 ---
-
 title: Homological Algebra
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - algebra
-
-  - homology
-
-  - categories
-
+- mathematics
+- algebra
+- homology
+- categories
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[category_theory]]
-
-      - [[algebraic_topology]]
-
-  - type: relates
-
-    links:
-
-      - [[derived_categories]]
-
-      - [[spectral_sequences]]
-
-      - [[sheaf_theory]]
-
+- type: foundation
+  links:
+  - - - category_theory
+  - - - algebraic_topology
+- type: relates
+  links:
+  - - - derived_categories
+  - - - spectral_sequences
+  - - - sheaf_theory
 ---
+
 
 # Homological Algebra
 

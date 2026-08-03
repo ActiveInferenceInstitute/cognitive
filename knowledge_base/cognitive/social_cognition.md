@@ -1,40 +1,24 @@
 ---
-
 title: Social Cognition
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - social
-
-  - interaction
-
-  - neural_systems
-
-  - behavior
-
+- cognition
+- social
+- interaction
+- neural_systems
+- behavior
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_functions]]
-
-  - type: related
-
-    links:
-
-      - [[theory_of_mind]]
-
-      - [[emotional_processing]]
-
-      - [[social_neuroscience]]
-
+- type: implements
+  links:
+  - - cognitive_functions
+- type: related
+  links:
+  - - - theory_of_mind
+  - - - emotional_processing
+  - - - social_neuroscience
 ---
+
 
 # Social Cognition
 

@@ -1,54 +1,30 @@
 ---
-
 title: Numerical Methods for Taylor Series in Active Inference
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - numerical_methods
-
-  - active_inference
-
-  - computation
-
+- mathematics
+- numerical_methods
+- active_inference
+- computation
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[advanced_taylor_series]]
-
-      - [[continuous_time_agent]]
-
-      - [[generalized_coordinates]]
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-  - type: relates
-
-    links:
-
-      - [[numerical_optimization]]
-
-      - [[differential_equations]]
-
-      - [[dynamical_systems]]
-
+- type: foundation
+  links:
+  - - - advanced_taylor_series
+  - - - continuous_time_agent
+  - - - generalized_coordinates
+- type: implements
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+- type: relates
+  links:
+  - - - numerical_optimization
+  - - - differential_equations
+  - - - dynamical_systems
 ---
+
 
 # Numerical Methods for Taylor Series in Active Inference
 

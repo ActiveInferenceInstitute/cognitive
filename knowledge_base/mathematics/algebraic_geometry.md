@@ -1,44 +1,25 @@
 ---
-
 title: Algebraic Geometry
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - geometry
-
-  - algebra
-
-  - schemes
-
+- mathematics
+- geometry
+- algebra
+- schemes
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[commutative_algebra]]
-
-      - [[category_theory]]
-
-  - type: relates
-
-    links:
-
-      - [[differential_geometry]]
-
-      - [[complex_geometry]]
-
-      - [[number_theory]]
-
+- type: foundation
+  links:
+  - - - commutative_algebra
+  - - - category_theory
+- type: relates
+  links:
+  - - - differential_geometry
+  - - - complex_geometry
+  - - - number_theory
 ---
+
 
 # Algebraic Geometry
 

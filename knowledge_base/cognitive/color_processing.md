@@ -1,44 +1,27 @@
 ---
-
 title: Color Processing
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - vision
-
-  - color
-
+- cognition
+- perception
+- vision
+- color
 semantic_relations:
-
-  - type: implements
-
-    links: [[visual_perception]]
-
-  - type: extends
-
-    links: [[sensory_processing]]
-
-  - type: related
-
-    links:
-
-      - [[pattern_recognition]]
-
-      - [[object_recognition]]
-
-      - [[visual_attention]]
-
+- type: implements
+  links:
+  - - visual_perception
+- type: extends
+  links:
+  - - sensory_processing
+- type: related
+  links:
+  - - - pattern_recognition
+  - - - object_recognition
+  - - - visual_attention
 ---
+
 
 # Color Processing
 

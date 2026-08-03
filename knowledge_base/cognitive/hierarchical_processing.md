@@ -1,40 +1,24 @@
 ---
-
 title: Hierarchical Processing
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - computation
-
-  - neural_architecture
-
-  - information_processing
-
-  - organization
-
+- cognition
+- computation
+- neural_architecture
+- information_processing
+- organization
 semantic_relations:
-
-  - type: implements
-
-    links: [[neural_computation]]
-
-  - type: related
-
-    links:
-
-      - [[predictive_coding]]
-
-      - [[active_inference]]
-
-      - [[information_theory]]
-
+- type: implements
+  links:
+  - - neural_computation
+- type: related
+  links:
+  - - - predictive_coding
+  - - - active_inference
+  - - - information_theory
 ---
+
 
 # Hierarchical Processing
 

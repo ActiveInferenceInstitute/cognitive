@@ -1,44 +1,25 @@
 ---
-
 title: Contact Geometry
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - geometry
-
-  - mechanics
-
-  - thermodynamics
-
+- mathematics
+- geometry
+- mechanics
+- thermodynamics
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[symplectic_geometry]]
-
-      - [[differential_geometry]]
-
-  - type: relates
-
-    links:
-
-      - [[thermodynamics]]
-
-      - [[geometric_mechanics]]
-
-      - [[control_theory]]
-
+- type: foundation
+  links:
+  - - - symplectic_geometry
+  - - - differential_geometry
+- type: relates
+  links:
+  - - - thermodynamics
+  - - - geometric_mechanics
+  - - - control_theory
 ---
+
 
 # Contact Geometry
 

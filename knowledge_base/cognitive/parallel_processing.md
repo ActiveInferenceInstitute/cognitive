@@ -1,26 +1,19 @@
 ---
-
 title: Parallel Processing
-
 type: concept
-
 status: stable
-
 tags:
-  - parallelism
-  - computation
-  - efficiency
-
+- parallelism
+- computation
+- efficiency
 semantic_relations:
-
-  - type: relates
-
-    links:
-      - attention_mechanisms
-      - resource_management
-      - computational_efficiency
-
+- type: relates
+  links:
+  - attention_mechanisms
+  - resource_management
+  - computational_efficiency
 ---
+
 
 # Parallel Processing
 

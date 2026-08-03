@@ -1,26 +1,24 @@
 ---
-
 title: Kullback–Leibler (KL) Divergence
-
 type: mathematical_concept
-
 status: stable
-
 created: 2025-08-08
-
-tags: [information-theory, divergence, probability]
-
+tags:
+- information-theory
+- divergence
+- probability
 semantic_relations:
-
-  - type: relates
-
-    links: [information_theory, variational_inference, expected_free_energy]
-
-  - type: underpins
-
-    links: [variational_free_energy, epistemic_value]
-
+- type: relates
+  links:
+  - information_theory
+  - variational_inference
+  - expected_free_energy
+- type: underpins
+  links:
+  - variational_free_energy
+  - epistemic_value
 ---
+
 
 ## KL Divergence
 

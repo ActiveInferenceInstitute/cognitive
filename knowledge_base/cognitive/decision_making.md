@@ -1,40 +1,24 @@
 ---
-
 title: Decision Making
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - decision
-
-  - computation
-
-  - behavior
-
-  - neural_systems
-
+- cognition
+- decision
+- computation
+- behavior
+- neural_systems
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_control]]
-
-  - type: related
-
-    links:
-
-      - [[value_computation]]
-
-      - [[reinforcement_learning]]
-
-      - [[action_selection]]
-
+- type: implements
+  links:
+  - - cognitive_control
+- type: related
+  links:
+  - - - value_computation
+  - - - reinforcement_learning
+  - - - action_selection
 ---
+
 
 # Decision Making
 

@@ -1,60 +1,33 @@
 ---
-
 title: Stigmergic Coordination
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - collective_behavior
-
-  - self_organization
-
-  - emergence
-
-  - coordination
-
-  - social_systems
-
+- cognition
+- collective_behavior
+- self_organization
+- emergence
+- coordination
+- social_systems
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[self_organization]]
-
-      - [[collective_intelligence]]
-
-      - [[emergence]]
-
-  - type: relates
-
-    links:
-
-      - [[swarm_intelligence]]
-
-      - [[distributed_cognition]]
-
-      - [[social_coordination]]
-
-      - [[information_flow]]
-
-  - type: examples
-
-    links:
-
-      - [[ant_colonies]]
-
-      - [[termite_mounds]]
-
-      - [[human_trail_systems]]
-
+- type: implements
+  links:
+  - - - self_organization
+  - - - collective_intelligence
+  - - - emergence
+- type: relates
+  links:
+  - - - swarm_intelligence
+  - - - distributed_cognition
+  - - - social_coordination
+  - - - information_flow
+- type: examples
+  links:
+  - - - ant_colonies
+  - - - termite_mounds
+  - - - human_trail_systems
 ---
+
 
 # Stigmergic Coordination
 

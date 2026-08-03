@@ -1,26 +1,21 @@
 ---
-
 title: Mutual Information
-
 type: mathematical_concept
-
 status: stable
-
 created: 2025-08-08
-
-tags: [information-theory]
-
+tags:
+- information-theory
 semantic_relations:
-
-  - type: relates
-
-    links: [entropy, kl_divergence]
-
-  - type: used_by
-
-    links: [expected_free_energy, epistemic_value]
-
+- type: relates
+  links:
+  - entropy
+  - kl_divergence
+- type: used_by
+  links:
+  - expected_free_energy
+  - epistemic_value
 ---
+
 
 ## Mutual Information
 

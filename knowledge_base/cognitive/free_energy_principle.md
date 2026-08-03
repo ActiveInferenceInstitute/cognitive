@@ -1,104 +1,56 @@
 ---
-
 title: Free Energy Principle
-
 type: concept
-
 status: stable
-
 created: 2024-02-12
-
 updated: 2026-01-03
-
 complexity: advanced
-
 processing_priority: 1
-
 tags:
-
-  - cognition
-
-  - theoretical_framework
-
-  - thermodynamics
-
-  - inference
-
-  - complexity
-
-  - statistical_physics
-
-  - information_theory
-
-  - dynamical_systems
-
-  - self_organization
-
+- cognition
+- theoretical_framework
+- thermodynamics
+- inference
+- complexity
+- statistical_physics
+- information_theory
+- dynamical_systems
+- self_organization
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[active_inference]]
-
-      - [[predictive_coding]]
-
-      - [[hierarchical_inference]]
-
-  - type: foundation
-
-    links:
-
-      - [[variational_inference]]
-
-      - [[information_theory]]
-
-      - [[dynamical_systems]]
-
-  - type: relates
-
-    links:
-
-      - [[stochastic_processes]]
-
-      - [[optimization_theory]]
-
-      - [[precision_weighting]]
-
-      - [[bayesian_mechanics]]
-
-  - type: implements
-
-    links:
-
-      - [[self_organization]]
-
-      - [[adaptive_behavior]]
-
-      - [[homeostasis]]
-
-      - [[autopoiesis]]
-
-  - type: mathematical_basis
-
-    links:
-
-      - [[variational_calculus]]
-
-      - [[information_geometry]]
-
-      - [[stochastic_processes]]
-
-      - [[differential_geometry]]
-
-      - [[measure_theory]]
-
-  - type: extends
-
-    links: [[knowledge_base/mathematics/variational_inference]]
-
+- type: foundation_for
+  links:
+  - - - active_inference
+  - - - predictive_coding
+  - - - hierarchical_inference
+- type: foundation
+  links:
+  - - - variational_inference
+  - - - information_theory
+  - - - dynamical_systems
+- type: relates
+  links:
+  - - - stochastic_processes
+  - - - optimization_theory
+  - - - precision_weighting
+  - - - bayesian_mechanics
+- type: implements
+  links:
+  - - - self_organization
+  - - - adaptive_behavior
+  - - - homeostasis
+  - - - autopoiesis
+- type: mathematical_basis
+  links:
+  - - - variational_calculus
+  - - - information_geometry
+  - - - stochastic_processes
+  - - - differential_geometry
+  - - - measure_theory
+- type: extends
+  links:
+  - - knowledge_base/mathematics/variational_inference
 ---
+
 
 ## Overview
 

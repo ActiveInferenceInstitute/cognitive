@@ -1,16 +1,13 @@
 ---
-
 title: Exploration Visualization
-
 type: guide
-
 status: stable
-
 created: 2025-03-03
-
-tags: [visualization, exploration]
-
+tags:
+- visualization
+- exploration
 ---
+
 
 # Exploration Visualization
 

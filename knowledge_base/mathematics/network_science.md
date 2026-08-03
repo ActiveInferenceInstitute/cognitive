@@ -1,64 +1,35 @@
 ---
-
 title: Network Science
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-15
-
 complexity: advanced
-
 processing_priority: 1
-
 tags:
-
-  - mathematics
-
-  - networks
-
-  - complex_systems
-
-  - graph_theory
-
-  - dynamics
-
+- mathematics
+- networks
+- complex_systems
+- graph_theory
+- dynamics
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[complex_systems]]
-
-      - [[knowledge_base/systems/Social-Ecological Systems]]
-
-      - [[neural_networks]]
-
-  - type: implements
-
-    links:
-
-      - [[graph_theory]]
-
-      - [[dynamical_systems]]
-
-      - [[statistical_physics]]
-
-  - type: relates
-
-    links:
-
-      - [[information_theory]]
-
-      - [[collective_intelligence]]
-
-      - [[cultural_evolution]]
-
-      - [[ecological_networks]]
-
+- type: foundation_for
+  links:
+  - - - complex_systems
+  - - - knowledge_base/systems/Social-Ecological Systems
+  - - - neural_networks
+- type: implements
+  links:
+  - - - graph_theory
+  - - - dynamical_systems
+  - - - statistical_physics
+- type: relates
+  links:
+  - - - information_theory
+  - - - collective_intelligence
+  - - - cultural_evolution
+  - - - ecological_networks
 ---
+
 
 # Network Science
 

@@ -1,46 +1,28 @@
 ---
-
 title: Divided Attention
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - attention
-
-  - perception
-
-  - multitasking
-
+- cognition
+- attention
+- perception
+- multitasking
 semantic_relations:
-
-  - type: implements
-
-    links: [[attention_mechanisms]]
-
-  - type: extends
-
-    links: [[cognitive_control]]
-
-  - type: related
-
-    links:
-
-      - [[selective_attention]]
-
-      - [[attentional_control]]
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
+- type: implements
+  links:
+  - - attention_mechanisms
+- type: extends
+  links:
+  - - cognitive_control
+- type: related
+  links:
+  - - - selective_attention
+  - - - attentional_control
+  - - - active_inference
+  - - - free_energy_principle
 ---
+
 
 # Divided Attention
 

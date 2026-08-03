@@ -1,54 +1,36 @@
 ---
-
 type: concept
-
 id: metabolic_networks_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [metabolic-networks, active-inference, free-energy-principle, biochemistry]
-
-aliases: [metabolism-networks, metabolic-pathways]
-
+tags:
+- metabolic-networks
+- active-inference
+- free-energy-principle
+- biochemistry
+aliases:
+- metabolism-networks
+- metabolic-pathways
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[biochemistry]]
-
-  - type: implements
-
-    links:
-
-      - [[metabolic_pathways]]
-
-      - [[cellular_energetics]]
-
-      - [[metabolic_regulation]]
-
-  - type: relates
-
-    links:
-
-      - [[cell_biology]]
-
-      - [[systems_biology]]
-
-      - [[network_theory]]
-
+- type: foundation
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - biochemistry
+- type: implements
+  links:
+  - - - metabolic_pathways
+  - - - cellular_energetics
+  - - - metabolic_regulation
+- type: relates
+  links:
+  - - - cell_biology
+  - - - systems_biology
+  - - - network_theory
 ---
+
 
 # Metabolic Networks
 

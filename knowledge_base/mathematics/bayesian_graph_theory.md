@@ -1,60 +1,33 @@
 ---
-
 title: Bayesian Graph Theory
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - graph-theory
-
-  - bayesian-inference
-
+- mathematics
+- probability
+- graph-theory
+- bayesian-inference
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[graph_theory]]
-
-      - [[probability_theory]]
-
-      - [[bayesian_inference]]
-
-      - [[bayes_theorem]]
-
-  - type: implements
-
-    links:
-
-      - [[bayesian_networks]]
-
-      - [[factor_graphs]]
-
-      - [[markov_random_fields]]
-
-  - type: related
-
-    links:
-
-      - [[causal_inference]]
-
-      - [[probabilistic_programming]]
-
-      - [[message_passing]]
-
-      - [[belief_updating]]
-
+- type: foundation
+  links:
+  - - - graph_theory
+  - - - probability_theory
+  - - - bayesian_inference
+  - - - bayes_theorem
+- type: implements
+  links:
+  - - - bayesian_networks
+  - - - factor_graphs
+  - - - markov_random_fields
+- type: related
+  links:
+  - - - causal_inference
+  - - - probabilistic_programming
+  - - - message_passing
+  - - - belief_updating
 ---
+
 
 # Bayesian Graph Theory
 

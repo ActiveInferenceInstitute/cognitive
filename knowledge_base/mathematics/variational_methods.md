@@ -1,84 +1,53 @@
 ---
-
 type: mathematical_concept
-
 id: variational_methods_001
-
 created: 2024-02-05
-
 modified: 2024-03-15
-
-tags: [mathematics, variational-methods, optimization, inference, variational-inference]
-
-aliases: [variational-calculus, variational-inference, variational-bayes]
-
+tags:
+- mathematics
+- variational-methods
+- optimization
+- inference
+- variational-inference
+aliases:
+- variational-calculus
+- variational-inference
+- variational-bayes
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[bayesian_inference]]
-
-      - [[belief_updating]]
-
-  - type: mathematical_basis
-
-    links:
-
-      - [[information_theory]]
-
-      - [[probability_theory]]
-
-      - [[optimization_theory]]
-
-      - [[functional_analysis]]
-
-      - [[differential_geometry]]
-
-  - type: relates
-
-    links:
-
-      - [[belief_updating]]
-
-      - [[expectation_maximization]]
-
-      - [[monte_carlo_methods]]
-
-      - [[path_integral_free_energy]]
-
-      - [[stochastic_optimization]]
-
-      - [[optimal_transport]]
-
-  - type: applications
-
-    links:
-
-      - [[deep_learning]]
-
-      - [[probabilistic_programming]]
-
-      - [[active_inference]]
-
-      - [[state_estimation]]
-
-      - [[dynamical_systems]]
-
-  - type: documented_by
-
-    links:
-
-      - [[docs/implementation/implementation_guides_index|Implementation Guides]]
-
-      - [[docs/api/api_documentation_index|API Documentation]]
-
+- type: implements
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - bayesian_inference
+  - - - belief_updating
+- type: mathematical_basis
+  links:
+  - - - information_theory
+  - - - probability_theory
+  - - - optimization_theory
+  - - - functional_analysis
+  - - - differential_geometry
+- type: relates
+  links:
+  - - - belief_updating
+  - - - expectation_maximization
+  - - - monte_carlo_methods
+  - - - path_integral_free_energy
+  - - - stochastic_optimization
+  - - - optimal_transport
+- type: applications
+  links:
+  - - - deep_learning
+  - - - probabilistic_programming
+  - - - active_inference
+  - - - state_estimation
+  - - - dynamical_systems
+- type: documented_by
+  links:
+  - - - docs/implementation/implementation_guides_index|Implementation Guides
+  - - - docs/api/api_documentation_index|API Documentation
 ---
+
 
 # Variational Methods in Cognitive Modeling
 

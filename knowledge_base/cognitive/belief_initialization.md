@@ -1,66 +1,36 @@
 ---
-
 title: Belief Initialization
-
 type: concept
-
 status: stable
-
 created: 2024-02-06
-
 updated: 2026-01-03
-
 complexity: advanced
-
 processing_priority: 1
-
 tags:
-
-  - cognition
-
-  - inference
-
-  - initialization
-
-  - priors
-
-  - uncertainty
-
-  - learning
-
+- cognition
+- inference
+- initialization
+- priors
+- uncertainty
+- learning
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[bayesian_inference]]
-
-      - [[belief_updating]]
-
-  - type: relates
-
-    links:
-
-      - [[prior_beliefs]]
-
-      - [[uncertainty_quantification]]
-
-      - [[learning_initialization]]
-
-  - type: mathematical_basis
-
-    links:
-
-      - [[probability_theory]]
-
-      - [[information_theory]]
-
-      - [[optimization_theory]]
-
+- type: implements
+  links:
+  - - - active_inference
+  - - - bayesian_inference
+  - - - belief_updating
+- type: relates
+  links:
+  - - - prior_beliefs
+  - - - uncertainty_quantification
+  - - - learning_initialization
+- type: mathematical_basis
+  links:
+  - - - probability_theory
+  - - - information_theory
+  - - - optimization_theory
 ---
+
 
 ## Overview
 

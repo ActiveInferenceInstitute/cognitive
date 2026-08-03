@@ -1,40 +1,24 @@
 ---
-
 title: Predictive Coding
-
 type: concept
-
 status: stable
-
 created: 2024-02-14
-
 tags:
-
-  - cognitive
-
-  - prediction
-
-  - active_inference
-
-  - computation
-
+- cognitive
+- prediction
+- active_inference
+- computation
 semantic_relations:
-
-  - type: implements
-
-    links: [[active_inference]]
-
-  - type: relates
-
-    links:
-
-      - [[hierarchical_inference]]
-
-      - [[generative_model]]
-
-      - [[perceptual_inference]]
-
+- type: implements
+  links:
+  - - active_inference
+- type: relates
+  links:
+  - - - hierarchical_inference
+  - - - generative_model
+  - - - perceptual_inference
 ---
+
 
 # Predictive Coding
 

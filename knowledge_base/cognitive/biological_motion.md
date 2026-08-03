@@ -1,46 +1,28 @@
 ---
-
 title: Biological Motion
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - vision
-
-  - motion
-
-  - social
-
+- cognition
+- perception
+- vision
+- motion
+- social
 semantic_relations:
-
-  - type: implements
-
-    links: [[motion_perception]]
-
-  - type: extends
-
-    links: [[social_perception]]
-
-  - type: related
-
-    links:
-
-      - [[action_recognition]]
-
-      - [[social_cognition]]
-
-      - [[motion_processing]]
-
+- type: implements
+  links:
+  - - motion_perception
+- type: extends
+  links:
+  - - social_perception
+- type: related
+  links:
+  - - - action_recognition
+  - - - social_cognition
+  - - - motion_processing
 ---
+
 
 # Biological Motion
 

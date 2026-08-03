@@ -1,58 +1,41 @@
 ---
-
 type: mathematical_concept
-
 id: belief_updating_001
-
 created: 2024-02-05
-
 modified: 2024-03-15
-
-tags: [mathematics, active-inference, belief-updating, inference, state-estimation, probability]
-
-aliases: [belief-update, state-estimation, posterior-update]
-
+tags:
+- mathematics
+- active-inference
+- belief-updating
+- inference
+- state-estimation
+- probability
+aliases:
+- belief-update
+- state-estimation
+- posterior-update
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[bayesian_inference]]
-
-      - [[bayes_theorem]]
-
-  - type: mathematical_basis
-
-    links:
-
-      - [[probability_theory]]
-
-      - [[information_theory]]
-
-      - [[optimization_theory]]
-
-  - type: relates
-
-    links:
-
-      - [[belief_initialization]]
-
-      - [[free_energy_principle]]
-
-      - [[predictive_coding]]
-
-      - [[bayesian_networks]]
-
-      - [[bayesian_graph_theory]]
-
+- type: implements
+  links:
+  - - - active_inference
+  - - - bayesian_inference
+  - - - bayes_theorem
+- type: mathematical_basis
+  links:
+  - - - probability_theory
+  - - - information_theory
+  - - - optimization_theory
+- type: relates
+  links:
+  - - - belief_initialization
+  - - - free_energy_principle
+  - - - predictive_coding
+  - - - bayesian_networks
+  - - - bayesian_graph_theory
 ---
+
 
 # Belief Updating
 

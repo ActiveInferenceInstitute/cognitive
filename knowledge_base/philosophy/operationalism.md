@@ -1,50 +1,28 @@
 ---
-
 title: Operationalism
-
 type: concept
-
 status: stable
-
 created: 2024-03-21
-
 tags:
-
-  - philosophy
-
-  - philosophy_of_science
-
-  - methodology
-
-  - measurement
-
+- philosophy
+- philosophy_of_science
+- methodology
+- measurement
 semantic_relations:
-
-  - type: foundational_theory
-
-    links:
-
-      - [[philosophy_of_science]]
-
-      - [[logical_positivism]]
-
-      - [[verification_theory]]
-
-  - type: relates
-
-    links:
-
-      - [[pragmatism]]
-
-      - [[instrumentalism]]
-
-      - [[scientific_method]]
-
-      - [[measurement_theory]]
-
-      - [[physics]]
-
+- type: foundational_theory
+  links:
+  - - - philosophy_of_science
+  - - - logical_positivism
+  - - - verification_theory
+- type: relates
+  links:
+  - - - pragmatism
+  - - - instrumentalism
+  - - - scientific_method
+  - - - measurement_theory
+  - - - physics
 ---
+
 
 # Operationalism
 

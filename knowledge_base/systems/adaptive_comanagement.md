@@ -1,20 +1,19 @@
 ---
-
 title: Adaptive Co-management
-
 type: systems
-
 status: stable
-
-tags: [SES, governance, adaptation]
-
+tags:
+- SES
+- governance
+- adaptation
 semantic_relations:
-
-  - type: relates
-
-    links: [resilience_thinking, ecosystem_management, learning_initiatives]
-
+- type: relates
+  links:
+  - resilience_thinking
+  - ecosystem_management
+  - learning_initiatives
 ---
+
 
 # Adaptive Co-management
 

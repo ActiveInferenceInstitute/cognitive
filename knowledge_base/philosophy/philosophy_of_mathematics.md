@@ -1,20 +1,18 @@
 ---
-
 title: Philosophy of Mathematics
-
 type: philosophy
-
 status: stable
-
-tags: [philosophy, mathematics]
-
+tags:
+- philosophy
+- mathematics
 semantic_relations:
-
-  - type: relates
-
-    links: [probability_theory, category_theory, information_theory]
-
+- type: relates
+  links:
+  - probability_theory
+  - category_theory
+  - information_theory
 ---
+
 
 # Philosophy of Mathematics
 

@@ -1,22 +1,21 @@
 ---
-
 title: Mathematics Resources Hub
-
 type: resource
-
 status: active
-
 created: 2025-08-08
-
-tags: [mathematics, resources, ontology, datasets]
-
+tags:
+- mathematics
+- resources
+- ontology
+- datasets
 semantic_relations:
-
-  - type: aggregates
-
-    links: [msc_skos, ontomathpro_ontology, mathgloss_knowledge_graph]
-
+- type: aggregates
+  links:
+  - msc_skos
+  - ontomathpro_ontology
+  - mathgloss_knowledge_graph
 ---
+
 
 ## Mathematics Resources Hub
 

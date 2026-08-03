@@ -1,46 +1,28 @@
 ---
-
 title: Path Integral Information Theory
-
 type: knowledge_base
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - path_integrals
-
-  - information_theory
-
-  - cognitive_systems
-
+- mathematics
+- path_integrals
+- information_theory
+- cognitive_systems
 semantic_relations:
-
-  - type: implements
-
-    links: [[path_integral_theory]]
-
-  - type: extends
-
-    links: [[information_theory]]
-
-  - type: related
-
-    links:
-
-      - [[path_integral]]
-
-      - [[information_gain]]
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
+- type: implements
+  links:
+  - - path_integral_theory
+- type: extends
+  links:
+  - - information_theory
+- type: related
+  links:
+  - - - path_integral
+  - - - information_gain
+  - - - active_inference
+  - - - free_energy_principle
 ---
+
 
 # Path Integral Information Theory
 

@@ -1,24 +1,15 @@
 ---
-
 title: Knowledge Base Quality Assessment
-
 type: assessment
-
 status: active
-
 created: 2024-02-07
-
 tags:
-
-  - quality
-
-  - assessment
-
-  - improvement
-
-  - roadmap
-
+- quality
+- assessment
+- improvement
+- roadmap
 ---
+
 
 # Knowledge Base Quality Assessment & Improvement Roadmap
 

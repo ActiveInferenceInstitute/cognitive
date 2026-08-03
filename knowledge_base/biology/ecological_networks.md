@@ -1,60 +1,39 @@
 ---
-
 type: concept
-
 id: ecological_networks_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [ecological-networks, active-inference, free-energy-principle, complex-systems]
-
-aliases: [food-webs, ecological-interactions]
-
+tags:
+- ecological-networks
+- active-inference
+- free-energy-principle
+- complex-systems
+aliases:
+- food-webs
+- ecological-interactions
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[ecological_dynamics]]
-
-      - [[knowledge_base/cognitive/active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[food_web_dynamics]]
-
-      - [[species_interactions]]
-
-      - [[ecosystem_stability]]
-
-      - [[knowledge_base/agents/architectures_overview]]
-
-  - type: relates
-
-    links:
-
-      - [[systems_biology]]
-
-      - [[evolutionary_dynamics]]
-
-      - [[network_theory]]
-
-      - [[knowledge_base/mathematics/information_theory]]
-
+- type: foundation
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - ecological_dynamics
+  - - - knowledge_base/cognitive/active_inference
+- type: implements
+  links:
+  - - - food_web_dynamics
+  - - - species_interactions
+  - - - ecosystem_stability
+  - - - knowledge_base/agents/architectures_overview
+- type: relates
+  links:
+  - - - systems_biology
+  - - - evolutionary_dynamics
+  - - - network_theory
+  - - - knowledge_base/mathematics/information_theory
 ---
+
 
 # Ecological Networks
 

@@ -1,56 +1,31 @@
 ---
-
 title: Geometric Active Inference
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - differential_geometry
-
-  - information_geometry
-
-  - active_inference
-
+- mathematics
+- differential_geometry
+- information_geometry
+- active_inference
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[differential_geometry]]
-
-      - [[information_geometry]]
-
-      - [[symplectic_geometry]]
-
-      - [[riemannian_geometry]]
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-  - type: relates
-
-    links:
-
-      - [[path_integral_free_energy]]
-
-      - [[variational_methods]]
-
-      - [[optimal_control]]
-
+- type: foundation
+  links:
+  - - - differential_geometry
+  - - - information_geometry
+  - - - symplectic_geometry
+  - - - riemannian_geometry
+- type: implements
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+- type: relates
+  links:
+  - - - path_integral_free_energy
+  - - - variational_methods
+  - - - optimal_control
 ---
+
 
 # Geometric Active Inference
 

@@ -1,46 +1,28 @@
 ---
-
 title: Uncertainty Estimation
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - computation
-
-  - uncertainty
-
-  - probability
-
+- cognition
+- computation
+- uncertainty
+- probability
 semantic_relations:
-
-  - type: implements
-
-    links: [[probabilistic_inference]]
-
-  - type: extends
-
-    links: [[bayesian_inference]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[precision_weighting]]
-
-      - [[belief_updating]]
-
+- type: implements
+  links:
+  - - probabilistic_inference
+- type: extends
+  links:
+  - - bayesian_inference
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - precision_weighting
+  - - - belief_updating
 ---
+
 
 # Uncertainty Estimation
 

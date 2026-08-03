@@ -1,44 +1,27 @@
 ---
-
 title: Illusory Contours
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - vision
-
-  - illusion
-
+- cognition
+- perception
+- vision
+- illusion
 semantic_relations:
-
-  - type: implements
-
-    links: [[visual_perception]]
-
-  - type: extends
-
-    links: [[perceptual_organization]]
-
-  - type: related
-
-    links:
-
-      - [[visual_completion]]
-
-      - [[gestalt_principles]]
-
-      - [[form_perception]]
-
+- type: implements
+  links:
+  - - visual_perception
+- type: extends
+  links:
+  - - perceptual_organization
+- type: related
+  links:
+  - - - visual_completion
+  - - - gestalt_principles
+  - - - form_perception
 ---
+
 
 # Illusory Contours
 

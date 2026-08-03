@@ -1,46 +1,27 @@
 ---
-
 title: Collective Behavior in Ants
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - collective_behavior
-
-  - social_insects
-
-  - emergence
-
-  - self_organization
-
-  - swarm_intelligence
-
+- cognition
+- collective_behavior
+- social_insects
+- emergence
+- self_organization
+- swarm_intelligence
 semantic_relations:
-
-  - type: implements
-
-    links: [[collective_behavior]]
-
-  - type: related
-
-    links:
-
-      - [[cooperation]]
-
-      - [[social_cognition]]
-
-      - [[swarm_intelligence]]
-
-      - [[emergence]]
-
-      - [[self_organization]]
-
+- type: implements
+  links:
+  - - collective_behavior
+- type: related
+  links:
+  - - - cooperation
+  - - - social_cognition
+  - - - swarm_intelligence
+  - - - emergence
+  - - - self_organization
 ---
+
 
 # Collective Behavior in Ants
 

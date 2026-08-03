@@ -1,46 +1,28 @@
 ---
-
 title: Learning Mechanisms
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - learning
-
-  - adaptation
-
-  - computation
-
+- cognition
+- learning
+- adaptation
+- computation
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_processes]]
-
-  - type: extends
-
-    links: [[adaptation_mechanisms]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[synaptic_plasticity]]
-
-      - [[memory_systems]]
-
+- type: implements
+  links:
+  - - cognitive_processes
+- type: extends
+  links:
+  - - adaptation_mechanisms
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - synaptic_plasticity
+  - - - memory_systems
 ---
+
 
 # Learning Mechanisms
 

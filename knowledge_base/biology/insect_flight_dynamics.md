@@ -1,54 +1,37 @@
 ---
-
 type: concept
-
 id: insect_flight_dynamics_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [biomechanics, entomology, fluid_dynamics, mathematical_biology, flight]
-
-aliases: [insect-aerodynamics, insect-flight-mechanics]
-
+tags:
+- biomechanics
+- entomology
+- fluid_dynamics
+- mathematical_biology
+- flight
+aliases:
+- insect-aerodynamics
+- insect-flight-mechanics
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[mathematical_entomology]]
-
-      - [[fluid_dynamics]]
-
-      - [[biomechanics]]
-
-  - type: implements
-
-    links:
-
-      - [[differential_equations]]
-
-      - [[numerical_methods]]
-
-      - [[computational_fluid_dynamics]]
-
-  - type: relates
-
-    links:
-
-      - [[evolutionary_dynamics]]
-
-      - [[behavioral_biology]]
-
-      - [[biophysics]]
-
+- type: foundation
+  links:
+  - - - mathematical_entomology
+  - - - fluid_dynamics
+  - - - biomechanics
+- type: implements
+  links:
+  - - - differential_equations
+  - - - numerical_methods
+  - - - computational_fluid_dynamics
+- type: relates
+  links:
+  - - - evolutionary_dynamics
+  - - - behavioral_biology
+  - - - biophysics
 ---
+
 
 # Insect Flight Dynamics
 

@@ -4,40 +4,38 @@ type: mathematical_concept
 id: active_inference_theory_001
 created: 2024-02-06
 modified: 2025-12-18
-tags: [mathematics, active-inference, free-energy, cognitive-modeling]
-aliases: [active-inference-framework, free-energy-principle]
-
+tags:
+- mathematics
+- active-inference
+- free-energy
+- cognitive-modeling
+aliases:
+- active-inference-framework
+- free-energy-principle
 semantic_relations:
-  - type: implements
-    links:
-      - [[free_energy_principle]]
-      - [[knowledge_base/cognitive/active_inference]]
-  - type: foundation
-    links:
-      - [[variational_methods]]
-      - [[information_theory]]
-      - [[optimal_control]]
-      - [[bayesian_inference]]
-  - type: documented_by
-    links:
-      - [[knowledge_base/active_inference_implementation]]
-      - [[knowledge_base/active_inference_integration]]
-      - [[geometric_active_inference]]
-      - [[measure_theoretic_active_inference]]
-      - [[stochastic_active_inference]]
-  - type: extends
-    links:
-      - [[expected_free_energy]]
-      - [[variational_free_energy]]
-      - [[active_inference_loop]]
-
-    links:
-
-      - [[docs/implementation/implementation_guides_index|Implementation Guides]]
-
-      - [[docs/api/api_documentation_index|API Documentation]]
-
+- type: implements
+  links:
+  - - - free_energy_principle
+  - - - knowledge_base/cognitive/active_inference
+- type: foundation
+  links:
+  - - - variational_methods
+  - - - information_theory
+  - - - optimal_control
+  - - - bayesian_inference
+- type: documented_by
+  links:
+  - - - knowledge_base/active_inference_implementation
+  - - - knowledge_base/active_inference_integration
+  - - - geometric_active_inference
+  - - - measure_theoretic_active_inference
+  - - - stochastic_active_inference
+- type: extends
+  links:
+  - - - docs/implementation/implementation_guides_index|Implementation Guides
+  - - - docs/api/api_documentation_index|API Documentation
 ---
+
 
 ## Overview
 

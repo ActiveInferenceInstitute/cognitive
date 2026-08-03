@@ -1,27 +1,19 @@
 ---
-
 title: Cognitive Science and Mathematics Education
-
 type: concept
-
 status: draft
-
 created: 2024-01-01
-
 tags:
-  - education
-  - cognitive-science
-  - mathematics
-
+- education
+- cognitive-science
+- mathematics
 semantic_relations:
-
-  - type: relates
-
-    links:
-      - learning_mechanisms
-      - research_education
-
+- type: relates
+  links:
+  - learning_mechanisms
+  - research_education
 ---
+
 
 ## Cognitive Science and Mathematics Education
 

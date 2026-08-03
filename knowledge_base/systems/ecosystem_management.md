@@ -1,50 +1,29 @@
 ---
-
 title: Ecosystem Management
-
 type: article
-
 created: 2024-03-25
-
 status: stable
-
 tags:
-
-  - ecology
-
-  - management
-
-  - conservation
-
-  - systems
-
-  - sustainability
-
+- ecology
+- management
+- conservation
+- systems
+- sustainability
 semantic_relations:
-
-  - type: related_to
-
-    links:
-
-      - [[knowledge_base/systems/environmental_applications|Environmental Applications]]
-
-      - [[knowledge_base/systems/resilient_systems|Resilient Systems]]
-
-  - type: prerequisite_for
-
-    links:
-
-      - [[docs/guides/learning_paths/active_inference_environmental_applications_path|Active Inference in Environmental Applications]]
-
-  - type: builds_on
-
-    links:
-
-      - [[knowledge_base/systems/systems_theory|Systems Theory]]
-
-      - [[knowledge_base/systems/complex_systems|Complex Systems]]
-
+- type: related_to
+  links:
+  - - - knowledge_base/systems/environmental_applications|Environmental Applications
+  - - - knowledge_base/systems/resilient_systems|Resilient Systems
+- type: prerequisite_for
+  links:
+  - - - docs/guides/learning_paths/active_inference_environmental_applications_path|Active
+        Inference in Environmental Applications
+- type: builds_on
+  links:
+  - - - knowledge_base/systems/systems_theory|Systems Theory
+  - - - knowledge_base/systems/complex_systems|Complex Systems
 ---
+
 
 # Ecosystem Management
 

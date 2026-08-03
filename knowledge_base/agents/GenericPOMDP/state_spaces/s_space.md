@@ -1,20 +1,19 @@
 ---
-
 type: state_space
-
 id: s_space_001
-
 space_type: hidden_state
-
 created: 2025-01-01
-
 modified: 2025-01-01
-
-tags: [state-space, hidden-states, active-inference]
-
-related_matrices: [A_matrix, B_matrix, D_matrix]
-
+tags:
+- state-space
+- hidden-states
+- active-inference
+related_matrices:
+- A_matrix
+- B_matrix
+- D_matrix
 ---
+
 
 # Hidden State Space (S)
 

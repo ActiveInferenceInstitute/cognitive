@@ -1,34 +1,20 @@
 ---
-
 title: Cognitive Science Index
-
 type: index
-
 status: stable
-
 created: 2024-02-07
-
 tags:
-
-  - cognitive
-
-  - index
-
-  - organization
-
+- cognitive
+- index
+- organization
 semantic_relations:
-
-  - type: organizes
-
-    links:
-
-      - [[cognitive_phenomena]]
-
-      - [[cognitive_architecture]]
-
-      - [[cognitive_development]]
-
+- type: organizes
+  links:
+  - - - cognitive_phenomena
+  - - - cognitive_architecture
+  - - - cognitive_development
 ---
+
 
 # Cognitive Science Knowledge Organization
 

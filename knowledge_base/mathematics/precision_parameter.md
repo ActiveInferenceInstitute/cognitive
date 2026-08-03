@@ -1,24 +1,23 @@
 ---
-
 title: Precision Parameter (Inverse Temperature)
-
 type: mathematical_concept
-
 status: stable
-
 created: 2025-08-08
-
-tags: [active-inference, control, temperature]
-
-aliases: [inverse_temperature, gamma]
-
+tags:
+- active-inference
+- control
+- temperature
+aliases:
+- inverse_temperature
+- gamma
 semantic_relations:
-
-  - type: relates
-
-    links: [temperature_parameter, policy_selection, action_distribution]
-
+- type: relates
+  links:
+  - temperature_parameter
+  - policy_selection
+  - action_distribution
 ---
+
 
 ## Precision Parameter (γ)
 

@@ -1,16 +1,13 @@
 ---
-
 title: Sensitivity Analysis
-
 type: guide
-
 status: stable
-
 created: 2025-03-03
-
-tags: [analysis, robustness]
-
+tags:
+- analysis
+- robustness
 ---
+
 
 # Sensitivity Analysis
 

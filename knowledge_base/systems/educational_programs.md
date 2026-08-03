@@ -1,50 +1,29 @@
 ---
-
 title: Educational Programs
-
 type: article
-
 created: 2024-03-25
-
 status: stable
-
 tags:
-
-  - education
-
-  - learning
-
-  - curriculum
-
-  - pedagogy
-
-  - systems
-
+- education
+- learning
+- curriculum
+- pedagogy
+- systems
 semantic_relations:
-
-  - type: related_to
-
-    links:
-
-      - [[knowledge_base/systems/learning_initiatives|Learning Initiatives]]
-
-      - [[knowledge_base/cognitive/learning_theory|Learning Theory]]
-
-  - type: prerequisite_for
-
-    links:
-
-      - [[docs/guides/learning_paths/active_inference_educational_programs_path|Active Inference in Educational Programs]]
-
-  - type: builds_on
-
-    links:
-
-      - Cognition
-
-      - [[knowledge_base/free_energy_principle/cognitive/learning|Learning]]
-
+- type: related_to
+  links:
+  - - - knowledge_base/systems/learning_initiatives|Learning Initiatives
+  - - - knowledge_base/cognitive/learning_theory|Learning Theory
+- type: prerequisite_for
+  links:
+  - - - docs/guides/learning_paths/active_inference_educational_programs_path|Active
+        Inference in Educational Programs
+- type: builds_on
+  links:
+  - Cognition
+  - - - knowledge_base/free_energy_principle/cognitive/learning|Learning
 ---
+
 
 # Educational Programs
 

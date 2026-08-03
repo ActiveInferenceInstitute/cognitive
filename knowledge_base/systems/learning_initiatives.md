@@ -1,50 +1,29 @@
 ---
-
 title: Learning Initiatives
-
 type: article
-
 created: 2024-03-25
-
 status: stable
-
 tags:
-
-  - education
-
-  - learning
-
-  - innovation
-
-  - systems
-
-  - development
-
+- education
+- learning
+- innovation
+- systems
+- development
 semantic_relations:
-
-  - type: related_to
-
-    links:
-
-      - [[knowledge_base/systems/educational_programs|Educational Programs]]
-
-      - [[knowledge_base/cognitive/learning_theory|Learning Theory]]
-
-  - type: prerequisite_for
-
-    links:
-
-      - [[docs/guides/learning_paths/active_inference_educational_programs_path|Active Inference in Educational Programs]]
-
-  - type: builds_on
-
-    links:
-
-      - Cognition
-
-      - Innovation
-
+- type: related_to
+  links:
+  - - - knowledge_base/systems/educational_programs|Educational Programs
+  - - - knowledge_base/cognitive/learning_theory|Learning Theory
+- type: prerequisite_for
+  links:
+  - - - docs/guides/learning_paths/active_inference_educational_programs_path|Active
+        Inference in Educational Programs
+- type: builds_on
+  links:
+  - Cognition
+  - Innovation
 ---
+
 
 # Learning Initiatives
 

@@ -1,44 +1,26 @@
 ---
-
 title: Emotional Processing
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - emotion
-
-  - affect
-
-  - neural_systems
-
-  - regulation
-
-  - social_cognition
-
+- cognition
+- emotion
+- affect
+- neural_systems
+- regulation
+- social_cognition
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_functions]]
-
-  - type: related
-
-    links:
-
-      - [[emotion_regulation]]
-
-      - [[social_cognition]]
-
-      - [[decision_making]]
-
-      - [[motivation]]
-
+- type: implements
+  links:
+  - - cognitive_functions
+- type: related
+  links:
+  - - - emotion_regulation
+  - - - social_cognition
+  - - - decision_making
+  - - - motivation
 ---
+
 
 # Emotional Processing
 

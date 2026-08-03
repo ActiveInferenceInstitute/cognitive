@@ -1,46 +1,28 @@
 ---
-
 title: Implicit Memory
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - memory
-
-  - learning
-
-  - unconscious
-
+- cognition
+- memory
+- learning
+- unconscious
 semantic_relations:
-
-  - type: implements
-
-    links: [[memory_systems]]
-
-  - type: extends
-
-    links: [[non_declarative_memory]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[procedural_memory]]
-
-      - [[priming_effects]]
-
+- type: implements
+  links:
+  - - memory_systems
+- type: extends
+  links:
+  - - non_declarative_memory
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - procedural_memory
+  - - - priming_effects
 ---
+
 
 # Implicit Memory
 

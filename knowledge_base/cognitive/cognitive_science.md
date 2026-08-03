@@ -1,44 +1,27 @@
 ---
-
 title: Cognitive Science Knowledge Base
-
 type: concept
-
 status: stable
-
 created: 2024-02-06
-
 tags:
-
-  - cognitive_science
-
-  - theory
-
-  - foundations
-
-  - knowledge_base
-
+- cognitive_science
+- theory
+- foundations
+- knowledge_base
 semantic_relations:
-
-  - type: documented_by
-
-    links: [[cognitive_modeling_concepts|Documentation Concepts]]
-
-  - type: implemented_by
-
-    links: [[docs/api/api_documentation|API Documentation]]
-
-  - type: formalized_by
-
-    links:
-
-      - [[knowledge_base/mathematics/active_inference_pomdp|Active Inference POMDP]]
-
-      - [[knowledge_base/mathematics/optimization_theory|Optimization Theory]]
-
-      - [[knowledge_base/mathematics/variational_calculus|Variational Calculus]]
-
+- type: documented_by
+  links:
+  - - cognitive_modeling_concepts|Documentation Concepts
+- type: implemented_by
+  links:
+  - - docs/api/api_documentation|API Documentation
+- type: formalized_by
+  links:
+  - - - knowledge_base/mathematics/active_inference_pomdp|Active Inference POMDP
+  - - - knowledge_base/mathematics/optimization_theory|Optimization Theory
+  - - - knowledge_base/mathematics/variational_calculus|Variational Calculus
 ---
+
 
 # Cognitive Science Knowledge Base
 

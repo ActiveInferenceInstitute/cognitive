@@ -1,26 +1,26 @@
 ---
-
 title: Mathematics Subject Classification (MSC) as SKOS
-
 type: mathematical_concept
-
 status: stable
-
 created: 2025-08-08
-
-tags: [mathematics, ontology, skos, standards, metadata]
-
+tags:
+- mathematics
+- ontology
+- skos
+- standards
+- metadata
 semantic_relations:
-
-  - type: relates
-
-    links: [information_theory, graph_theory, optimization_theory]
-
-  - type: integrates
-
-    links: [mathematics_resources, cross_reference_map]
-
+- type: relates
+  links:
+  - information_theory
+  - graph_theory
+  - optimization_theory
+- type: integrates
+  links:
+  - mathematics_resources
+  - cross_reference_map
 ---
+
 
 ## MSC (SKOS)
 

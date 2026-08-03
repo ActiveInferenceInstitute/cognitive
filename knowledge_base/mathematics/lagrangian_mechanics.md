@@ -1,44 +1,25 @@
 ---
-
 title: Lagrangian Mechanics
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - mechanics
-
-  - physics
-
-  - dynamics
-
+- mathematics
+- mechanics
+- physics
+- dynamics
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[calculus_of_variations]]
-
-      - [[geometric_mechanics]]
-
-  - type: relates
-
-    links:
-
-      - [[hamiltonian_mechanics]]
-
-      - [[classical_field_theory]]
-
-      - [[control_theory]]
-
+- type: foundation
+  links:
+  - - - calculus_of_variations
+  - - - geometric_mechanics
+- type: relates
+  links:
+  - - - hamiltonian_mechanics
+  - - - classical_field_theory
+  - - - control_theory
 ---
+
 
 # Lagrangian Mechanics
 

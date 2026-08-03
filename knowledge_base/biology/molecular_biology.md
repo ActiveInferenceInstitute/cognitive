@@ -1,54 +1,36 @@
 ---
-
 type: concept
-
 id: molecular_biology_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [molecular, biology, genetics, biochemistry]
-
-aliases: [molecular-processes, molecular-mechanisms]
-
+tags:
+- molecular
+- biology
+- genetics
+- biochemistry
+aliases:
+- molecular-processes
+- molecular-mechanisms
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[biochemistry]]
-
-      - [[genetics]]
-
-      - [[cell_biology]]
-
-  - type: implements
-
-    links:
-
-      - [[gene_expression]]
-
-      - [[protein_structure]]
-
-      - [[molecular_networks]]
-
-  - type: relates
-
-    links:
-
-      - [[population_genetics]]
-
-      - [[developmental_systems]]
-
-      - [[systems_biology]]
-
+- type: foundation
+  links:
+  - - - biochemistry
+  - - - genetics
+  - - - cell_biology
+- type: implements
+  links:
+  - - - gene_expression
+  - - - protein_structure
+  - - - molecular_networks
+- type: relates
+  links:
+  - - - population_genetics
+  - - - developmental_systems
+  - - - systems_biology
 ---
+
 
 # Molecular Biology
 

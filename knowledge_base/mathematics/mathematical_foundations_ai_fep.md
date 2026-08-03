@@ -1,64 +1,35 @@
 ---
-
 title: Mathematical Foundations of Active Inference and Free Energy Principle
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - active_inference
-
-  - free_energy_principle
-
-  - variational_inference
-
-  - information_geometry
-
+- mathematics
+- active_inference
+- free_energy_principle
+- variational_inference
+- information_geometry
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[variational_methods]]
-
-      - [[information_theory]]
-
-      - [[differential_geometry]]
-
-      - [[measure_theory]]
-
-      - [[probability_theory]]
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[path_integral_free_energy]]
-
-  - type: relates
-
-    links:
-
-      - [[expected_free_energy]]
-
-      - [[variational_free_energy]]
-
-      - [[information_geometry]]
-
-      - [[optimal_control]]
-
+- type: foundation
+  links:
+  - - - variational_methods
+  - - - information_theory
+  - - - differential_geometry
+  - - - measure_theory
+  - - - probability_theory
+- type: implements
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - path_integral_free_energy
+- type: relates
+  links:
+  - - - expected_free_energy
+  - - - variational_free_energy
+  - - - information_geometry
+  - - - optimal_control
 ---
+
 
 # Mathematical Foundations of Active Inference and Free Energy Principle
 

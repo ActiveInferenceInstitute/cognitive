@@ -1,40 +1,24 @@
 ---
-
 title: Knowledge Organization Guide
-
 type: concept
-
 status: stable
-
 created: 2024-02-06
-
 tags:
-
-  - organization
-
-  - knowledge
-
-  - structure
-
-  - management
-
+- organization
+- knowledge
+- structure
+- management
 semantic_relations:
-
-  - type: implements
-
-    links: [[documentation_standards]]
-
-  - type: relates
-
-    links:
-
-      - [[theoretical_foundations]]
-
-      - [[machine_readability]]
-
-      - [[linking_completeness]]
-
+- type: implements
+  links:
+  - - documentation_standards
+- type: relates
+  links:
+  - - - theoretical_foundations
+  - - - machine_readability
+  - - - linking_completeness
 ---
+
 
 # Knowledge Organization Guide
 

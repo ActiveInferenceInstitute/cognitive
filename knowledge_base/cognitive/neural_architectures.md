@@ -1,40 +1,24 @@
 ---
-
 title: Neural Architectures
-
 type: concept
-
 status: stable
-
 created: 2024-02-23
-
 tags:
-
-  - patterns
-
-  - neural_networks
-
-  - cognitive_modeling
-
-  - deep_learning
-
+- patterns
+- neural_networks
+- cognitive_modeling
+- deep_learning
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_modeling_concepts]]
-
-  - type: relates
-
-    links:
-
-      - [[perception_processing]]
-
-      - [[belief_updating]]
-
-      - [[predictive_processing]]
-
+- type: implements
+  links:
+  - - cognitive_modeling_concepts
+- type: relates
+  links:
+  - - - perception_processing
+  - - - belief_updating
+  - - - predictive_processing
 ---
+
 
 # Neural Architectures
 

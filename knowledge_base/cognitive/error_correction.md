@@ -1,46 +1,28 @@
 ---
-
 title: Error Correction
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - computation
-
-  - learning
-
-  - control
-
+- cognition
+- computation
+- learning
+- control
 semantic_relations:
-
-  - type: implements
-
-    links: [[control_processes]]
-
-  - type: extends
-
-    links: [[learning_mechanisms]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[predictive_processing]]
-
-      - [[performance_optimization]]
-
+- type: implements
+  links:
+  - - control_processes
+- type: extends
+  links:
+  - - learning_mechanisms
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - predictive_processing
+  - - - performance_optimization
 ---
+
 
 # Error Correction
 

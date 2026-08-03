@@ -1,46 +1,28 @@
 ---
-
 title: Spatial Attention
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - attention
-
-  - space
-
-  - perception
-
+- cognition
+- attention
+- space
+- perception
 semantic_relations:
-
-  - type: implements
-
-    links: [[attention_mechanisms]]
-
-  - type: extends
-
-    links: [[selective_attention]]
-
-  - type: related
-
-    links:
-
-      - [[visual_attention]]
-
-      - [[spatial_processing]]
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
+- type: implements
+  links:
+  - - attention_mechanisms
+- type: extends
+  links:
+  - - selective_attention
+- type: related
+  links:
+  - - - visual_attention
+  - - - spatial_processing
+  - - - active_inference
+  - - - free_energy_principle
 ---
+
 
 # Spatial Attention
 

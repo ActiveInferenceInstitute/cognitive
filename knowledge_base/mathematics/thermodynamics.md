@@ -1,60 +1,33 @@
 ---
-
 title: Thermodynamics
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-15
-
 complexity: advanced
-
 processing_priority: 1
-
 tags:
-
-  - mathematics
-
-  - physics
-
-  - energy
-
-  - entropy
-
+- mathematics
+- physics
+- energy
+- entropy
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[statistical_physics]]
-
-      - [[free_energy_principle]]
-
-      - [[non_equilibrium_thermodynamics]]
-
-  - type: implements
-
-    links:
-
-      - [[energy_conservation]]
-
-      - [[entropy_production]]
-
-      - [[heat_transfer]]
-
-  - type: relates
-
-    links:
-
-      - [[information_theory]]
-
-      - [[stochastic_processes]]
-
-      - [[dynamical_systems]]
-
+- type: foundation_for
+  links:
+  - - - statistical_physics
+  - - - free_energy_principle
+  - - - non_equilibrium_thermodynamics
+- type: implements
+  links:
+  - - - energy_conservation
+  - - - entropy_production
+  - - - heat_transfer
+- type: relates
+  links:
+  - - - information_theory
+  - - - stochastic_processes
+  - - - dynamical_systems
 ---
+
 
 # Thermodynamics
 

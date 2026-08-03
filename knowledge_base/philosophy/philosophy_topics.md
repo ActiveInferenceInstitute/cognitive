@@ -1,48 +1,27 @@
 ---
-
 title: Philosophical Topics Index
-
 type: index
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - philosophy
-
-  - index
-
-  - epistemology
-
-  - metaphysics
-
-  - logic
-
+- philosophy
+- index
+- epistemology
+- metaphysics
+- logic
 semantic_relations:
-
-  - type: organizes
-
-    links:
-
-      - [[epistemology]]
-
-      - [[metaphysics]]
-
-      - [[logic]]
-
-  - type: relates
-
-    links:
-
-      - [[cognitive_science]]
-
-      - [[mathematics]]
-
-      - [[physics]]
-
+- type: organizes
+  links:
+  - - - epistemology
+  - - - metaphysics
+  - - - logic
+- type: relates
+  links:
+  - - - cognitive_science
+  - - - mathematics
+  - - - physics
 ---
+
 
 # Philosophical Topics Index
 

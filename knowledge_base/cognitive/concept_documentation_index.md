@@ -1,36 +1,22 @@
 ---
-
 title: Concept Documentation
-
 type: index
-
 status: stable
-
 created: 2024-02-06
-
 tags:
-
-  - concepts
-
-  - documentation
-
-  - cognitive_modeling
-
+- concepts
+- documentation
+- cognitive_modeling
 semantic_relations:
-
-  - type: implements
-
-    links: [[knowledge_organization]]
-
-  - type: relates
-
-    links:
-
-      - [[docs/repo_docs/ai_documentation_style]]
-
-      - [[docs/repo_docs/content_management]]
-
+- type: implements
+  links:
+  - - knowledge_organization
+- type: relates
+  links:
+  - - - docs/repo_docs/ai_documentation_style
+  - - - docs/repo_docs/content_management
 ---
+
 
 # Concept Documentation
 

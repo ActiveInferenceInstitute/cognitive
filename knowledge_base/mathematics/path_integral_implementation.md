@@ -1,18 +1,18 @@
 ---
-
 type: implementation
-
 id: path_integral_implementation_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [implementation, numerical-methods, path-integrals, active-inference]
-
-aliases: [path-implementation, numerical-path-methods]
-
+tags:
+- implementation
+- numerical-methods
+- path-integrals
+- active-inference
+aliases:
+- path-implementation
+- numerical-path-methods
 ---
+
 
 # Implementation Guide for Path Integral Methods
 

@@ -1,46 +1,28 @@
 ---
-
 title: Multisensory Integration
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - integration
-
-  - sensory_processing
-
+- cognition
+- perception
+- integration
+- sensory_processing
 semantic_relations:
-
-  - type: implements
-
-    links: [[sensory_processing]]
-
-  - type: extends
-
-    links: [[perceptual_integration]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[cross_modal_perception]]
-
-      - [[sensorimotor_integration]]
-
+- type: implements
+  links:
+  - - sensory_processing
+- type: extends
+  links:
+  - - perceptual_integration
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - cross_modal_perception
+  - - - sensorimotor_integration
 ---
+
 
 # Multisensory Integration
 

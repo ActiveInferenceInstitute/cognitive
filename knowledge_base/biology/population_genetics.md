@@ -1,54 +1,36 @@
 ---
-
 type: concept
-
 id: population_genetics_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [genetics, evolution, mathematical-biology, complex-systems]
-
-aliases: [pop-gen, population-genetics-theory]
-
+tags:
+- genetics
+- evolution
+- mathematical-biology
+- complex-systems
+aliases:
+- pop-gen
+- population-genetics-theory
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[evolutionary_dynamics]]
-
-      - [[molecular_evolution]]
-
-      - [[quantitative_genetics]]
-
-  - type: implements
-
-    links:
-
-      - [[hardy_weinberg_equilibrium]]
-
-      - [[selection_theory]]
-
-      - [[genetic_drift]]
-
-  - type: relates
-
-    links:
-
-      - [[ecological_genetics]]
-
-      - [[molecular_biology]]
-
-      - [[statistical_genetics]]
-
+- type: foundation
+  links:
+  - - - evolutionary_dynamics
+  - - - molecular_evolution
+  - - - quantitative_genetics
+- type: implements
+  links:
+  - - - hardy_weinberg_equilibrium
+  - - - selection_theory
+  - - - genetic_drift
+- type: relates
+  links:
+  - - - ecological_genetics
+  - - - molecular_biology
+  - - - statistical_genetics
 ---
+
 
 # Population Genetics
 

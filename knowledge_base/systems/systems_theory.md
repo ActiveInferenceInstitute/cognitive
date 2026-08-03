@@ -1,42 +1,24 @@
 ---
-
 title: Systems Theory
-
 type: concept
-
 status: stable
-
 created: 2024-02-07
-
 tags:
-
-  - systems
-
-  - theory
-
-  - complexity
-
-  - emergence
-
+- systems
+- theory
+- complexity
+- emergence
 semantic_relations:
-
-  - type: foundational_to
-
-    links:
-
-      - [[cognitive/complex_systems_biology]]
-
-      - [[cognitive/emergence_self_organization]]
-
-  - type: relates
-
-    links:
-
-      - [[mathematics/information_theory]]
-
-      - [[cognitive/collective_behavior]]
-
+- type: foundational_to
+  links:
+  - - - cognitive/complex_systems_biology
+  - - - cognitive/emergence_self_organization
+- type: relates
+  links:
+  - - - mathematics/information_theory
+  - - - cognitive/collective_behavior
 ---
+
 
 # Systems Theory
 

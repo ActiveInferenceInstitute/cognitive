@@ -1,27 +1,19 @@
 ---
-
 title: CogPrints Archive
-
 type: resource
-
 status: stable
-
 created: 2024-01-01
-
 tags:
-  - cognitive-science
-  - open-access
-  - literature
-
+- cognitive-science
+- open-access
+- literature
 semantic_relations:
-
-  - type: supports
-
-    links:
-      - cognitive_science
-      - research_education
-
+- type: supports
+  links:
+  - cognitive_science
+  - research_education
 ---
+
 
 ## CogPrints Archive
 

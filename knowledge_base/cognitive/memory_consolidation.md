@@ -1,46 +1,28 @@
 ---
-
 title: Memory Consolidation
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - memory
-
-  - learning
-
-  - plasticity
-
+- cognition
+- memory
+- learning
+- plasticity
 semantic_relations:
-
-  - type: implements
-
-    links: [[memory_systems]]
-
-  - type: extends
-
-    links: [[memory_processes]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[synaptic_plasticity]]
-
-      - [[schema_integration]]
-
+- type: implements
+  links:
+  - - memory_systems
+- type: extends
+  links:
+  - - memory_processes
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - synaptic_plasticity
+  - - - schema_integration
 ---
+
 
 # Memory Consolidation
 

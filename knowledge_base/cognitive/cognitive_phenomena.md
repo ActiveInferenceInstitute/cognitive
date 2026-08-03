@@ -1,34 +1,22 @@
 ---
-
 title: Cognitive Phenomena
-
 type: concept
-
 status: stable
-
 created: 2024-02-06
-
 tags:
-
-  - cognition
-
-  - phenomena
-
-  - psychology
-
-  - neuroscience
-
+- cognition
+- phenomena
+- psychology
+- neuroscience
 semantic_relations:
-
-  - type: implements
-
-    links: [[knowledge_organization]]
-
-  - type: extends
-
-    links: [[cognitive_modeling]]
-
+- type: implements
+  links:
+  - - knowledge_organization
+- type: extends
+  links:
+  - - cognitive_modeling
 ---
+
 
 # Cognitive Phenomena
 

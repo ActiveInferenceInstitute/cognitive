@@ -1,44 +1,27 @@
 ---
-
 title: Pattern Recognition
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - learning
-
-  - neural_processing
-
+- cognition
+- perception
+- learning
+- neural_processing
 semantic_relations:
-
-  - type: implements
-
-    links: [[visual_perception]]
-
-  - type: extends
-
-    links: [[cognitive_processing]]
-
-  - type: related
-
-    links:
-
-      - [[object_recognition]]
-
-      - [[feature_detection]]
-
-      - [[perceptual_organization]]
-
+- type: implements
+  links:
+  - - visual_perception
+- type: extends
+  links:
+  - - cognitive_processing
+- type: related
+  links:
+  - - - object_recognition
+  - - - feature_detection
+  - - - perceptual_organization
 ---
+
 
 # Pattern Recognition
 

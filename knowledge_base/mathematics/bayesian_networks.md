@@ -1,60 +1,33 @@
 ---
-
 title: Bayesian Networks
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - graphical-models
-
+- mathematics
+- probability
+- graphical-models
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[probabilistic_graphical_models]]
-
-      - [[directed_graphical_models]]
-
-      - [[probability_theory]]
-
-      - [[factor_graphs]]
-
-      - [[bayes_theorem]]
-
-  - type: related
-
-    links:
-
-      - [[markov_random_fields]]
-
-      - [[message_passing]]
-
-      - [[variational_inference]]
-
-      - [[bayesian_graph_theory]]
-
-  - type: implements
-
-    links:
-
-      - [[probabilistic_models]]
-
-      - [[causal_inference]]
-
-      - [[belief_updating]]
-
+- type: foundation
+  links:
+  - - - probabilistic_graphical_models
+  - - - directed_graphical_models
+  - - - probability_theory
+  - - - factor_graphs
+  - - - bayes_theorem
+- type: related
+  links:
+  - - - markov_random_fields
+  - - - message_passing
+  - - - variational_inference
+  - - - bayesian_graph_theory
+- type: implements
+  links:
+  - - - probabilistic_models
+  - - - causal_inference
+  - - - belief_updating
 ---
+
 
 # Bayesian Networks
 

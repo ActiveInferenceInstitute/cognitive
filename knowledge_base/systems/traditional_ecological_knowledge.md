@@ -1,64 +1,35 @@
 ---
-
 title: Traditional Ecological Knowledge
-
 type: concept
-
 status: stable
-
 created: 2024-03-15
-
 complexity: advanced
-
 processing_priority: 1
-
 tags:
-
-  - ecology
-
-  - indigenous_knowledge
-
-  - complex_systems
-
-  - sustainability
-
-  - cognition
-
+- ecology
+- indigenous_knowledge
+- complex_systems
+- sustainability
+- cognition
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[sustainable_practices]]
-
-      - [[ecological_management]]
-
-      - [[adaptive_governance]]
-
-  - type: implements
-
-    links:
-
-      - [[complex_systems]]
-
-      - [[network_science]]
-
-      - [[dynamical_systems]]
-
-  - type: relates
-
-    links:
-
-      - [[knowledge_base/systems/Social-Ecological Systems]]
-
-      - [[collective_intelligence]]
-
-      - [[cultural_evolution]]
-
-      - [[cognitive_ecology]]
-
+- type: foundation_for
+  links:
+  - - - sustainable_practices
+  - - - ecological_management
+  - - - adaptive_governance
+- type: implements
+  links:
+  - - - complex_systems
+  - - - network_science
+  - - - dynamical_systems
+- type: relates
+  links:
+  - - - knowledge_base/systems/Social-Ecological Systems
+  - - - collective_intelligence
+  - - - cultural_evolution
+  - - - cognitive_ecology
 ---
+
 
 # Traditional Ecological Knowledge
 

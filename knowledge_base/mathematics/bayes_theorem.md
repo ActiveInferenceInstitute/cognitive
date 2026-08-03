@@ -1,54 +1,30 @@
 ---
-
 title: Bayes' Theorem
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - statistics
-
-  - bayesian-inference
-
+- mathematics
+- probability
+- statistics
+- bayesian-inference
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[probability_theory]]
-
-      - [[conditional_probability]]
-
-  - type: implements
-
-    links:
-
-      - [[bayesian_inference]]
-
-      - [[bayesian_statistics]]
-
-  - type: related
-
-    links:
-
-      - [[bayesian_networks]]
-
-      - [[bayesian_graph_theory]]
-
-      - [[belief_updating]]
-
-      - [[maximum_likelihood_estimation]]
-
+- type: foundation
+  links:
+  - - - probability_theory
+  - - - conditional_probability
+- type: implements
+  links:
+  - - - bayesian_inference
+  - - - bayesian_statistics
+- type: related
+  links:
+  - - - bayesian_networks
+  - - - bayesian_graph_theory
+  - - - belief_updating
+  - - - maximum_likelihood_estimation
 ---
+
 
 # Bayes' Theorem
 

@@ -1,56 +1,31 @@
 ---
-
 title: Markov Blanket
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-15
-
 complexity: intermediate
-
 processing_priority: 1
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - graphical_models
-
-  - statistical_independence
-
+- mathematics
+- probability
+- graphical_models
+- statistical_independence
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[free_energy_principle]]
-
-      - [[active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[conditional_independence]]
-
-      - [[probabilistic_graphical_models]]
-
-  - type: relates
-
-    links:
-
-      - [[information_theory]]
-
-      - [[bayesian_networks]]
-
-      - [[statistical_physics]]
-
+- type: foundation_for
+  links:
+  - - - free_energy_principle
+  - - - active_inference
+- type: implements
+  links:
+  - - - conditional_independence
+  - - - probabilistic_graphical_models
+- type: relates
+  links:
+  - - - information_theory
+  - - - bayesian_networks
+  - - - statistical_physics
 ---
+
 
 # Markov Blanket
 

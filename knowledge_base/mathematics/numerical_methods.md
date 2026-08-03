@@ -1,16 +1,13 @@
 ---
-
 title: Numerical Methods
-
 type: guide
-
 status: stable
-
 created: 2025-03-03
-
-tags: [numerics, stability]
-
+tags:
+- numerics
+- stability
 ---
+
 
 # Numerical Methods
 

@@ -1,26 +1,24 @@
 ---
-
 title: OntoMathPRO Ontology
-
 type: mathematical_concept
-
 status: stable
-
 created: 2025-08-08
-
-tags: [mathematics, ontology, knowledge-graph, semantics]
-
+tags:
+- mathematics
+- ontology
+- knowledge-graph
+- semantics
 semantic_relations:
-
-  - type: relates
-
-    links: [probabilistic_graphical_models, information_geometry]
-
-  - type: integrates
-
-    links: [cross_reference_map, mathematics_resources]
-
+- type: relates
+  links:
+  - probabilistic_graphical_models
+  - information_geometry
+- type: integrates
+  links:
+  - cross_reference_map
+  - mathematics_resources
 ---
+
 
 ## OntoMathPRO
 

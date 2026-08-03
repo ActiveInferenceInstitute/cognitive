@@ -1,60 +1,40 @@
 ---
-
 type: concept
-
 id: evolutionary_dynamics_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [evolution, dynamics, mathematics, biology, complexity]
-
-aliases: [evolution-dynamics, evolutionary-processes]
-
+tags:
+- evolution
+- dynamics
+- mathematics
+- biology
+- complexity
+aliases:
+- evolution-dynamics
+- evolutionary-processes
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[population_genetics]]
-
-      - [[natural_selection]]
-
-      - [[evolutionary_game_theory]]
-
-      - [[knowledge_base/cognitive/active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[fitness_landscapes]]
-
-      - [[replicator_dynamics]]
-
-      - [[adaptive_dynamics]]
-
-      - [[knowledge_base/agents/architectures_overview]]
-
-  - type: relates
-
-    links:
-
-      - [[ecological_dynamics]]
-
-      - [[developmental_systems]]
-
-      - [[evolutionary_computation]]
-
-      - [[behavioral_biology]]
-
+- type: foundation
+  links:
+  - - - population_genetics
+  - - - natural_selection
+  - - - evolutionary_game_theory
+  - - - knowledge_base/cognitive/active_inference
+- type: implements
+  links:
+  - - - fitness_landscapes
+  - - - replicator_dynamics
+  - - - adaptive_dynamics
+  - - - knowledge_base/agents/architectures_overview
+- type: relates
+  links:
+  - - - ecological_dynamics
+  - - - developmental_systems
+  - - - evolutionary_computation
+  - - - behavioral_biology
 ---
+
 
 # Evolutionary Dynamics
 

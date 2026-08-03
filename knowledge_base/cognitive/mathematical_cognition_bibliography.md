@@ -1,27 +1,19 @@
 ---
-
 title: Mathematical Cognition Bibliography
-
 type: resource
-
 status: draft
-
 created: 2024-01-01
-
 tags:
-  - cognitive-science
-  - mathematics
-  - bibliography
-
+- cognitive-science
+- mathematics
+- bibliography
 semantic_relations:
-
-  - type: relates
-
-    links:
-      - reasoning_problem_solving
-      - learning_mechanisms
-
+- type: relates
+  links:
+  - reasoning_problem_solving
+  - learning_mechanisms
 ---
+
 
 ## Mathematical Cognition – Bibliography
 

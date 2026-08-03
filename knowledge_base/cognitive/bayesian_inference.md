@@ -1,46 +1,28 @@
 ---
-
 title: Bayesian Inference
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - computation
-
-  - inference
-
-  - probability
-
+- cognition
+- computation
+- inference
+- probability
 semantic_relations:
-
-  - type: implements
-
-    links: [[evidence_accumulation]]
-
-  - type: extends
-
-    links: [[model_selection]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[probabilistic_inference]]
-
-      - [[belief_updating]]
-
+- type: implements
+  links:
+  - - evidence_accumulation
+- type: extends
+  links:
+  - - model_selection
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - probabilistic_inference
+  - - - belief_updating
 ---
+
 
 # Bayesian Inference
 

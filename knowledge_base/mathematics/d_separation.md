@@ -1,56 +1,31 @@
 ---
-
 title: D-separation
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - graphical-models
-
-  - bayesian-networks
-
+- mathematics
+- probability
+- graphical-models
+- bayesian-networks
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[graph_theory]]
-
-      - [[conditional_independence]]
-
-      - [[markov_properties]]
-
-  - type: used_by
-
-    links:
-
-      - [[bayesian_networks]]
-
-      - [[causal_inference]]
-
-      - [[probabilistic_graphical_models]]
-
-  - type: related
-
-    links:
-
-      - [[path_analysis]]
-
-      - [[graphical_separation]]
-
-      - [[markov_blanket]]
-
+- type: foundation
+  links:
+  - - - graph_theory
+  - - - conditional_independence
+  - - - markov_properties
+- type: used_by
+  links:
+  - - - bayesian_networks
+  - - - causal_inference
+  - - - probabilistic_graphical_models
+- type: related
+  links:
+  - - - path_analysis
+  - - - graphical_separation
+  - - - markov_blanket
 ---
+
 
 # D-separation
 

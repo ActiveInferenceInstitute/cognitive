@@ -1,46 +1,28 @@
 ---
-
 title: Synaptic Plasticity
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - neuroscience
-
-  - learning
-
-  - memory
-
+- cognition
+- neuroscience
+- learning
+- memory
 semantic_relations:
-
-  - type: implements
-
-    links: [[neural_computation]]
-
-  - type: extends
-
-    links: [[neural_mechanisms]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[memory_consolidation]]
-
-      - [[learning_mechanisms]]
-
+- type: implements
+  links:
+  - - neural_computation
+- type: extends
+  links:
+  - - neural_mechanisms
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - memory_consolidation
+  - - - learning_mechanisms
 ---
+
 
 # Synaptic Plasticity
 

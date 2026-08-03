@@ -1,46 +1,28 @@
 ---
-
 title: Model Complexity
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - computation
-
-  - complexity
-
-  - optimization
-
+- cognition
+- computation
+- complexity
+- optimization
 semantic_relations:
-
-  - type: implements
-
-    links: [[computational_efficiency]]
-
-  - type: extends
-
-    links: [[information_processing]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[computational_complexity]]
-
-      - [[model_selection]]
-
+- type: implements
+  links:
+  - - computational_efficiency
+- type: extends
+  links:
+  - - information_processing
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - computational_complexity
+  - - - model_selection
 ---
+
 
 # Model Complexity
 

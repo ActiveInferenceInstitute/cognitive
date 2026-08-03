@@ -1,44 +1,25 @@
 ---
-
 title: Geometric Mechanics
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - mechanics
-
-  - physics
-
-  - geometry
-
+- mathematics
+- mechanics
+- physics
+- geometry
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[symplectic_geometry]]
-
-      - [[lie_theory]]
-
-  - type: relates
-
-    links:
-
-      - [[hamiltonian_mechanics]]
-
-      - [[lagrangian_mechanics]]
-
-      - [[control_theory]]
-
+- type: foundation
+  links:
+  - - - symplectic_geometry
+  - - - lie_theory
+- type: relates
+  links:
+  - - - hamiltonian_mechanics
+  - - - lagrangian_mechanics
+  - - - control_theory
 ---
+
 
 # Geometric Mechanics
 

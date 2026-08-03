@@ -1,16 +1,13 @@
 ---
-
 title: Probability Distributions
-
 type: mathematical_concept
-
 status: stable
-
 created: 2025-03-03
-
-tags: [probability, mathematics]
-
+tags:
+- probability
+- mathematics
 ---
+
 
 # Probability Distributions
 

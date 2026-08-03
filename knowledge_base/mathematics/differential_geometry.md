@@ -1,44 +1,31 @@
 ---
-
 type: mathematical_concept
-
 id: differential_geometry_001
-
 created: 2024-02-06
-
 modified: 2024-02-06
-
-tags: [mathematics, differential-geometry, manifolds, connections]
-
-aliases: [riemannian-geometry, geometric-mechanics]
-
+tags:
+- mathematics
+- differential-geometry
+- manifolds
+- connections
+aliases:
+- riemannian-geometry
+- geometric-mechanics
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[docs/research/research_documentation_index|Research Documentation]]
-
-      - [[information_geometry]]
-
-  - type: uses
-
-    links:
-
-      - [[tensor_calculus]]
-
-      - [[lie_theory]]
-
-  - type: documented_by
-
-    links:
-
-      - [[docs/implementation/implementation_guides_index|Implementation Guides]]
-
-      - [[docs/api/api_documentation_index|API Documentation]]
-
+- type: implements
+  links:
+  - - - docs/research/research_documentation_index|Research Documentation
+  - - - information_geometry
+- type: uses
+  links:
+  - - - tensor_calculus
+  - - - lie_theory
+- type: documented_by
+  links:
+  - - - docs/implementation/implementation_guides_index|Implementation Guides
+  - - - docs/api/api_documentation_index|API Documentation
 ---
+
 
 # Differential Geometry in Cognitive Modeling
 

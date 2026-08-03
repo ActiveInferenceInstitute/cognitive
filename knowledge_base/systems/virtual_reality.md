@@ -1,54 +1,31 @@
 ---
-
 title: Virtual Reality
-
 type: article
-
 created: 2024-03-25
-
 status: stable
-
 tags:
-
-  - spatial-computing
-
-  - virtual-reality
-
-  - immersive-technology
-
-  - human-computer-interaction
-
-  - systems
-
-  - visualization
-
+- spatial-computing
+- virtual-reality
+- immersive-technology
+- human-computer-interaction
+- systems
+- visualization
 semantic_relations:
-
-  - type: related_to
-
-    links:
-
-      - [[knowledge_base/systems/spatial_web|Spatial Web]]
-
-      - [[knowledge_base/systems/augmented_reality|Augmented Reality]]
-
-      - [[knowledge_base/systems/mixed_reality|Mixed Reality]]
-
-  - type: prerequisite_for
-
-    links:
-
-      - [[docs/guides/learning_paths/active_inference_spatial_web_path|Active Inference in Spatial Web]]
-
-  - type: builds_on
-
-    links:
-
-      - Computer Vision
-
-      - [[knowledge_base/systems/human_computer_interaction|Human-Computer Interaction]]
-
+- type: related_to
+  links:
+  - - - knowledge_base/systems/spatial_web|Spatial Web
+  - - - knowledge_base/systems/augmented_reality|Augmented Reality
+  - - - knowledge_base/systems/mixed_reality|Mixed Reality
+- type: prerequisite_for
+  links:
+  - - - docs/guides/learning_paths/active_inference_spatial_web_path|Active Inference
+        in Spatial Web
+- type: builds_on
+  links:
+  - Computer Vision
+  - - - knowledge_base/systems/human_computer_interaction|Human-Computer Interaction
 ---
+
 
 # Virtual Reality
 

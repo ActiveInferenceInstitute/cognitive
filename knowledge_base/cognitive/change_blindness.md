@@ -1,46 +1,28 @@
 ---
-
 title: Change Blindness
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - attention
-
-  - perception
-
-  - limitations
-
+- cognition
+- attention
+- perception
+- limitations
 semantic_relations:
-
-  - type: implements
-
-    links: [[attention_mechanisms]]
-
-  - type: extends
-
-    links: [[attention_limitations]]
-
-  - type: related
-
-    links:
-
-      - [[inattentional_blindness]]
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[visual_attention]]
-
+- type: implements
+  links:
+  - - attention_mechanisms
+- type: extends
+  links:
+  - - attention_limitations
+- type: related
+  links:
+  - - - inattentional_blindness
+  - - - active_inference
+  - - - free_energy_principle
+  - - - visual_attention
 ---
+
 
 # Change Blindness
 

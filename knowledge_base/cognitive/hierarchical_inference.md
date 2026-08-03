@@ -1,40 +1,24 @@
 ---
-
 title: Hierarchical Inference
-
 type: concept
-
 status: stable
-
 created: 2024-02-14
-
 tags:
-
-  - cognitive
-
-  - inference
-
-  - active_inference
-
-  - hierarchy
-
+- cognitive
+- inference
+- active_inference
+- hierarchy
 semantic_relations:
-
-  - type: implements
-
-    links: [[active_inference]]
-
-  - type: relates
-
-    links:
-
-      - [[generative_model]]
-
-      - [[predictive_coding]]
-
-      - [[bayesian_inference]]
-
+- type: implements
+  links:
+  - - active_inference
+- type: relates
+  links:
+  - - - generative_model
+  - - - predictive_coding
+  - - - bayesian_inference
 ---
+
 
 # Hierarchical Inference
 

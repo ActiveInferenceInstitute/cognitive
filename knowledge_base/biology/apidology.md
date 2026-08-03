@@ -1,58 +1,40 @@
 ---
-
 type: concept
-
 id: apidology_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [apidology, bees, pollinators, entomology, ecology]
-
-aliases: [bee-science, melittology, bee-studies]
-
+tags:
+- apidology
+- bees
+- pollinators
+- entomology
+- ecology
+aliases:
+- bee-science
+- melittology
+- bee-studies
 complexity: intermediate
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[entomology]]
-
-      - [[behavioral_biology]]
-
-      - [[ecological_networks]]
-
-      - [[knowledge_base/cognitive/active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[population_genetics]]
-
-      - [[evolutionary_game_theory]]
-
-      - [[collective_behavior]]
-
-  - type: relates
-
-    links:
-
-      - [[myrmecology]]
-
-      - [[pollination_biology]]
-
-      - [[ecological_dynamics]]
-
-      - [[knowledge_base/agents/architectures_overview]]
-
+- type: foundation
+  links:
+  - - - entomology
+  - - - behavioral_biology
+  - - - ecological_networks
+  - - - knowledge_base/cognitive/active_inference
+- type: implements
+  links:
+  - - - population_genetics
+  - - - evolutionary_game_theory
+  - - - collective_behavior
+- type: relates
+  links:
+  - - - myrmecology
+  - - - pollination_biology
+  - - - ecological_dynamics
+  - - - knowledge_base/agents/architectures_overview
 ---
+
 
 # Apidology
 

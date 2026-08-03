@@ -1,16 +1,13 @@
 ---
-
 title: Parameter Tuning
-
 type: guide
-
 status: stable
-
 created: 2025-03-03
-
-tags: [tuning, optimization]
-
+tags:
+- tuning
+- optimization
 ---
+
 
 # Parameter Tuning
 

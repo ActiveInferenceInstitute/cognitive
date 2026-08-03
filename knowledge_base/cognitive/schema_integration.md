@@ -1,46 +1,28 @@
 ---
-
 title: Schema Integration
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - memory
-
-  - knowledge
-
-  - learning
-
+- cognition
+- memory
+- knowledge
+- learning
 semantic_relations:
-
-  - type: implements
-
-    links: [[memory_systems]]
-
-  - type: extends
-
-    links: [[knowledge_organization]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[memory_consolidation]]
-
-      - [[semantic_memory]]
-
+- type: implements
+  links:
+  - - memory_systems
+- type: extends
+  links:
+  - - knowledge_organization
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - memory_consolidation
+  - - - semantic_memory
 ---
+
 
 # Schema Integration
 

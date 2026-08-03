@@ -1,46 +1,28 @@
 ---
-
 title: Working Memory
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - memory
-
-  - executive_function
-
-  - computation
-
+- cognition
+- memory
+- executive_function
+- computation
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_control]]
-
-  - type: extends
-
-    links: [[memory_systems]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[attention_mechanisms]]
-
-      - [[executive_processes]]
-
+- type: implements
+  links:
+  - - cognitive_control
+- type: extends
+  links:
+  - - memory_systems
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - attention_mechanisms
+  - - - executive_processes
 ---
+
 
 # Working Memory
 

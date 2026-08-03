@@ -1,60 +1,33 @@
 ---
-
 title: Non-Equilibrium Thermodynamics
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-15
-
 complexity: advanced
-
 processing_priority: 1
-
 tags:
-
-  - mathematics
-
-  - physics
-
-  - thermodynamics
-
-  - complexity
-
+- mathematics
+- physics
+- thermodynamics
+- complexity
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[free_energy_principle]]
-
-      - [[active_inference]]
-
-      - [[self_organization]]
-
-  - type: implements
-
-    links:
-
-      - [[thermodynamics]]
-
-      - [[statistical_physics]]
-
-      - [[stochastic_processes]]
-
-  - type: relates
-
-    links:
-
-      - [[information_theory]]
-
-      - [[dynamical_systems]]
-
-      - [[complex_systems]]
-
+- type: foundation_for
+  links:
+  - - - free_energy_principle
+  - - - active_inference
+  - - - self_organization
+- type: implements
+  links:
+  - - - thermodynamics
+  - - - statistical_physics
+  - - - stochastic_processes
+- type: relates
+  links:
+  - - - information_theory
+  - - - dynamical_systems
+  - - - complex_systems
 ---
+
 
 # Non-Equilibrium Thermodynamics
 

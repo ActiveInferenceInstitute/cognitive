@@ -1,46 +1,27 @@
 ---
-
 title: Emergence and Self-Organization
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - emergence
-
-  - self_organization
-
-  - complex_systems
-
-  - collective_behavior
-
-  - dynamical_systems
-
+- cognition
+- emergence
+- self_organization
+- complex_systems
+- collective_behavior
+- dynamical_systems
 semantic_relations:
-
-  - type: implements
-
-    links: [[complex_systems]]
-
-  - type: related
-
-    links:
-
-      - [[collective_behavior]]
-
-      - [[swarm_intelligence]]
-
-      - [[dynamical_systems]]
-
-      - [[pattern_formation]]
-
-      - [[information_theory]]
-
+- type: implements
+  links:
+  - - complex_systems
+- type: related
+  links:
+  - - - collective_behavior
+  - - - swarm_intelligence
+  - - - dynamical_systems
+  - - - pattern_formation
+  - - - information_theory
 ---
+
 
 # Emergence and Self-Organization
 

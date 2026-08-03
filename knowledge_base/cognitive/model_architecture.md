@@ -1,44 +1,26 @@
 ---
-
 title: Model Architecture
-
 type: concept
-
 status: stable
-
 created: 2024-02-14
-
 tags:
-
-  - cognitive
-
-  - architecture
-
-  - design
-
-  - active_inference
-
+- cognitive
+- architecture
+- design
+- active_inference
 semantic_relations:
-
-  - type: implements
-
-    links: [[active_inference]]
-
-  - type: relates
-
-    links:
-
-      - [[generative_model]]
-
-      - [[hierarchical_inference]]
-
-      - [[predictive_coding]]
-
-      - [[temporal_models]]
-
-      - [[markov_blanket]]
-
+- type: implements
+  links:
+  - - active_inference
+- type: relates
+  links:
+  - - - generative_model
+  - - - hierarchical_inference
+  - - - predictive_coding
+  - - - temporal_models
+  - - - markov_blanket
 ---
+
 
 # Model Architecture
 

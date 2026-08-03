@@ -1,40 +1,24 @@
 ---
-
 title: Skill Acquisition
-
 type: concept
-
 status: stable
-
 tags:
-
-  - learning
-
-  - expertise
-
-  - performance
-
-  - practice
-
-  - development
-
+- learning
+- expertise
+- performance
+- practice
+- development
 semantic_relations:
-
-  - type: implements
-
-    links: [[learning_mechanisms]]
-
-  - type: related
-
-    links:
-
-      - [[motor_learning]]
-
-      - [[cognitive_skill]]
-
-      - [[expertise]]
-
+- type: implements
+  links:
+  - - learning_mechanisms
+- type: related
+  links:
+  - - - motor_learning
+  - - - cognitive_skill
+  - - - expertise
 ---
+
 
 # Skill Acquisition
 

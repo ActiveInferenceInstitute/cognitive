@@ -1,34 +1,20 @@
 ---
-
 title: Bayesian Brain Hypothesis
-
 type: concept
-
 status: stable
-
 created: 2024-01-01
-
 tags:
-
-  - cognitive
-
-  - neuroscience
-
-  - bayesian_inference
-
+- cognitive
+- neuroscience
+- bayesian_inference
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[active_inference]]
-
-      - [[predictive_coding]]
-
-      - [[variational_inference]]
-
+- type: foundation_for
+  links:
+  - - - active_inference
+  - - - predictive_coding
+  - - - variational_inference
 ---
+
 
 ## Bayesian Brain Hypothesis
 

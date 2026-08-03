@@ -1,46 +1,28 @@
 ---
-
 title: Episodic Memory
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - memory
-
-  - temporal
-
-  - integration
-
+- cognition
+- memory
+- temporal
+- integration
 semantic_relations:
-
-  - type: implements
-
-    links: [[memory_systems]]
-
-  - type: extends
-
-    links: [[declarative_memory]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[temporal_binding]]
-
-      - [[temporal_integration]]
-
+- type: implements
+  links:
+  - - memory_systems
+- type: extends
+  links:
+  - - declarative_memory
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - temporal_binding
+  - - - temporal_integration
 ---
+
 
 # Episodic Memory
 

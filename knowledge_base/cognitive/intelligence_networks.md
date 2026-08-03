@@ -1,26 +1,19 @@
 ---
-
 title: Intelligence Networks
-
 type: concept
-
 status: stable
-
 tags:
-  - intelligence
-  - networks
-  - integration
-
+- intelligence
+- networks
+- integration
 semantic_relations:
-
-  - type: relates
-
-    links:
-      - neural_architectures
-      - network_science
-      - cognitive_architecture
-
+- type: relates
+  links:
+  - neural_architectures
+  - network_science
+  - cognitive_architecture
 ---
+
 
 # Intelligence Networks
 

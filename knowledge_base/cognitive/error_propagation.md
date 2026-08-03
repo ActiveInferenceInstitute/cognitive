@@ -1,36 +1,22 @@
 ---
-
 title: Error Propagation Implementation
-
 type: concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - implementation
-
-  - predictive-processing
-
-  - error-handling
-
+- implementation
+- predictive-processing
+- error-handling
 semantic_relations:
-
-  - type: implements
-
-    links: [[predictive_processing]]
-
-  - type: relates
-
-    links:
-
-      - [[predictive_network]]
-
-      - [[precision_mechanisms]]
-
+- type: implements
+  links:
+  - - predictive_processing
+- type: relates
+  links:
+  - - - predictive_network
+  - - - precision_mechanisms
 ---
+
 
 # Error Propagation Implementation
 

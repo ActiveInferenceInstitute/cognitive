@@ -1,40 +1,23 @@
 ---
-
 title: Probabilistic Models
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - modeling
-
+- mathematics
+- probability
+- modeling
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[bayesian_inference]]
-
-      - [[probability_theory]]
-
-  - type: implements
-
-    links:
-
-      - [[graphical_models]]
-
-      - [[state_space_models]]
-
+- type: foundation
+  links:
+  - - - bayesian_inference
+  - - - probability_theory
+- type: implements
+  links:
+  - - - graphical_models
+  - - - state_space_models
 ---
+
 
 # Probabilistic Models
 

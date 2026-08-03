@@ -1,18 +1,17 @@
 ---
-
 type: implementation
-
 id: compute_vfe_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [active-inference, free-energy, implementation]
-
-aliases: [compute-vfe, variational-free-energy]
-
+tags:
+- active-inference
+- free-energy
+- implementation
+aliases:
+- compute-vfe
+- variational-free-energy
 ---
+
 
 # Computing Variational Free Energy
 

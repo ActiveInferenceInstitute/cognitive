@@ -1,40 +1,24 @@
 ---
-
 title: Memory Systems
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - memory
-
-  - learning
-
-  - neural_systems
-
-  - information_processing
-
+- cognition
+- memory
+- learning
+- neural_systems
+- information_processing
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_functions]]
-
-  - type: related
-
-    links:
-
-      - [[learning_mechanisms]]
-
-      - [[synaptic_plasticity]]
-
-      - [[neural_computation]]
-
+- type: implements
+  links:
+  - - cognitive_functions
+- type: related
+  links:
+  - - - learning_mechanisms
+  - - - synaptic_plasticity
+  - - - neural_computation
 ---
+
 
 # Memory Systems
 

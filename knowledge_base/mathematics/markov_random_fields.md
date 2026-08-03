@@ -1,56 +1,31 @@
 ---
-
 title: Markov Random Fields
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - graphical-models
-
-  - undirected-graphs
-
+- mathematics
+- probability
+- graphical-models
+- undirected-graphs
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[probabilistic_graphical_models]]
-
-      - [[graphical_models]]
-
-      - [[probability_theory]]
-
-      - [[bayesian_graph_theory]]
-
-  - type: related
-
-    links:
-
-      - [[bayesian_networks]]
-
-      - [[factor_graphs]]
-
-      - [[conditional_random_fields]]
-
-  - type: implements
-
-    links:
-
-      - [[message_passing]]
-
-      - [[probabilistic_inference]]
-
+- type: foundation
+  links:
+  - - - probabilistic_graphical_models
+  - - - graphical_models
+  - - - probability_theory
+  - - - bayesian_graph_theory
+- type: related
+  links:
+  - - - bayesian_networks
+  - - - factor_graphs
+  - - - conditional_random_fields
+- type: implements
+  links:
+  - - - message_passing
+  - - - probabilistic_inference
 ---
+
 
 # Markov Random Fields
 

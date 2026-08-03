@@ -1,46 +1,28 @@
 ---
-
 title: Semantic Memory
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - memory
-
-  - knowledge
-
-  - concepts
-
+- cognition
+- memory
+- knowledge
+- concepts
 semantic_relations:
-
-  - type: implements
-
-    links: [[memory_systems]]
-
-  - type: extends
-
-    links: [[declarative_memory]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[concept_learning]]
-
-      - [[knowledge_representation]]
-
+- type: implements
+  links:
+  - - memory_systems
+- type: extends
+  links:
+  - - declarative_memory
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - concept_learning
+  - - - knowledge_representation
 ---
+
 
 # Semantic Memory
 

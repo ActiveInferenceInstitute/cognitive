@@ -1,46 +1,28 @@
 ---
-
 title: Cross-Modal Perception
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - integration
-
-  - multisensory
-
+- cognition
+- perception
+- integration
+- multisensory
 semantic_relations:
-
-  - type: implements
-
-    links: [[multisensory_integration]]
-
-  - type: extends
-
-    links: [[perceptual_integration]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[neural_synchrony]]
-
-      - [[perceptual_binding]]
-
+- type: implements
+  links:
+  - - multisensory_integration
+- type: extends
+  links:
+  - - perceptual_integration
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - neural_synchrony
+  - - - perceptual_binding
 ---
+
 
 # Cross-Modal Perception
 

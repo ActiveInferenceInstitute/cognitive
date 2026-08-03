@@ -1,42 +1,25 @@
 ---
-
 title: Memory Organization
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - memory
-
-  - information_processing
-
-  - neural_systems
-
-  - knowledge_organization
-
+- cognition
+- memory
+- information_processing
+- neural_systems
+- knowledge_organization
 semantic_relations:
-
-  - type: implements
-
-    links: [[memory_systems]]
-
-  - type: related
-
-    links:
-
-      - [[learning_mechanisms]]
-
-      - [[information_processing]]
-
-      - [[cognitive_architecture]]
-
-      - [[knowledge_representation]]
-
+- type: implements
+  links:
+  - - memory_systems
+- type: related
+  links:
+  - - - learning_mechanisms
+  - - - information_processing
+  - - - cognitive_architecture
+  - - - knowledge_representation
 ---
+
 
 # Memory Organization
 

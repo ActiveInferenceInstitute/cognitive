@@ -1,20 +1,17 @@
 ---
-
 type: matrix_spec
-
 id: E_matrix_001
-
 matrix_type: action_distribution
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [matrix, action-distribution, active-inference]
-
-related_spaces: [action_space]
-
+tags:
+- matrix
+- action-distribution
+- active-inference
+related_spaces:
+- action_space
 ---
+
 
 # E-Matrix (Action Distribution)
 

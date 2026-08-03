@@ -1,46 +1,27 @@
 ---
-
 title: Consciousness and Awareness
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - consciousness
-
-  - awareness
-
-  - subjective_experience
-
-  - neural_correlates
-
-  - attention
-
+- cognition
+- consciousness
+- awareness
+- subjective_experience
+- neural_correlates
+- attention
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_functions]]
-
-  - type: related
-
-    links:
-
-      - [[attention]]
-
-      - [[perception]]
-
-      - [[metacognition]]
-
-      - [[executive_functions]]
-
-      - [[memory_systems]]
-
+- type: implements
+  links:
+  - - cognitive_functions
+- type: related
+  links:
+  - - - attention
+  - - - perception
+  - - - metacognition
+  - - - executive_functions
+  - - - memory_systems
 ---
+
 
 # Consciousness and Awareness
 

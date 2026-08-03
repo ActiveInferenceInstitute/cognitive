@@ -1,46 +1,28 @@
 ---
-
 title: Neural Efficiency
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - neuroscience
-
-  - efficiency
-
-  - computation
-
+- cognition
+- neuroscience
+- efficiency
+- computation
 semantic_relations:
-
-  - type: implements
-
-    links: [[metabolic_efficiency]]
-
-  - type: extends
-
-    links: [[energy_optimization]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[computational_efficiency]]
-
-      - [[neural_computation]]
-
+- type: implements
+  links:
+  - - metabolic_efficiency
+- type: extends
+  links:
+  - - energy_optimization
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - computational_efficiency
+  - - - neural_computation
 ---
+
 
 # Neural Efficiency
 

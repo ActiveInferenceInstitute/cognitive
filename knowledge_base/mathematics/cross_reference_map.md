@@ -1,34 +1,20 @@
 ---
-
 title: Mathematics Cross-Reference Map
-
 type: meta
-
 status: active
-
 created: 2024-02-07
-
 tags:
-
-  - mathematics
-
-  - meta
-
-  - cross_references
-
-  - knowledge_graph
-
+- mathematics
+- meta
+- cross_references
+- knowledge_graph
 semantic_relations:
-
-  - type: maps
-
-    links:
-
-      - [[README]]
-
-      - [[knowledge_base/ontology/cognitive_ontology]]
-
+- type: maps
+  links:
+  - - - README
+  - - - knowledge_base/ontology/cognitive_ontology
 ---
+
 
 # Mathematics Cross-Reference Map
 

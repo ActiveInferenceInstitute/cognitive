@@ -1,32 +1,19 @@
 ---
-
 title: Agent Architectures Index
-
 type: index
-
 status: stable
-
 created: 2024-02-07
-
 tags:
-
-  - agents
-
-  - architectures
-
-  - implementation
-
+- agents
+- architectures
+- implementation
 semantic_relations:
-
-  - type: organizes
-
-    links:
-
-      - [[GenericPOMDP/agent_config]]
-
-      - [[Continuous_Time/continuous_time_agent]]
-
+- type: organizes
+  links:
+  - - - GenericPOMDP/agent_config
+  - - - Continuous_Time/continuous_time_agent
 ---
+
 
 # Agent Architectures and Implementations
 

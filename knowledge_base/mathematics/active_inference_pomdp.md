@@ -1,44 +1,30 @@
 ---
-
 type: mathematical_concept
-
 id: active_inference_pomdp_001
-
 created: 2024-02-05
-
 modified: 2024-02-06
-
-tags: [active-inference, pomdp, free-energy, mathematics]
-
-aliases: [active-inference-pomdp]
-
+tags:
+- active-inference
+- pomdp
+- free-energy
+- mathematics
+aliases:
+- active-inference-pomdp
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[docs/research/research_documentation_index|Research Documentation]]
-
-      - [[free_energy_principle]]
-
-  - type: uses
-
-    links:
-
-      - [[variational_methods]]
-
-      - [[information_theory]]
-
-  - type: documented_by
-
-    links:
-
-      - [[docs/implementation/implementation_guides_index|Implementation Guides]]
-
-      - [[docs/api/api_documentation_index|API Documentation]]
-
+- type: implements
+  links:
+  - - - docs/research/research_documentation_index|Research Documentation
+  - - - free_energy_principle
+- type: uses
+  links:
+  - - - variational_methods
+  - - - information_theory
+- type: documented_by
+  links:
+  - - - docs/implementation/implementation_guides_index|Implementation Guides
+  - - - docs/api/api_documentation_index|API Documentation
 ---
+
 
 # Active Inference POMDP
 

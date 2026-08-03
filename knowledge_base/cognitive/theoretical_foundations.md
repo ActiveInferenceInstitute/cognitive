@@ -1,40 +1,24 @@
 ---
-
 title: Theoretical Foundations
-
 type: concept
-
 status: stable
-
 created: 2024-02-06
-
 tags:
-
-  - theory
-
-  - foundations
-
-  - concepts
-
-  - architecture
-
+- theory
+- foundations
+- concepts
+- architecture
 semantic_relations:
-
-  - type: implements
-
-    links: [[documentation_standards]]
-
-  - type: relates
-
-    links:
-
-      - [[active_inference|Active Inference Theory]]
-
-      - [[cognitive_phenomena|Cognitive Phenomena]]
-
-      - [[machine_readability]]
-
+- type: implements
+  links:
+  - - documentation_standards
+- type: relates
+  links:
+  - - - active_inference|Active Inference Theory
+  - - - cognitive_phenomena|Cognitive Phenomena
+  - - - machine_readability
 ---
+
 
 # Theoretical Foundations
 

@@ -1,62 +1,34 @@
 ---
-
 title: Path Integral Bayesian Inference
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-15
-
 tags:
-
-  - mathematics
-
-  - probability
-
-  - path-integrals
-
-  - bayesian-inference
-
-  - statistical-physics
-
+- mathematics
+- probability
+- path-integrals
+- bayesian-inference
+- statistical-physics
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[path_integral]]
-
-      - [[probability_theory]]
-
-      - [[bayesian_inference]]
-
-      - [[bayes_theorem]]
-
-  - type: implements
-
-    links:
-
-      - [[bayesian_networks]]
-
-      - [[variational_inference]]
-
-      - [[path_integral_free_energy]]
-
-  - type: related
-
-    links:
-
-      - [[bayesian_graph_theory]]
-
-      - [[stochastic_processes]]
-
-      - [[continuous_discrete_inference]]
-
-      - [[bayesian_renormalization]]
-
+- type: foundation
+  links:
+  - - - path_integral
+  - - - probability_theory
+  - - - bayesian_inference
+  - - - bayes_theorem
+- type: implements
+  links:
+  - - - bayesian_networks
+  - - - variational_inference
+  - - - path_integral_free_energy
+- type: related
+  links:
+  - - - bayesian_graph_theory
+  - - - stochastic_processes
+  - - - continuous_discrete_inference
+  - - - bayesian_renormalization
 ---
+
 
 # Path Integral Bayesian Inference
 

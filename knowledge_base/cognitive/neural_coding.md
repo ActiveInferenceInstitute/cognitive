@@ -1,40 +1,24 @@
 ---
-
 title: Neural Coding
-
 type: concept
-
 status: stable
-
 tags:
-
-  - neuroscience
-
-  - computation
-
-  - information_processing
-
-  - neural_representation
-
-  - brain_function
-
+- neuroscience
+- computation
+- information_processing
+- neural_representation
+- brain_function
 semantic_relations:
-
-  - type: implements
-
-    links: [[neural_computation]]
-
-  - type: related
-
-    links:
-
-      - [[information_theory]]
-
-      - [[population_coding]]
-
-      - [[temporal_coding]]
-
+- type: implements
+  links:
+  - - neural_computation
+- type: related
+  links:
+  - - - information_theory
+  - - - population_coding
+  - - - temporal_coding
 ---
+
 
 # Neural Coding
 

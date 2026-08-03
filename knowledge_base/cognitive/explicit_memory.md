@@ -1,46 +1,28 @@
 ---
-
 title: Explicit Memory
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - memory
-
-  - consciousness
-
-  - declarative
-
+- cognition
+- memory
+- consciousness
+- declarative
 semantic_relations:
-
-  - type: implements
-
-    links: [[memory_systems]]
-
-  - type: extends
-
-    links: [[declarative_memory]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[episodic_memory]]
-
-      - [[semantic_memory]]
-
+- type: implements
+  links:
+  - - memory_systems
+- type: extends
+  links:
+  - - declarative_memory
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - episodic_memory
+  - - - semantic_memory
 ---
+
 
 # Explicit Memory
 

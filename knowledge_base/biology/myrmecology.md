@@ -1,52 +1,37 @@
 ---
-
 type: concept
-
 id: myrmecology_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [myrmecology, ants, social_insects, entomology, ecology]
-
-aliases: [ant-science, ant-studies, formicology]
-
+tags:
+- myrmecology
+- ants
+- social_insects
+- entomology
+- ecology
+aliases:
+- ant-science
+- ant-studies
+- formicology
 complexity: intermediate
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[entomology]]
-
-      - [[behavioral_biology]]
-
-      - [[ecological_networks]]
-
-  - type: implements
-
-    links:
-
-      - [[population_genetics]]
-
-      - [[evolutionary_game_theory]]
-
-  - type: relates
-
-    links:
-
-      - [[apidology]]
-
-      - [[social_behavior]]
-
-      - [[ecological_dynamics]]
-
+- type: foundation
+  links:
+  - - - entomology
+  - - - behavioral_biology
+  - - - ecological_networks
+- type: implements
+  links:
+  - - - population_genetics
+  - - - evolutionary_game_theory
+- type: relates
+  links:
+  - - - apidology
+  - - - social_behavior
+  - - - ecological_dynamics
 ---
+
 
 # Myrmecology
 

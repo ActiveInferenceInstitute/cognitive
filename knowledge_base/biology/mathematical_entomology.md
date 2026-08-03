@@ -1,54 +1,37 @@
 ---
-
 type: concept
-
 id: mathematical_entomology_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [mathematical_biology, entomology, modeling, population_dynamics, statistics]
-
-aliases: [quantitative-entomology, computational-entomology]
-
+tags:
+- mathematical_biology
+- entomology
+- modeling
+- population_dynamics
+- statistics
+aliases:
+- quantitative-entomology
+- computational-entomology
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[entomology]]
-
-      - [[population_genetics]]
-
-      - [[evolutionary_dynamics]]
-
-  - type: implements
-
-    links:
-
-      - [[statistical_methods]]
-
-      - [[differential_equations]]
-
-      - [[network_theory]]
-
-  - type: relates
-
-    links:
-
-      - [[ecological_networks]]
-
-      - [[systems_biology]]
-
-      - [[bioinformatics]]
-
+- type: foundation
+  links:
+  - - - entomology
+  - - - population_genetics
+  - - - evolutionary_dynamics
+- type: implements
+  links:
+  - - - statistical_methods
+  - - - differential_equations
+  - - - network_theory
+- type: relates
+  links:
+  - - - ecological_networks
+  - - - systems_biology
+  - - - bioinformatics
 ---
+
 
 # Mathematical Entomology
 

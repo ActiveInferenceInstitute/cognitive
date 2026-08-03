@@ -1,18 +1,18 @@
 ---
-
 type: mathematical_concept
-
 id: expected_free_energy_update_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [mathematics, active-inference, policy-selection, free-energy]
-
-aliases: [EFE-update, policy-prior-update]
-
+tags:
+- mathematics
+- active-inference
+- policy-selection
+- free-energy
+aliases:
+- EFE-update
+- policy-prior-update
 ---
+
 
 # Expected Free Energy Update
 

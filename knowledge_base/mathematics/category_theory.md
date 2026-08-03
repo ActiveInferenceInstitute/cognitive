@@ -1,44 +1,25 @@
 ---
-
 title: Category Theory
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - category_theory
-
-  - abstraction
-
-  - foundations
-
+- mathematics
+- category_theory
+- abstraction
+- foundations
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[set_theory]]
-
-      - [[homological_algebra]]
-
-  - type: relates
-
-    links:
-
-      - [[algebraic_geometry]]
-
-      - [[topology]]
-
-      - [[logic]]
-
+- type: foundation
+  links:
+  - - - set_theory
+  - - - homological_algebra
+- type: relates
+  links:
+  - - - algebraic_geometry
+  - - - topology
+  - - - logic
 ---
+
 
 # Category Theory
 

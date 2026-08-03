@@ -1,56 +1,31 @@
 ---
-
 title: Tensegrity Information Geometry
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - tensegrity
-
-  - information_geometry
-
-  - differential_geometry
-
+- mathematics
+- tensegrity
+- information_geometry
+- differential_geometry
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[tensegrity]]
-
-      - [[information_geometry]]
-
-      - [[differential_geometry]]
-
-      - [[synergetics]]
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-  - type: relates
-
-    links:
-
-      - [[vector_equilibrium]]
-
-      - [[geodesic_geometry]]
-
-      - [[geometric_unity]]
-
+- type: foundation
+  links:
+  - - - tensegrity
+  - - - information_geometry
+  - - - differential_geometry
+  - - - synergetics
+- type: implements
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+- type: relates
+  links:
+  - - - vector_equilibrium
+  - - - geodesic_geometry
+  - - - geometric_unity
 ---
+
 
 # Tensegrity Information Geometry
 

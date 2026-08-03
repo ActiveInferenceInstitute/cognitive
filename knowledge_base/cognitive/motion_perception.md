@@ -1,44 +1,27 @@
 ---
-
 title: Motion Perception
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - vision
-
-  - movement
-
+- cognition
+- perception
+- vision
+- movement
 semantic_relations:
-
-  - type: implements
-
-    links: [[visual_perception]]
-
-  - type: extends
-
-    links: [[temporal_processing]]
-
-  - type: related
-
-    links:
-
-      - [[depth_perception]]
-
-      - [[spatial_attention]]
-
-      - [[action_planning]]
-
+- type: implements
+  links:
+  - - visual_perception
+- type: extends
+  links:
+  - - temporal_processing
+- type: related
+  links:
+  - - - depth_perception
+  - - - spatial_attention
+  - - - action_planning
 ---
+
 
 # Motion Perception
 

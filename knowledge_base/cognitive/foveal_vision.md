@@ -1,44 +1,27 @@
 ---
-
 title: Foveal Vision
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - vision
-
-  - acuity
-
+- cognition
+- perception
+- vision
+- acuity
 semantic_relations:
-
-  - type: implements
-
-    links: [[visual_perception]]
-
-  - type: extends
-
-    links: [[spatial_vision]]
-
-  - type: related
-
-    links:
-
-      - [[peripheral_vision]]
-
-      - [[visual_acuity]]
-
-      - [[visual_attention]]
-
+- type: implements
+  links:
+  - - visual_perception
+- type: extends
+  links:
+  - - spatial_vision
+- type: related
+  links:
+  - - - peripheral_vision
+  - - - visual_acuity
+  - - - visual_attention
 ---
+
 
 # Foveal Vision
 

@@ -1,40 +1,24 @@
 ---
-
 title: Executive Functions
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - control
-
-  - regulation
-
-  - behavior
-
-  - prefrontal
-
+- cognition
+- control
+- regulation
+- behavior
+- prefrontal
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_control]]
-
-  - type: related
-
-    links:
-
-      - [[attention]]
-
-      - [[working_memory]]
-
-      - [[decision_making]]
-
+- type: implements
+  links:
+  - - cognitive_control
+- type: related
+  links:
+  - - - attention
+  - - - working_memory
+  - - - decision_making
 ---
+
 
 # Executive Functions
 

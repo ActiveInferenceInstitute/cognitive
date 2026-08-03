@@ -1,46 +1,28 @@
 ---
-
 title: Computational Efficiency
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - computation
-
-  - efficiency
-
-  - optimization
-
+- cognition
+- computation
+- efficiency
+- optimization
 semantic_relations:
-
-  - type: implements
-
-    links: [[neural_efficiency]]
-
-  - type: extends
-
-    links: [[resource_management]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[information_processing]]
-
-      - [[model_complexity]]
-
+- type: implements
+  links:
+  - - neural_efficiency
+- type: extends
+  links:
+  - - resource_management
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - information_processing
+  - - - model_complexity
 ---
+
 
 # Computational Efficiency
 

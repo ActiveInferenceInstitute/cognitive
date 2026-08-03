@@ -1,54 +1,36 @@
 ---
-
 type: concept
-
 id: immunology_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [immunology, cell-biology, molecular-biology, systems-biology]
-
-aliases: [immune-system, immune-response]
-
+tags:
+- immunology
+- cell-biology
+- molecular-biology
+- systems-biology
+aliases:
+- immune-system
+- immune-response
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[cell_biology]]
-
-      - [[molecular_biology]]
-
-      - [[genetics]]
-
-  - type: implements
-
-    links:
-
-      - [[immune_response]]
-
-      - [[antibody_dynamics]]
-
-      - [[cell_signaling]]
-
-  - type: relates
-
-    links:
-
-      - [[developmental_systems]]
-
-      - [[systems_biology]]
-
-      - [[evolutionary_dynamics]]
-
+- type: foundation
+  links:
+  - - - cell_biology
+  - - - molecular_biology
+  - - - genetics
+- type: implements
+  links:
+  - - - immune_response
+  - - - antibody_dynamics
+  - - - cell_signaling
+- type: relates
+  links:
+  - - - developmental_systems
+  - - - systems_biology
+  - - - evolutionary_dynamics
 ---
+
 
 # Immunology
 

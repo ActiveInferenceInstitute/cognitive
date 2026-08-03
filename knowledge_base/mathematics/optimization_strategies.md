@@ -1,16 +1,12 @@
 ---
-
 title: Optimization Strategies
-
 type: guide
-
 status: stable
-
 created: 2025-03-03
-
-tags: [optimization]
-
+tags:
+- optimization
 ---
+
 
 # Optimization Strategies
 

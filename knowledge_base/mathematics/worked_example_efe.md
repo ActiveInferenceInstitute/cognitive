@@ -1,22 +1,17 @@
 ---
-
 title: Worked Example — Expected Free Energy
-
 type: example
-
 status: draft
-
 created: 2025-08-08
-
-tags: [example, efe]
-
+tags:
+- example
+- efe
 semantic_relations:
-
-  - type: demonstrates
-
-    links: [expected_free_energy]
-
+- type: demonstrates
+  links:
+  - expected_free_energy
 ---
+
 
 ## EFE on a toy POMDP
 

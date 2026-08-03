@@ -1,20 +1,17 @@
 ---
-
 type: matrix_spec
-
 id: C_matrix_001
-
 matrix_type: preference
-
 created: 2025-01-01
-
 modified: 2025-01-01
-
-tags: [matrix, preference, active-inference]
-
-related_spaces: [o_space]
-
+tags:
+- matrix
+- preference
+- active-inference
+related_spaces:
+- o_space
 ---
+
 
 # C-Matrix (Preferences/Goals)
 

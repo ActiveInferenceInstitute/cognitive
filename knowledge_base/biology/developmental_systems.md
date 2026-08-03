@@ -1,60 +1,39 @@
 ---
-
 type: concept
-
 id: developmental_systems_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [development, systems-biology, mathematical-biology, complex-systems]
-
-aliases: [developmental-dynamics, morphogenesis]
-
+tags:
+- development
+- systems-biology
+- mathematical-biology
+- complex-systems
+aliases:
+- developmental-dynamics
+- morphogenesis
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[morphogenesis]]
-
-      - [[pattern_formation]]
-
-      - [[cell_differentiation]]
-
-      - [[knowledge_base/cognitive/active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[reaction_diffusion]]
-
-      - [[gene_regulatory_networks]]
-
-      - [[cellular_automata]]
-
-      - [[knowledge_base/agents/architectures_overview]]
-
-  - type: relates
-
-    links:
-
-      - [[evolutionary_dynamics]]
-
-      - [[ecological_dynamics]]
-
-      - [[systems_biology]]
-
-      - [[developmental_networks]]
-
+- type: foundation
+  links:
+  - - - morphogenesis
+  - - - pattern_formation
+  - - - cell_differentiation
+  - - - knowledge_base/cognitive/active_inference
+- type: implements
+  links:
+  - - - reaction_diffusion
+  - - - gene_regulatory_networks
+  - - - cellular_automata
+  - - - knowledge_base/agents/architectures_overview
+- type: relates
+  links:
+  - - - evolutionary_dynamics
+  - - - ecological_dynamics
+  - - - systems_biology
+  - - - developmental_networks
 ---
+
 
 # Developmental Systems
 

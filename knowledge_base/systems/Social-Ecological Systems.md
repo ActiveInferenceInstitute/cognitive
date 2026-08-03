@@ -1,20 +1,19 @@
 ---
-
 title: Social–Ecological Systems (SES)
-
 type: systems
-
 status: stable
-
-tags: [SES, coupled_systems, sustainability]
-
+tags:
+- SES
+- coupled_systems
+- sustainability
 semantic_relations:
-
-  - type: relates
-
-    links: [resilience_thinking, adaptive_comanagement, environmental_applications]
-
+- type: relates
+  links:
+  - resilience_thinking
+  - adaptive_comanagement
+  - environmental_applications
 ---
+
 
 # Social–Ecological Systems (SES)
 

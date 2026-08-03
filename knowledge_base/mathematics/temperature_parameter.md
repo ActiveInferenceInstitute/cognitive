@@ -1,18 +1,18 @@
 ---
-
 type: mathematical_concept
-
 id: temperature_parameter_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [active-inference, optimization, exploration]
-
-aliases: [inverse-temperature, precision, exploration-control]
-
+tags:
+- active-inference
+- optimization
+- exploration
+aliases:
+- inverse-temperature
+- precision
+- exploration-control
 ---
+
 
 # Temperature Parameter
 

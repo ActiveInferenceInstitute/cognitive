@@ -1,42 +1,25 @@
 ---
-
 title: Neural Computation
-
 type: concept
-
 status: stable
-
 tags:
-
-  - computation
-
-  - neuroscience
-
-  - information_processing
-
-  - brain_function
-
-  - modeling
-
+- computation
+- neuroscience
+- information_processing
+- brain_function
+- modeling
 semantic_relations:
-
-  - type: implements
-
-    links: [[brain_function]]
-
-  - type: related
-
-    links:
-
-      - [[knowledge_base/biology/neuroscience]]
-
-      - [[information_processing]]
-
-      - [[neural_networks]]
-
-      - [[cognitive_architecture]]
-
+- type: implements
+  links:
+  - - brain_function
+- type: related
+  links:
+  - - - knowledge_base/biology/neuroscience
+  - - - information_processing
+  - - - neural_networks
+  - - - cognitive_architecture
 ---
+
 
 # Neural Computation
 

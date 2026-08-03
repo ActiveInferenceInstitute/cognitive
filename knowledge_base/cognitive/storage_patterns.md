@@ -1,40 +1,24 @@
 ---
-
 title: Storage Patterns
-
 type: concept
-
 status: stable
-
 created: 2024-02-23
-
 tags:
-
-  - patterns
-
-  - storage
-
-  - memory
-
-  - cognitive_modeling
-
+- patterns
+- storage
+- memory
+- cognitive_modeling
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_modeling_concepts]]
-
-  - type: relates
-
-    links:
-
-      - [[memory_systems]]
-
-      - [[model_architecture]]
-
-      - [[memory_processes]]
-
+- type: implements
+  links:
+  - - cognitive_modeling_concepts
+- type: relates
+  links:
+  - - - memory_systems
+  - - - model_architecture
+  - - - memory_processes
 ---
+
 
 # Storage Patterns
 

@@ -1,20 +1,18 @@
 ---
-
 type: matrix_spec
-
 id: A_matrix_001
-
 matrix_type: perception
-
 created: 2025-01-01
-
 modified: 2025-01-01
-
-tags: [matrix, perception, active-inference]
-
-related_spaces: [o_space, s_space]
-
+tags:
+- matrix
+- perception
+- active-inference
+related_spaces:
+- o_space
+- s_space
 ---
+
 
 # A-Matrix (Perception/Likelihood)
 

@@ -1,58 +1,32 @@
 ---
-
 title: Graph Theory
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-03-15
-
 complexity: intermediate
-
 processing_priority: 1
-
 tags:
-
-  - mathematics
-
-  - discrete_mathematics
-
-  - networks
-
-  - combinatorics
-
+- mathematics
+- discrete_mathematics
+- networks
+- combinatorics
 semantic_relations:
-
-  - type: foundation_for
-
-    links:
-
-      - [[probabilistic_graphical_models]]
-
-      - [[network_science]]
-
-      - [[markov_random_fields]]
-
-  - type: implements
-
-    links:
-
-      - [[discrete_mathematics]]
-
-      - [[combinatorics]]
-
-  - type: relates
-
-    links:
-
-      - [[optimization_theory]]
-
-      - [[information_theory]]
-
-      - [[complexity_theory]]
-
+- type: foundation_for
+  links:
+  - - - probabilistic_graphical_models
+  - - - network_science
+  - - - markov_random_fields
+- type: implements
+  links:
+  - - - discrete_mathematics
+  - - - combinatorics
+- type: relates
+  links:
+  - - - optimization_theory
+  - - - information_theory
+  - - - complexity_theory
 ---
+
 
 # Graph Theory
 

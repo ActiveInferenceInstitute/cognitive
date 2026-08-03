@@ -1,58 +1,39 @@
 ---
-
 type: concept
-
 id: entomology_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [entomology, insects, biology, arthropods, ecology]
-
-aliases: [insect-science, insect-studies]
-
+tags:
+- entomology
+- insects
+- biology
+- arthropods
+- ecology
+aliases:
+- insect-science
+- insect-studies
 complexity: intermediate
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[evolutionary_dynamics]]
-
-      - [[ecological_networks]]
-
-      - [[behavioral_biology]]
-
-      - [[knowledge_base/cognitive/active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[population_genetics]]
-
-      - [[developmental_systems]]
-
-      - [[knowledge_base/agents/architectures_overview]]
-
-  - type: relates
-
-    links:
-
-      - [[myrmecology]]
-
-      - [[apidology]]
-
-      - [[ecological_dynamics]]
-
-      - [[insect_flight_dynamics]]
-
+- type: foundation
+  links:
+  - - - evolutionary_dynamics
+  - - - ecological_networks
+  - - - behavioral_biology
+  - - - knowledge_base/cognitive/active_inference
+- type: implements
+  links:
+  - - - population_genetics
+  - - - developmental_systems
+  - - - knowledge_base/agents/architectures_overview
+- type: relates
+  links:
+  - - - myrmecology
+  - - - apidology
+  - - - ecological_dynamics
+  - - - insect_flight_dynamics
 ---
+
 
 # Entomology
 

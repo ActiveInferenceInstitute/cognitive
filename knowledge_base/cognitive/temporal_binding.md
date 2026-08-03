@@ -1,46 +1,28 @@
 ---
-
 title: Temporal Binding
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - time
-
-  - integration
-
+- cognition
+- perception
+- time
+- integration
 semantic_relations:
-
-  - type: implements
-
-    links: [[perceptual_binding]]
-
-  - type: extends
-
-    links: [[temporal_processing]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[neural_synchrony]]
-
-      - [[temporal_integration]]
-
+- type: implements
+  links:
+  - - perceptual_binding
+- type: extends
+  links:
+  - - temporal_processing
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - neural_synchrony
+  - - - temporal_integration
 ---
+
 
 # Temporal Binding
 

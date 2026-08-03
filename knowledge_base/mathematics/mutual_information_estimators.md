@@ -1,22 +1,18 @@
 ---
-
 title: Mutual Information Estimators
-
 type: mathematical_concept
-
 status: draft
-
 created: 2025-08-08
-
-tags: [information-theory, estimation]
-
+tags:
+- information-theory
+- estimation
 semantic_relations:
-
-  - type: relates
-
-    links: [mutual_information, epistemic_value]
-
+- type: relates
+  links:
+  - mutual_information
+  - epistemic_value
 ---
+
 
 ## MI Estimators
 

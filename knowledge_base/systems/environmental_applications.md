@@ -1,50 +1,29 @@
 ---
-
 title: Environmental Applications
-
 type: article
-
 created: 2024-03-25
-
 status: stable
-
 tags:
-
-  - environment
-
-  - ecology
-
-  - sustainability
-
-  - systems
-
-  - applications
-
+- environment
+- ecology
+- sustainability
+- systems
+- applications
 semantic_relations:
-
-  - type: related_to
-
-    links:
-
-      - [[knowledge_base/systems/ecosystem_management|Ecosystem Management]]
-
-      - [[knowledge_base/systems/sustainable_systems|Sustainable Systems]]
-
-  - type: prerequisite_for
-
-    links:
-
-      - [[docs/guides/learning_paths/active_inference_environmental_applications_path|Active Inference in Environmental Applications]]
-
-  - type: builds_on
-
-    links:
-
-      - [[knowledge_base/systems/systems_theory|Systems Theory]]
-
-      - [[knowledge_base/systems/complex_systems|Complex Systems]]
-
+- type: related_to
+  links:
+  - - - knowledge_base/systems/ecosystem_management|Ecosystem Management
+  - - - knowledge_base/systems/sustainable_systems|Sustainable Systems
+- type: prerequisite_for
+  links:
+  - - - docs/guides/learning_paths/active_inference_environmental_applications_path|Active
+        Inference in Environmental Applications
+- type: builds_on
+  links:
+  - - - knowledge_base/systems/systems_theory|Systems Theory
+  - - - knowledge_base/systems/complex_systems|Complex Systems
 ---
+
 
 # Environmental Applications
 

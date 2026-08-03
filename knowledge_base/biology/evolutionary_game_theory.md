@@ -1,60 +1,39 @@
 ---
-
 type: concept
-
 id: evolutionary_game_theory_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [evolutionary-game-theory, active-inference, free-energy-principle, complex-systems]
-
-aliases: [game-theory-evolution, evolutionary-games]
-
+tags:
+- evolutionary-game-theory
+- active-inference
+- free-energy-principle
+- complex-systems
+aliases:
+- game-theory-evolution
+- evolutionary-games
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[evolutionary_dynamics]]
-
-      - [[knowledge_base/cognitive/active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[game_dynamics]]
-
-      - [[strategy_evolution]]
-
-      - [[population_games]]
-
-      - [[knowledge_base/agents/architectures_overview]]
-
-  - type: relates
-
-    links:
-
-      - [[ecological_dynamics]]
-
-      - [[behavioral_biology]]
-
-      - [[systems_biology]]
-
-      - [[knowledge_base/mathematics/game_theory]]
-
+- type: foundation
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - evolutionary_dynamics
+  - - - knowledge_base/cognitive/active_inference
+- type: implements
+  links:
+  - - - game_dynamics
+  - - - strategy_evolution
+  - - - population_games
+  - - - knowledge_base/agents/architectures_overview
+- type: relates
+  links:
+  - - - ecological_dynamics
+  - - - behavioral_biology
+  - - - systems_biology
+  - - - knowledge_base/mathematics/game_theory
 ---
+
 
 # Evolutionary Game Theory
 

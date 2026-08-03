@@ -1,60 +1,39 @@
 ---
-
 type: concept
-
 id: gene_regulatory_networks_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [gene-regulation, active-inference, free-energy-principle, networks]
-
-aliases: [gene-networks, regulatory-networks]
-
+tags:
+- gene-regulation
+- active-inference
+- free-energy-principle
+- networks
+aliases:
+- gene-networks
+- regulatory-networks
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[molecular_biology]]
-
-      - [[knowledge_base/cognitive/active_inference]]
-
-  - type: implements
-
-    links:
-
-      - [[transcriptional_regulation]]
-
-      - [[network_motifs]]
-
-      - [[gene_expression]]
-
-      - [[knowledge_base/agents/architectures_overview]]
-
-  - type: relates
-
-    links:
-
-      - [[developmental_networks]]
-
-      - [[systems_biology]]
-
-      - [[network_theory]]
-
-      - [[bioinformatics]]
-
+- type: foundation
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - molecular_biology
+  - - - knowledge_base/cognitive/active_inference
+- type: implements
+  links:
+  - - - transcriptional_regulation
+  - - - network_motifs
+  - - - gene_expression
+  - - - knowledge_base/agents/architectures_overview
+- type: relates
+  links:
+  - - - developmental_networks
+  - - - systems_biology
+  - - - network_theory
+  - - - bioinformatics
 ---
+
 
 # Gene Regulatory Networks
 

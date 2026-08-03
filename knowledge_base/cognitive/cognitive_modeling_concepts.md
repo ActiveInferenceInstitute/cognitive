@@ -1,46 +1,27 @@
 ---
-
 title: Cognitive Modeling Concepts
-
 type: index
-
 status: stable
-
 created: 2024-02-06
-
 updated: 2026-01-03
-
 tags:
-
-  - concepts
-
-  - documentation
-
-  - cognitive_modeling
-
-  - theoretical_foundations
-
-  - implementation
-
+- concepts
+- documentation
+- cognitive_modeling
+- theoretical_foundations
+- implementation
 semantic_relations:
-
-  - type: implements
-
-    links: [[knowledge_organization]]
-
-  - type: relates
-
-    links:
-
-      - [[docs/repo_docs/ai_documentation_style]]
-
-      - [[docs/repo_docs/content_management]]
-
-      - docs/research/cognitive_architectures
-
-      - knowledge_base/model_implementations
-
+- type: implements
+  links:
+  - - knowledge_organization
+- type: relates
+  links:
+  - - - docs/repo_docs/ai_documentation_style
+  - - - docs/repo_docs/content_management
+  - docs/research/cognitive_architectures
+  - knowledge_base/model_implementations
 ---
+
 
 # Cognitive Modeling Concepts
 

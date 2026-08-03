@@ -1,18 +1,18 @@
 ---
-
 type: mathematical_concept
-
 id: epistemic_value_001
-
 created: 2024-02-05
-
 modified: 2024-02-05
-
-tags: [active-inference, information-theory, exploration]
-
-aliases: [epistemic-value, information-gain, uncertainty-reduction]
-
+tags:
+- active-inference
+- information-theory
+- exploration
+aliases:
+- epistemic-value
+- information-gain
+- uncertainty-reduction
 ---
+
 
 # Epistemic Value
 

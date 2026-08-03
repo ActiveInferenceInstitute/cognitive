@@ -1,44 +1,27 @@
 ---
-
 title: Texture Perception
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - perception
-
-  - vision
-
-  - texture
-
+- cognition
+- perception
+- vision
+- texture
 semantic_relations:
-
-  - type: implements
-
-    links: [[visual_perception]]
-
-  - type: extends
-
-    links: [[pattern_recognition]]
-
-  - type: related
-
-    links:
-
-      - [[form_perception]]
-
-      - [[surface_perception]]
-
-      - [[material_perception]]
-
+- type: implements
+  links:
+  - - visual_perception
+- type: extends
+  links:
+  - - pattern_recognition
+- type: related
+  links:
+  - - - form_perception
+  - - - surface_perception
+  - - - material_perception
 ---
+
 
 # Texture Perception
 

@@ -1,52 +1,38 @@
 ---
-
 type: mathematical_concept
-
 id: free_energy_001
-
 created: 2024-02-05
-
 modified: 2024-03-15
-
-tags: [mathematics, active-inference, free-energy, variational-inference, optimization]
-
-aliases: [variational-free-energy, VFE, evidence-lower-bound, ELBO]
-
+tags:
+- mathematics
+- active-inference
+- free-energy
+- variational-inference
+- optimization
+aliases:
+- variational-free-energy
+- VFE
+- evidence-lower-bound
+- ELBO
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[variational_inference]]
-
-  - type: mathematical_basis
-
-    links:
-
-      - [[information_theory]]
-
-      - [[probability_theory]]
-
-      - [[optimization_theory]]
-
-  - type: relates
-
-    links:
-
-      - [[expected_free_energy]]
-
-      - [[path_integral_free_energy]]
-
-      - [[predictive_coding]]
-
+- type: implements
+  links:
+  - - - active_inference
+  - - - variational_inference
+- type: mathematical_basis
+  links:
+  - - - information_theory
+  - - - probability_theory
+  - - - optimization_theory
+- type: relates
+  links:
+  - - - expected_free_energy
+  - - - path_integral_free_energy
+  - - - predictive_coding
 ---
+
 
 # Free Energy Computation
 

@@ -1,29 +1,21 @@
 ---
-
 title: MIT OCW – Computational Cognitive Science
-
 type: resource
-
 status: stable
-
 created: 2024-01-01
-
 tags:
-  - cognitive-science
-  - course
-  - bayesian
-  - representation
-
+- cognitive-science
+- course
+- bayesian
+- representation
 semantic_relations:
-
-  - type: supports
-
-    links:
-      - bayesian_inference
-      - knowledge_representation
-      - learning_mechanisms
-
+- type: supports
+  links:
+  - bayesian_inference
+  - knowledge_representation
+  - learning_mechanisms
 ---
+
 
 ## MIT OCW – Computational Cognitive Science
 

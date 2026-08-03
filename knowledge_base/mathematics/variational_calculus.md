@@ -1,96 +1,59 @@
 ---
-
 type: mathematical_concept
-
 id: variational_calculus_001
-
 created: 2024-02-06
-
 modified: 2024-03-15
-
-tags: [mathematics, variational-calculus, optimization, euler-lagrange, variational-inference]
-
-aliases: [calculus-of-variations, functional-optimization, variational-methods]
-
+tags:
+- mathematics
+- variational-calculus
+- optimization
+- euler-lagrange
+- variational-inference
+aliases:
+- calculus-of-variations
+- functional-optimization
+- variational-methods
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[active_inference]]
-
-      - [[variational_inference]]
-
-      - [[optimal_control]]
-
-      - [[path_integral_control]]
-
-  - type: uses
-
-    links:
-
-      - [[functional_analysis]]
-
-      - [[differential_geometry]]
-
-  - type: documented_by
-
-    links:
-
-      - [[docs/implementation/implementation_guides_index|Implementation Guides]]
-
-      - [[docs/api/api_documentation_index|API Documentation]]
-
-  - type: mathematical_basis
-
-    links:
-
-      - [[functional_analysis]]
-
-      - [[differential_geometry]]
-
-      - [[information_geometry]]
-
-      - [[measure_theory]]
-
-      - [[optimization_theory]]
-
-  - type: relates
-
-    links:
-
-      - [[optimization_theory]]
-
-      - [[probability_theory]]
-
-      - [[statistical_physics]]
-
-      - [[quantum_mechanics]]
-
-      - [[field_theory]]
-
-      - [[dynamical_systems]]
-
-  - type: applications
-
-    links:
-
-      - [[active_inference]]
-
-      - [[optimal_control]]
-
-      - [[quantum_computation]]
-
-      - [[machine_learning]]
-
-      - [[statistical_mechanics]]
-
+- type: implements
+  links:
+  - - - active_inference
+  - - - variational_inference
+  - - - optimal_control
+  - - - path_integral_control
+- type: uses
+  links:
+  - - - functional_analysis
+  - - - differential_geometry
+- type: documented_by
+  links:
+  - - - docs/implementation/implementation_guides_index|Implementation Guides
+  - - - docs/api/api_documentation_index|API Documentation
+- type: mathematical_basis
+  links:
+  - - - functional_analysis
+  - - - differential_geometry
+  - - - information_geometry
+  - - - measure_theory
+  - - - optimization_theory
+- type: relates
+  links:
+  - - - optimization_theory
+  - - - probability_theory
+  - - - statistical_physics
+  - - - quantum_mechanics
+  - - - field_theory
+  - - - dynamical_systems
+- type: applications
+  links:
+  - - - active_inference
+  - - - optimal_control
+  - - - quantum_computation
+  - - - machine_learning
+  - - - statistical_mechanics
 ---
+
 
 # Variational Calculus in Cognitive Modeling
 

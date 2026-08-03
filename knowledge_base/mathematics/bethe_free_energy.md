@@ -1,26 +1,21 @@
 ---
-
 title: Bethe Free Energy
-
 type: mathematical_concept
-
 status: stable
-
 created: 2025-08-08
-
-tags: [variational, graphical-models]
-
+tags:
+- variational
+- graphical-models
 semantic_relations:
-
-  - type: relates
-
-    links: [message_passing, belief_propagation]
-
-  - type: connects
-
-    links: [variational_free_energy]
-
+- type: relates
+  links:
+  - message_passing
+  - belief_propagation
+- type: connects
+  links:
+  - variational_free_energy
 ---
+
 
 ## Bethe Free Energy
 

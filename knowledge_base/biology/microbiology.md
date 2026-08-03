@@ -1,54 +1,37 @@
 ---
-
 type: concept
-
 id: microbiology_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [microbiology, active-inference, free-energy-principle, bacteria, viruses]
-
-aliases: [microorganisms, microbial-biology]
-
+tags:
+- microbiology
+- active-inference
+- free-energy-principle
+- bacteria
+- viruses
+aliases:
+- microorganisms
+- microbial-biology
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[cell_biology]]
-
-  - type: implements
-
-    links:
-
-      - [[bacterial_dynamics]]
-
-      - [[viral_dynamics]]
-
-      - [[microbial_networks]]
-
-  - type: relates
-
-    links:
-
-      - [[molecular_biology]]
-
-      - [[systems_biology]]
-
-      - [[evolutionary_dynamics]]
-
+- type: foundation
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - cell_biology
+- type: implements
+  links:
+  - - - bacterial_dynamics
+  - - - viral_dynamics
+  - - - microbial_networks
+- type: relates
+  links:
+  - - - molecular_biology
+  - - - systems_biology
+  - - - evolutionary_dynamics
 ---
+
 
 # Microbiology
 

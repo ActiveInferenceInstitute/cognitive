@@ -1,20 +1,19 @@
 ---
-
 title: Complexity and Philosophy
-
 type: philosophy
-
 status: stable
-
-tags: [complexity, philosophy, emergence]
-
+tags:
+- complexity
+- philosophy
+- emergence
 semantic_relations:
-
-  - type: relates
-
-    links: [systems_theory, emergence_self_organization, operationalism]
-
+- type: relates
+  links:
+  - systems_theory
+  - emergence_self_organization
+  - operationalism
 ---
+
 
 # Complexity and Philosophy
 

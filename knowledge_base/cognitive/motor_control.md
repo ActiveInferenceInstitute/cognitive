@@ -1,40 +1,24 @@
 ---
-
 title: Motor Control
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - movement
-
-  - action
-
-  - neural_systems
-
-  - behavior
-
+- cognition
+- movement
+- action
+- neural_systems
+- behavior
 semantic_relations:
-
-  - type: implements
-
-    links: [[action_systems]]
-
-  - type: related
-
-    links:
-
-      - [[motor_learning]]
-
-      - [[sensorimotor_integration]]
-
-      - [[action_planning]]
-
+- type: implements
+  links:
+  - - action_systems
+- type: related
+  links:
+  - - - motor_learning
+  - - - sensorimotor_integration
+  - - - action_planning
 ---
+
 
 # Motor Control
 

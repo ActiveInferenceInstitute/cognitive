@@ -1,44 +1,25 @@
 ---
-
 title: Complex Geometry
-
 type: mathematical_concept
-
 status: stable
-
 created: 2024-02-12
-
 tags:
-
-  - mathematics
-
-  - geometry
-
-  - complex_analysis
-
-  - manifolds
-
+- mathematics
+- geometry
+- complex_analysis
+- manifolds
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[differential_geometry]]
-
-      - [[complex_analysis]]
-
-  - type: relates
-
-    links:
-
-      - [[algebraic_geometry]]
-
-      - [[symplectic_geometry]]
-
-      - [[hodge_theory]]
-
+- type: foundation
+  links:
+  - - - differential_geometry
+  - - - complex_analysis
+- type: relates
+  links:
+  - - - algebraic_geometry
+  - - - symplectic_geometry
+  - - - hodge_theory
 ---
+
 
 # Complex Geometry
 

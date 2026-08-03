@@ -1,54 +1,37 @@
 ---
-
 type: concept
-
 id: plant_biology_001
-
 created: 2024-03-15
-
 modified: 2024-03-15
-
-tags: [plant-biology, active-inference, free-energy-principle, development, physiology]
-
-aliases: [botany, plant-science]
-
+tags:
+- plant-biology
+- active-inference
+- free-energy-principle
+- development
+- physiology
+aliases:
+- botany
+- plant-science
 complexity: advanced
-
 processing_priority: 1
-
 semantic_relations:
-
-  - type: foundation
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[developmental_systems]]
-
-  - type: implements
-
-    links:
-
-      - [[plant_development]]
-
-      - [[plant_physiology]]
-
-      - [[plant_networks]]
-
-  - type: relates
-
-    links:
-
-      - [[cell_biology]]
-
-      - [[systems_biology]]
-
-      - [[ecological_dynamics]]
-
+- type: foundation
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - developmental_systems
+- type: implements
+  links:
+  - - - plant_development
+  - - - plant_physiology
+  - - - plant_networks
+- type: relates
+  links:
+  - - - cell_biology
+  - - - systems_biology
+  - - - ecological_dynamics
 ---
+
 
 # Plant Biology
 

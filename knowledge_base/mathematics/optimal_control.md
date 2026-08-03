@@ -1,44 +1,31 @@
 ---
-
 type: mathematical_concept
-
 id: optimal_control_001
-
 created: 2024-02-06
-
 modified: 2024-02-06
-
-tags: [mathematics, optimal-control, control-theory, optimization]
-
-aliases: [control-theory, dynamic-optimization]
-
+tags:
+- mathematics
+- optimal-control
+- control-theory
+- optimization
+aliases:
+- control-theory
+- dynamic-optimization
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[docs/research/research_documentation_index|Research Documentation]]
-
-      - [[active_inference_theory]]
-
-  - type: uses
-
-    links:
-
-      - [[variational_calculus]]
-
-      - [[dynamic_programming]]
-
-  - type: documented_by
-
-    links:
-
-      - [[docs/implementation/implementation_guides_index|Implementation Guides]]
-
-      - [[docs/api/api_documentation_index|API Documentation]]
-
+- type: implements
+  links:
+  - - - docs/research/research_documentation_index|Research Documentation
+  - - - active_inference_theory
+- type: uses
+  links:
+  - - - variational_calculus
+  - - - dynamic_programming
+- type: documented_by
+  links:
+  - - - docs/implementation/implementation_guides_index|Implementation Guides
+  - - - docs/api/api_documentation_index|API Documentation
 ---
+
 
 # Optimal Control Theory in Cognitive Modeling
 

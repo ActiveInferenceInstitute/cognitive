@@ -1,16 +1,13 @@
 ---
-
 title: Stochastic Optimization
-
 type: mathematical_concept
-
 status: stable
-
 created: 2025-03-03
-
-tags: [optimization, stochastic]
-
+tags:
+- optimization
+- stochastic
 ---
+
 
 # Stochastic Optimization
 

@@ -1,46 +1,28 @@
 ---
-
 title: Resource Management
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - optimization
-
-  - control
-
-  - efficiency
-
+- cognition
+- optimization
+- control
+- efficiency
 semantic_relations:
-
-  - type: implements
-
-    links: [[control_processes]]
-
-  - type: extends
-
-    links: [[performance_optimization]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[energy_optimization]]
-
-      - [[attention_allocation]]
-
+- type: implements
+  links:
+  - - control_processes
+- type: extends
+  links:
+  - - performance_optimization
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - energy_optimization
+  - - - attention_allocation
 ---
+
 
 # Resource Management
 

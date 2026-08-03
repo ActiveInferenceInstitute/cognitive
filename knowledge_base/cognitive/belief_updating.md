@@ -1,52 +1,31 @@
 ---
-
 title: Belief Updating
-
 type: concept
-
 status: stable
-
 created: 2024-02-11
-
 tags:
-
-  - cognition
-
-  - computation
-
-  - inference
-
-  - learning
-
+- cognition
+- computation
+- inference
+- learning
 semantic_relations:
-
-  - type: implements
-
-    links: [[probabilistic_inference]]
-
-  - type: extends
-
-    links: [[bayesian_inference]]
-
-  - type: applies_to
-
-    links:
-
-      - [[../agents/architectures_overview]]
-
-  - type: related
-
-    links:
-
-      - [[active_inference]]
-
-      - [[free_energy_principle]]
-
-      - [[precision_weighting]]
-
-      - [[evidence_accumulation]]
-
+- type: implements
+  links:
+  - - probabilistic_inference
+- type: extends
+  links:
+  - - bayesian_inference
+- type: applies_to
+  links:
+  - - - ../agents/architectures_overview
+- type: related
+  links:
+  - - - active_inference
+  - - - free_energy_principle
+  - - - precision_weighting
+  - - - evidence_accumulation
 ---
+
 
 # Belief Updating
 

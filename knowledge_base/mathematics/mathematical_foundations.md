@@ -1,46 +1,28 @@
 ---
-
 title: Mathematical Foundations
-
 type: knowledge_base
-
 status: stable
-
 created: 2024-03-20
-
 tags:
-
-  - mathematics
-
-  - foundations
-
-  - theory
-
-  - computation
-
+- mathematics
+- foundations
+- theory
+- computation
 semantic_relations:
-
-  - type: implements
-
-    links: [[active_inference]]
-
-  - type: extends
-
-    links: [[free_energy_principle]]
-
-  - type: related
-
-    links:
-
-      - [[variational_methods]]
-
-      - [[variational_calculus]]
-
-      - [[variational_inference]]
-
-      - [[information_theory]]
-
+- type: implements
+  links:
+  - - active_inference
+- type: extends
+  links:
+  - - free_energy_principle
+- type: related
+  links:
+  - - - variational_methods
+  - - - variational_calculus
+  - - - variational_inference
+  - - - information_theory
 ---
+
 
 # Mathematical Foundations
 

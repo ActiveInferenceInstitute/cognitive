@@ -1,62 +1,34 @@
 ---
-
 title: Observation Space
-
 type: concept
-
 status: stable
-
 created: 2024-03-15
-
 updated: 2024-03-15
-
 complexity: advanced
-
 tags:
-
-  - pomdp
-
-  - state_space
-
-  - observation
-
-  - perception
-
-  - uncertainty
-
-  - inference
-
+- pomdp
+- state_space
+- observation
+- perception
+- uncertainty
+- inference
 semantic_relations:
-
-  - type: part_of
-
-    links:
-
-      - [[pomdp_framework]]
-
-      - [[state_representation]]
-
-  - type: relates_to
-
-    links:
-
-      - [[s_space]]
-
-      - [[a_space]]
-
-      - [[belief_space]]
-
-  - type: influences
-
-    links:
-
-      - [[belief_updating]]
-
-      - [[perception_model]]
-
-      - [[active_inference]]
-
+- type: part_of
+  links:
+  - - - pomdp_framework
+  - - - state_representation
+- type: relates_to
+  links:
+  - - - s_space
+  - - - a_space
+  - - - belief_space
+- type: influences
+  links:
+  - - - belief_updating
+  - - - perception_model
+  - - - active_inference
 ---
+
 
 # Observation Space (O-Space)
 

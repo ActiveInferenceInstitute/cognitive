@@ -1,40 +1,24 @@
 ---
-
 title: Learning Theory
-
 type: concept
-
 status: stable
-
 tags:
-
-  - cognition
-
-  - learning
-
-  - adaptation
-
-  - plasticity
-
-  - knowledge
-
+- cognition
+- learning
+- adaptation
+- plasticity
+- knowledge
 semantic_relations:
-
-  - type: implements
-
-    links: [[cognitive_functions]]
-
-  - type: related
-
-    links:
-
-      - [[memory_systems]]
-
-      - [[neural_plasticity]]
-
-      - [[skill_acquisition]]
-
+- type: implements
+  links:
+  - - cognitive_functions
+- type: related
+  links:
+  - - - memory_systems
+  - - - neural_plasticity
+  - - - skill_acquisition
 ---
+
 
 # Learning Theory
 

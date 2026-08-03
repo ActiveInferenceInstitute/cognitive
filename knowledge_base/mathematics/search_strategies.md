@@ -1,16 +1,13 @@
 ---
-
 title: Search Strategies
-
 type: guide
-
 status: stable
-
 created: 2025-03-03
-
-tags: [search, planning]
-
+tags:
+- search
+- planning
 ---
+
 
 # Search Strategies
 

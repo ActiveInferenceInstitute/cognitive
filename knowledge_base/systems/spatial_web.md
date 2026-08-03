@@ -1,56 +1,32 @@
 ---
-
 title: Spatial Web
-
 type: article
-
 created: 2024-03-25
-
 status: stable
-
 tags:
-
-  - spatial-computing
-
-  - augmented-reality
-
-  - virtual-reality
-
-  - digital-twin
-
-  - web3
-
-  - metaverse
-
-  - systems
-
+- spatial-computing
+- augmented-reality
+- virtual-reality
+- digital-twin
+- web3
+- metaverse
+- systems
 semantic_relations:
-
-  - type: related_to
-
-    links:
-
-      - [[knowledge_base/systems/augmented_reality|Augmented Reality]]
-
-      - [[knowledge_base/systems/virtual_reality|Virtual Reality]]
-
-      - [[knowledge_base/systems/internet_of_things|Internet of Things]]
-
-  - type: prerequisite_for
-
-    links:
-
-      - [[docs/guides/learning_paths/active_inference_spatial_web_path|Active Inference in Spatial Web]]
-
-  - type: builds_on
-
-    links:
-
-      - [[knowledge_base/systems/complex_systems|Complex Systems]]
-
-      - [[knowledge_base/mathematics/network_science|Network Science]]
-
+- type: related_to
+  links:
+  - - - knowledge_base/systems/augmented_reality|Augmented Reality
+  - - - knowledge_base/systems/virtual_reality|Virtual Reality
+  - - - knowledge_base/systems/internet_of_things|Internet of Things
+- type: prerequisite_for
+  links:
+  - - - docs/guides/learning_paths/active_inference_spatial_web_path|Active Inference
+        in Spatial Web
+- type: builds_on
+  links:
+  - - - knowledge_base/systems/complex_systems|Complex Systems
+  - - - knowledge_base/mathematics/network_science|Network Science
 ---
+
 
 # Spatial Web
 
