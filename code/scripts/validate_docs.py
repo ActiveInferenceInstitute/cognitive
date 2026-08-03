@@ -9,6 +9,7 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
+from scripts.check_markdown_links import verify_markdown_link_report
 from scripts.verify_links import verify_link_report
 
 _FORBIDDEN = [
@@ -169,6 +170,11 @@ def validate(root: str | Path = ".") -> dict[str, Any]:
     links = verify_link_report(root_path, strict_wiki_links=False)
     if links.broken_links:
         errors.append(f"{len(links.broken_links)} explicit wiki links do not resolve")
+    markdown_links = verify_markdown_link_report(root_path)
+    if markdown_links.broken_links:
+        errors.append(
+            f"{len(markdown_links.broken_links)} standard Markdown links do not resolve"
+        )
     errors.extend(_validate_exports())
     manuscript = _validate_manuscript(root_path)
     errors.extend(manuscript["errors"])
@@ -182,6 +188,11 @@ def validate(root: str | Path = ".") -> dict[str, Any]:
             "resolved": links.resolved_links,
             "skipped_concepts": links.skipped_concept_links,
             "broken": links.broken_links,
+        },
+        "markdown_links": {
+            "checked": markdown_links.checked_links,
+            "broken": markdown_links.broken_links,
+            "anchor_warnings": markdown_links.anchor_warnings,
         },
         "manuscript": manuscript,
         "ok": not forbidden and not errors,
@@ -201,6 +212,10 @@ def main(argv: list[str] | None = None) -> int:
     else:
         print(f"Checked {report['tracked_text_files']} tracked text files.")
         print(f"Checked {report['links']['checked']} wiki links.")
+        print(
+            "Checked "
+            f"{report['markdown_links']['checked']} standard Markdown links."
+        )
         print(f"Found {len(report['forbidden_terms'])} forbidden-term occurrences.")
         print(f"Found {len(report['documentation_errors'])} documentation errors.")
     return 0 if report["ok"] else 1
