@@ -1,5 +1,3 @@
-# Knowledge Organization Guide
-
 ---
 
 title: Knowledge Organization Guide
@@ -37,6 +35,9 @@ semantic_relations:
       - [[linking_completeness]]
 
 ---
+
+# Knowledge Organization Guide
+
 
 ## Overview
 

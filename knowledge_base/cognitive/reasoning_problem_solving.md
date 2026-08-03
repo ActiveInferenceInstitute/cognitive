@@ -1,5 +1,3 @@
-# Reasoning and Problem Solving
-
 ---
 
 title: Reasoning and Problem Solving
@@ -37,6 +35,9 @@ semantic_relations:
       - [[learning_mechanisms]]
 
 ---
+
+# Reasoning and Problem Solving
+
 
 ## Overview
 

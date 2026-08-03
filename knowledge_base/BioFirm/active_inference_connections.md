@@ -1,3 +1,9 @@
+---
+title: [[BioFirm_Active_Inference_Integration]]
+type: concept
+status: stable
+---
+
 # [[BioFirm_Active_Inference_Integration]]
 
 ## Overview

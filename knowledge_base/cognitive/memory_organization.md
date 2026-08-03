@@ -1,5 +1,3 @@
-# Memory Organization
-
 ---
 
 title: Memory Organization
@@ -39,6 +37,9 @@ semantic_relations:
       - [[knowledge_representation]]
 
 ---
+
+# Memory Organization
+
 
 ## Overview
 

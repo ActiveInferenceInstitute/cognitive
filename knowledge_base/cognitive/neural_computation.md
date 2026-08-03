@@ -1,5 +1,3 @@
-# Neural Computation
-
 ---
 
 title: Neural Computation
@@ -39,6 +37,9 @@ semantic_relations:
       - [[cognitive_architecture]]
 
 ---
+
+# Neural Computation
+
 
 ## Overview
 

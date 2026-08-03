@@ -1,3 +1,9 @@
+---
+title: 'The Observation Space (O-Space): A Window to the World'
+type: guide
+status: stable
+---
+
 # The Observation Space (O-Space): A Window to the World
 
 ## What's This All About?

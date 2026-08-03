@@ -1,5 +1,3 @@
-# Free Energy Minimization
-
 ---
 
 title: Free Energy Minimization
@@ -37,6 +35,9 @@ semantic_relations:
       - [[gradient_descent]]
 
 ---
+
+# Free Energy Minimization
+
 
 ## Overview
 

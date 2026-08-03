@@ -6,9 +6,9 @@ id: C_matrix_001
 
 matrix_type: preference
 
-created: "{{date}}"
+created: 2025-01-01
 
-modified: "{{date}}"
+modified: 2025-01-01
 
 tags: [matrix, preference, active-inference]
 

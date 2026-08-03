@@ -1,5 +1,3 @@
-# Motor Control
-
 ---
 
 title: Motor Control
@@ -37,6 +35,9 @@ semantic_relations:
       - [[action_planning]]
 
 ---
+
+# Motor Control
+
 
 ## Overview
 

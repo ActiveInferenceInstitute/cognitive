@@ -1,3 +1,9 @@
+---
+title: 'The B-Matrix: An Enthusiast''s Guide to Understanding State Transitions'
+type: guide
+status: stable
+---
+
 # The B-Matrix: An Enthusiast's Guide to Understanding State Transitions
 
 ## The Big Idea

@@ -1,5 +1,3 @@
-# Optimal Control Theory in Cognitive Modeling
-
 ---
 
 type: mathematical_concept
@@ -41,6 +39,9 @@ semantic_relations:
       - [[docs/api/api_documentation_index|API Documentation]]
 
 ---
+
+# Optimal Control Theory in Cognitive Modeling
+
 
 ## Overview
 

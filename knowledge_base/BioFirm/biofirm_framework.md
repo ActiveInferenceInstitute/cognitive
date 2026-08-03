@@ -1,3 +1,9 @@
+---
+title: [[biofirm_framework|BioFirm Framework]]
+type: concept
+status: stable
+---
+
 # [[biofirm_framework|BioFirm Framework]]
 
 ## Executive Summary

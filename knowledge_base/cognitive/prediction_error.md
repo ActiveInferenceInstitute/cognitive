@@ -1,5 +1,3 @@
-# Prediction Error
-
 ---
 
 title: Prediction Error
@@ -37,6 +35,9 @@ semantic_relations:
       - [[learning]]
 
 ---
+
+# Prediction Error
+
 
 ## Overview
 

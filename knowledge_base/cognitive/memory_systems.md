@@ -1,5 +1,3 @@
-# Memory Systems
-
 ---
 
 title: Memory Systems
@@ -37,6 +35,9 @@ semantic_relations:
       - [[neural_computation]]
 
 ---
+
+# Memory Systems
+
 
 ## Overview
 

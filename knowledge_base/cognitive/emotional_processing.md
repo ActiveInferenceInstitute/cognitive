@@ -1,5 +1,3 @@
-# Emotional Processing
-
 ---
 
 title: Emotional Processing
@@ -37,6 +35,9 @@ semantic_relations:
       - [[social_cognition]]
 
 ---
+
+# Emotional Processing
+
 
 ## Overview
 

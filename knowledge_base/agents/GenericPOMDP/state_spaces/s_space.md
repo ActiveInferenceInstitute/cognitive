@@ -6,9 +6,9 @@ id: s_space_001
 
 space_type: hidden_state
 
-created: "{{date}}"
+created: 2025-01-01
 
-modified: "{{date}}"
+modified: 2025-01-01
 
 tags: [state-space, hidden-states, active-inference]
 

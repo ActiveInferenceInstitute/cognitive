@@ -1,5 +1,3 @@
-# Language Processing
-
 ---
 
 title: Language Processing
@@ -37,6 +35,9 @@ semantic_relations:
       - [[neurolinguistics]]
 
 ---
+
+# Language Processing
+
 
 ## Overview
 

@@ -1,5 +1,3 @@
-# Social Cognition (Detailed)
-
 ---
 
 title: Social Cognition (Detailed)
@@ -37,6 +35,9 @@ semantic_relations:
       - [[communication]]
 
 ---
+
+# Social Cognition (Detailed)
+
 
 ## Overview
 

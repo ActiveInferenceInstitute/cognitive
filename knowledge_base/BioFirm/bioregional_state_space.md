@@ -1,3 +1,9 @@
+---
+title: [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]]
+type: concept
+status: stable
+---
+
 # [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]]
 
 ## Overview

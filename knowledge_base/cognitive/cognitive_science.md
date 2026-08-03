@@ -1,5 +1,3 @@
-# Cognitive Science Knowledge Base
-
 ---
 
 title: Cognitive Science Knowledge Base
@@ -41,6 +39,9 @@ semantic_relations:
       - [[knowledge_base/mathematics/variational_calculus|Variational Calculus]]
 
 ---
+
+# Cognitive Science Knowledge Base
+
 
 ## Overview
 

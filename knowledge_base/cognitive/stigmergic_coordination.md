@@ -1,5 +1,3 @@
-# Stigmergic Coordination
-
 ---
 
 title: Stigmergic Coordination
@@ -57,6 +55,9 @@ semantic_relations:
       - [[human_trail_systems]]
 
 ---
+
+# Stigmergic Coordination
+
 
 ## Overview
 

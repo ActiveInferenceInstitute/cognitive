@@ -1,3 +1,9 @@
+---
+title: 'The Action Space (A-Space): Your Agent''s Superpowers!'
+type: guide
+status: stable
+---
+
 # The Action Space (A-Space): Your Agent's Superpowers!
 
 ## What's the Deal with Actions?

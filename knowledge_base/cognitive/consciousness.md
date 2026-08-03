@@ -1,5 +1,3 @@
-# Consciousness
-
 ---
 
 title: Consciousness
@@ -37,6 +35,9 @@ semantic_relations:
       - [[perception]]
 
 ---
+
+# Consciousness
+
 
 ## Overview
 
@@ -384,3 +385,6 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 - [[cognition]]
 
+## See also
+
+- [[knowledge_base/free_energy_principle/cognitive/consciousness|Consciousness as Integrated Inference Under the FEP]]

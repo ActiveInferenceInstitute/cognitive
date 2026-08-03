@@ -1,34 +1,20 @@
 ---
-
 title: Agents Index
-
 type: index
-
 status: stable
-
 created: 2024-02-07
-
 tags:
-
-  - agents
-
-  - architectures
-
-  - implementation
-
+- agents
+- architectures
+- implementation
 semantic_relations:
-
-  - type: organizes
-
-    links:
-
-      - active inference agents
-
-      - pomdp agents
-
-      - swarm agents
-
+- type: organizes
+  links:
+  - active inference agents
+  - pomdp agents
+  - swarm agents
 ---
+
 
 # Agents Index
 

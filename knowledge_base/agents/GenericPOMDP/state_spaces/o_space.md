@@ -1,5 +1,3 @@
-# Observation Space (O-Space)
-
 ---
 
 title: Observation Space
@@ -59,6 +57,9 @@ semantic_relations:
       - [[active_inference]]
 
 ---
+
+# Observation Space (O-Space)
+
 
 ## Overview
 

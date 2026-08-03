@@ -1,5 +1,3 @@
-# Concept Documentation
-
 ---
 
 title: Concept Documentation
@@ -33,6 +31,9 @@ semantic_relations:
       - [[docs/repo_docs/content_management]]
 
 ---
+
+# Concept Documentation
+
 
 ## Overview
 

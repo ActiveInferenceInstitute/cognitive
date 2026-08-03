@@ -1,5 +1,3 @@
-# Learning Theory
-
 ---
 
 title: Learning Theory
@@ -37,6 +35,9 @@ semantic_relations:
       - [[skill_acquisition]]
 
 ---
+
+# Learning Theory
+
 
 ## Overview
 

@@ -1,5 +1,3 @@
-# Cognitive Architecture
-
 ---
 
 title: Cognitive Architecture
@@ -44,6 +42,9 @@ semantic_relations:
       - [[neural_networks]]
 
 ---
+
+# Cognitive Architecture
+
 
 ## Overview
 

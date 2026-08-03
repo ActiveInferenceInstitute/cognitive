@@ -1,5 +1,3 @@
-# Neural Coding
-
 ---
 
 title: Neural Coding
@@ -37,6 +35,9 @@ semantic_relations:
       - [[temporal_coding]]
 
 ---
+
+# Neural Coding
+
 
 ## Overview
 

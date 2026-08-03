@@ -1,3 +1,9 @@
+---
+title: Free Energy Principle Knowledge Base
+type: documentation
+status: stable
+---
+
 # Free Energy Principle Knowledge Base
 
 The Free Energy Principle (FEP) provides a unified mathematical framework for understanding adaptive behavior in biological, cognitive, and artificial systems. This knowledge base section comprehensively covers all aspects of the FEP, from mathematical foundations to practical implementations and applications across multiple domains.

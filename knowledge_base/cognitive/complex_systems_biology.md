@@ -1,5 +1,3 @@
-# Complex Systems in Biology
-
 ---
 
 title: Complex Systems in Biology
@@ -41,6 +39,9 @@ semantic_relations:
       - [[dynamical_systems]]
 
 ---
+
+# Complex Systems in Biology
+
 
 ## Overview
 

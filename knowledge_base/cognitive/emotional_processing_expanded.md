@@ -1,5 +1,3 @@
-# Emotional Processing
-
 ---
 
 title: Emotional Processing
@@ -41,6 +39,9 @@ semantic_relations:
       - [[motivation]]
 
 ---
+
+# Emotional Processing
+
 
 ## Overview
 

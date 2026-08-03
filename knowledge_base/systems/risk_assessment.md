@@ -1,3 +1,9 @@
+---
+title: Risk Assessment
+type: concept
+status: stable
+---
+
 # Risk Assessment
 
 ## Overview

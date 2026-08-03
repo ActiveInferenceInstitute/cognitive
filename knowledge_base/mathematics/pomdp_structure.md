@@ -1,3 +1,21 @@
+---
+
+type: matrix_spec
+
+id: unique_identifier
+
+matrix_type: perception
+
+created: timestamp
+
+modified: timestamp
+
+tags: [matrix, type, active-inference]
+
+related_spaces: [space1, space2]
+
+---
+
 # POMDP Structure Guide
 
 ## Overview
@@ -50,23 +68,6 @@ Fundamental spaces are defined separately:
 
 ```yaml
 
----
-
-type: matrix_spec
-
-id: unique_identifier
-
-matrix_type: perception
-
-created: timestamp
-
-modified: timestamp
-
-tags: [matrix, type, active-inference]
-
-related_spaces: [space1, space2]
-
----
 
 ```
 

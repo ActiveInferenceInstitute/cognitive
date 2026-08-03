@@ -1,5 +1,3 @@
-# Cognitive Phenomena
-
 ---
 
 title: Cognitive Phenomena
@@ -31,6 +29,9 @@ semantic_relations:
     links: [[cognitive_modeling]]
 
 ---
+
+# Cognitive Phenomena
+
 
 ## Perception and Attention
 

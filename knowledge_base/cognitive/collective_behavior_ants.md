@@ -1,5 +1,3 @@
-# Collective Behavior in Ants
-
 ---
 
 title: Collective Behavior in Ants
@@ -43,6 +41,9 @@ semantic_relations:
       - [[self_organization]]
 
 ---
+
+# Collective Behavior in Ants
+
 
 ## Overview
 

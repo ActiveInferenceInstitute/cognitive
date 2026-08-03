@@ -1,5 +1,3 @@
-# Variational Calculus in Cognitive Modeling
-
 ---
 
 type: mathematical_concept
@@ -93,6 +91,9 @@ semantic_relations:
       - [[statistical_mechanics]]
 
 ---
+
+# Variational Calculus in Cognitive Modeling
+
 
 ## Overview
 

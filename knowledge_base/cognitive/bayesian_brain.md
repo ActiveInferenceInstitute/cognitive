@@ -1,5 +1,3 @@
-# Bayesian Brain
-
 ---
 
 title: Bayesian Brain
@@ -37,6 +35,9 @@ semantic_relations:
       - [[perceptual_inference]]
 
 ---
+
+# Bayesian Brain
+
 
 ## Overview
 

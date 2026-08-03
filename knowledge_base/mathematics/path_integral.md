@@ -1,5 +1,3 @@
-# Path Integrals in Cognitive Modeling
-
 ---
 
 title: Path Integrals
@@ -39,6 +37,9 @@ semantic_relations:
       - [[docs/implementation/implementation_patterns|Implementation Patterns]]
 
 ---
+
+# Path Integrals in Cognitive Modeling
+
 
 ## Overview
 

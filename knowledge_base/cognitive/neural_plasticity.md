@@ -1,5 +1,3 @@
-# Neural Plasticity
-
 ---
 
 title: Neural Plasticity
@@ -37,6 +35,9 @@ semantic_relations:
       - [[development]]
 
 ---
+
+# Neural Plasticity
+
 
 ## Overview
 

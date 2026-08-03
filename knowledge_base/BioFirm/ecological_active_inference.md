@@ -1,3 +1,9 @@
+---
+title: [[knowledge_base/BioFirm/ecological_active_inference]]
+type: concept
+status: stable
+---
+
 # [[knowledge_base/BioFirm/ecological_active_inference]]
 
 ## Overview

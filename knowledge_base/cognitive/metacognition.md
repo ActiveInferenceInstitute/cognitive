@@ -1,5 +1,3 @@
-# Metacognition
-
 ---
 
 title: Metacognition
@@ -37,6 +35,9 @@ semantic_relations:
       - [[self_regulation]]
 
 ---
+
+# Metacognition
+
 
 ## Overview
 

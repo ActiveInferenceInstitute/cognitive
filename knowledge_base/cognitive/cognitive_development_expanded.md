@@ -1,5 +1,3 @@
-# Cognitive Development
-
 ---
 
 title: Cognitive Development
@@ -41,6 +39,9 @@ semantic_relations:
       - [[cognitive_architecture]]
 
 ---
+
+# Cognitive Development
+
 
 ## Overview
 

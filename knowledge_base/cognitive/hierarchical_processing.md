@@ -1,5 +1,3 @@
-# Hierarchical Processing
-
 ---
 
 title: Hierarchical Processing
@@ -37,6 +35,9 @@ semantic_relations:
       - [[information_theory]]
 
 ---
+
+# Hierarchical Processing
+
 
 ## Overview
 

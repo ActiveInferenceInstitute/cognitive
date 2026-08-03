@@ -1,5 +1,3 @@
-# Decision Making
-
 ---
 
 title: Decision Making
@@ -37,6 +35,9 @@ semantic_relations:
       - [[action_selection]]
 
 ---
+
+# Decision Making
+
 
 ## Overview
 
@@ -834,3 +835,6 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 - [[motivation]]
 
+## See also
+
+- [[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making Through Expected Free Energy Minimization]]

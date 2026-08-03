@@ -1,3 +1,9 @@
+---
+title: BioFirm Active Inference Schema
+type: concept
+status: stable
+---
+
 # [[biofirm_framework|BioFirm]] Active Inference Schema
 
 ## Core Abstractions

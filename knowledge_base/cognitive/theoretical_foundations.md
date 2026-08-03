@@ -1,5 +1,3 @@
-# Theoretical Foundations
-
 ---
 
 title: Theoretical Foundations
@@ -37,6 +35,9 @@ semantic_relations:
       - [[machine_readability]]
 
 ---
+
+# Theoretical Foundations
+
 
 ## Overview
 

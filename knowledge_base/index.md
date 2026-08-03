@@ -1,52 +1,29 @@
 ---
-
 title: Knowledge Base Index
-
 type: index
-
 status: stable
-
 created: 2024-02-07
-
 updated: 2024-02-07
-
 tags:
-
-  - index
-
-  - knowledge
-
-  - organization
-
-  - documentation
-
+- index
+- knowledge
+- organization
+- documentation
 semantic_relations:
-
-  - type: organizes
-
-    links:
-
-      - [[mathematics]]
-
-      - [[cognitive]]
-
-      - [[systems]]
-
-      - [[AGENTS]]
-
-      - [[biology]]
-
-      - [[philosophy]]
-
-      - [[ontology]]
-
-      - [[free_energy_principle]]
-
-      - [[research]]
-
-      - [[citations]]
-
+- type: organizes
+  links:
+  - - - mathematics
+  - - - cognitive
+  - - - systems
+  - - - AGENTS
+  - - - biology
+  - - - philosophy
+  - - - ontology
+  - - - free_energy_principle
+  - - - research
+  - - - citations
 ---
+
 
 # Cognitive Modeling Knowledge Base
 

@@ -1,5 +1,3 @@
-# Predictive Perception
-
 ---
 
 title: Predictive Perception
@@ -39,6 +37,9 @@ semantic_relations:
       - [[knowledge_base/mathematics/variational_methods|Variational Methods]]
 
 ---
+
+# Predictive Perception
+
 
 ## Overview
 

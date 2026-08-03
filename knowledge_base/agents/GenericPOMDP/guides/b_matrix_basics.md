@@ -1,3 +1,9 @@
+---
+title: 'Understanding the B-Matrix: A Beginner''s Guide'
+type: guide
+status: stable
+---
+
 # Understanding the B-Matrix: A Beginner's Guide
 
 ## What's a B-Matrix Anyway?

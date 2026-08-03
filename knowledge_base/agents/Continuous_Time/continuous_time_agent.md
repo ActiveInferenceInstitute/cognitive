@@ -1,3 +1,9 @@
+---
+title: Continuous Time Modeling in Active Inference and Predictive Processing
+type: concept
+status: stable
+---
+
 # Continuous Time Modeling in Active Inference and Predictive Processing
 
 ## Introduction

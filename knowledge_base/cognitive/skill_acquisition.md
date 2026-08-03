@@ -1,5 +1,3 @@
-# Skill Acquisition
-
 ---
 
 title: Skill Acquisition
@@ -37,6 +35,9 @@ semantic_relations:
       - [[expertise]]
 
 ---
+
+# Skill Acquisition
+
 
 ## Overview
 

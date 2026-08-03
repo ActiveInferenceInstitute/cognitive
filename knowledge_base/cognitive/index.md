@@ -1,34 +1,24 @@
+---
+title: Cognitive Science Knowledge Base
+type: index
+status: stable
+created: 2024-02-06
+tags:
+- index
+- cognitive_science
+- knowledge_base
+semantic_relations:
+- type: documented_by
+  links:
+  - - cognitive_modeling_concepts|Documentation Concepts
+- type: implemented_by
+  links:
+  - - docs/api/api_documentation|API Reference
+---
+
+
 # Cognitive Science Knowledge Base
 
----
-
-title: Cognitive Science Knowledge Base
-
-type: index
-
-status: stable
-
-created: 2024-02-06
-
-tags:
-
-  - index
-
-  - cognitive_science
-
-  - knowledge_base
-
-semantic_relations:
-
-  - type: documented_by
-
-    links: [[cognitive_modeling_concepts|Documentation Concepts]]
-
-  - type: implemented_by
-
-    links: [[docs/api/api_documentation|API Reference]]
-
----
 
 ## Overview
 

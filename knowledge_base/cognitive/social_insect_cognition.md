@@ -1,5 +1,3 @@
-# Social Insect Cognition
-
 ---
 
 title: Social Insect Cognition
@@ -45,6 +43,9 @@ semantic_relations:
       - [[adaptation]]
 
 ---
+
+# Social Insect Cognition
+
 
 ## Overview
 

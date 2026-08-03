@@ -1,5 +1,3 @@
-# Consciousness and Awareness
-
 ---
 
 title: Consciousness and Awareness
@@ -43,6 +41,9 @@ semantic_relations:
       - [[memory_systems]]
 
 ---
+
+# Consciousness and Awareness
+
 
 ## Overview
 

@@ -1,5 +1,3 @@
-# Cognitive Modeling Concepts
-
 ---
 
 title: Cognitive Modeling Concepts
@@ -43,6 +41,9 @@ semantic_relations:
       - knowledge_base/model_implementations
 
 ---
+
+# Cognitive Modeling Concepts
+
 
 ## Overview
 

@@ -1,5 +1,3 @@
-# Emergence and Self-Organization
-
 ---
 
 title: Emergence and Self-Organization
@@ -43,6 +41,9 @@ semantic_relations:
       - [[information_theory]]
 
 ---
+
+# Emergence and Self-Organization
+
 
 ## Overview
 

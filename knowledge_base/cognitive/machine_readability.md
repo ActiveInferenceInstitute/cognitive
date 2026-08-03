@@ -1,5 +1,3 @@
-# Machine Readability and Automation
-
 ---
 
 title: Machine Readability and Automation
@@ -30,6 +28,9 @@ semantic_relations:
       - [[machine_readability]]
 
 ---
+
+# Machine Readability and Automation
+
 
 ## Overview
 

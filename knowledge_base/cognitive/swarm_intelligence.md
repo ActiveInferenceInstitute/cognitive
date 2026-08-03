@@ -1,5 +1,3 @@
-# Swarm Intelligence
-
 ---
 
 title: Swarm Intelligence
@@ -43,6 +41,9 @@ semantic_relations:
       - [[optimization]]
 
 ---
+
+# Swarm Intelligence
+
 
 ## Overview
 

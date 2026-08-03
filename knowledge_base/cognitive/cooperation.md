@@ -1,5 +1,3 @@
-# Cooperation
-
 ---
 
 title: Cooperation
@@ -43,6 +41,9 @@ semantic_relations:
       - [[trust]]
 
 ---
+
+# Cooperation
+
 
 ## Overview
 

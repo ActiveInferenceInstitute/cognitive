@@ -1,5 +1,3 @@
-# Perception and Attention
-
 ---
 
 title: Perception and Attention
@@ -37,6 +35,9 @@ semantic_relations:
       - [[consciousness]]
 
 ---
+
+# Perception and Attention
+
 
 ## Overview
 

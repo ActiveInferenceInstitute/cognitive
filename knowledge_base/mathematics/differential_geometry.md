@@ -1,5 +1,3 @@
-# Differential Geometry in Cognitive Modeling
-
 ---
 
 type: mathematical_concept
@@ -41,6 +39,9 @@ semantic_relations:
       - [[docs/api/api_documentation_index|API Documentation]]
 
 ---
+
+# Differential Geometry in Cognitive Modeling
+
 
 ## Overview
 

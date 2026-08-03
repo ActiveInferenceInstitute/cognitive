@@ -1,5 +1,3 @@
-# Social Cognition
-
 ---
 
 title: Social Cognition
@@ -37,6 +35,9 @@ semantic_relations:
       - [[social_neuroscience]]
 
 ---
+
+# Social Cognition
+
 
 ## Overview
 
@@ -384,3 +385,7 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
 - [[development]]
 
+## See also
+
+- [[knowledge_base/free_energy_principle/cognitive/social_cognition|Social Cognition as Mutual Active Inference]]
+- [[knowledge_base/research/social_cognition|Social Cognition]]
