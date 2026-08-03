@@ -44,6 +44,14 @@ semantic_relations:
 
 ---
 
+> [!note] Scope
+> This page documents conceptual Git and knowledge-workflow tooling. The
+> utilities it names (for example `kb-code-linker`, `impl-gap`,
+> `kb-git-automator`, `kb-code-graph`, `cognitive-git-viz`) are not published
+> packages; do not run their `pip install` commands. The repository's actual
+> tooling is the `cognitive-*` CLI entry points (see `pyproject.toml`) and
+> the scripts in `code/scripts/` and `docs/repo_docs/repo_scripts/`.
+
 ## Overview
 
 This document details specialized Git tools and configurations designed specifically for cognitive modeling projects, with a focus on maintaining synchronization between code implementation and knowledge base documentation. These tools handle the unique challenges of managing both traditional code repositories and Obsidian-based knowledge graphs within a unified Git workflow.
