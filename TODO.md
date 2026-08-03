@@ -84,6 +84,17 @@ README/AGENTS.md files, manuscript sources, configuration, and CI.
   advisory warnings; it is wired into `validate_docs.py` and covered by
   `code/tests/test_check_markdown_links.py`. Completed in this pass.
 
+- ✓ Subagent-assisted knowledge-base audit: three parallel review
+  subagents audited all ~700 KB pages; every verified finding was fixed —
+  fictional API collisions renamed/framed (BioFirm schema, InferenceConfig,
+  ControlMode, ActiveInferenceModel, overview.md), uncited statistics
+  framed or removed, 879 code-fence wiki links converted to plain text,
+  broken anchors fixed, invalid BioFirm fragments stripped, GenericPOMDP
+  README corrected, JAX guide banner added. Gate-gap tooling:
+  `verify_links.py` gained advisory `#fragment` anchor validation and
+  `validate_docs.py` rejects template frontmatter values, with 6 new
+  regression tests. Completed in this pass.
+
 ## Open / deferred
 
 - Deferred: a handful of kept conceptual `docs/tools/` pages

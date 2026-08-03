@@ -1,5 +1,51 @@
 # Documentation deep review — 2026-08-02
 
+## Subagent-assisted knowledge-base audit (same day)
+
+Dispatched three parallel review-only subagents over the full knowledge
+base (cognitive+mathematics, biology+systems+philosophy+ontology,
+research+citations+agents+BioFirm+FEP). Their findings were verified
+against the files and fixed:
+
+- Fictional API collisions: `class InferenceConfig`/`ControlMode`/
+  `ActiveInferenceModel` redefined with different contracts than the real
+  exports (renamed + framed as illustrative); BioFirm schema used
+  nonexistent `InferenceMethod`/`PolicyType` members and a fictional
+  `BioregionalStewardshipFactory` (rewritten with the real
+  `ActiveInferenceFactory.create(config, model)`); `overview.md` claimed
+  "our framework uses probabilistic programming" with a fictional API
+  (reframed); `pomdp_structure.md` placeholder frontmatter and remaining
+  fictional classes removed; `matrix_specifications.md` B-matrix example
+  corrected to the package's `B[s_next, s_prev, a]` convention and E
+  corrected from policy prior to action prior.
+- Fabricated/uncited statistics: three spatial_web.md case-study outcome
+  lists replaced with illustrative-scenario notes (earlier commit); two
+  biology pages gained "indicative ranges, not repository measurements"
+  notes; the "See the canonical package documentation" dangling phrase
+  (26 occurrences in 33 files) replaced with a real pointer.
+- 879 wiki links embedded inside code fences (which Obsidian never
+  renders) converted to plain text across 59 files; the conversion
+  deliberately skipped Python `[[0, 1, 2]]` list-index literals.
+- Broken anchors fixed (`information_theory#kl-divergence` ->
+  `#divergence-measures`, `variational_methods#variational-free-energy` ->
+  `#variational-inference-framework`); 10 invalid BioFirm `#fragment`
+  links stripped.
+- Gate-gap tooling: `verify_links.py` now validates `#fragment` anchors
+  against heading slugs (`anchor_warnings`, advisory) and
+  `validate_docs.py` rejects template frontmatter values
+  (`unique_identifier`, `timestamp`, `lorem_ipsum`); 6 new regression
+  tests (13 in the two link-test files).
+- Misc: GenericPOMDP README (docs-only framing, Parr 2019 -> 2022, stray
+  `print(".3f")`, duplicate entry); JAX implementation guide banner;
+  `[[[name]]]` triple-bracket frontmatter links normalized to block YAML
+  in 5 files; citation "cited over N times" counts removed; two stale
+  counts corrected; `metaverse.md` links format normalized;
+  `cellular_intelligence.md` expanded from a stub; two same-folder
+  duplicate-stem pairs cross-linked; dangling "Re- " fragment fixed.
+
+Final gate: 102 tests passed; ruff clean; mypy clean; `validate_docs.py`
+ok (0 errors, 0 forbidden terms, 0 broken links, 0 anchor warnings).
+
 ## Docs-content and tooling pass (same day)
 
 Audited all 288 `docs/` Markdown files for fabricated content (fake package
