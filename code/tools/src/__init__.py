@@ -25,7 +25,7 @@ from .utils.matrix_utils import (
 )
 from .visualization.matrix_plots import MatrixPlotter
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 __all__ = [
     "ActiveInferenceDispatcher",

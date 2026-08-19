@@ -41,6 +41,14 @@ class ContinuousActiveInference:
     configuration file.  ``observation_matrix`` maps latent states to
     observations and ``dynamics_matrix`` maps each generalized coordinate to
     its expected derivative.  Rectangular observation matrices are supported.
+
+    ``alpha`` is the gradient-descent step size and ``dynamics_weight`` is the
+    weight of the dynamic (generalized-coordinate) term in the free energy.
+    ``step`` applies exact gradient descent on the free energy that
+    ``_compute_free_energy`` reports, so a finite-difference gradient of that
+    function reproduces the applied update; the regression test
+    ``test_step_follows_free_energy_gradient`` pins the identity for
+    non-identity dynamics matrices.
     """
 
     def __init__(
@@ -55,6 +63,7 @@ class ContinuousActiveInference:
         observation_precision: float | np.ndarray = 1.0,
         state_precision: float | np.ndarray = 1.0,
         precision_learning_rate: float = 0.0,
+        dynamics_weight: float = 1.0,
         seed: int | None = 0,
     ) -> None:
         self.n_states = self._positive_int(n_states, "n_states")
@@ -66,10 +75,13 @@ class ContinuousActiveInference:
             raise ValueError("alpha must be finite and positive")
         if not 0.0 <= precision_learning_rate <= 1.0:
             raise ValueError("precision_learning_rate must be in [0, 1]")
+        if not np.isfinite(dynamics_weight) or dynamics_weight < 0:
+            raise ValueError("dynamics_weight must be finite and non-negative")
         if seed is not None and (not isinstance(seed, int) or seed < 0):
             raise ValueError("seed must be a non-negative integer or None")
         self.dt = float(dt)
         self.alpha = float(alpha)
+        self.dynamics_weight = float(dynamics_weight)
         self.precision_learning_rate = float(precision_learning_rate)
         self.seed = seed
         self.rng = np.random.default_rng(seed)
@@ -155,7 +167,7 @@ class ContinuousActiveInference:
         for order in range(self.n_orders - 1):
             error = means[:, order + 1] - self.dynamics_matrix @ means[:, order]
             dynamic_energy += 0.5 * float(np.sum(self.state.belief_precisions[:, order] * error**2))
-        return sensory_energy + self.alpha * dynamic_energy
+        return sensory_energy + self.dynamics_weight * dynamic_energy
 
     def step(self, observation: np.ndarray) -> tuple[np.ndarray, float]:
         """Update beliefs from one observation and return action and free energy."""
@@ -168,15 +180,21 @@ class ContinuousActiveInference:
             self.observation_precision * prediction_error
         )
 
+        # updates is -dF/dmu for the free energy defined in _compute_free_energy,
+        # scaled by the step size alpha. The dynamic term contributes
+        # +f' D^T Pi e to the coordinate it predicts from and -f' Pi e to the
+        # coordinate it predicts; omitting the D^T Jacobian factor is only
+        # correct when dynamics_matrix is the identity.
         updates = np.zeros_like(means)
-        updates[:, 0] = self.alpha * sensory_gradient
+        updates[:, 0] = sensory_gradient
         for order in range(self.n_orders - 1):
             dynamic_error = means[:, order + 1] - self.dynamics_matrix @ means[:, order]
-            updates[:, order] += self.alpha * self.state.belief_precisions[:, order] * dynamic_error
-            updates[:, order + 1] -= (
-                self.alpha * self.state.belief_precisions[:, order] * dynamic_error
+            weighted = (
+                self.dynamics_weight * self.state.belief_precisions[:, order] * dynamic_error
             )
-        means += self.dt * updates
+            updates[:, order] += self.dynamics_matrix.T @ weighted
+            updates[:, order + 1] -= weighted
+        means += self.dt * self.alpha * updates
 
         if self.precision_learning_rate:
             residual = np.abs(prediction_error)

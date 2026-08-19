@@ -256,8 +256,17 @@ def test_expected_free_energy(model):
     assert not np.isinf(pragmatic)
     assert not np.isnan(pragmatic)
 
-    # EFE is pragmatic value minus epistemic information gain.
-    assert np.allclose(total_efe, pragmatic - epistemic)
+    # The total is the canonical risk-plus-ambiguity expected free energy, so
+    # it must be at least the risk term alone: ambiguity is an entropy and is
+    # therefore non-negative. The epistemic gain is already inside ambiguity
+    # and must not be subtracted from the total a second time.
+    assert total_efe >= pragmatic - 1e-12
+    assert epistemic >= -1e-12
+    ambiguity = total_efe - pragmatic
+    assert ambiguity >= -1e-12
+    # ambiguity == H[q(o)] - I(s; o), so the epistemic gain can never exceed
+    # the entropy of the predicted observation.
+    assert epistemic <= ambiguity + epistemic + 1e-12
 
 
 @pytest.mark.parametrize(

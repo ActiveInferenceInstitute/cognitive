@@ -249,7 +249,7 @@ class HomeostaticInference(ActiveInferenceModel):
         )
         if unknown:
             raise ValueError(f"Unknown inference fields: {sorted(unknown)}")
-        return self._coerce_config(config)
+        return config
 
     def _initialize_matrices(self) -> None:
         self._setup_spaces()
@@ -343,11 +343,23 @@ class HomeostaticInference(ActiveInferenceModel):
         return np.stack([matrices[label] for label in self.action_space.labels["actions"]], axis=2)
 
     def _preference_vector(self) -> np.ndarray:
+        """Return log preferences over observations implied by the state target.
+
+        The configured target is a distribution over *states*.  Observation
+        preferences are the target pushed through the likelihood,
+        ``p*(o) = A @ target``, so the mapping is defined whenever the number
+        of observations differs from the number of states.  Reading the state
+        target directly as an observation preference is only meaningful when
+        the two spaces happen to have equal size.
+        """
         target = self._target_vector()
-        observation_count = self.observation_space.dimensions[0]
-        if target.size == observation_count:
-            return np.log(np.maximum(target, 1e-12))
-        return np.zeros(observation_count)
+        likelihood = np.asarray(
+            self.config["observation_model"]["likelihood_matrix"], dtype=float
+        )
+        preferred_observations = self._normalize(
+            likelihood @ target, self.observation_space.dimensions[0]
+        )
+        return np.log(np.maximum(preferred_observations, 1e-12))
 
     def update_beliefs(self, observation: int | np.ndarray) -> np.ndarray:
         prediction = self.generative_model.predict_observations(self.state.beliefs)
@@ -373,20 +385,38 @@ class HomeostaticInference(ActiveInferenceModel):
         return observation, float(self.state.free_energy)
 
     def select_action(self) -> int:
+        """Select the action whose predicted beliefs best satisfy the target.
+
+        The control mode scores the state distribution *predicted under each
+        action*, so its state-shaped output is reduced to one number per action.
+        Multiplying a state-shaped control prior straight into an action-shaped
+        policy would only line up when the two spaces happen to have equal size,
+        and would otherwise be dropped without notice.
+        """
         target = self._target_vector()
+        action_count = self.action_space.dimensions[0]
         scores = []
-        for action_index in range(self.action_space.dimensions[0]):
+        control_scores = []
+        for action_index in range(action_count):
             transition = self.transition_model.get_transition_matrix(action_index)
             predicted = self._normalize(transition @ self.state.beliefs, target.size)
             scores.append(float(np.linalg.norm(predicted - target, ord=1)))
+            candidate = self.state.copy()
+            candidate.beliefs = predicted
+            prior = np.asarray(
+                self.control_mode.compute_policy_prior(candidate, target), dtype=float
+            ).reshape(-1)
+            if prior.size == 0 or not np.all(np.isfinite(prior)) or np.any(prior < 0):
+                raise ValueError(
+                    "compute_policy_prior must return finite, non-negative values; "
+                    f"{type(self.control_mode).__name__} returned {prior!r}"
+                )
+            control_scores.append(float(prior.mean()))
         policy = self._normalize(
             self.matrix_ops.softmax(-np.asarray(scores) * self.state.precision)
         )
-        control_prior = np.asarray(
-            self.control_mode.compute_policy_prior(self.state, target), dtype=float
-        )
-        if control_prior.shape == policy.shape:
-            policy = self._normalize(policy * self._normalize(control_prior))
+        control_prior = self._normalize(np.asarray(control_scores, dtype=float), action_count)
+        policy = self._normalize(policy * control_prior, action_count)
         self.state.policies = policy
         return int(np.argmax(policy))
 
@@ -419,10 +449,6 @@ class HomeostaticInference(ActiveInferenceModel):
             Path(save_path).parent.mkdir(parents=True, exist_ok=True)
             fig.savefig(save_path)
         return fig
-
-    @staticmethod
-    def _coerce_config(config: dict[str, Any]) -> dict[str, Any]:
-        return config
 
     @staticmethod
     def _normalize(vector: list[float] | np.ndarray, size: int | None = None) -> np.ndarray:

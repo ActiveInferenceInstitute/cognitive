@@ -59,6 +59,15 @@ def compute_expected_free_energy(
     beliefs: np.ndarray,
     action: int,
 ) -> tuple[float, float, float]:
+    """Return ``(total, epistemic_gain, pragmatic)`` for one action.
+
+    ``total`` is the canonical expected free energy ``risk + ambiguity``.
+    ``pragmatic`` is the risk term alone -- the divergence between predicted and
+    preferred observations -- so the three returned numbers are three distinct
+    quantities rather than two names for the same sum.  ``epistemic_gain`` is
+    the expected information gain ``I(s; o)``, already reflected inside
+    ``ambiguity`` and reported here as a diagnostic.
+    """
     model = DiscreteGenerativeModel(
         np.asarray(A, dtype=float),
         np.asarray(B, dtype=float),
@@ -67,8 +76,7 @@ def compute_expected_free_energy(
         np.full(np.asarray(B).shape[2], 1.0 / np.asarray(B).shape[2]),
     )
     total, risk, ambiguity, epistemic_gain = model.expected_free_energy(beliefs, action)
-    pragmatic = risk + ambiguity
-    return float(total), float(epistemic_gain), float(pragmatic)
+    return float(total), float(epistemic_gain), float(risk)
 
 
 class SimplePOMDP:

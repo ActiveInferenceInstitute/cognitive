@@ -7,11 +7,12 @@ import numpy as np
 EPS = 1e-12
 
 
-def _probability(values: np.ndarray, name: str) -> np.ndarray:
+def _probability(values: np.ndarray, name: str, axis: int = 0) -> np.ndarray:
+    """Normalize ``values`` into a probability distribution along ``axis``."""
     array = np.asarray(values, dtype=float)
     if array.size == 0 or not np.all(np.isfinite(array)) or np.any(array < 0):
         raise ValueError(f"{name} must be finite and non-negative")
-    total = array.sum(axis=0, keepdims=True)
+    total = array.sum(axis=axis, keepdims=True)
     if np.any(total <= EPS):
         raise ValueError(f"{name} must contain positive mass")
     return array / total
@@ -52,8 +53,13 @@ def ensure_matrix_properties(
 
 
 def compute_entropy(distribution: np.ndarray, axis: int = -1) -> np.ndarray:
-    """Compute Shannon entropy after normalizing along the requested axis."""
-    probabilities = _probability(distribution, "distribution")
+    """Compute Shannon entropy after normalizing along the requested axis.
+
+    Normalization and summation share ``axis``, so entropies of a matrix's rows
+    are computed from row-normalized values rather than from values normalized
+    along some other axis.
+    """
+    probabilities = _probability(distribution, "distribution", axis=axis)
     return -np.sum(
         np.where(probabilities > 0, probabilities * np.log(probabilities + EPS), 0.0), axis=axis
     )
@@ -91,7 +97,18 @@ def expected_free_energy(
     beliefs: np.ndarray,
     action: int,
 ) -> float:
-    """Compute one-step risk plus ambiguity minus epistemic value."""
+    """Compute the one-step expected free energy ``risk + ambiguity``.
+
+    ``risk`` is ``D_KL(q(o) || softmax(C))`` and ``ambiguity`` is the expected
+    likelihood entropy ``E_q(s)[H(P(o | s))]`` -- the entropy of each *column*
+    of ``A`` weighted by the predicted state distribution.  The entropy of the
+    predicted observation ``H[q(o)]`` is a different quantity and is not the
+    ambiguity term: it equals ``ambiguity + I(s; o)``.
+
+    This returns the same value as
+    ``DiscreteGenerativeModel.expected_free_energy(...)[0]`` for the same
+    ``A``, ``B``, ``C``, beliefs, and action.
+    """
     likelihood = ensure_matrix_properties(
         np.asarray(A, dtype=float), ["column_stochastic", "non_negative"]
     )
@@ -106,7 +123,7 @@ def expected_free_energy(
     expected_obs = _probability(likelihood @ predicted_states, "expected observations").reshape(-1)
     preferences = softmax(np.asarray(C, dtype=float).reshape(-1))
     risk = kl_divergence(expected_obs, preferences)
-    ambiguity = float(np.sum(expected_obs * np.log(1.0 / np.maximum(expected_obs, EPS))))
+    ambiguity = float(np.sum(predicted_states * compute_entropy(likelihood, axis=0)))
     return float(risk + ambiguity)
 
 

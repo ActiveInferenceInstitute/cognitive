@@ -40,7 +40,10 @@ class InferenceConfig:
     num_samples: int = 256
     temperature: float = 1.0
     discount_factor: float = 0.95
-    exploration_weight: float = 0.5
+    # Additional weight on expected information gain, subtracted from the
+    # canonical expected free energy of every policy step. 0.0 is the canonical
+    # objective; 1.0 reproduces the objective used before version 1.1.0.
+    exploration_weight: float = 0.0
     # If policy_limit truncates enumeration below one policy per first action,
     # dispatch_policy_inference raises instead of silently zeroing that action.
     policy_limit: int = 4096
@@ -64,7 +67,7 @@ class InferenceConfig:
             raise ValueError("temperature must be finite and positive")
         if not 0.0 < self.discount_factor <= 1.0:
             raise ValueError("discount_factor must be in (0, 1]")
-        if not 0.0 <= self.exploration_weight <= 1.0:
+        if not 0.0 <= self.exploration_weight <= 1.0 or not np.isfinite(self.exploration_weight):
             raise ValueError("exploration_weight must be in [0, 1]")
         if self.policy_limit < 1:
             raise ValueError("policy_limit must be positive")
@@ -185,6 +188,7 @@ class ActiveInferenceDispatcher:
                 state.beliefs,
                 policy,
                 self.config.discount_factor,
+                self.config.exploration_weight,
             )
         first_action_values = np.full(self.model.num_actions, np.inf, dtype=float)
         for action in range(self.model.num_actions):

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from itertools import product
+from itertools import islice, product
 
 import numpy as np
 
@@ -29,8 +29,14 @@ def _normalize(values: np.ndarray) -> np.ndarray:
 
 
 def _entropy(distribution: np.ndarray) -> float:
+    """Return Shannon entropy in nats, exactly zero for a deterministic input.
+
+    Zero-probability outcomes contribute nothing, so the result cannot go
+    slightly negative the way a uniform ``log(p + EPS)`` floor allows.
+    """
     probabilities = _normalize(distribution)
-    return float(-np.sum(probabilities * np.log(probabilities + EPS)))
+    terms = np.where(probabilities > 0, probabilities * np.log(np.maximum(probabilities, EPS)), 0.0)
+    return float(-np.sum(terms))
 
 
 def _kl_divergence(p: np.ndarray, q: np.ndarray) -> float:
@@ -158,7 +164,21 @@ class DiscreteGenerativeModel:
     def expected_free_energy(
         self, beliefs: np.ndarray, action: int
     ) -> tuple[float, float, float, float]:
-        """Return total EFE, risk, ambiguity, and epistemic information gain."""
+        """Return total EFE, risk, ambiguity, and epistemic information gain.
+
+        The total is the canonical risk-plus-ambiguity decomposition
+
+        .. math::
+            G = \\underbrace{D_{KL}[q(o) \\| p^*(o)]}_{\\text{risk}}
+              + \\underbrace{\\mathbb{E}_{q(s)}[H[P(o \\mid s)]]}_{\\text{ambiguity}},
+
+        which is algebraically identical to expected surprise minus expected
+        information gain, because ``ambiguity == H[q(o)] - I(s; o)``.  The
+        epistemic gain ``I(s; o)`` is therefore already accounted for inside
+        ``ambiguity`` and is returned only as a diagnostic component; adding it
+        to the total a second time would weight information seeking twice.
+        ``test_efe_decompositions_agree`` pins this identity.
+        """
         predicted_states = self.predict_states(beliefs, action)
         predicted_observations = self.predict_observations(predicted_states)
         risk = _kl_divergence(predicted_observations, self.preferences)
@@ -173,27 +193,45 @@ class DiscreteGenerativeModel:
             posterior = self.posterior(observation, predicted_states)
             posterior_entropies.append(predicted_observations[observation] * _entropy(posterior))
         epistemic = max(_entropy(predicted_states) - float(sum(posterior_entropies)), 0.0)
-        total = risk + ambiguity - epistemic
+        total = risk + ambiguity
         return float(total), float(risk), float(ambiguity), float(epistemic)
 
     def enumerate_policies(self, horizon: int, limit: int | None = None) -> list[tuple[int, ...]]:
+        """Enumerate action sequences of length ``horizon`` in lexicographic order.
+
+        ``limit`` truncates lazily, so a small limit over a large action-horizon
+        product never materializes the full ``num_actions ** horizon`` space.
+        """
         if horizon < 1:
             raise ValueError("horizon must be at least one")
-        policies = product(range(self.num_actions), repeat=horizon)
-        if limit is None:
-            return list(policies)
-        if limit < 1:
+        if limit is not None and limit < 1:
             raise ValueError("policy limit must be positive")
-        return [policy for index, policy in enumerate(policies) if index < limit]
+        policies = product(range(self.num_actions), repeat=horizon)
+        return list(policies if limit is None else islice(policies, limit))
 
     def evaluate_policy(
-        self, beliefs: np.ndarray, policy: tuple[int, ...], discount_factor: float
+        self,
+        beliefs: np.ndarray,
+        policy: tuple[int, ...],
+        discount_factor: float,
+        epistemic_weight: float = 0.0,
     ) -> float:
+        """Return the discounted expected free energy of one action sequence.
+
+        ``epistemic_weight`` subtracts an *additional* multiple of the expected
+        information gain from every step, on top of the epistemic drive that the
+        canonical objective already contains through ``ambiguity``.  The default
+        ``0.0`` is the canonical objective; positive values bias the agent toward
+        information seeking, and ``1.0`` reproduces the objective this package
+        used before version 1.1.0.
+        """
+        if not np.isfinite(epistemic_weight) or epistemic_weight < 0:
+            raise ValueError("epistemic_weight must be finite and non-negative")
         predicted = _as_probability_vector(beliefs, name="beliefs")
         total = 0.0
         for step, action in enumerate(policy):
-            value = self.expected_free_energy(predicted, action)[0]
-            total += float(discount_factor**step) * value
+            value, _risk, _ambiguity, epistemic = self.expected_free_energy(predicted, action)
+            total += float(discount_factor**step) * (value - epistemic_weight * epistemic)
             predicted = self.predict_states(predicted, action)
         return float(total)
 
