@@ -32,6 +32,12 @@ jobs:
       - name: Install package
         run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
 
+      # Installing the document toolchain lets the manuscript render test run
+      # in CI instead of skipping; the PDF render still skips because the
+      # runner has no XeLaTeX, and only the HTML render is asserted there.
+      - name: Install document toolchain
+        run: sudo apt-get update && sudo apt-get install -y pandoc pandoc-crossref
+
       # Coverage is measured across every module in the configured source
       # tree, with branch coverage on and no report include filter. The floor
       # lives in pyproject.toml.
@@ -53,13 +59,43 @@ jobs:
       # The manuscript builder and the benchmark runner are installed entry
       # points that no other step executes. Running them here means a break in
       # either surfaces on the commit that caused it rather than at release
-      # time. --no-render skips Pandoc and XeLaTeX, which this runner does not
-      # install; every stage the package itself owns still executes.
+      # time. With pandoc and pandoc-crossref installed above, the HTML render
+      # runs for real; the PDF stage still skips because the runner has no
+      # XeLaTeX.
       - name: Executable manuscript pipeline
-        run: python -m scripts.build_manuscript --no-render --output "${RUNNER_TEMP}/manuscript"
+        run: |
+          python -m scripts.build_manuscript --no-render --output "${RUNNER_TEMP}/no-render"
+          python -m scripts.build_manuscript --no-pdf --output "${RUNNER_TEMP}/manuscript"
+          python - <<'PY'
+          import json, os, pathlib
+          output = pathlib.Path(os.environ["RUNNER_TEMP"]) / "manuscript"
+          manifest = json.loads((output / "build_manifest.json").read_text())
+          # A skipped render must never read as a passing render.
+          assert manifest["rendered_documents"] is True, manifest
+          html = (output / "manuscript.html").read_text()
+          for leftover in ("{{", "[@fig:", "[@sec:", "[@eq:", "[@tbl:"):
+              assert leftover not in html, f"unresolved {leftover!r} in rendered HTML"
+          print(f"rendered manuscript is fully resolved ({len(html)} bytes)")
+          PY
 
       - name: Benchmarks
         run: cognitive-benchmark --repetitions 1 --output "${RUNNER_TEMP}/benchmarks.json"
+
+  # Coverage proves a line ran. This job proves the suite would notice if a
+  # line were wrong: each declared mutation is written to disk, its tests run,
+  # and a mutation the suite still passes fails the job.
+  mutation-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
+      - name: Mutation gate
+        run: python -m scripts.mutation_check --json
 
   build-package:
     runs-on: ubuntu-latest
