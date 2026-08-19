@@ -133,7 +133,13 @@ def _model_and_results(config: dict[str, Any]) -> tuple[DiscreteGenerativeModel,
         beliefs[method] = trajectory
         policies[method] = dispatcher.dispatch_policy_inference(current).tolist()
 
-    efe = [model.expected_free_energy(model.D, action) for action in range(model.num_actions)]
+    # Expected free energy is evaluated at the belief the agent actually holds
+    # after the observation sequence, not at the prior D. From a uniform prior
+    # every column-stochastic transition in this experiment predicts the same
+    # state distribution, so a decomposition taken at D is identical for every
+    # action and shows nothing about the choice between them.
+    efe_beliefs = np.asarray(beliefs["variational"][-1], dtype=float)
+    efe = [model.expected_free_energy(efe_beliefs, action) for action in range(model.num_actions)]
     continuous = ContinuousActiveInference(
         n_states=model.num_states,
         n_obs=model.num_observations,
@@ -157,6 +163,7 @@ def _model_and_results(config: dict[str, Any]) -> tuple[DiscreteGenerativeModel,
         "beliefs": beliefs,
         "policies": policies,
         "efe": efe,
+        "efe_beliefs": efe_beliefs.tolist(),
         "continuous_time": continuous_time,
         "continuous_beliefs": continuous_beliefs,
         "policy_count": policy_count,
@@ -216,16 +223,29 @@ def _save_figures(
         }
     )
 
+    # Risk and ambiguity are stacked because they sum to the total; the
+    # epistemic gain sits apart because it is a diagnostic already contained in
+    # ambiguity, not a third addend. Plotting it as a negative bar alongside the
+    # other two would restate the double-counting corrected in 1.1.0.
     efe = np.asarray(results["efe"], dtype=float)
     fig, ax = plt.subplots(figsize=(8, 4.5))
-    ax.bar(x - 0.2, efe[:, 1], 0.2, label="risk")
-    ax.bar(x, efe[:, 2], 0.2, label="ambiguity")
-    ax.bar(x + 0.2, -efe[:, 3], 0.2, label="epistemic value")
+    ax.bar(x - 0.15, efe[:, 1], 0.3, label="risk")
+    ax.bar(x - 0.15, efe[:, 2], 0.3, bottom=efe[:, 1], label="ambiguity")
+    ax.bar(
+        x + 0.2,
+        efe[:, 3],
+        0.3,
+        color="0.55",
+        label="epistemic gain (within ambiguity)",
+    )
+    ax.plot(x - 0.15, efe[:, 0], "k_", markersize=22, label="total $G$")
     ax.set_xlabel("Action")
     ax.set_ylabel("Expected free-energy component")
     ax.set_xticks(x, [str(value) for value in x])
-    ax.set_title("Risk, ambiguity, and epistemic value")
-    ax.legend()
+    ax.set_title("Expected free energy: risk plus ambiguity, with epistemic gain")
+    # Headroom keeps the legend clear of the bars rather than over them.
+    ax.set_ylim(0.0, float(max(efe[:, 0].max(), efe[:, 3].max())) * 1.45)
+    ax.legend(fontsize=8, loc="upper center", ncol=2, framealpha=0.95)
     ax.grid(axis="y", alpha=0.25)
     fig.tight_layout()
     fig.savefig(figure_dir / "efe_decomposition.png", dpi=180)
@@ -302,6 +322,10 @@ def _variables(
         "METHOD_COUNT": str(len(results["methods"])),
         "FIGURE_COUNT": str(figure_count),
         "PACKAGE_VERSION": __version__,
+        "EFE_BELIEF": ", ".join(f"{value:.3f}" for value in results["efe_beliefs"]),
+        "EFE_MIN_ACTION": str(
+            int(min(range(len(results["efe"])), key=lambda index: results["efe"][index][0]))
+        ),
     }
 
 
@@ -456,8 +480,16 @@ def build(
     config_path: str | Path | None = None,
     output_path: str | Path | None = None,
     render_pdf: bool = True,
+    render_documents: bool = True,
 ) -> Path:
-    """Build figures, hydrated source, and rendered manuscript artifacts."""
+    """Build figures, hydrated source, and rendered manuscript artifacts.
+
+    ``render_documents=False`` runs every stage the package itself owns --
+    experiment, figures, variables, hydration, manifests -- and skips only the
+    Pandoc and XeLaTeX invocations. That lets an environment without a document
+    toolchain still exercise the pipeline end to end, so a break in the
+    executable manuscript surfaces there instead of only at release time.
+    """
     config_file = (
         Path(config_path).expanduser().resolve()
         if config_path is not None
@@ -478,7 +510,8 @@ def build(
         (manuscript_dir / "references.bib").read_text(encoding="utf-8"), encoding="utf-8"
     )
     combined = _hydrate_sources(output, variables, manuscript_dir)
-    _render(output, combined, config, manuscript_dir, render_pdf=render_pdf)
+    if render_documents:
+        _render(output, combined, config, manuscript_dir, render_pdf=render_pdf)
     manifest = {
         "schema_version": 1,
         "package_version": __version__,
@@ -492,6 +525,8 @@ def build(
         "variables": variables,
         "figures": registry,
         "combined_sha256": hashlib.sha256(combined.read_bytes()).hexdigest(),
+        "rendered_documents": render_documents,
+        "rendered_pdf": render_documents and render_pdf,
     }
     (output / "figure_registry.json").write_text(
         json.dumps(registry, indent=2) + "\n", encoding="utf-8"
@@ -512,8 +547,18 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--no-pdf", action="store_true", help="Build HTML and figures without LaTeX PDF"
     )
+    parser.add_argument(
+        "--no-render",
+        action="store_true",
+        help="Build figures, variables, and hydrated source without running Pandoc or XeLaTeX",
+    )
     args = parser.parse_args(argv)
-    output = build(args.config, args.output, render_pdf=not args.no_pdf)
+    output = build(
+        args.config,
+        args.output,
+        render_pdf=not args.no_pdf,
+        render_documents=not args.no_render,
+    )
     print(f"Built manuscript artifacts in {output}")
     return 0
 

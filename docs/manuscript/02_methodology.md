@@ -20,20 +20,41 @@ sum is one.
 ## Expected free energy
 
 For a predicted state distribution $q(s)$ and predicted observation
-distribution $q(o)$, the implementation reports risk, ambiguity, epistemic
-information gain, and their total:
+distribution $q(o)$, expected free energy is the sum of a risk term and an
+ambiguity term:
 
 $$
 G = \underbrace{D_{KL}(q(o)\,\|\,p^*(o))}_{\text{risk}}
-  + \underbrace{\mathbb{E}_{q(s)}[H(P(o\mid s))]}_{\text{ambiguity}}
-  - \underbrace{\left(H[q(s)]-\mathbb{E}_{q(o)}H[q(s\mid o)]\right)}_{\text{epistemic gain}}.
+  + \underbrace{\mathbb{E}_{q(s)}[H(P(o\mid s))]}_{\text{ambiguity}}.
 $$ {#eq:efe_decomposition}
 
+This is algebraically identical to the expected-surprise form, in which the
+expected information gain is subtracted from the expected cost:
+
+$$
+G = \underbrace{\mathbb{E}_{q(o)}[-\log p^*(o)]}_{\text{expected surprise}}
+  - \underbrace{\left(H[q(s)]-\mathbb{E}_{q(o)}H[q(s\mid o)]\right)}_{\text{epistemic gain}},
+$$ {#eq:efe_surprise}
+
+because the ambiguity term already contains the epistemic gain:
+$\mathbb{E}_{q(s)}[H(P(o\mid s))] = H[q(o)] - I(s; o)$, where $I(s;o)$ is the
+mutual information that [@eq:efe_surprise] names the epistemic gain. Versions of
+this package before 1.1.0 subtracted the epistemic term from
+[@eq:efe_decomposition] as well, which weighted information seeking twice and
+broke the equality between the two forms. The regression test
+`test_efe_decompositions_agree` now pins it for randomly generated models.
+
 The method `expected_free_energy()` in
-`code/tools/src/models/active_inference/generative_model.py` returns the
-four terms separately. Policy evaluation sums discounted one-step values
-over the configured horizon, then the dispatcher selects the minimum value
-for each possible first action before applying softmax.
+`code/tools/src/models/active_inference/generative_model.py` returns the total
+alongside all three components, so the epistemic gain remains available as a
+diagnostic without entering the objective a second time. A configurable
+`exploration_weight` subtracts a further multiple of the epistemic gain for
+callers that want an explicit information-seeking bias; it defaults to zero,
+and a value of one reproduces the pre-1.1.0 objective exactly.
+
+Policy evaluation sums discounted one-step values over the configured horizon,
+then the dispatcher selects the minimum value for each possible first action
+before applying softmax.
 
 ## Continuous generalized coordinates
 

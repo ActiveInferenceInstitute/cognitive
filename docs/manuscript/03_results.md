@@ -41,11 +41,21 @@ unnormalized scores, and their support is exactly the configured action set.
 ## Information terms
 
 [@fig:efe_decomposition] decomposes the one-step expected free energy for each
-action. Risk measures deviation from the softmax of $C$; ambiguity measures
-expected observation entropy; epistemic value is subtracted because expected
-information gain reduces expected free energy.
+action, evaluated at the belief the agent holds after the observation sequence,
+$q(s) = ({{EFE_BELIEF}})$. Taking the decomposition at the prior $D$ instead
+would show nothing: from a uniform prior both transition matrices in this
+experiment predict the same state distribution, so every action would carry an
+identical decomposition. Action {{EFE_MIN_ACTION}} carries the lowest total.
 
-![Risk, ambiguity, and epistemic information gain for each action.](figures/efe_decomposition.png){#fig:efe_decomposition width=85%}
+Risk measures deviation from the softmax of $C$, and ambiguity is the
+expected entropy of the likelihood, $\mathbb{E}_{q(s)}[H(P(o\mid s))]$ — the
+uncertainty an observation leaves about the state, not the entropy of the
+predicted observation itself. Their sum is the total in
+[@eq:efe_decomposition]. The epistemic gain is plotted alongside them as a
+diagnostic, and is not subtracted a second time: it is already inside the
+ambiguity term, as [@eq:efe_surprise] makes explicit.
+
+![Expected free energy per action: risk and ambiguity stacked to their total, with the epistemic gain shown separately because it is contained within the ambiguity term rather than added to it.](figures/efe_decomposition.png){#fig:efe_decomposition width=85%}
 
 ## Continuous dynamics and matrix structure
 

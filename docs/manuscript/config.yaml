@@ -37,9 +37,15 @@ experiment:
   observations: [0, 1, 1, 0, 1]
   continuous_steps: 12
   model:
+    # A[o, s] = P(o | s): one row per observation, one column per state.
     A:
       - [0.9, 0.1]
       - [0.1, 0.9]
+    # B[s_next, s_prev, a] = P(s_next | s_prev, a). The outermost list indexes
+    # s_next and the innermost indexes the action, so the two blocks below are
+    # NOT the two per-action matrices: B[:, :, 0] is the identity and
+    # B[:, :, 1] is [[0.1, 0.9], [0.9, 0.1]]. Read the axis order before
+    # editing these numbers.
     B:
       - [[1.0, 0.1], [0.0, 0.9]]
       - [[0.0, 0.9], [1.0, 0.1]]
