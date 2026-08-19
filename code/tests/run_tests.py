@@ -27,15 +27,24 @@ class TestRunner:
 
         self.start_time = time.time()
 
-        # Run pytest with detailed output
+        # Run pytest with detailed output. Coverage comes from the
+        # [tool.coverage.*] configuration in pyproject.toml (whole source tree,
+        # branch coverage); passing a --cov target here would override it, and
+        # a wrong target such as ``--cov=src`` makes pytest exit nonzero even
+        # when every test passes. The JUnit report is written to the system
+        # temp directory so a local run never dirties the repository tree.
+        import tempfile
+
+        junit_path = Path(tempfile.gettempdir()) / "cognitive-test-results.xml"
         exit_code = pytest.main(
             [
                 str(self.test_dir),
                 "-v",
                 "--tb=short",
-                "--cov=src",
-                "--cov-report=term-missing",
-                f"--junit-xml={self.test_dir / 'test-results.xml'}",
+                "-p",
+                "pytest_cov",
+                "--cov",
+                f"--junit-xml={junit_path}",
             ]
         )
 

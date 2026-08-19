@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cognitive-active-inference"
-version = "1.0.0"
+version = "1.1.0"
 description = "Configurable, validated Active Inference models and knowledge tools"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -64,23 +64,29 @@ markers = ["visualization: tests that generate visualization artifacts"]
 addopts = "--strict-markers"
 
 [tool.coverage.run]
-branch = false
+# Branch coverage is on because the package's correctness lives in its
+# validation branches: a statement-only measurement counts a raise-guard as
+# covered when only its passing side ever executes.
+branch = true
 source = ["code/tools/src", "code/Things", "code/scripts"]
 
 [tool.coverage.report]
-include = [
-  "*/models/active_inference/dispatcher.py",
-  "*/models/active_inference/generative_model.py",
-  "*/utils/matrix_utils.py",
-  "*/Things/Continuous_Generic/continuous_generic.py",
-  "*/Things/Continuous_Generic/visualization.py",
-]
+# No include filter. An earlier configuration reported only five of the
+# package's modules, which showed 93% while the measured figure across every
+# module in `source` was 70%. The floor below is the real, whole-package number.
 exclude_lines = [
   "pragma: no cover",
   "@abstractmethod",
   "raise NotImplementedError",
+  "if __name__ == .__main__.:",
 ]
-fail_under = 90
+show_missing = true
+# The floor is the whole-package branch figure measured without a document
+# toolchain, which is the lower of the two environments: the Pandoc render test
+# skips when pandoc/pandoc-crossref are absent and contributes roughly one and a
+# half points when they are present. Ratchet this up as coverage grows; never
+# restore an include filter to raise it.
+fail_under = 87
 
 [tool.ruff]
 target-version = "py310"
