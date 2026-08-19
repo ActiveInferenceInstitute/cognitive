@@ -14,6 +14,7 @@ from .models.active_inference import (
     InferenceConfig,
     InferenceMethod,
     ModelState,
+    PolicyAggregation,
     PolicyType,
 )
 from .utils.matrix_utils import (
@@ -40,6 +41,7 @@ __all__ = [
     "InferenceMethod",
     "MatrixPlotter",
     "ModelState",
+    "PolicyAggregation",
     "PolicyType",
     "compute_entropy",
     "ensure_matrix_properties",

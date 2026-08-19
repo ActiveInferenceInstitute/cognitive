@@ -8,6 +8,7 @@ from .dispatcher import (
     ActiveInferenceFactory,
     InferenceConfig,
     InferenceMethod,
+    PolicyAggregation,
     PolicyType,
 )
 from .generative_model import DiscreteGenerativeModel
@@ -30,6 +31,7 @@ __all__ = [
     "DiscreteGenerativeModel",
     "InferenceConfig",
     "InferenceMethod",
+    "PolicyAggregation",
     "PolicyType",
     "AdaptiveControl",
     "ControlMode",

@@ -28,6 +28,23 @@ class PolicyType(str, Enum):
     DISCRETE = "discrete"
 
 
+class PolicyAggregation(str, Enum):
+    """How the energies of policies sharing a first action are combined.
+
+    ``MIN`` scores each first action by its best continuation, which is an
+    optimistic planning assumption: the action is judged as if the agent will
+    follow the most favourable policy available after it.
+
+    ``MARGINAL`` is the Bayesian model average used in the standard
+    formulation, ``P(a) proportional to sum over policies starting with a of
+    exp(-G(policy) / temperature)``. An action reachable by many adequate
+    policies is preferred over one reachable by a single excellent policy.
+    """
+
+    MIN = "min"
+    MARGINAL = "marginal"
+
+
 @dataclass
 class InferenceConfig:
     """Validated configuration for inference dispatch."""
@@ -47,12 +64,14 @@ class InferenceConfig:
     # If policy_limit truncates enumeration below one policy per first action,
     # dispatch_policy_inference raises instead of silently zeroing that action.
     policy_limit: int = 4096
+    policy_aggregation: PolicyAggregation = PolicyAggregation.MIN
     seed: int | None = 0
     custom_params: dict[str, Any] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         self.method = InferenceMethod(self.method)
         self.policy_type = PolicyType(self.policy_type)
+        self.policy_aggregation = PolicyAggregation(self.policy_aggregation)
         if self.policy_type is not PolicyType.DISCRETE:
             raise ValueError("Only discrete policies are implemented by this dispatcher")
         if self.temporal_horizon < 1:
@@ -204,7 +223,18 @@ class ActiveInferenceDispatcher:
                     "temporal_horizon; leaving this action implicit would silently give it "
                     "zero policy probability."
                 )
-            first_action_values[action] = min(candidates)
+            if self.config.policy_aggregation is PolicyAggregation.MIN:
+                first_action_values[action] = min(candidates)
+            else:
+                # Soft minimum: passing this through softmax(-value / temperature)
+                # reproduces the marginal exactly, because
+                # exp(-value / tau) == sum(exp(-G / tau)) by construction.
+                scaled = -np.asarray(candidates, dtype=float) / self.config.temperature
+                shifted = float(np.max(scaled))
+                total = float(np.sum(np.exp(np.clip(scaled - shifted, -745.0, 709.0))))
+                first_action_values[action] = -self.config.temperature * (
+                    shifted + float(np.log(total))
+                )
         if goal_prior is not None:
             prior = self._action_prior(goal_prior)
             first_action_values -= np.log(prior + 1e-12)
@@ -288,6 +318,7 @@ class ActiveInferenceFactory:
             "discount_factor",
             "exploration_weight",
             "policy_limit",
+            "policy_aggregation",
             "seed",
             "custom_params",
         }
@@ -299,6 +330,7 @@ class ActiveInferenceFactory:
                 "discount_factor",
                 "exploration_weight",
                 "policy_limit",
+                "policy_aggregation",
                 "seed",
                 "custom_params",
             }
