@@ -19,7 +19,7 @@ The test suite lives in `code/tests/` and runs with pytest:
 
 ```bash
 python -m pytest -q
-python -m pytest -q --cov=code/tools/src --cov-report=term-missing
+python -m pytest -q --cov
 ```
 
 `code/tests/run_tests.py` is a convenience runner. Tests use real data and

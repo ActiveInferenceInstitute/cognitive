@@ -3,7 +3,7 @@ title: Cognitive Active Inference — Documentation Backlog
 type: backlog
 status: active
 owner: Active Inference Institute
-last_reviewed: 2026-08-02
+last_reviewed: 2026-08-18
 ---
 
 # Documentation backlog
@@ -95,7 +95,30 @@ README/AGENTS.md files, manuscript sources, configuration, and CI.
   `validate_docs.py` rejects template frontmatter values, with 6 new
   regression tests. Completed in this pass.
 
+## Code and mathematics pass — 2026-08-18
+
+Recorded in [`REVIEW_LOG_2026-08-18.md`](REVIEW_LOG_2026-08-18.md). Closed in
+that pass: expected-free-energy double counting, a second disagreeing EFE
+implementation, the continuous gradient's missing Jacobian transpose, two
+homeostatic paths correct only when two spaces happened to have equal size, an
+entropy axis mismatch, a coverage report filtered to five of twenty-five
+modules, a documentation gate that evaded its own scan, a rewriter that
+enforced the gate by renaming, an inert `exploration_weight`, and a published
+figure that could not distinguish its own actions.
+
 ## Open / deferred
+
+- Deferred: run mutation testing over the corrected mathematics. The oracle
+  tests added on 2026-08-18 compare against closed forms and finite-difference
+  gradients, which is stronger than the finiteness assertions they replaced,
+  but no mutation run has confirmed that a sign flip or a boundary change dies
+  in every branch that matters.
+- Deferred: raise coverage in the two largest remaining gaps,
+  `Things/Simple_POMDP` plotting and the `verify_links` command-line paths.
+  The floor is 87 and the measurement is 89.1; ratchet the floor as these close.
+- Deferred: install `pandoc` and `pandoc-crossref` in CI so the manuscript
+  render test stops skipping there. It currently runs only where a document
+  toolchain exists.
 
 - Deferred: a handful of kept conceptual `docs/tools/` pages
   (`model_context_protocol.md`, `obsidian_usage.md`, `network_analysis.md`,

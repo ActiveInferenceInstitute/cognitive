@@ -42,6 +42,22 @@ supports `variational`, `mean_field`, and `sampling` inference, discrete policy
 sequences, explicit risk, ambiguity, epistemic information gain, horizons,
 temperatures, and seeds.
 
+### Expected free energy
+
+`expected_free_energy` returns the canonical objective and its components:
+
+```text
+G = D_KL(q(o) || p*(o))  +  E_q(s)[H(P(o | s))]
+    \_____ risk _____/     \____ ambiguity ____/
+```
+
+Ambiguity equals `H[q(o)] - I(s; o)`, so the expected information gain is
+already inside it; the epistemic gain is returned as a fourth value for
+inspection and is not subtracted from the total a second time. `InferenceConfig`
+exposes `exploration_weight` for callers who want an explicit additional
+information-seeking bias — it defaults to `0.0`, and `1.0` reproduces the
+objective this package used before 1.1.0. See [`CHANGELOG.md`](CHANGELOG.md).
+
 ```python
 import numpy as np
 
@@ -87,7 +103,7 @@ visualizer uses deterministic layouts and handles empty graphs.
 ## Quality gates
 
 ```bash
-python -m pytest -q
+python -m pytest -q --cov
 ruff check .
 mypy code/tools/src code/Things code/scripts
 python -m compileall -q code
@@ -96,10 +112,23 @@ python code/scripts/verify_links.py . --json
 python code/scripts/check_markdown_links.py . --json
 ```
 
+`--cov` measures branch coverage over every module in the configured source
+tree against the floor in `pyproject.toml`. The report carries no include
+filter, so the number is the package's, not a chosen subset's:
+[`docs/tools/coverage_tools.md`](docs/tools/coverage_tools.md).
+
+The documentation validator enforces the term policy declared in
+[`docs/policy/documentation_terms.yaml`](docs/policy/documentation_terms.yaml).
+
 The complete executable manuscript lives in
 [`docs/manuscript/`](docs/manuscript/README.md). Its builder generates
 deterministic figures, auto-numbered equations and tables, Pandoc citations,
-HTML, and a XeLaTeX PDF from `docs/manuscript/config.yaml`.
+HTML, and a XeLaTeX PDF from `docs/manuscript/config.yaml`. Pass `--no-render`
+to run every stage the package owns without Pandoc or XeLaTeX:
+
+```bash
+cognitive-build-manuscript --no-render --output build/manuscript
+```
 
 Tests write artifacts only to temporary directories. Generated reports and
 visualization trees are intentionally excluded from version control.

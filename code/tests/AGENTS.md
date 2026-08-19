@@ -153,7 +153,7 @@ python -m pytest
 python -m pytest code/tests/test_matrix_ops.py
 
 # Run with coverage
-python -m pytest -q --cov=code/tools/src --cov-report=term-missing
+python -m pytest -q --cov
 ```
 
 #### Test Reporting

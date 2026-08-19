@@ -57,6 +57,12 @@ packages = [
 ]
 package-dir = { cognitive = "code/tools/src", Things = "code/Things", scripts = "code/scripts" }
 
+# PEP 561 markers. The package is fully annotated and type-checked, but without
+# these files a downstream project's type checker ignores the annotations.
+[tool.setuptools.package-data]
+cognitive = ["py.typed"]
+Things = ["py.typed"]
+
 [tool.pytest.ini_options]
 testpaths = ["code/tests"]
 pythonpath = ["code/tools", "code"]

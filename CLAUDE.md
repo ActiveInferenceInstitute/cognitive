@@ -51,8 +51,10 @@ python -m pytest code/tests/ -v
 # Run a specific test file
 python -m pytest code/tests/test_simple_pomdp.py -v
 
-# Run with coverage
-python -m pytest code/tests/ -v --cov=code/tools/src --cov-report=term-missing
+# Run with coverage (branch coverage over every configured source module,
+# against the floor in pyproject.toml -- do not pass --cov=<path>, which
+# silently narrows what is measured)
+python -m pytest -q --cov
 
 # Run using the test runner script
 python code/tests/run_tests.py
