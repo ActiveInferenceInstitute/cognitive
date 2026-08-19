@@ -108,18 +108,39 @@ figure that could not distinguish its own actions.
 
 ## Open / deferred
 
-- Deferred: run mutation testing over the corrected mathematics. The oracle
-  tests added on 2026-08-18 compare against closed forms and finite-difference
-  gradients, which is stronger than the finiteness assertions they replaced,
-  but no mutation run has confirmed that a sign flip or a boundary change dies
-  in every branch that matters.
-- Deferred: raise coverage in the two largest remaining gaps,
-  `Things/Simple_POMDP` plotting and the `verify_links` command-line paths.
-  The floor is 87 and the measurement is 89.1; ratchet the floor as these close.
-- Deferred: install `pandoc` and `pandoc-crossref` in CI so the manuscript
-  render test stops skipping there. It currently runs only where a document
-  toolchain exists.
+- Closed 2026-08-19: mutation testing. Two harnesses were written in parallel
+  and consolidated into one, `code/scripts/mutation_check.py`, reachable as
+  `cognitive-mutation-check` and run as its own CI job. It declares 17
+  mutations covering the corrected mathematics, the dispatcher parameters, and
+  the documentation term policy; all are killed. Two properties from the merge
+  are load-bearing: a fresh `PYTHONPYCACHEPREFIX` per run, because a same-width
+  edit leaves a file's size and modification time unchanged and Python then
+  loads stale bytecode, and a kill criterion that requires a reported test
+  failure rather than any non-zero exit, because a broken import proves only
+  that the file no longer parses. `code/tests/test_mutation_check.py` proves the
+  harness can report a survivor.
+- Closed 2026-08-19: coverage in the named gaps. Branch coverage across every
+  configured module is 92.6% against a floor of 90, up from a measured 70% when
+  the report still carried an include filter.
+  `Things/Continuous_Generic/continuous_generic.py` is at 100%,
+  `Things/Simple_POMDP` at 98%, and `verify_links` at 93%.
+- Closed 2026-08-19: CI installs `pandoc` and `pandoc-crossref`, so the HTML
+  render runs there instead of skipping, and the workflow asserts the rendered
+  document carries no unresolved cross-reference or unhydrated variable. The
+  PDF stage still skips because the runner has no XeLaTeX.
+- Closed 2026-08-19: four dispatcher parameters that the suite executed but did
+  not check are now pinned by `test_dispatcher_semantics.py` — the belief
+  blend's `learning_rate`, the policy `temperature`, the precision clip bounds,
+  and the policy aggregation. All four were found by the mutation gate.
 
+- Deferred: decide whether `policy_aggregation` should default to `marginal`
+  rather than `min` in a future major version. `marginal` is the standard
+  Bayesian model average; `min` is the optimistic behaviour this package has
+  always had, and 1.1.0 already changed the objective, so changing the
+  aggregation in the same release would make the two effects hard to separate.
+- Deferred: extend the mutation set beyond the mathematics into the
+  documentation and link gates. One mutation currently covers
+  `validate_docs.py`, and none covers `verify_links.py`.
 - Deferred: a handful of kept conceptual `docs/tools/` pages
   (`model_context_protocol.md`, `obsidian_usage.md`, `network_analysis.md`,
   `advanced_linking.md`, `automation_scripts.md`, `cursor_integration.md`)

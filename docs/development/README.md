@@ -26,7 +26,15 @@ python code/scripts/verify_links.py . --json
 python code/scripts/check_markdown_links.py . --json
 python -m scripts.build_manuscript --no-render --output "${TMPDIR:-/tmp}/manuscript"
 cognitive-benchmark --repetitions 1 --output "${TMPDIR:-/tmp}/benchmarks.json"
+python -m scripts.mutation_check
 ```
+
+`mutation_check` applies a declared set of source mutations and requires the
+suite to reject each one. It answers the question coverage cannot: whether a
+covered line is also a checked line. See
+[`../tools/mutation_testing.md`](../tools/mutation_testing.md). It spawns one
+pytest subprocess per mutation, so run it before opening a change rather than on
+every save.
 
 `--cov` measures branch coverage across every module in the configured source
 tree against the floor in `pyproject.toml`; see

@@ -136,12 +136,70 @@ that builds the distribution, installs the wheel, and runs every declared
 console script — plus steps running the manuscript pipeline and benchmarks,
 neither of which any gate previously executed.
 
+## Second pass — 2026-08-19
+
+### 10. Four dispatcher parameters were executed but never checked
+
+A mutation gate was written to answer the question coverage cannot: whether a
+covered line is also a checked line. Its first run on the dispatcher found four
+survivors. `learning_rate` could be applied to the prior instead of the
+posterior — the blend is symmetric at 0.5, which is the only value any test
+used. `temperature` could be deleted from policy inference entirely. The
+precision clip's upper bound could move from 1e6 to 1e3. The policy aggregation
+could invert from a minimum to a maximum, reversing the planner's preference
+ordering. All four lines were reported as covered throughout.
+
+`test_dispatcher_semantics.py` pins each against a closed form and against a
+monotonicity property that holds regardless of the exact algebra.
+
+### 11. Policy aggregation was undocumented and unselectable
+
+Scoring each first action by `min` over its continuations is an optimistic
+planning assumption, not the standard formulation, and nothing said so.
+`policy_aggregation` now selects between `min` and `marginal`, the Bayesian
+model average. `min` remains the default: version 1.1.0 already changed the
+objective, and changing the aggregation in the same release would make the two
+effects impossible to separate in a comparison. The implementation returns a
+soft minimum, which reproduces the marginal exactly through the policy softmax,
+verified to 1.1e-16.
+
+### 12. The mutation harness had the defect it exists to find
+
+Python invalidates a cached `.pyc` by comparing the source's modification time
+and size. Several mutations replace a character with one of the same width —
+`limit < 1` becomes `limit < 0`. Written inside the same clock tick, the edit
+changes neither field, the interpreter loads the previous bytecode, and the
+mutation never reaches the tests, which pass and are scored as a survivor. This
+appeared as an intermittent false result depending on how the gate was invoked.
+Each run now uses a fresh `PYTHONPYCACHEPREFIX`. Three consecutive runs are
+stable at 17 of 17.
+
+`test_mutation_check.py` proves the harness reports a survivor when given a
+comment-only mutation nothing can kill, restores every file it edits, and
+refuses to run against a source whose anchor has moved.
+
+### 13. Two mutation harnesses, written in parallel
+
+A concurrent agent working in the same tree produced a second harness at
+`code/tests/mutation/run_mutation.py` with seven mutants, and test files that
+wrote artifacts to a hardcoded `/tmp/pomdp-edge-output` rather than to the
+per-test temporary directory the repository requires, which failed wherever that
+path is not writable.
+
+The two harnesses were consolidated into one. The surviving implementation kept
+the parallel version's stricter kill criterion — a non-zero pytest exit counts
+only when a test actually failed, since a mutation that breaks collection proves
+the file no longer parses rather than that a wrong answer is caught — and its
+one mutant the other set lacked, a negated risk term. The hardcoded output path
+was made relative so it anchors under the test's own directory.
+
 ## Verification
 
 Measured after the changes, on Python 3.12:
 
-- 185 tests passed (102 before).
-- Branch coverage 89.1% across every configured source module, floor 87.
+- 243 tests passed and 1 skipped (102 before).
+- Branch coverage 92.6% across every configured source module, floor 90.
+- Mutation gate: 17 of 17 declared mutations killed, stable across repeated runs.
 - ruff clean; mypy clean on 30 source files; `compileall` clean.
 - `validate_docs.py`: 0 forbidden terms, 0 documentation errors, 0 broken links,
   0 anchor warnings; manuscript structure valid.
@@ -157,5 +215,8 @@ Measured after the changes, on Python 3.12:
   standing editorial activity, as recorded in the previous pass.
 - `Things/Simple_POMDP` plotting branches and the `verify_links` CLI paths are
   the largest remaining coverage gaps.
-- No mutation testing was run. The oracle tests added here would survive a
-  sign flip in several places that a mutation run would find.
+- The mutation set covers the mathematics, the dispatcher parameters, and one
+  branch of the documentation term policy. It does not yet reach
+  `verify_links.py` or the rest of `validate_docs.py`.
+- Whether `policy_aggregation` should default to `marginal` is left open, for
+  the reason given in finding 11.

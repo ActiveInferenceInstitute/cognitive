@@ -38,6 +38,7 @@ cognitive-verify-links = "scripts.verify_links:main"
 cognitive-benchmark = "cognitive.benchmarks:main"
 cognitive-validate-docs = "scripts.validate_docs:main"
 cognitive-build-manuscript = "scripts.build_manuscript:main"
+cognitive-mutation-check = "scripts.mutation_check:main"
 
 [tool.setuptools]
 include-package-data = true
@@ -92,7 +93,7 @@ show_missing = true
 # skips when pandoc/pandoc-crossref are absent and contributes roughly one and a
 # half points when they are present. Ratchet this up as coverage grows; never
 # restore an include filter to raise it.
-fail_under = 87
+fail_under = 90
 
 [tool.ruff]
 target-version = "py310"

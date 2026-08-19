@@ -12,6 +12,27 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ## [1.1.0]
 
+### Mutation gate
+
+`code/scripts/mutation_check.py` and the `cognitive-mutation-check` entry point
+apply a declared set of source mutations and require the suite to reject each
+one. Coverage says a line ran; this says a wrong line would be noticed. It runs
+as its own CI job.
+
+Writing it found four lines that the suite executed but did not check: the
+belief blend could apply `learning_rate` to the prior instead of the posterior
+(symmetric at the 0.5 every test happened to use), `temperature` could be
+dropped from policy inference entirely, the precision clip's upper bound could
+move by three orders of magnitude, and the policy aggregation could invert from
+a minimum to a maximum. `test_dispatcher_semantics.py` now pins all four.
+
+The harness isolates `PYTHONPYCACHEPREFIX` per run: several mutations replace a
+character with another of the same width, which leaves a source file's size and
+modification time unchanged within one clock tick, so Python loads the previous
+bytecode and the mutation never reaches the tests. That produced an intermittent
+false survivor before it was fixed. A mutation that breaks collection rather
+than the answer raises instead of counting as a kill.
+
 ### Corrected mathematics
 
 **Behaviour change — expected free energy.** The discrete objective now returns
@@ -77,6 +98,15 @@ deterministic distribution is exactly zero rather than slightly negative.
   the inert parameter it replaces.
 - `dynamics_weight` on `ContinuousActiveInference`, weighting the dynamic term
   consistently in both the reported free energy and the gradient.
+- `policy_aggregation` on `InferenceConfig`, selecting how policies sharing a
+  first action are combined. `min` is the existing behaviour and remains the
+  default: each first action is scored by its best continuation, an optimistic
+  planning assumption. `marginal` is the Bayesian model average of the standard
+  formulation, `P(a)` proportional to the sum of `exp(-G / temperature)` over
+  policies starting with `a`, so an action reachable by many adequate policies
+  is preferred over one reachable by a single excellent policy. The
+  implementation returns a soft minimum, which reproduces the marginal exactly
+  once passed through the policy softmax.
 - `--no-render` on `cognitive-build-manuscript`, running every stage the package
   owns without Pandoc or XeLaTeX so the pipeline can be exercised where no
   document toolchain exists.
@@ -92,7 +122,8 @@ deterministic distribution is exactly zero rather than slightly negative.
 
 - Coverage measures branches and reports every module in the configured source
   tree. The previous configuration reported five modules and showed 93% while
-  the whole-package figure was 70%; the floor is now the real number.
+  the whole-package figure was 70%; the measured figure is now 92.6% and the
+  floor is 90.
 - `DiscreteGenerativeModel.enumerate_policies` truncates lazily, so a small
   `limit` over a long horizon no longer materializes the full action product.
 - `Things.Simple_POMDP.compute_expected_free_energy` returns the risk term as

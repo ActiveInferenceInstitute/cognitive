@@ -37,7 +37,7 @@ package; it is a coverage number for whichever files someone chose to look at.
 
 ## The floor
 
-`fail_under = 87` is the whole-package branch figure measured in the leaner of
+`fail_under = 90` is the whole-package branch figure measured in the leaner of
 the two environments — one without Pandoc, where
 `test_builder_renders_html_when_the_toolchain_is_present` skips. With
 `pandoc` and `pandoc-crossref` on `PATH` the same suite measures roughly a
@@ -45,6 +45,12 @@ point and a half higher.
 
 Raise the floor when new tests raise the measurement. Do not raise it by
 narrowing what is measured.
+
+## Coverage is not the whole question
+
+A covered line is an executed line, not a checked one. See
+[`mutation_testing.md`](mutation_testing.md) for the gate that asks the second
+question.
 
 ## Reading the gaps
 
