@@ -1,0 +1,35 @@
+# Documentation term policy for code/scripts/validate_docs.py.
+#
+# Every term below is rejected wherever it appears in a tracked text file,
+# matched whole-word and case-insensitively. The policy exists so that a page
+# cannot advertise content that does not exist: a section describing itself as
+# incomplete work is a claim the repository cannot keep.
+#
+# This file is the single source of the list. Before it existed, the validator
+# and its companion script spelled every term as a concatenation of two string
+# literals so that they would not trip the scan they implement. Externalizing
+# the list and exempting the files that must discuss it removes the need for
+# that evasion, and makes the policy readable by someone who is not reading
+# Python.
+#
+# Scope note: the scan covers source files as well as documentation, so an
+# in-code work marker fails the gate. Record outstanding work in TODO.md, which
+# is the repository's tracked backlog, rather than in a comment.
+
+terms:
+  - stub
+  - legacy
+  - mock
+  - placeholder
+  - todo
+  - fixme
+  - unfinished
+  - not implemented
+
+# Files that must be able to spell the terms literally: the policy itself, the
+# validator that enforces it, and the regression tests that prove it works.
+exempt_paths:
+  - docs/policy/documentation_terms.yaml
+  - docs/policy/README.md
+  - code/scripts/validate_docs.py
+  - code/tests/test_validate_docs.py

@@ -1,0 +1,44 @@
+---
+title: Repository Policy Files
+type: reference
+status: stable
+---
+
+# Repository policy files
+
+Machine-readable policy that the repository's gates enforce. Each file here is
+the single source of one rule, so the rule can be read without reading the
+script that applies it.
+
+| File | Enforced by | Rule |
+|---|---|---|
+| [`documentation_terms.yaml`](documentation_terms.yaml) | `code/scripts/validate_docs.py` | Terms that may not appear in tracked text, and the files exempt from the scan. |
+
+## Documentation terms
+
+The term list rejects words that advertise content the repository does not
+have: a page describing a section as incomplete work makes a claim the
+repository cannot keep, and a reader has no way to tell a genuine gap from a
+forgotten marker.
+
+Two properties of the policy are deliberate.
+
+**The list is data, not code.** The validator reads this YAML file. Before it
+existed, the validator spelled every term as two concatenated string literals
+so that its own source would not trip the scan it implements — a gate that has
+to hide from itself is a gate nobody can audit. Naming the exempt files here
+replaces that evasion.
+
+**The scan covers source files, not only documentation.** An in-code work
+marker therefore fails the gate. The tradeoff is real: a marker in a comment is
+an honest signal, and this policy pushes it out of the comment. It is pushed to
+[`TODO.md`](../../TODO.md), the tracked backlog, where it is visible to a
+reader who is not reading that file's source.
+
+What the policy must never become is a rename. A previous helper script walked
+every tracked file and substituted each banned term for a synonym — an
+incomplete section became a "foundation", an unimplemented path became
+"unavailable". That converts a gate about accuracy into a gate about
+vocabulary, and it left the inaccurate content in place under a better name.
+The script was removed rather than repaired. Resolve a flagged term by fixing
+what it describes or by moving it to the backlog.

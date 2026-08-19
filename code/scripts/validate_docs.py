@@ -12,16 +12,33 @@ from typing import Any
 from scripts.check_markdown_links import verify_markdown_link_report
 from scripts.verify_links import verify_link_report
 
-_FORBIDDEN = [
-    "st" + "ub",
-    "le" + "gacy",
-    "mo" + "ck",
-    "place" + "holder",
-    "to" + "do",
-    "fix" + "me",
-    "un" + "finished",
-    "not " + "implemented",
-]
+TERM_POLICY_PATH = Path("docs/policy/documentation_terms.yaml")
+
+
+def load_term_policy(root: Path) -> tuple[list[str], set[str]]:
+    """Return the forbidden terms and the paths exempt from the scan.
+
+    The list lives in ``docs/policy/documentation_terms.yaml`` rather than in
+    this module so that the policy is readable without reading Python, and so
+    that the files which must discuss the terms can be exempted by name instead
+    of spelling each term as two concatenated string literals to dodge the scan
+    they implement.
+    """
+    import yaml
+
+    policy_path = root / TERM_POLICY_PATH
+    if not policy_path.is_file():
+        raise FileNotFoundError(f"Missing documentation term policy: {policy_path}")
+    policy = yaml.safe_load(policy_path.read_text(encoding="utf-8")) or {}
+    if not isinstance(policy, dict):
+        raise ValueError(f"{TERM_POLICY_PATH} must contain a mapping")
+    terms = policy.get("terms")
+    exempt = policy.get("exempt_paths", [])
+    if not isinstance(terms, list) or not terms or not all(isinstance(t, str) for t in terms):
+        raise ValueError(f"{TERM_POLICY_PATH} must define a non-empty list of terms")
+    if not isinstance(exempt, list) or not all(isinstance(path, str) for path in exempt):
+        raise ValueError(f"{TERM_POLICY_PATH} exempt_paths must be a list of paths")
+    return [term.strip() for term in terms], set(exempt)
 _FENCE = re.compile(r"(^|\n)(```|~~~)([^\n]*)\n([\s\S]*?)(?:\n\2)(?=\n|$)")
 
 
@@ -158,13 +175,16 @@ def validate(root: str | Path = ".") -> dict[str, Any]:
     files = tracked_files(root_path)
     errors: list[str] = []
     forbidden: list[dict[str, str]] = []
+    terms, exempt_paths = load_term_policy(root_path)
     for path in _text_files(files):
         try:
             content = path.read_text(encoding="utf-8")
         except UnicodeDecodeError:
             continue
         relative = path.relative_to(root_path).as_posix()
-        for term in _FORBIDDEN:
+        if relative in exempt_paths:
+            continue
+        for term in terms:
             if re.search(rf"\b{re.escape(term)}\b", content, flags=re.IGNORECASE):
                 forbidden.append({"path": relative, "term": term})
         errors.extend(_validate_frontmatter(path, content))
@@ -179,8 +199,13 @@ def validate(root: str | Path = ".") -> dict[str, Any]:
     manuscript = _validate_manuscript(root_path)
     errors.extend(manuscript["errors"])
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "tracked_text_files": len(_text_files(files)),
+        "term_policy": {
+            "path": TERM_POLICY_PATH.as_posix(),
+            "terms": len(terms),
+            "exempt_paths": sorted(exempt_paths),
+        },
         "forbidden_terms": forbidden,
         "documentation_errors": errors,
         "links": {
