@@ -144,3 +144,87 @@ def test_stem_ambiguous_concept_link_is_not_broken(tmp_path):
     report = verify_link_report(tmp_path)
 
     assert report.broken_links == []
+
+
+def test_cli_text_mode_reports_broken_links_and_returns_one(tmp_path, capsys):
+    write_markdown(tmp_path / "index.md", "See [[missing-file.md|the manual]].")
+    write_markdown(tmp_path / "other.md", "Also [[gone.md]].")
+
+    exit_code = main([str(tmp_path)])
+
+    output = capsys.readouterr().out
+    assert exit_code == 1
+    assert "Index built with" in output
+    assert "Checked" in output
+    assert "Found 2 broken file links:" in output
+    assert "missing-file.md" in output
+    assert "gone.md" in output
+
+
+def test_cli_text_mode_reports_anchor_warnings(tmp_path, capsys):
+    write_markdown(tmp_path / "concept.md", "# Concept\n")
+    write_markdown(tmp_path / "index.md", "See [[concept#No-Such-Heading]].")
+
+    exit_code = main([str(tmp_path)])
+
+    output = capsys.readouterr().out
+    # A missing anchor is a warning, not a broken link.
+    assert exit_code == 0
+    assert "Found 1 anchor warnings:" in output
+    assert "No-Such-Heading" in output
+
+
+def test_cli_json_mode_outputs_the_full_report(tmp_path, capsys):
+    import json
+
+    write_markdown(tmp_path / "index.md", "See [[missing.md]].")
+
+    exit_code = main([str(tmp_path), "--json"])
+
+    payload = json.loads(capsys.readouterr().out)
+    assert exit_code == 1
+    assert payload["broken_links"] == [
+        {"source": "index.md", "link": "missing.md", "target": "missing.md"}
+    ]
+    assert payload["checked_links"] == 1
+    assert payload["anchor_warnings"] == []
+
+
+def test_cli_json_mode_exit_zero_without_broken_links(tmp_path, capsys):
+    import json
+
+    write_markdown(tmp_path / "index.md", "See [[systems_engineering]].")
+
+    exit_code = main([str(tmp_path), "--json"])
+
+    payload = json.loads(capsys.readouterr().out)
+    assert exit_code == 0
+    assert payload["broken_links"] == []
+    assert payload["skipped_concept_links"] == 1
+
+
+def test_legacy_wrapper_returns_broken_link_list(tmp_path):
+    from scripts.verify_links import verify_links
+
+    write_markdown(tmp_path / "index.md", "See [[missing.md]].")
+    broken = verify_links(tmp_path)
+    assert broken == [{"source": "index.md", "link": "missing.md", "target": "missing.md"}]
+
+
+def test_heading_slugs_return_empty_on_unreadable_file(tmp_path):
+    from scripts.verify_links import _heading_slugs
+
+    # A directory has no readable text content; the OSError guard returns no slugs.
+    assert _heading_slugs(tmp_path / "does-not-exist.md") == set()
+
+
+def test_target_exists_mirror_of_resolve(tmp_path):
+    from scripts.verify_links import _build_index, _resolve_target_path, _target_exists
+
+    write_markdown(tmp_path / "concept.md", "# Concept\n")
+    index = _build_index(tmp_path)
+    source = tmp_path / "index.md"
+    assert _target_exists(tmp_path, source, "concept", index) is True
+    assert _target_exists(tmp_path, source, "missing.md", index) is False
+    assert _resolve_target_path(tmp_path, source, "concept", index) == tmp_path / "concept.md"
+    assert _resolve_target_path(tmp_path, source, "missing.md", index) is None
