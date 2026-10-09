@@ -9,14 +9,14 @@ tags:
 - thermodynamics
 - inference
 semantic_relations:
-- type: implements
-  links:
-  - - free_energy_principle
-- type: related
-  links:
-  - - - variational_inference
-  - - - prediction_error
-  - - - gradient_descent
+  - type: implements
+    links:
+      - "[[free_energy_principle]]"
+  - type: related
+    links:
+      - "[[variational_inference]]"
+      - "[[prediction_error]]"
+      - "[[gradient_descent]]"
 ---
 
 

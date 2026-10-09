@@ -12,14 +12,14 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[free_energy_principle]]
+      - "[[free_energy_principle]]"
   - type: relates
     links:
-      - [[adaptation_strategies]]
-      - [[homeostatic_regulation]]
-      - [[knowledge_base/systems/complex_systems]]
-      - [[emergence_self_organization]]
-      - [[learning_mechanisms]]
+      - "[[adaptation_strategies]]"
+      - "[[homeostatic_regulation]]"
+      - "[[knowledge_base/systems/complex_systems]]"
+      - "[[emergence_self_organization]]"
+      - "[[learning_mechanisms]]"
 ---
 
 # Adaptive Systems

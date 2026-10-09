@@ -9,21 +9,21 @@ tags:
 - graphical-models
 - bayesian-networks
 semantic_relations:
-- type: foundation
-  links:
-  - - - graph_theory
-  - - - conditional_independence
-  - - - markov_properties
-- type: used_by
-  links:
-  - - - bayesian_networks
-  - - - causal_inference
-  - - - probabilistic_graphical_models
-- type: related
-  links:
-  - - - path_analysis
-  - - - graphical_separation
-  - - - markov_blanket
+  - type: foundation
+    links:
+      - "[[graph_theory]]"
+      - "[[conditional_independence]]"
+      - "[[markov_properties]]"
+  - type: used_by
+    links:
+      - "[[bayesian_networks]]"
+      - "[[causal_inference]]"
+      - "[[probabilistic_graphical_models]]"
+  - type: related
+    links:
+      - "[[path_analysis]]"
+      - "[[graphical_separation]]"
+      - "[[markov_blanket]]"
 ---
 
 

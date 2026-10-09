@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/cognitive/bayesian_brain_hypothesis]]
-      - [[knowledge_base/cognitive/predictive_processing]]
+      - "[[knowledge_base/cognitive/bayesian_brain_hypothesis]]"
+      - "[[knowledge_base/cognitive/predictive_processing]]"
 ---
 
 # Brain Theory

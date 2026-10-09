@@ -17,15 +17,10 @@ tags:
   - index
 
 semantic_relations:
-
   - type: organizes
-
     links:
-
-      - research areas
-
-      - research methods
-
+      - "[[research areas]]"
+      - "[[research methods]]"
 ---
 
 # Research Index

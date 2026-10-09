@@ -7,11 +7,11 @@ tags:
 - analysis
 - graphs
 semantic_relations:
-- type: relates
-  links:
-  - graph_theory
-  - intelligence_networks
-  - cognitive_architecture
+  - type: relates
+    links:
+      - "[[graph_theory]]"
+      - "[[intelligence_networks]]"
+      - "[[cognitive_architecture]]"
 ---
 
 

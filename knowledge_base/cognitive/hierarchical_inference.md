@@ -9,14 +9,14 @@ tags:
 - active_inference
 - hierarchy
 semantic_relations:
-- type: implements
-  links:
-  - - active_inference
-- type: relates
-  links:
-  - - - generative_model
-  - - - predictive_coding
-  - - - bayesian_inference
+  - type: implements
+    links:
+      - "[[active_inference]]"
+  - type: relates
+    links:
+      - "[[generative_model]]"
+      - "[[predictive_coding]]"
+      - "[[bayesian_inference]]"
 ---
 
 

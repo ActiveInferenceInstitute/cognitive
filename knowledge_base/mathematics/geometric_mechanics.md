@@ -9,15 +9,15 @@ tags:
 - physics
 - geometry
 semantic_relations:
-- type: foundation
-  links:
-  - - - symplectic_geometry
-  - - - lie_theory
-- type: relates
-  links:
-  - - - hamiltonian_mechanics
-  - - - lagrangian_mechanics
-  - - - control_theory
+  - type: foundation
+    links:
+      - "[[symplectic_geometry]]"
+      - "[[lie_theory]]"
+  - type: relates
+    links:
+      - "[[hamiltonian_mechanics]]"
+      - "[[lagrangian_mechanics]]"
+      - "[[control_theory]]"
 ---
 
 

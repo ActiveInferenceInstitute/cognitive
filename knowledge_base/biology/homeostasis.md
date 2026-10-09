@@ -10,9 +10,9 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[allostatic_regulation]]
-      - [[levels_of_organization]]
-      - [[knowledge_base/free_energy_principle/biology/homeostasis]]
+      - "[[allostatic_regulation]]"
+      - "[[levels_of_organization]]"
+      - "[[knowledge_base/free_energy_principle/biology/homeostasis]]"
 ---
 
 # Homeostasis

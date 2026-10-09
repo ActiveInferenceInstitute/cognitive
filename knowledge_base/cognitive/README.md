@@ -14,11 +14,11 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[active_inference]]
-      - [[free_energy_principle]]
-      - [[predictive_processing]]
-      - [[cognitive_architecture]]
-      - [[belief_updating]]
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[predictive_processing]]"
+      - "[[cognitive_architecture]]"
+      - "[[belief_updating]]"
 ---
 
 # Cognitive Science Knowledge Base

@@ -9,18 +9,18 @@ tags:
 - efficiency
 - metabolism
 semantic_relations:
-- type: implements
-  links:
-  - - resource_management
-- type: extends
-  links:
-  - - performance_optimization
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - metabolic_efficiency
-  - - - resource_allocation
+  - type: implements
+    links:
+      - "[[resource_management]]"
+  - type: extends
+    links:
+      - "[[performance_optimization]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[metabolic_efficiency]]"
+      - "[[resource_allocation]]"
 ---
 
 

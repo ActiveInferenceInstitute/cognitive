@@ -9,14 +9,14 @@ tags:
 - structure
 - management
 semantic_relations:
-- type: implements
-  links:
-  - - documentation_standards
-- type: relates
-  links:
-  - - - theoretical_foundations
-  - - - machine_readability
-  - - - linking_completeness
+  - type: implements
+    links:
+      - "[[documentation_standards]]"
+  - type: relates
+    links:
+      - "[[theoretical_foundations]]"
+      - "[[machine_readability]]"
+      - "[[linking_completeness]]"
 ---
 
 

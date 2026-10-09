@@ -22,14 +22,14 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/mathematics/expected_free_energy]]
+      - "[[knowledge_base/mathematics/expected_free_energy]]"
   - type: extends
     links:
-      - [[friston_2017_curiosity]]
-      - [[da_costa_2020]]
+      - "[[friston_2017_curiosity]]"
+      - "[[da_costa_2020]]"
   - type: cited_by
     links:
-      - [[parr_pezzulo_friston_2022]]
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # Whence the Expected Free Energy?

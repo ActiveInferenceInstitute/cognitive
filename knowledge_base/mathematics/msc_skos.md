@@ -10,15 +10,15 @@ tags:
 - standards
 - metadata
 semantic_relations:
-- type: relates
-  links:
-  - information_theory
-  - graph_theory
-  - optimization_theory
-- type: integrates
-  links:
-  - mathematics_resources
-  - cross_reference_map
+  - type: relates
+    links:
+      - "[[information_theory]]"
+      - "[[graph_theory]]"
+      - "[[optimization_theory]]"
+  - type: integrates
+    links:
+      - "[[mathematics_resources]]"
+      - "[[cross_reference_map]]"
 ---
 
 

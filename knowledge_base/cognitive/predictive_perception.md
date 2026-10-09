@@ -9,14 +9,14 @@ tags:
 - cognition
 - active_inference
 semantic_relations:
-- type: implements
-  links:
-  - - - predictive_processing|Predictive Processing
-  - - - active_inference|Active Inference
-- type: uses
-  links:
-  - - - knowledge_base/mathematics/information_theory|Information Theory
-  - - - knowledge_base/mathematics/variational_methods|Variational Methods
+  - type: implements
+    links:
+      - "[[predictive_processing|Predictive Processing]]"
+      - "[[active_inference|Active Inference]]"
+  - type: uses
+    links:
+      - "[[knowledge_base/mathematics/information_theory|Information Theory]]"
+      - "[[knowledge_base/mathematics/variational_methods|Variational Methods]]"
 ---
 
 

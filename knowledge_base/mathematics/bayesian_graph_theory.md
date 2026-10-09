@@ -9,23 +9,23 @@ tags:
 - graph-theory
 - bayesian-inference
 semantic_relations:
-- type: foundation
-  links:
-  - - - graph_theory
-  - - - probability_theory
-  - - - bayesian_inference
-  - - - bayes_theorem
-- type: implements
-  links:
-  - - - bayesian_networks
-  - - - factor_graphs
-  - - - markov_random_fields
-- type: related
-  links:
-  - - - causal_inference
-  - - - probabilistic_programming
-  - - - message_passing
-  - - - belief_updating
+  - type: foundation
+    links:
+      - "[[graph_theory]]"
+      - "[[probability_theory]]"
+      - "[[bayesian_inference]]"
+      - "[[bayes_theorem]]"
+  - type: implements
+    links:
+      - "[[bayesian_networks]]"
+      - "[[factor_graphs]]"
+      - "[[markov_random_fields]]"
+  - type: related
+    links:
+      - "[[causal_inference]]"
+      - "[[probabilistic_programming]]"
+      - "[[message_passing]]"
+      - "[[belief_updating]]"
 ---
 
 

@@ -10,15 +10,15 @@ tags:
 - self_organization
 - networks
 semantic_relations:
-- type: implements
-  links:
-  - - knowledge_base/systems/systems_theory
-- type: related
-  links:
-  - - - emergence_self_organization
-  - - - biological_systems
-  - - - network_theory
-  - - - dynamical_systems
+  - type: implements
+    links:
+      - "[[knowledge_base/systems/systems_theory]]"
+  - type: related
+    links:
+      - "[[emergence_self_organization]]"
+      - "[[biological_systems]]"
+      - "[[network_theory]]"
+      - "[[dynamical_systems]]"
 ---
 
 

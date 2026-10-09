@@ -10,17 +10,17 @@ tags:
 - motion
 - social
 semantic_relations:
-- type: implements
-  links:
-  - - motion_perception
-- type: extends
-  links:
-  - - social_perception
-- type: related
-  links:
-  - - - action_recognition
-  - - - social_cognition
-  - - - motion_processing
+  - type: implements
+    links:
+      - "[[motion_perception]]"
+  - type: extends
+    links:
+      - "[[social_perception]]"
+  - type: related
+    links:
+      - "[[action_recognition]]"
+      - "[[social_cognition]]"
+      - "[[motion_processing]]"
 ---
 
 

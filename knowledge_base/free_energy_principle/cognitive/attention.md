@@ -14,17 +14,17 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
   - type: relates
     links:
-      - [[perception|Perception]]
-      - [[decision_making|Decision Making]]
-      - [[consciousness|Consciousness]]
-      - [[knowledge_base/free_energy_principle/biology/neural_systems|Neural Systems]]
+      - "[[perception|Perception]]"
+      - "[[decision_making|Decision Making]]"
+      - "[[consciousness|Consciousness]]"
+      - "[[knowledge_base/free_energy_principle/biology/neural_systems|Neural Systems]]"
   - type: implements
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/information_geometry|Information Geometry]]
+      - "[[knowledge_base/free_energy_principle/mathematics/information_geometry|Information Geometry]]"
 ---
 
 # Attention as Precision Optimization

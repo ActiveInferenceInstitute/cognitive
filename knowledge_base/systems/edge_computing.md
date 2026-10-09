@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/systems/internet_of_things]]
-      - [[knowledge_base/cognitive/active_inference]]
+      - "[[knowledge_base/systems/internet_of_things]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
 ---
 
 # Edge Computing

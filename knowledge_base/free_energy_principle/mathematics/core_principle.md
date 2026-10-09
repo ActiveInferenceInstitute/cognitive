@@ -15,22 +15,22 @@ aliases: [fep_core, variational_free_energy, free_energy_minimization]
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy]]
-      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets]]
-      - [[knowledge_base/free_energy_principle/mathematics/information_geometry]]
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/expected_free_energy]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/information_geometry]]"
   - type: implements
     links:
-      - [[knowledge_base/free_energy_principle/cognitive/perception]]
-      - [[knowledge_base/cognitive/active_inference]]
-      - [[knowledge_base/free_energy_principle/biology/homeostasis]]
-      - [[knowledge_base/free_energy_principle/systems/self_organization]]
+      - "[[knowledge_base/free_energy_principle/cognitive/perception]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+      - "[[knowledge_base/free_energy_principle/biology/homeostasis]]"
+      - "[[knowledge_base/free_energy_principle/systems/self_organization]]"
   - type: relates
     links:
-      - [[knowledge_base/mathematics/thermodynamics]]
-      - [[knowledge_base/mathematics/statistical_physics]]
-      - [[knowledge_base/mathematics/information_theory]]
-      - [[knowledge_base/cognitive/bayesian_inference]]
+      - "[[knowledge_base/mathematics/thermodynamics]]"
+      - "[[knowledge_base/mathematics/statistical_physics]]"
+      - "[[knowledge_base/mathematics/information_theory]]"
+      - "[[knowledge_base/cognitive/bayesian_inference]]"
 ---
 
 # Core Free Energy Principle

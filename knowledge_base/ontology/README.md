@@ -13,13 +13,13 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[biological_ontology]]
-      - [[cognitive_ontology]]
-      - [[computer_science_ontology]]
-      - [[mathematical_ontology]]
-      - [[philosophical_ontology]]
-      - [[systems_ontology]]
-      - [[hyperspatial/hyperspace_ontology]]
+      - "[[biological_ontology]]"
+      - "[[cognitive_ontology]]"
+      - "[[computer_science_ontology]]"
+      - "[[mathematical_ontology]]"
+      - "[[philosophical_ontology]]"
+      - "[[systems_ontology]]"
+      - "[[hyperspatial/hyperspace_ontology]]"
 ---
 
 # Ontology Knowledge Base

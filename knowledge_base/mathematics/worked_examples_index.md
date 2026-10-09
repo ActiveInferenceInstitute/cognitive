@@ -8,10 +8,10 @@ tags:
 - vfe
 - efe
 semantic_relations:
-- type: aggregates
-  links:
-  - worked_example_vfe
-  - worked_example_efe
+  - type: aggregates
+    links:
+      - "[[worked_example_vfe]]"
+      - "[[worked_example_efe]]"
 ---
 
 

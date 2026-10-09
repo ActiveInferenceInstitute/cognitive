@@ -12,8 +12,8 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[code/tools/src/models/README]]
-      - [[code/tools/src/README]]
+      - "[[code/tools/src/models/README]]"
+      - "[[code/tools/src/README]]"
 ---
 
 # Matrix Operations

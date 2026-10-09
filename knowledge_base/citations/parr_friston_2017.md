@@ -21,16 +21,16 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - attention
-      - [[knowledge_base/cognitive/working_memory]]
+      - "[[attention]]"
+      - "[[knowledge_base/cognitive/working_memory]]"
   - type: extends
     links:
-      - [[friston_2017_curiosity]]
-      - [[friston_2010]]
+      - "[[friston_2017_curiosity]]"
+      - "[[friston_2010]]"
   - type: cited_by
     links:
-      - [[parr_pezzulo_friston_2022]]
-      - [[da_costa_2020]]
+      - "[[parr_pezzulo_friston_2022]]"
+      - "[[da_costa_2020]]"
 ---
 
 # Working Memory, Attention, and Salience in Active Inference

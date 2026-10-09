@@ -9,18 +9,18 @@ tags:
 - information_theory
 - cognitive_systems
 semantic_relations:
-- type: implements
-  links:
-  - - path_integral_theory
-- type: extends
-  links:
-  - - information_theory
-- type: related
-  links:
-  - - - path_integral
-  - - - information_gain
-  - - - active_inference
-  - - - free_energy_principle
+  - type: implements
+    links:
+      - "[[path_integral_theory]]"
+  - type: extends
+    links:
+      - "[[information_theory]]"
+  - type: related
+    links:
+      - "[[path_integral]]"
+      - "[[information_gain]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
 ---
 
 

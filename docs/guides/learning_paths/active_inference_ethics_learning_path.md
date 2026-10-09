@@ -49,16 +49,11 @@ tags:
   - trustworthy-ai
 
 semantic_relations:
-
   - type: specializes
-
-    links: [[active_inference_learning_path]]
-
-  - type: relates
-
     links:
-
-
+      - "[[active_inference_learning_path]]"
+  - type: relates
+    links: []
 ---
 
 # Active Inference Ethics and Responsible AI Learning Path

@@ -16,17 +16,17 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]"
   - type: relates
     links:
-      - [[self_organization|Self-Organization]]
-      - [[emergence|Emergence]]
-      - [[complex_adaptation|Complex Adaptation]]
-      - [[critical_phenomena|Critical Phenomena]]
-      - [[resilience|Resilience]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
-      - [[knowledge_base/free_energy_principle/biology/homeostasis|Homeostasis]]
+      - "[[self_organization|Self-Organization]]"
+      - "[[emergence|Emergence]]"
+      - "[[complex_adaptation|Complex Adaptation]]"
+      - "[[critical_phenomena|Critical Phenomena]]"
+      - "[[resilience|Resilience]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
+      - "[[knowledge_base/free_energy_principle/biology/homeostasis|Homeostasis]]"
 ---
 
 # Network Dynamics under the Free Energy Principle

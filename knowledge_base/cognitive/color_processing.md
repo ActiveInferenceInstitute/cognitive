@@ -9,17 +9,17 @@ tags:
 - vision
 - color
 semantic_relations:
-- type: implements
-  links:
-  - - visual_perception
-- type: extends
-  links:
-  - - sensory_processing
-- type: related
-  links:
-  - - - pattern_recognition
-  - - - object_recognition
-  - - - visual_attention
+  - type: implements
+    links:
+      - "[[visual_perception]]"
+  - type: extends
+    links:
+      - "[[sensory_processing]]"
+  - type: related
+    links:
+      - "[[pattern_recognition]]"
+      - "[[object_recognition]]"
+      - "[[visual_attention]]"
 ---
 
 

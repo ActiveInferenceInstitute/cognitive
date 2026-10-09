@@ -10,23 +10,23 @@ tags:
 - bayesian-inference
 - statistical-physics
 semantic_relations:
-- type: foundation
-  links:
-  - - - renormalization_group
-  - - - probability_theory
-  - - - bayesian_inference
-  - - - bayes_theorem
-- type: implements
-  links:
-  - - - bayesian_networks
-  - - - bayesian_graph_theory
-  - - - hierarchical_models
-- type: related
-  links:
-  - - - path_integral_bayesian_inference
-  - - - scale_free_networks
-  - - - continuous_discrete_inference
-  - - - bayesian_generative_models
+  - type: foundation
+    links:
+      - "[[renormalization_group]]"
+      - "[[probability_theory]]"
+      - "[[bayesian_inference]]"
+      - "[[bayes_theorem]]"
+  - type: implements
+    links:
+      - "[[bayesian_networks]]"
+      - "[[bayesian_graph_theory]]"
+      - "[[hierarchical_models]]"
+  - type: related
+    links:
+      - "[[path_integral_bayesian_inference]]"
+      - "[[scale_free_networks]]"
+      - "[[continuous_discrete_inference]]"
+      - "[[bayesian_generative_models]]"
 ---
 
 

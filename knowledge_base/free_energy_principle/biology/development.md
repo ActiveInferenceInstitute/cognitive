@@ -14,13 +14,13 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
   - type: relates
     links:
-      - [[evolution|Evolution]]
-      - [[neural_systems|Neural Systems]]
-      - [[knowledge_base/free_energy_principle/cognitive/learning|Learning]]
+      - "[[evolution|Evolution]]"
+      - "[[neural_systems|Neural Systems]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/learning|Learning]]"
 ---
 
 # Ontogenesis as Hierarchical Inference

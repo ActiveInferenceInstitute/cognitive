@@ -9,18 +9,18 @@ tags:
 - connections
 - synthesis
 semantic_relations:
-- type: implements
-  links:
-  - - path_integral_information
-- type: extends
-  links:
-  - - mathematical_foundations
-- type: related
-  links:
-  - - - information_theory
-  - - - variational_methods
-  - - - active_inference
-  - - - free_energy_principle
+  - type: implements
+    links:
+      - "[[path_integral_information]]"
+  - type: extends
+    links:
+      - "[[mathematical_foundations]]"
+  - type: related
+    links:
+      - "[[information_theory]]"
+      - "[[variational_methods]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
 ---
 
 

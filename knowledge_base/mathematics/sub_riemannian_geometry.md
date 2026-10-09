@@ -9,15 +9,15 @@ tags:
 - control
 - metric
 semantic_relations:
-- type: foundation
-  links:
-  - - - differential_geometry
-  - - - contact_geometry
-- type: relates
-  links:
-  - - - control_theory
-  - - - metric_geometry
-  - - - geometric_mechanics
+  - type: foundation
+    links:
+      - "[[differential_geometry]]"
+      - "[[contact_geometry]]"
+  - type: relates
+    links:
+      - "[[control_theory]]"
+      - "[[metric_geometry]]"
+      - "[[geometric_mechanics]]"
 ---
 
 

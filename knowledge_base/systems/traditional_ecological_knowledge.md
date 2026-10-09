@@ -12,22 +12,22 @@ tags:
 - sustainability
 - cognition
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - sustainable_practices
-  - - - ecological_management
-  - - - adaptive_governance
-- type: implements
-  links:
-  - - - complex_systems
-  - - - network_science
-  - - - dynamical_systems
-- type: relates
-  links:
-  - - - knowledge_base/systems/Social-Ecological Systems
-  - - - collective_intelligence
-  - - - cultural_evolution
-  - - - cognitive_ecology
+  - type: foundation_for
+    links:
+      - "[[sustainable_practices]]"
+      - "[[ecological_management]]"
+      - "[[adaptive_governance]]"
+  - type: implements
+    links:
+      - "[[complex_systems]]"
+      - "[[network_science]]"
+      - "[[dynamical_systems]]"
+  - type: relates
+    links:
+      - "[[knowledge_base/systems/Social-Ecological Systems]]"
+      - "[[collective_intelligence]]"
+      - "[[cultural_evolution]]"
+      - "[[cognitive_ecology]]"
 ---
 
 

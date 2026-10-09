@@ -11,22 +11,22 @@ tags:
 - machine-learning
 - probabilistic-programming
 semantic_relations:
-- type: foundation
-  links:
-  - - - probability_theory
-  - - - bayesian_inference
-  - - - bayes_theorem
-- type: implements
-  links:
-  - - - latent_variable_models
-  - - - bayesian_networks
-  - - - variational_inference
-- type: related
-  links:
-  - - - bayesian_renormalization
-  - - - continuous_discrete_inference
-  - - - path_integral_bayesian_inference
-  - - - markov_chain_monte_carlo
+  - type: foundation
+    links:
+      - "[[probability_theory]]"
+      - "[[bayesian_inference]]"
+      - "[[bayes_theorem]]"
+  - type: implements
+    links:
+      - "[[latent_variable_models]]"
+      - "[[bayesian_networks]]"
+      - "[[variational_inference]]"
+  - type: related
+    links:
+      - "[[bayesian_renormalization]]"
+      - "[[continuous_discrete_inference]]"
+      - "[[path_integral_bayesian_inference]]"
+      - "[[markov_chain_monte_carlo]]"
 ---
 
 

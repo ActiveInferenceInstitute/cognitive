@@ -14,16 +14,16 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[core_principle|Core Principle]]
+      - "[[core_principle|Core Principle]]"
   - type: relates
     links:
-      - [[variational_free_energy|Variational Free Energy]]
-      - [[information_geometry|Information Geometry]]
-      - [[knowledge_base/free_energy_principle/biology/homeostasis|Homeostasis]]
-      - [[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]
+      - "[[variational_free_energy|Variational Free Energy]]"
+      - "[[information_geometry|Information Geometry]]"
+      - "[[knowledge_base/free_energy_principle/biology/homeostasis|Homeostasis]]"
+      - "[[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]"
   - type: extends
     links:
-      - [[advanced_formulations|Advanced Formulations]]
+      - "[[advanced_formulations|Advanced Formulations]]"
 ---
 
 # Markov Blankets: Statistical Boundaries and Bayesian Mechanics

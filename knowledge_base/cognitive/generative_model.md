@@ -9,14 +9,14 @@ tags:
 - active_inference
 - computation
 semantic_relations:
-- type: implements
-  links:
-  - - active_inference
-- type: relates
-  links:
-  - - - model_architecture
-  - - - probabilistic_inference
-  - - - bayesian_inference
+  - type: implements
+    links:
+      - "[[active_inference]]"
+  - type: relates
+    links:
+      - "[[model_architecture]]"
+      - "[[probabilistic_inference]]"
+      - "[[bayesian_inference]]"
 ---
 
 

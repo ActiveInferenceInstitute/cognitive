@@ -10,23 +10,23 @@ tags:
 - continuous-systems
 - discrete-systems
 semantic_relations:
-- type: foundation
-  links:
-  - - - probability_theory
-  - - - bayesian_inference
-  - - - bayes_theorem
-  - - - stochastic_processes
-- type: implements
-  links:
-  - - - bayesian_networks
-  - - - bayesian_graph_theory
-  - - - path_integral_bayesian_inference
-- type: related
-  links:
-  - - - bayesian_renormalization
-  - - - bayesian_generative_models
-  - - - variational_inference
-  - - - belief_updating
+  - type: foundation
+    links:
+      - "[[probability_theory]]"
+      - "[[bayesian_inference]]"
+      - "[[bayes_theorem]]"
+      - "[[stochastic_processes]]"
+  - type: implements
+    links:
+      - "[[bayesian_networks]]"
+      - "[[bayesian_graph_theory]]"
+      - "[[path_integral_bayesian_inference]]"
+  - type: related
+    links:
+      - "[[bayesian_renormalization]]"
+      - "[[bayesian_generative_models]]"
+      - "[[variational_inference]]"
+      - "[[belief_updating]]"
 ---
 
 

@@ -8,15 +8,15 @@ tags:
 - computation
 - foundations
 semantic_relations:
-- type: foundation
-  links:
-  - - - real_analysis
-  - - - linear_algebra
-- type: relates
-  links:
-  - - - differential_equations
-  - - - optimization_theory
-  - - - numerical_methods
+  - type: foundation
+    links:
+      - "[[real_analysis]]"
+      - "[[linear_algebra]]"
+  - type: relates
+    links:
+      - "[[differential_equations]]"
+      - "[[optimization_theory]]"
+      - "[[numerical_methods]]"
 ---
 
 

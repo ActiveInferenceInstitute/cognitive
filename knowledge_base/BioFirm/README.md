@@ -13,9 +13,9 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[biofirm_framework]]
-      - [[active_inference_connections]]
-      - [[ecological_active_inference]]
+      - "[[biofirm_framework]]"
+      - "[[active_inference_connections]]"
+      - "[[ecological_active_inference]]"
 ---
 
 # BioFirm Knowledge Base

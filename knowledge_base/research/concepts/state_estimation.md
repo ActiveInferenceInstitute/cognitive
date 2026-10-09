@@ -7,9 +7,14 @@ updated: 2026-02-07
 tags: [state_estimation, filtering, inference, perception]
 semantic_relations:
   - type: implements
-    links: [[knowledge_base/mathematics/variational_inference]]
+    links:
+      - "[[knowledge_base/mathematics/variational_inference]]"
   - type: relates
-    links: [[[hidden_states]], [[belief_evolution]], [[knowledge_base/cognitive/perception_processing]], [[knowledge_base/cognitive/belief_updating]]]
+    links:
+      - "[[hidden_states]]"
+      - "[[belief_evolution]]"
+      - "[[knowledge_base/cognitive/perception_processing]]"
+      - "[[knowledge_base/cognitive/belief_updating]]"
 ---
 
 # State Estimation

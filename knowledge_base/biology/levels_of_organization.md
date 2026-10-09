@@ -7,11 +7,11 @@ tags:
 - hierarchy
 - systems
 semantic_relations:
-- type: relates
-  links:
-  - systems_biology
-  - ecological_networks
-  - systems_theory
+  - type: relates
+    links:
+      - "[[systems_biology]]"
+      - "[[ecological_networks]]"
+      - "[[systems_theory]]"
 ---
 
 

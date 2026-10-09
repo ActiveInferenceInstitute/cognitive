@@ -9,15 +9,15 @@ tags:
 - cognitive_modeling
 - feature_extraction
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_modeling_concepts
-- type: relates
-  links:
-  - - - model_architecture
-  - - - belief_updating
-  - - - memory_systems
-  - - - predictive_processing
+  - type: implements
+    links:
+      - "[[cognitive_modeling_concepts]]"
+  - type: relates
+    links:
+      - "[[model_architecture]]"
+      - "[[belief_updating]]"
+      - "[[memory_systems]]"
+      - "[[predictive_processing]]"
 ---
 
 

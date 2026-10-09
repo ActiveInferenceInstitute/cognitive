@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../config/README|Configuration reference]]'
+      - "[[../config/README|Configuration reference]]"
 ---
 
 # Configuration tools

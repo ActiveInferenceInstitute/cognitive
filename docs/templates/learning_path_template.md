@@ -39,19 +39,13 @@ completion_time: "6-8 weeks"
 certification_track: false
 
 semantic_relations:
-
   - type: template_for
-
-    links: [[learning_paths]]
-
-  - type: related_to
-
     links:
-
-      - [[curriculum_design]]
-
-      - [[educational_standards]]
-
+      - "[[learning_paths]]"
+  - type: related_to
+    links:
+      - "[[curriculum_design]]"
+      - "[[educational_standards]]"
 ---
 
 # [Learning Path Name]

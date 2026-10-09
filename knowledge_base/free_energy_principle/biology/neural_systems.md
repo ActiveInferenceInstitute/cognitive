@@ -14,14 +14,14 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]"
   - type: relates
     links:
-      - [[homeostasis|Homeostasis]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
-      - [[knowledge_base/free_energy_principle/cognitive/attention|Attention]]
-      - [[knowledge_base/free_energy_principle/cognitive/learning|Learning]]
+      - "[[homeostasis|Homeostasis]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/attention|Attention]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/learning|Learning]]"
 ---
 
 # Neural Implementation of Free Energy Minimization

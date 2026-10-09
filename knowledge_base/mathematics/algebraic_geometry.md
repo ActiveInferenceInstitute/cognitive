@@ -9,15 +9,15 @@ tags:
 - algebra
 - schemes
 semantic_relations:
-- type: foundation
-  links:
-  - - - commutative_algebra
-  - - - category_theory
-- type: relates
-  links:
-  - - - differential_geometry
-  - - - complex_geometry
-  - - - number_theory
+  - type: foundation
+    links:
+      - "[[commutative_algebra]]"
+      - "[[category_theory]]"
+  - type: relates
+    links:
+      - "[[differential_geometry]]"
+      - "[[complex_geometry]]"
+      - "[[number_theory]]"
 ---
 
 

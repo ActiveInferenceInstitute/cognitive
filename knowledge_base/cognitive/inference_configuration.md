@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[system_definition]]
-      - [[learning_mechanisms]]
-      - [[precision_weighting]]
-      - [[policy_evaluation]]
+      - "[[system_definition]]"
+      - "[[learning_mechanisms]]"
+      - "[[precision_weighting]]"
+      - "[[policy_evaluation]]"
 ---
 
 # Inference Configuration

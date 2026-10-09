@@ -7,7 +7,12 @@ updated: 2026-02-07
 tags: [statistics, analysis, methods, research]
 semantic_relations:
   - type: relates
-    links: [[[bayesian_analysis]], [[frequentist_analysis]], [[hypothesis_testing]], [[power_analysis]], [[model_comparison]]]
+    links:
+      - "[[bayesian_analysis]]"
+      - "[[frequentist_analysis]]"
+      - "[[hypothesis_testing]]"
+      - "[[power_analysis]]"
+      - "[[model_comparison]]"
 ---
 
 # Statistical Analysis

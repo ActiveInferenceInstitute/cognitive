@@ -25,27 +25,16 @@ tags:
   - cognitive-science
 
 semantic_relations:
-
   - type: foundation_for
-
     links:
-
-      - [[active_inference_cognitive_learning_path]]
-
-      - [[active_inference_neuroscience_learning_path]]
-
+      - "[[active_inference_cognitive_learning_path]]"
+      - "[[active_inference_neuroscience_learning_path]]"
   - type: relates
-
     links:
-
-      - [[knowledge_base/cognitive/predictive_processing]]
-
-      - [[active_inference_learning_path]]
-
-      - [[active_inference_pragmatism_learning_path]]
-
-      - [[active_inference_cognitive_learning_path]]
-
+      - "[[knowledge_base/cognitive/predictive_processing]]"
+      - "[[active_inference_learning_path]]"
+      - "[[active_inference_pragmatism_learning_path]]"
+      - "[[active_inference_cognitive_learning_path]]"
 ---
 
 # Active Inference and Observation Learning Path

@@ -9,18 +9,18 @@ tags:
 - executive_function
 - computation
 semantic_relations:
-- type: implements
-  links:
-  - - control_processes
-- type: extends
-  links:
-  - - executive_processes
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - attentional_control
-  - - - working_memory
+  - type: implements
+    links:
+      - "[[control_processes]]"
+  - type: extends
+    links:
+      - "[[executive_processes]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[attentional_control]]"
+      - "[[working_memory]]"
 ---
 
 

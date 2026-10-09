@@ -8,11 +8,11 @@ tags:
 - neuroscience
 - bayesian_inference
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - active_inference
-  - - - predictive_coding
-  - - - variational_inference
+  - type: foundation_for
+    links:
+      - "[[active_inference]]"
+      - "[[predictive_coding]]"
+      - "[[variational_inference]]"
 ---
 
 

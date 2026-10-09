@@ -16,12 +16,12 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
-      - [[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]
-      - [[knowledge_base/free_energy_principle/implementations/robotics|Robotics]]
-      - [[knowledge_base/free_energy_principle/philosophy/epistemology|Epistemology]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]"
+      - "[[knowledge_base/free_energy_principle/implementations/robotics|Robotics]]"
+      - "[[knowledge_base/free_energy_principle/philosophy/epistemology|Epistemology]]"
 ---
 
 # AI Safety and the Free Energy Principle

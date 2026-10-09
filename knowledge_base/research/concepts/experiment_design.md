@@ -7,7 +7,11 @@ updated: 2026-02-07
 tags: [experimental_design, methodology, research, active_inference]
 semantic_relations:
   - type: relates
-    links: [[[control_variables]], [[hypothesis_testing]], [[power_analysis]], [[sampling_strategies]]]
+    links:
+      - "[[control_variables]]"
+      - "[[hypothesis_testing]]"
+      - "[[power_analysis]]"
+      - "[[sampling_strategies]]"
 ---
 
 # Experiment Design

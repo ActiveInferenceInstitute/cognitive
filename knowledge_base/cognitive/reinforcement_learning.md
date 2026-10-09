@@ -11,9 +11,9 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[active_inference]]
-      - [[../mathematics/optimal_control]]
-      - [[../mathematics/expected_free_energy]]
+      - "[[active_inference]]"
+      - "[[../mathematics/optimal_control]]"
+      - "[[../mathematics/expected_free_energy]]"
 ---
 
 # Reinforcement Learning (Comparison)

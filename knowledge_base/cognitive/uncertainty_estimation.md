@@ -9,18 +9,18 @@ tags:
 - uncertainty
 - probability
 semantic_relations:
-- type: implements
-  links:
-  - - probabilistic_inference
-- type: extends
-  links:
-  - - bayesian_inference
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - precision_weighting
-  - - - belief_updating
+  - type: implements
+    links:
+      - "[[probabilistic_inference]]"
+  - type: extends
+    links:
+      - "[[bayesian_inference]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[precision_weighting]]"
+      - "[[belief_updating]]"
 ---
 
 

@@ -17,20 +17,20 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: implements
-  links:
-  - - - active_inference
-  - - - variational_inference
-- type: mathematical_basis
-  links:
-  - - - information_theory
-  - - - probability_theory
-  - - - optimization_theory
-- type: relates
-  links:
-  - - - expected_free_energy
-  - - - path_integral_free_energy
-  - - - predictive_coding
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[variational_inference]]"
+  - type: mathematical_basis
+    links:
+      - "[[information_theory]]"
+      - "[[probability_theory]]"
+      - "[[optimization_theory]]"
+  - type: relates
+    links:
+      - "[[expected_free_energy]]"
+      - "[[path_integral_free_energy]]"
+      - "[[predictive_coding]]"
 ---
 
 

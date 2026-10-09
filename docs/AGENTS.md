@@ -12,18 +12,18 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Documentation hub]]'
-      - '[[api/README|API]]'
-      - '[[config/README|Configuration]]'
-      - '[[development/README|Development]]'
-      - '[[examples/README|Examples]]'
-      - '[[guides/README|Guides]]'
-      - '[[implementation/README|Implementation]]'
-      - '[[research/README|Research]]'
-      - '[[tools/README|Tools]]'
-      - '[[templates/README|Templates]]'
-      - '[[repo_docs/README|Repository documentation]]'
-      - '[[manuscript/README|Manuscript]]'
+      - "[[README|Documentation hub]]"
+      - "[[api/README|API]]"
+      - "[[config/README|Configuration]]"
+      - "[[development/README|Development]]"
+      - "[[examples/README|Examples]]"
+      - "[[guides/README|Guides]]"
+      - "[[implementation/README|Implementation]]"
+      - "[[research/README|Research]]"
+      - "[[tools/README|Tools]]"
+      - "[[templates/README|Templates]]"
+      - "[[repo_docs/README|Repository documentation]]"
+      - "[[manuscript/README|Manuscript]]"
 ---
 
 # Documentation instructions

@@ -31,24 +31,23 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[repo_docs/documentation_standards]]
-      - [[repo_docs/ai_documentation_style]]
+      - "[[repo_docs/documentation_standards]]"
+      - "[[repo_docs/ai_documentation_style]]"
   - type: organizes
     links:
-      - [[README]]
-      - [[AGENTS]]
-      - [[repo_docs/content_management]]
+      - "[[README]]"
+      - "[[AGENTS]]"
+      - "[[repo_docs/content_management]]"
   - type: plans
     links:
-      - [[repo_docs/folder_structure]]
-      - [[knowledge_base/linking_standards]]
-      - [[repo_docs/obsidian_linking]]
+      - "[[repo_docs/folder_structure]]"
+      - "[[knowledge_base/linking_standards]]"
+      - "[[repo_docs/obsidian_linking]]"
   - type: documents
     links:
-      - [[knowledge_base/index]]
-      - [[agents/agent_docs_readme]]
-      - [[research/AGENTS]]
-
+      - "[[knowledge_base/index]]"
+      - "[[agents/agent_docs_readme]]"
+      - "[[research/AGENTS]]"
 ---
 
 # Documentation Roadmap

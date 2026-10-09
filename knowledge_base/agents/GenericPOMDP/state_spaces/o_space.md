@@ -13,20 +13,20 @@ tags:
 - uncertainty
 - inference
 semantic_relations:
-- type: part_of
-  links:
-  - - - pomdp_framework
-  - - - state_representation
-- type: relates_to
-  links:
-  - - - s_space
-  - - - a_space
-  - - - belief_space
-- type: influences
-  links:
-  - - - belief_updating
-  - - - perception_model
-  - - - active_inference
+  - type: part_of
+    links:
+      - "[[pomdp_framework]]"
+      - "[[state_representation]]"
+  - type: relates_to
+    links:
+      - "[[s_space]]"
+      - "[[a_space]]"
+      - "[[belief_space]]"
+  - type: influences
+    links:
+      - "[[belief_updating]]"
+      - "[[perception_model]]"
+      - "[[active_inference]]"
 ---
 
 

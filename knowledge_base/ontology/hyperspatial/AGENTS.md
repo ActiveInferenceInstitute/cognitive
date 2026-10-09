@@ -13,9 +13,9 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Hyperspatial ontology]]'
-      - '[[hyperspace_ontology|Hyperspace ontology]]'
-      - '[[../AGENTS|Ontology domain]]'
+      - "[[README|Hyperspatial ontology]]"
+      - "[[hyperspace_ontology|Hyperspace ontology]]"
+      - "[[../AGENTS|Ontology domain]]"
 ---
 
 # Hyperspatial Ontology Agents

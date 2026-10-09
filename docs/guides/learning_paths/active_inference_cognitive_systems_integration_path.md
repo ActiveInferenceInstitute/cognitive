@@ -23,21 +23,12 @@ tags:
   - architecture
 
 semantic_relations:
-
   - type: prerequisite
-
     links:
-
-      - [[active_inference_cognitive_learning_path]]
-
-
+      - "[[active_inference_cognitive_learning_path]]"
   - type: related
-
     links:
-
-      - [[active_inference_neuroscience_learning_path]]
-
-
+      - "[[active_inference_neuroscience_learning_path]]"
 ---
 
 # Cognitive Systems Integration Learning Path

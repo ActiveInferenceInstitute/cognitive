@@ -9,17 +9,17 @@ tags:
 - vision
 - depth
 semantic_relations:
-- type: implements
-  links:
-  - - visual_perception
-- type: extends
-  links:
-  - - depth_perception
-- type: related
-  links:
-  - - - stereopsis
-  - - - eye_movements
-  - - - visual_development
+  - type: implements
+    links:
+      - "[[visual_perception]]"
+  - type: extends
+    links:
+      - "[[depth_perception]]"
+  - type: related
+    links:
+      - "[[stereopsis]]"
+      - "[[eye_movements]]"
+      - "[[visual_development]]"
 ---
 
 

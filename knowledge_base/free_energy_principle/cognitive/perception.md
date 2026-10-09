@@ -15,22 +15,22 @@ aliases: [fep_perception, perception_fep, predictive_perception]
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy]]
-      - [[knowledge_base/cognitive/predictive_coding]]
-      - [[knowledge_base/cognitive/attention_mechanisms]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy]]"
+      - "[[knowledge_base/cognitive/predictive_coding]]"
+      - "[[knowledge_base/cognitive/attention_mechanisms]]"
   - type: implements
     links:
-      - [[knowledge_base/cognitive/perceptual_inference]]
-      - [[knowledge_base/free_energy_principle/biology/neural_systems]]
-      - [[knowledge_base/free_energy_principle/implementations/neural_networks]]
-      - [[attention]]
+      - "[[knowledge_base/cognitive/perceptual_inference]]"
+      - "[[knowledge_base/free_energy_principle/biology/neural_systems]]"
+      - "[[knowledge_base/free_energy_principle/implementations/neural_networks]]"
+      - "[[attention]]"
   - type: relates
     links:
-      - [[learning]]
-      - [[decision_making]]
-      - [[consciousness]]
-      - [[knowledge_base/free_energy_principle/mathematics/information_geometry]]
+      - "[[learning]]"
+      - "[[decision_making]]"
+      - "[[consciousness]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/information_geometry]]"
 ---
 
 # Free Energy Principle and Perception

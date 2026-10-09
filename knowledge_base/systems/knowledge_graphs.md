@@ -12,17 +12,17 @@ tags:
 semantic_relations:
   - type: related
     links:
-      - [[network_theory]]
-      - [[complex_systems]]
-      - [[knowledge_base/cognitive/social_cognition]]
+      - "[[network_theory]]"
+      - "[[complex_systems]]"
+      - "[[knowledge_base/cognitive/social_cognition]]"
   - type: applied_in
     links:
-      - [[code/Things/KG_Multi_Agent/README]]
-      - [[knowledge_base/cognitive/research_education]]
+      - "[[code/Things/KG_Multi_Agent/README]]"
+      - "[[knowledge_base/cognitive/research_education]]"
   - type: foundation
     links:
-      - [[knowledge_base/mathematics/graphical_models]]
-      - [[knowledge_base/mathematics/information_theory]]
+      - "[[knowledge_base/mathematics/graphical_models]]"
+      - "[[knowledge_base/mathematics/information_theory]]"
 ---
 
 # Knowledge Graphs

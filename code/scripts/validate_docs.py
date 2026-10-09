@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from scripts.check_markdown_links import verify_markdown_link_report
+from scripts.normalize_frontmatter import unquoted_links
 from scripts.verify_links import verify_link_report
 
 TERM_POLICY_PATH = Path("docs/policy/documentation_terms.yaml")
@@ -78,6 +79,14 @@ def _validate_frontmatter(path: Path, content: str) -> list[str]:
     for key, value in parsed.items():
         if isinstance(value, str) and value.strip().lower() in template_values:
             return [f"{path}: template frontmatter value for '{key}': '{value.strip()}'"]
+    # An unquoted [[link]] parses as a nested list, so the relation is data but
+    # no longer a link Obsidian can see. normalize_frontmatter.py fixes it.
+    unquoted = unquoted_links(parsed)
+    if unquoted:
+        return [
+            f"{path}: semantic_relations links must be quoted wiki links "
+            f"(run normalize_frontmatter.py --write): {unquoted[0]}"
+        ]
     return []
 
 

@@ -9,20 +9,20 @@ tags:
 - continuous_time
 - generalized_coordinates
 semantic_relations:
-- type: foundation
-  links:
-  - - - continuous_time_agent
-  - - - generalized_coordinates
-  - - - differential_equations
-- type: implements
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-- type: relates
-  links:
-  - - - path_integral_free_energy
-  - - - variational_methods
-  - - - dynamical_systems
+  - type: foundation
+    links:
+      - "[[continuous_time_agent]]"
+      - "[[generalized_coordinates]]"
+      - "[[differential_equations]]"
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+  - type: relates
+    links:
+      - "[[path_integral_free_energy]]"
+      - "[[variational_methods]]"
+      - "[[dynamical_systems]]"
 ---
 
 

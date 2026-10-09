@@ -9,18 +9,18 @@ tags:
 - time
 - perception
 semantic_relations:
-- type: implements
-  links:
-  - - attention_mechanisms
-- type: extends
-  links:
-  - - selective_attention
-- type: related
-  links:
-  - - - attentional_blink
-  - - - temporal_processing
-  - - - active_inference
-  - - - free_energy_principle
+  - type: implements
+    links:
+      - "[[attention_mechanisms]]"
+  - type: extends
+    links:
+      - "[[selective_attention]]"
+  - type: related
+    links:
+      - "[[attentional_blink]]"
+      - "[[temporal_processing]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
 ---
 
 

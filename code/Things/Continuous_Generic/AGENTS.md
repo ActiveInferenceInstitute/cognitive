@@ -9,7 +9,7 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[knowledge_base/cognitive/continuous_time_active_inference]]
+      - "[[knowledge_base/cognitive/continuous_time_active_inference]]"
 ---
 
 # Continuous Generic Agent

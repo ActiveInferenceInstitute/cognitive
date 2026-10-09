@@ -8,15 +8,15 @@ tags:
 - coordination
 - multi-agent
 semantic_relations:
-- type: extends
-  links:
-  - swarm_intelligence
-  - stigmergic_coordination
-- type: relates
-  links:
-  - social_insect_cognition
-  - cooperation
-  - active_inference
+  - type: extends
+    links:
+      - "[[swarm_intelligence]]"
+      - "[[stigmergic_coordination]]"
+  - type: relates
+    links:
+      - "[[social_insect_cognition]]"
+      - "[[cooperation]]"
+      - "[[active_inference]]"
 ---
 
 

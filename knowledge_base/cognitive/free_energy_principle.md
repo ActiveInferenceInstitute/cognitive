@@ -17,38 +17,38 @@ tags:
 - dynamical_systems
 - self_organization
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - active_inference
-  - - - predictive_coding
-  - - - hierarchical_inference
-- type: foundation
-  links:
-  - - - variational_inference
-  - - - information_theory
-  - - - dynamical_systems
-- type: relates
-  links:
-  - - - stochastic_processes
-  - - - optimization_theory
-  - - - precision_weighting
-  - - - bayesian_mechanics
-- type: implements
-  links:
-  - - - self_organization
-  - - - adaptive_behavior
-  - - - homeostasis
-  - - - autopoiesis
-- type: mathematical_basis
-  links:
-  - - - variational_calculus
-  - - - information_geometry
-  - - - stochastic_processes
-  - - - differential_geometry
-  - - - measure_theory
-- type: extends
-  links:
-  - - knowledge_base/mathematics/variational_inference
+  - type: foundation_for
+    links:
+      - "[[active_inference]]"
+      - "[[predictive_coding]]"
+      - "[[hierarchical_inference]]"
+  - type: foundation
+    links:
+      - "[[variational_inference]]"
+      - "[[information_theory]]"
+      - "[[dynamical_systems]]"
+  - type: relates
+    links:
+      - "[[stochastic_processes]]"
+      - "[[optimization_theory]]"
+      - "[[precision_weighting]]"
+      - "[[bayesian_mechanics]]"
+  - type: implements
+    links:
+      - "[[self_organization]]"
+      - "[[adaptive_behavior]]"
+      - "[[homeostasis]]"
+      - "[[autopoiesis]]"
+  - type: mathematical_basis
+    links:
+      - "[[variational_calculus]]"
+      - "[[information_geometry]]"
+      - "[[stochastic_processes]]"
+      - "[[differential_geometry]]"
+      - "[[measure_theory]]"
+  - type: extends
+    links:
+      - "[[knowledge_base/mathematics/variational_inference]]"
 ---
 
 

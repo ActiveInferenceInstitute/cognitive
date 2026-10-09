@@ -12,15 +12,15 @@ tags:
 semantic_relations:
   - type: defines
     links:
-      - [[knowledge_base/cognitive/active_inference]]
-      - [[knowledge_base/cognitive/predictive_processing]]
-      - [[knowledge_base/cognitive/free_energy_principle]]
+      - "[[knowledge_base/cognitive/active_inference]]"
+      - "[[knowledge_base/cognitive/predictive_processing]]"
+      - "[[knowledge_base/cognitive/free_energy_principle]]"
   - type: relates
     links:
-      - [[knowledge_base/mathematics/information_theory]]
-      - [[knowledge_base/systems/systems_theory]]
-      - [[knowledge_base/mathematics/category_theory]]
-      - [[knowledge_base/systems/complex_systems]]
+      - "[[knowledge_base/mathematics/information_theory]]"
+      - "[[knowledge_base/systems/systems_theory]]"
+      - "[[knowledge_base/mathematics/category_theory]]"
+      - "[[knowledge_base/systems/complex_systems]]"
 ---
 
 ---

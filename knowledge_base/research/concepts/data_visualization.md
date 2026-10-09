@@ -7,7 +7,10 @@ updated: 2026-02-07
 tags: [visualization, plotting, analysis, data_science]
 semantic_relations:
   - type: relates
-    links: [[[policy_visualization]], [[knowledge_base/cognitive/visualization_suite]], [[knowledge_base/cognitive/graph_visualization]]]
+    links:
+      - "[[policy_visualization]]"
+      - "[[knowledge_base/cognitive/visualization_suite]]"
+      - "[[knowledge_base/cognitive/graph_visualization]]"
 ---
 
 # Data Visualization

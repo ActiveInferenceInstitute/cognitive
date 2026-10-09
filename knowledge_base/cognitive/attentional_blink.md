@@ -9,18 +9,18 @@ tags:
 - temporal
 - limitations
 semantic_relations:
-- type: implements
-  links:
-  - - temporal_attention
-- type: extends
-  links:
-  - - attention_mechanisms
-- type: related
-  links:
-  - - - temporal_processing
-  - - - active_inference
-  - - - free_energy_principle
-  - - - attention_limitations
+  - type: implements
+    links:
+      - "[[temporal_attention]]"
+  - type: extends
+    links:
+      - "[[attention_mechanisms]]"
+  - type: related
+    links:
+      - "[[temporal_processing]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[attention_limitations]]"
 ---
 
 

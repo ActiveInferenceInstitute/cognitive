@@ -15,21 +15,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - geometric_unity
-- type: implements
-  links:
-  - - - tensegrity
-  - - - geodesic_geometry
-  - - - vector_equilibrium
-- type: relates
-  links:
-  - - - complex_systems
-  - - - information_geometry
-  - - - network_theory
+  - type: foundation
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[geometric_unity]]"
+  - type: implements
+    links:
+      - "[[tensegrity]]"
+      - "[[geodesic_geometry]]"
+      - "[[vector_equilibrium]]"
+  - type: relates
+    links:
+      - "[[complex_systems]]"
+      - "[[information_geometry]]"
+      - "[[network_theory]]"
 ---
 
 

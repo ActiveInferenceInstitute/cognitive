@@ -9,15 +9,15 @@ tags:
 - mechanics
 - physics
 semantic_relations:
-- type: foundation
-  links:
-  - - - differential_geometry
-  - - - hamiltonian_mechanics
-- type: relates
-  links:
-  - - - complex_geometry
-  - - - poisson_geometry
-  - - - contact_geometry
+  - type: foundation
+    links:
+      - "[[differential_geometry]]"
+      - "[[hamiltonian_mechanics]]"
+  - type: relates
+    links:
+      - "[[complex_geometry]]"
+      - "[[poisson_geometry]]"
+      - "[[contact_geometry]]"
 ---
 
 

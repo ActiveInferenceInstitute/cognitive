@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/research/environmental_science]]
-      - [[knowledge_base/biology/conservation_biology_social_insects]]
+      - "[[knowledge_base/research/environmental_science]]"
+      - "[[knowledge_base/biology/conservation_biology_social_insects]]"
 ---
 
 # Conservation Biology

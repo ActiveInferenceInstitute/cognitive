@@ -7,9 +7,13 @@ updated: 2026-02-07
 tags: [frequentist, statistics, hypothesis_testing, p_values]
 semantic_relations:
   - type: contrasts_with
-    links: [[bayesian_analysis]]
+    links:
+      - "[[bayesian_analysis]]"
   - type: relates
-    links: [[[hypothesis_testing]], [[power_analysis]], [[statistical_analysis]]]
+    links:
+      - "[[hypothesis_testing]]"
+      - "[[power_analysis]]"
+      - "[[statistical_analysis]]"
 ---
 
 # Frequentist Analysis

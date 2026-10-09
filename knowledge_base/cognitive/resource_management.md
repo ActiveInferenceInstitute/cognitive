@@ -9,18 +9,18 @@ tags:
 - control
 - efficiency
 semantic_relations:
-- type: implements
-  links:
-  - - control_processes
-- type: extends
-  links:
-  - - performance_optimization
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - energy_optimization
-  - - - attention_allocation
+  - type: implements
+    links:
+      - "[[control_processes]]"
+  - type: extends
+    links:
+      - "[[performance_optimization]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[energy_optimization]]"
+      - "[[attention_allocation]]"
 ---
 
 

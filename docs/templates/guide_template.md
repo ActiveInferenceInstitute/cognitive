@@ -17,19 +17,13 @@ tags:
   - documentation
 
 semantic_relations:
-
   - type: implements
-
-    links: [[docs/repo_docs/documentation_standards]]
-
-  - type: relates
-
     links:
-
-      - [[template_guide]]
-
-      - [[ai_concept_template]]
-
+      - "[[docs/repo_docs/documentation_standards]]"
+  - type: relates
+    links:
+      - "[[template_guide]]"
+      - "[[ai_concept_template]]"
 ---
 
 # Guide Template
@@ -174,9 +168,9 @@ Available commands.
 
 ## Related Documentation
 
-- related_guide_1
+- [[related_guide_1]]
 
-- related_guide_2
+- [[related_guide_2]]
 
 ```
 
@@ -308,15 +302,15 @@ semantic_relations:
 
   - type: implements
 
-    links: documentation_standards
+    links: [[documentation_standards]]
 
   - type: relates
 
     links:
 
-      - installation_guide
+      - [[installation_guide]]
 
-      - basic_concepts
+      - [[basic_concepts]]
 
 ---
 
@@ -354,15 +348,15 @@ semantic_relations:
 
   - type: implements
 
-    links: configuration_standards
+    links: [[configuration_standards]]
 
   - type: relates
 
     links:
 
-      - performance_tuning
+      - [[performance_tuning]]
 
-      - security_hardening
+      - [[security_hardening]]
 
 ---
 

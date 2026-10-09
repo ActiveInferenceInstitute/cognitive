@@ -9,18 +9,18 @@ tags:
 - temporal
 - integration
 semantic_relations:
-- type: implements
-  links:
-  - - memory_systems
-- type: extends
-  links:
-  - - declarative_memory
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - temporal_binding
-  - - - temporal_integration
+  - type: implements
+    links:
+      - "[[memory_systems]]"
+  - type: extends
+    links:
+      - "[[declarative_memory]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[temporal_binding]]"
+      - "[[temporal_integration]]"
 ---
 
 

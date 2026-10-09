@@ -10,9 +10,9 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[homeostasis]]
-      - [[allostatic_regulation]]
-      - [[levels_of_organization]]
+      - "[[homeostasis]]"
+      - "[[allostatic_regulation]]"
+      - "[[levels_of_organization]]"
 ---
 
 # Physiology

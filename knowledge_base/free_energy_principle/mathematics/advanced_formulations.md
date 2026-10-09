@@ -14,18 +14,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[core_principle|Core Principle]]
-      - [[markov_blankets|Markov Blankets]]
-      - [[information_geometry|Information Geometry]]
+      - "[[core_principle|Core Principle]]"
+      - "[[markov_blankets|Markov Blankets]]"
+      - "[[information_geometry|Information Geometry]]"
   - type: extends
     links:
-      - [[variational_free_energy|Variational Free Energy]]
-      - [[expected_free_energy|Expected Free Energy]]
+      - "[[variational_free_energy|Variational Free Energy]]"
+      - "[[expected_free_energy|Expected Free Energy]]"
   - type: relates
     links:
-      - [[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]
-      - [[knowledge_base/free_energy_principle/systems/emergence|Emergence]]
-      - [[knowledge_base/free_energy_principle/philosophy/epistemology|Epistemology]]
+      - "[[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]"
+      - "[[knowledge_base/free_energy_principle/systems/emergence|Emergence]]"
+      - "[[knowledge_base/free_energy_principle/philosophy/epistemology|Epistemology]]"
 ---
 
 # Advanced Formulations of the Free Energy Principle

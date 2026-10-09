@@ -12,18 +12,18 @@ tags:
 semantic_relations:
   - type: includes
     links:
-      - [[belief_propagation]]
-      - [[variational_inference]]
-      - [[message_passing]]
+      - "[[belief_propagation]]"
+      - "[[variational_inference]]"
+      - "[[message_passing]]"
   - type: operates_on
     links:
-      - [[graphical_models]]
-      - [[factor_graphs]]
-      - [[generative_models]]
+      - "[[graphical_models]]"
+      - "[[factor_graphs]]"
+      - "[[generative_models]]"
   - type: foundation_for
     links:
-      - [[active_inference_theory]]
-      - [[free_energy_principle]]
+      - "[[active_inference_theory]]"
+      - "[[free_energy_principle]]"
 ---
 
 # Inference Algorithms

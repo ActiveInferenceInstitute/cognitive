@@ -9,17 +9,17 @@ tags:
 - vision
 - spatial
 semantic_relations:
-- type: implements
-  links:
-  - - visual_perception
-- type: extends
-  links:
-  - - spatial_vision
-- type: related
-  links:
-  - - - foveal_vision
-  - - - visual_attention
-  - - - motion_perception
+  - type: implements
+    links:
+      - "[[visual_perception]]"
+  - type: extends
+    links:
+      - "[[spatial_vision]]"
+  - type: related
+    links:
+      - "[[foveal_vision]]"
+      - "[[visual_attention]]"
+      - "[[motion_perception]]"
 ---
 
 

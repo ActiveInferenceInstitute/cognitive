@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/research/economic_policy]]
-      - [[knowledge_base/research/financial_systems]]
+      - "[[knowledge_base/research/economic_policy]]"
+      - "[[knowledge_base/research/financial_systems]]"
 ---
 
 # Market Dynamics

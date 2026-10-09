@@ -13,12 +13,12 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Philosophy knowledge base]]'
-      - '[[philosophy_of_mind|Philosophy of mind]]'
-      - '[[pragmatism|Pragmatism]]'
-      - '[[enactivism|Enactivism]]'
-      - '[[operationalism|Operationalism]]'
-      - '[[dark_room_problem|Dark room problem]]'
+      - "[[README|Philosophy knowledge base]]"
+      - "[[philosophy_of_mind|Philosophy of mind]]"
+      - "[[pragmatism|Pragmatism]]"
+      - "[[enactivism|Enactivism]]"
+      - "[[operationalism|Operationalism]]"
+      - "[[dark_room_problem|Dark room problem]]"
 ---
 
 # Philosophy Knowledge Base Agents

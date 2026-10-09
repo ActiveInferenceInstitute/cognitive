@@ -17,11 +17,9 @@ tags:
   - concept
 
 semantic_relations:
-
   - type: template_for
-
-    links: [[cognitive_concepts]]
-
+    links:
+      - "[[cognitive_concepts]]"
 ---
 
 # [Concept Name]

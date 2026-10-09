@@ -9,14 +9,14 @@ tags:
 - plasticity
 - knowledge
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_functions
-- type: related
-  links:
-  - - - memory_systems
-  - - - neural_plasticity
-  - - - skill_acquisition
+  - type: implements
+    links:
+      - "[[cognitive_functions]]"
+  - type: related
+    links:
+      - "[[memory_systems]]"
+      - "[[neural_plasticity]]"
+      - "[[skill_acquisition]]"
 ---
 
 

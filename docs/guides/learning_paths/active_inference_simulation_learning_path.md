@@ -51,20 +51,13 @@ tags:
   - behavior-modeling
 
 semantic_relations:
-
   - type: specializes
-
-    links: [[active_inference_learning_path]]
-
-  - type: relates
-
     links:
-
-
-      - [[active_inference_spatial_web_path]]
-
-      - [[active_inference_social_learning_path]]
-
+      - "[[active_inference_learning_path]]"
+  - type: relates
+    links:
+      - "[[active_inference_spatial_web_path]]"
+      - "[[active_inference_social_learning_path]]"
 ---
 
 # Active Inference Simulation and Virtual Environments Learning Path

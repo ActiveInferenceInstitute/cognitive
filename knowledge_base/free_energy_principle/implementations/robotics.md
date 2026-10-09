@@ -14,16 +14,16 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]
+      - "[[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]"
   - type: implements
     links:
-      - [[knowledge_base/free_energy_principle/AGENTS|Agent Architectures]]
-      - [[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]
+      - "[[knowledge_base/free_energy_principle/AGENTS|Agent Architectures]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]"
   - type: relates
     links:
-      - [[python_framework|Python Framework]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
+      - "[[python_framework|Python Framework]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
 ---
 
 # Robotic Applications of Active Inference

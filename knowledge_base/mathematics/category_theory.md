@@ -9,15 +9,15 @@ tags:
 - abstraction
 - foundations
 semantic_relations:
-- type: foundation
-  links:
-  - - - set_theory
-  - - - homological_algebra
-- type: relates
-  links:
-  - - - algebraic_geometry
-  - - - topology
-  - - - logic
+  - type: foundation
+    links:
+      - "[[set_theory]]"
+      - "[[homological_algebra]]"
+  - type: relates
+    links:
+      - "[[algebraic_geometry]]"
+      - "[[topology]]"
+      - "[[logic]]"
 ---
 
 

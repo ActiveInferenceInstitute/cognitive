@@ -17,19 +17,13 @@ tags:
   - ai
 
 semantic_relations:
-
   - type: implements
-
-    links: [[docs/repo_docs/documentation_standards]]
-
-  - type: relates
-
     links:
-
-      - [[template_guide]]
-
-      - [[guide_template]]
-
+      - "[[docs/repo_docs/documentation_standards]]"
+  - type: relates
+    links:
+      - "[[template_guide]]"
+      - "[[guide_template]]"
 ---
 
 # AI Concept Template
@@ -156,9 +150,9 @@ Standard benchmarks and results.
 
 ## Related Concepts
 
-- related_concept_1
+- [[related_concept_1]]
 
-- related_concept_2
+- [[related_concept_2]]
 
 ```
 
@@ -290,15 +284,15 @@ semantic_relations:
 
   - type: implements
 
-    links: free_energy_principle
+    links: [[free_energy_principle]]
 
   - type: relates
 
     links:
 
-      - predictive_processing
+      - [[predictive_processing]]
 
-      - belief_updating
+      - [[belief_updating]]
 
 ---
 
@@ -338,15 +332,15 @@ semantic_relations:
 
   - type: extends
 
-    links: information_theory
+    links: [[information_theory]]
 
   - type: relates
 
     links:
 
-      - active_inference
+      - [[active_inference]]
 
-      - variational_inference
+      - [[variational_inference]]
 
 ---
 

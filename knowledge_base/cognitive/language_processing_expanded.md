@@ -9,15 +9,15 @@ tags:
 - neural_systems
 - information_processing
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_functions
-- type: related
-  links:
-  - - - working_memory
-  - - - attention
-  - - - social_cognition
-  - - - executive_functions
+  - type: implements
+    links:
+      - "[[cognitive_functions]]"
+  - type: related
+    links:
+      - "[[working_memory]]"
+      - "[[attention]]"
+      - "[[social_cognition]]"
+      - "[[executive_functions]]"
 ---
 
 

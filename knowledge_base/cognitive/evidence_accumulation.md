@@ -9,18 +9,18 @@ tags:
 - decision
 - inference
 semantic_relations:
-- type: implements
-  links:
-  - - model_selection
-- type: extends
-  links:
-  - - information_processing
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - bayesian_inference
-  - - - decision_making
+  - type: implements
+    links:
+      - "[[model_selection]]"
+  - type: extends
+    links:
+      - "[[information_processing]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[bayesian_inference]]"
+      - "[[decision_making]]"
 ---
 
 

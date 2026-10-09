@@ -8,12 +8,12 @@ tags:
 - homeostasis
 - adaptation
 semantic_relations:
-- type: relates
-  links:
-  - homeostatic_regulation
-  - adaptation_mechanisms
-  - precision_weighting
-  - active_inference
+  - type: relates
+    links:
+      - "[[homeostatic_regulation]]"
+      - "[[adaptation_mechanisms]]"
+      - "[[precision_weighting]]"
+      - "[[active_inference]]"
 ---
 
 

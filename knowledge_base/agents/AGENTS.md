@@ -13,12 +13,12 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Agent architectures overview]]'
-      - '[[architectures_overview|Architectures overview]]'
-      - '[[index|Agent index]]'
-      - '[[GenericPOMDP/README|Generic POMDP]]'
-      - '[[Continuous_Time/README|Continuous time]]'
-      - '[[../../code/Things/AGENTS|Things index]]'
+      - "[[README|Agent architectures overview]]"
+      - "[[architectures_overview|Architectures overview]]"
+      - "[[index|Agent index]]"
+      - "[[GenericPOMDP/README|Generic POMDP]]"
+      - "[[Continuous_Time/README|Continuous time]]"
+      - "[[../../code/Things/AGENTS|Things index]]"
 ---
 
 # Agent Architectures Documentation

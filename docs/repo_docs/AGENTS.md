@@ -12,12 +12,12 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Repository documentation index]]'
-      - '[[documentation_standards|Documentation standards]]'
-      - '[[ai_documentation_style|Documentation style]]'
-      - '[[content_management|Content management]]'
-      - '[[linking_validation|Link validation]]'
-      - '[[getting_started|Getting started]]'
+      - "[[README|Repository documentation index]]"
+      - "[[documentation_standards|Documentation standards]]"
+      - "[[ai_documentation_style|Documentation style]]"
+      - "[[content_management|Content management]]"
+      - "[[linking_validation|Link validation]]"
+      - "[[getting_started|Getting started]]"
 ---
 
 # Repository documentation instructions

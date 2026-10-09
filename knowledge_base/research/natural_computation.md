@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/research/biological_intelligence]]
-      - [[knowledge_base/biology/systems_biology]]
+      - "[[knowledge_base/research/biological_intelligence]]"
+      - "[[knowledge_base/biology/systems_biology]]"
 ---
 
 # Natural Computation

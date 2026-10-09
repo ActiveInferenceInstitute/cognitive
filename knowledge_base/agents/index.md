@@ -8,11 +8,11 @@ tags:
 - architectures
 - implementation
 semantic_relations:
-- type: organizes
-  links:
-  - active inference agents
-  - pomdp agents
-  - swarm agents
+  - type: organizes
+    links:
+      - "[[active inference agents]]"
+      - "[[pomdp agents]]"
+      - "[[swarm agents]]"
 ---
 
 

@@ -11,23 +11,23 @@ tags:
 - emergence
 - self_organization
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - free_energy_principle
-  - - - active_inference
-  - - - neural_networks
-- type: implements
-  links:
-  - - - dynamical_systems
-  - - - statistical_physics
-  - - - network_science
-- type: relates
-  links:
-  - - - information_theory
-  - - - optimization_theory
-  - - - control_theory
-  - - - chaos_theory
-  - - - fractal_geometry
+  - type: foundation_for
+    links:
+      - "[[free_energy_principle]]"
+      - "[[active_inference]]"
+      - "[[neural_networks]]"
+  - type: implements
+    links:
+      - "[[dynamical_systems]]"
+      - "[[statistical_physics]]"
+      - "[[network_science]]"
+  - type: relates
+    links:
+      - "[[information_theory]]"
+      - "[[optimization_theory]]"
+      - "[[control_theory]]"
+      - "[[chaos_theory]]"
+      - "[[fractal_geometry]]"
 ---
 
 

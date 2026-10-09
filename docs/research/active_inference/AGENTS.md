@@ -5,12 +5,12 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Active inference research]]'
-      - '[[../README|Research documentation]]'
-      - '[[theory|Theory]]'
-      - '[[applications|Applications]]'
-      - '[[scaling|Scaling]]'
-      - '[[hierarchical|Hierarchical extensions]]'
+      - "[[README|Active inference research]]"
+      - "[[../README|Research documentation]]"
+      - "[[theory|Theory]]"
+      - "[[applications|Applications]]"
+      - "[[scaling|Scaling]]"
+      - "[[hierarchical|Hierarchical extensions]]"
 ---
 
 # Active inference research instructions

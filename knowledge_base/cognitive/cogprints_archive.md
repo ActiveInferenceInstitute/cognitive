@@ -8,10 +8,10 @@ tags:
 - open-access
 - literature
 semantic_relations:
-- type: supports
-  links:
-  - cognitive_science
-  - research_education
+  - type: supports
+    links:
+      - "[[cognitive_science]]"
+      - "[[research_education]]"
 ---
 
 

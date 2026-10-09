@@ -16,23 +16,23 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: integrates
-  links:
-  - - - path_integral_free_energy
-  - - - continuous_time_active_inference
-  - - - free_energy_principle
-  - - - cognitive_architectures
-- type: implements
-  links:
-  - - - active_inference
-  - - - predictive_processing
-  - - - hierarchical_inference
-- type: mathematical_basis
-  links:
-  - - - differential_geometry
-  - - - information_geometry
-  - - - dynamical_systems
-  - - - stochastic_processes
+  - type: integrates
+    links:
+      - "[[path_integral_free_energy]]"
+      - "[[continuous_time_active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[cognitive_architectures]]"
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[predictive_processing]]"
+      - "[[hierarchical_inference]]"
+  - type: mathematical_basis
+    links:
+      - "[[differential_geometry]]"
+      - "[[information_geometry]]"
+      - "[[dynamical_systems]]"
+      - "[[stochastic_processes]]"
 ---
 
 

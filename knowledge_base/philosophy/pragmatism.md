@@ -9,18 +9,18 @@ tags:
 - american_philosophy
 - truth_theory
 semantic_relations:
-- type: foundational_theory
-  links:
-  - - - epistemology
-  - - - truth_theories
-  - - - philosophy_of_science
-- type: relates
-  links:
-  - - - operationalism
-  - - - instrumentalism
-  - - - empiricism
-  - - - active_inference
-  - - - process_philosophy
+  - type: foundational_theory
+    links:
+      - "[[epistemology]]"
+      - "[[truth_theories]]"
+      - "[[philosophy_of_science]]"
+  - type: relates
+    links:
+      - "[[operationalism]]"
+      - "[[instrumentalism]]"
+      - "[[empiricism]]"
+      - "[[active_inference]]"
+      - "[[process_philosophy]]"
 ---
 
 

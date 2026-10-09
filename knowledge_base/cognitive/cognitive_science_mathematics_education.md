@@ -8,10 +8,10 @@ tags:
 - cognitive-science
 - mathematics
 semantic_relations:
-- type: relates
-  links:
-  - learning_mechanisms
-  - research_education
+  - type: relates
+    links:
+      - "[[learning_mechanisms]]"
+      - "[[research_education]]"
 ---
 
 

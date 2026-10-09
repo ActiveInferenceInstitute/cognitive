@@ -17,19 +17,13 @@ tags:
   - methodology
 
 semantic_relations:
-
   - type: implements
-
-    links: [[documentation_standards]]
-
-  - type: relates
-
     links:
-
-      - [[machine_learning]]
-
-      - [[ai_validation_framework]]
-
+      - "[[documentation_standards]]"
+  - type: relates
+    links:
+      - "[[machine_learning]]"
+      - "[[ai_validation_framework]]"
 ---
 
 # Research Guide

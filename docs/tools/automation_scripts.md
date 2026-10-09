@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[dev_scripts|Development scripts]]'
-      - '[[../repo_docs/README|Repository documentation]]'
+      - "[[dev_scripts|Development scripts]]"
+      - "[[../repo_docs/README|Repository documentation]]"
 ---
 
 # Automation scripts

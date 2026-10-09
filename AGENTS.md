@@ -10,9 +10,9 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[code/Things/README]]
-      - [[code/tools/src/models/active_inference/AGENTS]]
-      - [[knowledge_base/AGENTS]]
+      - "[[code/Things/README]]"
+      - "[[code/tools/src/models/active_inference/AGENTS]]"
+      - "[[knowledge_base/AGENTS]]"
 ---
 
 # Cognitive Agents Index

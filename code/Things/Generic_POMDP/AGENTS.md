@@ -9,7 +9,7 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[knowledge_base/mathematics/active_inference_pomdp]]
+      - "[[knowledge_base/mathematics/active_inference_pomdp]]"
 ---
 
 # Generic POMDP Agent

@@ -12,18 +12,18 @@ aliases:
 - control-theory
 - dynamic-optimization
 semantic_relations:
-- type: implements
-  links:
-  - - - docs/research/research_documentation_index|Research Documentation
-  - - - active_inference_theory
-- type: uses
-  links:
-  - - - variational_calculus
-  - - - dynamic_programming
-- type: documented_by
-  links:
-  - - - docs/implementation/implementation_guides_index|Implementation Guides
-  - - - docs/api/api_documentation_index|API Documentation
+  - type: implements
+    links:
+      - "[[docs/research/research_documentation_index|Research Documentation]]"
+      - "[[active_inference_theory]]"
+  - type: uses
+    links:
+      - "[[variational_calculus]]"
+      - "[[dynamic_programming]]"
+  - type: documented_by
+    links:
+      - "[[docs/implementation/implementation_guides_index|Implementation Guides]]"
+      - "[[docs/api/api_documentation_index|API Documentation]]"
 ---
 
 

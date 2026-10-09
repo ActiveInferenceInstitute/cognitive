@@ -9,18 +9,18 @@ tags:
 - theory
 - computation
 semantic_relations:
-- type: implements
-  links:
-  - - active_inference
-- type: extends
-  links:
-  - - free_energy_principle
-- type: related
-  links:
-  - - - variational_methods
-  - - - variational_calculus
-  - - - variational_inference
-  - - - information_theory
+  - type: implements
+    links:
+      - "[[active_inference]]"
+  - type: extends
+    links:
+      - "[[free_energy_principle]]"
+  - type: related
+    links:
+      - "[[variational_methods]]"
+      - "[[variational_calculus]]"
+      - "[[variational_inference]]"
+      - "[[information_theory]]"
 ---
 
 

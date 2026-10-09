@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[docs/guides/api_implementation]]
-      - [[docs/guides/agent_development]]
-      - [[docs/implementation/README]]
+      - "[[docs/guides/api_implementation]]"
+      - "[[docs/guides/agent_development]]"
+      - "[[docs/implementation/README]]"
 ---
 
 # Best Practices

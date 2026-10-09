@@ -13,12 +13,12 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|BioFirm overview]]'
-      - '[[biofirm_framework|BioFirm framework]]'
-      - '[[biofirm_schema|BioFirm schema]]'
-      - '[[bioregional_state_space|Bioregional state space]]'
-      - '[[ecological_active_inference|Ecological active inference]]'
-      - '[[socioeconomic_active_inference|Socioeconomic active inference]]'
+      - "[[README|BioFirm overview]]"
+      - "[[biofirm_framework|BioFirm framework]]"
+      - "[[biofirm_schema|BioFirm schema]]"
+      - "[[bioregional_state_space|Bioregional state space]]"
+      - "[[ecological_active_inference|Ecological active inference]]"
+      - "[[socioeconomic_active_inference|Socioeconomic active inference]]"
 ---
 
 # BioFirm Knowledge Base Documentation

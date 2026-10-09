@@ -14,24 +14,24 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - developmental_systems
-  - - - knowledge_base/cognitive/active_inference
-- type: implements
-  links:
-  - - - gene_regulatory_networks
-  - - - morphogenetic_fields
-  - - - cell_fate_dynamics
-  - - - knowledge_base/agents/architectures_overview
-- type: relates
-  links:
-  - - - cell_biology
-  - - - systems_biology
-  - - - network_theory
-  - - - evolutionary_dynamics
+  - type: foundation
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[developmental_systems]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+  - type: implements
+    links:
+      - "[[gene_regulatory_networks]]"
+      - "[[morphogenetic_fields]]"
+      - "[[cell_fate_dynamics]]"
+      - "[[knowledge_base/agents/architectures_overview]]"
+  - type: relates
+    links:
+      - "[[cell_biology]]"
+      - "[[systems_biology]]"
+      - "[[network_theory]]"
+      - "[[evolutionary_dynamics]]"
 ---
 
 

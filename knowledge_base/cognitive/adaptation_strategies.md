@@ -12,15 +12,15 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[active_inference]]
-      - [[free_energy_principle]]
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
   - type: relates
     links:
-      - [[adaptive_systems]]
-      - [[learning_mechanisms]]
-      - [[homeostatic_regulation]]
-      - [[meta_learning]]
-      - [[precision_weighting]]
+      - "[[adaptive_systems]]"
+      - "[[learning_mechanisms]]"
+      - "[[homeostatic_regulation]]"
+      - "[[meta_learning]]"
+      - "[[precision_weighting]]"
 ---
 
 # Adaptation Strategies

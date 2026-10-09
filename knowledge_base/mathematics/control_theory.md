@@ -12,22 +12,22 @@ tags:
 - optimization
 - feedback
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - active_inference
-  - - - optimal_control
-  - - - adaptive_control
-- type: implements
-  links:
-  - - - dynamical_systems
-  - - - optimization_theory
-  - - - differential_equations
-- type: relates
-  links:
-  - - - statistical_physics
-  - - - information_theory
-  - - - free_energy_principle
-  - - - stochastic_processes
+  - type: foundation_for
+    links:
+      - "[[active_inference]]"
+      - "[[optimal_control]]"
+      - "[[adaptive_control]]"
+  - type: implements
+    links:
+      - "[[dynamical_systems]]"
+      - "[[optimization_theory]]"
+      - "[[differential_equations]]"
+  - type: relates
+    links:
+      - "[[statistical_physics]]"
+      - "[[information_theory]]"
+      - "[[free_energy_principle]]"
+      - "[[stochastic_processes]]"
 ---
 
 

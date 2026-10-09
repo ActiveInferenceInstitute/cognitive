@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/systems/environmental_applications]]
-      - [[knowledge_base/systems/internet_of_things]]
+      - "[[knowledge_base/systems/environmental_applications]]"
+      - "[[knowledge_base/systems/internet_of_things]]"
 ---
 
 # Environmental Monitoring

@@ -18,18 +18,18 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[myrmecology]]
-      - [[apidology]]
-      - [[social_insect_cognition]]
+      - "[[myrmecology]]"
+      - "[[apidology]]"
+      - "[[social_insect_cognition]]"
   - type: implements
     links:
-      - [[comparative_evolution]]
-      - [[swarm_intelligence_implementation]]
+      - "[[comparative_evolution]]"
+      - "[[swarm_intelligence_implementation]]"
   - type: relates
     links:
-      - [[evolution_of_eusociality]]
-      - [[collective_behavior]]
-      - [[foraging_optimization]]
+      - "[[evolution_of_eusociality]]"
+      - "[[collective_behavior]]"
+      - "[[foraging_optimization]]"
 ---
 
 # Comparative Analysis of Ant and Bee Social Systems

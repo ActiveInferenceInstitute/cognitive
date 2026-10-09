@@ -9,18 +9,18 @@ tags:
 - perception
 - stimulus-driven
 semantic_relations:
-- type: implements
-  links:
-  - - attention_mechanisms
-- type: extends
-  links:
-  - - attentional_control
-- type: related
-  links:
-  - - - endogenous_attention
-  - - - active_inference
-  - - - free_energy_principle
-  - - - salience_detection
+  - type: implements
+    links:
+      - "[[attention_mechanisms]]"
+  - type: extends
+    links:
+      - "[[attentional_control]]"
+  - type: related
+    links:
+      - "[[endogenous_attention]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[salience_detection]]"
 ---
 
 

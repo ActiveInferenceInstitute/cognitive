@@ -7,9 +7,11 @@ updated: 2026-02-07
 tags: [homeostasis, cybernetics, control_theory, free_energy_principle]
 semantic_relations:
   - type: foundation
-    links: [[homeostatic_regulation]]
+    links:
+      - "[[homeostatic_regulation]]"
   - type: implements
-    links: [[free_energy_principle]]
+    links:
+      - "[[free_energy_principle]]"
   - type: relates
     links:
       - "[[basic_homeostatic_control]]"

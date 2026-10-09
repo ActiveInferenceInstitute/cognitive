@@ -8,13 +8,13 @@ tags: [agents, mathematics, knowledge_base, probability, optimization, active-in
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Mathematical foundations]]'
-      - '[[active_inference_theory|Active inference theory]]'
-      - '[[free_energy_theory|Free energy theory]]'
-      - '[[active_inference_pomdp|POMDP active inference]]'
-      - '[[active_inference_loop|Active inference loop]]'
-      - '[[bayes_theorem|Bayes theorem]]'
-      - '[[../../cognitive/README|Cognitive science]]'
+      - "[[README|Mathematical foundations]]"
+      - "[[active_inference_theory|Active inference theory]]"
+      - "[[free_energy_theory|Free energy theory]]"
+      - "[[active_inference_pomdp|POMDP active inference]]"
+      - "[[active_inference_loop|Active inference loop]]"
+      - "[[bayes_theorem|Bayes theorem]]"
+      - "[[../../cognitive/README|Cognitive science]]"
 ---
 
 # Mathematical Knowledge Base Agents

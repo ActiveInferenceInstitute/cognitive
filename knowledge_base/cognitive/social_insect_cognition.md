@@ -10,17 +10,17 @@ tags:
 - learning
 - adaptation
 semantic_relations:
-- type: implements
-  links:
-  - - collective_behavior
-- type: related
-  links:
-  - - - knowledge_base/biology/myrmecology
-  - - - collective_behavior_ants
-  - - - swarm_intelligence
-  - - - emergence_self_organization
-  - - - learning_mechanisms
-  - - - adaptation
+  - type: implements
+    links:
+      - "[[collective_behavior]]"
+  - type: related
+    links:
+      - "[[knowledge_base/biology/myrmecology]]"
+      - "[[collective_behavior_ants]]"
+      - "[[swarm_intelligence]]"
+      - "[[emergence_self_organization]]"
+      - "[[learning_mechanisms]]"
+      - "[[adaptation]]"
 ---
 
 

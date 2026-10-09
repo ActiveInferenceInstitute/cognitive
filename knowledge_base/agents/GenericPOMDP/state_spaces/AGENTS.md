@@ -9,10 +9,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[o_space|Observation Space]]
-      - [[s_space|Hidden State Space (S)]]
-    parent:
-      - [[../AGENTS|Generic POMDP]]
+      - "[[o_space|Observation Space]]"
+      - "[[s_space|Hidden State Space (S)]]"
+    parent: [[[../AGENTS|Generic POMDP]]]
 ---
 
 # Generic POMDP State Spaces

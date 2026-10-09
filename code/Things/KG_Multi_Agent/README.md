@@ -13,14 +13,14 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[knowledge_base/cognitive/social_cognition]]
-      - [[knowledge_base/systems/network_theory]]
+      - "[[knowledge_base/cognitive/social_cognition]]"
+      - "[[knowledge_base/systems/network_theory]]"
   - type: extends
     links:
-      - [[code/Things/Ant_Colony/README]]
+      - "[[code/Things/Ant_Colony/README]]"
   - type: supports
     links:
-      - [[docs/repo_docs/research]]
+      - "[[docs/repo_docs/research]]"
 ---
 
 # Knowledge Graph Multi-Agent Systems

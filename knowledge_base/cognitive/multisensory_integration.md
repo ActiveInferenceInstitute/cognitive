@@ -9,18 +9,18 @@ tags:
 - integration
 - sensory_processing
 semantic_relations:
-- type: implements
-  links:
-  - - sensory_processing
-- type: extends
-  links:
-  - - perceptual_integration
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - cross_modal_perception
-  - - - sensorimotor_integration
+  - type: implements
+    links:
+      - "[[sensory_processing]]"
+  - type: extends
+    links:
+      - "[[perceptual_integration]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[cross_modal_perception]]"
+      - "[[sensorimotor_integration]]"
 ---
 
 

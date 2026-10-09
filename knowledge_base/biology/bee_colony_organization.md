@@ -18,18 +18,18 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[apidology]]
-      - [[collective_behavior]]
-      - [[social_insect_cognition]]
+      - "[[apidology]]"
+      - "[[collective_behavior]]"
+      - "[[social_insect_cognition]]"
   - type: implements
     links:
-      - [[reproductive_division]]
-      - [[task_allocation]]
+      - "[[reproductive_division]]"
+      - "[[task_allocation]]"
   - type: relates
     links:
-      - [[myrmecology]]
-      - [[evolution_of_eusociality]]
-      - [[communication_systems]]
+      - "[[myrmecology]]"
+      - "[[evolution_of_eusociality]]"
+      - "[[communication_systems]]"
 ---
 
 # Bee Colony Organization

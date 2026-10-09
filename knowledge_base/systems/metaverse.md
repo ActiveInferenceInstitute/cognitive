@@ -13,27 +13,26 @@ tags:
 - social-computing
 - spatial-web
 semantic_relations:
-- type: relates
-  links:
-  - - - knowledge_base/systems/spatial_web|Spatial Web
-  - - - knowledge_base/systems/virtual_reality|Virtual Reality
-  - - - knowledge_base/systems/augmented_reality|Augmented Reality
-  - - - knowledge_base/systems/mixed_reality|Mixed Reality
-  - - - knowledge_base/systems/digital_twins|Digital Twins
-  - - - docs/guides/application/active_inference_spatial_applications|Active Inference
-        in Spatial Applications
-- type: specializes
-  links:
-  - - - knowledge_base/systems/spatial_computing|Spatial Computing
-- type: prerequisite
-  links:
-  - - - knowledge_base/systems/virtual_reality|Virtual Reality
-  - - - knowledge_base/systems/internet_of_things|Internet of Things
-- type: foundation
-  links:
-  - - - [[distributed_systems|Distributed Systems]]
-  - - - [[computer_graphics|Computer Graphics]]
-  - - - knowledge_base/cognitive/embodied_cognition|Embodied Cognition
+  - type: relates
+    links:
+      - "[[knowledge_base/systems/spatial_web|Spatial Web]]"
+      - "[[knowledge_base/systems/virtual_reality|Virtual Reality]]"
+      - "[[knowledge_base/systems/augmented_reality|Augmented Reality]]"
+      - "[[knowledge_base/systems/mixed_reality|Mixed Reality]]"
+      - "[[knowledge_base/systems/digital_twins|Digital Twins]]"
+      - "[[docs/guides/application/active_inference_spatial_applications|Active Inference in Spatial Applications]]"
+  - type: specializes
+    links:
+      - "[[knowledge_base/systems/spatial_computing|Spatial Computing]]"
+  - type: prerequisite
+    links:
+      - "[[knowledge_base/systems/virtual_reality|Virtual Reality]]"
+      - "[[knowledge_base/systems/internet_of_things|Internet of Things]]"
+  - type: foundation
+    links:
+      - "[[distributed_systems|Distributed Systems]]"
+      - "[[computer_graphics|Computer Graphics]]"
+      - "[[knowledge_base/cognitive/embodied_cognition|Embodied Cognition]]"
 ---
 
 

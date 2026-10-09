@@ -14,13 +14,13 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
   - type: relates
     links:
-      - [[homeostasis|Homeostasis]]
-      - [[evolution|Evolution]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
+      - "[[homeostasis|Homeostasis]]"
+      - "[[evolution|Evolution]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
 ---
 
 # The Immune System as an Inference Engine

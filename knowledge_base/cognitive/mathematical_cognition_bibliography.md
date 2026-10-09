@@ -8,10 +8,10 @@ tags:
 - mathematics
 - bibliography
 semantic_relations:
-- type: relates
-  links:
-  - reasoning_problem_solving
-  - learning_mechanisms
+  - type: relates
+    links:
+      - "[[reasoning_problem_solving]]"
+      - "[[learning_mechanisms]]"
 ---
 
 

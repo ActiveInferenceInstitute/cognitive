@@ -13,14 +13,14 @@ tags:
 semantic_relations:
   - type: foundational_to
     links:
-      - [[emergence]]
-      - [[self_organization]]
-      - [[adaptive_systems]]
+      - "[[emergence]]"
+      - "[[self_organization]]"
+      - "[[adaptive_systems]]"
   - type: relates
     links:
-      - [[knowledge_base/mathematics/dynamical_systems]]
-      - [[knowledge_base/biology/ecological_dynamics]]
-      - [[knowledge_base/cognitive/complex_systems_biology]]
+      - "[[knowledge_base/mathematics/dynamical_systems]]"
+      - "[[knowledge_base/biology/ecological_dynamics]]"
+      - "[[knowledge_base/cognitive/complex_systems_biology]]"
 ---
 
 # Complex Systems Theory

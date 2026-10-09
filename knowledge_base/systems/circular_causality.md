@@ -15,19 +15,19 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[systems/emergence|Emergence]]
-      - [[systems/dynamical_systems|Dynamical Systems]]
-      - [[systems/synergetics|Synergetics]]
+      - "[[systems/emergence|Emergence]]"
+      - "[[systems/dynamical_systems|Dynamical Systems]]"
+      - "[[systems/synergetics|Synergetics]]"
   - type: relates
     links:
-      - [[cognitive/free_energy_principle|Free Energy Principle]]
-      - [[cognitive/predictive_coding|Predictive Coding]]
-      - [[cognitive/hierarchical_inference|Hierarchical Inference]]
-      - [[mathematics/renormalization_group|Renormalization Group]]
+      - "[[cognitive/free_energy_principle|Free Energy Principle]]"
+      - "[[cognitive/predictive_coding|Predictive Coding]]"
+      - "[[cognitive/hierarchical_inference|Hierarchical Inference]]"
+      - "[[mathematics/renormalization_group|Renormalization Group]]"
   - type: extends
     links:
-      - [[philosophy/enactivism|Enactivism]]
-      - [[mathematics/markov_blankets|Markov Blankets]]
+      - "[[philosophy/enactivism|Enactivism]]"
+      - "[[mathematics/markov_blankets|Markov Blankets]]"
 ---
 
 # Circular Causality

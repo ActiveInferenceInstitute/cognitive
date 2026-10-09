@@ -11,21 +11,21 @@ tags:
 - inference
 - foundations
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - active_inference_theory
-  - - - bayesian_inference
-  - - - variational_inference
-  - - - free_energy_principle
-- type: uses
-  links:
-  - - - information_theory
-  - - - probability_theory
-  - - - measure_theory
-- type: implements
-  links:
-  - - - variational_methods
-  - - - optimization_theory
+  - type: foundation_for
+    links:
+      - "[[active_inference_theory]]"
+      - "[[bayesian_inference]]"
+      - "[[variational_inference]]"
+      - "[[free_energy_principle]]"
+  - type: uses
+    links:
+      - "[[information_theory]]"
+      - "[[probability_theory]]"
+      - "[[measure_theory]]"
+  - type: implements
+    links:
+      - "[[variational_methods]]"
+      - "[[optimization_theory]]"
 ---
 
 

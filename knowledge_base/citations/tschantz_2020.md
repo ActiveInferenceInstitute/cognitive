@@ -20,16 +20,16 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - rl active inference
-      - [[knowledge_base/cognitive/decision_making]]
+      - "[[rl active inference]]"
+      - "[[knowledge_base/cognitive/decision_making]]"
   - type: extends
     links:
-      - [[friston_2017_curiosity]]
-      - [[sajid_2021]]
+      - "[[friston_2017_curiosity]]"
+      - "[[sajid_2021]]"
   - type: cited_by
     links:
-      - [[millidge_2021]]
-      - [[parr_pezzulo_friston_2022]]
+      - "[[millidge_2021]]"
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # Reinforcement Learning through Active Inference

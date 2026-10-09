@@ -10,16 +10,16 @@ tags:
 - collective_behavior
 - dynamical_systems
 semantic_relations:
-- type: implements
-  links:
-  - - complex_systems
-- type: related
-  links:
-  - - - collective_behavior
-  - - - swarm_intelligence
-  - - - dynamical_systems
-  - - - pattern_formation
-  - - - information_theory
+  - type: implements
+    links:
+      - "[[complex_systems]]"
+  - type: related
+    links:
+      - "[[collective_behavior]]"
+      - "[[swarm_intelligence]]"
+      - "[[dynamical_systems]]"
+      - "[[pattern_formation]]"
+      - "[[information_theory]]"
 ---
 
 

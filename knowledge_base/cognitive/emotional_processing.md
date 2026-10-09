@@ -9,14 +9,14 @@ tags:
 - neural_systems
 - behavior
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_functions
-- type: related
-  links:
-  - - - emotion_regulation
-  - - - affective_neuroscience
-  - - - social_cognition
+  - type: implements
+    links:
+      - "[[cognitive_functions]]"
+  - type: related
+    links:
+      - "[[emotion_regulation]]"
+      - "[[affective_neuroscience]]"
+      - "[[social_cognition]]"
 ---
 
 

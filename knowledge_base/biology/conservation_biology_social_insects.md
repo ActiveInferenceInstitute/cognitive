@@ -19,18 +19,18 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[myrmecology]]
-      - [[apidology]]
-      - [[ecological_impacts_social_insects]]
+      - "[[myrmecology]]"
+      - "[[apidology]]"
+      - "[[ecological_impacts_social_insects]]"
   - type: implements
     links:
-      - [[conservation_biology]]
-      - [[biodiversity_assessment]]
+      - "[[conservation_biology]]"
+      - "[[biodiversity_assessment]]"
   - type: relates
     links:
-      - [[invasive_species]]
-      - [[climate_change_ecology]]
-      - [[habitat_fragmentation]]
+      - "[[invasive_species]]"
+      - "[[climate_change_ecology]]"
+      - "[[habitat_fragmentation]]"
 ---
 
 # Conservation Biology of Social Insects

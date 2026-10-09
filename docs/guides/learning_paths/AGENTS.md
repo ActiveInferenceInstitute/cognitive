@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Learning paths index]]'
-      - '[[index|Learning path index]]'
-      - '[[catalog_of_learning_paths|Catalog of learning paths]]'
-      - '[[../../examples/README|Examples]]'
+      - "[[README|Learning paths index]]"
+      - "[[index|Learning path index]]"
+      - "[[catalog_of_learning_paths|Catalog of learning paths]]"
+      - "[[../../examples/README|Examples]]"
 ---
 
 # Learning paths documentation instructions

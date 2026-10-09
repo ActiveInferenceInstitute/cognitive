@@ -5,12 +5,12 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[AGENTS|Implementation documentation instructions]]'
-      - '[[implementation_guides|Implementation guides]]'
-      - '[[implementation_patterns|Implementation patterns]]'
-      - '[[rxinfer/README|RxInfer integration]]'
-      - '[[../manuscript/README|Executable manuscript]]'
-      - '[[../api/README|API documentation]]'
+      - "[[AGENTS|Implementation documentation instructions]]"
+      - "[[implementation_guides|Implementation guides]]"
+      - "[[implementation_patterns|Implementation patterns]]"
+      - "[[rxinfer/README|RxInfer integration]]"
+      - "[[../manuscript/README|Executable manuscript]]"
+      - "[[../api/README|API documentation]]"
 ---
 
 # Implementation documentation index

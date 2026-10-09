@@ -14,10 +14,10 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[systems_theory]]
-      - [[complex_systems]]
-      - [[emergence]]
-      - [[adaptive_systems]]
+      - "[[systems_theory]]"
+      - "[[complex_systems]]"
+      - "[[emergence]]"
+      - "[[adaptive_systems]]"
 ---
 
 # Systems Theory Knowledge Base

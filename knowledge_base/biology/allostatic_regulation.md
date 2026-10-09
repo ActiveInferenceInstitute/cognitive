@@ -14,18 +14,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[cognitive/active_inference|Active Inference]]
-      - [[cognitive/predictive_coding|Predictive Coding]]
-      - [[cognitive/embodied_cognition|Embodied Cognition]]
+      - "[[cognitive/active_inference|Active Inference]]"
+      - "[[cognitive/predictive_coding|Predictive Coding]]"
+      - "[[cognitive/embodied_cognition|Embodied Cognition]]"
   - type: relates
     links:
-      - [[cognitive/precision_weighting|Precision Weighting]]
-      - [[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]
-      - [[biology/neuroscience|Neuroscience]]
+      - "[[cognitive/precision_weighting|Precision Weighting]]"
+      - "[[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]"
+      - "[[biology/neuroscience|Neuroscience]]"
   - type: extends
     links:
-      - [[cognitive/free_energy_principle|Free Energy Principle]]
-      - [[cognitive/homeostatic_regulation|Homeostatic Regulation]]
+      - "[[cognitive/free_energy_principle|Free Energy Principle]]"
+      - "[[cognitive/homeostatic_regulation|Homeostatic Regulation]]"
 ---
 
 # Allostatic Regulation

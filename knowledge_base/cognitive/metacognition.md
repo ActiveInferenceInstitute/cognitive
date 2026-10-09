@@ -9,14 +9,14 @@ tags:
 - control
 - reflection
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_functions
-- type: related
-  links:
-  - - - executive_functions
-  - - - consciousness
-  - - - self_regulation
+  - type: implements
+    links:
+      - "[[cognitive_functions]]"
+  - type: related
+    links:
+      - "[[executive_functions]]"
+      - "[[consciousness]]"
+      - "[[self_regulation]]"
 ---
 
 

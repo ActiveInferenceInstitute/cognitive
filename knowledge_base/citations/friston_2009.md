@@ -19,15 +19,15 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/cognitive/predictive_coding]]
-      - [[knowledge_base/cognitive/free_energy_principle]]
+      - "[[knowledge_base/cognitive/predictive_coding]]"
+      - "[[knowledge_base/cognitive/free_energy_principle]]"
   - type: extends
     links:
-      - [[knowledge_base/mathematics/free_energy_principle]]
+      - "[[knowledge_base/mathematics/free_energy_principle]]"
   - type: cited_by
     links:
-      - [[friston_2017]]
-      - [[friston_2010]]
+      - "[[friston_2017]]"
+      - "[[friston_2010]]"
 ---
 
 # Predictive Coding under the Free Energy Principle

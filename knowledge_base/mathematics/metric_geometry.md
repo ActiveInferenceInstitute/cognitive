@@ -9,15 +9,15 @@ tags:
 - metric
 - analysis
 semantic_relations:
-- type: foundation
-  links:
-  - - - differential_geometry
-  - - - topology
-- type: relates
-  links:
-  - - - sub_riemannian_geometry
-  - - - geometric_group_theory
-  - - - optimal_transport
+  - type: foundation
+    links:
+      - "[[differential_geometry]]"
+      - "[[topology]]"
+  - type: relates
+    links:
+      - "[[sub_riemannian_geometry]]"
+      - "[[geometric_group_theory]]"
+      - "[[optimal_transport]]"
 ---
 
 

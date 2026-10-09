@@ -8,13 +8,13 @@ tags:
 - predictive-processing
 - neural-networks
 semantic_relations:
-- type: implements
-  links:
-  - - predictive_processing
-- type: relates
-  links:
-  - - - error_propagation
-  - - - precision_mechanisms
+  - type: implements
+    links:
+      - "[[predictive_processing]]"
+  - type: relates
+    links:
+      - "[[error_propagation]]"
+      - "[[precision_mechanisms]]"
 ---
 
 

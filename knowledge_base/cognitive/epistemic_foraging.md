@@ -14,19 +14,19 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/mathematics/expected_free_energy|Expected Free Energy]]
-      - [[knowledge_base/mathematics/information_gain|Information Gain]]
-      - [[knowledge_base/mathematics/kl_divergence|KL Divergence]]
+      - "[[knowledge_base/mathematics/expected_free_energy|Expected Free Energy]]"
+      - "[[knowledge_base/mathematics/information_gain|Information Gain]]"
+      - "[[knowledge_base/mathematics/kl_divergence|KL Divergence]]"
   - type: relates
     links:
-      - [[active_inference|Active Inference]]
-      - [[attention_mechanisms|Attention Mechanisms]]
-      - [[decision_making|Decision Making]]
-      - [[knowledge_base/mathematics/exploration_exploitation|Exploration-Exploitation]]
+      - "[[active_inference|Active Inference]]"
+      - "[[attention_mechanisms|Attention Mechanisms]]"
+      - "[[decision_making|Decision Making]]"
+      - "[[knowledge_base/mathematics/exploration_exploitation|Exploration-Exploitation]]"
   - type: extends
     links:
-      - [[precision_weighting|Precision Weighting]]
-      - [[knowledge_base/mathematics/mutual_information|Mutual Information]]
+      - "[[precision_weighting|Precision Weighting]]"
+      - "[[knowledge_base/mathematics/mutual_information|Mutual Information]]"
 ---
 
 # Epistemic Foraging and Information Seeking

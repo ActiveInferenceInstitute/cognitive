@@ -9,18 +9,18 @@ tags:
 - knowledge
 - concepts
 semantic_relations:
-- type: implements
-  links:
-  - - memory_systems
-- type: extends
-  links:
-  - - declarative_memory
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - concept_learning
-  - - - knowledge_representation
+  - type: implements
+    links:
+      - "[[memory_systems]]"
+  - type: extends
+    links:
+      - "[[declarative_memory]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[concept_learning]]"
+      - "[[knowledge_representation]]"
 ---
 
 

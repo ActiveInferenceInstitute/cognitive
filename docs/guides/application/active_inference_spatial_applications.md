@@ -27,51 +27,28 @@ tags:
   - spatial-web
 
 semantic_relations:
-
   - type: relates
-
     links:
-
-      - [[knowledge_base/cognitive/active_inference|Active Inference]]
-
-      - [[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]
-
-      - [[knowledge_base/systems/spatial_web|Spatial Web]]
-
-      - [[knowledge_base/systems/augmented_reality|Augmented Reality]]
-
-      - [[knowledge_base/systems/virtual_reality|Virtual Reality]]
-
-      - [[knowledge_base/systems/mixed_reality|Mixed Reality]]
-
-      - [[knowledge_base/systems/digital_twins|Digital Twins]]
-
+      - "[[knowledge_base/cognitive/active_inference|Active Inference]]"
+      - "[[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]"
+      - "[[knowledge_base/systems/spatial_web|Spatial Web]]"
+      - "[[knowledge_base/systems/augmented_reality|Augmented Reality]]"
+      - "[[knowledge_base/systems/virtual_reality|Virtual Reality]]"
+      - "[[knowledge_base/systems/mixed_reality|Mixed Reality]]"
+      - "[[knowledge_base/systems/digital_twins|Digital Twins]]"
   - type: specializes
-
     links:
-
-      - [[knowledge_base/mathematics/applications_of_free_energy|Applications of Free Energy]]
-
-      - [[knowledge_base/systems/spatial_computing|Spatial Computing]]
-
+      - "[[knowledge_base/mathematics/applications_of_free_energy|Applications of Free Energy]]"
+      - "[[knowledge_base/systems/spatial_computing|Spatial Computing]]"
   - type: prerequisite
-
     links:
-
-      - [[knowledge_base/cognitive/active_inference|Active Inference]]
-
-      - [[knowledge_base/systems/spatial_web|Spatial Web]]
-
+      - "[[knowledge_base/cognitive/active_inference|Active Inference]]"
+      - "[[knowledge_base/systems/spatial_web|Spatial Web]]"
   - type: foundation
-
     links:
-
-      - [[knowledge_base/cognitive/bayesian_inference|Bayesian Inference]]
-
-      - [[knowledge_base/mathematics/generative_models|Generative Models]]
-
-      - [[knowledge_base/cognitive/predictive_coding|Predictive Coding]]
-
+      - "[[knowledge_base/cognitive/bayesian_inference|Bayesian Inference]]"
+      - "[[knowledge_base/mathematics/generative_models|Generative Models]]"
+      - "[[knowledge_base/cognitive/predictive_coding|Predictive Coding]]"
 ---
 
 # Active Inference in Spatial Applications

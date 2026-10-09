@@ -10,10 +10,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[knowledge_base/mathematics/message_passing]]
-      - [[knowledge_base/mathematics/factor_graphs]]
-      - [[knowledge_base/mathematics/bethe_free_energy]]
-      - [[network_theory]]
+      - "[[knowledge_base/mathematics/message_passing]]"
+      - "[[knowledge_base/mathematics/factor_graphs]]"
+      - "[[knowledge_base/mathematics/bethe_free_energy]]"
+      - "[[network_theory]]"
 ---
 
 # Message Passing Networks

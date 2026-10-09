@@ -18,18 +18,18 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[myrmecology]]
-      - [[apidology]]
-      - [[swarm_intelligence_implementation]]
+      - "[[myrmecology]]"
+      - "[[apidology]]"
+      - "[[swarm_intelligence_implementation]]"
   - type: implements
     links:
-      - [[code/Things/Ant_Colony/README]]
-      - [[code/Things/Ant_Colony/AGENTS]]
+      - "[[code/Things/Ant_Colony/README]]"
+      - "[[code/Things/Ant_Colony/AGENTS]]"
   - type: relates
     links:
-      - [[foraging_optimization]]
-      - [[mathematical_models_social_insects]]
-      - [[active_inference_social_insects]]
+      - "[[foraging_optimization]]"
+      - "[[mathematical_models_social_insects]]"
+      - "[[active_inference_social_insects]]"
 ---
 
 # Implementation Examples Using Social Insect Code

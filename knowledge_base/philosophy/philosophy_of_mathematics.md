@@ -6,11 +6,11 @@ tags:
 - philosophy
 - mathematics
 semantic_relations:
-- type: relates
-  links:
-  - probability_theory
-  - category_theory
-  - information_theory
+  - type: relates
+    links:
+      - "[[probability_theory]]"
+      - "[[category_theory]]"
+      - "[[information_theory]]"
 ---
 
 

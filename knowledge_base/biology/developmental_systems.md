@@ -14,24 +14,24 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - morphogenesis
-  - - - pattern_formation
-  - - - cell_differentiation
-  - - - knowledge_base/cognitive/active_inference
-- type: implements
-  links:
-  - - - reaction_diffusion
-  - - - gene_regulatory_networks
-  - - - cellular_automata
-  - - - knowledge_base/agents/architectures_overview
-- type: relates
-  links:
-  - - - evolutionary_dynamics
-  - - - ecological_dynamics
-  - - - systems_biology
-  - - - developmental_networks
+  - type: foundation
+    links:
+      - "[[morphogenesis]]"
+      - "[[pattern_formation]]"
+      - "[[cell_differentiation]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+  - type: implements
+    links:
+      - "[[reaction_diffusion]]"
+      - "[[gene_regulatory_networks]]"
+      - "[[cellular_automata]]"
+      - "[[knowledge_base/agents/architectures_overview]]"
+  - type: relates
+    links:
+      - "[[evolutionary_dynamics]]"
+      - "[[ecological_dynamics]]"
+      - "[[systems_biology]]"
+      - "[[developmental_networks]]"
 ---
 
 

@@ -7,11 +7,11 @@ tags:
 - governance
 - adaptation
 semantic_relations:
-- type: relates
-  links:
-  - resilience_thinking
-  - ecosystem_management
-  - learning_initiatives
+  - type: relates
+    links:
+      - "[[resilience_thinking]]"
+      - "[[ecosystem_management]]"
+      - "[[learning_initiatives]]"
 ---
 
 

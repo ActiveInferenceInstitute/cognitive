@@ -9,14 +9,14 @@ tags:
 - decision_making
 - logic
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_functions
-- type: related
-  links:
-  - - - decision_making
-  - - - executive_functions
-  - - - learning_mechanisms
+  - type: implements
+    links:
+      - "[[cognitive_functions]]"
+  - type: related
+    links:
+      - "[[decision_making]]"
+      - "[[executive_functions]]"
+      - "[[learning_mechanisms]]"
 ---
 
 

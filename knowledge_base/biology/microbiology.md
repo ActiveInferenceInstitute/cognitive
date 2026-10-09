@@ -15,21 +15,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - cell_biology
-- type: implements
-  links:
-  - - - bacterial_dynamics
-  - - - viral_dynamics
-  - - - microbial_networks
-- type: relates
-  links:
-  - - - molecular_biology
-  - - - systems_biology
-  - - - evolutionary_dynamics
+  - type: foundation
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[cell_biology]]"
+  - type: implements
+    links:
+      - "[[bacterial_dynamics]]"
+      - "[[viral_dynamics]]"
+      - "[[microbial_networks]]"
+  - type: relates
+    links:
+      - "[[molecular_biology]]"
+      - "[[systems_biology]]"
+      - "[[evolutionary_dynamics]]"
 ---
 
 

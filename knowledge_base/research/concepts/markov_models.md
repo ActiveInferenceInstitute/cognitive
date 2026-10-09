@@ -7,9 +7,14 @@ updated: 2026-02-07
 tags: [markov, stochastic_processes, transition, HMM]
 semantic_relations:
   - type: foundation_for
-    links: [[knowledge_base/mathematics/active_inference_pomdp]]
+    links:
+      - "[[knowledge_base/mathematics/active_inference_pomdp]]"
   - type: relates
-    links: [[[state_spaces]], [[hidden_states]], [[knowledge_base/mathematics/stochastic_processes]], [[knowledge_base/mathematics/markov_blanket]]]
+    links:
+      - "[[state_spaces]]"
+      - "[[hidden_states]]"
+      - "[[knowledge_base/mathematics/stochastic_processes]]"
+      - "[[knowledge_base/mathematics/markov_blanket]]"
 ---
 
 # Markov Models

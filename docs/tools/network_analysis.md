@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../repo_docs/obsidian_linking|Obsidian linking standards]]'
-      - '[[graph_generator|Graph generation]]'
+      - "[[../repo_docs/obsidian_linking|Obsidian linking standards]]"
+      - "[[graph_generator|Graph generation]]"
 ---
 
 # Network analysis

@@ -23,16 +23,16 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/biology/morphogenesis]]
-      - pattern regulation
+      - "[[knowledge_base/biology/morphogenesis]]"
+      - "[[pattern regulation]]"
   - type: extends
     links:
-      - [[friston_2013]]
-      - [[friston_2010]]
+      - "[[friston_2013]]"
+      - "[[friston_2010]]"
   - type: cited_by
     links:
-      - [[ramstead_2018]]
-      - [[kirchhoff_2018]]
+      - "[[ramstead_2018]]"
+      - "[[kirchhoff_2018]]"
 ---
 
 # Knowing One's Place: A Free-Energy Approach to Pattern Regulation

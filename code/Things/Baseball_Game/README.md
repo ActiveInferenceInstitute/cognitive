@@ -13,8 +13,8 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[knowledge_base/cognitive/decision_making]]
-      - [[docs/guides/application/README]]
+      - "[[knowledge_base/cognitive/decision_making]]"
+      - "[[docs/guides/application/README]]"
 ---
 
 # Baseball Game Implementation

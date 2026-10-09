@@ -13,14 +13,14 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[knowledge_base/mathematics/active_inference_theory]]
-      - [[knowledge_base/cognitive/active_inference]]
+      - "[[knowledge_base/mathematics/active_inference_theory]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
   - type: extends
     links:
-      - [[knowledge_base/mathematics/pomdp_framework]]
+      - "[[knowledge_base/mathematics/pomdp_framework]]"
   - type: documented_in
     links:
-      - [[knowledge_base/agents/AGENTS]]
+      - "[[knowledge_base/agents/AGENTS]]"
 ---
 
 # Generic POMDP Active Inference Implementation

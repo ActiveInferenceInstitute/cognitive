@@ -13,19 +13,19 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[active_inference]]
-      - [[predictive_coding]]
-      - [[bayesian_brain_hypothesis]]
+      - "[[active_inference]]"
+      - "[[predictive_coding]]"
+      - "[[bayesian_brain_hypothesis]]"
   - type: foundation
     links:
-      - [[knowledge_base/biology/neuroscience]]
-      - [[knowledge_base/mathematics/free_energy_principle]]
-      - [[knowledge_base/mathematics/predictive_coding]]
+      - "[[knowledge_base/biology/neuroscience]]"
+      - "[[knowledge_base/mathematics/free_energy_principle]]"
+      - "[[knowledge_base/mathematics/predictive_coding]]"
   - type: relates
     links:
-      - [[attention_mechanisms]]
-      - [[hierarchical_processing]]
-      - [[precision_weighting]]
+      - "[[attention_mechanisms]]"
+      - "[[hierarchical_processing]]"
+      - "[[precision_weighting]]"
 ---
 
 # Neural Implementation of Active Inference

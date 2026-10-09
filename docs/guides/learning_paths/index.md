@@ -18,17 +18,11 @@ tags:
   - index
 
 semantic_relations:
-
   - type: organizes
-
     links:
-
-      - [[knowledge_base/cognitive/active_inference]]
-
-      - [[knowledge_base/mathematics/pomdp_framework]]
-
-      - [[knowledge_base/cognitive/swarm_intelligence]]
-
+      - "[[knowledge_base/cognitive/active_inference]]"
+      - "[[knowledge_base/mathematics/pomdp_framework]]"
+      - "[[knowledge_base/cognitive/swarm_intelligence]]"
 ---
 
 #

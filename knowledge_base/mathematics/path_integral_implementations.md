@@ -11,21 +11,21 @@ tags:
 - numerical_methods
 - active_inference
 semantic_relations:
-- type: implements
-  links:
-  - - - path_integral_theory
-  - - - path_integral_free_energy
-  - - - stochastic_processes
-- type: uses
-  links:
-  - - - monte_carlo_methods
-  - - - numerical_methods
-  - - - optimization_theory
-- type: applied_in
-  links:
-  - - - active_inference_theory
-  - - - expected_free_energy
-  - - - policy_selection
+  - type: implements
+    links:
+      - "[[path_integral_theory]]"
+      - "[[path_integral_free_energy]]"
+      - "[[stochastic_processes]]"
+  - type: uses
+    links:
+      - "[[monte_carlo_methods]]"
+      - "[[numerical_methods]]"
+      - "[[optimization_theory]]"
+  - type: applied_in
+    links:
+      - "[[active_inference_theory]]"
+      - "[[expected_free_energy]]"
+      - "[[policy_selection]]"
 ---
 
 

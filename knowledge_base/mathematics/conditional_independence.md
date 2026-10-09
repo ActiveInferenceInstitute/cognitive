@@ -9,21 +9,21 @@ tags:
 - statistics
 - graphical-models
 semantic_relations:
-- type: foundation
-  links:
-  - - - probability_theory
-  - - - information_theory
-  - - - graphical_models
-- type: used_by
-  links:
-  - - - bayesian_networks
-  - - - markov_random_fields
-  - - - probabilistic_graphical_models
-- type: related
-  links:
-  - - - markov_properties
-  - - - d_separation
-  - - - independence_testing
+  - type: foundation
+    links:
+      - "[[probability_theory]]"
+      - "[[information_theory]]"
+      - "[[graphical_models]]"
+  - type: used_by
+    links:
+      - "[[bayesian_networks]]"
+      - "[[markov_random_fields]]"
+      - "[[probabilistic_graphical_models]]"
+  - type: related
+    links:
+      - "[[markov_properties]]"
+      - "[[d_separation]]"
+      - "[[independence_testing]]"
 ---
 
 

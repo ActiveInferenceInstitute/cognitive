@@ -25,18 +25,18 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/mathematics/expected_free_energy]]
-      - curiosity
-      - exploration
+      - "[[knowledge_base/mathematics/expected_free_energy]]"
+      - "[[curiosity]]"
+      - "[[exploration]]"
   - type: extends
     links:
-      - [[friston_2010]]
-      - [[friston_2013]]
+      - "[[friston_2010]]"
+      - "[[friston_2013]]"
   - type: cited_by
     links:
-      - [[da_costa_2020]]
-      - [[sajid_2021]]
-      - [[millidge_2021]]
+      - "[[da_costa_2020]]"
+      - "[[sajid_2021]]"
+      - "[[millidge_2021]]"
 ---
 
 # Active Inference, Curiosity and Insight

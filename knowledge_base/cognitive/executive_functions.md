@@ -9,14 +9,14 @@ tags:
 - behavior
 - prefrontal
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_control
-- type: related
-  links:
-  - - - attention
-  - - - working_memory
-  - - - decision_making
+  - type: implements
+    links:
+      - "[[cognitive_control]]"
+  - type: related
+    links:
+      - "[[attention]]"
+      - "[[working_memory]]"
+      - "[[decision_making]]"
 ---
 
 

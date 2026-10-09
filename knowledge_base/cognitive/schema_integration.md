@@ -9,18 +9,18 @@ tags:
 - knowledge
 - learning
 semantic_relations:
-- type: implements
-  links:
-  - - memory_systems
-- type: extends
-  links:
-  - - knowledge_organization
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - memory_consolidation
-  - - - semantic_memory
+  - type: implements
+    links:
+      - "[[memory_systems]]"
+  - type: extends
+    links:
+      - "[[knowledge_organization]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[memory_consolidation]]"
+      - "[[semantic_memory]]"
 ---
 
 

@@ -25,31 +25,18 @@ tags:
   - cognitive-development
 
 semantic_relations:
-
   - type: specializes
-
     links:
-
-      - [[active_inference_learning_path]]
-
+      - "[[active_inference_learning_path]]"
   - type: relates
-
     links:
-
-      - [[active_inference_cognitive_learning_path]]
-
-      - [[active_inference_social_learning_path]]
-
-      - [[active_inference_pragmatism_learning_path]]
-
+      - "[[active_inference_cognitive_learning_path]]"
+      - "[[active_inference_social_learning_path]]"
+      - "[[active_inference_pragmatism_learning_path]]"
   - type: builds_on
-
     links:
-
-      - [[knowledge_base/systems/educational_programs|Educational Programs]]
-
-      - [[knowledge_base/systems/learning_initiatives|Learning Initiatives]]
-
+      - "[[knowledge_base/systems/educational_programs|Educational Programs]]"
+      - "[[knowledge_base/systems/learning_initiatives|Learning Initiatives]]"
 ---
 
 # Active Inference in Educational Programs Learning Path

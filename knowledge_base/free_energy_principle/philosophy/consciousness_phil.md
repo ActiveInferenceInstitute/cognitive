@@ -16,17 +16,17 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
   - type: relates
     links:
-      - [[mind_body_problem|Mind-Body Problem]]
-      - [[epistemology|Epistemology]]
-      - [[metaphysics|Metaphysics]]
-      - [[knowledge_base/free_energy_principle/cognitive/consciousness|Consciousness (Cognitive)]]
-      - [[knowledge_base/free_energy_principle/cognitive/attention|Attention]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
+      - "[[mind_body_problem|Mind-Body Problem]]"
+      - "[[epistemology|Epistemology]]"
+      - "[[metaphysics|Metaphysics]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/consciousness|Consciousness (Cognitive)]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/attention|Attention]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
 ---
 
 # Consciousness and the Free Energy Principle

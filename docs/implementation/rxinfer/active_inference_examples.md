@@ -17,23 +17,14 @@ tags:
   - examples
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[active_inference]]
-
-      - [[model_macro_paradigm]]
-
+      - "[[active_inference]]"
+      - "[[model_macro_paradigm]]"
   - type: related
-
     links:
-
-      - [[free_energy]]
-
-      - [[message_passing]]
-
+      - "[[free_energy]]"
+      - "[[message_passing]]"
 ---
 
 # Active Inference Examples in RxInfer

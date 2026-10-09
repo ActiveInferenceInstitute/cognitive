@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[documentation_standards|Documentation standards]]'
-      - '[[naming_conventions|Naming conventions]]'
-      - '[[content_management|Content management]]'
-      - '[[validation|Validation]]'
+      - "[[documentation_standards|Documentation standards]]"
+      - "[[naming_conventions|Naming conventions]]"
+      - "[[content_management|Content management]]"
+      - "[[validation|Validation]]"
 ---
 
 # AI Documentation Style

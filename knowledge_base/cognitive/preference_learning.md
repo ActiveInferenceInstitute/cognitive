@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[learning_mechanisms]]
-      - [[decision_making]]
-      - [[reinforcement_learning]]
-      - [[learning_models]]
+      - "[[learning_mechanisms]]"
+      - "[[decision_making]]"
+      - "[[reinforcement_learning]]"
+      - "[[learning_models]]"
 ---
 
 # Preference Learning

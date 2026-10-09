@@ -9,18 +9,18 @@ tags:
 - action
 - motor_control
 semantic_relations:
-- type: implements
-  links:
-  - - sensory_processing
-- type: extends
-  links:
-  - - motor_control
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - multisensory_integration
-  - - - motor_learning
+  - type: implements
+    links:
+      - "[[sensory_processing]]"
+  - type: extends
+    links:
+      - "[[motor_control]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[multisensory_integration]]"
+      - "[[motor_learning]]"
 ---
 
 

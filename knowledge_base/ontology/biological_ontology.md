@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[knowledge_base/biology/AGENTS|Biological Systems Agents]]
-      - [[knowledge_base/biology/README|Biology Overview]]
-      - [[knowledge_base/biology/levels_of_organization|Biological Organization Levels]]
+      - "[[knowledge_base/biology/AGENTS|Biological Systems Agents]]"
+      - "[[knowledge_base/biology/README|Biology Overview]]"
+      - "[[knowledge_base/biology/levels_of_organization|Biological Organization Levels]]"
 ---
 
 # Biological Ontology

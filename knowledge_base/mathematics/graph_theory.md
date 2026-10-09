@@ -11,20 +11,20 @@ tags:
 - networks
 - combinatorics
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - probabilistic_graphical_models
-  - - - network_science
-  - - - markov_random_fields
-- type: implements
-  links:
-  - - - discrete_mathematics
-  - - - combinatorics
-- type: relates
-  links:
-  - - - optimization_theory
-  - - - information_theory
-  - - - complexity_theory
+  - type: foundation_for
+    links:
+      - "[[probabilistic_graphical_models]]"
+      - "[[network_science]]"
+      - "[[markov_random_fields]]"
+  - type: implements
+    links:
+      - "[[discrete_mathematics]]"
+      - "[[combinatorics]]"
+  - type: relates
+    links:
+      - "[[optimization_theory]]"
+      - "[[information_theory]]"
+      - "[[complexity_theory]]"
 ---
 
 

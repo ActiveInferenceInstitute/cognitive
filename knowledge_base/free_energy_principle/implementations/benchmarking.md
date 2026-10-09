@@ -13,12 +13,12 @@ aliases: [benchmarking_agents, agent_benchmarks]
 semantic_relations:
   - type: implements
     links:
-      - [[knowledge_base/free_energy_principle/implementations/python_framework]]
-      - [[knowledge_base/free_energy_principle/implementations/simulation]]
+      - "[[knowledge_base/free_energy_principle/implementations/python_framework]]"
+      - "[[knowledge_base/free_energy_principle/implementations/simulation]]"
   - type: relates
     links:
-      - [[knowledge_base/free_energy_principle/implementations/simulation]]
-      - [[docs/tools/benchmark_tools|Benchmark tools]]
+      - "[[knowledge_base/free_energy_principle/implementations/simulation]]"
+      - "[[docs/tools/benchmark_tools|Benchmark tools]]"
 ---
 
 # Benchmarking Active Inference Agents

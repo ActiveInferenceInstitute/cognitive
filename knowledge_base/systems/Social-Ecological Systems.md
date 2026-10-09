@@ -7,11 +7,11 @@ tags:
 - coupled_systems
 - sustainability
 semantic_relations:
-- type: relates
-  links:
-  - resilience_thinking
-  - adaptive_comanagement
-  - environmental_applications
+  - type: relates
+    links:
+      - "[[resilience_thinking]]"
+      - "[[adaptive_comanagement]]"
+      - "[[environmental_applications]]"
 ---
 
 

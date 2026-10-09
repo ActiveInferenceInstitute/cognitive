@@ -17,23 +17,14 @@ tags:
   - probabilistic-programming
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[probabilistic_models]]
-
-      - [[domain_specific_languages]]
-
+      - "[[probabilistic_models]]"
+      - "[[domain_specific_languages]]"
   - type: related
-
     links:
-
-      - [[factor_graphs]]
-
-      - [[variational_inference]]
-
+      - "[[factor_graphs]]"
+      - "[[variational_inference]]"
 ---
 
 # Model Specification in RxInfer

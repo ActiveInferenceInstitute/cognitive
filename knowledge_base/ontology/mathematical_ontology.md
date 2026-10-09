@@ -12,19 +12,18 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[knowledge_base/mathematics/AGENTS|Mathematical Foundations]]
-      - [[knowledge_base/mathematics/README|Mathematics Overview]]
+      - "[[knowledge_base/mathematics/AGENTS|Mathematical Foundations]]"
+      - "[[knowledge_base/mathematics/README|Mathematics Overview]]"
   - type: relates
     links:
-      - [[cognitive_ontology]]
-      - [[systems_ontology]]
-      - [[knowledge_base/mathematics/category_theory]]
-      - [[knowledge_base/mathematics/information_theory]]
+      - "[[cognitive_ontology]]"
+      - "[[systems_ontology]]"
+      - "[[knowledge_base/mathematics/category_theory]]"
+      - "[[knowledge_base/mathematics/information_theory]]"
   - type: provides
     links:
-      - [[knowledge_base/mathematics/probability_theory]]
-      - code/Things/KG_Multi_Agent/MKG_Multi_Agent/test1/outputs/research_requests/statistics/statistics
-      - [[knowledge_base/cognitive/free_energy_principle]]
+      - "[[knowledge_base/mathematics/probability_theory]]"
+      - "[[knowledge_base/cognitive/free_energy_principle]]"
 ---
 
 # Mathematical Ontology

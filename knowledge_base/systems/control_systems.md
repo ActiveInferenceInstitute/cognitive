@@ -10,9 +10,9 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[dynamical_systems]]
-      - [[adaptive_systems]]
-      - [[circular_causality]]
+      - "[[dynamical_systems]]"
+      - "[[adaptive_systems]]"
+      - "[[circular_causality]]"
 ---
 
 # Control Systems

@@ -13,11 +13,11 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[bayesian_brain_hypothesis]]
-      - [[predictive_coding]]
-      - [[computational_neuroscience]]
-      - [[attention_mechanisms]]
-      - [[decision_making]]
+      - "[[bayesian_brain_hypothesis]]"
+      - "[[predictive_coding]]"
+      - "[[computational_neuroscience]]"
+      - "[[attention_mechanisms]]"
+      - "[[decision_making]]"
 ---
 
 # Cognitive Neuroscience

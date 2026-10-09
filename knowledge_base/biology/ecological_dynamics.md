@@ -14,24 +14,24 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - population_dynamics
-  - - - community_ecology
-  - - - ecosystem_processes
-  - - - knowledge_base/cognitive/active_inference
-- type: implements
-  links:
-  - - - lotka_volterra
-  - - - food_webs
-  - - - metacommunity_theory
-  - - - knowledge_base/agents/architectures_overview
-- type: relates
-  links:
-  - - - evolutionary_dynamics
-  - - - developmental_systems
-  - - - ecological_networks
-  - - - behavioral_biology
+  - type: foundation
+    links:
+      - "[[population_dynamics]]"
+      - "[[community_ecology]]"
+      - "[[ecosystem_processes]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+  - type: implements
+    links:
+      - "[[lotka_volterra]]"
+      - "[[food_webs]]"
+      - "[[metacommunity_theory]]"
+      - "[[knowledge_base/agents/architectures_overview]]"
+  - type: relates
+    links:
+      - "[[evolutionary_dynamics]]"
+      - "[[developmental_systems]]"
+      - "[[ecological_networks]]"
+      - "[[behavioral_biology]]"
 ---
 
 

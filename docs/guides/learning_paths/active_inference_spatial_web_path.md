@@ -49,41 +49,23 @@ tags:
   - free-energy-principle
 
 semantic_relations:
-
   - type: specializes
-
     links:
-
-      - [[active_inference_learning_path]]
-
+      - "[[active_inference_learning_path]]"
   - type: relates
-
     links:
-
-      - [[active_inference_cognitive_learning_path]]
-
-      - [[active_inference_environmental_applications_path]]
-
-      - [[active_inference_social_learning_path]]
-
+      - "[[active_inference_cognitive_learning_path]]"
+      - "[[active_inference_environmental_applications_path]]"
+      - "[[active_inference_social_learning_path]]"
   - type: builds_on
-
     links:
-
-      - [[knowledge_base/systems/spatial_web|Spatial Web]]
-
-      - [[knowledge_base/systems/augmented_reality|Augmented Reality]]
-
-      - [[knowledge_base/systems/virtual_reality|Virtual Reality]]
-
-      - [[knowledge_base/systems/mixed_reality|Mixed Reality]]
-
-      - [[knowledge_base/cognitive/active_inference|Active Inference]]
-
-      - [[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]
-
-      - [[docs/guides/application/active_inference_spatial_applications|Active Inference in Spatial Applications]]
-
+      - "[[knowledge_base/systems/spatial_web|Spatial Web]]"
+      - "[[knowledge_base/systems/augmented_reality|Augmented Reality]]"
+      - "[[knowledge_base/systems/virtual_reality|Virtual Reality]]"
+      - "[[knowledge_base/systems/mixed_reality|Mixed Reality]]"
+      - "[[knowledge_base/cognitive/active_inference|Active Inference]]"
+      - "[[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]"
+      - "[[docs/guides/application/active_inference_spatial_applications|Active Inference in Spatial Applications]]"
 ---
 
 # Active Inference in Spatial Web Learning Path

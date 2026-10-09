@@ -11,14 +11,14 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - free_energy_principle
-      - variational_inference
-      - active_inference
-      - bayesian_brain_hypothesis
+      - "[[free_energy_principle]]"
+      - "[[variational_inference]]"
+      - "[[active_inference]]"
+      - "[[bayesian_brain_hypothesis]]"
   - type: foundation
     links:
-      - [[../mathematics/variational_free_energy]]
-      - [[../mathematics/variational_inference]]
+      - "[[../mathematics/variational_free_energy]]"
+      - "[[../mathematics/variational_inference]]"
 ---
 
 # Variational Free Energy

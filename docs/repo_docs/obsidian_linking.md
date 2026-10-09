@@ -34,11 +34,11 @@ This guide explains how to effectively use Obsidian's [[wikilink]] syntax in our
 
 ```markdown
 
-- parent_concept
+- [[parent_concept]]
 
-  - child_concept_1
+  - [[child_concept_1]]
 
-  - child_concept_2
+  - [[child_concept_2]]
 
 ```
 
@@ -50,11 +50,11 @@ Always consider reciprocal links in related documents:
 
 // In model_a.md
 
-Related: model_b
+Related: [[model_b]]
 
 // In model_b.md
 
-Related: model_a
+Related: [[model_a]]
 
 ```
 
@@ -90,9 +90,9 @@ title: Belief Update Algorithm
 
 related:
 
-  - free_energy
+  - [[free_energy]]
 
-  - message_passing
+  - [[message_passing]]
 
 tags:
 
@@ -130,11 +130,11 @@ tags:
 
 ## Topic Map
 
-- core_concept
+- [[core_concept]]
 
-  - sub_concept_1 - Brief description
+  - [[sub_concept_1]] - Brief description
 
-  - sub_concept_2 - Brief description
+  - [[sub_concept_2]] - Brief description
 
 ```
 
@@ -144,11 +144,11 @@ tags:
 
 ## Implementation
 
-- Algorithm: algorithm_name
+- Algorithm: [[algorithm_name]]
 
-- Tests: test_suite
+- Tests: [[test_suite]]
 
-- Examples: usage_example
+- Examples: [[usage_example]]
 
 ```
 
@@ -158,11 +158,11 @@ tags:
 
 ## Version History
 
-- v1_implementation
+- [[v1_implementation]]
 
-- v2_implementation (current)
+- [[v2_implementation]] (current)
 
-- v3_proposal
+- [[v3_proposal]]
 
 ```
 

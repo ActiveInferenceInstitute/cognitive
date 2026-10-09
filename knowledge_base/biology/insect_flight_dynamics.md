@@ -15,21 +15,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - mathematical_entomology
-  - - - fluid_dynamics
-  - - - biomechanics
-- type: implements
-  links:
-  - - - differential_equations
-  - - - numerical_methods
-  - - - computational_fluid_dynamics
-- type: relates
-  links:
-  - - - evolutionary_dynamics
-  - - - behavioral_biology
-  - - - biophysics
+  - type: foundation
+    links:
+      - "[[mathematical_entomology]]"
+      - "[[fluid_dynamics]]"
+      - "[[biomechanics]]"
+  - type: implements
+    links:
+      - "[[differential_equations]]"
+      - "[[numerical_methods]]"
+      - "[[computational_fluid_dynamics]]"
+  - type: relates
+    links:
+      - "[[evolutionary_dynamics]]"
+      - "[[behavioral_biology]]"
+      - "[[biophysics]]"
 ---
 
 

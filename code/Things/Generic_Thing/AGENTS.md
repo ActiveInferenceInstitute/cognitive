@@ -9,8 +9,8 @@ tags:
 semantic_relations:
   - type: documented_by
     links:
-      - [[code/Things/Generic_Thing/README]]
-      - [[code/Things/Generic_Thing/generic_thing]]
+      - "[[code/Things/Generic_Thing/README]]"
+      - "[[code/Things/Generic_Thing/generic_thing]]"
 ---
 
 # Generic Thing

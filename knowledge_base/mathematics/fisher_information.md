@@ -8,14 +8,14 @@ tags:
 - estimation
 - geometry
 semantic_relations:
-- type: relates
-  links:
-  - information_geometry
-  - natural_gradients
-- type: supports
-  links:
-  - policy_selection
-  - action_distribution
+  - type: relates
+    links:
+      - "[[information_geometry]]"
+      - "[[natural_gradients]]"
+  - type: supports
+    links:
+      - "[[policy_selection]]"
+      - "[[action_distribution]]"
 ---
 
 

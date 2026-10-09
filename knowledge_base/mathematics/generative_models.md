@@ -12,19 +12,19 @@ tags:
 semantic_relations:
   - type: foundation_for
     links:
-      - [[active_inference_theory]]
-      - [[free_energy_principle]]
-      - [[belief_updating]]
+      - "[[active_inference_theory]]"
+      - "[[free_energy_principle]]"
+      - "[[belief_updating]]"
   - type: uses
     links:
-      - [[graphical_models]]
-      - [[probability_theory]]
-      - [[bayesian_inference]]
+      - "[[graphical_models]]"
+      - "[[probability_theory]]"
+      - "[[bayesian_inference]]"
   - type: related
     links:
-      - [[probabilistic_models]]
-      - [[variational_inference]]
-      - [[message_passing]]
+      - "[[probabilistic_models]]"
+      - "[[variational_inference]]"
+      - "[[message_passing]]"
 ---
 
 # Generative Models

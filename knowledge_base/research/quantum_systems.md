@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/research/quantum_cognition]]
-      - [[knowledge_base/research/quantum_computation]]
+      - "[[knowledge_base/research/quantum_cognition]]"
+      - "[[knowledge_base/research/quantum_computation]]"
 ---
 
 # Quantum Systems

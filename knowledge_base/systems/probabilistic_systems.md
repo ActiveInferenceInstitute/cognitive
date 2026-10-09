@@ -10,9 +10,9 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[dynamical_systems]]
-      - [[complex_systems]]
-      - [[knowledge_base/mathematics/probability_distributions]]
+      - "[[dynamical_systems]]"
+      - "[[complex_systems]]"
+      - "[[knowledge_base/mathematics/probability_distributions]]"
 ---
 
 # Probabilistic Systems

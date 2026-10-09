@@ -14,14 +14,14 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
   - type: relates
     links:
-      - [[evolution|Evolution]]
-      - [[homeostasis|Homeostasis]]
-      - [[knowledge_base/free_energy_principle/systems/complex_adaptation|Complex Adaptation]]
-      - [[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]
+      - "[[evolution|Evolution]]"
+      - "[[homeostasis|Homeostasis]]"
+      - "[[knowledge_base/free_energy_principle/systems/complex_adaptation|Complex Adaptation]]"
+      - "[[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]"
 ---
 
 # Ecosystems as Coupled Inference Systems

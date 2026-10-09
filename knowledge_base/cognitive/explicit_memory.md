@@ -9,18 +9,18 @@ tags:
 - consciousness
 - declarative
 semantic_relations:
-- type: implements
-  links:
-  - - memory_systems
-- type: extends
-  links:
-  - - declarative_memory
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - episodic_memory
-  - - - semantic_memory
+  - type: implements
+    links:
+      - "[[memory_systems]]"
+  - type: extends
+    links:
+      - "[[declarative_memory]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[episodic_memory]]"
+      - "[[semantic_memory]]"
 ---
 
 

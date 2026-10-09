@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[code/Things/Ant_Colony/AGENTS]]
-      - [[knowledge_base/cognitive/swarm_intelligence]]
-      - [[knowledge_base/biology/README]]
+      - "[[code/Things/Ant_Colony/AGENTS]]"
+      - "[[knowledge_base/cognitive/swarm_intelligence]]"
+      - "[[knowledge_base/biology/README]]"
 ---
 
 # Ant Colony Implementation Guide

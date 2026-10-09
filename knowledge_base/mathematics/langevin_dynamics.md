@@ -14,18 +14,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[mathematics/stochastic_processes|Stochastic Processes]]
-      - [[mathematics/differential_equations|Differential Equations]]
-      - [[mathematics/probability_theory|Probability Theory]]
+      - "[[mathematics/stochastic_processes|Stochastic Processes]]"
+      - "[[mathematics/differential_equations|Differential Equations]]"
+      - "[[mathematics/probability_theory|Probability Theory]]"
   - type: relates
     links:
-      - [[mathematics/fokker_planck|Fokker-Planck Equation]]
-      - [[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]
-      - [[cognitive/free_energy_principle|Free Energy Principle]]
+      - "[[mathematics/fokker_planck|Fokker-Planck Equation]]"
+      - "[[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]"
+      - "[[cognitive/free_energy_principle|Free Energy Principle]]"
   - type: implements
     links:
-      - [[mathematics/variational_free_energy|Variational Free Energy]]
-      - [[cognitive/active_inference|Active Inference]]
+      - "[[mathematics/variational_free_energy|Variational Free Energy]]"
+      - "[[cognitive/active_inference|Active Inference]]"
 ---
 
 # Langevin Dynamics

@@ -10,13 +10,13 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - git_workflow
-      - obsidian_usage
-      - knowledge_organization
-      - model_generalization
+      - "[[git_workflow]]"
+      - "[[obsidian_usage]]"
+      - "[[knowledge_organization]]"
+      - "[[model_generalization]]"
   - type: implements
     links:
-      - [[plain_text_benefits]]
+      - "[[plain_text_benefits]]"
 ---
 
 # Plain Text Benefits in Cognitive Modeling
@@ -117,11 +117,11 @@ See [[model_specification]] for details.
 
 ## Cognitive Architecture
 
-- belief_updating
+- [[belief_updating]]
 
-  - prediction_error
+  - [[prediction_error]]
 
-  - precision_weighting
+  - [[precision_weighting]]
 
 ```
 
@@ -189,11 +189,11 @@ experiment:
 
   id: exp001
 
-  hypothesis: "active_inference_hypothesis"
+  hypothesis: "[[active_inference_hypothesis]]"
 
-  methods: "experimental_design"
+  methods: "[[experimental_design]]"
 
-  results: "data_analysis"
+  results: "[[data_analysis]]"
 
 ---
 

@@ -10,16 +10,16 @@ tags:
 - metaphysics
 - logic
 semantic_relations:
-- type: organizes
-  links:
-  - - - epistemology
-  - - - metaphysics
-  - - - logic
-- type: relates
-  links:
-  - - - cognitive_science
-  - - - mathematics
-  - - - physics
+  - type: organizes
+    links:
+      - "[[epistemology]]"
+      - "[[metaphysics]]"
+      - "[[logic]]"
+  - type: relates
+    links:
+      - "[[cognitive_science]]"
+      - "[[mathematics]]"
+      - "[[physics]]"
 ---
 
 

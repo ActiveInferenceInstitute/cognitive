@@ -15,22 +15,22 @@ aliases: [fep_homeostasis, homeostasis_fep, physiological_fep]
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy]]
-      - [[knowledge_base/free_energy_principle/systems/self_organization]]
-      - knowledge_base/biology/autopoiesis
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy]]"
+      - "[[knowledge_base/free_energy_principle/systems/self_organization]]"
+      - "[[knowledge_base/biology/autopoiesis]]"
   - type: implements
     links:
-      - knowledge_base/biology/physiological_homeostasis
-      - [[knowledge_base/free_energy_principle/biology/neural_systems]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception]]
-      - [[knowledge_base/free_energy_principle/implementations/simulation]]
+      - "[[knowledge_base/biology/homeostasis]]"
+      - "[[knowledge_base/free_energy_principle/biology/neural_systems]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception]]"
+      - "[[knowledge_base/free_energy_principle/implementations/simulation]]"
   - type: relates
     links:
-      - [[knowledge_base/free_energy_principle/biology/evolution]]
-      - [[knowledge_base/free_energy_principle/biology/development]]
-      - [[knowledge_base/free_energy_principle/systems/resilience]]
-      - [[knowledge_base/free_energy_principle/philosophy/mind_body_problem]]
+      - "[[knowledge_base/free_energy_principle/biology/evolution]]"
+      - "[[knowledge_base/free_energy_principle/biology/development]]"
+      - "[[knowledge_base/free_energy_principle/systems/resilience]]"
+      - "[[knowledge_base/free_energy_principle/philosophy/mind_body_problem]]"
 ---
 
 # Free Energy Principle and Homeostasis

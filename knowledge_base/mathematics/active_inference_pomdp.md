@@ -11,18 +11,18 @@ tags:
 aliases:
 - active-inference-pomdp
 semantic_relations:
-- type: implements
-  links:
-  - - - docs/research/research_documentation_index|Research Documentation
-  - - - free_energy_principle
-- type: uses
-  links:
-  - - - variational_methods
-  - - - information_theory
-- type: documented_by
-  links:
-  - - - docs/implementation/implementation_guides_index|Implementation Guides
-  - - - docs/api/api_documentation_index|API Documentation
+  - type: implements
+    links:
+      - "[[docs/research/research_documentation_index|Research Documentation]]"
+      - "[[free_energy_principle]]"
+  - type: uses
+    links:
+      - "[[variational_methods]]"
+      - "[[information_theory]]"
+  - type: documented_by
+    links:
+      - "[[docs/implementation/implementation_guides_index|Implementation Guides]]"
+      - "[[docs/api/api_documentation_index|API Documentation]]"
 ---
 
 

@@ -9,17 +9,17 @@ tags:
 - vision
 - shape
 semantic_relations:
-- type: implements
-  links:
-  - - visual_perception
-- type: extends
-  links:
-  - - pattern_recognition
-- type: related
-  links:
-  - - - object_recognition
-  - - - spatial_processing
-  - - - perceptual_organization
+  - type: implements
+    links:
+      - "[[visual_perception]]"
+  - type: extends
+    links:
+      - "[[pattern_recognition]]"
+  - type: related
+    links:
+      - "[[object_recognition]]"
+      - "[[spatial_processing]]"
+      - "[[perceptual_organization]]"
 ---
 
 

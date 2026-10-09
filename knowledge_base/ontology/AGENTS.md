@@ -13,14 +13,14 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Ontology knowledge base]]'
-      - '[[cognitive_ontology|Cognitive ontology]]'
-      - '[[biological_ontology|Biological ontology]]'
-      - '[[mathematical_ontology|Mathematical ontology]]'
-      - '[[philosophical_ontology|Philosophical ontology]]'
-      - '[[systems_ontology|Systems ontology]]'
-      - '[[computer_science_ontology|Computer science ontology]]'
-      - '[[hyperspatial/AGENTS|Hyperspatial ontology]]'
+      - "[[README|Ontology knowledge base]]"
+      - "[[cognitive_ontology|Cognitive ontology]]"
+      - "[[biological_ontology|Biological ontology]]"
+      - "[[mathematical_ontology|Mathematical ontology]]"
+      - "[[philosophical_ontology|Philosophical ontology]]"
+      - "[[systems_ontology|Systems ontology]]"
+      - "[[computer_science_ontology|Computer science ontology]]"
+      - "[[hyperspatial/AGENTS|Hyperspatial ontology]]"
 ---
 
 # Ontology Knowledge Base Agents

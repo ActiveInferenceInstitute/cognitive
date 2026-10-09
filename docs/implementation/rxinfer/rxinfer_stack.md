@@ -17,23 +17,14 @@ tags:
   - implementation
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[model_specification]]
-
-      - [[runtime_system]]
-
+      - "[[model_specification]]"
+      - "[[runtime_system]]"
   - type: related
-
     links:
-
-      - [[compiler_pipeline]]
-
-      - [[execution_engine]]
-
+      - "[[compiler_pipeline]]"
+      - "[[execution_engine]]"
 ---
 
 # The RxInfer Technical Stack

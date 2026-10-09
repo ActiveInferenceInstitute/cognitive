@@ -17,23 +17,14 @@ tags:
   - variational-inference
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[variational_inference]]
-
-      - [[optimization_theory]]
-
+      - "[[variational_inference]]"
+      - "[[optimization_theory]]"
   - type: related
-
     links:
-
-      - [[message_passing]]
-
-      - [[factor_graphs]]
-
+      - "[[message_passing]]"
+      - "[[factor_graphs]]"
 ---
 
 # Free Energy in RxInfer

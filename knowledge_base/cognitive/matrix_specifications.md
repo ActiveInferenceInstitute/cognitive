@@ -7,7 +7,8 @@ updated: 2026-02-07
 tags: [active_inference, POMDP, matrices, generative_model]
 semantic_relations:
   - type: specifies
-    links: [[knowledge_base/mathematics/active_inference_pomdp]]
+    links:
+      - "[[knowledge_base/mathematics/active_inference_pomdp]]"
   - type: relates
     links:
       - "[[observation_model]]"

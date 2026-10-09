@@ -17,19 +17,13 @@ tags:
   - testing
 
 semantic_relations:
-
   - type: implements
-
-    links: [[ai_validation_framework]]
-
-  - type: relates
-
     links:
-
-      - [[unit_testing]]
-
-      - [[quality_metrics]]
-
+      - "[[ai_validation_framework]]"
+  - type: relates
+    links:
+      - "[[unit_testing]]"
+      - "[[quality_metrics]]"
 ---
 
 # Validation Framework

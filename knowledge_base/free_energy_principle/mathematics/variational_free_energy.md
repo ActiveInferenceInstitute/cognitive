@@ -14,22 +14,22 @@ aliases: [variational_free_energy, variational_f, free_energy_variational]
 semantic_relations:
   - type: foundation
     links:
-      - [[core_principle]]
-      - [[knowledge_base/mathematics/variational_inference]]
-      - knowledge_base/mathematics/kullback_leibler_divergence
-      - [[knowledge_base/mathematics/entropy]]
+      - "[[core_principle]]"
+      - "[[knowledge_base/mathematics/variational_inference]]"
+      - "[[knowledge_base/mathematics/kl_divergence]]"
+      - "[[knowledge_base/mathematics/entropy]]"
   - type: implements
     links:
-      - [[knowledge_base/free_energy_principle/cognitive/perception]]
-      - [[knowledge_base/cognitive/predictive_coding]]
-      - [[knowledge_base/free_energy_principle/biology/neural_systems]]
-      - [[knowledge_base/free_energy_principle/implementations/python_framework]]
+      - "[[knowledge_base/free_energy_principle/cognitive/perception]]"
+      - "[[knowledge_base/cognitive/predictive_coding]]"
+      - "[[knowledge_base/free_energy_principle/biology/neural_systems]]"
+      - "[[knowledge_base/free_energy_principle/implementations/python_framework]]"
   - type: relates
     links:
-      - [[expected_free_energy]]
-      - [[knowledge_base/free_energy_principle/mathematics/information_geometry]]
-      - [[knowledge_base/mathematics/path_integral]]
-      - [[knowledge_base/mathematics/thermodynamics]]
+      - "[[expected_free_energy]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/information_geometry]]"
+      - "[[knowledge_base/mathematics/path_integral]]"
+      - "[[knowledge_base/mathematics/thermodynamics]]"
 ---
 
 # Variational Free Energy

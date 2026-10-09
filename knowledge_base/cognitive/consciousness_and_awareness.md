@@ -10,16 +10,16 @@ tags:
 - neural_correlates
 - attention
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_functions
-- type: related
-  links:
-  - - - attention
-  - - - perception
-  - - - metacognition
-  - - - executive_functions
-  - - - memory_systems
+  - type: implements
+    links:
+      - "[[cognitive_functions]]"
+  - type: related
+    links:
+      - "[[attention]]"
+      - "[[perception]]"
+      - "[[metacognition]]"
+      - "[[executive_functions]]"
+      - "[[memory_systems]]"
 ---
 
 

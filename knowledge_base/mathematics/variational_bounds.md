@@ -6,14 +6,14 @@ created: 2025-08-08
 tags:
 - variational-inference
 semantic_relations:
-- type: relates
-  links:
-  - variational_inference
-  - variational_free_energy
-- type: used_by
-  links:
-  - message_passing
-  - belief_updating
+  - type: relates
+    links:
+      - "[[variational_inference]]"
+      - "[[variational_free_energy]]"
+  - type: used_by
+    links:
+      - "[[message_passing]]"
+      - "[[belief_updating]]"
 ---
 
 

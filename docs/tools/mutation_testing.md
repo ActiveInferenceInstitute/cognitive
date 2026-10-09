@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[coverage_tools|Coverage tools]]'
-      - '[[../development/README|Development resources]]'
+      - "[[coverage_tools|Coverage tools]]"
+      - "[[../development/README|Development resources]]"
 ---
 
 # Mutation testing

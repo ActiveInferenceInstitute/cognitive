@@ -14,24 +14,24 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - molecular_biology
-  - - - biochemistry
-  - - - biophysics
-  - - - knowledge_base/cognitive/active_inference
-- type: implements
-  links:
-  - - - membrane_dynamics
-  - - - cytoskeleton
-  - - - cell_signaling
-  - - - knowledge_base/agents/architectures_overview
-- type: relates
-  links:
-  - - - developmental_systems
-  - - - systems_biology
-  - - - tissue_mechanics
-  - - - neuroscience
+  - type: foundation
+    links:
+      - "[[molecular_biology]]"
+      - "[[biochemistry]]"
+      - "[[biophysics]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+  - type: implements
+    links:
+      - "[[membrane_dynamics]]"
+      - "[[cytoskeleton]]"
+      - "[[cell_signaling]]"
+      - "[[knowledge_base/agents/architectures_overview]]"
+  - type: relates
+    links:
+      - "[[developmental_systems]]"
+      - "[[systems_biology]]"
+      - "[[tissue_mechanics]]"
+      - "[[neuroscience]]"
 ---
 
 

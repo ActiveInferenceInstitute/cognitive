@@ -9,18 +9,18 @@ tags:
 - vigilance
 - performance
 semantic_relations:
-- type: implements
-  links:
-  - - attention_mechanisms
-- type: extends
-  links:
-  - - cognitive_control
-- type: related
-  links:
-  - - - selective_attention
-  - - - attentional_control
-  - - - active_inference
-  - - - free_energy_principle
+  - type: implements
+    links:
+      - "[[attention_mechanisms]]"
+  - type: extends
+    links:
+      - "[[cognitive_control]]"
+  - type: related
+    links:
+      - "[[selective_attention]]"
+      - "[[attentional_control]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
 ---
 
 

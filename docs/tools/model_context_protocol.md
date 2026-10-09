@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../AGENTS|Tools documentation instructions]]'
+      - "[[../AGENTS|Tools documentation instructions]]"
 ---
 
 # Model Context Protocol

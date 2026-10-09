@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/systems/resilience_thinking]]
-      - [[knowledge_base/systems/ecosystem_management]]
+      - "[[knowledge_base/systems/resilience_thinking]]"
+      - "[[knowledge_base/systems/ecosystem_management]]"
 ---
 
 # Sustainable Systems

@@ -7,14 +7,14 @@ tags:
 - optimization
 - information-geometry
 semantic_relations:
-- type: relates
-  links:
-  - information_geometry
-  - fisher_information
-- type: used_by
-  links:
-  - policy_selection
-  - action_distribution
+  - type: relates
+    links:
+      - "[[information_geometry]]"
+      - "[[fisher_information]]"
+  - type: used_by
+    links:
+      - "[[policy_selection]]"
+      - "[[action_distribution]]"
 ---
 
 

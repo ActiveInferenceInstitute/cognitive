@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/systems/ecosystem_management]]
-      - [[knowledge_base/systems/environmental_applications]]
+      - "[[knowledge_base/systems/ecosystem_management]]"
+      - "[[knowledge_base/systems/environmental_applications]]"
 ---
 
 # Spatial Ecology

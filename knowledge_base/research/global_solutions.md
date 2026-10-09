@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/systems/environmental_applications]]
-      - [[knowledge_base/research/design_science]]
+      - "[[knowledge_base/systems/environmental_applications]]"
+      - "[[knowledge_base/research/design_science]]"
 ---
 
 # Global Solutions

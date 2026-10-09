@@ -9,15 +9,15 @@ tags:
 - ontology
 - education
 semantic_relations:
-- type: relates
-  links:
-  - probability_theory
-  - calculus
-  - linear_algebra
-- type: integrates
-  links:
-  - cross_reference_map
-  - mathematics_resources
+  - type: relates
+    links:
+      - "[[probability_theory]]"
+      - "[[calculus]]"
+      - "[[linear_algebra]]"
+  - type: integrates
+    links:
+      - "[[cross_reference_map]]"
+      - "[[mathematics_resources]]"
 ---
 
 

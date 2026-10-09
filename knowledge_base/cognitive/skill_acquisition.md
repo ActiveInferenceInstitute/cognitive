@@ -9,14 +9,14 @@ tags:
 - practice
 - development
 semantic_relations:
-- type: implements
-  links:
-  - - learning_mechanisms
-- type: related
-  links:
-  - - - motor_learning
-  - - - cognitive_skill
-  - - - expertise
+  - type: implements
+    links:
+      - "[[learning_mechanisms]]"
+  - type: related
+    links:
+      - "[[motor_learning]]"
+      - "[[cognitive_skill]]"
+      - "[[expertise]]"
 ---
 
 

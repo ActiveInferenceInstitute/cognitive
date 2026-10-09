@@ -9,23 +9,23 @@ aliases: [policy-selection, action-choice, decision-selection]
 semantic_relations:
   - type: implements
     links:
-      - [[expected_free_energy]]
-      - [[policy_selection]]
-      - [[active_inference]]
-      - [[active_inference_loop]]
+      - "[[expected_free_energy]]"
+      - "[[policy_selection]]"
+      - "[[active_inference]]"
+      - "[[active_inference_loop]]"
   - type: uses
     links:
-      - [[optimization_theory]]
-      - [[information_theory]]
-      - [[probability_theory]]
-      - [[natural_gradients]]
+      - "[[optimization_theory]]"
+      - "[[information_theory]]"
+      - "[[probability_theory]]"
+      - "[[natural_gradients]]"
   - type: relates
     links:
-      - [[action_distribution]]
-      - [[behavioral_control]]
-      - [[reinforcement_learning]]
-      - [[decision_theory]]
-      - [[optimal_control]]
+      - "[[action_distribution]]"
+      - "[[behavioral_control]]"
+      - "[[reinforcement_learning]]"
+      - "[[decision_theory]]"
+      - "[[optimal_control]]"
 ---
 
 # Action Selection

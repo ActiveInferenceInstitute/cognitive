@@ -14,18 +14,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[mathematics/stochastic_processes|Stochastic Processes]]
-      - [[mathematics/fokker_planck|Fokker-Planck Equation]]
-      - [[mathematics/langevin_dynamics|Langevin Dynamics]]
+      - "[[mathematics/stochastic_processes|Stochastic Processes]]"
+      - "[[mathematics/fokker_planck|Fokker-Planck Equation]]"
+      - "[[mathematics/langevin_dynamics|Langevin Dynamics]]"
   - type: relates
     links:
-      - [[cognitive/free_energy_principle|Free Energy Principle]]
-      - [[mathematics/markov_blankets|Markov Blankets]]
-      - [[mathematics/thermodynamics|Thermodynamics]]
+      - "[[cognitive/free_energy_principle|Free Energy Principle]]"
+      - "[[mathematics/markov_blankets|Markov Blankets]]"
+      - "[[mathematics/thermodynamics|Thermodynamics]]"
   - type: implements
     links:
-      - [[cognitive/active_inference|Active Inference]]
-      - [[biology/allostatic_regulation|Allostatic Regulation]]
+      - "[[cognitive/active_inference|Active Inference]]"
+      - "[[biology/allostatic_regulation|Allostatic Regulation]]"
 ---
 
 # Non-Equilibrium Steady States

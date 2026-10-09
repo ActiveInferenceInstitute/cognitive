@@ -47,20 +47,13 @@ tags:
   - academic-publishing
 
 semantic_relations:
-
   - type: specializes
-
-    links: [[active_inference_learning_path]]
-
-  - type: relates
-
     links:
-
-
-      - [[active_inference_computational_learning_path]]
-
-      - [[active_inference_mathematical_learning_path]]
-
+      - "[[active_inference_learning_path]]"
+  - type: relates
+    links:
+      - "[[active_inference_computational_learning_path]]"
+      - "[[active_inference_mathematical_learning_path]]"
 ---
 
 # Active Inference and Information Theory Learning Path

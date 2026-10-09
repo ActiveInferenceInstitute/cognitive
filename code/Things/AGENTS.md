@@ -11,16 +11,16 @@ tags:
 semantic_relations:
   - type: contains
     links:
-      - [[code/Things/Ant_Colony/AGENTS]]
-      - [[code/Things/BioFirm/AGENTS]]
-      - [[code/Things/Continuous_Generic/AGENTS]]
-      - [[code/Things/Generic_POMDP/AGENTS]]
-      - [[code/Things/Simple_POMDP/AGENTS]]
-      - [[code/Things/Generic_Thing/AGENTS]]
-      - [[code/Things/Baseball_Game/AGENTS]]
-      - [[code/Things/KG_Multi_Agent/AGENTS]]
-      - [[code/Things/Path_Network/AGENTS]]
-      - [[code/Things/ActiveInferenceInstitute/AGENTS]]
+      - "[[code/Things/Ant_Colony/AGENTS]]"
+      - "[[code/Things/BioFirm/AGENTS]]"
+      - "[[code/Things/Continuous_Generic/AGENTS]]"
+      - "[[code/Things/Generic_POMDP/AGENTS]]"
+      - "[[code/Things/Simple_POMDP/AGENTS]]"
+      - "[[code/Things/Generic_Thing/AGENTS]]"
+      - "[[code/Things/Baseball_Game/AGENTS]]"
+      - "[[code/Things/KG_Multi_Agent/AGENTS]]"
+      - "[[code/Things/Path_Network/AGENTS]]"
+      - "[[code/Things/ActiveInferenceInstitute/AGENTS]]"
 ---
 
 # Things Agents Index

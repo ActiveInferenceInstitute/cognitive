@@ -11,9 +11,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../../research/ant_colony_active_inference|Ant colony research]]'
-      - '[[../README|Examples index]]'
-      - '[[../../manuscript/README|Executable manuscript]]'
+      - "[[../../research/ant_colony_active_inference|Ant colony research]]"
+      - "[[../README|Examples index]]"
+      - "[[../../manuscript/README|Executable manuscript]]"
 ---
 
 # Ant Colony Usage Example

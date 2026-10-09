@@ -18,18 +18,18 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[myrmecology]]
-      - [[behavioral_biology]]
-      - [[chemical_ecology]]
+      - "[[myrmecology]]"
+      - "[[behavioral_biology]]"
+      - "[[chemical_ecology]]"
   - type: implements
     links:
-      - [[collective_behavior]]
-      - [[swarm_intelligence]]
+      - "[[collective_behavior]]"
+      - "[[swarm_intelligence]]"
   - type: relates
     links:
-      - [[apidology]]
-      - [[stigmergic_coordination]]
-      - [[social_insect_cognition]]
+      - "[[apidology]]"
+      - "[[stigmergic_coordination]]"
+      - "[[social_insect_cognition]]"
 ---
 
 # Ant Communication Systems

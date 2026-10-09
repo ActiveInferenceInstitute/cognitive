@@ -9,20 +9,20 @@ aliases: [generalized-coordinates, higher-order-dynamics, continuous-state-space
 semantic_relations:
   - type: foundation
     links:
-      - [[dynamical_systems]]
-      - [[differential_equations]]
-      - [[hamiltonian_mechanics]]
-      - [[lagrangian_mechanics]]
+      - "[[dynamical_systems]]"
+      - "[[differential_equations]]"
+      - "[[hamiltonian_mechanics]]"
+      - "[[lagrangian_mechanics]]"
   - type: implements
     links:
-      - [[active_inference_theory]]
-      - [[continuous_time_agent]]
-      - [[path_integral_theory]]
+      - "[[active_inference_theory]]"
+      - "[[continuous_time_agent]]"
+      - "[[path_integral_theory]]"
   - type: relates
     links:
-      - [[advanced_taylor_series]]
-      - [[generalized_motion]]
-      - [[temporal_dynamics]]
+      - "[[advanced_taylor_series]]"
+      - "[[generalized_motion]]"
+      - "[[temporal_dynamics]]"
 ---
 
 # Generalized Coordinates in Active Inference

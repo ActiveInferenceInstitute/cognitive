@@ -17,14 +17,14 @@ aliases: [fep_agents, free_energy_agents, variational_agents]
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Free energy principle overview]]'
-      - '[[applications/AGENTS|FEP applications]]'
-      - '[[biology/AGENTS|FEP biology]]'
-      - '[[cognitive/AGENTS|FEP cognitive]]'
-      - '[[implementations/AGENTS|FEP implementations]]'
-      - '[[mathematics/AGENTS|FEP mathematics]]'
-      - '[[philosophy/AGENTS|FEP philosophy]]'
-      - '[[systems/AGENTS|FEP systems]]'
+      - "[[README|Free energy principle overview]]"
+      - "[[applications/AGENTS|FEP applications]]"
+      - "[[biology/AGENTS|FEP biology]]"
+      - "[[cognitive/AGENTS|FEP cognitive]]"
+      - "[[implementations/AGENTS|FEP implementations]]"
+      - "[[mathematics/AGENTS|FEP mathematics]]"
+      - "[[philosophy/AGENTS|FEP philosophy]]"
+      - "[[systems/AGENTS|FEP systems]]"
 ---
 
 # Free Energy Principle Knowledge Base

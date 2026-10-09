@@ -13,19 +13,19 @@ aliases:
 - free-energy-principle
 - variational-free-energy
 semantic_relations:
-- type: implements
-  links:
-  - - - docs/research/research_documentation_index|Research Documentation
-  - - - active_inference_pomdp
-- type: uses
-  links:
-  - - - variational_methods
-  - - - information_theory
-  - - - category_theory
-- type: documented_by
-  links:
-  - - - docs/implementation/implementation_guides_index|Implementation Guides
-  - - - docs/api/api_documentation_index|API Documentation
+  - type: implements
+    links:
+      - "[[docs/research/research_documentation_index|Research Documentation]]"
+      - "[[active_inference_pomdp]]"
+  - type: uses
+    links:
+      - "[[variational_methods]]"
+      - "[[information_theory]]"
+      - "[[category_theory]]"
+  - type: documented_by
+    links:
+      - "[[docs/implementation/implementation_guides_index|Implementation Guides]]"
+      - "[[docs/api/api_documentation_index|API Documentation]]"
 ---
 
 

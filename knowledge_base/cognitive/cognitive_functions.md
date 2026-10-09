@@ -14,11 +14,11 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[attention_mechanisms]]
-      - [[decision_making]]
-      - [[cognitive_neuroscience]]
-      - [[precision_weighting]]
-      - [[executive_functions]]
+      - "[[attention_mechanisms]]"
+      - "[[decision_making]]"
+      - "[[cognitive_neuroscience]]"
+      - "[[precision_weighting]]"
+      - "[[executive_functions]]"
 ---
 
 # Cognitive Functions

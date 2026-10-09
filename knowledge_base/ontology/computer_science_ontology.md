@@ -10,15 +10,15 @@ tags:
 - knowledge_graph
 - algorithms
 semantic_relations:
-- type: relates
-  links:
-  - - - knowledge_base/mathematics/category_theory
-  - - - knowledge_base/systems/complex_systems
-  - knowledge_base/cognitive/knowledge_representation
-- type: implements
-  links:
-  - - - cognitive_ontology
-  - - - mathematical_ontology
+  - type: relates
+    links:
+      - "[[knowledge_base/mathematics/category_theory]]"
+      - "[[knowledge_base/systems/complex_systems]]"
+      - "[[knowledge_base/cognitive/knowledge_representation]]"
+  - type: implements
+    links:
+      - "[[cognitive_ontology]]"
+      - "[[mathematical_ontology]]"
 ---
 
 

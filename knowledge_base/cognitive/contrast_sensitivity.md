@@ -9,17 +9,17 @@ tags:
 - vision
 - contrast
 semantic_relations:
-- type: implements
-  links:
-  - - visual_perception
-- type: extends
-  links:
-  - - brightness_perception
-- type: related
-  links:
-  - - - spatial_vision
-  - - - visual_acuity
-  - - - pattern_recognition
+  - type: implements
+    links:
+      - "[[visual_perception]]"
+  - type: extends
+    links:
+      - "[[brightness_perception]]"
+  - type: related
+    links:
+      - "[[spatial_vision]]"
+      - "[[visual_acuity]]"
+      - "[[pattern_recognition]]"
 ---
 
 

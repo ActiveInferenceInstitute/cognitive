@@ -13,11 +13,11 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[probability_theory]]
-      - [[information_theory]]
-      - [[free_energy_principle]]
-      - [[variational_inference]]
-      - [[active_inference_theory]]
+      - "[[probability_theory]]"
+      - "[[information_theory]]"
+      - "[[free_energy_principle]]"
+      - "[[variational_inference]]"
+      - "[[active_inference_theory]]"
 ---
 
 # Mathematical Foundations

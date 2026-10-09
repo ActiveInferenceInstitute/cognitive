@@ -14,7 +14,7 @@ semantic_relations:
       - "[[bogacz_2017|Bogacz (2017)]]"
       - "[[bruineberg_2018|The Anticipating Brain Is Not a Scientist: The Free-Energy Principle from an Ecological-Enactive Perspective]]"
       - "[[buckley_2017|The Free Energy Principle for Action and Perception: A Mathematical Review]]"
-      - '[[clark_2013|Whatever Next? Predictive Brains, Situated Agents, and the Future of Cognitive Science]]'
+      - "[[clark_2013|Whatever Next? Predictive Brains, Situated Agents, and the Future of Cognitive Science]]"
       - "[[constant_2018|A Variational Approach to Niche Construction]]"
       - "[[da_costa_2020|Active Inference on Discrete State-Spaces: A Synthesis]]"
       - "[[da_costa_2021_bayesian|Bayesian Mechanics for Stationary Processes]]"
@@ -45,8 +45,7 @@ semantic_relations:
       - "[[smith_2022|A Step-by-Step Tutorial on Active Inference and Its Application to Empirical Data]]"
       - "[[sutton_2018|Sutton & Barto (2018)]]"
       - "[[tschantz_2020|Reinforcement Learning through Active Inference]]"
-    parent:
-      - "[[knowledge_base/AGENTS|Knowledge Base]]"
+    parent: ['[[knowledge_base/AGENTS|Knowledge Base]]']
 ---
 
 # Citations Reference Notes

@@ -17,23 +17,14 @@ tags:
   - implementation-guide
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[systems_engineering]]
-
-      - [[model_macro_paradigm]]
-
+      - "[[systems_engineering]]"
+      - "[[model_macro_paradigm]]"
   - type: related
-
     links:
-
-      - [[active_inference]]
-
-      - [[free_energy]]
-
+      - "[[active_inference]]"
+      - "[[free_energy]]"
 ---
 
 # Systems Engineering Guidebook for RxInfer

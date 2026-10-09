@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Agent documentation index]]'
-      - '[[agent_docs_readme|Agent documentation clearinghouse]]'
-      - '[[../repo_docs/getting_started|Getting started]]'
+      - "[[README|Agent documentation index]]"
+      - "[[agent_docs_readme|Agent documentation clearinghouse]]"
+      - "[[../repo_docs/getting_started|Getting started]]"
 ---
 
 # Agent documentation instructions

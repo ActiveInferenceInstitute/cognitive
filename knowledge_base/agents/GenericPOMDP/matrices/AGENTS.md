@@ -9,13 +9,12 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[A_matrix|Perception Matrix (A)]]
-      - [[B_matrix|Constraints]]
-      - [[C_matrix|Preference Matrix (C)]]
-      - [[D_matrix|Prior Beliefs (D)]]
-      - [[E_matrix|E-Matrix (Action Distribution)]]
-    parent:
-      - [[../AGENTS|Generic POMDP]]
+      - "[[A_matrix|Perception Matrix (A)]]"
+      - "[[B_matrix|Constraints]]"
+      - "[[C_matrix|Preference Matrix (C)]]"
+      - "[[D_matrix|Prior Beliefs (D)]]"
+      - "[[E_matrix|E-Matrix (Action Distribution)]]"
+    parent: [[[../AGENTS|Generic POMDP]]]
 ---
 
 # Generic POMDP Matrices

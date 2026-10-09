@@ -17,16 +17,16 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/cognitive/predictive_coding]]
-      - perception
+      - "[[knowledge_base/cognitive/predictive_coding]]"
+      - "[[perception]]"
   - type: extends
     links:
-      - [[friston_2010]]
-      - [[friston_2009]]
+      - "[[friston_2010]]"
+      - "[[friston_2009]]"
   - type: cited_by
     links:
-      - [[clark_2013]]
-      - [[andrews_2021]]
+      - "[[clark_2013]]"
+      - "[[andrews_2021]]"
 ---
 
 # The Predictive Mind

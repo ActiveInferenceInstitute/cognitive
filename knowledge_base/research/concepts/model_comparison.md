@@ -7,7 +7,12 @@ updated: 2026-02-07
 tags: [model_selection, bayesian, evidence, comparison, free_energy]
 semantic_relations:
   - type: relates
-    links: [[[bayesian_analysis]], [[goodness_of_fit]], [[knowledge_base/mathematics/variational_free_energy]], [[knowledge_base/cognitive/model_selection]], [[hypothesis_testing]]]
+    links:
+      - "[[bayesian_analysis]]"
+      - "[[goodness_of_fit]]"
+      - "[[knowledge_base/mathematics/variational_free_energy]]"
+      - "[[knowledge_base/cognitive/model_selection]]"
+      - "[[hypothesis_testing]]"
 ---
 
 # Model Comparison

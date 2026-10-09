@@ -12,19 +12,18 @@ tags:
 - networks
 - sensors
 semantic_relations:
-- type: related_to
-  links:
-  - - - knowledge_base/systems/spatial_web|Spatial Web
-  - - - knowledge_base/systems/digital_twins|Digital Twins
-  - - - knowledge_base/systems/edge_computing|Edge Computing
-- type: prerequisite_for
-  links:
-  - - - docs/guides/learning_paths/active_inference_spatial_web_path|Active Inference
-        in Spatial Web
-- type: builds_on
-  links:
-  - Embedded Systems
-  - Networks
+  - type: related_to
+    links:
+      - "[[knowledge_base/systems/spatial_web|Spatial Web]]"
+      - "[[knowledge_base/systems/digital_twins|Digital Twins]]"
+      - "[[knowledge_base/systems/edge_computing|Edge Computing]]"
+  - type: prerequisite_for
+    links:
+      - "[[docs/guides/learning_paths/active_inference_spatial_web_path|Active Inference in Spatial Web]]"
+  - type: builds_on
+    links:
+      - "[[Embedded Systems]]"
+      - "[[Networks]]"
 ---
 
 

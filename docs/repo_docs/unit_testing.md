@@ -17,19 +17,13 @@ tags:
   - quality
 
 semantic_relations:
-
   - type: implements
-
-    links: [[ai_validation_framework]]
-
-  - type: relates
-
     links:
-
-      - [[implementation_guides]]
-
-      - [[model_implementation]]
-
+      - "[[ai_validation_framework]]"
+  - type: relates
+    links:
+      - "[[implementation_guides]]"
+      - "[[model_implementation]]"
 ---
 
 # Unit Testing Guide

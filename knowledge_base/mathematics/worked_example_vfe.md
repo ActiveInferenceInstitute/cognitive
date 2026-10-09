@@ -7,9 +7,9 @@ tags:
 - example
 - vfe
 semantic_relations:
-- type: demonstrates
-  links:
-  - variational_free_energy
+  - type: demonstrates
+    links:
+      - "[[variational_free_energy]]"
 ---
 
 

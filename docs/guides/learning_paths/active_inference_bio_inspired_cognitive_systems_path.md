@@ -47,36 +47,21 @@ tags:
   - embodied cognition
 
 semantic_relations:
-
   - type: prerequisite
-
     links:
-
-      - [[active_inference_biological_learning_path]]
-
-      - [[active_inference_cognitive_learning_path]]
-
+      - "[[active_inference_biological_learning_path]]"
+      - "[[active_inference_cognitive_learning_path]]"
   - type: specializes
-
-    links: [[active_inference_learning_path]]
-
+    links:
+      - "[[active_inference_learning_path]]"
   - type: related
-
     links:
-
-
-      - [[active_inference_computational_learning_path]]
-
-      - [[active_inference_biological_learning_path]]
-
+      - "[[active_inference_computational_learning_path]]"
+      - "[[active_inference_biological_learning_path]]"
   - type: integrates_with
-
     links:
-
-      - [[active_inference_robotics_learning_path]]
-
-      - [[active_inference_agi_learning_path]]
-
+      - "[[active_inference_robotics_learning_path]]"
+      - "[[active_inference_agi_learning_path]]"
 ---
 
 # Bio-Inspired Cognitive Systems Learning Path

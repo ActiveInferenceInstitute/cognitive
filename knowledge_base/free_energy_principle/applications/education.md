@@ -16,13 +16,13 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]
-      - [[knowledge_base/free_energy_principle/cognitive/learning|Learning]]
-      - [[knowledge_base/free_energy_principle/cognitive/attention|Attention]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
-      - [[knowledge_base/free_energy_principle/biology/development|Development]]
-      - [[psychiatry|Psychiatric Applications]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/learning|Learning]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/attention|Attention]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
+      - "[[knowledge_base/free_energy_principle/biology/development|Development]]"
+      - "[[psychiatry|Psychiatric Applications]]"
 ---
 
 # Educational Applications of the Free Energy Principle

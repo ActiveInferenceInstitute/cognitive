@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[AGENTS]]
-      - [[agent_docs_readme]]
-      - [[docs/README]]
+      - "[[AGENTS]]"
+      - "[[agent_docs_readme]]"
+      - "[[docs/README]]"
 ---
 
 # Agent Documentation Overview

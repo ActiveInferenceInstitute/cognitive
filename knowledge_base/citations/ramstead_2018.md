@@ -21,16 +21,16 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/biology/evolutionary_dynamics]]
-      - niche construction
+      - "[[knowledge_base/biology/evolutionary_dynamics]]"
+      - "[[niche construction]]"
   - type: extends
     links:
-      - [[friston_2013]]
-      - [[friston_2010]]
+      - "[[friston_2013]]"
+      - "[[friston_2010]]"
   - type: cited_by
     links:
-      - [[constant_2018]]
-      - [[kirchhoff_2018]]
+      - "[[constant_2018]]"
+      - "[[kirchhoff_2018]]"
 ---
 
 # Answering Schrodinger's Question: A Free-Energy Formulation

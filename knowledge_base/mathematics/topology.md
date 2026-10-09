@@ -9,15 +9,15 @@ tags:
 - geometry
 - analysis
 semantic_relations:
-- type: foundation
-  links:
-  - - - differential_geometry
-  - - - algebraic_topology
-- type: relates
-  links:
-  - - - manifold_theory
-  - - - homology_theory
-  - - - homotopy_theory
+  - type: foundation
+    links:
+      - "[[differential_geometry]]"
+      - "[[algebraic_topology]]"
+  - type: relates
+    links:
+      - "[[manifold_theory]]"
+      - "[[homology_theory]]"
+      - "[[homotopy_theory]]"
 ---
 
 

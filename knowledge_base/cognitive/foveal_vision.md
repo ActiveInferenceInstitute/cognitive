@@ -9,17 +9,17 @@ tags:
 - vision
 - acuity
 semantic_relations:
-- type: implements
-  links:
-  - - visual_perception
-- type: extends
-  links:
-  - - spatial_vision
-- type: related
-  links:
-  - - - peripheral_vision
-  - - - visual_acuity
-  - - - visual_attention
+  - type: implements
+    links:
+      - "[[visual_perception]]"
+  - type: extends
+    links:
+      - "[[spatial_vision]]"
+  - type: related
+    links:
+      - "[[peripheral_vision]]"
+      - "[[visual_acuity]]"
+      - "[[visual_attention]]"
 ---
 
 

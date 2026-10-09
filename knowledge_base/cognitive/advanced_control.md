@@ -7,7 +7,8 @@ updated: 2026-02-07
 tags: [active-inference, control-theory, hierarchical-control, model-predictive-control]
 semantic_relations:
   - type: extends
-    links: [[active_inference_for_control]]
+    links:
+      - "[[active_inference_for_control]]"
   - type: relates
     links:
       - "[[basic_homeostatic_control]]"

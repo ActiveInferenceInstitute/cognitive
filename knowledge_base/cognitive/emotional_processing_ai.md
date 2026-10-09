@@ -13,18 +13,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[active_inference]]
-      - [[free_energy_principle]]
-      - [[precision_weighting]]
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[precision_weighting]]"
   - type: relates
     links:
-      - [[attention_mechanisms]]
-      - [[working_memory]]
-      - [[decision_making]]
+      - "[[attention_mechanisms]]"
+      - "[[working_memory]]"
+      - "[[decision_making]]"
   - type: implements
     links:
-      - [[predictive_coding]]
-      - [[hierarchical_inference]]
+      - "[[predictive_coding]]"
+      - "[[hierarchical_inference]]"
 ---
 
 # Emotional Processing Through Active Inference

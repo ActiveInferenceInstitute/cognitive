@@ -8,14 +8,14 @@ tags:
 - probability
 - modeling
 semantic_relations:
-- type: foundation
-  links:
-  - - - bayesian_inference
-  - - - probability_theory
-- type: implements
-  links:
-  - - - graphical_models
-  - - - state_space_models
+  - type: foundation
+    links:
+      - "[[bayesian_inference]]"
+      - "[[probability_theory]]"
+  - type: implements
+    links:
+      - "[[graphical_models]]"
+      - "[[state_space_models]]"
 ---
 
 

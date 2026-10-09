@@ -14,24 +14,24 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - information_theory
-  - - - knowledge_base/cognitive/active_inference
-- type: implements
-  links:
-  - - - sequence_analysis
-  - - - network_inference
-  - - - machine_learning
-  - - - knowledge_base/agents/architectures_overview
-- type: relates
-  links:
-  - - - molecular_biology
-  - - - systems_biology
-  - - - genetics
-  - - - bioinformatics
+  - type: foundation
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[information_theory]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+  - type: implements
+    links:
+      - "[[sequence_analysis]]"
+      - "[[network_inference]]"
+      - "[[machine_learning]]"
+      - "[[knowledge_base/agents/architectures_overview]]"
+  - type: relates
+    links:
+      - "[[molecular_biology]]"
+      - "[[systems_biology]]"
+      - "[[genetics]]"
+      - "[[bioinformatics]]"
 ---
 
 

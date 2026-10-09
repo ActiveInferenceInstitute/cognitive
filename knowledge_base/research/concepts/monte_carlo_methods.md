@@ -7,7 +7,11 @@ updated: 2026-02-07
 tags: [monte_carlo, sampling, simulation, MCMC, particle_filter]
 semantic_relations:
   - type: relates
-    links: [[[sampling_strategies]], [[parameter_estimation]], [[knowledge_base/mathematics/stochastic_processes]], [[bayesian_analysis]]]
+    links:
+      - "[[sampling_strategies]]"
+      - "[[parameter_estimation]]"
+      - "[[knowledge_base/mathematics/stochastic_processes]]"
+      - "[[bayesian_analysis]]"
 ---
 
 # Monte Carlo Methods

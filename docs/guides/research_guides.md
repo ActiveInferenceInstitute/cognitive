@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[docs/research/README]]
-      - [[knowledge_base/cognitive/active_inference]]
-      - [[knowledge_base/free_energy_principle/README]]
+      - "[[docs/research/README]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+      - "[[knowledge_base/free_energy_principle/README]]"
 ---
 
 # Research Guides

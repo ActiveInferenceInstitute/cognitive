@@ -11,14 +11,14 @@ tags:
 - neural_computation
 - cognitive_control
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_control
-- type: related
-  links:
-  - - - working_memory
-  - - - perception
-  - - - consciousness
+  - type: implements
+    links:
+      - "[[cognitive_control]]"
+  - type: related
+    links:
+      - "[[working_memory]]"
+      - "[[perception]]"
+      - "[[consciousness]]"
 ---
 
 

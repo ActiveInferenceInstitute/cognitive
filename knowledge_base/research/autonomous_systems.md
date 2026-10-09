@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/research/robot_control]]
-      - [[knowledge_base/research/cognitive_robotics]]
+      - "[[knowledge_base/research/robot_control]]"
+      - "[[knowledge_base/research/cognitive_robotics]]"
 ---
 
 # Autonomous Systems

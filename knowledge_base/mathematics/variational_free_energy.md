@@ -16,21 +16,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: implements
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - policy_selection
-- type: mathematical_basis
-  links:
-  - - - variational_calculus
-  - - - information_geometry
-  - - - statistical_mechanics
-- type: relates
-  links:
-  - - - expected_free_energy
-  - - - path_integral_free_energy
-  - - - belief_updating
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[policy_selection]]"
+  - type: mathematical_basis
+    links:
+      - "[[variational_calculus]]"
+      - "[[information_geometry]]"
+      - "[[statistical_mechanics]]"
+  - type: relates
+    links:
+      - "[[expected_free_energy]]"
+      - "[[path_integral_free_energy]]"
+      - "[[belief_updating]]"
 ---
 
 

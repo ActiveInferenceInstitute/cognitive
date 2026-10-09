@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[README|Configuration reference]]'
-      - '[[simulation_config.yaml|Simulation example]]'
-      - '[[../../config.yaml|Repository configuration]]'
+      - "[[README|Configuration reference]]"
+      - "[[simulation_config.yaml|Simulation example]]"
+      - "[[../../config.yaml|Repository configuration]]"
 ---
 
 # Configuration documentation instructions

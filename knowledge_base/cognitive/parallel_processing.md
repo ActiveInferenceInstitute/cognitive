@@ -7,11 +7,11 @@ tags:
 - computation
 - efficiency
 semantic_relations:
-- type: relates
-  links:
-  - attention_mechanisms
-  - resource_management
-  - computational_efficiency
+  - type: relates
+    links:
+      - "[[attention_mechanisms]]"
+      - "[[resource_management]]"
+      - "[[computational_efficiency]]"
 ---
 
 

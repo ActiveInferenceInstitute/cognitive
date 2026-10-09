@@ -22,13 +22,13 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/mathematics/free_energy_principle]]
-      - [[knowledge_base/cognitive/predictive_coding]]
+      - "[[knowledge_base/mathematics/free_energy_principle]]"
+      - "[[knowledge_base/cognitive/predictive_coding]]"
   - type: cited_by
     links:
-      - [[friston_2009]]
-      - [[friston_2010]]
-      - [[buckley_2017]]
+      - "[[friston_2009]]"
+      - "[[friston_2010]]"
+      - "[[buckley_2017]]"
 ---
 
 # A Free Energy Principle for the Brain

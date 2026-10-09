@@ -9,15 +9,15 @@ tags:
 - mechanics
 - algebra
 semantic_relations:
-- type: foundation
-  links:
-  - - - symplectic_geometry
-  - - - lie_theory
-- type: relates
-  links:
-  - - - quantum_groups
-  - - - deformation_quantization
-  - - - integrable_systems
+  - type: foundation
+    links:
+      - "[[symplectic_geometry]]"
+      - "[[lie_theory]]"
+  - type: relates
+    links:
+      - "[[quantum_groups]]"
+      - "[[deformation_quantization]]"
+      - "[[integrable_systems]]"
 ---
 
 

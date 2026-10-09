@@ -14,17 +14,17 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
+      - "[[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
   - type: relates
     links:
-      - [[perception|Perception]]
-      - [[attention|Attention]]
-      - [[learning|Learning]]
-      - [[consciousness|Consciousness]]
+      - "[[perception|Perception]]"
+      - "[[attention|Attention]]"
+      - "[[learning|Learning]]"
+      - "[[consciousness|Consciousness]]"
   - type: implements
     links:
-      - [[knowledge_base/free_energy_principle/AGENTS|Agent Architectures]]
+      - "[[knowledge_base/free_energy_principle/AGENTS|Agent Architectures]]"
 ---
 
 # Decision Making Through Expected Free Energy Minimization

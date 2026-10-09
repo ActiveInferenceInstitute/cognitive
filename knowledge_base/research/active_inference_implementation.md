@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[mathematics/free_energy_principle]]
-      - [[cognitive/active_inference]]
-      - Implementation Tools
+      - "[[mathematics/free_energy_principle]]"
+      - "[[cognitive/active_inference]]"
+      - "[[Implementation Tools]]"
 ---
 
 # Active Inference Implementation Guide

@@ -20,17 +20,17 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/cognitive/predictive_coding]]
-      - [[knowledge_base/cognitive/embodied_cognition]]
+      - "[[knowledge_base/cognitive/predictive_coding]]"
+      - "[[knowledge_base/cognitive/embodied_cognition]]"
   - type: extends
     links:
-      - [[friston_2009]]
-      - [[friston_2010]]
+      - "[[friston_2009]]"
+      - "[[friston_2010]]"
   - type: cited_by
     links:
-      - [[hohwy_2013]]
-      - [[bruineberg_2018]]
-      - [[seth_2021]]
+      - "[[hohwy_2013]]"
+      - "[[bruineberg_2018]]"
+      - "[[seth_2021]]"
 ---
 
 # Whatever Next? Predictive Brains, Situated Agents, and the Future of Cognitive Science

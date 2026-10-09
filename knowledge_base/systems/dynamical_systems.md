@@ -12,12 +12,12 @@ tags:
 semantic_relations:
   - type: grounded_in
     links:
-      - [[knowledge_base/mathematics/dynamical_systems]]
+      - "[[knowledge_base/mathematics/dynamical_systems]]"
   - type: relates
     links:
-      - [[complex_systems]]
-      - [[adaptive_systems]]
-      - [[knowledge_base/mathematics/path_integral_theory]]
+      - "[[complex_systems]]"
+      - "[[adaptive_systems]]"
+      - "[[knowledge_base/mathematics/path_integral_theory]]"
 ---
 
 # Dynamical Systems in Complex Systems

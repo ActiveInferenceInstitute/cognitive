@@ -9,9 +9,8 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[continuous_time_agent|Continuous Time Modeling in Active Inference and Predictive Processing]]
-    parent:
-      - [[../../AGENTS|Knowledge Base]]
+      - "[[continuous_time_agent|Continuous Time Modeling in Active Inference and Predictive Processing]]"
+    parent: [[[../../AGENTS|Knowledge Base]]]
 ---
 
 # Continuous-Time Agent

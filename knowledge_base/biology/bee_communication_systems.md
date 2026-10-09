@@ -18,18 +18,18 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[apidology]]
-      - [[behavioral_biology]]
-      - [[pollination_biology]]
+      - "[[apidology]]"
+      - "[[behavioral_biology]]"
+      - "[[pollination_biology]]"
   - type: implements
     links:
-      - [[collective_behavior]]
-      - [[swarm_intelligence]]
+      - "[[collective_behavior]]"
+      - "[[swarm_intelligence]]"
   - type: relates
     links:
-      - [[myrmecology]]
-      - [[social_insect_cognition]]
-      - [[chemical_ecology]]
+      - "[[myrmecology]]"
+      - "[[social_insect_cognition]]"
+      - "[[chemical_ecology]]"
 ---
 
 # Bee Communication Systems

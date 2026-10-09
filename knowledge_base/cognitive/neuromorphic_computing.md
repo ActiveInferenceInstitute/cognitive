@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/cognitive/computational_neuroscience]]
-      - [[knowledge_base/systems/edge_computing]]
+      - "[[knowledge_base/cognitive/computational_neuroscience]]"
+      - "[[knowledge_base/systems/edge_computing]]"
 ---
 
 # Neuromorphic Computing

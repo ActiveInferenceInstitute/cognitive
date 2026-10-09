@@ -17,19 +17,13 @@ tags:
   - overview
 
 semantic_relations:
-
   - type: implements
-
-    links: [[documentation_standards]]
-
-  - type: relates
-
     links:
-
-      - [[docs/repo_docs/folder_structure]]
-
-      - [[docs/repo_docs/linking_patterns]]
-
+      - "[[documentation_standards]]"
+  - type: relates
+    links:
+      - "[[docs/repo_docs/folder_structure]]"
+      - "[[docs/repo_docs/linking_patterns]]"
 ---
 
 # Obsidian Usage Guide
@@ -118,17 +112,17 @@ See [[docs/repo_docs/linking_patterns|Linking Patterns Guide]] for complete deta
 
 # Basic Links
 
-filename
+[[filename]]
 
-alias
+[[filename|alias]]
 
 # Section Links
 
-filename#section
+[[filename#section]]
 
 # Block References
 
-filename#^block-id
+[[filename#^block-id]]
 
 ```
 

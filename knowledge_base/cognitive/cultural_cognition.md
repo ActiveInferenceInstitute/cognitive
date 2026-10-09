@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/cognitive/active_inference]]
-      - [[knowledge_base/research/cultural_dynamics]]
+      - "[[knowledge_base/cognitive/active_inference]]"
+      - "[[knowledge_base/research/cultural_dynamics]]"
 ---
 
 # Cultural Cognition

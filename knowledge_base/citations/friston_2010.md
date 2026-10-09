@@ -21,19 +21,19 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/mathematics/free_energy_principle]]
-      - [[knowledge_base/cognitive/active_inference]]
-      - [[knowledge_base/cognitive/predictive_coding]]
+      - "[[knowledge_base/mathematics/free_energy_principle]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+      - "[[knowledge_base/cognitive/predictive_coding]]"
   - type: extends
     links:
-      - [[friston_2006]]
-      - [[friston_2009]]
+      - "[[friston_2006]]"
+      - "[[friston_2009]]"
   - type: cited_by
     links:
-      - [[friston_2012]]
-      - [[friston_2013]]
-      - [[clark_2013]]
-      - [[hohwy_2013]]
+      - "[[friston_2012]]"
+      - "[[friston_2013]]"
+      - "[[clark_2013]]"
+      - "[[hohwy_2013]]"
 ---
 
 # The Free-Energy Principle: A Unified Brain Theory?

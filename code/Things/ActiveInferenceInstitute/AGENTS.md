@@ -11,9 +11,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[README|Thing readme]]'
-      - '[[active_inference_institute|Active Inference Institute notes]]'
-      - '[[../AGENTS|Things index]]'
+      - "[[README|Thing readme]]"
+      - "[[active_inference_institute|Active Inference Institute notes]]"
+      - "[[../AGENTS|Things index]]"
 ---
 
 # Active Inference Institute Thing Documentation

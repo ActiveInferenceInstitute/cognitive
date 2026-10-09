@@ -8,11 +8,11 @@ tags:
 - complexity
 - emergence
 semantic_relations:
-- type: organizes
-  links:
-  - - - systems_theory
-  - - - complex_systems
-  - - - emergence
+  - type: organizes
+    links:
+      - "[[systems_theory]]"
+      - "[[complex_systems]]"
+      - "[[emergence]]"
 ---
 
 

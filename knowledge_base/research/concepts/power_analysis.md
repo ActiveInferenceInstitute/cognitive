@@ -7,7 +7,11 @@ updated: 2026-02-07
 tags: [statistics, power, sample_size, experimental_design]
 semantic_relations:
   - type: relates
-    links: [[[hypothesis_testing]], [[experiment_design]], [[statistical_analysis]], [[frequentist_analysis]]]
+    links:
+      - "[[hypothesis_testing]]"
+      - "[[experiment_design]]"
+      - "[[statistical_analysis]]"
+      - "[[frequentist_analysis]]"
 ---
 
 # Power Analysis

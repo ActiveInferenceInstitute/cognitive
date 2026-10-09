@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../manuscript/README|Manuscript build]]'
+      - "[[../manuscript/README|Manuscript build]]"
 ---
 
 # Build system

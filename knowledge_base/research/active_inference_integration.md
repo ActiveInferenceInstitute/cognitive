@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: integrates
     links:
-      - [[mathematics/free_energy_principle]]
-      - [[cognitive/active_inference]]
-      - [[systems/complex_systems]]
-      - [[cognitive/homeostatic_regulation]]
+      - "[[mathematics/free_energy_principle]]"
+      - "[[cognitive/active_inference]]"
+      - "[[systems/complex_systems]]"
+      - "[[cognitive/homeostatic_regulation]]"
 ---
 
 # Active Inference Integration Across Domains

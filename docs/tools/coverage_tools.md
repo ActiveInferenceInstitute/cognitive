@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../development/README|Development resources]]'
+      - "[[../development/README|Development resources]]"
 ---
 
 # Coverage tools

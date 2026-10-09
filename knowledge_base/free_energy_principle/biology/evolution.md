@@ -14,14 +14,14 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
   - type: relates
     links:
-      - [[development|Development]]
-      - [[ecology|Ecology]]
-      - [[homeostasis|Homeostasis]]
-      - [[knowledge_base/free_energy_principle/systems/complex_adaptation|Complex Adaptation]]
+      - "[[development|Development]]"
+      - "[[ecology|Ecology]]"
+      - "[[homeostasis|Homeostasis]]"
+      - "[[knowledge_base/free_energy_principle/systems/complex_adaptation|Complex Adaptation]]"
 ---
 
 # Evolution as Free Energy Minimization Across Generations

@@ -14,19 +14,19 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[active_inference|Active Inference]]
-      - [[philosophy/4e_cognition|4E Cognition]]
-      - [[philosophy/enactivism|Enactivism]]
+      - "[[active_inference|Active Inference]]"
+      - "[[philosophy/4e_cognition|4E Cognition]]"
+      - "[[philosophy/enactivism|Enactivism]]"
   - type: relates
     links:
-      - [[precision_weighting|Precision Weighting]]
-      - [[sensorimotor_coordination|Sensorimotor Coordination]]
-      - [[biology/allostatic_regulation|Allostatic Regulation]]
-      - [[knowledge_base/mathematics/markov_blankets|Markov Blankets]]
+      - "[[precision_weighting|Precision Weighting]]"
+      - "[[sensorimotor_coordination|Sensorimotor Coordination]]"
+      - "[[biology/allostatic_regulation|Allostatic Regulation]]"
+      - "[[knowledge_base/mathematics/markov_blankets|Markov Blankets]]"
   - type: extends
     links:
-      - [[generative_model|Generative Models]]
-      - [[motor_control|Motor Control]]
+      - "[[generative_model|Generative Models]]"
+      - "[[motor_control|Motor Control]]"
 ---
 
 # Embodied Cognition Through the FEP Lens

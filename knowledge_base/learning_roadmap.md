@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: guides
     links:
-      - [[mathematics|Mathematics Foundations]]
-      - [[cognitive|Cognitive Science]]
-      - [[systems|Systems Theory]]
-      - [[biology|Biology]]
+      - "[[mathematics|Mathematics Foundations]]"
+      - "[[cognitive|Cognitive Science]]"
+      - "[[systems|Systems Theory]]"
+      - "[[biology|Biology]]"
 ---
 
 # Cognitive Modeling Learning Roadmap

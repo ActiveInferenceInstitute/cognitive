@@ -12,19 +12,19 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[active_inference]]
-      - [[knowledge_base/mathematics/optimal_control]]
+      - "[[active_inference]]"
+      - "[[knowledge_base/mathematics/optimal_control]]"
   - type: foundation
     links:
-      - [[homeostatic_regulation]]
-      - [[homeostatic_control_theory]]
-      - [[free_energy_principle]]
+      - "[[homeostatic_regulation]]"
+      - "[[homeostatic_control_theory]]"
+      - "[[free_energy_principle]]"
   - type: relates
     links:
-      - [[basic_homeostatic_control]]
-      - [[advanced_control]]
-      - [[custom_control_modes]]
-      - [[knowledge_base/mathematics/control_theory]]
+      - "[[basic_homeostatic_control]]"
+      - "[[advanced_control]]"
+      - "[[custom_control_modes]]"
+      - "[[knowledge_base/mathematics/control_theory]]"
 ---
 
 # Active Inference for Control

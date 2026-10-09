@@ -11,9 +11,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[AGENTS]]
-      - [[docs/repo_docs/unit_testing|Unit Testing Guide]]
-      - [[code/tools/src/models/active_inference/AGENTS|Active Inference Models]]
+      - "[[AGENTS]]"
+      - "[[docs/repo_docs/unit_testing|Unit Testing Guide]]"
+      - "[[code/tools/src/models/active_inference/AGENTS|Active Inference Models]]"
 ---
 
 # Test Suite Overview

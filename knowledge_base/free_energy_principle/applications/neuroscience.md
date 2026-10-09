@@ -16,12 +16,12 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
-      - [[knowledge_base/free_energy_principle/cognitive/attention|Attention]]
-      - [[knowledge_base/free_energy_principle/biology/neural_systems|Neural Systems]]
-      - [[psychiatry|Psychiatric Applications]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/attention|Attention]]"
+      - "[[knowledge_base/free_energy_principle/biology/neural_systems|Neural Systems]]"
+      - "[[psychiatry|Psychiatric Applications]]"
 ---
 
 # Neuroscience Applications of the Free Energy Principle

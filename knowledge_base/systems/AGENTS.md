@@ -13,13 +13,13 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Systems theory knowledge base]]'
-      - '[[complex_systems|Complex systems]]'
-      - '[[dynamical_systems|Dynamical systems]]'
-      - '[[control_systems|Control systems]]'
-      - '[[adaptive_systems|Adaptive systems]]'
-      - '[[Social-Ecological Systems|Social-ecological systems]]'
-      - '[[../../cognitive/README|Cognitive science]]'
+      - "[[README|Systems theory knowledge base]]"
+      - "[[complex_systems|Complex systems]]"
+      - "[[dynamical_systems|Dynamical systems]]"
+      - "[[control_systems|Control systems]]"
+      - "[[adaptive_systems|Adaptive systems]]"
+      - "[[Social-Ecological Systems|Social-ecological systems]]"
+      - "[[../../cognitive/README|Cognitive science]]"
 ---
 
 # System-Level Agent Documentation

@@ -9,14 +9,14 @@ tags:
 - knowledge-graph
 - semantics
 semantic_relations:
-- type: relates
-  links:
-  - probabilistic_graphical_models
-  - information_geometry
-- type: integrates
-  links:
-  - cross_reference_map
-  - mathematics_resources
+  - type: relates
+    links:
+      - "[[probabilistic_graphical_models]]"
+      - "[[information_geometry]]"
+  - type: integrates
+    links:
+      - "[[cross_reference_map]]"
+      - "[[mathematics_resources]]"
 ---
 
 

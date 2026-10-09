@@ -7,9 +7,9 @@ tags:
 - example
 - efe
 semantic_relations:
-- type: demonstrates
-  links:
-  - expected_free_energy
+  - type: demonstrates
+    links:
+      - "[[expected_free_energy]]"
 ---
 
 

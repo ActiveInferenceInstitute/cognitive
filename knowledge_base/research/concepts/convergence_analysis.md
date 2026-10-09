@@ -7,9 +7,13 @@ updated: 2026-02-07
 tags: [convergence, variational_inference, optimization, analysis]
 semantic_relations:
   - type: analyzes
-    links: [[knowledge_base/mathematics/variational_inference]]
+    links:
+      - "[[knowledge_base/mathematics/variational_inference]]"
   - type: relates
-    links: [[[stability_analysis]], [[belief_evolution]], [[knowledge_base/mathematics/numerical_stability]]]
+    links:
+      - "[[stability_analysis]]"
+      - "[[belief_evolution]]"
+      - "[[knowledge_base/mathematics/numerical_stability]]"
 ---
 
 # Convergence Analysis

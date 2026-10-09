@@ -9,12 +9,12 @@ tags:
 - overview
 - documentation
 semantic_relations:
-- type: explains
-  links:
-  - - - active_inference
-  - - - message_passing
-  - - - factor_graphs
-  - - - variational_inference
+  - type: explains
+    links:
+      - "[[active_inference]]"
+      - "[[message_passing]]"
+      - "[[factor_graphs]]"
+      - "[[variational_inference]]"
 ---
 
 

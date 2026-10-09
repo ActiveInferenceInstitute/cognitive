@@ -19,23 +19,14 @@ tags:
   - model-specification
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[probabilistic_models]]
-
-      - [[factor_graphs]]
-
+      - "[[probabilistic_models]]"
+      - "[[factor_graphs]]"
   - type: uses
-
     links:
-
-      - [[message_passing]]
-
-      - [[variational_inference]]
-
+      - "[[message_passing]]"
+      - "[[variational_inference]]"
 ---
 
 # The @model Macro Paradigm in RxInfer

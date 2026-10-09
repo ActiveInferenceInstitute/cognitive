@@ -11,21 +11,21 @@ tags:
 - thermodynamics
 - complexity
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - free_energy_principle
-  - - - active_inference
-  - - - self_organization
-- type: implements
-  links:
-  - - - thermodynamics
-  - - - statistical_physics
-  - - - stochastic_processes
-- type: relates
-  links:
-  - - - information_theory
-  - - - dynamical_systems
-  - - - complex_systems
+  - type: foundation_for
+    links:
+      - "[[free_energy_principle]]"
+      - "[[active_inference]]"
+      - "[[self_organization]]"
+  - type: implements
+    links:
+      - "[[thermodynamics]]"
+      - "[[statistical_physics]]"
+      - "[[stochastic_processes]]"
+  - type: relates
+    links:
+      - "[[information_theory]]"
+      - "[[dynamical_systems]]"
+      - "[[complex_systems]]"
 ---
 
 

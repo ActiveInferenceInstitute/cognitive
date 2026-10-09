@@ -10,10 +10,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[enactivism]]
-      - [[4e_cognition]]
-      - [[dark_room_problem]]
-      - [[knowledge_base/free_energy_principle/philosophy/mind_body_problem]]
+      - "[[enactivism]]"
+      - "[[4e_cognition]]"
+      - "[[dark_room_problem]]"
+      - "[[knowledge_base/free_energy_principle/philosophy/mind_body_problem]]"
 ---
 
 # Philosophy of Mind

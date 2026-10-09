@@ -13,11 +13,11 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[planning_as_inference]]
-      - [[decision_making]]
-      - [[policy_selection]]
-      - [[action_selection]]
-      - [[knowledge_base/mathematics/expected_free_energy]]
+      - "[[planning_as_inference]]"
+      - "[[decision_making]]"
+      - "[[policy_selection]]"
+      - "[[action_selection]]"
+      - "[[knowledge_base/mathematics/expected_free_energy]]"
 ---
 
 # Policy Evaluation

@@ -17,11 +17,9 @@ tags:
   - example
 
 semantic_relations:
-
   - type: template_for
-
-    links: [[implementation_examples]]
-
+    links:
+      - "[[implementation_examples]]"
 ---
 
 # [Example Name]

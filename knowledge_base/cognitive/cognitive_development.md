@@ -9,14 +9,14 @@ tags:
 - maturation
 - plasticity
 semantic_relations:
-- type: implements
-  links:
-  - - developmental_processes
-- type: related
-  links:
-  - - - learning_mechanisms
-  - - - neural_plasticity
-  - - - brain_development
+  - type: implements
+    links:
+      - "[[developmental_processes]]"
+  - type: related
+    links:
+      - "[[learning_mechanisms]]"
+      - "[[neural_plasticity]]"
+      - "[[brain_development]]"
 ---
 
 

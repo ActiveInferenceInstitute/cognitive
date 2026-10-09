@@ -12,18 +12,18 @@ tags:
 semantic_relations:
   - type: foundation_for
     links:
-      - [[knowledge_base/cognitive/decision_making]]
-      - [[knowledge_base/cognitive/social_cognition]]
-      - [[knowledge_base/cognitive/cooperation]]
+      - "[[knowledge_base/cognitive/decision_making]]"
+      - "[[knowledge_base/cognitive/social_cognition]]"
+      - "[[knowledge_base/cognitive/cooperation]]"
   - type: related
     links:
-      - [[optimization_theory]]
-      - [[probability_theory]]
-      - [[information_theory]]
+      - "[[optimization_theory]]"
+      - "[[probability_theory]]"
+      - "[[information_theory]]"
   - type: applied_in
     links:
-      - [[code/Things/Baseball_Game/AGENTS]]
-      - [[knowledge_base/cognitive/collective_behavior]]
+      - "[[code/Things/Baseball_Game/AGENTS]]"
+      - "[[knowledge_base/cognitive/collective_behavior]]"
 ---
 
 # Game Theory

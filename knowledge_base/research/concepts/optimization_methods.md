@@ -7,7 +7,11 @@ updated: 2026-02-07
 tags: [optimization, free_energy, variational, methods]
 semantic_relations:
   - type: relates
-    links: [[[gradient_descent]], [[knowledge_base/mathematics/optimization_theory]], [[knowledge_base/mathematics/variational_methods]], [[convergence_analysis]]]
+    links:
+      - "[[gradient_descent]]"
+      - "[[knowledge_base/mathematics/optimization_theory]]"
+      - "[[knowledge_base/mathematics/variational_methods]]"
+      - "[[convergence_analysis]]"
 ---
 
 # Optimization Methods

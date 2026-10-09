@@ -9,18 +9,18 @@ tags:
 - time
 - integration
 semantic_relations:
-- type: implements
-  links:
-  - - perceptual_binding
-- type: extends
-  links:
-  - - temporal_processing
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - neural_synchrony
-  - - - temporal_integration
+  - type: implements
+    links:
+      - "[[perceptual_binding]]"
+  - type: extends
+    links:
+      - "[[temporal_processing]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[neural_synchrony]]"
+      - "[[temporal_integration]]"
 ---
 
 

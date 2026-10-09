@@ -9,15 +9,15 @@ tags:
 - complex_analysis
 - manifolds
 semantic_relations:
-- type: foundation
-  links:
-  - - - differential_geometry
-  - - - complex_analysis
-- type: relates
-  links:
-  - - - algebraic_geometry
-  - - - symplectic_geometry
-  - - - hodge_theory
+  - type: foundation
+    links:
+      - "[[differential_geometry]]"
+      - "[[complex_analysis]]"
+  - type: relates
+    links:
+      - "[[algebraic_geometry]]"
+      - "[[symplectic_geometry]]"
+      - "[[hodge_theory]]"
 ---
 
 

@@ -9,18 +9,18 @@ tags:
 - learning
 - plasticity
 semantic_relations:
-- type: implements
-  links:
-  - - memory_systems
-- type: extends
-  links:
-  - - memory_processes
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - synaptic_plasticity
-  - - - schema_integration
+  - type: implements
+    links:
+      - "[[memory_systems]]"
+  - type: extends
+    links:
+      - "[[memory_processes]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[synaptic_plasticity]]"
+      - "[[schema_integration]]"
 ---
 
 

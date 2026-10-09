@@ -17,11 +17,9 @@ tags:
   - documentation
 
 semantic_relations:
-
   - type: template_for
-
-    links: [[research_documents]]
-
+    links:
+      - "[[research_documents]]"
 ---
 
 # [Research Topic]

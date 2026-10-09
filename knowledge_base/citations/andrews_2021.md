@@ -21,14 +21,14 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - philosophy of fep
+      - "[[philosophy of fep]]"
   - type: extends
     links:
-      - [[hohwy_2013]]
-      - [[bruineberg_2018]]
+      - "[[hohwy_2013]]"
+      - "[[bruineberg_2018]]"
   - type: cited_by
     links:
-      - [[parr_pezzulo_friston_2022]]
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # The Math Is Not the Territory: Navigating the Free Energy Principle

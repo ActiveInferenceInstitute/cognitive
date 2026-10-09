@@ -7,9 +7,14 @@ updated: 2026-02-07
 tags: [hidden_states, POMDP, inference, generative_model]
 semantic_relations:
   - type: component_of
-    links: [[knowledge_base/mathematics/active_inference_pomdp]]
+    links:
+      - "[[knowledge_base/mathematics/active_inference_pomdp]]"
   - type: relates
-    links: [[[state_estimation]], [[state_spaces]], [[knowledge_base/cognitive/perception_processing]], [[knowledge_base/mathematics/markov_blanket]]]
+    links:
+      - "[[state_estimation]]"
+      - "[[state_spaces]]"
+      - "[[knowledge_base/cognitive/perception_processing]]"
+      - "[[knowledge_base/mathematics/markov_blanket]]"
 ---
 
 # Hidden States

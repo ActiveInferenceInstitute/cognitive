@@ -14,12 +14,12 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Biology knowledge base overview]]'
-      - '[[behavioral_biology|Behavioral biology]]'
-      - '[[evolutionary_biology|Evolutionary biology]]'
-      - '[[homeostasis|Homeostasis]]'
-      - '[[ecological_networks|Ecological networks]]'
-      - '[[ant_colony_organization|Ant colony organization]]'
+      - "[[README|Biology knowledge base overview]]"
+      - "[[behavioral_biology|Behavioral biology]]"
+      - "[[evolutionary_biology|Evolutionary biology]]"
+      - "[[homeostasis|Homeostasis]]"
+      - "[[ecological_networks|Ecological networks]]"
+      - "[[ant_colony_organization|Ant colony organization]]"
 ---
 
 # Biological Knowledge Base Documentation

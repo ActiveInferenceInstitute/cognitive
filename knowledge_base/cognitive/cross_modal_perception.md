@@ -9,18 +9,18 @@ tags:
 - integration
 - multisensory
 semantic_relations:
-- type: implements
-  links:
-  - - multisensory_integration
-- type: extends
-  links:
-  - - perceptual_integration
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - neural_synchrony
-  - - - perceptual_binding
+  - type: implements
+    links:
+      - "[[multisensory_integration]]"
+  - type: extends
+    links:
+      - "[[perceptual_integration]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[neural_synchrony]]"
+      - "[[perceptual_binding]]"
 ---
 
 

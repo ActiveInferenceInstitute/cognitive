@@ -5,9 +5,9 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[AGENTS|Tools documentation instructions]]'
-      - '[[development_tools_index|Development tools index]]'
-      - '[[../../code/scripts/validate_docs.py|Documentation validator]]'
+      - "[[AGENTS|Tools documentation instructions]]"
+      - "[[development_tools_index|Development tools index]]"
+      - "[[../../code/scripts/validate_docs.py|Documentation validator]]"
 ---
 
 # Tools documentation index

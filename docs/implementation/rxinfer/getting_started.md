@@ -17,29 +17,17 @@ tags:
   - onboarding
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[probabilistic_models]]
-
-      - [[bayesian_inference]]
-
-      - [[factor_graphs]]
-
-      - [[message_passing]]
-
+      - "[[probabilistic_models]]"
+      - "[[bayesian_inference]]"
+      - "[[factor_graphs]]"
+      - "[[message_passing]]"
   - type: related
-
     links:
-
-      - [[julia_programming]]
-
-      - [[reactive_programming]]
-
-      - [[variational_inference]]
-
+      - "[[julia_programming]]"
+      - "[[reactive_programming]]"
+      - "[[variational_inference]]"
 ---
 
 # Getting Started with RxInfer

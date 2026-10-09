@@ -7,7 +7,11 @@ updated: 2026-02-07
 tags: [validation, verification, testing, model_evaluation]
 semantic_relations:
   - type: relates
-    links: [[[goodness_of_fit]], [[model_comparison]], [[knowledge_base/cognitive/quality_metrics]], [[knowledge_base/cognitive/performance_metrics]]]
+    links:
+      - "[[goodness_of_fit]]"
+      - "[[model_comparison]]"
+      - "[[knowledge_base/cognitive/quality_metrics]]"
+      - "[[knowledge_base/cognitive/performance_metrics]]"
 ---
 
 # Validation Methods

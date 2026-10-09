@@ -18,18 +18,18 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[mathematical_entomology]]
-      - [[swarm_intelligence_implementation]]
-      - [[optimization_patterns]]
+      - "[[mathematical_entomology]]"
+      - "[[swarm_intelligence_implementation]]"
+      - "[[optimization_patterns]]"
   - type: implements
     links:
-      - [[free_energy_principle]]
-      - [[information_theory]]
+      - "[[free_energy_principle]]"
+      - "[[information_theory]]"
   - type: relates
     links:
-      - [[foraging_optimization]]
-      - [[ant_colony_organization]]
-      - [[bee_colony_organization]]
+      - "[[foraging_optimization]]"
+      - "[[ant_colony_organization]]"
+      - "[[bee_colony_organization]]"
 ---
 
 # Mathematical Models of Social Insect Optimization

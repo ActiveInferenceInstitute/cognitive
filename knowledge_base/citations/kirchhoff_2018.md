@@ -24,16 +24,16 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/mathematics/markov_blankets]]
-      - autonomy
+      - "[[knowledge_base/mathematics/markov_blankets]]"
+      - "[[autonomy]]"
   - type: extends
     links:
-      - [[friston_2013]]
-      - [[ramstead_2018]]
+      - "[[friston_2013]]"
+      - "[[ramstead_2018]]"
   - type: cited_by
     links:
-      - [[friston_2019_particular]]
-      - [[parr_pezzulo_friston_2022]]
+      - "[[friston_2019_particular]]"
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # The Markov Blankets of Life: Autonomy, Active Inference and the Free Energy Principle

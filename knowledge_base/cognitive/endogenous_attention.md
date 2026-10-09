@@ -9,18 +9,18 @@ tags:
 - control
 - volition
 semantic_relations:
-- type: implements
-  links:
-  - - attention_mechanisms
-- type: extends
-  links:
-  - - attentional_control
-- type: related
-  links:
-  - - - exogenous_attention
-  - - - active_inference
-  - - - free_energy_principle
-  - - - cognitive_control
+  - type: implements
+    links:
+      - "[[attention_mechanisms]]"
+  - type: extends
+    links:
+      - "[[attentional_control]]"
+  - type: related
+    links:
+      - "[[exogenous_attention]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[cognitive_control]]"
 ---
 
 

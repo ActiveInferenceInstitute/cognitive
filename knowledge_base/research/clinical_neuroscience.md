@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/research/brain_theory]]
-      - [[knowledge_base/cognitive/computational_neuroscience]]
+      - "[[knowledge_base/research/brain_theory]]"
+      - "[[knowledge_base/cognitive/computational_neuroscience]]"
 ---
 
 # Clinical Neuroscience

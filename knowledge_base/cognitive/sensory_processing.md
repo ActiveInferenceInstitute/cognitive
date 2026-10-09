@@ -13,11 +13,11 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[predictive_coding]]
-      - [[precision_weighting]]
-      - [[attention_mechanisms]]
-      - [[perceptual_inference]]
-      - [[visual_perception]]
+      - "[[predictive_coding]]"
+      - "[[precision_weighting]]"
+      - "[[attention_mechanisms]]"
+      - "[[perceptual_inference]]"
+      - "[[visual_perception]]"
 ---
 
 # Sensory Processing

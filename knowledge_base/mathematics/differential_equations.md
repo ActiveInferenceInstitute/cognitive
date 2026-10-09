@@ -8,15 +8,15 @@ tags:
 - computation
 - systems
 semantic_relations:
-- type: foundation
-  links:
-  - - - calculus
-  - - - linear_algebra
-- type: relates
-  links:
-  - - - dynamical_systems
-  - - - optimization_theory
-  - - - control_theory
+  - type: foundation
+    links:
+      - "[[calculus]]"
+      - "[[linear_algebra]]"
+  - type: relates
+    links:
+      - "[[dynamical_systems]]"
+      - "[[optimization_theory]]"
+      - "[[control_theory]]"
 ---
 
 

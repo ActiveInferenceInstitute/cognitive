@@ -9,15 +9,15 @@ tags:
 - physics
 - dynamics
 semantic_relations:
-- type: foundation
-  links:
-  - - - symplectic_geometry
-  - - - geometric_mechanics
-- type: relates
-  links:
-  - - - lagrangian_mechanics
-  - - - quantum_mechanics
-  - - - integrable_systems
+  - type: foundation
+    links:
+      - "[[symplectic_geometry]]"
+      - "[[geometric_mechanics]]"
+  - type: relates
+    links:
+      - "[[lagrangian_mechanics]]"
+      - "[[quantum_mechanics]]"
+      - "[[integrable_systems]]"
 ---
 
 

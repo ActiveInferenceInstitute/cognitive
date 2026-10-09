@@ -5,12 +5,12 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[AGENTS|Complex systems research instructions]]'
-      - '[[adaptation|Adaptation]]'
-      - '[[collective|Collective behavior]]'
-      - '[[emergence|Emergence]]'
-      - '[[self_organization|Self-organization]]'
-      - '[[../README|Research documentation]]'
+      - "[[AGENTS|Complex systems research instructions]]"
+      - "[[adaptation|Adaptation]]"
+      - "[[collective|Collective behavior]]"
+      - "[[emergence|Emergence]]"
+      - "[[self_organization|Self-organization]]"
+      - "[[../README|Research documentation]]"
 ---
 
 # Complex systems research

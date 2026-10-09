@@ -18,18 +18,18 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[free_energy_principle]]
-      - [[active_inference]]
-      - [[predictive_processing]]
+      - "[[free_energy_principle]]"
+      - "[[active_inference]]"
+      - "[[predictive_processing]]"
   - type: implements
     links:
-      - [[social_insect_cognition]]
-      - [[collective_behavior]]
+      - "[[social_insect_cognition]]"
+      - "[[collective_behavior]]"
   - type: relates
     links:
-      - [[myrmecology]]
-      - [[apidology]]
-      - [[swarm_intelligence_implementation]]
+      - "[[myrmecology]]"
+      - "[[apidology]]"
+      - "[[swarm_intelligence_implementation]]"
 ---
 
 # Active Inference in Social Insect Systems

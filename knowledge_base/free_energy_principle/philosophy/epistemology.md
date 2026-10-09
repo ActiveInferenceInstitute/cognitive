@@ -14,14 +14,14 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]"
   - type: relates
     links:
-      - [[mind_body_problem|Mind-Body Problem]]
-      - [[free_will|Free Will]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
-      - [[knowledge_base/free_energy_principle/cognitive/learning|Learning]]
+      - "[[mind_body_problem|Mind-Body Problem]]"
+      - "[[free_will|Free Will]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/learning|Learning]]"
 ---
 
 # The FEP as Formal Epistemology

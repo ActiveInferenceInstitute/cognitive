@@ -18,18 +18,18 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[myrmecology]]
-      - [[collective_behavior]]
-      - [[social_insect_cognition]]
+      - "[[myrmecology]]"
+      - "[[collective_behavior]]"
+      - "[[social_insect_cognition]]"
   - type: implements
     links:
-      - [[division_of_labor]]
-      - [[task_allocation]]
+      - "[[division_of_labor]]"
+      - "[[task_allocation]]"
   - type: relates
     links:
-      - [[apidology]]
-      - [[evolution_of_eusociality]]
-      - [[resource_management]]
+      - "[[apidology]]"
+      - "[[evolution_of_eusociality]]"
+      - "[[resource_management]]"
 ---
 
 # Ant Colony Organization

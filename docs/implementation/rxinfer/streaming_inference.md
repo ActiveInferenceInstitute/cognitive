@@ -17,15 +17,10 @@ tags:
   - online-learning
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[online_learning]]
-
-      - [[reactive_programming]]
-
+      - "[[online_learning]]"
+      - "[[reactive_programming]]"
 ---
 
 # Streaming Inference in RxInfer

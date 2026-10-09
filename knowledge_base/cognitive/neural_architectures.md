@@ -9,14 +9,14 @@ tags:
 - cognitive_modeling
 - deep_learning
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_modeling_concepts
-- type: relates
-  links:
-  - - - perception_processing
-  - - - belief_updating
-  - - - predictive_processing
+  - type: implements
+    links:
+      - "[[cognitive_modeling_concepts]]"
+  - type: relates
+    links:
+      - "[[perception_processing]]"
+      - "[[belief_updating]]"
+      - "[[predictive_processing]]"
 ---
 
 

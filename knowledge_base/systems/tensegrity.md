@@ -14,21 +14,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - synergetics
-- type: implements
-  links:
-  - - - structural_dynamics
-  - - - geodesic_geometry
-  - - - network_resilience
-- type: relates
-  links:
-  - - - spatial_computing
-  - - - information_geometry
-  - - - complex_systems
+  - type: foundation
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[synergetics]]"
+  - type: implements
+    links:
+      - "[[structural_dynamics]]"
+      - "[[geodesic_geometry]]"
+      - "[[network_resilience]]"
+  - type: relates
+    links:
+      - "[[spatial_computing]]"
+      - "[[information_geometry]]"
+      - "[[complex_systems]]"
 ---
 
 

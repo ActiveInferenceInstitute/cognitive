@@ -14,24 +14,24 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - evolutionary_dynamics
-  - - - knowledge_base/cognitive/active_inference
-- type: implements
-  links:
-  - - - game_dynamics
-  - - - strategy_evolution
-  - - - population_games
-  - - - knowledge_base/agents/architectures_overview
-- type: relates
-  links:
-  - - - ecological_dynamics
-  - - - behavioral_biology
-  - - - systems_biology
-  - - - knowledge_base/mathematics/game_theory
+  - type: foundation
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[evolutionary_dynamics]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+  - type: implements
+    links:
+      - "[[game_dynamics]]"
+      - "[[strategy_evolution]]"
+      - "[[population_games]]"
+      - "[[knowledge_base/agents/architectures_overview]]"
+  - type: relates
+    links:
+      - "[[ecological_dynamics]]"
+      - "[[behavioral_biology]]"
+      - "[[systems_biology]]"
+      - "[[knowledge_base/mathematics/game_theory]]"
 ---
 
 

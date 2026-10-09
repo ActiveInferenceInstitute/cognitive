@@ -12,19 +12,19 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[knowledge_base/systems/AGENTS|Systems Agent Documentation]]
-      - [[knowledge_base/systems/README|Systems Overview]]
-      - [[knowledge_base/systems/complex_systems|Complex Systems Theory]]
+      - "[[knowledge_base/systems/AGENTS|Systems Agent Documentation]]"
+      - "[[knowledge_base/systems/README|Systems Overview]]"
+      - "[[knowledge_base/systems/complex_systems|Complex Systems Theory]]"
   - type: relates
     links:
-      - [[cognitive_ontology]]
-      - [[mathematical_ontology]]
-      - [[knowledge_base/systems/systems_theory]]
-      - [[knowledge_base/mathematics/dynamical_systems]]
+      - "[[cognitive_ontology]]"
+      - "[[mathematical_ontology]]"
+      - "[[knowledge_base/systems/systems_theory]]"
+      - "[[knowledge_base/mathematics/dynamical_systems]]"
   - type: implements
     links:
-      - knowledge_base/systems/complex_adaptive_systems
-      - [[knowledge_base/systems/emergence]]
+      - "[[knowledge_base/systems/complex_adaptive_systems]]"
+      - "[[knowledge_base/systems/emergence]]"
 ---
 
 # Systems Ontology

@@ -19,21 +19,21 @@ msc:
 - 94A17
 - 68T05
 semantic_relations:
-- type: foundation
-  links:
-  - - - bayesian_inference
-  - - - information_theory
-  - - - statistical_physics
-  - - - variational_methods
-- type: relates
-  links:
-  - - - active_inference
-  - - - predictive_coding
-  - - - bayesian_brain_hypothesis
-  - - - markov_blanket
-  - - - variational_inference
-  - - - self_organization
-  - - - autopoiesis
+  - type: foundation
+    links:
+      - "[[bayesian_inference]]"
+      - "[[information_theory]]"
+      - "[[statistical_physics]]"
+      - "[[variational_methods]]"
+  - type: relates
+    links:
+      - "[[active_inference]]"
+      - "[[predictive_coding]]"
+      - "[[bayesian_brain_hypothesis]]"
+      - "[[markov_blanket]]"
+      - "[[variational_inference]]"
+      - "[[self_organization]]"
+      - "[[autopoiesis]]"
 ---
 
 

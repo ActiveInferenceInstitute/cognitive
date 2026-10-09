@@ -11,14 +11,14 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - active_inference
-      - decision_making
-      - expected_free_energy
-      - action_selection
+      - "[[active_inference]]"
+      - "[[decision_making]]"
+      - "[[expected_free_energy]]"
+      - "[[action_selection]]"
   - type: implements
     links:
-      - [[knowledge_base/mathematics/policy_selection]]
-      - [[precision_weighting]]
+      - "[[knowledge_base/mathematics/policy_selection]]"
+      - "[[precision_weighting]]"
 ---
 
 # Policy Selection

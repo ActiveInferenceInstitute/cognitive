@@ -13,13 +13,13 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Cognitive science knowledge base]]'
-      - '[[active_inference|Active inference]]'
-      - '[[active_inference_agent|Active inference agent]]'
-      - '[[cognitive_architecture|Cognitive architecture]]'
-      - '[[free_energy_principle|Free energy principle]]'
-      - '[[predictive_processing|Predictive processing]]'
-      - '[[belief_updating|Belief updating]]'
+      - "[[README|Cognitive science knowledge base]]"
+      - "[[active_inference|Active inference]]"
+      - "[[active_inference_agent|Active inference agent]]"
+      - "[[cognitive_architecture|Cognitive architecture]]"
+      - "[[free_energy_principle|Free energy principle]]"
+      - "[[predictive_processing|Predictive processing]]"
+      - "[[belief_updating|Belief updating]]"
 ---
 
 # Cognitive Agent Architectures

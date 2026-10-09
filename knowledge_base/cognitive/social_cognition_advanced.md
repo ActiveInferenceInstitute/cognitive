@@ -13,19 +13,19 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[active_inference]]
-      - [[social_cognition]]
-      - [[hierarchical_inference]]
+      - "[[active_inference]]"
+      - "[[social_cognition]]"
+      - "[[hierarchical_inference]]"
   - type: relates
     links:
-      - [[attention_mechanisms]]
-      - [[working_memory]]
-      - [[communication]]
-      - [[cooperation]]
+      - "[[attention_mechanisms]]"
+      - "[[working_memory]]"
+      - "[[communication]]"
+      - "[[cooperation]]"
   - type: implements
     links:
-      - [[predictive_coding]]
-      - [[precision_weighting]]
+      - "[[predictive_coding]]"
+      - "[[precision_weighting]]"
 ---
 
 # Advanced Social Cognition and Theory of Mind

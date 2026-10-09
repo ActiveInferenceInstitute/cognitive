@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: integrates
     links:
-      - [[systems/emergence]]
-      - [[biology/evolutionary_dynamics]]
-      - [[cognitive/collective_behavior]]
-      - [[mathematics/complex_systems]]
+      - "[[systems/emergence]]"
+      - "[[biology/evolutionary_dynamics]]"
+      - "[[cognitive/collective_behavior]]"
+      - "[[mathematics/complex_systems]]"
 ---
 
 # Emergence Integration Across Domains

@@ -14,18 +14,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[philosophy/4e_cognition|4E Cognition]]
-      - [[cognitive/embodied_cognition|Embodied Cognition]]
+      - "[[philosophy/4e_cognition|4E Cognition]]"
+      - "[[cognitive/embodied_cognition|Embodied Cognition]]"
   - type: relates
     links:
-      - [[cognitive/active_inference|Active Inference]]
-      - [[cognitive/free_energy_principle|Free Energy Principle]]
-      - [[biology/niche_construction|Niche Construction]]
-      - [[mathematics/markov_blankets|Markov Blankets]]
+      - "[[cognitive/active_inference|Active Inference]]"
+      - "[[cognitive/free_energy_principle|Free Energy Principle]]"
+      - "[[biology/niche_construction|Niche Construction]]"
+      - "[[mathematics/markov_blankets|Markov Blankets]]"
   - type: extends
     links:
-      - [[cognitive/sensorimotor_coordination|Sensorimotor Coordination]]
-      - [[systems/circular_causality|Circular Causality]]
+      - "[[cognitive/sensorimotor_coordination|Sensorimotor Coordination]]"
+      - "[[systems/circular_causality|Circular Causality]]"
 ---
 
 # Enactivism

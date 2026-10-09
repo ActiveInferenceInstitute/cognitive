@@ -7,11 +7,11 @@ tags:
 - philosophy
 - emergence
 semantic_relations:
-- type: relates
-  links:
-  - systems_theory
-  - emergence_self_organization
-  - operationalism
+  - type: relates
+    links:
+      - "[[systems_theory]]"
+      - "[[emergence_self_organization]]"
+      - "[[operationalism]]"
 ---
 
 

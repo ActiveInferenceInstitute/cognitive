@@ -9,14 +9,14 @@ tags:
 - cognitive_modeling
 - algorithms
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_modeling_concepts
-- type: relates
-  links:
-  - - - inference_patterns
-  - - - action_selection
-  - - - active_inference
+  - type: implements
+    links:
+      - "[[cognitive_modeling_concepts]]"
+  - type: relates
+    links:
+      - "[[inference_patterns]]"
+      - "[[action_selection]]"
+      - "[[active_inference]]"
 ---
 
 

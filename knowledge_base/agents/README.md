@@ -8,10 +8,10 @@ tags:
 - architectures
 - implementation
 semantic_relations:
-- type: organizes
-  links:
-  - - - GenericPOMDP/agent_config
-  - - - Continuous_Time/continuous_time_agent
+  - type: organizes
+    links:
+      - "[[GenericPOMDP/agent_config]]"
+      - "[[Continuous_Time/continuous_time_agent]]"
 ---
 
 

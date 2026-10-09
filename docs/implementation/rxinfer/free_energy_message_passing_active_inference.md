@@ -19,23 +19,14 @@ tags:
   - active-inference
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[variational_inference]]
-
-      - [[active_inference]]
-
+      - "[[variational_inference]]"
+      - "[[active_inference]]"
   - type: related
-
     links:
-
-      - [[message_passing]]
-
-      - [[factor_graphs]]
-
+      - "[[message_passing]]"
+      - "[[factor_graphs]]"
 ---
 
 # Free Energy, Message Passing, and Active Inference in RxInfer

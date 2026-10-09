@@ -9,21 +9,21 @@ tags:
 - probability_theory
 - active_inference
 semantic_relations:
-- type: foundation
-  links:
-  - - - measure_theory
-  - - - probability_theory
-  - - - functional_analysis
-  - - - integration_theory
-- type: implements
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-- type: relates
-  links:
-  - - - path_integral_free_energy
-  - - - variational_methods
-  - - - stochastic_processes
+  - type: foundation
+    links:
+      - "[[measure_theory]]"
+      - "[[probability_theory]]"
+      - "[[functional_analysis]]"
+      - "[[integration_theory]]"
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+  - type: relates
+    links:
+      - "[[path_integral_free_energy]]"
+      - "[[variational_methods]]"
+      - "[[stochastic_processes]]"
 ---
 
 

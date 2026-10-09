@@ -9,14 +9,14 @@ tags:
 - prediction
 - neural_computation
 semantic_relations:
-- type: implements
-  links:
-  - - predictive_processing
-- type: related
-  links:
-  - - - free_energy_minimization
-  - - - active_inference
-  - - - learning
+  - type: implements
+    links:
+      - "[[predictive_processing]]"
+  - type: related
+    links:
+      - "[[free_energy_minimization]]"
+      - "[[active_inference]]"
+      - "[[learning]]"
 ---
 
 

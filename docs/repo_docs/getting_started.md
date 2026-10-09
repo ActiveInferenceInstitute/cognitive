@@ -5,10 +5,10 @@ status: stable
 semantic_relations:
   - type: supports
     links:
-      - '[[README|Repository README]]'
-      - '[[docs/development/README|Development resources]]'
-      - '[[docs/examples/README|Executable examples]]'
-      - '[[docs/manuscript/README|Executable manuscript]]'
+      - "[[README|Repository README]]"
+      - "[[docs/development/README|Development resources]]"
+      - "[[docs/examples/README|Executable examples]]"
+      - "[[docs/manuscript/README|Executable manuscript]]"
 ---
 
 # Getting Started

@@ -7,9 +7,13 @@ updated: 2026-02-07
 tags: [visualization, policy, active_inference, decision_making]
 semantic_relations:
   - type: visualizes
-    links: [[knowledge_base/cognitive/policy_selection]]
+    links:
+      - "[[knowledge_base/cognitive/policy_selection]]"
   - type: relates
-    links: [[[data_visualization]], [[knowledge_base/cognitive/visualization_suite]], [[knowledge_base/mathematics/expected_free_energy]]]
+    links:
+      - "[[data_visualization]]"
+      - "[[knowledge_base/cognitive/visualization_suite]]"
+      - "[[knowledge_base/mathematics/expected_free_energy]]"
 ---
 
 # Policy Visualization

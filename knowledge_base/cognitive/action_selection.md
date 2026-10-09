@@ -15,22 +15,22 @@ tags:
 - motor_control
 - planning
 semantic_relations:
-- type: implements
-  links:
-  - - - active_inference
-  - - - optimal_control
-  - - - policy_selection
-- type: relates
-  links:
-  - - - decision_making
-  - - - motor_control
-  - - - planning
-  - - - reinforcement_learning
-- type: mathematical_basis
-  links:
-  - - - expected_free_energy
-  - - - path_integral_control
-  - - - optimization_theory
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[optimal_control]]"
+      - "[[policy_selection]]"
+  - type: relates
+    links:
+      - "[[decision_making]]"
+      - "[[motor_control]]"
+      - "[[planning]]"
+      - "[[reinforcement_learning]]"
+  - type: mathematical_basis
+    links:
+      - "[[expected_free_energy]]"
+      - "[[path_integral_control]]"
+      - "[[optimization_theory]]"
 ---
 
 

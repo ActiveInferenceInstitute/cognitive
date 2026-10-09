@@ -9,21 +9,21 @@ tags:
 - graphical-models
 - machine-learning
 semantic_relations:
-- type: foundation
-  links:
-  - - - probability_theory
-  - - - graph_theory
-  - - - information_theory
-- type: implements
-  links:
-  - - - bayesian_networks
-  - - - markov_random_fields
-  - - - factor_graphs
-- type: related
-  links:
-  - - - message_passing
-  - - - variational_inference
-  - - - causal_inference
+  - type: foundation
+    links:
+      - "[[probability_theory]]"
+      - "[[graph_theory]]"
+      - "[[information_theory]]"
+  - type: implements
+    links:
+      - "[[bayesian_networks]]"
+      - "[[markov_random_fields]]"
+      - "[[factor_graphs]]"
+  - type: related
+    links:
+      - "[[message_passing]]"
+      - "[[variational_inference]]"
+      - "[[causal_inference]]"
 ---
 
 

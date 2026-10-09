@@ -16,17 +16,17 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]"
   - type: relates
     links:
-      - [[epistemology|Epistemology]]
-      - [[metaphysics|Metaphysics]]
-      - [[mind_body_problem|Mind-Body Problem]]
-      - [[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
-      - [[knowledge_base/free_energy_principle/systems/emergence|Emergence]]
+      - "[[epistemology|Epistemology]]"
+      - "[[metaphysics|Metaphysics]]"
+      - "[[mind_body_problem|Mind-Body Problem]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
+      - "[[knowledge_base/free_energy_principle/systems/emergence|Emergence]]"
 ---
 
 # Causality and the Free Energy Principle

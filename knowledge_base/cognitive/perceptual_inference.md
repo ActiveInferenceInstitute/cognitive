@@ -9,14 +9,14 @@ tags:
 - predictive_processing
 - neural_computation
 semantic_relations:
-- type: implements
-  links:
-  - - predictive_processing
-- type: related
-  links:
-  - - - active_inference
-  - - - sensory_processing
-  - - - bayesian_brain
+  - type: implements
+    links:
+      - "[[predictive_processing]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[sensory_processing]]"
+      - "[[bayesian_brain]]"
 ---
 
 

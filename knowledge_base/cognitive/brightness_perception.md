@@ -9,17 +9,17 @@ tags:
 - vision
 - brightness
 semantic_relations:
-- type: implements
-  links:
-  - - visual_perception
-- type: extends
-  links:
-  - - sensory_processing
-- type: related
-  links:
-  - - - contrast_sensitivity
-  - - - color_processing
-  - - - light_adaptation
+  - type: implements
+    links:
+      - "[[visual_perception]]"
+  - type: extends
+    links:
+      - "[[sensory_processing]]"
+  - type: related
+    links:
+      - "[[contrast_sensitivity]]"
+      - "[[color_processing]]"
+      - "[[light_adaptation]]"
 ---
 
 

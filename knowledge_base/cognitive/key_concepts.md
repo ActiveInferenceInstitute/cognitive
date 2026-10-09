@@ -11,15 +11,15 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - active_inference
-      - cognitive_architecture
-      - knowledge_organization
-      - [[linking_standards]]
+      - "[[active_inference]]"
+      - "[[cognitive_architecture]]"
+      - "[[knowledge_organization]]"
+      - "[[linking_standards]]"
   - type: relates
     links:
-      - concept_documentation_index
-      - cognitive_science_index
-      - overview
+      - "[[concept_documentation_index]]"
+      - "[[cognitive_science_index]]"
+      - "[[overview]]"
 ---
 
 # Key Concepts

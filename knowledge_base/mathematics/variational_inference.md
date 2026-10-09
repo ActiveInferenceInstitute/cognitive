@@ -10,28 +10,28 @@ tags:
 - computation
 - active_inference
 semantic_relations:
-- type: foundation
-  links:
-  - - - probability_theory
-  - - - information_theory
-  - - - optimization_theory
-- type: implements
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - variational_free_energy
-  - - - expected_free_energy
-- type: uses
-  links:
-  - - - kl_divergence
-  - - - evidence_lower_bound
-  - - - mean_field_approximation
-- type: relates
-  links:
-  - - - predictive_coding
-  - - - message_passing
-  - - - bayesian_inference
-  - - - belief_updating
+  - type: foundation
+    links:
+      - "[[probability_theory]]"
+      - "[[information_theory]]"
+      - "[[optimization_theory]]"
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[variational_free_energy]]"
+      - "[[expected_free_energy]]"
+  - type: uses
+    links:
+      - "[[kl_divergence]]"
+      - "[[evidence_lower_bound]]"
+      - "[[mean_field_approximation]]"
+  - type: relates
+    links:
+      - "[[predictive_coding]]"
+      - "[[message_passing]]"
+      - "[[bayesian_inference]]"
+      - "[[belief_updating]]"
 ---
 
 

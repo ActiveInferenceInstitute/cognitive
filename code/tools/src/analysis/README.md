@@ -13,8 +13,8 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[code/tools/README]]
-      - [[docs/repo_docs/README]]
+      - "[[code/tools/README]]"
+      - "[[docs/repo_docs/README]]"
 ---
 
 # Analysis Tools Implementation

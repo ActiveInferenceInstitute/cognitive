@@ -12,17 +12,17 @@ tags:
 semantic_relations:
   - type: extends
     links:
-      - [[active_inference]]
-      - [[../mathematics/active_inference_theory]]
+      - "[[active_inference]]"
+      - "[[../mathematics/active_inference_theory]]"
   - type: foundation
     links:
-      - [[../mathematics/variational_calculus]]
-      - [[../mathematics/path_integral_free_energy]]
-      - [[../mathematics/stochastic_processes]]
+      - "[[../mathematics/variational_calculus]]"
+      - "[[../mathematics/path_integral_free_energy]]"
+      - "[[../mathematics/stochastic_processes]]"
   - type: relates
     links:
-      - ../mathematics/continuous_time_models
-      - ../mathematics/stochastic_differential_equations
+      - "[[../mathematics/continuous_time_models]]"
+      - "[[../mathematics/stochastic_differential_equations]]"
 ---
 
 # Continuous-Time Active Inference

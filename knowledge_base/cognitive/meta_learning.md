@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[learning_mechanisms]]
-      - [[hierarchical_processing]]
-      - [[precision_weighting]]
-      - [[learning_models]]
+      - "[[learning_mechanisms]]"
+      - "[[hierarchical_processing]]"
+      - "[[precision_weighting]]"
+      - "[[learning_models]]"
 ---
 
 # Meta-Learning

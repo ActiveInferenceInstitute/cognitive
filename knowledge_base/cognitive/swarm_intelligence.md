@@ -10,16 +10,16 @@ tags:
 - distributed_cognition
 - optimization
 semantic_relations:
-- type: implements
-  links:
-  - - collective_behavior
-- type: related
-  links:
-  - - - collective_behavior_ants
-  - - - emergence
-  - - - self_organization
-  - - - distributed_cognition
-  - - - optimization
+  - type: implements
+    links:
+      - "[[collective_behavior]]"
+  - type: related
+    links:
+      - "[[collective_behavior_ants]]"
+      - "[[emergence]]"
+      - "[[self_organization]]"
+      - "[[distributed_cognition]]"
+      - "[[optimization]]"
 ---
 
 

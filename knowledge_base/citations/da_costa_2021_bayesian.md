@@ -23,15 +23,15 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - bayesian mechanics
-      - stationary processes
+      - "[[bayesian mechanics]]"
+      - "[[stationary processes]]"
   - type: extends
     links:
-      - [[friston_2019_particular]]
-      - [[kirchhoff_2018]]
+      - "[[friston_2019_particular]]"
+      - "[[kirchhoff_2018]]"
   - type: cited_by
     links:
-      - [[parr_pezzulo_friston_2022]]
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # Bayesian Mechanics for Stationary Processes

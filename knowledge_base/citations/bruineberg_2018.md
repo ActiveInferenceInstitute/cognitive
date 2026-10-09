@@ -23,16 +23,16 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - enactivism
-      - ecological psychology
+      - "[[enactivism]]"
+      - "[[ecological psychology]]"
   - type: extends
     links:
-      - [[friston_2010]]
-      - [[clark_2013]]
+      - "[[friston_2010]]"
+      - "[[clark_2013]]"
   - type: cited_by
     links:
-      - [[kirchhoff_2018]]
-      - [[andrews_2021]]
+      - "[[kirchhoff_2018]]"
+      - "[[andrews_2021]]"
 ---
 
 # The Anticipating Brain Is Not a Scientist: The Free-Energy Principle from an Ecological-Enactive Perspective

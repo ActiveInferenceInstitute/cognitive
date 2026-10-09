@@ -14,21 +14,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - evolutionary_dynamics
-  - - - molecular_evolution
-  - - - quantitative_genetics
-- type: implements
-  links:
-  - - - hardy_weinberg_equilibrium
-  - - - selection_theory
-  - - - genetic_drift
-- type: relates
-  links:
-  - - - ecological_genetics
-  - - - molecular_biology
-  - - - statistical_genetics
+  - type: foundation
+    links:
+      - "[[evolutionary_dynamics]]"
+      - "[[molecular_evolution]]"
+      - "[[quantitative_genetics]]"
+  - type: implements
+    links:
+      - "[[hardy_weinberg_equilibrium]]"
+      - "[[selection_theory]]"
+      - "[[genetic_drift]]"
+  - type: relates
+    links:
+      - "[[ecological_genetics]]"
+      - "[[molecular_biology]]"
+      - "[[statistical_genetics]]"
 ---
 
 

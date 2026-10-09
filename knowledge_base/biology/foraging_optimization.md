@@ -18,18 +18,18 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[myrmecology]]
-      - [[apidology]]
-      - [[swarm_intelligence_implementation]]
+      - "[[myrmecology]]"
+      - "[[apidology]]"
+      - "[[swarm_intelligence_implementation]]"
   - type: implements
     links:
-      - [[optimization_patterns]]
-      - [[collective_behavior]]
+      - "[[optimization_patterns]]"
+      - "[[collective_behavior]]"
   - type: relates
     links:
-      - [[energy_optimization]]
-      - [[resource_management]]
-      - [[decision_making]]
+      - "[[energy_optimization]]"
+      - "[[resource_management]]"
+      - "[[decision_making]]"
 ---
 
 # Foraging Optimization in Social Insects

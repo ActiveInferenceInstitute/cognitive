@@ -9,14 +9,14 @@ tags:
 - cognitive-science
 - reasoning
 semantic_relations:
-- type: relates
-  links:
-  - bayesian_generative_models
-  - reasoning_problem_solving
-  - information_geometry
-- type: supports
-  links:
-  - active_inference_theory
+  - type: relates
+    links:
+      - "[[bayesian_generative_models]]"
+      - "[[reasoning_problem_solving]]"
+      - "[[information_geometry]]"
+  - type: supports
+    links:
+      - "[[active_inference_theory]]"
 ---
 
 

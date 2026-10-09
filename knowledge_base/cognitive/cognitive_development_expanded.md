@@ -10,15 +10,15 @@ tags:
 - plasticity
 - neuroscience
 semantic_relations:
-- type: implements
-  links:
-  - - developmental_processes
-- type: related
-  links:
-  - - - learning_mechanisms
-  - - - neural_plasticity
-  - - - brain_development
-  - - - cognitive_architecture
+  - type: implements
+    links:
+      - "[[developmental_processes]]"
+  - type: related
+    links:
+      - "[[learning_mechanisms]]"
+      - "[[neural_plasticity]]"
+      - "[[brain_development]]"
+      - "[[cognitive_architecture]]"
 ---
 
 

@@ -9,14 +9,14 @@ tags:
 - cognitive_modeling
 - algorithms
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_modeling_concepts
-- type: relates
-  links:
-  - - - belief_updating
-  - - - model_architecture
-  - - - predictive_processing
+  - type: implements
+    links:
+      - "[[cognitive_modeling_concepts]]"
+  - type: relates
+    links:
+      - "[[belief_updating]]"
+      - "[[model_architecture]]"
+      - "[[predictive_processing]]"
 ---
 
 

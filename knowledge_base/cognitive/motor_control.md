@@ -9,14 +9,14 @@ tags:
 - neural_systems
 - behavior
 semantic_relations:
-- type: implements
-  links:
-  - - action_systems
-- type: related
-  links:
-  - - - motor_learning
-  - - - sensorimotor_integration
-  - - - action_planning
+  - type: implements
+    links:
+      - "[[action_systems]]"
+  - type: related
+    links:
+      - "[[motor_learning]]"
+      - "[[sensorimotor_integration]]"
+      - "[[action_planning]]"
 ---
 
 

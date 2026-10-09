@@ -21,17 +21,17 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/biology/homeostasis]]
-      - adaptive behavior
+      - "[[knowledge_base/biology/homeostasis]]"
+      - "[[adaptive behavior]]"
   - type: extends
     links:
-      - [[friston_2010]]
-      - [[friston_2013]]
+      - "[[friston_2010]]"
+      - "[[friston_2013]]"
   - type: cited_by
     links:
-      - [[seth_2021]]
-      - [[hesp_2021]]
-      - [[parr_pezzulo_friston_2022]]
+      - "[[seth_2021]]"
+      - "[[hesp_2021]]"
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # Active Inference, Homeostatic Regulation and Adaptive Behavioural Control

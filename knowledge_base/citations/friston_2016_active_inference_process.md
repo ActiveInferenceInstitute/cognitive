@@ -23,17 +23,17 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - learning
-      - bayesian learning
+      - "[[learning]]"
+      - "[[bayesian learning]]"
   - type: extends
     links:
-      - [[friston_2010]]
-      - [[friston_2009]]
+      - "[[friston_2010]]"
+      - "[[friston_2009]]"
   - type: cited_by
     links:
-      - [[friston_2017_curiosity]]
-      - [[da_costa_2020]]
-      - [[parr_pezzulo_friston_2022]]
+      - "[[friston_2017_curiosity]]"
+      - "[[da_costa_2020]]"
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # Active Inference and Learning

@@ -8,13 +8,13 @@ tags:
 - active_inference
 - learning
 semantic_relations:
-- type: implements
-  links:
-  - - learning_path_template
-- type: relates
-  links:
-  - - - knowledge_base/agents/GenericPOMDP/README
-  - - - knowledge_base/cognitive/active_inference
+  - type: implements
+    links:
+      - "[[learning_path_template]]"
+  - type: relates
+    links:
+      - "[[knowledge_base/agents/GenericPOMDP/README]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
 ---
 
 

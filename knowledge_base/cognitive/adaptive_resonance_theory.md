@@ -12,15 +12,15 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - stability_plasticity
-      - learning_theory
-      - pattern_recognition
-      - neural_networks
-      - cognitive_architecture
+      - "[[stability_plasticity]]"
+      - "[[learning_theory]]"
+      - "[[pattern_recognition]]"
+      - "[[neural_networks]]"
+      - "[[cognitive_architecture]]"
   - type: foundation
     links:
-      - knowledge_base/mathematics/neural_network_theory
-      - [[memory_systems]]
+      - "[[knowledge_base/mathematics/neural_network_theory]]"
+      - "[[memory_systems]]"
 ---
 
 # Adaptive Resonance Theory

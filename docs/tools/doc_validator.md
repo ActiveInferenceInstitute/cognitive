@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../../code/scripts/validate_docs.py|Validator source]]'
+      - "[[../../code/scripts/validate_docs.py|Validator source]]"
 ---
 
 # Documentation validator

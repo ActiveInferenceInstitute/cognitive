@@ -5,11 +5,11 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[AGENTS|Application guide instructions]]'
-      - '[[active_inference_spatial_applications|Spatial applications]]'
-      - '[[guide_for_cognitive_modeling|Cognitive modeling guide]]'
-      - '[[parr_2022_chapter_6|Parr 2022 chapter 6]]'
-      - '[[../README|Guides index]]'
+      - "[[AGENTS|Application guide instructions]]"
+      - "[[active_inference_spatial_applications|Spatial applications]]"
+      - "[[guide_for_cognitive_modeling|Cognitive modeling guide]]"
+      - "[[parr_2022_chapter_6|Parr 2022 chapter 6]]"
+      - "[[../README|Guides index]]"
 ---
 
 # Application guides index

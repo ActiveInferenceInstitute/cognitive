@@ -9,18 +9,18 @@ tags:
 - perception
 - limitations
 semantic_relations:
-- type: implements
-  links:
-  - - attention_mechanisms
-- type: extends
-  links:
-  - - attention_limitations
-- type: related
-  links:
-  - - - change_blindness
-  - - - active_inference
-  - - - free_energy_principle
-  - - - selective_attention
+  - type: implements
+    links:
+      - "[[attention_mechanisms]]"
+  - type: extends
+    links:
+      - "[[attention_limitations]]"
+  - type: related
+    links:
+      - "[[change_blindness]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[selective_attention]]"
 ---
 
 

@@ -10,23 +10,23 @@ tags:
 - bayesian-inference
 - statistical-physics
 semantic_relations:
-- type: foundation
-  links:
-  - - - path_integral
-  - - - probability_theory
-  - - - bayesian_inference
-  - - - bayes_theorem
-- type: implements
-  links:
-  - - - bayesian_networks
-  - - - variational_inference
-  - - - path_integral_free_energy
-- type: related
-  links:
-  - - - bayesian_graph_theory
-  - - - stochastic_processes
-  - - - continuous_discrete_inference
-  - - - bayesian_renormalization
+  - type: foundation
+    links:
+      - "[[path_integral]]"
+      - "[[probability_theory]]"
+      - "[[bayesian_inference]]"
+      - "[[bayes_theorem]]"
+  - type: implements
+    links:
+      - "[[bayesian_networks]]"
+      - "[[variational_inference]]"
+      - "[[path_integral_free_energy]]"
+  - type: related
+    links:
+      - "[[bayesian_graph_theory]]"
+      - "[[stochastic_processes]]"
+      - "[[continuous_discrete_inference]]"
+      - "[[bayesian_renormalization]]"
 ---
 
 

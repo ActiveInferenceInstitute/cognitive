@@ -10,18 +10,18 @@ tags:
 - organization
 - documentation
 semantic_relations:
-- type: organizes
-  links:
-  - - - mathematics
-  - - - cognitive
-  - - - systems
-  - - - AGENTS
-  - - - biology
-  - - - philosophy
-  - - - ontology
-  - - - free_energy_principle
-  - - - research
-  - - - citations
+  - type: organizes
+    links:
+      - "[[mathematics]]"
+      - "[[cognitive]]"
+      - "[[systems]]"
+      - "[[AGENTS]]"
+      - "[[biology]]"
+      - "[[philosophy]]"
+      - "[[ontology]]"
+      - "[[free_energy_principle]]"
+      - "[[research]]"
+      - "[[citations]]"
 ---
 
 

@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/research/social_cognition]]
-      - [[knowledge_base/research/cultural_evolution]]
+      - "[[knowledge_base/research/social_cognition]]"
+      - "[[knowledge_base/research/cultural_evolution]]"
 ---
 
 # Cultural Dynamics

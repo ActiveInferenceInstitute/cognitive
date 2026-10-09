@@ -9,17 +9,17 @@ tags:
 - vision
 - illusion
 semantic_relations:
-- type: implements
-  links:
-  - - visual_perception
-- type: extends
-  links:
-  - - perceptual_organization
-- type: related
-  links:
-  - - - visual_completion
-  - - - gestalt_principles
-  - - - form_perception
+  - type: implements
+    links:
+      - "[[visual_perception]]"
+  - type: extends
+    links:
+      - "[[perceptual_organization]]"
+  - type: related
+    links:
+      - "[[visual_completion]]"
+      - "[[gestalt_principles]]"
+      - "[[form_perception]]"
 ---
 
 

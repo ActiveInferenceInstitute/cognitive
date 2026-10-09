@@ -12,18 +12,18 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[generative_models]]
-      - [[bayesian_inference]]
-      - [[variational_inference]]
+      - "[[generative_models]]"
+      - "[[bayesian_inference]]"
+      - "[[variational_inference]]"
   - type: related
     links:
-      - [[graphical_models]]
-      - [[factor_graphs]]
-      - [[message_passing]]
+      - "[[graphical_models]]"
+      - "[[factor_graphs]]"
+      - "[[message_passing]]"
   - type: applied_in
     links:
-      - [[active_inference_theory]]
-      - [[knowledge_base/cognitive/active_inference]]
+      - "[[active_inference_theory]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
 ---
 
 # Probabilistic Programming

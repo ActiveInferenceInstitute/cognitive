@@ -12,19 +12,19 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[message_passing]]
-      - [[factor_graphs]]
-      - [[variational_inference]]
+      - "[[message_passing]]"
+      - "[[factor_graphs]]"
+      - "[[variational_inference]]"
   - type: foundation_for
     links:
-      - [[active_inference_theory]]
-      - [[free_energy_principle]]
-      - [[belief_updating]]
+      - "[[active_inference_theory]]"
+      - "[[free_energy_principle]]"
+      - "[[belief_updating]]"
   - type: related
     links:
-      - [[graphical_models]]
-      - [[markov_random_fields]]
-      - [[probabilistic_models]]
+      - "[[graphical_models]]"
+      - "[[markov_random_fields]]"
+      - "[[probabilistic_models]]"
 ---
 
 # Belief Propagation

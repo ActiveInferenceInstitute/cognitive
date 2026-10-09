@@ -13,12 +13,12 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|RxInfer overview]]'
-      - '[[getting_started|Getting started]]'
-      - '[[model_specification|Model specification]]'
-      - '[[variational_inference|Variational inference]]'
-      - '[[message_passing|Message passing]]'
-      - '[[factor_graphs|Factor graphs]]'
+      - "[[README|RxInfer overview]]"
+      - "[[getting_started|Getting started]]"
+      - "[[model_specification|Model specification]]"
+      - "[[variational_inference|Variational inference]]"
+      - "[[message_passing|Message passing]]"
+      - "[[factor_graphs|Factor graphs]]"
 ---
 
 # RxInfer integration documentation instructions

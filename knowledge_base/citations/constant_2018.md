@@ -24,15 +24,15 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - niche construction
-      - cultural evolution
+      - "[[niche construction]]"
+      - "[[cultural evolution]]"
   - type: extends
     links:
-      - [[ramstead_2018]]
-      - [[friston_2013]]
+      - "[[ramstead_2018]]"
+      - "[[friston_2013]]"
   - type: cited_by
     links:
-      - [[parr_pezzulo_friston_2022]]
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # A Variational Approach to Niche Construction

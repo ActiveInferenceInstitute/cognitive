@@ -9,18 +9,18 @@ tags:
 - information
 - processing
 semantic_relations:
-- type: implements
-  links:
-  - - computational_efficiency
-- type: extends
-  links:
-  - - neural_computation
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - information_theory
-  - - - computational_complexity
+  - type: implements
+    links:
+      - "[[computational_efficiency]]"
+  - type: extends
+    links:
+      - "[[neural_computation]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[information_theory]]"
+      - "[[computational_complexity]]"
 ---
 
 

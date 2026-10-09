@@ -19,18 +19,18 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - [[myrmecology]]
-      - [[apidology]]
-      - [[ecological_dynamics]]
+      - "[[myrmecology]]"
+      - "[[apidology]]"
+      - "[[ecological_dynamics]]"
   - type: implements
     links:
-      - [[ecosystem_services]]
-      - [[biodiversity]]
+      - "[[ecosystem_services]]"
+      - "[[biodiversity]]"
   - type: relates
     links:
-      - [[conservation_biology]]
-      - [[soil_ecology]]
-      - [[pollination_biology]]
+      - "[[conservation_biology]]"
+      - "[[soil_ecology]]"
+      - "[[pollination_biology]]"
 ---
 
 # Ecological Impacts and Ecosystem Services of Social Insects

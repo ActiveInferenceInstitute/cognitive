@@ -14,14 +14,14 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
+      - "[[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
   - type: relates
     links:
-      - [[perception|Perception]]
-      - [[decision_making|Decision Making]]
-      - [[consciousness|Consciousness]]
-      - [[knowledge_base/free_energy_principle/systems/emergence|Emergence]]
+      - "[[perception|Perception]]"
+      - "[[decision_making|Decision Making]]"
+      - "[[consciousness|Consciousness]]"
+      - "[[knowledge_base/free_energy_principle/systems/emergence|Emergence]]"
 ---
 
 # Social Cognition as Mutual Active Inference

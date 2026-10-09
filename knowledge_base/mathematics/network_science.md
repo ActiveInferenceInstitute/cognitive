@@ -12,22 +12,22 @@ tags:
 - graph_theory
 - dynamics
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - complex_systems
-  - - - knowledge_base/systems/Social-Ecological Systems
-  - - - neural_networks
-- type: implements
-  links:
-  - - - graph_theory
-  - - - dynamical_systems
-  - - - statistical_physics
-- type: relates
-  links:
-  - - - information_theory
-  - - - collective_intelligence
-  - - - cultural_evolution
-  - - - ecological_networks
+  - type: foundation_for
+    links:
+      - "[[complex_systems]]"
+      - "[[knowledge_base/systems/Social-Ecological Systems]]"
+      - "[[neural_networks]]"
+  - type: implements
+    links:
+      - "[[graph_theory]]"
+      - "[[dynamical_systems]]"
+      - "[[statistical_physics]]"
+  - type: relates
+    links:
+      - "[[information_theory]]"
+      - "[[collective_intelligence]]"
+      - "[[cultural_evolution]]"
+      - "[[ecological_networks]]"
 ---
 
 

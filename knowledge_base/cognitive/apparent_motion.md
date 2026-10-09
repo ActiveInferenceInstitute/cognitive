@@ -9,17 +9,17 @@ tags:
 - vision
 - motion
 semantic_relations:
-- type: implements
-  links:
-  - - visual_perception
-- type: extends
-  links:
-  - - motion_perception
-- type: related
-  links:
-  - - - motion_processing
-  - - - perceptual_organization
-  - - - temporal_integration
+  - type: implements
+    links:
+      - "[[visual_perception]]"
+  - type: extends
+    links:
+      - "[[motion_perception]]"
+  - type: related
+    links:
+      - "[[motion_processing]]"
+      - "[[perceptual_organization]]"
+      - "[[temporal_integration]]"
 ---
 
 

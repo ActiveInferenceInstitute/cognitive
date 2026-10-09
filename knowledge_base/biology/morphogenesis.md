@@ -14,18 +14,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[cognitive/free_energy_principle|Free Energy Principle]]
-      - [[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]
-      - [[mathematics/dynamical_systems|Dynamical Systems]]
+      - "[[cognitive/free_energy_principle|Free Energy Principle]]"
+      - "[[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]"
+      - "[[mathematics/dynamical_systems|Dynamical Systems]]"
   - type: relates
     links:
-      - [[biology/developmental_systems|Developmental Systems]]
-      - [[mathematics/renormalization_group|Renormalization Group]]
-      - [[systems/emergence|Emergence]]
+      - "[[biology/developmental_systems|Developmental Systems]]"
+      - "[[mathematics/renormalization_group|Renormalization Group]]"
+      - "[[systems/emergence|Emergence]]"
   - type: extends
     links:
-      - [[cognitive/active_inference|Active Inference]]
-      - [[mathematics/markov_blankets|Markov Blankets]]
+      - "[[cognitive/active_inference|Active Inference]]"
+      - "[[mathematics/markov_blankets|Markov Blankets]]"
 ---
 
 # Morphogenesis Through the Free Energy Principle

@@ -11,14 +11,14 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - consciousness
-      - metacognition
-      - consciousness_and_awareness
-      - theory_of_mind
+      - "[[consciousness]]"
+      - "[[metacognition]]"
+      - "[[consciousness_and_awareness]]"
+      - "[[theory_of_mind]]"
   - type: foundation
     links:
-      - knowledge_base/mathematics/self_modeling
-      - [[social_cognition]]
+      - "[[knowledge_base/mathematics/self_modeling]]"
+      - "[[social_cognition]]"
 ---
 
 # Self-Awareness

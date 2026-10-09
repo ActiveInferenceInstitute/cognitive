@@ -11,14 +11,14 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - social_cognition
-      - learning_mechanisms
-      - imitation
-      - observational_learning
+      - "[[social_cognition]]"
+      - "[[learning_mechanisms]]"
+      - "[[imitation]]"
+      - "[[observational_learning]]"
   - type: implements
     links:
-      - [[social_cognition_detailed]]
-      - [[collective_behavior]]
+      - "[[social_cognition_detailed]]"
+      - "[[collective_behavior]]"
 ---
 
 # Social Learning

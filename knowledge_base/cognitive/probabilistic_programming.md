@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[bayesian_inference]]
-      - [[generative_model]]
-      - [[knowledge_base/mathematics/probability_distributions]]
-      - [[computational_neuroscience]]
+      - "[[bayesian_inference]]"
+      - "[[generative_model]]"
+      - "[[knowledge_base/mathematics/probability_distributions]]"
+      - "[[computational_neuroscience]]"
 ---
 
 # Probabilistic Programming

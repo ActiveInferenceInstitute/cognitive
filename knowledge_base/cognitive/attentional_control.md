@@ -9,18 +9,18 @@ tags:
 - control
 - executive_function
 semantic_relations:
-- type: implements
-  links:
-  - - attention_mechanisms
-- type: extends
-  links:
-  - - cognitive_control
-- type: related
-  links:
-  - - - selective_attention
-  - - - divided_attention
-  - - - active_inference
-  - - - free_energy_principle
+  - type: implements
+    links:
+      - "[[attention_mechanisms]]"
+  - type: extends
+    links:
+      - "[[cognitive_control]]"
+  - type: related
+    links:
+      - "[[selective_attention]]"
+      - "[[divided_attention]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
 ---
 
 

@@ -17,17 +17,17 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
-      - [[knowledge_base/free_energy_principle/mathematics/information_geometry|Information Geometry]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/information_geometry|Information Geometry]]"
   - type: relates
     links:
-      - [[mind_body_problem|Mind-Body Problem]]
-      - [[epistemology|Epistemology]]
-      - [[consciousness_phil|Consciousness]]
-      - [[causality|Causality]]
-      - [[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]
-      - [[knowledge_base/free_energy_principle/systems/emergence|Emergence]]
+      - "[[mind_body_problem|Mind-Body Problem]]"
+      - "[[epistemology|Epistemology]]"
+      - "[[consciousness_phil|Consciousness]]"
+      - "[[causality|Causality]]"
+      - "[[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]"
+      - "[[knowledge_base/free_energy_principle/systems/emergence|Emergence]]"
 ---
 
 # Metaphysics of the Free Energy Principle

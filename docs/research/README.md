@@ -5,14 +5,14 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[AGENTS|Research documentation instructions]]'
-      - '[[index|Research index]]'
-      - '[[research_documentation|Research documentation guide]]'
-      - '[[ant_colony_active_inference|Ant colony research]]'
-      - '[[active_inference/README|Active inference research]]'
-      - '[[architectures/README|Architectures research]]'
-      - '[[complex_systems/README|Complex systems research]]'
-      - '[[../../knowledge_base/research/README|Knowledge base research]]'
+      - "[[AGENTS|Research documentation instructions]]"
+      - "[[index|Research index]]"
+      - "[[research_documentation|Research documentation guide]]"
+      - "[[ant_colony_active_inference|Ant colony research]]"
+      - "[[active_inference/README|Active inference research]]"
+      - "[[architectures/README|Architectures research]]"
+      - "[[complex_systems/README|Complex systems research]]"
+      - "[[../../knowledge_base/research/README|Knowledge base research]]"
 ---
 
 # Research documentation index

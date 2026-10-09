@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Implementation overview]]'
-      - '[[../manuscript/README|Executable manuscript]]'
-      - '[[rxinfer/README|RxInfer integration]]'
-      - '[[../../code/tools/src/models/active_inference/AGENTS|Active inference models]]'
+      - "[[README|Implementation overview]]"
+      - "[[../manuscript/README|Executable manuscript]]"
+      - "[[rxinfer/README|RxInfer integration]]"
+      - "[[../../code/tools/src/models/active_inference/AGENTS|Active inference models]]"
 ---
 
 # Implementation documentation instructions

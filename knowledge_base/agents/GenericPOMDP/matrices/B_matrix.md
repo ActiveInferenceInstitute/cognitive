@@ -17,18 +17,18 @@ related_spaces:
 - - - pi_space
 - - - belief_space
 semantic_relations:
-- type: implements
-  links:
-  - - - markov_property
-  - - - transition_model
-- type: influences
-  links:
-  - - - policy_selection
-  - - - state_prediction
-- type: relates_to
-  links:
-  - - - dynamics_model
-  - - - control_theory
+  - type: implements
+    links:
+      - "[[markov_property]]"
+      - "[[transition_model]]"
+  - type: influences
+    links:
+      - "[[policy_selection]]"
+      - "[[state_prediction]]"
+  - type: relates_to
+    links:
+      - "[[dynamics_model]]"
+      - "[[control_theory]]"
 ---
 
 

@@ -7,7 +7,12 @@ updated: 2026-02-07
 tags: [statistics, hypothesis, testing, inference, methodology]
 semantic_relations:
   - type: relates
-    links: [[[bayesian_analysis]], [[frequentist_analysis]], [[power_analysis]], [[model_comparison]], [[experiment_design]]]
+    links:
+      - "[[bayesian_analysis]]"
+      - "[[frequentist_analysis]]"
+      - "[[power_analysis]]"
+      - "[[model_comparison]]"
+      - "[[experiment_design]]"
 ---
 
 # Hypothesis Testing

@@ -9,18 +9,18 @@ tags:
 - computation
 - dynamics
 semantic_relations:
-- type: implements
-  links:
-  - - neural_dynamics
-- type: extends
-  links:
-  - - neural_computation
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - temporal_binding
-  - - - perceptual_binding
+  - type: implements
+    links:
+      - "[[neural_dynamics]]"
+  - type: extends
+    links:
+      - "[[neural_computation]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[temporal_binding]]"
+      - "[[perceptual_binding]]"
 ---
 
 

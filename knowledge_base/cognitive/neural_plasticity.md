@@ -9,14 +9,14 @@ tags:
 - development
 - adaptation
 semantic_relations:
-- type: implements
-  links:
-  - - brain_function
-- type: related
-  links:
-  - - - learning_mechanisms
-  - - - memory_formation
-  - - - development
+  - type: implements
+    links:
+      - "[[brain_function]]"
+  - type: related
+    links:
+      - "[[learning_mechanisms]]"
+      - "[[memory_formation]]"
+      - "[[development]]"
 ---
 
 

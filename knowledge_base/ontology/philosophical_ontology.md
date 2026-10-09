@@ -12,19 +12,19 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[knowledge_base/philosophy/AGENTS|Philosophy Agents Documentation]]
-      - [[knowledge_base/philosophy/README|Philosophy Overview]]
-      - [[knowledge_base/philosophy/philosophy_topics|Philosophy Topics]]
+      - "[[knowledge_base/philosophy/AGENTS|Philosophy Agents Documentation]]"
+      - "[[knowledge_base/philosophy/README|Philosophy Overview]]"
+      - "[[knowledge_base/philosophy/philosophy_topics|Philosophy Topics]]"
   - type: relates
     links:
-      - [[cognitive_ontology]]
-      - [[systems_ontology]]
-      - [[knowledge_base/free_energy_principle/philosophy/epistemology]]
-      - [[knowledge_base/free_energy_principle/philosophy/metaphysics]]
+      - "[[cognitive_ontology]]"
+      - "[[systems_ontology]]"
+      - "[[knowledge_base/free_energy_principle/philosophy/epistemology]]"
+      - "[[knowledge_base/free_energy_principle/philosophy/metaphysics]]"
   - type: influences
     links:
-      - [[knowledge_base/cognitive/free_energy_principle]]
-      - [[knowledge_base/cognitive/active_inference]]
+      - "[[knowledge_base/cognitive/free_energy_principle]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
 ---
 
 # Philosophical Ontology

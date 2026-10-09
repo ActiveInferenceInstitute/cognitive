@@ -7,7 +7,12 @@ updated: 2026-02-07
 tags: [experimental_design, variables, control, methodology, research]
 semantic_relations:
   - type: relates
-    links: [[[experiment_design]], [[parameter_estimation]], [[power_analysis]], [[statistical_analysis]], [[knowledge_base/cognitive/active_inference]]]
+    links:
+      - "[[experiment_design]]"
+      - "[[parameter_estimation]]"
+      - "[[power_analysis]]"
+      - "[[statistical_analysis]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
 ---
 
 # Control Variables

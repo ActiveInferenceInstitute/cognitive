@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/mathematics/variational_methods]]
-      - [[knowledge_base/cognitive/active_inference]]
+      - "[[knowledge_base/mathematics/variational_methods]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
 ---
 
 # Computational Modeling

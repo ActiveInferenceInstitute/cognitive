@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../../code/scripts/validate_docs.py|Scripts directory]]'
+      - "[[../../code/scripts/validate_docs.py|Scripts directory]]"
 ---
 
 # Development scripts

@@ -10,10 +10,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[complex_systems]]
-      - [[adaptive_systems]]
-      - [[knowledge_base/cognitive/social_cognition]]
-      - [[knowledge_base/cognitive/multi_agent_active_inference]]
+      - "[[complex_systems]]"
+      - "[[adaptive_systems]]"
+      - "[[knowledge_base/cognitive/social_cognition]]"
+      - "[[knowledge_base/cognitive/multi_agent_active_inference]]"
 ---
 
 # Social Systems

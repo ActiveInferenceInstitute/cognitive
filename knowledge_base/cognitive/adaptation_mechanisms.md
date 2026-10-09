@@ -9,18 +9,18 @@ tags:
 - learning
 - optimization
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_processes
-- type: extends
-  links:
-  - - learning_mechanisms
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - homeostatic_regulation
-  - - - error_correction
+  - type: implements
+    links:
+      - "[[cognitive_processes]]"
+  - type: extends
+    links:
+      - "[[learning_mechanisms]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[homeostatic_regulation]]"
+      - "[[error_correction]]"
 ---
 
 

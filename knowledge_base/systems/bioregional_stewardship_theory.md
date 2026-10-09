@@ -7,11 +7,11 @@ tags:
 - stewardship
 - governance
 semantic_relations:
-- type: relates
-  links:
-  - adaptive_comanagement
-  - resilience_thinking
-  - environmental_applications
+  - type: relates
+    links:
+      - "[[adaptive_comanagement]]"
+      - "[[resilience_thinking]]"
+      - "[[environmental_applications]]"
 ---
 
 

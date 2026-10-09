@@ -5,10 +5,10 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Manuscript overview]]'
-      - '[[SYNTAX|Manuscript syntax]]'
-      - '[[config.yaml|Manuscript configuration]]'
-      - '[[../api/README|API documentation]]'
+      - "[[README|Manuscript overview]]"
+      - "[[SYNTAX|Manuscript syntax]]"
+      - "[[config.yaml|Manuscript configuration]]"
+      - "[[../api/README|API documentation]]"
 ---
 
 # Manuscript instructions

@@ -9,19 +9,19 @@ aliases: [renormalization-group, RG-theory, scale-transformations]
 semantic_relations:
   - type: foundation
     links:
-      - [[statistical_physics]]
-      - [[quantum_field_theory]]
-      - [[statistical_mechanics]]
+      - "[[statistical_physics]]"
+      - "[[quantum_field_theory]]"
+      - "[[statistical_mechanics]]"
   - type: implements
     links:
-      - [[bayesian_inference]]
-      - [[generative_models]]
-      - [[coarse_graining]]
+      - "[[bayesian_inference]]"
+      - "[[generative_models]]"
+      - "[[coarse_graining]]"
   - type: relates
     links:
-      - [[information_theory]]
-      - [[bayesian_renormalization]]
-      - [[critical_phenomena]]
+      - "[[information_theory]]"
+      - "[[bayesian_renormalization]]"
+      - "[[critical_phenomena]]"
 ---
 
 # Renormalization Group and Generative Models

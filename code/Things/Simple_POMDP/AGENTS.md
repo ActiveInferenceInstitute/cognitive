@@ -9,7 +9,7 @@ tags:
 semantic_relations:
   - type: simplified_version_of
     links:
-      - [[code/Things/Generic_POMDP/AGENTS]]
+      - "[[code/Things/Generic_POMDP/AGENTS]]"
 ---
 
 # Simple POMDP Agent

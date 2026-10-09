@@ -17,19 +17,13 @@ tags:
   - guide
 
 semantic_relations:
-
   - type: implements
-
-    links: [[ai_validation_framework]]
-
-  - type: relates
-
     links:
-
-      - [[active_inference]]
-
-      - [[predictive_processing]]
-
+      - "[[ai_validation_framework]]"
+  - type: relates
+    links:
+      - "[[active_inference]]"
+      - "[[predictive_processing]]"
 ---
 
 # Machine Learning Guide

@@ -12,13 +12,13 @@ tags:
 semantic_relations:
   - type: emerges_from
     links:
-      - [[complex_systems]]
-      - [[self_organization]]
+      - "[[complex_systems]]"
+      - "[[self_organization]]"
   - type: relates
     links:
-      - [[knowledge_base/cognitive/emergence_self_organization]]
-      - [[knowledge_base/cognitive/collective_behavior]]
-      - [[swarm_intelligence]]
+      - "[[knowledge_base/cognitive/emergence_self_organization]]"
+      - "[[knowledge_base/cognitive/collective_behavior]]"
+      - "[[swarm_intelligence]]"
 ---
 
 # Emergence in Complex Systems

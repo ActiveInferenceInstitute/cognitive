@@ -13,18 +13,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[active_inference]]
-      - [[free_energy_principle]]
-      - [[memory_systems]]
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[memory_systems]]"
   - type: relates
     links:
-      - [[learning_mechanisms]]
-      - [[precision_weighting]]
-      - [[neural_plasticity]]
+      - "[[learning_mechanisms]]"
+      - "[[precision_weighting]]"
+      - "[[neural_plasticity]]"
   - type: implements
     links:
-      - [[predictive_coding]]
-      - [[hierarchical_processing]]
+      - "[[predictive_coding]]"
+      - "[[hierarchical_processing]]"
 ---
 
 # Sleep and Memory Consolidation Through Active Inference

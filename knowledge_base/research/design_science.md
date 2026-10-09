@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/systems/systems_theory]]
-      - [[knowledge_base/research/global_solutions]]
+      - "[[knowledge_base/systems/systems_theory]]"
+      - "[[knowledge_base/research/global_solutions]]"
 ---
 
 # Design Science

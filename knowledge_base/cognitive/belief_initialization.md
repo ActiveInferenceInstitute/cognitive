@@ -14,21 +14,21 @@ tags:
 - uncertainty
 - learning
 semantic_relations:
-- type: implements
-  links:
-  - - - active_inference
-  - - - bayesian_inference
-  - - - belief_updating
-- type: relates
-  links:
-  - - - prior_beliefs
-  - - - uncertainty_quantification
-  - - - learning_initialization
-- type: mathematical_basis
-  links:
-  - - - probability_theory
-  - - - information_theory
-  - - - optimization_theory
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[bayesian_inference]]"
+      - "[[belief_updating]]"
+  - type: relates
+    links:
+      - "[[prior_beliefs]]"
+      - "[[uncertainty_quantification]]"
+      - "[[learning_initialization]]"
+  - type: mathematical_basis
+    links:
+      - "[[probability_theory]]"
+      - "[[information_theory]]"
+      - "[[optimization_theory]]"
 ---
 
 

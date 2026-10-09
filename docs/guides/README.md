@@ -5,10 +5,10 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[application/README|Application guides]]'
-      - '[[learning_paths/README|Learning paths]]'
-      - '[[../examples/README|Examples]]'
-      - '[[../implementation/README|Implementation]]'
+      - "[[application/README|Application guides]]"
+      - "[[learning_paths/README|Learning paths]]"
+      - "[[../examples/README|Examples]]"
+      - "[[../implementation/README|Implementation]]"
 ---
 
 # Guides index

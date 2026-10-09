@@ -11,11 +11,11 @@ aliases:
 - inverse_temperature
 - gamma
 semantic_relations:
-- type: relates
-  links:
-  - temperature_parameter
-  - policy_selection
-  - action_distribution
+  - type: relates
+    links:
+      - "[[temperature_parameter]]"
+      - "[[policy_selection]]"
+      - "[[action_distribution]]"
 ---
 
 

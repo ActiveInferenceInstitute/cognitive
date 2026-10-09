@@ -13,11 +13,11 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[README|KG multi-agent readme]]'
-      - '[[Ant_Swarm|Ant swarm notes]]'
-      - '[[KG_ActInf_Search|Active inference search notes]]'
-      - '[[SWR_Swarm|SWR swarm notes]]'
-      - '[[../../knowledge_base/cognitive/social_cognition|Social cognition]]'
+      - "[[README|KG multi-agent readme]]"
+      - "[[Ant_Swarm|Ant swarm notes]]"
+      - "[[KG_ActInf_Search|Active inference search notes]]"
+      - "[[SWR_Swarm|SWR swarm notes]]"
+      - "[[../../knowledge_base/cognitive/social_cognition|Social cognition]]"
 ---
 
 # KG Multi-Agent Documentation

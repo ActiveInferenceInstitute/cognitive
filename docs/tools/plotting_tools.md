@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../../code/tools/src/visualization/matrix_plots.py|Matrix plots]]'
+      - "[[../../code/tools/src/visualization/matrix_plots.py|Matrix plots]]"
 ---
 
 # Plotting tools

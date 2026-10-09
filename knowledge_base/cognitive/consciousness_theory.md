@@ -13,19 +13,19 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[active_inference]]
-      - [[free_energy_principle]]
-      - [[metacognition]]
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[metacognition]]"
   - type: relates
     links:
-      - [[attention_mechanisms]]
-      - [[hierarchical_processing]]
-      - [[working_memory]]
-      - [[self_organization]]
+      - "[[attention_mechanisms]]"
+      - "[[hierarchical_processing]]"
+      - "[[working_memory]]"
+      - "[[self_organization]]"
   - type: implements
     links:
-      - [[predictive_coding]]
-      - [[precision_weighting]]
+      - "[[predictive_coding]]"
+      - "[[precision_weighting]]"
 ---
 
 # Consciousness Theory and Active Inference

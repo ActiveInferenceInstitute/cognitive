@@ -13,9 +13,9 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[GenericPOMDP/README]]
-      - [[Continuous_Time/README]]
-      - [[AGENTS]]
+      - "[[GenericPOMDP/README]]"
+      - "[[Continuous_Time/README]]"
+      - "[[AGENTS]]"
 ---
 
 # Agent Architectures Overview

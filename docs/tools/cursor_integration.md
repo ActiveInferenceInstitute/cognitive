@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../../.cursorrules|Cursor rules]]'
-      - '[[../AGENTS|Tools documentation instructions]]'
+      - "[[../../.cursorrules|Cursor rules]]"
+      - "[[../AGENTS|Tools documentation instructions]]"
 ---
 
 # Cursor integration

@@ -9,10 +9,10 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[knowledge_base/agents/README]]
+      - "[[knowledge_base/agents/README]]"
   - type: documented_by
     links:
-      - [[code/Things/Ant_Colony/README]]
+      - "[[code/Things/Ant_Colony/README]]"
 ---
 
 # Ant Colony Agents

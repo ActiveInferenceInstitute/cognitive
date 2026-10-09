@@ -14,21 +14,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - biochemistry
-  - - - genetics
-  - - - cell_biology
-- type: implements
-  links:
-  - - - gene_expression
-  - - - protein_structure
-  - - - molecular_networks
-- type: relates
-  links:
-  - - - population_genetics
-  - - - developmental_systems
-  - - - systems_biology
+  - type: foundation
+    links:
+      - "[[biochemistry]]"
+      - "[[genetics]]"
+      - "[[cell_biology]]"
+  - type: implements
+    links:
+      - "[[gene_expression]]"
+      - "[[protein_structure]]"
+      - "[[molecular_networks]]"
+  - type: relates
+    links:
+      - "[[population_genetics]]"
+      - "[[developmental_systems]]"
+      - "[[systems_biology]]"
 ---
 
 

@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[generative_model]]
-      - [[system_definition]]
-      - [[hierarchical_inference]]
-      - [[model_architecture]]
+      - "[[generative_model]]"
+      - "[[system_definition]]"
+      - "[[hierarchical_inference]]"
+      - "[[model_architecture]]"
 ---
 
 # State Space Abstraction

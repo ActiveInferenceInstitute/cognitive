@@ -9,21 +9,21 @@ tags:
 - graphical-models
 - undirected-graphs
 semantic_relations:
-- type: foundation
-  links:
-  - - - probabilistic_graphical_models
-  - - - graphical_models
-  - - - probability_theory
-  - - - bayesian_graph_theory
-- type: related
-  links:
-  - - - bayesian_networks
-  - - - factor_graphs
-  - - - conditional_random_fields
-- type: implements
-  links:
-  - - - message_passing
-  - - - probabilistic_inference
+  - type: foundation
+    links:
+      - "[[probabilistic_graphical_models]]"
+      - "[[graphical_models]]"
+      - "[[probability_theory]]"
+      - "[[bayesian_graph_theory]]"
+  - type: related
+    links:
+      - "[[bayesian_networks]]"
+      - "[[factor_graphs]]"
+      - "[[conditional_random_fields]]"
+  - type: implements
+    links:
+      - "[[message_passing]]"
+      - "[[probabilistic_inference]]"
 ---
 
 

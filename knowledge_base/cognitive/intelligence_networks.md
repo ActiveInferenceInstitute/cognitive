@@ -7,11 +7,11 @@ tags:
 - networks
 - integration
 semantic_relations:
-- type: relates
-  links:
-  - neural_architectures
-  - network_science
-  - cognitive_architecture
+  - type: relates
+    links:
+      - "[[neural_architectures]]"
+      - "[[network_science]]"
+      - "[[cognitive_architecture]]"
 ---
 
 

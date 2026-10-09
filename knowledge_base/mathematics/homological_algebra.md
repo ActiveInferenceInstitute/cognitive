@@ -9,15 +9,15 @@ tags:
 - homology
 - categories
 semantic_relations:
-- type: foundation
-  links:
-  - - - category_theory
-  - - - algebraic_topology
-- type: relates
-  links:
-  - - - derived_categories
-  - - - spectral_sequences
-  - - - sheaf_theory
+  - type: foundation
+    links:
+      - "[[category_theory]]"
+      - "[[algebraic_topology]]"
+  - type: relates
+    links:
+      - "[[derived_categories]]"
+      - "[[spectral_sequences]]"
+      - "[[sheaf_theory]]"
 ---
 
 

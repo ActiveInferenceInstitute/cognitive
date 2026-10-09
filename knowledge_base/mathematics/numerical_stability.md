@@ -8,15 +8,15 @@ tags:
 - stability
 - optimization
 semantic_relations:
-- type: supports
-  links:
-  - variational_inference
-  - policy_selection
-  - action_distribution
-- type: relates
-  links:
-  - softmax_function
-  - precision_parameter
+  - type: supports
+    links:
+      - "[[variational_inference]]"
+      - "[[policy_selection]]"
+      - "[[action_distribution]]"
+  - type: relates
+    links:
+      - "[[softmax_function]]"
+      - "[[precision_parameter]]"
 ---
 
 

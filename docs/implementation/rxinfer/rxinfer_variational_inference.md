@@ -17,15 +17,10 @@ tags:
   - probabilistic-programming
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[variational_inference]]
-
-      - [[message_passing]]
-
+      - "[[variational_inference]]"
+      - "[[message_passing]]"
 ---
 
 # Variational Inference in RxInfer

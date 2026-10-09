@@ -12,18 +12,18 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[active_inference]]
-      - [[knowledge_base/mathematics/active_inference_theory]]
+      - "[[active_inference]]"
+      - "[[knowledge_base/mathematics/active_inference_theory]]"
   - type: foundation
     links:
-      - [[knowledge_base/mathematics/free_energy_principle]]
-      - [[generative_model]]
-      - [[belief_updating]]
+      - "[[knowledge_base/mathematics/free_energy_principle]]"
+      - "[[generative_model]]"
+      - "[[belief_updating]]"
   - type: documented_by
     links:
-      - [[knowledge_base/active_inference_implementation]]
-      - [[knowledge_base/agents/GenericPOMDP/README]]
-      - [[knowledge_base/agents/Continuous_Time/README]]
+      - "[[knowledge_base/active_inference_implementation]]"
+      - "[[knowledge_base/agents/GenericPOMDP/README]]"
+      - "[[knowledge_base/agents/Continuous_Time/README]]"
 ---
 
 # Implementing Active Inference Agents

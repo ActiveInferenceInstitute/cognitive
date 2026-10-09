@@ -9,18 +9,18 @@ tags:
 - active_inference
 - modeling
 semantic_relations:
-- type: implements
-  links:
-  - - active_inference
-- type: relates
-  links:
-  - - - generative_model
-  - - - predictive_coding
-  - - - hierarchical_inference
-  - - - model_architecture
-  - - - continuous_time_active_inference
-  - - - model_selection
-  - - - evidence_accumulation
+  - type: implements
+    links:
+      - "[[active_inference]]"
+  - type: relates
+    links:
+      - "[[generative_model]]"
+      - "[[predictive_coding]]"
+      - "[[hierarchical_inference]]"
+      - "[[model_architecture]]"
+      - "[[continuous_time_active_inference]]"
+      - "[[model_selection]]"
+      - "[[evidence_accumulation]]"
 ---
 
 

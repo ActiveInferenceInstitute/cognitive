@@ -12,18 +12,18 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[index]]
-      - [[AGENTS]]
-      - [[cognitive]]
-      - [[mathematics]]
-      - [[biology]]
-      - [[systems]]
-      - [[philosophy]]
-      - [[ontology]]
-      - [[research]]
-      - [[citations]]
-      - [[agents]]
-      - [[free_energy_principle]]
+      - "[[index]]"
+      - "[[AGENTS]]"
+      - "[[cognitive]]"
+      - "[[mathematics]]"
+      - "[[biology]]"
+      - "[[systems]]"
+      - "[[philosophy]]"
+      - "[[ontology]]"
+      - "[[research]]"
+      - "[[citations]]"
+      - "[[agents]]"
+      - "[[free_energy_principle]]"
 ---
 
 # Knowledge Base Overview

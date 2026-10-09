@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[quality_metrics]]
-      - [[quality_assessment]]
-      - [[simulation_studies]]
-      - [[active_inference_agent]]
+      - "[[quality_metrics]]"
+      - "[[quality_assessment]]"
+      - "[[simulation_studies]]"
+      - "[[active_inference_agent]]"
 ---
 
 # Performance Metrics

@@ -47,31 +47,18 @@ tags:
   - ecosystem-management
 
 semantic_relations:
-
   - type: specializes
-
     links:
-
-      - [[active_inference_learning_path]]
-
+      - "[[active_inference_learning_path]]"
   - type: relates
-
     links:
-
-      - [[active_inference_ecological_learning_path]]
-
-      - [[active_inference_social_learning_path]]
-
-      - [[active_inference_cognitive_systems_integration_path]]
-
+      - "[[active_inference_ecological_learning_path]]"
+      - "[[active_inference_social_learning_path]]"
+      - "[[active_inference_cognitive_systems_integration_path]]"
   - type: builds_on
-
     links:
-
-      - [[knowledge_base/systems/environmental_applications|Environmental Applications]]
-
-      - [[knowledge_base/systems/ecosystem_management|Ecosystem Management]]
-
+      - "[[knowledge_base/systems/environmental_applications|Environmental Applications]]"
+      - "[[knowledge_base/systems/ecosystem_management|Ecosystem Management]]"
 ---
 
 # Active Inference in Environmental Applications Learning Path

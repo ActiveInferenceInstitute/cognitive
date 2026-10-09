@@ -16,12 +16,12 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]
-      - [[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]
-      - [[social_sciences|Social Sciences]]
-      - [[ai_safety|AI Safety]]
-      - [[knowledge_base/free_energy_principle/philosophy/epistemology|Epistemology]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]"
+      - "[[social_sciences|Social Sciences]]"
+      - "[[ai_safety|AI Safety]]"
+      - "[[knowledge_base/free_energy_principle/philosophy/epistemology|Epistemology]]"
 ---
 
 # Economic Applications of the Free Energy Principle

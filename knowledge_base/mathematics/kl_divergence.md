@@ -8,15 +8,15 @@ tags:
 - divergence
 - probability
 semantic_relations:
-- type: relates
-  links:
-  - information_theory
-  - variational_inference
-  - expected_free_energy
-- type: underpins
-  links:
-  - variational_free_energy
-  - epistemic_value
+  - type: relates
+    links:
+      - "[[information_theory]]"
+      - "[[variational_inference]]"
+      - "[[expected_free_energy]]"
+  - type: underpins
+    links:
+      - "[[variational_free_energy]]"
+      - "[[epistemic_value]]"
 ---
 
 

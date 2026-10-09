@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../api/README|API documentation]]'
-      - '[[../api/api_reference|API reference]]'
+      - "[[../api/README|API documentation]]"
+      - "[[../api/api_reference|API reference]]"
 ---
 
 # API documentation tools

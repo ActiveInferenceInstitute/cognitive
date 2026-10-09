@@ -13,9 +13,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[README]]
-      - [[code/tools/src/models/active_inference/AGENTS|Active Inference Models]]
-      - [[code/tools/README|Tools Overview]]
+      - "[[README]]"
+      - "[[code/tools/src/models/active_inference/AGENTS|Active Inference Models]]"
+      - "[[code/tools/README|Tools Overview]]"
 ---
 
 # Analysis Tools Agent Documentation

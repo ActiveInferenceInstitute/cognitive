@@ -19,15 +19,15 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[mathematics/active_inference_theory]]
-      - [[cognitive/temporal_models]]
+      - "[[mathematics/active_inference_theory]]"
+      - "[[cognitive/temporal_models]]"
   - type: extends
     links:
-      - [[mathematics/free_energy_principle]]
+      - "[[mathematics/free_energy_principle]]"
   - type: cited_by
     links:
-      - [[friston_2013]]
-      - [[parr_2019]]
+      - "[[friston_2013]]"
+      - "[[parr_2019]]"
 ---
 
 # The History of the Future

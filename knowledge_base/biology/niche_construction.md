@@ -14,18 +14,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[cognitive/active_inference|Active Inference]]
-      - [[cognitive/free_energy_principle|Free Energy Principle]]
-      - [[biology/evolutionary_dynamics|Evolutionary Dynamics]]
+      - "[[cognitive/active_inference|Active Inference]]"
+      - "[[cognitive/free_energy_principle|Free Energy Principle]]"
+      - "[[biology/evolutionary_dynamics|Evolutionary Dynamics]]"
   - type: relates
     links:
-      - [[cognitive/embodied_cognition|Embodied Cognition]]
-      - [[cognitive/multi_agent_active_inference|Multi-Agent Active Inference]]
-      - [[philosophy/enactivism|Enactivism]]
+      - "[[cognitive/embodied_cognition|Embodied Cognition]]"
+      - "[[cognitive/multi_agent_active_inference|Multi-Agent Active Inference]]"
+      - "[[philosophy/enactivism|Enactivism]]"
   - type: extends
     links:
-      - [[mathematics/markov_blankets|Markov Blankets]]
-      - [[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]
+      - "[[mathematics/markov_blankets|Markov Blankets]]"
+      - "[[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]"
 ---
 
 # Niche Construction

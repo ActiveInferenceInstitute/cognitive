@@ -14,10 +14,10 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[pragmatism]]
-      - [[operationalism]]
-      - [[peircean_semiotics]]
-      - [[philosophy_topics]]
+      - "[[pragmatism]]"
+      - "[[operationalism]]"
+      - "[[peircean_semiotics]]"
+      - "[[philosophy_topics]]"
 ---
 
 # Philosophy Knowledge Base

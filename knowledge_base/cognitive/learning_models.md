@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[learning_mechanisms]]
-      - [[reinforcement_learning]]
-      - [[knowledge_base/mathematics/probability_distributions]]
-      - [[meta_learning]]
+      - "[[learning_mechanisms]]"
+      - "[[reinforcement_learning]]"
+      - "[[knowledge_base/mathematics/probability_distributions]]"
+      - "[[meta_learning]]"
 ---
 
 # Learning Models

@@ -20,14 +20,14 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/mathematics/free_energy_principle]]
-      - [[knowledge_base/cognitive/active_inference]]
-      - [[knowledge_base/mathematics/expected_free_energy]]
+      - "[[knowledge_base/mathematics/free_energy_principle]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+      - "[[knowledge_base/mathematics/expected_free_energy]]"
   - type: extends
     links:
-      - [[friston_2010]]
-      - [[friston_2017_curiosity]]
-      - [[da_costa_2020]]
+      - "[[friston_2010]]"
+      - "[[friston_2017_curiosity]]"
+      - "[[da_costa_2020]]"
   - type: cited_by
     links: []
 ---

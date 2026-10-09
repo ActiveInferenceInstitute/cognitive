@@ -7,11 +7,11 @@ tags:
 - perception
 - thresholds
 semantic_relations:
-- type: relates
-  links:
-  - perception_processing
-  - information_theory
-  - active_inference
+  - type: relates
+    links:
+      - "[[perception_processing]]"
+      - "[[information_theory]]"
+      - "[[active_inference]]"
 ---
 
 

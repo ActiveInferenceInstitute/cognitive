@@ -17,27 +17,16 @@ tags:
   - probabilistic-models
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[probabilistic_models]]
-
-      - [[graphical_models]]
-
+      - "[[probabilistic_models]]"
+      - "[[graphical_models]]"
   - type: related
-
     links:
-
-      - [[message_passing]]
-
-      - [[model_specification]]
-
-      - [[variational_inference]]
-
-      - [[belief_propagation]]
-
+      - "[[message_passing]]"
+      - "[[model_specification]]"
+      - "[[variational_inference]]"
+      - "[[belief_propagation]]"
 ---
 
 # Factor Graphs in RxInfer

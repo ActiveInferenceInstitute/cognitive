@@ -18,17 +18,17 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - bayesian mechanics
-      - particular partition
+      - "[[bayesian mechanics]]"
+      - "[[particular partition]]"
   - type: extends
     links:
-      - [[friston_2013]]
-      - [[kirchhoff_2018]]
-      - [[friston_2010]]
+      - "[[friston_2013]]"
+      - "[[kirchhoff_2018]]"
+      - "[[friston_2010]]"
   - type: cited_by
     links:
-      - [[da_costa_2021_bayesian]]
-      - [[parr_pezzulo_friston_2022]]
+      - "[[da_costa_2021_bayesian]]"
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # A Free Energy Principle for a Particular Physics

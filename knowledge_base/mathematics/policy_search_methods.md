@@ -6,11 +6,11 @@ created: 2025-08-08
 tags:
 - policy-optimization
 semantic_relations:
-- type: relates
-  links:
-  - policy_selection
-  - expected_free_energy
-  - natural_gradients
+  - type: relates
+    links:
+      - "[[policy_selection]]"
+      - "[[expected_free_energy]]"
+      - "[[natural_gradients]]"
 ---
 
 

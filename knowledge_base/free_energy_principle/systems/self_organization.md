@@ -14,14 +14,14 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
   - type: relates
     links:
-      - [[emergence|Emergence]]
-      - [[complex_adaptation|Complex Adaptation]]
-      - [[knowledge_base/free_energy_principle/biology/homeostasis|Homeostasis]]
-      - [[knowledge_base/free_energy_principle/biology/evolution|Evolution]]
+      - "[[emergence|Emergence]]"
+      - "[[complex_adaptation|Complex Adaptation]]"
+      - "[[knowledge_base/free_energy_principle/biology/homeostasis|Homeostasis]]"
+      - "[[knowledge_base/free_energy_principle/biology/evolution|Evolution]]"
 ---
 
 # Self-Organization Through Free Energy Minimization

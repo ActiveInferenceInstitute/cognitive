@@ -10,10 +10,10 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[code/Things/BioFirm/README]]
+      - "[[code/Things/BioFirm/README]]"
   - type: documented_by
     links:
-      - [[knowledge_base/BioFirm/biofirm_framework]]
+      - "[[knowledge_base/BioFirm/biofirm_framework]]"
 ---
 
 # BioFirm Agents

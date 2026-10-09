@@ -14,16 +14,16 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[core_principle|Core Principle]]
-      - [[variational_free_energy|Variational Free Energy]]
+      - "[[core_principle|Core Principle]]"
+      - "[[variational_free_energy|Variational Free Energy]]"
   - type: relates
     links:
-      - [[markov_blankets|Markov Blankets]]
-      - [[advanced_formulations|Advanced Formulations]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
+      - "[[markov_blankets|Markov Blankets]]"
+      - "[[advanced_formulations|Advanced Formulations]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
   - type: extends
     links:
-      - [[expected_free_energy|Expected Free Energy]]
+      - "[[expected_free_energy|Expected Free Energy]]"
 ---
 
 # Information Geometry and the Free Energy Principle

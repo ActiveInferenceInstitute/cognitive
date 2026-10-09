@@ -17,19 +17,13 @@ tags:
   - guidelines
 
 semantic_relations:
-
   - type: implements
-
-    links: [[ai_documentation_style]]
-
-  - type: relates
-
     links:
-
-      - [[package_documentation]]
-
-      - [[implementation_guides]]
-
+      - "[[ai_documentation_style]]"
+  - type: relates
+    links:
+      - "[[package_documentation]]"
+      - "[[implementation_guides]]"
 ---
 
 # Documentation Standards

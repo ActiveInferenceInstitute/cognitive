@@ -13,18 +13,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[active_inference]]
-      - [[free_energy_principle]]
-      - [[learning_mechanisms]]
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[learning_mechanisms]]"
   - type: relates
     links:
-      - [[hierarchical_processing]]
-      - [[precision_weighting]]
-      - [[neural_plasticity]]
+      - "[[hierarchical_processing]]"
+      - "[[precision_weighting]]"
+      - "[[neural_plasticity]]"
   - type: implements
     links:
-      - [[predictive_coding]]
-      - [[hierarchical_inference]]
+      - "[[predictive_coding]]"
+      - "[[hierarchical_inference]]"
 ---
 
 # Cognitive Development Through Active Inference

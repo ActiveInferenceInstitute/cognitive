@@ -12,8 +12,8 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[README|Path Network readme]]'
-      - '[[Path_Network_README|Path Network implementation notes]]'
+      - "[[README|Path Network readme]]"
+      - "[[Path_Network_README|Path Network implementation notes]]"
 ---
 
 # Path Network Documentation

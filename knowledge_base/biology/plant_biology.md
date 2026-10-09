@@ -15,21 +15,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - developmental_systems
-- type: implements
-  links:
-  - - - plant_development
-  - - - plant_physiology
-  - - - plant_networks
-- type: relates
-  links:
-  - - - cell_biology
-  - - - systems_biology
-  - - - ecological_dynamics
+  - type: foundation
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[developmental_systems]]"
+  - type: implements
+    links:
+      - "[[plant_development]]"
+      - "[[plant_physiology]]"
+      - "[[plant_networks]]"
+  - type: relates
+    links:
+      - "[[cell_biology]]"
+      - "[[systems_biology]]"
+      - "[[ecological_dynamics]]"
 ---
 
 

@@ -9,21 +9,21 @@ tags:
 - information_geometry
 - active_inference
 semantic_relations:
-- type: foundation
-  links:
-  - - - differential_geometry
-  - - - information_geometry
-  - - - symplectic_geometry
-  - - - riemannian_geometry
-- type: implements
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-- type: relates
-  links:
-  - - - path_integral_free_energy
-  - - - variational_methods
-  - - - optimal_control
+  - type: foundation
+    links:
+      - "[[differential_geometry]]"
+      - "[[information_geometry]]"
+      - "[[symplectic_geometry]]"
+      - "[[riemannian_geometry]]"
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+  - type: relates
+    links:
+      - "[[path_integral_free_energy]]"
+      - "[[variational_methods]]"
+      - "[[optimal_control]]"
 ---
 
 

@@ -19,25 +19,15 @@ tags:
   - best-practices
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[systems_engineering]]
-
-      - [[model_macro_paradigm]]
-
+      - "[[systems_engineering]]"
+      - "[[model_macro_paradigm]]"
   - type: related
-
     links:
-
-      - [[active_inference]]
-
-      - [[free_energy]]
-
-      - [[message_passing]]
-
+      - "[[active_inference]]"
+      - "[[free_energy]]"
+      - "[[message_passing]]"
 ---
 
 # Advanced Systems Engineering Guidebook for RxInfer

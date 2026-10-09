@@ -9,14 +9,14 @@ tags:
 - information_processing
 - organization
 semantic_relations:
-- type: implements
-  links:
-  - - neural_computation
-- type: related
-  links:
-  - - - predictive_coding
-  - - - active_inference
-  - - - information_theory
+  - type: implements
+    links:
+      - "[[neural_computation]]"
+  - type: related
+    links:
+      - "[[predictive_coding]]"
+      - "[[active_inference]]"
+      - "[[information_theory]]"
 ---
 
 

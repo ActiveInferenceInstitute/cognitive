@@ -13,18 +13,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[mathematics/probability_theory|Probability Theory]]
-      - [[mathematics/bayesian_networks|Bayesian Networks]]
-      - [[mathematics/conditional_independence|Conditional Independence]]
+      - "[[mathematics/probability_theory|Probability Theory]]"
+      - "[[mathematics/bayesian_networks|Bayesian Networks]]"
+      - "[[mathematics/conditional_independence|Conditional Independence]]"
   - type: relates
     links:
-      - [[cognitive/active_inference|Active Inference]]
-      - [[cognitive/free_energy_principle|Free Energy Principle]]
-      - [[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]
+      - "[[cognitive/active_inference|Active Inference]]"
+      - "[[cognitive/free_energy_principle|Free Energy Principle]]"
+      - "[[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]"
   - type: implements
     links:
-      - [[mathematics/probabilistic_graphical_models|Probabilistic Graphical Models]]
-      - [[mathematics/variational_free_energy|Variational Free Energy]]
+      - "[[mathematics/probabilistic_graphical_models|Probabilistic Graphical Models]]"
+      - "[[mathematics/variational_free_energy|Variational Free Energy]]"
 ---
 
 # Markov Blankets

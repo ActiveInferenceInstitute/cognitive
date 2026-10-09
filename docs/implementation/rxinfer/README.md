@@ -5,14 +5,14 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[AGENTS|RxInfer documentation instructions]]'
-      - '[[getting_started|Getting started]]'
-      - '[[model_specification|Model specification]]'
-      - '[[variational_inference|Variational inference]]'
-      - '[[message_passing|Message passing]]'
-      - '[[factor_graphs|Factor graphs]]'
-      - '[[streaming_inference|Streaming inference]]'
-      - '[[systems_engineering_guidebook|Systems engineering guidebook]]'
+      - "[[AGENTS|RxInfer documentation instructions]]"
+      - "[[getting_started|Getting started]]"
+      - "[[model_specification|Model specification]]"
+      - "[[variational_inference|Variational inference]]"
+      - "[[message_passing|Message passing]]"
+      - "[[factor_graphs|Factor graphs]]"
+      - "[[streaming_inference|Streaming inference]]"
+      - "[[systems_engineering_guidebook|Systems engineering guidebook]]"
 ---
 
 # RxInfer integration index

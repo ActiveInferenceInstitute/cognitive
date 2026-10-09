@@ -11,14 +11,14 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - validation
-      - performance_optimization
-      - model_complexity
-      - simulation_studies
+      - "[[validation]]"
+      - "[[performance_optimization]]"
+      - "[[model_complexity]]"
+      - "[[simulation_studies]]"
   - type: implements
     links:
-      - [[docs/repo_docs/validation]]
-      - [[benchmarking]]
+      - "[[docs/repo_docs/validation]]"
+      - "[[benchmarking]]"
 ---
 
 # Quality Assessment

@@ -9,18 +9,18 @@ tags:
 - neuroscience
 - networks
 semantic_relations:
-- type: implements
-  links:
-  - - attention_mechanisms
-- type: extends
-  links:
-  - - neural_networks
-- type: related
-  links:
-  - - - selective_attention
-  - - - divided_attention
-  - - - active_inference
-  - - - free_energy_principle
+  - type: implements
+    links:
+      - "[[attention_mechanisms]]"
+  - type: extends
+    links:
+      - "[[neural_networks]]"
+  - type: related
+    links:
+      - "[[selective_attention]]"
+      - "[[divided_attention]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
 ---
 
 

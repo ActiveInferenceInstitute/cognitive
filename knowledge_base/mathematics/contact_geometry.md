@@ -9,15 +9,15 @@ tags:
 - mechanics
 - thermodynamics
 semantic_relations:
-- type: foundation
-  links:
-  - - - symplectic_geometry
-  - - - differential_geometry
-- type: relates
-  links:
-  - - - thermodynamics
-  - - - geometric_mechanics
-  - - - control_theory
+  - type: foundation
+    links:
+      - "[[symplectic_geometry]]"
+      - "[[differential_geometry]]"
+  - type: relates
+    links:
+      - "[[thermodynamics]]"
+      - "[[geometric_mechanics]]"
+      - "[[control_theory]]"
 ---
 
 

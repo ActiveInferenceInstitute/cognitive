@@ -17,25 +17,15 @@ tags:
   - approximate-inference
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[inference_algorithms]]
-
-      - [[probabilistic_inference]]
-
+      - "[[inference_algorithms]]"
+      - "[[probabilistic_inference]]"
   - type: related
-
     links:
-
-      - [[message_passing]]
-
-      - [[factor_graphs]]
-
-      - [[model_specification]]
-
+      - "[[message_passing]]"
+      - "[[factor_graphs]]"
+      - "[[model_specification]]"
 ---
 
 # Variational Inference in RxInfer

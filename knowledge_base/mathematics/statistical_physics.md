@@ -13,24 +13,24 @@ tags:
 - complexity
 - emergence
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - complex_systems
-  - - - network_science
-  - - - free_energy_principle
-  - - - active_inference
-- type: implements
-  links:
-  - - - thermodynamics
-  - - - information_theory
-  - - - probability_theory
-  - - - stochastic_processes
-- type: relates
-  links:
-  - - - dynamical_systems
-  - - - non_equilibrium_thermodynamics
-  - - - optimization_theory
-  - - - variational_inference
+  - type: foundation_for
+    links:
+      - "[[complex_systems]]"
+      - "[[network_science]]"
+      - "[[free_energy_principle]]"
+      - "[[active_inference]]"
+  - type: implements
+    links:
+      - "[[thermodynamics]]"
+      - "[[information_theory]]"
+      - "[[probability_theory]]"
+      - "[[stochastic_processes]]"
+  - type: relates
+    links:
+      - "[[dynamical_systems]]"
+      - "[[non_equilibrium_thermodynamics]]"
+      - "[[optimization_theory]]"
+      - "[[variational_inference]]"
 ---
 
 

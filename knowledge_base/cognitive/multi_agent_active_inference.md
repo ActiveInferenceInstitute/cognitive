@@ -13,19 +13,19 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[active_inference|Active Inference]]
-      - [[knowledge_base/mathematics/expected_free_energy|Expected Free Energy]]
-      - [[knowledge_base/mathematics/variational_free_energy|Variational Free Energy]]
+      - "[[active_inference|Active Inference]]"
+      - "[[knowledge_base/mathematics/expected_free_energy|Expected Free Energy]]"
+      - "[[knowledge_base/mathematics/variational_free_energy|Variational Free Energy]]"
   - type: relates
     links:
-      - [[social_cognition|Social Cognition]]
-      - [[social_learning|Social Learning]]
-      - [[biology/niche_construction|Niche Construction]]
-      - [[philosophy/enactivism|Enactivism]]
+      - "[[social_cognition|Social Cognition]]"
+      - "[[social_learning|Social Learning]]"
+      - "[[biology/niche_construction|Niche Construction]]"
+      - "[[philosophy/enactivism|Enactivism]]"
   - type: extends
     links:
-      - [[knowledge_base/mathematics/markov_blankets|Markov Blankets]]
-      - [[generative_model|Generative Models]]
+      - "[[knowledge_base/mathematics/markov_blankets|Markov Blankets]]"
+      - "[[generative_model|Generative Models]]"
 ---
 
 # Multi-Agent Active Inference

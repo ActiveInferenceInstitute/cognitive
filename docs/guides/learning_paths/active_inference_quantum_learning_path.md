@@ -47,17 +47,12 @@ tags:
   - enterprise-integration
 
 semantic_relations:
-
   - type: specializes
-
-    links: [[active_inference_learning_path]]
-
-  - type: relates
-
     links:
-
-      - [[active_inference_information_theory_learning_path]]
-
+      - "[[active_inference_learning_path]]"
+  - type: relates
+    links:
+      - "[[active_inference_information_theory_learning_path]]"
 ---
 
 # Active Inference in Quantum Systems Learning Path

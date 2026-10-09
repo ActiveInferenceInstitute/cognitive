@@ -9,17 +9,17 @@ tags:
 - vision
 - texture
 semantic_relations:
-- type: implements
-  links:
-  - - visual_perception
-- type: extends
-  links:
-  - - pattern_recognition
-- type: related
-  links:
-  - - - form_perception
-  - - - surface_perception
-  - - - material_perception
+  - type: implements
+    links:
+      - "[[visual_perception]]"
+  - type: extends
+    links:
+      - "[[pattern_recognition]]"
+  - type: related
+    links:
+      - "[[form_perception]]"
+      - "[[surface_perception]]"
+      - "[[material_perception]]"
 ---
 
 

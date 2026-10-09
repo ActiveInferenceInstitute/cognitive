@@ -12,18 +12,18 @@ aliases:
 - riemannian-geometry
 - geometric-mechanics
 semantic_relations:
-- type: implements
-  links:
-  - - - docs/research/research_documentation_index|Research Documentation
-  - - - information_geometry
-- type: uses
-  links:
-  - - - tensor_calculus
-  - - - lie_theory
-- type: documented_by
-  links:
-  - - - docs/implementation/implementation_guides_index|Implementation Guides
-  - - - docs/api/api_documentation_index|API Documentation
+  - type: implements
+    links:
+      - "[[docs/research/research_documentation_index|Research Documentation]]"
+      - "[[information_geometry]]"
+  - type: uses
+    links:
+      - "[[tensor_calculus]]"
+      - "[[lie_theory]]"
+  - type: documented_by
+    links:
+      - "[[docs/implementation/implementation_guides_index|Implementation Guides]]"
+      - "[[docs/api/api_documentation_index|API Documentation]]"
 ---
 
 

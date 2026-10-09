@@ -9,18 +9,18 @@ tags:
 - perception
 - objects
 semantic_relations:
-- type: implements
-  links:
-  - - attention_mechanisms
-- type: extends
-  links:
-  - - selective_attention
-- type: related
-  links:
-  - - - spatial_attention
-  - - - feature_based_attention
-  - - - active_inference
-  - - - free_energy_principle
+  - type: implements
+    links:
+      - "[[attention_mechanisms]]"
+  - type: extends
+    links:
+      - "[[selective_attention]]"
+  - type: related
+    links:
+      - "[[spatial_attention]]"
+      - "[[feature_based_attention]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
 ---
 
 

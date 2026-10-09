@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/cognitive/active_inference]]
-      - [[knowledge_base/systems/spatial_computing]]
+      - "[[knowledge_base/cognitive/active_inference]]"
+      - "[[knowledge_base/systems/spatial_computing]]"
 ---
 
 # Human-Computer Interaction

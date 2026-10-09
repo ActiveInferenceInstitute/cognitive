@@ -10,21 +10,21 @@ tags:
 - computational_methods
 - bayesian_inference
 semantic_relations:
-- type: implements
-  links:
-  - - - statistical_foundations
-  - - - bayesian_inference
-  - - - information_theory
-- type: uses
-  links:
-  - - - probability_theory
-  - - - optimization_theory
-  - - - numerical_methods
-- type: applied_in
-  links:
-  - - - active_inference_theory
-  - - - message_passing
-  - - - variational_inference
+  - type: implements
+    links:
+      - "[[statistical_foundations]]"
+      - "[[bayesian_inference]]"
+      - "[[information_theory]]"
+  - type: uses
+    links:
+      - "[[probability_theory]]"
+      - "[[optimization_theory]]"
+      - "[[numerical_methods]]"
+  - type: applied_in
+    links:
+      - "[[active_inference_theory]]"
+      - "[[message_passing]]"
+      - "[[variational_inference]]"
 ---
 
 

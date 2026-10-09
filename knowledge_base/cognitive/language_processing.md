@@ -9,14 +9,14 @@ tags:
 - neural_systems
 - behavior
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_functions
-- type: related
-  links:
-  - - - speech_production
-  - - - language_comprehension
-  - - - neurolinguistics
+  - type: implements
+    links:
+      - "[[cognitive_functions]]"
+  - type: related
+    links:
+      - "[[speech_production]]"
+      - "[[language_comprehension]]"
+      - "[[neurolinguistics]]"
 ---
 
 

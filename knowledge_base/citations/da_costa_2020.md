@@ -24,17 +24,17 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - active inference discrete
-      - python framework
+      - "[[active inference discrete]]"
+      - "[[python framework]]"
   - type: extends
     links:
-      - [[friston_2017_curiosity]]
-      - [[friston_2010]]
+      - "[[friston_2017_curiosity]]"
+      - "[[friston_2010]]"
   - type: cited_by
     links:
-      - [[sajid_2021]]
-      - [[smith_2022]]
-      - [[parr_pezzulo_friston_2022]]
+      - "[[sajid_2021]]"
+      - "[[smith_2022]]"
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # Active Inference on Discrete State-Spaces: A Synthesis

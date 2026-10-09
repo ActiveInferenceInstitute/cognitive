@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../repo_docs/obsidian_linking|Obsidian linking standards]]'
-      - '[[../repo_docs/linking_patterns|Linking patterns]]'
+      - "[[../repo_docs/obsidian_linking|Obsidian linking standards]]"
+      - "[[../repo_docs/linking_patterns|Linking patterns]]"
 ---
 
 # Obsidian usage

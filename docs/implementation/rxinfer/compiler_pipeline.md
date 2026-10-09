@@ -17,23 +17,14 @@ tags:
   - implementation
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[model_specification]]
-
-      - [[ast_transformation]]
-
+      - "[[model_specification]]"
+      - "[[ast_transformation]]"
   - type: related
-
     links:
-
-      - [[execution_engine]]
-
-      - [[factor_graphs]]
-
+      - "[[execution_engine]]"
+      - "[[factor_graphs]]"
 ---
 
 # RxInfer Compiler Pipeline

@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/systems/technology_ethics]]
-      - [[knowledge_base/systems/social_systems]]
+      - "[[knowledge_base/systems/technology_ethics]]"
+      - "[[knowledge_base/systems/social_systems]]"
 ---
 
 # Digital Governance

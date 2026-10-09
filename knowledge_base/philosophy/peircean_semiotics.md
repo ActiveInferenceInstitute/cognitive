@@ -10,17 +10,17 @@ tags:
 - cognition
 - epistemology
 semantic_relations:
-- type: foundation
-  links:
-  - - - pragmaticism
-  - - - logic
-  - - - epistemology
-- type: relates
-  links:
-  - - - active_inference
-  - - - information_theory
-  - - - category_theory
-  - - - phenomenology
+  - type: foundation
+    links:
+      - "[[pragmaticism]]"
+      - "[[logic]]"
+      - "[[epistemology]]"
+  - type: relates
+    links:
+      - "[[active_inference]]"
+      - "[[information_theory]]"
+      - "[[category_theory]]"
+      - "[[phenomenology]]"
 ---
 
 

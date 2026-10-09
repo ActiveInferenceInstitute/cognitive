@@ -15,21 +15,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - mathematical_entomology
-  - - - population_genetics
-  - - - evolutionary_dynamics
-- type: implements
-  links:
-  - - - statistical_methods
-  - - - bioinformatics
-  - - - genomics
-- type: relates
-  links:
-  - - - ecological_networks
-  - - - speciation
-  - - - adaptation
+  - type: foundation
+    links:
+      - "[[mathematical_entomology]]"
+      - "[[population_genetics]]"
+      - "[[evolutionary_dynamics]]"
+  - type: implements
+    links:
+      - "[[statistical_methods]]"
+      - "[[bioinformatics]]"
+      - "[[genomics]]"
+  - type: relates
+    links:
+      - "[[ecological_networks]]"
+      - "[[speciation]]"
+      - "[[adaptation]]"
 ---
 
 

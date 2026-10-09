@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[README|Baseball Game readme]]'
-      - '[[Baseball_Game|Baseball Game notes]]'
-      - '[[../../knowledge_base/cognitive/decision_making|Decision making]]'
+      - "[[README|Baseball Game readme]]"
+      - "[[Baseball_Game|Baseball Game notes]]"
+      - "[[../../knowledge_base/cognitive/decision_making|Decision making]]"
 ---
 
 # Baseball Game Documentation

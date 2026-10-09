@@ -9,11 +9,11 @@ tags:
 - ontology
 - datasets
 semantic_relations:
-- type: aggregates
-  links:
-  - msc_skos
-  - ontomathpro_ontology
-  - mathgloss_knowledge_graph
+  - type: aggregates
+    links:
+      - "[[msc_skos]]"
+      - "[[ontomathpro_ontology]]"
+      - "[[mathgloss_knowledge_graph]]"
 ---
 
 

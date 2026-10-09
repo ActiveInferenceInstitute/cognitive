@@ -9,14 +9,14 @@ tags:
 - subjective_experience
 - neural_correlates
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_functions
-- type: related
-  links:
-  - - - attention
-  - - - self_awareness
-  - - - perception
+  - type: implements
+    links:
+      - "[[cognitive_functions]]"
+  - type: related
+    links:
+      - "[[attention]]"
+      - "[[self_awareness]]"
+      - "[[perception]]"
 ---
 
 

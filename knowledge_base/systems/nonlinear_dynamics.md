@@ -10,9 +10,9 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[dynamical_systems]]
-      - [[complex_systems]]
-      - [[emergence]]
+      - "[[dynamical_systems]]"
+      - "[[complex_systems]]"
+      - "[[emergence]]"
 ---
 
 # Nonlinear Dynamics

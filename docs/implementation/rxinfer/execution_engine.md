@@ -17,23 +17,14 @@ tags:
   - inference
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[message_passing]]
-
-      - [[variational_inference]]
-
+      - "[[message_passing]]"
+      - "[[variational_inference]]"
   - type: related
-
     links:
-
-      - [[factor_graphs]]
-
-      - [[free_energy]]
-
+      - "[[factor_graphs]]"
+      - "[[free_energy]]"
 ---
 
 # RxInfer Execution Engine

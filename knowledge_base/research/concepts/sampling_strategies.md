@@ -7,7 +7,10 @@ updated: 2026-02-07
 tags: [sampling, statistics, experimental_design, inference]
 semantic_relations:
   - type: relates
-    links: [[[monte_carlo_methods]], [[experiment_design]], [[parameter_estimation]]]
+    links:
+      - "[[monte_carlo_methods]]"
+      - "[[experiment_design]]"
+      - "[[parameter_estimation]]"
 ---
 
 # Sampling Strategies

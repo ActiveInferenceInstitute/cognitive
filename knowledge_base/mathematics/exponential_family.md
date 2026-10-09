@@ -7,15 +7,15 @@ tags:
 - probability
 - statistics
 semantic_relations:
-- type: relates
-  links:
-  - variational_inference
-  - fisher_information
-  - natural_gradients
-- type: used_by
-  links:
-  - message_passing
-  - belief_updating
+  - type: relates
+    links:
+      - "[[variational_inference]]"
+      - "[[fisher_information]]"
+      - "[[natural_gradients]]"
+  - type: used_by
+    links:
+      - "[[message_passing]]"
+      - "[[belief_updating]]"
 ---
 
 

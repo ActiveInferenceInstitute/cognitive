@@ -15,23 +15,23 @@ aliases:
 complexity: intermediate
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - evolutionary_dynamics
-  - - - ecological_networks
-  - - - behavioral_biology
-  - - - knowledge_base/cognitive/active_inference
-- type: implements
-  links:
-  - - - population_genetics
-  - - - developmental_systems
-  - - - knowledge_base/agents/architectures_overview
-- type: relates
-  links:
-  - - - myrmecology
-  - - - apidology
-  - - - ecological_dynamics
-  - - - insect_flight_dynamics
+  - type: foundation
+    links:
+      - "[[evolutionary_dynamics]]"
+      - "[[ecological_networks]]"
+      - "[[behavioral_biology]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+  - type: implements
+    links:
+      - "[[population_genetics]]"
+      - "[[developmental_systems]]"
+      - "[[knowledge_base/agents/architectures_overview]]"
+  - type: relates
+    links:
+      - "[[myrmecology]]"
+      - "[[apidology]]"
+      - "[[ecological_dynamics]]"
+      - "[[insect_flight_dynamics]]"
 ---
 
 

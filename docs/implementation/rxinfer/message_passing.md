@@ -17,23 +17,14 @@ tags:
   - inference
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[variational_inference]]
-
-      - [[factor_graphs]]
-
+      - "[[variational_inference]]"
+      - "[[factor_graphs]]"
   - type: related
-
     links:
-
-      - [[inference_algorithms]]
-
-      - [[model_specification]]
-
+      - "[[inference_algorithms]]"
+      - "[[model_specification]]"
 ---
 
 # Message Passing in RxInfer

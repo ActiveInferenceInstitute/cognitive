@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[README]]
-      - [[code/tools/src/models/active_inference/AGENTS|Active Inference Models]]
-      - [[docs/repo_docs/unit_testing|Unit Testing Guide]]
+      - "[[README]]"
+      - "[[code/tools/src/models/active_inference/AGENTS|Active Inference Models]]"
+      - "[[docs/repo_docs/unit_testing|Unit Testing Guide]]"
 ---
 
 # Test Suite Agent Documentation

@@ -9,14 +9,14 @@ tags:
 - stochastic_processes
 - optimization
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - knowledge_base/mathematics/expected_free_energy|Expected Free Energy
-  - - - knowledge_base/cognitive/active_inference|Active Inference
-- type: implemented_by
-  links:
-  - - - knowledge_base/mathematics/numerical_methods|Numerical Methods
-  - - - docs/implementation/implementation_patterns|Implementation Patterns
+  - type: foundation_for
+    links:
+      - "[[knowledge_base/mathematics/expected_free_energy|Expected Free Energy]]"
+      - "[[knowledge_base/cognitive/active_inference|Active Inference]]"
+  - type: implemented_by
+    links:
+      - "[[knowledge_base/mathematics/numerical_methods|Numerical Methods]]"
+      - "[[docs/implementation/implementation_patterns|Implementation Patterns]]"
 ---
 
 

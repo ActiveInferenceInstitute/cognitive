@@ -47,35 +47,20 @@ tags:
   - recursive-self-improvement
 
 semantic_relations:
-
   - type: specializes
-
-    links: [[active_inference_learning_path]]
-
+    links:
+      - "[[active_inference_learning_path]]"
   - type: relates
-
     links:
-
-
-      - [[active_inference_cognitive_learning_path]]
-
-
+      - "[[active_inference_cognitive_learning_path]]"
   - type: prerequisite
-
     links:
-
-      - [[active_inference_learning_path]]
-
-      - [[active_inference_cognitive_learning_path]]
-
+      - "[[active_inference_learning_path]]"
+      - "[[active_inference_cognitive_learning_path]]"
   - type: integrates_with
-
     links:
-
-      - [[active_inference_security_learning_path]]
-
-      - [[active_inference_quantum_learning_path]]
-
+      - "[[active_inference_security_learning_path]]"
+      - "[[active_inference_quantum_learning_path]]"
 ---
 
 # Active Inference in AGI and Superintelligence Learning Path

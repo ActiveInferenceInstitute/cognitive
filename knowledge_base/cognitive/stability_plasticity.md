@@ -12,14 +12,14 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - learning_mechanisms
-      - memory_consolidation
-      - synaptic_plasticity
-      - adaptation_mechanisms
+      - "[[learning_mechanisms]]"
+      - "[[memory_consolidation]]"
+      - "[[synaptic_plasticity]]"
+      - "[[adaptation_mechanisms]]"
   - type: foundation
     links:
-      - [[learning_theory]]
-      - [[neural_plasticity]]
+      - "[[learning_theory]]"
+      - "[[neural_plasticity]]"
 ---
 
 # Stability-Plasticity Dilemma

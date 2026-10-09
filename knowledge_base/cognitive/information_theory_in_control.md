@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[active_inference_for_control]]
-      - [[free_energy_principle]]
-      - [[knowledge_base/mathematics/information_theory]]
-      - [[advanced_control]]
+      - "[[active_inference_for_control]]"
+      - "[[free_energy_principle]]"
+      - "[[knowledge_base/mathematics/information_theory]]"
+      - "[[advanced_control]]"
 ---
 
 # Information Theory in Control

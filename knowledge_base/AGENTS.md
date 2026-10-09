@@ -12,16 +12,16 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Knowledge base overview]]'
-      - '[[index|Knowledge base index]]'
-      - '[[cognitive/README|Cognitive science]]'
-      - '[[mathematics/README|Mathematics]]'
-      - '[[biology/README|Biology]]'
-      - '[[systems/README|Systems theory]]'
-      - '[[philosophy/README|Philosophy]]'
-      - '[[ontology/README|Ontology]]'
-      - '[[agents/README|Agent architectures]]'
-      - '[[free_energy_principle/README|Free energy principle]]'
+      - "[[README|Knowledge base overview]]"
+      - "[[index|Knowledge base index]]"
+      - "[[cognitive/README|Cognitive science]]"
+      - "[[mathematics/README|Mathematics]]"
+      - "[[biology/README|Biology]]"
+      - "[[systems/README|Systems theory]]"
+      - "[[philosophy/README|Philosophy]]"
+      - "[[ontology/README|Ontology]]"
+      - "[[agents/README|Agent architectures]]"
+      - "[[free_energy_principle/README|Free energy principle]]"
 ---
 
 # Knowledge Base Active Inference Documentation

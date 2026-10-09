@@ -14,14 +14,14 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
-      - [[knowledge_base/free_energy_principle/mathematics/advanced_formulations|Advanced Formulations]]
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/advanced_formulations|Advanced Formulations]]"
   - type: relates
     links:
-      - [[self_organization|Self-Organization]]
-      - [[complex_adaptation|Complex Adaptation]]
-      - [[knowledge_base/free_energy_principle/cognitive/consciousness|Consciousness]]
-      - [[knowledge_base/free_energy_principle/biology/evolution|Evolution]]
+      - "[[self_organization|Self-Organization]]"
+      - "[[complex_adaptation|Complex Adaptation]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/consciousness|Consciousness]]"
+      - "[[knowledge_base/free_energy_principle/biology/evolution|Evolution]]"
 ---
 
 # Emergence From Inference Hierarchies

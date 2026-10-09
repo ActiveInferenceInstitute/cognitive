@@ -10,9 +10,9 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[evolutionary_dynamics]]
-      - [[knowledge_base/free_energy_principle/biology/evolution]]
-      - [[levels_of_organization]]
+      - "[[evolutionary_dynamics]]"
+      - "[[knowledge_base/free_energy_principle/biology/evolution]]"
+      - "[[levels_of_organization]]"
 ---
 
 # Evolutionary Biology

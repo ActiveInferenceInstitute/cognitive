@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/free_energy_principle/README]]
-      - [[knowledge_base/mathematics/variational_methods]]
+      - "[[knowledge_base/free_energy_principle/README]]"
+      - "[[knowledge_base/mathematics/variational_methods]]"
 ---
 
 # Applications of Free Energy

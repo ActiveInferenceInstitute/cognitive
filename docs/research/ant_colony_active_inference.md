@@ -17,19 +17,13 @@ tags:
   - collective_behavior
 
 semantic_relations:
-
   - type: implements
-
-    links: [[research_document_template]]
-
-  - type: relates
-
     links:
-
-      - [[knowledge_base/cognitive/collective_behavior]]
-
-      - [[knowledge_base/cognitive/active_inference]]
-
+      - "[[research_document_template]]"
+  - type: relates
+    links:
+      - "[[knowledge_base/cognitive/collective_behavior]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
 ---
 
 # Active Inference in Ant Colony Behavior

@@ -15,17 +15,17 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[core_principle|Core Principle]]
-      - [[variational_free_energy|Variational Free Energy]]
+      - "[[core_principle|Core Principle]]"
+      - "[[variational_free_energy|Variational Free Energy]]"
   - type: implements
     links:
-      - [[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]
-      - [[knowledge_base/free_energy_principle/AGENTS|Agent Architectures]]
+      - "[[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]"
+      - "[[knowledge_base/free_energy_principle/AGENTS|Agent Architectures]]"
   - type: relates
     links:
-      - [[knowledge_base/free_energy_principle/cognitive/attention|Attention]]
-      - [[knowledge_base/free_energy_principle/cognitive/learning|Learning]]
-      - [[information_geometry|Information Geometry]]
+      - "[[knowledge_base/free_energy_principle/cognitive/attention|Attention]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/learning|Learning]]"
+      - "[[information_geometry|Information Geometry]]"
 ---
 
 # Expected Free Energy: Planning, Curiosity, and Goal-Directed Behavior

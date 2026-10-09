@@ -5,11 +5,11 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[AGENTS|Templates instructions]]'
-      - '[[template_index|Template index]]'
-      - '[[template_guide|Template guide]]'
-      - '[[documentation_templates|Documentation templates]]'
-      - '[[documentation_templates_index|Documentation templates index]]'
+      - "[[AGENTS|Templates instructions]]"
+      - "[[template_index|Template index]]"
+      - "[[template_guide|Template guide]]"
+      - "[[documentation_templates|Documentation templates]]"
+      - "[[documentation_templates_index|Documentation templates index]]"
 ---
 
 # Templates index

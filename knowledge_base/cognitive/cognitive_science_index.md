@@ -8,11 +8,11 @@ tags:
 - index
 - organization
 semantic_relations:
-- type: organizes
-  links:
-  - - - cognitive_phenomena
-  - - - cognitive_architecture
-  - - - cognitive_development
+  - type: organizes
+    links:
+      - "[[cognitive_phenomena]]"
+      - "[[cognitive_architecture]]"
+      - "[[cognitive_development]]"
 ---
 
 

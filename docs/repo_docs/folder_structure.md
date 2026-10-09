@@ -17,19 +17,13 @@ tags:
   - structure
 
 semantic_relations:
-
   - type: implements
-
-    links: [[docs/repo_docs/documentation_standards]]
-
-  - type: relates
-
     links:
-
-      - [[obsidian_usage]]
-
-      - [[obsidian_linking]]
-
+      - "[[docs/repo_docs/documentation_standards]]"
+  - type: relates
+    links:
+      - "[[obsidian_usage]]"
+      - "[[obsidian_linking]]"
 ---
 
 # Obsidian Folder Structure
@@ -311,9 +305,9 @@ semantic_relations:
 
     links:
 
-      - related_doc
+      - [[related_doc]]
 
-      - another_doc
+      - [[another_doc]]
 
 ---
 
@@ -729,15 +723,15 @@ FEP.md
 
 ## Related Concepts
 
-- Concept A
+- [[theory/concept_a|Concept A]]
 
-- Implementation B
+- [[implementation/concept_b|Implementation B]]
 
 ## See Also
 
-- Related Guide
+- [[docs/guides/related_guide|Related Guide]]
 
-- Example Usage
+- [[docs/examples/example|Example Usage]]
 
 ```
 

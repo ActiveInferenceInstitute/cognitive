@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[generative_model]]
-      - [[matrix_specifications]]
-      - [[observation_model]]
-      - [[transition_model]]
+      - "[[generative_model]]"
+      - "[[matrix_specifications]]"
+      - "[[observation_model]]"
+      - "[[transition_model]]"
 ---
 
 # System Definition

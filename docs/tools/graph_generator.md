@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../../code/tools/src/utils/visualization/network_viz.py|Network visualizer]]'
+      - "[[../../code/tools/src/utils/visualization/network_viz.py|Network visualizer]]"
 ---
 
 # Graph generation

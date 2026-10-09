@@ -9,18 +9,18 @@ tags:
 - efficiency
 - control
 semantic_relations:
-- type: implements
-  links:
-  - - control_processes
-- type: extends
-  links:
-  - - error_correction
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - resource_management
-  - - - learning_mechanisms
+  - type: implements
+    links:
+      - "[[control_processes]]"
+  - type: extends
+    links:
+      - "[[error_correction]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[resource_management]]"
+      - "[[learning_mechanisms]]"
 ---
 
 

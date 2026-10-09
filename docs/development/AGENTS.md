@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: supports
     links:
-      - '[[README|Development resources]]'
-      - '[[../api/README|API documentation]]'
-      - '[[../implementation/README|Implementation]]'
+      - "[[README|Development resources]]"
+      - "[[../api/README|API documentation]]"
+      - "[[../implementation/README|Implementation]]"
 ---
 
 # Development documentation instructions

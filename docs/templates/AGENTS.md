@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Templates index]]'
-      - '[[template_index|Template index]]'
-      - '[[template_guide|Template guide]]'
-      - '[[documentation_templates_index|Documentation templates]]'
+      - "[[README|Templates index]]"
+      - "[[template_index|Template index]]"
+      - "[[template_guide|Template guide]]"
+      - "[[documentation_templates_index|Documentation templates]]"
 ---
 
 # Templates documentation instructions

@@ -13,13 +13,13 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[adaptive_resonance_theory]]
-      - [[neural_computation]]
-      - [[pattern_recognition]]
+      - "[[adaptive_resonance_theory]]"
+      - "[[neural_computation]]"
+      - "[[pattern_recognition]]"
   - type: foundation
     links:
-      - [[../mathematics/dynamical_systems]]
-      - [[neural_computation]]
+      - "[[../mathematics/dynamical_systems]]"
+      - "[[neural_computation]]"
 ---
 
 # Resonance Dynamics

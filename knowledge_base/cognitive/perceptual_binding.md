@@ -9,18 +9,18 @@ tags:
 - integration
 - computation
 semantic_relations:
-- type: implements
-  links:
-  - - sensory_processing
-- type: extends
-  links:
-  - - perceptual_integration
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - feature_integration
-  - - - temporal_binding
+  - type: implements
+    links:
+      - "[[sensory_processing]]"
+  - type: extends
+    links:
+      - "[[perceptual_integration]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[feature_integration]]"
+      - "[[temporal_binding]]"
 ---
 
 

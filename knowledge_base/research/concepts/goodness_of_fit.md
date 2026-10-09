@@ -7,7 +7,12 @@ updated: 2026-02-07
 tags: [model_evaluation, statistics, fit, validation, bayesian]
 semantic_relations:
   - type: relates
-    links: [[[model_comparison]], [[bayesian_analysis]], [[validation_methods]], [[knowledge_base/mathematics/variational_free_energy]], [[statistical_analysis]]]
+    links:
+      - "[[model_comparison]]"
+      - "[[bayesian_analysis]]"
+      - "[[validation_methods]]"
+      - "[[knowledge_base/mathematics/variational_free_energy]]"
+      - "[[statistical_analysis]]"
 ---
 
 # Goodness of Fit

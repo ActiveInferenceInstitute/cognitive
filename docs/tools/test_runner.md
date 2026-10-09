@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../../code/tests/README|Test suite]]'
+      - "[[../../code/tests/README|Test suite]]"
 ---
 
 # Test runner

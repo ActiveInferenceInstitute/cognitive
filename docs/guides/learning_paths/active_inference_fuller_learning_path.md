@@ -25,18 +25,12 @@ tags:
   - dymaxion
 
 semantic_relations:
-
   - type: specializes
-
-    links: [[active_inference_learning_path]]
-
-  - type: relates
-
     links:
-
-      - [[active_inference_resilient_systems_path]]
-
-
+      - "[[active_inference_learning_path]]"
+  - type: relates
+    links:
+      - "[[active_inference_resilient_systems_path]]"
 ---
 
 # Active Inference in Fuller Systems Learning Path

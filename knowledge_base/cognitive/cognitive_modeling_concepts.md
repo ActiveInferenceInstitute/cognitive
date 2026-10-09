@@ -11,15 +11,15 @@ tags:
 - theoretical_foundations
 - implementation
 semantic_relations:
-- type: implements
-  links:
-  - - knowledge_organization
-- type: relates
-  links:
-  - - - docs/repo_docs/ai_documentation_style
-  - - - docs/repo_docs/content_management
-  - docs/research/cognitive_architectures
-  - knowledge_base/model_implementations
+  - type: implements
+    links:
+      - "[[knowledge_organization]]"
+  - type: relates
+    links:
+      - "[[docs/repo_docs/ai_documentation_style]]"
+      - "[[docs/repo_docs/content_management]]"
+      - "[[knowledge_base/cognitive/cognitive_architecture]]"
+      - "[[docs/repo_docs/model_implementation]]"
 ---
 
 

@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[cognitive/swarm_intelligence]]
-      - [[biology/evolutionary_dynamics]]
-      - [[systems/emergence]]
-      - [[code/Things/Ant_Colony/README|Ant Colony Implementations]]
+      - "[[cognitive/swarm_intelligence]]"
+      - "[[biology/evolutionary_dynamics]]"
+      - "[[systems/emergence]]"
+      - "[[code/Things/Ant_Colony/README|Ant Colony Implementations]]"
 ---
 
 # Swarm Intelligence Implementation Guide

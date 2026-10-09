@@ -5,9 +5,9 @@ status: stable
 semantic_relations:
   - type: documents
     links:
-      - '[[AGENTS|Configuration guidance]]'
-      - '[[simulation_config.yaml|Simulation example]]'
-      - '[[../../config.yaml|Repository configuration]]'
+      - "[[AGENTS|Configuration guidance]]"
+      - "[[simulation_config.yaml|Simulation example]]"
+      - "[[../../config.yaml|Repository configuration]]"
 ---
 
 # Configuration reference

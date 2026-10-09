@@ -9,9 +9,8 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[agent_config|Generic POMDP Agent]]
-    parent:
-      - [[../../AGENTS|Knowledge Base]]
+      - "[[agent_config|Generic POMDP Agent]]"
+    parent: [[[../../AGENTS|Knowledge Base]]]
 ---
 
 # Generic POMDP Agent

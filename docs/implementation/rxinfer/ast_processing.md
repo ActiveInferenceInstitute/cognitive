@@ -19,31 +19,18 @@ tags:
   - julia
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[model_specification]]
-
-      - [[compiler_infrastructure]]
-
-      - [[type_system]]
-
+      - "[[model_specification]]"
+      - "[[compiler_infrastructure]]"
+      - "[[type_system]]"
   - type: related
-
     links:
-
-      - [[factor_graphs]]
-
-      - [[model_macro]]
-
-      - [[graph_construction]]
-
-      - [[probabilistic_inference]]
-
-      - [[code_generation]]
-
+      - "[[factor_graphs]]"
+      - "[[model_macro]]"
+      - "[[graph_construction]]"
+      - "[[probabilistic_inference]]"
+      - "[[code_generation]]"
 ---
 
 # Abstract Syntax Trees in RxInfer

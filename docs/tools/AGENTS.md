@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Tools documentation index]]'
-      - '[[development_tools_index|Development tools index]]'
-      - '[[../../code/scripts/validate_docs.py|Repository scripts]]'
+      - "[[README|Tools documentation index]]"
+      - "[[development_tools_index|Development tools index]]"
+      - "[[../../code/scripts/validate_docs.py|Repository scripts]]"
 ---
 
 # Tools documentation instructions

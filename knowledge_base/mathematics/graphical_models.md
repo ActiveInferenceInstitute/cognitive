@@ -12,19 +12,19 @@ tags:
 semantic_relations:
   - type: foundation_for
     links:
-      - [[factor_graphs]]
-      - [[belief_propagation]]
-      - [[message_passing]]
+      - "[[factor_graphs]]"
+      - "[[belief_propagation]]"
+      - "[[message_passing]]"
   - type: includes
     links:
-      - [[bayesian_networks]]
-      - [[markov_random_fields]]
-      - [[conditional_independence]]
+      - "[[bayesian_networks]]"
+      - "[[markov_random_fields]]"
+      - "[[conditional_independence]]"
   - type: related
     links:
-      - [[probabilistic_models]]
-      - [[variational_inference]]
-      - [[active_inference_theory]]
+      - "[[probabilistic_models]]"
+      - "[[variational_inference]]"
+      - "[[active_inference_theory]]"
 ---
 
 # Graphical Models

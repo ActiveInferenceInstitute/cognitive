@@ -14,21 +14,21 @@ msc:
 - 68T05
 - 62H12
 semantic_relations:
-- type: implements
-  links:
-  - - - factor_graphs
-  - - - belief_propagation
-  - - - variational_inference
-- type: foundation_for
-  links:
-  - - - active_inference_theory
-  - - - free_energy_principle
-  - - - probabilistic_inference
-- type: uses
-  links:
-  - - - probability_theory
-  - - - information_theory
-  - - - graph_theory
+  - type: implements
+    links:
+      - "[[factor_graphs]]"
+      - "[[belief_propagation]]"
+      - "[[variational_inference]]"
+  - type: foundation_for
+    links:
+      - "[[active_inference_theory]]"
+      - "[[free_energy_principle]]"
+      - "[[probabilistic_inference]]"
+  - type: uses
+    links:
+      - "[[probability_theory]]"
+      - "[[information_theory]]"
+      - "[[graph_theory]]"
 ---
 
 

@@ -7,10 +7,10 @@ tags:
 - information-theory
 - estimation
 semantic_relations:
-- type: relates
-  links:
-  - mutual_information
-  - epistemic_value
+  - type: relates
+    links:
+      - "[[mutual_information]]"
+      - "[[epistemic_value]]"
 ---
 
 

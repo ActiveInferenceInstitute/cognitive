@@ -9,20 +9,20 @@ tags:
 - active_inference
 - computation
 semantic_relations:
-- type: foundation
-  links:
-  - - - advanced_taylor_series
-  - - - continuous_time_agent
-  - - - generalized_coordinates
-- type: implements
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-- type: relates
-  links:
-  - - - numerical_optimization
-  - - - differential_equations
-  - - - dynamical_systems
+  - type: foundation
+    links:
+      - "[[advanced_taylor_series]]"
+      - "[[continuous_time_agent]]"
+      - "[[generalized_coordinates]]"
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+  - type: relates
+    links:
+      - "[[numerical_optimization]]"
+      - "[[differential_equations]]"
+      - "[[dynamical_systems]]"
 ---
 
 

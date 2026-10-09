@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/free_energy_principle/implementations/robotics]]
-      - [[knowledge_base/research/autonomous_systems]]
+      - "[[knowledge_base/free_energy_principle/implementations/robotics]]"
+      - "[[knowledge_base/research/autonomous_systems]]"
 ---
 
 # Robot Control

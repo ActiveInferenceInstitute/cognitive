@@ -5,12 +5,12 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Architectures research]]'
-      - '[[../README|Research documentation]]'
-      - '[[continuous|Continuous architectures]]'
-      - '[[hierarchical|Hierarchical architectures]]'
-      - '[[multi_agent|Multi-agent architectures]]'
-      - '[[pomdp|POMDP architectures]]'
+      - "[[README|Architectures research]]"
+      - "[[../README|Research documentation]]"
+      - "[[continuous|Continuous architectures]]"
+      - "[[hierarchical|Hierarchical architectures]]"
+      - "[[multi_agent|Multi-agent architectures]]"
+      - "[[pomdp|POMDP architectures]]"
 ---
 
 # Architectures research instructions

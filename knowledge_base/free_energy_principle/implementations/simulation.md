@@ -16,12 +16,12 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[python_framework|Python Framework]]
-      - [[neural_networks|Neural Network Implementations]]
-      - [[robotics|Robotics Implementations]]
-      - [[benchmarking|Benchmarking]]
-      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]
-      - [[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]
+      - "[[python_framework|Python Framework]]"
+      - "[[neural_networks|Neural Network Implementations]]"
+      - "[[robotics|Robotics Implementations]]"
+      - "[[benchmarking|Benchmarking]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]"
 ---
 
 # Simulation Environments for Active Inference

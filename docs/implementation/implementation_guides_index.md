@@ -17,15 +17,10 @@ tags:
   - index
 
 semantic_relations:
-
   - type: organizes
-
     links:
-
-      - [[implementation_guides]]
-
-      - model implementation
-
+      - "[[implementation_guides]]"
+      - "[[model implementation]]"
 ---
 
 # Implementation Guides Index

@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[learning_mechanisms]]
-      - [[bayesian_brain_hypothesis]]
-      - [[predictive_processing]]
-      - [[knowledge_base/mathematics/probability_distributions]]
+      - "[[learning_mechanisms]]"
+      - "[[bayesian_brain_hypothesis]]"
+      - "[[predictive_processing]]"
+      - "[[knowledge_base/mathematics/probability_distributions]]"
 ---
 
 # Statistical Learning

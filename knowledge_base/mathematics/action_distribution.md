@@ -12,21 +12,21 @@ aliases:
 - action-probabilities
 - policy-distribution
 semantic_relations:
-- type: implements
-  links:
-  - - - policy_selection
-  - - - expected_free_energy
-  - - - active_inference
-- type: uses
-  links:
-  - - - probability_theory
-  - - - softmax_function
-  - - - information_theory
-- type: relates
-  links:
-  - - - action_selection
-  - - - exploration_exploitation
-  - - - precision_parameter
+  - type: implements
+    links:
+      - "[[policy_selection]]"
+      - "[[expected_free_energy]]"
+      - "[[active_inference]]"
+  - type: uses
+    links:
+      - "[[probability_theory]]"
+      - "[[softmax_function]]"
+      - "[[information_theory]]"
+  - type: relates
+    links:
+      - "[[action_selection]]"
+      - "[[exploration_exploitation]]"
+      - "[[precision_parameter]]"
 ---
 
 

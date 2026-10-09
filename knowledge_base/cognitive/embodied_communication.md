@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/cognitive/enactive_cognition]]
-      - [[knowledge_base/cognitive/active_inference]]
+      - "[[knowledge_base/cognitive/enactive_cognition]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
 ---
 
 # Embodied Communication

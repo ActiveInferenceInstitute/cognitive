@@ -13,41 +13,41 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[knowledge_base/mathematics/free_energy_principle]]
-      - [[knowledge_base/mathematics/active_inference_theory]]
-      - [[knowledge_base/mathematics/expected_free_energy]]
-      - [[knowledge_base/mathematics/variational_free_energy]]
-      - [[knowledge_base/mathematics/policy_selection]]
+      - "[[knowledge_base/mathematics/free_energy_principle]]"
+      - "[[knowledge_base/mathematics/active_inference_theory]]"
+      - "[[knowledge_base/mathematics/expected_free_energy]]"
+      - "[[knowledge_base/mathematics/variational_free_energy]]"
+      - "[[knowledge_base/mathematics/policy_selection]]"
   - type: foundation
     links:
-      - [[predictive_processing]]
-      - [[belief_updating]]
-      - [[precision_weighting]]
-      - [[variational_inference]]
-      - [[bayesian_brain_hypothesis]]
+      - "[[predictive_processing]]"
+      - "[[belief_updating]]"
+      - "[[precision_weighting]]"
+      - "[[variational_inference]]"
+      - "[[bayesian_brain_hypothesis]]"
   - type: integrates
     links:
-      - [[perception_processing]]
-      - [[action_selection]]
-      - [[learning_mechanisms]]
-      - [[decision_making]]
+      - "[[perception_processing]]"
+      - "[[action_selection]]"
+      - "[[learning_mechanisms]]"
+      - "[[decision_making]]"
   - type: documented_by
     links:
-      - [[active_inference_agent]]
-      - [[knowledge_base/active_inference_integration]]
-      - [[knowledge_base/active_inference_implementation]]
+      - "[[active_inference_agent]]"
+      - "[[knowledge_base/active_inference_integration]]"
+      - "[[knowledge_base/active_inference_implementation]]"
   - type: relates
     links:
-      - [[predictive_coding]]
-      - [[precision_weighting]]
-      - [[reinforcement_learning]]
-      - [[optimal_control]]
-      - [[planning_as_inference]]
-      - [[knowledge_base/mathematics/markov_blanket]]
-      - [[knowledge_base/mathematics/active_inference_pomdp]]
-      - [[continuous_time_active_inference]]
-      - [[bayesian_inference]]
-      - [[control_theory]]
+      - "[[predictive_coding]]"
+      - "[[precision_weighting]]"
+      - "[[reinforcement_learning]]"
+      - "[[optimal_control]]"
+      - "[[planning_as_inference]]"
+      - "[[knowledge_base/mathematics/markov_blanket]]"
+      - "[[knowledge_base/mathematics/active_inference_pomdp]]"
+      - "[[continuous_time_active_inference]]"
+      - "[[bayesian_inference]]"
+      - "[[control_theory]]"
 ---
 
 # Active Inference

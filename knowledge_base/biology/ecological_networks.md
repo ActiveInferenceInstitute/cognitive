@@ -14,24 +14,24 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - ecological_dynamics
-  - - - knowledge_base/cognitive/active_inference
-- type: implements
-  links:
-  - - - food_web_dynamics
-  - - - species_interactions
-  - - - ecosystem_stability
-  - - - knowledge_base/agents/architectures_overview
-- type: relates
-  links:
-  - - - systems_biology
-  - - - evolutionary_dynamics
-  - - - network_theory
-  - - - knowledge_base/mathematics/information_theory
+  - type: foundation
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[ecological_dynamics]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+  - type: implements
+    links:
+      - "[[food_web_dynamics]]"
+      - "[[species_interactions]]"
+      - "[[ecosystem_stability]]"
+      - "[[knowledge_base/agents/architectures_overview]]"
+  - type: relates
+    links:
+      - "[[systems_biology]]"
+      - "[[evolutionary_dynamics]]"
+      - "[[network_theory]]"
+      - "[[knowledge_base/mathematics/information_theory]]"
 ---
 
 

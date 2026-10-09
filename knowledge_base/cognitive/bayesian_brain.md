@@ -9,14 +9,14 @@ tags:
 - inference
 - neuroscience
 semantic_relations:
-- type: implements
-  links:
-  - - predictive_processing
-- type: related
-  links:
-  - - - free_energy_principle
-  - - - active_inference
-  - - - perceptual_inference
+  - type: implements
+    links:
+      - "[[predictive_processing]]"
+  - type: related
+    links:
+      - "[[free_energy_principle]]"
+      - "[[active_inference]]"
+      - "[[perceptual_inference]]"
 ---
 
 

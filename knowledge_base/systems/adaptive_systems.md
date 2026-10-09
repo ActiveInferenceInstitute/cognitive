@@ -10,11 +10,11 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[complex_systems]]
-      - [[dynamical_systems]]
-      - [[systems_theory]]
-      - [[emergence]]
-      - [[resilient_systems]]
+      - "[[complex_systems]]"
+      - "[[dynamical_systems]]"
+      - "[[systems_theory]]"
+      - "[[emergence]]"
+      - "[[resilient_systems]]"
 ---
 
 # Adaptive Systems

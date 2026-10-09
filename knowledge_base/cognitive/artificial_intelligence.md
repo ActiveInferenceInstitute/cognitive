@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[active_inference]]
-      - [[reinforcement_learning]]
-      - [[multi_agent_active_inference]]
-      - [[cognitive_architecture]]
+      - "[[active_inference]]"
+      - "[[reinforcement_learning]]"
+      - "[[multi_agent_active_inference]]"
+      - "[[cognitive_architecture]]"
 ---
 
 # Artificial Intelligence

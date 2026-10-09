@@ -7,7 +7,8 @@ updated: 2026-02-07
 tags: [active-inference, transition, dynamics, generative-model, POMDP]
 semantic_relations:
   - type: component_of
-    links: [[matrix_specifications]]
+    links:
+      - "[[matrix_specifications]]"
   - type: relates
     links:
       - "[[observation_model]]"

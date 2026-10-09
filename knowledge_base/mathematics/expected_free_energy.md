@@ -13,21 +13,21 @@ msc:
 - 94A17
 - 68T05
 semantic_relations:
-- type: foundation
-  links:
-  - - - free_energy_principle
-  - - - information_theory
-  - - - decision_theory
-- type: implements
-  links:
-  - - - active_inference
-  - - - policy_selection
-  - - - exploration_exploitation
-- type: related
-  links:
-  - - - variational_free_energy
-  - - - kl_divergence
-  - - - entropy
+  - type: foundation
+    links:
+      - "[[free_energy_principle]]"
+      - "[[information_theory]]"
+      - "[[decision_theory]]"
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[policy_selection]]"
+      - "[[exploration_exploitation]]"
+  - type: related
+    links:
+      - "[[variational_free_energy]]"
+      - "[[kl_divergence]]"
+      - "[[entropy]]"
 ---
 
 

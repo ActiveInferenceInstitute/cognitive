@@ -8,13 +8,12 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[benchmarking|Benchmarking Active Inference Agents]]
-      - [[neural_networks|Neural Network Implementations of Active Inference]]
-      - [[python_framework|Python FEP Framework]]
-      - [[robotics|Robotic Applications of Active Inference]]
-      - [[simulation|Simulation Environments for Active Inference]]
-    parent:
-      - [[../AGENTS|Free Energy Principle]]
+      - "[[benchmarking|Benchmarking Active Inference Agents]]"
+      - "[[neural_networks|Neural Network Implementations of Active Inference]]"
+      - "[[python_framework|Python FEP Framework]]"
+      - "[[robotics|Robotic Applications of Active Inference]]"
+      - "[[simulation|Simulation Environments for Active Inference]]"
+    parent: [[[../AGENTS|Free Energy Principle]]]
 ---
 
 # FEP Implementations

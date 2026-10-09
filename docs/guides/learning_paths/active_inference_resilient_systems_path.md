@@ -21,29 +21,17 @@ tags:
   - systems
 
 semantic_relations:
-
   - type: builds_on
-
     links:
-
-      - [[knowledge_base/systems/resilient_systems|Resilient Systems]]
-
-      - [[knowledge_base/systems/fault_tolerance|Fault Tolerance]]
-
-      - [[knowledge_base/systems/systems_theory|Systems Theory]]
-
+      - "[[knowledge_base/systems/resilient_systems|Resilient Systems]]"
+      - "[[knowledge_base/systems/fault_tolerance|Fault Tolerance]]"
+      - "[[knowledge_base/systems/systems_theory|Systems Theory]]"
   - type: prerequisite_for
-
     links:
-
-      - [[docs/guides/learning_paths/active_inference_security_learning_path|Active Inference Security Learning Path]]
-
+      - "[[docs/guides/learning_paths/active_inference_security_learning_path|Active Inference Security Learning Path]]"
   - type: relates_to
-
     links:
-
-      - [[docs/guides/learning_paths/active_inference_cognitive_systems_integration_path|Active Inference Cognitive Systems Integration Path]]
-
+      - "[[docs/guides/learning_paths/active_inference_cognitive_systems_integration_path|Active Inference Cognitive Systems Integration Path]]"
 ---
 
 # Resilient Systems Learning Path

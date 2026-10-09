@@ -9,12 +9,12 @@ tags:
 - psychology
 - neuroscience
 semantic_relations:
-- type: implements
-  links:
-  - - knowledge_organization
-- type: extends
-  links:
-  - - cognitive_modeling
+  - type: implements
+    links:
+      - "[[knowledge_organization]]"
+  - type: extends
+    links:
+      - "[[cognitive_modeling]]"
 ---
 
 

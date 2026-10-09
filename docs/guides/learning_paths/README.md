@@ -5,11 +5,11 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[AGENTS|Learning paths instructions]]'
-      - '[[index|Learning path index]]'
-      - '[[catalog_of_learning_paths|Catalog of learning paths]]'
-      - '[[navigation_framework_implementation|Navigation framework]]'
-      - '[[active_inference_learning_path|Active inference path]]'
+      - "[[AGENTS|Learning paths instructions]]"
+      - "[[index|Learning path index]]"
+      - "[[catalog_of_learning_paths|Catalog of learning paths]]"
+      - "[[navigation_framework_implementation|Navigation framework]]"
+      - "[[active_inference_learning_path|Active inference path]]"
 ---
 
 # Learning paths index

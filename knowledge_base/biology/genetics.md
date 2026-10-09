@@ -14,21 +14,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - molecular_biology
-  - - - evolutionary_dynamics
-  - - - population_genetics
-- type: implements
-  links:
-  - - - gene_expression
-  - - - genetic_regulation
-  - - - genome_organization
-- type: relates
-  links:
-  - - - developmental_systems
-  - - - systems_biology
-  - - - bioinformatics
+  - type: foundation
+    links:
+      - "[[molecular_biology]]"
+      - "[[evolutionary_dynamics]]"
+      - "[[population_genetics]]"
+  - type: implements
+    links:
+      - "[[gene_expression]]"
+      - "[[genetic_regulation]]"
+      - "[[genome_organization]]"
+  - type: relates
+    links:
+      - "[[developmental_systems]]"
+      - "[[systems_biology]]"
+      - "[[bioinformatics]]"
 ---
 
 

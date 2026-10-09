@@ -10,16 +10,16 @@ tags:
 - collective_action
 - game_theory
 semantic_relations:
-- type: implements
-  links:
-  - - social_cognition
-- type: related
-  links:
-  - - - decision_making
-  - - - social_learning
-  - - - theory_of_mind
-  - - - collective_behavior
-  - - - trust
+  - type: implements
+    links:
+      - "[[social_cognition]]"
+  - type: related
+    links:
+      - "[[decision_making]]"
+      - "[[social_learning]]"
+      - "[[theory_of_mind]]"
+      - "[[collective_behavior]]"
+      - "[[trust]]"
 ---
 
 

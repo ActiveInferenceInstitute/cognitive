@@ -8,15 +8,14 @@ tags:
 - machine-learning
 - tooling
 semantic_relations:
-- type: relates
-  links:
-  - plain_text_benefits
-  - automation_tools
-  - ci_cd_pipeline
-- type: implements
-  links:
-  - code/tools/src/automation
-  - - - machine_readability
+  - type: relates
+    links:
+      - "[[plain_text_benefits]]"
+      - "[[automation_tools]]"
+      - "[[ci_cd_pipeline]]"
+  - type: implements
+    links:
+      - "[[machine_readability]]"
 ---
 
 

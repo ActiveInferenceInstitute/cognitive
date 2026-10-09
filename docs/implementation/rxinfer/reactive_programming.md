@@ -17,23 +17,14 @@ tags:
   - streaming
 
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[reactive_programming_concepts]]
-
-      - [[streaming_inference]]
-
+      - "[[reactive_programming_concepts]]"
+      - "[[streaming_inference]]"
   - type: related
-
     links:
-
-      - [[rocket_jl]]
-
-      - [[message_passing]]
-
+      - "[[rocket_jl]]"
+      - "[[message_passing]]"
 ---
 
 # Reactive Programming in RxInfer

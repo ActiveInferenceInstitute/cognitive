@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../repo_docs/getting_started|Getting started]]'
+      - "[[../repo_docs/getting_started|Getting started]]"
 ---
 
 # Setup tools

@@ -13,11 +13,11 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - [[active_inference_institute]]
+      - "[[active_inference_institute]]"
   - type: supports
     links:
-      - [[docs/guides/learning_paths/README]]
-      - [[docs/repo_docs/research]]
+      - "[[docs/guides/learning_paths/README]]"
+      - "[[docs/repo_docs/research]]"
 ---
 
 # Active Inference Institute Resources

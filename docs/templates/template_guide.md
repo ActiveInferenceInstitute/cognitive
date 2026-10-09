@@ -17,19 +17,13 @@ tags:
   - standards
 
 semantic_relations:
-
   - type: implements
-
-    links: [[docs/repo_docs/documentation_standards]]
-
-  - type: relates
-
     links:
-
-      - [[ai_concept_template]]
-
-      - [[guide_template]]
-
+      - "[[docs/repo_docs/documentation_standards]]"
+  - type: relates
+    links:
+      - "[[ai_concept_template]]"
+      - "[[guide_template]]"
 ---
 
 # Template Guide
@@ -94,9 +88,9 @@ Usage examples and patterns.
 
 ## Related Concepts
 
-- related_concept_1
+- [[related_concept_1]]
 
-- related_concept_2
+- [[related_concept_2]]
 
 ```
 
@@ -152,9 +146,9 @@ Recommended practices.
 
 ## Related Guides
 
-- related_guide_1
+- [[related_guide_1]]
 
-- related_guide_2
+- [[related_guide_2]]
 
 ```
 

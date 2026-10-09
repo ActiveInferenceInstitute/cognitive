@@ -14,24 +14,24 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - metabolism
-  - - - enzyme_kinetics
-  - - - thermodynamics
-  - - - knowledge_base/cognitive/active_inference
-- type: implements
-  links:
-  - - - metabolic_networks
-  - - - protein_chemistry
-  - - - cellular_energetics
-  - - - knowledge_base/agents/architectures_overview
-- type: relates
-  links:
-  - - - molecular_biology
-  - - - cell_biology
-  - - - biophysics
-  - - - gene_regulatory_networks
+  - type: foundation
+    links:
+      - "[[metabolism]]"
+      - "[[enzyme_kinetics]]"
+      - "[[thermodynamics]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+  - type: implements
+    links:
+      - "[[metabolic_networks]]"
+      - "[[protein_chemistry]]"
+      - "[[cellular_energetics]]"
+      - "[[knowledge_base/agents/architectures_overview]]"
+  - type: relates
+    links:
+      - "[[molecular_biology]]"
+      - "[[cell_biology]]"
+      - "[[biophysics]]"
+      - "[[gene_regulatory_networks]]"
 ---
 
 

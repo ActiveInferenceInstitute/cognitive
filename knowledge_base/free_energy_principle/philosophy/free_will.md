@@ -14,14 +14,14 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
+      - "[[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
   - type: relates
     links:
-      - [[mind_body_problem|Mind-Body Problem]]
-      - [[epistemology|Epistemology]]
-      - [[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]
-      - [[knowledge_base/free_energy_principle/cognitive/consciousness|Consciousness]]
+      - "[[mind_body_problem|Mind-Body Problem]]"
+      - "[[epistemology|Epistemology]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/consciousness|Consciousness]]"
 ---
 
 # Agency, Autonomy, and Free Will Under the FEP

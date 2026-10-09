@@ -20,27 +20,27 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: implements
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - optimal_control
-- type: mathematical_basis
-  links:
-  - - - quantum_mechanics
-  - - - statistical_mechanics
-  - - - information_geometry
-  - - - dynamical_systems
-  - - - differential_geometry
-  - - - variational_calculus
-- type: relates
-  links:
-  - - - variational_free_energy
-  - - - expected_free_energy
-  - - - stochastic_thermodynamics
-  - - - path_integral_control
-  - - - hamiltonian_mechanics
-  - - - lagrangian_mechanics
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[optimal_control]]"
+  - type: mathematical_basis
+    links:
+      - "[[quantum_mechanics]]"
+      - "[[statistical_mechanics]]"
+      - "[[information_geometry]]"
+      - "[[dynamical_systems]]"
+      - "[[differential_geometry]]"
+      - "[[variational_calculus]]"
+  - type: relates
+    links:
+      - "[[variational_free_energy]]"
+      - "[[expected_free_energy]]"
+      - "[[stochastic_thermodynamics]]"
+      - "[[path_integral_control]]"
+      - "[[hamiltonian_mechanics]]"
+      - "[[lagrangian_mechanics]]"
 ---
 
 

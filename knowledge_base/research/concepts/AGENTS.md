@@ -20,7 +20,7 @@ semantic_relations:
       - "[[experiment_design|Experiment Design]]"
       - "[[free_energy_landscape|Free Energy Landscape]]"
       - "[[frequentist_analysis|Frequentist Analysis]]"
-      - '[[friston_2017|"Friston et al. (2017): Active Inference: A Process Theory"]]'
+      - "[[friston_2017|\"Friston et al. (2017): Active Inference: A Process Theory\"]]"
       - "[[game_theory|Game Theory]]"
       - "[[goodness_of_fit|Goodness of Fit]]"
       - "[[gradient_descent|Gradient Descent]]"
@@ -43,8 +43,7 @@ semantic_relations:
       - "[[state_spaces|State Spaces]]"
       - "[[statistical_analysis|Statistical Analysis]]"
       - "[[validation_methods|Validation Methods]]"
-    parent:
-      - "[[research/AGENTS|Research]]"
+    parent: ['[[research/AGENTS|Research]]']
 ---
 
 # Research Methodology Concepts

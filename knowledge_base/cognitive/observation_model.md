@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[generative_model]]
-      - [[matrix_specifications]]
-      - [[transition_model]]
-      - [[perceptual_inference]]
+      - "[[generative_model]]"
+      - "[[matrix_specifications]]"
+      - "[[transition_model]]"
+      - "[[perceptual_inference]]"
 ---
 
 # Observation Model

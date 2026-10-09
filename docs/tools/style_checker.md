@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[linting_tools|Linting tools]]'
+      - "[[linting_tools|Linting tools]]"
 ---
 
 # Style checker

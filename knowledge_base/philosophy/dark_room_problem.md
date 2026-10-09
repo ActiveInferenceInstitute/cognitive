@@ -14,18 +14,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[cognitive/free_energy_principle|Free Energy Principle]]
-      - [[cognitive/active_inference|Active Inference]]
-      - [[mathematics/expected_free_energy|Expected Free Energy]]
+      - "[[cognitive/free_energy_principle|Free Energy Principle]]"
+      - "[[cognitive/active_inference|Active Inference]]"
+      - "[[mathematics/expected_free_energy|Expected Free Energy]]"
   - type: relates
     links:
-      - [[cognitive/epistemic_foraging|Epistemic Foraging]]
-      - [[biology/allostatic_regulation|Allostatic Regulation]]
-      - [[cognitive/precision_weighting|Precision Weighting]]
+      - "[[cognitive/epistemic_foraging|Epistemic Foraging]]"
+      - "[[biology/allostatic_regulation|Allostatic Regulation]]"
+      - "[[cognitive/precision_weighting|Precision Weighting]]"
   - type: extends
     links:
-      - [[mathematics/variational_free_energy|Variational Free Energy]]
-      - [[cognitive/homeostatic_regulation|Homeostatic Regulation]]
+      - "[[mathematics/variational_free_energy|Variational Free Energy]]"
+      - "[[cognitive/homeostatic_regulation|Homeostatic Regulation]]"
 ---
 
 # The Dark Room Problem

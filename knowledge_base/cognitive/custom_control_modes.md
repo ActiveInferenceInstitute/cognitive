@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[active_inference_for_control]]
-      - [[advanced_control]]
-      - [[basic_homeostatic_control]]
-      - [[inference_configuration]]
+      - "[[active_inference_for_control]]"
+      - "[[advanced_control]]"
+      - "[[basic_homeostatic_control]]"
+      - "[[inference_configuration]]"
 ---
 
 # Custom Control Modes

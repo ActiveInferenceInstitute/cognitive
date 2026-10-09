@@ -13,11 +13,11 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[predictive_coding]]
-      - [[precision_weighting]]
-      - [[cognitive_neuroscience]]
-      - [[bayesian_brain_hypothesis]]
-      - [[emotional_processing]]
+      - "[[predictive_coding]]"
+      - "[[precision_weighting]]"
+      - "[[cognitive_neuroscience]]"
+      - "[[bayesian_brain_hypothesis]]"
+      - "[[emotional_processing]]"
 ---
 
 # Clinical Psychology

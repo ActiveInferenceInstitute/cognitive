@@ -13,7 +13,7 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[hyperspace_ontology]]
+      - "[[hyperspace_ontology]]"
 ---
 
 # Hyperspatial Ontology Knowledge Base

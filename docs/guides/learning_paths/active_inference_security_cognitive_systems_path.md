@@ -19,21 +19,12 @@ tags:
   - secure architecture
 
 semantic_relations:
-
   - type: prerequisite
-
     links:
-
-      - [[active_inference_security_learning_path]]
-
-
+      - "[[active_inference_security_learning_path]]"
   - type: related
-
     links:
-
-      - [[active_inference_security_learning_path]]
-
-
+      - "[[active_inference_security_learning_path]]"
 ---
 
 # Security-Cognitive Systems Learning Path

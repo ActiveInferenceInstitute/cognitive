@@ -424,13 +424,13 @@ frontmatter:
 
       type: "{relationship_type}"
 
-      links: ["{target}"]
+      links: ["[[{target}]]"]
 
     example:
 
       type: "implements"
 
-      links: ["active_inference"]
+      links: ["[[active_inference]]"]
 
 ```
 

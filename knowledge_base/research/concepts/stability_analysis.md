@@ -7,7 +7,11 @@ updated: 2026-02-07
 tags: [stability, dynamical_systems, lyapunov, convergence]
 semantic_relations:
   - type: relates
-    links: [[[convergence_analysis]], [[free_energy_landscape]], [[knowledge_base/mathematics/dynamical_systems]], [[knowledge_base/cognitive/homeostatic_control_theory]]]
+    links:
+      - "[[convergence_analysis]]"
+      - "[[free_energy_landscape]]"
+      - "[[knowledge_base/mathematics/dynamical_systems]]"
+      - "[[knowledge_base/cognitive/homeostatic_control_theory]]"
 ---
 
 # Stability Analysis

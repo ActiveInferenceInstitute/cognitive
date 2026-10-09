@@ -9,17 +9,17 @@ tags:
 - vision
 - movement
 semantic_relations:
-- type: implements
-  links:
-  - - visual_perception
-- type: extends
-  links:
-  - - temporal_processing
-- type: related
-  links:
-  - - - depth_perception
-  - - - spatial_attention
-  - - - action_planning
+  - type: implements
+    links:
+      - "[[visual_perception]]"
+  - type: extends
+    links:
+      - "[[temporal_processing]]"
+  - type: related
+    links:
+      - "[[depth_perception]]"
+      - "[[spatial_attention]]"
+      - "[[action_planning]]"
 ---
 
 

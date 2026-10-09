@@ -7,9 +7,11 @@ updated: 2026-02-07
 tags: [homeostasis, control-theory, active-inference, regulation]
 semantic_relations:
   - type: foundation
-    links: [[homeostatic_control_theory]]
+    links:
+      - "[[homeostatic_control_theory]]"
   - type: extends
-    links: [[homeostatic_regulation]]
+    links:
+      - "[[homeostatic_regulation]]"
   - type: relates
     links:
       - "[[active_inference_for_control]]"

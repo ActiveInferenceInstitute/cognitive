@@ -7,7 +7,11 @@ updated: 2026-02-07
 tags: [state_space, representation, POMDP, generative_model]
 semantic_relations:
   - type: relates
-    links: [[[hidden_states]], [[knowledge_base/cognitive/state_space_abstraction]], [[knowledge_base/mathematics/active_inference_pomdp]], [[markov_models]]]
+    links:
+      - "[[hidden_states]]"
+      - "[[knowledge_base/cognitive/state_space_abstraction]]"
+      - "[[knowledge_base/mathematics/active_inference_pomdp]]"
+      - "[[markov_models]]"
 ---
 
 # State Spaces

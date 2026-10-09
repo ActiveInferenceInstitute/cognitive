@@ -9,14 +9,14 @@ tags:
 - cognitive_modeling
 - resource_allocation
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_modeling_concepts
-- type: relates
-  links:
-  - - - perception_processing
-  - - - neural_architectures
-  - - - attention_mechanisms
+  - type: implements
+    links:
+      - "[[cognitive_modeling_concepts]]"
+  - type: relates
+    links:
+      - "[[perception_processing]]"
+      - "[[neural_architectures]]"
+      - "[[attention_mechanisms]]"
 ---
 
 

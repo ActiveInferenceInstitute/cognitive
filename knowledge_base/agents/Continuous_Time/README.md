@@ -13,14 +13,14 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[knowledge_base/mathematics/path_integral_theory]]
-      - [[knowledge_base/cognitive/continuous_time_active_inference]]
+      - "[[knowledge_base/mathematics/path_integral_theory]]"
+      - "[[knowledge_base/cognitive/continuous_time_active_inference]]"
   - type: extends
     links:
-      - [[knowledge_base/mathematics/stochastic_processes]]
+      - "[[knowledge_base/mathematics/stochastic_processes]]"
   - type: documented_in
     links:
-      - [[knowledge_base/agents/AGENTS]]
+      - "[[knowledge_base/agents/AGENTS]]"
 ---
 
 # Continuous-Time Active Inference Implementation Guide

@@ -14,18 +14,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[mathematics/stochastic_processes|Stochastic Processes]]
-      - [[mathematics/differential_equations|Differential Equations]]
-      - [[mathematics/probability_theory|Probability Theory]]
+      - "[[mathematics/stochastic_processes|Stochastic Processes]]"
+      - "[[mathematics/differential_equations|Differential Equations]]"
+      - "[[mathematics/probability_theory|Probability Theory]]"
   - type: relates
     links:
-      - [[mathematics/langevin_dynamics|Langevin Dynamics]]
-      - [[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]
-      - [[cognitive/free_energy_principle|Free Energy Principle]]
+      - "[[mathematics/langevin_dynamics|Langevin Dynamics]]"
+      - "[[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]"
+      - "[[cognitive/free_energy_principle|Free Energy Principle]]"
   - type: implements
     links:
-      - [[mathematics/variational_free_energy|Variational Free Energy]]
-      - [[mathematics/markov_blankets|Markov Blankets]]
+      - "[[mathematics/variational_free_energy|Variational Free Energy]]"
+      - "[[mathematics/markov_blankets|Markov Blankets]]"
 ---
 
 # Fokker-Planck Equation

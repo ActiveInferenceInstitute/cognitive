@@ -9,18 +9,18 @@ tags:
 - learning
 - unconscious
 semantic_relations:
-- type: implements
-  links:
-  - - memory_systems
-- type: extends
-  links:
-  - - non_declarative_memory
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - procedural_memory
-  - - - priming_effects
+  - type: implements
+    links:
+      - "[[memory_systems]]"
+  - type: extends
+    links:
+      - "[[non_declarative_memory]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[procedural_memory]]"
+      - "[[priming_effects]]"
 ---
 
 

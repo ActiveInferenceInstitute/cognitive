@@ -21,15 +21,15 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - python framework
-      - active inference discrete
+      - "[[python framework]]"
+      - "[[active inference discrete]]"
   - type: extends
     links:
-      - [[da_costa_2020]]
-      - [[friston_2017_curiosity]]
+      - "[[da_costa_2020]]"
+      - "[[friston_2017_curiosity]]"
   - type: cited_by
     links:
-      - [[parr_pezzulo_friston_2022]]
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # A Step-by-Step Tutorial on Active Inference and Its Application to Empirical Data

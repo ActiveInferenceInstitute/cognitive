@@ -5,12 +5,12 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[AGENTS|Repository documentation instructions]]'
-      - '[[getting_started|Getting started]]'
-      - '[[documentation_standards|Documentation standards]]'
-      - '[[ai_documentation_style|Documentation style]]'
-      - '[[folder_structure|Folder structure]]'
-      - '[[obsidian_linking|Obsidian linking]]'
+      - "[[AGENTS|Repository documentation instructions]]"
+      - "[[getting_started|Getting started]]"
+      - "[[documentation_standards|Documentation standards]]"
+      - "[[ai_documentation_style|Documentation style]]"
+      - "[[folder_structure|Folder structure]]"
+      - "[[obsidian_linking|Obsidian linking]]"
 ---
 
 # Repository documentation index

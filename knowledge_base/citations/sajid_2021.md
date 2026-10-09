@@ -23,15 +23,15 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/cognitive/active_inference]]
-      - comparison
+      - "[[knowledge_base/cognitive/active_inference]]"
+      - "[[comparison]]"
   - type: extends
     links:
-      - [[da_costa_2020]]
-      - [[friston_2017_curiosity]]
+      - "[[da_costa_2020]]"
+      - "[[friston_2017_curiosity]]"
   - type: cited_by
     links:
-      - [[parr_pezzulo_friston_2022]]
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # Active Inference: Demystified and Compared

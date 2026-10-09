@@ -20,17 +20,17 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/cognitive/active_inference]]
-      - [[knowledge_base/systems/emergence]]
-      - [[knowledge_base/biology/evolutionary_dynamics]]
+      - "[[knowledge_base/cognitive/active_inference]]"
+      - "[[knowledge_base/systems/emergence]]"
+      - "[[knowledge_base/biology/evolutionary_dynamics]]"
   - type: extends
     links:
-      - [[knowledge_base/mathematics/free_energy_principle]]
-      - [[knowledge_base/systems/complex_systems]]
+      - "[[knowledge_base/mathematics/free_energy_principle]]"
+      - "[[knowledge_base/systems/complex_systems]]"
   - type: cited_by
     links:
-      - [[friston_2017]]
-      - [[parr_2019]]
+      - "[[friston_2017]]"
+      - "[[parr_2019]]"
 ---
 
 # Life as We Know It

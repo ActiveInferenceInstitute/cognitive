@@ -7,16 +7,16 @@ tags:
 - information-theory
 - uncertainty
 semantic_relations:
-- type: relates
-  links:
-  - information_theory
-  - mutual_information
-  - kl_divergence
-- type: used_by
-  links:
-  - expected_free_energy
-  - action_distribution
-  - exploration_exploitation
+  - type: relates
+    links:
+      - "[[information_theory]]"
+      - "[[mutual_information]]"
+      - "[[kl_divergence]]"
+  - type: used_by
+    links:
+      - "[[expected_free_energy]]"
+      - "[[action_distribution]]"
+      - "[[exploration_exploitation]]"
 ---
 
 

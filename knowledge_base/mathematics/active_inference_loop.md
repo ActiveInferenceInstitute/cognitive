@@ -12,26 +12,26 @@ aliases:
 - perception-action-cycle
 - active-inference-algorithm
 semantic_relations:
-- type: implements
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - belief_updating
-  - - - policy_selection
-- type: uses
-  links:
-  - - - variational_free_energy
-  - - - expected_free_energy
-  - - - A_matrix
-  - - - B_matrix
-  - - - C_matrix
-  - - - D_matrix
-  - - - E_matrix
-- type: relates
-  links:
-  - - - active_inference_pomdp
-  - - - message_passing
-  - - - predictive_coding
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[belief_updating]]"
+      - "[[policy_selection]]"
+  - type: uses
+    links:
+      - "[[variational_free_energy]]"
+      - "[[expected_free_energy]]"
+      - "[[A_matrix]]"
+      - "[[B_matrix]]"
+      - "[[C_matrix]]"
+      - "[[D_matrix]]"
+      - "[[E_matrix]]"
+  - type: relates
+    links:
+      - "[[active_inference_pomdp]]"
+      - "[[message_passing]]"
+      - "[[predictive_coding]]"
 ---
 
 

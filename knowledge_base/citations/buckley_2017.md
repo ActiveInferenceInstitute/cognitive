@@ -23,17 +23,17 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - [[knowledge_base/mathematics/free_energy_principle]]
-      - [[knowledge_base/mathematics/generalized_coordinates]]
+      - "[[knowledge_base/mathematics/free_energy_principle]]"
+      - "[[knowledge_base/mathematics/generalized_coordinates]]"
   - type: extends
     links:
-      - [[friston_2006]]
-      - [[friston_2010]]
+      - "[[friston_2006]]"
+      - "[[friston_2010]]"
   - type: cited_by
     links:
-      - [[millidge_2021]]
-      - [[da_costa_2021_bayesian]]
-      - [[parr_pezzulo_friston_2022]]
+      - "[[millidge_2021]]"
+      - "[[da_costa_2021_bayesian]]"
+      - "[[parr_pezzulo_friston_2022]]"
 ---
 
 # The Free Energy Principle for Action and Perception: A Mathematical Review

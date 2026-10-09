@@ -12,19 +12,19 @@ tags:
 semantic_relations:
   - type: implements
     links:
-      - [[active_inference]]
-      - [[../mathematics/expected_free_energy]]
+      - "[[active_inference]]"
+      - "[[../mathematics/expected_free_energy]]"
   - type: relates
     links:
-      - [[decision_making]]
-      - [[hierarchical_inference]]
-      - [[../mathematics/active_inference_pomdp]]
+      - "[[decision_making]]"
+      - "[[hierarchical_inference]]"
+      - "[[../mathematics/active_inference_pomdp]]"
   - type: foundation
     links:
-      - [[bayesian_inference]]
-      - [[../mathematics/optimal_control]]
-      - [[predictive_coding]]
-      - [[../mathematics/variational_free_energy]]
+      - "[[bayesian_inference]]"
+      - "[[../mathematics/optimal_control]]"
+      - "[[predictive_coding]]"
+      - "[[../mathematics/variational_free_energy]]"
 ---
 
 ## Planning as Inference

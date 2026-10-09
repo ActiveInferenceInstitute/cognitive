@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: integrates
     links:
-      - [[mathematics/information_theory]]
-      - [[cognitive/information_processing]]
-      - neural computation
-      - [[systems/network_theory]]
+      - "[[mathematics/information_theory]]"
+      - "[[cognitive/information_processing]]"
+      - "[[neural computation]]"
+      - "[[systems/network_theory]]"
 ---
 
 # Information Processing Integration Across Domains

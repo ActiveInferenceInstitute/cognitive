@@ -9,18 +9,18 @@ tags:
 - vision
 - neuroscience
 semantic_relations:
-- type: implements
-  links:
-  - - perception_attention
-- type: extends
-  links:
-  - - sensory_processing
-- type: related
-  links:
-  - - - pattern_recognition
-  - - - depth_perception
-  - - - motion_perception
-  - - - color_processing
+  - type: implements
+    links:
+      - "[[perception_attention]]"
+  - type: extends
+    links:
+      - "[[sensory_processing]]"
+  - type: related
+    links:
+      - "[[pattern_recognition]]"
+      - "[[depth_perception]]"
+      - "[[motion_perception]]"
+      - "[[color_processing]]"
 ---
 
 

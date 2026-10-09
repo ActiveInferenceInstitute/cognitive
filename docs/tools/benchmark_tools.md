@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../../code/tools/src/benchmarks.py|Benchmark source]]'
+      - "[[../../code/tools/src/benchmarks.py|Benchmark source]]"
 ---
 
 # Benchmark tools

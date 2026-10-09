@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/mathematics/probability_theory]]
-      - [[knowledge_base/research/quantum_systems]]
+      - "[[knowledge_base/mathematics/probability_theory]]"
+      - "[[knowledge_base/research/quantum_systems]]"
 ---
 
 # Quantum Computation

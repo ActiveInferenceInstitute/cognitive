@@ -9,18 +9,18 @@ tags:
 - space
 - perception
 semantic_relations:
-- type: implements
-  links:
-  - - attention_mechanisms
-- type: extends
-  links:
-  - - selective_attention
-- type: related
-  links:
-  - - - visual_attention
-  - - - spatial_processing
-  - - - active_inference
-  - - - free_energy_principle
+  - type: implements
+    links:
+      - "[[attention_mechanisms]]"
+  - type: extends
+    links:
+      - "[[selective_attention]]"
+  - type: related
+    links:
+      - "[[visual_attention]]"
+      - "[[spatial_processing]]"
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
 ---
 
 

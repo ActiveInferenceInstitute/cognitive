@@ -16,20 +16,20 @@ aliases:
 complexity: intermediate
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - entomology
-  - - - behavioral_biology
-  - - - ecological_networks
-- type: implements
-  links:
-  - - - population_genetics
-  - - - evolutionary_game_theory
-- type: relates
-  links:
-  - - - apidology
-  - - - social_behavior
-  - - - ecological_dynamics
+  - type: foundation
+    links:
+      - "[[entomology]]"
+      - "[[behavioral_biology]]"
+      - "[[ecological_networks]]"
+  - type: implements
+    links:
+      - "[[population_genetics]]"
+      - "[[evolutionary_game_theory]]"
+  - type: relates
+    links:
+      - "[[apidology]]"
+      - "[[social_behavior]]"
+      - "[[ecological_dynamics]]"
 ---
 
 

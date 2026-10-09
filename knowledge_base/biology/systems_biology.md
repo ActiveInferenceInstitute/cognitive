@@ -14,21 +14,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - complex_systems
-- type: implements
-  links:
-  - - - biological_networks
-  - - - cellular_systems
-  - - - metabolic_networks
-- type: relates
-  links:
-  - - - molecular_biology
-  - - - cell_biology
-  - - - evolutionary_dynamics
+  - type: foundation
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[complex_systems]]"
+  - type: implements
+    links:
+      - "[[biological_networks]]"
+      - "[[cellular_systems]]"
+      - "[[metabolic_networks]]"
+  - type: relates
+    links:
+      - "[[molecular_biology]]"
+      - "[[cell_biology]]"
+      - "[[evolutionary_dynamics]]"
 ---
 
 

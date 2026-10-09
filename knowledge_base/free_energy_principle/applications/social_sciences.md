@@ -16,14 +16,14 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]
-      - [[knowledge_base/free_energy_principle/cognitive/social_cognition|Social Cognition]]
-      - [[economics|Economic Applications]]
-      - [[education|Educational Applications]]
-      - [[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]
-      - [[knowledge_base/free_energy_principle/systems/emergence|Emergence]]
-      - [[knowledge_base/free_energy_principle/biology/ecology|Ecology]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/social_cognition|Social Cognition]]"
+      - "[[economics|Economic Applications]]"
+      - "[[education|Educational Applications]]"
+      - "[[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]]"
+      - "[[knowledge_base/free_energy_principle/systems/emergence|Emergence]]"
+      - "[[knowledge_base/free_energy_principle/biology/ecology|Ecology]]"
 ---
 
 # Social Science Applications of the Free Energy Principle
@@ -532,7 +532,7 @@ Connecting cultural models to mental health:
   - Cultural priors shape what counts as "aberrant" precision
   - Same computational profile may be pathological in one culture, adaptive in another
   - Cultural affordances shape available policies for free energy reduction
-  See psychiatry for clinical details
+  See [[psychiatry]] for clinical details
 ```
 
 ### Digital Societies

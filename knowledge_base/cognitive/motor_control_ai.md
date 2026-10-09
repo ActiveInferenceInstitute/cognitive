@@ -13,18 +13,18 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[active_inference]]
-      - [[free_energy_principle]]
-      - [[hierarchical_inference]]
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[hierarchical_inference]]"
   - type: relates
     links:
-      - [[predictive_coding]]
-      - [[precision_weighting]]
-      - [[learning_mechanisms]]
+      - "[[predictive_coding]]"
+      - "[[precision_weighting]]"
+      - "[[learning_mechanisms]]"
   - type: implements
     links:
-      - [[optimal_control]]
-      - [[dynamical_systems]]
+      - "[[optimal_control]]"
+      - "[[dynamical_systems]]"
 ---
 
 # Motor Control and Sensorimotor Integration Through Active Inference

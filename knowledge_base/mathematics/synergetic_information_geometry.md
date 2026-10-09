@@ -9,21 +9,21 @@ tags:
 - information_geometry
 - differential_geometry
 semantic_relations:
-- type: foundation
-  links:
-  - - - synergetics
-  - - - information_geometry
-  - - - differential_geometry
-  - - - geodesic_geometry
-- type: implements
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-- type: relates
-  links:
-  - - - tensegrity
-  - - - vector_equilibrium
-  - - - geometric_unity
+  - type: foundation
+    links:
+      - "[[synergetics]]"
+      - "[[information_geometry]]"
+      - "[[differential_geometry]]"
+      - "[[geodesic_geometry]]"
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+  - type: relates
+    links:
+      - "[[tensegrity]]"
+      - "[[vector_equilibrium]]"
+      - "[[geometric_unity]]"
 ---
 
 

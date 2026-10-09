@@ -7,7 +7,10 @@ updated: 2026-02-07
 tags: [estimation, parameters, learning, inference]
 semantic_relations:
   - type: relates
-    links: [[[bayesian_analysis]], [[knowledge_base/mathematics/bayesian_generative_models]], [[knowledge_base/cognitive/learning_mechanisms]]]
+    links:
+      - "[[bayesian_analysis]]"
+      - "[[knowledge_base/mathematics/bayesian_generative_models]]"
+      - "[[knowledge_base/cognitive/learning_mechanisms]]"
 ---
 
 # Parameter Estimation

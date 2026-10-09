@@ -23,16 +23,11 @@ tags:
   - security-protocols
 
 semantic_relations:
-
   - type: specializes
-
-    links: [[active_inference_learning_path]]
-
-  - type: relates
-
     links:
-
-
+      - "[[active_inference_learning_path]]"
+  - type: relates
+    links: []
 ---
 
 # Active Inference in Cognitive Security Learning Path

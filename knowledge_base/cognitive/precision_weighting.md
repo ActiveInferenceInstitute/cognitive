@@ -8,15 +8,15 @@ tags:
 - neuroscience
 - computation
 semantic_relations:
-- type: foundation
-  links:
-  - - - predictive_coding
-  - - - variational_inference
-- type: relates
-  links:
-  - - - free_energy_principle
-  - - - active_inference
-  - - - error_propagation
+  - type: foundation
+    links:
+      - "[[predictive_coding]]"
+      - "[[variational_inference]]"
+  - type: relates
+    links:
+      - "[[free_energy_principle]]"
+      - "[[active_inference]]"
+      - "[[error_propagation]]"
 ---
 
 

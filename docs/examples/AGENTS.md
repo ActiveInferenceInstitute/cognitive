@@ -5,8 +5,8 @@ status: stable
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Examples overview]]'
-      - '[[../manuscript/README|Executable manuscript]]'
+      - "[[README|Examples overview]]"
+      - "[[../manuscript/README|Executable manuscript]]"
 ---
 
 # Examples documentation instructions

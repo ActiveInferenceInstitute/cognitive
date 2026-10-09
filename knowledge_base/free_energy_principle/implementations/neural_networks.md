@@ -16,14 +16,14 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[python_framework|Python Framework]]
-      - [[robotics|Robotics Implementations]]
-      - [[simulation|Simulation Environments]]
-      - [[benchmarking|Benchmarking]]
-      - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]]
-      - [[knowledge_base/free_energy_principle/cognitive/learning|Learning]]
+      - "[[python_framework|Python Framework]]"
+      - "[[robotics|Robotics Implementations]]"
+      - "[[simulation|Simulation Environments]]"
+      - "[[benchmarking|Benchmarking]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
+      - "[[knowledge_base/free_energy_principle/cognitive/learning|Learning]]"
 ---
 
 # Neural Network Implementations of Active Inference

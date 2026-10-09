@@ -14,21 +14,21 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - cell_biology
-  - - - molecular_biology
-  - - - biophysics
-- type: implements
-  links:
-  - - - neural_dynamics
-  - - - synaptic_plasticity
-  - - - neural_circuits
-- type: relates
-  links:
-  - - - developmental_systems
-  - - - systems_biology
-  - - - cognitive_science
+  - type: foundation
+    links:
+      - "[[cell_biology]]"
+      - "[[molecular_biology]]"
+      - "[[biophysics]]"
+  - type: implements
+    links:
+      - "[[neural_dynamics]]"
+      - "[[synaptic_plasticity]]"
+      - "[[neural_circuits]]"
+  - type: relates
+    links:
+      - "[[developmental_systems]]"
+      - "[[systems_biology]]"
+      - "[[cognitive_science]]"
 ---
 
 

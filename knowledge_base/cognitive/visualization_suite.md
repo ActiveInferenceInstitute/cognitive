@@ -13,10 +13,10 @@ tags:
 semantic_relations:
   - type: relates
     links:
-      - [[graph_visualization]]
-      - [[visualization_tools]]
-      - [[performance_metrics]]
-      - [[simulation_studies]]
+      - "[[graph_visualization]]"
+      - "[[visualization_tools]]"
+      - "[[performance_metrics]]"
+      - "[[simulation_studies]]"
 ---
 
 # Visualization Suite

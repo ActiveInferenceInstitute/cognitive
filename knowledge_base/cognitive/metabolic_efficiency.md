@@ -9,18 +9,18 @@ tags:
 - efficiency
 - energy
 semantic_relations:
-- type: implements
-  links:
-  - - energy_optimization
-- type: extends
-  links:
-  - - resource_management
-- type: related
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - energy_optimization
-  - - - neural_efficiency
+  - type: implements
+    links:
+      - "[[energy_optimization]]"
+  - type: extends
+    links:
+      - "[[resource_management]]"
+  - type: related
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[energy_optimization]]"
+      - "[[neural_efficiency]]"
 ---
 
 

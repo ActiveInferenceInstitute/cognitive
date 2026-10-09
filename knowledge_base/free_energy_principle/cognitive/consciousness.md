@@ -14,17 +14,17 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]
-      - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]
+      - "[[knowledge_base/free_energy_principle/mathematics/core_principle|Core Principle]]"
+      - "[[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]]"
   - type: relates
     links:
-      - [[perception|Perception]]
-      - [[attention|Attention]]
-      - [[decision_making|Decision Making]]
-      - [[knowledge_base/free_energy_principle/philosophy/mind_body_problem|Mind-Body Problem]]
+      - "[[perception|Perception]]"
+      - "[[attention|Attention]]"
+      - "[[decision_making|Decision Making]]"
+      - "[[knowledge_base/free_energy_principle/philosophy/mind_body_problem|Mind-Body Problem]]"
   - type: extends
     links:
-      - [[knowledge_base/free_energy_principle/mathematics/advanced_formulations|Advanced Formulations]]
+      - "[[knowledge_base/free_energy_principle/mathematics/advanced_formulations|Advanced Formulations]]"
 ---
 
 # Consciousness as Integrated Inference Under the FEP

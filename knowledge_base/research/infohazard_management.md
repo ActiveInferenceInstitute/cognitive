@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/research/cognitive_security]]
-      - [[knowledge_base/research/security_evolution]]
+      - "[[knowledge_base/research/cognitive_security]]"
+      - "[[knowledge_base/research/security_evolution]]"
 ---
 
 # Infohazard Management

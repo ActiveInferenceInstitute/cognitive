@@ -11,19 +11,19 @@ tags:
 - graphical_models
 - statistical_independence
 semantic_relations:
-- type: foundation_for
-  links:
-  - - - free_energy_principle
-  - - - active_inference
-- type: implements
-  links:
-  - - - conditional_independence
-  - - - probabilistic_graphical_models
-- type: relates
-  links:
-  - - - information_theory
-  - - - bayesian_networks
-  - - - statistical_physics
+  - type: foundation_for
+    links:
+      - "[[free_energy_principle]]"
+      - "[[active_inference]]"
+  - type: implements
+    links:
+      - "[[conditional_independence]]"
+      - "[[probabilistic_graphical_models]]"
+  - type: relates
+    links:
+      - "[[information_theory]]"
+      - "[[bayesian_networks]]"
+      - "[[statistical_physics]]"
 ---
 
 

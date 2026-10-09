@@ -12,9 +12,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - matrix_ops
-      - [[code/tools/src/models/active_inference/AGENTS|Active Inference Models]]
-      - [[code/tools/README|Tools Overview]]
+      - "[[matrix_ops]]"
+      - "[[code/tools/src/models/active_inference/AGENTS|Active Inference Models]]"
+      - "[[code/tools/README|Tools Overview]]"
 ---
 
 # Matrix Operations Agent Documentation

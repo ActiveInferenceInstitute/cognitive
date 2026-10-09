@@ -9,11 +9,11 @@ tags:
 - bayesian
 - representation
 semantic_relations:
-- type: supports
-  links:
-  - bayesian_inference
-  - knowledge_representation
-  - learning_mechanisms
+  - type: supports
+    links:
+      - "[[bayesian_inference]]"
+      - "[[knowledge_representation]]"
+      - "[[learning_mechanisms]]"
 ---
 
 

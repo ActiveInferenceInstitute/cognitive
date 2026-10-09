@@ -14,10 +14,10 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - [[neuroscience]]
-      - [[evolutionary_dynamics]]
-      - [[systems_biology]]
-      - [[ecological_dynamics]]
+      - "[[neuroscience]]"
+      - "[[evolutionary_dynamics]]"
+      - "[[systems_biology]]"
+      - "[[ecological_dynamics]]"
 ---
 
 # Biology Knowledge Base

@@ -8,13 +8,13 @@ tags:
 - predictive-processing
 - error-handling
 semantic_relations:
-- type: implements
-  links:
-  - - predictive_processing
-- type: relates
-  links:
-  - - - predictive_network
-  - - - precision_mechanisms
+  - type: implements
+    links:
+      - "[[predictive_processing]]"
+  - type: relates
+    links:
+      - "[[predictive_network]]"
+      - "[[precision_mechanisms]]"
 ---
 
 

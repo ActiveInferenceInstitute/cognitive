@@ -9,21 +9,21 @@ tags:
 - information-theory
 - probability
 semantic_relations:
-- type: foundation
-  links:
-  - - - differential_geometry
-  - - - information_theory
-  - - - probability_theory
-- type: implements
-  links:
-  - - - statistical_manifolds
-  - - - natural_gradient
-  - - - fisher_information
-- type: related
-  links:
-  - - - variational_inference
-  - - - exponential_families
-  - - - optimal_transport
+  - type: foundation
+    links:
+      - "[[differential_geometry]]"
+      - "[[information_theory]]"
+      - "[[probability_theory]]"
+  - type: implements
+    links:
+      - "[[statistical_manifolds]]"
+      - "[[natural_gradient]]"
+      - "[[fisher_information]]"
+  - type: related
+    links:
+      - "[[variational_inference]]"
+      - "[[exponential_families]]"
+      - "[[optimal_transport]]"
 ---
 
 

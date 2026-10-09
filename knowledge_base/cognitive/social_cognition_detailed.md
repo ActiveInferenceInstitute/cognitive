@@ -9,14 +9,14 @@ tags:
 - theory_of_mind
 - social_neuroscience
 semantic_relations:
-- type: implements
-  links:
-  - - cognitive_functions
-- type: related
-  links:
-  - - - emotional_processing
-  - - - theory_of_mind
-  - - - communication
+  - type: implements
+    links:
+      - "[[cognitive_functions]]"
+  - type: related
+    links:
+      - "[[emotional_processing]]"
+      - "[[theory_of_mind]]"
+      - "[[communication]]"
 ---
 
 

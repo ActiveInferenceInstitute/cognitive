@@ -12,13 +12,13 @@ tags:
 semantic_relations:
   - type: grounded_in
     links:
-      - [[knowledge_base/mathematics/graph_theory]]
-      - [[knowledge_base/mathematics/network_science]]
+      - "[[knowledge_base/mathematics/graph_theory]]"
+      - "[[knowledge_base/mathematics/network_science]]"
   - type: relates
     links:
-      - [[complex_systems]]
-      - [[emergence]]
-      - [[message_passing_networks]]
+      - "[[complex_systems]]"
+      - "[[emergence]]"
+      - "[[message_passing_networks]]"
 ---
 
 # Network Theory in Complex Systems

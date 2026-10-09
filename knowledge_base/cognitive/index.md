@@ -8,12 +8,12 @@ tags:
 - cognitive_science
 - knowledge_base
 semantic_relations:
-- type: documented_by
-  links:
-  - - cognitive_modeling_concepts|Documentation Concepts
-- type: implemented_by
-  links:
-  - - docs/api/api_documentation|API Reference
+  - type: documented_by
+    links:
+      - "[[cognitive_modeling_concepts|Documentation Concepts]]"
+  - type: implemented_by
+    links:
+      - "[[docs/api/api_documentation|API Reference]]"
 ---
 
 

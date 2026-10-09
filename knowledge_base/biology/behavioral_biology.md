@@ -14,25 +14,25 @@ aliases:
 complexity: advanced
 processing_priority: 1
 semantic_relations:
-- type: foundation
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-  - - - neuroscience
-  - - - knowledge_base/cognitive/active_inference
-- type: implements
-  links:
-  - - - behavioral_dynamics
-  - - - decision_making
-  - - - learning_theory
-  - - - knowledge_base/agents/architectures_overview
-- type: relates
-  links:
-  - - - evolutionary_dynamics
-  - - - systems_biology
-  - - - cognitive_science
-  - - - apidology
-  - - - myrmecology
+  - type: foundation
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+      - "[[neuroscience]]"
+      - "[[knowledge_base/cognitive/active_inference]]"
+  - type: implements
+    links:
+      - "[[behavioral_dynamics]]"
+      - "[[decision_making]]"
+      - "[[learning_theory]]"
+      - "[[knowledge_base/agents/architectures_overview]]"
+  - type: relates
+    links:
+      - "[[evolutionary_dynamics]]"
+      - "[[systems_biology]]"
+      - "[[cognitive_science]]"
+      - "[[apidology]]"
+      - "[[myrmecology]]"
 ---
 
 

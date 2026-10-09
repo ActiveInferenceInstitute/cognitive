@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/research/cognitive_security]]
-      - [[knowledge_base/systems/resilient_systems]]
+      - "[[knowledge_base/research/cognitive_security]]"
+      - "[[knowledge_base/systems/resilient_systems]]"
 ---
 
 # Security Evolution

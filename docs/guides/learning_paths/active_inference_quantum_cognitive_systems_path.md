@@ -19,22 +19,13 @@ tags:
   - quantum cognition
 
 semantic_relations:
-
   - type: prerequisite
-
     links:
-
-      - [[active_inference_quantum_learning_path]]
-
-      - [[active_inference_cognitive_learning_path]]
-
+      - "[[active_inference_quantum_learning_path]]"
+      - "[[active_inference_cognitive_learning_path]]"
   - type: related
-
     links:
-
-      - [[active_inference_quantum_learning_path]]
-
-
+      - "[[active_inference_quantum_learning_path]]"
 ---
 
 # Quantum Cognitive Systems Learning Path

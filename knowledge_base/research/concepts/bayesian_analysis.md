@@ -7,9 +7,15 @@ updated: 2026-02-07
 tags: [bayesian, statistics, inference, active_inference]
 semantic_relations:
   - type: foundation
-    links: [[knowledge_base/mathematics/bayes_theorem]]
+    links:
+      - "[[knowledge_base/mathematics/bayes_theorem]]"
   - type: relates
-    links: [[[frequentist_analysis]], [[parameter_estimation]], [[model_comparison]], [[hypothesis_testing]], [[knowledge_base/mathematics/bayesian_networks]]]
+    links:
+      - "[[frequentist_analysis]]"
+      - "[[parameter_estimation]]"
+      - "[[model_comparison]]"
+      - "[[hypothesis_testing]]"
+      - "[[knowledge_base/mathematics/bayesian_networks]]"
 ---
 
 # Bayesian Analysis

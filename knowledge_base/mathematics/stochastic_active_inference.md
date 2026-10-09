@@ -9,21 +9,21 @@ tags:
 - probability_theory
 - active_inference
 semantic_relations:
-- type: foundation
-  links:
-  - - - stochastic_processes
-  - - - probability_theory
-  - - - measure_theory
-  - - - statistical_physics
-- type: implements
-  links:
-  - - - active_inference
-  - - - free_energy_principle
-- type: relates
-  links:
-  - - - path_integral_free_energy
-  - - - variational_methods
-  - - - optimal_control
+  - type: foundation
+    links:
+      - "[[stochastic_processes]]"
+      - "[[probability_theory]]"
+      - "[[measure_theory]]"
+      - "[[statistical_physics]]"
+  - type: implements
+    links:
+      - "[[active_inference]]"
+      - "[[free_energy_principle]]"
+  - type: relates
+    links:
+      - "[[path_integral_free_energy]]"
+      - "[[variational_methods]]"
+      - "[[optimal_control]]"
 ---
 
 

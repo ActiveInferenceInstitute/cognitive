@@ -11,9 +11,9 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[getting_started|Getting started]]'
-      - '[[unit_testing|Testing]]'
-      - '[[../../manuscript/README|Executable manuscript]]'
+      - "[[getting_started|Getting started]]"
+      - "[[unit_testing|Testing]]"
+      - "[[../../manuscript/README|Executable manuscript]]"
 ---
 
 # Simulation

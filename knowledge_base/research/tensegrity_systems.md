@@ -10,8 +10,8 @@ tags:
 semantic_relations:
   - type: relates_to
     links:
-      - [[knowledge_base/systems/tensegrity]]
-      - [[knowledge_base/free_energy_principle/README]]
+      - "[[knowledge_base/systems/tensegrity]]"
+      - "[[knowledge_base/free_energy_principle/README]]"
 ---
 
 # Tensegrity Systems

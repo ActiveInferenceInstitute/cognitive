@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - '[[README|Research documentation index]]'
-      - '[[research_documentation|Research documentation guide]]'
-      - '[[ant_colony_active_inference|Ant colony research]]'
-      - '[[../repo_docs/getting_started|Getting started]]'
+      - "[[README|Research documentation index]]"
+      - "[[research_documentation|Research documentation guide]]"
+      - "[[ant_colony_active_inference|Ant colony research]]"
+      - "[[../repo_docs/getting_started|Getting started]]"
 ---
 
 # Research documentation instructions

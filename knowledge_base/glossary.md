@@ -12,10 +12,10 @@ tags:
 semantic_relations:
   - type: defines
     links:
-      - [[mathematics|Mathematical Concepts]]
-      - [[cognitive|Cognitive Concepts]]
-      - [[systems|Systems Concepts]]
-      - [[biology|Biological Concepts]]
+      - "[[mathematics|Mathematical Concepts]]"
+      - "[[cognitive|Cognitive Concepts]]"
+      - "[[systems|Systems Concepts]]"
+      - "[[biology|Biological Concepts]]"
 ---
 
 # Cognitive Modeling Knowledge Base Glossary

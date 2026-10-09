@@ -10,7 +10,7 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - '[[../../pyproject.toml|Package configuration]]'
+      - "[[../../pyproject.toml|Package configuration]]"
 ---
 
 # Packaging tools
