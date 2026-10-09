@@ -178,3 +178,6 @@ cython_debug/
 .pypirc
 code/tests/test-results.xml
 code/tests/test_report.json
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/

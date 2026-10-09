@@ -22,7 +22,7 @@ semantic_relations:
 
 # Biology Knowledge Base
 
-This knowledge base contains 45 comprehensive documents covering biological principles, processes, and systems relevant to cognitive modeling and Active Inference. The content spans from molecular biology to ecosystem dynamics, with particular emphasis on neuroscience, evolution, ecological systems, and agent architectures.
+This knowledge base covers biological principles, processes, and systems relevant to cognitive modeling and Active Inference. The content spans from molecular biology to ecosystem dynamics, with particular emphasis on neuroscience, evolution, ecological systems, and agent architectures. Every page is listed in the [[knowledge_base/biology/catalog|catalog]].
 
 ## 🧬 Overview
 

@@ -8,6 +8,8 @@ tags:
 - perception
 - integration
 - multisensory
+aliases:
+  - cross_modal
 semantic_relations:
   - type: implements
     links:

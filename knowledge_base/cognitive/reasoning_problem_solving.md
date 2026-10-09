@@ -8,6 +8,8 @@ tags:
 - problem_solving
 - decision_making
 - logic
+aliases:
+  - problem_solving
 semantic_relations:
   - type: implements
     links:

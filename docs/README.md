@@ -2,6 +2,7 @@
 title: Documentation hub
 type: documentation
 status: stable
+updated: 2026-10-09
 semantic_relations:
   - type: organizes
     links:
@@ -15,6 +16,11 @@ semantic_relations:
       - "[[research/README|Research]]"
       - "[[tools/README|Tools]]"
       - "[[templates/README|Templates]]"
+      - "[[agents/README|Agent documentation]]"
+      - "[[manuscript/README|Manuscript]]"
+      - "[[policy/README|Documentation term policy]]"
+      - "[[repo_docs/README|Repository documentation]]"
+      - "[[DOCUMENTATION_ROADMAP|Documentation roadmap]]"
 ---
 
 # Documentation hub
@@ -37,9 +43,12 @@ working entry points.
 
 ## Documentation domains
 
-- [`api/`](api/README.md): public API reference and versioning notes.
-- [`config/`](config/README.md): actual repository and simulation configuration.
+- [`api/`](api/README.md): public API reference, executed examples, versioning.
+- [`config/`](config/README.md): the root `config.yaml` and which keys code reads.
 - [`development/`](development/README.md): development loop and CI.
+- [`agents/`](agents/README.md): navigation for agent documentation.
+- [`manuscript/`](manuscript/README.md): the executable manuscript.
+- [`policy/`](policy/README.md): the term policy the documentation gate enforces.
 - [`examples/`](examples/README.md): validated example entry points.
 - [`guides/`](guides/README.md): application notes and learning paths.
 - [`implementation/`](implementation/README.md): implementation patterns and the
@@ -57,6 +66,9 @@ Its source files use Obsidian wiki links and may contain theoretical or
 illustrative material beyond the implemented runtime. For code behavior, prefer
 the installed package, its tests, and the manuscript's reproducibility section.
 
+The [documentation roadmap](DOCUMENTATION_ROADMAP.md) maps these folders and
+lists the open documentation work.
+
 ## Validation
 
 From the repository root:
@@ -64,11 +76,19 @@ From the repository root:
 ```bash
 python code/scripts/validate_docs.py --json
 python code/scripts/verify_links.py . --json
+python code/scripts/check_markdown_links.py . --json
+python code/scripts/normalize_frontmatter.py --check .
+python code/scripts/kb_index.py --check .
 ```
 
-The first command checks frontmatter, Python fenced blocks, package exports, and
-manuscript references. The second checks explicit file-like wiki links; unresolved
-extensionless concept links are reported separately unless strict mode is used.
+`validate_docs.py` is the aggregate gate: frontmatter, quoted
+`semantic_relations` links, compile-checking of Python fences, package exports,
+the term policy, wiki and Markdown links, knowledge-base catalogs, and
+manuscript references. `verify_links.py` checks wiki links that name a file;
+unresolved extensionless concept links are reported separately unless
+`--strict-wiki-links` is passed. `normalize_frontmatter.py` and `kb_index.py` are
+also run inside `validate_docs.py`; run them directly with `--write` to fix what
+they report.
 
 ## Licensing
 

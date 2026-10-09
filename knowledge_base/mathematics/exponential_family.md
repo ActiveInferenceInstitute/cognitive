@@ -6,6 +6,8 @@ created: 2025-08-08
 tags:
 - probability
 - statistics
+aliases:
+  - exponential_families
 semantic_relations:
   - type: relates
     links:

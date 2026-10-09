@@ -10,6 +10,8 @@ from typing import Any
 import numpy as np
 import yaml
 
+from ...utils.matrix_utils import as_integer
+
 EPS = 1e-12
 
 
@@ -216,8 +218,8 @@ class ActiveInferenceModel(ABC):
 
     @staticmethod
     def _observation_vector(observation: int | np.ndarray, size: int) -> np.ndarray:
-        if np.isscalar(observation):
-            index = int(observation)
+        if np.ndim(observation) == 0:
+            index = as_integer(observation, "Observation")
             if not 0 <= index < size:
                 raise ValueError(f"Observation out of range: {index}")
             vector = np.zeros(size, dtype=float)

@@ -2,6 +2,7 @@
 title: Configuration reference
 type: documentation
 status: stable
+updated: 2026-10-09
 semantic_relations:
   - type: documents
     links:
@@ -12,14 +13,13 @@ semantic_relations:
 
 # Configuration reference
 
-This directory contains configuration examples. It is not a separate runtime
-configuration framework: the package's constructors and command-line interfaces
-are the source of truth for supported options.
+This directory documents the repository's configuration files. It is not a
+separate runtime configuration framework: the package's constructors and
+command-line interfaces are the source of truth for supported options.
 
 ## Repository configuration
 
-The root [`config.yaml`](../../config.yaml) records repository-level defaults and
-paths used by the surrounding tooling. Its top-level sections are:
+The root [`config.yaml`](../../config.yaml) has these top-level sections:
 
 - `paths`: template, knowledge-base, model, utility, and data locations.
 - `active_inference`: default precision, temporal horizon, learning rate,
@@ -33,23 +33,44 @@ paths used by the surrounding tooling. Its top-level sections are:
 - `logging`: level, file, format, size, and backup count.
 - `development`: debug, profiling, and test-mode switches.
 
-These values are configuration data; not every key is consumed by every package
-component. Check the relevant loader or constructor before relying on a key.
+Only these keys are read by code in this repository:
+
+- `paths.templates` and `paths.knowledge_base`, by `NodeCreator`
+  (`cognitive-create-node`); relative paths resolve against the directory that
+  holds the YAML file.
+- `paths.knowledge_base` and `visualization.seed`, by `NetworkVisualizer`.
+
+Every other key in `config.yaml` (including `active_inference`, `analysis`,
+`obsidian`, `logging`, and `development`) is descriptive: no loader consumes it.
+The dispatcher does not read `active_inference.*`; pass those values to
+`InferenceConfig` explicitly.
 
 ## Simulation example
 
-[`simulation_config.yaml`](simulation_config.yaml) is an example configuration
-for the repository's simulation-oriented documentation. Treat it as an example,
-not as a guaranteed global schema. Validate any configuration against the
-component that loads it.
+[`simulation_config.yaml`](simulation_config.yaml) holds illustrative BioFirm
+simulation parameters (time steps, hierarchies, intervention strategies). No
+code in the repository loads it, and `code/Things/BioFirm/` contains
+documentation only. Treat it as a sketch of a parameter set, not as a schema.
 
 ## Runtime options
 
 The public discrete runtime is configured with `InferenceConfig` in Python. The
-root README demonstrates the supported fields used by the current dispatcher,
-including `method`, `policy_type`, `temporal_horizon`, `learning_rate`,
-`precision_init`, and `seed`. Model matrices are supplied to
-`DiscreteGenerativeModel`; they are not read implicitly from `config.yaml`.
+required fields are `method`, `policy_type`, `temporal_horizon`, `learning_rate`,
+and `precision_init`; the optional fields are listed in
+[`../api/api_reference.md`](../api/api_reference.md). Model matrices are
+supplied to `DiscreteGenerativeModel`; they are not read implicitly from
+`config.yaml`.
+
+Other loaders take their own schemas, and reject unknown keys:
+
+- `ActiveInferenceFactory.create_from_yaml`: dispatcher fields plus a
+  `generative_model` mapping with `A`, `B`, `C`, `D`, `E`.
+- `SimplePOMDP`: sections `model`, `state_space`, `observation_space`,
+  `action_space`, `matrices`, `inference`, `visualization`, and optional `seed`.
+- `HomeostaticFactory`: sections `state_spaces`, `observation_model`,
+  `transition_model`, `inference`, and optional `target_state`,
+  `initial_beliefs`, `action_prior`, `seed`.
+- The manuscript builder reads `docs/manuscript/config.yaml`.
 
 Command-line options are discoverable from the installed entry points:
 

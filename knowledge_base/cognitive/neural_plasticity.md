@@ -8,6 +8,8 @@ tags:
 - learning
 - development
 - adaptation
+aliases:
+  - plasticity
 semantic_relations:
   - type: implements
     links:

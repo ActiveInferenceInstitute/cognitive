@@ -3,7 +3,7 @@ title: Configuration documentation instructions
 type: agents
 status: stable
 created: 2024-01-01
-updated: 2026-08-02
+updated: 2026-10-09
 tags:
   - configuration
   - settings
@@ -24,10 +24,12 @@ options accepted by the package's constructors and command-line interfaces.
 
 ## Ground truth
 
-- The repository-level file is `config.yaml` at the repository root; its
-  sections are documented in `docs/config/README.md`.
-- `docs/config/simulation_config.yaml` is an example configuration, not a
-  schema that every component loads.
+- The repository-level file is `config.yaml` at the repository root. Code reads
+  only `paths.templates`, `paths.knowledge_base`, and `visualization.seed` from
+  it (`NodeCreator`, `NetworkVisualizer`); `docs/config/README.md` lists the rest
+  as descriptive.
+- `docs/config/simulation_config.yaml` is an illustrative parameter sketch that
+  no code loads.
 - Runtime options come from Python constructors such as `InferenceConfig` and
   from the installed CLI entry points (`cognitive-* --help`).
 
@@ -35,6 +37,6 @@ options accepted by the package's constructors and command-line interfaces.
 
 - Do not document generic configuration frameworks, feature-flag systems, or
   schema validators that are absent from this repository.
-- When a configuration key is added or renamed, update
+- When a configuration key is added, renamed, or begins to be consumed, update
   `docs/config/README.md` in the same change.
 - Verify claims against the loader or constructor that consumes the key.

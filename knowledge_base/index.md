@@ -12,6 +12,7 @@ tags:
 semantic_relations:
   - type: organizes
     links:
+      - "[[knowledge_base/catalog]]"
       - "[[mathematics]]"
       - "[[cognitive]]"
       - "[[systems]]"
@@ -26,6 +27,8 @@ semantic_relations:
 
 
 # Cognitive Modeling Knowledge Base
+
+Every page, by domain, with a one-line description: [[knowledge_base/catalog|catalog]].
 
 ## Core Domains
 

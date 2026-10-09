@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from scripts.check_markdown_links import verify_markdown_link_report
+from scripts.kb_index import stale_catalogs
 from scripts.normalize_frontmatter import unquoted_links
 from scripts.verify_links import verify_link_report
 
@@ -40,6 +41,8 @@ def load_term_policy(root: Path) -> tuple[list[str], set[str]]:
     if not isinstance(exempt, list) or not all(isinstance(path, str) for path in exempt):
         raise ValueError(f"{TERM_POLICY_PATH} exempt_paths must be a list of paths")
     return [term.strip() for term in terms], set(exempt)
+
+
 _FENCE = re.compile(r"(^|\n)(```|~~~)([^\n]*)\n([\s\S]*?)(?:\n\2)(?=\n|$)")
 
 
@@ -204,6 +207,12 @@ def validate(root: str | Path = ".") -> dict[str, Any]:
     markdown_links = verify_markdown_link_report(root_path)
     if markdown_links.broken_links:
         errors.append(f"{len(markdown_links.broken_links)} standard Markdown links do not resolve")
+    stale = stale_catalogs(root_path)
+    if stale:
+        errors.append(
+            f"{len(stale)} knowledge-base catalog(s) are missing or stale "
+            f"(run kb_index.py --write): {', '.join(stale[:3])}"
+        )
     errors.extend(_validate_exports())
     manuscript = _validate_manuscript(root_path)
     errors.extend(manuscript["errors"])

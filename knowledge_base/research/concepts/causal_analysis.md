@@ -2,6 +2,8 @@
 title: "Causal Analysis"
 type: "concept"
 status: stable
+aliases:
+  - causal_inference
 ---
 
 # Causal Analysis

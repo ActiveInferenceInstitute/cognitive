@@ -128,9 +128,12 @@ class ContinuousVisualizer:
     def create_summary_plot(self, history: dict[str, Any], output_path: str | Path) -> plt.Figure:
         means_full = self._history_means(history)
         means = means_full[:, :, 0]
-        actions = np.asarray(history.get("actions"), dtype=float)
+        missing = [key for key in ("actions", "free_energy") if key not in history]
+        if missing:
+            raise ValueError(f"history must contain {', '.join(missing)}")
+        actions = np.asarray(history["actions"], dtype=float)
         time = self._history_time(history, means.shape[0])
-        free_energy = np.asarray(history.get("free_energy"), dtype=float)
+        free_energy = np.asarray(history["free_energy"], dtype=float)
         if actions.shape[0] != means.shape[0] or free_energy.shape != (means.shape[0],):
             raise ValueError("actions and free_energy must match the history length")
 

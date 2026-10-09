@@ -10,6 +10,123 @@ This project documents notable changes here. Versions follow
 [semantic versioning](https://semver.org/spec/v2.0.0.html); entries that change
 a computed result are marked **behaviour change** and say what moved and why.
 
+## [Unreleased]
+
+### Behaviour change
+
+Each item names what moved and why. Inputs that were previously accepted and
+produced a wrong or arbitrary result now raise `ValueError`.
+
+- **Indices are no longer truncated.** `int(1.9)` is `1`, so
+  `matrix_utils.expected_free_energy(..., action=1.9)`,
+  `DiscreteGenerativeModel.posterior(1.7, ...)`, `HomeostaticInference.step(1.9)`,
+  `SimplePOMDP.step(0.7)`, and the observation arguments of
+  `ActiveInferenceModel`/`HomeostaticInference` silently evaluated a different
+  action or observation than the caller named. They now raise. Integral values
+  of any numeric type (`1`, `np.int64(1)`, `1.0`) are still accepted, and a
+  zero-dimensional array is now read as an index rather than as a one-element
+  observation vector. The shared check is `matrix_utils.as_integer`.
+- **A small posterior is no longer discarded.** `DiscreteGenerativeModel.posterior`
+  and `SimplePOMDP._update_beliefs` compared the unnormalized evidence with
+  `1e-12`; below it the former returned the prior and the latter a uniform
+  belief. Dividing by the evidence is scale-invariant, so likelihoods of `1e-13`
+  and `1e-14` now give the exact posterior `(10/11, 1/11)`. Only evidence of
+  exactly zero still falls back to the prior (or uniform in `SimplePOMDP`). The
+  same `EPS` floor remains in the other normalization helpers (`_normalize` in
+  the dispatcher, the homeostatic model and `MatrixOps`, and
+  `ensure_matrix_properties`), so inputs whose total mass is below `1e-12` are
+  still treated as empty there.
+- **`matrix_utils.compute_entropy`** of a deterministic distribution is exactly
+  zero. A `log(p + EPS)` floor applied to every entry gave about `-1e-12`; other
+  distributions move by about `n * 1e-12` for `n` outcomes.
+- **`matrix_utils.ensure_matrix_properties`** rejects empty and non-finite input.
+  A NaN column used to fail the `sum > EPS` test and was replaced by a uniform
+  distribution, turning corrupt data into a plausible result. A stochastic
+  constraint without `non_negative` now rejects negative entries instead of
+  returning a "stochastic" matrix that contains them; request `non_negative` to
+  clip first.
+- **`HomeostaticInference` defaults `exploration_weight` to `0.0`**, matching
+  `InferenceConfig`. 1.1.0 moved that default from `0.5` to `0.0` but the
+  homeostatic model kept passing `0.5`, so its `infer_policies()` still applied
+  half of the extra information-seeking bias that the release removed. Set
+  `inference.exploration_weight: 0.5` to keep the old result.
+- **`DiscreteGenerativeModel.evaluate_policy`** requires `discount_factor` in
+  `(0, 1]`, matching `InferenceConfig`, and a non-empty policy. An empty policy
+  used to evaluate to a free energy of exactly zero.
+- **`validate_docs`** (and `cognitive-validate-docs`) now also fails when a
+  `semantic_relations` link is not a quoted wiki link or a knowledge-base
+  catalog is missing or stale. `ensure_matrix_properties` rejects empty and
+  non-finite input even when no constraint is requested.
+- **`DiscreteGenerativeModel.evaluate_policy`** accepts any iterable of actions
+  and raises `ValueError` for a non-numeric `discount_factor`.
+- **`NetworkPlotter.plot_message_network_dynamics`** uses a seeded spring layout
+  (`seed=0`, settable on the constructor). The layout was previously different
+  on every call.
+
+### Added
+
+- `code/scripts/normalize_frontmatter.py` (`cognitive-normalize-frontmatter`)
+  keeps every `semantic_relations` link a quoted wiki link. 753 pages stored
+  them as nested YAML lists, the residue of unquoted `[[links]]`, so the
+  relations were data but invisible to Obsidian's graph and backlinks.
+  `validate_docs` now rejects the damaged form.
+- `code/scripts/kb_index.py` (`cognitive-kb-index`) generates a `catalog.md` in
+  every `knowledge_base/` domain and at its root: each page with its title and
+  opening line. `validate_docs` fails when a catalog is missing or stale.
+- 158 knowledge-base concept pages for the most-referenced names that had
+  no page (learning and plasticity, vision and perception, psychiatry and social
+  cognition, statistics, dynamics and control, ecology and swarms, philosophy of
+  science), and 72 one-paragraph pages rewritten into articles. Worked examples are
+  computed with the package and quote the numbers it returns.
+
+### Fixed
+
+- `StateSpacePlotter.plot_free_energy_landscape` failed with a shape mismatch for
+  any non-square array: `np.meshgrid` defaulted to `xy` indexing and transposed
+  the grid. It now uses `ij` indexing.
+- `ContinuousVisualizer.create_summary_plot` raised `IndexError: tuple index out
+  of range` when the history lacked `actions` or `free_energy`. It now names the
+  missing key.
+- `MatrixPlotter.plot_multi_heatmap`/`plot_belief_evolution` and
+  `StateSpacePlotter.plot_belief_evolution` raised a bare
+  `IndexError` when given fewer labels than slices or states; they now raise a
+  `ValueError` that says how many were needed.
+- `verify_links.py` and `check_markdown_links.py` counted a `# comment` inside a
+  fenced code block as a heading, so a link to `#install-deps` was accepted
+  whenever a shell snippet contained that comment. Fenced blocks are now
+  ignored when collecting heading anchors. The repository itself reports no new
+  anchor warnings.
+- Removed an unreachable duplicate `non_negative` branch in
+  `SimplePOMDP._apply_constraint`.
+
+### Documentation
+
+- Restored the `[[link]]` syntax inside markdown and yaml fences that the
+  2026-08-02 pass had flattened to plain text. The link checkers already ignore
+  fenced code, so the conversion gained nothing and left the linking-standards
+  and template pages teaching the wrong syntax.
+- `knowledge_base/mathematics/expected_free_energy.md` equated epistemic value
+  plus risk with ambiguity plus risk. It now states the canonical decomposition
+  used by the package.
+- Rewrote `project_structure.md` (it described directories that do not exist)
+  and `knowledge_base/quality_assessment.md` (stale counts, subjective ratings),
+  cut `docs/DOCUMENTATION_ROADMAP.md` from 809 to 145 lines, and replaced the
+  fictional content of the `docs/api/` and `docs/agents/` pages with what the
+  package actually exports.
+
+### Tests
+
+- `test_boundary_validation.py` pins each item above with an independently
+  derived expectation, and fails against the previous code.
+- `test_validation_branches.py` covers the validation and fallback branches of
+  the generative model, homeostatic components and configuration, dispatcher
+  factory, base-state checks, matrix helpers, node creation, knowledge-network
+  visualizer, and plotters.
+- Five mutations were added to `mutation_check.py` (22 total), one per defect
+  fixed above that a test pins: the posterior threshold, the entropy floor,
+  index truncation, non-finite constraint input, and the transposed landscape
+  grid. All are killed.
+
 ## [1.1.0]
 
 ### Mutation gate

@@ -7,6 +7,8 @@ from itertools import islice, product
 
 import numpy as np
 
+from ...utils.matrix_utils import as_integer
+
 EPS = 1e-12
 
 
@@ -143,11 +145,22 @@ class DiscreteGenerativeModel:
         return _normalize(self.A @ prior)
 
     def posterior(self, observation: int | np.ndarray, prior: np.ndarray) -> np.ndarray:
+        """Return ``P(s | o)`` for one observation index or an observation distribution.
+
+        An integer ``observation`` selects a row of ``A``; a vector is treated as
+        a distribution over observations and weights the likelihood by
+        ``A.T @ observation``. Fractional indices are rejected rather than
+        truncated. If the observation has exactly zero probability under every
+        state the prior supports, no update is possible and the prior is
+        returned unchanged. Evidence is compared with zero, not with a
+        tolerance: normalizing is scale-invariant, so a small but positive
+        likelihood still yields an exact posterior.
+        """
         prior_vector = _as_probability_vector(prior, name="prior")
         if prior_vector.shape != self.D.shape:
             raise ValueError(f"prior must have shape {self.D.shape}")
-        if np.isscalar(observation):
-            index = int(observation)
+        if np.ndim(observation) == 0:
+            index = as_integer(observation, "Observation")
             if not 0 <= index < self.num_observations:
                 raise ValueError(f"Observation out of range: {index}")
             likelihood = self.A[index]
@@ -157,9 +170,10 @@ class DiscreteGenerativeModel:
                 raise ValueError(f"observation must have shape {(self.num_observations,)}")
             likelihood = self.A.T @ observation_vector
         posterior = prior_vector * np.maximum(likelihood, 0.0)
-        if float(posterior.sum()) <= EPS:
+        evidence = float(posterior.sum())
+        if evidence <= 0.0:
             return prior_vector
-        return _normalize(posterior)
+        return posterior / evidence
 
     def expected_free_energy(
         self, beliefs: np.ndarray, action: int
@@ -227,6 +241,15 @@ class DiscreteGenerativeModel:
         """
         if not np.isfinite(epistemic_weight) or epistemic_weight < 0:
             raise ValueError("epistemic_weight must be finite and non-negative")
+        try:
+            valid_discount = bool(np.isfinite(discount_factor) and 0.0 < discount_factor <= 1.0)
+        except TypeError:
+            valid_discount = False
+        if not valid_discount:
+            raise ValueError("discount_factor must be in (0, 1]")
+        policy = tuple(policy)
+        if len(policy) == 0:
+            raise ValueError("policy must contain at least one action")
         predicted = _as_probability_vector(beliefs, name="beliefs")
         total = 0.0
         for step, action in enumerate(policy):

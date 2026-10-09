@@ -31,8 +31,9 @@ treatments.
 
 ## Documents
 
-The folder contains the domain's concept pages (48 files; see
-`README.md` for full navigation). Core entries include complex systems,
+The folder contains the domain's concept pages (every page is listed in
+[[knowledge_base/systems/catalog|catalog]]; `README.md` gives the guided
+navigation). Core entries include complex systems,
 dynamical systems, control systems, adaptive systems, and social-ecological
 systems.
 

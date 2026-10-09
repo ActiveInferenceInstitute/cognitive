@@ -1,4 +1,5 @@
-# BioFirm Simulation Configuration
+# BioFirm simulation parameters (illustrative).
+# No code in this repository loads this file; see docs/config/README.md.
 
 simulation:
   duration: 1000  # Time steps

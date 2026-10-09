@@ -8,6 +8,8 @@ tags:
 - learning
 - prediction
 - neural_computation
+aliases:
+  - prediction_errors
 semantic_relations:
   - type: implements
     links:

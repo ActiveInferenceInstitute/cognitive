@@ -12,6 +12,8 @@ tags:
 - statistical_mechanics
 - complexity
 - emergence
+aliases:
+  - statistical_mechanics
 semantic_relations:
   - type: foundation_for
     links:

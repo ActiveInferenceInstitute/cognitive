@@ -1,22 +1,14 @@
 ---
-title: Research API Reference
-type: guide
+title: Research API
+type: reference
 status: stable
-created: 2026-02-06
-tags:
-  - guide
-  - documentation
+updated: 2026-10-09
 ---
 
-# Research API Reference
+# Research API
 
-## Overview
-This document provides an overview of **Research API Reference**.
-
-## Key Concepts
-- **Concept 1**: Description.
-- **Concept 2**: Description.
-
-## Related Links
-- [[index]]
-- [[README]]
+There is no research-specific API. Research material in `docs/research/` is
+documentation. The executable surface it can call is the one in
+[[api_reference]]; reproducible numerical results are produced by the
+manuscript build (`cognitive-build-manuscript`) and the benchmark runner
+(`cognitive-benchmark`).

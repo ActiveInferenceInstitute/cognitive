@@ -6,6 +6,8 @@ tags:
 - communication
 - information
 - pragmatics
+aliases:
+  - communications
 semantic_relations:
   - type: relates
     links:

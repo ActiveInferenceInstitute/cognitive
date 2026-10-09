@@ -8,6 +8,8 @@ tags:
 - regulation
 - behavior
 - prefrontal
+aliases:
+  - executive_function
 semantic_relations:
   - type: implements
     links:

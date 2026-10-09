@@ -8,6 +8,8 @@ tags:
 - probability
 - graphical-models
 - markov-theory
+aliases:
+  - markov_property
 semantic_relations:
   - type: foundation
     links:

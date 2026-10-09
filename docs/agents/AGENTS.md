@@ -3,7 +3,7 @@ title: Agent documentation instructions
 type: agents
 status: stable
 created: 2024-01-01
-updated: 2026-08-02
+updated: 2026-10-09
 tags:
   - agents
   - documentation
@@ -26,10 +26,13 @@ agent behavior lives in `code/Things/` and in the package under
 
 ## Sources of truth
 
-- `code/Things/AGENTS.md` — index of the self-contained agent implementations.
+- `code/Things/AGENTS.md` — index of the agent folders; only `Simple_POMDP` and
+  `Continuous_Generic` contain importable code.
 - `code/tools/src/models/active_inference/AGENTS.md` — the validated discrete
   Active Inference model family.
 - `knowledge_base/agents/README.md` — conceptual agent architecture material.
+- `docs/api/agent_api.md` and `docs/api/api_examples.md` — the importable agent
+  classes with executed examples.
 - `docs/examples/README.md` — executable example commands.
 
 ## Rules

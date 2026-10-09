@@ -31,8 +31,9 @@ the agent-architecture focus of the domain.
 
 ## Documents
 
-The folder contains the domain's concept pages (approximately 170 files; see
-`README.md` for the full navigation). Core entries include:
+The folder contains the domain's concept pages (every page is listed in
+[[knowledge_base/cognitive/catalog|catalog]]; `README.md` gives the guided
+navigation). Core entries include:
 
 - [[active_inference]] and [[active_inference_agent]] — the theory and agent
   formulations.

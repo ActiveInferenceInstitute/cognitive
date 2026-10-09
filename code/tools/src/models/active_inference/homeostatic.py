@@ -10,6 +10,7 @@ from typing import Any
 import numpy as np
 import yaml
 
+from ...utils.matrix_utils import as_integer
 from ..matrices.matrix_ops import MatrixOps
 from .base import ActiveInferenceModel, ModelState
 from .dispatcher import ActiveInferenceDispatcher, InferenceConfig, InferenceMethod, PolicyType
@@ -272,7 +273,7 @@ class HomeostaticInference(ActiveInferenceModel):
                 num_samples=int(inference.get("num_samples", 256)),
                 temperature=float(inference.get("temperature", 1.0)),
                 discount_factor=float(inference.get("discount_factor", 0.95)),
-                exploration_weight=float(inference.get("exploration_weight", 0.5)),
+                exploration_weight=float(inference.get("exploration_weight", 0.0)),
                 policy_limit=int(inference.get("policy_limit", 4096)),
                 seed=inference.get("seed", self.config.get("seed", 0)),
             ),
@@ -353,9 +354,7 @@ class HomeostaticInference(ActiveInferenceModel):
         the two spaces happen to have equal size.
         """
         target = self._target_vector()
-        likelihood = np.asarray(
-            self.config["observation_model"]["likelihood_matrix"], dtype=float
-        )
+        likelihood = np.asarray(self.config["observation_model"]["likelihood_matrix"], dtype=float)
         preferred_observations = self._normalize(
             likelihood @ target, self.observation_space.dimensions[0]
         )
@@ -371,7 +370,7 @@ class HomeostaticInference(ActiveInferenceModel):
         return posterior.copy()
 
     def step(self, action: int | None = None) -> tuple[int, float]:
-        selected_action = self.select_action() if action is None else int(action)
+        selected_action = self.select_action() if action is None else as_integer(action, "Action")
         transition = self.transition_model.get_transition_matrix(selected_action)
         self.state.beliefs = self._normalize(
             transition @ self.state.beliefs, self.state_space.dimensions[0]
@@ -463,8 +462,8 @@ class HomeostaticInference(ActiveInferenceModel):
         return values / total
 
     def _observation_vector(self, observation: int | np.ndarray, size: int) -> np.ndarray:
-        if np.isscalar(observation):
-            index = int(observation)
+        if np.ndim(observation) == 0:
+            index = as_integer(observation, "Observation")
             if not 0 <= index < size:
                 raise ValueError(f"Observation out of range: {index}")
             vector = np.zeros(size)

@@ -8,6 +8,8 @@ tags:
 - performance
 - practice
 - development
+aliases:
+  - skill_learning
 semantic_relations:
   - type: implements
     links:

@@ -14,6 +14,8 @@ tags:
 - computation
 - design
 - implementation
+aliases:
+  - cognitive_architectures
 semantic_relations:
   - type: implements
     links:

@@ -3,7 +3,7 @@ title: Knowledge Base Overview
 type: overview
 status: stable
 created: 2024-01-01
-updated: 2026-01-03
+updated: 2026-10-09
 tags:
   - knowledge_base
   - overview
@@ -13,6 +13,7 @@ semantic_relations:
   - type: organizes
     links:
       - "[[index]]"
+      - "[[knowledge_base/catalog]]"
       - "[[AGENTS]]"
       - "[[cognitive]]"
       - "[[mathematics]]"
@@ -29,6 +30,8 @@ semantic_relations:
 # Knowledge Base Overview
 
 A comprehensive knowledge base for cognitive modeling, integrating theoretical foundations, mathematical frameworks, and practical implementations across multiple disciplines. This repository serves as the central hub for understanding Active Inference and its applications in cognitive science, artificial intelligence, and complex systems research.
+
+To find a page by name or topic, start at the [[knowledge_base/catalog|catalog]]: it lists every page in every domain with its title and opening line.
 
 ## 🎯 Purpose
 

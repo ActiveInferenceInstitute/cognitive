@@ -221,6 +221,58 @@ MUTATIONS: tuple[Mutation, ...] = (
         tests=("code/tests/test_dispatcher_semantics.py",),
     ),
     Mutation(
+        name="posterior_treats_small_evidence_as_impossible",
+        path="code/tools/src/models/active_inference/generative_model.py",
+        original="        if evidence <= 0.0:\n",
+        mutated="        if evidence <= EPS:\n",
+        rationale=(
+            "Bayes' rule is scale-invariant. Comparing the evidence with a "
+            "tolerance discards a legitimate posterior whose likelihood is small."
+        ),
+        tests=("code/tests/test_boundary_validation.py",),
+    ),
+    Mutation(
+        name="entropy_floors_every_probability",
+        path="code/tools/src/utils/matrix_utils.py",
+        original=(
+            "        np.where(probabilities > 0, probabilities * "
+            "np.log(np.maximum(probabilities, EPS)), 0.0),\n"
+        ),
+        mutated=(
+            "        np.where(probabilities > 0, probabilities * "
+            "np.log(probabilities + EPS), 0.0),\n"
+        ),
+        rationale=(
+            "Adding a floor to every entry makes the entropy of a deterministic "
+            "distribution slightly negative."
+        ),
+        tests=("code/tests/test_boundary_validation.py",),
+    ),
+    Mutation(
+        name="index_conversion_truncates_fractions",
+        path="code/tools/src/utils/matrix_utils.py",
+        original="    if index != value:\n",
+        mutated="    if False:\n",
+        rationale="int(1.9) is 1: an index must be integral, not silently rounded down.",
+        tests=("code/tests/test_boundary_validation.py",),
+    ),
+    Mutation(
+        name="matrix_constraints_accept_non_finite_input",
+        path="code/tools/src/utils/matrix_utils.py",
+        original="    if values.size == 0 or not np.all(np.isfinite(values)):\n",
+        mutated="    if values.size == 0:\n",
+        rationale="A NaN column fails sum > EPS and is replaced by a uniform distribution.",
+        tests=("code/tests/test_boundary_validation.py",),
+    ),
+    Mutation(
+        name="landscape_grid_is_transposed",
+        path="code/tools/src/visualization/matrix_plots.py",
+        original='        X, Y = np.meshgrid(x, y, indexing="ij")\n',
+        mutated="        X, Y = np.meshgrid(x, y)\n",
+        rationale="The default xy indexing transposes the grid, so Z mismatches non-square input.",
+        tests=("code/tests/test_boundary_validation.py",),
+    ),
+    Mutation(
         name="term_policy_exemption_is_ignored",
         path="code/scripts/validate_docs.py",
         original="        if relative in exempt_paths:\n            continue\n",
@@ -256,8 +308,7 @@ def _run(tests: tuple[str, ...], root: Path, cache_prefix: Path) -> bool:
     environment = {
         key: value
         for key, value in os.environ.items()
-        if not key.startswith("COV_CORE")
-        and key != "PYTEST_DISABLE_PLUGIN_AUTOLOAD"
+        if not key.startswith("COV_CORE") and key != "PYTEST_DISABLE_PLUGIN_AUTOLOAD"
     }
     environment["PYTHONPYCACHEPREFIX"] = str(cache_prefix)
     # ``--no-cov`` requires the pytest-cov plugin to be loaded to be a
@@ -268,8 +319,21 @@ def _run(tests: tuple[str, ...], root: Path, cache_prefix: Path) -> bool:
     # contain "ERROR", and would be miscounted as a kill. Explicitly loading
     # the plugin makes the flag valid and the run meaningful.
     result = subprocess.run(
-        [sys.executable, "-B", "-m", "pytest", "-x", "-q", "--no-header",
-         "-p", "no:cacheprovider", "-p", "pytest_cov", "--no-cov", *tests],
+        [
+            sys.executable,
+            "-B",
+            "-m",
+            "pytest",
+            "-x",
+            "-q",
+            "--no-header",
+            "-p",
+            "no:cacheprovider",
+            "-p",
+            "pytest_cov",
+            "--no-cov",
+            *tests,
+        ],
         cwd=root,
         capture_output=True,
         text=True,
@@ -297,9 +361,7 @@ def check(root: Path | None = None, name_filter: str | None = None) -> dict[str,
     """Apply each mutation, run its tests, and restore the source."""
     repository = Path(root or REPO_ROOT).resolve()
     selected = [
-        mutation
-        for mutation in MUTATIONS
-        if name_filter is None or name_filter in mutation.name
+        mutation for mutation in MUTATIONS if name_filter is None or name_filter in mutation.name
     ]
     if not selected:
         raise ValueError(f"No mutation matches filter {name_filter!r}")

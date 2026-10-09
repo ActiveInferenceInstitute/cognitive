@@ -1,643 +1,101 @@
-# Project Structure
-
-## Overview
-
-This document outlines the comprehensive organization of the cognitive modeling framework, detailing the purpose and relationships between different components.
-
-## Core Directories
-
-### 📁 knowledge_base/
-
-Core knowledge organization and theoretical foundations
-
-#### Cognitive Domain
-
-- `cognitive/` - Core cognitive concepts
-
-  - `active_inference/` - Active Inference framework
-
-  - `belief_updating/` - Belief update mechanisms
-
-  - `policy_selection/` - Action selection algorithms
-
-  - `free_energy/` - Free Energy calculations
-
-  - `predictive_processing/` - Predictive processing theory
-
-#### Mathematical Domain
-
-- `mathematics/` - Mathematical foundations
-
-  - `probability/` - Probability theory
-
-  - `information_theory/` - Information theoretic concepts
-
-  - `optimization/` - Optimization methods
-
-  - `dynamical_systems/` - System dynamics
-
-#### Biological Domain
-
-- `biology/` - Biological foundations
-
-  - `neuroscience/` - Neuroscience concepts
-
-  - `evolution/` - Evolutionary theory
-
-  - `systems_biology/` - Systems biology principles
-
-#### Philosophical Domain
-
-- `philosophy/` - Philosophical foundations
-
-  - `epistemology/` - Theory of knowledge
-
-  - `metaphysics/` - Nature of reality
-
-  - `philosophy_of_mind/` - Mind theories
-
-#### Ontological Domain
-
-- `ontology/` - Knowledge organization
-
-  - `taxonomies/` - Classification systems
-
-  - `semantic_networks/` - Concept relationships
-
-  - `knowledge_graphs/` - Knowledge representation
-
-#### Agent Domain
-
-- `agents/` - Agent architectures
-
-  - `multi_agent/` - Multi-agent systems
-
-  - `agent_society/` - Agent social structures
-
-  - `cognitive_agents/` - Cognitive agent designs
-
-#### Citations
-
-- `citations/` - Research references
-
-  - `papers/` - Academic papers
-
-  - `books/` - Reference books
-
-  - `resources/` - Online resources
-
-#### BioFirm
-
-- `BioFirm/` - Biological firm theory
-
-  - `models/` - BioFirm models
-
-  - `analysis/` - BioFirm analysis
-
-### 📁 tools/
-
-Implementation code and utilities
-
-#### Source Code
-
-- `src/` - Source code implementation
-
-  - `models/` - Core modeling components
-
-    - `active_inference/` - Active Inference implementation
-
-    - `belief_models/` - Belief representation
-
-    - `policy_models/` - Policy implementation
-
-  - `analysis/` - Analysis tools
-
-    - `metrics/` - Performance metrics
-
-    - `network_analysis/` - Network analysis
-
-    - `simulations/` - Simulation frameworks
-
-  - `visualization/` - Visualization tools
-
-    - `state_space/` - State space visualization
-
-    - `belief_plots/` - Belief visualization
-
-    - `network_viz/` - Network visualization
-
-  - `utils/` - Utility functions
-
-    - `validation/` - Validation utilities
-
-    - `data_processing/` - Data handling
-
-    - `math_utils/` - Mathematical utilities
-
-### 📁 tests/
-
-Comprehensive test suite
-
-#### Test Categories
-
-- `unit/` - Unit tests
-
-  - `test_matrix_ops.py`
-
-  - `test_belief_updates.py`
-
-  - `test_policy_selection.py`
-
-- `integration/` - Integration tests
-
-  - `test_agent_environment.py`
-
-  - `test_learning_scenarios.py`
-
-- `visualization/` - Visualization tests
-
-  - `test_state_plots.py`
-
-  - `test_network_viz.py`
-
-### 📁 docs/
-
-Project documentation
-
-#### Documentation Types
-
-- `api/` - API documentation
-
-  - `reference/` - API reference
-
-  - `examples/` - API usage examples
-
-- `implementation/` - Implementation details
-
-  - `architecture/` - System architecture
-
-  - `algorithms/` - Algorithm documentation
-
-  - `data_structures/` - Data structure details
-
-- `development/` - Development guides
-
-  - `contributing/` - Contribution guidelines
-
-  - `style_guide/` - Coding standards
-
-  - `workflow/` - Development workflow
-
-- `examples/` - Usage examples
-
-  - `tutorials/` - Step-by-step guides
-
-  - `notebooks/` - Jupyter notebooks
-
-  - `case_studies/` - Applied examples
-
-- `research/` - Research foundations
-
-  - `papers/` - Research papers
-
-  - `concepts/` - Theoretical concepts
-
-  - `literature_reviews/` - Literature surveys
-
-- `config/` - Configuration documentation
-
-  - `settings/` - Settings reference
-
-  - `environment/` - Environment setup
-
-- `guides/` - User guides
-
-  - `quickstart/` - Getting started guides
-
-  - `advanced/` - Advanced usage
-
-- `repo_docs/` - Repository documentation
-
-  - `project_structure/` - Structure documentation
-
-  - `contribution_workflow/` - Contribution process
-
-- `templates/` - Documentation templates
-
-  - `api_template.md` - API documentation template
-
-  - `example_template.md` - Example template
-
-  - `tutorial_template.md` - Tutorial template
-
-- `tools/` - Tools documentation
-
-  - `utilities/` - Utility documentation
-
-  - `visualization/` - Visualization tools
-
-### 📁 notebooks/
-
-Jupyter notebooks for exploration and examples
-
-#### Notebook Categories
-
-- `tutorials/` - Tutorial notebooks
-
-  - `introduction/` - Introductory tutorials
-
-  - `advanced/` - Advanced concepts
-
-- `experiments/` - Experimental notebooks
-
-  - `simulations/` - Simulation experiments
-
-  - `analysis/` - Data analysis
-
-- `visualizations/` - Visualization notebooks
-
-  - `interactive/` - Interactive visualizations
-
-  - `static/` - Static visualizations
-
-### 📁 .benchmarks/
-
-Performance benchmarking
-
-#### Benchmark Categories
-
-- `performance/` - Performance tests
-
-- `scalability/` - Scalability tests
-
-- `comparison/` - Comparative benchmarks
-
-### 📁 Output/
-
-Generated outputs and results
-
-#### Output Types
-
-- `figures/` - Generated figures
-
-- `data/` - Output data
-
-- `reports/` - Generated reports
-
-### 📁 .obsidian/
-
-Obsidian vault configuration
-
-#### Obsidian Config
-
-- `plugins/` - Obsidian plugins
-
-- `themes/` - Visual themes
-
-- `templates/` - Note templates
-
-### 📁 Things/
-
-Implementation examples and specific cognitive model instances
-
-#### Model Implementations
-
-- `Generic_Thing/` - Generic cognitive model implementation
-
-- `Simple_POMDP/` - Simple POMDP implementations
-
-- `Generic_POMDP/` - Generic POMDP framework
-
-- `Continuous_Generic/` - Continuous state space models
-
-- `BioFirm/` - Biological firm simulations
-
-- `Ant_Colony/` - Ant colony optimization models
-
-- `Baseball_Game/` - Baseball game simulations
-
-- `Path_Network/` - Path network optimization
-
-- `ActiveInferenceInstitute/` - Active inference institute models
-
-- `KG_Multi_Agent/` - Knowledge graph multi-agent systems
-
-## Configuration Files
-
-### Primary Configuration
-
-- `config.yaml` - Main configuration file
-
-- `.gitignore` - Git ignored files
-
-- `LICENSE` - Project license
-
-- `.coverage` - Test coverage data
-
-### Documentation Files
-
-- `DOCUMENTATION_ROADMAP.md` - Documentation planning and roadmap
-
-- `InferAnt_Stream.md` - InferAnt stream documentation
-
-- `docs/README.md` - Documentation overview
-
-## File Organization
-
-### Naming Conventions
-
-- Use lowercase with underscores
-
-- Include category prefixes
-
-- Be descriptive and concise
-
-- Use consistent extensions (.md, .py, .ipynb)
-
-### File Structure
-
-- Include header metadata
-
-- Follow consistent organization
-
-- Maintain clear dependencies
-
-- Include proper documentation blocks
-
-### Version Control
-
-- Use meaningful commits
-
-- Group related changes
-
-- Track dependencies
-
-- Maintain clean branches
-
-- Follow gitflow workflow
-
-## Development Workflow
-
-### 1. Knowledge Development
-
-1. Create concept documentation
-
-1. Establish relationships
-
-1. Validate theoretical consistency
-
-1. Update dependencies
-
-1. Link to relevant literature
-
-### 2. Implementation
-
-1. Write core functionality
-
-1. Add unit tests
-
-1. Create integration tests
-
-1. Document API
-
-1. Add example usage
-
-### 3. Validation
-
-1. Run test suite
-
-1. Check coverage
-
-1. Validate relationships
-
-1. Review documentation
-
-1. Perform code reviews
-
-### 4. Deployment
-
-1. Update version
-
-1. Generate documentation
-
-1. Create release notes
-
-1. Deploy changes
-
-1. Monitor performance
-
-## Continuous Integration
-
-### CI Pipeline
-
-- Automated testing
-
-- Code quality checks
-
-- Documentation building
-
-- Dependency validation
-
-### CD Pipeline
-
-- Automated deployment
-
-- Release packaging
-
-- Version tagging
-
-- Changelog generation
-
-## Quality Assurance
-
-### Documentation Standards
-
-- Complete API documentation
-
-- Clear usage examples
-
-- Comprehensive guides
-
-- Up-to-date references
-
-- Consistent formatting
-
-### Testing Requirements
-
-- High test coverage
-
-- Integration testing
-
-- Property-based tests
-
-- Performance benchmarks
-
-- Regression tests
-
-### Code Quality
-
-- Follow style guide
-
-- Use type hints
-
-- Write clear comments
-
-- Maintain modularity
-
-- Apply SOLID principles
-
-## Data Management
-
-### Data Sources
-
-- External datasets
-
-- Generated data
-
-- Test data
-
-- Validation sets
-
-### Data Storage
-
-- File formats
-
-- Database schemas
-
-- Data versioning
-
-- Backup strategies
-
-## Obsidian Integration
-
-This repository is designed to work with Obsidian, a powerful knowledge management tool that enhances markdown with additional features.
-
-### Wiki-Style Links
-
-#### Internal Links
-
-- Use double brackets for internal links: `[[filename]]`
-
-- Link to specific sections: `[[filename#section]]`
-
-- Use aliases for different display text: `[[filename|Display Text]]`
-
-- Links work across the entire vault for easy navigation
-
-#### Link Examples
-
-- Link to a concept: `[[active_inference]]`
-
-- Link to section: `[[free_energy#Variational Free Energy]]`
-
-- Link with alias: `[[policy_selection|Action Selection Mechanisms]]`
-
-### Mermaid Diagrams
-
-Obsidian supports Mermaid diagrams for visual representations directly in markdown:
-
-#### Diagram Types
-
-- Flowcharts for processes
-
-- Sequence diagrams for interactions
-
-- Class diagrams for structure
-
-- State diagrams for state machines
-
-- Gantt charts for timelines
-
-#### Syntax Example
-
-```mermaid
-
-graph TD
-
-    A[Active Inference] --> B[Belief Updating]
-
-    A --> C[Policy Selection]
-
-    B --> D[Free Energy]
-
-    C --> D
-
-```
-
-#### Usage Guidelines
-
-- Keep diagrams focused and readable
-
-- Use consistent styling
-
-- Add comments for complex sections
-
-- Consider both light and dark themes
-
-### Obsidian Features
-
-#### Key Features
-
-- Backlinks showing references to the current note
-
-- Graph view for visualizing connections
-
-- Templates for consistent note creation
-
-- Daily notes for journaling progress
-
-- Plugins for extended functionality
-
-#### Best Practices
-
-- Create consistent templates for different content types
-
-- Use tags for additional categorization: #concept, #implementation
-
-- Leverage dataview queries for dynamic content
-
-- Create MOCs (Maps of Content) for navigation hubs
-
-- Use consistent metadata in YAML frontmatter
-
-## References
-
-### Documentation
-
-- Project style guide
-
-- API documentation
-
-- Testing guide
-
-- Contribution guide
-
-### Dependencies
-
-- requirements.txt
-
-- setup.py
-
-- environment.yml
-
-- Dockerfile
-
-- pyproject.toml
-
-### External Resources
-
-- Literature references
-
-- Related projects
-
-- Community resources
-
-- Learning materials
-
+---
+title: Project Structure
+type: reference
+status: stable
+updated: 2026-10-09
 ---
 
-> [!note] Open Source and Licensing
-> Repository: [ActiveInferenceInstitute/cognitive](https://github.com/ActiveInferenceInstitute/cognitive)
-> - Documentation and knowledge base content: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-> - Code and examples: MIT License (see `LICENSE`)
+# Project Structure
 
+The repository is two things at once: a Python package with its validation
+tooling, and an Obsidian vault of linked Markdown. This page maps both. Every
+directory named below exists; the quality gates in
+[`README.md`](README.md#quality-gates) fail when a documented link stops
+resolving.
+
+## Top level
+
+| Path | Purpose |
+|------|---------|
+| `code/` | Python source, tests, and tooling scripts |
+| `knowledge_base/` | The theory vault: concepts, mathematics, biology, philosophy, ontology |
+| `docs/` | Guides, API notes, the executable manuscript, templates, and repository policy |
+| `config.yaml` | Default inference, visualization, and logging parameters |
+| `pyproject.toml` | Package metadata, entry points, ruff, mypy, pytest, and coverage configuration |
+| `CHANGELOG.md` | Release notes; entries that change a computed result are marked **behaviour change** |
+| tracked backlog file | Open work only; the documentation policy forbids work markers elsewhere |
+| `REVIEW_LOG_*.md` | Dated review records |
+| `AGENTS.md`, `CLAUDE.md` | Operating guidance for AI agents working in the repository |
+| `.github/workflows/quality.yml` | CI: tests, static checks, documentation gates, manuscript build, mutation gate, packaging |
+| `.obsidian/` | Vault settings so the Markdown opens as a graph |
+
+## `code/`
+
+| Path | Contents |
+|------|----------|
+| `code/tools/src/` | Installed as the `cognitive` package |
+| `code/tools/src/models/active_inference/` | `ActiveInferenceModel` base class, `ActiveInferenceDispatcher`, `DiscreteGenerativeModel`, and the homeostatic module |
+| `code/tools/src/models/matrices/` | `MatrixOps`, `MatrixLoader`, `MatrixInitializer` |
+| `code/tools/src/utils/` | Matrix helpers, node creation, network visualization |
+| `code/tools/src/visualization/` | `MatrixPlotter`, `StateSpacePlotter`, `NetworkPlotter` |
+| `code/tools/src/benchmarks.py` | The `cognitive-benchmark` runner |
+| `code/Things/` | Installed as the `Things` package. `Simple_POMDP` and `Continuous_Generic` are executable; the other folders hold documentation for agent designs (`Generic_Thing`, `Ant_Colony`, `BioFirm`, `Path_Network`, `KG_Multi_Agent`, and others) |
+| `code/scripts/` | Installed as `scripts`: `validate_docs`, `verify_links`, `check_markdown_links`, `normalize_frontmatter`, `kb_index`, `build_manuscript`, `mutation_check` |
+| `code/tests/` | The centralized suite; `conftest.py` holds the shared fixtures and sets the Matplotlib `Agg` backend |
+
+Console scripts declared in `pyproject.toml`: `cognitive-create-node`,
+`cognitive-verify-links`, `cognitive-validate-docs`,
+`cognitive-normalize-frontmatter`, `cognitive-kb-index`, `cognitive-benchmark`,
+`cognitive-build-manuscript`, `cognitive-mutation-check`.
+
+## `knowledge_base/`
+
+Each domain folder carries a generated `catalog.md` listing every page beneath
+it with its title and opening line; [`knowledge_base/catalog.md`](knowledge_base/catalog.md)
+lists the domains. Start there to find a page, or at
+[`knowledge_base/index.md`](knowledge_base/index.md) to read in order.
+
+| Domain | Subject |
+|--------|---------|
+| `cognitive/` | Cognitive science, neuroscience, and psychology as they bear on Active Inference |
+| `mathematics/` | Probability, information theory, optimization, dynamical systems, geometry, worked examples |
+| `free_energy_principle/` | The free-energy principle by sub-field: mathematics, biology, systems, applications, implementations |
+| `agents/` | Agent architectures: generic POMDP, continuous time, and related designs |
+| `biology/` | Biological foundations, homeostasis, ecology, social insects |
+| `systems/` | Complex systems, swarms, self-organization, governance and infrastructure topics |
+| `philosophy/` | Epistemology and philosophy of science relevant to the framework |
+| `ontology/` | Formal ontologies of the vault's own concepts |
+| `research/` | Active research areas and their open questions |
+| `citations/` | One note per cited work |
+| `BioFirm/` | Biological firm theory and its Active Inference formulation |
+
+Cross-cutting pages at the top of the folder: `glossary.md`,
+`learning_roadmap.md`, `linking_standards.md`, `quality_assessment.md`.
+
+Conventions are in [`linking_standards.md`](knowledge_base/linking_standards.md):
+YAML frontmatter on every page, `semantic_relations` links written as quoted
+wiki links (`"[[page]]"`), and `[[wiki links]]` for internal references. The
+frontmatter rule and catalog freshness are enforced by `validate_docs`.
+
+## `docs/`
+
+| Path | Contents |
+|------|----------|
+| `docs/guides/` | Learning paths and how-to guides |
+| `docs/api/` | API notes for the package |
+| `docs/examples/` | Examples, with an explicit boundary between conceptual and executable ones |
+| `docs/manuscript/` | The executable manuscript source, built by `cognitive-build-manuscript` |
+| `docs/implementation/` | Implementation notes, including RxInfer integration |
+| `docs/research/` | Research notes and plans |
+| `docs/repo_docs/` | How this repository is organized and maintained |
+| `docs/templates/` | Page templates for new knowledge-base and documentation files |
+| `docs/tools/` | One page per tool in the quality toolchain |
+| `docs/config/`, `docs/development/`, `docs/agents/` | Configuration, contributor workflow, agent guidance |
+| `docs/policy/` | The forbidden-term policy read by `validate_docs` |
+
+## Conventions that apply everywhere
+
+- Every folder has an `AGENTS.md` (technical detail) and a `README.md` (overview and navigation).
+- Python files and methods use `snake_case`, public functions carry type hints and docstrings, and names avoid non-semantic adjectives such as `enhanced_` or `new_`.
+- Tests use real computation; the suite writes artifacts only to temporary directories.
+- Code is MIT licensed (see `LICENSE`); the documentation licence is stated in [`docs/README.md`](docs/README.md).

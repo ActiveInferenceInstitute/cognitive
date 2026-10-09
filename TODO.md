@@ -3,7 +3,7 @@ title: Cognitive Active Inference — Documentation Backlog
 type: backlog
 status: active
 owner: Active Inference Institute
-last_reviewed: 2026-08-18
+last_reviewed: 2026-10-09
 ---
 
 # Documentation backlog
@@ -105,6 +105,39 @@ entropy axis mismatch, a coverage report filtered to five of twenty-five
 modules, a documentation gate that evaded its own scan, a rewriter that
 enforced the gate by renaming, an inert `exploration_weight`, and a published
 figure that could not distinguish its own actions.
+
+## Knowledge-base and tooling pass — 2026-10-09
+
+Recorded in [`REVIEW_LOG_2026-10-09.md`](REVIEW_LOG_2026-10-09.md). Closed in
+that pass: nested-list `semantic_relations` frontmatter on 753 pages, fenced
+link examples flattened by the 2026-08-02 pass, an expected-free-energy
+decomposition that contradicted the package, 158 missing concept pages, 72
+one-paragraph pages, a project-structure map of directories that do not exist, fictional
+API and agent pages in `docs/`, and eleven boundary and numerical defects in
+`code/` (listed in `CHANGELOG.md` under `[Unreleased]`).
+
+## Open
+
+- Verify the references on the pages written or expanded on 2026-10-09; they
+  were compiled from memory and not checked against the sources.
+- About 7,300 distinct `[[concept]]` link targets still have no page, 510 of
+  them linked three or more times. Write the ones that are real concepts and
+  unlink the ones that are not (`new_methods`, `validation_framework`,
+  `version_control`).
+- About fifty pages open with a formula and appear in their catalog by title
+  only; give them a `description:` in frontmatter.
+- Suspected, unproven, in `code/`: `AdaptiveControl.compute_policy_prior`
+  ignores `prediction_error`; `SimplePOMDP` accepts `inference.seed`,
+  `temperature` and horizon keys it does not use; precision learning in
+  `ContinuousActiveInference` is unbounded; `goal_prior` is scaled by
+  `1/temperature` in variational and sampling modes but not in mean-field.
+- Heading-anchor collection in `verify_links.py` and `check_markdown_links.py`
+  uses a non-greedy fence regex, so a comment inside a nested or unterminated
+  fence is still read as a heading. A line-based fence tracker would fix both.
+- The `EPS` floor in the dispatcher, homeostatic, `MatrixOps` and
+  `ensure_matrix_properties` normalizers still treats total mass below `1e-12`
+  as empty; only `DiscreteGenerativeModel.posterior` and `SimplePOMDP` were fixed.
+- `code/Things/README.md` lists code-less folders as active implementations.
 
 ## Open / deferred
 

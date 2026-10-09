@@ -3,7 +3,7 @@ title: Documentation instructions
 type: agents
 status: stable
 created: 2024-01-01
-updated: 2026-08-02
+updated: 2026-10-09
 tags:
   - documentation
   - agents
@@ -24,6 +24,9 @@ semantic_relations:
       - "[[templates/README|Templates]]"
       - "[[repo_docs/README|Repository documentation]]"
       - "[[manuscript/README|Manuscript]]"
+      - "[[agents/README|Agent documentation]]"
+      - "[[policy/README|Documentation term policy]]"
+      - "[[DOCUMENTATION_ROADMAP|Documentation roadmap]]"
 ---
 
 # Documentation instructions
@@ -38,6 +41,7 @@ conceptual and educational material. Keep the two clearly separated.
 - `docs/manuscript/README.md` — the executable end-to-end example.
 - `docs/api/README.md` — API documentation policy and reference.
 - `docs/repo_docs/getting_started.md` — fresh-checkout setup.
+- `docs/DOCUMENTATION_ROADMAP.md` — folder map, gates, open documentation work.
 
 ## Authoring rules
 
@@ -48,14 +52,22 @@ conceptual and educational material. Keep the two clearly separated.
 - Keep YAML frontmatter valid; use wiki links for cross-references. Do not
   invent file paths, citation keys, statistics, or external URLs.
 - When a page documents a command, run it first and record real output.
+- Quote `semantic_relations` links (`"[[page]]"`); unquoted links are rejected.
+- Avoid the words listed in `docs/policy/documentation_terms.yaml`; the gate
+  rejects them anywhere in tracked text.
+- Run a changed Python example before keeping it; the gate only compiles it.
 
 ## Validation
 
 ```bash
 python code/scripts/validate_docs.py --json
 python code/scripts/verify_links.py . --json
+python code/scripts/normalize_frontmatter.py --check .
+python code/scripts/kb_index.py --check .
 ```
 
-The first checks frontmatter, Python fenced blocks, public exports, and
-manuscript references. The second checks explicit file-like wiki links. See
+The first is the aggregate gate (frontmatter, Python fences, public exports,
+term policy, wiki and Markdown links, knowledge-base catalogs, manuscript
+references). The second checks explicit file-like wiki links. The last two are
+also run by the first; each accepts `--write` to apply its fix. See
 `docs/development/README.md` for the full development loop.

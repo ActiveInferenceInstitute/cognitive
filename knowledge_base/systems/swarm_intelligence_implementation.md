@@ -1,7 +1,7 @@
 ---
 title: "Swarm Intelligence Implementation"
 type: redirect
-redirect: "[[swarm_intelligence_implementation]]"
+redirect: "[[knowledge_base/swarm_intelligence_implementation]]"
 ---
 
-See [[swarm_intelligence_implementation|Swarm Intelligence Implementation]]
+See [[knowledge_base/swarm_intelligence_implementation|Swarm Intelligence Implementation]]

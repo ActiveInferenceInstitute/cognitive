@@ -189,9 +189,7 @@ class ContinuousActiveInference:
         updates[:, 0] = sensory_gradient
         for order in range(self.n_orders - 1):
             dynamic_error = means[:, order + 1] - self.dynamics_matrix @ means[:, order]
-            weighted = (
-                self.dynamics_weight * self.state.belief_precisions[:, order] * dynamic_error
-            )
+            weighted = self.dynamics_weight * self.state.belief_precisions[:, order] * dynamic_error
             updates[:, order] += self.dynamics_matrix.T @ weighted
             updates[:, order + 1] -= weighted
         means += self.dt * self.alpha * updates

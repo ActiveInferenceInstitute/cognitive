@@ -25,8 +25,9 @@ optimization, and the mathematical formulation of active inference.
 
 ## Documents
 
-The folder contains the domain's concept pages (approximately 150 files; see
-`README.md` for full navigation). Core entries include active inference
+The folder contains the domain's concept pages (every page is listed in
+[[knowledge_base/mathematics/catalog|catalog]]; `README.md` gives the guided
+navigation). Core entries include active inference
 theory, free energy theory, the POMDP formulation, the active inference loop,
 and foundational probability material.
 

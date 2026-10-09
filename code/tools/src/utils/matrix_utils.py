@@ -7,6 +7,23 @@ import numpy as np
 EPS = 1e-12
 
 
+def as_integer(value: object, name: str) -> int:
+    """Return ``value`` as an ``int`` or raise ``ValueError`` if it is not integral.
+
+    ``int(1.9)`` is ``1``, so converting an index with ``int`` alone silently
+    selects a different action or observation than the caller named. Integral
+    floats such as ``1.0`` and NumPy integers are accepted; fractional,
+    non-finite, and non-numeric values are rejected.
+    """
+    try:
+        index = int(value)
+    except (TypeError, ValueError, OverflowError) as exc:
+        raise ValueError(f"{name} must be an integer, got {value!r}") from exc
+    if index != value:
+        raise ValueError(f"{name} must be an integer, got {value!r}")
+    return index
+
+
 def _probability(values: np.ndarray, name: str, axis: int = 0) -> np.ndarray:
     """Normalize ``values`` into a probability distribution along ``axis``."""
     array = np.asarray(values, dtype=float)
@@ -22,8 +39,17 @@ def ensure_matrix_properties(
     matrix: np.ndarray,
     constraints: list[str] | str | None = None,
 ) -> np.ndarray:
-    """Apply explicitly requested non-negativity and stochastic constraints."""
+    """Apply explicitly requested non-negativity and stochastic constraints.
+
+    The input must be non-empty and finite: a NaN column would otherwise fail
+    the ``sum > EPS`` test and be replaced by a uniform distribution, turning
+    corrupt data into a plausible-looking result. A stochastic constraint also
+    requires non-negative entries; request ``"non_negative"`` as well to clip
+    negative values first.
+    """
     values = np.asarray(matrix, dtype=float)
+    if values.size == 0 or not np.all(np.isfinite(values)):
+        raise ValueError("matrix must be non-empty and finite")
     requested = (
         []
         if constraints is None
@@ -39,6 +65,11 @@ def ensure_matrix_properties(
         values = np.maximum(values, 0.0)
     if "column_stochastic" in requested and "row_stochastic" in requested:
         raise ValueError("Choose one stochastic orientation")
+    if ({"column_stochastic", "row_stochastic"} & set(requested)) and np.any(values < 0):
+        raise ValueError(
+            "stochastic constraints require non-negative entries; "
+            "add 'non_negative' to clip negative values first"
+        )
     if "column_stochastic" in requested:
         sums = values.sum(axis=0, keepdims=True)
         values = np.divide(
@@ -57,11 +88,14 @@ def compute_entropy(distribution: np.ndarray, axis: int = -1) -> np.ndarray:
 
     Normalization and summation share ``axis``, so entropies of a matrix's rows
     are computed from row-normalized values rather than from values normalized
-    along some other axis.
+    along some other axis. Zero-probability outcomes contribute nothing, so a
+    deterministic distribution has entropy exactly zero rather than a value
+    slightly below it.
     """
     probabilities = _probability(distribution, "distribution", axis=axis)
     return -np.sum(
-        np.where(probabilities > 0, probabilities * np.log(probabilities + EPS), 0.0), axis=axis
+        np.where(probabilities > 0, probabilities * np.log(np.maximum(probabilities, EPS)), 0.0),
+        axis=axis,
     )
 
 
@@ -113,10 +147,11 @@ def expected_free_energy(
         np.asarray(A, dtype=float), ["column_stochastic", "non_negative"]
     )
     transition = np.asarray(B, dtype=float)
-    if transition.ndim != 3 or not 0 <= int(action) < transition.shape[2]:
+    action_index = as_integer(action, "action")
+    if transition.ndim != 3 or not 0 <= action_index < transition.shape[2]:
         raise ValueError("B must be (states, states, actions) and action must be valid")
     transitions = ensure_matrix_properties(
-        transition[:, :, int(action)], ["column_stochastic", "non_negative"]
+        transition[:, :, action_index], ["column_stochastic", "non_negative"]
     )
     prior = _probability(np.asarray(beliefs, dtype=float).reshape(-1), "beliefs")
     predicted_states = transitions @ prior
@@ -128,6 +163,7 @@ def expected_free_energy(
 
 
 __all__ = [
+    "as_integer",
     "compute_entropy",
     "ensure_matrix_properties",
     "expected_free_energy",

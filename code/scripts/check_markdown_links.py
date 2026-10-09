@@ -96,7 +96,8 @@ def _heading_slugs(path: Path) -> set[str]:
     except OSError:
         return set()
     slugs: set[str] = set()
-    for line in content.splitlines():
+    # A "# comment" inside a fenced block is not a heading and cannot be an anchor.
+    for line in CODE_BLOCK_PATTERN.sub("", content).splitlines():
         match = re.match(r"^\s{0,3}(#{1,6})\s+(.+?)\s*#*\s*$", line)
         if match:
             slugs.add(gfm_slug(match.group(2)))
@@ -149,9 +150,7 @@ def verify_markdown_link_report(root_dir: str | Path) -> MarkdownLinkReport:
             report.checked_links += 1
 
             # Allow generated manuscript figures.
-            if rel_source.startswith(MANUSCRIPT_DIR.as_posix()) and target.startswith(
-                "figures/"
-            ):
+            if rel_source.startswith(MANUSCRIPT_DIR.as_posix()) and target.startswith("figures/"):
                 continue
 
             anchor = None

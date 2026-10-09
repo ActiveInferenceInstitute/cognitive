@@ -146,7 +146,8 @@ def _heading_slugs(filepath: Path) -> set[str]:
         content = filepath.read_text(encoding="utf-8")
     except OSError:
         return slugs
-    for line in content.splitlines():
+    # A "# comment" inside a fenced block is not a heading and cannot be an anchor.
+    for line in CODE_BLOCK_PATTERN.sub("", content).splitlines():
         stripped = line.strip()
         if not stripped.startswith("#") or stripped.startswith("#!"):
             continue

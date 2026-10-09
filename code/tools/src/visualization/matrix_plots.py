@@ -93,6 +93,10 @@ class MatrixPlotter:
     ) -> plt.Figure:
         """Plot 3D tensor as multiple heatmaps."""
         n_slices = tensor.shape[0]
+        if len(slice_names) < n_slices:
+            raise ValueError(
+                f"slice_names must name each of the {n_slices} slices, got {len(slice_names)}"
+            )
         fig, axes = plt.subplots(1, n_slices, figsize=(5 * n_slices, 4))
 
         if n_slices == 1:
@@ -169,6 +173,11 @@ class MatrixPlotter:
         Returns:
             Matplotlib axes object
         """
+        num_states = beliefs.shape[1]
+        if state_labels is not None and len(state_labels) < num_states:
+            raise ValueError(
+                f"state_labels must name each of the {num_states} states, got {len(state_labels)}"
+            )
         if ax is None:
             _, ax = plt.subplots(figsize=self.figure_size)
 
@@ -278,6 +287,11 @@ class StateSpacePlotter:
         self, beliefs: np.ndarray, title: str, state_labels: list[str], save_name: str | None = None
     ) -> plt.Figure:
         """Plot belief evolution over time."""
+        if len(state_labels) < beliefs.shape[1]:
+            raise ValueError(
+                f"state_labels must name each of the {beliefs.shape[1]} states, "
+                f"got {len(state_labels)}"
+            )
         fig, ax = plt.subplots(figsize=(10, 6))
 
         time_steps = range(beliefs.shape[0])
@@ -303,7 +317,9 @@ class StateSpacePlotter:
 
         x = np.arange(free_energy.shape[0])
         y = np.arange(free_energy.shape[1])
-        X, Y = np.meshgrid(x, y)
+        # "ij" indexing keeps X, Y and Z all shaped (rows, columns); the default
+        # "xy" indexing transposes the grid and fails for any non-square array.
+        X, Y = np.meshgrid(x, y, indexing="ij")
 
         surf = ax.plot_surface(X, Y, free_energy, cmap="viridis")
         fig.colorbar(surf)
@@ -347,10 +363,16 @@ class StateSpacePlotter:
 class NetworkPlotter:
     """Utility class for network visualization."""
 
-    def __init__(self, save_dir: Path | None = None):
-        """Initialize plotter with save directory."""
+    def __init__(self, save_dir: Path | None = None, seed: int = 0):
+        """Initialize plotter with save directory and a layout seed.
+
+        Args:
+            save_dir: Directory for saved figures; defaults to the working directory
+            seed: Seed for the spring layout, so the same graph draws the same way
+        """
         self.save_dir = Path(save_dir) if save_dir else Path.cwd()
         self.save_dir.mkdir(parents=True, exist_ok=True)
+        self.seed = seed
 
     def plot_message_network_dynamics(
         self,
@@ -384,7 +406,7 @@ class NetworkPlotter:
         fig, ax = plt.subplots(figsize=(10, 8))
 
         # Draw network
-        pos = nx.spring_layout(G)
+        pos = nx.spring_layout(G, seed=self.seed)
         nx.draw_networkx_nodes(G, pos, node_color="lightblue", node_size=500, alpha=0.8)
         nx.draw_networkx_labels(G, pos)
 

@@ -8,6 +8,8 @@ tags:
 - perception
 - vision
 - neuroscience
+aliases:
+  - visual_processing
 semantic_relations:
   - type: implements
     links:

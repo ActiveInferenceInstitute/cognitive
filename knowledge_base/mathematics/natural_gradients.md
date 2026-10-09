@@ -6,6 +6,8 @@ created: 2025-08-08
 tags:
 - optimization
 - information-geometry
+aliases:
+  - natural_gradient
 semantic_relations:
   - type: relates
     links:

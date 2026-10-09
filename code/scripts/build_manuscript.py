@@ -448,9 +448,7 @@ def _render(
 
 def _is_build_output(path: Path) -> bool:
     """True when the path looks like an artifact produced by this builder."""
-    return (path / "build_manifest.json").is_file() or (
-        path / "figure_registry.json"
-    ).is_file()
+    return (path / "build_manifest.json").is_file() or (path / "figure_registry.json").is_file()
 
 
 def _prepare_output(output: Path) -> None:

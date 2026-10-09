@@ -22,7 +22,7 @@ semantic_relations:
 
 # Systems Theory Knowledge Base
 
-This knowledge base contains 46 comprehensive documents covering systems theory, complex systems, emergence, network dynamics, and related concepts essential for understanding complex adaptive systems in cognitive modeling and Active Inference.
+This knowledge base covers systems theory, complex systems, emergence, network dynamics, and related concepts essential for understanding complex adaptive systems in cognitive modeling and Active Inference. Every page is listed in the [[knowledge_base/systems/catalog|catalog]].
 
 ## 🔄 Overview
 

@@ -57,23 +57,32 @@ where:
 
 ### 2. Decomposition
 
-A common and numerically stable decomposition separates risk (preference mismatch) and ambiguity (expected observation uncertainty):
+The canonical decomposition separates risk (preference mismatch) and ambiguity (expected observation uncertainty):
 
 ```math
 
-\begin{aligned}
-
 G(\pi,\tau)
-
-&= \underbrace{\mathbb{E}_{q(o_\tau|\pi)}\big[ D_{\mathrm{KL}}\big(q(s_\tau\mid o_\tau,\pi)\,\|\,q(s_\tau\mid \pi)\big)\big]}_{\text{Epistemic value (information gain)}} \\
-
-&\quad + \underbrace{D_{\mathrm{KL}}\big(q(o_\tau\mid \pi)\,\|\,p(o_\tau)\big)}_{\text{Risk (preference mismatch)}} \\
-
-&\equiv \text{Ambiguity} + \text{Risk}
-
-\end{aligned}
+= \underbrace{D_{\mathrm{KL}}\big(q(o_\tau\mid \pi)\,\|\,p(o_\tau)\big)}_{\text{Risk (preference mismatch)}}
++ \underbrace{\mathbb{E}_{q(s_\tau\mid \pi)}\big[ H[p(o_\tau\mid s_\tau)] \big]}_{\text{Ambiguity}}
 
 ```
+
+Ambiguity already contains the expected information gain. With the joint
+$q(s_\tau, o_\tau) = q(s_\tau\mid\pi)\,p(o_\tau\mid s_\tau)$, the mutual
+information $I(s_\tau; o_\tau) = \mathbb{E}_{q(o_\tau\mid\pi)}\big[ D_{\mathrm{KL}}\big(q(s_\tau\mid o_\tau,\pi)\,\|\,q(s_\tau\mid \pi)\big)\big]$
+is the epistemic value, and
+
+```math
+
+\text{Ambiguity} = H[q(o_\tau\mid\pi)] - I(s_\tau; o_\tau),
+\qquad
+G(\pi,\tau) = -\mathbb{E}_{q(o_\tau\mid\pi)}\big[\ln p(o_\tau)\big] - I(s_\tau; o_\tau).
+
+```
+
+The epistemic value is therefore a diagnostic of the same quantity, not a third
+term to add to risk and ambiguity. The package reports it separately and does
+not subtract it a second time; see `CHANGELOG.md`, "Corrected mathematics".
 
 where:
 

@@ -23,7 +23,7 @@ semantic_relations:
 
 # Cognitive Science Knowledge Base
 
-This knowledge base contains 213 comprehensive documents covering cognitive science, neuroscience, psychology, and related fields as they pertain to Active Inference and cognitive modeling. The content is organized thematically and extensively cross-linked for optimal navigation.
+This knowledge base covers cognitive science, neuroscience, psychology, and related fields as they pertain to Active Inference and cognitive modeling. The content is organized thematically and extensively cross-linked for optimal navigation. Every page is listed in the [[knowledge_base/cognitive/catalog|catalog]].
 
 ## 🧠 Overview
 
@@ -251,7 +251,7 @@ The cognitive science knowledge base provides theoretical foundations and empiri
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 173 comprehensive documents
+- **Coverage**: every page is listed in the [[knowledge_base/cognitive/catalog|catalog]]
 - **Cross-Linking**: Extensive bidirectional references
 - **Theoretical Depth**: From neural mechanisms to social cognition
 - **Implementation Relevance**: Direct connections to agent architectures

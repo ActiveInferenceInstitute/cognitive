@@ -24,7 +24,7 @@ semantic_relations:
 
 ## Overview
 
-The mathematical foundations knowledge base provides comprehensive theoretical and practical resources for Active Inference and cognitive modeling. This collection of 150+ documents spans probability theory, information theory, dynamical systems, optimization, geometry, and advanced mathematical concepts essential for understanding and implementing sophisticated cognitive systems.
+The mathematical foundations knowledge base provides comprehensive theoretical and practical resources for Active Inference and cognitive modeling. This collection spans probability theory, information theory, dynamical systems, optimization, geometry, and advanced mathematical concepts essential for understanding and implementing sophisticated cognitive systems. Every page is listed in the [[knowledge_base/mathematics/catalog|catalog]].
 
 ## Key Features
 

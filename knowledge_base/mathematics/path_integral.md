@@ -8,6 +8,9 @@ tags:
 - path_integrals
 - stochastic_processes
 - optimization
+aliases:
+  - feynman_path_integral
+  - path_integrals
 semantic_relations:
   - type: foundation_for
     links:

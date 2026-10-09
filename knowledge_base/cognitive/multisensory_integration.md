@@ -8,6 +8,8 @@ tags:
 - perception
 - integration
 - sensory_processing
+aliases:
+  - sensory_integration
 semantic_relations:
   - type: implements
     links:

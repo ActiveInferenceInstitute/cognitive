@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import yaml
 from cognitive.models.active_inference.generative_model import DiscreteGenerativeModel
+from cognitive.utils.matrix_utils import as_integer
 
 EPS = 1e-12
 
@@ -103,7 +104,9 @@ class SimplePOMDP:
 
         self._validate_matrices()
 
-        initial_state = int(self.config["state_space"].get("initial_state", 0))
+        initial_state = as_integer(
+            self.config["state_space"].get("initial_state", 0), "initial_state"
+        )
         self.state = SimplePOMDPState(current_state=initial_state, beliefs=self.D.copy())
         self.plotter = _SimplePOMDPPlotter(self)
 
@@ -246,13 +249,11 @@ class SimplePOMDP:
             if matrix.ndim == 3:
                 raise ValueError("B_matrix uses column_stochastic, not row_stochastic")
             return self._row_normalize(matrix)
-        if constraint in {"sum_to_one", "non_negative"}:
-            if constraint == "sum_to_one":
-                total = float(matrix.sum())
-                if total <= EPS:
-                    raise ValueError("sum_to_one cannot normalize an all-zero matrix")
-                return matrix / total
-            return np.maximum(matrix, 0.0)
+        if constraint == "sum_to_one":
+            total = float(matrix.sum())
+            if total <= EPS:
+                raise ValueError("sum_to_one cannot normalize an all-zero matrix")
+            return matrix / total
         raise ValueError(f"Unsupported matrix constraint: {constraint}")
 
     @staticmethod
@@ -311,7 +312,9 @@ class SimplePOMDP:
         if self.E.shape != (num_actions,):
             raise ValueError("E matrix must define one prior per action")
         self.E = _normalize(self.E)
-        initial_state = int(self.config["state_space"].get("initial_state", 0))
+        initial_state = as_integer(
+            self.config["state_space"].get("initial_state", 0), "initial_state"
+        )
         if not 0 <= initial_state < num_states:
             raise ValueError("initial_state is out of range")
 
@@ -319,7 +322,7 @@ class SimplePOMDP:
         if action is None:
             action, _ = self._select_action()
         else:
-            action = int(action)
+            action = as_integer(action, "Action")
         if not 0 <= action < self.config["action_space"]["num_actions"]:
             raise ValueError(f"Action out of range: {action}")
 
@@ -352,7 +355,9 @@ class SimplePOMDP:
 
     def reset(self) -> None:
         """Reset beliefs, time, and history to the configured prior."""
-        initial_state = int(self.config["state_space"].get("initial_state", 0))
+        initial_state = as_integer(
+            self.config["state_space"].get("initial_state", 0), "initial_state"
+        )
         self.state = SimplePOMDPState(initial_state, self.D.copy())
 
     def save_state(self, path: str | Path) -> Path:
@@ -383,7 +388,7 @@ class SimplePOMDP:
             payload = yaml.safe_load(state_file)
         if not isinstance(payload, dict) or payload.get("schema_version") != 1:
             raise ValueError("Unsupported or malformed POMDP state")
-        current_state = int(payload["current_state"])
+        current_state = as_integer(payload["current_state"], "current_state")
         beliefs = _normalize(np.asarray(payload["beliefs"], dtype=float))
         if current_state < 0 or current_state >= self.B.shape[0] or beliefs.shape != self.D.shape:
             raise ValueError("Saved state dimensions are incompatible with this model")
@@ -393,7 +398,7 @@ class SimplePOMDP:
         self.state = SimplePOMDPState(
             current_state=current_state,
             beliefs=beliefs,
-            time_step=int(payload["time_step"]),
+            time_step=as_integer(payload["time_step"], "time_step"),
             history={key: list(values) for key, values in history.items()},
         )
 
@@ -404,7 +409,15 @@ class SimplePOMDP:
     def _update_beliefs(self, observation: int, action: int) -> float:
         predicted = self.B[:, :, action] @ self.state.beliefs
         likelihood = self.A[observation, :]
-        posterior = _normalize(predicted * likelihood)
+        # Divide by the evidence itself, not through _normalize, whose EPS floor
+        # would replace a small but positive posterior mass with a uniform belief.
+        unnormalized = predicted * likelihood
+        evidence_mass = float(unnormalized.sum())
+        posterior = (
+            unnormalized / evidence_mass
+            if evidence_mass > 0.0
+            else np.full(unnormalized.shape, 1.0 / unnormalized.size)
+        )
         learning_rate = float(self.config["inference"].get("learning_rate", 1.0))
         learning_rate = float(np.clip(learning_rate, 0.0, 1.0))
         self.state.beliefs = _normalize(

@@ -8,6 +8,8 @@ tags:
 - perception
 - integration
 - computation
+aliases:
+  - feature_binding
 semantic_relations:
   - type: implements
     links:

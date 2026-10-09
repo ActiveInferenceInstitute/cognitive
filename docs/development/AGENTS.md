@@ -3,7 +3,7 @@ title: Development documentation instructions
 type: agents
 status: stable
 created: 2024-01-01
-updated: 2026-08-02
+updated: 2026-10-09
 tags:
   - development
   - agents
@@ -27,13 +27,16 @@ automated development agents.
 
 ```bash
 python -m pip install -e ".[dev]"
-python -m pytest -q
+python -m pytest -q --cov
 ruff check .
 mypy code/tools/src code/Things code/scripts
 python -m compileall -q code
 python code/scripts/validate_docs.py --json
 python code/scripts/verify_links.py . --json
 ```
+
+The complete loop, including the manuscript build, benchmark, and mutation
+check, is in `docs/development/README.md`.
 
 ## Conventions
 
