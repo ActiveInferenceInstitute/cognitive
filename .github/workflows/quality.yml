@@ -35,8 +35,27 @@ jobs:
       # Installing the document toolchain lets the manuscript render test run
       # in CI instead of skipping; the PDF render still skips because the
       # runner has no XeLaTeX, and only the HTML render is asserted there.
+      #
+      # Ubuntu's archive does not carry pandoc-crossref, and a crossref binary
+      # only loads under the Pandoc it was built against, so both come from
+      # their release pages as a pinned pair (crossref v0.3.26 is built with
+      # Pandoc 3.12.1). Bump the two versions together.
       - name: Install document toolchain
-        run: sudo apt-get update && sudo apt-get install -y pandoc pandoc-crossref
+        env:
+          PANDOC_VERSION: "3.12.1"
+          CROSSREF_VERSION: "0.3.26"
+        run: |
+          set -euo pipefail
+          curl -fsSL -o "$RUNNER_TEMP/pandoc.deb" \
+            "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb"
+          sudo apt-get install -y "$RUNNER_TEMP/pandoc.deb"
+          curl -fsSL -o "$RUNNER_TEMP/crossref.tar.xz" \
+            "https://github.com/lierdakil/pandoc-crossref/releases/download/v${CROSSREF_VERSION}/pandoc-crossref-Linux-X64.tar.xz"
+          mkdir "$RUNNER_TEMP/crossref"
+          tar -xJf "$RUNNER_TEMP/crossref.tar.xz" -C "$RUNNER_TEMP/crossref"
+          sudo install -m 0755 "$RUNNER_TEMP/crossref/pandoc-crossref" /usr/local/bin/pandoc-crossref
+          pandoc --version | head -1
+          pandoc-crossref --version
 
       # Coverage is measured across every module in the configured source
       # tree, with branch coverage on and no report include filter. The floor
