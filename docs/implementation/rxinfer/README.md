@@ -1,7 +1,8 @@
 ---
-title: RxInfer integration index
+title: RxInfer notes
 type: documentation
 status: stable
+updated: 2026-10-10
 semantic_relations:
   - type: organizes
     links:
@@ -12,38 +13,28 @@ semantic_relations:
       - "[[message_passing|Message passing]]"
       - "[[factor_graphs|Factor graphs]]"
       - "[[streaming_inference|Streaming inference]]"
-      - "[[systems_engineering_guidebook|Systems engineering guidebook]]"
+      - "[[systems_engineering_guidebook|Workflow checklist]]"
 ---
 
-# RxInfer integration index
+# RxInfer notes
 
-This subtree documents the RxInfer (Julia) probabilistic-programming
-integration for message-passing and variational-inference models.
+> This folder describes an external project, RxInfer.jl, which is not part of this repository and is not used by the Python package. Official documentation: <https://docs.rxinfer.com/stable/>. Source: <https://github.com/ReactiveBayes/RxInfer.jl>.
 
-## Local notes
-
-- `getting_started.md` — first steps with the integration.
-- `model_specification.md` and `model_macro_paradigm.md` — model definition.
-- `variational_inference.md`, `rxinfer_variational_inference.md`,
-  `free_energy.md`, `free_energy_message_passing_active_inference.md`,
-  `free_energy_message_passing_details.md` — inference mathematics.
-- `message_passing.md`, `factor_graphs.md`, `reactive_programming.md`,
-  `streaming_inference.md`, `execution_engine.md`, `ast_processing.md`,
-  `compiler_pipeline.md` — engine concepts.
-- `rxinfer_stack.md` — the integration stack.
-- `systems_engineering_guidebook.md` and
-  `advanced_systems_engineering_guidebook.md` — engineering guides.
-- `active_inference_examples.md` and `rxinfer_mountain_car_readme.md` —
-  worked examples.
-
-## Vendored documentation
-
-`docs/` is a read-only snapshot of the RxInfer documentation (Documenter.jl
-site). See `AGENTS.md` for the maintenance rule.
+RxInfer is a Julia package for Bayesian inference on factor graphs by reactive message passing. The pages here are short summaries of its official documentation, with Julia snippets taken from it. Julia code is not run in this repository. If a page here and the official documentation differ, the official documentation is authoritative.
 
 ## Notes
 
-- The integration is Julia software; these pages are not part of the Python
-  package and are excluded from its linters.
-- For the Python runtime, see the root `README.md` and
-  `docs/manuscript/README.md`.
+- Basics: [[getting_started]], [[model_specification]], [[model_macro_paradigm]], [[factor_graphs]].
+- Inference: [[message_passing]], [[variational_inference]], [[rxinfer_variational_inference]], [[free_energy]], [[execution_engine]].
+- Streaming: [[reactive_programming]], [[streaming_inference]].
+- Active inference: [[free_energy_message_passing_active_inference]], [[free_energy_message_passing_details]], [[active_inference_examples]], [[rxinfer_mountain_car_readme]].
+- Ecosystem and workflow: [[rxinfer_stack]], [[systems_engineering_guidebook]].
+- Reduced to pointers (candidates for merging): [[ast_processing]], [[compiler_pipeline]], [[advanced_systems_engineering_guidebook]].
+
+## Vendored documentation
+
+`docs/` is a copy of the RxInfer documentation source (a Documenter.jl site) and is read-only. It is a snapshot and can lag the live site; for example, the live site has a v4 to v5 migration page and a different page layout. Use the live site for current behaviour.
+
+## Python runtime
+
+For the Python package, see the root `README.md` and [[docs/manuscript/README|the manuscript]].

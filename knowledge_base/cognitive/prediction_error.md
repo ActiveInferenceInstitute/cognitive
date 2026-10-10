@@ -71,7 +71,7 @@ Prediction Error represents the discrepancy between predicted and actual outcome
 
   - [[deep_pyramidal_cells]] - Prediction-encoding neurons
 
-  - [[interneurons]] - Modulatory connections
+  - [[interneurons]] - Inhibitory cells that regulate local circuit activity
 
 ### Processing Dynamics
 
@@ -141,13 +141,13 @@ where:
 
   - [[object_recognition]] - Object identification
 
-  - [[scene_understanding]] - Context processing
+  - [[scene_understanding]] - Interpreting objects within their context
 
 ### Learning
 
-- [[error_driven_learning]] - Knowledge acquisition
+- [[error_driven_learning]] - Learning driven by prediction errors
 
-  - [[supervised_learning]] - Guided learning
+  - [[supervised_learning]] - Learning from labeled examples
 
   - [[reinforcement_learning]] - Value-based learning
 
@@ -167,33 +167,33 @@ where:
 
 ### Clinical Applications
 
-- [[psychiatric_disorders]] - Mental health
+- [[psychiatric_disorders]] - Conditions involving altered prediction processing
 
-  - [[schizophrenia]] - Prediction dysfunction
+  - [[schizophrenia]] - Associated with disrupted prediction error signaling
 
   - [[autism]] - Error processing differences
 
-  - [[anxiety]] - Error sensitivity
+  - [[anxiety]] - Altered sensitivity to prediction errors
 
 ### Artificial Intelligence
 
-- [[machine_learning]] - Computational systems
+- [[machine_learning]] - Algorithms that learn from data
 
-  - [[deep_learning]] - Neural networks
+  - [[deep_learning]] - Learning with multi-layer neural networks
 
   - [[predictive_coding_networks]] - Error-based architectures
 
-  - [[active_inference_agents]] - Adaptive systems
+  - [[active_inference_agents]] - Agents that minimize expected free energy
 
 ### Cognitive Enhancement
 
-- [[brain_training]] - Cognitive improvement
+- [[brain_training]] - Training aimed at improving cognitive function
 
   - [[error_awareness]] - Error detection skills
 
-  - [[learning_optimization]] - Enhanced learning
+  - [[learning_optimization]] - Tuning conditions to improve learning
 
-  - [[cognitive_flexibility]] - Adaptive behavior
+  - [[cognitive_flexibility]] - Switching strategies as demands change
 
 ## Research Directions
 

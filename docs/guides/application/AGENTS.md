@@ -2,6 +2,7 @@
 title: Application guide instructions
 type: agents
 status: stable
+updated: 2026-10-10
 ---
 
 # Application guide instructions

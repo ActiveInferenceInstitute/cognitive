@@ -1,5 +1,6 @@
 ---
 title: Observation Model
+description: "The observation model, or A matrix, giving the likelihood of observations given hidden states, with discrete, multi-modal and factored forms, implementation and learning."
 type: concept
 status: stable
 created: 2026-02-06

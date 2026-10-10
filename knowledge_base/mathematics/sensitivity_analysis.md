@@ -1,5 +1,6 @@
 ---
 title: Sensitivity Analysis
+description: "Methods for measuring how Active Inference agent outputs respond to parameters, including local derivatives, Morris elementary effects and Sobol indices, with a toy agent example."
 type: guide
 status: stable
 created: 2025-03-03

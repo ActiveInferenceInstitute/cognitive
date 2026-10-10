@@ -2,6 +2,7 @@
 title: Cognitive tools instructions
 type: agents
 status: stable
+updated: 2026-10-10
 ---
 
 # Cognitive tools

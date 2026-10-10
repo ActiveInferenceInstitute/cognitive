@@ -5,22 +5,14 @@ title: Active Inference in Cognitive Science Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
-modified: 2025-08-08
 
-version: 2.1.0
 
 complexity: advanced
 
-processing_priority: 1
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: advanced
 
@@ -89,7 +81,7 @@ semantic_relations:
 
 ### Purpose and Scope
 
-This specialized learning path integrates Active Inference principles with cognitive science, providing a comprehensive framework for understanding and modeling mental processes. It bridges theoretical cognitive science with computational implementation, focusing on both fundamental research and practical applications in clinical and technological domains.
+This specialized learning path integrates Active Inference principles with cognitive science, providing a framework for understanding and modeling mental processes. It bridges theoretical cognitive science with computational implementation, focusing on both fundamental research and practical applications in clinical and technological domains.
 
 ### Target Audience
 
@@ -121,27 +113,15 @@ By completing this path, learners will be able to:
 
 - Education: Cognitive training, educational technology
 
-### Repo-integrated labs (TDD)
+### Repository labs
 
-- Perception-to-action loop with `Generic_POMDP`
+Runnable material in this repository is the `cognitive` package, `Things.Simple_POMDP`, and `Things.Continuous_Generic`. The `Generic_POMDP`, `BioFirm`, `Ant_Colony`, and `Generic_Thing` folders contain documentation only, so there are no scripts to launch for them.
 
-  ```bash
+- Executed starting points: [[docs/examples/index|Examples index]] and [[docs/api/api_examples|API examples]].
 
-  python3 /home/trim/Documents/GitHub/cognitive/Things/Generic_POMDP/generic_pomdp.py
+- Continuous-agent checks: `python -m pytest code/tests/visualization/test_continuous_generic.py -q`.
 
-  ```
-
-  - Add an assertion on belief update stability across repeated stimuli
-
-- Clinical-style task prototyping
-
-  - Use `tools/src/models/active_inference` to encode a 2AFC task
-
-  - Validate expected choice patterns via tests; export plots to `tests/Output`
-
-- Social interaction minimal model
-
-  - Extend to two-agent inference using shared observations; assert reciprocity metrics
+- Exercise: encode a two-alternative forced-choice task as the `A`, `B`, `C`, `D`, `E` arrays of a `DiscreteGenerativeModel` and check that beliefs stay normalized across repeated stimuli.
 
 ## Knowledge Base Anchors
 
@@ -265,14 +245,6 @@ This specialized path focuses on applying Active Inference to understand cogniti
 
 ## Core Learning Path
 
-### 1. Cognitive Modeling (4 weeks)
-
-#### Week 1-2: Mental State Inference
-
-
-#### Week 3-4: Action Selection
-
-
 ### 2. Cognitive Domains (6 weeks)
 
 #### Week 1-2: Perceptual Processing
@@ -307,9 +279,6 @@ This specialized path focuses on applying Active Inference to understand cogniti
 
 ### 3. Applications (4 weeks)
 
-#### Week 1-2: Behavioral Tasks
-
-
 #### Week 3-4: Clinical Applications
 
 - Psychiatric Disorders
@@ -321,9 +290,6 @@ This specialized path focuses on applying Active Inference to understand cogniti
 - Intervention Design
 
 ### 4. Advanced Topics (4 weeks)
-
-#### Week 1-2: Social Cognition
-
 
 #### Week 3-4: Metacognition
 
@@ -629,13 +595,7 @@ mindmap
 
 ```
 
-## Enhanced Assessment Framework
-
-### Adaptive Assessment System
-
-
-### Personalized Learning Analytics
-
+## Assessment Framework
 
 ### Portfolio-Based Assessment
 
@@ -734,26 +694,6 @@ portfolio_requirements:
   - System development
 
   - Technical validation
-
-#### Certification Path
-
-- Cognitive Science Research
-
-  - Experimental methods
-
-  - Statistical analysis
-
-- Clinical Applications
-
-  - Disorder modeling
-
-  - Treatment planning
-
-- Technical Implementation
-
-  - Model development
-
-  - System integration
 
 ### Professional Network
 
@@ -883,323 +823,7 @@ mindmap
 
 ```
 
-## Support Resources
-
-### Research Support
-
-- Literature Database
-
-  - Key papers
-
-  - Review articles
-
-  - Latest research
-
-- Computing Resources
-
-  - HPC access
-
-  - Cloud computing
-
-  - GPU clusters
-
-- Analysis Tools
-
-  - Statistical packages
-
-  - Visualization tools
-
-  - Data processing
-
-### Technical Support
-
-- Development Tools
-
-  - Code repositories
-
-  - Version control
-
-  - Testing frameworks
-
-- Documentation
-
-  - API references
-
-  - Implementation guides
-
-  - Best practices
-
-- Computing Resources
-
-  - Development environments
-
-  - Debugging tools
-
-  - Performance profilers
-
-### Learning Support
-
-```mermaid
-
-mindmap
-
-    root((Learning
-
-    Resources))
-
-        Materials
-
-            Tutorials
-
-                Theory
-
-                Implementation
-
-            Examples
-
-                Code
-
-                Applications
-
-            Documentation
-
-                Technical
-
-                Clinical
-
-        Support
-
-            Mentorship
-
-                Research
-
-                Clinical
-
-            Community
-
-                Forums
-
-                Groups
-
-            Workshops
-
-                Theory
-
-                Practice
-
-```
-
-### Cross-repo anchors
-
-- Knowledge base
-
-  - `knowledge_base/cognitive/active_inference.md`
-
-  - `knowledge_base/mathematics/precision_parameter.md`
-
-- Tools
-
-  - `tools/src/visualization/matrix_plots.py`
-
-  - `tools/src/utils/matrix_utils.py`
-
-## Version Control and Updates
-
-### Version History
-
-```mermaid
-
-gitGraph
-
-    commit id: "v1.0.0" tag: "Initial Release"
-
-    commit id: "v1.1.0"
-
-    branch feature/clinical-integration
-
-    commit id: "clinical-models"
-
-    commit id: "treatment-planning"
-
-    checkout main
-
-    merge feature/clinical-integration id: "v2.0.0" tag: "Major Update"
-
-    commit id: "v2.1.0"
-
-```
-
-### Change Management
-
-#### Major Updates
-
-- v2.0.0 (Current)
-
-  - Enhanced clinical integration
-
-  - Advanced research components
-
-  - Improved assessment framework
-
-  - Updated career paths
-
-- v1.1.0
-
-  - Added clinical applications
-
-  - Enhanced documentation
-
-  - New example projects
-
-- v1.0.0
-
-  - Initial curriculum
-
-  - Basic implementations
-
-  - Core concepts
-
-#### Planned Improvements
-
-- Advanced clinical models
-
-- Real-world case studies
-
-- Integration frameworks
-
-- Research extensions
-
-### Quality Metrics
-
-```mermaid
-
-xychart-beta
-
-    title "Learning Path Components Quality"
-
-    x-axis [Theory, Implementation, Clinical, Research, Support]
-
-    y-axis "Score" 0 --> 100
-
-    bar [95, 88, 92, 90, 85]
-
-```
-
-## Learning Analytics
-
-### Progress Tracking
-
-```mermaid
-
-xychart-beta
-
-    title "Skill Development Progress"
-
-    x-axis [Week 1, Week 6, Week 12, Week 18]
-
-    y-axis "Competency" 0 --> 100
-
-    line [15, 45, 75, 95]
-
-    line [10, 40, 70, 90]
-
-```
-
-### Performance Metrics
-
-- Research Skills
-
-  - Theory understanding
-
-  - Experimental design
-
-  - Data analysis
-
-- Clinical Skills
-
-  - Model development
-
-  - Treatment planning
-
-  - Outcome assessment
-
-- Technical Skills
-
-  - Implementation quality
-
-  - System integration
-
-  - Documentation
-
-### Development Analytics
-
-```mermaid
-
-graph LR
-
-    subgraph Research Development
-
-        T[Theory] --> E[Experiments]
-
-        E --> R[Results]
-
-    end
-
-    subgraph Clinical Application
-
-        M[Models] --> I[Interventions]
-
-        I --> O[Outcomes]
-
-    end
-
-    subgraph Technical Implementation
-
-        D[Design] --> C[Code]
-
-        C --> V[Validation]
-
-    end
-
-    R --> M
-
-    O --> D
-
-    style T,E,R fill:#f9f,stroke:#333
-
-    style M,I,O fill:#bbf,stroke:#333
-
-    style D,C,V fill:#bfb,stroke:#333
-
-```
-
 ## Final Notes
-
-### Success Stories
-
-- Research Impact
-
-  - Published papers
-
-  - Novel methods
-
-  - Field contributions
-
-- Clinical Applications
-
-  - Treatment models
-
-  - Patient outcomes
-
-  - Practice improvements
-
-- Technical Achievements
-
-  - System implementations
-
-  - Tool development
-
-  - Framework adoption
 
 ### Additional Resources
 
@@ -1226,29 +850,3 @@ graph LR
   - Clinical networks
 
   - Technical forums
-
-### Contact Information
-
-- Research Support
-
-  - Principal investigators
-
-  - Research coordinators
-
-  - Lab managers
-
-- Clinical Support
-
-  - Clinical directors
-
-  - Treatment specialists
-
-  - Research clinicians
-
-- Technical Support
-
-  - Lead developers
-
-  - System architects
-
-  - Integration specialists

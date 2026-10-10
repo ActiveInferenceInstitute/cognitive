@@ -1,9 +1,9 @@
 ---
 title: Generic Thing
 type: agents
-status: core
+status: draft
+updated: 2026-10-10
 tags:
-  - base_class
   - entity
   - active_inference
 semantic_relations:
@@ -15,18 +15,19 @@ semantic_relations:
 
 # Generic Thing
 
-The fundamental unit of the framework. See [[code/Things/Generic_Thing/README|Knowledge Base]] for full implementation details.
+Documentation only; nothing can be imported from this folder.
 
-## Definition
-
-A "Thing" in this context is any entity that can:
+A "Thing" in this vocabulary is any entity that can:
 
 1. Perceive its environment (receive observations).
 2. Act upon its environment (emit actions).
 3. Maintain internal states (beliefs).
 
+The executable agents are [[code/Things/Simple_POMDP/AGENTS|Simple_POMDP]] and
+[[code/Things/Continuous_Generic/AGENTS|Continuous_Generic]].
+
 ## Related
 
-- [[knowledge_base/cognitive/active_inference_agent|Active Inference Agent Theory]]
-- [[knowledge_base/cognitive/generative_model|Generative Model]]
-- [[knowledge_base/cognitive/belief_updating|Belief Updating]]
+- [[knowledge_base/cognitive/active_inference_agent|Active inference agent theory]]
+- [[knowledge_base/cognitive/generative_model|Generative model]]
+- [[knowledge_base/cognitive/belief_updating|Belief updating]]

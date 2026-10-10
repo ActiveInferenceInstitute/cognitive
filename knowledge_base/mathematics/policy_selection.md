@@ -1,4 +1,5 @@
 ---
+description: "Policy selection in Active Inference as a softmax of negative expected free energy scaled by precision, with implementation, properties and single-step to hierarchical variants."
 type: mathematical_concept
 id: policy_selection_001
 created: 2024-02-05
@@ -176,7 +177,7 @@ Policy selection is used in:
 
 - [[parallelization]]
 
-- [[scalability]]
+- scalability
 
 ## Variants
 
@@ -236,7 +237,7 @@ Policy selection is used in:
 
 - [[active_inference_control]] - Control applications
 
-- [[implementation_examples]] - Code examples
+- implementation examples - Code examples
 
 ## Advanced Mathematical Framework
 

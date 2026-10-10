@@ -8,6 +8,8 @@ tags:
 - probability
 - graphical-models
 - machine-learning
+aliases:
+  - probabilistic_relationships
 semantic_relations:
   - type: foundation
     links:

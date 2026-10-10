@@ -9,6 +9,8 @@ tags:
   - probability
   - inference
   - machine_learning
+aliases:
+  - directed_graphical_models
 semantic_relations:
   - type: foundation_for
     links:

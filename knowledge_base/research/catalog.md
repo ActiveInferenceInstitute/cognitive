@@ -50,7 +50,7 @@ All 68 pages under `knowledge_base/research/`, with the opening line of each. Ge
 - [[knowledge_base/research/concepts/friston_2017|"Friston et al. (2017): Active Inference: A Process Theory"]] — Prior to this paper, Active Inference was primarily a theoretical framework.
 - [[knowledge_base/research/concepts/parr_2019|"Parr & Friston (2019): Generalised Free Energy and Active Inference"]] — Parr, T., & Friston, K.
 - [[knowledge_base/research/concepts/bayesian_analysis|Bayesian Analysis]] — Bayesian analysis provides the statistical foundation for Active Inference, enabling principled reasoning under uncertainty through posterior computation, model comparison, and…
-- [[knowledge_base/research/concepts/belief_evolution|Belief Evolution]]
+- [[knowledge_base/research/concepts/belief_evolution|Belief Evolution]] — How an Active Inference agent's posterior beliefs change over time, covering continuous and discrete dynamics, belief trajectories, diagnostic measures and pathological dynamics.
 - [[knowledge_base/research/concepts/belief_propagation|Belief Propagation]] — Belief propagation is a message-passing algorithm for performing inference in graphical models.
 - [[knowledge_base/research/concepts/causal_analysis|Causal Analysis]] — Causal analysis methods for understanding and evaluating Active Inference models, including interventional reasoning, counterfactual analysis, and structural causal modeling.
 - [[knowledge_base/research/concepts/control_variables|Control Variables]] — Specification and management of experimental variables in Active Inference research.

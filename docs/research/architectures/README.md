@@ -1,10 +1,28 @@
-# Agent Architectures
+---
+title: Agent architectures research
+type: documentation
+status: stable
+updated: 2026-10-10
+semantic_relations:
+  - type: organizes
+    links:
+      - "[[pomdp]]"
+      - "[[continuous]]"
+      - "[[hierarchical]]"
+      - "[[multi_agent]]"
+      - "[[../README|Research documentation]]"
+---
 
-Overview of agent architectures.
+# Agent architectures research
 
-## Topics
+Which architectures the repository implements:
 
-- [[pomdp|POMDP Frameworks]]
-- [[continuous|Continuous-Time Agents]]
-- [[hierarchical|Hierarchical Agents]]
-- [[multi_agent|Multi-Agent Systems]]
+| Architecture | Status | Page |
+|---|---|---|
+| Discrete POMDP | implemented | [[pomdp]] |
+| Continuous generalized coordinates | implemented | [[continuous]] |
+| Hierarchical | not built | [[hierarchical]] |
+| Multi-agent | not built | [[multi_agent]] |
+
+The architecture theory notes are in `knowledge_base/agents/`; see
+[[knowledge_base/agents/architectures_overview|the architectures overview]].

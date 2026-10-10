@@ -1,15 +1,28 @@
+---
+title: Generic Thing
+type: concept
+status: draft
+updated: 2026-10-10
+semantic_relations:
+  - type: documented_by
+    links:
+      - "[[code/Things/Generic_Thing/generic_thing]]"
+      - "[[code/Things/Generic_Thing/AGENTS]]"
+  - type: related_to
+    links:
+      - "[[knowledge_base/cognitive/active_inference_agent|Active inference agent]]"
+---
+
 # Generic Thing
 
-The base "Thing" class for Active Inference entities. This directory contains the foundational classes and methods that other agents may inherit from or utilize. It represents the most abstract definition of an active entity in the framework.
+Design sketch; no code in this repository. The abstract definition of an
+active entity: it receives observations, emits actions, and holds internal
+beliefs. This folder holds `README.md`, `AGENTS.md`, `generic_thing.md`, and a
+`generic_thing/visualizations/` directory of saved PNG images from an earlier
+experiment whose code is not present. There is no Python and no base class to
+inherit from; nothing in the repository imports from here.
 
-## Contents
+## Related
 
-- **`AGENTS.md`**: Defines the fundamental entity concept.
-
-For full source code, tests, and detailed documentation, see [[code/Things/Generic_Thing/README|Knowledge Base: Generic Thing]].
-
-## Related Resources
-
-- [[code/Things/Generic_Thing/generic_thing|Generic Thing Design]]
-- [[knowledge_base/cognitive/active_inference_agent|Active Inference Agent Theory]]
-- [[code/Things/Generic_Thing/AGENTS|Agent Details]]
+- [[code/Things/Generic_Thing/generic_thing|Generic Thing design notes]]
+- [[knowledge_base/cognitive/active_inference_agent|Active inference agent theory]]

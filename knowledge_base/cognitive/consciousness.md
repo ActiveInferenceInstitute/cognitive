@@ -33,17 +33,17 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 - [[consciousness_levels]] - Awareness states
 
-  - [[wakefulness]] - Arousal states
+  - [[wakefulness]] - Level of arousal and responsiveness
 
-    - [[alertness]] - Full awareness
+    - [[alertness]] - Highest arousal, ready to respond
 
     - [[drowsiness]] - Reduced awareness
 
   - [[altered_states]] - Modified consciousness
 
-    - [[sleep_states]] - Natural alterations
+    - [[sleep_states]] - Consciousness changes across sleep stages
 
-    - [[meditative_states]] - Intentional changes
+    - [[meditative_states]] - States induced by meditation practice
 
 ### Contents of Consciousness
 
@@ -57,21 +57,21 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
   - [[cognitive_consciousness]] - Thought awareness
 
-    - [[thought_awareness]] - Mental content
+    - [[thought_awareness]] - Awareness of one's own thoughts
 
-    - [[emotional_awareness]] - Feeling states
+    - [[emotional_awareness]] - Awareness of one's own emotions
 
 ### Self-Awareness
 
 - [[self_consciousness]] - Self-knowledge
 
-  - [[bodily_awareness]] - Physical self
+  - [[bodily_awareness]] - Awareness of one's own body
 
     - [[body_schema]] - Body representation
 
     - [[interoception]] - Internal sensing
 
-  - [[metacognition]] - Mental self
+  - [[metacognition]] - Awareness of one's own mental processes
 
     - [[self_reflection]] - Inner examination
 
@@ -81,163 +81,163 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 ### Brain Networks
 
-- [[consciousness_networks]] - Neural systems
+- [[consciousness_networks]] - Brain networks supporting conscious experience
 
   - [[default_mode]] - Self-processing
 
     - [[medial_prefrontal]] - Self-reference
 
-    - [[posterior_cingulate]] - Integration
+    - [[posterior_cingulate]] - Hub of the default-mode network
 
   - [[frontoparietal]] - Access/control
 
-    - [[dorsolateral_prefrontal]] - Executive
+    - [[dorsolateral_prefrontal]] - Prefrontal region for executive control
 
-    - [[posterior_parietal]] - Integration
+    - [[posterior_parietal]] - Parietal region integrating sensory and spatial information
 
 ### Circuit Mechanisms
 
-- [[conscious_processing]] - Neural dynamics
+- [[conscious_processing]] - Neural activity patterns underlying awareness
 
-  - [[information_integration]] - Binding
+  - [[information_integration]] - Combining information into unified experience
 
-    - [[feature_binding]] - Sensory unity
+    - [[feature_binding]] - Combining features into unified objects
 
-    - [[temporal_binding]] - Time unity
+    - [[temporal_binding]] - Combining events across time into one experience
 
-  - [[global_workspace]] - Information sharing
+  - [[global_workspace]] - Broadcast of information across brain systems
 
-    - [[broadcast_mechanisms]] - Distribution
+    - [[broadcast_mechanisms]] - Spreading information to many brain areas
 
-    - [[access_mechanisms]] - Availability
+    - [[access_mechanisms]] - Making information available for reasoning and report
 
 ### Neuromodulation
 
-- [[consciousness_modulation]] - State control
+- [[consciousness_modulation]] - Regulation of conscious state by brain systems
 
-  - [[arousal_systems]] - Wakefulness
+  - [[arousal_systems]] - Brain systems maintaining wakefulness
 
-    - [[reticular_activation]] - Arousal
+    - [[reticular_activation]] - Brainstem network driving cortical arousal
 
-    - [[thalamic_regulation]] - Gating
+    - [[thalamic_regulation]] - Thalamic control of information flow to cortex
 
-  - [[neurotransmitter_systems]] - Chemical
+  - [[neurotransmitter_systems]] - Chemical signaling that modulates awareness
 
     - [[cholinergic]] - Attention/arousal
 
-    - [[monoaminergic]] - State regulation
+    - [[monoaminergic]] - Dopamine, serotonin, and norepinephrine systems
 
 ## Theoretical Frameworks
 
 ### Information Integration Theory
 
-- [[integrated_information]] - Unity theory
+- [[integrated_information]] - Theory linking consciousness to integrated information
 
   - [[phi_measure]] - Integration metric
 
     - [[causal_structure]] - Cause-effect
 
-    - [[information_structure]] - Content
+    - [[information_structure]] - Structure of cause-effect relations in a system
 
-  - [[exclusion_principle]] - Boundary
+  - [[exclusion_principle]] - Only one maximally integrated boundary is conscious
 
-    - [[spatiotemporal_grain]] - Scale
+    - [[spatiotemporal_grain]] - Spatial and temporal resolution of conscious elements
 
-    - [[causal_exclusion]] - Uniqueness
+    - [[causal_exclusion]] - Only the maximal cause-effect structure counts
 
 ### Global Workspace Theory
 
-- [[global_workspace]] - Access theory
+- [[global_workspace]] - Theory of conscious access through broadcast
 
-  - [[workspace_dynamics]] - Processing
+  - [[workspace_dynamics]] - Activity patterns of the global workspace
 
-    - [[competition]] - Content selection
+    - competition - Content selection
 
     - [[broadcast]] - Information sharing
 
-  - [[access_consciousness]] - Availability
+  - [[access_consciousness]] - Information available for reasoning and report
 
-    - [[reportability]] - Expression
+    - [[reportability]] - Ability to report an experience
 
-    - [[cognitive_access]] - Processing
+    - [[cognitive_access]] - Availability of content to cognitive systems
 
 ### Predictive Processing
 
-- [[conscious_prediction]] - Inference theory
+- [[conscious_prediction]] - Predictive processing account of consciousness
 
-  - [[prediction_hierarchy]] - Levels
+  - [[prediction_hierarchy]] - Layered predictions from abstract to concrete
 
     - [[top_down_predictions]] - Expectations
 
-    - [[bottom_up_errors]] - Corrections
+    - [[bottom_up_errors]] - Prediction errors passed up the hierarchy
 
-  - [[conscious_inference]] - Experience
+  - [[conscious_inference]] - Experience as inference about hidden causes
 
-    - [[perceptual_inference]] - World model
+    - [[perceptual_inference]] - Inferring causes of sensory input
 
-    - [[active_inference]] - Action model
+    - [[active_inference]] - Acting to fulfill predictions and reduce uncertainty
 
 ## Experimental Paradigms
 
 ### Behavioral Methods
 
-- [[consciousness_tasks]] - Assessment
+- [[consciousness_tasks]] - Tasks for studying and measuring awareness
 
   - [[report_paradigms]] - Explicit measures
 
-    - [[subjective_reports]] - Experience
+    - [[subjective_reports]] - Participants' own accounts of experience
 
-    - [[confidence_ratings]] - Certainty
+    - [[confidence_ratings]] - Participants' self-rated certainty
 
   - [[implicit_measures]] - Indirect tests
 
-    - [[priming_effects]] - Unconscious
+    - [[priming_effects]] - Influence of stimuli not consciously perceived
 
-    - [[blindsight]] - Unseen processing
+    - [[blindsight]] - Visual responses without reported awareness
 
 ### Neural Measures
 
-- [[consciousness_imaging]] - Brain recording
+- [[consciousness_imaging]] - Imaging brain activity during awareness tasks
 
-  - [[contrastive_analysis]] - Comparison
+  - [[contrastive_analysis]] - Comparing conscious and unconscious conditions
 
-    - [[seen_unseen]] - Awareness
+    - [[seen_unseen]] - Contrast between seen and unseen stimuli
 
-    - [[conscious_unconscious]] - Processing
+    - [[conscious_unconscious]] - Contrast between conscious and unconscious processing
 
-  - [[connectivity_analysis]] - Integration
+  - [[connectivity_analysis]] - Measuring interactions between brain regions
 
-    - [[effective_connectivity]] - Causation
+    - [[effective_connectivity]] - Causal influence of one region on another
 
-    - [[functional_connectivity]] - Correlation
+    - [[functional_connectivity]] - Statistical correlation between regional activity
 
 ### Manipulation Methods
 
-- [[consciousness_manipulation]] - State change
+- [[consciousness_manipulation]] - Experimentally altering conscious state
 
-  - [[stimulation_methods]] - Direct
+  - [[stimulation_methods]] - Direct stimulation of brain tissue
 
-    - [[tms]] - Magnetic
+    - [[tms]] - Transcranial magnetic stimulation
 
-    - [[tdes]] - Electrical
+    - [[tdes]] - Transcranial electrical stimulation
 
-  - [[pharmacological]] - Chemical
+  - pharmacological - Drug-based manipulation
 
-    - [[anesthetics]] - Suppression
+    - [[anesthetics]] - Drugs that suppress consciousness
 
-    - [[psychedelics]] - Alteration
+    - [[psychedelics]] - Drugs that alter perception and cognition
 
 ## Clinical Applications
 
 ### Disorders of Consciousness
 
-- [[consciousness_disorders]] - Dysfunction
+- [[consciousness_disorders]] - Conditions with impaired consciousness
 
   - [[coma]] - Unresponsiveness
 
-    - [[vegetative_state]] - Wakefulness
+    - [[vegetative_state]] - Wakefulness without awareness
 
-    - [[minimal_consciousness]] - Awareness
+    - [[minimal_consciousness]] - Fluctuating but definite awareness
 
   - [[locked_in]] - Awareness intact
 
@@ -249,101 +249,101 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 - [[consciousness_assessment]] - Evaluation
 
-  - [[behavioral_scales]] - Response tests
+  - [[behavioral_scales]] - Bedside scales rating behavioral responses
 
-    - [[coma_scale]] - Responsiveness
+    - [[coma_scale]] - Scale rating eye, verbal, and motor responses
 
-    - [[awareness_scale]] - Consciousness
+    - [[awareness_scale]] - Scale rating level of awareness
 
-  - [[brain_measures]] - Neural tests
+  - brain measures - Neural tests
 
-    - [[eeg_markers]] - Electrical
+    - [[eeg_markers]] - EEG signatures of conscious state
 
-    - [[imaging_markers]] - Structural
+    - [[imaging_markers]] - Imaging signatures of conscious state
 
 ### Treatment Approaches
 
 - [[consciousness_treatment]] - Intervention
 
-  - [[pharmacological]] - Drug therapy
+  - pharmacological - Drug therapy
 
-    - [[stimulants]] - Arousal
+    - [[stimulants]] - Drugs that raise arousal
 
-    - [[modulators]] - Regulation
+    - [[modulators]] - Drugs that adjust neurotransmitter activity
 
-  - [[stimulation]] - Direct intervention
+  - stimulation - Brain stimulation therapy
 
-    - [[deep_brain]] - Internal
+    - [[deep_brain]] - Implanted electrodes stimulating deep structures
 
-    - [[transcranial]] - External
+    - [[transcranial]] - Non-invasive stimulation through the skull
 
 ## Philosophical Aspects
 
 ### Hard Problem
 
-- [[hard_problem]] - Experience nature
+- [[hard_problem]] - Why physical processes give rise to experience
 
   - [[qualia]] - Subjective quality
 
-    - [[phenomenal_experience]] - Feel
+    - [[phenomenal_experience]] - What an experience is like
 
-    - [[explanatory_gap]] - Understanding
+    - [[explanatory_gap]] - Gap between physical explanation and experience
 
-  - [[consciousness_emergence]] - Origin
+  - [[consciousness_emergence]] - How consciousness arises from brain activity
 
-    - [[physical_basis]] - Material
+    - [[physical_basis]] - Consciousness grounded in physical processes
 
-    - [[information_basis]] - Abstract
+    - [[information_basis]] - Consciousness grounded in information structure
 
 ### Unity Problem
 
-- [[consciousness_unity]] - Integration
+- [[consciousness_unity]] - Experience appearing as one whole
 
-  - [[binding_problem]] - Feature unity
+  - [[binding_problem]] - How separate features form one percept
 
-    - [[temporal_binding]] - Time
+    - [[temporal_binding]] - Combining events across time into one experience
 
-    - [[spatial_binding]] - Space
+    - [[spatial_binding]] - Combining features at a location into one object
 
-  - [[self_unity]] - Identity
+  - [[self_unity]] - Sense of being one continuous self
 
-    - [[narrative_self]] - Story
+    - [[narrative_self]] - Self built from a life story
 
-    - [[minimal_self]] - Core
+    - [[minimal_self]] - Basic sense of being the subject of experience
 
 ### Free Will
 
-- [[free_will]] - Agency question
+- [[free_will]] - Whether we author our own actions
 
-  - [[voluntary_action]] - Choice
+  - [[voluntary_action]] - Actions initiated by the agent's intention
 
-    - [[intention]] - Purpose
+    - [[intention]] - Mental state directing an action
 
-    - [[decision]] - Selection
+    - [[decision]] - Choosing among options
 
-  - [[conscious_control]] - Influence
+  - [[conscious_control]] - Conscious influence over action
 
-    - [[veto_power]] - Inhibition
+    - [[veto_power]] - Ability to cancel an action before execution
 
-    - [[action_awareness]] - Knowledge
+    - [[action_awareness]] - Awareness of one's own actions
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[measurement_problem]] - Assessment
+- [[measurement_problem]] - Difficulty measuring consciousness objectively
 
-- [[neural_basis]] - Mechanism
+- [[neural_basis]] - Brain mechanisms underlying consciousness
 
-- [[clinical_translation]] - Application
+- [[clinical_translation]] - Applying findings in patient care
 
 ### Emerging Approaches
 
-- [[artificial_consciousness]] - Machine
+- [[artificial_consciousness]] - Machine awareness
 
-- [[consciousness_enhancement]] - Improvement
+- [[consciousness_enhancement]] - Augmenting conscious capacities
 
-- [[therapeutic_applications]] - Treatment
+- therapeutic applications - Clinical uses for disorders of consciousness
 
 ## References
 
@@ -367,7 +367,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 - [[emotion]]
 
-- [[cognition]]
+- cognition
 
 ## See also
 

@@ -5,6 +5,7 @@ title: Quantum Cognitive Systems Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
@@ -286,28 +287,6 @@ This learning path explores the intersection of quantum computing and cognitive 
 
 - Analysis software
 
-## Community and Support
-
-### 1. Academic Networks
-
-- Research groups
-
-- Conference participation
-
-- Publication venues
-
-- Collaboration opportunities
-
-### 2. Industry Connections
-
-- Commercial applications
-
-- Technology transfer
-
-- Professional networks
-
-- Expert consultation
-
 ## Next Steps
 
 ### 1. Advanced Research
@@ -329,14 +308,3 @@ This learning path explores the intersection of quantum computing and cognitive 
 - Performance tuning
 
 - User adoption
-
-## Version History
-
-- Created: 2024-03-15
-
-- Last Updated: 2024-03-15
-
-- Status: Stable
-
-- Version: 1.0.0
-

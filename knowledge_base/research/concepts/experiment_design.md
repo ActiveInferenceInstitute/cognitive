@@ -5,6 +5,8 @@ status: stable
 created: 2024-02-12
 updated: 2026-02-07
 tags: [experimental_design, methodology, research, active_inference]
+aliases:
+  - experimental_design
 semantic_relations:
   - type: relates
     links:

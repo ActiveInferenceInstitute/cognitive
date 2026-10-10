@@ -321,61 +321,11 @@ See `docs/examples/README.md` for runnable examples.
 
 ### Integration Points
 
-```yaml
+- Modules, packages, or services this agent calls
 
-api_endpoints:
+- Modules, packages, or services that call this agent
 
-  - name: "belief_update"
-
-    path: "/api/agent/{{agent_id}}/beliefs/update"
-
-    method: "POST"
-
-    description: "Update agent beliefs with new observations"
-
-  - name: "action_selection"
-
-    path: "/api/agent/{{agent_id}}/actions/select"
-
-    method: "GET"
-
-    description: "Get next action based on current state"
-
-  - name: "goal_update"
-
-    path: "/api/agent/{{agent_id}}/goals/update"
-
-    method: "POST"
-
-    description: "Update agent goals"
-
-```
-
-### Deployment Configuration
-
-```yaml
-
-deployment:
-
-  container: "{{container_type}}"
-
-  resources:
-
-    cpu: "{{cpu_requirement}}"
-
-    memory: "{{memory_requirement}}"
-
-    gpu: "{{gpu_requirement}}"
-
-  scaling:
-
-    min_instances: {{min_instances}}
-
-    max_instances: {{max_instances}}
-
-    scaling_metric: "{{scaling_metric}}"
-
-```
+- Configuration files and their location in the repository
 
 ## Evaluation
 

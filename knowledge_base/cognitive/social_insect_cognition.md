@@ -35,557 +35,557 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
 ### Individual Cognition
 
-- [[insect_cognition]] - Bug think
+- [[insect_cognition]] - Cognitive abilities of individual insects
 
-  - [[sensory_processing]] - Feel think
+  - [[sensory_processing]] - Detecting and interpreting environmental cues
 
-    - [[chemical_sensing]] - Smell know
+    - [[chemical_sensing]] - Detecting odors and chemical signals
 
-      - [[pheromone_detection]] - Mark find
+      - [[pheromone_detection]] - Sensing pheromone trails and signals
 
-      - [[nestmate_recognition]] - Friend know
+      - [[nestmate_recognition]] - Identifying colony members by chemical cues
 
-    - [[mechanical_sensing]] - Touch know
+    - [[mechanical_sensing]] - Detecting touch and vibration
 
-      - [[vibration_detection]] - Shake feel
+      - [[vibration_detection]] - Sensing substrate and airborne vibrations
 
-      - [[contact_information]] - Touch learn
+      - [[contact_information]] - Information gained through physical contact
 
-  - [[neural_processing]] - Brain work
+  - [[neural_processing]] - Information processing in the insect brain
 
-    - [[learning_mechanisms]] - Learn ways
+    - [[learning_mechanisms]] - Processes that change behavior with experience
 
-      - [[associative_learning]] - Link learn
+      - [[associative_learning]] - Linking stimuli with outcomes
 
-      - [[spatial_learning]] - Place learn
+      - [[spatial_learning]] - Learning locations and routes
 
-    - [[memory_systems]] - Mind keep
+    - [[memory_systems]] - Storage of learned information
 
-      - [[working_memory]] - Now mind
+      - [[working_memory]] - Short-term maintenance of current information
 
-      - [[long_term_memory]] - Long mind
+      - [[long_term_memory]] - Durable storage of learned associations
 
 ### Collective Cognition
 
-- [[group_cognition]] - Team think
+- [[group_cognition]] - Information processing at the colony level
 
-  - [[information_sharing]] - Know share
+  - [[information_sharing]] - Exchange of information among colony members
 
-    - [[communication_systems]] - Talk ways
+    - communication systems - Channels colony members use to signal
 
-      - [[chemical_signals]] - Smell talk
+      - [[chemical_signals]] - Pheromone-based communication
 
-      - [[tactile_signals]] - Touch talk
+      - [[tactile_signals]] - Communication through touch
 
-    - [[information_flow]] - Know move
+    - [[information_flow]] - Movement of information through the colony
 
-      - [[local_transfer]] - Near tell
+      - [[local_transfer]] - Exchange between nearby individuals
 
-      - [[global_spread]] - Far reach
+      - [[global_spread]] - Propagation across the whole colony
 
-  - [[decision_making]] - Choose ways
+  - [[decision_making]] - Colony-level choice among alternatives
 
-    - [[consensus_building]] - Agree make
+    - [[consensus_building]] - Reaching agreement among individuals
 
-      - [[quorum_sensing]] - Enough feel
+      - [[quorum_sensing]] - Committing once enough individuals agree
 
-      - [[opinion_pooling]] - Think mix
+      - [[opinion_pooling]] - Combining individual assessments
 
-    - [[choice_mechanisms]] - Pick ways
+    - [[choice_mechanisms]] - Rules that select among options
 
-      - [[threshold_response]] - Jump do
+      - [[threshold_response]] - Acting once a stimulus passes a threshold
 
-      - [[competitive_feedback]] - Fight pick
+      - [[competitive_feedback]] - Competing options reinforcing themselves
 
 ### Adaptive Mechanisms
 
-- [[colony_adaptation]] - Group change
+- [[colony_adaptation]] - Colony-level adjustment to changing conditions
 
-  - [[behavioral_flexibility]] - Do change
+  - [[behavioral_flexibility]] - Adjusting behavior to circumstances
 
-    - [[task_switching]] - Job change
+    - [[task_switching]] - Changing from one job to another
 
-      - [[response_thresholds]] - Need jump
+      - [[response_thresholds]] - Stimulus levels that trigger task engagement
 
-      - [[workload_sensing]] - Work feel
+      - [[workload_sensing]] - Detecting how much work needs doing
 
-    - [[strategy_adjustment]] - Way change
+    - [[strategy_adjustment]] - Changing behavioral strategy
 
-      - [[exploration]] - New try
+      - [[exploration]] - Sampling new options
 
-      - [[exploitation]] - Good use
+      - [[exploitation]] - Using known good options
 
-  - [[learning_processes]] - Learn ways
+  - [[learning_processes]] - Mechanisms of learning from experience
 
-    - [[collective_learning]] - Group learn
+    - [[collective_learning]] - Learning distributed across the colony
 
-      - [[experience_sharing]] - Know give
+      - [[experience_sharing]] - Passing learned information to others
 
-      - [[success_reinforcement]] - Good more
+      - [[success_reinforcement]] - Strengthening behaviors that pay off
 
-    - [[memory_formation]] - Mind make
+    - [[memory_formation]] - Establishing lasting records of experience
 
-      - [[spatial_memory]] - Place mind
+      - [[spatial_memory]] - Memory for locations and routes
 
-      - [[temporal_memory]] - Time mind
+      - [[temporal_memory]] - Memory for timing of events
 
 ## Cognitive Functions
 
 ### Navigation Systems
 
-- [[spatial_cognition]] - Space know
+- [[spatial_cognition]] - Representing and moving through space
 
-  - [[path_integration]] - Way add
+  - [[path_integration]] - Tracking position by summing movements
 
-    - [[distance_estimation]] - Far know
+    - [[distance_estimation]] - Judging distance traveled
 
-      - [[step_counting]] - Step count
+      - [[step_counting]] - Estimating distance from steps taken
 
-      - [[energy_cost]] - Work feel
+      - [[energy_cost]] - Estimating distance from energy expended
 
-    - [[direction_sensing]] - Way know
+    - [[direction_sensing]] - Determining heading
 
-      - [[sun_compass]] - Sun use
+      - [[sun_compass]] - Using the sun's position to hold heading
 
-      - [[magnetic_sense]] - Earth feel
+      - [[magnetic_sense]] - Using the geomagnetic field to orient
 
-  - [[landmark_learning]] - Mark learn
+  - [[landmark_learning]] - Learning cues that mark locations
 
-    - [[visual_landmarks]] - See marks
+    - [[visual_landmarks]] - Navigation by visual cues
 
-      - [[pattern_recognition]] - Shape know
+      - [[pattern_recognition]] - Recognizing visual shapes and scenes
 
-      - [[size_estimation]] - Big small
+      - [[size_estimation]] - Judging landmark size and distance
 
-    - [[chemical_landmarks]] - Smell marks
+    - [[chemical_landmarks]] - Navigation by chemical cues
 
-      - [[trail_following]] - Path follow
+      - [[trail_following]] - Following pheromone trails
 
-      - [[home_recognition]] - Nest know
+      - [[home_recognition]] - Recognizing the nest location
 
 ### Foraging Systems
 
-- [[foraging_cognition]] - Food think
+- [[foraging_cognition]] - Decision processes in food collection
 
-  - [[resource_assessment]] - Food check
+  - resource assessment - Evaluating food sources
 
-    - [[quality_evaluation]] - Good bad
+    - [[quality_evaluation]] - Judging the value of a resource
 
-      - [[nutrient_sensing]] - Food type
+      - [[nutrient_sensing]] - Detecting nutrient content
 
-      - [[quantity_estimation]] - How much
+      - [[quantity_estimation]] - Estimating the amount available
 
-    - [[cost_evaluation]] - Work check
+    - [[cost_evaluation]] - Weighing the costs of exploiting a resource
 
-      - [[distance_cost]] - Far work
+      - [[distance_cost]] - Travel cost to reach a resource
 
-      - [[risk_assessment]] - Danger check
+      - [[risk_assessment]] - Weighing hazards at a food source
 
-  - [[foraging_strategies]] - Food ways
+  - [[foraging_strategies]] - Patterns of food collection
 
-    - [[search_patterns]] - Look ways
+    - [[search_patterns]] - Movement patterns used to find food
 
-      - [[random_search]] - Random look
+      - [[random_search]] - Undirected exploration
 
-      - [[directed_search]] - Aimed look
+      - [[directed_search]] - Search guided by cues or memory
 
-    - [[recruitment_systems]] - Help call
+    - [[recruitment_systems]] - Mobilizing nestmates to a resource
 
-      - [[information_transfer]] - Tell how
+      - [[information_transfer]] - Passing location information to nestmates
 
-      - [[team_coordination]] - Work team
+      - [[team_coordination]] - Coordinating group effort at a resource
 
 ### Social Organization
 
-- [[colony_organization]] - Group run
+- [[colony_organization]] - Structure of colony activity
 
-  - [[division_of_labor]] - Job split
+  - [[division_of_labor]] - Specialization of individuals in different tasks
 
-    - [[task_allocation]] - Work give
+    - [[task_allocation]] - Distributing tasks among workers
 
-      - [[specialization]] - Good one
+      - specialization - Individuals focusing on particular tasks
 
-      - [[flexibility]] - Change can
+      - [[flexibility]] - Ability to switch tasks as needs change
 
-    - [[work_coordination]] - Team work
+    - [[work_coordination]] - Aligning the efforts of workers
 
-      - [[activity_cycles]] - Time work
+      - [[activity_cycles]] - Rhythms of colony activity over time
 
-      - [[spatial_organization]] - Space work
+      - spatial organization - Arrangement of workers in nest space
 
-  - [[colony_regulation]] - Group fix
+  - [[colony_regulation]] - Maintaining colony function
 
-    - [[population_control]] - Size fix
+    - [[population_control]] - Regulating colony size
 
-      - [[birth_regulation]] - Born fix
+      - [[birth_regulation]] - Controlling brood production
 
-      - [[mortality_control]] - Die fix
+      - [[mortality_control]] - Managing worker loss
 
-    - [[resource_management]] - Thing use
+    - [[resource_management]] - Handling colony resources
 
-      - [[storage_systems]] - Keep ways
+      - [[storage_systems]] - Storing food and materials
 
-      - [[distribution]] - Give ways
+      - [[distribution]] - Sharing resources among members
 
 ## Neural Mechanisms
 
 ### Sensory Systems
 
-- [[insect_sensing]] - Bug feel
+- [[insect_sensing]] - Sensory capabilities of insects
 
-  - [[chemical_systems]] - Smell parts
+  - [[chemical_systems]] - Sensory systems for chemicals
 
-    - [[olfactory_processing]] - Smell think
+    - [[olfactory_processing]] - Neural processing of odors
 
-      - [[receptor_systems]] - Catch bits
+      - [[receptor_systems]] - Receptors that detect odor molecules
 
-      - [[neural_coding]] - Brain code
+      - [[neural_coding]] - Neural representation of sensory information
 
-    - [[gustatory_processing]] - Taste think
+    - [[gustatory_processing]] - Neural processing of taste
 
-      - [[feeding_control]] - Eat think
+      - [[feeding_control]] - Neural regulation of feeding
 
-      - [[quality_detection]] - Good bad
+      - [[quality_detection]] - Detecting food quality by taste
 
-  - [[mechanical_systems]] - Touch parts
+  - [[mechanical_systems]] - Sensory systems for touch and force
 
-    - [[tactile_processing]] - Touch think
+    - [[tactile_processing]] - Neural processing of touch
 
-      - [[pressure_sensing]] - Push feel
+      - [[pressure_sensing]] - Detecting mechanical pressure
 
-      - [[texture_analysis]] - Rough smooth
+      - [[texture_analysis]] - Distinguishing surface texture
 
-    - [[proprioception]] - Self feel
+    - [[proprioception]] - Sensing body position and movement
 
-      - [[position_sense]] - Where am
+      - [[position_sense]] - Sensing limb and body position
 
-      - [[movement_sense]] - How move
+      - [[movement_sense]] - Sensing ongoing body movement
 
 ### Learning Circuits
 
-- [[neural_learning]] - Brain learn
+- [[neural_learning]] - Neural basis of learning
 
-  - [[plasticity_mechanisms]] - Change ways
+  - [[plasticity_mechanisms]] - Processes that modify neural connections
 
-    - [[synaptic_changes]] - Link change
+    - [[synaptic_changes]] - Changes in synaptic strength
 
-      - [[strengthening]] - Strong more
+      - strengthening - Increasing synaptic efficacy
 
-      - [[weakening]] - Weak less
+      - [[weakening]] - Decreasing synaptic efficacy
 
-    - [[circuit_modification]] - Path change
+    - [[circuit_modification]] - Rewiring of neural circuits
 
-      - [[pruning]] - Cut bad
+      - [[pruning]] - Removal of unused connections
 
-      - [[growth]] - Add good
+      - [[growth]] - Formation of new connections
 
-  - [[memory_circuits]] - Mind paths
+  - [[memory_circuits]] - Neural circuits that store memories
 
-    - [[encoding]] - Put in
+    - [[encoding]] - Converting experience into stored form
 
-      - [[pattern_formation]] - Make form
+      - [[pattern_formation]] - Forming neural activity patterns
 
-      - [[association_formation]] - Link make
+      - [[association_formation]] - Linking co-occurring stimuli
 
-    - [[retrieval]] - Get out
+    - [[retrieval]] - Recalling stored information
 
-      - [[pattern_completion]] - Fill blank
+      - [[pattern_completion]] - Reconstructing a memory from partial cues
 
-      - [[context_activation]] - Where match
+      - [[context_activation]] - Recall triggered by matching context
 
 ### Integration Systems
 
-- [[neural_integration]] - Brain join
+- [[neural_integration]] - Combining information across neural systems
 
-  - [[sensory_integration]] - Feel join
+  - [[sensory_integration]] - Combining inputs from different senses
 
-    - [[multimodal_processing]] - Many join
+    - [[multimodal_processing]] - Processing several sensory modalities together
 
-      - [[cross_modal]] - Type mix
+      - [[cross_modal]] - Interactions between sensory modalities
 
-      - [[feature_binding]] - Part join
+      - [[feature_binding]] - Combining features into one percept
 
-    - [[context_processing]] - Where join
+    - context processing - Interpreting inputs given the situation
 
-      - [[state_dependent]] - Now matter
+      - [[state_dependent]] - Responses that depend on internal state
 
-      - [[history_dependent]] - Past matter
+      - [[history_dependent]] - Responses that depend on past experience
 
-  - [[motor_integration]] - Move join
+  - [[motor_integration]] - Combining signals to produce movement
 
-    - [[action_selection]] - Do pick
+    - [[action_selection]] - Choosing among possible actions
 
-      - [[competing_actions]] - Choice fight
+      - [[competing_actions]] - Rival actions vying for expression
 
-      - [[priority_control]] - First what
+      - [[priority_control]] - Ranking which action takes precedence
 
-    - [[coordination]] - Work smooth
+    - [[coordination]] - Aligning movements into smooth behavior
 
-      - [[timing_control]] - When right
+      - [[timing_control]] - Controlling when actions occur
 
-      - [[sequence_control]] - Order right
+      - [[sequence_control]] - Controlling the order of actions
 
 ## Research Methods
 
 ### Behavioral Analysis
 
-- [[behavior_methods]] - Do study
+- [[behavior_methods]] - Methods for studying behavior
 
-  - [[observation_techniques]] - Watch ways
+  - [[observation_techniques]] - Methods for recording behavior
 
-    - [[activity_tracking]] - Do track
+    - [[activity_tracking]] - Recording what individuals do over time
 
-      - [[movement_patterns]] - Move look
+      - movement patterns - Analysis of paths and locomotion
 
-      - [[interaction_patterns]] - Talk look
+      - interaction patterns - Analysis of contacts among individuals
 
-    - [[response_testing]] - React test
+    - [[response_testing]] - Measuring reactions to stimuli
 
-      - [[stimulus_response]] - Thing do
+      - [[stimulus_response]] - Relating behavior to stimulus conditions
 
-      - [[choice_behavior]] - Pick do
+      - [[choice_behavior]] - Measuring preferences among options
 
-  - [[manipulation_studies]] - Change test
+  - [[manipulation_studies]] - Experiments that alter conditions
 
-    - [[environmental_control]] - Place change
+    - [[environmental_control]] - Experimentally changing the surroundings
 
-      - [[resource_manipulation]] - Food change
+      - [[resource_manipulation]] - Altering food availability
 
-      - [[social_manipulation]] - Friend change
+      - [[social_manipulation]] - Altering group composition
 
-    - [[individual_marking]] - Mark one
+    - [[individual_marking]] - Identifying individual insects
 
-      - [[paint_marking]] - Color mark
+      - [[paint_marking]] - Identifying insects with paint dots
 
-      - [[rfid_tracking]] - Chip track
+      - [[rfid_tracking]] - Tracking tagged insects with radio tags
 
 ### Neural Analysis
 
-- [[brain_methods]] - Brain study
+- [[brain_methods]] - Methods for studying the brain
 
-  - [[anatomy_studies]] - Part look
+  - [[anatomy_studies]] - Studies of neural structure
 
-    - [[structure_analysis]] - Build look
+    - [[structure_analysis]] - Describing brain organization
 
-      - [[circuit_mapping]] - Path map
+      - [[circuit_mapping]] - Tracing neural pathways
 
-      - [[cell_types]] - Kind find
+      - [[cell_types]] - Classifying neurons
 
-    - [[connectivity_analysis]] - Link look
+    - [[connectivity_analysis]] - Analyzing neural connections
 
-      - [[synaptic_mapping]] - Join map
+      - [[synaptic_mapping]] - Mapping synaptic contacts
 
-      - [[network_structure]] - Web look
+      - [[network_structure]] - Describing network topology
 
-  - [[function_studies]] - Work look
+  - [[function_studies]] - Studies of neural function
 
-    - [[activity_recording]] - Do watch
+    - [[activity_recording]] - Measuring neural activity
 
-      - [[electrical_recording]] - Zap watch
+      - [[electrical_recording]] - Recording electrical activity of neurons
 
-      - [[chemical_recording]] - Mix watch
+      - [[chemical_recording]] - Measuring neurochemical signals
 
-    - [[manipulation_techniques]] - Change do
+    - [[manipulation_techniques]] - Altering neural activity experimentally
 
-      - [[stimulation]] - Wake up
+      - stimulation - Activating neurons experimentally
 
-      - [[blocking]] - Stop do
+      - [[blocking]] - Silencing neural activity
 
 ### Collective Analysis
 
-- [[group_methods]] - Team study
+- [[group_methods]] - Methods for studying groups
 
-  - [[network_analysis]] - Web study
+  - [[network_analysis]] - Graph-based analysis of interactions
 
-    - [[interaction_networks]] - Talk webs
+    - [[interaction_networks]] - Networks of contacts among individuals
 
-      - [[contact_patterns]] - Touch maps
+      - [[contact_patterns]] - Who contacts whom, and how often
 
-      - [[information_flow]] - Know flow
+      - [[information_flow]] - Pathways of information transfer
 
-    - [[organization_patterns]] - Run forms
+    - [[organization_patterns]] - Structure of colony organization
 
-      - [[hierarchy_analysis]] - Boss maps
+      - [[hierarchy_analysis]] - Analyzing dominance or rank structure
 
-      - [[module_detection]] - Part find
+      - [[module_detection]] - Finding subgroups within a network
 
-  - [[emergence_analysis]] - Rise study
+  - [[emergence_analysis]] - Studying group-level properties from individual rules
 
-    - [[pattern_detection]] - Form find
+    - [[pattern_detection]] - Finding regularities in group behavior
 
-      - [[spatial_patterns]] - Space forms
+      - [[spatial_patterns]] - Regularities in spatial arrangement
 
-      - [[temporal_patterns]] - Time forms
+      - temporal patterns - Regularities in timing
 
-    - [[causality_analysis]] - Why study
+    - [[causality_analysis]] - Identifying causes of group behavior
 
-      - [[feedback_analysis]] - Loop look
+      - [[feedback_analysis]] - Analyzing reinforcing and balancing loops
 
-      - [[regulation_study]] - Fix look
+      - [[regulation_study]] - Studying how colonies maintain stability
 
 ## Applications
 
 ### Robotics Applications
 
-- [[bio_inspired_robotics]] - Bug bots
+- [[bio_inspired_robotics]] - Robots modeled on insect biology
 
-  - [[swarm_robotics]] - Many bots
+  - [[swarm_robotics]] - Coordinated groups of simple robots
 
-    - [[collective_behavior]] - Group do
+    - [[collective_behavior]] - Group behavior emerging from local rules
 
-      - [[coordination]] - Team work
+      - [[coordination]] - Aligning actions among robots
 
-      - [[task_allocation]] - Job give
+      - [[task_allocation]] - Assigning tasks across robots
 
-    - [[navigation_systems]] - Way find
+    - [[navigation_systems]] - Methods for robot movement through space
 
-      - [[path_planning]] - Route make
+      - [[path_planning]] - Computing routes to a goal
 
-      - [[mapping]] - Place learn
+      - [[mapping]] - Building representations of the environment
 
-  - [[cognitive_robotics]] - Think bots
+  - [[cognitive_robotics]] - Robots with learning and reasoning abilities
 
-    - [[learning_systems]] - Learn ways
+    - [[learning_systems]] - Systems that improve from experience
 
-      - [[adaptive_control]] - Smart boss
+      - [[adaptive_control]] - Control that adjusts to changing conditions
 
-      - [[memory_systems]] - Mind keep
+      - [[memory_systems]] - Storage of learned information
 
-    - [[decision_systems]] - Choose ways
+    - [[decision_systems]] - Systems that choose among actions
 
-      - [[action_selection]] - Do pick
+      - [[action_selection]] - Choosing among possible actions
 
-      - [[planning]] - Plan make
+      - [[planning]] - Constructing action sequences toward goals
 
 ### Agricultural Applications
 
-- [[pest_management]] - Bug fix
+- [[pest_management]] - Controlling crop pests
 
-  - [[biological_control]] - Life fix
+  - [[biological_control]] - Using natural enemies against pests
 
-    - [[predator_prey]] - Hunt help
+    - [[predator_prey]] - Predators suppressing pest populations
 
-      - [[population_dynamics]] - Group size
+      - [[population_dynamics]] - Changes in pest and predator numbers
 
-      - [[efficiency_analysis]] - Good check
+      - [[efficiency_analysis]] - Evaluating how well control works
 
-    - [[habitat_management]] - Home fix
+    - [[habitat_management]] - Managing habitat to favor beneficial insects
 
-      - [[resource_manipulation]] - Food change
+      - [[resource_manipulation]] - Providing food that supports beneficial insects
 
-      - [[shelter_provision]] - Safe make
+      - [[shelter_provision]] - Providing refuges for beneficial insects
 
-  - [[chemical_ecology]] - Smell use
+  - [[chemical_ecology]] - Using chemical signals in pest control
 
-    - [[pheromone_applications]] - Mark use
+    - [[pheromone_applications]] - Using pheromones to manage insects
 
-      - [[attraction]] - Come here
+      - [[attraction]] - Luring insects with chemical cues
 
-      - [[repulsion]] - Go away
+      - [[repulsion]] - Deterring insects with chemical cues
 
-    - [[plant_protection]] - Plant help
+    - [[plant_protection]] - Protecting crops from damage
 
-      - [[defense_induction]] - Strong make
+      - [[defense_induction]] - Triggering plant defenses
 
-      - [[pollination]] - Seed help
+      - [[pollination]] - Pollen transfer supporting crop yield
 
 ### Conservation Applications
 
-- [[insect_conservation]] - Bug save
+- [[insect_conservation]] - Protecting insect populations
 
-  - [[population_management]] - Group keep
+  - [[population_management]] - Managing insect population levels
 
-    - [[habitat_protection]] - Home save
+    - [[habitat_protection]] - Preserving habitat for insects
 
-      - [[resource_preservation]] - Food save
+      - [[resource_preservation]] - Protecting food resources
 
-      - [[nest_protection]] - House save
+      - [[nest_protection]] - Protecting nesting sites
 
-    - [[population_monitoring]] - Group watch
+    - [[population_monitoring]] - Surveying insect populations
 
-      - [[abundance_tracking]] - How many
+      - [[abundance_tracking]] - Estimating population size over time
 
-      - [[health_assessment]] - How good
+      - [[health_assessment]] - Evaluating population condition
 
-  - [[ecosystem_services]] - Nature help
+  - [[ecosystem_services]] - Benefits insects provide to ecosystems
 
-    - [[pollination_services]] - Plant help
+    - [[pollination_services]] - Pollination benefits to plants
 
-      - [[crop_pollination]] - Food grow
+      - [[crop_pollination]] - Pollination of agricultural crops
 
-      - [[wild_pollination]] - Wild grow
+      - [[wild_pollination]] - Pollination of wild plants
 
-    - [[soil_services]] - Ground help
+    - [[soil_services]] - Insect contributions to soil function
 
-      - [[soil_structure]] - Dirt build
+      - [[soil_structure]] - Soil aeration and aggregate formation
 
-      - [[nutrient_cycling]] - Food round
+      - [[nutrient_cycling]] - Recycling nutrients through the ecosystem
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[research_challenges]] - Study hard
+- [[research_challenges]] - Open difficulties in the field
 
-  - [[measurement_challenges]] - Check hard
+  - [[measurement_challenges]] - Difficulties in collecting data
 
-    - [[individual_tracking]] - One watch
+    - [[individual_tracking]] - Following individual insects over time
 
-      - [[small_scale]] - Tiny hard
+      - [[small_scale]] - Difficulty of working with tiny animals
 
-      - [[many_individuals]] - Many hard
+      - [[many_individuals]] - Difficulty of tracking whole colonies
 
-    - [[brain_access]] - Mind reach
+    - [[brain_access]] - Access to insect neural tissue
 
-      - [[size_constraints]] - Small hard
+      - [[size_constraints]] - Limits imposed by small brain size
 
-      - [[activity_recording]] - Do watch
+      - [[activity_recording]] - Recording neural activity in small brains
 
-  - [[analysis_challenges]] - Look hard
+  - [[analysis_challenges]] - Difficulties in interpreting data
 
-    - [[data_complexity]] - Info much
+    - [[data_complexity]] - Large, high-dimensional datasets
 
-      - [[multi_scale]] - Size mix
+      - [[multi_scale]] - Linking individual and colony scales
 
-      - [[temporal_dynamics]] - Time change
+      - [[temporal_dynamics]] - Changes across multiple timescales
 
-    - [[causality_inference]] - Why guess
+    - [[causality_inference]] - Inferring causes from observations
 
-      - [[feedback_loops]] - Loop mess
+      - [[feedback_loops]] - Circular causation that obscures causes
 
-      - [[emergence]] - New from
+      - [[emergence]] - Group properties not found in individuals
 
 ### Emerging Approaches
 
-- [[new_methods]] - Next ways
+- new methods - Recent techniques for the field
 
-  - [[technical_advances]] - Tool new
+  - [[technical_advances]] - Improvements in experimental tools
 
-    - [[imaging_methods]] - See new
+    - [[imaging_methods]] - Visualizing neural and behavioral activity
 
-      - [[microscopy]] - Small see
+      - [[microscopy]] - High-resolution imaging of small structures
 
-      - [[tracking_systems]] - Follow new
+      - [[tracking_systems]] - Automated tracking of individual insects
 
-    - [[manipulation_tools]] - Change new
+    - [[manipulation_tools]] - Tools for altering biology experimentally
 
-      - [[genetic_tools]] - Gene change
+      - [[genetic_tools]] - Genetic modification of neural function
 
-      - [[neural_tools]] - Brain change
+      - [[neural_tools]] - Tools for manipulating neural activity
 
-  - [[analytical_advances]] - Think new
+  - [[analytical_advances]] - Improvements in data analysis
 
-    - [[computational_methods]] - Math new
+    - [[computational_methods]] - Computational approaches to analysis
 
-      - [[machine_learning]] - Smart math
+      - [[machine_learning]] - Statistical learning from large datasets
 
-      - [[network_analysis]] - Web math
+      - [[network_analysis]] - Graph-based analysis of interactions
 
-    - [[theory_development]] - Think deep
+    - [[theory_development]] - Building explanatory frameworks
 
-      - [[predictive_models]] - Guess good
+      - [[predictive_models]] - Models that forecast behavior
 
-      - [[unified_theories]] - All join
+      - [[unified_theories]] - Frameworks linking individual and collective cognition
 
 ## References
 

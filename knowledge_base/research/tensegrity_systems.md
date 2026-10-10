@@ -45,7 +45,7 @@ See [[knowledge_base/systems/tensegrity]] for the systems-level treatment and [[
 
 - Ingber, D. E. (1993). Cellular tensegrity: defining new rules of biological design that govern the cytoskeleton. *Journal of Cell Science*, 104, 613-627.
 - Ingber, D. E. (1998). The architecture of life. *Scientific American*, 278(1), 48-57.
-- Fuller, R. B. (1975). *Synergetics*. Macmillan.
+- Fuller, R. B., with Applewhite, E. J. (1975). *Synergetics*. Macmillan.
 
 ## Related Resources
 

@@ -1,3 +1,10 @@
+---
+title: Cognitive package tools
+type: documentation
+status: stable
+updated: 2026-10-10
+---
+
 # Cognitive package tools
 
 The installable package source lives in `code/tools/src` and is exposed as

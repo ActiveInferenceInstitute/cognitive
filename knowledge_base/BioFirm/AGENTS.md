@@ -41,5 +41,5 @@ collects the framework documents, schema notes, and ecological applications.
 
 - This material is conceptual and is linked from the repository knowledge
   base; see `knowledge_base/AGENTS.md` for the authoring rules.
-- Implementation of biological-firm models, where present, lives in
-  `code/Things/BioFirm/`.
+- `code/Things/BioFirm/` holds documentation only; there is no importable
+  biological-firm code.

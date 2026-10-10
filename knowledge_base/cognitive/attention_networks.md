@@ -8,6 +8,8 @@ tags:
 - attention
 - neuroscience
 - networks
+aliases:
+  - attention_systems
 semantic_relations:
   - type: implements
     links:

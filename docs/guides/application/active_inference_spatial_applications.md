@@ -7,6 +7,7 @@ type: article
 status: stable
 
 created: 2024-03-25
+updated: 2026-10-10
 
 tags:
 
@@ -57,7 +58,7 @@ semantic_relations:
 
 ### 1.1 Introduction
 
-Active Inference and Spatial Computing represent two powerful frameworks that, when combined, offer unprecedented opportunities for creating intelligent, adaptive, and intuitive systems that bridge physical and digital realities. This article explores the theoretical foundations, practical applications, and future directions of implementing [[knowledge_base/cognitive/active_inference|Active Inference]] principles within spatial technologies such as augmented reality, virtual reality, mixed reality, and the broader [[knowledge_base/systems/spatial_web|Spatial Web]].
+Active Inference and Spatial Computing represent two powerful frameworks that, when combined, offer opportunities for creating intelligent, adaptive, and intuitive systems that bridge physical and digital realities. This article explores the theoretical foundations, practical applications, and future directions of implementing [[knowledge_base/cognitive/active_inference|Active Inference]] principles within spatial technologies such as augmented reality, virtual reality, mixed reality, and the broader [[knowledge_base/systems/spatial_web|Spatial Web]].
 
 At its core, Active Inference in spatial applications treats human-computer interaction as a bidirectional prediction process where both the user and the system continuously generate and update models about each other and the shared environment. This paradigm shift moves beyond traditional reactive interfaces toward predictive experiences that anticipate user needs, adapt to changing contexts, and minimize surprise or uncertainty.
 
@@ -601,11 +602,11 @@ Evaluating Active Inference implementations requires specific metrics:
 
 These metrics help quantify the effectiveness of different implementation approaches.
 
-## 10. Case Studies
+## 10. Illustrative scenarios
 
 ### 10.1 Predictive Augmented Reality Interface
 
-A case study of a workspace AR system implementing Active Inference principles:
+A hypothetical workspace AR system implementing Active Inference principles. The scenarios in this section are design sketches, not evaluated systems, and report no results:
 
 - Hierarchical prediction of user attention and task state
 
@@ -615,13 +616,12 @@ A case study of a workspace AR system implementing Active Inference principles:
 
 - Continuous adaptation to individual work patterns
 
-- Measurable improvements in task efficiency and cognitive load
 
-This example demonstrates how Active Inference principles translate into practical benefits in professional contexts.
+This sketch shows how the principles could map onto a professional setting.
 
 ### 10.2 Therapeutic Virtual Reality
 
-A VR therapy application leveraging Active Inference for anxiety treatment:
+A hypothetical VR therapy application using Active Inference for anxiety treatment:
 
 - Generative models of anxiety triggers and responses
 
@@ -631,13 +631,12 @@ A VR therapy application leveraging Active Inference for anxiety treatment:
 
 - Personalized therapy progression based on user models
 
-- Evidence of enhanced treatment outcomes through predictive adaptation
 
-This case study shows how predictive frameworks enhance therapeutic applications of spatial technologies.
+This sketch shows how predictive models could be applied to therapeutic uses of spatial technologies.
 
 ### 10.3 Collaborative Spatial Design
 
-A multi-user design application implementing collective Active Inference:
+A hypothetical multi-user design application implementing collective Active Inference:
 
 - Shared predictive models of design objects and spaces
 
@@ -647,13 +646,12 @@ A multi-user design application implementing collective Active Inference:
 
 - Adaptive interface based on group dynamics
 
-- Demonstrated improvements in collaboration efficiency
 
-This example illustrates how Active Inference principles extend to multi-user spatial applications.
+This sketch shows how the principles could extend to multi-user spatial applications.
 
 ### 10.4 Intelligent Navigation System
 
-A spatial wayfinding application based on Active Inference:
+A hypothetical spatial wayfinding application based on Active Inference:
 
 - Predictive models of user movement and attention
 
@@ -663,9 +661,8 @@ A spatial wayfinding application based on Active Inference:
 
 - Adaptive guidance based on familiarity inference
 
-- Evidence of improved navigation performance and reduced cognitive load
 
-This case study demonstrates practical applications in everyday spatial tasks.
+This sketch shows how the principles could apply to everyday spatial tasks.
 
 ## 11. Future Directions
 

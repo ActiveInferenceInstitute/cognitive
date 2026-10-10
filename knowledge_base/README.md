@@ -29,7 +29,7 @@ semantic_relations:
 
 # Knowledge Base Overview
 
-A comprehensive knowledge base for cognitive modeling, integrating theoretical foundations, mathematical frameworks, and practical implementations across multiple disciplines. This repository serves as the central hub for understanding Active Inference and its applications in cognitive science, artificial intelligence, and complex systems research.
+A knowledge base for cognitive modeling, integrating theoretical foundations, mathematical frameworks, and implementation notes across multiple disciplines. This repository serves as the central hub for understanding Active Inference and its applications in cognitive science, artificial intelligence, and complex systems research.
 
 To find a page by name or topic, start at the [[knowledge_base/catalog|catalog]]: it lists every page in every domain with its title and opening line.
 
@@ -162,4 +162,4 @@ Author-date reference notes for the primary literature on active inference and t
 
 ---
 
-> **Integration Note**: This knowledge base integrates with the broader [[docs/README|Documentation Framework]] and [[tools/README|Implementation Tools]] for complete cognitive modeling support.
+> **Integration Note**: This knowledge base integrates with the broader [[docs/README|Documentation Framework]] and [[code/tools/README|Implementation Tools]] for complete cognitive modeling support.

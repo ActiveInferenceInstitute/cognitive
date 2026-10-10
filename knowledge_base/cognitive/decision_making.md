@@ -8,6 +8,8 @@ tags:
 - computation
 - behavior
 - neural_systems
+aliases:
+  - decision_models
 semantic_relations:
   - type: implements
     links:
@@ -43,7 +45,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - [[energy_costs]] - Resource use
 
-    - [[opportunity_costs]] - Alternative loss
+    - [[opportunity_costs]] - Value forgone by choosing one alternative
 
 ### Evidence Processing
 
@@ -51,9 +53,9 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[sensory_evidence]] - Perceptual input
 
-    - [[signal_detection]] - Pattern finding
+    - [[signal_detection]] - Separating meaningful signals from background noise
 
-    - [[noise_filtering]] - Clean-up
+    - noise filtering - Clean-up
 
   - [[memory_evidence]] - Stored information
 
@@ -67,11 +69,11 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[option_comparison]] - Alternative evaluation
 
-    - [[value_comparison]] - Worth matching
+    - [[value_comparison]] - Comparing the subjective values of options
 
-    - [[probability_weighting]] - Likelihood scaling
+    - [[probability_weighting]] - Nonlinear distortion of outcome probabilities
 
-  - [[threshold_crossing]] - Decision point
+  - [[threshold_crossing]] - Evidence reaching the level that triggers a choice
 
     - [[decision_bounds]] - Choice criteria
 
@@ -85,15 +87,15 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[valuation_network]] - Worth coding
 
-    - [[ventral_striatum]] - Reward
+    - [[ventral_striatum]] - Subcortical hub for reward and motivation
 
     - [[orbitofrontal]] - Value integration
 
   - [[control_network]] - Choice regulation
 
-    - [[dorsolateral_prefrontal]] - Executive
+    - [[dorsolateral_prefrontal]] - Working memory and executive control region
 
-    - [[anterior_cingulate]] - Monitoring
+    - [[anterior_cingulate]] - Conflict and error monitoring region
 
 ### Circuit Mechanisms
 
@@ -101,29 +103,29 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[accumulator_circuits]] - Evidence build-up
 
-    - [[integration_neurons]] - Signal adding
+    - [[integration_neurons]] - Neurons that accumulate evidence over time
 
-    - [[threshold_units]] - Decision points
+    - [[threshold_units]] - Units that fire once evidence passes a bound
 
   - [[comparison_circuits]] - Option evaluation
 
-    - [[mutual_inhibition]] - Competition
+    - [[mutual_inhibition]] - Competing populations suppress each other's activity
 
-    - [[winner_take_all]] - Selection
+    - [[winner_take_all]] - Strongest option suppresses all others
 
 ### Neuromodulation
 
-- [[decision_modulation]] - Chemical control
+- [[decision_modulation]] - Neurotransmitter influences on choice
 
   - [[dopamine_system]] - Reward/learning
 
-    - [[reward_prediction]] - Value learning
+    - [[reward_prediction]] - Anticipating the reward an action will bring
 
-    - [[motivation_control]] - Drive
+    - [[motivation_control]] - Regulating drive to pursue goals
 
   - [[serotonin_system]] - Patience/inhibition
 
-    - [[temporal_discounting]] - Future value
+    - [[temporal_discounting]] - Devaluing rewards that arrive later
 
     - [[behavioral_inhibition]] - Restraint
 
@@ -135,11 +137,11 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[drift_diffusion]] - Evidence accumulation
 
-    - [[drift_rate]] - Information quality
+    - [[drift_rate]] - Speed of evidence accumulation toward a bound
 
     - [[decision_threshold]] - Choice criterion
 
-  - [[race_models]] - Option competition
+  - [[race_models]] - Independent accumulators racing to a bound
 
     - [[accumulator_race]] - Parallel build-up
 
@@ -151,31 +153,31 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[utility_maximization]] - Value optimization
 
-    - [[expected_utility]] - Average outcome
+    - [[expected_utility]] - Probability-weighted average of outcome values
 
     - [[risk_preference]] - Uncertainty attitude
 
-  - [[cost_minimization]] - Efficiency
+  - [[cost_minimization]] - Choosing options with the lowest total cost
 
-    - [[effort_optimization]] - Energy use
+    - [[effort_optimization]] - Balancing effort spent against expected payoff
 
     - [[time_optimization]] - Speed-accuracy
 
 ### Learning Processes
 
-- [[decision_learning]] - Improvement
+- [[decision_learning]] - Improving choices through experience
 
-  - [[value_learning]] - Worth estimation
+  - [[value_learning]] - Learning how rewarding each option is
 
     - [[reward_learning]] - Outcome association
 
-    - [[punishment_learning]] - Avoidance
+    - [[punishment_learning]] - Learning to avoid actions with bad outcomes
 
-  - [[strategy_learning]] - Method selection
+  - strategy learning - Learning which approach suits which situation
 
     - [[policy_learning]] - Action rules
 
-    - [[meta_learning]] - Learning to decide
+    - [[meta_learning]] - Learning how to learn and choose better
 
 ## Decision Types
 
@@ -185,15 +187,15 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[detection]] - Presence/absence
 
-    - [[threshold_detection]] - Minimal signal
+    - [[threshold_detection]] - Detecting the weakest noticeable stimulus
 
-    - [[change_detection]] - Difference notice
+    - [[change_detection]] - Noticing changes between successive stimuli
 
   - [[discrimination]] - Difference judgment
 
-    - [[feature_discrimination]] - Property
+    - [[feature_discrimination]] - Telling stimuli apart by a single attribute
 
-    - [[pattern_discrimination]] - Complex
+    - [[pattern_discrimination]] - Telling apart complex multi-feature stimuli
 
 ### Value-based Decisions
 
@@ -201,7 +203,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[economic_choice]] - Resource decisions
 
-    - [[risk_decisions]] - Uncertainty
+    - [[risk_decisions]] - Choices among options with uncertain outcomes
 
     - [[temporal_choice]] - Time trade-offs
 
@@ -209,7 +211,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - [[cooperation]] - Joint benefit
 
-    - [[competition]] - Contest
+    - competition - Rivalry for limited resources or rewards
 
 ### Motor Decisions
 
@@ -217,21 +219,21 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[target_selection]] - Goal choice
 
-    - [[spatial_target]] - Location
+    - [[spatial_target]] - Choosing a goal by its location
 
-    - [[object_target]] - Thing
+    - [[object_target]] - Choosing a goal by the object itself
 
-  - [[movement_selection]] - How to act
+  - [[movement_selection]] - Choosing which movement to execute
 
-    - [[trajectory_choice]] - Path
+    - [[trajectory_choice]] - Choosing the route a movement follows
 
-    - [[timing_choice]] - When
+    - [[timing_choice]] - Choosing when to start an action
 
 ## Applications
 
 ### Clinical Applications
 
-- [[decision_disorders]] - Dysfunction
+- [[decision_disorders]] - Clinical disruptions of choice behavior
 
   - [[addiction]] - Maladaptive choice
 
@@ -239,11 +241,11 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - [[behavioral_addiction]] - Action-related
 
-  - [[impulsivity]] - Poor control
+  - [[impulsivity]] - Acting without adequate forethought or restraint
 
-    - [[premature_choice]] - Too fast
+    - [[premature_choice]] - Choosing before enough evidence is gathered
 
-    - [[risky_choice]] - Too dangerous
+    - [[risky_choice]] - Choosing options with excessive risk of loss
 
 ### Economic Applications
 
@@ -253,25 +255,25 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - [[product_choice]] - What to buy
 
-    - [[price_sensitivity]] - How much
+    - [[price_sensitivity]] - Responsiveness of demand to price changes
 
-  - [[investment_decisions]] - Financial
+  - [[investment_decisions]] - Allocating money in pursuit of future returns
 
     - [[portfolio_choice]] - Asset mix
 
-    - [[risk_management]] - Safety
+    - [[risk_management]] - Identifying and limiting potential losses
 
 ### Technology Applications
 
 - [[decision_technology]] - Support tools
 
-  - [[decision_support]] - Choice aids
+  - decision support - Choice aids
 
-    - [[information_systems]] - Data help
+    - [[information_systems]] - Systems that collect and present decision data
 
     - [[recommendation_systems]] - Suggestions
 
-  - [[automated_decisions]] - AI choice
+  - [[automated_decisions]] - Choices made by algorithms without human input
 
     - [[autonomous_systems]] - Self-deciding
 
@@ -283,17 +285,17 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 - [[decision_tasks]] - Choice measurement
 
-  - [[psychophysics]] - Perceptual choice
+  - [[psychophysics]] - Relating physical stimuli to perceptual judgments
 
-    - [[threshold_measurement]] - Limits
+    - [[threshold_measurement]] - Estimating the smallest detectable stimulus
 
-    - [[bias_measurement]] - Tendencies
+    - [[bias_measurement]] - Quantifying systematic leanings in choices
 
-  - [[economic_games]] - Value choice
+  - [[economic_games]] - Tasks with monetary stakes and strategic choices
 
-    - [[gambling_tasks]] - Risk measure
+    - [[gambling_tasks]] - Tasks probing risk-taking with uncertain payoffs
 
-    - [[social_games]] - Interaction
+    - [[social_games]] - Tasks probing choices between interacting players
 
 ### Neural Recording
 
@@ -301,15 +303,15 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[single_unit]] - Neuron firing
 
-    - [[choice_probability]] - Decision coding
+    - [[choice_probability]] - How well a neuron's firing predicts the choice
 
-    - [[value_coding]] - Worth signals
+    - [[value_coding]] - Neural signals that represent option value
 
   - [[population_recording]] - Group activity
 
-    - [[network_dynamics]] - System patterns
+    - [[network_dynamics]] - Time-varying activity patterns across a network
 
-    - [[state_transitions]] - Choice evolution
+    - [[state_transitions]] - Shifts of neural state as a choice forms
 
 ### Computational Modeling
 
@@ -317,9 +319,9 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[behavioral_models]] - Choice patterns
 
-    - [[sequential_sampling]] - Evidence
+    - [[sequential_sampling]] - Models of evidence sampled over time until a bound
 
-    - [[reinforcement_learning]] - Value
+    - [[reinforcement_learning]] - Learning action values from reward feedback
 
   - [[neural_models]] - Brain mechanisms
 
@@ -331,17 +333,17 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Current Challenges
 
-- [[complexity_scaling]] - Real-world
+- complexity scaling - Real-world
 
 - [[individual_differences]] - Person variation
 
-- [[context_dependence]] - Situation effects
+- context dependence - Situation effects
 
 ### Emerging Approaches
 
-- [[real_time_tracking]] - Online monitoring
+- real time tracking - Online monitoring
 
-- [[adaptive_systems]] - Smart support
+- [[adaptive_systems]] - Systems that adjust to the user's behavior
 
 - [[collective_decisions]] - Group choice
 
@@ -371,425 +373,425 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Value Systems
 
-- [[value_computation]] - Worth judge
+- [[value_computation]] - Estimating the subjective value of options
 
-  - [[reward_processing]] - Good check
+  - [[reward_processing]] - Evaluating how rewarding an outcome is
 
-    - [[primary_rewards]] - Basic good
+    - [[primary_rewards]] - Innate rewards such as food and water
 
-      - [[survival_value]] - Live need
+      - [[survival_value]] - Value tied to staying alive
 
-      - [[hedonic_value]] - Feel good
+      - [[hedonic_value]] - Value derived from pleasure or enjoyment
 
-    - [[secondary_rewards]] - Learn good
+    - [[secondary_rewards]] - Rewards valued through learned association
 
-      - [[social_value]] - People good
+      - [[social_value]] - Value gained from social interaction
 
-      - [[abstract_value]] - Think good
+      - [[abstract_value]] - Value of ideas, money, and symbolic goods
 
-  - [[cost_processing]] - Bad check
+  - [[cost_processing]] - Evaluating the costs of an action
 
-    - [[energy_costs]] - Power use
+    - [[energy_costs]] - Energy expended to carry out an action
 
-      - [[metabolic_cost]] - Body use
+      - [[metabolic_cost]] - Physical energy demands of an action
 
-      - [[cognitive_cost]] - Mind use
+      - [[cognitive_cost]] - Mental effort required to decide or act
 
-    - [[risk_costs]] - Danger cost
+    - [[risk_costs]] - Expected losses from risky outcomes
 
-      - [[uncertainty_cost]] - Not sure
+      - [[uncertainty_cost]] - Penalty attached to unknown outcomes
 
-      - [[loss_potential]] - Might lose
+      - [[loss_potential]] - Size of what could be lost
 
 ### Evidence Processing
 
-- [[evidence_accumulation]] - Info gather
+- [[evidence_accumulation]] - Collecting evidence toward a decision
 
-  - [[sensory_evidence]] - Sense get
+  - [[sensory_evidence]] - Evidence drawn from sensory input
 
-    - [[perceptual_sampling]] - Look take
+    - [[perceptual_sampling]] - Repeatedly sampling stimulus information
 
-      - [[feature_extraction]] - Thing find
+      - [[feature_extraction]] - Pulling out informative stimulus features
 
-      - [[pattern_recognition]] - Shape find
+      - [[pattern_recognition]] - Identifying familiar patterns in input
 
-    - [[noise_handling]] - Clean mess
+    - noise handling - Managing random variability in the signal
 
-      - [[signal_detection]] - Real find
+      - [[signal_detection]] - Telling true signals from noise
 
-      - [[noise_filtering]] - Wrong drop
+      - noise filtering - Removing irrelevant fluctuations from input
 
-  - [[memory_evidence]] - Remember get
+  - [[memory_evidence]] - Evidence retrieved from memory
 
-    - [[episodic_recall]] - Event get
+    - [[episodic_recall]] - Recalling specific past events
 
-      - [[past_outcomes]] - Before what
+      - [[past_outcomes]] - Results of earlier similar choices
 
-      - [[similar_cases]] - Like what
+      - [[similar_cases]] - Comparable prior situations
 
-    - [[semantic_knowledge]] - Fact get
+    - [[semantic_knowledge]] - General factual knowledge
 
-      - [[rule_application]] - Use rules
+      - [[rule_application]] - Applying learned rules to the choice
 
-      - [[category_knowledge]] - Group know
+      - [[category_knowledge]] - Knowledge about category membership
 
 ### Choice Mechanisms
 
-- [[choice_selection]] - Pick what
+- [[choice_selection]] - Selecting among available options
 
-  - [[option_evaluation]] - Worth check
+  - [[option_evaluation]] - Assessing the merits of each option
 
-    - [[value_comparison]] - Good match
+    - [[value_comparison]] - Comparing option values against each other
 
-      - [[relative_value]] - Compare good
+      - [[relative_value]] - Value judged against alternatives
 
-      - [[reference_points]] - Base line
+      - [[reference_points]] - Baselines against which outcomes are judged
 
-    - [[probability_weighting]] - Chance weight
+    - [[probability_weighting]] - Subjective weighting of outcome probabilities
 
-      - [[subjective_probability]] - Feel sure
+      - [[subjective_probability]] - Personal estimate of how likely an outcome is
 
-      - [[risk_attitude]] - Risk like
+      - [[risk_attitude]] - Tendency to seek or avoid risk
 
-  - [[decision_criteria]] - Choose how
+  - [[decision_criteria]] - Standards used to settle on a choice
 
-    - [[threshold_setting]] - When pick
+    - [[threshold_setting]] - Setting how much evidence is needed to choose
 
-      - [[evidence_threshold]] - Sure need
+      - [[evidence_threshold]] - Amount of evidence required to commit
 
-      - [[urgency_signals]] - Rush need
+      - [[urgency_signals]] - Growing pressure to decide as time passes
 
-    - [[strategy_selection]] - Way pick
+    - strategy selection - Choosing which decision approach to use
 
-      - [[heuristics]] - Quick rules
+      - [[heuristics]] - Fast rule-of-thumb shortcuts
 
-      - [[optimization]] - Best find
+      - [[optimization]] - Searching for the best available option
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[decision_networks]] - Brain webs
+- [[decision_networks]] - Interacting brain regions underlying choice
 
-  - [[valuation_network]] - Worth web
+  - [[valuation_network]] - Regions that compute subjective value
 
-    - [[ventral_striatum]] - Want spot
+    - [[ventral_striatum]] - Reward and motivation hub
 
-      - [[reward_signals]] - Good mark
+      - [[reward_signals]] - Neural signals indicating reward
 
-      - [[motivation_signals]] - Want mark
+      - [[motivation_signals]] - Neural signals driving effort toward goals
 
-    - [[orbitofrontal]] - Value spot
+    - [[orbitofrontal]] - Region encoding the value of options
 
-      - [[value_coding]] - Worth code
+      - [[value_coding]] - Neural representation of option value
 
-      - [[outcome_coding]] - Result code
+      - [[outcome_coding]] - Neural representation of expected outcomes
 
-  - [[control_network]] - Boss web
+  - [[control_network]] - Regions that regulate and direct choices
 
-    - [[prefrontal]] - Think boss
+    - [[prefrontal]] - Frontal cortex supporting planning and control
 
-      - [[dorsolateral]] - Plan spot
+      - [[dorsolateral]] - Prefrontal region for planning and working memory
 
-      - [[anterior_cingulate]] - Check spot
+      - [[anterior_cingulate]] - Region that monitors conflict and errors
 
-    - [[parietal]] - Space boss
+    - [[parietal]] - Parietal cortex integrating space and attention
 
-      - [[evidence_accumulation]] - Proof get
+      - [[evidence_accumulation]] - Parietal activity that builds toward a decision bound
 
-      - [[action_planning]] - Move plan
+      - [[action_planning]] - Preparing which movement to make
 
 ### Circuit Mechanisms
 
-- [[decision_circuits]] - Brain paths
+- [[decision_circuits]] - Neural pathways computing choices
 
-  - [[accumulator_circuits]] - Gather paths
+  - [[accumulator_circuits]] - Circuits that sum evidence over time
 
-    - [[evidence_integration]] - Proof join
+    - [[evidence_integration]] - Combining evidence into a running total
 
-      - [[temporal_integration]] - Time add
+      - [[temporal_integration]] - Summing evidence across time
 
-      - [[spatial_integration]] - Space add
+      - [[spatial_integration]] - Combining evidence across space or sources
 
-    - [[threshold_mechanisms]] - Limit paths
+    - [[threshold_mechanisms]] - Mechanisms that trigger a choice at a bound
 
-      - [[threshold_crossing]] - Pass point
+      - [[threshold_crossing]] - Moment evidence reaches the decision bound
 
-      - [[winner_take_all]] - Best win
+      - [[winner_take_all]] - Strongest option suppresses its competitors
 
-  - [[value_circuits]] - Worth paths
+  - [[value_circuits]] - Circuits that compute option value
 
-    - [[reward_computation]] - Good math
+    - [[reward_computation]] - Computing the reward an option offers
 
-      - [[utility_coding]] - Use worth
+      - [[utility_coding]] - Neural encoding of subjective utility
 
-      - [[risk_coding]] - Danger code
+      - [[risk_coding]] - Neural encoding of outcome uncertainty
 
-    - [[cost_computation]] - Bad math
+    - [[cost_computation]] - Computing the costs an option incurs
 
-      - [[effort_coding]] - Work code
+      - [[effort_coding]] - Neural encoding of required effort
 
-      - [[loss_coding]] - Lose code
+      - [[loss_coding]] - Neural encoding of potential losses
 
 ### Neuromodulation
 
-- [[decision_modulation]] - Brain change
+- [[decision_modulation]] - Neuromodulator effects on decision processes
 
-  - [[dopamine_system]] - Want juice
+  - [[dopamine_system]] - Dopamine pathways for reward and motivation
 
-    - [[reward_prediction]] - Good guess
+    - [[reward_prediction]] - Predicting upcoming reward
 
-      - [[prediction_errors]] - Guess wrong
+      - [[prediction_errors]] - Gap between expected and actual outcome
 
-      - [[incentive_salience]] - Want mark
+      - [[incentive_salience]] - Motivational pull of reward-related cues
 
-    - [[action_motivation]] - Do drive
+    - [[action_motivation]] - Drive to initiate effortful actions
 
-      - [[approach_behavior]] - Go to
+      - [[approach_behavior]] - Moving toward rewarding stimuli
 
-      - [[exploration]] - Try new
+      - [[exploration]] - Sampling unfamiliar options to gain information
 
-  - [[noradrenaline_system]] - Wake juice
+  - [[noradrenaline_system]] - Noradrenaline pathways regulating arousal and uncertainty
 
-    - [[uncertainty_signals]] - Not sure
+    - [[uncertainty_signals]] - Signals that track unreliable information
 
-      - [[surprise_detection]] - New spot
+      - [[surprise_detection]] - Noticing unexpected events
 
-      - [[volatility_tracking]] - Change track
+      - [[volatility_tracking]] - Tracking how quickly the environment changes
 
-    - [[arousal_control]] - Wake control
+    - arousal control - Regulating alertness level
 
-      - [[vigilance]] - Stay watch
+      - [[vigilance]] - Sustained readiness to detect events
 
-      - [[stress_response]] - Stress act
+      - [[stress_response]] - Physiological and behavioral reaction to stress
 
 ## Processing Principles
 
 ### Information Flow
 
-- [[decision_processing]] - Choose flow
+- [[decision_processing]] - Stages through which a decision unfolds
 
-  - [[bottom_up]] - Sense up
+  - [[bottom_up]] - Processing driven by sensory input
 
-    - [[evidence_gathering]] - Proof get
+    - [[evidence_gathering]] - Collecting stimulus-driven evidence
 
-      - [[sampling_processes]] - Look take
+      - [[sampling_processes]] - Drawing samples of information
 
-      - [[integration_processes]] - Add up
+      - [[integration_processes]] - Combining samples into a running estimate
 
-    - [[value_construction]] - Worth make
+    - [[value_construction]] - Building value estimates during choice
 
-      - [[feature_valuation]] - Thing worth
+      - [[feature_valuation]] - Valuing options by their individual attributes
 
-      - [[context_effects]] - Where effect
+      - [[context_effects]] - Influence of surrounding options on choice
 
-  - [[top_down]] - Think down
+  - [[top_down]] - Processing guided by goals and expectations
 
-    - [[goal_influence]] - Want effect
+    - [[goal_influence]] - Goals shaping which evidence gets attention
 
-      - [[preference_bias]] - Like bend
+      - [[preference_bias]] - Existing preferences tilting the choice
 
-      - [[strategy_bias]] - Way bend
+      - [[strategy_bias]] - Chosen strategy tilting the choice
 
-    - [[control_processes]] - Boss effect
+    - [[control_processes]] - Executive processes that direct decision behavior
 
-      - [[inhibition]] - Stop power
+      - [[inhibition]] - Suppressing unwanted responses
 
-      - [[flexibility]] - Change able
+      - [[flexibility]] - Adapting strategy to changing demands
 
 ### Resource Management
 
-- [[decision_resources]] - Choose power
+- [[decision_resources]] - Cognitive and motivational capacity available for deciding
 
-  - [[cognitive_resources]] - Think power
+  - [[cognitive_resources]] - Attention and memory capacity for deciding
 
-    - [[attention_allocation]] - Focus give
+    - [[attention_allocation]] - Distributing attention among options and cues
 
-      - [[selective_attention]] - Pick what
+      - [[selective_attention]] - Focusing on relevant information
 
-      - [[sustained_attention]] - Keep on
+      - [[sustained_attention]] - Maintaining focus over time
 
-    - [[working_memory]] - Hold short
+    - [[working_memory]] - Holding options in mind briefly
 
-      - [[option_maintenance]] - Choice hold
+      - [[option_maintenance]] - Keeping candidate options active in mind
 
-      - [[comparison_process]] - Match do
+      - [[comparison_process]] - Weighing options against each other
 
-  - [[motivational_resources]] - Want power
+  - [[motivational_resources]] - Drive available to sustain effort
 
-    - [[effort_allocation]] - Try give
+    - [[effort_allocation]] - Deciding how much effort to invest
 
-      - [[energy_management]] - Power use
+      - [[energy_management]] - Pacing energy expenditure over time
 
-      - [[persistence]] - Keep try
+      - persistence - Continuing effort despite obstacles
 
-    - [[emotional_resources]] - Feel power
+    - [[emotional_resources]] - Capacity to regulate emotion while deciding
 
-      - [[stress_management]] - Stress handle
+      - stress management - Coping with stress during decisions
 
-      - [[mood_effects]] - Feel effect
+      - [[mood_effects]] - Influence of mood on choices
 
 ### Integration Mechanisms
 
-- [[decision_integration]] - Choose join
+- [[decision_integration]] - Combining multiple inputs into one choice
 
-  - [[multimodal_integration]] - Sense join
+  - [[multimodal_integration]] - Merging information from several senses
 
-    - [[sensory_fusion]] - Feel join
+    - [[sensory_fusion]] - Merging sensory signals into a single estimate
 
-      - [[visual_integration]] - See join
+      - [[visual_integration]] - Combining visual cues
 
-      - [[auditory_integration]] - Hear join
+      - [[auditory_integration]] - Combining auditory cues
 
-    - [[evidence_combination]] - Proof join
+    - [[evidence_combination]] - Pooling multiple pieces of evidence
 
-      - [[weighted_averaging]] - Weight mix
+      - [[weighted_averaging]] - Averaging cues in proportion to reliability
 
-      - [[bayesian_integration]] - Smart join
+      - [[bayesian_integration]] - Combining cues and priors by Bayes' rule
 
-  - [[value_integration]] - Worth join
+  - [[value_integration]] - Combining attribute values into overall value
 
-    - [[attribute_integration]] - Thing join
+    - [[attribute_integration]] - Merging an option's attributes into one score
 
-      - [[feature_combination]] - Part join
+      - [[feature_combination]] - Combining separate features into a whole
 
-      - [[dimension_reduction]] - Simple make
+      - [[dimension_reduction]] - Compressing many attributes into a few
 
-    - [[temporal_integration]] - Time join
+    - [[temporal_integration]] - Combining information across time
 
-      - [[history_effects]] - Past effect
+      - [[history_effects]] - Influence of previous trials on current choice
 
-      - [[future_projection]] - Next guess
+      - [[future_projection]] - Anticipating likely future outcomes
 
 ## Applications
 
 ### Clinical Applications
 
-- [[decision_disorders]] - Choose wrong
+- [[decision_disorders]] - Conditions that impair choice behavior
 
-  - [[impulsivity]] - Fast wrong
+  - [[impulsivity]] - Acting without adequate forethought
 
-    - [[response_inhibition]] - Stop fail
+    - [[response_inhibition]] - Impaired ability to withhold responses
 
-      - [[premature_response]] - Too soon
+      - [[premature_response]] - Responding before the evidence warrants
 
-      - [[perseveration]] - Stuck do
+      - [[perseveration]] - Repeating a response despite changed demands
 
-    - [[risk_taking]] - Danger take
+    - [[risk_taking]] - Seeking options with a high chance of harm
 
-      - [[reward_sensitivity]] - Good chase
+      - [[reward_sensitivity]] - Heightened drive toward rewards
 
-      - [[punishment_insensitivity]] - Bad ignore
+      - [[punishment_insensitivity]] - Reduced learning from negative consequences
 
-  - [[indecision]] - Stuck choose
+  - [[indecision]] - Difficulty committing to a choice
 
     - [[choice_paralysis]] - Can't pick
 
-      - [[overthinking]] - Think much
+      - [[overthinking]] - Excessive deliberation that delays choice
 
-      - [[avoidance]] - No choose
+      - [[avoidance]] - Evading decisions to escape discomfort
 
-    - [[ambivalence]] - Feel split
+    - [[ambivalence]] - Holding conflicting feelings about options
 
-      - [[conflict_anxiety]] - Worry clash
+      - [[conflict_anxiety]] - Anxiety arising from competing options
 
-      - [[commitment_fear]] - Stuck fear
+      - [[commitment_fear]] - Fear of being bound to a choice
 
 ### Therapeutic Approaches
 
-- [[decision_therapy]] - Choose help
+- [[decision_therapy]] - Therapies that improve decision-making
 
-  - [[cognitive_strategies]] - Think help
+  - [[cognitive_strategies]] - Mental techniques that improve choices
 
-    - [[decision_analysis]] - Choice look
+    - [[decision_analysis]] - Structured breakdown of a choice
 
-      - [[option_evaluation]] - Worth check
+      - [[option_evaluation]] - Assessing the merits of each option
 
-      - [[consequence_analysis]] - Result think
+      - [[consequence_analysis]] - Considering likely results of each option
 
-    - [[bias_awareness]] - Bend know
+    - [[bias_awareness]] - Recognizing one's own decision biases
 
-      - [[bias_identification]] - Bend find
+      - [[bias_identification]] - Spotting specific biases in one's choices
 
-      - [[debiasing_techniques]] - Bend fix
+      - [[debiasing_techniques]] - Methods that reduce biased judgment
 
-  - [[behavioral_strategies]] - Do help
+  - [[behavioral_strategies]] - Behavior-based methods for better choices
 
-    - [[exposure_training]] - Face try
+    - [[exposure_training]] - Gradual confrontation with feared decisions
 
-      - [[gradual_exposure]] - Slow face
+      - [[gradual_exposure]] - Stepwise exposure to rising difficulty
 
-      - [[feedback_learning]] - Learn from
+      - [[feedback_learning]] - Learning from outcomes of past choices
 
-    - [[skill_building]] - Can make
+    - [[skill_building]] - Developing practical decision skills
 
-      - [[coping_skills]] - Deal skills
+      - [[coping_skills]] - Strategies for managing stress and setbacks
 
-      - [[planning_skills]] - Plan skills
+      - [[planning_skills]] - Skills for setting goals and sequencing steps
 
 ### Technology Applications
 
-- [[decision_technology]] - Choose tech
+- [[decision_technology]] - Technology that supports decision-making
 
-  - [[decision_support]] - Help tools
+  - decision support - Tools that assist people in choosing
 
-    - [[analysis_tools]] - Look tools
+    - [[analysis_tools]] - Software for analyzing options and data
 
-      - [[option_comparison]] - Match tools
+      - [[option_comparison]] - Tools for side-by-side comparison of options
 
-      - [[risk_assessment]] - Risk tools
+      - [[risk_assessment]] - Tools that estimate the likelihood and impact of risk
 
-    - [[recommendation_systems]] - Suggest tools
+    - [[recommendation_systems]] - Systems that suggest options based on preferences
 
-      - [[preference_learning]] - Like learn
+      - [[preference_learning]] - Inferring a user's preferences from behavior
 
-      - [[personalization]] - Person fit
+      - [[personalization]] - Tailoring advice to the individual
 
-  - [[monitoring_systems]] - Watch tools
+  - monitoring systems - Systems that track behavior and outcomes
 
-    - [[behavior_tracking]] - Do watch
+    - behavior tracking - Recording what people actually do
 
-      - [[choice_patterns]] - Pick paths
+      - [[choice_patterns]] - Recurring regularities in a person's choices
 
-      - [[outcome_tracking]] - Result watch
+      - [[outcome_tracking]] - Recording the results of decisions
 
-    - [[adaptation_systems]] - Change tools
+    - [[adaptation_systems]] - Systems that adjust to changing conditions
 
-      - [[dynamic_adjustment]] - Fix move
+      - [[dynamic_adjustment]] - Updating recommendations as conditions change
 
-      - [[learning_algorithms]] - Learn math
+      - [[learning_algorithms]] - Algorithms that improve from experience
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[measurement_issues]] - Check hard
+- measurement issues - Difficulty measuring decision processes reliably
 
-  - [[preference_stability]] - Like change
+  - [[preference_stability]] - Whether preferences stay constant over time
 
-  - [[context_dependence]] - Where effect
+  - context dependence - Choices shifting with the situation
 
-- [[mechanism_understanding]] - How work
+- mechanism understanding - Explaining how decision processes operate
 
-  - [[integration_processes]] - Join how
+  - [[integration_processes]] - How separate inputs are combined
 
-  - [[individual_differences]] - Person vary
+  - [[individual_differences]] - Variation in decision style across people
 
 ### Emerging Approaches
 
-- [[new_methods]] - New ways
+- new methods - Emerging techniques for studying decisions
 
-  - [[real_time_measures]] - Now check
+  - real time measures - Measures taken as decisions unfold
 
-    - [[neural_decoding]] - Brain read
+    - [[neural_decoding]] - Inferring choices from neural activity
 
-    - [[behavior_tracking]] - Do watch
+    - behavior tracking - Recording what people actually do
 
-  - [[computational_models]] - Math think
+  - [[computational_models]] - Formal models of decision processes
 
-    - [[learning_models]] - Learn math
+    - [[learning_models]] - Models of how choices change with experience
 
-    - [[hybrid_models]] - Mix math
+    - hybrid models - Models combining several modeling approaches
 
 ## References
 

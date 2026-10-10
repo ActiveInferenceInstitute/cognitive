@@ -8,6 +8,7 @@ tags:
 - pragmatics
 aliases:
   - communications
+  - social_communication
 semantic_relations:
   - type: relates
     links:

@@ -1,406 +1,91 @@
 ---
-
-title: Obsidian Linking Patterns
-
+title: Linking patterns
 type: guide
-
 status: stable
-
 created: 2024-02-12
-
+updated: 2026-10-10
 tags:
-
   - obsidian
-
   - linking
-
   - organization
-
 semantic_relations:
   - type: implements
     links:
-      - "[[docs/repo_docs/documentation_standards]]"
+      - "[[docs/repo_docs/documentation_standards|Documentation standards]]"
   - type: relates
     links:
-      - "[[obsidian_usage]]"
-      - "[[folder_structure]]"
+      - "[[docs/repo_docs/obsidian_usage|Obsidian usage]]"
+      - "[[docs/repo_docs/folder_structure|Folder structure]]"
 ---
 
-# Obsidian Linking Patterns
+# Linking patterns
 
-## Link Types Overview
+How pages in this vault link to each other, taken from the existing pages. The
+syntax and resolution rules are in
+[[docs/repo_docs/obsidian_linking|Obsidian linking]]; the checkers are in
+[[docs/repo_docs/linking_validation|Link validation]].
 
-### Basic Links
+## Concept pages in `knowledge_base/`
 
-1. Direct Links
-
-   ```markdown
-
-   [[filename]]
-
-   ```
-
-1. Aliased Links
-
-   ```markdown
-
-   [[filename|Display Text]]
-
-   ```
-
-1. Section Links
-
-   ```markdown
-
-   [[filename#Section Name]]
-
-   ```
-
-1. Block Links
-
-   ```markdown
-
-   [[filename#^block-id]]
-
-   ```
-
-### Advanced Links
-
-1. Relative Path Links
-
-   ```markdown
-
-   [[parent_folder/filename]]
-
-   [[./current_folder/filename]]
-
-   ```
-
-1. Multi-section Links
-
-   ```markdown
-
-   [[filename#section1#subsection]]
-
-   ```
-
-1. Embedded Links
-
-   ```markdown
-
-   ![[filename]]
-
-   ![[filename#section]]
-
-   ```
-
-## Link Organization
-
-### Semantic Grouping
+A concept page declares its neighbours twice: in frontmatter, as typed
+relations, and at the end of the body, as a "Related concepts" list with a short
+reason for each link. For example, `knowledge_base/cognitive/action_planning.md`
+ends with:
 
 ```markdown
+## Related concepts
 
-## Theory
-
-- [[active_inference|Active Inference Theory]]
-
-- [[free_energy|Free Energy Principle]]
-
-## Implementation
-
-- [[active_inference_impl|Implementation Details]]
-
-- [[free_energy_calc|Calculations]]
-
+- [[planning_as_inference]] — the general formulation
+- [[knowledge_base/mathematics/expected_free_energy]] — the score being summed
 ```
 
-### Hierarchical Organization
+Bare names such as `[[planning_as_inference]]` are the common form for links
+inside one domain. Use the full path when the target is in another domain, when
+the name could match more than one page, or when the link must be enforced by
+the gate.
 
-```markdown
+## Hub pages
 
-## Core Concepts
+Each domain has a `README.md` that introduces it and a generated `catalog.md`
+that lists every page. Link to a hub rather than copying its list. The vault's
+entry points are `knowledge_base/index.md`, `knowledge_base/README.md`, and
+`knowledge_base/catalog.md`.
 
-- [[parent_concept]]
+## Documentation pages
 
-  - [[child_concept_1]]
+A guide links forward to the reference it depends on and back to the standard it
+follows. API pages link to [[docs/api/api_reference|the API reference]]; agent
+pages link to [[docs/agents/agent_docs_readme|the agent clearinghouse]]. Do not
+describe the same API in two pages; link to the one authoritative page.
 
-  - [[child_concept_2]]
+## Code references
 
-    - [[grandchild_1]]
+Documentation names code in code spans (`code/tools/src/models/active_inference/`,
+`DiscreteGenerativeModel`) rather than wiki links, because the link checker
+indexes Markdown and a code path is not a page. Link to a folder's `README.md`
+or `AGENTS.md` when you mean the folder's documentation, for example
+`[[code/Things/Simple_POMDP/AGENTS]]`.
 
-    - [[grandchild_2]]
-
-```
-
-## Link Patterns
-
-### Knowledge Base Links
-
-```markdown
-
-## Concept Definition
-
-- Base: [[concept_name]]
-
-- Theory: [[concept_theory]]
-
-- Implementation: [[concept_implementation]]
-
-- Examples: [[concept_examples]]
-
-```
-
-### Documentation Links
-
-```markdown
-
-## Documentation Structure
-
-- Guide: [[user_guide]]
-
-- API: [[api_documentation]]
-
-- Examples: [[usage_examples]]
-
-- Tests: [[test_documentation]]
-
-```
-
-### Code Links
-
-```markdown
-
-## Code References
-
-- Source: [[source_file]]
-
-- Tests: [[test_file]]
-
-- Examples: [[example_file]]
-
-- Benchmarks: [[benchmark_file]]
-
-```
-
-## Link Management
-
-### Frontmatter Links
+## Frontmatter relations
 
 ```yaml
-
----
-
-related_concepts:
-
-  - [[concept_a]]
-
-  - [[concept_b]]
-
-dependencies:
-
-  - [[dependency_1]]
-
-  - [[dependency_2]]
-
-implementations:
-
-  - [[impl_1]]
-
-  - [[impl_2]]
-
----
-
+semantic_relations:
+  - type: relates
+    links:
+      - "[[knowledge_base/cognitive/action_planning|Action planning]]"
 ```
 
-### Link Categories
+The links must be quoted. Common `type` values are `relates`, `implements`,
+`extends`, `organizes`, and `documents`.
 
-```markdown
+## Reciprocity
 
-## Theoretical Links
+Links are not required to be reciprocal, and no tool checks for it. Obsidian
+shows backlinks for every inbound link automatically, so add a reverse link only
+when a reader of the target page would want to be sent back.
 
-- [[theory_a]]
+## Related documentation
 
-- [[theory_b]]
-
-## Implementation Links
-
-- [[impl_x]]
-
-- [[impl_y]]
-
-## Test Links
-
-- [[test_1]]
-
-- [[test_2]]
-
-```
-
-## Best Practices
-
-### Link Naming
-
-1. Use descriptive names
-
-1. Maintain consistency
-
-1. Follow naming conventions
-
-1. Use appropriate aliases
-
-### Link Organization
-
-1. Group related links
-
-1. Use clear hierarchy
-
-1. Maintain bidirectional links
-
-1. Document relationships
-
-### Link Maintenance
-
-1. Regular validation
-
-1. Update broken links
-
-1. Clean unused links
-
-1. Check consistency
-
-## Automation
-
-### Link Validation
-
-```python
-
-def validate_links(content: str) -> List[str]:
-
-    """Validate all links in content."""
-
-    pattern = r'\[\[(.*?)\]\]'
-
-    links = re.findall(pattern, content)
-
-    return validate_link_targets(links)
-
-```
-
-### Link Generation
-
-```python
-
-def generate_backlinks(source: str, target: str) -> str:
-
-    """Generate bidirectional links."""
-
-    return f"""
-
-    // In {source}:
-
-    {target}
-
-    // In {target}:
-
-    {source}
-
-    """
-
-```
-
-## Common Patterns
-
-### Theory Documentation
-
-```markdown
-
-## Theoretical Foundation
-
-- Base Theory: [[base_theory]]
-
-- Extensions: [[theory_extension]]
-
-- Applications: [[theory_application]]
-
-```
-
-### Implementation Documentation
-
-```markdown
-
-## Implementation Details
-
-- Core: [[core_implementation]]
-
-- Modules: [[module_documentation]]
-
-- Tests: [[test_documentation]]
-
-```
-
-### Research Documentation
-
-```markdown
-
-## Research Notes
-
-- Papers: [[research_papers]]
-
-- Experiments: [[experiment_notes]]
-
-- Results: [[research_results]]
-
-```
-
-## Link Visualization
-
-### Graph View
-
-- Node types
-
-- Link types
-
-- Clustering
-
-- Filtering
-
-### Local Graphs
-
-- Depth settings
-
-- Node filtering
-
-- Link filtering
-
-- Layout options
-
-## Troubleshooting
-
-### Common Issues
-
-1. Broken links
-
-1. Circular references
-
-1. Ambiguous links
-
-1. Missing backlinks
-
-### Solutions
-
-1. Regular validation
-
-1. Clear naming
-
-1. Proper organization
-
-1. Consistent patterns
-
-## Related Documentation
-
-- [[obsidian_usage]]
-
-- [[folder_structure]]
-
-- [[documentation_standards]]
-
+- [[docs/repo_docs/obsidian_linking|Obsidian linking]]
+- [[docs/repo_docs/linking_completeness|Linking completeness]]
+- [[docs/repo_docs/linking_validation|Link validation]]

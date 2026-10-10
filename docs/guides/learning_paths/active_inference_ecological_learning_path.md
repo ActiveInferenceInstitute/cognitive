@@ -5,12 +5,12 @@ title: Active Inference in Ecological Systems Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
 complexity: advanced
 
-processing_priority: 1
 
 tags:
 
@@ -114,14 +114,6 @@ This specialized path focuses on applying Active Inference to understand ecologi
 
 ## Core Learning Path
 
-### 1. Ecological Modeling (4 weeks)
-
-#### Week 1-2: System State Estimation
-
-
-#### Week 3-4: Intervention Planning
-
-
 ### 2. Ecological Applications (6 weeks)
 
 #### Week 1-2: Population Dynamics
@@ -156,9 +148,6 @@ This specialized path focuses on applying Active Inference to understand ecologi
 
 ### 3. Environmental Applications (4 weeks)
 
-#### Week 1-2: Climate Response
-
-
 #### Week 3-4: Adaptation Planning
 
 - Vulnerability Assessment
@@ -170,9 +159,6 @@ This specialized path focuses on applying Active Inference to understand ecologi
 - Risk Management
 
 ### 4. Advanced Topics (4 weeks)
-
-#### Week 1-2: Complex Systems Analysis
-
 
 #### Week 3-4: Socio-Ecological Systems
 

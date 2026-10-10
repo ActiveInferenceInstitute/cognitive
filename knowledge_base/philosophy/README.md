@@ -85,12 +85,12 @@ The philosophy knowledge base provides philosophical foundations that inform cog
 - [[knowledge_base/systems/complex_systems|Complex Systems Theory]]
 
 ### Implementation Examples
-- [[tools/src/models/README|Model Implementations]]
+- [[code/tools/src/models/README|Model Implementations]]
 - Philosophical Guides
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 10 focused philosophical documents
+- **Coverage**: every page is listed in the [[knowledge_base/philosophy/catalog|catalog]]
 - **Depth**: Comprehensive treatment of key philosophical frameworks
 - **Relevance**: Strong connections to cognitive modeling
 - **Integration**: Well-integrated with scientific methodology

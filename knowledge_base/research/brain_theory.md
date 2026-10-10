@@ -25,7 +25,7 @@ semantic_relations:
 
 ## Overview
 
-Brain theory seeks general principles that explain what neural tissue computes and how. Two ideas have organised much of it in recent decades: that the brain performs a form of Bayesian inference about the causes of its sensory input, and that cortex implements this through hierarchical prediction and prediction-error signalling. Both have older roots. Helmholtz described perception as unconscious inference in the nineteenth century, and the modern formulation was developed by Knill and Pouget (2004) as the "Bayesian brain" programme.
+Brain theory seeks general principles that explain what neural tissue computes and how. Two ideas have organised much of it in recent decades: that the brain performs a form of Bayesian inference about the causes of its sensory input, and that cortex implements this through hierarchical prediction and prediction-error signalling. Both have older roots. Helmholtz described perception as unconscious inference in the nineteenth century, and Knill and Pouget (2004) reviewed the modern "Bayesian brain" programme, in which neural coding and computation are framed in terms of uncertainty.
 
 ## Main questions
 

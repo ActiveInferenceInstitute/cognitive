@@ -8,6 +8,8 @@ tags:
   - active_inference
   - bayesian_inference
   - generative_model
+aliases:
+  - prior_knowledge
 semantic_relations:
   - type: relates
     links:

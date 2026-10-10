@@ -1,5 +1,6 @@
 ---
 title: Optimization Algorithms
+description: "Overview of iterative optimization algorithms, with gradient descent rates and natural gradient preconditioning, and their role in minimising variational free energy."
 type: mathematical_concept
 status: stable
 created: 2026-10-09
@@ -8,6 +9,11 @@ tags:
   - optimization
   - gradient_descent
   - convergence
+aliases:
+  - computational_optimization
+  - numerical_optimization
+  - optimization
+  - optimization_techniques
 semantic_relations:
   - type: foundation
     links:

@@ -73,15 +73,15 @@ Plain text formats serve as the foundation for our cognitive modeling ecosystem,
 
   - [[experiment_tracking]]
 
-  - [[version_control]]
+  - version control
 
   - [[parameter_logging]]
 
 - **Collaboration**
 
-  - [[code_review]]
+  - code review
 
-  - [[knowledge_sharing]]
+  - knowledge sharing
 
   - [[distributed_development]]
 
@@ -355,9 +355,9 @@ graph LR
 
 ## Related Concepts
 
-- [[knowledge_management]]
+- knowledge management
 
-- [[version_control]]
+- version control
 
 - [[documentation_systems]]
 

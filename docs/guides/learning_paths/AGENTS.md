@@ -3,7 +3,7 @@ title: Learning paths documentation instructions
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2026-08-02
+updated: 2026-10-10
 tags:
   - agents
   - learning_paths

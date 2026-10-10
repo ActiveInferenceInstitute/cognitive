@@ -2,27 +2,31 @@
 title: Templates index
 type: documentation
 status: stable
+created: 2024-01-01
+updated: 2026-10-10
 semantic_relations:
   - type: organizes
     links:
-      - "[[AGENTS|Templates instructions]]"
-      - "[[template_index|Template index]]"
-      - "[[template_guide|Template guide]]"
-      - "[[documentation_templates|Documentation templates]]"
-      - "[[documentation_templates_index|Documentation templates index]]"
+      - "[[docs/templates/AGENTS|Templates instructions]]"
+      - "[[docs/templates/template_index|Template index]]"
+      - "[[docs/templates/template_guide|Template guide]]"
+      - "[[docs/templates/documentation_templates|Documentation templates]]"
+      - "[[docs/templates/documentation_templates_index|Documentation templates index]]"
 ---
 
 # Templates index
 
-This directory provides authoring templates for knowledge-base and
-documentation pages.
+This directory holds the authoring templates for knowledge-base and
+documentation pages. `config.yaml` points `paths.templates` here, and
+`cognitive-create-node` renders the `<type>_template.md` files from this
+directory into `knowledge_base/`.
 
 ## Guides
 
-- `template_guide.md` — how to use the templates.
-- `template_index.md` — index of all templates.
-- `documentation_templates.md` and `documentation_templates_index.md` —
-  documentation-specific templates.
+- `template_guide.md` explains the two kinds of template and how to use them.
+- `template_index.md` lists every template with its purpose.
+- `documentation_templates.md` and `documentation_templates_index.md` cover the
+  documentation-page templates.
 
 ## Template files
 
@@ -33,12 +37,12 @@ documentation pages.
   `cognitive_architecture_template.md`, `environment_template.md`.
 - Research: `research_document.md`, `analysis_template.md`,
   `experiment_template.md`.
-- Process: `action_template.md`, `guide_template.md`,
+- Process and reference: `action_template.md`, `guide_template.md`,
   `learning_path_template.md`, `linking_template.md`,
   `implementation_example.md`, `package_component.md`.
 
 ## Rules
 
 Templates are starting points: keep frontmatter valid, replace
-`semantic_relations` examples with resolving links, and use only real
+`semantic_relations` examples with resolving quoted links, and use only real
 package symbols in code examples. See `AGENTS.md`.

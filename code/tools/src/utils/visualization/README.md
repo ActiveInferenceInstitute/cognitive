@@ -1,22 +1,28 @@
 ---
-title: Visualization Utilities
+title: Knowledge network visualization
 type: module_index
 status: stable
 created: 2026-02-06
+updated: 2026-10-10
 tags:
   - module_index
   - documentation
 ---
 
-# Visualization Utilities
+# Knowledge network visualization
 
-## Overview
-This document provides an overview of **Visualization Utilities**.
+`cognitive.utils.visualization.network_viz.NetworkVisualizer` is the only
+module in this package (exported from its `__init__.py`).
 
-## Key Concepts
-- **Concept 1**: Description.
-- **Concept 2**: Description.
+- The constructor takes a YAML configuration path (default `config.yaml`). The
+  configuration must define `paths.knowledge_base`; a relative path resolves
+  against the configuration file. `visualization.seed` (default 0) seeds the
+  layout.
+- `build_network()` returns a NetworkX graph with one node per Markdown file
+  (canonical relative path without suffix) and an edge for each `[[wiki link]]`
+  that resolves to another file.
+- `visualize(output_path=None, width=1200, height=800)` returns a Plotly
+  figure and writes HTML only when `output_path` is given.
 
-## Related Links
-- index
-- [[README]]
+Related: [[code/tools/src/utils/README|Utility modules]],
+[[code/tools/src/utils/visualization/AGENTS|Instructions]].

@@ -1,5 +1,6 @@
 ---
 title: Homological Algebra
+description: "Mathematical background on homological algebra, covering chain complexes, homology, derived functors, spectral sequences and derived categories, with computational examples."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

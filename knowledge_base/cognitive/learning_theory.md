@@ -8,6 +8,9 @@ tags:
 - adaptation
 - plasticity
 - knowledge
+aliases:
+  - learning_algorithms
+  - learning_systems
 semantic_relations:
   - type: implements
     links:
@@ -31,327 +34,327 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 ### Basic Learning Types
 
-- [[learning_forms]] - Learn kinds
+- [[learning_forms]] - Major forms of learning
 
-  - [[associative_learning]] - Link learn
+  - [[associative_learning]] - Learning relationships between stimuli or events
 
-    - [[classical_conditioning]] - Event pair
+    - [[classical_conditioning]] - Learning that one stimulus predicts another
 
-    - [[operant_conditioning]] - Result learn
+    - [[operant_conditioning]] - Learning from the consequences of actions
 
-  - [[non_associative]] - Simple learn
+  - [[non_associative]] - Learning from a single repeated stimulus
 
-    - [[habituation]] - Less respond
+    - [[habituation]] - Declining response to a repeated harmless stimulus
 
-    - [[sensitization]] - More respond
+    - [[sensitization]] - Increased response after a strong or noxious stimulus
 
 ### Learning Mechanisms
 
-- [[learning_processes]] - How learn
+- [[learning_processes]] - Mechanisms through which learning occurs
 
-  - [[error_driven]] - Wrong fix
+  - [[error_driven]] - Learning by correcting prediction errors
 
-    - [[prediction_error]] - Guess wrong
+    - [[prediction_error]] - Difference between expected and actual outcome
 
-    - [[feedback_learning]] - Fix tell
+    - [[feedback_learning]] - Learning guided by information about performance
 
-  - [[reward_based]] - Good learn
+  - [[reward_based]] - Learning guided by rewards and punishments
 
-    - [[reinforcement]] - Good more
+    - [[reinforcement]] - Consequence that increases a behavior
 
-    - [[punishment]] - Bad less
+    - [[punishment]] - Consequence that decreases a behavior
 
 ### Knowledge Organization
 
-- [[knowledge_structure]] - Know build
+- [[knowledge_structure]] - How knowledge is organized
 
-  - [[schema_formation]] - Pattern make
+  - [[schema_formation]] - Building organized frameworks of knowledge
 
-    - [[category_learning]] - Group learn
+    - [[category_learning]] - Learning to group items into categories
 
-    - [[concept_formation]] - Idea make
+    - [[concept_formation]] - Forming abstract concepts from examples
 
-  - [[hierarchical_learning]] - Level learn
+  - [[hierarchical_learning]] - Learning organized in levels of increasing complexity
 
-    - [[simple_complex]] - Easy hard
+    - [[simple_complex]] - Progression from simple to complex material
 
-    - [[part_whole]] - Piece full
+    - [[part_whole]] - Relation between components and the whole
 
 ## Learning Systems
 
 ### Memory Formation
 
-- [[memory_systems]] - Store types
+- [[memory_systems]] - Distinct types of memory
 
-  - [[working_memory]] - Hold now
+  - [[working_memory]] - Short-term holding and use of information
 
-    - [[maintenance]] - Keep active
+    - maintenance - Keeping information active in working memory
 
-    - [[manipulation]] - Change hold
+    - manipulation - Transforming information held in working memory
 
-  - [[long_term]] - Keep long
+  - [[long_term]] - Durable storage of information
 
-    - [[declarative]] - Know what
+    - [[declarative]] - Memory for facts and events
 
-    - [[procedural]] - Know how
+    - [[procedural]] - Memory for skills and routines
 
 ### Skill Development
 
-- [[skill_learning]] - Can do
+- [[skill_learning]] - Acquiring skilled performance through practice
 
-  - [[motor_skills]] - Move learn
+  - [[motor_skills]] - Learning coordinated movements
 
-    - [[sequence_learning]] - Order do
+    - [[sequence_learning]] - Learning ordered series of actions
 
-    - [[coordination]] - Together do
+    - [[coordination]] - Combining movements into smooth action
 
-  - [[cognitive_skills]] - Think learn
+  - [[cognitive_skills]] - Learning mental skills such as reasoning
 
-    - [[strategy_learning]] - Way learn
+    - strategy learning - Learning effective approaches to tasks
 
-    - [[problem_solving]] - Fix learn
+    - [[problem_solving]] - Learning to reach goals when the path is unclear
 
 ### Social Learning
 
-- [[social_learning]] - People learn
+- [[social_learning]] - Learning from other individuals
 
-  - [[observation]] - Watch learn
+  - [[observation]] - Learning by watching others
 
-    - [[imitation]] - Copy do
+    - [[imitation]] - Reproducing another's actions
 
-    - [[modeling]] - Follow do
+    - [[modeling]] - Learning from demonstrations by a model
 
-  - [[instruction]] - Teach learn
+  - instruction - Learning through explicit teaching
 
-    - [[guided_learning]] - Help learn
+    - [[guided_learning]] - Learning with support from a teacher
 
-    - [[feedback]] - Tell right
+    - [[feedback]] - Information about the correctness of performance
 
 ## Neural Implementation
 
 ### Synaptic Plasticity
 
-- [[synapse_change]] - Connect change
+- [[synapse_change]] - Changes in synaptic strength
 
-  - [[hebbian_learning]] - Fire join
+  - [[hebbian_learning]] - Connections strengthen when neurons fire together
 
-    - [[ltp]] - Strong more
+    - [[ltp]] - Long-term potentiation, lasting synaptic strengthening
 
-    - [[ltd]] - Weak less
+    - [[ltd]] - Long-term depression, lasting synaptic weakening
 
-  - [[homeostatic]] - Balance keep
+  - [[homeostatic]] - Plasticity that keeps activity stable
 
-    - [[scaling]] - Size fix
+    - [[scaling]] - Adjusting all synaptic strengths to hold activity steady
 
-    - [[metaplasticity]] - Change rule
+    - [[metaplasticity]] - Plasticity of plasticity itself
 
 ### Network Adaptation
 
-- [[circuit_change]] - Path change
+- [[circuit_change]] - Changes in neural circuit organization
 
-  - [[local_circuits]] - Near change
+  - [[local_circuits]] - Plasticity within local neural circuits
 
-    - [[connection_strength]] - Link power
+    - [[connection_strength]] - Strength of connections between neurons
 
-    - [[pattern_formation]] - Shape make
+    - [[pattern_formation]] - Emergence of structured activity patterns
 
-  - [[distributed_circuits]] - Far change
+  - [[distributed_circuits]] - Plasticity across widely distributed circuits
 
-    - [[network_efficiency]] - Work good
+    - [[network_efficiency]] - How efficiently a network transmits information
 
-    - [[specialization]] - Job focus
+    - specialization - Regions tuning to particular functions
 
 ### System Integration
 
-- [[brain_systems]] - Part work
+- [[brain_systems]] - Brain systems involved in learning
 
-  - [[memory_networks]] - Store nets
+  - [[memory_networks]] - Networks that store memories
 
-    - [[hippocampal]] - Event learn
+    - [[hippocampal]] - Hippocampus-dependent memory processes
 
-    - [[cortical]] - Know store
+    - [[cortical]] - Cortical storage of consolidated knowledge
 
-  - [[reward_networks]] - Good nets
+  - [[reward_networks]] - Networks that process reward
 
-    - [[dopamine]] - Want learn
+    - [[dopamine]] - Neuromodulator signaling reward prediction errors
 
-    - [[motivation]] - Try drive
+    - [[motivation]] - Drive to pursue goals that supports learning
 
 ## Learning Principles
 
 ### Attention and Encoding
 
-- [[information_processing]] - Info work
+- [[information_processing]] - How information is attended to and encoded
 
   - [[selective_attention]] - Choose what
 
-    - [[relevance]] - Matter what
+    - [[relevance]] - Importance of information to current goals
 
-    - [[salience]] - Stand out
+    - [[salience]] - Prominence that captures attention
 
-  - [[deep_processing]] - Think deep
+  - [[deep_processing]] - Encoding based on meaning
 
-    - [[elaboration]] - More think
+    - [[elaboration]] - Linking new material to existing knowledge
 
-    - [[organization]] - Order make
+    - organization - Structuring material to aid encoding
 
 ### Practice and Repetition
 
-- [[practice_effects]] - Do better
+- [[practice_effects]] - Performance gains from practice
 
-  - [[spacing]] - Time spread
+  - [[spacing]] - Spreading practice over time
 
-    - [[distributed_practice]] - Space out
+    - [[distributed_practice]] - Practice separated by intervals
 
-    - [[massed_practice]] - All once
+    - [[massed_practice]] - Practice concentrated in one session
 
-  - [[variability]] - Change how
+  - [[variability]] - Varying conditions during practice
 
-    - [[context_variation]] - Where change
+    - [[context_variation]] - Varying the setting of practice
 
-    - [[task_variation]] - What change
+    - [[task_variation]] - Varying the task during practice
 
 ### Transfer Effects
 
-- [[knowledge_transfer]] - Use else
+- [[knowledge_transfer]] - Applying learning in new situations
 
-  - [[near_transfer]] - Close use
+  - [[near_transfer]] - Transfer to similar situations
 
-    - [[similar_tasks]] - Like do
+    - [[similar_tasks]] - Tasks that closely resemble the trained task
 
-    - [[same_domain]] - Same kind
+    - [[same_domain]] - Transfer within the same field
 
-  - [[far_transfer]] - Far use
+  - [[far_transfer]] - Transfer to dissimilar situations
 
-    - [[different_tasks]] - Other do
+    - [[different_tasks]] - Tasks unlike the trained task
 
-    - [[new_domains]] - New kind
+    - [[new_domains]] - Transfer to a different field
 
 ## Applications
 
 ### Educational Applications
 
-- [[teaching_methods]] - Teach how
+- teaching methods - Approaches to instruction
 
-  - [[instruction_design]] - Plan how
+  - [[instruction_design]] - Planning instruction to achieve learning goals
 
-    - [[sequence]] - Order what
+    - [[sequence]] - Ordering of material for instruction
 
-    - [[scaffolding]] - Help right
+    - [[scaffolding]] - Temporary support that is gradually withdrawn
 
-  - [[assessment]] - Check learn
+  - assessment - Measuring what has been learned
 
-    - [[formative]] - During check
+    - [[formative]] - Assessment during learning to guide teaching
 
-    - [[summative]] - After check
+    - [[summative]] - Assessment at the end to judge attainment
 
 ### Clinical Applications
 
-- [[rehabilitation]] - Fix help
+- rehabilitation - Restoring function after injury or illness
 
-  - [[cognitive_training]] - Think fix
+  - [[cognitive_training]] - Exercises aimed at improving cognitive function
 
-    - [[memory_training]] - Remember fix
+    - [[memory_training]] - Exercises aimed at improving memory
 
-    - [[attention_training]] - Focus fix
+    - [[attention_training]] - Exercises aimed at improving attention
 
-  - [[behavioral_therapy]] - Do fix
+  - [[behavioral_therapy]] - Therapy that changes behavior through learning principles
 
-    - [[skill_retraining]] - Can again
+    - [[skill_retraining]] - Relearning skills lost to injury or disease
 
-    - [[habit_formation]] - New way
+    - [[habit_formation]] - Establishing automatic behaviors through repetition
 
 ### Technology Applications
 
-- [[learning_technology]] - Tech help
+- [[learning_technology]] - Technology that supports learning
 
-  - [[adaptive_learning]] - Fit learn
+  - [[adaptive_learning]] - Instruction that adjusts to the learner
 
-    - [[personalization]] - Person fit
+    - [[personalization]] - Tailoring content to the individual learner
 
-    - [[difficulty_scaling]] - Hard right
+    - [[difficulty_scaling]] - Adjusting task difficulty to the learner's level
 
-  - [[feedback_systems]] - Tell help
+  - [[feedback_systems]] - Systems that deliver feedback to learners
 
-    - [[immediate_feedback]] - Now tell
+    - [[immediate_feedback]] - Feedback delivered right after a response
 
-    - [[progress_tracking]] - How far
+    - progress tracking - Monitoring a learner's advancement
 
 ## Research Methods
 
 ### Behavioral Methods
 
-- [[learning_measures]] - Check how
+- [[learning_measures]] - Ways of measuring learning
 
-  - [[performance_tests]] - Do check
+  - [[performance_tests]] - Tests of task performance
 
-    - [[accuracy]] - Right check
+    - accuracy - Proportion of correct responses
 
-    - [[speed]] - Fast check
+    - [[speed]] - Time taken to respond or complete a task
 
-  - [[learning_curves]] - Better track
+  - [[learning_curves]] - Performance plotted against practice
 
-    - [[rate]] - How fast
+    - [[rate]] - Speed of improvement with practice
 
-    - [[asymptote]] - How good
+    - [[asymptote]] - Performance level reached after extended practice
 
 ### Neural Methods
 
-- [[brain_measures]] - Brain check
+- brain measures - Neural measures of learning
 
-  - [[activity_measures]] - Work check
+  - [[activity_measures]] - Measures of neural activity
 
-    - [[activation]] - Fire where
+    - activation - Which brain regions are active during learning
 
-    - [[connectivity]] - Join how
+    - [[connectivity]] - Functional coupling between brain regions
 
-  - [[structure_measures]] - Build check
+  - [[structure_measures]] - Measures of brain structure
 
-    - [[anatomy]] - Part look
+    - [[anatomy]] - Structural changes in brain tissue
 
-    - [[plasticity]] - Change look
+    - [[plasticity]] - Measures of experience-dependent brain change
 
 ### Computational Models
 
-- [[learning_models]] - Math think
+- [[learning_models]] - Computational models of learning
 
-  - [[process_models]] - Step math
+  - process models - Models of the steps in learning processes
 
-    - [[reinforcement_models]] - Good math
+    - [[reinforcement_models]] - Models of learning from reward
 
-    - [[error_models]] - Wrong math
+    - [[error_models]] - Models of learning from prediction errors
 
-  - [[network_models]] - Join math
+  - [[network_models]] - Models based on connected units
 
-    - [[neural_nets]] - Brain math
+    - [[neural_nets]] - Artificial neural network models
 
-    - [[cognitive_models]] - Think math
+    - [[cognitive_models]] - Models of mental processes in learning
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[individual_differences]] - Person vary
+- [[individual_differences]] - Variation in learning between people
 
-- [[optimal_methods]] - Best how
+- [[optimal_methods]] - Most effective methods for learning
 
-- [[measurement_issues]] - Check hard
+- measurement issues - Difficulties measuring learning accurately
 
 ### Emerging Approaches
 
-- [[personalized_learning]] - Person fit
+- [[personalized_learning]] - Instruction tailored to the individual
 
-  - [[adaptive_systems]] - Change fit
+  - [[adaptive_systems]] - Systems that adjust to learner performance
 
-    - [[real_time]] - Now change
+    - [[real_time]] - Adjustment during learning as it happens
 
-    - [[predictive]] - Guess need
+    - [[predictive]] - Anticipating learner needs from data
 
-  - [[technology_enhanced]] - Tech help
+  - technology enhanced - Learning supported by technology
 
-    - [[ai_assisted]] - Smart help
+    - [[ai_assisted]] - Learning supported by artificial intelligence
 
-    - [[virtual_reality]] - Fake world
+    - [[virtual_reality]] - Immersive simulated environments for learning
 
 ## References
 

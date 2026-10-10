@@ -9,6 +9,8 @@ tags:
   - control-theory
   - homeostasis
   - free-energy-principle
+aliases:
+  - active_inference_control
 semantic_relations:
   - type: implements
     links:

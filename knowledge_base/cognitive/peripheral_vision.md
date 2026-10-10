@@ -445,9 +445,9 @@ Peripheral vision refers to visual perception occurring outside the center of ga
 
 - [[perceptual_psychology]]
 
-- [[clinical_vision]]
+- clinical vision
 
-- [[vision_research]]
+- vision research
 
 - [[ecological_psychology]]
 

@@ -8,6 +8,8 @@ tags:
 - learning
 - maturation
 - plasticity
+aliases:
+  - brain_development
 semantic_relations:
   - type: implements
     links:
@@ -33,399 +35,399 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 - [[brain_maturation]] - Neural development
 
-  - [[structural_development]] - Physical growth
+  - [[structural_development]] - Anatomical growth of neural structures
 
     - [[synaptogenesis]] - Connection formation
 
-    - [[myelination]] - Signal speed
+    - [[myelination]] - Insulation of axons that speeds signal conduction
 
-  - [[functional_development]] - Operation change
+  - [[functional_development]] - Maturation of neural and cognitive function
 
     - [[circuit_formation]] - Network building
 
-    - [[specialization]] - Region focus
+    - specialization - Regions becoming specialized for particular functions
 
 ### Learning Processes
 
-- [[developmental_learning]] - Ability growth
+- [[developmental_learning]] - Learning that shapes abilities across development
 
-  - [[experience_dependent]] - Use driven
+  - [[experience_dependent]] - Development shaped by individual experience
 
-    - [[activity_dependent]] - Neural change
+    - [[activity_dependent]] - Neural refinement driven by patterns of activity
 
-    - [[practice_effects]] - Skill improve
+    - [[practice_effects]] - Skill gains from repeated practice
 
-  - [[critical_periods]] - Special times
+  - [[critical_periods]] - Windows of heightened sensitivity to experience
 
-    - [[sensitive_periods]] - Best learning
+    - [[sensitive_periods]] - Periods of heightened responsiveness to specific input
 
-    - [[window_closure]] - Opportunity end
+    - [[window_closure]] - Decline in plasticity once a window ends
 
 ### Adaptation Systems
 
-- [[developmental_adaptation]] - Change response
+- [[developmental_adaptation]] - Adjustment of development to circumstances
 
-  - [[environmental_adaptation]] - Context fit
+  - [[environmental_adaptation]] - Development adjusting to environmental conditions
 
-    - [[niche_adaptation]] - Setting match
+    - [[niche_adaptation]] - Tuning to the specific ecological niche
 
-    - [[cultural_adaptation]] - Society fit
+    - [[cultural_adaptation]] - Tuning to cultural practices and expectations
 
-  - [[compensatory_processes]] - Problem solve
+  - [[compensatory_processes]] - Mechanisms offsetting deficits or loss
 
-    - [[alternative_strategies]] - Other ways
+    - [[alternative_strategies]] - Different routes to the same cognitive goal
 
-    - [[resource_reallocation]] - Energy shift
+    - [[resource_reallocation]] - Shifting neural resources to other functions
 
 ## Developmental Stages
 
 ### Early Development
 
-- [[infant_cognition]] - Baby thinking
+- [[infant_cognition]] - Cognitive abilities in infancy
 
   - [[sensorimotor_development]] - Action/sense
 
-    - [[object_permanence]] - Thing stable
+    - [[object_permanence]] - Understanding that objects persist when unseen
 
-    - [[means_ends]] - Action goals
+    - [[means_ends]] - Using actions as means to reach goals
 
-  - [[perceptual_development]] - Sensing
+  - [[perceptual_development]] - Maturation of perceptual abilities
 
-    - [[pattern_recognition]] - See structure
+    - [[pattern_recognition]] - Detecting regularities in sensory input
 
-    - [[cross_modal]] - Sense combine
+    - [[cross_modal]] - Integration across sensory modalities
 
 ### Middle Childhood
 
-- [[child_cognition]] - Kid thinking
+- [[child_cognition]] - Cognitive abilities in middle childhood
 
-  - [[concrete_operations]] - Physical world
+  - [[concrete_operations]] - Logical reasoning about concrete objects and events
 
-    - [[conservation]] - Amount same
+    - [[conservation]] - Quantity persists despite changes in appearance
 
-    - [[classification]] - Group things
+    - [[classification]] - Sorting objects into categories by shared features
 
-  - [[skill_development]] - Ability gain
+  - [[skill_development]] - Acquisition of practical and academic skills
 
-    - [[academic_skills]] - School learn
+    - [[academic_skills]] - Reading, writing, and mathematics skills
 
-    - [[social_skills]] - People skills
+    - social skills - People skills
 
 ### Adolescence
 
-- [[adolescent_cognition]] - Teen thinking
+- [[adolescent_cognition]] - Cognitive changes during adolescence
 
-  - [[abstract_reasoning]] - Complex thought
+  - [[abstract_reasoning]] - Reasoning about abstract ideas and relations
 
-    - [[hypothetical_thinking]] - What if
+    - [[hypothetical_thinking]] - Reasoning about possibilities and counterfactuals
 
-    - [[metacognition]] - Think about think
+    - [[metacognition]] - Thinking about one's own thinking
 
-  - [[identity_formation]] - Self develop
+  - [[identity_formation]] - Development of a stable sense of self
 
-    - [[personal_identity]] - Who am I
+    - [[personal_identity]] - Sense of self as an individual
 
-    - [[social_identity]] - Group belong
+    - [[social_identity]] - Self-concept derived from group membership
 
 ### Adult Development
 
-- [[adult_cognition]] - Grown thinking
+- [[adult_cognition]] - Cognitive abilities across adulthood
 
-  - [[expertise_development]] - Skill master
+  - [[expertise_development]] - Building deep skill through extended practice
 
-    - [[professional_skills]] - Work ability
+    - [[professional_skills]] - Skills acquired for occupational performance
 
-    - [[life_skills]] - Living ability
+    - [[life_skills]] - Everyday skills for independent living
 
-  - [[cognitive_maintenance]] - Keep ability
+  - [[cognitive_maintenance]] - Preserving cognitive function with age
 
-    - [[plasticity]] - Change power
+    - [[plasticity]] - Capacity of the brain to change with experience
 
-    - [[compensation]] - Problem fix
+    - compensation - Using alternative resources to offset decline
 
 ## Cognitive Domains
 
 ### Perceptual Development
 
-- [[sensory_development]] - Sense growth
+- [[sensory_development]] - Maturation of sensory systems
 
-  - [[visual_development]] - Seeing grow
+  - visual development - Maturation of visual function
 
-    - [[depth_perception]] - Space see
+    - [[depth_perception]] - Perceiving distance and three-dimensional layout
 
-    - [[pattern_vision]] - Shape see
+    - [[pattern_vision]] - Detecting shapes and visual patterns
 
-  - [[auditory_development]] - Hear grow
+  - [[auditory_development]] - Maturation of hearing and auditory processing
 
-    - [[speech_perception]] - Talk hear
+    - [[speech_perception]] - Perceiving speech sounds
 
-    - [[sound_patterns]] - Sound order
+    - [[sound_patterns]] - Detecting regularities in sound sequences
 
 ### Attention Development
 
-- [[attention_development]] - Focus grow
+- [[attention_development]] - Maturation of attention
 
-  - [[selective_attention]] - Choose focus
+  - [[selective_attention]] - Focusing on relevant stimuli
 
-    - [[distraction_resistance]] - Stay focus
+    - [[distraction_resistance]] - Ignoring irrelevant stimuli while attending
 
-    - [[attention_control]] - Guide focus
+    - [[attention_control]] - Voluntary direction of attention
 
-  - [[sustained_attention]] - Keep focus
+  - [[sustained_attention]] - Maintaining attention over extended time
 
-    - [[vigilance]] - Stay alert
+    - [[vigilance]] - Sustained readiness to detect rare events
 
-    - [[effort_control]] - Energy use
+    - [[effort_control]] - Deliberate regulation of attention and behavior
 
 ### Memory Development
 
-- [[memory_development]] - Remember grow
+- [[memory_development]] - Maturation of memory systems
 
-  - [[working_memory]] - Hold info
+  - [[working_memory]] - Temporarily holding and manipulating information
 
-    - [[capacity_increase]] - More hold
+    - [[capacity_increase]] - Growth in working memory capacity
 
-    - [[processing_speed]] - Fast work
+    - [[processing_speed]] - Increasing speed of cognitive operations
 
-  - [[long_term_memory]] - Keep info
+  - [[long_term_memory]] - Durable storage of information
 
-    - [[strategy_use]] - Remember ways
+    - [[strategy_use]] - Use of mnemonic strategies such as rehearsal
 
-    - [[knowledge_organization]] - Info order
+    - [[knowledge_organization]] - Structuring knowledge to aid retrieval
 
 ### Language Development
 
-- [[language_development]] - Talk grow
+- [[language_development]] - Acquisition of language skills
 
-  - [[early_language]] - First words
+  - [[early_language]] - Early speech sounds and first words
 
-    - [[phonology]] - Sound learn
+    - [[phonology]] - Learning the sound system of a language
 
-    - [[vocabulary]] - Word learn
+    - [[vocabulary]] - Acquiring words and their meanings
 
-  - [[complex_language]] - Full talk
+  - [[complex_language]] - Multi-word and sentence-level language
 
-    - [[grammar]] - Rule learn
+    - [[grammar]] - Learning rules for combining words
 
-    - [[pragmatics]] - Use right
+    - [[pragmatics]] - Using language appropriately in social contexts
 
 ## Neural Basis
 
 ### Brain Development
 
-- [[neural_development]] - Brain grow
+- [[neural_development]] - Growth and organization of the nervous system
 
-  - [[regional_development]] - Area grow
+  - [[regional_development]] - Differing maturation rates across brain regions
 
-    - [[cortical_development]] - Think parts
+    - [[cortical_development]] - Maturation of the cerebral cortex
 
-    - [[subcortical_development]] - Deep parts
+    - [[subcortical_development]] - Maturation of structures beneath the cortex
 
-  - [[network_development]] - Connect grow
+  - [[network_development]] - Maturation of connections between brain regions
 
-    - [[local_circuits]] - Near links
+    - [[local_circuits]] - Connections within a single region
 
-    - [[long_range]] - Far links
+    - [[long_range]] - Connections between distant brain regions
 
 ### Plasticity Mechanisms
 
-- [[developmental_plasticity]] - Change able
+- [[developmental_plasticity]] - Capacity of the developing brain to be reshaped
 
-  - [[experience_dependent]] - Use change
+  - [[experience_dependent]] - Neural change driven by experience
 
-    - [[activity_patterns]] - Use ways
+    - activity patterns - Patterns of neural activity shaping circuits
 
-    - [[critical_periods]] - Change times
+    - [[critical_periods]] - Windows of heightened plasticity
 
-  - [[injury_response]] - Problem fix
+  - [[injury_response]] - Reorganization and recovery after brain injury
 
-    - [[reorganization]] - New arrange
+    - [[reorganization]] - Functional remapping of neural circuits
 
-    - [[compensation]] - Other way
+    - compensation - Other brain areas taking over lost function
 
 ### Neurotransmitter Systems
 
-- [[chemical_development]] - Brain chemical
+- [[chemical_development]] - Maturation of neurochemical systems
 
-  - [[transmitter_systems]] - Signal types
+  - [[transmitter_systems]] - Neurotransmitter systems and their maturation
 
     - [[dopamine]] - Reward/learn
 
     - [[serotonin]] - Mood/regulate
 
-  - [[receptor_development]] - Signal catch
+  - [[receptor_development]] - Maturation of neurotransmitter receptors
 
-    - [[receptor_expression]] - Make catch
+    - [[receptor_expression]] - Changes in receptor abundance and type
 
-    - [[sensitivity]] - How strong
+    - [[sensitivity]] - Responsiveness of receptors to transmitters
 
 ## Environmental Influences
 
 ### Physical Environment
 
-- [[environmental_factors]] - World effect
+- [[environmental_factors]] - External conditions influencing development
 
-  - [[sensory_input]] - Sense get
+  - [[sensory_input]] - Stimulation received through the senses
 
-    - [[enrichment]] - Good input
+    - [[enrichment]] - Stimulating environments that support development
 
-    - [[deprivation]] - Poor input
+    - [[deprivation]] - Lack of adequate sensory or social stimulation
 
-  - [[physical_activity]] - Move effect
+  - [[physical_activity]] - Effects of movement on development
 
-    - [[exercise]] - Body work
+    - [[exercise]] - Physical exercise and its cognitive benefits
 
-    - [[skill_practice]] - Do learn
+    - [[skill_practice]] - Learning through repeated practice
 
 ### Social Environment
 
-- [[social_influences]] - People effect
+- [[social_influences]] - Effects of other people on development
 
-  - [[family_effects]] - Home learn
+  - [[family_effects]] - Influence of the family environment
 
-    - [[parenting]] - Raise way
+    - parenting - Caregiving styles and practices
 
     - [[sibling_effects]] - Brother/sister
 
-  - [[peer_effects]] - Friend learn
+  - [[peer_effects]] - Influence of same-age peers
 
-    - [[social_learning]] - Watch learn
+    - [[social_learning]] - Learning by observing others
 
-    - [[group_norms]] - Rules learn
+    - [[group_norms]] - Learning the shared expectations of a group
 
 ### Cultural Context
 
-- [[cultural_influences]] - Society effect
+- [[cultural_influences]] - Effects of culture on development
 
-  - [[educational_practices]] - School way
+  - [[educational_practices]] - Instructional approaches in schooling
 
-    - [[teaching_methods]] - Learn help
+    - teaching methods - Instructional techniques that support learning
 
-    - [[curriculum]] - Learn what
+    - [[curriculum]] - Content and sequence of instruction
 
-  - [[cultural_values]] - Worth what
+  - [[cultural_values]] - Culturally shared beliefs about what matters
 
-    - [[goals]] - Want what
+    - [[goals]] - Developmental goals set by a culture
 
-    - [[practices]] - Do how
+    - [[practices]] - Everyday cultural routines and customs
 
 ## Applications
 
 ### Educational Applications
 
-- [[educational_design]] - School plan
+- educational design - Planning learning around developmental stages
 
-  - [[curriculum_development]] - Learn plan
+  - [[curriculum_development]] - Designing curricula suited to developmental level
 
-    - [[sequence]] - Order what
+    - [[sequence]] - Ordering material from simple to complex
 
-    - [[methods]] - Teach how
+    - [[methods]] - Teaching methods matched to developmental level
 
-  - [[assessment]] - Check learn
+  - assessment - Evaluating learning and progress
 
-    - [[progress_monitoring]] - How going
+    - [[progress_monitoring]] - Tracking learning progress over time
 
-    - [[outcome_measurement]] - What got
+    - [[outcome_measurement]] - Measuring learning outcomes
 
 ### Clinical Applications
 
-- [[developmental_disorders]] - Grow wrong
+- [[developmental_disorders]] - Conditions affecting typical development
 
-  - [[diagnosis]] - Find problem
+  - [[diagnosis]] - Identifying developmental conditions
 
-    - [[assessment_methods]] - Check ways
+    - [[assessment_methods]] - Tools for evaluating developmental status
 
-    - [[early_detection]] - Find soon
+    - [[early_detection]] - Identifying conditions at young ages
 
-  - [[intervention]] - Help fix
+  - intervention - Treatment and support for developmental conditions
 
-    - [[therapy_approaches]] - Fix ways
+    - [[therapy_approaches]] - Therapeutic methods for developmental conditions
 
-    - [[support_services]] - Help kinds
+    - [[support_services]] - Educational and family support services
 
 ### Policy Implications
 
-- [[development_policy]] - Rules make
+- [[development_policy]] - Policies shaping developmental outcomes
 
-  - [[educational_policy]] - School rules
+  - [[educational_policy]] - Policies governing schooling
 
-    - [[standards]] - Should what
+    - [[standards]] - Expected benchmarks for learning
 
-    - [[resources]] - Need what
+    - [[resources]] - Funding and materials for education
 
-  - [[health_policy]] - Health rules
+  - [[health_policy]] - Policies governing child health services
 
-    - [[screening]] - Check all
+    - [[screening]] - Population-wide checks for developmental conditions
 
-    - [[services]] - Help give
+    - [[services]] - Delivery of health and support services
 
 ## Research Methods
 
 ### Behavioral Methods
 
-- [[developmental_assessment]] - Check how
+- [[developmental_assessment]] - Methods for measuring developmental status
 
-  - [[standardized_tests]] - Same check
+  - [[standardized_tests]] - Tests administered under uniform conditions
 
-    - [[ability_tests]] - Can what
+    - [[ability_tests]] - Tests of cognitive capacity
 
-    - [[achievement_tests]] - Learn what
+    - [[achievement_tests]] - Tests of acquired knowledge and skills
 
-  - [[observational_methods]] - Watch do
+  - [[observational_methods]] - Recording behavior as it occurs
 
-    - [[naturalistic]] - Real life
+    - [[naturalistic]] - Observation in everyday settings
 
-    - [[structured]] - Set task
+    - [[structured]] - Observation using prescribed tasks
 
 ### Neural Methods
 
-- [[brain_measures]] - Brain look
+- brain measures - Measures of brain structure and activity
 
-  - [[imaging]] - Picture take
+  - imaging - Imaging of brain structure and function
 
-    - [[structural]] - Shape see
+    - structural - Imaging of brain anatomy
 
-    - [[functional]] - Work see
+    - functional - Imaging of brain activity
 
-  - [[activity_measures]] - Do see
+  - [[activity_measures]] - Recording neural and behavioral activity
 
-    - [[eeg]] - Brain wave
+    - [[eeg]] - Electrical brain activity recorded at the scalp
 
-    - [[eye_tracking]] - Look where
+    - [[eye_tracking]] - Recording where and how long someone looks
 
 ### Longitudinal Methods
 
-- [[time_studies]] - Over time
+- [[time_studies]] - Studies following change across time
 
-  - [[longitudinal]] - Same group
+  - [[longitudinal]] - Following the same individuals over time
 
-    - [[growth_curves]] - Change track
+    - [[growth_curves]] - Modeling individual change trajectories
 
-    - [[stability]] - Stay same
+    - [[stability]] - Consistency of traits over time
 
-  - [[cross_sectional]] - Age groups
+  - [[cross_sectional]] - Comparing different age groups at one time
 
-    - [[age_differences]] - Group vary
+    - [[age_differences]] - Differences between age groups
 
-    - [[cohort_effects]] - Time group
+    - [[cohort_effects]] - Differences due to generation or birth cohort
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[individual_variation]] - Person differ
+- [[individual_variation]] - Differences between individuals in development
 
-- [[measurement_issues]] - Check problem
+- measurement issues - Difficulties in measuring development reliably
 
-- [[mechanism_understanding]] - How work
+- mechanism understanding - Explaining how developmental mechanisms operate
 
 ### Emerging Approaches
 
-- [[personalized_development]] - Person fit
+- [[personalized_development]] - Tailoring support to the individual child
 
-- [[technology_enhanced]] - Tech help
+- technology enhanced - Technology-supported learning and assessment
 
-- [[prevention_focus]] - Stop bad
+- [[prevention_focus]] - Preventing developmental problems early
 
 ## References
 

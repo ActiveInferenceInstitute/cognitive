@@ -2,6 +2,7 @@
 title: Guides documentation instructions
 type: agents
 status: stable
+updated: 2026-10-10
 semantic_relations:
   - type: organizes
     links:

@@ -2,6 +2,7 @@
 title: Automation scripts
 type: tool
 status: stable
+updated: 2026-10-10
 created: 2026-08-02
 tags:
   - automation
@@ -25,7 +26,11 @@ no external automation services.
   exports, links, manuscript).
 - `verify_links.py` — explicit wiki-link audit.
 - `check_markdown_links.py` — standard Markdown link and anchor audit.
+- `normalize_frontmatter.py` — `semantic_relations` link quoting
+  (`--check` / `--write`).
+- `kb_index.py` — knowledge-base catalog generation (`--check` / `--write`).
 - `build_manuscript.py` — manuscript build pipeline.
+- `mutation_check.py` — mutation gate.
 
 ## Documentation helpers (`docs/repo_docs/repo_scripts/`)
 
@@ -36,4 +41,5 @@ no external automation services.
 - `link_fix_prompt.md` — guidance for link repairs.
 
 Run any script with `python <path> --help` for its options. The CI workflow
-(`.github/workflows/quality.yml`) automates the gates on every push.
+(`.github/workflows/quality.yml`) runs the gates on every push. There is no
+scheduler, task runner, or Makefile.

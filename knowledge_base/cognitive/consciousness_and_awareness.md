@@ -36,33 +36,33 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
 - [[consciousness_levels]] - Awareness states
 
-  - [[wakefulness]] - Arousal states
+  - [[wakefulness]] - Level of arousal and responsiveness
 
     - [[alertness]] - Full awareness
 
       - [[vigilance]] - Sustained attention
 
-      - [[arousal_regulation]] - Energy control
+      - [[arousal_regulation]] - Regulating level of physiological arousal
 
     - [[drowsiness]] - Reduced awareness
 
       - [[sleep_onset]] - Sleep transition
 
-      - [[consciousness_fluctuation]] - State changes
+      - [[consciousness_fluctuation]] - Moment-to-moment variation in awareness
 
   - [[altered_states]] - Modified consciousness
 
-    - [[sleep_states]] - Natural alterations
+    - [[sleep_states]] - Consciousness changes across sleep stages
 
-      - [[rem_sleep]] - Dream state
+      - [[rem_sleep]] - Sleep stage with vivid dreaming
 
       - [[slow_wave_sleep]] - Deep sleep
 
-    - [[meditative_states]] - Intentional changes
+    - [[meditative_states]] - States induced by meditation practice
 
-      - [[focused_attention]] - Concentrated
+      - [[focused_attention]] - Meditation on a single object
 
-      - [[open_monitoring]] - Receptive
+      - [[open_monitoring]] - Meditation noticing experience without fixating
 
 ### Contents of Consciousness
 
@@ -72,11 +72,11 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - [[visual_awareness]] - Sight experience
 
-      - [[object_consciousness]] - Thing awareness
+      - [[object_consciousness]] - Awareness of objects
 
-      - [[spatial_consciousness]] - Space awareness
+      - [[spatial_consciousness]] - Awareness of spatial layout
 
-    - [[bodily_consciousness]] - Body experience
+    - [[bodily_consciousness]] - Experience of one's own body
 
       - [[interoception]] - Internal sensing
 
@@ -84,375 +84,375 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
   - [[cognitive_consciousness]] - Thought awareness
 
-    - [[thought_awareness]] - Mental content
+    - [[thought_awareness]] - Awareness of one's own thoughts
 
-      - [[inner_speech]] - Mental talk
+      - [[inner_speech]] - Silent talking to oneself
 
-      - [[mental_imagery]] - Mind pictures
+      - [[mental_imagery]] - Perception-like experience without external stimuli
 
-    - [[emotional_awareness]] - Feeling states
+    - [[emotional_awareness]] - Awareness of one's own emotions
 
-      - [[affect_consciousness]] - Emotion feel
+      - [[affect_consciousness]] - Felt experience of emotion
 
-      - [[mood_awareness]] - State know
+      - [[mood_awareness]] - Awareness of one's current mood
 
 ### Self-Awareness
 
 - [[self_consciousness]] - Self-knowledge
 
-  - [[bodily_self]] - Physical self
+  - [[bodily_self]] - Sense of the body as one's own
 
-    - [[body_ownership]] - Mine feeling
+    - [[body_ownership]] - Feeling that the body is one's own
 
-      - [[body_schema]] - Body map
+      - [[body_schema]] - Internal map of body posture and shape
 
-      - [[peripersonal_space]] - Near space
+      - [[peripersonal_space]] - Space immediately around the body
 
-    - [[agency_experience]] - Control feel
+    - [[agency_experience]] - Feeling of controlling one's actions
 
-      - [[action_ownership]] - My action
+      - [[action_ownership]] - Sense that an action is one's own
 
-      - [[effort_sense]] - Try feel
+      - [[effort_sense]] - Felt sense of exerted effort
 
-  - [[psychological_self]] - Mental self
+  - [[psychological_self]] - Sense of oneself as a thinker with traits
 
-    - [[self_reflection]] - Self think
+    - [[self_reflection]] - Examining one's own thoughts and motives
 
-      - [[self_knowledge]] - Me know
+      - [[self_knowledge]] - Beliefs about one's own traits and abilities
 
-      - [[self_evaluation]] - Me judge
+      - [[self_evaluation]] - Judging one's own qualities and performance
 
-    - [[autobiographical_self]] - Story self
+    - [[autobiographical_self]] - Self defined by personal history
 
-      - [[personal_identity]] - Who am I
+      - [[personal_identity]] - Sense of being the same person over time
 
-      - [[life_narrative]] - My story
+      - [[life_narrative]] - Story a person tells about their life
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[consciousness_networks]] - Neural systems
+- [[consciousness_networks]] - Brain networks supporting conscious experience
 
   - [[default_mode]] - Self-processing
 
     - [[medial_prefrontal]] - Self-reference
 
-      - [[self_processing]] - Me think
+      - [[self_processing]] - Processing information about oneself
 
-      - [[value_integration]] - Worth join
+      - [[value_integration]] - Integrating reward and subjective value
 
-    - [[posterior_cingulate]] - Integration
+    - [[posterior_cingulate]] - Hub of the default-mode network
 
-      - [[autobiographical_processing]] - Story make
+      - [[autobiographical_processing]] - Retrieving and constructing personal memories
 
-      - [[scene_construction]] - World build
+      - [[scene_construction]] - Imagining coherent scenes from memory
 
   - [[frontoparietal]] - Access/control
 
-    - [[dorsolateral_prefrontal]] - Executive
+    - [[dorsolateral_prefrontal]] - Prefrontal region for executive control
 
-      - [[working_memory]] - Hold info
+      - [[working_memory]] - Holding information in mind for use
 
-      - [[attention_control]] - Focus manage
+      - [[attention_control]] - Directing attention toward goals
 
-    - [[posterior_parietal]] - Integration
+    - [[posterior_parietal]] - Parietal region integrating sensory and spatial information
 
-      - [[multimodal_integration]] - Sense join
+      - [[multimodal_integration]] - Combining inputs from several senses
 
-      - [[spatial_processing]] - Space handle
+      - [[spatial_processing]] - Processing locations and spatial relations
 
 ### Circuit Mechanisms
 
-- [[conscious_processing]] - Neural dynamics
+- [[conscious_processing]] - Neural activity patterns underlying awareness
 
-  - [[information_integration]] - Binding
+  - [[information_integration]] - Combining information into unified experience
 
-    - [[feature_binding]] - Sensory unity
+    - [[feature_binding]] - Combining features into unified objects
 
-      - [[temporal_binding]] - Time unity
+      - [[temporal_binding]] - Combining events across time into one experience
 
-      - [[spatial_binding]] - Space unity
+      - [[spatial_binding]] - Combining features at a location into one object
 
-    - [[semantic_binding]] - Meaning unity
+    - [[semantic_binding]] - Combining meaning elements into one concept
 
-      - [[concept_integration]] - Idea join
+      - [[concept_integration]] - Merging concepts into new ones
 
-      - [[context_binding]] - Setting join
+      - [[context_binding]] - Linking content to its context
 
-  - [[global_workspace]] - Information sharing
+  - [[global_workspace]] - Broadcast of information across brain systems
 
-    - [[broadcast_mechanisms]] - Distribution
+    - [[broadcast_mechanisms]] - Spreading information to many brain areas
 
-      - [[cortical_broadcast]] - Brain share
+      - [[cortical_broadcast]] - Spread of signals across the cortex
 
-      - [[feedback_loops]] - Back talk
+      - [[feedback_loops]] - Recurrent signals from higher to lower areas
 
-    - [[access_mechanisms]] - Availability
+    - [[access_mechanisms]] - Making information available for reasoning and report
 
-      - [[attention_gating]] - Focus gate
+      - [[attention_gating]] - Attention controlling which content gains access
 
-      - [[memory_access]] - Remember get
+      - [[memory_access]] - Retrieving stored information into awareness
 
 ### Neuromodulation
 
-- [[consciousness_modulation]] - State control
+- [[consciousness_modulation]] - Regulation of conscious state by brain systems
 
-  - [[arousal_systems]] - Wakefulness
+  - [[arousal_systems]] - Brain systems maintaining wakefulness
 
-    - [[reticular_activation]] - Wake system
+    - [[reticular_activation]] - Brainstem network driving cortical arousal
 
-      - [[brainstem_arousal]] - Base wake
+      - [[brainstem_arousal]] - Brainstem nuclei sustaining wakefulness
 
-      - [[thalamic_relay]] - Gate relay
+      - [[thalamic_relay]] - Thalamic transmission of signals to cortex
 
-    - [[cortical_activation]] - Brain wake
+    - [[cortical_activation]] - Cortical activity raised by arousal systems
 
-      - [[cholinergic_system]] - ACh system
+      - [[cholinergic_system]] - Acetylcholine-based arousal system
 
-      - [[noradrenergic_system]] - NE system
+      - [[noradrenergic_system]] - Norepinephrine-based arousal system
 
-  - [[state_regulation]] - Level control
+  - [[state_regulation]] - Regulation of the level of conscious state
 
-    - [[homeostatic_control]] - Balance keep
+    - [[homeostatic_control]] - Keeping physiological variables in balance
 
-      - [[sleep_regulation]] - Sleep control
+      - [[sleep_regulation]] - Control of sleep timing and depth
 
-      - [[energy_regulation]] - Power manage
+      - [[energy_regulation]] - Regulation of metabolic energy use
 
-    - [[circadian_control]] - Time control
+    - [[circadian_control]] - Control by the roughly 24-hour body clock
 
-      - [[daily_rhythm]] - Day cycle
+      - [[daily_rhythm]] - Daily cycle of sleep and wake
 
-      - [[state_transitions]] - Change times
+      - [[state_transitions]] - Switches between conscious states
 
 ## Theoretical Frameworks
 
 ### Global Workspace Theory
 
-- [[global_workspace]] - Access theory
+- [[global_workspace]] - Theory of conscious access through broadcast
 
-  - [[workspace_dynamics]] - Processing
+  - [[workspace_dynamics]] - Activity patterns of the global workspace
 
-    - [[competition]] - Content select
+    - competition - Selection of content for broadcast
 
-      - [[attention_competition]] - Focus fight
+      - [[attention_competition]] - Competition among stimuli for attention
 
-      - [[memory_competition]] - Remember race
+      - [[memory_competition]] - Competition among memories for retrieval
 
-    - [[broadcast]] - Info share
+    - [[broadcast]] - Sharing information across brain systems
 
-      - [[parallel_processing]] - Many path
+      - [[parallel_processing]] - Many unconscious processes running at once
 
-      - [[serial_bottleneck]] - One time
+      - [[serial_bottleneck]] - Limit of one conscious content at a time
 
-  - [[access_consciousness]] - Available
+  - [[access_consciousness]] - Information available for reasoning and report
 
-    - [[reportability]] - Tell able
+    - [[reportability]] - Ability to report an experience
 
-      - [[verbal_report]] - Say can
+      - [[verbal_report]] - Describing an experience in words
 
-      - [[behavioral_report]] - Show can
+      - [[behavioral_report]] - Indicating an experience through action
 
-    - [[cognitive_access]] - Think use
+    - [[cognitive_access]] - Availability of content to cognitive systems
 
-      - [[deliberate_control]] - Choose do
+      - [[deliberate_control]] - Planned, effortful control of action
 
-      - [[rational_thought]] - Logic use
+      - [[rational_thought]] - Reasoning that draws on conscious content
 
 ### Integrated Information Theory
 
-- [[integrated_information]] - Unity theory
+- [[integrated_information]] - Theory linking consciousness to integrated information
 
-  - [[phi_measure]] - Join measure
+  - [[phi_measure]] - Measure of integrated information
 
-    - [[causal_power]] - Change cause
+    - [[causal_power]] - Ability of a system to affect itself
 
-      - [[effective_information]] - Real info
+      - [[effective_information]] - Information generated by a system's cause-effect structure
 
-      - [[causal_density]] - Cause much
+      - [[causal_density]] - Density of causal interactions among elements
 
-    - [[information_structure]] - Info build
+    - [[information_structure]] - Structure of cause-effect relations in a system
 
-      - [[compositional_information]] - Part join
+      - [[compositional_information]] - Information carried by combinations of parts
 
-      - [[exclusion_information]] - Part split
+      - [[exclusion_information]] - Information defining a single maximal boundary
 
-  - [[consciousness_structure]] - Mind build
+  - [[consciousness_structure]] - Structure of conscious experience
 
-    - [[qualia_space]] - Feel space
+    - [[qualia_space]] - Space of possible experiences
 
-      - [[experience_structure]] - Feel build
+      - [[experience_structure]] - Internal structure of a single experience
 
-      - [[phenomenal_organization]] - Feel order
+      - [[phenomenal_organization]] - Organization of experienced elements
 
-    - [[conceptual_structure]] - Think build
+    - [[conceptual_structure]] - Structure of concepts in the mind
 
-      - [[concept_space]] - Idea space
+      - [[concept_space]] - Space of possible concepts
 
-      - [[meaning_structure]] - Sense make
+      - [[meaning_structure]] - Structure of relations that give meaning
 
 ### Predictive Processing
 
-- [[conscious_prediction]] - Guess theory
+- [[conscious_prediction]] - Predictive processing account of consciousness
 
-  - [[prediction_hierarchy]] - Level guess
+  - [[prediction_hierarchy]] - Layered predictions from abstract to concrete
 
-    - [[top_down_predictions]] - High guess
+    - [[top_down_predictions]] - Predictions flowing down from higher levels
 
-      - [[prior_beliefs]] - Before think
+      - [[prior_beliefs]] - Expectations held before new evidence
 
-      - [[model_predictions]] - Guess make
+      - [[model_predictions]] - Predictions generated by the internal model
 
-    - [[bottom_up_errors]] - Low wrong
+    - [[bottom_up_errors]] - Prediction errors passed up the hierarchy
 
-      - [[prediction_errors]] - Guess wrong
+      - [[prediction_errors]] - Mismatch between prediction and input
 
-      - [[error_signals]] - Wrong tell
+      - [[error_signals]] - Neural signals carrying prediction errors
 
-  - [[conscious_inference]] - Mind guess
+  - [[conscious_inference]] - Experience as inference about hidden causes
 
-    - [[perceptual_inference]] - See guess
+    - [[perceptual_inference]] - Inferring causes of sensory input
 
-      - [[scene_prediction]] - World guess
+      - [[scene_prediction]] - Predicting the layout of a scene
 
-      - [[object_prediction]] - Thing guess
+      - [[object_prediction]] - Predicting which objects are present
 
-    - [[active_inference]] - Do guess
+    - [[active_inference]] - Acting to fulfill predictions
 
-      - [[action_selection]] - Choose do
+      - [[action_selection]] - Choosing actions that minimize expected free energy
 
-      - [[behavior_prediction]] - Do guess
+      - [[behavior_prediction]] - Predicting the outcomes of one's behavior
 
 ## Applications
 
 ### Clinical Applications
 
-- [[consciousness_disorders]] - Wrong states
+- [[consciousness_disorders]] - Conditions with impaired consciousness
 
-  - [[disorders_consciousness]] - Aware wrong
+  - [[disorders_consciousness]] - Disorders of awareness and wakefulness
 
-    - [[coma]] - No wake
+    - [[coma]] - Unresponsive state without wakefulness
 
-      - [[vegetative_state]] - Body only
+      - [[vegetative_state]] - Wakefulness without awareness
 
-      - [[minimal_consciousness]] - Some mind
+      - [[minimal_consciousness]] - Fluctuating but definite awareness
 
-    - [[locked_in]] - Mind trap
+    - [[locked_in]] - Full awareness with near-total paralysis
 
-      - [[complete_lockin]] - All trap
+      - [[complete_lockin]] - Paralysis including eye movement
 
-      - [[incomplete_lockin]] - Some move
+      - [[incomplete_lockin]] - Paralysis sparing some movement
 
-  - [[altered_consciousness]] - Change states
+  - [[altered_consciousness]] - Changed states of awareness
 
-    - [[delirium]] - Confused think
+    - [[delirium]] - Acute confusion with fluctuating attention
 
-      - [[attention_disorder]] - Focus wrong
+      - [[attention_disorder]] - Impaired ability to focus attention
 
-      - [[awareness_fluctuation]] - Know change
+      - [[awareness_fluctuation]] - Shifts in level of awareness over time
 
-    - [[dissociation]] - Split mind
+    - [[dissociation]] - Disruption of integrated perception, memory, or identity
 
-      - [[depersonalization]] - Self strange
+      - [[depersonalization]] - Feeling detached from oneself
 
-      - [[derealization]] - World strange
+      - [[derealization]] - Feeling that the world is unreal
 
 ### Research Methods
 
-- [[consciousness_methods]] - Study ways
+- [[consciousness_methods]] - Methods for studying consciousness
 
-  - [[behavioral_measures]] - Do check
+  - [[behavioral_measures]] - Assessing awareness from behavior
 
-    - [[report_methods]] - Tell check
+    - [[report_methods]] - Assessing awareness from participant reports
 
-      - [[subjective_scales]] - Feel rate
+      - [[subjective_scales]] - Scales rating subjective experience
 
-      - [[confidence_ratings]] - Sure rate
+      - [[confidence_ratings]] - Participants' self-rated certainty
 
-    - [[objective_measures]] - See check
+    - [[objective_measures]] - Awareness inferred from task performance
 
-      - [[performance_tests]] - Do test
+      - [[performance_tests]] - Accuracy-based tests of perception
 
-      - [[response_measures]] - Answer check
+      - [[response_measures]] - Responses recorded during tasks
 
-  - [[neural_measures]] - Brain check
+  - [[neural_measures]] - Brain-based indicators of awareness
 
-    - [[imaging_methods]] - Picture take
+    - [[imaging_methods]] - Brain imaging techniques
 
-      - [[activation_patterns]] - Work where
+      - [[activation_patterns]] - Which brain regions are active
 
-      - [[connectivity_measures]] - Join how
+      - [[connectivity_measures]] - Measures of interaction between brain regions
 
-    - [[electrophysiology]] - Signal check
+    - [[electrophysiology]] - Recording electrical brain activity
 
-      - [[neural_signatures]] - Brain marks
+      - [[neural_signatures]] - Brain activity patterns tied to awareness
 
-      - [[state_markers]] - State signs
+      - [[state_markers]] - Indicators of conscious state
 
 ### Enhancement Applications
 
-- [[consciousness_enhancement]] - Better make
+- [[consciousness_enhancement]] - Augmenting conscious capacities
 
-  - [[awareness_training]] - Know train
+  - awareness training - Training that improves awareness
 
-    - [[meditation_practice]] - Mind calm
+    - [[meditation_practice]] - Practice that trains attention and awareness
 
-      - [[attention_training]] - Focus learn
+      - [[attention_training]] - Training to improve attentional control
 
-      - [[awareness_cultivation]] - Know grow
+      - [[awareness_cultivation]] - Developing sustained awareness
 
-    - [[metacognitive_training]] - Think about
+    - [[metacognitive_training]] - Training to monitor one's own thinking
 
-      - [[monitoring_training]] - Watch learn
+      - [[monitoring_training]] - Training to monitor mental states
 
-      - [[control_training]] - Manage learn
+      - [[control_training]] - Training to regulate mental states
 
-  - [[state_optimization]] - Best state
+  - [[state_optimization]] - Tuning mental state for performance
 
-    - [[peak_performance]] - Best do
+    - [[peak_performance]] - Performing at the highest level
 
-      - [[flow_cultivation]] - Flow make
+      - [[flow_cultivation]] - Fostering states of absorbed engagement
 
-      - [[optimal_arousal]] - Best wake
+      - [[optimal_arousal]] - Arousal level that best supports performance
 
-    - [[recovery_enhancement]] - Better fix
+    - [[recovery_enhancement]] - Improving mental and physical recovery
 
-      - [[sleep_optimization]] - Rest best
+      - [[sleep_optimization]] - Improving sleep quality and timing
 
-      - [[restoration_methods]] - Fix best
+      - [[restoration_methods]] - Methods for restoring energy and focus
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[measurement_problem]] - Check hard
+- [[measurement_problem]] - Difficulty measuring consciousness objectively
 
-  - [[subjective_objective]] - Feel see gap
+  - [[subjective_objective]] - Gap between experience and measurement
 
-  - [[state_classification]] - Type sort
+  - [[state_classification]] - Sorting states of consciousness into types
 
-- [[mechanism_understanding]] - How work
+- mechanism understanding - Understanding how consciousness is produced
 
-  - [[neural_correlates]] - Brain match
+  - [[neural_correlates]] - Brain activity associated with consciousness
 
-  - [[causal_mechanisms]] - Why happen
+  - [[causal_mechanisms]] - Mechanisms that cause consciousness
 
 ### Emerging Approaches
 
-- [[new_methods]] - New ways
+- new methods - Emerging techniques for consciousness research
 
-  - [[real_time_tracking]] - Now watch
+  - real time tracking - Monitoring conscious state as it changes
 
-    - [[state_monitoring]] - Level watch
+    - [[state_monitoring]] - Tracking the current state of consciousness
 
-    - [[content_tracking]] - What watch
+    - [[content_tracking]] - Tracking what is being experienced
 
-  - [[intervention_development]] - Help make
+  - [[intervention_development]] - Developing treatments for consciousness disorders
 
-    - [[targeted_stimulation]] - Spot help
+    - [[targeted_stimulation]] - Stimulating specific brain regions
 
-    - [[chemical_modulation]] - Drug help
+    - [[chemical_modulation]] - Using drugs to alter conscious state
 
 ## References
 

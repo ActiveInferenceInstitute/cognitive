@@ -2,6 +2,7 @@
 title: Executable examples
 type: documentation
 status: stable
+updated: 2026-10-10
 ---
 
 # Executable examples

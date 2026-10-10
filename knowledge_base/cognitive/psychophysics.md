@@ -6,6 +6,9 @@ tags:
 - psychophysics
 - perception
 - thresholds
+aliases:
+  - discrimination
+  - threshold_measurement
 semantic_relations:
   - type: relates
     links:

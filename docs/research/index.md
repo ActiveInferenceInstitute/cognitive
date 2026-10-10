@@ -1,216 +1,65 @@
 ---
-
-title: Research Index
-
+title: Research index
 type: index
-
 status: stable
-
 created: 2024-02-07
-
+updated: 2026-10-10
 tags:
-
   - research
-
-  - methodology
-
   - index
-
 semantic_relations:
   - type: organizes
     links:
-      - "[[research areas]]"
-      - "[[research methods]]"
+      - "[[active_inference/README]]"
+      - "[[architectures/README]]"
+      - "[[complex_systems/README]]"
+      - "[[methodology/README]]"
+      - "[[tools/README]]"
 ---
 
-# Research Index
+# Research index
 
-## Active Research Areas
+Each linked page states what the repository implements for its topic.
 
-### Active Inference Research
+## Research areas
 
-- Theoretical Developments
+- Active inference: [[active_inference/theory|theory]],
+  [[active_inference/applications|applications]],
+  [[active_inference/scaling|scaling]],
+  [[active_inference/hierarchical|hierarchical extensions]].
+- Architectures: [[architectures/pomdp|POMDP]],
+  [[architectures/continuous|continuous]],
+  [[architectures/hierarchical|hierarchical]],
+  [[architectures/multi_agent|multi-agent]].
+- Complex systems: [[complex_systems/emergence|emergence]],
+  [[complex_systems/self_organization|self-organization]],
+  [[complex_systems/collective|collective behaviour]],
+  [[complex_systems/adaptation|adaptation]].
 
-- Applications
+## Methodology
 
-- Scaling Methods
+- [[methodology/hypothesis|Hypotheses]]
+- [[methodology/variables|Variables]]
+- [[methodology/sampling|Sampling]]
+- [[methodology/validation|Validation]]
 
-- Hierarchical Extensions
+## Tools
 
-### Agent Architectures
+- [[tools/analysis_tools|Analysis tools]]
+- [[tools/implementation_tools|Implementation tools]]
+- [[tools/documentation_tools|Documentation tools]]
 
-- POMDP Frameworks
+## Container pages
 
-- Continuous-Time Agents
+[[examples/README|Examples]], [[guidelines/README|Guidelines]],
+[[implementations/README|Implementations]], [[standards/README|Standards]],
+[[templates/README|Templates]], [[validation/README|Validation]].
 
-- Hierarchical Agents
+## Related
 
-- Multi-Agent Systems
-
-### Complex Systems
-
-- [[docs/research/complex_systems/emergence|Emergence Studies]]
-
-- [[docs/research/complex_systems/self_organization|Self-Organization]]
-
-- [[docs/research/complex_systems/collective|Collective Behavior]]
-
-- [[docs/research/complex_systems/adaptation|Adaptation Mechanisms]]
-
-## Research Methodology
-
-### Experimental Design
-
-- [[docs/research/methodology/hypothesis|Hypothesis Formation]]
-
-- [[docs/research/methodology/variables|Variable Control]]
-
-- [[docs/research/methodology/sampling|Sampling Methods]]
-
-- [[docs/research/methodology/validation|Validation Approaches]]
-
-### Analysis Methods
-
-- Statistical Analysis
-
-- Computational Analysis
-
-- Qualitative Analysis
-
-- Comparative Studies
-
-### Validation Methods
-
-- Empirical Validation
-
-- Theoretical Validation
-
-- Computational Validation
-
-- Comparative Validation
-
-## Research Tools
-
-### Analysis Tools
-
-```python
-
-# Basic research analysis
-
-def analyze_experiment(data, config):
-
-    """Analyze experimental results."""
-
-    results = {
-
-        'statistics': compute_statistics(data),
-
-        'metrics': evaluate_metrics(data),
-
-        'visualizations': generate_plots(data)
-
-    }
-
-    return results
-
-def validate_results(results, criteria):
-
-    """Validate research results."""
-
-    validation = {
-
-        'statistical': validate_statistics(results),
-
-        'theoretical': validate_theory(results),
-
-        'empirical': validate_empirically(results)
-
-    }
-
-    return validation
-
-```
-
-### Implementation Tools
-
-
-### Documentation Tools
-
-
-## Research Examples
-
-### Case Studies
-
-- [[knowledge_base/cognitive/active_inference|Active Inference Study]]
-
-- [[docs/research/architectures/multi_agent|Multi-Agent Study]]
-
-- [[docs/research/complex_systems/emergence|Emergence Study]]
-
-### Implementation Studies
-
-- [[docs/research/architectures/pomdp|POMDP Implementation]]
-
-- [[docs/research/active_inference/hierarchical|Hierarchical Implementation]]
-
-- [[docs/research/architectures/continuous|Continuous-Time Implementation]]
-
-### Validation Studies
-
-- [[docs/research/active_inference/theory|Theory Validation]]
-
-- Implementation Validation
-
-- [[docs/implementation/rxinfer/docs/src/manuals/comparison|Comparative Validation]]
-
-## Research Documentation
-
-### Documentation Standards
-
-- Methodology Standards
-
-- Reporting Standards
-
-- [[docs/research/methodology/validation|Validation Standards]]
-
-### Templates
-
-- Experiment Template
-
-- Analysis Template
-
-- Report Template
-
-### Guidelines
-
-- Design Guidelines
-
-- Execution Guidelines
-
-- Reporting Guidelines
-
-## Related Resources
-
-### Documentation
-
-- [[docs/guides/research_guides|Research Guides]]
-
+- [[research_documentation|Research documentation]]
+- [[ant_colony_active_inference|Ant colony research proposal]]
+- [[docs/guides/research_guides|Research guides]]
 - [[docs/api/research_api|Research API]]
-
-- [[docs/examples/research_examples|Research Examples]]
-
-### Knowledge Base
-
-- Research Methodology
-
-- Research Tools
-
-- Research Standards
-
-### Learning Resources
-
-- [[docs/repo_docs/research|Research Learning Path]]
-
-- [[docs/repo_docs/research|Research Tutorials]]
-
-- [[docs/guides/best_practices|Research Best Practices]]
+- [[docs/examples/research_examples|Research examples]]
+- [[docs/guides/best_practices|Best practices]]

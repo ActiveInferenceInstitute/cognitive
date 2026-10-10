@@ -9,6 +9,8 @@ tags:
   - graphs
   - information_systems
   - semantic_web
+aliases:
+  - knowledge_graph_structure
 semantic_relations:
   - type: related
     links:

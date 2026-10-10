@@ -1,4 +1,5 @@
 ---
+description: "Implementation guide for computing variational free energy as accuracy plus complexity from beliefs, prior and the A matrix, with usage in belief updating and monitoring."
 type: implementation
 id: compute_vfe_001
 created: 2024-02-05

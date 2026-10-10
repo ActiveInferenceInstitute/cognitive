@@ -28,7 +28,7 @@ The mathematical foundations knowledge base provides comprehensive theoretical a
 
 ## Key Features
 
-- **📚 Comprehensive Coverage**: 150+ interconnected mathematical concepts
+- **Coverage**: every page is listed in the [[knowledge_base/mathematics/catalog|catalog]]
 - **🔗 Semantic Cross-References**: Rich linking between related concepts
 - **💻 Implementation Examples**: Working code examples in Python
 - **🎯 Active Inference Focus**: Specialized mathematical foundations for AI
@@ -280,11 +280,11 @@ Master sophisticated mathematical techniques and research frontiers.
 
 ## 🔗 Related Documentation
 
-### Implementation Applications
-- [[code/Things/Generic_Thing/README|Generic Thing]] - Core mathematical implementations
-- [[code/Things/Simple_POMDP/README|Simple POMDP]] - Basic probabilistic implementations
-- [[code/Things/Generic_POMDP/README|Generic POMDP]] - Advanced mathematical agents
-- [[code/Things/Continuous_Generic/README|Continuous Generic]] - Continuous mathematics
+### Implementation notes
+- [[code/Things/Simple_POMDP/README|Simple POMDP]] - runnable discrete agent (`Things.Simple_POMDP`)
+- [[code/Things/Continuous_Generic/README|Continuous Generic]] - runnable continuous agent (`Things.Continuous_Generic`)
+- [[code/Things/Generic_Thing/README|Generic Thing]] - design notes only
+- [[code/Things/Generic_POMDP/README|Generic POMDP]] - design notes only
 
 ### Theoretical Integration
 - [[knowledge_base/cognitive/active_inference|Active Inference Theory]]
@@ -294,7 +294,7 @@ Master sophisticated mathematical techniques and research frontiers.
 
 ### Research Resources
 - [[docs/research|Research Documentation]]
-- [[tools/README|Mathematical Tools]]
+- [[code/tools/README|Mathematical Tools]]
 - [[docs/implementation/implementation_guides|Implementation Mathematics]]
 
 ## 🔗 Cross-References
@@ -318,7 +318,7 @@ Master sophisticated mathematical techniques and research frontiers.
 2. **Add Metadata**: Include complete YAML header with semantic relations
 3. **Structure Content**: Follow the established format with theory, implementations, and examples
 4. **Cross-Reference**: Add bidirectional links to related concepts
-5. **Validate**: Ensure all links work and content is mathematically sound
+5. **Validate**: Run `python code/scripts/verify_links.py . --json` and `python code/scripts/kb_index.py --write`, and check the mathematics yourself
 
 ### Quality Standards
 

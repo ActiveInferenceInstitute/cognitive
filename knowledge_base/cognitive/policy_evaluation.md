@@ -1,5 +1,6 @@
 ---
 title: Policy Evaluation
+description: "How an Active Inference agent scores candidate policies by expected free energy, balancing pragmatic and epistemic value, and converts scores into a policy posterior."
 type: concept
 status: stable
 created: 2026-02-06
@@ -10,6 +11,8 @@ tags:
   - planning
   - decision-making
   - active-inference
+aliases:
+  - option_evaluation
 semantic_relations:
   - type: relates
     links:

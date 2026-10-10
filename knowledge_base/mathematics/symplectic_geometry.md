@@ -1,5 +1,6 @@
 ---
 title: Symplectic Geometry
+description: "Mathematical background on symplectic geometry, covering symplectic manifolds, Hamiltonian systems, moment maps, reduction and integrators, with links to geometric quantization."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

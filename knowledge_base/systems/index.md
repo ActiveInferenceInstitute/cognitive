@@ -1,5 +1,6 @@
 ---
 title: Systems Index
+description: "Index of systems theory pages on core concepts, system properties and dynamics, complex systems, emergence, collective behavior and self-organization, with implementation examples."
 type: index
 status: stable
 created: 2024-02-07

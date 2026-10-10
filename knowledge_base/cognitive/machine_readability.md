@@ -58,7 +58,7 @@ def extract_parameters(markdown_file):
 
   - [[link_extraction]]
 
-  - [[graph_construction]]
+  - graph construction
 
   - [[relationship_inference]]
 
@@ -338,7 +338,7 @@ graph LR
 
   - [[clear_structure]]
 
-  - [[metadata_standards]]
+  - metadata standards
 
 ### 2. Automation Rules
 

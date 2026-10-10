@@ -1,290 +1,99 @@
 ---
-
 title: Template Guide
-
 type: guide
-
 status: stable
-
 created: 2024-02-12
-
+updated: 2026-10-10
 tags:
-
   - templates
-
   - documentation
-
   - standards
-
 semantic_relations:
   - type: implements
     links:
       - "[[docs/repo_docs/documentation_standards]]"
   - type: relates
     links:
-      - "[[ai_concept_template]]"
-      - "[[guide_template]]"
+      - "[[docs/templates/template_index|Template index]]"
+      - "[[docs/templates/ai_concept_template|AI concept template]]"
+      - "[[docs/templates/guide_template|Guide template]]"
 ---
 
 # Template Guide
 
-## Overview
+How to use the templates in `docs/templates/`. The full list, with the purpose
+of each template, is in [[docs/templates/template_index|the template index]].
 
-This guide provides comprehensive documentation for using templates in the cognitive modeling framework. It covers template types, usage patterns, and customization.
+## Two kinds of template
 
-## Template Types
+### Field templates
 
-### 1. Documentation Templates
+Eleven `<type>_template.md` files use `{{field}}` entries in their frontmatter and
+body: `action`, `agent`, `analysis`, `belief`, `cognitive_architecture`,
+`environment`, `experiment`, `goal`, `memory_system`, `observation` and
+`reasoning_system`. `cognitive-create-node` renders them with Jinja2 and writes
+the result to `knowledge_base/<type>s/<name>.md` (`agents`, `beliefs`, `goals`,
+`actions`, `observations` and `environments` are the pluralised folders the tool
+knows; other types get an `s` appended):
 
-#### Concept Template
-
-```markdown
-
----
-
-title: ${title}
-
-type: concept
-
-status: draft
-
-created: ${date}
-
-tags:
-
-  - concept
-
-  - ${category}
-
-semantic_relations:
-
-  - type: implements
-
-    links: []
-
-  - type: relates
-
-    links: []
-
----
-
-# ${title}
-
-## Overview
-
-Brief description of the concept.
-
-## Theory
-
-Theoretical foundation and background.
-
-## Implementation
-
-Implementation details and considerations.
-
-## Usage
-
-Usage examples and patterns.
-
-## Related Concepts
-
-- [[related_concept_1]]
-
-- [[related_concept_2]]
-
+```bash
+cognitive-create-node --type belief --name my_belief --var belief_type=prior
 ```
 
-#### Guide Template
+Options: `--type` (required), `--name` (required), `--config` (default
+`config.yaml`, whose `paths.templates` and `paths.knowledge_base` choose the
+folders) and `--var key=value` (repeatable). The tool always supplies
+`node_id`, `node_name`, `date` (an ISO timestamp), `type`, `<type>_id` and
+`<type>_name`. Any other template field that is not passed with `--var` renders
+as empty text, so fill those in by hand afterwards. The tool refuses to
+overwrite an existing node.
 
-```markdown
+### Copy-and-edit templates
 
----
+`ai_concept_template`, `guide_template`, `learning_path_template`,
+`linking_template`, `cognitive_concept`, `implementation_example`,
+`package_component` and `research_document` are pages that show a structure for
+a human to copy. They use `[Bracketed text]`, `{{field}}` or example names for
+the parts to replace; rendering them with `cognitive-create-node` only
+reproduces the template, so copy the file instead.
 
-title: ${title}
+## Frontmatter
 
-type: guide
+Every page needs valid YAML frontmatter. The `semantic_relations` links must be
+quoted strings:
 
-status: draft
-
-created: ${date}
-
-tags:
-
-  - guide
-
-  - ${category}
-
+```yaml
 semantic_relations:
-
   - type: implements
-
-    links: []
-
-  - type: relates
-
-    links: []
-
----
-
-# ${title}
-
-## Overview
-
-Brief guide description.
-
-## Usage
-
-Step-by-step instructions.
-
-## Examples
-
-Usage examples.
-
-## Best Practices
-
-Recommended practices.
-
-## Related Guides
-
-- [[related_guide_1]]
-
-- [[related_guide_2]]
-
+    links:
+      - "[[docs/repo_docs/documentation_standards]]"
 ```
 
-### 2. Code Templates
+Unquoted `[[...]]` in YAML parses as a nested list, not a link.
+`code/scripts/normalize_frontmatter.py --check` lists drifted files and
+`--write` fixes them.
 
-#### Module Template
+## Checking a page
 
-See `docs/examples/README.md` for runnable examples.
+- `cognitive-validate-docs` runs the documentation gate: frontmatter must parse
+  and use quoted relation links, Python fences must compile, the forbidden-term
+  policy in `docs/policy/documentation_terms.yaml` must pass, and links are
+  checked.
+- `cognitive-verify-links` checks Obsidian wiki links. By default an
+  unresolved extensionless target counts as a concept link;
+  `--strict-wiki-links` requires every link to resolve to a file.
 
+Template files legitimately contain example link targets such as
+`[[concept1]]`; replace them when you copy the template.
 
-#### Test Template
+## Code in templates
 
-See `docs/examples/README.md` for runnable examples.
+Code templates are not provided. Runnable examples live in
+`docs/examples/README.md`, and the package API is listed in
+`docs/api/api_reference.md`.
 
+## Related documentation
 
-## Template Usage
-
-### Using Documentation Templates
-
-1. Choose appropriate template
-
-1. Copy template content
-
-1. Replace variables
-
-1. Fill in content
-
-1. Update metadata
-
-1. Add links
-
-### Using Code Templates
-
-1. Select template type
-
-1. Copy template
-
-1. Update module info
-
-1. Implement functionality
-
-1. Add documentation
-
-1. Write tests
-
-## Template Customization
-
-### Variables
-
-- ${title} - Document title
-
-- ${date} - Creation date
-
-- ${category} - Content category
-
-- ${module_name} - Module name
-
-- ${class_name} - Class name
-
-- ${purpose} - Module purpose
-
-### Sections
-
-- Required sections
-
-- Optional sections
-
-- Custom sections
-
-- Section order
-
-### Metadata
-
-- Title
-
-- Type
-
-- Status
-
-- Tags
-
-- Relations
-
-## Best Practices
-
-### Documentation
-
-1. Use consistent formatting
-
-1. Follow naming conventions
-
-1. Complete all sections
-
-1. Add relevant links
-
-1. Include examples
-
-### Code
-
-1. Add type hints
-
-1. Write docstrings
-
-1. Include examples
-
-1. Add tests
-
-1. Follow style guide
-
-## Template Management
-
-### Organization
-
-- Group by type
-
-- Use clear names
-
-- Maintain hierarchy
-
-- Regular updates
-
-### Maintenance
-
-- Version control
-
-- Regular review
-
-- Update examples
-
-- Fix issues
-
-## Related Documentation
-
-- [[ai_concept_template]]
-
-- [[guide_template]]
-
-- [[documentation_standards]]
-
+- [[docs/templates/ai_concept_template|AI concept template]]
+- [[docs/templates/guide_template|Guide template]]
+- [[docs/repo_docs/documentation_standards|Documentation standards]]

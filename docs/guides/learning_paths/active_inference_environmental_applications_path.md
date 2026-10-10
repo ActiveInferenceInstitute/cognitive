@@ -5,22 +5,14 @@ title: Active Inference in Environmental Applications Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-25
 
-modified: 2024-03-25
 
-version: 2.0.0
 
 complexity: advanced
 
-processing_priority: 2
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: advanced
 
@@ -99,7 +91,7 @@ semantic_relations:
 
 ### Purpose and Scope
 
-This specialized learning path integrates Active Inference principles with environmental science and management, providing a comprehensive framework for understanding and managing complex ecological systems. It bridges environmental monitoring with predictive processing, focusing on sustainable ecosystem management and environmental decision-making.
+This specialized learning path integrates Active Inference principles with environmental science and management, providing a framework for understanding and managing complex ecological systems. It bridges environmental monitoring with predictive processing, focusing on sustainable ecosystem management and environmental decision-making.
 
 ### Target Audience
 
@@ -777,7 +769,7 @@ This learning path explores the application of active inference principles to en
 
   - Evaluate mitigation policies through expected free energy
 
-  - Develop robust decision methods for deep climate uncertainty
+  - Develop decision methods for deep climate uncertainty
 
 #### 5.3 Biodiversity Conservation
 
@@ -929,7 +921,7 @@ This learning path explores the application of active inference principles to en
 
 ### Project 2: Ecosystem Management Plan
 
-**Objective**: Develop a comprehensive management plan for an ecosystem using active inference principles.
+**Objective**: Develop a management plan for an ecosystem using active inference principles.
 
 **Requirements**:
 
@@ -1092,14 +1084,6 @@ Evaluation of one of the implementation projects based on:
 - [[active_inference_social_systems_learning_path|Active Inference in Social Systems]]
 
 - [[active_inference_cognitive_systems_integration_path|Active Inference Cognitive Systems Integration]]
-
-### Certification Path
-
-1. **Foundation Certificate**: Environmental Applications of Active Inference
-
-1. **Practitioner Certificate**: Environmental Modeling and Management Through Active Inference
-
-1. **Expert Certificate**: Advanced Environmental Systems Analysis and Design
 
 ## Integration Strategies
 
@@ -1427,225 +1411,7 @@ graph TB
 
 - Environmental organizations
 
-### Certification Path
-
-```mermaid
-
-graph LR
-
-    F[Foundation] --> P[Practitioner]
-
-    P --> E[Expert]
-
-    E --> S[Specialist]
-
-    style F fill:#f9f,stroke:#333
-
-    style P fill:#bbf,stroke:#333
-
-    style E fill:#bfb,stroke:#333
-
-    style S fill:#fbb,stroke:#333
-
-```
-
-## Support Resources
-
-### Research Support
-
-```mermaid
-
-mindmap
-
-    root((Research
-
-    Resources))
-
-        Literature
-
-            Journals
-
-            Publications
-
-            Case Studies
-
-        Data
-
-            Environmental
-
-            Climate
-
-            Ecological
-
-        Tools
-
-            Analysis
-
-            Modeling
-
-            Visualization
-
-```
-
-### Technical Support
-
-- Environmental modeling tools
-
-- Data analysis platforms
-
-- Monitoring systems
-
-- Documentation resources
-
-- Development environments
-
-### Learning Support
-
-- Mentorship program
-
-- Research groups
-
-- Online forums
-
-- Expert consultations
-
-- Workshop sessions
-
-## Version Control and Updates
-
-### Version History
-
-```mermaid
-
-gitGraph
-
-    commit id: "v1.0" tag: "Initial"
-
-    commit id: "v1.1"
-
-    branch research
-
-    commit id: "research-1"
-
-    checkout main
-
-    merge research
-
-    commit id: "v1.2"
-
-    branch policy
-
-    commit id: "policy-1"
-
-    checkout main
-
-    merge policy
-
-    commit id: "v2.0" tag: "Current"
-
-```
-
-### Change Management
-
-- v1.0: Initial framework
-
-- v1.1: Enhanced research methods
-
-- v1.2: Updated policy integration
-
-- v2.0: Complete system revision
-
-### Quality Metrics
-
-```mermaid
-
-xychart-beta
-
-    title "Component Quality Scores"
-
-    x-axis [Theory, Implementation, Integration, Research, Support]
-
-    y-axis 0 --> 100
-
-    bar [85, 90, 88, 92, 87]
-
-```
-
-## Learning Analytics
-
-### Progress Tracking
-
-```mermaid
-
-graph LR
-
-    subgraph Skills
-
-        E[Engineering] --> R[Research]
-
-        R --> T[Technical]
-
-        T --> P[Policy]
-
-    end
-
-    subgraph Metrics
-
-        A[Assessment] --> M[Monitoring]
-
-        M --> I[Impact]
-
-    end
-
-    P --> A
-
-    style E,R,T,P fill:#f9f,stroke:#333
-
-    style A,M,I fill:#bbf,stroke:#333
-
-```
-
-### Development Analytics
-
-```mermaid
-
-flowchart TB
-
-    subgraph Theory
-
-        T1[Research] --> T2[Development]
-
-        T2 --> T3[Integration]
-
-    end
-
-    subgraph Practice
-
-        P1[Implementation] --> P2[Testing]
-
-        P2 --> P3[Deployment]
-
-    end
-
-    T3 --> P1
-
-    style T1,T2,T3 fill:#f9f,stroke:#333
-
-    style P1,P2,P3 fill:#bbf,stroke:#333
-
-```
-
 ## Final Notes
-
-### Success Stories
-
-- Research impact
-
-- Technical achievements
-
-- Professional growth
-
-- Community contributions
 
 ### Additional Resources
 

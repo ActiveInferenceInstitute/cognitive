@@ -1,5 +1,6 @@
 ---
 title: Convergence Control in Variational and Policy Optimization
+description: "Short note on controlling convergence in variational inference and policy optimization using step-size schedules, annealing, line search and entropy or KL regularization."
 type: mathematical_concept
 status: draft
 created: 2025-08-08

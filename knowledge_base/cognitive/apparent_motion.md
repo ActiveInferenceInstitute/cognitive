@@ -447,7 +447,7 @@ Apparent motion is the perception of movement from a series of static images or 
 
 - [[motion_science]]
 
-- [[vision_research]]
+- vision research
 
 - [[cognitive_neuroscience]]
 

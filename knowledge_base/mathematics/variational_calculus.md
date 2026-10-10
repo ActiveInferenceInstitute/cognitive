@@ -13,6 +13,7 @@ aliases:
 - calculus-of-variations
 - functional-optimization
 - variational-methods
+- calculus_of_variations
 complexity: advanced
 processing_priority: 1
 semantic_relations:
@@ -604,5 +605,5 @@ class PathIntegrator:
 
 - [[kappen]] - Path Integral Control and Planning
 
-- [[friston]] - The Free-Energy Principle
+- friston - The Free-Energy Principle
 

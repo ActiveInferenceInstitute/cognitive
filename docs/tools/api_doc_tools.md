@@ -2,6 +2,7 @@
 title: API documentation tools
 type: tool
 status: stable
+updated: 2026-10-10
 created: 2026-08-02
 tags:
   - api
@@ -23,7 +24,9 @@ The canonical API documentation is `docs/api/`:
 - `docs/api/README.md` — documentation policy: describe only symbols
   importable from the installed packages.
 
-The documentation validator checks that public exports exist:
+The documentation validator checks that each name in `cognitive.__all__`
+exists and compiles every Python fence in the docs (it does not execute them,
+so run changed snippets by hand):
 
 ```bash
 python code/scripts/validate_docs.py --json

@@ -8,6 +8,8 @@ tags:
   - neuromodulation
   - dopamine
   - neuroscience
+aliases:
+  - dopamine
 semantic_relations:
   - type: relates
     links:

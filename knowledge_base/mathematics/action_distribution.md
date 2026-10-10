@@ -1,4 +1,5 @@
 ---
+description: "The action distribution E, a probability vector over actions updated by a softmax of negative expected free energy, and its role in Active Inference policy selection."
 type: mathematical_concept
 id: action_distribution_001
 created: 2024-02-05

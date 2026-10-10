@@ -11,7 +11,7 @@ All 16 pages under `knowledge_base/agents/`, with the opening line of each. Gene
 ## Top level
 
 - [[knowledge_base/agents/architectures_overview|Agent Architectures Overview]] — The Generic POMDP architecture implements Active Inference in partially observable Markov decision processes.
-- [[knowledge_base/agents/index|Agents Index]]
+- [[knowledge_base/agents/index|Agents Index]] — Index of agent types and architectures, covering Active Inference, POMDP, swarm, hierarchical, memory-based and learning agents, with implementation components and examples.
 
 ## `Continuous_Time/`
 

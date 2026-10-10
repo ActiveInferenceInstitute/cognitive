@@ -1,3 +1,10 @@
+---
+title: Are You Experienced? A Journey Through Active Inference and Scientific Method
+type: learning_path
+status: stable
+updated: 2026-10-10
+---
+
 # Are You Experienced? A Journey Through Active Inference and Scientific Method
 
 ## Quick Start

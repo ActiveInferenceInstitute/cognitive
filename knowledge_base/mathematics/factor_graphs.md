@@ -2085,6 +2085,8 @@ class ConvergenceGuaranteedLBP:
         # Simplified implementation
 
         return {'variables': {}, 'factors': {}}
+```
+
 
 ## References
 

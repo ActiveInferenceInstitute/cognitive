@@ -1,5 +1,6 @@
 ---
 title: "Belief Evolution"
+description: "How an Active Inference agent's posterior beliefs change over time, covering continuous and discrete dynamics, belief trajectories, diagnostic measures and pathological dynamics."
 type: "concept"
 status: stable
 ---

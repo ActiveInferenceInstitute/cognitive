@@ -1,5 +1,6 @@
 ---
 title: Numerical Stability in Inference and Control
+description: "Short reference on numerical stability techniques for inference and control, including log-space computation, log-sum-exp, epsilon floors, gradient clipping and bounded precision."
 type: mathematical_concept
 status: stable
 created: 2025-08-08

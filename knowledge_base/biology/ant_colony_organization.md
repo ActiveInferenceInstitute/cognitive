@@ -649,7 +649,7 @@ class SwarmTaskAllocation:
 - [[division_of_labor]] - Task specialization principles
 - [[task_allocation]] - Resource and task distribution
 - [[resource_management]] - Colony resource organization
-- [[communication_systems]] - Ant communication networks
+- communication systems - Ant communication networks
 
 ### Computational Applications
 - [[swarm_intelligence_implementation]] - Algorithm implementations

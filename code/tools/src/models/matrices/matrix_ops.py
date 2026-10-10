@@ -9,6 +9,8 @@ from typing import Any
 import numpy as np
 import yaml
 
+from ...utils.matrix_utils import normalize_mass
+
 logger = logging.getLogger(__name__)
 EPS = 1e-12
 
@@ -22,14 +24,7 @@ def _validate_numeric(array: np.ndarray, name: str) -> np.ndarray:
 
 def _normalize_axis(array: np.ndarray, axis: int) -> np.ndarray:
     values = np.maximum(_validate_numeric(array, "array"), 0.0)
-    sums = values.sum(axis=axis, keepdims=True)
-    count = values.shape[axis]
-    return np.divide(
-        values,
-        np.where(sums > EPS, sums, 1.0),
-        out=np.full_like(values, 1.0 / count),
-        where=sums > EPS,
-    )
+    return normalize_mass(values, axis)
 
 
 class MatrixOps:

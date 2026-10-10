@@ -8,6 +8,8 @@ tags:
 - memory
 - learning
 - plasticity
+aliases:
+  - consolidation
 semantic_relations:
   - type: implements
     links:

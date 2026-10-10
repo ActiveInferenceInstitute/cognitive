@@ -425,9 +425,7 @@ def test_state_space_and_component_validation() -> None:
         valid, actions, {"hold": np.eye(2), "move": np.array([[0.0, 1.0], [1.0, 0.0]])}, 1
     )
     assert np.array_equal(transitions.get_transition_matrix("hold"), np.eye(2))
-    assert np.array_equal(
-        transitions.get_transition_matrix(1), np.array([[0.0, 1.0], [1.0, 0.0]])
-    )
+    assert np.array_equal(transitions.get_transition_matrix(1), np.array([[0.0, 1.0], [1.0, 0.0]]))
     with pytest.raises(ValueError, match="Action out of range"):
         transitions.get_transition_matrix(9)
     with pytest.raises(ValueError, match="Unknown action"):

@@ -2,7 +2,7 @@
 
 type: memory-system
 
-id: "{{memory_id}}"
+id: "{{memory_system_id}}"
 
 created: "{{date}}"
 
@@ -10,13 +10,13 @@ modified: "{{date}}"
 
 tags: [memory, cognitive-model, knowledge-representation]
 
-aliases: ["{{memory_name}}", "{{memory_alias}}"]
+aliases: ["{{memory_system_name}}", "{{memory_alias}}"]
 
 related_memory_systems: ["{{related_memory_1}}", "{{related_memory_2}}"]
 
 ---
 
-# Memory System: {{memory_name}}
+# Memory System: {{memory_system_name}}
 
 ## Metadata
 
@@ -42,7 +42,7 @@ related_memory_systems: ["{{related_memory_1}}", "{{related_memory_2}}"]
 
 graph TD
 
-    A[Memory System: {{memory_name}}] --> B[Working Memory]
+    A[Memory System: {{memory_system_name}}] --> B[Working Memory]
 
     A --> C[Long-term Memory]
 
@@ -319,13 +319,13 @@ sequenceDiagram
 
 ```
 
-### API Specification
+### Interface
 
 ```yaml
 
-api:
+interface:
 
-  - endpoint: "encode"
+  - operation: "encode"
 
     parameters:
 
@@ -349,7 +349,7 @@ api:
 
       description: "Status of encoding operation"
 
-  - endpoint: "retrieve"
+  - operation: "retrieve"
 
     parameters:
 

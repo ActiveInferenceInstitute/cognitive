@@ -8,6 +8,8 @@ tags:
   - reinforcement-learning
   - decision-making
   - comparison
+aliases:
+  - reinforcement
 semantic_relations:
   - type: relates
     links:

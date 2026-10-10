@@ -8,6 +8,8 @@ tags:
 - probability
 - graphical-models
 - undirected-graphs
+aliases:
+  - undirected_graphical_models
 semantic_relations:
   - type: foundation
     links:
@@ -601,7 +603,7 @@ end
 
 ```
 
-### 2. [[hybrid_models|Hybrid Models]]
+### 2. Hybrid Models
 
 ```julia
 

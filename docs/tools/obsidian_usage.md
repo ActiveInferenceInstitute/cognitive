@@ -2,6 +2,7 @@
 title: Obsidian usage
 type: tool
 status: stable
+updated: 2026-10-10
 created: 2026-08-02
 tags:
   - obsidian
@@ -19,7 +20,8 @@ semantic_relations:
 The repository is an Obsidian vault: `knowledge_base/` and `docs/` use
 `[[wiki links]]`, YAML frontmatter, and `semantic_relations` for graph
 navigation. The `.obsidian/` folder contains the vault configuration
-(`app.json`, `graph.json`, `community-plugins.json`, and others).
+(`app.json`, `graph.json`, `community-plugins.json`, and others); the only
+community plugin listed is `3d-graph`.
 
 ## Conventions
 

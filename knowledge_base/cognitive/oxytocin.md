@@ -8,6 +8,8 @@ tags:
   - neuromodulation
   - social_neuroscience
   - hormones
+aliases:
+  - oxytocin_system
 semantic_relations:
   - type: relates
     links:

@@ -29,7 +29,6 @@ semantic_relations:
     links:
       - "[[myrmecology]]"
       - "[[evolution_of_eusociality]]"
-      - "[[communication_systems]]"
 ---
 
 # Bee Colony Organization
@@ -670,7 +669,7 @@ class CommunicationBasedCoordination:
 ### Organizational Theory
 - [[reproductive_division]] - Queen-worker dynamics
 - [[task_allocation]] - Worker task specialization
-- [[communication_systems]] - Bee communication networks
+- communication systems - Bee communication networks
 - [[resource_management]] - Colony resource organization
 
 ### Computational Applications

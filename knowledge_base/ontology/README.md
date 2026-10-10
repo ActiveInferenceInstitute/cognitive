@@ -24,7 +24,7 @@ semantic_relations:
 
 # Ontology Knowledge Base
 
-This knowledge base contains 6 comprehensive documents covering ontological frameworks, knowledge organization, and semantic structures essential for cognitive modeling and knowledge representation. The content spans biological, cognitive, computer science, mathematical, philosophical, and systems ontology, along with hyperspatial concepts.
+This knowledge base covers ontological frameworks (every page is listed in the [[knowledge_base/ontology/catalog|catalog]]), knowledge organization, and semantic structures essential for cognitive modeling and knowledge representation. The content spans biological, cognitive, computer science, mathematical, philosophical, and systems ontology, along with hyperspatial concepts.
 
 ## 🧬 Overview
 
@@ -74,12 +74,12 @@ The ontology knowledge base provides frameworks for organizing knowledge, repres
 - [[knowledge_base/systems/knowledge_graphs|Knowledge Graphs]]
 
 ### Implementation Examples
-- [[tools/src/models/README|Knowledge Models]]
+- [[code/tools/src/models/README|Knowledge Models]]
 - [[docs/templates/README|Ontology Templates]]
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 6 focused ontological documents
+- **Coverage**: every page is listed in the [[knowledge_base/ontology/catalog|catalog]]
 - **Depth**: Comprehensive treatment of key ontological frameworks
 - **Integration**: Strong connections to cognitive modeling
 - **Formalism**: Rigorous ontological structures

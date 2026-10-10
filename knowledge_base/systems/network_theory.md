@@ -9,6 +9,8 @@ tags:
   - complex_networks
   - graph_theory
   - systems_dynamics
+aliases:
+  - network_structure
 semantic_relations:
   - type: grounded_in
     links:

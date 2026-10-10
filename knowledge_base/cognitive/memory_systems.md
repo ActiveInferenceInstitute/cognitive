@@ -8,6 +8,11 @@ tags:
 - learning
 - neural_systems
 - information_processing
+aliases:
+  - memory
+  - memory_models
+  - memory_processes
+  - long_term_memory
 semantic_relations:
   - type: implements
     links:
@@ -33,7 +38,7 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 - [[working_memory]] - Short-term active maintenance
 
-  - [[central_executive]] - Control system
+  - [[central_executive]] - Attention-directing control of working memory
 
     - [[attention_control]] - Focus management
 
@@ -41,9 +46,9 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
     - [[interference_control]] - Distraction handling
 
-  - [[storage_systems]] - Buffer components
+  - [[storage_systems]] - Short-term stores for verbal and visual information
 
-    - [[phonological_loop]] - Verbal information
+    - [[phonological_loop]] - Rehearsal of verbal information
 
     - [[visuospatial_sketchpad]] - Visual-spatial info
 
@@ -57,31 +62,31 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
     - [[autobiographical_memory]] - Personal events
 
-    - [[source_memory]] - Context details
+    - [[source_memory]] - Memory for where and when information was learned
 
-    - [[temporal_memory]] - Time relationships
+    - [[temporal_memory]] - Memory for temporal order of events
 
   - [[semantic_memory]] - Factual knowledge
 
     - [[conceptual_knowledge]] - Abstract concepts
 
-    - [[categorical_knowledge]] - Classifications
+    - [[categorical_knowledge]] - Knowledge of category membership
 
     - [[world_knowledge]] - General facts
 
 ### Non-declarative Memory
 
-- [[implicit_memory]] - Unconscious memory
+- [[implicit_memory]] - Memory expressed without conscious recall
 
   - [[procedural_memory]] - Skills and habits
 
-    - [[motor_skills]] - Movement patterns
+    - [[motor_skills]] - Learned motor sequences
 
-    - [[cognitive_skills]] - Mental operations
+    - [[cognitive_skills]] - Learned mental procedures
 
     - [[behavioral_habits]] - Routine actions
 
-  - [[priming]] - Facilitation effects
+  - [[priming]] - Faster processing after prior exposure
 
     - [[perceptual_priming]] - Form-based
 
@@ -93,9 +98,9 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 ### Anatomical Structures
 
-- [[medial_temporal_lobe]] - Declarative memory
+- [[medial_temporal_lobe]] - Medial temporal region supporting declarative memory
 
-  - [[hippocampus]] - Episode formation
+  - [[hippocampus]] - Binds elements into episodic memories
 
     - [[dentate_gyrus]] - Pattern separation
 
@@ -103,43 +108,43 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
     - [[ca1]] - Temporal integration
 
-  - [[entorhinal_cortex]] - Interface region
+  - [[entorhinal_cortex]] - Gateway between neocortex and hippocampus
 
-    - [[grid_cells]] - Spatial mapping
+    - [[grid_cells]] - Neurons with periodic spatial firing fields
 
-    - [[time_cells]] - Temporal coding
+    - [[time_cells]] - Neurons encoding elapsed time
 
 ### Circuit Mechanisms
 
-- [[memory_circuits]] - Neural networks
+- [[memory_circuits]] - Neural circuits supporting memory
 
-  - [[encoding_circuits]] - Information capture
+  - [[encoding_circuits]] - Circuits that capture new information
 
-    - [[attention_networks]] - Selection
+    - [[attention_networks]] - Attention networks selecting information to encode
 
-    - [[novelty_detection]] - Significance
+    - [[novelty_detection]] - Detecting novel or significant events
 
-  - [[consolidation_circuits]] - Stabilization
+  - [[consolidation_circuits]] - Circuits stabilizing memories after encoding
 
-    - [[hippocampal_cortical]] - Systems level
+    - [[hippocampal_cortical]] - Hippocampus-neocortex interactions that stabilize memory
 
-    - [[synaptic_consolidation]] - Cellular level
+    - [[synaptic_consolidation]] - Synapse-level stabilization of memory traces
 
 ### Molecular Mechanisms
 
-- [[molecular_memory]] - Cellular basis
+- [[molecular_memory]] - Cellular and molecular basis of memory
 
   - [[synaptic_plasticity]] - Connection changes
 
-    - [[ltp]] - Strengthening
+    - [[ltp]] - Long-term potentiation of synapses
 
-    - [[ltd]] - Weakening
+    - [[ltd]] - Long-term depression of synapses
 
-  - [[protein_synthesis]] - Maintenance
+  - [[protein_synthesis]] - Protein production sustaining memory traces
 
-    - [[immediate_early_genes]] - Rapid response
+    - [[immediate_early_genes]] - Genes rapidly activated by neural activity
 
-    - [[structural_proteins]] - Physical changes
+    - [[structural_proteins]] - Proteins supporting synaptic structure
 
 ## Memory Processes
 
@@ -147,7 +152,7 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 - [[memory_encoding]] - Initial registration
 
-  - [[attention_mechanisms]] - Selection
+  - [[attention_mechanisms]] - Attention selecting what is encoded
 
     - [[bottom_up_attention]] - Stimulus-driven
 
@@ -163,17 +168,17 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 - [[memory_consolidation]] - Stabilization
 
-  - [[synaptic_consolidation]] - Local changes
+  - [[synaptic_consolidation]] - Synapse-level changes stabilizing memory
 
     - [[protein_synthesis]] - Molecular basis
 
     - [[synaptic_remodeling]] - Structural changes
 
-  - [[systems_consolidation]] - Network changes
+  - [[systems_consolidation]] - Gradual reorganization across brain networks
 
-    - [[hippocampal_independence]] - Autonomy
+    - [[hippocampal_independence]] - Memory retrievable without the hippocampus
 
-    - [[cortical_integration]] - Knowledge incorporation
+    - [[cortical_integration]] - Integration of memories into cortical knowledge
 
 ### Retrieval
 
@@ -181,37 +186,37 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
   - [[recall]] - Active reconstruction
 
-    - [[free_recall]] - Unprompted
+    - [[free_recall]] - Recall without cues
 
-    - [[cued_recall]] - Prompted
+    - [[cued_recall]] - Recall aided by cues
 
-  - [[recognition]] - Familiarity detection
+  - [[recognition]] - Judging whether an item was encountered before
 
-    - [[recollection]] - Detailed memory
+    - [[recollection]] - Retrieval of specific contextual details
 
-    - [[familiarity]] - General sense
+    - [[familiarity]] - Sense of prior occurrence without details
 
 ## Memory Properties
 
 ### Organization
 
-- [[memory_organization]] - Structure
+- [[memory_organization]] - Structure of stored memories
 
-  - [[hierarchical_organization]] - Levels
+  - [[hierarchical_organization]] - Memories arranged in nested levels
 
-    - [[categorical_structure]] - Groups
+    - [[categorical_structure]] - Grouping of items into categories
 
-    - [[associative_networks]] - Connections
+    - [[associative_networks]] - Linked memory representations
 
   - [[schema_organization]] - Knowledge frameworks
 
-    - [[mental_models]] - Understanding
+    - [[mental_models]] - Internal representations of how things work
 
     - [[scripts]] - Event sequences
 
 ### Dynamics
 
-- [[memory_dynamics]] - Time course
+- [[memory_dynamics]] - Changes in memory over time
 
   - [[forgetting]] - Information loss
 
@@ -221,15 +226,15 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
   - [[reconsolidation]] - Memory update
 
-    - [[destabilization]] - Lability
+    - [[destabilization]] - Retrieved memory becomes unstable
 
-    - [[restabilization]] - Updating
+    - [[restabilization]] - Memory re-stabilization after reactivation
 
 ### Characteristics
 
-- [[memory_features]] - Properties
+- [[memory_features]] - Qualities that describe memories
 
-  - [[specificity]] - Detail level
+  - [[specificity]] - Level of detail retained
 
     - [[gist]] - Core meaning
 
@@ -237,7 +242,7 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
   - [[durability]] - Persistence
 
-    - [[strength]] - Robustness
+    - [[strength]] - How firmly a memory is stored
 
     - [[accessibility]] - Retrieval ease
 
@@ -247,29 +252,29 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 - [[amnesia]] - Memory loss
 
-  - [[anterograde_amnesia]] - New learning
+  - [[anterograde_amnesia]] - Inability to form new memories
 
-  - [[retrograde_amnesia]] - Past memories
+  - [[retrograde_amnesia]] - Loss of memories from before onset
 
   - [[transient_amnesia]] - Temporary loss
 
 ### Neurological Conditions
 
-- [[memory_pathology]] - Disorders
+- [[memory_pathology]] - Disorders of memory function
 
-  - [[alzheimers_disease]] - Degeneration
+  - [[alzheimers_disease]] - Progressive neurodegenerative memory loss
 
-  - [[korsakoff_syndrome]] - Nutritional
+  - [[korsakoff_syndrome]] - Memory disorder from thiamine deficiency
 
-  - [[temporal_lobe_damage]] - Structural
+  - [[temporal_lobe_damage]] - Memory deficits from structural brain injury
 
 ### Therapeutic Approaches
 
-- [[memory_rehabilitation]] - Treatment
+- [[memory_rehabilitation]] - Interventions for memory impairment
 
-  - [[cognitive_training]] - Practice
+  - [[cognitive_training]] - Repeated practice to improve memory
 
-  - [[compensatory_strategies]] - Adaptation
+  - [[compensatory_strategies]] - Strategies to work around memory deficits
 
   - [[pharmacological_treatment]] - Medication
 
@@ -277,31 +282,31 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 ### Behavioral Testing
 
-- [[memory_tasks]] - Assessment
+- [[memory_tasks]] - Tasks that measure memory
 
   - [[recall_tests]] - Active retrieval
 
-  - [[recognition_tests]] - Identification
+  - [[recognition_tests]] - Tests of judging prior occurrence
 
   - [[implicit_tests]] - Indirect measures
 
 ### Neural Recording
 
-- [[memory_imaging]] - Brain activity
+- [[memory_imaging]] - Imaging of brain activity during memory
 
-  - [[fmri_studies]] - Location
+  - [[fmri_studies]] - Localizing memory activity with fMRI
 
-  - [[eeg_recording]] - Timing
+  - [[eeg_recording]] - Temporal dynamics of memory via EEG
 
-  - [[single_unit]] - Cell activity
+  - [[single_unit]] - Recordings from individual neurons
 
 ### Computational Modeling
 
-- [[memory_models]] - Theoretical
+- [[memory_models]] - Theoretical models of memory
 
   - [[network_models]] - Connection-based
 
-  - [[mathematical_models]] - Formal theories
+  - mathematical models - Formal theories
 
   - [[cognitive_models]] - Process models
 
@@ -309,51 +314,51 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 ### Educational
 
-- [[learning_strategies]] - Study methods
+- learning strategies - Study methods
 
-  - [[spaced_repetition]] - Timing
+  - [[spaced_repetition]] - Reviewing material at spaced intervals
 
-  - [[active_recall]] - Testing
+  - [[active_recall]] - Learning by retrieving from memory
 
-  - [[elaborative_rehearsal]] - Processing
+  - [[elaborative_rehearsal]] - Rehearsal that connects material to meaning
 
 ### Clinical
 
-- [[memory_enhancement]] - Improvement
+- [[memory_enhancement]] - Methods to improve memory
 
-  - [[cognitive_training]] - Practice
+  - [[cognitive_training]] - Repeated practice to improve memory
 
-  - [[pharmacological]] - Drugs
+  - pharmacological - Drug-based memory enhancement
 
-  - [[brain_stimulation]] - Direct intervention
+  - [[brain_stimulation]] - Stimulating the brain to influence memory
 
 ### Technological
 
-- [[memory_technology]] - Tools
+- [[memory_technology]] - Technology supporting memory
 
-  - [[memory_prosthetics]] - Assistance
+  - [[memory_prosthetics]] - Devices that compensate for memory loss
 
-  - [[brain_computer_interfaces]] - Direct interface
+  - [[brain_computer_interfaces]] - Brain-machine links to memory systems
 
-  - [[memory_augmentation]] - Enhancement
+  - [[memory_augmentation]] - Technology that boosts memory performance
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[memory_capacity]] - Limits
+- [[memory_capacity]] - Constraints on how much can be stored
 
-- [[specificity_control]] - Detail level
+- [[specificity_control]] - Control over the level of stored detail
 
-- [[stability_plasticity]] - Balance
+- [[stability_plasticity]] - Trade-off between stability and plasticity
 
 ### Emerging Approaches
 
-- [[optogenetic_manipulation]] - Light control
+- [[optogenetic_manipulation]] - Controlling memory circuits with light
 
 - [[closed_loop_interfaces]] - Real-time
 
-- [[artificial_memory]] - Synthetic
+- [[artificial_memory]] - Engineered memory in artificial systems
 
 ## References
 

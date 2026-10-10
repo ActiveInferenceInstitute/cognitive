@@ -693,7 +693,7 @@ numerical_implementations = {
 
 ## References
 
-- [[friston]] - Active Inference
+- friston - Active Inference
 
 - [[parr]] - Mathematical Foundations
 

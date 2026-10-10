@@ -10,6 +10,8 @@ tags:
   - computational-psychiatry
   - active-inference
   - precision-weighting
+aliases:
+  - clinical_applications
 semantic_relations:
   - type: relates
     links:

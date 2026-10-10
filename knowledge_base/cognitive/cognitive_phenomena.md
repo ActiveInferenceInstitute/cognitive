@@ -1,5 +1,6 @@
 ---
 title: Cognitive Phenomena
+description: "Catalogue of cognitive phenomena linking to concept pages on perception, attention, learning and memory, decision making and reasoning, and executive functions."
 type: concept
 status: stable
 created: 2024-02-06
@@ -201,11 +202,11 @@ semantic_relations:
 
 - [[elaboration]] - Memory enrichment
 
-- [[integration]] - Memory combination
+- integration - Memory combination
 
-- [[pattern_completion]] - Memory reconstruction
+- [[pattern_completion]] - Recalling a whole memory from partial cues
 
-- [[pattern_separation]] - Memory discrimination
+- [[pattern_separation]] - Making similar memories distinct
 
 ## Decision Making and Reasoning
 
@@ -233,7 +234,7 @@ semantic_relations:
 
 - [[problem_representation]] - Mental modeling of problems
 
-- [[strategy_selection]] - Choice of solution approaches
+- strategy selection - Choice of solution approaches
 
 - [[insight_problem_solving]] - Sudden solution discovery
 
@@ -267,7 +268,7 @@ semantic_relations:
 
 - [[metacognition]] - Thinking about thinking
 
-- [[effort_regulation]] - Management of mental effort
+- effort regulation - Management of mental effort
 
 - [[impulse_control]] - Control of impulses
 
@@ -365,7 +366,7 @@ semantic_relations:
 
 - [[effort_allocation]] - Distribution of effort
 
-- [[persistence]] - Maintenance of effort
+- persistence - Maintenance of effort
 
 ## Integration Points
 
@@ -521,7 +522,7 @@ semantic_relations:
 
 - [[collective_problem_solving]] - Group problem-solving
 
-- [[wisdom_of_crowds]] - Aggregate knowledge
+- [[wisdom_of_crowds]] - Accuracy of pooled group judgments
 
 - [[group_decision_making]] - Collective decisions
 
@@ -683,13 +684,13 @@ semantic_relations:
 
   - [[orienting_network]] - Spatial attention
 
-    - [[covert_attention]] - Internal focus shifting
+    - [[covert_attention]] - Shifting attention without moving the eyes
 
-    - [[overt_attention]] - External focus shifting
+    - [[overt_attention]] - Shifting attention by moving the eyes
 
   - [[executive_network]] - Control processes
 
-    - [[conflict_monitoring]] - Interference detection
+    - [[conflict_monitoring]] - Detecting competing responses
 
     - [[error_detection]] - Mistake identification
 
@@ -713,7 +714,7 @@ semantic_relations:
 
       - [[reward_prediction_error]] - Difference between expected and received rewards
 
-    - [[loss_aversion]] - Asymmetric value sensitivity
+    - [[loss_aversion]] - Losses weigh more than equal gains
 
     - [[utility_estimation]] - Subjective value computation
 
@@ -743,9 +744,9 @@ semantic_relations:
 
     - [[temporal_discounting]] - Future reward devaluation
 
-    - [[opportunity_cost]] - Alternative option consideration
+    - [[opportunity_cost]] - Value of the best forgone alternative
 
-    - [[planning_horizon]] - Future time consideration
+    - [[planning_horizon]] - How far ahead plans look
 
 ### Social Cognition and Theory of Mind
 
@@ -775,9 +776,9 @@ semantic_relations:
 
     - [[observational_learning]] - Learning by watching
 
-      - [[social_modeling]] - Behavior pattern acquisition
+      - [[social_modeling]] - Learning behavior by watching a model
 
-      - [[vicarious_reinforcement]] - Indirect learning
+      - [[vicarious_reinforcement]] - Learning from others' rewards and punishments
 
   - [[social_motivation]] - Drivers of social behavior
 
@@ -821,7 +822,7 @@ semantic_relations:
 
     - [[lexical_retrieval]] - Word finding
 
-      - [[lemma_selection]] - Word form selection
+      - [[lemma_selection]] - Choosing a word entry to express a concept
 
       - [[phonological_encoding]] - Sound form assembly
 
@@ -835,7 +836,7 @@ semantic_relations:
 
     - [[syntactic_prediction]] - Structure anticipation
 
-  - [[semantic_processing]] - Meaning processing
+  - semantic processing - Meaning processing
 
     - [[semantic_integration]] - Meaning combination
 
@@ -863,11 +864,11 @@ semantic_relations:
 
       - [[secondary_appraisal]] - Coping assessment
 
-    - [[physiological_response]] - Body state changes
+    - physiological response - Body state changes
 
       - [[autonomic_activation]] - Nervous system response
 
-      - [[hormonal_changes]] - Chemical state changes
+      - [[hormonal_changes]] - Endocrine changes accompanying emotion
 
   - [[emotion_regulation]] - Control processes
 
@@ -877,7 +878,7 @@ semantic_relations:
 
     - [[situation_modification]] - Environment change
 
-  - [[emotional_awareness]] - Conscious experience
+  - [[emotional_awareness]] - Awareness of one's own emotions
 
     - [[interoception]] - Internal state sensing
 
@@ -905,7 +906,7 @@ semantic_relations:
 
   - [[motor_execution]] - Movement implementation
 
-    - [[motor_units]] - Muscle activation patterns
+    - [[motor_units]] - A motor neuron and the muscle fibers it controls
 
     - [[coordination_patterns]] - Movement synergies
 
@@ -951,11 +952,11 @@ semantic_relations:
 
       - [[template_matching]] - Pattern comparison
 
-      - [[prototype_formation]] - Category learning
+      - [[prototype_formation]] - Forming a typical example of a category
 
     - [[perceptual_organization]] - Gestalt principles
 
-      - [[grouping]] - Element combination
+      - [[grouping]] - Combining elements into perceptual wholes
 
       - [[figure_ground]] - Object-background separation
 
@@ -963,15 +964,15 @@ semantic_relations:
 
     - [[object_recognition]] - Object identification
 
-      - [[view_invariance]] - Perspective independence
+      - [[view_invariance]] - Recognizing objects from any viewpoint
 
       - [[category_formation]] - Object classification
 
     - [[scene_perception]] - Environment processing
 
-      - [[spatial_layout]] - Space organization
+      - [[spatial_layout]] - Arrangement of objects within a scene
 
-      - [[context_effects]] - Setting influence
+      - [[context_effects]] - Influence of surrounding context on perception
 
 ### Consciousness and Awareness
 
@@ -985,7 +986,7 @@ semantic_relations:
 
       - [[vigilance]] - Sustained attention
 
-    - [[awareness_states]] - Conscious conditions
+    - [[awareness_states]] - Distinct states of awareness
 
       - [[minimal_consciousness]] - Basic awareness
 
@@ -997,21 +998,21 @@ semantic_relations:
 
       - [[sensory_awareness]] - Sensory consciousness
 
-      - [[emotional_awareness]] - Feeling states
+      - [[emotional_awareness]] - Awareness of one's own emotions
 
     - [[self_awareness]] - Self-consciousness
 
-      - [[body_awareness]] - Physical self
+      - [[body_awareness]] - Awareness of one's own body
 
-      - [[mental_state_awareness]] - Psychological self
+      - [[mental_state_awareness]] - Awareness of one's own mental states
 
   - [[neural_correlates]] - Brain basis
 
-    - [[default_mode_network]] - Resting state
+    - [[default_mode_network]] - Network active during rest and self-related thought
 
-    - [[global_workspace]] - Information integration
+    - [[global_workspace]] - Broadcast of information across brain systems
 
-    - [[consciousness_networks]] - Neural systems
+    - [[consciousness_networks]] - Brain networks supporting conscious experience
 
 ### Problem Solving and Reasoning
 
@@ -1063,9 +1064,9 @@ semantic_relations:
 
 - [[metacognition]] - Thinking about thinking
 
-  - [[metacognitive_knowledge]] - Understanding cognition
+  - [[metacognitive_knowledge]] - Knowledge about one's own thinking
 
-    - [[task_knowledge]] - Task understanding
+    - task knowledge - Task understanding
 
       - [[difficulty_assessment]] - Challenge evaluation
 
@@ -1077,9 +1078,9 @@ semantic_relations:
 
       - [[limitation_awareness]] - Constraint recognition
 
-  - [[metacognitive_regulation]] - Cognitive control
+  - [[metacognitive_regulation]] - Planning, monitoring, and adjusting one's thinking
 
-    - [[monitoring]] - Progress tracking
+    - monitoring - Progress tracking
 
       - [[comprehension_monitoring]] - Understanding check
 
@@ -1087,13 +1088,13 @@ semantic_relations:
 
     - [[control]] - Process adjustment
 
-      - [[strategy_selection]] - Approach choice
+      - strategy selection - Approach choice
 
       - [[effort_allocation]] - Resource distribution
 
-  - [[metacognitive_experiences]] - Subjective states
+  - [[metacognitive_experiences]] - Felt experiences about one's own cognition
 
-    - [[feeling_of_knowing]] - Knowledge sense
+    - [[feeling_of_knowing]] - Feeling that a fact is known but unrecalled
 
     - [[judgment_of_learning]] - Learning assessment
 

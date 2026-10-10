@@ -395,7 +395,7 @@ naming_patterns = {
 
 ### 1. Structure Validation
 
-See [[validation_framework]] for implementation.
+See validation framework for implementation.
 
 ```python
 
@@ -533,7 +533,7 @@ quality_requirements = {
 
 - [[linking_completeness]]
 
-- [[validation_framework]]
+- validation framework
 
 ## References
 

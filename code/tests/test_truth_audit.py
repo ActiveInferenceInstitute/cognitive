@@ -215,9 +215,7 @@ def test_policy_limit_too_low_raises_instead_of_silently_zeroing_actions() -> No
     """
     model = DiscreteGenerativeModel(
         A=np.eye(3),
-        B=np.stack(
-            [np.roll(np.eye(3), shift, axis=0) for shift in range(3)], axis=2
-        ),
+        B=np.stack([np.roll(np.eye(3), shift, axis=0) for shift in range(3)], axis=2),
         C=np.zeros(3),
         D=np.array([1 / 3, 1 / 3, 1 / 3]),
         E=np.array([1 / 3, 1 / 3, 1 / 3]),

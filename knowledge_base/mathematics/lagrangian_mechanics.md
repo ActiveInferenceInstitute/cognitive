@@ -1,5 +1,6 @@
 ---
 title: Lagrangian Mechanics
+description: "Mathematical background on Lagrangian mechanics, covering configuration space, variational principles, symmetries, conservation laws and constraints, with computational examples."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

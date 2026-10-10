@@ -1,304 +1,120 @@
 ---
-
-title: Unit Testing Guide
-
+title: Unit testing
 type: guide
-
-status: draft
-
+status: stable
 created: 2024-02-12
-
+updated: 2026-10-10
 tags:
-
   - testing
-
   - development
-
   - quality
-
 semantic_relations:
   - type: implements
     links:
-      - "[[ai_validation_framework]]"
+      - "[[docs/repo_docs/ai_validation_framework|Validation framework]]"
   - type: relates
     links:
-      - "[[implementation_guides]]"
-      - "[[model_implementation]]"
+      - "[[docs/implementation/implementation_guides|Implementation guides]]"
+      - "[[docs/repo_docs/model_implementation|Model implementation]]"
 ---
 
-# Unit Testing Guide
+# Unit testing
 
-## Overview
+The suite is pytest, lives in `code/tests/`, and covers the `cognitive`
+package, both executable `Things`, and the scripts in `code/scripts/`.
 
-This guide provides comprehensive instructions for unit testing in the cognitive modeling framework. It covers best practices, testing patterns, and validation approaches.
-
-## Testing Philosophy
-
-### Core Principles
-
-- Test behavior, not implementation
-
-- One assertion per test
-
-- Keep tests simple and readable
-
-- Test edge cases and error conditions
-
-- Maintain test independence
-
-### Test Types
-
-1. Unit Tests
-
-   - Individual component testing
-
-   - Function-level validation
-
-   - Class behavior verification
-
-1. Integration Tests
-
-   - Component interaction testing
-
-   - System integration validation
-
-   - End-to-end workflows
-
-1. Property Tests
-
-   - Invariant verification
-
-   - Property-based testing
-
-   - Randomized input testing
-
-## Testing Structure
-
-### Directory Organization
-
-```text
-
-tests/
-
-├── unit/              # Unit tests
-
-├── integration/       # Integration tests
-
-├── property/         # Property-based tests
-
-└── fixtures/         # Test data and fixtures
-
-```
-
-### File Naming
-
-- Test files: `test_*.py`
-
-- Test classes: `Test*`
-
-- Test methods: `test_*`
-
-## Writing Tests
-
-### Basic Test Structure
-
-```python
-
-def test_function_name():
-
-    # Arrange
-
-    input_data = prepare_test_data()
-
-    # Act
-
-    result = function_under_test(input_data)
-
-    # Assert
-
-    assert result == expected_output
-
-```
-
-### Test Fixtures
-
-```python
-
-@pytest.fixture
-
-def sample_model():
-
-    """Create a sample model for testing."""
-
-    return Model(params)
-
-```
-
-### Parameterized Tests
-
-```python
-
-@pytest.mark.parametrize("input,expected", [
-
-    (value1, result1),
-
-    (value2, result2)
-
-])
-
-def test_parameterized(input, expected):
-
-    assert function(input) == expected
-
-```
-
-## Testing Patterns
-
-### Model Testing
-
-- Test model initialization
-
-- Verify state transitions
-
-- Validate output distributions
-
-- Check error handling
-
-### Algorithm Testing
-
-- Test convergence properties
-
-- Verify numerical stability
-
-- Check optimization behavior
-
-- Validate against known solutions
-
-### Data Structure Testing
-
-- Test data integrity
-
-- Verify structure constraints
-
-- Check serialization
-
-- Validate transformations
-
-## Best Practices
-
-### Code Coverage
-
-- Aim for high test coverage
-
-- Focus on critical paths
-
-- Test edge cases
-
-- Cover error conditions
-
-### Test Maintenance
-
-- Keep tests up to date
-
-- Refactor when needed
-
-- Document test purpose
-
-- Review test quality
-
-### Performance
-
-- Use appropriate fixtures
-
-- Minimize test duration
-
-- Profile slow tests
-
-- Optimize test data
-
-## Tools and Libraries
-
-### Testing Framework
-
-- pytest for test execution
-
-- pytest-cov for coverage
-
-- pytest-benchmark for performance
-
-- pytest-test fixture for test fixtureing
-
-### Assertion Libraries
-
-- pytest assertions
-
-- numpy.testing
-
-- pandas.testing
-
-- torch.testing
-
-### test fixtureing
-
-- unittest.test fixture
-
-- pytest-test fixture
-
-- responses for HTTP
-
-- moto for AWS
-
-## Continuous Integration
-
-### CI Pipeline
-
-1. Run unit tests
-
-1. Check coverage
-
-1. Run integration tests
-
-1. Generate reports
-
-### Quality Gates
-
-- Minimum coverage: 80%
-
-- All tests must pass
-
-- No critical issues
-
-- Performance thresholds
-
-## Repository Test Entrypoints
+## Running it
 
 ```bash
-
-# Top-level tests
-
-python3 -m pytest -q tests
-
-# Generic Thing: full visualization and analysis test suite
-
-python3 Things/Generic_Thing/tests/run_test_suite.py
-
-# Continuous Generic module tests
-
-python3 -m pytest -q Things/Continuous_Generic/tests
-
-# Generic POMDP quick checks (if tests provided)
-
-python3 -m pytest -q Things/Generic_POMDP
-
+python -m pytest -q                  # whole suite
+python -m pytest code/tests/test_simple_pomdp.py -v
+python -m pytest -q --cov            # branch coverage against the configured floor
+python -m scripts.mutation_check     # does the suite notice a wrong line?
+python code/tests/run_tests.py       # wrapper that also writes a JSON report
 ```
 
-Artifacts such as plots and reports will appear under `Things/Generic_Thing/reports/` and `Things/Generic_Thing/visualizations/` when applicable.
+Configuration is in `pytest.ini` and `[tool.pytest.ini_options]` in
+`pyproject.toml`: `testpaths = code/tests`, import paths `code/tools` and
+`code`, strict markers, and one marker, `visualization`, for tests that draw
+figures.
 
-## Related Documentation
+Do not pass `--cov=<path>`. Coverage is configured once, in
+`[tool.coverage.*]`, with branch coverage over `code/tools/src`, `code/Things`,
+and `code/scripts` and a `fail_under` floor of 90; a `--cov=<path>` argument
+silently narrows what is measured.
 
-- [[ai_validation_framework]]
+## Layout
 
-- [[implementation_guides]]
+The tests are flat files in `code/tests/`, named for what they cover
+(`test_matrix_ops.py`, `test_simple_pomdp.py`, `test_dispatcher_semantics.py`,
+`test_validate_docs.py`, `test_verify_links.py`, `test_build_pipeline.py`, and
+so on), plus `code/tests/visualization/` for the continuous-agent plots. There
+are no `unit/`, `integration/`, or `property/` subfolders, and the `Things`
+folders have no tests of their own.
 
-- [[model_implementation]]
+`code/tests/conftest.py` provides the shared fixtures (`output_dir`,
+`temp_dir`, `sample_matrix_2d`, `sample_matrix_3d`, `sample_belief_vector`,
+`sample_matrix_spec`, `sample_markdown_spec`, `sample_matrix_data`), selects
+Matplotlib's `Agg` backend.
 
+## Conventions
+
+- Use real data and real computation. Do not substitute fake objects for the
+  code under test.
+- Write artifacts only to `tmp_path` or the session `output_dir` fixture.
+- Prefer oracles over snapshots: compare against a closed-form quantity or an
+  identity (`test_math_oracles.py`) rather than a recorded output.
+- Pair a rejected input with the nearest accepted one so a guard that moved by
+  one is noticed (`test_validation_branches.py`, `test_boundary_validation.py`).
+- When a bug is fixed, add the regression test and, if the line is
+  mathematical, a mutation in `code/scripts/mutation_check.py` so the test stays
+  load-bearing.
+- Test files are `test_*.py`, functions `test_*`.
+
+## Example
+
+A test file written against the public API (this one runs as written):
+
+```python
+import numpy as np
+import pytest
+
+from cognitive import DiscreteGenerativeModel
+
+
+@pytest.fixture
+def model():
+    return DiscreteGenerativeModel(
+        A=np.array([[0.9, 0.1], [0.1, 0.9]]),
+        B=np.stack([np.eye(2), np.array([[0.1, 0.9], [0.9, 0.1]])], axis=2),
+        C=np.array([0.0, 1.0]),
+        D=np.array([0.5, 0.5]),
+        E=np.array([0.5, 0.5]),
+    )
+
+
+def test_posterior_is_a_distribution(model):
+    posterior = model.posterior(0, model.D)
+    assert np.isclose(posterior.sum(), 1.0)
+    assert posterior[0] > posterior[1]
+
+
+@pytest.mark.parametrize("horizon", [1, 2])
+def test_policy_count(model, horizon):
+    assert len(model.enumerate_policies(horizon)) == 2**horizon
+```
+
+## Continuous integration
+
+`.github/workflows/quality.yml` runs the suite with branch coverage on Python
+3.10 and 3.12, then ruff, mypy, `compileall`, the documentation gates, the
+manuscript build, and the benchmarks. A separate job runs
+`python -m scripts.mutation_check --json`, and another builds and installs the
+wheel. See [[docs/repo_docs/validation|Validation]].
+
+## Related documentation
+
+- [[docs/repo_docs/testing_guidelines|Testing guidelines]]
+- [[docs/repo_docs/ai_validation_framework|Validation framework]]
+- [[docs/repo_docs/model_implementation|Model implementation]]
+- [[docs/tools/mutation_testing|Mutation testing]]

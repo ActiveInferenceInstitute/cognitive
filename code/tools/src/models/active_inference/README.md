@@ -1,3 +1,10 @@
+---
+title: Discrete Active Inference runtime
+type: documentation
+status: stable
+updated: 2026-10-10
+---
+
 # Discrete Active Inference runtime
 
 The active-inference package contains four cooperating pieces:

@@ -1,31 +1,53 @@
+---
+title: Things
+type: reference
+status: stable
+updated: 2026-10-10
+semantic_relations:
+  - type: indexes
+    links:
+      - "[[code/Things/AGENTS|Things index]]"
+      - "[[docs/api/api_reference|API reference]]"
+      - "[[docs/agents/agent_docs_readme|Agent documentation]]"
+---
+
 # Things
 
-This directory contains agent implementations and experiments ("Things") for the Cognitive Modeling Framework. Each subdirectory represents a specific agent configuration or experiment, with generated output artifacts (plots, visualizations) stored locally.
+`code/Things/` is installed as the `Things` Python package (see
+`[tool.setuptools]` in `pyproject.toml`). Only two of its subfolders contain
+code. The rest are documentation: design notes for agents that were described
+but never implemented here.
 
-For full source code, detailed documentation, and knowledge base entries, see [[knowledge_base/README|Knowledge Base: Things]].
+## Runnable agents
 
-## Directory Structure
+| Folder | Import | What it is |
+|---|---|---|
+| [[code/Things/Simple_POMDP/README]] | `from Things.Simple_POMDP import SimplePOMDP` | Discrete POMDP agent configured from a YAML path or dict; seeded, validated, with state save and load and six plot types. |
+| [[code/Things/Continuous_Generic/README]] | `from Things.Continuous_Generic import ContinuousActiveInference, ContinuousVisualizer` | Precision-weighted gradient descent on free energy over generalized coordinates, plus a plotting and GIF helper. |
 
-### Active Implementations
+Both are exercised by the test suite in `code/tests/` (for example
+`test_simple_pomdp.py` and `test_pomdp_edge_paths.py`). Their signatures
+are listed in [[docs/api/api_reference|the API reference]].
 
-- **[[code/Things/Ant_Colony/README|Ant Colony]]**: Swarm intelligence using Active Inference and stigmergic coordination. [[code/Things/Ant_Colony/AGENTS|Agents]]
-- **[[code/Things/BioFirm/README|BioFirm]]**: Biological firm simulations and earth systems modeling. [[code/Things/BioFirm/AGENTS|Agents]]
-- **[[code/Things/Continuous_Generic/README|Continuous Generic]]**: Agents in continuous state and action spaces. [[code/Things/Continuous_Generic/AGENTS|Agents]]
-- **[[code/Things/Generic_POMDP/README|Generic POMDP]]**: Discrete POMDP agent framework with A/B/C/D matrices. [[code/Things/Generic_POMDP/AGENTS|Agents]]
-- **[[code/Things/Simple_POMDP/README|Simple POMDP]]**: Simplified educational POMDP implementation. [[code/Things/Simple_POMDP/AGENTS|Agents]]
-- **[[code/Things/Generic_Thing/README|Generic Thing]]**: Base active inference entity classes. [[code/Things/Generic_Thing/AGENTS|Agents]]
+## Documentation-only folders
 
-### Archived (Documentation Only)
+These folders contain markdown (and, for `Generic_Thing`, saved PNG images) but
+no importable Python. Read them as design notes, not as descriptions of an
+installed API.
 
-The following implementations have full documentation in the knowledge base:
+- [[code/Things/Ant_Colony/README|Ant_Colony]]: stigmergic foraging concept.
+- [[code/Things/BioFirm/README|BioFirm]]: a firm or bioregion as an active inference agent.
+- [[code/Things/Generic_POMDP/README|Generic_POMDP]]: matrix-configured discrete agent design; the working discrete code is `Simple_POMDP` and the `cognitive` package.
+- [[code/Things/Generic_Thing/README|Generic_Thing]]: the abstract definition of an agent.
+- [[code/Things/Baseball_Game/README|Baseball_Game]]: archived concept study.
+- [[code/Things/KG_Multi_Agent/README|KG_Multi_Agent]]: agents on a knowledge graph.
+- [[code/Things/Path_Network/README|Path_Network]]: agents on a dynamic network.
+- [[code/Things/ActiveInferenceInstitute/README|ActiveInferenceInstitute]]: short description of the Institute.
 
-- **[[code/Things/Baseball_Game/README|Baseball Game]]**: Active inference in game dynamics.
-- **[[code/Things/KG_Multi_Agent/README|KG Multi-Agent]]**: Knowledge graph multi-agent system.
-- **[[code/Things/Path_Network/README|Path Network]]**: Network navigation via active inference.
-- **[[code/Things/ActiveInferenceInstitute/README|Active Inference Institute]]**: Institute-aligned agent examples.
+`code/Things/agents/examples/swarm.md` is a single note, not a package.
 
-## Related Resources
+## Related
 
-- [[knowledge_base/agents/architectures_overview|Agent Architectures Overview]]
-- [[knowledge_base/agents/index|Agent Index]]
-- [[AGENTS|Things Agents Index]]
+- [[code/Things/AGENTS|Things index]]
+- [[knowledge_base/agents/architectures_overview|Agent architectures overview]]
+- [[knowledge_base/agents/index|Agent index]]

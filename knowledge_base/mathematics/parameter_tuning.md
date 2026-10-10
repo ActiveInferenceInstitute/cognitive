@@ -7,6 +7,8 @@ updated: 2026-10-09
 tags:
 - tuning
 - optimization
+aliases:
+  - optimization_parameters
 semantic_relations:
   - type: relates_to
     links:

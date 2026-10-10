@@ -1,374 +1,108 @@
 ---
-
-title: Active Inference in Ant Colony Behavior
-
+title: Active inference for ant colony foraging (design proposal)
 type: research
-
-status: stable
-
+status: proposal
 created: 2024-02-07
-
+updated: 2026-10-10
 tags:
-
   - active_inference
-
   - ant_colony
-
   - collective_behavior
-
+  - proposal
 semantic_relations:
-  - type: implements
-    links:
-      - "[[research_document_template]]"
   - type: relates
     links:
-      - "[[knowledge_base/cognitive/collective_behavior]]"
+      - "[[knowledge_base/cognitive/collective_behavior_ants]]"
+      - "[[knowledge_base/cognitive/stigmergic_coordination]]"
+      - "[[knowledge_base/cognitive/swarm_intelligence]]"
       - "[[knowledge_base/cognitive/active_inference]]"
+      - "[[docs/api/ant_colony_api]]"
 ---
 
-# Active Inference in Ant Colony Behavior
+# Active inference for ant colony foraging (design proposal)
 
-## Overview
+**Status: proposal.** Nothing on this page has been built or run at colony scale.
+`code/Things/Ant_Colony/` contains documentation only (`README.md`, `AGENTS.md`,
+`Ant_Colony_README.md`), the package has no environment, pheromone field, or
+population class, and no foraging result exists in the repository. See
+[[docs/api/ant_colony_api|the ant colony API page]]. The only executable part of
+this page is the single-ant sketch below.
 
-### Research Question
+## Research question
 
-How can active inference principles explain and model emergent collective behavior in ant colonies, particularly in foraging and path optimization?
+Can foragers that each minimize expected free energy over a local, discrete model
+reproduce trail formation through stigmergy, and does the colony-level pattern
+depend on the precision or the preference parameters of the individual?
 
-### Significance
+Background: [[knowledge_base/cognitive/collective_behavior_ants|ant colony behaviour]],
+[[knowledge_base/cognitive/stigmergic_coordination|stigmergic coordination]],
+[[knowledge_base/cognitive/swarm_intelligence|swarm intelligence]],
+[[knowledge_base/cognitive/emergence_self_organization|emergence and self-organization]].
 
-Understanding how simple agents using active inference principles can produce complex collective behaviors has implications for both biological systems and artificial swarm intelligence.
+## Single-ant sketch (runs)
 
-### Related Work
-
-- [[knowledge_base/cognitive/collective_behavior_ants|Ant Colony Behavior]]
-
-- [[knowledge_base/cognitive/stigmergic_coordination|Stigmergic Coordination]]
-
-- [[knowledge_base/cognitive/swarm_intelligence|Swarm Intelligence]]
-
-## Theoretical Framework
-
-### Core Concepts
-
-- [[knowledge_base/cognitive/active_inference|Active Inference]]
-
-- [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]]
-
-- [[knowledge_base/cognitive/emergence_self_organization|Emergence and Self-Organization]]
-
-### Mathematical Foundation
+One ant at a fork senses whether the pheromone is `weak` or `strong` and chooses
+`left` or `right`. The hidden state is which branch leads to food. This is only
+the individual decision, built from the existing discrete model.
 
 ```python
-
-def compute_expected_free_energy(beliefs, policies):
-
-    """
-
-    Compute expected free energy for policy evaluation.
-
-    Args:
-
-        beliefs: Current belief state about environment
-
-        policies: Available action policies
-
-    Returns:
-
-        Expected free energy for each policy
-
-    """
-
-    pragmatic_value = compute_pragmatic_value(beliefs, policies)
-
-    epistemic_value = compute_epistemic_value(beliefs, policies)
-
-    return pragmatic_value + epistemic_value
-
-```
-
-## Methodology
-
-### Experimental Design
-
-1. Implementation of individual ant agents using active inference
-
-1. Environment design with pheromone trails and food sources
-
-1. Collective behavior emergence through local interactions
-
-1. Analysis of path optimization and foraging efficiency
-
-### Implementation
-
-
-### Validation Methods
-
-- Path efficiency metrics
-
-- Food collection rate
-
-- Emergence of optimal trails
-
-- Collective behavior analysis
-
-## Results
-
-### Data Analysis
-
-```python
-
-def analyze_colony_behavior(simulation_data):
-
-    """
-
-    Analyze collective behavior patterns.
-
-    Args:
-
-        simulation_data: Recorded simulation data
-
-    Returns:
-
-        Analysis metrics and visualizations
-
-    """
-
-    # Compute path optimization metrics
-
-    path_efficiency = compute_path_efficiency(simulation_data)
-
-    # Analyze pheromone trail formation
-
-    trail_formation = analyze_trail_formation(simulation_data)
-
-    # Measure food collection efficiency
-
-    foraging_efficiency = compute_foraging_efficiency(simulation_data)
-
-    return {
-
-        'path_efficiency': path_efficiency,
-
-        'trail_formation': trail_formation,
-
-        'foraging_efficiency': foraging_efficiency
-
-    }
-
-```
-
-### Key Findings
-
-1. Active inference enables efficient path optimization
-
-1. Emergent trail patterns match biological observations
-
-1. Collective behavior emerges from individual inference
-
-### Visualizations
-
-```python
-
-def visualize_results(results):
-
-    """Create visualizations of colony behavior."""
-
-    plt.figure(figsize=(12, 8))
-
-    # Plot pheromone trails
-
-    plt.subplot(221)
-
-    plot_pheromone_trails(results)
-
-    # Plot path efficiency
-
-    plt.subplot(222)
-
-    plot_path_efficiency(results)
-
-    # Plot food collection
-
-    plt.subplot(223)
-
-    plot_food_collection(results)
-
-    plt.tight_layout()
-
-    plt.show()
-
-```
-
-## Discussion
-
-### Interpretation
-
-- Active inference provides a principled explanation for ant behavior
-
-- Local inference leads to global optimization
-
-- Pheromone trails serve as external memory
-
-### Implications
-
-1. New insights into biological systems
-
-1. Improved swarm robotics algorithms
-
-1. Applications to distributed optimization
-
-### Limitations
-
-- Computational complexity scaling
-
-- Simplified environment model
-
-- Limited agent capabilities
-
-## Implementation Details
-
-### Environment Setup
-
-```bash
-
-# Setup virtual environment
-
-python -m venv env
-
-source env/bin/activate
-
-# Install dependencies
-
-pip install -r requirements.txt
-
-```
-
-### Dependencies
-
-```python
-
 import numpy as np
 
-import torch
+from cognitive import ActiveInferenceDispatcher, DiscreteGenerativeModel, InferenceConfig, ModelState
 
-import matplotlib.pyplot as plt
+# States: food on left / food on right. Observations: pheromone weak / strong.
+A = np.array([[0.4, 0.6], [0.6, 0.4]])             # A[o, s] = P(o | s)
+B = np.stack([np.eye(2), np.eye(2)], axis=2)       # the food does not move
+model = DiscreteGenerativeModel(
+    A=A, B=B, C=np.array([0.0, 1.0]), D=np.array([0.5, 0.5]), E=np.array([0.5, 0.5])
+)
+config = InferenceConfig("variational", "discrete", 1, 0.5, 1.0, seed=0)
+dispatcher = ActiveInferenceDispatcher(config, model)
 
-from dataclasses import dataclass
-
-from typing import List, Dict
-
+state = ModelState(model.D.copy(), model.E.copy(), 1.0, 0.0, 0.0)
+beliefs = dispatcher.dispatch_belief_update(1, state)   # observe strong pheromone
+assert np.isclose(beliefs.sum(), 1.0)
 ```
 
-### Configuration
+## Proposed colony study (not built)
 
-```yaml
+1. Implement a grid environment with food sources and an evaporating pheromone
+   field. This requires new code outside the current package.
+2. Give each ant a local model like the sketch above, with observations taken
+   from the pheromone concentration at the ant's position.
+3. Deposit pheromone as a side effect of action, so that the environment carries
+   the memory.
+4. Measure, with fixed seeds, the time to first food return, the fraction of
+   ants on the shortest path, and trail persistence; vary the number of ants,
+   the evaporation rate, and the agent's precision.
+5. Compare against a non-inferential baseline (a classical ant colony
+   optimization rule) so that any difference is attributable to the agent model.
 
-simulation:
+No expected outcome is asserted. Results would be registered through the
+manuscript build, which injects numbers into text rather than typing them
+([[docs/manuscript/06_reproducibility|reproducibility chapter]]).
 
-  max_steps: 10000
+## Known limitations of the design
 
-  timestep: 0.1
-
-  random_seed: 42
-
-environment:
-
-  size: [100, 100]
-
-  food_sources: 5
-
-  obstacles: 10
-
-agent:
-
-  sensor_range: 5
-
-  movement_speed: 1
-
-  rotation_speed: 0.5
-
-```
-
-## Reproducibility
-
-### Code Repository
-
-- Repository: `code/Things/Ant_Colony/`
-
-- Current implementation notes: `README.md` and `Ant_Colony_README.md`
-
-- Agent guidance: `AGENTS.md`
-
-### Data
-
-- Simulation recordings
-
-- Analysis results
-
-- Visualization data
-
-### Environment
-
-- Python 3.8+
-
-- NumPy, PyTorch
-
-- Matplotlib for visualization
-
-## Extensions
-
-### Future Work
-
-1. Hierarchical active inference models
-
-1. Multi-colony interactions
-
-1. Dynamic environment adaptation
-
-### Open Questions
-
-- Optimal balance of exploration/exploitation
-
-- Scaling to larger colonies
-
-- Transfer to robotic systems
+- Each ant's model is a small discrete POMDP, so spatial navigation must be
+  encoded in the state space; the package has no spatial or hierarchical agent.
+- Policy enumeration grows as `num_actions ** horizon`; keep the horizon short
+  ([[docs/research/active_inference/scaling|scaling]]).
 
 ## References
 
-### Academic References
+- Deneubourg, J. L., Aron, S., Goss, S., and Pasteels, J. M. (1990). The
+  self-organizing exploratory pattern of the Argentine ant. *Journal of Insect
+  Behavior*, 3, 159-168.
+- Friston, K. (2010). The free-energy principle: a unified brain theory?
+  *Nature Reviews Neuroscience*, 11, 127-138.
+- Ramstead, M. J. D., Kirchhoff, M. D., and Friston, K. J. (2020). A tale of two
+  densities: active inference is enactive inference. *Adaptive Behavior*, 28,
+  225-239.
 
-1. Friston, K. "The free-energy principle: a unified brain theory?"
+## Related documentation
 
-1. Deneubourg, J.L. "The Self-Organizing Exploratory Pattern of the Argentine Ant"
-
-1. Ramstead, M.J.D. "A tale of two densities: active inference is enactive inference"
-
-### Code References
-
-- [[code/Things/Ant_Colony/README|Ant Colony Overview]]
-
-- [[code/Things/Ant_Colony/Ant_Colony_README|Model Notes]]
-
-- [[code/Things/Ant_Colony/AGENTS|Agent Instructions]]
-
-### Documentation
-
-- [[docs/guides/ant_colony_guide|Implementation Guide]]
-
-- [[docs/api/ant_colony_api|API Reference]]
-
-- [[docs/examples/ant_colony_example|Usage Example]]
-
-## Related Research
-
-### Prerequisites
-
-- Active Inference Foundations
-
-- Collective Behavior Basics
-
-### Follow-up Work
-
-- Hierarchical Swarm Behavior
-
-- Multi-Colony Systems
+- [[code/Things/Ant_Colony/README|Ant colony folder]] and
+  [[code/Things/Ant_Colony/AGENTS|its agent notes]]
+- [[docs/guides/ant_colony_guide|Ant colony guide]]
+- [[docs/examples/ant_colony_example|Ant colony example]]

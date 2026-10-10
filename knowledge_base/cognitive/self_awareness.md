@@ -8,6 +8,8 @@ tags:
   - metacognition
   - self_representation
   - introspection
+aliases:
+  - self_knowledge
 semantic_relations:
   - type: relates
     links:

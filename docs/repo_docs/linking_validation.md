@@ -1,480 +1,91 @@
-# Documentation Linking Validation Guide
-
 ---
-
-title: Documentation Linking Validation
-
+title: Link validation
 type: guide
-
 status: stable
-
 created: 2024-02-06
-
+updated: 2026-10-10
 tags:
-
   - validation
-
   - linking
-
   - documentation
-
-  - quality
-
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[linking_completeness]]
-
-      - [[ai_validation_framework]]
-
+      - "[[docs/repo_docs/linking_completeness|Linking completeness]]"
+      - "[[docs/repo_docs/ai_validation_framework|Validation framework]]"
   - type: extends
-
-    links: [[obsidian_linking]]
-
+    links:
+      - "[[docs/repo_docs/obsidian_linking|Obsidian linking]]"
 ---
 
-## Overview
+# Link validation
 
-This guide establishes comprehensive validation rules and patterns for maintaining high-quality documentation linking across the cognitive modeling system.
+Two scripts check links, and `validate_docs.py` runs both.
 
-## Validation Framework
-
-### Core Link Types
-
-```yaml
-
-link_categories:
-
-  theoretical:
-
-    - type: concept_hierarchy
-
-      required: true
-
-      validation: strict
-
-      pattern: "[[parent_concept]] -> [[child_concept]]"
-
-    - type: implementation
-
-      required: true
-
-      validation: strict
-
-      pattern: "[[concept]] -> [[implementation]]"
-
-  research:
-
-    - type: experimental
-
-      required: true
-
-      validation: flexible
-
-      pattern: "[[theory]] -> [[experiment]] -> [[results]]"
-
-    - type: literature
-
-      required: false
-
-      validation: flexible
-
-      pattern: "[[paper]] -> [[findings]] -> [[integration]]"
-
-  documentation:
-
-    - type: guide_reference
-
-      required: true
-
-      validation: strict
-
-      pattern: "[[guide]] -> [[reference]] -> [[example]]"
-
-    - type: api_documentation
-
-      required: true
-
-      validation: strict
-
-      pattern: "[[api]] -> [[implementation]] -> [[test]]"
-
-```
-
-### Validation Rules
-
-#### 1. Structural Validation
-
-```python
-
-# @structural_validation
-
-validation_rules = {
-
-    "bidirectional": {
-
-        "concept_links": True,      # Concepts must link both ways
-
-        "implementation_links": True,# Implementations must reference concepts
-
-        "test_links": True          # Tests must link to implementations
-
-    },
-
-    "hierarchical": {
-
-        "max_depth": 5,            # Maximum hierarchy depth
-
-        "required_levels": ["concept", "implementation", "test"],
-
-        "optional_levels": ["example", "extension"]
-
-    },
-
-    "completeness": {
-
-        "required_sections": 0.9,   # 90% of required sections must be present
-
-        "optional_sections": 0.7,   # 70% of optional sections recommended
-
-        "metadata_fields": 1.0      # All required metadata must be present
-
-    }
-
-}
-
-```
-
-#### 2. Semantic Validation
-
-```python
-
-# @semantic_validation
-
-semantic_rules = {
-
-    "relationship_types": {
-
-        "implements": "Direct implementation of concept",
-
-        "extends": "Extension or enhancement",
-
-        "requires": "Dependency relationship",
-
-        "relates": "Related but independent"
-
-    },
-
-    "context_validation": {
-
-        "theoretical": ["concepts", "principles", "frameworks"],
-
-        "practical": ["implementations", "examples", "tests"],
-
-        "research": ["experiments", "results", "analysis"]
-
-    }
-
-}
-
-```
-
-## Link Patterns
-
-### 1. Knowledge Organization
-
-```mermaid
-
-graph TD
-
-    A[Core Concepts] --> B[Theoretical Framework]
-
-    B --> C[Implementation]
-
-    C --> D[Validation]
-
-    D --> E[Examples]
-
-    F[Research] --> G[Experiments]
-
-    G --> H[Results]
-
-    H --> I[Integration]
-
-```
-
-### 2. Documentation Flow
-
-```mermaid
-
-graph LR
-
-    A[Concepts] --> B[Guides]
-
-    B --> C[Examples]
-
-    C --> D[Tests]
-
-    D --> E[Validation]
-
-    F[API] --> G[Implementation]
-
-    G --> H[Documentation]
-
-    H --> I[Integration]
-
-```
-
-## Quality Metrics
-
-### 1. Link Quality
-
-```python
-
-# @quality_metrics
-
-quality_metrics = {
-
-    "structural": {
-
-        "completeness": "Percentage of required links present",
-
-        "consistency": "Consistency of link patterns",
-
-        "bidirectional": "Percentage of required bidirectional links"
-
-    },
-
-    "semantic": {
-
-        "accuracy": "Correctness of relationship types",
-
-        "relevance": "Relevance of linked content",
-
-        "context": "Appropriate context maintenance"
-
-    },
-
-    "maintenance": {
-
-        "freshness": "Recent validation/update",
-
-        "stability": "Link stability over time",
-
-        "coverage": "Documentation coverage"
-
-    }
-
-}
-
-```
-
-### 2. Validation Thresholds
-
-```yaml
-
-quality_thresholds:
-
-  critical:
-
-    structural_completeness: 0.95
-
-    semantic_accuracy: 0.90
-
-    bidirectional_completion: 0.85
-
-  standard:
-
-    structural_completeness: 0.85
-
-    semantic_accuracy: 0.80
-
-    bidirectional_completion: 0.75
-
-  minimum:
-
-    structural_completeness: 0.70
-
-    semantic_accuracy: 0.65
-
-    bidirectional_completion: 0.60
-
-```
-
-## Validation Process
-
-### 1. Automated Checks
-
-```python
-
-# @validation_process
-
-def validate_documentation():
-
-    """
-
-    Validation steps:
-
-    1. Scan all documentation files
-
-    2. Extract and validate links
-
-    3. Check relationship types
-
-    4. Verify bidirectional links
-
-    5. Generate quality report
-
-    """
-
-    pass
-
-```
-
-### 3. Repository Scripts
-
-Use the built-in scripts to collect repository structure and enforce link health:
+## Wiki links: `verify_links.py`
 
 ```bash
-
-# Inventory and wikilink graph
-
-python3 docs/repo_docs/repo_scripts/list_file_directory.py --root . --output docs/repo_docs/repo_scripts/output
-
-# Fix broken/ambiguous/missing backlinks
-
-python3 docs/repo_docs/repo_scripts/fix_links.py --root . --output docs/repo_docs/repo_scripts/output
-
+python code/scripts/verify_links.py .                       # human-readable report
+python code/scripts/verify_links.py . --json                # machine-readable report
+python code/scripts/verify_links.py . --strict-wiki-links   # also fail on unresolved bare names
 ```
 
-### 2. Manual Review
+Also installed as `cognitive-verify-links`. The JSON report has the keys
+`checked_links`, `resolved_links`, `skipped_concept_links`,
+`indexed_markdown_files`, `anchor_warnings`, and `broken_links` (each entry has
+`source`, `link`, and `target`). The exit status is 1 when `broken_links` is not
+empty. Anchor warnings never change the exit status. Resolution rules are in
+[[docs/repo_docs/obsidian_linking|Obsidian linking]].
 
-- Regular link audits
+## Standard Markdown links: `check_markdown_links.py`
 
-- Content relevance review
-
-- Context verification
-
-- Quality assessment
-
-## Integration Points
-
-### 1. Documentation System
-
-```yaml
-
-integration_points:
-
-  obsidian:
-
-    - graph_visualization
-
-    - backlink_tracking
-
-    - relationship_mapping
-
-  validation:
-
-    - automated_checks
-
-    - quality_metrics
-
-    - report_generation
-
-  maintenance:
-
-    - link_updates
-
-    - content_synchronization
-
-    - version_control
-
+```bash
+python code/scripts/check_markdown_links.py . --json
 ```
 
-### 2. Development Workflow
+It checks `[text](target)` and `![alt](target)` links. File targets must exist
+relative to the page or the repository root; `#anchor` fragments are matched
+against heading slugs and reported as warnings. External URLs are not fetched.
+It skips the vendored RxInfer snapshot (`docs/implementation/rxinfer/docs/`) and
+the manuscript's generated `figures/` references. The report has
+`checked_links`, `broken_links`, `anchor_warnings`, and `indexed_markdown_files`,
+and the exit status is 1 when a link is broken.
 
-```yaml
+## Triage
 
-workflow_integration:
+1. Run `verify_links.py . --json` and group `broken_links` by `source`.
+2. If the target page exists under a different path, correct the link. If the
+   page was renamed, update every inbound link in the same change.
+3. If no page is meant, replace the link with plain text or a code span, or
+   (for a concept you intend to write) a bare name without a path or suffix.
+4. For a wider audit, run with `--strict-wiki-links`. Expect many results: bare
+   concept links are allowed by convention, so strict mode is a worklist, not a
+   gate.
 
-  pre_commit:
+A small script can summarize a report; this one groups strict-mode failures by
+source file:
 
-    - link_validation
+```python
+from collections import Counter
 
-    - quality_check
+from scripts.verify_links import verify_link_report
 
-    - report_generation
-
-  continuous:
-
-    - automated_monitoring
-
-    - issue_detection
-
-    - notification_system
-
-  periodic:
-
-    - comprehensive_audit
-
-    - quality_assessment
-
-    - improvement_planning
-
+report = verify_link_report(".", strict_wiki_links=True)
+print(f"checked={report.checked_links} resolved={report.resolved_links}")
+by_source = Counter(item["source"] for item in report.broken_links)
+for source, count in by_source.most_common(3):
+    print(count, source)
 ```
 
-## Best Practices
+## Gates
 
-### 1. Link Management
+CI runs `validate_docs.py --json` and, as a separate step,
+`verify_links.py . --json`. The tests are `code/tests/test_verify_links.py`,
+`test_check_markdown_links.py`, and `test_validate_docs.py`. Nothing validates
+links to external websites.
 
-- Maintain clear hierarchies
+## Related documentation
 
-- Use consistent patterns
-
-- Update bidirectional links
-
-- Regular validation
-
-### 2. Quality Assurance
-
-- Automated checking
-
-- Regular audits
-
-- Quality monitoring
-
-- Issue resolution
-
-### 3. Documentation Flow
-
-- Clear structure
-
-- Logical progression
-
-- Proper categorization
-
-- Context preservation
-
-## Related Documentation
-
-- [[linking_completeness]]
-
-- [[ai_validation_framework]]
-
-- [[obsidian_linking]]
-
-- [[documentation_standards]]
-
-## References
-
-- [[validation_patterns]]
-
-- [[quality_metrics]]
-
-- [[documentation_tools]]
-
-- [[maintenance_practices]]
-
+- [[docs/repo_docs/ai_validation_framework|Validation framework]]
+- [[docs/repo_docs/linking_analysis|Linking analysis]]
+- [[docs/tools/link_checker|Link checker notes]]

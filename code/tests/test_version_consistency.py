@@ -26,6 +26,5 @@ def test_changelog_documents_the_current_version() -> None:
     headings = re.findall(r"^## \[([^\]]+)\]", changelog, flags=re.MULTILINE)
     assert headings, "the changelog must contain at least one version heading"
     assert cognitive.__version__ in headings, (
-        f"version {cognitive.__version__} has no CHANGELOG entry; "
-        f"found {headings}"
+        f"version {cognitive.__version__} has no CHANGELOG entry; found {headings}"
     )

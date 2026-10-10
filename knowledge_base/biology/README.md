@@ -147,14 +147,14 @@ The [[AGENTS|biological agents documentation]] provides specific guidance for im
 - [[knowledge_base/systems/systems_theory]]
 - [[knowledge_base/agents/architectures_overview]]
 
-### Implementation Examples
-- [[code/Things/BioFirm/README|BioFirm Models]]
-- [[code/Things/Ant_Colony/README|Ant Colony Simulations]]
-- [[tools/src/models/active_inference|Active Inference Models]]
+### Related design notes
+- [[code/Things/BioFirm/README|BioFirm Models]] (documentation only)
+- [[code/Things/Ant_Colony/README|Ant Colony design notes]] (documentation only)
+- [[code/tools/src/models/active_inference/README|Active Inference Models]]
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 47 specialized biological documents with comprehensive agent architectures
+- **Coverage**: every page is listed in the [[knowledge_base/biology/catalog|catalog]]
 - **Integration**: Strong connections to cognitive modeling and Active Inference
 - **Depth**: From molecular mechanisms to ecosystem dynamics with mathematical rigor
 - **Applications**: Direct relevance to agent architectures and implementation examples

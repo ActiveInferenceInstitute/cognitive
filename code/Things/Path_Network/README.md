@@ -1,156 +1,25 @@
-# Path Network Simulation
-
-A simulation of Active Inference agents in a dynamic network topology, where agents adapt their heights in response to changing water levels and network influences.
-
-## Features
-
-- **Active Inference Agents**: Each node implements continuous-time active inference
-
-- **Dynamic Network Topology**: Network connections evolve based on agent performance
-
-- **Environmental Dynamics**: Complex water level patterns through nested sinusoidal waves
-
-- **Real-time Visualization**: Interactive visualization of network state and agent behavior
-
-- **Comprehensive Analysis**: Detailed metrics and visualizations of simulation results
-
-## Requirements
-
-### System Dependencies
-
-- Python 3.8+
-
-- Qt5 or Tk (for visualization)
-
-- Required system libraries (installed automatically by setup script)
-
-### Python Dependencies
-
-All Python dependencies are listed in `requirements.txt` and will be installed automatically by the setup script.
-
-## Quick Start
-
-The easiest way to run the simulation is using the provided setup script:
-
-```bash
-
-./run_simulation.sh
-
-```
-
-This script will:
-
-1. Create a Python virtual environment
-
-1. Install required system dependencies
-
-1. Install Python dependencies
-
-1. Run the simulation
-
-1. Save results to the `output` directory
-
-## Manual Setup
-
-If you prefer to set up manually:
-
-1. Create and activate a virtual environment:
-
-   ```bash
-
-   python3 -m venv venv
-
-   source venv/bin/activate
-
-   ```
-
-1. Install dependencies:
-
-   ```bash
-
-   pip install -r requirements.txt
-
-   ```
-
-1. Run the simulation:
-
-   ```bash
-
-   python example.py
-
-   ```
-
-## Output
-
-The simulation creates a timestamped output directory containing:
-
-- `simulation.log`: Detailed log of the simulation run
-
-- `initial_state.png`: Network state visualization after initial period
-
-- `final_state.png`: Network state visualization after perturbation
-
-- `water_level_distribution.png`: Distribution of water levels
-
-- `agent_height_variations.png`: Time series of agent heights
-
-- `water_levels.npy`: Raw water level data
-
-- `agent_heights.npy`: Raw agent height data
-
-## Visualization
-
-The simulation provides real-time visualization of:
-
-- Network topology with node colors representing heights
-
-- Current agent heights compared to water level
-
-- Historical evolution of heights and water levels
-
-## Configuration
-
-Key parameters can be adjusted in `example.py`:
-
-- Network parameters (number of nodes, connectivity, etc.)
-
-- Wave components (frequencies, amplitudes, phases)
-
-- Simulation duration and visualization intervals
-
-- Perturbation parameters
-
-## Troubleshooting
-
-### Visualization Issues
-
-If you encounter visualization problems:
-
-1. The script will automatically try different backends (Qt5 → Tk → Agg)
-
-1. Check if Qt5 or Tk is properly installed
-
-1. Look for error messages in the simulation log
-
-### System Dependencies
-
-If system dependencies fail to install:
-
-1. Check your system's package manager
-
-1. Install required packages manually:
-
-   - For Ubuntu/Debian: `sudo apt-get install python3-tk python3-qt5 libxcb-cursor0`
-
-   - For Fedora: `sudo dnf install python3-tkinter python3-qt5 xcb-util-cursor`
-
-   - For Arch: `sudo pacman -S python-tk qt5-base xcb-util-cursor`
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues and pull requests.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
+---
+title: Path Network
+type: concept
+status: draft
+updated: 2026-10-10
+semantic_relations:
+  - type: related_to
+    links:
+      - "[[code/Things/Path_Network/Path_Network_README|Path Network design notes]]"
+      - "[[code/Things/Continuous_Generic/Continuous_Generic_README|Continuous Generic agent]]"
+---
+
+# Path Network
+
+Design sketch; no code in this repository. Path Network is a concept for a
+simulation in which continuous-time active inference agents sit on the nodes of
+a dynamic network and adjust their height to follow a changing water level
+made of nested sinusoidal waves.
+
+This folder contains only documentation: `README.md`, `Path_Network_README.md`,
+and `AGENTS.md`. There is no simulation script, no `requirements.txt`, no setup
+script, no output directory, and no tests. Earlier descriptions of those
+artifacts did not match any file in the repository.
+
+For a working continuous-time agent, see `code/Things/Continuous_Generic`.

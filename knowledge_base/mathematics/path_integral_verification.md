@@ -1,4 +1,5 @@
 ---
+description: "Verification checklist for the path integral documentation, listing needed links and corrections in measure theory, functional analysis, statistical physics and Active Inference."
 type: verification
 id: path_integral_verification_001
 created: 2024-02-05
@@ -346,9 +347,9 @@ aliases:
 
    - Add [[unit_testing]] framework
 
-   - Include [[integration_testing]]
+   - Include integration testing
 
-   - Link to [[continuous_integration]]
+   - Link to continuous integration
 
 ## References
 

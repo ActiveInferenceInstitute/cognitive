@@ -8,6 +8,9 @@ tags:
 - attention
 - perception
 - stimulus-driven
+aliases:
+  - bottom_up_attention
+  - salience_detection
 semantic_relations:
   - type: implements
     links:

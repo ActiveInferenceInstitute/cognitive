@@ -8,6 +8,8 @@ tags:
   - reward
   - valuation
   - neuroscience
+aliases:
+  - reward_signals
 semantic_relations:
   - type: relates
     links:

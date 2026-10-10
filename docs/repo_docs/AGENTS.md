@@ -3,7 +3,7 @@ title: Repository documentation instructions
 type: agents
 status: stable
 created: 2024-01-01
-updated: 2026-08-02
+updated: 2026-10-10
 tags:
   - repository
   - documentation
@@ -12,12 +12,12 @@ tags:
 semantic_relations:
   - type: organizes
     links:
-      - "[[README|Repository documentation index]]"
-      - "[[documentation_standards|Documentation standards]]"
-      - "[[ai_documentation_style|Documentation style]]"
-      - "[[content_management|Content management]]"
-      - "[[linking_validation|Link validation]]"
-      - "[[getting_started|Getting started]]"
+      - "[[docs/repo_docs/README|Repository documentation index]]"
+      - "[[docs/repo_docs/documentation_standards|Documentation standards]]"
+      - "[[docs/repo_docs/ai_documentation_style|Documentation style]]"
+      - "[[docs/repo_docs/content_management|Content management]]"
+      - "[[docs/repo_docs/linking_validation|Link validation]]"
+      - "[[docs/repo_docs/getting_started|Getting started]]"
 ---
 
 # Repository documentation instructions
@@ -27,18 +27,21 @@ maintenance practices, linking rules, and the getting-started guide.
 
 ## Ground truth
 
-- The standards pages (`documentation_standards.md`,
-  `ai_documentation_style.md`, `naming_conventions.md`,
-  `obsidian_linking.md`) describe conventions; the enforceable checks are the
-  repository's scripts in `code/scripts/` and `repo_scripts/`.
+- The enforceable checks are `code/scripts/validate_docs.py`,
+  `verify_links.py`, `check_markdown_links.py`, `normalize_frontmatter.py`, and
+  `kb_index.py`, plus `.markdownlint.json` for editor linting. The standards
+  pages describe conventions; where a page and a script disagree, the script
+  wins and the page is the defect.
 - `getting_started.md` is the fresh-checkout guide and must match the root
   `README.md` and `pyproject.toml`.
 
 ## Rules
 
-- Standards must match the tools that enforce them
-  (`code/scripts/validate_docs.py`, `code/scripts/verify_links.py`,
-  `.markdownlint.json`).
-- The helper scripts in `repo_scripts/` are utilities; document their real
-  flags and outputs.
-- Do not describe documentation automation frameworks that do not exist here.
+- Name only tools, flags, paths, and classes that exist. Check with `--help`,
+  `fd`, or `rg` before writing them down.
+- Do not describe documentation automation (Sphinx, MkDocs, embeddings,
+  pre-commit hooks, a Makefile) that this repository does not have.
+- The helper scripts in `repo_scripts/` are excluded from linting and are not
+  part of the quality gate; document their real flags and no more.
+- Terms listed in `docs/policy/documentation_terms.yaml` may not appear in
+  tracked text files.

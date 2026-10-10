@@ -140,14 +140,14 @@ The systems theory knowledge base provides frameworks for understanding how comp
 - [[knowledge_base/biology/ecological_dynamics]]
 - [[knowledge_base/philosophy/complexity_and_philosophy|Philosophy of Complexity]]
 
-### Implementation Examples
-- [[code/Things/Ant_Colony/README|Ant Colony Systems]]
-- [[code/Things/BioFirm/README|BioFirm Models]]
-- [[tools/src/models/README|System Models]]
+### Related design notes
+- [[code/Things/Ant_Colony/README|Ant Colony Systems]] (documentation only)
+- [[code/Things/BioFirm/README|BioFirm Models]] (documentation only)
+- [[code/tools/src/models/README|System Models]]
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 31 specialized systems documents
+- **Coverage**: every page is listed in the [[knowledge_base/systems/catalog|catalog]]
 - **Interdisciplinary**: Spans biology, technology, and social systems
 - **Implementation**: Strong connections to practical applications
 - **Integration**: Unified systems perspective across domains

@@ -8,6 +8,8 @@ tags:
   - active_inference
   - goals
   - preferences
+aliases:
+  - goal_specification
 semantic_relations:
   - type: relates
     links:

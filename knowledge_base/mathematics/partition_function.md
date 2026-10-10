@@ -1,5 +1,6 @@
 ---
 title: Partition Function
+description: "The partition function as the normalising constant of a Boltzmann distribution, with thermodynamic identities and its link to model evidence, softmax and free energy."
 type: mathematical_concept
 status: stable
 created: 2026-10-09

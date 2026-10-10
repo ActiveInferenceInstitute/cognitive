@@ -31,377 +31,377 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Social Perception
 
-- [[person_perception]] - People see
+- [[person_perception]] - Forming impressions of other people
 
-  - [[face_processing]] - Face work
+  - [[face_processing]] - Perceiving and interpreting faces
 
-    - [[identity_recognition]] - Who know
+    - [[identity_recognition]] - Recognizing who a person is
 
-    - [[expression_recognition]] - Feel know
+    - [[expression_recognition]] - Recognizing emotions from facial expressions
 
-  - [[body_perception]] - Body work
+  - [[body_perception]] - Perceiving other people's bodies and postures
 
-    - [[biological_motion]] - Move see
+    - [[biological_motion]] - Perceiving the movement of living agents
 
-    - [[action_understanding]] - Do know
+    - [[action_understanding]] - Interpreting the goals behind others' actions
 
 ### Theory of Mind
 
-- [[mental_state_attribution]] - Mind read
+- [[mental_state_attribution]] - Inferring others' beliefs, desires, and intentions
 
-  - [[belief_understanding]] - Think know
+  - [[belief_understanding]] - Understanding what others believe
 
-    - [[false_belief]] - Wrong think
+    - [[false_belief]] - Recognizing that others can hold mistaken beliefs
 
-    - [[true_belief]] - Right think
+    - [[true_belief]] - Recognizing others' accurate beliefs
 
-  - [[intention_inference]] - Want know
+  - [[intention_inference]] - Inferring what others intend
 
-    - [[goal_detection]] - Aim spot
+    - [[goal_detection]] - Identifying the goals of others' actions
 
-    - [[desire_inference]] - Want guess
+    - [[desire_inference]] - Inferring what others want
 
 ### Social Learning
 
-- [[social_knowledge]] - People learn
+- [[social_knowledge]] - Knowledge acquired about the social world
 
-  - [[norm_acquisition]] - Rule learn
+  - [[norm_acquisition]] - Learning social rules
 
-    - [[cultural_norms]] - Group rules
+    - [[cultural_norms]] - Shared behavioral expectations of a group
 
-    - [[social_conventions]] - Do rules
+    - [[social_conventions]] - Customary rules for social behavior
 
-  - [[value_learning]] - Worth learn
+  - [[value_learning]] - Learning what is considered worthwhile
 
-    - [[moral_values]] - Right wrong
+    - [[moral_values]] - Beliefs about right and wrong
 
-    - [[social_preferences]] - Like what
+    - [[social_preferences]] - Preferences concerning outcomes for others
 
 ## Processing Mechanisms
 
 ### Social Information Processing
 
-- [[social_cognition_steps]] - Think steps
+- [[social_cognition_steps]] - Sequence of processing stages in social cognition
 
-  - [[cue_detection]] - Sign spot
+  - [[cue_detection]] - Detecting social cues
 
-    - [[social_signals]] - People signs
+    - [[social_signals]] - Signals conveyed by other people
 
-    - [[contextual_cues]] - Where signs
+    - [[contextual_cues]] - Situational information that shapes interpretation
 
-  - [[interpretation]] - Mean make
+  - [[interpretation]] - Assigning meaning to social cues
 
-    - [[intention_attribution]] - Why think
+    - [[intention_attribution]] - Explaining behavior by others' intentions
 
-    - [[causal_attribution]] - Why happen
+    - [[causal_attribution]] - Explaining the causes of events or behavior
 
 ### Social Decision Making
 
-- [[social_choices]] - People pick
+- [[social_choices]] - Decisions involving other people
 
-  - [[cooperation_decisions]] - Help pick
+  - [[cooperation_decisions]] - Decisions about cooperating with others
 
-    - [[trust_decisions]] - Trust who
+    - [[trust_decisions]] - Decisions about whom to trust
 
-    - [[fairness_judgments]] - Fair what
+    - [[fairness_judgments]] - Judgments about equitable outcomes
 
-  - [[competition_decisions]] - Fight pick
+  - [[competition_decisions]] - Decisions in competitive situations
 
-    - [[resource_allocation]] - Give what
+    - [[resource_allocation]] - Deciding how to distribute resources
 
-    - [[strategic_thinking]] - Plan how
+    - [[strategic_thinking]] - Anticipating others' choices to plan actions
 
 ### Social Regulation
 
-- [[interaction_control]] - Talk manage
+- [[interaction_control]] - Regulating one's behavior in social exchanges
 
-  - [[behavior_regulation]] - Do manage
+  - [[behavior_regulation]] - Adjusting actions to social demands
 
-    - [[impulse_control]] - Stop urge
+    - [[impulse_control]] - Resisting socially inappropriate urges
 
-    - [[norm_compliance]] - Rule follow
+    - [[norm_compliance]] - Following social rules
 
-  - [[emotion_regulation]] - Feel manage
+  - [[emotion_regulation]] - Managing one's emotional responses
 
-    - [[expression_control]] - Show manage
+    - [[expression_control]] - Modulating outward emotional expression
 
-    - [[empathy_control]] - Feel with
+    - [[empathy_control]] - Modulating how strongly others' feelings are shared
 
 ## Neural Implementation
 
 ### Social Brain Networks
 
-- [[social_brain]] - People parts
+- [[social_brain]] - Brain regions supporting social cognition
 
-  - [[mentalizing_network]] - Think parts
+  - [[mentalizing_network]] - Network supporting inference of mental states
 
-    - [[medial_prefrontal]] - Self other
+    - [[medial_prefrontal]] - Medial prefrontal cortex, linked to self-other reasoning
 
-    - [[temporoparietal]] - View take
+    - [[temporoparietal]] - Temporoparietal junction, involved in perspective taking
 
-  - [[mirror_system]] - Copy parts
+  - [[mirror_system]] - Neurons active both when acting and observing actions
 
-    - [[premotor]] - Move match
+    - [[premotor]] - Premotor cortex, matching observed actions to motor plans
 
-    - [[inferior_parietal]] - Do match
+    - [[inferior_parietal]] - Inferior parietal cortex, representing action goals
 
 ### Circuit Mechanisms
 
-- [[social_circuits]] - People paths
+- [[social_circuits]] - Neural circuits for social processing
 
-  - [[face_circuits]] - Face paths
+  - [[face_circuits]] - Circuits specialized for face processing
 
-    - [[fusiform_face]] - Face spot
+    - [[fusiform_face]] - Fusiform region specialized for face recognition
 
-    - [[superior_temporal]] - Move spot
+    - [[superior_temporal]] - Superior temporal region, processing gaze and biological motion
 
-  - [[emotion_circuits]] - Feel paths
+  - [[emotion_circuits]] - Circuits underlying emotional processing
 
-    - [[amygdala]] - Feel mark
+    - [[amygdala]] - Structure detecting emotionally salient stimuli
 
-    - [[insula]] - Body feel
+    - [[insula]] - Region linking bodily states to feeling and empathy
 
 ### Neuromodulation
 
-- [[social_modulation]] - Change how
+- [[social_modulation]] - Neurochemical influences on social behavior
 
-  - [[oxytocin_system]] - Bond chemical
+  - [[oxytocin_system]] - Neuropeptide system for bonding and trust
 
-    - [[trust_effects]] - Trust more
+    - [[trust_effects]] - Increased trust under oxytocin
 
-    - [[attachment_effects]] - Close more
+    - [[attachment_effects]] - Strengthened attachment under oxytocin
 
-  - [[dopamine_system]] - Want chemical
+  - [[dopamine_system]] - Neuromodulator system for reward and motivation
 
-    - [[reward_learning]] - Good learn
+    - [[reward_learning]] - Learning from social and other rewards
 
-    - [[motivation]] - Try more
+    - [[motivation]] - Drive to pursue goals and rewards
 
 ## Social Functions
 
 ### Communication
 
-- [[social_communication]] - Talk share
+- [[social_communication]] - Exchange of information between people
 
-  - [[verbal_communication]] - Word share
+  - [[verbal_communication]] - Communication using spoken words
 
-    - [[language_use]] - Talk how
+    - [[language_use]] - Using language in social contexts
 
-    - [[speech_acts]] - Say what
+    - [[speech_acts]] - Actions performed through utterances, such as requesting
 
-  - [[nonverbal_communication]] - Sign share
+  - [[nonverbal_communication]] - Communication without words
 
-    - [[gesture]] - Move mean
+    - [[gesture]] - Hand and body movements that convey meaning
 
-    - [[facial_expression]] - Face show
+    - [[facial_expression]] - Communicating emotion through the face
 
 ### Relationship Management
 
-- [[social_relations]] - People bonds
+- [[social_relations]] - Relationships between people
 
-  - [[attachment]] - Close bonds
+  - [[attachment]] - Enduring emotional bonds
 
-    - [[bond_formation]] - Make close
+    - [[bond_formation]] - Developing close emotional ties
 
-    - [[trust_building]] - Make trust
+    - [[trust_building]] - Developing mutual trust over time
 
-  - [[group_relations]] - Team bonds
+  - [[group_relations]] - Relationships within and between groups
 
-    - [[group_identity]] - Team self
+    - [[group_identity]] - Sense of belonging to a group
 
-    - [[social_status]] - Rank where
+    - [[social_status]] - A person's standing or rank within a group
 
 ### Cultural Participation
 
-- [[cultural_engagement]] - Group join
+- [[cultural_engagement]] - Participation in cultural life
 
-  - [[norm_following]] - Rule do
+  - [[norm_following]] - Acting in line with social norms
 
-    - [[social_scripts]] - Do plans
+    - [[social_scripts]] - Learned sequences of expected behavior
 
-    - [[ritual_participation]] - Group do
+    - [[ritual_participation]] - Taking part in shared ceremonies
 
-  - [[value_expression]] - Worth show
+  - [[value_expression]] - Showing one's values through action
 
-    - [[moral_behavior]] - Right do
+    - [[moral_behavior]] - Actions guided by moral principles
 
-    - [[cultural_practices]] - Group ways
+    - [[cultural_practices]] - Customary activities of a cultural group
 
 ## Development
 
 ### Social Development
 
-- [[social_growth]] - People grow
+- [[social_growth]] - Development of social abilities
 
-  - [[early_social]] - Young grow
+  - [[early_social]] - Social development in early childhood
 
-    - [[attachment_formation]] - Bond make
+    - [[attachment_formation]] - Forming first bonds with caregivers
 
-    - [[basic_interaction]] - Talk start
+    - [[basic_interaction]] - First simple exchanges with others
 
-  - [[advanced_social]] - Old grow
+  - [[advanced_social]] - Social development in later childhood and adulthood
 
-    - [[complex_understanding]] - Deep know
+    - [[complex_understanding]] - Understanding nuanced social situations
 
-    - [[social_expertise]] - Good with
+    - [[social_expertise]] - Skilled handling of social situations
 
 ### Individual Differences
 
-- [[social_variation]] - People vary
+- [[social_variation]] - Individual differences in social functioning
 
-  - [[social_ability]] - Can vary
+  - [[social_ability]] - Individual differences in social skill
 
-    - [[social_intelligence]] - Smart how
+    - [[social_intelligence]] - Skill in understanding and navigating social situations
 
-    - [[emotional_intelligence]] - Feel smart
+    - [[emotional_intelligence]] - Skill in perceiving and managing emotions
 
-  - [[personality]] - Self vary
+  - [[personality]] - Stable individual patterns of thought and behavior
 
-    - [[temperament]] - Born way
+    - [[temperament]] - Inborn dispositions of reactivity and regulation
 
-    - [[social_style]] - Do way
+    - [[social_style]] - Characteristic manner of interacting with others
 
 ### Environmental Effects
 
-- [[social_context]] - Where effect
+- [[social_context]] - Environmental influences on social development
 
-  - [[family_influence]] - Home learn
+  - [[family_influence]] - Learning shaped by family
 
-    - [[parenting]] - Raise how
+    - parenting - Parental child-rearing practices
 
-    - [[sibling_relations]] - Brother sister
+    - [[sibling_relations]] - Relationships between brothers and sisters
 
-  - [[peer_influence]] - Friend learn
+  - [[peer_influence]] - Influence of same-age peers
 
-    - [[peer_pressure]] - Friend push
+    - [[peer_pressure]] - Pressure from peers to conform
 
-    - [[social_modeling]] - Copy who
+    - [[social_modeling]] - Learning by imitating others
 
 ## Applications
 
 ### Clinical Applications
 
-- [[social_disorders]] - Wrong social
+- [[social_disorders]] - Conditions with impaired social functioning
 
-  - [[autism_spectrum]] - Connect hard
+  - [[autism_spectrum]] - Neurodevelopmental condition affecting social interaction
 
-    - [[social_communication]] - Talk hard
+    - [[social_communication]] - Difficulties in social communication
 
-    - [[social_understanding]] - Know hard
+    - [[social_understanding]] - Difficulties interpreting others' perspectives and cues
 
-  - [[social_anxiety]] - Fear social
+  - [[social_anxiety]] - Fear of social evaluation
 
-    - [[interaction_avoidance]] - Avoid people
+    - [[interaction_avoidance]] - Avoiding social situations
 
-    - [[performance_anxiety]] - Do fear
+    - [[performance_anxiety]] - Fear of being judged during performance
 
 ### Educational Applications
 
-- [[social_education]] - Teach social
+- [[social_education]] - Teaching social skills
 
-  - [[skill_training]] - Learn do
+  - [[skill_training]] - Structured practice of specific skills
 
-    - [[communication_skills]] - Talk learn
+    - [[communication_skills]] - Abilities for effective exchange of information
 
-    - [[conflict_resolution]] - Fight fix
+    - [[conflict_resolution]] - Resolving disagreements constructively
 
-  - [[social_integration]] - Join help
+  - [[social_integration]] - Helping people participate in groups
 
-    - [[classroom_dynamics]] - Class work
+    - [[classroom_dynamics]] - Social interactions within a class
 
-    - [[peer_relations]] - Friend make
+    - [[peer_relations]] - Relationships among peers
 
 ### Professional Applications
 
-- [[workplace_social]] - Work social
+- [[workplace_social]] - Social processes at work
 
-  - [[leadership]] - Lead how
+  - leadership - Guiding and motivating groups
 
-    - [[team_management]] - Group run
+    - [[team_management]] - Directing and supporting a team
 
-    - [[influence_skills]] - Change others
+    - [[influence_skills]] - Ability to shape others' attitudes and actions
 
-  - [[collaboration]] - Work together
+  - [[collaboration]] - Working jointly toward a shared goal
 
-    - [[team_coordination]] - Group do
+    - [[team_coordination]] - Aligning team members' actions
 
-    - [[negotiation]] - Deal make
+    - [[negotiation]] - Reaching agreement between parties
 
 ## Research Methods
 
 ### Behavioral Methods
 
-- [[social_measures]] - Check how
+- [[social_measures]] - Methods for measuring social behavior
 
-  - [[interaction_analysis]] - Talk look
+  - interaction analysis - Systematic study of social exchanges
 
-    - [[conversation_analysis]] - Words check
+    - [[conversation_analysis]] - Detailed study of the structure of talk
 
-    - [[behavior_coding]] - Do check
+    - [[behavior_coding]] - Categorizing observed behavior systematically
 
-  - [[experimental_games]] - Play test
+  - [[experimental_games]] - Game-based tests of social decisions
 
-    - [[economic_games]] - Money games
+    - [[economic_games]] - Games using monetary payoffs to study decisions
 
-    - [[social_dilemmas]] - Choice games
+    - [[social_dilemmas]] - Situations where individual and group interests conflict
 
 ### Neural Methods
 
-- [[social_brain_measures]] - Brain look
+- [[social_brain_measures]] - Neuroimaging of social processing
 
-  - [[hyperscanning]] - Two brain
+  - [[hyperscanning]] - Recording brain activity from interacting people simultaneously
 
-    - [[synchronization]] - Match when
+    - [[synchronization]] - Temporal alignment of activity between people
 
-    - [[coupling]] - Join how
+    - coupling - Dynamic linkage between interacting brains
 
-  - [[social_neuroscience]] - Brain social
+  - [[social_neuroscience]] - Study of the neural bases of social behavior
 
-    - [[activation]] - Work where
+    - activation - Regional brain activity during social tasks
 
-    - [[connectivity]] - Join paths
+    - [[connectivity]] - Functional links between brain regions
 
 ### Computational Models
 
-- [[social_models]] - Math think
+- [[social_models]] - Computational models of social behavior
 
-  - [[agent_models]] - Person math
+  - agent models - Models of individual decision makers
 
-    - [[decision_models]] - Choose math
+    - [[decision_models]] - Models of choice behavior
 
-    - [[learning_models]] - Learn math
+    - [[learning_models]] - Models of how people learn
 
-  - [[interaction_models]] - Talk math
+  - interaction models - Models of exchanges between agents
 
-    - [[game_theory]] - Play math
+    - [[game_theory]] - Mathematical study of strategic interaction
 
-    - [[network_models]] - Group math
+    - [[network_models]] - Models of social network structure
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[measurement_complexity]] - Check hard
+- [[measurement_complexity]] - Difficulty measuring social processes
 
-- [[ecological_validity]] - Real match
+- [[ecological_validity]] - Relevance of findings to real-world settings
 
-- [[cultural_variation]] - Group differ
+- [[cultural_variation]] - Differences in social cognition across cultures
 
 ### Emerging Approaches
 
-- [[new_methods]] - New ways
+- new methods - Novel approaches to studying social cognition
 
-  - [[real_world_studies]] - Life look
+  - [[real_world_studies]] - Research conducted in everyday settings
 
-    - [[mobile_assessment]] - Move check
+    - [[mobile_assessment]] - Measurement using portable devices
 
-    - [[natural_observation]] - Watch real
+    - [[natural_observation]] - Observing behavior in natural settings
 
-  - [[technology_use]] - Tech help
+  - [[technology_use]] - Using technology in social cognition research
 
-    - [[virtual_reality]] - Fake world
+    - [[virtual_reality]] - Simulated environments for controlled experiments
 
-    - [[social_computing]] - Computer social
+    - [[social_computing]] - Computational systems supporting social interaction
 
 ## References
 

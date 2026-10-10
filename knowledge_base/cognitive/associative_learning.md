@@ -8,6 +8,8 @@ tags:
   - learning
   - conditioning
   - behavior
+aliases:
+  - classical_conditioning
 semantic_relations:
   - type: relates
     links:

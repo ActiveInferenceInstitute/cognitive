@@ -8,6 +8,8 @@ status: stable
 
 created: 2024-02-12
 
+updated: 2026-10-10
+
 tags:
 
   - template
@@ -40,21 +42,21 @@ This template provides a standardized structure for creating guides in the cogni
 
 ---
 
-title: ${guide_name}
+title: "{{guide_name}}"
 
 type: guide
 
 status: draft
 
-created: ${date}
+created: "{{date}}"
 
 tags:
 
   - guide
 
-  - ${category}
+  - "{{category}}"
 
-  - ${specific_tags}
+  - "{{specific_tags}}"
 
 semantic_relations:
 
@@ -68,7 +70,7 @@ semantic_relations:
 
 ---
 
-# ${guide_name}
+# {{guide_name}}
 
 ## Overview
 
@@ -256,23 +258,23 @@ Available commands.
 
 ### Required Variables
 
-- ${guide_name} - Name of the guide
+- `{{guide_name}}` - Name of the guide
 
-- ${date} - Creation date
+- `{{date}}` - Creation date
 
-- ${category} - Guide category
+- `{{category}}` - Guide category
 
-- ${specific_tags} - Guide-specific tags
+- `{{specific_tags}}` - Guide-specific tags
 
 ### Optional Variables
 
-- ${description} - Brief description
+- `{{description}}` - Brief description
 
-- ${author} - Content author
+- `{{author}}` - Content author
 
-- ${version} - Version number
+- `{{version}}` - Version number
 
-- ${prerequisites} - Required knowledge
+- `{{prerequisites}}` - Required knowledge
 
 ## Examples
 
@@ -302,16 +304,16 @@ semantic_relations:
 
   - type: implements
 
-    links: [[documentation_standards]]
+    links:
 
+
+      - "[[documentation_standards]]"
   - type: relates
 
     links:
 
-      - [[installation_guide]]
-
-      - [[basic_concepts]]
-
+      - "[[installation_guide]]"
+      - "[[basic_concepts]]"
 ---
 
 # Getting Started Guide
@@ -348,16 +350,16 @@ semantic_relations:
 
   - type: implements
 
-    links: [[configuration_standards]]
+    links:
 
+
+      - "[[configuration_standards]]"
   - type: relates
 
     links:
 
-      - [[performance_tuning]]
-
-      - [[security_hardening]]
-
+      - "[[performance_tuning]]"
+      - "[[security_hardening]]"
 ---
 
 # Advanced Configuration Guide

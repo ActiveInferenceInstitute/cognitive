@@ -1,4 +1,5 @@
 ---
+description: "Active Inference formulation of partially observable Markov decision processes, using variational free energy for perception and expected free energy for action."
 type: mathematical_concept
 id: active_inference_pomdp_001
 created: 2024-02-05

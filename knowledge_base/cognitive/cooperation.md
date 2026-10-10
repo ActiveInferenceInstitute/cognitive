@@ -9,6 +9,8 @@ tags:
 - behavior
 - collective_action
 - game_theory
+aliases:
+  - cooperation_networks
 semantic_relations:
   - type: implements
     links:
@@ -34,541 +36,541 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
 ### Social Mechanisms
 
-- [[social_coordination]] - Work together
+- [[social_coordination]] - Aligning actions with other people
 
-  - [[joint_attention]] - Share focus
+  - [[joint_attention]] - Attending to the same object together
 
-    - [[gaze_following]] - Look same
+    - [[gaze_following]] - Looking where another person looks
 
-      - [[attention_sharing]] - Focus join
+      - [[attention_sharing]] - Directing others' attention to the same target
 
-      - [[intention_reading]] - Goal spot
+      - [[intention_reading]] - Inferring what others intend to do
 
-    - [[shared_reference]] - Point same
+    - [[shared_reference]] - Pointing to a common referent
 
-      - [[spatial_coordination]] - Space match
+      - [[spatial_coordination]] - Aligning positions and movements in space
 
-      - [[temporal_coordination]] - Time match
+      - [[temporal_coordination]] - Aligning the timing of actions
 
-  - [[action_synchrony]] - Move together
+  - [[action_synchrony]] - Moving in time with others
 
-    - [[behavioral_matching]] - Do same
+    - [[behavioral_matching]] - Matching another person's behavior
 
-      - [[mimicry]] - Copy moves
+      - [[mimicry]] - Unconscious copying of others' movements
 
-      - [[synchronization]] - Time match
+      - [[synchronization]] - Coordinating actions in time
 
-    - [[role_complementarity]] - Fit roles
+    - [[role_complementarity]] - Partners taking roles that fit together
 
-      - [[task_division]] - Split work
+      - [[task_division]] - Dividing a task among partners
 
-      - [[skill_complementarity]] - Match skills
+      - [[skill_complementarity]] - Partners contributing different, fitting skills
 
 ### Decision Processes
 
-- [[cooperative_decisions]] - Help choose
+- [[cooperative_decisions]] - Decisions about whether and how to cooperate
 
-  - [[cost_benefit_analysis]] - Worth check
+  - [[cost_benefit_analysis]] - Weighing costs of cooperating against gains
 
-    - [[immediate_costs]] - Now cost
+    - [[immediate_costs]] - Costs paid at the time of cooperating
 
-      - [[resource_investment]] - Give what
+      - [[resource_investment]] - Resources contributed to a joint effort
 
-      - [[effort_expenditure]] - Try hard
+      - [[effort_expenditure]] - Effort spent on a joint task
 
-    - [[future_benefits]] - Later good
+    - [[future_benefits]] - Gains that arrive after cooperating
 
-      - [[shared_rewards]] - Split good
+      - [[shared_rewards]] - Rewards divided among cooperators
 
-      - [[relationship_value]] - Bond worth
+      - [[relationship_value]] - Long-term value of a relationship
 
-  - [[trust_decisions]] - Trust choose
+  - [[trust_decisions]] - Choosing whether to trust a partner
 
-    - [[partner_evaluation]] - Who trust
+    - [[partner_evaluation]] - Judging which partners are trustworthy
 
-      - [[reputation_assessment]] - Name check
+      - [[reputation_assessment]] - Judging a partner by their reputation
 
-      - [[behavior_history]] - Past check
+      - [[behavior_history]] - Reviewing a partner's past conduct
 
-    - [[risk_assessment]] - Danger check
+    - [[risk_assessment]] - Estimating the chance and cost of being let down
 
-      - [[betrayal_risk]] - Cheat risk
+      - [[betrayal_risk]] - Risk that a partner defects
 
-      - [[exploitation_risk]] - Use risk
+      - [[exploitation_risk]] - Risk of being taken advantage of
 
 ### Learning Mechanisms
 
-- [[cooperation_learning]] - Help learn
+- [[cooperation_learning]] - Learning when and with whom to cooperate
 
-  - [[social_reinforcement]] - Good learn
+  - [[social_reinforcement]] - Learning from social rewards and punishments
 
-    - [[reward_sharing]] - Share good
+    - [[reward_sharing]] - Dividing rewards among partners
 
-      - [[mutual_benefits]] - Both win
+      - [[mutual_benefits]] - Gains that accrue to all partners
 
-      - [[reciprocity]] - Give back
+      - [[reciprocity]] - Returning favors in kind
 
-    - [[punishment_avoidance]] - Bad dodge
+    - [[punishment_avoidance]] - Learning to avoid social punishment
 
-      - [[social_sanctions]] - Group bad
+      - [[social_sanctions]] - Penalties imposed by a group
 
-      - [[exclusion_threat]] - Out risk
+      - [[exclusion_threat]] - Risk of being excluded from the group
 
-  - [[strategy_learning]] - Way learn
+  - strategy learning - Learning which strategies work
 
-    - [[cooperation_patterns]] - Help paths
+    - [[cooperation_patterns]] - Recurring patterns of cooperative behavior
 
-      - [[successful_strategies]] - Win ways
+      - [[successful_strategies]] - Strategies that sustain cooperation
 
-      - [[failed_strategies]] - Lose ways
+      - [[failed_strategies]] - Strategies that lead to breakdown
 
-    - [[context_learning]] - Where learn
+    - [[context_learning]] - Learning how context affects cooperation
 
-      - [[partner_specificity]] - Who works
+      - [[partner_specificity]] - Strategies that depend on the partner
 
-      - [[situation_specificity]] - When works
+      - [[situation_specificity]] - Strategies that depend on the situation
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[cooperation_networks]] - Help brain
+- [[cooperation_networks]] - Brain networks supporting cooperation
 
-  - [[social_cognition_network]] - People brain
+  - [[social_cognition_network]] - Brain network for understanding other people
 
-    - [[mentalizing_regions]] - Mind read
+    - [[mentalizing_regions]] - Regions that infer others' mental states
 
-      - [[medial_prefrontal]] - Self other
+      - [[medial_prefrontal]] - Prefrontal region distinguishing self from others
 
-      - [[temporoparietal]] - View take
+      - [[temporoparietal]] - Region supporting perspective taking
 
-    - [[reward_regions]] - Good feel
+    - [[reward_regions]] - Regions that process reward
 
-      - [[ventral_striatum]] - Want mark
+      - [[ventral_striatum]] - Reward region signaling value and anticipation
 
-      - [[orbitofrontal]] - Value judge
+      - [[orbitofrontal]] - Prefrontal region representing value
 
-  - [[control_network]] - Boss brain
+  - [[control_network]] - Brain network for cognitive and emotional control
 
-    - [[cognitive_control]] - Think boss
+    - [[cognitive_control]] - Regulating thought and action toward goals
 
-      - [[dorsolateral_prefrontal]] - Plan boss
+      - [[dorsolateral_prefrontal]] - Prefrontal region for planning and control
 
-      - [[anterior_cingulate]] - Check boss
+      - [[anterior_cingulate]] - Region monitoring conflict and errors
 
-    - [[emotional_control]] - Feel boss
+    - [[emotional_control]] - Regulating emotional responses
 
-      - [[emotion_regulation]] - Feel manage
+      - [[emotion_regulation]] - Adjusting one's emotional responses
 
-      - [[impulse_control]] - Want stop
+      - [[impulse_control]] - Inhibiting immediate urges
 
 ### Circuit Mechanisms
 
-- [[cooperation_circuits]] - Help paths
+- [[cooperation_circuits]] - Neural circuits supporting cooperation
 
-  - [[reward_circuits]] - Good paths
+  - [[reward_circuits]] - Circuits processing reward
 
-    - [[social_reward]] - People good
+    - [[social_reward]] - Reward gained from social interaction
 
-      - [[affiliation_signals]] - Friend mark
+      - [[affiliation_signals]] - Neural signals of social bonding
 
-      - [[reciprocity_signals]] - Back mark
+      - [[reciprocity_signals]] - Neural signals tracking returned favors
 
-    - [[shared_success]] - Win good
+    - [[shared_success]] - Reward from succeeding together
 
-      - [[joint_achievement]] - Done good
+      - [[joint_achievement]] - Reward from reaching a shared goal
 
-      - [[group_benefit]] - Team good
+      - [[group_benefit]] - Reward from benefiting the group
 
-  - [[trust_circuits]] - Trust paths
+  - [[trust_circuits]] - Circuits supporting trust
 
-    - [[bond_formation]] - Link make
+    - [[bond_formation]] - Forming social attachments
 
-      - [[attachment_signals]] - Close mark
+      - [[attachment_signals]] - Neural signals of closeness
 
-      - [[safety_signals]] - Safe mark
+      - [[safety_signals]] - Neural signals of social safety
 
-    - [[violation_detection]] - Wrong spot
+    - [[violation_detection]] - Detecting broken trust or norms
 
-      - [[betrayal_signals]] - Cheat mark
+      - [[betrayal_signals]] - Neural signals of being betrayed
 
-      - [[fairness_signals]] - Fair mark
+      - [[fairness_signals]] - Neural signals of fair treatment
 
 ### Neuromodulation
 
-- [[cooperation_modulation]] - Help change
+- [[cooperation_modulation]] - Chemical modulation of cooperation
 
-  - [[prosocial_systems]] - Nice juice
+  - [[prosocial_systems]] - Neurochemical systems promoting prosocial behavior
 
-    - [[oxytocin_system]] - Trust juice
+    - [[oxytocin_system]] - Oxytocin signaling linked to bonding and trust
 
-      - [[bonding_effects]] - Close feel
+      - [[bonding_effects]] - Increased feelings of closeness
 
-      - [[trust_enhancement]] - Trust more
+      - [[trust_enhancement]] - Increased willingness to trust
 
-    - [[endogenous_opioids]] - Good juice
+    - [[endogenous_opioids]] - Natural opioids linked to social reward
 
-      - [[social_reward]] - Friend good
+      - [[social_reward]] - Reward gained from social interaction
 
-      - [[pain_reduction]] - Less hurt
+      - [[pain_reduction]] - Reduced pain from social contact
 
-  - [[stress_systems]] - Stress juice
+  - [[stress_systems]] - Neurochemical systems responding to stress
 
-    - [[cortisol_system]] - Stress mark
+    - [[cortisol_system]] - Hormonal stress-response system
 
-      - [[threat_response]] - Danger act
+      - [[threat_response]] - Defensive reaction to threat
 
-      - [[resource_conservation]] - Save act
+      - [[resource_conservation]] - Saving effort and resources under stress
 
-    - [[noradrenaline]] - Wake juice
+    - [[noradrenaline]] - Neuromodulator raising arousal and alertness
 
-      - [[arousal_control]] - Wake level
+      - arousal control - Regulating level of arousal
 
-      - [[attention_focus]] - Look sharp
+      - [[attention_focus]] - Sharpened attention under arousal
 
 ## Behavioral Patterns
 
 ### Cooperation Types
 
-- [[cooperation_forms]] - Help kinds
+- [[cooperation_forms]] - Kinds of cooperation
 
-  - [[dyadic_cooperation]] - Two help
+  - [[dyadic_cooperation]] - Cooperation between two individuals
 
-    - [[direct_reciprocity]] - Back forth
+    - [[direct_reciprocity]] - Repeated returns of favors between two partners
 
-      - [[tit_for_tat]] - Match last
+      - [[tit_for_tat]] - Repeating the partner's previous move
 
-      - [[generous_tit_for_tat]] - Nice match
+      - [[generous_tit_for_tat]] - Tit for tat that sometimes forgives defection
 
-    - [[mutual_aid]] - Both help
+    - [[mutual_aid]] - Partners helping each other
 
-      - [[resource_sharing]] - Share things
+      - resource sharing - Pooling resources among partners
 
-      - [[skill_sharing]] - Share know
+      - [[skill_sharing]] - Teaching skills to partners
 
-  - [[group_cooperation]] - Many help
+  - [[group_cooperation]] - Cooperation among many individuals
 
-    - [[collective_action]] - Group do
+    - [[collective_action]] - Joint action toward a shared goal
 
-      - [[public_goods]] - All good
+      - [[public_goods]] - Shared resources that benefit everyone
 
-      - [[common_pool]] - Share pool
+      - [[common_pool]] - Shared resource open to all members
 
-    - [[indirect_reciprocity]] - Help round
+    - [[indirect_reciprocity]] - Helping those who have helped others
 
-      - [[reputation_based]] - Name help
+      - [[reputation_based]] - Helping based on reputation
 
-      - [[network_effects]] - Web help
+      - [[network_effects]] - Cooperation spreading through social networks
 
 ### Cooperation Dynamics
 
-- [[cooperation_patterns]] - Help flows
+- [[cooperation_patterns]] - How cooperation develops and persists
 
-  - [[stability_factors]] - Stay help
+  - [[stability_factors]] - Factors that sustain cooperation
 
-    - [[trust_building]] - Trust grow
+    - [[trust_building]] - Gradual growth of trust through reliable behavior
 
-      - [[reliability]] - Count on
+      - [[reliability]] - Consistently doing what one promised
 
-      - [[transparency]] - See clear
+      - [[transparency]] - Openness about intentions and actions
 
-    - [[commitment_mechanisms]] - Stay true
+    - [[commitment_mechanisms]] - Means of binding partners to cooperate
 
-      - [[social_bonds]] - People ties
+      - [[social_bonds]] - Lasting relationships between individuals
 
-      - [[institutional_rules]] - Group rules
+      - [[institutional_rules]] - Formal rules that guide group behavior
 
-  - [[breakdown_factors]] - Help fail
+  - [[breakdown_factors]] - Factors that cause cooperation to fail
 
-    - [[trust_violation]] - Trust break
+    - [[trust_violation]] - Breaking a partner's trust
 
-      - [[cheating]] - Not fair
+      - [[cheating]] - Gaining benefits without contributing
 
-      - [[exploitation]] - Use bad
+      - [[exploitation]] - Taking advantage of cooperators
 
-    - [[coordination_failure]] - Work fail
+    - [[coordination_failure]] - Partners failing to align their actions
 
-      - [[miscommunication]] - Talk wrong
+      - [[miscommunication]] - Messages misunderstood by partners
 
-      - [[misalignment]] - Goal wrong
+      - [[misalignment]] - Partners holding conflicting goals
 
 ### Cultural Influence
 
-- [[cooperation_culture]] - Group shape
+- [[cooperation_culture]] - Cultural shaping of cooperation
 
-  - [[social_norms]] - Group rules
+  - [[social_norms]] - Shared expectations about behavior
 
-    - [[cooperation_norms]] - Help rules
+    - [[cooperation_norms]] - Norms that encourage cooperation
 
-      - [[fairness_norms]] - Fair rules
+      - [[fairness_norms]] - Norms demanding equitable treatment
 
-      - [[reciprocity_norms]] - Back rules
+      - [[reciprocity_norms]] - Norms requiring returned favors
 
-    - [[punishment_norms]] - Bad rules
+    - [[punishment_norms]] - Norms about punishing violations
 
-      - [[sanction_systems]] - Bad give
+      - [[sanction_systems]] - Systems for penalizing norm violations
 
-      - [[reputation_systems]] - Name track
+      - [[reputation_systems]] - Systems recording past behavior
 
-  - [[cultural_variation]] - Group diff
+  - [[cultural_variation]] - Differences in cooperation across cultures
 
-    - [[cooperation_styles]] - Help ways
+    - [[cooperation_styles]] - Culturally shaped ways of cooperating
 
-      - [[individualistic]] - Self first
+      - [[individualistic]] - Prioritizing personal goals
 
-      - [[collectivistic]] - Group first
+      - [[collectivistic]] - Prioritizing group goals
 
-    - [[trust_patterns]] - Trust ways
+    - [[trust_patterns]] - Cultural patterns of extending trust
 
-      - [[in_group]] - Us trust
+      - [[in_group]] - Trust directed at one's own group
 
-      - [[out_group]] - Them trust
+      - [[out_group]] - Trust directed at other groups
 
 ## Applications
 
 ### Social Applications
 
-- [[cooperation_society]] - Group use
+- [[cooperation_society]] - Cooperation applied across society
 
-  - [[community_building]] - Group make
+  - [[community_building]] - Creating cohesive communities
 
-    - [[social_capital]] - Group power
+    - [[social_capital]] - Value of social relationships and trust
 
-      - [[trust_networks]] - Trust webs
+      - [[trust_networks]] - Networks of trusting relationships
 
-      - [[reciprocity_systems]] - Back webs
+      - [[reciprocity_systems]] - Networks of exchanged favors
 
-    - [[collective_efficacy]] - Group can
+    - [[collective_efficacy]] - Shared belief that the group can succeed
 
-      - [[shared_goals]] - Same want
+      - [[shared_goals]] - Goals held in common by group members
 
-      - [[coordinated_action]] - Same do
+      - [[coordinated_action]] - Group members acting in concert
 
-  - [[conflict_resolution]] - Fight fix
+  - [[conflict_resolution]] - Settling disputes between parties
 
-    - [[negotiation]] - Talk fix
+    - [[negotiation]] - Reaching agreement through discussion
 
-      - [[interest_alignment]] - Want match
+      - [[interest_alignment]] - Aligning the interests of parties
 
-      - [[compromise_finding]] - Middle find
+      - [[compromise_finding]] - Finding terms each party accepts
 
-    - [[reconciliation]] - Make peace
+    - [[reconciliation]] - Restoring relations after conflict
 
-      - [[trust_repair]] - Fix trust
+      - [[trust_repair]] - Rebuilding trust after a violation
 
-      - [[relationship_rebuild]] - Fix bond
+      - [[relationship_rebuild]] - Restoring a damaged relationship
 
 ### Clinical Applications
 
-- [[cooperation_therapy]] - Help fix
+- [[cooperation_therapy]] - Clinical approaches to improving cooperation
 
-  - [[social_disorders]] - People wrong
+  - [[social_disorders]] - Conditions that impair social functioning
 
-    - [[autism_spectrum]] - Connect hard
+    - [[autism_spectrum]] - Condition marked by social communication differences
 
-      - [[joint_attention]] - Share hard
+      - [[joint_attention]] - Difficulty sharing attention with others
 
-      - [[social_reciprocity]] - Back hard
+      - [[social_reciprocity]] - Difficulty with back-and-forth social exchange
 
-    - [[personality_disorders]] - Self wrong
+    - [[personality_disorders]] - Enduring patterns that impair relationships
 
-      - [[trust_issues]] - Trust hard
+      - [[trust_issues]] - Difficulty trusting others
 
-      - [[cooperation_deficits]] - Help hard
+      - [[cooperation_deficits]] - Reduced capacity to cooperate
 
-  - [[intervention_approaches]] - Fix ways
+  - [[intervention_approaches]] - Treatment approaches for cooperation problems
 
-    - [[skill_training]] - Learn help
+    - [[skill_training]] - Teaching skills that support cooperation
 
-      - [[social_skills]] - People skills
+      - social skills - Skills for interacting with others
 
-      - [[cooperation_skills]] - Help skills
+      - [[cooperation_skills]] - Skills for working with others
 
-    - [[relationship_therapy]] - Bond fix
+    - [[relationship_therapy]] - Therapy aimed at improving relationships
 
-      - [[trust_building]] - Trust make
+      - [[trust_building]] - Rebuilding trust within therapy
 
-      - [[communication_training]] - Talk learn
+      - [[communication_training]] - Training in clear communication
 
 ### Organizational Applications
 
-- [[cooperation_work]] - Work help
+- [[cooperation_work]] - Cooperation in organizations
 
-  - [[team_dynamics]] - Group work
+  - [[team_dynamics]] - How team members interact
 
-    - [[team_formation]] - Team make
+    - [[team_formation]] - Assembling and launching a team
 
-      - [[role_definition]] - Job clear
+      - [[role_definition]] - Clarifying each member's responsibilities
 
-      - [[norm_setting]] - Rule make
+      - [[norm_setting]] - Establishing shared team norms
 
-    - [[team_development]] - Team grow
+    - [[team_development]] - Growth of a team over time
 
-      - [[trust_building]] - Trust grow
+      - [[trust_building]] - Gradual growth of trust through reliable behavior
 
-      - [[skill_integration]] - Know join
+      - [[skill_integration]] - Combining members' skills
 
-  - [[leadership_practices]] - Lead help
+  - [[leadership_practices]] - Leader actions that support cooperation
 
-    - [[cooperation_promotion]] - Help push
+    - [[cooperation_promotion]] - Encouraging cooperation in a group
 
-      - [[incentive_systems]] - Good give
+      - [[incentive_systems]] - Rewards that encourage cooperative behavior
 
-      - [[culture_building]] - Feel make
+      - [[culture_building]] - Shaping shared values in an organization
 
-    - [[conflict_management]] - Fight fix
+    - [[conflict_management]] - Handling disputes within a group
 
-      - [[mediation]] - Talk help
+      - [[mediation]] - Resolving disputes with a neutral third party
 
-      - [[resolution_processes]] - Fix ways
+      - [[resolution_processes]] - Procedures for resolving conflicts
 
 ## Research Methods
 
 ### Behavioral Methods
 
-- [[cooperation_measures]] - Help check
+- [[cooperation_measures]] - Ways of measuring cooperation
 
-  - [[game_theory]] - Play math
+  - [[game_theory]] - Mathematics of strategic interaction
 
-    - [[economic_games]] - Money games
+    - [[economic_games]] - Lab games using payoffs to study cooperation
 
-      - [[prisoners_dilemma]] - Trust game
+      - [[prisoners_dilemma]] - Game pitting mutual cooperation against defection
 
-      - [[public_goods]] - Share game
+      - [[public_goods]] - Game where contributions benefit all players
 
-    - [[social_dilemmas]] - Choose hard
+    - [[social_dilemmas]] - Situations where self-interest conflicts with group interest
 
-      - [[resource_dilemmas]] - Share hard
+      - [[resource_dilemmas]] - Dilemmas over dividing limited resources
 
-      - [[commons_problems]] - Use hard
+      - [[commons_problems]] - Overuse of shared resources
 
-  - [[field_studies]] - Real watch
+  - [[field_studies]] - Observing cooperation in natural settings
 
-    - [[natural_observation]] - Look real
+    - [[natural_observation]] - Watching behavior as it naturally occurs
 
-      - [[behavior_coding]] - Do mark
+      - [[behavior_coding]] - Categorizing observed behaviors
 
-      - [[interaction_analysis]] - Talk mark
+      - interaction analysis - Coding how people interact
 
-    - [[network_analysis]] - Web look
+    - [[network_analysis]] - Studying relationships as networks
 
-      - [[cooperation_networks]] - Help webs
+      - [[cooperation_networks]] - Networks of cooperative ties
 
-      - [[information_flow]] - Know flow
+      - [[information_flow]] - Spread of information through a network
 
 ### Neural Methods
 
-- [[cooperation_brain]] - Help brain
+- [[cooperation_brain]] - Neural basis of cooperation
 
-  - [[imaging_studies]] - Brain look
+  - [[imaging_studies]] - Brain imaging studies of cooperation
 
-    - [[task_based]] - Do look
+    - [[task_based]] - Imaging during cooperative tasks
 
-      - [[cooperation_tasks]] - Help tasks
+      - [[cooperation_tasks]] - Tasks that require working together
 
-      - [[trust_games]] - Trust tasks
+      - [[trust_games]] - Games measuring willingness to trust
 
-    - [[connectivity]] - Join look
+    - [[connectivity]] - Studying interactions between brain regions
 
-      - [[network_analysis]] - Web look
+      - [[network_analysis]] - Studying relationships as networks
 
-      - [[dynamic_patterns]] - Change look
+      - dynamic patterns - Studying how brain activity changes over time
 
-  - [[interaction_methods]] - Two look
+  - [[interaction_methods]] - Methods for studying interacting people
 
-    - [[hyperscanning]] - Two brain
+    - [[hyperscanning]] - Recording brain activity from interacting people
 
-      - [[synchronization]] - Match when
+      - [[synchronization]] - Alignment of brain activity between partners
 
-      - [[coupling]] - Join how
+      - coupling - Degree to which partners' brain activity is linked
 
-    - [[real_time_methods]] - Now look
+    - [[real_time_methods]] - Methods measuring interaction as it unfolds
 
-      - [[neural_markers]] - Brain marks
+      - [[neural_markers]] - Brain signals indicating cooperative states
 
-      - [[behavior_links]] - Do links
+      - [[behavior_links]] - Links between brain signals and behavior
 
 ### Computational Models
 
-- [[cooperation_models]] - Help math
+- [[cooperation_models]] - Mathematical models of cooperation
 
-  - [[agent_models]] - Thing math
+  - agent models - Models of individual decision makers
 
-    - [[decision_models]] - Choose math
+    - [[decision_models]] - Models of how agents choose
 
-      - [[utility_functions]] - Good math
+      - [[utility_functions]] - Functions assigning value to outcomes
 
-      - [[learning_rules]] - Learn math
+      - [[learning_rules]] - Rules for updating behavior from experience
 
-    - [[interaction_models]] - Talk math
+    - interaction models - Models of interactions between agents
 
-      - [[game_theory]] - Play math
+      - [[game_theory]] - Mathematics of strategic interaction
 
-      - [[evolutionary_models]] - Time math
+      - [[evolutionary_models]] - Models of how strategies change across generations
 
-  - [[network_models]] - Web math
+  - [[network_models]] - Models of cooperation on networks
 
-    - [[cooperation_networks]] - Help nets
+    - [[cooperation_networks]] - Network structure of cooperative ties
 
-      - [[topology]] - Shape math
+      - [[topology]] - Structure of connections in a network
 
-      - [[dynamics]] - Change math
+      - [[dynamics]] - How network states change over time
 
-    - [[information_flow]] - Know flow
+    - [[information_flow]] - Spread of information through a network
 
-      - [[diffusion]] - Spread math
+      - [[diffusion]] - Models of spread through a network
 
-      - [[cascade_effects]] - Fall math
+      - [[cascade_effects]] - Chain reactions of behavioral change
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[measurement_complexity]] - Check hard
+- [[measurement_complexity]] - Difficulty measuring cooperation reliably
 
-  - [[ecological_validity]] - Real match
+  - [[ecological_validity]] - Whether lab findings hold in real life
 
-    - [[lab_field_gap]] - Lab life
+    - [[lab_field_gap]] - Differences between lab and field results
 
-    - [[context_effects]] - Where change
+    - [[context_effects]] - Influence of setting on cooperation
 
-  - [[individual_differences]] - Person vary
+  - [[individual_differences]] - Variation in cooperation between people
 
-    - [[trait_effects]] - Self how
+    - [[trait_effects]] - Effects of stable personal traits
 
-    - [[state_effects]] - Now how
+    - [[state_effects]] - Effects of momentary mood and situation
 
 ### Emerging Approaches
 
-- [[new_methods]] - New ways
+- new methods - Emerging research methods
 
-  - [[real_world_studies]] - Life look
+  - [[real_world_studies]] - Studies conducted in everyday settings
 
-    - [[mobile_assessment]] - Move check
+    - [[mobile_assessment]] - Measurement using portable devices
 
-      - [[sensor_data]] - Feel data
+      - [[sensor_data]] - Data from wearable and environmental sensors
 
-      - [[location_data]] - Where data
+      - [[location_data]] - Data on where people are
 
-    - [[longitudinal_tracking]] - Time watch
+    - [[longitudinal_tracking]] - Following people over extended periods
 
-      - [[development_patterns]] - Grow watch
+      - [[development_patterns]] - Tracking how cooperation develops
 
-      - [[change_processes]] - Fix watch
+      - [[change_processes]] - Tracking how behavior changes
 
-  - [[computational_social]] - Math social
+  - [[computational_social]] - Computational approaches to social behavior
 
-    - [[agent_simulation]] - Fake life
+    - [[agent_simulation]] - Simulating interacting agents
 
-      - [[emergence_study]] - Come watch
+      - [[emergence_study]] - Studying group patterns that emerge
 
-      - [[pattern_prediction]] - Next guess
+      - [[pattern_prediction]] - Forecasting future behavior patterns
 
-    - [[network_dynamics]] - Web change
+    - [[network_dynamics]] - How networks change over time
 
-      - [[cooperation_spread]] - Help move
+      - [[cooperation_spread]] - Spread of cooperation through a population
 
-      - [[norm_evolution]] - Rule change
+      - [[norm_evolution]] - How norms change over time
 
 ## References
 

@@ -126,9 +126,7 @@ def test_minimum_aggregation_scores_each_action_by_its_best_continuation() -> No
 def test_marginal_aggregation_reproduces_the_bayesian_model_average() -> None:
     """``marginal`` sums the policy posterior over policies sharing a first action."""
     temperature = 0.7
-    engine = dispatcher(
-        policy_aggregation=PolicyAggregation.MARGINAL, temperature=temperature
-    )
+    engine = dispatcher(policy_aggregation=PolicyAggregation.MARGINAL, temperature=temperature)
     current = state(engine.model)
     policies = engine.model.enumerate_policies(3, engine.config.policy_limit)
     energies = np.array(

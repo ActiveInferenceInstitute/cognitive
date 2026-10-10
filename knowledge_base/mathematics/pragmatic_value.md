@@ -230,11 +230,11 @@ Links to:
 
    - Links to:
 
-     - [[policy_selection]] - Selection methods
+     - [[policy_selection]] - Choosing policies by expected free energy
 
-     - [[temperature_parameter]] - Control parameter
+     - [[temperature_parameter]] - Parameter controlling randomness of choice
 
-     - [[efe_components]] - Component balance
+     - [[efe_components]] - Balance between epistemic and pragmatic terms
 
 ### Other Frameworks
 
@@ -250,7 +250,7 @@ Links to:
 
      - [[value_function]] - Value estimation
 
-     - [[policy_gradient]] - Policy optimization
+     - [[policy_gradient]] - Optimizing policy parameters by gradient ascent
 
 1. **Control Theory**
 
@@ -264,7 +264,7 @@ Links to:
 
      - [[optimal_control]] - Control theory
 
-     - [[model_predictive_control]] - Planning
+     - [[model_predictive_control]] - Control by optimizing over a receding horizon
 
 ## Analysis Methods
 
@@ -302,13 +302,13 @@ Links to:
 
 ## Related Concepts
 
-- [[epistemic_value]] - Complementary value
+- [[epistemic_value]] - Information-seeking counterpart to pragmatic value
 
 - [[free_energy_principle]] - Theoretical basis
 
 - [[decision_theory]] - Decision framework
 
-- [[utility_theory]] - Value theory
+- [[utility_theory]] - Formal theory of preferences and value
 
 - [[optimal_control]] - Control theory
 

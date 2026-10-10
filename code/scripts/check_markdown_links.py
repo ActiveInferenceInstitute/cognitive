@@ -30,7 +30,11 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
-CODE_BLOCK_PATTERN = re.compile(r"```[\s\S]*?```|~~~[\s\S]*?~~~")
+try:
+    from scripts.markdown_fences import strip_fenced_blocks
+except ImportError:  # run as a file: the script directory is on sys.path
+    from markdown_fences import strip_fenced_blocks  # type: ignore[no-redef]
+
 INLINE_CODE_PATTERN = re.compile(r"`[^`\n]+`")
 LATEX_PATTERN = re.compile(r"\$[^$\n]*\$")
 LINK_PATTERN = re.compile(r"!?\[[^\]]*\]\(([^)\s]+)(?:\s+[\"'][^\"']*[\"'])?\)")
@@ -62,6 +66,9 @@ class MarkdownLinkReport:
     broken_links: list[dict[str, str]] = field(default_factory=list)
     anchor_warnings: list[dict[str, str]] = field(default_factory=list)
     indexed_markdown_files: int = 0
+    # Files that could not be read. Their links were not checked, so a report
+    # with entries here is not a clean report.
+    unreadable_files: list[dict[str, str]] = field(default_factory=list)
 
 
 def _iter_markdown_files(root_dir: Path):
@@ -77,8 +84,7 @@ def _iter_markdown_files(root_dir: Path):
 
 
 def _strip_code(content: str) -> str:
-    without_blocks = CODE_BLOCK_PATTERN.sub("", content)
-    return INLINE_CODE_PATTERN.sub("", without_blocks)
+    return INLINE_CODE_PATTERN.sub("", strip_fenced_blocks(content))
 
 
 def gfm_slug(heading: str) -> str:
@@ -93,11 +99,11 @@ def gfm_slug(heading: str) -> str:
 def _heading_slugs(path: Path) -> set[str]:
     try:
         content = path.read_text(encoding="utf-8")
-    except OSError:
+    except (OSError, UnicodeDecodeError):
         return set()
     slugs: set[str] = set()
     # A "# comment" inside a fenced block is not a heading and cannot be an anchor.
-    for line in CODE_BLOCK_PATTERN.sub("", content).splitlines():
+    for line in strip_fenced_blocks(content).splitlines():
         match = re.match(r"^\s{0,3}(#{1,6})\s+(.+?)\s*#*\s*$", line)
         if match:
             slugs.add(gfm_slug(match.group(2)))
@@ -120,7 +126,8 @@ def verify_markdown_link_report(root_dir: str | Path) -> MarkdownLinkReport:
         rel_source = filepath.relative_to(root_path).as_posix()
         try:
             content = filepath.read_text(encoding="utf-8")
-        except OSError:
+        except (OSError, UnicodeDecodeError) as exc:
+            report.unreadable_files.append({"source": rel_source, "error": str(exc)})
             continue
         content = LATEX_PATTERN.sub("", _strip_code(content))
         own_slugs = _heading_slugs(filepath)
@@ -223,15 +230,24 @@ def main(argv: list[str] | None = None) -> int:
                     "broken_links": report.broken_links,
                     "anchor_warnings": report.anchor_warnings,
                     "indexed_markdown_files": report.indexed_markdown_files,
+                    "unreadable_files": report.unreadable_files,
                 },
                 indent=2,
                 sort_keys=True,
             )
         )
-        return int(bool(report.broken_links))
+        return int(bool(report.broken_links or report.unreadable_files))
 
     print(f"Indexed {report.indexed_markdown_files} markdown files.")
     print(f"Checked {report.checked_links} standard Markdown links.")
+    if report.unreadable_files:
+        print(f"Could not read {len(report.unreadable_files)} files; their links were not checked:")
+        for unreadable in report.unreadable_files:
+            print(f"  Source: {unreadable['source']}")
+            print(f"  Error: {unreadable['error']}")
+            print("-" * 20)
+        if not report.broken_links:
+            return 1
     if report.broken_links:
         print(f"Found {len(report.broken_links)} broken links:")
         for broken in report.broken_links:

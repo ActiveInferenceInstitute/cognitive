@@ -1,318 +1,58 @@
-# Baseball Game Active Inference Simulation Manifesto
+---
+title: Baseball Game Concept Notes
+type: design_notes
+status: archived
+created: 2025-01-01
+updated: 2026-10-10
+tags:
+  - baseball
+  - multi_agent
+  - game_theory
+  - design
+semantic_relations:
+  - type: relates
+    links:
+      - "[[code/Things/Baseball_Game/README|Baseball Game readme]]"
+      - "[[knowledge_base/cognitive/decision_making|Decision making]]"
+      - "[[knowledge_base/mathematics/game_theory|Game theory]]"
+      - "[[knowledge_base/cognitive/multi_agent_active_inference|Multi-agent active inference]]"
+---
 
-## Overview
+# Baseball Game: Concept Notes
 
-This document outlines the theoretical framework and implementation strategy for modeling a baseball game using active inference principles. The simulation aims to capture the complex dynamics of baseball through the lens of free energy minimization and belief updating.
+> **Status: archived concept study; no code in this repository.** `code/Things/Baseball_Game/` holds documentation only (`README.md`, `AGENTS.md`, this page). There is no simulator, physics engine, agent class, visualization or test. The material below is a design sketch of how baseball could be framed as a multi-agent Active Inference problem.
 
-## Core Principles
+## Framing
 
-### 1. Active Inference Framework
+Baseball is a useful thought experiment for Active Inference because it combines physical dynamics (ball flight, player motion), discrete game state (inning, count, outs, base occupancy) and strategic interaction between two teams under uncertainty.
 
-- Players and teams modeled as active inference agents
+## Agents
 
-- Free energy minimization drives decision-making
+- **Players:** each an Active Inference agent with position-specific priors and policies, observing through proprioceptive and exteroceptive channels.
+- **Teams:** a higher-level agent whose policies (defensive positioning, batting order, pitching changes) constrain the players below it.
+- **Umpires:** observers who enforce rules and so shape which outcomes are admissible.
 
-- Hierarchical generative models represent game states
+## State space
 
-- Precision-weighted belief updating based on sensory evidence
+- **Physical:** ball position, velocity and spin; player positions; field geometry; weather.
+- **Game:** inning, score, balls and strikes, outs, base occupancy.
+- **Mental (latent):** confidence, momentum, strategic intent, risk assessment.
 
-- Action selection through expected free energy minimization
+## Hierarchical generative model
 
-### 2. Multi-Agent System Architecture
+1. **Low level:** ball trajectories, collisions and player movement.
+2. **Mid level:** play outcomes and situation-specific strategies.
+3. **High level:** game flow, win probability and long-term planning.
 
-#### Agents
+Higher levels would supply priors to lower levels, with action selection by expected free energy at each level.
 
-1. **Players**
+## Questions the framing could address
 
-   - Individual active inference models
+- Do team-level strategies emerge from belief alignment between players?
+- How do precision (confidence) changes alter risk taking in late innings?
+- How would skill acquisition appear as learning of the likelihood and transition model?
 
-   - Position-specific priors and policies
+## Related
 
-   - Continuous state-space representation
-
-   - Proprioceptive and exteroceptive modalities
-
-1. **Teams**
-
-   - Collective active inference at team level
-
-   - Shared generative models
-
-   - Strategic coordination through belief alignment
-
-   - Hierarchical policy selection
-
-1. **Umpires**
-
-   - Objective state observers
-
-   - Rule enforcement agents
-
-   - Precision modulators for game flow
-
-### 3. State Space Representation
-
-#### Physical States
-
-- Ball position, velocity, and spin (6D state space)
-
-- Player positions and orientations
-
-- Field geometry and boundaries
-
-- Weather conditions and environmental factors
-
-#### Game States
-
-- Inning structure
-
-- Score tracking
-
-- Count (balls/strikes)
-
-- Base occupancy
-
-- Game phase indicators
-
-#### Mental States
-
-- Player confidence levels
-
-- Team momentum
-
-- Strategic intentions
-
-- Risk assessment metrics
-
-### 4. Action Space
-
-#### Player Actions
-
-- Batting mechanics
-
-- Pitching variations
-
-- Fielding movements
-
-- Base running decisions
-
-#### Team Actions
-
-- Defensive positioning
-
-- Batting order optimization
-
-- Pitching changes
-
-- Strategic timeouts
-
-### 5. Generative Models
-
-#### Hierarchical Structure
-
-1. **Low-level physics**
-
-   - Ball trajectories
-
-   - Collision dynamics
-
-   - Player movement physics
-
-1. **Mid-level gameplay**
-
-   - Play outcomes
-
-   - Situation-specific strategies
-
-   - Performance statistics
-
-1. **High-level strategy**
-
-   - Game flow
-
-   - Win probability
-
-   - Long-term planning
-
-### 6. Learning and Adaptation
-
-#### Model Parameters
-
-- Prior beliefs updated through experience
-
-- Precision parameters tuned dynamically
-
-- Policy preferences refined by outcomes
-
-- Skill development through practice
-
-#### Team Dynamics
-
-- Emergent strategies
-
-- Role specialization
-
-- Coordination patterns
-
-- Adaptive responses
-
-### 7. Implementation Strategy
-
-#### Technical Architecture
-
-1. **Simulation Engine**
-
-   - Physics-based core
-
-   - Event-driven architecture
-
-   - Real-time processing capability
-
-   - Modular component design
-
-1. **Data Collection**
-
-   - State tracking
-
-   - Action logging
-
-   - Performance metrics
-
-   - Belief evolution
-
-1. **Visualization**
-
-   - 3D rendering
-
-   - Statistical displays
-
-   - Belief visualization
-
-   - Decision trees
-
-#### Development Phases
-
-1. **Phase 1: Core Mechanics**
-
-   - Basic physics implementation
-
-   - Simple agent models
-
-   - Fundamental game rules
-
-1. **Phase 2: Active Inference Integration**
-
-   - Generative model implementation
-
-   - Free energy computation
-
-   - Policy selection mechanisms
-
-1. **Phase 3: Learning and Adaptation**
-
-   - Parameter updating
-
-   - Strategy evolution
-
-   - Performance optimization
-
-1. **Phase 4: Advanced Features**
-
-   - Complex strategies
-
-   - Team dynamics
-
-   - Environmental factors
-
-### 8. Research Objectives
-
-#### Primary Goals
-
-1. Demonstrate active inference in complex sports dynamics
-
-1. Model emergent team strategies
-
-1. Study skill acquisition and adaptation
-
-1. Analyze decision-making under uncertainty
-
-#### Applications
-
-- Training and strategy development
-
-- Player development systems
-
-- Game outcome prediction
-
-- Performance analysis
-
-### 9. Evaluation Metrics
-
-#### Performance Metrics
-
-- Win-loss records
-
-- Statistical accuracy
-
-- Strategy effectiveness
-
-- Learning efficiency
-
-#### Model Metrics
-
-- Free energy minimization
-
-- Belief convergence
-
-- Policy optimization
-
-- Prediction accuracy
-
-## Future Directions
-
-### Extensions
-
-1. Multi-game seasons
-
-1. Player development trajectories
-
-1. Team chemistry modeling
-
-1. Injury and fatigue effects
-
-### Integration Opportunities
-
-1. Real game data validation
-
-1. Machine learning hybridization
-
-1. Virtual reality training
-
-1. Strategic analysis tools
-
-## Technical Requirements
-
-### Software Stack
-
-- Python-based simulation core
-
-- Physics engine integration
-
-- Neural network components
-
-- Visualization toolkit
-
-### Computing Resources
-
-- GPU acceleration for physics
-
-- Parallel processing for agents
-
-- Real-time visualization
-
-- Data storage and analysis
-
-## Conclusion
-
-This baseball simulation framework provides a comprehensive platform for studying active inference in complex sports environments, offering insights into both individual and team dynamics while maintaining computational tractability and practical applicability.
-
+- Executable agents: `code/Things/Simple_POMDP/` and `code/Things/Continuous_Generic/` (see [[docs/api/api_reference|API reference]]).
+- Theory: [[knowledge_base/cognitive/decision_making|decision making]], [[knowledge_base/mathematics/game_theory|game theory]].

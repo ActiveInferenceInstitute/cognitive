@@ -5,9 +5,9 @@ title: Learning Paths Index
 type: index
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-02-07
-modified: 2025-08-09
 
 tags:
 
@@ -25,7 +25,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/swarm_intelligence]]"
 ---
 
-#
+# Learning paths index
 
 ## Browse Learning Paths
 
@@ -214,7 +214,7 @@ semantic_relations:
 
   - Friston (2010) “The free-energy principle: a unified brain theory?” in Nature Reviews Neuroscience. See recommended readings at the Free Energy Principle hub: [activeinference.github.io](https://activeinference.github.io/)
 
-  - Parr, Pezzulo, Friston (2022) “Active Inference” (Cambridge University Press). Book resources: [tejparr.github.io/Resources](https://tejparr.github.io/Resources.html)
+  - Parr, Pezzulo, Friston (2022) “Active Inference” (MIT Press). Book resources: [tejparr.github.io/Resources](https://tejparr.github.io/Resources.html)
 
   - Smith et al. (2022) “A step-by-step tutorial on Active Inference and its application to empirical data” (open access): [PMC article](https://pmc.ncbi.nlm.nih.gov/articles/PMC8956124/)
 
@@ -222,18 +222,16 @@ semantic_relations:
 
 - Join ongoing talks for context/mechanics: Active Inference Institute livestreams: [activeinference.institute/livestreams](https://www.activeinference.institute/livestreams)
 
-### Repo-integrated quick runners
+### Repository quick runners
 
 ```bash
-# Run a basic discrete-state agent
-python3 code/Things/Simple_POMDP/generic_pomdp.py
-# Run the BioFirm dispatcher
-python3 code/Things/BioFirm/active_inference/dispatcher.py
-# Run the Ant Colony simulation
-python3 code/Things/Ant_Colony/ant_colony/main.py --config code/Things/Ant_Colony/config/colony_config.yaml
-# Run visualization tests
-python3 -m pytest tests/visualization/test_continuous_generic.py -q
+python -m pip install -e ".[dev]"
+python -m pytest code/tests/visualization/test_continuous_generic.py -q
+cognitive-benchmark --repetitions 1
+cognitive-build-manuscript --no-pdf --output build/manuscript
 ```
+
+The `Generic_POMDP`, `BioFirm`, and `Ant_Colony` folders contain documentation only; the executed examples are listed in [[docs/examples/index|Examples index]].
 
 ## Centralized External Web Resources
 

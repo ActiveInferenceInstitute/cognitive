@@ -5,22 +5,14 @@ title: Active Inference and Information Theory Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
-modified: 2024-03-15
 
-version: 3.0.0
 
 complexity: advanced
 
-processing_priority: 1
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: advanced
 
@@ -123,15 +115,6 @@ By completing this path, learners will be able to:
 - Healthcare: Medical informatics, precision medicine
 
 ## Advanced Research Methodology and Publication Framework
-
-### Systematic Literature Review and Meta-Analysis Platform
-
-
-### Academic Publication and Dissemination Framework
-
-
-### Research Quality Assurance and Reproducibility Framework
-
 
 ### Conference Presentation and Networking Framework
 

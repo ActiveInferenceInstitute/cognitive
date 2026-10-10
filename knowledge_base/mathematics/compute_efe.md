@@ -1,4 +1,5 @@
 ---
+description: "Implementation guide for computing the expected free energy of an action as epistemic value plus risk from the A, B and C matrices, with usage and properties."
 type: implementation
 id: compute_efe_001
 created: 2024-02-05

@@ -3,7 +3,7 @@ title: Matrix Operations
 type: module_index
 status: stable
 created: 2026-02-06
-updated: 2026-02-08
+updated: 2026-10-10
 tags:
   - matrices
   - linear_algebra
@@ -18,13 +18,13 @@ semantic_relations:
 
 # Matrix Operations
 
-Core matrix operations for Active Inference computations. This module provides matrix manipulation, normalization, information-theoretic calculations, and initialization utilities used throughout the framework.
+Matrix normalization, information-theoretic calculations, specification loading, and initialization used by the discrete Active Inference runtime. The four classes are exported from `cognitive.models.matrices`.
 
-## 📁 Module Contents
+## Module contents
 
 - **`matrix_ops.py`**: Core matrix operations module containing all classes
 
-## 🔧 Classes
+## Classes
 
 ### MatrixOps
 Static methods for matrix algebra and information-theoretic calculations:
@@ -37,24 +37,25 @@ Static methods for matrix algebra and information-theoretic calculations:
 
 ### MatrixLoader
 Utilities for loading and validating matrices from configuration:
-- `load_spec()` - Load matrix specification from YAML
-- `load_matrix()` - Load matrix data from file
-- `validate_matrix()` - Validate matrix against specification constraints
+- `load_spec()` - Read the YAML frontmatter of a Markdown specification file
+- `load_matrix()` - Load a NumPy `.npy` array (no pickle)
+- `validate_matrix()` - Check shape and constraints (`sum(cols) == 1.0`, `sum(rows) == 1.0`, `all_values >= 0`)
 
 ### MatrixInitializer
 Factory methods for creating common matrix types:
-- `random_stochastic()` - Random column-stochastic matrices
-- `identity_based()` - Identity-biased stochastic matrices
-- `uniform()` - Uniform distribution matrices
+- `random_stochastic()` - Random column-stochastic matrices (optional `rng`)
+- `identity_based()` - Square column-stochastic matrix with `strength` on the diagonal
+- `uniform()` - Constant array whose entries sum to 1 over the whole shape
 
 ### MatrixVisualizer
-Data preparation for matrix visualization:
+Data preparation for matrix visualization (figures are drawn by `MatrixPlotter`):
 - `prepare_heatmap_data()` - Format matrix for heatmap display
 - `prepare_bar_data()` - Format vector for bar chart display
 - `prepare_multi_heatmap_data()` - Format 3D tensor for multi-panel heatmaps
 
-## 📚 Related Documentation
+## Related documentation
 
 - [[code/tools/src/models/README|Models Overview]]
 - [[code/tools/src/models/active_inference/README|Active Inference Models]]
-- [[code/tools/src/visualization/README|Visualization Tools]]
+- [[code/tools/src/visualization/README|Matrix plotting]]
+- [[code/tools/src/models/matrices/AGENTS|Instructions]]

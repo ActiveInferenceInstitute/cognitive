@@ -8,6 +8,8 @@ status: stable
 
 created: 2024-02-07
 
+updated: 2026-10-10
+
 tags:
 
   - template
@@ -19,7 +21,7 @@ tags:
 semantic_relations:
   - type: template_for
     links:
-      - "[[implementation_examples]]"
+      - "[[docs/examples/README|Examples]]"
 ---
 
 # [Example Name]
@@ -131,11 +133,9 @@ advanced_settings:
 
 ```bash
 
-# Environment setup commands
+# From the repository root; installs the package and its console scripts
 
-pip install -r requirements.txt
-
-python setup.py develop
+pip install -e ".[dev]"
 
 ```
 
@@ -143,17 +143,17 @@ python setup.py develop
 
 ### Test Cases
 
+Tests live in `code/tests/` and run with `python -m pytest code/tests/ -v`.
+
 ```python
 
-def test_implementation():
+def test_belief_update_is_normalised():
 
-    """Test core functionality."""
+    """Beliefs returned by the dispatcher sum to one."""
 
-    implementation = ExampleImplementation(test_parameters)
+    beliefs = dispatcher.dispatch_belief_update(1, state)
 
-    result = implementation.core_method(test_input)
-
-    assert check_condition(result)
+    assert np.isclose(beliefs.sum(), 1.0)
 
 ```
 
@@ -171,11 +171,9 @@ def test_implementation():
 
 ```python
 
-# Example output generation
+# Print the posterior beliefs returned by the example above
 
-results = implementation.run()
-
-visualization.plot_results(results)
+print(beliefs)
 
 ```
 
@@ -183,15 +181,15 @@ visualization.plot_results(results)
 
 ```python
 
-def visualize_results(results):
+# Plot the posterior beliefs with matplotlib
 
-    """Create standard visualizations."""
+plt.bar(range(len(beliefs)), beliefs)
 
-    plt.figure(figsize=(10, 6))
+plt.xlabel("State")
 
-    # Plotting code
+plt.ylabel("Belief")
 
-    plt.show()
+plt.show()
 
 ```
 

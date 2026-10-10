@@ -1,4 +1,5 @@
 ---
+description: "Theoretical foundations of path integrals, covering measure-theoretic and functional-analytic structure, the partition function connection, fluctuation theory and field theory."
 type: mathematical_concept
 id: path_integral_theory_001
 created: 2024-02-05

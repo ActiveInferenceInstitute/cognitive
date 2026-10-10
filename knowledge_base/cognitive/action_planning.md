@@ -8,6 +8,9 @@ tags:
   - active_inference
   - planning
   - policy
+aliases:
+  - motor_planning
+  - planning
 semantic_relations:
   - type: relates
     links:

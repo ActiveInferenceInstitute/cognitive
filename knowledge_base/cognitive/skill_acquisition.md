@@ -10,6 +10,10 @@ tags:
 - development
 aliases:
   - skill_learning
+  - practice_effects
+  - skill_training
+  - expertise
+  - skill_development
 semantic_relations:
   - type: implements
     links:
@@ -33,325 +37,325 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Learning Stages
 
-- [[acquisition_stages]] - Learn steps
+- [[acquisition_stages]] - Progression of stages in learning a skill
 
-  - [[cognitive_stage]] - Understanding
+  - [[cognitive_stage]] - Initial stage of understanding task demands
 
-    - [[task_comprehension]] - Get what
+    - [[task_comprehension]] - Grasping the task goals and rules
 
-    - [[strategy_formation]] - Plan how
+    - [[strategy_formation]] - Developing an approach to perform the task
 
-  - [[associative_stage]] - Practice
+  - [[associative_stage]] - Stage of practice and error reduction
 
-    - [[refinement]] - Get better
+    - refinement - Gradual improvement of performance
 
-    - [[error_reduction]] - Less wrong
+    - [[error_reduction]] - Decreasing mistakes with practice
 
-  - [[autonomous_stage]] - Master
+  - [[autonomous_stage]] - Stage of fluent, expert performance
 
-    - [[automaticity]] - No think
+    - [[automaticity]] - Performance requiring little conscious attention
 
-    - [[efficiency]] - Less effort
+    - efficiency - Lower effort for the same performance
 
 ### Performance Components
 
-- [[skill_elements]] - Part pieces
+- [[skill_elements]] - Component parts that make up a skill
 
-  - [[basic_operations]] - Simple parts
+  - [[basic_operations]] - Elementary actions underlying a skill
 
-    - [[movement_primitives]] - Basic moves
+    - [[movement_primitives]] - Basic units of movement
 
-    - [[cognitive_operations]] - Think steps
+    - [[cognitive_operations]] - Elementary mental steps
 
-  - [[integration]] - Put together
+  - integration - Combining components into smooth performance
 
-    - [[sequence_formation]] - Order right
+    - [[sequence_formation]] - Ordering components into correct sequences
 
-    - [[coordination]] - Work together
+    - [[coordination]] - Timing multiple components together
 
 ### Control Processes
 
-- [[skill_control]] - Manage how
+- [[skill_control]] - Regulation of skilled performance
 
-  - [[monitoring]] - Watch do
+  - monitoring - Observing one's own performance
 
-    - [[error_detection]] - Find wrong
+    - [[error_detection]] - Noticing errors during performance
 
-    - [[performance_evaluation]] - How good
+    - [[performance_evaluation]] - Judging the quality of performance
 
-  - [[adjustment]] - Change do
+  - [[adjustment]] - Modifying performance in response to feedback
 
-    - [[error_correction]] - Fix wrong
+    - [[error_correction]] - Adjusting actions to remove errors
 
-    - [[optimization]] - Make better
+    - [[optimization]] - Tuning performance toward better outcomes
 
 ## Learning Mechanisms
 
 ### Practice Effects
 
-- [[practice_impact]] - Train result
+- [[practice_impact]] - Effects of practice on learning
 
-  - [[quantity_effects]] - How much
+  - [[quantity_effects]] - Effects of the amount of practice
 
-    - [[repetition]] - Do again
+    - [[repetition]] - Repeating a task to strengthen learning
 
-    - [[time_invested]] - How long
+    - [[time_invested]] - Total practice time accumulated
 
-  - [[quality_effects]] - How good
+  - [[quality_effects]] - Effects of the type of practice
 
-    - [[focused_practice]] - Pay attention
+    - [[focused_practice]] - Practice with full concentration
 
-    - [[deliberate_practice]] - Plan better
+    - [[deliberate_practice]] - Structured practice targeting weaknesses
 
 ### Feedback Processing
 
-- [[feedback_use]] - Info use
+- [[feedback_use]] - Use of information about performance
 
-  - [[intrinsic_feedback]] - Self know
+  - [[intrinsic_feedback]] - Feedback arising from the performer's own senses
 
-    - [[proprioception]] - Feel move
+    - [[proprioception]] - Sensing body position and movement
 
-    - [[task_outcome]] - What happen
+    - [[task_outcome]] - Observed results of an action
 
-  - [[extrinsic_feedback]] - Other tell
+  - [[extrinsic_feedback]] - Feedback supplied by an outside source
 
-    - [[instruction]] - Tell how
+    - instruction - Verbal or demonstrated guidance
 
-    - [[correction]] - Fix tell
+    - [[correction]] - External feedback that identifies errors
 
 ### Memory Formation
 
-- [[skill_memory]] - Remember how
+- [[skill_memory]] - Retention of how to perform skills
 
-  - [[procedural_memory]] - Do memory
+  - [[procedural_memory]] - Memory for learned skills and routines
 
-    - [[motor_programs]] - Move plans
+    - [[motor_programs]] - Stored motor commands for movements
 
-    - [[action_sequences]] - Step orders
+    - [[action_sequences]] - Stored ordered series of actions
 
-  - [[declarative_memory]] - Know memory
+  - [[declarative_memory]] - Memory for facts and events
 
-    - [[task_knowledge]] - What know
+    - task knowledge - Facts about the task and its goals
 
-    - [[strategy_knowledge]] - How know
+    - [[strategy_knowledge]] - Knowledge of effective approaches
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[skill_networks]] - Brain parts
+- [[skill_networks]] - Brain networks supporting skills
 
-  - [[motor_networks]] - Move parts
+  - [[motor_networks]] - Networks controlling movement
 
-    - [[motor_cortex]] - Move control
+    - [[motor_cortex]] - Cortical region issuing movement commands
 
-    - [[cerebellum]] - Move smooth
+    - [[cerebellum]] - Coordinates and refines movement
 
-  - [[cognitive_networks]] - Think parts
+  - [[cognitive_networks]] - Networks supporting mental skills
 
-    - [[prefrontal]] - Plan parts
+    - [[prefrontal]] - Planning and executive control
 
-    - [[parietal]] - Space parts
+    - [[parietal]] - Spatial and sensorimotor integration
 
 ### Plasticity Mechanisms
 
-- [[skill_plasticity]] - Brain change
+- [[skill_plasticity]] - Brain changes underlying skill learning
 
-  - [[synaptic_changes]] - Cell connect
+  - [[synaptic_changes]] - Changes in synaptic connections
 
-    - [[strengthening]] - Get stronger
+    - strengthening - Strengthening of practiced synapses
 
-    - [[pruning]] - Cut extra
+    - [[pruning]] - Elimination of unused connections
 
-  - [[network_changes]] - System change
+  - [[network_changes]] - Reorganization of brain networks
 
-    - [[efficiency]] - Better work
+    - efficiency - Reduced neural cost of performance
 
-    - [[specialization]] - Special job
+    - specialization - Regions tuning to the trained skill
 
 ### Learning Systems
 
-- [[brain_learning]] - Learn parts
+- [[brain_learning]] - Brain systems supporting learning
 
-  - [[fast_learning]] - Quick get
+  - [[fast_learning]] - Rapid learning from few exposures
 
-    - [[hippocampal]] - Memory make
+    - [[hippocampal]] - Rapid encoding of new episodes
 
-    - [[prefrontal]] - Plan make
+    - [[prefrontal]] - Rapid, flexible strategy-based learning
 
-  - [[slow_learning]] - Slow build
+  - [[slow_learning]] - Gradual learning over many repetitions
 
-    - [[striatal]] - Habit make
+    - [[striatal]] - Gradual habit formation
 
-    - [[cerebellar]] - Smooth make
+    - [[cerebellar]] - Gradual refinement of movement timing
 
 ## Skill Types
 
 ### Motor Skills
 
-- [[movement_skills]] - Body do
+- [[movement_skills]] - Skills involving bodily movement
 
-  - [[fine_motor]] - Small move
+  - [[fine_motor]] - Skills requiring small, precise movements
 
-    - [[manipulation]] - Hand use
+    - manipulation - Fine control of objects by hand
 
-    - [[precision]] - Exact do
+    - [[precision]] - Accuracy of movement
 
-  - [[gross_motor]] - Big move
+  - [[gross_motor]] - Skills using large muscle groups
 
-    - [[locomotion]] - Move around
+    - [[locomotion]] - Moving the body through space
 
-    - [[balance]] - Stay up
+    - [[balance]] - Maintaining posture and stability
 
 ### Cognitive Skills
 
-- [[mental_skills]] - Mind do
+- [[mental_skills]] - Skills based on mental processes
 
-  - [[problem_solving]] - Fix things
+  - [[problem_solving]] - Skills for resolving problems
 
-    - [[analysis]] - Break down
+    - [[analysis]] - Breaking a problem into components
 
-    - [[solution_finding]] - Answer get
+    - [[solution_finding]] - Finding solutions to problems
 
-  - [[decision_making]] - Choose things
+  - [[decision_making]] - Skills for choosing among options
 
-    - [[evaluation]] - Judge good
+    - [[evaluation]] - Judging the value of options
 
-    - [[selection]] - Pick best
+    - [[selection]] - Choosing the best option
 
 ### Social Skills
 
-- [[interaction_skills]] - People do
+- [[interaction_skills]] - Skills used in dealing with others
 
-  - [[communication]] - Talk skills
+  - [[communication]] - Skills for exchanging information
 
-    - [[expression]] - Say things
+    - [[expression]] - Conveying thoughts and feelings
 
-    - [[understanding]] - Get things
+    - [[understanding]] - Interpreting what others convey
 
-  - [[social_cognition]] - People think
+  - [[social_cognition]] - Reasoning about other people
 
-    - [[perspective_taking]] - Other view
+    - [[perspective_taking]] - Understanding another person's viewpoint
 
-    - [[social_rules]] - Group ways
+    - [[social_rules]] - Norms governing group behavior
 
 ## Applications
 
 ### Educational Applications
 
-- [[learning_design]] - Teach plan
+- [[learning_design]] - Designing instruction for learning
 
-  - [[instruction]] - Show how
+  - instruction - Teaching methods for skills
 
-    - [[demonstration]] - Show do
+    - [[demonstration]] - Showing how a skill is performed
 
-    - [[explanation]] - Tell why
+    - [[explanation]] - Explaining the reasons behind actions
 
-  - [[practice_design]] - Train plan
+  - [[practice_design]] - Designing practice for skill learning
 
-    - [[progression]] - Step up
+    - [[progression]] - Gradually increasing task difficulty
 
-    - [[variation]] - Change how
+    - [[variation]] - Varying practice conditions
 
 ### Training Applications
 
-- [[skill_training]] - Learn help
+- [[skill_training]] - Programs for building skills
 
-  - [[basic_training]] - Start learn
+  - [[basic_training]] - Introductory training for novices
 
-    - [[foundation_skills]] - Base build
+    - [[foundation_skills]] - Core skills that later learning builds on
 
-    - [[progression_steps]] - Move up
+    - [[progression_steps]] - Advancing through graded training steps
 
-  - [[advanced_training]] - Expert learn
+  - [[advanced_training]] - Training for high levels of expertise
 
-    - [[refinement]] - Fine tune
+    - refinement - Fine-tuning of skilled performance
 
-    - [[integration]] - Put together
+    - integration - Combining skills into complex performance
 
 ### Rehabilitation Applications
 
-- [[skill_recovery]] - Get back
+- [[skill_recovery]] - Restoring skills after injury or illness
 
-  - [[assessment]] - Check what
+  - assessment - Evaluating current skill level
 
-    - [[deficit_evaluation]] - Lost what
+    - [[deficit_evaluation]] - Identifying which abilities are impaired
 
-    - [[capacity_testing]] - Can what
+    - [[capacity_testing]] - Testing remaining functional capacity
 
-  - [[intervention]] - Help how
+  - intervention - Rehabilitation approaches to restore skill
 
-    - [[retraining]] - Learn again
+    - [[retraining]] - Relearning lost skills
 
-    - [[compensation]] - New way
+    - compensation - Alternative strategies replacing lost abilities
 
 ## Research Methods
 
 ### Behavioral Methods
 
-- [[performance_assessment]] - Check do
+- [[performance_assessment]] - Measuring skilled performance
 
-  - [[skill_testing]] - Test how
+  - [[skill_testing]] - Tests of skill level
 
-    - [[accuracy]] - Right check
+    - accuracy - Proportion of correct responses
 
-    - [[speed]] - Fast check
+    - [[speed]] - Time taken to perform the skill
 
-  - [[learning_curves]] - Better track
+  - [[learning_curves]] - Plots of performance across practice
 
-    - [[rate]] - How fast
+    - [[rate]] - Speed of improvement with practice
 
-    - [[plateau]] - Stop point
+    - [[plateau]] - Period when improvement levels off
 
 ### Neural Methods
 
-- [[brain_assessment]] - Brain check
+- [[brain_assessment]] - Measuring brain activity related to skill
 
-  - [[activation]] - Work where
+  - activation - Which regions are active during skill use
 
-    - [[task_activity]] - Do brain
+    - [[task_activity]] - Brain activity during task performance
 
-    - [[rest_activity]] - Stop brain
+    - [[rest_activity]] - Brain activity at rest
 
-  - [[connectivity]] - Connect how
+  - [[connectivity]] - Interaction between brain regions
 
-    - [[functional]] - Work link
+    - functional - Statistically coupled activity between regions
 
-    - [[structural]] - Build link
+    - structural - Anatomical connections between regions
 
 ### Computational Methods
 
-- [[skill_modeling]] - Math check
+- [[skill_modeling]] - Mathematical models of skill learning
 
-  - [[learning_models]] - Get how
+  - [[learning_models]] - Models of how skills are acquired
 
-    - [[rate_models]] - Speed math
+    - [[rate_models]] - Models describing learning speed
 
-    - [[stage_models]] - Step math
+    - [[stage_models]] - Models of discrete learning stages
 
-  - [[performance_models]] - Do how
+  - [[performance_models]] - Models of performance outcomes
 
-    - [[error_models]] - Wrong math
+    - [[error_models]] - Models of error patterns
 
-    - [[optimization_models]] - Better math
+    - [[optimization_models]] - Models of performance optimization
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[individual_differences]] - Person vary
+- [[individual_differences]] - Differences in learning among individuals
 
-- [[transfer_limits]] - Move hard
+- [[transfer_limits]] - Difficulty transferring skills to new tasks
 
-- [[plateau_effects]] - Stop grow
+- [[plateau_effects]] - Slowing of improvement with practice
 
 ### Emerging Approaches
 
-- [[personalized_learning]] - Person fit
+- [[personalized_learning]] - Training adapted to the learner
 
-- [[technology_enhanced]] - Tech help
+- technology enhanced - Training supported by technology
 
-- [[hybrid_training]] - Mix ways
+- [[hybrid_training]] - Combining several training approaches
 
 ## References
 

@@ -5,22 +5,14 @@ title: Active Inference in Myrmecology Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-25
 
-modified: 2024-03-25
 
-version: 2.0.0
 
 complexity: advanced
 
-processing_priority: 2
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: advanced
 
@@ -94,7 +86,7 @@ semantic_relations:
 
 ### Purpose and Scope
 
-This specialized learning path integrates Active Inference principles with myrmecology (the study of ants), providing a comprehensive framework for understanding multi-scale cognitive processes in ant colonies. It bridges theoretical biology with computational modeling, focusing on collective behavior and colony-level intelligence.
+This specialized learning path integrates Active Inference principles with myrmecology (the study of ants), providing a framework for understanding multi-scale cognitive processes in ant colonies. It bridges theoretical biology with computational modeling, focusing on collective behavior and colony-level intelligence.
 
 ### Target Audience
 
@@ -372,14 +364,6 @@ graph TB
 
 ## Core Learning Modules
 
-### 1. Colony-Level Active Inference (4 weeks)
-
-#### Week 1-2: Colony State Inference
-
-
-#### Week 3-4: Collective Decision Making
-
-
 ### 2. Multi-scale Analysis (6 weeks)
 
 #### Week 1-2: Individual Ant Behavior
@@ -414,9 +398,6 @@ graph TB
 
 ### 3. Field Applications (4 weeks)
 
-#### Week 1-2: Field Studies
-
-
 #### Week 3-4: Natural Systems
 
 - Colony monitoring
@@ -428,9 +409,6 @@ graph TB
 - Habitat relationships
 
 ### 4. Advanced Topics (4 weeks)
-
-#### Week 1-2: Multi-Colony Systems
-
 
 #### Week 3-4: Advanced Applications
 
@@ -447,14 +425,6 @@ graph TB
 ### Module Overview
 
 This specialized module explores Pogonomyrmex harvester ant foraging behavior through the lens of active inference, examining how colonies optimize resource collection while managing uncertainty and environmental risks.
-
-### 1. Theoretical Framework (2 weeks)
-
-#### Active Inference in Foraging Decisions
-
-
-#### Foraging Pattern Analysis
-
 
 ### 2. Field Studies and Data Collection (2 weeks)
 
@@ -489,17 +459,6 @@ This specialized module explores Pogonomyrmex harvester ant foraging behavior th
    - Food item selection
 
    - Information sharing events
-
-#### Data Collection Framework
-
-
-### 3. Active Inference Models (2 weeks)
-
-#### Colony-Level Decision Making
-
-
-#### Individual Forager Models
-
 
 ### 4. Integration with Environmental Factors (2 weeks)
 
@@ -551,9 +510,6 @@ graph TB
 
 ```
 
-#### Weather-Dependent Foraging
-
-
 ### 5. Practical Applications (2 weeks)
 
 #### Conservation and Management
@@ -578,133 +534,17 @@ graph TB
 
    - Long-term monitoring
 
-#### Research Applications
-
-
-### 6. Advanced Foraging Dynamics (2 weeks)
-
-#### Recruitment System Analysis
-
-
-#### Temporal Foraging Patterns
-
-
-### 7. Energy Economics and Optimization (2 weeks)
-
-#### Energy Budget Analysis
-
-
-#### Resource Quality Assessment
-
-
 ## Specialized Module: Fire Ant Colony Organization Through Active Inference
 
 ### Module Overview
 
 This module examines Solenopsis invicta (Fire Ant) colony organization through active inference, focusing on their unique multi-queen system, territorial behavior, and adaptive responses to environmental challenges.
 
-### 1. Social Structure Analysis (2 weeks)
-
-#### Queen-Worker Dynamics
-
-
-#### Territory Defense System
-
-
-### 2. Environmental Adaptation (2 weeks)
-
-#### Flood Response System
-
-
-#### Temperature Regulation System
-
-
-### 3. Colony Expansion and Competition (2 weeks)
-
-#### Territory Expansion Model
-
-
-#### Inter-Colony Warfare
-
-
-### 4. Social Immunity and Disease Response (2 weeks)
-
-#### Disease Detection System
-
-
-#### Social Prophylaxis
-
-
-### 5. Practical Applications and Integration (2 weeks)
-
-#### Pest Management Applications
-
-
-#### Ecological Impact Assessment
-
-
 ## Specialized Module: Leaf-Cutter Ant Agricultural Systems Through Active Inference
 
 ### Module Overview
 
 This module examines Atta and Acromyrmex leaf-cutter ant species through active inference, focusing on their sophisticated agricultural systems, fungus cultivation, and complex division of labor.
-
-### 1. Agricultural System Analysis (2 weeks)
-
-#### Fungus Garden Management
-
-
-#### Substrate Selection System
-
-
-### 2. Caste System and Labor Division (2 weeks)
-
-#### Task Allocation System
-
-
-### 3. Foraging and Processing Chain (2 weeks)
-
-#### Multi-Stage Processing
-
-
-### 4. Environmental Control Systems (2 weeks)
-
-#### Climate Control System
-
-
-### 5. Agricultural Optimization (2 weeks)
-
-#### Yield Optimization System
-
-
-### Integration Projects
-
-#### Cross-Species Comparative Analysis
-
-
-### Cross-Species Integration and Advanced Analysis
-
-#### Evolutionary Strategy Comparison
-
-
-#### Multi-Species Active Inference Framework
-
-
-#### Ecological Network Analysis
-
-
-### Advanced Comparative Studies
-
-#### Behavioral Plasticity Analysis
-
-
-#### Cognitive Architecture Comparison
-
-
-### Synthesis and Integration
-
-#### Cross-Species Knowledge Integration
-
 
 ## Assessment Methods
 
@@ -1198,32 +1038,6 @@ This module examines Atta and Acromyrmex leaf-cutter ant species through active 
 
   - Publication track
 
-#### Certification Path
-
-- Field Biology
-
-  - Field methods
-
-  - Species identification
-
-  - Ecological assessment
-
-- Computational Methods
-
-  - Model development
-
-  - Data analysis
-
-  - Simulation design
-
-- Research Methods
-
-  - Experimental design
-
-  - Statistical analysis
-
-  - Publication writing
-
 ### Professional Network
 
 #### Research Community
@@ -1394,112 +1208,6 @@ graph TB
 
 ```
 
-## Support Resources
-
-### Research Support
-
-- Literature Database
-
-  - Myrmecology papers
-
-  - Active inference research
-
-  - Field methods
-
-- Computing Resources
-
-  - Analysis software
-
-  - Simulation platforms
-
-  - Data processing
-
-- Field Resources
-
-  - Equipment access
-
-  - Field stations
-
-  - Collection permits
-
-### Technical Support
-
-- Development Tools
-
-  - Analysis packages
-
-  - Modeling frameworks
-
-  - Visualization tools
-
-- Documentation
-
-  - API references
-
-  - Field guides
-
-  - Best practices
-
-- Computing Resources
-
-  - Development environments
-
-  - Data storage
-
-  - Processing power
-
-### Learning Support
-
-```mermaid
-
-mindmap
-
-    root((Learning
-
-    Resources))
-
-        Materials
-
-            Theory
-
-                Biology
-
-                Computation
-
-            Implementation
-
-                Field
-
-                Lab
-
-            Research
-
-                Papers
-
-                Methods
-
-        Support
-
-            Technical
-
-                Tools
-
-                Equipment
-
-            Academic
-
-                Mentors
-
-                Groups
-
-            Field
-
-                Stations
-
-                Training
-
-```
-
 ## Knowledge Base Anchors
 
 - Myrmecology + cognition: [[knowledge_base/cognitive/collective_behavior_ants]] · [[knowledge_base/cognitive/collective_behavior]] · [[knowledge_base/cognitive/swarm_intelligence]]
@@ -1526,203 +1234,7 @@ graph LR
 
 ```
 
-## Version Control and Updates
-
-### Version History
-
-```mermaid
-
-gitGraph
-
-    commit id: "v1.0.0" tag: "Initial Release"
-
-    commit id: "v1.1.0"
-
-    branch feature/field-integration
-
-    commit id: "field-framework"
-
-    commit id: "validation-system"
-
-    checkout main
-
-    merge feature/field-integration id: "v2.0.0" tag: "Major Update"
-
-    commit id: "v2.1.0"
-
-```
-
-### Change Management
-
-#### Major Updates
-
-- v2.0.0 (Current)
-
-  - Enhanced field framework
-
-  - Advanced colony models
-
-  - Improved validation system
-
-  - Updated career paths
-
-- v1.1.0
-
-  - Added field protocols
-
-  - Enhanced documentation
-
-  - New research projects
-
-- v1.0.0
-
-  - Initial curriculum
-
-  - Basic framework
-
-  - Core concepts
-
-#### Planned Improvements
-
-- Advanced colony models
-
-- Field protocols
-
-- Integration frameworks
-
-- Research extensions
-
-### Quality Metrics
-
-```mermaid
-
-xychart-beta
-
-    title "Learning Path Components Quality"
-
-    x-axis [Theory, Field Work, Research, Integration, Support]
-
-    y-axis "Score" 0 --> 100
-
-    bar [92, 95, 88, 90, 85]
-
-```
-
-## Learning Analytics
-
-### Progress Tracking
-
-```mermaid
-
-xychart-beta
-
-    title "Skill Development Progress"
-
-    x-axis [Week 1, Week 6, Week 12, Week 20]
-
-    y-axis "Competency" 0 --> 100
-
-    line [15, 45, 75, 95]
-
-    line [10, 40, 70, 90]
-
-```
-
-### Performance Metrics
-
-- Field Skills
-
-  - Species identification
-
-  - Field methods
-
-  - Data collection
-
-- Research Skills
-
-  - Experimental design
-
-  - Data analysis
-
-  - Theory development
-
-- Technical Skills
-
-  - Model implementation
-
-  - Data processing
-
-  - Documentation
-
-### Development Analytics
-
-```mermaid
-
-graph LR
-
-    subgraph Theory Development
-
-        T[Theory] --> M[Model]
-
-        M --> H[Hypothesis]
-
-    end
-
-    subgraph Field Work
-
-        F[Methods] --> E[Experiment]
-
-        E --> V[Validation]
-
-    end
-
-    subgraph Analysis
-
-        D[Data] --> R[Results]
-
-        R --> C[Conclusions]
-
-    end
-
-    H --> F
-
-    V --> D
-
-    style T,M,H fill:#f9f,stroke:#333
-
-    style F,E,V fill:#bbf,stroke:#333
-
-    style D,R,C fill:#bfb,stroke:#333
-
-```
-
 ## Final Notes
-
-### Success Stories
-
-- Research Impact
-
-  - Novel discoveries
-
-  - Method innovations
-
-  - Field contributions
-
-- Technical Achievements
-
-  - Model implementations
-
-  - Analysis tools
-
-  - Field techniques
-
-- Professional Growth
-
-  - Research leadership
-
-  - Field expertise
-
-  - Community building
 
 ### Additional Resources
 
@@ -1749,33 +1261,3 @@ graph LR
   - Field stations
 
   - Professional networks
-
-### Contact Information
-
-- Research Support
-
-  - Principal investigators
-
-  - Field coordinators
-
-  - Research managers
-
-- Technical Support
-
-  - Analysis specialists
-
-  - Tool developers
-
-  - Equipment managers
-
-- Field Support
-
-  - Station managers
-
-  - Field technicians
-
-  - Collection managers
-
----
-
-*This expanded learning path now incorporates deep cultural, historical, and natural history dimensions while maintaining its scientific and technical foundations. It celebrates both the wonder and rigor of myrmecological study.*

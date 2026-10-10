@@ -1,436 +1,141 @@
+---
+title: Document Linking Template
+type: template
+status: stable
+created: 2024-02-06
+updated: 2026-10-10
+tags:
+  - template
+  - linking
+  - documentation
+semantic_relations:
+  - type: implements
+    links:
+      - "[[docs/repo_docs/linking_completeness|Linking completeness]]"
+  - type: extends
+    links:
+      - "[[docs/repo_docs/ai_documentation_style|AI documentation style]]"
+---
+
 # Document Linking Template
 
----
+A template for the links a page should carry. Copy the sections you need and
+replace every example target with a page that exists. The conventions are
+described in [[docs/repo_docs/linking_patterns|Obsidian linking patterns]] and
+[[docs/repo_docs/linking_completeness|Linking completeness]].
 
-title: Document Linking Template
+## Frontmatter links
 
-type: template
-
-status: stable
-
-created: 2024-02-06
-
-tags:
-
-  - template
-
-  - linking
-
-  - documentation
-
-semantic_relations:
-
-  - type: implements
-
-    links: [[linking_completeness]]
-
-  - type: extends
-
-    links: [[ai_documentation_style]]
-
----
-
-## Required Link Sections
-
-### 1. Metadata Links
+`semantic_relations` links are quoted strings. An unquoted `[[...]]` parses as
+a nested YAML list and is no longer a link.
 
 ```yaml
-
 ---
-
 title: Document Title
-
-type: [document_type]
-
-status: [status]
-
+type: concept
+status: draft
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
 semantic_relations:
-
-  # Core relationships (Required)
-
   - type: implements
-
-    links: [[base_concept]]
-
+    links:
+      - "[[path/to/base_concept|Base concept]]"
   - type: extends
-
-    links: [[parent_concept]]
-
-  # Dependencies (Required)
-
-  - type: requires
-
-    links: 
-
-      - [[dependency1]]
-
-      - [[dependency2]]
-
-  # Related Content (Optional)
-
-  - type: related
-
-    links: [[related_content]]
-
+    links:
+      - "[[path/to/parent_concept|Parent concept]]"
+  - type: relates
+    links:
+      - "[[path/to/related_page_1]]"
+      - "[[path/to/related_page_2]]"
 ---
-
 ```
 
-### 2. Concept Definition Links
+Relation types in use across the knowledge base include `relates`,
+`implements`, `extends`, `foundation`, `organizes`, `documents` and `uses`.
+
+## Link sections in the body
+
+### Concept pages
 
 ```markdown
+## Concept links
 
-#BEGIN_CONCEPT_LINKS
-
-- Parent Concept: [[parent_concept]]
-
-- Core Implementation: [[implementation]]
-
+- Parent concept: [[parent_concept]]
+- Implementation: [[implementation]]
 - Validation: [[validation_spec]]
-
 - Examples: [[usage_examples]]
-
-#END_CONCEPT_LINKS
-
 ```
 
-### 3. Implementation Links
+### Implementation pages
 
 ```markdown
-
-#BEGIN_IMPLEMENTATION_LINKS
+## Implementation links
 
 - Interface: [[api_spec]]
-
 - Tests: [[test_suite]]
-
 - Examples: [[implementation_examples]]
-
-- Validation: [[implementation_validation]]
-
-#END_IMPLEMENTATION_LINKS
-
 ```
 
-### 4. Knowledge Graph Links
+### Hierarchy
 
 ```markdown
-
-#BEGIN_KNOWLEDGE_LINKS
-
-- Ontology: [[domain_ontology]]
-
-- Classification: [[concept_classification]]
-
-- Relationships: [[concept_relationships]]
-
-#END_KNOWLEDGE_LINKS
-
-```
-
-## Link Categories
-
-### 1. Hierarchical Links
-
-```markdown
-
 ## Hierarchy
 
 - Parent: [[parent_concept]]
-
 - Children:
-
   - [[child_concept_1]]
-
   - [[child_concept_2]]
-
 - Siblings:
-
   - [[sibling_1]]
-
   - [[sibling_2]]
-
 ```
 
-### 2. Implementation Links
+### Documentation and research
 
 ```markdown
-
-## Implementation
-
-- Core: [[core_implementation]]
-
-- Extensions:
-
-  - [[extension_1]]
-
-  - [[extension_2]]
-
-- Tests:
-
-  - [[test_suite]]
-
-  - [[benchmarks]]
-
-```
-
-### 3. Documentation Links
-
-```markdown
-
 ## Documentation
 
 - Guide: [[user_guide]]
-
 - API: [[api_reference]]
-
 - Examples: [[example_collection]]
-
-- Tutorials: [[tutorial_series]]
-
-```
-
-### 4. Research Links
-
-```markdown
 
 ## Research
 
 - Papers: [[research_papers]]
-
 - Experiments: [[experiment_results]]
-
 - Analysis: [[data_analysis]]
-
-- Citations: [[citations]]
-
 ```
 
-## Link Annotations
-
-### 1. Relationship Annotations
+## Link syntax
 
 ```markdown
-
-- [[concept]] {type: prerequisite, confidence: 0.9}
-
-- [[implementation]] {type: implements, version: "1.0"}
-
-- [[test]] {type: validates, coverage: 0.95}
-
+[[filename]]
+[[filename|Display text]]
+[[filename#Section name]]
+[[folder/filename]]
 ```
 
-### 2. Context Annotations
-
-```markdown
-
-- [[concept]] {context: "theoretical_foundation"}
-
-- [[example]] {context: "practical_application"}
-
-- [[test]] {context: "validation"}
-
-```
-
-### 3. Status Annotations
-
-```markdown
-
-- [[feature]] {status: "stable", since: "1.0"}
-
-- [[api]] {status: "deprecated", replaced_by: "[[new_api]]"}
-
-- [[concept]] {status: "draft", review_required: true}
-
-```
-
-## Validation Blocks
-
-### 1. Link Validation
-
-```python
-
-# @link_validation
-
-{
-
-    "required_links": {
-
-        "concept": ["parent", "implementation", "validation"],
-
-        "implementation": ["interface", "tests", "examples"],
-
-        "documentation": ["guide", "api", "examples"]
-
-    }
-
-}
-
-```
-
-### 2. Relationship Validation
-
-```python
-
-# @relationship_validation
-
-{
-
-    "bidirectional": ["implements", "extends", "requires"],
-
-    "hierarchical": ["parent", "child", "sibling"],
-
-    "temporal": ["precedes", "follows", "replaces"]
-
-}
-
-```
-
-## Integration Examples
-
-### 1. Concept Documentation
-
-```markdown
-
-# Concept: Active Inference
-
-## Core Links
-
-- Theory: [[free_energy_principle]]
-
-- Implementation: [[active_inference_impl]]
-
-- Validation: [[active_inference_tests]]
-
-## Related Concepts
-
-- [[predictive_coding]]
-
-- [[belief_updating]]
-
-- [[action_selection]]
-
-## Applications
-
-- [[robot_control]]
-
-- [[decision_making]]
-
-- [[learning_systems]]
-
-```
-
-### 2. Implementation Documentation
-
-```markdown
-
-# Implementation: Belief Updating
-
-## Specification Links
-
-- Design: [[belief_update_design]]
-
-- Interface: [[belief_update_api]]
-
-- Tests: [[belief_update_tests]]
-
-## Dependencies
-
-- [[matrix_operations]]
-
-- [[probability_utils]]
-
-- [[optimization_methods]]
-
-## Examples
-
-- [[basic_belief_update]]
-
-- [[advanced_scenarios]]
-
-```
-
-### 3. Documentation Integration
-
-```markdown
-
-# Guide: System Overview
-
-## Component Links
-
-- [[architecture_overview]]
-
-- [[component_interactions]]
-
-- [[deployment_guide]]
-
-## Implementation Links
-
-- [[core_components]]
-
-- [[extension_points]]
-
-- [[integration_patterns]]
-
-## Reference Links
-
-- [[api_documentation]]
-
-- [[example_collection]]
-
-- [[troubleshooting_guide]]
-
-```
-
-## Best Practices
-
-### 1. Link Organization
-
-- Group related links logically
-
-- Maintain consistent structure
-
-- Use appropriate annotations
-
-- Include validation blocks
-
-### 2. Link Maintenance
-
-- Regular link validation
-
-- Update bidirectional links
-
-- Remove obsolete links
-
-- Add new relationships
-
-### 3. Link Quality
-
-- Clear relationship types
-
-- Appropriate context
-
-- Meaningful descriptions
-
-- Proper categorization
-
-## Related Templates
-
-- [[concept_template]]
-
-- [[implementation_template]]
-
-- [[documentation_template]]
-
-- [[validation_template]]
-
-## References
-
-- [[linking_completeness]]
-
-- [[documentation_standards]]
-
-- [[validation_framework]]
-
-- [[knowledge_organization]]
-
+## Checking links
+
+- `cognitive-verify-links` scans the repository's Markdown files. By default an
+  unresolved extensionless target counts as a concept link;
+  `cognitive-verify-links --strict-wiki-links` requires every wiki link to
+  resolve to a file.
+- `cognitive-normalize-frontmatter --check` lists pages whose
+  `semantic_relations` links are not quoted; `--write` fixes them.
+- `cognitive-validate-docs` runs the full documentation gate.
+
+## Best practices
+
+- Group related links under a heading and keep the structure consistent.
+- Prefer path-qualified targets (`folder/filename`) when a short name could
+  match more than one page.
+- Add a link back from the target page when the relation is mutual.
+- Remove links to pages that no longer exist.
+
+## Related documentation
+
+- [[docs/repo_docs/linking_completeness|Linking completeness]]
+- [[docs/repo_docs/linking_patterns|Obsidian linking patterns]]
+- [[docs/repo_docs/documentation_standards|Documentation standards]]
+- [[docs/templates/template_guide|Template guide]]

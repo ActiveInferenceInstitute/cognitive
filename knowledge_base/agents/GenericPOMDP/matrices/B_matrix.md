@@ -40,7 +40,7 @@ The B-matrix is a fundamental component in POMDPs and active inference framework
 
 ### Fundamental Definition
 
-- [[transition_probability]] - Basic concept
+- [[transition_probability]] - Probability of moving between states
 
   - Conditional probability P(s'|s,π)
 
@@ -52,7 +52,7 @@ The B-matrix is a fundamental component in POMDPs and active inference framework
 
 ### Key Properties
 
-- [[markov_property]] - Memory independence
+- [[markov_property]] - Next state depends only on the current state
 
   - History independence
 
@@ -62,7 +62,7 @@ The B-matrix is a fundamental component in POMDPs and active inference framework
 
 ### Structural Characteristics
 
-- [[matrix_structure]] - Organization
+- [[matrix_structure]] - Layout of rows, columns, and action slices
 
   - Dimensionality
 
@@ -118,7 +118,7 @@ constraints:
 
 ### Probabilistic Properties
 
-- [[transition_properties]] - Characteristics
+- [[transition_properties]] - Formal properties of the transition dynamics
 
   - Stochasticity
 
@@ -161,7 +161,7 @@ See `docs/examples/README.md` for runnable examples.
 
 ### Storage Formats
 
-- [[matrix_storage]] - Data management
+- [[matrix_storage]] - Storing and indexing matrices in memory
 
   - Dense arrays
 
@@ -173,7 +173,7 @@ See `docs/examples/README.md` for runnable examples.
 
 ### Computational Methods
 
-- [[transition_computation]] - Processing
+- [[transition_computation]] - Computing transition matrices and updates
 
   - Matrix operations
 
@@ -310,7 +310,7 @@ def simulate_trajectory(self,
 
 #### State Prediction
 
-- [[state_prediction]] - Future states
+- [[state_prediction]] - Predicting future states from transitions
 
   - Expected states
 
@@ -324,7 +324,7 @@ def simulate_trajectory(self,
 
 ### With State Space
 
-- [[state_space_integration]] - State representation
+- [[state_space_integration]] - Linking transitions to the state space
 
   - State encoding
 
@@ -348,7 +348,7 @@ def simulate_trajectory(self,
 
 ### With Observation Model
 
-- [[observation_integration]] - Perception
+- [[observation_integration]] - Linking transitions to observations
 
   - Hidden states
 
@@ -400,7 +400,7 @@ def simulate_trajectory(self,
 
 ### Computational Optimization
 
-- [[computation_optimization]] - Performance
+- [[computation_optimization]] - Speeding up transition computation
 
   - Matrix operations
 
@@ -424,7 +424,7 @@ def simulate_trajectory(self,
 
 ### Resource Management
 
-- [[resource_optimization]] - Resources
+- [[resource_optimization]] - Managing memory and compute costs
 
   - Memory allocation
 
@@ -438,7 +438,7 @@ def simulate_trajectory(self,
 
 ### Implementation Guidelines
 
-- [[implementation_guide]] - Development
+- implementation guide - Steps for implementing the matrix in code
 
   - Code structure
 
@@ -462,7 +462,7 @@ def simulate_trajectory(self,
 
 ### Maintenance Procedures
 
-- [[maintenance_procedures]] - Upkeep
+- [[maintenance_procedures]] - Maintaining and updating matrices over time
 
   - Updates
 
@@ -486,15 +486,15 @@ def simulate_trajectory(self,
 
 ## See Also
 
-- [[knowledge_base/agents/GenericPOMDP/matrices/A_matrix]] - Action model
+- [[knowledge_base/agents/GenericPOMDP/matrices/A_matrix]] - Likelihood mapping from states to observations
 
-- [[knowledge_base/agents/GenericPOMDP/matrices/D_matrix]] - Prior preferences
+- [[knowledge_base/agents/GenericPOMDP/matrices/D_matrix]] - Prior beliefs over initial states
 
-- [[state_space]] - State representation
+- [[state_space]] - Set of possible hidden states
 
-- [[policy_space]] - Action policies
+- [[policy_space]] - Set of candidate action sequences
 
-- [[active_inference]] - Framework
+- [[active_inference]] - Framework unifying perception and action
 
 - [[control_theory]] - Control principles
 

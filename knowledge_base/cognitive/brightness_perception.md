@@ -447,7 +447,7 @@ Brightness perception is the visual system's ability to process and interpret th
 
 - [[computational_vision]]
 
-- [[clinical_vision]]
+- clinical vision
 
 - [[lighting_science]]
 

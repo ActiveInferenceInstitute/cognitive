@@ -1,23 +1,35 @@
-# Ant Colony Optimization
+---
+title: Ant Colony
+type: concept
+status: draft
+updated: 2026-10-10
+semantic_relations:
+  - type: documented_by
+    links:
+      - "[[code/Things/Ant_Colony/Ant_Colony_README]]"
+      - "[[code/Things/Ant_Colony/AGENTS]]"
+  - type: related_to
+    links:
+      - "[[knowledge_base/biology/ant_colony_organization|Ant colony organization]]"
+      - "[[knowledge_base/cognitive/swarm_intelligence|Swarm intelligence]]"
+---
 
-Implementation of Ant Colony Optimization (ACO) and swarm intelligence algorithms using Active Inference principles.
+# Ant Colony
 
-## Overview
+Design sketch; no code in this repository. This folder contains only
+documentation: `README.md`, `AGENTS.md`, and `Ant_Colony_README.md`. There is no
+simulation, no `Output/` directory, and nothing to import.
 
-This module models stigmergic coordination and collective problem solving through Active Inference, where ants minimize free energy by reducing uncertainty about food locations and optimizing foraging routes.
+The idea: ants coordinate through stigmergy (pheromone traces left in the
+environment) and can be read as agents that reduce uncertainty about food
+locations. Details are in [[code/Things/Ant_Colony/Ant_Colony_README|the design notes]].
 
-## Contents
+For runnable agents see [[code/Things/README|the Things overview]].
 
-- **`AGENTS.md`**: Agent definitions and architecture details.
-- **`Output/`**: Generated simulation results (when available).
+## Related
 
-For full source code and detailed documentation, see [[code/Things/Ant_Colony/README|Knowledge Base: Ant Colony]].
-
-## Related Resources
-
-- [[code/Things/Ant_Colony/Ant_Colony_README|Detailed Ant Colony Documentation]]
-- [[knowledge_base/biology/ant_colony_organization|Ant Colony Organization (Biology)]]
-- [[knowledge_base/biology/ant_communication_systems|Ant Communication Systems]]
-- [[knowledge_base/cognitive/swarm_intelligence|Swarm Intelligence]]
-- [[knowledge_base/cognitive/collective_behavior|Collective Behavior]]
-- [[code/Things/Ant_Colony/AGENTS|Agent Details]]
+- [[knowledge_base/biology/ant_colony_organization|Ant colony organization (biology)]]
+- [[knowledge_base/biology/ant_communication_systems|Ant communication systems]]
+- [[knowledge_base/cognitive/swarm_intelligence|Swarm intelligence]]
+- [[knowledge_base/cognitive/collective_behavior|Collective behavior]]
+- [[docs/research/ant_colony_active_inference|Ant colony active inference research]]

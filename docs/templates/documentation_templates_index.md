@@ -1,190 +1,46 @@
+---
+title: Documentation Templates Index
+type: index
+status: stable
+created: 2024-02-06
+updated: 2026-10-10
+tags:
+  - templates
+  - documentation
+  - index
+semantic_relations:
+  - type: indexes
+    links:
+      - "[[docs/templates/documentation_templates|Documentation templates]]"
+      - "[[docs/templates/template_index|Template index]]"
+---
+
 # Documentation Templates Index
 
----
+The templates for documentation pages (as opposed to model-component nodes),
+each with its location.
 
-title: Documentation Templates Index
+## Concepts and guides
 
-type: index
+- [[docs/templates/ai_concept_template|AI concept template]]
+- [[docs/templates/cognitive_concept|Cognitive concept template]]
+- [[docs/templates/guide_template|Guide template]]
+- [[docs/templates/learning_path_template|Learning path template]]
 
-status: stable
+## Research and implementation
 
-created: 2024-02-06
+- [[docs/templates/research_document|Research document template]]
+- [[docs/templates/experiment_template|Experiment template]]
+- [[docs/templates/analysis_template|Analysis template]]
+- [[docs/templates/implementation_example|Implementation example template]]
+- [[docs/templates/package_component|Package component template]]
 
-tags:
+## Structure and links
 
-  - index
+- [[docs/templates/linking_template|Linking template]]
+- [[docs/templates/template_guide|Template guide]]
 
-  - templates
+## Related
 
-  - documentation
-
-semantic_relations:
-
-  - type: implements
-
-    links: [[knowledge_base/cognitive/knowledge_organization]]
-
-  - type: relates
-
-    links:
-
-      - [[docs/implementation/implementation_guides_index]]
-
-      - [[knowledge_base/cognitive/concept_documentation_index]]
-
----
-
-## Overview
-
-This directory contains templates for creating various types of documentation in the cognitive modeling system.
-
-## Core Templates
-
-### Documentation Types
-
-- concept template - Core concept documentation
-
-- [[guide_template]] - Implementation guide
-
-- api template - API documentation
-
-- example template - Usage example
-
-### Component Templates
-
-- model template - Model documentation
-
-- algorithm template - Algorithm documentation
-
-- class template - Class documentation
-
-- function template - Function documentation
-
-### Research Templates
-
-- [[experiment_template]] - Experiment documentation
-
-- [[analysis_template]] - Analysis documentation
-
-- results template - Results documentation
-
-## Specialized Templates
-
-### Development
-
-- [[package_component]] - Package component
-
-- tool template - Tool documentation
-
-- script template - Script documentation
-
-### Testing
-
-- test template - Test documentation
-
-- benchmark template - Benchmark documentation
-
-- validation template - Validation documentation
-
-### Integration
-
-- integration template - Integration guide
-
-- plugin template - Plugin documentation
-
-- extension template - Extension documentation
-
-## Content Templates
-
-### Structure
-
-- index template - Index page
-
-- overview template - Overview document
-
-- reference template - Reference document
-
-### Components
-
-- section template - Section structure
-
-- example block - Example block
-
-- note block - Note block
-
-### Metadata
-
-- frontmatter template - YAML frontmatter
-
-- metadata block - Metadata section
-
-- tag block - Tag organization
-
-## Format Guidelines
-
-### Markdown
-
-- markdown guide - Markdown usage
-
-- formatting guide - Text formatting
-
-- link guide - Link formatting
-
-### Code
-
-- code block - Code formatting
-
-- comment block - Comment formatting
-
-- docstring template - Docstring format
-
-### Diagrams
-
-- mermaid template - Mermaid diagrams
-
-- graph template - Graph visualization
-
-- flowchart template - Flowchart design
-
-## Template Usage
-
-### Getting Started
-
-- template usage - How to use templates
-
-- template examples - Example usage
-
-- template checklist - Usage checklist
-
-### Best Practices
-
-- naming conventions - Naming guidelines
-
-- structure guidelines - Structure guidelines
-
-- style guidelines - Style guidelines
-
-### Customization
-
-- template customization - Customization guide
-
-- extension guide - Extension guide
-
-- theme customization - Theme customization
-
-## Related Sections
-
-- [[docs/implementation/implementation_guides_index|Implementation Guides]]
-
-- [[knowledge_base/cognitive/concept_documentation_index|Core Concepts]]
-
-- [[docs/examples/usage_examples_index|Usage Examples]]
-
-## Contributing
-
-- template contribution - Contributing new templates
-
-- template review - Template review process
-
-- template maintenance - Template maintenance
-
+- [[docs/repo_docs/documentation_standards|Documentation standards]]
+- [[docs/examples/README|Examples]]

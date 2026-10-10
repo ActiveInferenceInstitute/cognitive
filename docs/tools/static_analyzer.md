@@ -2,6 +2,7 @@
 title: Static analysis
 type: tool
 status: stable
+updated: 2026-10-10
 created: 2026-08-02
 tags:
   - static_analysis
@@ -15,7 +16,10 @@ semantic_relations:
 
 # Static analysis
 
-Static type checking uses `mypy` (configured in `pyproject.toml`):
+There is no custom static analyzer; the repository uses these standard tools.
+
+Static type checking uses `mypy` (configured in `pyproject.toml` with
+`python_version = "3.12"`):
 
 ```bash
 mypy code/tools/src code/Things code/scripts

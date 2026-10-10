@@ -13,6 +13,9 @@ tags:
   - power_laws
   - edge_of_chaos
   - ising_model
+aliases:
+  - critical_points
+  - criticality
 semantic_relations:
   - type: foundation
     links:

@@ -1,5 +1,6 @@
 ---
 title: Topology
+description: "Mathematical background on topology, covering topological and metric spaces, algebraic and differential topology, and applications such as manifold learning and data analysis."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

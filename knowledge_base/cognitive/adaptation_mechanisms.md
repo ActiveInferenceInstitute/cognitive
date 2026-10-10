@@ -8,6 +8,9 @@ tags:
 - adaptation
 - learning
 - optimization
+aliases:
+  - environmental_adaptation
+  - adaptive_behavior
 semantic_relations:
   - type: implements
     links:

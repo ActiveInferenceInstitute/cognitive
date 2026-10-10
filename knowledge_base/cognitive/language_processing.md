@@ -8,6 +8,8 @@ tags:
 - communication
 - neural_systems
 - behavior
+aliases:
+  - natural_language_processing
 semantic_relations:
   - type: implements
     links:
@@ -35,69 +37,69 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
   - [[phonological_processing]] - Sound structure
 
-    - [[phoneme_recognition]] - Sound units
+    - [[phoneme_recognition]] - Identifying the basic sounds of speech
 
-    - [[prosody_processing]] - Intonation
+    - [[prosody_processing]] - Processing rhythm, stress, and intonation
 
   - [[word_recognition]] - Word identification
 
-    - [[lexical_access]] - Word meaning
+    - [[lexical_access]] - Retrieving word forms and meanings from memory
 
     - [[morphological_processing]] - Word structure
 
 ### Language Production
 
-- [[speech_production]] - Output generation
+- [[speech_production]] - Planning and producing spoken language
 
   - [[lexical_selection]] - Word choice
 
     - [[word_retrieval]] - Finding words
 
-    - [[semantic_access]] - Meaning selection
+    - [[semantic_access]] - Retrieving the meaning to be expressed
 
-  - [[articulation]] - Speech output
+  - [[articulation]] - Movements that produce speech sounds
 
-    - [[motor_planning]] - Movement prep
+    - [[motor_planning]] - Preparing speech movements
 
-    - [[phonetic_encoding]] - Sound assembly
+    - [[phonetic_encoding]] - Assembling sound sequences for articulation
 
 ### Linguistic Structure
 
-- [[language_structure]] - Organization
+- [[language_structure]] - Organization of language into levels
 
-  - [[syntax]] - Grammar rules
+  - [[syntax]] - Rules for ordering words into sentences
 
-    - [[sentence_structure]] - Organization
+    - [[sentence_structure]] - How words are arranged in sentences
 
-    - [[grammatical_rules]] - Constraints
+    - [[grammatical_rules]] - Constraints on well-formed sentences
 
-  - [[semantics]] - Meaning systems
+  - [[semantics]] - Study of meaning in language
 
     - [[word_meaning]] - Lexical semantics
 
-    - [[sentence_meaning]] - Compositional
+    - [[sentence_meaning]] - Meaning built from word meanings and structure
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[language_networks]] - Neural systems
+- [[language_networks]] - Brain systems supporting language
 
-  - [[perisylvian_network]] - Core language
+  - [[perisylvian_network]] - Core cortical regions around the Sylvian fissure
 
-    - [[brocas_area]] - Production
+    - [[brocas_area]] - Region central to speech production
 
-    - [[wernickes_area]] - Comprehension
+    - [[wernickes_area]] - Region central to language comprehension
 
-  - [[semantic_network]] - Meaning
+  - [[semantic_network]] - Brain regions storing and retrieving meaning
 
-    - [[temporal_pole]] - Concepts
+    - [[temporal_pole]] - Region supporting conceptual knowledge
 
-    - [[angular_gyrus]] - Integration
+    - [[angular_gyrus]] - Region integrating information across modalities
 
 ### Circuit Mechanisms
 
-- [[language_circuits]] - Local networks
+- [[language_circuits]] - Local neural circuits for language
 
   - [[phonological_circuits]] - Sound processing
 
@@ -109,23 +111,23 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - [[temporal_circuits]] - Word meaning
 
-    - [[frontal_circuits]] - Selection
+    - [[frontal_circuits]] - Selecting among competing alternatives
 
 ### Neuromodulation
 
-- [[language_modulation]] - Chemical control
+- [[language_modulation]] - Neurochemical modulation of language processing
 
   - [[dopamine_system]] - Learning/reward
 
-    - [[language_learning]] - Acquisition
+    - [[language_learning]] - Dopamine-supported learning of language
 
-    - [[feedback_processing]] - Error signals
+    - [[feedback_processing]] - Processing of error feedback signals
 
-  - [[acetylcholine_system]] - Attention
+  - [[acetylcholine_system]] - Cholinergic modulation of attention
 
-    - [[selective_attention]] - Focus
+    - [[selective_attention]] - Focusing on relevant linguistic input
 
-    - [[learning_consolidation]] - Memory
+    - [[learning_consolidation]] - Stabilizing newly learned material in memory
 
 ## Computational Principles
 
@@ -133,49 +135,49 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 - [[language_computation]] - Processing theory
 
-  - [[serial_processing]] - Sequential
+  - [[serial_processing]] - Stages processed one after another
 
     - [[bottom_up]] - Input driven
 
     - [[top_down]] - Knowledge driven
 
-  - [[parallel_processing]] - Simultaneous
+  - [[parallel_processing]] - Several processes operating at the same time
 
-    - [[interactive_activation]] - Bidirectional
+    - [[interactive_activation]] - Levels exchanging activation in both directions
 
-    - [[constraint_satisfaction]] - Multiple cues
+    - [[constraint_satisfaction]] - Integrating many cues to select an interpretation
 
 ### Learning Mechanisms
 
-- [[language_learning]] - Acquisition
+- [[language_learning]] - Mechanisms of language acquisition
 
   - [[statistical_learning]] - Pattern finding
 
-    - [[sequence_learning]] - Order patterns
+    - [[sequence_learning]] - Learning regularities in sequences
 
-    - [[distributional_learning]] - Statistics
+    - [[distributional_learning]] - Learning categories from input distributions
 
   - [[rule_learning]] - Grammar acquisition
 
-    - [[parameter_setting]] - Language rules
+    - [[parameter_setting]] - Fixing grammatical parameters from input
 
-    - [[constraint_learning]] - Limitations
+    - [[constraint_learning]] - Learning which structures are not allowed
 
 ### Information Theory
 
-- [[linguistic_information]] - Structure
+- [[linguistic_information]] - Information carried by linguistic structure
 
-  - [[entropy_measures]] - Uncertainty
+  - [[entropy_measures]] - Measures of uncertainty in language
 
     - [[word_entropy]] - Lexical uncertainty
 
     - [[syntactic_entropy]] - Structure uncertainty
 
-  - [[predictability]] - Expectation
+  - [[predictability]] - How expected a word or structure is
 
-    - [[word_prediction]] - Next word
+    - [[word_prediction]] - Anticipating the upcoming word
 
-    - [[structure_prediction]] - Coming structure
+    - [[structure_prediction]] - Anticipating upcoming syntactic structure
 
 ## Language Domains
 
@@ -185,153 +187,153 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
   - [[phoneme_system]] - Sound units
 
-    - [[consonants]] - Stop sounds
+    - [[consonants]] - Speech sounds made with airway constriction
 
-    - [[vowels]] - Continuous sounds
+    - [[vowels]] - Speech sounds made with an open vocal tract
 
   - [[syllable_structure]] - Sound groups
 
-    - [[onset_rhyme]] - Syllable parts
+    - [[onset_rhyme]] - Division of syllables into onset and rime
 
-    - [[stress_patterns]] - Emphasis
+    - [[stress_patterns]] - Patterns of emphasis across syllables
 
 ### Morphology
 
 - [[word_structure]] - Word formation
 
-  - [[morpheme_types]] - Meaning units
+  - [[morpheme_types]] - Categories of minimal meaningful units
 
     - [[roots]] - Core meaning
 
-    - [[affixes]] - Modifiers
+    - [[affixes]] - Elements attached to roots to modify them
 
   - [[word_formation]] - Building words
 
-    - [[derivation]] - New words
+    - [[derivation]] - Forming new words from existing ones
 
-    - [[inflection]] - Grammar marking
+    - [[inflection]] - Word forms marking tense, number, and case
 
 ### Syntax
 
-- [[sentence_structure]] - Grammar
+- [[sentence_structure]] - Grammatical organization of sentences
 
-  - [[phrase_structure]] - Unit organization
+  - [[phrase_structure]] - Grouping words into phrases
 
-    - [[noun_phrases]] - Thing groups
+    - [[noun_phrases]] - Phrases built around a noun
 
-    - [[verb_phrases]] - Action groups
+    - [[verb_phrases]] - Phrases built around a verb
 
-  - [[movement_operations]] - Rearrangement
+  - [[movement_operations]] - Operations that move sentence elements
 
-    - [[wh_movement]] - Questions
+    - [[wh_movement]] - Fronting of question words
 
-    - [[passivization]] - Voice change
+    - [[passivization]] - Converting active sentences to passive
 
 ## Applications
 
 ### Clinical Applications
 
-- [[language_disorders]] - Dysfunction
+- [[language_disorders]] - Impairments of language function
 
-  - [[aphasia]] - Language loss
+  - [[aphasia]] - Acquired impairment of language after brain damage
 
-    - [[brocas_aphasia]] - Production
+    - [[brocas_aphasia]] - Aphasia with impaired speech production
 
-    - [[wernickes_aphasia]] - Comprehension
+    - [[wernickes_aphasia]] - Aphasia with impaired comprehension
 
-  - [[developmental_disorders]] - Learning
+  - [[developmental_disorders]] - Disorders arising in language development
 
-    - [[specific_language_impairment]] - Pure
+    - [[specific_language_impairment]] - Language impairment without other deficits
 
-    - [[dyslexia]] - Reading problems
+    - [[dyslexia]] - Difficulty with accurate and fluent reading
 
 ### Educational Applications
 
-- [[language_education]] - Teaching
+- [[language_education]] - Teaching and learning of languages
 
-  - [[first_language]] - Native
+  - [[first_language]] - Language acquired from early childhood
 
     - [[literacy_development]] - Reading/writing
 
-    - [[metalinguistic_awareness]] - Language knowledge
+    - [[metalinguistic_awareness]] - Awareness of language as an object
 
-  - [[second_language]] - Additional
+  - [[second_language]] - Language learned after the first
 
-    - [[l2_acquisition]] - Learning
+    - [[l2_acquisition]] - Process of learning a second language
 
-    - [[bilingual_development]] - Two languages
+    - [[bilingual_development]] - Development of two languages
 
 ### Technology Applications
 
-- [[language_technology]] - Tools
+- [[language_technology]] - Technologies built around language
 
-  - [[natural_language_processing]] - Computer
+  - [[natural_language_processing]] - Computational processing of human language
 
     - [[speech_recognition]] - Sound to text
 
-    - [[machine_translation]] - Between languages
+    - [[machine_translation]] - Automatic translation between languages
 
-  - [[language_assistance]] - Help tools
+  - [[language_assistance]] - Tools that support language use
 
-    - [[writing_support]] - Composition
+    - [[writing_support]] - Tools that help with composing text
 
-    - [[reading_support]] - Comprehension
+    - [[reading_support]] - Tools that aid reading comprehension
 
 ## Research Methods
 
 ### Behavioral Methods
 
-- [[language_behavior]] - Performance
+- [[language_behavior]] - Observable language use and performance
 
-  - [[psycholinguistics]] - Processing study
+  - [[psycholinguistics]] - Study of language processing in the mind
 
-    - [[reaction_time]] - Speed measures
+    - [[reaction_time]] - Response speed as a measure of processing
 
-    - [[error_analysis]] - Mistake patterns
+    - error analysis - Mistake patterns
 
-  - [[corpus_analysis]] - Usage patterns
+  - [[corpus_analysis]] - Analysis of language use in text collections
 
-    - [[frequency_analysis]] - Word counts
+    - frequency analysis - Counting how often words occur
 
-    - [[collocation_analysis]] - Word pairs
+    - [[collocation_analysis]] - Words that tend to occur together
 
 ### Neural Methods
 
-- [[language_imaging]] - Brain activity
+- [[language_imaging]] - Imaging brain activity during language tasks
 
-  - [[functional_imaging]] - Activity patterns
+  - functional imaging - Imaging of brain activity during tasks
 
-    - [[language_lateralization]] - Side bias
+    - [[language_lateralization]] - Dominance of one hemisphere for language
 
-    - [[network_organization]] - Connections
+    - [[network_organization]] - Organization of connected language regions
 
   - [[temporal_measures]] - Time course
 
-    - [[erp_studies]] - Electrical
+    - [[erp_studies]] - Studies of event-related electrical responses
 
-    - [[meg_studies]] - Magnetic
+    - [[meg_studies]] - Studies using magnetoencephalography
 
 ### Computational Models
 
-- [[language_models]] - Theory testing
+- [[language_models]] - Models for testing language theories
 
-  - [[processing_models]] - Understanding
+  - [[processing_models]] - Models of comprehension and production
 
-    - [[parsing_models]] - Structure
+    - [[parsing_models]] - Models of building sentence structure
 
-    - [[semantic_models]] - Meaning
+    - [[semantic_models]] - Models of meaning representation
 
-  - [[learning_models]] - Acquisition
+  - [[learning_models]] - Models of language acquisition
 
     - [[statistical_models]] - Pattern finding
 
-    - [[rule_models]] - Grammar learning
+    - [[rule_models]] - Models using explicit grammatical rules
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[processing_complexity]] - Real language
+- [[processing_complexity]] - Handling the complexity of natural language
 
 - [[individual_differences]] - Person variation
 
@@ -339,11 +341,11 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Emerging Approaches
 
-- [[neural_decoding]] - Brain reading
+- [[neural_decoding]] - Inferring language content from brain activity
 
-- [[brain_stimulation]] - Direct intervention
+- [[brain_stimulation]] - Stimulating the brain to influence language
 
-- [[artificial_language]] - Machine language
+- [[artificial_language]]
 
 ## References
 

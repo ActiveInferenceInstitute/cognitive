@@ -1,292 +1,79 @@
-# Package Documentation Guide
-
-## Overview
-
-This guide outlines the documentation standards and organization for the Cognitive Modeling package. It combines Python docstrings, markdown documentation, and Obsidian's knowledge management capabilities.
-
-## Documentation Structure
-
-### Directory Organization
-
-```text
-
-docs/
-
-├── api/              # API reference documentation
-
-├── concepts/         # Core theoretical concepts
-
-├── examples/         # Usage examples and tutorials
-
-├── guides/           # How-to guides and tutorials
-
-└── tools/           # Tool-specific documentation
-
-```
-
-## Documentation Types
-
-### 1. API Documentation
-
-- Located in `docs/api/`
-
-- Generated from docstrings
-
-- Follows Google docstring format
-
-Example:
-
-```python
-
-def update_beliefs(observation: np.ndarray, prior: np.ndarray) -> np.ndarray:
-
-    """Updates agent beliefs based on new observations.
-
-    Args:
-
-        observation (np.ndarray): Current observation vector
-
-        prior (np.ndarray): Prior belief state
-
-    Returns:
-
-        np.ndarray: Updated belief state
-
-    See Also:
-
-        belief_update_algorithm
-
-        free_energy_computation
-
-    """
-
-    pass
-
-```
-
-### 2. Concept Documentation
-
-- Located in `docs/concepts/`
-
-- Theoretical foundations
-
-- Mathematical formulations
-
-- Links to implementations
-
-Example: `concepts/free_energy.md`:
-
-```markdown
-
-# Free Energy Principle
-
-## Mathematical Foundation
-
-...
-
-## Implementation
-
-See [[free_energy_impl]] for code implementation.
-
-```
-
-### 3. Example Documentation
-
-- Located in `docs/examples/`
-
-- Practical usage examples
-
-- Step-by-step tutorials
-
-- Interactive notebooks
-
-## Documentation Standards
-
-### Python Docstrings
-
-1. Use Google style docstrings
-
-1. Include type hints
-
-1. Link to relevant documentation
-
-1. Provide usage examples
-
-### Markdown Files
-
-1. Clear headings hierarchy
-
-1. Consistent formatting
-
-1. Proper linking
-
-1. Code examples
-
-### YAML Frontmatter
-
-```yaml
-
 ---
-
-title: Package Documentation
-
-category: guide
-
+title: Package documentation
+type: guide
 status: stable
-
-related:
-
-  - [[docstring_guide]]
-
-  - [[api_reference]]
-
+updated: 2026-10-10
 tags:
-
   - documentation
-
-  - standards
-
+  - api
+  - docstrings
+semantic_relations:
+  - type: implements
+    links:
+      - "[[docs/repo_docs/documentation_standards|Documentation standards]]"
+  - type: relates
+    links:
+      - "[[docs/api/api_reference|API reference]]"
+      - "[[docs/repo_docs/api_development|API development]]"
 ---
 
+# Package documentation
+
+How the `cognitive` package and the `Things` agents are documented. Everything is
+hand-written Markdown plus docstrings; there is no Sphinx, MkDocs, or generated
+API site, and no tool that builds documentation from docstrings.
+
+## Layers
+
+1. **Docstrings** in `code/tools/src`, `code/Things`, and `code/scripts`. Public
+   functions and classes should carry type hints and a docstring. The usual style is
+   a short summary line, then prose that states behavior, units, and what raises,
+   with identifiers in double backticks. Args/Returns sections are rare; this
+   abridged excerpt from `DiscreteGenerativeModel.posterior` shows the shape:
+
+   ```text
+   def posterior(self, observation: int | np.ndarray, prior: np.ndarray) -> np.ndarray:
+       """Return ``P(s | o)`` for one observation index or an observation distribution.
+
+       Fractional indices are rejected rather than truncated.
+       """
+   ```
+
+2. **Folder pages.** Each package folder has a `README.md` and usually an
+   `AGENTS.md` (for example `code/tools/src/models/active_inference/`). They state
+   what the folder owns and its invariants.
+3. **API pages** in `docs/api/`. [[docs/api/api_reference|The API reference]] lists
+   the exports of `cognitive.__all__` and the agent classes with their signatures;
+   [[docs/api/api_examples|API examples]] holds runnable snippets. The root
+   `README.md` carries the minimal discrete example.
+4. **Guides and examples** in `docs/guides/`, `docs/examples/`, and
+   `docs/implementation/`, which link to the API pages instead of repeating them.
+5. **Tool notes** in `docs/tools/`.
+
+## Rules
+
+- Name a class or function in documentation only if it can be imported, and give
+  the import path.
+- A `python` fence that uses the package must run as written. The validator
+  checks only that it compiles, so run changed snippets yourself.
+- When a public symbol changes, update its docstring, the API page, and
+  `CHANGELOG.md` in the same commit.
+- Keep folder pages and the code in agreement. `validate_docs.py` verifies that
+  every name in `cognitive.__all__` exists; it does not verify prose.
+
+## Checking
+
+```bash
+python code/scripts/validate_docs.py --json
+python -c "import cognitive; print(sorted(cognitive.__all__))"
 ```
 
-## Integration Patterns
-
-### Code-to-Doc Links
-
-
-### Doc-to-Code Links
-
-```markdown
-
-See implementation in `src/models/belief_update.py`:
-
-[[belief_update_impl#update_method]]
-
-```
-
-### Test Documentation
-
-```python
-
-def test_belief_update():
-
-    """Test case described in belief_update_tests"""
-
-    pass
-
-```
-
-## Maintenance
-
-### Documentation Updates
-
-1. Keep in sync with code
-
-1. Update related documents
-
-1. Maintain version consistency
-
-1. Review broken links
-
-### Version Control
-
-1. Document version dependencies
-
-1. Track breaking changes
-
-1. Maintain changelog
-
-1. Update migration guides
-
-## Tools and Automation
-
-### Documentation Generation
-
-- Use sphinx for API docs
-
-- Auto-generate from docstrings
-
-- Maintain cross-references
-
-- Update graphs
-
-### Link Validation and Inventory
-
-- Generate repository inventory and wikilink graph:
-
-  ```bash
-
-  python3 docs/repo_docs/repo_scripts/list_file_directory.py --root . --output docs/repo_docs/repo_scripts/output
-
-  ```
-
-- Fix broken/ambiguous/missing links:
-
-  ```bash
-
-  python3 docs/repo_docs/repo_scripts/fix_links.py --root . --output docs/repo_docs/repo_scripts/output
-
-  ```
-
-### Quality Checks
-
-- Link validation
-
-- Style consistency
-
-- Coverage metrics
-
-- Reference integrity
-
-## Best Practices
-
-### Writing Style
-
-1. Clear and concise
-
-1. Consistent terminology
-
-1. Proper citations
-
-1. Progressive disclosure
-
-### Organization
-
-1. Logical grouping
-
-1. Clear navigation
-
-1. Proper linking
-
-1. Version management
-
-### Code Examples
-
-1. Runnable snippets
-
-1. Clear context
-
-1. Error handling
-
-1. Best practices
-
-## Related Guides
-
-- [[api_documentation]]
-
-- [[docstring_standards]]
-
-- [[example_writing]]
-
-- [[documentation_workflow]]
-
-## References
-
-- [[python_documentation]]
-
-- [[sphinx_usage]]
-
-- [[obsidian_integration]]
-
-- [[documentation_tools]]
+Type checking (`mypy code/tools/src code/Things code/scripts`) and `ruff check .`
+cover the signatures the docstrings describe. See
+[[docs/repo_docs/validation|Validation]].
+
+## Related documentation
+
+- [[docs/repo_docs/documentation_standards|Documentation standards]]
+- [[docs/repo_docs/api_development|API development]]
+- [[docs/api/api_reference|API reference]]

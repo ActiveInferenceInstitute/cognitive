@@ -98,9 +98,7 @@ def test_efe_components_match_their_definitions(shape: tuple[int, int, int]) -> 
         assert ambiguity == pytest.approx(expected_ambiguity, abs=1e-9)
         # Ambiguity is H(o | s); the epistemic gain is the mutual information
         # H(o) - H(o | s). Both must be recoverable from the same joint.
-        assert epistemic == pytest.approx(
-            _entropy(predicted_states) - posterior_entropy, abs=1e-9
-        )
+        assert epistemic == pytest.approx(_entropy(predicted_states) - posterior_entropy, abs=1e-9)
         assert ambiguity + epistemic == pytest.approx(_entropy(predicted_observations), abs=1e-9)
 
 
@@ -312,9 +310,7 @@ def test_dynamics_weight_is_validated_and_scales_the_dynamic_term() -> None:
     observation = np.array([0.1, 0.2])
     energies = {}
     for weight in (0.0, 1.0, 2.0):
-        agent = ContinuousActiveInference(
-            n_states=2, n_obs=2, n_orders=3, dynamics_weight=weight
-        )
+        agent = ContinuousActiveInference(n_states=2, n_obs=2, n_orders=3, dynamics_weight=weight)
         agent.state.belief_means = means.copy()
         energies[weight] = agent._compute_free_energy(observation, means)
     dynamic = energies[1.0] - energies[0.0]

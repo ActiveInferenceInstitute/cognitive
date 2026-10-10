@@ -8,6 +8,8 @@ tags:
   - learning
   - imitation
   - observation
+aliases:
+  - cultural_learning
 semantic_relations:
   - type: relates
     links:

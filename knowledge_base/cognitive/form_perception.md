@@ -453,7 +453,7 @@ Form perception is the cognitive process by which the visual system analyzes, or
 
 - [[computational_vision]]
 
-- [[clinical_vision]]
+- clinical vision
 
 - [[cognitive_neuroscience]]
 

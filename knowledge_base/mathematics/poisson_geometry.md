@@ -1,5 +1,6 @@
 ---
 title: Poisson Geometry
+description: "Mathematical background on Poisson geometry, covering Poisson brackets and manifolds, Hamiltonian systems, Poisson reduction and symplectic foliation, with computational examples."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

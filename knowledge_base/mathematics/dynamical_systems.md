@@ -2,6 +2,8 @@
 title: "Dynamical Systems"
 type: "mathematical_concept"
 status: stable
+aliases:
+  - dynamics
 ---
 
 # Dynamical Systems
@@ -381,6 +383,8 @@ class StochasticDynamicalSystem(DynamicalSystem):
             states[i] = self.step(dt)
 
         return times, states
+```
+
 
 ### Information-Theoretic Analysis
 
@@ -614,7 +618,7 @@ def _mutual_information(x: np.ndarray, y: np.ndarray, embedding_dim: int) -> flo
 
     return mi
 
-```text
+```
 
 ### Formal Stability Theory
 
@@ -732,7 +736,7 @@ class EnhancedStabilityAnalyzer:
 
         }
 
-```text
+```
 
 ### Bifurcation Analysis
 
@@ -818,7 +822,7 @@ class BifurcationAnalyzer:
 
         }
 
-```text
+```
 
 ## Applications
 
@@ -1092,7 +1096,7 @@ class BifurcationAnalyzer:
 
       }
 
-  ```text
+  ```
 
 - Stability Theory
 
@@ -1120,7 +1124,7 @@ class BifurcationAnalyzer:
 
       return vector_field
 
-  ```text
+  ```
 
 - Bifurcation Theory
 
@@ -1158,7 +1162,7 @@ class BifurcationAnalyzer:
 
       return np.mean(exponents)
 
-  ```text
+  ```
 
 - Strange Attractors
 
@@ -1194,7 +1198,7 @@ class BifurcationAnalyzer:
 
           return np.concatenate([dH_dp, -dH_dq])
 
-  ```text
+  ```
 
 - Quantum Systems
 
@@ -1240,7 +1244,7 @@ class BifurcationAnalyzer:
 
           return np.array([dx, dy])
 
-  ```text
+  ```
 
 - Neural Dynamics
 
@@ -1280,7 +1284,7 @@ class BifurcationAnalyzer:
 
           return K
 
-  ```text
+  ```
 
 - Feedback Control
 
@@ -1320,7 +1324,7 @@ class BifurcationAnalyzer:
 
           return individual + coupling
 
-  ```text
+  ```
 
 - Collective Behavior
 
@@ -1374,7 +1378,7 @@ class BifurcationAnalyzer:
 
           return state + k2, dt
 
-  ```text
+  ```
 
 - Perturbation Methods
 
@@ -2238,7 +2242,7 @@ if __name__ == "__main__":
 
     validate_infinite_dimensional_systems()
 
-```text
+```
 
 ### Hamiltonian Dynamics and Symplectic Geometry
 
@@ -2774,7 +2778,7 @@ if __name__ == "__main__":
 
     validate_hamiltonian_systems()
 
-```text
+```
 
 ## See also
 

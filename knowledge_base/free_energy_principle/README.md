@@ -13,7 +13,7 @@ The Free Energy Principle (FEP) provides a unified mathematical framework for un
 ```
 free_energy_principle/
 ├── README.md                    # This overview document
-├── AGENTS.md                    # Agent architectures and implementations
+├── AGENTS.md                    # Folder index
 ├── mathematics/                 # Mathematical foundations and formulations
 │   ├── core_principle.md        # Core FEP mathematical formulation
 │   ├── variational_free_energy.md # Variational formulations
@@ -133,9 +133,12 @@ Where:
 
 ## 🔧 Implementation Frameworks
 
-### Python Implementations
+### Python sketch
+
+An illustrative skeleton, not package API (its helper methods are not defined here). The validated implementation is `cognitive.DiscreteGenerativeModel` with `cognitive.ActiveInferenceDispatcher`.
+
 ```python
-# Basic Active Inference Agent
+# Illustrative skeleton of an Active Inference agent
 class ActiveInferenceAgent:
     def __init__(self, state_dim, obs_dim, action_dim):
         # Generative model components

@@ -1434,7 +1434,7 @@ class PathIntegralFreeEnergy:
 
 ## References
 
-- [[friston]] - Free Energy Principle
+- friston - Free Energy Principle
 
 - [[parr]] - Active Inference
 

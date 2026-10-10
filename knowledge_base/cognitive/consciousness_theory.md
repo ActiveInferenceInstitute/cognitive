@@ -643,7 +643,7 @@ class MetacognitiveMonitor:
 ### Consciousness Research
 - [[attention_mechanisms]] - Consciousness modulation
 - [[working_memory]] - Conscious access
-- [[self_organization]] - Consciousness emergence
+- [[self_organization]] - Spontaneous formation of ordered structure
 
 ### Related Domains
 - [[consciousness]] - Philosophical approaches

@@ -1,4 +1,5 @@
 ---
+description: "Mathematical treatment of belief updating in Active Inference, covering the update equation, its free energy form, hierarchical extension, model terms and implementation."
 type: mathematical_concept
 id: belief_updating_001
 created: 2024-02-05

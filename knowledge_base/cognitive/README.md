@@ -244,10 +244,10 @@ The cognitive science knowledge base provides theoretical foundations and empiri
 - [[knowledge_base/systems/complex_systems|Complex Systems]]
 - [[knowledge_base/agents/architectures_overview|Agent Architectures]]
 
-### Implementation Examples
-- [[code/Things/Generic_Thing/README|Generic Thing Implementation]]
-- [[code/Things/Simple_POMDP/README|Simple POMDP Agents]]
-- [[tools/src/models/active_inference|Active Inference Models]]
+### Implementation examples
+- [[code/Things/Generic_Thing/README|Generic Thing]] (design notes only)
+- [[code/Things/Simple_POMDP/README|Simple POMDP Agents]] (runnable: `Things.Simple_POMDP`)
+- [[code/tools/src/models/active_inference/README|Active Inference Models]]
 
 ## 📈 Quality Metrics
 

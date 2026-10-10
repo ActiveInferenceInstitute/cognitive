@@ -3,7 +3,7 @@ title: Knowledge Base Active Inference Documentation
 type: agents
 status: stable
 created: 2024-01-01
-updated: 2026-08-02
+updated: 2026-10-10
 tags:
   - active_inference
   - knowledge_base
@@ -45,7 +45,11 @@ interconnected Markdown pages, not an executable package.
 
 - Pages use YAML frontmatter and `[[wiki links]]` for cross-references;
   explicit file-like links must resolve (checked by
-  `code/scripts/verify_links.py`).
+  `code/scripts/verify_links.py`). Unresolved extensionless targets count as
+  concept links unless `--strict-wiki-links` is passed.
+- Each domain's `catalog.md` is generated: refresh it with
+  `python code/scripts/kb_index.py --write` (`--check` reports stale catalogs)
+  rather than editing it by hand.
 - Do not invent citations, statistics, or references; cite the actual
   literature or the actual repository files.
 - Domain overviews live in each domain's `README.md`; each content folder

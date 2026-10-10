@@ -8,6 +8,9 @@ tags:
   - vision
   - computation
   - modeling
+aliases:
+  - computer_vision
+  - computer vision
 semantic_relations:
   - type: relates
     links:

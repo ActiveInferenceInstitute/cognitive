@@ -1,14 +1,11 @@
 ---
-title: Best Practices Guide
+title: Best practices guide
 type: guide
 status: stable
-created: 2025-01-01
-updated: 2026-02-07
+updated: 2026-10-10
 tags:
   - best_practices
-  - development
   - active_inference
-  - quality
 semantic_relations:
   - type: relates_to
     links:
@@ -17,71 +14,77 @@ semantic_relations:
       - "[[docs/implementation/README]]"
 ---
 
-# Best Practices
+# Best practices
 
-## API Best Practices
+Practices that the `cognitive` package enforces or that its tests check. Each
+rule names the behaviour it relies on.
 
-1. **Use typed configurations** — define explicit parameter types with validation
-2. **Handle errors gracefully** — catch specific exceptions and provide meaningful fallbacks
-3. **Specify precision parameters** — always set precision explicitly; do not rely on defaults
+## Build the generative model from validated arrays
 
-## Generative Model Best Practices
+- `A[o, s]` is `P(o | s)` and every column sums to one.
+- `B[s_next, s_prev, a]` has one column-stochastic slice per action.
+- `C` holds log-preferences over observations; `D` and `E` are state and
+  action priors.
+- `DiscreteGenerativeModel` checks these conditions on construction and raises
+  `ValueError` for wrong shapes, negative or non-finite entries, and columns
+  that do not sum to one. Let the constructor reject bad input rather than
+  renormalizing it silently.
 
-### Matrix Construction
+```python
+import numpy as np
 
-- Ensure all likelihood matrices (**A**) have columns that sum to 1
-- Ensure all transition matrices (**B**) have columns that sum to 1 for each action
-- Use small epsilon values (1e-16) to avoid log(0) in free energy calculations
-- Validate matrix dimensions match before running inference
+from cognitive import DiscreteGenerativeModel
 
-### Belief Updating
+model = DiscreteGenerativeModel(
+    A=np.array([[0.9, 0.1], [0.1, 0.9]]),
+    B=np.stack([np.eye(2)], axis=2),
+    C=np.array([0.0, 1.0]),
+    D=np.array([0.5, 0.5]),
+    E=np.array([1.0]),
+)
+try:
+    model.posterior(0.5, model.D)
+except ValueError as error:
+    print(error)  # Observation must be an integer, got 0.5
+```
 
-- Initialize beliefs with informative priors when possible (not uniform)
-- Monitor for numerical instabilities (NaN, Inf) during message passing
-- Use log-space computations for numerical stability with small probabilities
-- Set convergence thresholds explicitly rather than using fixed iteration counts
+## Pass indices as integers
 
-### Policy Selection
+Observation and action indices are not truncated: `1.9` raises, while `1`,
+`np.int64(1)` and `1.0` are accepted. See the Unreleased behaviour changes in
+[`CHANGELOG.md`](../../CHANGELOG.md).
 
-- Use softmax (not argmax) for action selection to maintain exploration
-- Tune the precision parameter (β) to balance exploration vs exploitation
-- Evaluate expected free energy components (epistemic + pragmatic) separately for debugging
-- Limit planning horizon to manageable depths (1–3 for discrete models)
+## Configure inference explicitly
 
-## Code Quality Best Practices
+- Set `method` (`variational`, `sampling`, or `mean_field`), `temporal_horizon`,
+  `learning_rate`, and `precision_init` in `InferenceConfig`; out-of-range values
+  raise `ValueError`.
+- `exploration_weight` defaults to `0.0`, the canonical objective. Raise it only
+  when extra information seeking is intended.
+- `temporal_horizon` enumerates every action sequence, so the number of
+  policies grows as `num_actions ** horizon`. `policy_limit` (default 4096)
+  caps enumeration, and a limit too small to cover every first action raises
+  instead of zeroing an action.
+- Pass `seed` for reproducible sampling; the dispatcher builds its generator
+  from `InferenceConfig.seed` unless an `rng` is supplied.
 
-### Logging
+## Test the behaviour you rely on
 
+- The suite lives in `code/tests/`; run `python -m pytest -q`. Coverage uses the
+  configured floor: `python -m pytest -q --cov` (do not pass `--cov=<path>`,
+  which narrows what is measured).
+- Assert that outputs are finite and normalized, as in
+  `code/tests/test_truth_audit.py`.
+- Test the smallest valid model and the invalid inputs that must raise.
 
-- Log at appropriate levels: DEBUG for internals, INFO for flow, WARNING for anomalies
-- Include free energy values in logs to track convergence
-- Use structured logging for machine-parseable output
+## Document with checks
 
-### Testing
+Run `python code/scripts/validate_docs.py --json` and
+`python code/scripts/verify_links.py . --json` before merging documentation
+changes. See [[docs/repo_docs/documentation_standards|Documentation standards]].
 
-- Write unit tests for each generative model component (A, B, C, D matrices)
-- Test belief updating with known posterior distributions
-- Verify policy selection produces correct actions for simple test cases
-- Run regression tests when modifying inference algorithms
+## Related
 
-### Documentation
-
-- Document all matrix dimensions and their semantic meaning
-- Include mathematical notation alongside code implementations
-- Provide worked examples with expected output for key functions
-- Cross-reference theoretical sources (Friston, Parr, Da Costa) in docstrings
-
-## Performance Best Practices
-
-- Profile inference loops before optimizing
-- Use NumPy vectorized operations instead of Python loops
-- Cache repeated computations (e.g., log-likelihood ratios)
-- Consider sparse representations for large state spaces
-- Batch observations when processing time-series data
-
-## Related Resources
-
-- [[docs/guides/agent_development|Agent Development Guide]] — agent architecture patterns
-- [[docs/guides/api_implementation|API Implementation Guide]] — API design patterns
-- [[docs/implementation/README|Implementation Guides]] — detailed implementation reference
-- [[docs/repo_docs/documentation_standards|Documentation Standards]] — documentation conventions
+- [[docs/guides/agent_development|Agent development guide]]
+- [[docs/guides/api_implementation|API implementation guide]]
+- [[docs/implementation/README|Implementation guides]]

@@ -41,7 +41,7 @@ systems.
 
 - The pages are conceptual; pseudocode within them is illustrative and is not
   package API.
-- Multi-agent and swarm material connects to the executable implementations
-  in `code/Things/` (for example the ant colony).
+- Multi-agent and swarm material is linked to design notes in `code/Things/`
+  (for example `Ant_Colony`); those folders hold documentation, not code.
 - Authoring rules for knowledge-base pages are in
   `knowledge_base/AGENTS.md`.

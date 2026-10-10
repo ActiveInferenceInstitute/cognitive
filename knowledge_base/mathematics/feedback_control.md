@@ -9,6 +9,8 @@ tags:
   - pid
   - transfer_function
   - good_regulator
+aliases:
+  - closed_loop_systems
 semantic_relations:
   - type: foundation
     links:

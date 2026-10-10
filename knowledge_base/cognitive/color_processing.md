@@ -445,7 +445,7 @@ Color processing is the neural and cognitive mechanism by which the visual syste
 
 - [[perceptual_psychology]]
 
-- [[vision_research]]
+- vision research
 
-- [[clinical_vision]]
+- clinical vision
 

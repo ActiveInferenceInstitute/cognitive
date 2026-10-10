@@ -33,425 +33,425 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
 ### Emotion Generation
 
-- [[emotion_elicitation]] - Feel start
+- [[emotion_elicitation]] - Processes that initiate an emotion
 
-  - [[trigger_processing]] - Cause handle
+  - [[trigger_processing]] - Detecting events that provoke emotion
 
-    - [[external_triggers]] - Outside cause
+    - [[external_triggers]] - Environmental events that provoke emotion
 
-      - [[sensory_events]] - Feel things
+      - [[sensory_events]] - Sights, sounds, and other sensory stimuli
 
-      - [[social_events]] - People cause
+      - [[social_events]] - Interpersonal events that provoke emotion
 
-    - [[internal_triggers]] - Inside cause
+    - [[internal_triggers]] - Internally generated emotion triggers
 
-      - [[thoughts]] - Think cause
+      - [[thoughts]] - Thoughts that provoke emotion
 
-      - [[memories]] - Remember cause
+      - [[memories]] - Recalled memories that provoke emotion
 
-  - [[appraisal_processes]] - Worth check
+  - [[appraisal_processes]] - Evaluating events for emotional significance
 
-    - [[primary_appraisal]] - First check
+    - [[primary_appraisal]] - Judging an event's relevance to goals
 
-      - [[relevance]] - Matter what
+      - [[relevance]] - Whether an event matters to the person
 
-      - [[goal_impact]] - Want effect
+      - [[goal_impact]] - Effect of an event on goals
 
-    - [[secondary_appraisal]] - Next check
+    - [[secondary_appraisal]] - Assessing resources for responding
 
-      - [[coping_potential]] - Can handle
+      - [[coping_potential]] - Perceived ability to handle the situation
 
-      - [[future_implications]] - Later what
+      - [[future_implications]] - Expected later consequences of an event
 
 ### Emotional Response
 
-- [[response_systems]] - Feel show
+- [[response_systems]] - Components of the emotional reaction
 
-  - [[physiological_response]] - Body change
+  - physiological response - Bodily changes during emotion
 
-    - [[autonomic_changes]] - Auto change
+    - [[autonomic_changes]] - Autonomic nervous system changes
 
-      - [[heart_rate]] - Heart speed
+      - [[heart_rate]] - Cardiovascular arousal measure
 
-      - [[skin_conductance]] - Sweat much
+      - [[skin_conductance]] - Sweat-related arousal measure
 
-    - [[endocrine_changes]] - Chemical change
+    - [[endocrine_changes]] - Hormonal changes during emotion
 
-      - [[cortisol]] - Stress make
+      - [[cortisol]] - Primary stress hormone
 
-      - [[oxytocin]] - Bond make
+      - [[oxytocin]] - Hormone supporting social bonding
 
-  - [[behavioral_response]] - Do change
+  - [[behavioral_response]] - Observable behavioral changes
 
-    - [[expressive_behavior]] - Show feel
+    - [[expressive_behavior]] - Outward display of emotion
 
-      - [[facial_expression]] - Face show
+      - [[facial_expression]] - Emotion shown through the face
 
-      - [[body_language]] - Body show
+      - [[body_language]] - Emotion shown through posture and gesture
 
-    - [[action_tendencies]] - Do urge
+    - [[action_tendencies]] - Urges to act in emotion-specific ways
 
-      - [[approach]] - Go to
+      - [[approach]] - Moving toward a stimulus
 
-      - [[avoidance]] - Go from
+      - [[avoidance]] - Moving away from a stimulus
 
 ### Emotion Regulation
 
-- [[regulation_processes]] - Feel manage
+- [[regulation_processes]] - Managing emotional experience and expression
 
-  - [[automatic_regulation]] - No think
+  - [[automatic_regulation]] - Regulation without conscious effort
 
-    - [[habituation]] - Get used
+    - [[habituation]] - Declining response to repeated stimuli
 
-      - [[response_decrease]] - Less react
+      - [[response_decrease]] - Reduced emotional reaction over time
 
-      - [[threshold_change]] - Need more
+      - [[threshold_change]] - Stronger stimuli needed to evoke response
 
-    - [[emotional_inertia]] - Stay same
+    - [[emotional_inertia]] - Resistance of emotional state to change
 
-      - [[persistence]] - Keep on
+      - persistence - Emotional state lasting over time
 
-      - [[recovery_rate]] - Back normal
+      - [[recovery_rate]] - Speed of return to baseline
 
-  - [[controlled_regulation]] - Think do
+  - [[controlled_regulation]] - Deliberate, effortful regulation
 
-    - [[cognitive_strategies]] - Mind ways
+    - [[cognitive_strategies]] - Regulating emotion by changing thinking
 
-      - [[reappraisal]] - Think new
+      - [[reappraisal]] - Reinterpreting an event's meaning
 
-      - [[distraction]] - Think else
+      - [[distraction]] - Shifting attention away from the trigger
 
-    - [[behavioral_strategies]] - Do ways
+    - [[behavioral_strategies]] - Regulating emotion through actions
 
-      - [[situation_selection]] - Pick where
+      - [[situation_selection]] - Choosing situations to shape emotion
 
-      - [[response_modulation]] - Change do
+      - [[response_modulation]] - Altering the response once it arises
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[emotion_networks]] - Feel parts
+- [[emotion_networks]] - Brain systems supporting emotion
 
-  - [[limbic_system]] - Core feel
+  - [[limbic_system]] - Core subcortical emotion circuitry
 
-    - [[amygdala]] - Feel mark
+    - [[amygdala]] - Emotional salience and fear processing
 
-      - [[threat_detection]] - Bad spot
+      - [[threat_detection]] - Rapid identification of danger
 
-      - [[emotional_learning]] - Feel learn
+      - [[emotional_learning]] - Acquiring emotional associations through experience
 
-    - [[hippocampus]] - Memory feel
+    - [[hippocampus]] - Context and memory in emotion
 
-      - [[context_processing]] - Where what
+      - context processing - Encoding situational context
 
-      - [[emotional_memory]] - Feel store
+      - [[emotional_memory]] - Storage of emotionally charged events
 
-  - [[cortical_regions]] - Think feel
+  - [[cortical_regions]] - Cortical areas shaping emotion
 
-    - [[prefrontal]] - Boss feel
+    - [[prefrontal]] - Prefrontal control of emotion
 
-      - [[ventromedial]] - Value judge
+      - [[ventromedial]] - Value and emotion-related evaluation
 
-      - [[dorsolateral]] - Feel control
+      - [[dorsolateral]] - Cognitive control of emotion
 
-    - [[insula]] - Body feel
+    - [[insula]] - Bodily awareness and feeling
 
-      - [[interoception]] - Inside feel
+      - [[interoception]] - Sensing internal bodily states
 
-      - [[emotional_awareness]] - Feel know
+      - [[emotional_awareness]] - Conscious recognition of one's own feelings
 
 ### Circuit Mechanisms
 
-- [[emotion_circuits]] - Feel paths
+- [[emotion_circuits]] - Neural pathways for emotion processing
 
-  - [[processing_streams]] - Info flow
+  - [[processing_streams]] - Parallel routes of emotional information
 
-    - [[fast_pathway]] - Quick feel
+    - [[fast_pathway]] - Rapid, coarse emotional processing
 
-      - [[subcortical_route]] - Low path
+      - [[subcortical_route]] - Direct thalamus-to-amygdala path
 
-      - [[automatic_response]] - Fast do
+      - [[automatic_response]] - Rapid reaction without deliberation
 
-    - [[slow_pathway]] - Slow feel
+    - [[slow_pathway]] - Slower, detailed emotional processing
 
-      - [[cortical_route]] - High path
+      - [[cortical_route]] - Path through sensory cortex
 
-      - [[deliberate_response]] - Think do
+      - [[deliberate_response]] - Reflective, considered reaction
 
-  - [[integration_circuits]] - Join paths
+  - integration circuits - Circuits combining emotion pathways
 
-    - [[emotion_cognition]] - Feel think
+    - [[emotion_cognition]] - Interaction of emotion and cognition
 
-      - [[attention_emotion]] - Feel focus
+      - [[attention_emotion]] - Emotional influences on attention
 
-      - [[memory_emotion]] - Feel member
+      - [[memory_emotion]] - Emotional influences on memory
 
-    - [[emotion_motivation]] - Feel want
+    - [[emotion_motivation]] - Links between emotion and motivated behavior
 
-      - [[reward_circuits]] - Good want
+      - [[reward_circuits]] - Pathways signaling reward and approach
 
-      - [[aversion_circuits]] - Bad avoid
+      - [[aversion_circuits]] - Pathways signaling punishment and avoidance
 
 ### Neuromodulation
 
-- [[emotion_modulation]] - Feel change
+- [[emotion_modulation]] - Chemical adjustment of emotional processing
 
-  - [[neurotransmitter_systems]] - Signal types
+  - [[neurotransmitter_systems]] - Chemical messengers affecting emotion
 
-    - [[monoamines]] - Mood change
+    - [[monoamines]] - Neurotransmitters regulating mood
 
-      - [[dopamine]] - Want good
+      - [[dopamine]] - Reward and motivation signaling
 
-      - [[serotonin]] - Feel good
+      - [[serotonin]] - Mood and well-being regulation
 
-    - [[neuropeptides]] - Bond change
+    - [[neuropeptides]] - Peptide modulators of social bonding
 
-      - [[oxytocin]] - Trust bond
+      - [[oxytocin]] - Promotes trust and bonding
 
-      - [[vasopressin]] - Fight bond
+      - [[vasopressin]] - Linked to aggression and social bonding
 
-  - [[hormone_systems]] - Body change
+  - [[hormone_systems]] - Hormonal influences on emotion
 
-    - [[stress_hormones]] - Stress make
+    - [[stress_hormones]] - Hormones released under stress
 
-      - [[cortisol]] - Stress now
+      - [[cortisol]] - Sustained stress response hormone
 
-      - [[adrenaline]] - Fight flight
+      - [[adrenaline]] - Hormone driving fight-or-flight responses
 
-    - [[social_hormones]] - Friend make
+    - [[social_hormones]] - Hormones shaping social behavior
 
-      - [[testosterone]] - Power make
+      - [[testosterone]] - Linked to dominance and status
 
-      - [[estrogen]] - Care make
+      - [[estrogen]] - Hormone influencing mood and social behavior
 
 ## Processing Principles
 
 ### Information Flow
 
-- [[emotion_processing]] - Feel work
+- [[emotion_processing]] - Overall flow of emotional information
 
-  - [[bottom_up]] - Body up
+  - [[bottom_up]] - Processing driven by sensory input
 
-    - [[sensory_processing]] - Feel get
+    - [[sensory_processing]] - Intake of sensory input
 
-      - [[body_signals]] - Inside signs
+      - [[body_signals]] - Internal bodily signals
 
-      - [[environment_signals]] - Outside signs
+      - [[environment_signals]] - External environmental signals
 
-    - [[automatic_evaluation]] - Quick judge
+    - [[automatic_evaluation]] - Rapid valence assessment
 
-      - [[valence_detection]] - Good bad
+      - [[valence_detection]] - Detecting pleasantness or unpleasantness
 
-      - [[arousal_detection]] - How much
+      - [[arousal_detection]] - Detecting intensity of activation
 
-  - [[top_down]] - Mind down
+  - [[top_down]] - Expectation- and goal-driven processing
 
-    - [[cognitive_influence]] - Think effect
+    - [[cognitive_influence]] - Cognitive effects on emotion
 
-      - [[expectation_effects]] - Think ahead
+      - [[expectation_effects]] - Predictions shaping emotional response
 
-      - [[attention_effects]] - Focus what
+      - [[attention_effects]] - Attention shaping emotional response
 
-    - [[regulatory_control]] - Boss control
+    - [[regulatory_control]] - Executive control over emotion
 
-      - [[goal_maintenance]] - Want keep
+      - [[goal_maintenance]] - Keeping regulation goals active
 
-      - [[response_inhibition]] - Stop do
+      - [[response_inhibition]] - Suppressing unwanted responses
 
 ### Integration Mechanisms
 
-- [[emotion_integration]] - Feel join
+- [[emotion_integration]] - Combining emotional information sources
 
-  - [[cross_modal]] - Type join
+  - [[cross_modal]] - Combining across sensory modalities
 
-    - [[sensory_integration]] - Feel join
+    - [[sensory_integration]] - Combining sensory inputs
 
-      - [[visual_emotional]] - See feel
+      - [[visual_emotional]] - Visual input combined with emotion
 
-      - [[auditory_emotional]] - Hear feel
+      - [[auditory_emotional]] - Auditory input combined with emotion
 
-    - [[cognitive_integration]] - Think join
+    - [[cognitive_integration]] - Combining emotion with cognition
 
-      - [[memory_integration]] - Remember feel
+      - [[memory_integration]] - Combining emotion with memory
 
-      - [[decision_integration]] - Choose feel
+      - [[decision_integration]] - Combining emotion with decision-making
 
-  - [[temporal_integration]] - Time join
+  - [[temporal_integration]] - Combining emotional information over time
 
-    - [[emotional_dynamics]] - Feel change
+    - [[emotional_dynamics]] - Time course of emotional change
 
-      - [[onset_dynamics]] - Start how
+      - [[onset_dynamics]] - How emotions begin
 
-      - [[offset_dynamics]] - End how
+      - [[offset_dynamics]] - How emotions end
 
-    - [[emotional_sequences]] - Feel order
+    - [[emotional_sequences]] - Ordered series of emotional states
 
-      - [[emotion_transitions]] - Change how
+      - [[emotion_transitions]] - Shifts between emotional states
 
-      - [[emotion_patterns]] - Feel paths
+      - [[emotion_patterns]] - Recurring emotional trajectories
 
 ### Learning Mechanisms
 
-- [[emotional_learning]] - Feel learn
+- [[emotional_learning]] - Acquiring emotional associations through experience
 
-  - [[associative_learning]] - Link learn
+  - [[associative_learning]] - Learning links between stimuli
 
-    - [[classical_conditioning]] - Pair learn
+    - [[classical_conditioning]] - Learning stimulus-stimulus pairings
 
-      - [[stimulus_association]] - Thing link
+      - [[stimulus_association]] - Linking stimuli to emotional outcomes
 
-      - [[response_learning]] - Do learn
+      - [[response_learning]] - Learning emotional responses
 
-    - [[evaluative_conditioning]] - Like learn
+    - [[evaluative_conditioning]] - Changing liking through pairing
 
-      - [[preference_formation]] - Want make
+      - [[preference_formation]] - Developing likes and dislikes
 
-      - [[attitude_learning]] - Think make
+      - [[attitude_learning]] - Acquiring evaluative attitudes
 
-  - [[social_learning]] - People learn
+  - [[social_learning]] - Learning from other people
 
-    - [[observational_learning]] - Watch learn
+    - [[observational_learning]] - Learning by watching others
 
-      - [[emotion_contagion]] - Feel spread
+      - [[emotion_contagion]] - Spread of emotion between people
 
-      - [[vicarious_learning]] - Other learn
+      - [[vicarious_learning]] - Learning from others' experiences
 
-    - [[instructed_learning]] - Tell learn
+    - [[instructed_learning]] - Learning from verbal instruction
 
-      - [[rule_learning]] - Should learn
+      - [[rule_learning]] - Learning emotional rules and norms
 
-      - [[strategy_learning]] - How learn
+      - strategy learning - Learning regulation strategies
 
 ## Applications
 
 ### Clinical Applications
 
-- [[emotional_disorders]] - Feel wrong
+- [[emotional_disorders]] - Disorders of emotional functioning
 
-  - [[anxiety_disorders]] - Worry wrong
+  - [[anxiety_disorders]] - Disorders of excessive fear and worry
 
-    - [[fear_disorders]] - Fear wrong
+    - [[fear_disorders]] - Disorders of excessive fear
 
-      - [[phobias]] - Thing fear
+      - [[phobias]] - Intense fear of specific objects
 
-      - [[panic]] - Sudden fear
+      - [[panic]] - Sudden episodes of intense fear
 
-    - [[worry_disorders]] - Think wrong
+    - [[worry_disorders]] - Disorders of persistent worry
 
-      - [[generalized_anxiety]] - All worry
+      - [[generalized_anxiety]] - Chronic, wide-ranging worry
 
-      - [[social_anxiety]] - People fear
+      - [[social_anxiety]] - Fear of social evaluation
 
-  - [[mood_disorders]] - Feel wrong
+  - [[mood_disorders]] - Disorders of sustained mood disturbance
 
-    - [[depression]] - Down wrong
+    - [[depression]] - Persistent low mood
 
-      - [[major_depression]] - Big down
+      - [[major_depression]] - Severe episodic depression
 
-      - [[persistent_depression]] - Long down
+      - [[persistent_depression]] - Chronic low-grade depression
 
-    - [[bipolar]] - Up down
+    - [[bipolar]] - Alternating depressive and manic episodes
 
-      - [[mania]] - High wrong
+      - [[mania]] - Elevated, hyperactive mood episodes
 
-      - [[cycling]] - Change wrong
+      - [[cycling]] - Rapid alternation of mood episodes
 
 ### Therapeutic Approaches
 
-- [[emotion_therapy]] - Feel help
+- [[emotion_therapy]] - Treatments for emotional difficulties
 
-  - [[cognitive_approaches]] - Think help
+  - [[cognitive_approaches]] - Treatments targeting thought patterns
 
-    - [[cognitive_restructuring]] - Think new
+    - [[cognitive_restructuring]] - Replacing unhelpful thoughts
 
-      - [[belief_change]] - Think change
+      - [[belief_change]] - Revising maladaptive beliefs
 
-      - [[perspective_change]] - View change
+      - [[perspective_change]] - Adopting alternative viewpoints
 
-    - [[mindfulness]] - Now focus
+    - [[mindfulness]] - Present-moment, nonjudgmental attention
 
-      - [[awareness_training]] - Know more
+      - awareness training - Building awareness of internal states
 
-      - [[acceptance]] - Let be
+      - [[acceptance]] - Allowing experiences without struggle
 
-  - [[behavioral_approaches]] - Do help
+  - [[behavioral_approaches]] - Treatments targeting behavior
 
-    - [[exposure_therapy]] - Face fear
+    - [[exposure_therapy]] - Confronting feared stimuli
 
-      - [[gradual_exposure]] - Slow face
+      - [[gradual_exposure]] - Stepwise confrontation of fears
 
-      - [[response_prevention]] - No hide
+      - [[response_prevention]] - Blocking avoidance and safety behaviors
 
-    - [[activation]] - Do more
+    - activation - Increasing engagement in rewarding activity
 
-      - [[pleasant_activities]] - Good do
+      - [[pleasant_activities]] - Scheduling rewarding activities
 
-      - [[social_engagement]] - People do
+      - [[social_engagement]] - Increasing social contact
 
 ### Technology Applications
 
-- [[emotion_technology]] - Tech help
+- [[emotion_technology]] - Technology for emotion measurement and support
 
-  - [[emotion_detection]] - Feel find
+  - [[emotion_detection]] - Automated recognition of emotion
 
-    - [[physiological_monitoring]] - Body watch
+    - [[physiological_monitoring]] - Measuring bodily signals
 
-      - [[heart_tracking]] - Heart check
+      - [[heart_tracking]] - Monitoring heart activity
 
-      - [[skin_response]] - Sweat check
+      - [[skin_response]] - Monitoring skin conductance
 
-    - [[behavioral_monitoring]] - Do watch
+    - [[behavioral_monitoring]] - Measuring observable behavior
 
-      - [[expression_analysis]] - Face check
+      - [[expression_analysis]] - Analyzing facial expressions
 
-      - [[voice_analysis]] - Talk check
+      - [[voice_analysis]] - Analyzing vocal features
 
-  - [[emotion_support]] - Feel aid
+  - [[emotion_support]] - Tools that assist emotional well-being
 
-    - [[regulation_aids]] - Control help
+    - [[regulation_aids]] - Tools that support emotion regulation
 
-      - [[biofeedback]] - Body learn
+      - [[biofeedback]] - Learning control via physiological feedback
 
-      - [[stress_management]] - Calm help
+      - stress management - Techniques for reducing stress
 
-    - [[intervention_tools]] - Fix help
+    - [[intervention_tools]] - Tools delivering interventions
 
-      - [[mood_tracking]] - Feel track
+      - [[mood_tracking]] - Recording mood over time
 
-      - [[therapy_apps]] - Help apps
+      - [[therapy_apps]] - Mobile applications delivering therapy
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[measurement_issues]] - Check hard
+- measurement issues - Difficulty measuring emotion reliably
 
-  - [[subjective_nature]] - Feel inside
+  - [[subjective_nature]] - Emotion as private experience
 
-  - [[temporal_dynamics]] - Time change
+  - [[temporal_dynamics]] - Changes in emotion over time
 
-- [[individual_differences]] - Person vary
+- [[individual_differences]] - Variation between people
 
-  - [[response_patterns]] - Feel ways
+  - [[response_patterns]] - Characteristic emotional response profiles
 
-  - [[regulation_styles]] - Control ways
+  - [[regulation_styles]] - Habitual regulation strategies
 
 ### Emerging Approaches
 
-- [[new_methods]] - New ways
+- new methods - Novel measurement and intervention approaches
 
-  - [[real_time_assessment]] - Now check
+  - [[real_time_assessment]] - Measuring emotion as it unfolds
 
-    - [[continuous_monitoring]] - Keep watch
+    - [[continuous_monitoring]] - Ongoing tracking of emotional state
 
-    - [[multimodal_tracking]] - All watch
+    - [[multimodal_tracking]] - Tracking across multiple signals
 
-  - [[personalized_intervention]] - Person help
+  - personalized intervention - Interventions tailored to the individual
 
-    - [[adaptive_systems]] - Change fit
+    - [[adaptive_systems]] - Systems that adjust to user state
 
-    - [[precision_medicine]] - Right help
+    - [[precision_medicine]] - Treatment matched to individual profile
 
 ## References
 

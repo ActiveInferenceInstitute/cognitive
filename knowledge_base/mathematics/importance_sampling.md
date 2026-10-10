@@ -1,5 +1,6 @@
 ---
 title: Importance Sampling
+description: "Importance sampling estimates expectations under a target distribution from weighted proposal samples; notes its relevance to Active Inference and that this repo computes exactly."
 type: mathematical_concept
 status: stable
 created: 2026-10-09

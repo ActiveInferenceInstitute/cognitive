@@ -1,370 +1,77 @@
 ---
-
-title: Obsidian Usage Guide
-
+title: Obsidian usage
 type: guide
-
 status: stable
-
 created: 2024-02-12
-
+updated: 2026-10-10
 tags:
-
   - obsidian
-
   - guide
-
   - overview
-
 semantic_relations:
   - type: implements
     links:
-      - "[[documentation_standards]]"
+      - "[[docs/repo_docs/documentation_standards|Documentation standards]]"
   - type: relates
     links:
-      - "[[docs/repo_docs/folder_structure]]"
-      - "[[docs/repo_docs/linking_patterns]]"
+      - "[[docs/repo_docs/folder_structure|Folder structure]]"
+      - "[[docs/repo_docs/linking_patterns|Linking patterns]]"
 ---
 
-# Obsidian Usage Guide
-
-## Overview
-
-This guide provides a comprehensive overview of using Obsidian for knowledge management in the cognitive modeling framework. For detailed information, see the specialized guides referenced throughout.
-
-## Quick Start
-
-### Installation
-
-1. Download Obsidian from [obsidian.md](https://obsidian.md)
-
-1. Install and open Obsidian
-
-1. Open the cognitive modeling vault
-
-1. Configure recommended settings
-
-### Essential Features
-
-- Markdown editing
-
-- Wiki-style linking
-
-- Graph visualization
-
-- Plugin system
-
-## Knowledge Organization
-
-### Directory Structure
-
-See [[docs/repo_docs/folder_structure|Folder Structure Guide]] for complete details.
-
-```text
-
-cognitive/
-
-├── knowledge_base/    # Core knowledge
-
-├── docs/             # Documentation
-
-└── templates/        # Note templates
-
-```
-
-### Content Types
-
-1. Knowledge Base
-
-   - Concepts
-
-   - Theories
-
-   - Implementations
-
-   - Research notes
-
-1. Documentation
-
-   - Guides
-
-   - API docs
-
-   - Examples
-
-   - Tutorials
-
-1. Templates
-
-   - Note templates
-
-   - Code templates
-
-   - Documentation templates
-
-## Linking System
-
-### Link Types
-
-See [[docs/repo_docs/linking_patterns|Linking Patterns Guide]] for complete details.
-
-```markdown
-
-# Basic Links
-
-[[filename]]
-
-[[filename|alias]]
-
-# Section Links
-
-[[filename#section]]
-
-# Block References
-
-[[filename#^block-id]]
-
-```
-
-### Link Organization
-
-- Group related links
-
-- Use consistent patterns
-
-- Maintain bidirectional links
-
-- Follow naming conventions
-
-## Templates
-
-### Using Templates
-
-1. Open command palette (Ctrl/Cmd + P)
-
-1. Select "Templates: Insert template"
-
-1. Choose appropriate template
-
-1. Fill in template fields
-
-### Template Types
-
-See [[templates/template_guide|Template Guide]] for complete details.
-
-1. Note Templates
-
-   ```markdown
-
-   ---
-
-   title: ${title}
-
-   type: ${type}
-
-   created: ${date}
-
-   ---
-
-   # ${title}
-
-   ## Overview
-
-   ## Content
-
-   ```
-
-1. Documentation Templates
-
-   ```markdown
-
-   ---
-
-   title: ${title}
-
-   type: documentation
-
-   status: draft
-
-   ---
-
-   # ${title}
-
-   ## Purpose
-
-   ## Usage
-
-   ```
-
-## Plugins
-
-### Core Plugins
-
-1. File Explorer
-
-1. Search
-
-1. Graph View
-
-1. Backlinks
-
-1. Outgoing Links
-
-1. Tags View
-
-### Community Plugins
-
-See Plugin Guide for complete details.
-
-1. Essential Plugins
-
-   - Dataview
-
-   - Calendar
-
-   - Templates
-
-   - Mind Map
-
-1. Development Plugins
-
-   - Code Blocks
-
-   - Mermaid
-
-   - PlantUML
-
-   - Math Preview
-
-## Workflows
-
-### Content Creation
-
-1. Choose appropriate template
-
-1. Fill in metadata
-
-1. Add content
-
-1. Create links
-
-1. Add tags
-
-1. Review and validate
-
-### Content Organization
-
-1. Use consistent structure
-
-1. Follow naming conventions
-
-1. Maintain clean hierarchy
-
-1. Regular cleanup
-
-### Link Management
-
-1. Create meaningful links
-
-1. Validate link targets
-
-1. Add backlinks
-
-1. Check link graph
-
-## Best Practices
-
-### File Management
-
-- Use clear names
-
-- Follow conventions
-
-- Maintain organization
-
-- Regular cleanup
-
-### Content Structure
-
-- Clear hierarchy
-
-- Consistent formatting
-
-- Proper metadata
-
-- Complete documentation
-
-### Link Hygiene
-
-- Valid links
-
-- Meaningful connections
-
-- Bidirectional links
-
-- Regular validation
-
-## Advanced Features
-
-### Graph View
-
-- Node filtering
-
-- Link filtering
-
-- Custom colors
-
-- Layout options
-
-### Search
-
-- Full-text search
-
-- Regular expressions
-
-- File properties
-
-- Tag filtering
-
-### Automation
-
-- Templates
-
-- Hotkeys
-
-- Scripts
-
-- Workflows
+# Obsidian usage
+
+The repository root is an Obsidian vault. Opening the cloned folder as a vault
+gives the graph view, backlinks, and wiki-link navigation over more than a thousand
+Markdown files. Nothing in the Python package depends on Obsidian; the scripts
+read the same files as plain text.
+
+## Opening the vault
+
+1. Install Obsidian from [obsidian.md](https://obsidian.md).
+2. Choose "Open folder as vault" and select the repository root.
+3. Trust the vault's settings when prompted. They are stored in `.obsidian/`
+   and tracked in git.
+
+## What is configured
+
+- `app.json`: `alwaysUpdateLinks` is on, so renames inside Obsidian rewrite
+  inbound links. Unsupported files are shown; deletion prompts are off.
+- `core-plugins.json`: file explorer, search, quick switcher, graph, backlinks,
+  outgoing links, tag pane, canvas, page preview, daily notes, templates, note
+  composer, command palette, bookmarks, outline, word count, and bases are on.
+  The Properties view is off.
+- `graph.json`: graph view shows orphans and has no colour groups.
+- `community-plugins.json`: one community plugin, `3d-graph`.
+
+The Templates core plugin is enabled but no template folder is set in the
+tracked settings. Node templates live in `docs/templates/` and are filled by
+`cognitive-create-node`, not by Obsidian (see below).
+
+## Working in the vault
+
+- **Find a page.** Start at `knowledge_base/index.md` or a domain's generated
+  `catalog.md`; use the quick switcher or search for a known title.
+- **Link pages.** Write `[[folder/page|Text]]` links; see
+  [[docs/repo_docs/obsidian_linking|Obsidian linking]] for how they resolve and
+  what the checker enforces.
+- **Create a node.** `cognitive-create-node --type agent --name my_agent` renders
+  `docs/templates/agent_template.md` into `knowledge_base/agents/my_agent.md`.
+  Available types are the `<type>_template.md` files in `docs/templates/`.
+- **Check your work.** Run `python code/scripts/validate_docs.py --json` and
+  `python code/scripts/kb_index.py --write` before committing; see
+  [[docs/repo_docs/validation|Validation]].
 
 ## Troubleshooting
 
-### Common Issues
+- A link that Obsidian shows as unresolved but the checker accepts is probably a
+  bare concept name; the checker treats those as intentional.
+- A link the checker reports as broken is a path or file-suffixed target that
+  does not exist; correct the path.
+- After renaming files outside Obsidian, run `python code/scripts/verify_links.py .`
+  to find links that now point nowhere.
 
-1. Broken links
+## Related documentation
 
-1. Missing files
-
-1. Plugin conflicts
-
-1. Performance issues
-
-### Solutions
-
-1. Link validation
-
-1. File verification
-
-1. Plugin updates
-
-1. Cache clearing
-
-## Related Documentation
-
-- [[docs/repo_docs/folder_structure|Folder Structure Guide]]
-
-- [[docs/repo_docs/linking_patterns|Linking Patterns Guide]]
-
-- [[templates/template_guide|Template Guide]]
-
-- Plugin Guide
-
+- [[docs/repo_docs/folder_structure|Folder structure]]
+- [[docs/repo_docs/linking_patterns|Linking patterns]]
+- [[docs/templates/template_guide|Template guide]]

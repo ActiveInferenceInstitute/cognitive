@@ -1,4 +1,5 @@
 ---
+description: "Decomposition of variational free energy into an accuracy term and a complexity term, with component analysis and visualization code for plotting total, stacked and ratio views."
 type: visualization
 id: vfe_components_001
 created: 2024-02-05

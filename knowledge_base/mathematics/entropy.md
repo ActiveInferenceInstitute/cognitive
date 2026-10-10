@@ -1,5 +1,6 @@
 ---
 title: Entropy
+description: "Short reference on Shannon, conditional and joint entropy, and its role as the uncertainty measure behind exploration and the ambiguity term of expected free energy."
 type: mathematical_concept
 status: stable
 created: 2025-08-08

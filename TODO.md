@@ -106,38 +106,59 @@ modules, a documentation gate that evaded its own scan, a rewriter that
 enforced the gate by renaming, an inert `exploration_weight`, and a published
 figure that could not distinguish its own actions.
 
-## Knowledge-base and tooling pass — 2026-10-09
+## Knowledge-base and tooling passes — 2026-10-09 and 2026-10-10
 
 Recorded in [`REVIEW_LOG_2026-10-09.md`](REVIEW_LOG_2026-10-09.md). Closed in
-that pass: nested-list `semantic_relations` frontmatter on 753 pages, fenced
+those passes: nested-list `semantic_relations` frontmatter on 753 pages, fenced
 link examples flattened by the 2026-08-02 pass, an expected-free-energy
-decomposition that contradicted the package, 158 missing concept pages, 72
-one-paragraph pages, a project-structure map of directories that do not exist, fictional
-API and agent pages in `docs/`, and eleven boundary and numerical defects in
-`code/` (listed in `CHANGELOG.md` under `[Unreleased]`).
+decomposition that contradicted the package, 358 missing concept pages, 72
+one-paragraph pages, a project-structure map of directories that do not exist,
+fictional content throughout `docs/`, 4,987 garbled link glosses, four code
+fences that never closed, a CI job that had been red since 2026-08-19, bibliographic
+checks on every page written in the two passes, and two rounds of boundary,
+numerical and silent-failure defects in `code/` (listed in `CHANGELOG.md` under
+`[Unreleased]`).
 
 ## Open
 
-- Verify the references on the pages written or expanded on 2026-10-09; they
-  were compiled from memory and not checked against the sources.
-- About 7,300 distinct `[[concept]]` link targets still have no page, 510 of
-  them linked three or more times. Write the ones that are real concepts and
-  unlink the ones that are not (`new_methods`, `validation_framework`,
-  `version_control`).
-- About fifty pages open with a formula and appear in their catalog by title
-  only; give them a `description:` in frontmatter.
-- Suspected, unproven, in `code/`: `AdaptiveControl.compute_policy_prior`
-  ignores `prediction_error`; `SimplePOMDP` accepts `inference.seed`,
-  `temperature` and horizon keys it does not use; precision learning in
-  `ContinuousActiveInference` is unbounded; `goal_prior` is scaled by
-  `1/temperature` in variational and sampling modes but not in mean-field.
-- Heading-anchor collection in `verify_links.py` and `check_markdown_links.py`
-  uses a non-greedy fence regex, so a comment inside a nested or unterminated
-  fence is still read as a heading. A line-based fence tracker would fix both.
-- The `EPS` floor in the dispatcher, homeostatic, `MatrixOps` and
-  `ensure_matrix_properties` normalizers still treats total mass below `1e-12`
-  as empty; only `DiscreteGenerativeModel.posterior` and `SimplePOMDP` were fixed.
-- `code/Things/README.md` lists code-less folders as active implementations.
+- 6,533 distinct `[[concept]]` names still have no page; none has more than two
+  links and about 950 have two. Most are single-use names from generated "Related"
+  lists. Triage the two-link ones the way the three-link ones were (write, alias or
+  unlink); unlinking the single-link names wholesale is a separate editorial call.
+- `parr_2022_chapter_6.md` (under
+  `docs/guides/application/`) appears to reproduce the chapter of a published
+  book at length. Decide whether it may stay; it is not rewritten.
+- `docs/implementation/rxinfer/docs/` (about 50 files) is a vendored snapshot of
+  the official RxInfer documentation and was not audited; its AGENTS file calls it
+  read-only, and some pages are out of date against the live site.
+- Suggested mergers from the docs audit: `ast_processing`, `compiler_pipeline` and
+  `advanced_systems_engineering_guidebook` into `rxinfer_stack`,
+  `systems_engineering_guidebook` and `model_specification`;
+  `learning_paths/navigation_framework_implementation.md` into
+  `learning_paths/AGENTS.md`; `examples/usage_examples_index.md` and
+  `usage_examples.md` into `examples/index.md`.
+- `docs/templates/learning_path_template.md` is still 1,374 lines of generic
+  content, and `cognitive-create-node` accepts four templates that are hand-copy
+  only (`ai_concept_template.md`, `guide_template.md`, `learning_path_template.md`,
+  `linking_template.md`).
+- `code/Things/ActiveInferenceInstitute/active_inference_institute.md` lost a
+  dated 2020-2029 history and roadmap because nothing in the repository supports it.
+  Restore it from sources if it is wanted.
+- `scipy` (used by `NetworkVisualizer` on the whole vault) and `tqdm` (used by
+  `docs/repo_docs/repo_scripts`) are imported but not declared as dependencies.
+  The `--mutation` option registered in `conftest.py` is read by no test.
+- `SimplePOMDP` still accepts, and ignores, a per-matrix `learning_rate` and the
+  `visualization` fields `formats`, `dpi` and `style`. Reject or honour them as
+  was done for the `inference` section.
+- The normalizers emit a `RuntimeWarning` when the total mass overflows (inputs near
+  `1e308`) before rescaling; the result is right but no test pins it, and a
+  warnings-as-errors run would fail. `_latex_preamble` leaves a mixed `\r\n`/`\n`
+  ending for CRLF sources. Fences indented four or more spaces are accepted as
+  fences, which differs from CommonMark in a way that errs toward skipping text.
+- References on the pages from these passes were checked against the records
+  available online; the classics that were not individually searched (Shannon 1948,
+  Pearl, Koller and Friedman, Broadbent, Baddeley and Hitch, Rescorla and Wagner,
+  Wertheimer, Watson, Ryle and a few more) were judged from knowledge.
 
 ## Open / deferred
 

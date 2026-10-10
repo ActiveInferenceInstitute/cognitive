@@ -1,5 +1,6 @@
 ---
 title: Bethe Free Energy
+description: "The Bethe free energy for factor graphs, whose stationary points are loopy belief propagation fixed points, with code and links to message passing."
 type: mathematical_concept
 status: stable
 created: 2025-08-08

@@ -656,7 +656,7 @@ diffusion_processes ↔ brownian_motion ↔ feynman_kac
 
 - **[[quantum_information]]** - Quantum extensions
 
-- **[[information_geometry]]** - Geometric information
+- **[[information_geometry]]** - Differential geometry of probability distributions
 
 **Cross-References:**
 

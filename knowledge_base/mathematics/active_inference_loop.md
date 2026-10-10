@@ -1,4 +1,5 @@
 ---
+description: "The Active Inference perception-action cycle of belief updating, policy selection and environment interaction, with an implementation, properties and algorithmic variants."
 type: mathematical_concept
 id: active_inference_loop_001
 created: 2024-02-05
@@ -63,7 +64,7 @@ The Active Inference loop implements the perception-action cycle through iterati
 
 - [[belief_state]] - Current estimates
 
-- [[uncertainty]] - Confidence measures
+- [[uncertainty]] - Degree of doubt in current beliefs
 
 ## Implementation
 
@@ -243,15 +244,15 @@ The Active Inference loop is used for:
 
 - [[free_energy_principle]] - Theoretical foundation
 
-- [[self_organization]] - Emergent behavior
+- [[self_organization]] - Order arising from local interactions
 
-- [[homeostasis]] - Stability
+- [[homeostasis]] - Keeping internal variables near set points
 
 ### Computational Properties
 
 - [[online_processing]] - Real-time updates
 
-- [[anytime_computation]] - Flexible computation
+- [[anytime_computation]] - Usable results available even when interrupted
 
 - [[adaptive_behavior]] - Learning and adaptation
 
@@ -289,13 +290,13 @@ The Active Inference loop is used for:
 
 - [[performance_metrics]]
 
-- [[debugging_tools]]
+- debugging tools
 
 ### Optimization
 
 - [[computational_efficiency]]
 
-- [[memory_management]]
+- memory management
 
 - [[parallel_processing]]
 
@@ -305,5 +306,5 @@ The Active Inference loop is used for:
 
 - [[active_inference_tutorial]]
 
-- [[implementation_guide]]
+- implementation guide
 

@@ -67,8 +67,6 @@ matrices:
 inference:
   learning_rate: 0.5
   temperature: 1.0
-  num_iterations: 10
-  policy_learning_rate: 0.2
 
 visualization:
   output_dir: "test_output"

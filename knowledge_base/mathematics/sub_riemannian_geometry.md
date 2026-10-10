@@ -1,5 +1,6 @@
 ---
 title: Sub-Riemannian Geometry
+description: "Mathematical background on sub-Riemannian geometry, covering horizontal distributions, the Hormander condition, geodesics and curvature, with optimal control applications."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

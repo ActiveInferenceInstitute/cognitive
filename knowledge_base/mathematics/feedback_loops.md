@@ -9,6 +9,11 @@ tags:
   - systems
   - stability
   - bistability
+aliases:
+  - feedback
+  - feedback_systems
+  - negative_feedback
+  - positive_feedback
 semantic_relations:
   - type: foundation
     links:

@@ -38,7 +38,8 @@ homeostasis, physiology, ecological networks, and social-insect organization.
 
 - This material is conceptual; it explains biology through the free energy
   principle. Pseudocode within pages is illustrative.
-- Executable biological models, where present, live in `code/Things/`
-  (for example the ant colony and BioFirm implementations).
+- No biological model is importable: the `Ant_Colony` and `BioFirm` folders
+  in `code/Things/` hold design notes only. The runnable agents are the
+  `cognitive` package, `Simple_POMDP`, and `Continuous_Generic`.
 - Authoring rules for knowledge-base pages are in
   `knowledge_base/AGENTS.md`.

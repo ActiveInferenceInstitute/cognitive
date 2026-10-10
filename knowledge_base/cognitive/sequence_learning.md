@@ -8,6 +8,8 @@ tags:
   - learning
   - sequences
   - temporal
+aliases:
+  - action_sequences
 semantic_relations:
   - type: relates
     links:

@@ -2,6 +2,7 @@
 title: Cursor integration
 type: tool
 status: stable
+updated: 2026-10-10
 created: 2026-08-02
 tags:
   - cursor

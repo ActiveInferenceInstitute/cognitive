@@ -5,24 +5,14 @@ title: Active Inference in Social Systems Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
-modified: 2024-03-15
 
-modified: 2025-08-08
-
-version: 3.1.0
 
 complexity: intermediate
 
-processing_priority: 1
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: intermediate
 
@@ -91,23 +81,15 @@ semantic_relations:
 
 - **Theory Component**: 50%
 
-## Repo-integrated labs (TDD)
+## Repository labs
 
-- Social learning via ant colony analogies (collective behavior)
+Runnable material in this repository is the `cognitive` package, `Things.Simple_POMDP`, and `Things.Continuous_Generic`. The `Generic_POMDP`, `BioFirm`, `Ant_Colony`, and `Generic_Thing` folders contain documentation only, so there are no scripts to launch for them.
 
-  ```bash
-  python3 /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/ant_colony/main.py --config /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/config/colony_config.yaml
-  ```
+- Executed starting points: [[docs/examples/index|Examples index]] and [[docs/api/api_examples|API examples]].
 
-  - Add tests for information-flow and conservative exploration under perturbations
+- Continuous-agent checks: `python -m pytest code/tests/visualization/test_continuous_generic.py -q`.
 
-- Generic POMDP small-society toy
-
-  ```bash
-  python3 /home/trim/Documents/GitHub/cognitive/Things/Generic_POMDP/generic_pomdp.py
-  ```
-
-  - Compare preference shaping vs. coordination costs; assert bounded policy entropy
+- Exercise: build two `DiscreteGenerativeModel` agents that observe each other's actions; the shared environment loop is your own code.
 
 ### Cross-repo anchors
 
@@ -117,7 +99,7 @@ semantic_relations:
 
 ### Purpose and Scope
 
-This comprehensive learning path explores Active Inference principles in social systems, emphasizing cultural intelligence, global accessibility, and adaptive learning technologies. The curriculum provides frameworks for understanding and modeling complex social dynamics while ensuring inclusive and culturally responsive educational approaches.
+This learning path explores Active Inference principles in social systems, emphasizing cultural intelligence, global accessibility, and adaptive learning technologies. The curriculum provides frameworks for understanding and modeling complex social dynamics while ensuring inclusive and culturally responsive educational approaches.
 
 ### Target Audience
 
@@ -149,26 +131,7 @@ By completing this path, learners will be able to:
 
 - Education: Personalized learning, cultural responsiveness
 
-## Global Accessibility and Multilingual Learning Framework
-
-### Multilingual Learning Platform
-
-
-### Diverse Learning Modality Framework
-
-
-### Cultural Competency and Inclusive Assessment Framework
-
-
 ## Core Learning Path
-
-### 1. Social Modeling (4 weeks)
-
-#### Week 1-2: Collective State Inference
-
-
-#### Week 3-4: Social Action Selection
-
 
 ### 2. Social Applications (6 weeks)
 
@@ -204,9 +167,6 @@ By completing this path, learners will be able to:
 
 ### 3. Collective Intelligence (4 weeks)
 
-#### Week 1-2: Group Problem Solving
-
-
 #### Week 3-4: Collective Learning
 
 - Knowledge Aggregation
@@ -218,9 +178,6 @@ By completing this path, learners will be able to:
 - Adaptive Learning
 
 ### 4. Advanced Topics (4 weeks)
-
-#### Week 1-2: Social Institutions
-
 
 #### Week 3-4: Social Adaptation
 

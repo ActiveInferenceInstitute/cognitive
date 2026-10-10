@@ -8,6 +8,8 @@ tags:
 - neural_architecture
 - information_processing
 - organization
+aliases:
+  - hierarchical_organization
 semantic_relations:
   - type: implements
     links:
@@ -159,9 +161,9 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
 ### Neural Networks
 
-- [[deep_neural_networks]] - Artificial systems
+- [[deep_neural_networks]] - Multilayer artificial learning networks
 
-  - [[convolutional_networks]] - Visual processing
+  - [[convolutional_networks]] - Networks using local filters for images
 
   - [[recurrent_networks]] - Temporal processing
 
@@ -179,7 +181,7 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
 ### Cognitive Architectures
 
-- [[cognitive_models]] - Mind modeling
+- [[cognitive_models]] - Computational models of mental processes
 
   - [[production_systems]] - Rule-based
 
@@ -191,21 +193,21 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
 ### Current Challenges
 
-- [[scale_invariance]] - Level consistency
+- [[scale_invariance]] - Similar structure across scales
 
-- [[information_bottleneck]] - Capacity limits
+- [[information_bottleneck]] - Compression retaining task-relevant information
 
-- [[integration_problem]] - Level combination
+- [[integration_problem]] - Combining information across hierarchy levels
 
 ### Emerging Applications
 
-- [[artificial_intelligence]] - Machine learning
+- [[artificial_intelligence]] - Machine-based intelligent behavior
 
   - [[hierarchical_ai]] - Level-based AI
 
   - [[cognitive_computing]] - Brain-inspired
 
-  - [[neuromorphic_computing]] - Neural hardware
+  - [[neuromorphic_computing]] - Brain-inspired computing hardware
 
 ### Future Developments
 

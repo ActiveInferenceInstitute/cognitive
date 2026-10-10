@@ -14,6 +14,8 @@ tags:
 - behavior
 - motor_control
 - planning
+aliases:
+  - target_selection
 semantic_relations:
   - type: implements
     links:

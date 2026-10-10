@@ -8,6 +8,8 @@ status: stable
 
 created: 2024-02-07
 
+updated: 2026-10-10
+
 tags:
 
   - template
@@ -19,7 +21,7 @@ tags:
 semantic_relations:
   - type: template_for
     links:
-      - "[[research_documents]]"
+      - "[[docs/research/research_documentation|Research documentation]]"
 ---
 
 # [Research Topic]
@@ -46,11 +48,11 @@ semantic_relations:
 
 ### Core Concepts
 
-- [[concept1|Core Concept 1]]
+- Core Concept 1
 
-- [[concept2|Core Concept 2]]
+- Core Concept 2
 
-- [[concept3|Core Concept 3]]
+- Core Concept 3
 
 ### Mathematical Foundation
 
@@ -169,11 +171,9 @@ def plot_results():
 
 ```bash
 
-# Setup commands
+# From the repository root; installs the package and its console scripts
 
-pip install -r requirements.txt
-
-python setup.py develop
+pip install -e ".[dev]"
 
 ```
 

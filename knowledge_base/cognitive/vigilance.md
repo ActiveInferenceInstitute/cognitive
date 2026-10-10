@@ -8,6 +8,8 @@ tags:
 - attention
 - monitoring
 - performance
+aliases:
+  - alertness
 semantic_relations:
   - type: implements
     links:

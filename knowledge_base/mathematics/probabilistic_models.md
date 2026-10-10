@@ -7,6 +7,8 @@ tags:
 - mathematics
 - probability
 - modeling
+aliases:
+  - probabilistic_modeling
 semantic_relations:
   - type: foundation
     links:

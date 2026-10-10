@@ -10,7 +10,7 @@ from typing import Any
 import numpy as np
 import yaml
 
-from ...utils.matrix_utils import as_integer
+from ...utils.matrix_utils import as_integer, normalize_mass
 from ..matrices.matrix_ops import MatrixOps
 from .base import ActiveInferenceModel, ModelState
 from .dispatcher import ActiveInferenceDispatcher, InferenceConfig, InferenceMethod, PolicyType
@@ -159,11 +159,23 @@ class AdaptiveControl(ControlMode):
         self.exploration_weight = exploration_weight
 
     def compute_policy_prior(self, state: ModelState, goal: np.ndarray) -> np.ndarray:
+        """Return ``exp(logits)`` with the maximum logit shifted to zero.
+
+        The logits are the target-tracking score ``-|beliefs - goal|`` scaled by
+        ``(1 - exploration_weight) / (1 + exploration_weight * prediction_error)``.
+        A large prediction error therefore flattens the prior toward uniform
+        (more exploration), and a vanishing one leaves the tracking score at
+        full strength. The prediction error must reach the output through the
+        scale: an additive exploration term that is the same for every entry
+        cancels in the max-shift, which is how an earlier version made
+        ``prediction_error`` inert.
+        """
+        error = float(state.prediction_error)
+        if not np.isfinite(error) or error < 0:
+            raise ValueError("prediction_error must be finite and non-negative")
         exploitation = -np.abs(state.beliefs - goal)
-        exploration = -float(state.prediction_error) * np.ones_like(state.beliefs)
-        logits = (
-            1.0 - self.exploration_weight
-        ) * exploitation + self.exploration_weight * exploration
+        sharpness = (1.0 - self.exploration_weight) / (1.0 + self.exploration_weight * error)
+        logits = sharpness * exploitation
         shifted = logits - np.max(logits)
         return np.exp(shifted)
 
@@ -456,10 +468,7 @@ class HomeostaticInference(ActiveInferenceModel):
             raise ValueError(f"Expected vector of size {size}, got {values.size}")
         if not np.all(np.isfinite(values)) or np.any(values < 0):
             raise ValueError("Probability vector must be finite and non-negative")
-        total = float(values.sum())
-        if total <= 1e-12:
-            return np.full(size or values.size, 1.0 / (size or values.size))
-        return values / total
+        return normalize_mass(values)
 
     def _observation_vector(self, observation: int | np.ndarray, size: int) -> np.ndarray:
         if np.ndim(observation) == 0:

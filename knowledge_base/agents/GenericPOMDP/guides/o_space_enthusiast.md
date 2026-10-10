@@ -436,7 +436,7 @@ Want to dive deeper? Check out:
 
 - [[sensor_fusion_basics]] - Combining different observations
 
-- [[noise_filtering]] - Cleaning up sensor data
+- noise filtering - Cleaning up sensor data
 
 - [[perception_systems]] - How robots perceive the world
 

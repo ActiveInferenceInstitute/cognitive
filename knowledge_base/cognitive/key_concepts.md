@@ -106,7 +106,7 @@ Fundamental units of knowledge representation:
 
 - [[model_architecture]]
 
-- [[implementation_guide]]
+- implementation guide
 
 ## Tool Integration
 
@@ -166,7 +166,7 @@ Fundamental units of knowledge representation:
 
    - Collaboration
 
-   - See [[version_control]]
+   - See version control
 
 ### Cognitive Architecture
 
@@ -206,9 +206,9 @@ Fundamental units of knowledge representation:
 
 1. Use [[cursor_integration]]
 
-1. Follow [[code_style]]
+1. Follow code style
 
-1. Update [[documentation_guide]]
+1. Update documentation guide
 
 ### Knowledge Management
 
@@ -224,7 +224,7 @@ Fundamental units of knowledge representation:
 
 1. Use [[branching_strategy]]
 
-1. Review [[deployment_guide]]
+1. Review deployment guide
 
 ## Best Practices
 
@@ -234,7 +234,7 @@ Fundamental units of knowledge representation:
 
 - Clear dependencies
 
-- See [[code_organization]]
+- See code organization
 
 ### Documentation
 
@@ -242,7 +242,7 @@ Fundamental units of knowledge representation:
 
 - Clear examples
 
-- See [[documentation_guide]]
+- See documentation guide
 
 ### Testing
 
@@ -250,7 +250,7 @@ Fundamental units of knowledge representation:
 
 - Integration tests
 
-- See [[testing_guide]]
+- See testing guide
 
 ## Advanced Topics
 
@@ -292,7 +292,7 @@ Fundamental units of knowledge representation:
 
 - [[research_papers]]
 
-- [[implementation_examples]]
+- implementation examples
 
 - [[further_reading]]
 

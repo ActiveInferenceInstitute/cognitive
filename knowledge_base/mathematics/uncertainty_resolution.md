@@ -1,4 +1,5 @@
 ---
+description: "How an agent resolves uncertainty through entropy-driven information seeking and active resolution, with metrics, formulation, implementation and visualization methods."
 type: mathematical_concept
 id: uncertainty_resolution_001
 created: 2024-02-05
@@ -264,9 +265,9 @@ Links to:
 
 - [[entropy]] - Uncertainty measure
 
-- [[kl_divergence]] - Divergence measure
+- [[kl_divergence]] - Difference between two probability distributions
 
-- [[mutual_information]] - Information measure
+- [[mutual_information]] - Information one variable carries about another
 
 ## Implementation
 
@@ -332,7 +333,7 @@ def compute_uncertainty_resolution(
 
    - Asymptotic behavior
 
-   - Links to [[information_bounds]]
+   - Links to information bounds
 
 1. **Active Nature**
 
@@ -344,15 +345,15 @@ def compute_uncertainty_resolution(
 
 ## Related Concepts
 
-- [[active_inference]] - Framework
+- [[active_inference]] - Framework unifying perception and action
 
-- [[information_seeking]] - Strategy
+- [[information_seeking]] - Choosing actions that reduce uncertainty
 
-- [[optimal_experiment_design]] - Design
+- [[optimal_experiment_design]] - Choosing experiments that maximize information
 
-- [[uncertainty_quantification]] - Measurement
+- [[uncertainty_quantification]] - Estimating and reporting uncertainty in outputs
 
-- [[information_geometry]] - Geometry
+- [[information_geometry]] - Geometry of probability distributions
 
 ## References
 
@@ -586,7 +587,7 @@ class UncertaintyVisualizer:
 
 Links to:
 
-- [[visualization_guide]] - Visualization standards
+- visualization guide - Visualization standards
 
 - [[plotting_utilities]] - Plotting tools
 
@@ -736,7 +737,7 @@ graph LR
 
 - [[information_theory]] - Theoretical foundation
 
-- [[active_inference]] - Framework context
+- [[active_inference]] - Framework unifying perception and action
 
 - [[belief_updating]] - State estimation
 
@@ -746,49 +747,49 @@ graph LR
 
 ### Resolution Methods
 
-- [[information_gain]] - Knowledge acquisition
+- [[information_gain]] - Uncertainty reduction from an observation
 
-- [[active_learning]] - Strategic learning
+- [[active_learning]] - Learning by choosing which data to query
 
-- [[optimal_experiment_design]] - Query design
+- [[optimal_experiment_design]] - Choosing experiments that maximize information
 
-- [[exploration_strategies]] - Search methods
+- [[exploration_strategies]] - Methods for exploring unknown states
 
-- [[convergence_control]] - Learning stability
+- [[convergence_control]] - Managing how quickly learning settles
 
 ### Analysis Tools
 
-- [[information_metrics]] - Measurement tools
+- [[information_metrics]] - Quantities measuring information and uncertainty
 
-- [[convergence_analysis]] - Learning progress
+- [[convergence_analysis]] - Assessing whether learning has converged
 
 - [[visualization_methods]] - Visual analysis
 
 - [[performance_evaluation]] - System assessment
 
-- [[statistical_tests]] - Validation methods
+- [[statistical_tests]] - Tests for validating results
 
 ### Implementation Aspects
 
-- [[numerical_methods]] - Computation tools
+- [[numerical_methods]] - Numerical techniques for computing quantities
 
-- [[optimization_algorithms]] - Search techniques
+- [[optimization_algorithms]] - Algorithms for minimizing objective functions
 
-- [[probability_distributions]] - Distribution handling
+- [[probability_distributions]] - Representing and manipulating distributions
 
-- [[computational_efficiency]] - Performance
+- [[computational_efficiency]] - Reducing computation time and memory
 
-- [[numerical_stability]] - Robustness
+- [[numerical_stability]] - Avoiding rounding and overflow errors
 
 ## Theoretical Foundations
 
-- [[information_geometry]] - Geometric view
+- [[information_geometry]] - Geometry of probability distributions
 
-- [[statistical_inference]] - Learning framework
+- [[statistical_inference]] - Drawing conclusions about parameters from data
 
-- [[decision_theory]] - Choice framework
+- [[decision_theory]] - Choosing actions under uncertainty
 
-- [[optimization_theory]] - Search principles
+- [[optimization_theory]] - Mathematical principles of optimization
 
-- [[learning_dynamics]] - System behavior
+- [[learning_dynamics]] - How beliefs change during learning
 

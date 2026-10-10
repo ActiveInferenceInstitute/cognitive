@@ -1,222 +1,116 @@
+---
+title: Component Documentation Template
+type: template
+status: stable
+created: 2024-02-06
+updated: 2026-10-10
+tags:
+  - template
+  - component
+  - package
+semantic_relations:
+  - type: template_for
+    links:
+      - "[[docs/api/api_reference|API reference]]"
+  - type: relates
+    links:
+      - "[[docs/repo_docs/package_documentation|Package documentation]]"
+---
+
 # Component Documentation Template
 
----
+Copy this page to document one component of the `cognitive` package (source in
+`code/tools/src/`). Replace the text in square brackets, delete sections that do
+not apply, and make sure every symbol and path you name exists. The public
+exports are listed in [[docs/api/api_reference|the API reference]].
 
+Suggested frontmatter for the copied page:
+
+```yaml
+---
 title: Component Name
-
 type: package_component
-
-status: [draft|stable|deprecated]
-
+status: draft
 created: YYYY-MM-DD
-
-last_updated: YYYY-MM-DD
-
-version: X.Y.Z
-
-dependencies:
-
-  - dependency1
-
-  - dependency2
-
-related:
-
-  - [[related_component1]]
-
-  - [[related_component2]]
-
+updated: YYYY-MM-DD
 tags:
-
   - component
-
-  - category
-
+semantic_relations:
+  - type: relates
+    links:
+      - "[[path/to/related_component_1]]"
+      - "[[path/to/related_component_2]]"
 ---
+```
 
 ## Overview
 
-Brief description of the component's purpose and role in the system.
+[Purpose of the component and its role in the package.]
 
 ## Installation
 
 ```bash
-
-pip install package[component]
-
+# From the repository root: installs the package and its console scripts
+pip install -e ".[dev]"
 ```
 
-## Core Features
+## Core features
 
-- Feature 1
-
-- Feature 2
-
-- Feature 3
+- [Feature 1]
+- [Feature 2]
 
 ## Usage
 
-### Basic Usage
-
 ```python
-
-from package.component import MainClass
-
-instance = MainClass()
-
-result = instance.method()
-
+# Import from the top-level package where the symbol is exported
+from cognitive import ActiveInferenceDispatcher
 ```
 
-### Advanced Usage
+Show a complete, runnable example here and run it with the repository's Python
+before publishing the page.
 
-```python
-
-# Advanced usage examples
-
-```
-
-## API Reference
+## API reference
 
 ### Classes
 
-- [[ComponentClass1]] - Brief description
-
-- [[ComponentClass2]] - Brief description
+- `ClassName`: [brief description and source file]
 
 ### Functions
 
-- [[function1]] - Brief description
-
-- [[function2]] - Brief description
+- `function_name`: [brief description and source file]
 
 ## Configuration
 
-```python
-
-# Configuration examples and options
-
-CONFIG = {
-
-    "option1": value1,
-
-    "option2": value2
-
-}
-
-```
+[Configuration keys the component reads, for example from `config.yaml`, and
+their defaults.]
 
 ## Integration
 
-### With Other Components
-
-- Integration with [[component1]]
-
-- Integration with [[component2]]
-
-### Common Patterns
-
-```python
-
-# Common integration patterns
-
-```
-
-## Examples
-
-### Example 1: Basic Task
-
-```python
-
-# Basic example code
-
-```
-
-### Example 2: Advanced Usage
-
-```python
-
-# Advanced example code
-
-```
+- [How this component is used by other components]
+- [Components this one depends on]
 
 ## Testing
 
-### Unit Tests
-
-Location: `tests/component/`
-
-```python
-
-# Example test case
-
-```
-
-### Integration Tests
-
-```python
-
-# Example integration test
-
-```
+Tests live in `code/tests/`. Run one file with
+`python -m pytest code/tests/test_<name>.py -v`, or the whole suite with
+`python -m pytest code/tests/ -v`.
 
 ## Performance
 
-### Benchmarks
-
-```python
-
-# Benchmark results or code
-
-```
-
-### Optimization Tips
-
-- Tip 1
-
-- Tip 2
+[Measured results only. `cognitive-benchmark --repetitions 1` runs the
+repository benchmarks.]
 
 ## Troubleshooting
 
-### Common Issues
+1. [Issue]
+   - Cause: [cause]
+   - Solution: [solution]
 
-1. Issue 1
+## Version history
 
-   - Cause
+See `CHANGELOG.md` for released and unreleased changes.
 
-   - Solution
+## Related documentation
 
-1. Issue 2
-
-   - Cause
-
-   - Solution
-
-## Version History
-
-### Current (X.Y.Z)
-
-- Feature A added
-
-- Bug B fixed
-
-### Previous (X.Y.W)
-
-- Initial release
-
-## Related Documentation
-
-- [[component_guide]]
-
-- [[api_reference]]
-
-- [[example_usage]]
-
-## References
-
-- [[technical_spec]]
-
-- [[design_doc]]
-
-- External documentation
-
+- [[docs/api/api_reference|API reference]]
+- [[docs/repo_docs/package_documentation|Package documentation]]

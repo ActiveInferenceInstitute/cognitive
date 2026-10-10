@@ -1,289 +1,131 @@
-# Model Implementation Guide
-
 ---
-
-title: Model Implementation Guide
-
+title: Model implementation
 type: guide
-
 status: stable
-
 created: 2024-02-06
-
+updated: 2026-10-10
 tags:
-
   - implementation
-
   - models
-
   - development
-
-  - architecture
-
 semantic_relations:
-
   - type: implements
-
     links:
-
-      - [[knowledge_base/cognitive/active_inference|Active Inference]]
-
-      - [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]]
-
+      - "[[knowledge_base/cognitive/active_inference|Active Inference]]"
+      - "[[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]"
   - type: relates
-
     links:
-
-      - [[docs/implementation/implementation_patterns|Implementation Patterns]]
-
-      - [[docs/api/api_reference|API Reference]]
-
+      - "[[docs/implementation/implementation_patterns|Implementation patterns]]"
+      - "[[docs/api/api_reference|API reference]]"
 ---
 
-## Overview
+# Model implementation
 
-This guide provides detailed instructions for implementing cognitive models based on the Active Inference framework. While the [[knowledge_base/cognitive/cognitive_science|knowledge base]] provides theoretical foundations, this guide focuses on practical implementation steps.
+How a model is built on this package. The theory is in the knowledge base
+([[knowledge_base/cognitive/active_inference|Active Inference]]); the
+signatures are in [[docs/api/api_reference|the API reference]]. This page covers
+the extension points.
 
-## Model Architecture
+## The pieces
 
-### Core Components
+| Piece | Where | Role |
+|---|---|---|
+| `DiscreteGenerativeModel` | `code/tools/src/models/active_inference/generative_model.py` | Validated `A`, `B`, `C`, `D`, `E` arrays; prediction, posterior, expected free energy, policy evaluation |
+| `InferenceConfig` | `dispatcher.py` | Method (`variational`, `mean_field`, `sampling`), horizon, learning rate, precision, seed |
+| `ActiveInferenceDispatcher` | `dispatcher.py` | `dispatch_belief_update` and `dispatch_policy_inference` for a model and config |
+| `ModelState` | `base.py` | Beliefs, policies, precision, free energy, prediction error |
+| `ActiveInferenceModel` | `base.py` | Abstract lifecycle: belief and policy updates, precision, free energy, state save and load |
 
+Matrix conventions: `A[o, s] = P(o | s)`, `B[s_next, s_prev, a]`, `C` holds
+log-preferences over observations, `D` and `E` are state and action priors.
+Only discrete policies are supported.
 
-### State Management
+## Writing a model
 
-```python
-
-# @state_management
-
-def initialize_state(self):
-
-    """
-
-    Initialize model state.
-
-    Theory: State Initialization
-
-    Implementation: State Management
-
-    """
-
-    # Initialize belief states
-
-    self.beliefs = self._initialize_beliefs()
-
-    # Initialize action states
-
-    self.policies = self._initialize_policies()
-
-    # Initialize perception states
-
-    self.perception = self._initialize_perception()
-
-```
-
-## Implementation Steps
-
-### 1. Belief System Implementation
-
-
-### 2. Policy Implementation
-
-
-### 3. Perception Implementation
-
-
-## Integration Guidelines
-
-### 1. Component Integration
+Subclass `ActiveInferenceModel`. Five methods are abstract: `_load_config`,
+`_initialize_matrices`, `_initialize_state`, `step`, and `visualize`. The base
+class supplies `update_beliefs`, `infer_policies`, `update_precision`,
+`calculate_free_energy`, `get_state`, `save_state`, and `load_state` (a
+versioned YAML document), provided the subclass sets `self.dispatcher`.
 
 ```python
+import numpy as np
 
-# @component_integration
+from cognitive import (
+    ActiveInferenceDispatcher,
+    ActiveInferenceModel,
+    DiscreteGenerativeModel,
+    InferenceConfig,
+    ModelState,
+)
 
-def integrate_components(self):
 
-    """
+class TwoStateModel(ActiveInferenceModel):
+    """A minimal concrete model that routes inference through the dispatcher."""
 
-    Integrate model components.
+    def _load_config(self, config_path):
+        return dict(config_path)
 
-    See System Integration
+    def _initialize_matrices(self):
+        self.generative_model = DiscreteGenerativeModel(
+            A=np.array([[0.9, 0.1], [0.1, 0.9]]),
+            B=np.stack([np.eye(2), np.array([[0.1, 0.9], [0.9, 0.1]])], axis=2),
+            C=np.array([0.0, 1.0]),
+            D=np.array([0.5, 0.5]),
+            E=np.array([0.5, 0.5]),
+        )
+        config = InferenceConfig("variational", "discrete", 2, 0.5, 1.0, seed=0)
+        self.dispatcher = ActiveInferenceDispatcher(config, self.generative_model)
 
-    """
+    def _initialize_state(self):
+        model = self.generative_model
+        return ModelState(model.D.copy(), model.E.copy(), 1.0, 0.0, 0.0)
 
-    # Connect belief system
+    def step(self, action=None):
+        observation = 1
+        self.update_beliefs(observation)
+        return observation, float(self.state.free_energy)
 
-    self._connect_belief_system()
+    def visualize(self, plot_type, **kwargs):
+        return self.state.beliefs
 
-    # Connect policy system
 
-    self._connect_policy_system()
-
-    # Connect perception system
-
-    self._connect_perception_system()
-
+model = TwoStateModel({"prior_beliefs": [0.5, 0.5]})
+observation, free_energy = model.step()
+policies = model.infer_policies()
+assert np.isclose(model.state.beliefs.sum(), 1.0) and np.isclose(policies.sum(), 1.0)
 ```
 
-### 2. Data Flow
-
-```python
-
-# @data_flow
-
-def process_cycle(self, input_data: Input) -> Action:
-
-    """
-
-    Process single cognitive cycle.
-
-    Theory: Cognitive Cycle
-
-    """
-
-    # Process perception
-
-    observation = self.perception_model.process_observation(input_data)
-
-    # Update beliefs
-
-    beliefs = self.belief_model.update_beliefs(observation)
-
-    # Select policy
-
-    policy = self.policy_model.select_policy(beliefs)
-
-    # Get action
-
-    action = policy.get_action()
-
-    return action
-
-```
-
-## Validation Framework
-
-### 1. Model Validation
-
-```python
-
-# @model_validation
-
-def validate_model(self) -> ValidationResult:
-
-    """
-
-    Validate model implementation.
-
-    See Validation Guide
-
-    """
-
-    # Validate components
-
-    component_validation = self._validate_components()
-
-    # Validate integration
-
-    integration_validation = self._validate_integration()
-
-    # Validate behavior
-
-    behavior_validation = self._validate_behavior()
-
-    return ValidationResult(
-
-        component_validation,
-
-        integration_validation,
-
-        behavior_validation
-
-    )
-
-```
-
-### 2. Testing Framework
-
-```python
-
-# @testing_framework
-
-def test_model(self) -> TestResults:
-
-    """
-
-    Test model implementation.
-
-    See Testing Guide
-
-    """
-
-    # Run unit tests
-
-    unit_results = self._run_unit_tests()
-
-    # Run integration tests
-
-    integration_results = self._run_integration_tests()
-
-    # Run system tests
-
-    system_results = self._run_system_tests()
-
-    return TestResults(
-
-        unit_results,
-
-        integration_results,
-
-        system_results
-
-    )
-
-```
-
-## Best Practices
-
-### 1. Implementation Guidelines
-
-- Follow [[docs/implementation/implementation_patterns|Implementation Patterns]]
-
-- Use Code Organization
-
-- Apply [[docs/repo_docs/documentation_standards|Documentation Standards]]
-
-### 2. Performance Optimization
-
-- Implement [[knowledge_base/cognitive/performance_optimization|Optimization Guidelines]]
-
-- Monitor [[knowledge_base/cognitive/performance_metrics|Performance Metrics]]
-
-- Profile using Profiling Guide
-
-### 3. Quality Assurance
-
-- Follow Testing Guidelines
-
-- Use Validation Framework
-
-- Review with Code Review Process
-
-## Related Documentation
-
-- [[knowledge_base/cognitive/cognitive_science|Cognitive Science Theory]]
-
-- [[docs/api/api_reference|API Reference]]
-
-- [[docs/implementation/implementation_patterns|Implementation Patterns]]
-
-- System Integration
-
-## References
-
-- [[knowledge_base/cognitive/active_inference|Active Inference]]
-
-- [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]]
-
-- [[knowledge_base/cognitive/predictive_processing|Predictive Processing]]
-
-- [[knowledge_base/cognitive/theoretical_foundations|Theoretical Foundations]]
+The constructor calls `_load_config`, then `_initialize_matrices`, then
+`_initialize_state`, and validates the state: beliefs and policies must be
+finite, non-negative, normalized vectors, `precision` must be positive, and
+`prediction_error` non-negative. A violation raises `ValueError`.
+
+## Complete implementations to read
+
+- `Things.Simple_POMDP.SimplePOMDP` (`code/Things/Simple_POMDP/simple_pomdp.py`):
+  a YAML- or dict-configured discrete agent with `step`, `run`, `reset`,
+  `save_state`, `load_state`, and `visualize`.
+- `Things.Continuous_Generic.ContinuousActiveInference`
+  (`code/Things/Continuous_Generic/continuous_generic.py`): a
+  generalized-coordinates continuous agent.
+- `HomeostaticFactory` in `homeostatic.py`: builds a homeostatic agent from a
+  labelled configuration.
+
+The other folders under `code/Things/` document agent designs but contain no
+importable code.
+
+## Checklist for a change
+
+1. Write the mathematical definition in the docstring or the knowledge-base page.
+2. Validate inputs at the boundary and raise `ValueError` naming the parameter.
+3. Add a deterministic regression test with a closed-form or hand-computed
+   oracle ([[docs/repo_docs/unit_testing|Unit testing]]).
+4. Update [[docs/api/api_reference|the API reference]] and `CHANGELOG.md`.
+
+## Related documentation
+
+- [[docs/api/api_reference|API reference]]
+- [[docs/implementation/implementation_patterns|Implementation patterns]]
+- [[docs/guides/agent_development|Agent development guide]]
+- [[docs/repo_docs/unit_testing|Unit testing]]

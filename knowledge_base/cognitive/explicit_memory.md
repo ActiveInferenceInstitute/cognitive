@@ -8,6 +8,8 @@ tags:
 - memory
 - consciousness
 - declarative
+aliases:
+  - declarative_memory
 semantic_relations:
   - type: implements
     links:

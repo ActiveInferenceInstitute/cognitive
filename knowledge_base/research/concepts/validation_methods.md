@@ -5,6 +5,8 @@ status: stable
 created: 2024-02-12
 updated: 2026-02-07
 tags: [validation, verification, testing, model_evaluation]
+aliases:
+  - model_validation
 semantic_relations:
   - type: relates
     links:

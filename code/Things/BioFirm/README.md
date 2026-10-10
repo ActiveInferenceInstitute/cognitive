@@ -1,24 +1,35 @@
-# BioFirm: Biological Firm Simulation
+---
+title: BioFirm
+type: concept
+status: draft
+updated: 2026-10-10
+semantic_relations:
+  - type: documented_by
+    links:
+      - "[[code/Things/BioFirm/BioFirm_README]]"
+      - "[[code/Things/BioFirm/AGENTS]]"
+      - "[[code/Things/BioFirm/docs/earth_systems_schema]]"
+  - type: related_to
+    links:
+      - "[[knowledge_base/BioFirm/biofirm_framework|BioFirm framework]]"
+---
 
-Implementation of organizational behavior modeling using biological principles and Active Inference. BioFirm treats a firm as an active inference agent trying to minimize its free energy (uncertainty/entropy) while maintaining its boundary (integrity).
+# BioFirm
 
-## Contents
+Design sketch; no code in this repository. This folder contains documentation
+only: `README.md`, `AGENTS.md`, `BioFirm_README.md`, and
+`docs/earth_systems_schema.md`. There are no model, environment, or analysis
+modules and no `output/` directory.
 
-- **`AGENTS.md`**: Agent architecture and organizational agent design.
-- **`output/`**: Generated simulation results and visualizations.
+The idea: treat a firm or a bioregion as an active inference agent that keeps
+itself viable (homeostasis) by minimizing free energy, with the state space and
+schema described in the design notes.
 
-For full source code and detailed documentation, see [[code/Things/BioFirm/README|Knowledge Base: BioFirm]].
+For a runnable discrete agent, use [[code/Things/Simple_POMDP/README|Simple_POMDP]].
 
-## Key Concepts
+## Related
 
-- **Organizational Homeostasis**: Maintaining viability through free energy minimization
-- **Earth Systems Modeling**: Bioregional state space representations
-- **Multi-Scale Analysis**: Hierarchical, spatial, and temporal modeling
-
-## Related Resources
-
-- [[knowledge_base/BioFirm/biofirm_framework|BioFirm Framework]]
-- [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]]
-- [[knowledge_base/BioFirm/ecological_active_inference|Ecological Active Inference]]
+- [[knowledge_base/BioFirm/biofirm_framework|BioFirm framework]]
+- [[knowledge_base/BioFirm/bioregional_state_space|Bioregional state space]]
+- [[knowledge_base/BioFirm/ecological_active_inference|Ecological active inference]]
 - [[knowledge_base/free_energy_principle/biology/homeostasis|Homeostasis (FEP)]]
-- [[code/Things/BioFirm/AGENTS|Agent Details]]

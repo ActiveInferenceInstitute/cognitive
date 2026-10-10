@@ -510,7 +510,7 @@ class FreeEnergyGradients:
 
 ### 3. Applications
 
-- [[robotics_applications]]
+- robotics applications
 
   - Planning
 

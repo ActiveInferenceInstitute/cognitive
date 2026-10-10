@@ -2,6 +2,7 @@
 title: Test runner
 type: tool
 status: stable
+updated: 2026-10-10
 created: 2026-08-02
 tags:
   - testing
@@ -22,7 +23,8 @@ python -m pytest -q
 python -m pytest -q --cov
 ```
 
-`code/tests/run_tests.py` is a convenience runner. Tests use real data and
+`code/tests/run_tests.py` is a convenience runner. `pyproject.toml` sets
+`testpaths = ["code/tests"]`, so a bare `pytest` collects the suite. Tests use real data and
 computation (no fixture-only assertions) and write artifacts only to
 temporary directories. See `docs/repo_docs/unit_testing.md` for
 conventions.

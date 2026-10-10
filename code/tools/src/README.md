@@ -1,3 +1,10 @@
+---
+title: Package source
+type: documentation
+status: stable
+updated: 2026-10-10
+---
+
 # Package source
 
 This directory is packaged as `cognitive`. The source tree is split into:

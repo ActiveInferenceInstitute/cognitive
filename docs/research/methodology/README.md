@@ -1,10 +1,23 @@
-# Research Methodology
+---
+title: Research methodology
+type: documentation
+status: stable
+updated: 2026-10-10
+semantic_relations:
+  - type: organizes
+    links:
+      - "[[hypothesis]]"
+      - "[[variables]]"
+      - "[[sampling]]"
+      - "[[validation]]"
+      - "[[../README|Research documentation]]"
+---
 
-Overview of research methods.
+# Research methodology
 
-## Experimental Design
+How experiments with the package are framed and checked in this repository.
 
-- [[hypothesis|Hypothesis Formation]]
-- [[variables|Variable Control]]
-- [[sampling|Sampling Methods]]
-- [[validation|Validation Approaches]]
+- [[hypothesis|Hypotheses]]
+- [[variables|Variables]]
+- [[sampling|Sampling]]
+- [[validation|Validation]]

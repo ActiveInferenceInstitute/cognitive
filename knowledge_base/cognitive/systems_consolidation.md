@@ -9,6 +9,8 @@ tags:
   - consolidation
   - hippocampus
   - sleep
+aliases:
+  - hippocampal_cortical
 semantic_relations:
   - type: relates
     links:

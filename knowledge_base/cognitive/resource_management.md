@@ -8,6 +8,8 @@ tags:
 - optimization
 - control
 - efficiency
+aliases:
+  - effort_allocation
 semantic_relations:
   - type: implements
     links:

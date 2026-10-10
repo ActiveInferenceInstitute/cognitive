@@ -23,7 +23,6 @@ semantic_relations:
     links:
       - "[[vector_equilibrium]]"
       - "[[geodesic_geometry]]"
-      - "[[geometric_unity]]"
 ---
 
 

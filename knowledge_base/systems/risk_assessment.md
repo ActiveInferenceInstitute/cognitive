@@ -52,7 +52,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
    - Industry knowledge
 
-   - Historical analysis ([[claims_history]])
+   - Historical analysis (claims history)
 
 1. **Actuarial Analysis**
 

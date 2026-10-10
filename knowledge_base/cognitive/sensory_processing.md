@@ -10,6 +10,8 @@ tags:
   - predictive-coding
   - precision
   - neural-computation
+aliases:
+  - sensory_systems
 semantic_relations:
   - type: relates
     links:

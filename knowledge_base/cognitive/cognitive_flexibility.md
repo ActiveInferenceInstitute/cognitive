@@ -8,6 +8,8 @@ tags:
   - executive_function
   - control
   - learning
+aliases:
+  - flexibility
 semantic_relations:
   - type: relates
     links:

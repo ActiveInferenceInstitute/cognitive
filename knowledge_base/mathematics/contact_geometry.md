@@ -1,5 +1,6 @@
 ---
 title: Contact Geometry
+description: "Mathematical background on contact geometry, covering contact manifolds, Darboux coordinates, Legendrian submanifolds and contact transformations, with computational examples."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

@@ -2,6 +2,7 @@
 title: Mutation testing
 type: tool
 status: stable
+updated: 2026-10-10
 created: 2026-08-19
 tags:
   - testing
@@ -21,6 +22,7 @@ notice if that line were wrong. Both facts matter, and only the second one is
 about correctness.
 
 ```bash
+cognitive-mutation-check                  # installed entry point, same as:
 python -m scripts.mutation_check          # human-readable
 python -m scripts.mutation_check --json   # machine-readable
 python -m scripts.mutation_check --filter gradient
@@ -47,8 +49,8 @@ replace a character with another of the same width — `limit < 1` becomes
 `limit < 0`. Written inside the same clock tick, such an edit changes neither
 field, the interpreter loads the previous bytecode, and the mutation never
 reaches the tests, which then pass and are reported as a survivor. Each run
-therefore points `PYTHONPYCACHEPREFIX` at a fresh directory. This is not
-hypothetical: it produced an intermittent false survivor before it was fixed.
+therefore points `PYTHONPYCACHEPREFIX` at a fresh directory. Without
+that isolation a same-width mutation can be reported as a false survivor.
 
 **A broken import is not a kill.** A non-zero pytest exit only counts when a
 test actually failed. A mutation that breaks collection proves the file no

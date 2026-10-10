@@ -8,6 +8,8 @@ tags:
 - computation
 - decision
 - inference
+aliases:
+  - sensory_evidence
 semantic_relations:
   - type: implements
     links:

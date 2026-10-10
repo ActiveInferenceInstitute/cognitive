@@ -39,21 +39,21 @@ The Bayesian Brain hypothesis proposes that the brain implements Bayesian infere
 
     - [[structural_priors]] - Architecture-based
 
-  - [[likelihood_computation]] - Evidence processing
+  - [[likelihood_computation]] - Computing how well hypotheses explain the data
 
-    - [[sensory_likelihood]] - Sensory evidence
+    - [[sensory_likelihood]] - Probability of sensory input given a cause
 
     - [[causal_likelihood]] - Cause-effect relations
 
 ### Uncertainty Processing
 
-- [[uncertainty_representation]] - Probability encoding
+- [[uncertainty_representation]] - How the brain encodes probability distributions
 
   - [[sensory_uncertainty]] - Input noise
 
-  - [[model_uncertainty]] - Knowledge uncertainty
+  - [[model_uncertainty]] - Uncertainty about which model is correct
 
-  - [[structural_uncertainty]] - Architecture uncertainty
+  - [[structural_uncertainty]] - Uncertainty about model structure
 
 ### Hierarchical Organization
 
@@ -69,37 +69,37 @@ The Bayesian Brain hypothesis proposes that the brain implements Bayesian infere
 
 ### Circuit Mechanisms
 
-- [[probabilistic_circuits]] - Neural computation
+- [[probabilistic_circuits]] - Neural circuits computing with probabilities
 
   - [[population_coding]] - Distributed representation
 
-    - [[probabilistic_population]] - Uncertainty coding
+    - [[probabilistic_population]] - Population activity encoding probability distributions
 
-    - [[neural_sampling]] - Probability sampling
+    - [[neural_sampling]] - Neural activity as samples from a distribution
 
-  - [[message_passing]] - Information flow
+  - [[message_passing]] - Exchange of beliefs between neural units
 
-    - [[belief_propagation]] - Probability updates
+    - [[belief_propagation]] - Passing messages to update marginal beliefs
 
-    - [[error_propagation]] - Mismatch signals
+    - [[error_propagation]] - Passing prediction errors through the hierarchy
 
 ### Synaptic Mechanisms
 
 - [[synaptic_computation]] - Local processing
 
-  - [[synaptic_weights]] - Prior encoding
+  - [[synaptic_weights]] - Connection strengths encoding learned priors
 
-  - [[synaptic_plasticity]] - Learning rules
+  - [[synaptic_plasticity]] - Activity-dependent changes in synaptic strength
 
-  - [[dendritic_computation]] - Integration rules
+  - [[dendritic_computation]] - Input integration within dendrites
 
 ### Network Architecture
 
-- [[bayesian_networks]] - Neural organization
+- [[bayesian_networks]] - Directed graphical models of dependencies
 
   - [[directed_connections]] - Causal structure
 
-  - [[reciprocal_connections]] - Recurrent processing
+  - [[reciprocal_connections]] - Two-way links between neural areas
 
   - [[lateral_connections]] - Within-level interaction
 
@@ -125,19 +125,19 @@ where:
 
 ### Inference Algorithms
 
-- [[variational_inference]] - Approximate methods
+- [[variational_inference]] - Approximate posterior inference by optimization
 
   - [[mean_field]] - Independence assumption
 
-  - [[laplace_approximation]] - Gaussian assumption
+  - [[laplace_approximation]] - Gaussian approximation around the posterior mode
 
-  - [[particle_filtering]] - Sampling methods
+  - [[particle_filtering]] - Sequential Monte Carlo state estimation
 
 ### Learning Mechanisms
 
-- [[bayesian_learning]] - Knowledge acquisition
+- [[bayesian_learning]] - Updating beliefs from experience
 
-  - [[parameter_learning]] - Value estimation
+  - [[parameter_learning]] - Estimating model parameters from data
 
   - [[structure_learning]] - Model discovery
 
@@ -147,145 +147,145 @@ where:
 
 ### Perception
 
-- [[bayesian_perception]] - Sensory processing
+- [[bayesian_perception]] - Perception as probabilistic inference about causes
 
   - [[cue_integration]] - Multi-sensory fusion
 
-  - [[perceptual_inference]] - State estimation
+  - [[perceptual_inference]] - Inferring hidden causes of sensations
 
-  - [[perceptual_learning]] - Model refinement
+  - [[perceptual_learning]] - Improved perception through experience
 
 ### Decision Making
 
-- [[bayesian_decision]] - Choice processes
+- [[bayesian_decision]] - Choosing actions by expected utility
 
   - [[value_computation]] - Utility estimation
 
-  - [[risk_assessment]] - Uncertainty handling
+  - [[risk_assessment]] - Evaluating outcome probabilities and costs
 
   - [[policy_selection]] - Action choice
 
 ### Learning and Memory
 
-- [[bayesian_learning]] - Knowledge acquisition
+- [[bayesian_learning]] - Updating beliefs from experience
 
   - [[model_updating]] - Belief revision
 
-  - [[structure_learning]] - Pattern discovery
+  - [[structure_learning]] - Learning model structure from data
 
-  - [[memory_formation]] - Experience storage
+  - [[memory_formation]] - Encoding experiences into memory
 
 ## Applications
 
 ### Clinical Applications
 
-- [[psychiatric_disorders]] - Mental health
+- [[psychiatric_disorders]] - Conditions framed as disturbances of inference
 
-  - [[schizophrenia]] - Reality processing
+  - [[schizophrenia]] - Linked to aberrant inference and prediction error
 
-  - [[autism]] - Prior weighting
+  - [[autism]] - Linked to atypical weighting of priors
 
-  - [[anxiety]] - Uncertainty processing
+  - [[anxiety]] - Linked to heightened response to uncertainty
 
 ### Artificial Intelligence
 
-- [[bayesian_ai]] - Machine implementation
+- [[bayesian_ai]] - Bayesian methods in artificial intelligence
 
-  - [[probabilistic_programming]] - Modeling tools
+  - [[probabilistic_programming]] - Languages for specifying probabilistic models
 
-  - [[bayesian_networks]] - Causal models
+  - [[bayesian_networks]] - Directed graphical models of dependencies
 
-  - [[bayesian_deep_learning]] - Neural integration
+  - [[bayesian_deep_learning]] - Neural networks with uncertainty estimates
 
 ### Cognitive Technology
 
-- [[brain_machine_interfaces]] - Neural interfaces
+- [[brain_machine_interfaces]] - Devices linking neural activity to machines
 
-  - [[decoder_design]] - Signal interpretation
+  - [[decoder_design]] - Decoding intent from neural signals
 
-  - [[feedback_optimization]] - Control systems
+  - [[feedback_optimization]] - Tuning interface feedback to improve control
 
-  - [[adaptive_interfaces]] - User modeling
+  - [[adaptive_interfaces]] - Interfaces that adapt to the user
 
 ## Research Methods
 
 ### Experimental Paradigms
 
-- [[psychophysics]] - Behavioral testing
+- [[psychophysics]] - Relating stimuli to perceptual judgments
 
   - [[threshold_estimation]] - Sensitivity measurement
 
-  - [[uncertainty_measurement]] - Confidence assessment
+  - [[uncertainty_measurement]] - Measuring confidence in judgments
 
-  - [[prior_manipulation]] - Knowledge effects
+  - [[prior_manipulation]] - Altering expectations to test priors
 
 ### Neural Recording
 
 - [[neuroimaging]] - Brain measurement
 
-  - [[fmri_studies]] - Spatial patterns
+  - [[fmri_studies]] - Spatial activity patterns from fMRI
 
-  - [[eeg_recording]] - Temporal dynamics
+  - [[eeg_recording]] - Millisecond-scale electrical activity
 
-  - [[single_unit_recording]] - Neural activity
+  - [[single_unit_recording]] - Recording activity of individual neurons
 
 ### Computational Modeling
 
-- [[bayesian_models]] - Theory testing
+- [[bayesian_models]] - Models for testing Bayesian theories of cognition
 
-  - [[generative_models]] - World simulation
+  - [[generative_models]] - Models of how observations arise from causes
 
-  - [[inference_models]] - Processing simulation
+  - [[inference_models]] - Models of how beliefs are computed
 
-  - [[learning_models]] - Adaptation simulation
+  - [[learning_models]] - Models of how beliefs and parameters change
 
 ## Theoretical Extensions
 
 ### Information Theory
 
-- [[information_processing]] - Data handling
+- [[information_processing]] - Transformation of signals in neural systems
 
   - [[entropy_computation]] - Uncertainty measure
 
   - [[mutual_information]] - Dependency measure
 
-  - [[free_energy]] - Bound optimization
+  - [[free_energy]] - Bound on surprise minimized by inference
 
 ### Complexity Theory
 
 - [[computational_complexity]] - Processing demands
 
-  - [[algorithmic_complexity]] - Procedure difficulty
+  - [[algorithmic_complexity]] - Resource cost of an algorithm
 
   - [[sample_complexity]] - Data requirements
 
-  - [[model_complexity]] - Structure costs
+  - [[model_complexity]] - Number and flexibility of model parameters
 
 ### Emergence Theory
 
-- [[emergent_properties]] - System features
+- [[emergent_properties]] - Properties arising from component interactions
 
-  - [[collective_computation]] - Group effects
+  - [[collective_computation]] - Computation arising from many interacting units
 
   - [[self_organization]] - Spontaneous order
 
-  - [[criticality]] - Optimal processing
+  - [[criticality]] - Operating near a phase transition
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[scalability]] - Large-scale inference
+- scalability - Large-scale inference
 
-- [[biological_plausibility]] - Neural implementation
+- [[biological_plausibility]] - Whether algorithms can run in real neurons
 
 - [[real_time_processing]] - Speed requirements
 
 ### Emerging Applications
 
-- [[neuroprosthetics]] - Neural replacement
+- [[neuroprosthetics]] - Devices restoring neural function
 
-- [[cognitive_enhancement]] - Performance improvement
+- cognitive enhancement - Performance improvement
 
 - [[artificial_consciousness]] - Machine awareness
 

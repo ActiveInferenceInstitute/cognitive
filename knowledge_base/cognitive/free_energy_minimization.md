@@ -115,7 +115,7 @@ where:
 
   - [[deep_learning]] - Neural network approaches
 
-  - [[reinforcement_learning]] - Action learning
+  - [[reinforcement_learning]] - Learning actions from reward feedback
 
   - [[unsupervised_learning]] - Pattern discovery
 
@@ -139,7 +139,7 @@ where:
 
   - [[statistical_manifolds]] - Space of distributions
 
-  - [[geodesic_flows]] - Optimal paths
+  - [[geodesic_flows]] - Shortest paths on statistical manifolds
 
 ### Thermodynamics
 
@@ -147,7 +147,7 @@ where:
 
   - [[entropy_production]] - Dissipation
 
-  - [[fluctuation_theorems]] - Statistical physics
+  - [[fluctuation_theorems]] - Relations governing entropy fluctuations in small systems
 
   - [[steady_state_dynamics]] - Stable configurations
 
@@ -157,27 +157,27 @@ where:
 
   - [[attractor_dynamics]] - Stable states
 
-  - [[phase_transitions]] - System changes
+  - [[phase_transitions]] - Abrupt qualitative changes in system state
 
-  - [[criticality]] - Optimal processing
+  - [[criticality]] - Operating near a phase transition for flexible processing
 
 ## Research Directions
 
 ### Current Challenges
 
-- [[scalability]] - Handling complex systems
+- scalability - Handling complex systems
 
-- [[biological_plausibility]] - Neural implementation
+- [[biological_plausibility]] - Whether mechanisms are realistic for neural tissue
 
-- [[computational_efficiency]] - Practical applications
+- [[computational_efficiency]] - Cost of running inference in practice
 
 ### Future Applications
 
-- [[brain_machine_interfaces]] - Neural engineering
+- [[brain_machine_interfaces]] - Devices linking neural activity to machines
 
 - [[artificial_consciousness]] - Machine consciousness
 
-- [[personalized_medicine]] - Clinical applications
+- personalized medicine - Treatments tailored to individual patients
 
 ## References
 

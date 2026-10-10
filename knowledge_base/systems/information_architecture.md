@@ -46,7 +46,7 @@ The knowledge base is itself an information architecture. Every folder carries a
 
 ## References
 
-- Rosenfeld, L., Morville, P. *Information Architecture for the World Wide Web*. O'Reilly Media.
+- Rosenfeld, L., Morville, P. (1998). *Information Architecture for the World Wide Web*. O'Reilly Media.
 - Pirolli, P., Card, S. (1999). Information foraging. *Psychological Review*.
 
 ## Related Resources

@@ -1,5 +1,6 @@
 ---
 title: Quantum Computing
+description: "Overview of quantum computing, covering qubits, unitary gates, measurement and the BQP complexity class, and a speculative assessment of its role in Active Inference."
 type: mathematical_concept
 status: stable
 created: 2026-10-09

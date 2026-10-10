@@ -10,6 +10,8 @@ tags:
 - sensory_processing
 aliases:
   - sensory_integration
+  - multimodal_integration
+  - perceptual_integration
 semantic_relations:
   - type: implements
     links:

@@ -33,523 +33,523 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
 ### Biological Foundations
 
-- [[neural_development]] - Brain growth
+- [[neural_development]] - Growth and maturation of the nervous system
 
-  - [[structural_development]] - Physical build
+  - [[structural_development]] - Physical construction of neural tissue and wiring
 
-    - [[neurogenesis]] - Cell birth
+    - [[neurogenesis]] - Birth of new neurons
 
-      - [[cell_proliferation]] - Make new
+      - [[cell_proliferation]] - Rapid division producing new neural cells
 
-      - [[cell_migration]] - Move place
+      - [[cell_migration]] - Neurons moving to their final positions
 
-    - [[circuit_formation]] - Path make
+    - [[circuit_formation]] - Assembly of neurons into working circuits
 
-      - [[axon_growth]] - Wire extend
+      - [[axon_growth]] - Axons extending toward their targets
 
-      - [[synaptogenesis]] - Connect make
+      - [[synaptogenesis]] - Formation of new synaptic connections
 
-  - [[functional_development]] - Work grow
+  - [[functional_development]] - Maturation of what neural systems can do
 
-    - [[myelination]] - Speed wrap
+    - [[myelination]] - Insulating axons to speed signal conduction
 
-      - [[white_matter]] - Fast paths
+      - [[white_matter]] - Myelinated fiber tracts linking brain regions
 
-      - [[processing_speed]] - Think fast
+      - [[processing_speed]] - Faster information handling as conduction improves
 
-    - [[specialization]] - Area focus
+    - specialization - Regions taking on distinct roles
 
-      - [[functional_networks]] - Work webs
+      - [[functional_networks]] - Coordinated groups of regions working together
 
-      - [[efficiency_gain]] - Better work
+      - [[efficiency_gain]] - Less effort needed for the same performance
 
 ### Learning Processes
 
-- [[developmental_learning]] - Grow learn
+- [[developmental_learning]] - How learning shapes the developing brain
 
-  - [[experience_dependent]] - Use based
+  - [[experience_dependent]] - Change driven by individual experience
 
-    - [[activity_dependent]] - Do change
+    - [[activity_dependent]] - Change driven by neural activity patterns
 
-      - [[hebbian_learning]] - Fire wire
+      - [[hebbian_learning]] - Co-active neurons strengthen their connections
 
-      - [[synaptic_plasticity]] - Connect change
+      - [[synaptic_plasticity]] - Experience altering synaptic strength
 
-    - [[environmental_interaction]] - World learn
+    - [[environmental_interaction]] - Learning through engagement with the surroundings
 
-      - [[exploration]] - Find out
+      - [[exploration]] - Actively sampling the environment to learn
 
-      - [[feedback_learning]] - Result learn
+      - [[feedback_learning]] - Adjusting behavior based on outcomes
 
-  - [[critical_periods]] - Special times
+  - [[critical_periods]] - Age windows of heightened sensitivity to input
 
-    - [[sensitive_windows]] - Best times
+    - [[sensitive_windows]] - Phases when experience has the largest effect
 
-      - [[period_onset]] - Start when
+      - [[period_onset]] - When a sensitive window opens
 
-      - [[period_closure]] - End when
+      - [[period_closure]] - When a sensitive window ends
 
-    - [[period_regulation]] - Time control
+    - [[period_regulation]] - Mechanisms that open and close windows
 
-      - [[molecular_triggers]] - Start signals
+      - [[molecular_triggers]] - Molecular signals that open a window
 
-      - [[plasticity_brakes]] - Stop signals
+      - [[plasticity_brakes]] - Molecular factors that limit later plasticity
 
 ### Adaptation Systems
 
-- [[developmental_adaptation]] - Change fit
+- [[developmental_adaptation]] - Adjusting to conditions during development
 
-  - [[environmental_adaptation]] - World fit
+  - [[environmental_adaptation]] - Fitting development to the surroundings
 
-    - [[niche_adaptation]] - Place fit
+    - [[niche_adaptation]] - Tuning development to a particular ecological niche
 
-      - [[resource_use]] - Use what
+      - [[resource_use]] - Making use of available resources
 
-      - [[constraint_handling]] - Deal limits
+      - [[constraint_handling]] - Coping with limits on resources or ability
 
-    - [[social_adaptation]] - People fit
+    - [[social_adaptation]] - Fitting to the social setting
 
-      - [[cultural_learning]] - Group learn
+      - [[cultural_learning]] - Acquiring knowledge from one's group
 
-      - [[social_norms]] - Rules learn
+      - [[social_norms]] - Learning the shared rules of a group
 
-  - [[compensatory_processes]] - Fix ways
+  - [[compensatory_processes]] - Ways of offsetting a deficit
 
-    - [[alternative_strategies]] - Other ways
+    - [[alternative_strategies]] - Different routes to the same goal
 
-      - [[behavioral_compensation]] - Do different
+      - [[behavioral_compensation]] - Changing behavior to offset a deficit
 
-      - [[cognitive_compensation]] - Think different
+      - [[cognitive_compensation]] - Using other mental processes to offset a deficit
 
-    - [[resource_reallocation]] - Move help
+    - [[resource_reallocation]] - Shifting resources to where they are needed
 
-      - [[effort_shift]] - Try change
+      - [[effort_shift]] - Redirecting effort to different demands
 
-      - [[network_reorganization]] - Brain change
+      - [[network_reorganization]] - Rewiring networks to take over lost function
 
 ## Developmental Trajectories
 
 ### Sensorimotor Development
 
-- [[motor_development]] - Move grow
+- [[motor_development]] - Growth of movement abilities
 
-  - [[gross_motor]] - Big move
+  - [[gross_motor]] - Large-muscle movements of the whole body
 
-    - [[postural_control]] - Stand stay
+    - [[postural_control]] - Holding the body in stable positions
 
-      - [[balance]] - Stay up
+      - [[balance]] - Keeping the body upright and steady
 
-      - [[coordination]] - Move smooth
+      - [[coordination]] - Smooth combination of movements
 
-    - [[locomotion]] - Get around
+    - [[locomotion]] - Moving from place to place
 
-      - [[crawling]] - Floor move
+      - [[crawling]] - Moving along the floor on hands and knees
 
-      - [[walking]] - Foot move
+      - [[walking]] - Upright movement on two feet
 
-  - [[fine_motor]] - Small move
+  - [[fine_motor]] - Small precise movements of hands and fingers
 
-    - [[hand_control]] - Grab hold
+    - [[hand_control]] - Directing the hands with precision
 
-      - [[reaching]] - Get to
+      - [[reaching]] - Extending the arm toward a target
 
-      - [[grasping]] - Hold thing
+      - [[grasping]] - Closing the hand around an object
 
-    - [[manipulation]] - Use thing
+    - manipulation - Handling and using objects
 
-      - [[tool_use]] - Thing help
+      - [[tool_use]] - Using objects as instruments for goals
 
-      - [[writing]] - Mark make
+      - [[writing]] - Producing marks with a pen or pencil
 
 ### Cognitive Functions
 
-- [[function_development]] - Think grow
+- [[function_development]] - Growth of mental abilities
 
-  - [[basic_functions]] - Simple think
+  - [[basic_functions]] - Early foundational mental abilities
 
-    - [[attention_development]] - Focus grow
+    - [[attention_development]] - Growth of attentional control
 
-      - [[selective_attention]] - Pick what
+      - [[selective_attention]] - Focusing on relevant information
 
-      - [[sustained_attention]] - Keep on
+      - [[sustained_attention]] - Maintaining focus over time
 
-    - [[memory_development]] - Remember grow
+    - [[memory_development]] - Growth of memory abilities
 
-      - [[working_memory]] - Hold now
+      - [[working_memory]] - Holding information in mind for current use
 
-      - [[long_term]] - Keep long
+      - [[long_term]] - Durable storage of information
 
-  - [[higher_functions]] - Complex think
+  - [[higher_functions]] - Later-developing complex mental abilities
 
-    - [[executive_development]] - Boss grow
+    - [[executive_development]] - Growth of goal-directed control
 
-      - [[inhibitory_control]] - Stop power
+      - [[inhibitory_control]] - Suppressing unwanted impulses and responses
 
-      - [[cognitive_flexibility]] - Change able
+      - [[cognitive_flexibility]] - Shifting between tasks or perspectives
 
-    - [[metacognition]] - Think about
+    - [[metacognition]] - Thinking about one's own thinking
 
-      - [[monitoring]] - Watch self
+      - monitoring - Tracking one's own mental performance
 
-      - [[control]] - Guide self
+      - [[control]] - Directing one's own mental processes
 
 ### Social-Emotional Development
 
-- [[socioemotional_development]] - Feel grow
+- [[socioemotional_development]] - Growth of emotional and social abilities
 
-  - [[emotional_development]] - Feel learn
+  - [[emotional_development]] - Growth of emotional understanding and expression
 
-    - [[emotion_understanding]] - Feel know
+    - [[emotion_understanding]] - Knowing what emotions are and mean
 
-      - [[emotion_recognition]] - Feel spot
+      - [[emotion_recognition]] - Identifying emotions in oneself and others
 
-      - [[emotion_regulation]] - Feel manage
+      - [[emotion_regulation]] - Managing the intensity of one's emotions
 
-    - [[empathy_development]] - Feel with
+    - [[empathy_development]] - Growth of sharing others' feelings
 
-      - [[perspective_taking]] - Other view
+      - [[perspective_taking]] - Seeing a situation from another's viewpoint
 
-      - [[emotional_sharing]] - Feel share
+      - [[emotional_sharing]] - Sharing and mirroring others' feelings
 
-  - [[social_development]] - People learn
+  - [[social_development]] - Growth of relationships and social skills
 
-    - [[attachment]] - Close bond
+    - [[attachment]] - Emotional bond with a caregiver
 
-      - [[secure_base]] - Safe feel
+      - [[secure_base]] - Caregiver as a safe base for exploring
 
-      - [[internal_models]] - People think
+      - [[internal_models]] - Mental representations of relationships
 
-    - [[peer_relations]] - Friend learn
+    - [[peer_relations]] - Relationships with age mates
 
-      - [[social_skills]] - People do
+      - social skills - Abilities for interacting with others
 
-      - [[friendship]] - Friend make
+      - [[friendship]] - Close voluntary bond between peers
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[developmental_networks]] - Brain webs
+- [[developmental_networks]] - Brain networks that emerge during development
 
-  - [[local_networks]] - Near nets
+  - [[local_networks]] - Networks within a single region
 
-    - [[cortical_networks]] - Think nets
+    - [[cortical_networks]] - Networks within the cerebral cortex
 
-      - [[sensory_networks]] - Feel nets
+      - [[sensory_networks]] - Networks processing sensory input
 
-      - [[motor_networks]] - Move nets
+      - [[motor_networks]] - Networks controlling movement
 
-    - [[subcortical_networks]] - Deep nets
+    - [[subcortical_networks]] - Networks in structures beneath the cortex
 
-      - [[emotion_networks]] - Feel nets
+      - [[emotion_networks]] - Networks processing emotion
 
-      - [[reward_networks]] - Want nets
+      - [[reward_networks]] - Networks processing reward and motivation
 
-  - [[distributed_networks]] - Far nets
+  - [[distributed_networks]] - Networks spanning many distant regions
 
-    - [[attention_networks]] - Focus nets
+    - [[attention_networks]] - Networks directing attention
 
-      - [[alerting_network]] - Wake net
+      - [[alerting_network]] - Network maintaining readiness to respond
 
-      - [[executive_network]] - Boss net
+      - [[executive_network]] - Network for control and conflict resolution
 
-    - [[default_network]] - Rest net
+    - [[default_network]] - Network active during rest and self-reflection
 
-      - [[self_processing]] - Me net
+      - [[self_processing]] - Network activity about oneself
 
-      - [[social_cognition]] - People net
+      - [[social_cognition]] - Network activity about other people
 
 ### Circuit Development
 
-- [[circuit_maturation]] - Path grow
+- [[circuit_maturation]] - Refinement of neural circuits over development
 
-  - [[synaptic_development]] - Connect grow
+  - [[synaptic_development]] - Growth and refinement of synapses
 
-    - [[synapse_formation]] - Make join
+    - [[synapse_formation]] - Creation of new synaptic contacts
 
-      - [[sprouting]] - Grow out
+      - [[sprouting]] - Growth of new axon and dendrite branches
 
-      - [[targeting]] - Find where
+      - [[targeting]] - Guiding connections to the correct partner cells
 
-    - [[synapse_elimination]] - Cut extra
+    - [[synapse_elimination]] - Removal of surplus synapses
 
-      - [[pruning]] - Take away
+      - [[pruning]] - Cutting back unused connections
 
-      - [[refinement]] - Make better
+      - refinement - Sharpening connection patterns through use
 
-  - [[network_formation]] - Web make
+  - network formation - Assembly of connected neural networks
 
-    - [[activity_patterns]] - Fire ways
+    - activity patterns - Patterns of neural firing that shape wiring
 
-      - [[spontaneous_activity]] - Self fire
+      - [[spontaneous_activity]] - Firing generated within the brain without input
 
-      - [[evoked_activity]] - Cause fire
+      - [[evoked_activity]] - Firing caused by external stimuli
 
-    - [[connectivity_patterns]] - Join ways
+    - connectivity patterns - How regions are wired together
 
-      - [[feedforward]] - Forward send
+      - [[feedforward]] - Signals passing from lower to higher areas
 
-      - [[feedback]] - Back send
+      - [[feedback]] - Signals passing from higher to lower areas
 
 ### Plasticity Mechanisms
 
-- [[developmental_plasticity]] - Change able
+- [[developmental_plasticity]] - Capacity of the developing brain to change
 
-  - [[molecular_mechanisms]] - Small change
+  - [[molecular_mechanisms]] - Molecular processes underlying plastic change
 
-    - [[gene_expression]] - Gene use
+    - [[gene_expression]] - Turning genes on to make products
 
-      - [[transcription_factors]] - Gene boss
+      - [[transcription_factors]] - Proteins that switch gene expression on or off
 
-      - [[epigenetics]] - Gene switch
+      - [[epigenetics]] - Chemical marks regulating genes without changing DNA
 
-    - [[protein_synthesis]] - Make stuff
+    - [[protein_synthesis]] - Building the proteins cells need
 
-      - [[structural_proteins]] - Build stuff
+      - [[structural_proteins]] - Proteins that form cell structure
 
-      - [[signaling_proteins]] - Send stuff
+      - [[signaling_proteins]] - Proteins that carry signals between cells
 
-  - [[cellular_mechanisms]] - Cell change
+  - [[cellular_mechanisms]] - Cell-level processes underlying plastic change
 
-    - [[morphological]] - Shape change
+    - [[morphological]] - Changes in cell shape and structure
 
-      - [[dendrite_growth]] - Branch grow
+      - [[dendrite_growth]] - Extension and branching of dendrites
 
-      - [[spine_dynamics]] - Bump change
+      - [[spine_dynamics]] - Formation and loss of dendritic spines
 
-    - [[physiological]] - Work change
+    - [[physiological]] - Changes in how cells function
 
-      - [[excitability]] - Fire easy
+      - [[excitability]] - How readily a neuron fires
 
-      - [[threshold]] - Fire when
+      - [[threshold]] - Level of input needed to trigger firing
 
 ## Environmental Influences
 
 ### Physical Environment
 
-- [[environmental_factors]] - World effect
+- [[environmental_factors]] - External influences on development
 
-  - [[sensory_environment]] - Feel world
+  - [[sensory_environment]] - Sensory input available to the child
 
-    - [[enrichment]] - Good stuff
+    - [[enrichment]] - Rich, stimulating surroundings
 
-      - [[complexity]] - Many thing
+      - [[complexity]] - Variety and richness of stimulation
 
-      - [[novelty]] - New thing
+      - novelty - Exposure to new experiences
 
-    - [[deprivation]] - Poor stuff
+    - [[deprivation]] - Lack of adequate stimulation
 
-      - [[restriction]] - Less thing
+      - [[restriction]] - Reduced range of experience
 
-      - [[monotony]] - Same thing
+      - [[monotony]] - Repetitive, unvaried stimulation
 
-  - [[physical_activity]] - Move world
+  - [[physical_activity]] - Bodily movement and its effects
 
-    - [[exercise]] - Body work
+    - [[exercise]] - Sustained physical exertion
 
-      - [[aerobic]] - Heart work
+      - [[aerobic]] - Exercise raising heart rate and oxygen use
 
-      - [[strength]] - Muscle work
+      - [[strength]] - Exercise building muscle power
 
-    - [[skill_practice]] - Do learn
+    - [[skill_practice]] - Repeating a skill to improve it
 
-      - [[repetition]] - Do again
+      - [[repetition]] - Doing the same action again
 
-      - [[variation]] - Do different
+      - [[variation]] - Practicing in varied conditions
 
 ### Social Environment
 
-- [[social_influences]] - People effect
+- [[social_influences]] - Effects of other people on development
 
-  - [[family_environment]] - Home life
+  - [[family_environment]] - Home and family context
 
-    - [[parenting]] - Raise how
+    - parenting - How caregivers raise children
 
-      - [[attachment_quality]] - Bond type
+      - [[attachment_quality]] - Security of the child-caregiver bond
 
-      - [[interaction_style]] - Talk way
+      - [[interaction_style]] - Characteristic manner of caregiver communication
 
-    - [[sibling_relations]] - Brother sister
+    - [[sibling_relations]] - Relationships between brothers and sisters
 
-      - [[cooperation]] - Help each
+      - [[cooperation]] - Working together toward shared goals
 
-      - [[competition]] - Beat each
+      - competition - Contending against others for advantage
 
-  - [[peer_environment]] - Friend world
+  - [[peer_environment]] - Context of age mates
 
-    - [[peer_interaction]] - Friend do
+    - [[peer_interaction]] - Everyday exchanges between peers
 
-      - [[play]] - Fun do
+      - [[play]] - Voluntary activity done for enjoyment
 
-      - [[conflict]] - Fight fix
+      - [[conflict]] - Disagreement and its resolution
 
-    - [[group_dynamics]] - Group do
+    - group dynamics - How members of a group interact
 
-      - [[social_roles]] - Who what
+      - [[social_roles]] - Positions with expected behaviors
 
-      - [[social_status]] - Who where
+      - [[social_status]] - Standing within a group
 
 ### Cultural Context
 
-- [[cultural_influences]] - Group effect
+- [[cultural_influences]] - Effects of culture on development
 
-  - [[educational_practices]] - Learn ways
+  - [[educational_practices]] - Culturally shaped ways of teaching
 
-    - [[formal_education]] - School learn
+    - [[formal_education]] - Structured teaching in schools
 
-      - [[curriculum]] - Learn what
+      - [[curriculum]] - Planned content of instruction
 
-      - [[teaching_methods]] - Learn how
+      - teaching methods - Techniques used to deliver instruction
 
-    - [[informal_learning]] - Life learn
+    - [[informal_learning]] - Learning outside formal schooling
 
-      - [[daily_activities]] - Do learn
+      - [[daily_activities]] - Learning through everyday routines
 
-      - [[cultural_practices]] - Group do
+      - [[cultural_practices]] - Customs shared by a community
 
-  - [[societal_values]] - Worth what
+  - [[societal_values]] - What a society regards as important
 
-    - [[developmental_goals]] - Want what
+    - [[developmental_goals]] - Outcomes a culture wants for children
 
-      - [[achievement]] - Do good
+      - [[achievement]] - Valuing accomplishment and success
 
-      - [[independence]] - Self do
+      - [[independence]] - Valuing self-reliance and autonomy
 
-    - [[cultural_norms]] - Should what
+    - [[cultural_norms]] - Shared standards of acceptable behavior
 
-      - [[behavior_rules]] - Do rules
+      - [[behavior_rules]] - Explicit rules for conduct
 
-      - [[social_expectations]] - Should be
+      - [[social_expectations]] - What others anticipate from a person
 
 ## Applications
 
 ### Educational Applications
 
-- [[educational_design]] - School make
+- educational design - Planning instruction for learners
 
-  - [[curriculum_development]] - Learn plan
+  - [[curriculum_development]] - Planning what and when to teach
 
-    - [[content_selection]] - What teach
+    - [[content_selection]] - Choosing what to teach
 
-      - [[knowledge_domains]] - Know what
+      - [[knowledge_domains]] - Subject areas of knowledge
 
-      - [[skill_areas]] - Can what
+      - [[skill_areas]] - Areas of skill to develop
 
-    - [[sequence_design]] - Order how
+    - [[sequence_design]] - Ordering material for learning
 
-      - [[progression]] - Step up
+      - [[progression]] - Moving from simpler to harder material
 
-      - [[integration]] - Put together
+      - integration - Linking material across topics
 
-  - [[teaching_methods]] - Teach how
+  - teaching methods - Ways of delivering instruction
 
-    - [[instructional_strategies]] - Show how
+    - [[instructional_strategies]] - Approaches teachers use to present material
 
-      - [[direct_instruction]] - Tell show
+      - [[direct_instruction]] - Explicit teaching by explanation and demonstration
 
-      - [[discovery_learning]] - Find out
+      - [[discovery_learning]] - Learners finding principles through exploration
 
-    - [[assessment_approaches]] - Check how
+    - [[assessment_approaches]] - Ways of checking learning
 
-      - [[formative]] - During check
+      - [[formative]] - Assessment during learning to guide teaching
 
-      - [[summative]] - After check
+      - [[summative]] - Assessment after learning to judge outcomes
 
 ### Clinical Applications
 
-- [[developmental_disorders]] - Grow wrong
+- [[developmental_disorders]] - Conditions that alter typical development
 
-  - [[assessment_methods]] - Check what
+  - [[assessment_methods]] - Ways of evaluating development
 
-    - [[diagnostic_tools]] - Find what
+    - [[diagnostic_tools]] - Instruments for identifying a disorder
 
-      - [[behavioral_measures]] - Do check
+      - [[behavioral_measures]] - Measures based on observed behavior
 
-      - [[cognitive_measures]] - Think check
+      - [[cognitive_measures]] - Measures of mental abilities
 
-    - [[monitoring_methods]] - Track how
+    - [[monitoring_methods]] - Ways of tracking development over time
 
-      - [[progress_tracking]] - Better how
+      - progress tracking - Following improvement over time
 
-      - [[outcome_measures]] - End how
+      - [[outcome_measures]] - Measures of final results
 
-  - [[intervention_approaches]] - Help how
+  - [[intervention_approaches]] - Ways of helping affected children
 
-    - [[early_intervention]] - Soon help
+    - [[early_intervention]] - Support started at a young age
 
-      - [[prevention]] - Stop bad
+      - [[prevention]] - Acting to stop problems arising
 
-      - [[remediation]] - Fix wrong
+      - [[remediation]] - Correcting existing difficulties
 
-    - [[targeted_intervention]] - Specific help
+    - [[targeted_intervention]] - Support aimed at a specific need
 
-      - [[skill_training]] - Can train
+      - [[skill_training]] - Teaching a specific skill directly
 
-      - [[strategy_teaching]] - Way learn
+      - [[strategy_teaching]] - Teaching ways of approaching tasks
 
 ### Research Methods
 
-- [[developmental_research]] - Study how
+- [[developmental_research]] - Study of how development unfolds
 
-  - [[longitudinal_methods]] - Time watch
+  - [[longitudinal_methods]] - Following the same people over time
 
-    - [[growth_curves]] - Change track
+    - [[growth_curves]] - Plots of change in an ability with age
 
-      - [[trajectory_analysis]] - Path look
+      - [[trajectory_analysis]] - Describing paths of change over time
 
-      - [[milestone_tracking]] - Step check
+      - [[milestone_tracking]] - Recording when key abilities appear
 
-    - [[stability_assessment]] - Same check
+    - [[stability_assessment]] - Checking whether traits persist over time
 
-      - [[continuity]] - Keep on
+      - continuity - Persistence of traits across ages
 
-      - [[change_patterns]] - Shift how
+      - [[change_patterns]] - Forms that developmental change takes
 
-  - [[cross_sectional]] - Age groups
+  - [[cross_sectional]] - Comparing different age groups at one time
 
-    - [[age_comparisons]] - Group look
+    - [[age_comparisons]] - Contrasting performance across ages
 
-      - [[cohort_effects]] - When born
+      - [[cohort_effects]] - Differences due to birth year
 
-      - [[period_effects]] - When test
+      - [[period_effects]] - Differences due to time of testing
 
-    - [[individual_differences]] - Person vary
+    - [[individual_differences]] - Variation between people
 
-      - [[variability]] - How much
+      - [[variability]] - Spread of performance among individuals
 
-      - [[patterns]] - How ways
+      - [[patterns]] - Recurring forms of variation
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[measurement_issues]] - Check hard
+- measurement issues - Difficulties in measuring development
 
-  - [[developmental_timing]] - When what
+  - [[developmental_timing]] - When abilities emerge
 
-  - [[individual_variation]] - Who how
+  - [[individual_variation]] - Differences between individuals and their sources
 
-- [[mechanism_understanding]] - Work how
+- mechanism understanding - Knowing how development works
 
-  - [[causal_pathways]] - Why how
+  - [[causal_pathways]] - Chains of cause and effect
 
-  - [[interaction_effects]] - Together how
+  - [[interaction_effects]] - Joint effects of several factors
 
 ### Emerging Approaches
 
-- [[new_methods]] - New ways
+- new methods - Emerging research techniques
 
-  - [[real_time_measures]] - Now watch
+  - real time measures - Measures taken as events unfold
 
-    - [[neural_tracking]] - Brain watch
+    - [[neural_tracking]] - Recording brain activity as it happens
 
-    - [[behavior_tracking]] - Do watch
+    - behavior tracking - Recording behavior as it happens
 
-  - [[computational_models]] - Math think
+  - [[computational_models]] - Mathematical models of development
 
-    - [[learning_models]] - Get how
+    - [[learning_models]] - Models of how learning occurs
 
-    - [[network_models]] - Web how
+    - [[network_models]] - Models of interacting networks
 
 ## References
 

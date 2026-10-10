@@ -8,6 +8,9 @@ tags:
 - information_processing
 - neural_systems
 - knowledge_organization
+aliases:
+  - memory_circuits
+  - memory_networks
 semantic_relations:
   - type: implements
     links:
@@ -32,427 +35,427 @@ Memory Organization encompasses the structural and functional principles by whic
 
 ### Memory Systems Architecture
 
-- [[memory_hierarchy]] - System levels
+- [[memory_hierarchy]] - Organization of memory into tiers
 
-  - [[sensory_memory]] - Brief storage
+  - [[sensory_memory]] - Very brief storage of sensory input
 
-    - [[iconic_memory]] - Visual brief
+    - [[iconic_memory]] - Fleeting visual sensory store
 
-      - [[visual_persistence]] - Image hold
+      - [[visual_persistence]] - Brief retention of visual images
 
-      - [[feature_storage]] - Part keep
+      - [[feature_storage]] - Holding basic features of stimuli
 
-    - [[echoic_memory]] - Audio brief
+    - [[echoic_memory]] - Fleeting auditory sensory store
 
-      - [[auditory_persistence]] - Sound hold
+      - [[auditory_persistence]] - Brief retention of sound traces
 
-      - [[phonological_storage]] - Speech hold
+      - [[phonological_storage]] - Short-term holding of speech sounds
 
-  - [[working_memory]] - Active storage
+  - [[working_memory]] - Temporary storage for active manipulation
 
-    - [[central_executive]] - Control system
+    - [[central_executive]] - Attention-directing control component
 
-      - [[attention_control]] - Focus manage
+      - [[attention_control]] - Directing and sustaining focus
 
-      - [[coordination]] - Part join
+      - [[coordination]] - Combining information across memory components
 
-    - [[storage_buffers]] - Hold systems
+    - [[storage_buffers]] - Temporary holding stores
 
-      - [[phonological_loop]] - Word hold
+      - [[phonological_loop]] - Rehearsal of verbal and auditory information
 
-      - [[visuospatial_sketchpad]] - Space hold
+      - [[visuospatial_sketchpad]] - Holding visual and spatial information
 
-      - [[episodic_buffer]] - Event hold
+      - [[episodic_buffer]] - Binding multimodal information into episodes
 
 ### Knowledge Organization
 
-- [[knowledge_structure]] - Info arrange
+- [[knowledge_structure]] - How stored knowledge is arranged
 
-  - [[semantic_organization]] - Meaning structure
+  - [[semantic_organization]] - Arrangement of knowledge by meaning
 
-    - [[category_structure]] - Group order
+    - [[category_structure]] - Organization of concepts into categories
 
-      - [[hierarchical_categories]] - Level groups
+      - [[hierarchical_categories]] - Nested categories from general to specific
 
-      - [[prototype_effects]] - Type best
+      - [[prototype_effects]] - Best examples representing a category
 
-    - [[associative_networks]] - Link webs
+    - [[associative_networks]] - Networks of linked concepts
 
-      - [[semantic_relations]] - Mean links
+      - [[semantic_relations]] - Meaning-based links between concepts
 
-      - [[context_associations]] - Setting links
+      - [[context_associations]] - Links between items and settings
 
-  - [[episodic_organization]] - Event structure
+  - [[episodic_organization]] - Arrangement of memories of events
 
-    - [[temporal_organization]] - Time order
+    - [[temporal_organization]] - Ordering of memories in time
 
-      - [[sequence_memory]] - Order memory
+      - [[sequence_memory]] - Memory for the order of events
 
-      - [[timeline_structure]] - When what
+      - [[timeline_structure]] - Placing events along a temporal scale
 
-    - [[spatial_organization]] - Space order
+    - spatial organization - Arrangement of memories by location
 
-      - [[cognitive_maps]] - Place know
+      - [[cognitive_maps]] - Internal representations of spatial layout
 
-      - [[navigation_memory]] - Move know
+      - [[navigation_memory]] - Memory supporting route finding
 
 ### Memory Integration
 
-- [[memory_integration]] - System join
+- [[memory_integration]] - Combining information across memory systems
 
-  - [[cross_system_binding]] - Type join
+  - [[cross_system_binding]] - Linking content across memory systems
 
-    - [[declarative_binding]] - Fact join
+    - [[declarative_binding]] - Linking facts and events
 
-      - [[episode_semantic]] - Event fact
+      - [[episode_semantic]] - Linking specific events to general facts
 
-      - [[fact_procedure]] - Know how
+      - [[fact_procedure]] - Linking factual and procedural knowledge
 
-    - [[implicit_binding]] - Hidden join
+    - [[implicit_binding]] - Unconscious linking across memory systems
 
-      - [[skill_knowledge]] - Do know
+      - [[skill_knowledge]] - Knowledge expressed through performance
 
-      - [[habit_memory]] - Regular do
+      - [[habit_memory]] - Memory for learned routines
 
-  - [[consolidation_processes]] - Make firm
+  - [[consolidation_processes]] - Stabilization of memories after learning
 
-    - [[synaptic_consolidation]] - Cell firm
+    - [[synaptic_consolidation]] - Cellular stabilization of new synaptic changes
 
-      - [[molecular_changes]] - Small change
+      - [[molecular_changes]] - Protein and gene-expression changes at synapses
 
-      - [[structural_changes]] - Build change
+      - [[structural_changes]] - Physical remodeling of synapses
 
-    - [[systems_consolidation]] - Brain firm
+    - [[systems_consolidation]] - Gradual reorganization of memory across brain regions
 
-      - [[hippocampal_cortical]] - Deep store
+      - [[hippocampal_cortical]] - Transfer of memories from hippocampus to cortex
 
-      - [[distributed_storage]] - Spread save
+      - [[distributed_storage]] - Memory spread across many brain regions
 
 ## Neural Implementation
 
 ### Storage Networks
 
-- [[memory_networks]] - Brain parts
+- [[memory_networks]] - Brain regions supporting memory
 
-  - [[local_circuits]] - Near nets
+  - [[local_circuits]] - Short-range connections among neighboring neurons
 
-    - [[cortical_columns]] - Brain bits
+    - [[cortical_columns]] - Vertical groups of cortical neurons
 
-      - [[minicolumn_organization]] - Tiny bits
+      - [[minicolumn_organization]] - Narrow vertical chains of neurons
 
-      - [[hypercolumn_structure]] - Big bits
+      - [[hypercolumn_structure]] - Clusters of columns covering one input location
 
-    - [[layer_organization]] - Level nets
+    - [[layer_organization]] - Arrangement of cortical layers
 
-      - [[laminar_circuits]] - Layer paths
+      - [[laminar_circuits]] - Connections within and between cortical layers
 
-      - [[interlaminar_connections]] - Layer join
+      - [[interlaminar_connections]] - Links between cortical layers
 
-  - [[distributed_networks]] - Far nets
+  - [[distributed_networks]] - Long-range connections across brain regions
 
-    - [[hub_networks]] - Center nets
+    - [[hub_networks]] - Highly connected integrating regions
 
-      - [[convergence_zones]] - Meet spots
+      - [[convergence_zones]] - Regions combining inputs from multiple areas
 
-      - [[integration_hubs]] - Join spots
+      - [[integration_hubs]] - Regions joining information from several systems
 
-    - [[parallel_networks]] - Same nets
+    - [[parallel_networks]] - Multiple pathways handling similar functions
 
-      - [[redundant_storage]] - Copy save
+      - [[redundant_storage]] - Duplicate encoding for reliability
 
-      - [[complementary_systems]] - Help save
+      - [[complementary_systems]] - Systems with different, mutually supporting roles
 
 ### Circuit Mechanisms
 
-- [[memory_circuits]] - Brain paths
+- [[memory_circuits]] - Neural pathways that support remembering
 
-  - [[encoding_circuits]] - Write paths
+  - [[encoding_circuits]] - Circuits forming new memories
 
-    - [[pattern_separation]] - Make different
+    - [[pattern_separation]] - Making similar inputs distinct
 
-      - [[orthogonalization]] - Make unique
+      - [[orthogonalization]] - Making representations non-overlapping
 
-      - [[sparse_coding]] - Few use
+      - [[sparse_coding]] - Representing items with few active neurons
 
-    - [[pattern_completion]] - Fill missing
+    - [[pattern_completion]] - Recovering whole memories from partial cues
 
-      - [[attractor_dynamics]] - Pull whole
+      - [[attractor_dynamics]] - Network settling into stored patterns
 
-      - [[associative_recall]] - Link get
+      - [[associative_recall]] - Retrieval triggered by linked cues
 
-  - [[maintenance_circuits]] - Keep paths
+  - [[maintenance_circuits]] - Circuits keeping memories active
 
-    - [[reverberatory_circuits]] - Echo paths
+    - [[reverberatory_circuits]] - Loops that sustain activity
 
-      - [[recurrent_networks]] - Loop back
+      - [[recurrent_networks]] - Networks with feedback connections
 
-      - [[sustained_activity]] - Keep fire
+      - [[sustained_activity]] - Persistent firing that holds information
 
-    - [[stabilization_circuits]] - Stay paths
+    - [[stabilization_circuits]] - Circuits that preserve memory traces
 
-      - [[synaptic_tagging]] - Mark save
+      - [[synaptic_tagging]] - Marking synapses for later strengthening
 
-      - [[protein_synthesis]] - Make strong
+      - [[protein_synthesis]] - Protein production needed for lasting memory
 
 ### Access Mechanisms
 
-- [[memory_access]] - Get paths
+- [[memory_access]] - Mechanisms for reaching stored memories
 
-  - [[retrieval_circuits]] - Find paths
+  - [[retrieval_circuits]] - Circuits that recover stored memories
 
-    - [[search_processes]] - Look paths
+    - [[search_processes]] - Seeking target memories among stored ones
 
-      - [[spreading_activation]] - Fire spread
+      - [[spreading_activation]] - Activation passing to related items
 
-      - [[parallel_search]] - Many look
+      - [[parallel_search]] - Simultaneous checking of many memories
 
-    - [[selection_processes]] - Pick paths
+    - [[selection_processes]] - Choosing among candidate memories
 
-      - [[competition]] - Fight pick
+      - competition - Rivalry among candidate memories
 
-      - [[inhibition]] - Stop others
+      - [[inhibition]] - Suppressing competing memories
 
-  - [[integration_circuits]] - Join paths
+  - integration circuits - Circuits combining information from several sources
 
-    - [[binding_circuits]] - Tie paths
+    - [[binding_circuits]] - Circuits linking features into wholes
 
-      - [[temporal_binding]] - Time join
+      - [[temporal_binding]] - Linking items occurring close in time
 
-      - [[feature_binding]] - Part join
+      - [[feature_binding]] - Combining features into a unified item
 
-    - [[updating_circuits]] - Change paths
+    - [[updating_circuits]] - Circuits that revise stored memories
 
-      - [[modification]] - Fix paths
+      - [[modification]] - Altering existing memory content
 
-      - [[reconsolidation]] - New save
+      - [[reconsolidation]] - Re-stabilization of memories after retrieval
 
 ## Organizational Principles
 
 ### Hierarchical Structure
 
-- [[memory_hierarchy]] - Level order
+- [[memory_hierarchy]] - Ordering of memory by abstraction and control
 
-  - [[abstraction_levels]] - Think levels
+  - [[abstraction_levels]] - Degrees of detachment from specifics
 
-    - [[concrete_representations]] - Real things
+    - [[concrete_representations]] - Representations tied to specific details
 
-      - [[perceptual_features]] - Sense things
+      - [[perceptual_features]] - Sensory properties of experience
 
-      - [[motor_patterns]] - Do things
+      - [[motor_patterns]] - Stored movement sequences
 
-    - [[abstract_representations]] - Mind things
+    - [[abstract_representations]] - Representations independent of specific details
 
-      - [[concepts]] - Idea things
+      - [[concepts]] - General ideas grouping related instances
 
-      - [[schemas]] - Plan things
+      - [[schemas]] - Organized knowledge frameworks for situations
 
-  - [[processing_levels]] - Work levels
+  - [[processing_levels]] - Degrees of control and depth in processing
 
-    - [[automatic_processing]] - Fast work
+    - [[automatic_processing]] - Fast, effortless processing
 
-      - [[habit_level]] - Regular do
+      - [[habit_level]] - Routine, cue-driven responding
 
-      - [[skill_level]] - Good do
+      - [[skill_level]] - Practiced, fluent performance
 
-    - [[controlled_processing]] - Slow work
+    - [[controlled_processing]] - Slow, effortful, deliberate processing
 
-      - [[strategic_level]] - Plan do
+      - [[strategic_level]] - Planning and goal-directed processing
 
-      - [[metacognitive_level]] - Think about
+      - [[metacognitive_level]] - Monitoring one's own memory
 
 ### Network Organization
 
-- [[memory_networks]] - Web order
+- [[memory_networks]] - Network-level organization of memories
 
-  - [[local_organization]] - Near order
+  - [[local_organization]] - Structure among nearby items
 
-    - [[feature_clusters]] - Thing groups
+    - [[feature_clusters]] - Items grouped by shared features
 
-      - [[similarity_organization]] - Like groups
+      - [[similarity_organization]] - Grouping by similarity
 
-      - [[proximity_organization]] - Near groups
+      - [[proximity_organization]] - Grouping by closeness in space or time
 
-    - [[functional_clusters]] - Use groups
+    - [[functional_clusters]] - Items grouped by use
 
-      - [[task_organization]] - Do groups
+      - [[task_organization]] - Grouping by task demands
 
-      - [[context_organization]] - Where groups
+      - [[context_organization]] - Grouping by setting
 
-  - [[global_organization]] - Far order
+  - [[global_organization]] - Broad structure across the whole memory
 
-    - [[distributed_representation]] - Spread save
+    - [[distributed_representation]] - Information spread across many units
 
-      - [[redundancy]] - Copy save
+      - [[redundancy]] - Duplicate coding that protects against loss
 
-      - [[complementarity]] - Help save
+      - [[complementarity]] - Different systems supporting each other
 
-    - [[hierarchical_representation]] - Level save
+    - [[hierarchical_representation]] - Nested levels of stored information
 
-      - [[bottom_up]] - Low high
+      - [[bottom_up]] - Processing driven by sensory input
 
-      - [[top_down]] - High low
+      - [[top_down]] - Processing driven by expectations and goals
 
 ### Dynamic Properties
 
-- [[memory_dynamics]] - Change ways
+- [[memory_dynamics]] - Change in memory over time
 
-  - [[plasticity_mechanisms]] - Change able
+  - [[plasticity_mechanisms]] - Processes that alter synaptic strength
 
-    - [[hebbian_plasticity]] - Use change
+    - [[hebbian_plasticity]] - Strengthening of co-active connections
 
-      - [[correlation_learning]] - Together learn
+      - [[correlation_learning]] - Learning from co-occurring activity
 
-      - [[competition_learning]] - Fight learn
+      - [[competition_learning]] - Learning where units compete to respond
 
-    - [[homeostatic_plasticity]] - Balance keep
+    - [[homeostatic_plasticity]] - Adjustments that keep activity balanced
 
-      - [[scaling]] - Size fix
+      - [[scaling]] - Proportional adjustment of synaptic strengths
 
-      - [[metaplasticity]] - Change rules
+      - [[metaplasticity]] - Plasticity that depends on prior activity
 
-  - [[stability_mechanisms]] - Stay same
+  - [[stability_mechanisms]] - Processes that preserve memories
 
-    - [[maintenance_processes]] - Keep processes
+    - [[maintenance_processes]] - Activities that keep memories intact
 
-      - [[reactivation]] - Wake again
+      - [[reactivation]] - Replay of stored memory patterns
 
-      - [[repair]] - Fix damage
+      - [[repair]] - Restoring damaged memory traces
 
-    - [[protection_processes]] - Safe keep
+    - [[protection_processes]] - Processes that guard against loss
 
-      - [[interference_control]] - Block noise
+      - [[interference_control]] - Reducing disruption from similar memories
 
-      - [[decay_prevention]] - Stop loss
+      - [[decay_prevention]] - Preventing fading of stored traces
 
 ## Applications
 
 ### Educational Applications
 
-- [[learning_organization]] - Learn order
+- [[learning_organization]] - Structuring how learning is arranged
 
-  - [[study_strategies]] - Learn ways
+  - study strategies - Techniques for learning material
 
-    - [[encoding_strategies]] - Save ways
+    - [[encoding_strategies]] - Techniques for forming memories
 
-      - [[elaboration]] - More think
+      - [[elaboration]] - Linking new material to existing knowledge
 
-      - [[organization]] - Order make
+      - organization - Structuring material into meaningful groups
 
-    - [[retrieval_strategies]] - Get ways
+    - [[retrieval_strategies]] - Techniques for recalling material
 
-      - [[practice_testing]] - Try get
+      - [[practice_testing]] - Self-testing to strengthen recall
 
-      - [[spaced_retrieval]] - Time get
+      - [[spaced_retrieval]] - Recalling at increasing intervals
 
-  - [[knowledge_building]] - Know make
+  - [[knowledge_building]] - Constructing structured understanding
 
-    - [[schema_construction]] - Plan build
+    - [[schema_construction]] - Building organized knowledge frameworks
 
-      - [[concept_mapping]] - Idea map
+      - [[concept_mapping]] - Diagramming relations among ideas
 
-      - [[hierarchical_learning]] - Level learn
+      - [[hierarchical_learning]] - Learning organized in nested levels
 
-    - [[skill_development]] - Can build
+    - [[skill_development]] - Acquiring practiced abilities
 
-      - [[procedural_learning]] - Do learn
+      - [[procedural_learning]] - Learning skills through practice
 
-      - [[automatization]] - Easy make
+      - [[automatization]] - Making performance effortless through practice
 
 ### Clinical Applications
 
-- [[memory_rehabilitation]] - Fix help
+- [[memory_rehabilitation]] - Restoring or compensating for impairment
 
-  - [[compensation_strategies]] - Other ways
+  - [[compensation_strategies]] - Working around memory deficits
 
-    - [[external_aids]] - Tool help
+    - [[external_aids]] - Tools outside the mind that support memory
 
-      - [[memory_devices]] - Thing help
+      - [[memory_devices]] - Notebooks, alarms, and similar aids
 
-      - [[environmental_support]] - Where help
+      - [[environmental_support]] - Cues in the surroundings that aid recall
 
-    - [[internal_strategies]] - Mind help
+    - [[internal_strategies]] - Mental techniques supporting memory
 
-      - [[mnemonics]] - Remember tricks
+      - [[mnemonics]] - Techniques that aid remembering
 
-      - [[routines]] - Regular ways
+      - [[routines]] - Regular habits that reduce memory demands
 
-  - [[restoration_approaches]] - Fix back
+  - [[restoration_approaches]] - Methods to recover lost function
 
-    - [[retraining]] - Learn again
+    - [[retraining]] - Relearning lost skills
 
-      - [[targeted_practice]] - Specific do
+      - [[targeted_practice]] - Practice focused on specific deficits
 
-      - [[progressive_challenge]] - Hard more
+      - [[progressive_challenge]] - Gradually increasing task difficulty
 
-    - [[neural_stimulation]] - Brain wake
+    - [[neural_stimulation]] - Activating neural tissue to aid memory
 
-      - [[direct_stimulation]] - Zap help
+      - [[direct_stimulation]] - Electrical or magnetic stimulation of brain areas
 
-      - [[cognitive_exercise]] - Mind work
+      - [[cognitive_exercise]] - Mental activities that train memory
 
 ### Technology Applications
 
-- [[memory_technology]] - Tech help
+- [[memory_technology]] - Technology supporting remembering
 
-  - [[augmentation_systems]] - Better make
+  - [[augmentation_systems]] - Systems that extend memory capacity
 
-    - [[memory_prosthetics]] - Add help
+    - [[memory_prosthetics]] - Devices that replace lost memory function
 
-      - [[storage_devices]] - Save things
+      - [[storage_devices]] - External records of information
 
-      - [[retrieval_aids]] - Find help
+      - [[retrieval_aids]] - Cues and tools for recall
 
-    - [[enhancement_systems]] - More good
+    - [[enhancement_systems]] - Systems that boost memory performance
 
-      - [[brain_stimulation]] - Brain help
+      - [[brain_stimulation]] - Neuromodulation applied to improve memory
 
-      - [[cognitive_training]] - Mind train
+      - [[cognitive_training]] - Structured exercises to improve cognition
 
-  - [[artificial_systems]] - Computer help
+  - [[artificial_systems]] - Computational systems that model or support memory
 
-    - [[memory_models]] - Think like
+    - [[memory_models]] - Formal models of memory function
 
-      - [[neural_networks]] - Brain like
+      - [[neural_networks]] - Brain-inspired computational models
 
-      - [[symbolic_systems]] - Rule like
+      - [[symbolic_systems]] - Rule-based computational models
 
-    - [[hybrid_systems]] - Mix help
+    - [[hybrid_systems]] - Combining neural and symbolic approaches
 
-      - [[human_ai]] - People computer
+      - [[human_ai]] - Collaboration between people and AI
 
-      - [[augmented_cognition]] - Better think
+      - [[augmented_cognition]] - AI-supported extension of thinking
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[integration_problems]] - Join hard
+- [[integration_problems]] - Difficulties combining memory systems
 
-  - [[system_coordination]] - Work together
+  - [[system_coordination]] - Aligning different memory systems
 
-  - [[capacity_limits]] - How much
+  - [[capacity_limits]] - Limits on how much can be stored
 
-- [[efficiency_issues]] - Good work
+- [[efficiency_issues]] - Challenges of speed and resource use
 
-  - [[access_speed]] - Fast get
+  - [[access_speed]] - How quickly memories can be retrieved
 
-  - [[accuracy_reliability]] - Right sure
+  - [[accuracy_reliability]] - Correctness and consistency of recall
 
 ### Emerging Approaches
 
-- [[new_methods]] - New ways
+- new methods - Emerging approaches to memory research
 
-  - [[real_time_monitoring]] - Now watch
+  - [[real_time_monitoring]] - Continuous tracking of memory states
 
-    - [[state_tracking]] - How now
+    - [[state_tracking]] - Following the current memory state
 
-    - [[dynamic_adaptation]] - Change fit
+    - [[dynamic_adaptation]] - Adjusting interventions as conditions change
 
-  - [[precision_targeting]] - Exact help
+  - [[precision_targeting]] - Tailoring interventions to specific needs
 
-    - [[individual_differences]] - Person fit
+    - [[individual_differences]] - Person-specific variation in memory
 
-    - [[context_sensitivity]] - Where fit
+    - [[context_sensitivity]] - Responsiveness to the situation
 
 ## References
 

@@ -10,6 +10,8 @@ tags:
 - cognitive_modeling
 - theoretical_foundations
 - implementation
+aliases:
+  - cognitive_models
 semantic_relations:
   - type: implements
     links:

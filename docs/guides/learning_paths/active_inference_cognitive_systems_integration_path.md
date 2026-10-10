@@ -5,12 +5,11 @@ title: Cognitive Systems Integration Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
-modified: 2025-08-08
 
-version: 1.1.0
 
 tags:
 
@@ -35,9 +34,9 @@ semantic_relations:
 
 ## Quick Start
 
-- Add a contract test for a belief-update microservice interface in `Generic_Thing`
+- Add a contract test for a belief-update service interface wrapped around `ActiveInferenceDispatcher`
 
-- Wire minimal `tools/src/models/active_inference` components and assert telemetry/latency bounds
+- Wire minimal `cognitive.models.active_inference` components and assert telemetry/latency bounds
 
 - Document interfaces and trace propagation across services
 
@@ -219,25 +218,15 @@ This learning path focuses on integrating cognitive science principles with syst
 
 - Performance optimization
 
-### Repo-integrated labs (TDD)
+### Repository labs
 
-- Cognitive microservices via `Generic_Thing`
+Runnable material in this repository is the `cognitive` package, `Things.Simple_POMDP`, and `Things.Continuous_Generic`. The `Generic_POMDP`, `BioFirm`, `Ant_Colony`, and `Generic_Thing` folders contain documentation only, so there are no scripts to launch for them.
 
-  - Explore visualizations and tests:
+- Executed starting points: [[docs/examples/index|Examples index]] and [[docs/api/api_examples|API examples]].
 
-    - ```bash
+- Continuous-agent checks: `python -m pytest code/tests/visualization/test_continuous_generic.py -q`.
 
-      python3 -m pytest /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/tests -q
-
-      ```text
-
-  - Add a contract test for interface stability of belief update service
-
-- Integration smoke tests
-
-  - Wire `tools/src/models/active_inference` components with visualization utilities
-
-  - Assert telemetry completeness and latency bounds in a CI-like run
+- Exercise: wrap an `ActiveInferenceDispatcher` in an interface of your own and test that it returns normalized beliefs and policies.
 
 ## Projects and Applications
 
@@ -307,28 +296,6 @@ This learning path focuses on integrating cognitive science principles with syst
 
 - Development environments
 
-## Community and Support
-
-### 1. Learning Communities
-
-- Discussion forums
-
-- Study groups
-
-- Project collaboration
-
-- Knowledge sharing
-
-### 2. Professional Networks
-
-- Expert consultation
-
-- Peer review
-
-- Collaboration opportunities
-
-- Industry connections
-
 ## Next Steps
 
 ### 1. Advanced Specialization
@@ -352,14 +319,3 @@ This learning path focuses on integrating cognitive science principles with syst
 - Adaptive architectures
 
  - Observability for cognitive microservices
-
-## Version History
-
-- Created: 2024-03-15
-
-- Last Updated: 2024-03-15
-
-- Status: Stable
-
-- Version: 1.0.0
-

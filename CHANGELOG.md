@@ -32,10 +32,54 @@ produced a wrong or arbitrary result now raise `ValueError`.
   belief. Dividing by the evidence is scale-invariant, so likelihoods of `1e-13`
   and `1e-14` now give the exact posterior `(10/11, 1/11)`. Only evidence of
   exactly zero still falls back to the prior (or uniform in `SimplePOMDP`). The
-  same `EPS` floor remains in the other normalization helpers (`_normalize` in
-  the dispatcher, the homeostatic model and `MatrixOps`, and
-  `ensure_matrix_properties`), so inputs whose total mass is below `1e-12` are
-  still treated as empty there.
+  other normalizers were brought in line by the scale-invariance item below.
+- **Normalization is scale-invariant everywhere.** The dispatcher, homeostatic,
+  `MatrixOps`, `ensure_matrix_properties`, `compute_entropy`/`kl_divergence`,
+  `SimplePOMDP`, generative-model and base-model normalizers compared the total
+  mass with `EPS = 1e-12`, so `[1e-13, 3e-13]` became uniform (or raised
+  `must contain positive mass`) while `[1e-11, 3e-11]` became `[0.25, 0.75]`.
+  They now share `matrix_utils.normalize_mass` and divide by the sum whenever it
+  is positive. Inputs with total mass of at least `1e-12` give identical results
+  (the quotient is the same expression); an all-zero slice is handled as before
+  (uniform, except `SimplePOMDP`'s column/row helpers, which leave it zero),
+  non-finite input is still rejected, and a total that overflows to infinity is
+  rescaled by the largest entry instead of yielding zeros.
+- **`AdaptiveControl.compute_policy_prior` now depends on `prediction_error`.**
+  The exploration term was the same constant for every entry, so the max-shift
+  before `exp` cancelled it and the output was identical for any error. The
+  tracking score `-|beliefs - goal|` is now scaled by
+  `(1 - exploration_weight) / (1 + exploration_weight * prediction_error)`: a
+  large error flattens the prior (more exploration), and at an error of zero the
+  result equals the old output, which was the same for every error. `prediction_error` must be
+  finite and non-negative. With `exploration_weight=0` the error is gated out,
+  as before.
+- **`SimplePOMDP` reads or rejects every `inference` field.** `inference.seed`,
+  `temperature`, and `time_horizon` were accepted and ignored. `seed` now seeds
+  the generator (the root `seed` is equivalent; different values for both raise);
+  `temperature`, when present, makes `step()` sample the action from
+  `softmax(-(G - ln E) / temperature)` (omit it for the previous greedy
+  selection), so every configuration that sets `temperature` follows a new
+  random stream; `time_horizon`/`temporal_horizon` must be 1; and
+  `num_iterations` and `policy_learning_rate`, which nothing read, raise
+  `ValueError`. Remove them from existing configurations.
+- **`ContinuousActiveInference` bounds learned precision.** With
+  `precision_learning_rate > 0` the precision chased `1 / residual**2`: one
+  zero-residual step set it to `1e12`, the next gradient step moved the belief by
+  `dt * alpha * 1e12`, and the resulting huge residual drove the precision to
+  `1e-20` and froze the update. The learned target is now clipped to the new
+  `precision_min=1e-3` and `precision_max=1e3`, and the initial
+  `observation_precision` must lie inside them when learning is on. Residuals
+  between about 0.03 and 30 give the previous result. The sensory step is stable
+  only while `dt * alpha * precision_max < 2`.
+- **`goal_prior` is applied at the same strength by all three policy methods.**
+  Variational and sampling inference folded `-ln(prior)` into the energy, which
+  the softmax then divided by the temperature, so the prior entered as
+  `ln(prior) / T`; mean-field applied `ln(prior)`. The documented posterior is
+  `q(a) proportional to E(a) exp(-G(a) / T)`, which is the mean-field form, so
+  `calculate_expected_free_energy(state, goal_prior)` now returns
+  `G - T ln(prior)`. Results change for variational and sampling only when
+  `temperature != 1`. When `goal_prior` is omitted, mean-field still uses the
+  model's `E` and the other two methods still apply no action prior.
 - **`matrix_utils.compute_entropy`** of a deterministic distribution is exactly
   zero. A `log(p + EPS)` floor applied to every entry gave about `-1e-12`; other
   distributions move by about `n * 1e-12` for `n` outcomes.
@@ -65,6 +109,17 @@ produced a wrong or arbitrary result now raise `ValueError`.
 
 ### Added
 
+- `code/scripts/markdown_fences.py` is the one place that finds fenced code
+  blocks: a line-based tracker that matches the opening fence's character and
+  length, treats a shorter run or the other character as content, and runs an
+  unterminated fence to the end of the file. `verify_links.py`,
+  `check_markdown_links.py`, `kb_index.py`, `validate_docs.py` and
+  `build_manuscript.py` use it. `validate_docs` reports unterminated fences in a
+  `unterminated_fences` list, which is also a documentation error: a page may not
+  leave a fence open. The tracker also finds fences inside blockquotes and callouts
+  and on list-item lines, and ends a line only at LF, CR or CRLF.
+- `matrix_utils.normalize_mass`, the shared scale-invariant normalizer, and the
+  `precision_min`/`precision_max` arguments of `ContinuousActiveInference`.
 - `code/scripts/normalize_frontmatter.py` (`cognitive-normalize-frontmatter`)
   keeps every `semantic_relations` link a quoted wiki link. 753 pages stored
   them as nested YAML lists, the residue of unquoted `[[links]]`, so the
@@ -73,14 +128,25 @@ produced a wrong or arbitrary result now raise `ValueError`.
 - `code/scripts/kb_index.py` (`cognitive-kb-index`) generates a `catalog.md` in
   every `knowledge_base/` domain and at its root: each page with its title and
   opening line. `validate_docs` fails when a catalog is missing or stale.
-- 158 knowledge-base concept pages for the most-referenced names that had
-  no page (learning and plasticity, vision and perception, psychiatry and social
+- 358 knowledge-base concept pages for the most-referenced names that had no
+  page (learning and plasticity, vision and perception, psychiatry and social
   cognition, statistics, dynamics and control, ecology and swarms, philosophy of
-  science), and 72 one-paragraph pages rewritten into articles. Worked examples are
-  computed with the package and quote the numbers it returns.
+  science), and 72 one-paragraph pages rewritten into articles. Worked examples
+  are computed with the package and quote the numbers it returns. The second
+  batch of 200 was chosen by triaging the 510 link targets with three or more
+  inbound links into write, alias and unlink; the references on all of these
+  pages were checked against the published records (see Documentation).
+- A `description:` line on 55 pages that opened with a formula or a list, so the
+  generated catalogs describe them.
+- `aliases:` on 124 existing pages so that a link to a synonym or variant name
+  (`[[plasticity]]`, `[[executive_function]]`) opens the page that covers it.
 
 ### Fixed
 
+- CI has been red since 2026-08-19: the document-toolchain step asked apt for
+  `pandoc-crossref`, which Ubuntu does not package, so the test job stopped before
+  pytest. It now installs Pandoc 3.12.1 and pandoc-crossref 0.3.26, built against
+  that Pandoc, from their release pages.
 - `StateSpacePlotter.plot_free_energy_landscape` failed with a shape mismatch for
   any non-square array: `np.meshgrid` defaulted to `xy` indexing and transposed
   the grid. It now uses `ij` indexing.
@@ -94,8 +160,24 @@ produced a wrong or arbitrary result now raise `ValueError`.
 - `verify_links.py` and `check_markdown_links.py` counted a `# comment` inside a
   fenced code block as a heading, so a link to `#install-deps` was accepted
   whenever a shell snippet contained that comment. Fenced blocks are now
-  ignored when collecting heading anchors. The repository itself reports no new
-  anchor warnings.
+  ignored when collecting heading anchors, and the non-greedy fence pattern that
+  first fixed this was replaced by the line-based tracker: it still read a
+  comment inside a four-backtick fence that holds a three-backtick block, or
+  after a fence that is never closed, as a heading, and it scanned the contents
+  of nested blocks for links. `kb_index.py` toggled "in fence" on every fence
+  line and `validate_docs.py` compiled `python` fences found by a pattern; both
+  now use the tracker (catalog text is unchanged). `validate_docs` still
+  compiles only unindented, closed `python` fences, as before.
+- Silent failures in `code/scripts`: `verify_links.py` and
+  `check_markdown_links.py` skipped a Markdown file they could not read (the
+  first printed and exited 0, the second said nothing); both now list it under
+  `unreadable_files` and exit 1, and `validate_docs` reports it. `validate_docs`
+  skipped a tracked text file that was not valid UTF-8, exempting it from every
+  check, and now reports it. `normalize_frontmatter.py --check` skipped such a
+  file and exited 0; it now exits 1. `unquoted_links` read `links: 0`, `""` and
+  `false` as an empty list (`or []`); only an absent or null `links` means none.
+  `build_manuscript` wrote an empty `preamble.tex` when `preamble.md` had no
+  `latex` fence and rendered a PDF without its macros; it now raises.
 - Removed an unreachable duplicate `non_negative` branch in
   `SimplePOMDP._apply_constraint`.
 
@@ -113,6 +195,31 @@ produced a wrong or arbitrary result now raise `ValueError`.
   cut `docs/DOCUMENTATION_ROADMAP.md` from 809 to 145 lines, and replaced the
   fictional content of the `docs/api/` and `docs/agents/` pages with what the
   package actually exports.
+- Verified the bibliographic details of every page written or expanded on
+  2026-10-09 and 2026-10-10 against PubMed, Crossref and publisher records:
+  about 900 cited works, 41 corrections (wrong or truncated titles, an author
+  list, page ranges, three findings credited to the wrong paper, a missing
+  co-author) and no invented papers. 36 in-text citations that had no reference
+  entry gained one.
+- Removed generated filler from `docs/`: about 120 false claims in
+  `docs/implementation/` and `docs/research/` (invented RxInfer API names,
+  fictional results, a PyTorch integration), about 8,500 lines of invented
+  scaffolding in `docs/guides/` (learner analytics, certificates, 1,700 lines of
+  class skeletons, paths into another machine's home directory), and the
+  fictional "Active Implementations" in `code/Things/README.md`. The RxInfer notes
+  are rewritten from the official documentation and say that they describe an
+  external project.
+- Replaced 4,987 garbled glosses in link lists across 47 knowledge-base pages
+  ("Warn ways", "Brain think") with accurate descriptions, and dropped 2 whose
+  meaning was unclear; 1,170 accurate glosses were kept. Every changed line was
+  checked to differ from its predecessor only after the ` - `.
+- Unlinked 493 references to generic labels that no page should exist for
+  (`new_methods`, `version_control`) and aliased the rest; 6,533 names with one
+  or two links each remain unresolved by design.
+- Closed four code fences that never ended in `dynamical_systems.md`,
+  `expected_free_energy.md`, `factor_graphs.md` and `free_energy_principle.md`:
+  CommonMark rendered the rest of each page as code. The generator had written
+  the closing fence as a fence with an info string, which cannot close a block.
 
 ### Tests
 
@@ -126,6 +233,19 @@ produced a wrong or arbitrary result now raise `ValueError`.
   fixed above that a test pins: the posterior threshold, the entropy floor,
   index truncation, non-finite constraint input, and the transposed landscape
   grid. All are killed.
+- `test_suspect_defects.py` (the `AdaptiveControl` prior, `SimplePOMDP`
+  `seed`/`temperature`/horizon keys, precision bounds, `goal_prior` scaling at
+  several temperatures against an independently computed `E exp(-G/T)`),
+  `test_scale_invariant_normalization.py` (every normalizer at scales from 1 to
+  `1e-300`, plus the unchanged all-zero and non-finite handling) and
+  `test_markdown_fences.py` (the tracker, nested and unterminated fences in both
+  link checkers, and the silent-failure paths above) were written against the
+  previous code first; 93 of their 133 cases fail there, the rest pin unchanged
+  behaviour.
+- Nine more mutations (31 total): the normalizer floor, the `goal_prior`
+  temperature scale, the `AdaptiveControl` error scale, the precision target
+  clip, the two `SimplePOMDP` settings, two fence-tracker rules, and the
+  falsy-`links` default. All are killed.
 
 ## [1.1.0]
 

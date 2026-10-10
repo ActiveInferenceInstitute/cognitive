@@ -10,6 +10,7 @@ tags:
 - prefrontal
 aliases:
   - executive_function
+  - executive_processes
 semantic_relations:
   - type: implements
     links:
@@ -33,319 +34,319 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 ### Working Memory
 
-- [[working_memory_control]] - Info manage
+- [[working_memory_control]] - Managing the contents of working memory
 
-  - [[maintenance]] - Keep active
+  - maintenance - Keeping information active over short delays
 
-    - [[active_representation]] - Hold info
+    - [[active_representation]] - Holding information in an active state
 
-    - [[interference_protection]] - Block noise
+    - [[interference_protection]] - Shielding memory from distraction
 
-  - [[manipulation]] - Change info
+  - manipulation - Transforming information held in mind
 
-    - [[updating]] - New info add
+    - [[updating]] - Replacing working memory contents with new input
 
-    - [[reordering]] - Change order
+    - [[reordering]] - Rearranging items held in working memory
 
 ### Inhibitory Control
 
-- [[response_inhibition]] - Stop action
+- [[response_inhibition]] - Suppressing inappropriate or prepotent responses
 
-  - [[behavioral_inhibition]] - Action stop
+  - [[behavioral_inhibition]] - Withholding overt actions
 
-    - [[motor_inhibition]] - Move stop
+    - [[motor_inhibition]] - Stopping or suppressing movement
 
-    - [[impulse_control]] - Urge stop
+    - [[impulse_control]] - Resisting immediate urges
 
-  - [[cognitive_inhibition]] - Think stop
+  - [[cognitive_inhibition]] - Suppressing irrelevant thoughts and information
 
-    - [[distraction_resistance]] - Focus keep
+    - [[distraction_resistance]] - Maintaining focus despite competing stimuli
 
-    - [[thought_suppression]] - Think block
+    - [[thought_suppression]] - Deliberately keeping unwanted thoughts out of mind
 
 ### Cognitive Flexibility
 
-- [[mental_flexibility]] - Think change
+- [[mental_flexibility]] - Adapting thinking to changing demands
 
-  - [[set_shifting]] - Rule switch
+  - [[set_shifting]] - Switching between rules or mental sets
 
-    - [[task_switching]] - Activity change
+    - [[task_switching]] - Alternating between different tasks
 
-    - [[perspective_taking]] - View change
+    - [[perspective_taking]] - Adopting another person's viewpoint
 
-  - [[adaptive_behavior]] - Change fit
+  - [[adaptive_behavior]] - Adjusting behavior to fit circumstances
 
-    - [[strategy_adjustment]] - Plan change
+    - [[strategy_adjustment]] - Modifying plans in response to feedback
 
-    - [[error_correction]] - Fix wrong
+    - [[error_correction]] - Fixing mistakes once detected
 
 ## Control Processes
 
 ### Goal Management
 
-- [[goal_processing]] - Aim handle
+- [[goal_processing]] - Representing and managing goals
 
-  - [[goal_setting]] - Choose aims
+  - [[goal_setting]] - Selecting and defining goals
 
-    - [[priority_setting]] - What first
+    - [[priority_setting]] - Deciding which goals come first
 
-    - [[planning]] - How do
+    - [[planning]] - Sequencing actions to reach goals
 
-  - [[goal_maintenance]] - Keep aims
+  - [[goal_maintenance]] - Keeping goals active over time
 
-    - [[active_goals]] - Current aims
+    - [[active_goals]] - Goals currently guiding behavior
 
-    - [[subgoal_coordination]] - Part aims
+    - [[subgoal_coordination]] - Organizing intermediate steps toward a larger goal
 
 ### Attention Control
 
-- [[attention_regulation]] - Focus manage
+- [[attention_regulation]] - Controlling where attention is directed
 
-  - [[selective_attention]] - Pick what
+  - [[selective_attention]] - Prioritizing relevant stimuli over irrelevant ones
 
-    - [[target_selection]] - Choose what
+    - [[target_selection]] - Choosing which stimulus to attend to
 
-    - [[distractor_suppression]] - Ignore what
+    - [[distractor_suppression]] - Filtering out irrelevant stimuli
 
-  - [[sustained_attention]] - Keep focus
+  - [[sustained_attention]] - Maintaining focus over extended periods
 
-    - [[vigilance]] - Stay alert
+    - [[vigilance]] - Sustained readiness to detect rare events
 
-    - [[effort_regulation]] - Energy use
+    - effort regulation - Adjusting mental effort to task demands
 
 ### Performance Monitoring
 
-- [[monitoring_system]] - Check work
+- [[monitoring_system]] - Tracking performance and detecting problems
 
-  - [[error_detection]] - Find wrong
+  - [[error_detection]] - Noticing that a mistake has occurred
 
-    - [[error_recognition]] - See wrong
+    - [[error_recognition]] - Identifying what kind of mistake occurred
 
-    - [[error_correction]] - Fix wrong
+    - [[error_correction]] - Fixing mistakes once detected
 
-  - [[conflict_monitoring]] - Problem spot
+  - [[conflict_monitoring]] - Detecting competing response tendencies
 
-    - [[response_conflict]] - Action clash
+    - [[response_conflict]] - Competition between incompatible responses
 
-    - [[strategy_conflict]] - Plan clash
+    - [[strategy_conflict]] - Competition between alternative strategies
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[executive_networks]] - Control parts
+- [[executive_networks]] - Brain networks supporting executive control
 
-  - [[prefrontal_cortex]] - Front brain
+  - [[prefrontal_cortex]] - Frontal brain region central to executive control
 
-    - [[dorsolateral]] - Side front
+    - [[dorsolateral]] - Dorsolateral prefrontal cortex, supporting working memory and planning
 
-    - [[ventrolateral]] - Low front
+    - [[ventrolateral]] - Ventrolateral prefrontal cortex, supporting inhibition and selection
 
-  - [[cingulate_cortex]] - Middle brain
+  - [[cingulate_cortex]] - Medial cortex involved in monitoring and conflict detection
 
-    - [[anterior_cingulate]] - Front middle
+    - [[anterior_cingulate]] - Front part of the cingulate, detecting conflict and errors
 
-    - [[posterior_cingulate]] - Back middle
+    - [[posterior_cingulate]] - Rear cingulate, tied to internally directed attention
 
 ### Circuit Mechanisms
 
-- [[control_circuits]] - Cell paths
+- [[control_circuits]] - Neural circuits implementing cognitive control
 
-  - [[local_circuits]] - Near cells
+  - [[local_circuits]] - Connections within a single brain region
 
-    - [[recurrent_networks]] - Loop back
+    - [[recurrent_networks]] - Circuits whose feedback loops sustain activity
 
-    - [[inhibitory_circuits]] - Stop paths
+    - [[inhibitory_circuits]] - Circuits that suppress competing activity
 
-  - [[long_range]] - Far cells
+  - [[long_range]] - Connections linking distant brain regions
 
-    - [[frontoparietal]] - Front back
+    - [[frontoparietal]] - Frontal-parietal network for flexible control
 
-    - [[frontostriatal]] - Front deep
+    - [[frontostriatal]] - Frontal-striatal loops for action selection and learning
 
 ### Neuromodulation
 
-- [[control_modulation]] - Change how
+- [[control_modulation]] - Neurochemical adjustment of control processes
 
-  - [[dopamine_system]] - Reward chemical
+  - [[dopamine_system]] - Neuromodulator system for reward and motivation
 
-    - [[reward_signaling]] - Good mark
+    - [[reward_signaling]] - Encoding reward and reward prediction
 
-    - [[error_signaling]] - Wrong mark
+    - [[error_signaling]] - Encoding prediction errors and mistakes
 
-  - [[norepinephrine_system]] - Alert chemical
+  - [[norepinephrine_system]] - Neuromodulator system for arousal and alertness
 
-    - [[arousal_regulation]] - Wake level
+    - [[arousal_regulation]] - Adjusting overall alertness level
 
-    - [[attention_regulation]] - Focus level
+    - [[attention_regulation]] - Controlling where attention is directed
 
 ## Development
 
 ### Developmental Trajectory
 
-- [[executive_development]] - Grow how
+- [[executive_development]] - Maturation of executive functions over time
 
-  - [[early_development]] - Young grow
+  - [[early_development]] - Emergence of control abilities in early childhood
 
-    - [[basic_control]] - Simple manage
+    - [[basic_control]] - Early, simple forms of self-control
 
-    - [[emergence]] - Start show
+    - [[emergence]] - First appearance of control abilities
 
-  - [[later_development]] - Old grow
+  - [[later_development]] - Continued maturation across adolescence and adulthood
 
-    - [[refinement]] - Get better
+    - refinement - Increasing accuracy and efficiency of control
 
-    - [[specialization]] - Get specific
+    - specialization - Differentiation of control into distinct abilities
 
 ### Individual Differences
 
-- [[control_variation]] - Person differ
+- [[control_variation]] - Differences in control between individuals
 
-  - [[capacity_differences]] - Can do
+  - [[capacity_differences]] - Differences in available processing resources
 
-    - [[processing_capacity]] - How much
+    - [[processing_capacity]] - Amount of information that can be handled at once
 
-    - [[control_strength]] - How strong
+    - [[control_strength]] - Degree of effective control exerted
 
-  - [[style_differences]] - How do
+  - [[style_differences]] - Differences in preferred control approaches
 
-    - [[strategy_preference]] - Way pick
+    - [[strategy_preference]] - Preferred approach to a task
 
-    - [[regulation_style]] - Control way
+    - [[regulation_style]] - Characteristic way of regulating behavior
 
 ### Environmental Influences
 
-- [[control_environment]] - World effect
+- [[control_environment]] - Environmental influences on executive control
 
-  - [[experience_effects]] - Do effect
+  - [[experience_effects]] - Influence of life experience on control
 
-    - [[practice_effects]] - Train result
+    - [[practice_effects]] - Improvement through repeated training
 
-    - [[challenge_effects]] - Hard result
+    - [[challenge_effects]] - Influence of demanding conditions on control
 
-  - [[context_effects]] - Where effect
+  - [[context_effects]] - Influence of situational factors on control
 
-    - [[social_influence]] - People effect
+    - [[social_influence]] - Influence of other people on control
 
-    - [[stress_effects]] - Pressure effect
+    - [[stress_effects]] - Impact of stress on control
 
 ## Applications
 
 ### Educational Applications
 
-- [[academic_executive]] - School use
+- [[academic_executive]] - Executive functions in schooling
 
-  - [[learning_support]] - Learn help
+  - [[learning_support]] - Aids that help students learn
 
-    - [[study_strategies]] - Learn how
+    - study strategies - Methods for organizing and retaining material
 
-    - [[self_regulation]] - Control self
+    - [[self_regulation]] - Managing one's own thoughts, emotions, and behavior
 
-  - [[classroom_management]] - Class help
+  - [[classroom_management]] - Organizing classroom conditions for learning
 
-    - [[attention_support]] - Focus help
+    - attention support - Aids for sustaining attention in class
 
-    - [[behavior_management]] - Act help
+    - [[behavior_management]] - Guiding and regulating student behavior
 
 ### Clinical Applications
 
-- [[executive_dysfunction]] - Control wrong
+- [[executive_dysfunction]] - Impaired executive control
 
-  - [[assessment]] - Check how
+  - assessment - Measuring executive abilities
 
-    - [[function_testing]] - Ability test
+    - [[function_testing]] - Performance tests of executive abilities
 
-    - [[behavior_rating]] - Act check
+    - [[behavior_rating]] - Questionnaire ratings of everyday behavior
 
-  - [[intervention]] - Help fix
+  - intervention - Methods for improving executive function
 
-    - [[cognitive_training]] - Think train
+    - [[cognitive_training]] - Practice exercises targeting cognitive skills
 
-    - [[strategy_teaching]] - Way teach
+    - [[strategy_teaching]] - Instruction in compensatory strategies
 
 ### Workplace Applications
 
-- [[professional_executive]] - Work use
+- [[professional_executive]] - Executive functions in work settings
 
-  - [[performance_enhancement]] - Do better
+  - [[performance_enhancement]] - Improving work performance
 
-    - [[efficiency_improvement]] - Fast better
+    - [[efficiency_improvement]] - Getting more done with less effort
 
-    - [[error_reduction]] - Less wrong
+    - [[error_reduction]] - Lowering the rate of mistakes
 
-  - [[stress_management]] - Handle hard
+  - stress management - Coping with work pressure
 
-    - [[load_management]] - Much handle
+    - [[load_management]] - Handling cognitive workload
 
-    - [[adaptation_support]] - Change handle
+    - [[adaptation_support]] - Helping people adjust to change
 
 ## Research Methods
 
 ### Behavioral Methods
 
-- [[executive_assessment]] - Check how
+- [[executive_assessment]] - Methods for measuring executive function
 
-  - [[performance_tasks]] - Do tasks
+  - [[performance_tasks]] - Tasks measuring executive performance
 
-    - [[switching_tasks]] - Change tasks
+    - [[switching_tasks]] - Tasks measuring shifting ability
 
-    - [[inhibition_tasks]] - Stop tasks
+    - [[inhibition_tasks]] - Tasks measuring response suppression
 
-  - [[rating_scales]] - Judge how
+  - [[rating_scales]] - Standardized questionnaires of behavior
 
-    - [[self_report]] - Self say
+    - [[self_report]] - Ratings given by the individual
 
-    - [[observer_rating]] - Other say
+    - [[observer_rating]] - Ratings given by others
 
 ### Neural Methods
 
-- [[brain_assessment]] - Brain check
+- [[brain_assessment]] - Measuring neural correlates of control
 
-  - [[imaging]] - Brain look
+  - imaging - Brain imaging techniques
 
-    - [[activation]] - Work where
+    - activation - Regional brain activity during tasks
 
-    - [[connectivity]] - Connect how
+    - [[connectivity]] - Functional or structural links between brain regions
 
-  - [[physiology]] - Body check
+  - [[physiology]] - Bodily measures of control
 
-    - [[autonomic]] - Body state
+    - [[autonomic]] - Heart rate and other autonomic nervous system measures
 
-    - [[neuroendocrine]] - Chemical state
+    - [[neuroendocrine]] - Hormone-based measures
 
 ### Computational Methods
 
-- [[control_modeling]] - Math check
+- [[control_modeling]] - Computational models of control
 
-  - [[process_models]] - How work
+  - process models - Models of underlying cognitive mechanisms
 
-    - [[control_mechanisms]] - Do how
+    - [[control_mechanisms]] - Mechanisms through which control operates
 
-    - [[optimization]] - Best how
+    - [[optimization]] - Finding the best control strategy
 
-  - [[network_models]] - Connect how
+  - [[network_models]] - Models of interacting brain networks
 
-    - [[circuit_models]] - Path how
+    - [[circuit_models]] - Models of neural circuit dynamics
 
-    - [[system_models]] - Whole how
+    - [[system_models]] - Models of whole-system control
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[measurement_issues]] - Check problems
+- measurement issues - Difficulties in measuring executive function
 
-- [[individual_variation]] - Person differ
+- [[individual_variation]] - Differences between individuals
 
-- [[ecological_validity]] - Real life
+- [[ecological_validity]] - Relevance of tests to real-life performance
 
 ### Emerging Approaches
 
-- [[personalized_intervention]] - Person fit
+- personalized intervention - Treatment tailored to the individual
 
-- [[technology_enhanced]] - Tech help
+- technology enhanced - Technology-assisted training and support
 
-- [[integrative_methods]] - Mix ways
+- [[integrative_methods]] - Approaches combining multiple methods
 
 ## References
 

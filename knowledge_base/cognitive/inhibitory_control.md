@@ -8,6 +8,11 @@ tags:
   - executive_function
   - control
   - action
+aliases:
+  - interference_control
+  - inhibition
+  - impulse_control
+  - response_inhibition
 semantic_relations:
   - type: relates
     links:

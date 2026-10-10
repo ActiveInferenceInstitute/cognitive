@@ -9,6 +9,8 @@ tags:
   - algorithms
   - computation
   - probabilistic
+aliases:
+  - approximate_inference
 semantic_relations:
   - type: includes
     links:

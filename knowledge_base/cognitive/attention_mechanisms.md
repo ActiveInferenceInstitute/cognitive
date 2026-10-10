@@ -40,9 +40,9 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
   - [[feature_attention]] - Attribute-based
 
-    - [[feature_selection]] - Property focus
+    - [[feature_selection]] - Attending to specific stimulus features
 
-    - [[conjunction_search]] - Combined features
+    - [[conjunction_search]] - Search for targets defined by feature combinations
 
 ### Control Systems
 
@@ -52,13 +52,13 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
     - [[task_sets]] - Goal maintenance
 
-    - [[priority_maps]] - Importance coding
+    - [[priority_maps]] - Spatial maps combining salience and relevance
 
   - [[bottom_up_control]] - Stimulus-driven
 
-    - [[salience_detection]] - Novelty
+    - [[salience_detection]] - Detecting stimuli that stand out from context
 
-    - [[emotional_salience]] - Affective value
+    - [[emotional_salience]] - Prioritizing emotionally significant stimuli
 
 ### Resource Allocation
 
@@ -66,11 +66,11 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
   - [[capacity_limits]] - Bandwidth constraints
 
-    - [[load_theory]] - Processing demands
+    - [[load_theory]] - Perceptual load determines distractor processing
 
     - [[interference_control]] - Distraction handling
 
-  - [[resource_distribution]] - Allocation
+  - [[resource_distribution]] - Allocating limited attention across tasks
 
     - [[divided_attention]] - Multi-tasking
 
@@ -80,7 +80,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 ### Anatomical Networks
 
-- [[attention_networks]] - Brain systems
+- [[attention_networks]] - Large-scale brain networks supporting attention
 
   - [[dorsal_network]] - Top-down control
 
@@ -90,9 +90,9 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
   - [[ventral_network]] - Bottom-up capture
 
-    - [[temporoparietal]] - Reorienting
+    - [[temporoparietal]] - Detecting unexpected stimuli and reorienting
 
-    - [[ventral_frontal]] - Interruption
+    - [[ventral_frontal]] - Ventral frontal response to unexpected events
 
 ### Circuit Mechanisms
 
@@ -100,31 +100,31 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
   - [[gain_modulation]] - Signal enhancement
 
-    - [[neural_gain]] - Amplification
+    - [[neural_gain]] - Scaling of neural response strength
 
-    - [[response_suppression]] - Inhibition
+    - [[response_suppression]] - Reduced neural responses to unattended stimuli
 
   - [[synchronization]] - Temporal coordination
 
-    - [[gamma_synchrony]] - Local binding
+    - [[gamma_synchrony]] - Fast oscillatory coupling within local circuits
 
-    - [[theta_coupling]] - Network integration
+    - [[theta_coupling]] - Slow oscillatory coupling across brain regions
 
 ### Neuromodulation
 
-- [[attention_modulation]] - Chemical control
+- [[attention_modulation]] - Neuromodulatory regulation of attention
 
-  - [[cholinergic_system]] - Acetylcholine
+  - [[cholinergic_system]] - Acetylcholine-based modulatory system
 
-    - [[nucleus_basalis]] - Source
+    - [[nucleus_basalis]] - Basal forebrain source of cortical acetylcholine
 
-    - [[cortical_modulation]] - Target
+    - [[cortical_modulation]] - Cortical targets of cholinergic input
 
-  - [[noradrenergic_system]] - Norepinephrine
+  - [[noradrenergic_system]] - Norepinephrine-based modulatory system
 
-    - [[locus_coeruleus]] - Source
+    - [[locus_coeruleus]] - Brainstem source of norepinephrine
 
-    - [[arousal_control]] - Function
+    - arousal control - Regulating alertness and vigilance
 
 ## Functional Roles
 
@@ -132,99 +132,99 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 - [[perceptual_attention]] - Sensory selection
 
-  - [[visual_attention]] - Vision
+  - [[visual_attention]] - Selective processing of visual input
 
-    - [[spatial_selection]] - Location
+    - [[spatial_selection]] - Selecting stimuli by spatial location
 
-    - [[object_selection]] - Things
+    - [[object_selection]] - Selecting whole objects as attentional units
 
-  - [[auditory_attention]] - Hearing
+  - [[auditory_attention]] - Selective processing of auditory input
 
     - [[auditory_streaming]] - Sound separation
 
-    - [[cocktail_party]] - Speech selection
+    - [[cocktail_party]] - Following one speaker among competing voices
 
 ### Memory
 
-- [[attention_memory]] - Memory control
+- [[attention_memory]] - Attentional influences on memory
 
-  - [[encoding_attention]] - Input selection
+  - [[encoding_attention]] - Attention shaping what gets encoded
 
-    - [[selective_encoding]] - Relevant info
+    - [[selective_encoding]] - Preferential encoding of relevant information
 
-    - [[depth_processing]] - Detail level
+    - [[depth_processing]] - Depth of processing during encoding
 
-  - [[retrieval_attention]] - Memory access
+  - [[retrieval_attention]] - Attention guiding memory retrieval
 
-    - [[search_control]] - Memory search
+    - [[search_control]] - Strategic control of memory search
 
-    - [[monitoring]] - Accuracy check
+    - monitoring - Checking the accuracy of retrieved memories
 
 ### Action
 
-- [[motor_attention]] - Movement control
+- [[motor_attention]] - Attention in action planning and execution
 
-  - [[action_selection]] - Choice
+  - [[action_selection]] - Choosing among competing actions
 
-    - [[response_preparation]] - Planning
+    - [[response_preparation]] - Preparing a selected response
 
-    - [[inhibitory_control]] - Stopping
+    - [[inhibitory_control]] - Suppressing unwanted responses
 
   - [[performance_monitoring]] - Evaluation
 
-    - [[error_detection]] - Mistakes
+    - [[error_detection]] - Detecting errors in performance
 
-    - [[conflict_monitoring]] - Competition
+    - [[conflict_monitoring]] - Detecting competing response tendencies
 
 ## Computational Principles
 
 ### Information Theory
 
-- [[attention_information]] - Selection theory
+- [[attention_information]] - Information-theoretic account of selection
 
-  - [[information_gain]] - Relevance
+  - [[information_gain]] - Reduction in uncertainty from sampling
 
-    - [[uncertainty_reduction]] - Learning value
+    - [[uncertainty_reduction]] - Value of reducing uncertainty
 
-    - [[precision_weighting]] - Reliability
+    - [[precision_weighting]] - Weighting signals by their reliability
 
-  - [[channel_capacity]] - Limits
+  - [[channel_capacity]] - Maximum information throughput
 
-    - [[bottleneck_theory]] - Constraints
+    - [[bottleneck_theory]] - Limited-capacity stage in processing
 
-    - [[resource_theory]] - Allocation
+    - [[resource_theory]] - Attention as a limited, divisible resource
 
 ### Control Theory
 
-- [[attention_control]] - Regulation
+- [[attention_control]] - Control-theoretic regulation of attention
 
   - [[feedback_control]] - Error-based
 
-    - [[error_signals]] - Mismatch
+    - [[error_signals]] - Signals of mismatch between goal and state
 
-    - [[adjustment_mechanisms]] - Correction
+    - [[adjustment_mechanisms]] - Adjusting attention to reduce errors
 
-  - [[predictive_control]] - Anticipatory
+  - [[predictive_control]] - Control based on anticipated demands
 
-    - [[forward_models]] - Prediction
+    - [[forward_models]] - Predicting consequences of actions
 
-    - [[expectation_bias]] - Prior effects
+    - [[expectation_bias]] - Prior expectations biasing perception
 
 ### Learning Theory
 
-- [[attention_learning]] - Adaptation
+- [[attention_learning]] - Learning to allocate attention
 
-  - [[value_learning]] - Importance
+  - [[value_learning]] - Learning which stimuli are valuable
 
-    - [[reward_association]] - Value binding
+    - [[reward_association]] - Linking stimuli to rewards
 
-    - [[punishment_avoidance]] - Threat detection
+    - [[punishment_avoidance]] - Learning to avoid punished stimuli
 
-  - [[strategy_learning]] - Methods
+  - strategy learning - Learning effective attentional strategies
 
     - [[search_strategies]] - Efficient search
 
-    - [[allocation_strategies]] - Resource use
+    - [[allocation_strategies]] - Strategies for distributing attention
 
 ## Clinical Applications
 
@@ -234,27 +234,27 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
   - [[hyperactivity]] - Excess movement
 
-  - [[impulsivity]] - Poor control
+  - [[impulsivity]] - Acting without adequate forethought
 
   - [[inattention]] - Focus problems
 
 ### Neurological Conditions
 
-- [[attention_deficits]] - Brain damage
+- [[attention_deficits]] - Attention impairments after brain injury
 
-  - [[spatial_neglect]] - Side ignorance
+  - [[spatial_neglect]] - Failure to attend to one side of space
 
-  - [[extinction]] - Competition failure
+  - [[extinction]] - Missing a stimulus when a competitor is present
 
-  - [[simultanagnosia]] - Limited awareness
+  - [[simultanagnosia]] - Inability to perceive multiple objects at once
 
 ### Therapeutic Approaches
 
-- [[attention_therapy]] - Treatment
+- [[attention_therapy]] - Interventions for attention problems
 
-  - [[cognitive_training]] - Practice
+  - [[cognitive_training]] - Repeated practice to improve attention
 
-  - [[behavioral_therapy]] - Strategies
+  - [[behavioral_therapy]] - Behavioral techniques for managing attention problems
 
   - [[medication]] - Drug treatment
 
@@ -262,65 +262,65 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 ### Behavioral Testing
 
-- [[attention_tasks]] - Assessment
+- [[attention_tasks]] - Tasks that measure attention
 
   - [[visual_search]] - Finding targets
 
-  - [[cueing_paradigms]] - Direction tests
+  - [[cueing_paradigms]] - Tasks using cues to direct attention
 
   - [[dual_tasks]] - Multi-tasking
 
 ### Neural Recording
 
-- [[attention_imaging]] - Brain activity
+- [[attention_imaging]] - Imaging of brain activity during attention
 
-  - [[fmri_attention]] - Location
+  - [[fmri_attention]] - Spatial localization of attention effects with fMRI
 
-  - [[eeg_attention]] - Timing
+  - [[eeg_attention]] - Temporal dynamics of attention via EEG
 
-  - [[meg_attention]] - Dynamics
+  - [[meg_attention]] - Millisecond-scale cortical dynamics via MEG
 
 ### Computational Modeling
 
-- [[attention_models]] - Theory testing
+- [[attention_models]] - Computational models for testing theories
 
   - [[neural_models]] - Brain-based
 
   - [[cognitive_models]] - Mind-based
 
-  - [[hybrid_models]] - Combined
+  - hybrid models - Models combining several approaches
 
 ## Applications
 
 ### Educational
 
-- [[learning_applications]] - Education
+- [[learning_applications]] - Attention research applied to learning
 
-  - [[classroom_attention]] - School
+  - [[classroom_attention]] - Attention in classroom settings
 
-  - [[study_strategies]] - Learning
+  - study strategies - Strategies for focused studying
 
-  - [[skill_acquisition]] - Training
+  - [[skill_acquisition]] - Learning skills through practice
 
 ### Clinical
 
-- [[therapeutic_applications]] - Treatment
+- therapeutic applications - Clinical uses of attention research
 
-  - [[rehabilitation]] - Recovery
+  - rehabilitation - Restoring attention after injury
 
-  - [[compensation]] - Adaptation
+  - compensation - Strategies to work around deficits
 
-  - [[enhancement]] - Improvement
+  - enhancement - Boosting attention in healthy people
 
 ### Technology
 
-- [[attention_technology]] - Tools
+- [[attention_technology]] - Technology that measures or supports attention
 
-  - [[attention_interfaces]] - HCI
+  - [[attention_interfaces]] - Interfaces that manage user attention
 
-  - [[attention_monitoring]] - Tracking
+  - [[attention_monitoring]] - Tracking user attention, such as gaze
 
-  - [[attention_support]] - Assistance
+  - attention support - Tools that help sustain attention
 
 ## Implementation Examples
 
@@ -525,19 +525,19 @@ Where:
 
 ### Current Challenges
 
-- [[measurement_issues]] - Assessment
+- measurement issues - Difficulty measuring attention reliably
 
-- [[mechanism_understanding]] - Process
+- mechanism understanding - Incomplete knowledge of underlying mechanisms
 
-- [[individual_differences]] - Variation
+- [[individual_differences]] - Variation in attention across people
 
 ### Emerging Approaches
 
-- [[real_time_tracking]] - Monitoring
+- real time tracking - Continuous tracking of attentional state
 
-- [[closed_loop_systems]] - Adaptation
+- [[closed_loop_systems]] - Systems that adapt to measured attention
 
-- [[artificial_attention]] - AI systems
+- [[artificial_attention]] - Attention mechanisms in artificial systems
 
 ## References
 

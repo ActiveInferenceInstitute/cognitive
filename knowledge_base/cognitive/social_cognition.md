@@ -51,9 +51,9 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
   - [[belief_understanding]] - Others' thoughts
 
-    - [[false_belief]] - Different beliefs
+    - [[false_belief]] - Others' beliefs that differ from reality
 
-    - [[true_belief]] - Shared beliefs
+    - [[true_belief]] - Others' beliefs that match reality
 
   - [[intention_understanding]] - Others' goals
 
@@ -67,15 +67,15 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
   - [[observational_learning]] - Watching others
 
-    - [[action_learning]] - Behavior copy
+    - [[action_learning]] - Learning actions by watching others
 
-    - [[outcome_learning]] - Result learning
+    - [[outcome_learning]] - Learning from observed consequences
 
   - [[cultural_learning]] - Group knowledge
 
     - [[norm_acquisition]] - Rule learning
 
-    - [[value_transmission]] - Worth learning
+    - [[value_transmission]] - Passing values between individuals
 
 ## Neural Implementation
 
@@ -85,7 +85,7 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
   - [[mentalizing_network]] - Theory of mind
 
-    - [[temporal_parietal]] - Perspective
+    - [[temporal_parietal]] - Temporoparietal region supporting perspective-taking
 
     - [[medial_prefrontal]] - Self/other
 
@@ -103,63 +103,63 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
     - [[fusiform_face]] - Face recognition
 
-    - [[superior_temporal]] - Expression
+    - [[superior_temporal]] - Region processing gaze and expressions
 
   - [[empathy_circuits]] - Feeling sharing
 
-    - [[anterior_insula]] - Emotion
+    - [[anterior_insula]] - Region for emotional awareness
 
-    - [[anterior_cingulate]] - Pain
+    - [[anterior_cingulate]] - Region involved in pain and conflict monitoring
 
 ### Neuromodulation
 
-- [[social_modulation]] - Chemical control
+- [[social_modulation]] - Neuromodulatory influence on social behavior
 
   - [[oxytocin_system]] - Bonding/trust
 
-    - [[social_reward]] - Affiliation
+    - [[social_reward]] - Reward gained from social contact
 
-    - [[social_memory]] - Recognition
+    - [[social_memory]] - Remembering familiar individuals
 
-  - [[vasopressin_system]] - Social behavior
+  - [[vasopressin_system]] - Neuropeptide system shaping social behavior
 
-    - [[aggression]] - Defense
+    - [[aggression]] - Hostile behavior toward others
 
-    - [[pair_bonding]] - Attachment
+    - [[pair_bonding]] - Formation of enduring partner attachment
 
 ## Computational Principles
 
 ### Inference Mechanisms
 
-- [[social_inference]] - Understanding
+- [[social_inference]] - Inferring others' mental states and intentions
 
   - [[intention_inference]] - Goal detection
 
-    - [[action_observation]] - Movement
+    - [[action_observation]] - Watching and interpreting others' actions
 
-    - [[outcome_prediction]] - Results
+    - [[outcome_prediction]] - Predicting consequences of actions
 
   - [[mental_inference]] - Mind reading
 
-    - [[belief_inference]] - Thoughts
+    - [[belief_inference]] - Inferring what others believe
 
-    - [[desire_inference]] - Wants
+    - [[desire_inference]] - Inferring what others want
 
 ### Learning Processes
 
-- [[social_learning_mechanisms]] - Acquisition
+- [[social_learning_mechanisms]] - Processes for learning from others
 
   - [[imitation_learning]] - Copying
 
-    - [[action_matching]] - Movement copy
+    - [[action_matching]] - Reproducing observed movements
 
-    - [[goal_emulation]] - Purpose copy
+    - [[goal_emulation]] - Reproducing the goal by one's own means
 
-  - [[reinforcement_learning]] - Value
+  - [[reinforcement_learning]] - Learning from rewards and penalties
 
     - [[social_reward_learning]] - Good/bad
 
-    - [[social_punishment]] - Avoidance
+    - [[social_punishment]] - Sanctions that discourage behavior
 
 ### Coordination Systems
 
@@ -167,183 +167,183 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
   - [[joint_attention]] - Shared focus
 
-    - [[gaze_following]] - Eye direction
+    - [[gaze_following]] - Following another's gaze direction
 
-    - [[pointing_understanding]] - Gesture
+    - [[pointing_understanding]] - Interpreting pointing gestures
 
-  - [[action_coordination]] - Together
+  - [[action_coordination]] - Aligning actions between partners
 
-    - [[synchronization]] - Timing
+    - [[synchronization]] - Aligning the timing of actions
 
-    - [[role_division]] - Tasks
+    - [[role_division]] - Allocating tasks among partners
 
 ## Social Phenomena
 
 ### Social Interaction
 
-- [[interaction_patterns]] - Exchange types
+- interaction patterns - Exchange types
 
-  - [[communication]] - Information share
+  - [[communication]] - Exchange of information between individuals
 
     - [[verbal_communication]] - Speech
 
-    - [[nonverbal_communication]] - Signals
+    - [[nonverbal_communication]] - Gestures, posture, and expression
 
   - [[cooperation]] - Working together
 
     - [[joint_action]] - Shared tasks
 
-    - [[resource_sharing]] - Distribution
+    - resource sharing - Dividing resources among group members
 
 ### Group Processes
 
-- [[group_dynamics]] - Collective behavior
+- group dynamics - Collective behavior
 
   - [[group_formation]] - Coming together
 
-    - [[social_bonding]] - Connection
+    - [[social_bonding]] - Forming emotional ties
 
-    - [[group_identity]] - Belonging
+    - [[group_identity]] - Sense of membership in a group
 
-  - [[group_function]] - Operation
+  - [[group_function]] - How groups carry out tasks
 
-    - [[leadership]] - Direction
+    - leadership - Guiding group decisions and actions
 
-    - [[followership]] - Support
+    - [[followership]] - Following and supporting a leader
 
 ### Cultural Processes
 
-- [[cultural_cognition]] - Group thinking
+- [[cultural_cognition]] - Cognition shaped by shared culture
 
-  - [[norm_processing]] - Rule handling
+  - [[norm_processing]] - Processing of shared social rules
 
-    - [[norm_detection]] - Learning rules
+    - [[norm_detection]] - Inferring unwritten social rules
 
-    - [[norm_enforcement]] - Maintaining
+    - [[norm_enforcement]] - Sanctioning violations of norms
 
-  - [[value_systems]] - Worth structure
+  - [[value_systems]] - Organized sets of shared values
 
     - [[moral_values]] - Right/wrong
 
-    - [[cultural_values]] - Group worth
+    - [[cultural_values]] - Values shared within a culture
 
 ## Applications
 
 ### Clinical Applications
 
-- [[social_disorders]] - Dysfunction
+- [[social_disorders]] - Conditions impairing social functioning
 
-  - [[autism_spectrum]] - Social difficulty
+  - [[autism_spectrum]] - Neurodevelopmental condition affecting social communication
 
-    - [[social_communication]] - Interaction
+    - [[social_communication]] - Reciprocal exchange of social signals
 
-    - [[repetitive_behavior]] - Patterns
+    - [[repetitive_behavior]] - Restricted, repeated actions or interests
 
-  - [[social_anxiety]] - Fear
+  - [[social_anxiety]] - Fear of social evaluation
 
     - [[interaction_avoidance]] - Withdrawal
 
-    - [[performance_anxiety]] - Evaluation
+    - [[performance_anxiety]] - Anxiety about being judged
 
 ### Educational Applications
 
-- [[social_education]] - Teaching
+- [[social_education]] - Teaching social competence
 
-  - [[social_skills_training]] - Ability
+  - [[social_skills_training]] - Structured practice of social abilities
 
     - [[communication_skills]] - Talk/listen
 
-    - [[conflict_resolution]] - Problems
+    - [[conflict_resolution]] - Resolving disputes between people
 
-  - [[emotional_education]] - Feeling
+  - [[emotional_education]] - Teaching emotional understanding
 
-    - [[emotion_recognition]] - Detection
+    - [[emotion_recognition]] - Identifying emotions in others
 
-    - [[emotion_regulation]] - Control
+    - [[emotion_regulation]] - Managing one's own emotional responses
 
 ### Technology Applications
 
-- [[social_technology]] - Tools
+- [[social_technology]] - Technology supporting social interaction
 
-  - [[social_robotics]] - Machines
+  - [[social_robotics]] - Robots designed for social interaction
 
-    - [[human_robot_interaction]] - Exchange
+    - [[human_robot_interaction]] - Communication between people and robots
 
-    - [[social_assistance]] - Help
+    - [[social_assistance]] - Robots providing practical support
 
-  - [[virtual_agents]] - Digital
+  - [[virtual_agents]] - Software characters that interact socially
 
-    - [[avatars]] - Representatives
+    - [[avatars]] - Digital representations of users
 
-    - [[chatbots]] - Talk systems
+    - [[chatbots]] - Conversational software agents
 
 ## Research Methods
 
 ### Behavioral Methods
 
-- [[social_behavior]] - Action study
+- [[social_behavior]] - Study of behavior in social contexts
 
-  - [[interaction_analysis]] - Exchange
+  - interaction analysis - Examining moment-to-moment exchanges
 
-    - [[conversation_analysis]] - Talk
+    - [[conversation_analysis]] - Study of turn-taking in conversation
 
-    - [[nonverbal_analysis]] - Signals
+    - [[nonverbal_analysis]] - Study of gesture and posture
 
-  - [[group_observation]] - Collective
+  - [[group_observation]] - Observing the behavior of groups
 
-    - [[network_analysis]] - Connections
+    - [[network_analysis]] - Mapping relationships among individuals
 
-    - [[role_analysis]] - Functions
+    - [[role_analysis]] - Examining roles within groups
 
 ### Neural Methods
 
-- [[social_neuroscience]] - Brain study
+- [[social_neuroscience]] - Neural basis of social behavior
 
-  - [[hyperscanning]] - Multiple brains
+  - [[hyperscanning]] - Recording several brains during interaction
 
-    - [[synchronization]] - Together
+    - [[synchronization]] - Correlated neural activity between people
 
-    - [[coupling]] - Connection
+    - coupling - Mutual influence between interacting brains
 
-  - [[social_imaging]] - Brain activity
+  - [[social_imaging]] - Imaging brain activity during social tasks
 
-    - [[face_responses]] - Face areas
+    - [[face_responses]] - Neural responses to faces
 
-    - [[theory_mind_areas]] - Mind areas
+    - [[theory_mind_areas]] - Brain regions for mental-state reasoning
 
 ### Computational Models
 
-- [[social_modeling]] - Theory testing
+- [[social_modeling]] - Computational modeling of social processes
 
-  - [[agent_models]] - Individual
+  - agent models - Models of individual agents
 
-    - [[decision_models]] - Choices
+    - [[decision_models]] - Models of choice behavior
 
-    - [[learning_models]] - Change
+    - [[learning_models]] - Models of how learning updates behavior
 
-  - [[interaction_models]] - Together
+  - interaction models - Models of agents interacting
 
-    - [[game_theory]] - Strategy
+    - [[game_theory]] - Mathematics of strategic interaction
 
-    - [[network_models]] - Groups
+    - [[network_models]] - Models of social connection structure
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[ecological_validity]] - Real world
+- [[ecological_validity]] - Relevance of findings to real-life settings
 
-- [[individual_differences]] - Variation
+- [[individual_differences]] - Variation between people
 
-- [[cultural_variation]] - Group diff
+- [[cultural_variation]] - Differences across cultural groups
 
 ### Emerging Approaches
 
-- [[real_time_interaction]] - Live study
+- [[real_time_interaction]] - Studying interaction as it unfolds
 
-- [[computational_psychiatry]] - Disorder
+- [[computational_psychiatry]] - Computational modeling of psychiatric disorders
 
-- [[social_artificial_intelligence]] - AI
+- [[social_artificial_intelligence]] - AI systems that reason about social interaction
 
 ## References
 

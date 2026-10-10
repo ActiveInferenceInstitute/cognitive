@@ -490,7 +490,7 @@ end
 
 ```
 
-### 3. [[information_bounds|Information Bounds]]
+### 3. Information Bounds
 
 ```julia
 
@@ -1049,6 +1049,8 @@ class RigorousEFECalculator:
             total_efe += pragmatic
 
         return total_efe
+```
+
 
 ### Advanced Policy Optimization
 

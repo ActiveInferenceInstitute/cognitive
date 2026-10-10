@@ -1,5 +1,6 @@
 ---
 title: Taylor Series in Active Inference
+description: "How Taylor series expansion supports continuous-time Active Inference by representing trajectories and relating generalized coordinates to predictions, with an implementation."
 type: mathematical_concept
 status: stable
 created: 2024-03-20
@@ -413,7 +414,7 @@ class TaylorErrorAnalyzer:
 
 1. Use stable algorithms ([[numerical_stability]])
 
-1. Monitor error growth ([[error_analysis]])
+1. Monitor error growth (error analysis)
 
 1. Adapt step sizes ([[adaptive_step_size]])
 
@@ -423,7 +424,7 @@ class TaylorErrorAnalyzer:
 
 1. Efficient computation ([[computational_efficiency]])
 
-1. Memory management ([[memory_optimization]])
+1. Memory management (memory optimization)
 
 1. Parallel processing ([[parallel_computation]])
 

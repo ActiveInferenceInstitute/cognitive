@@ -5,6 +5,7 @@ title: Security-Cognitive Systems Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
@@ -51,7 +52,7 @@ semantic_relations:
 
 ## Overview
 
-This learning path focuses on the intersection of cognitive systems and security, addressing the unique challenges of securing cognitive architectures while managing infohazards. It provides comprehensive coverage of security principles, threat models, and protective measures specific to cognitive systems.
+This learning path focuses on the intersection of cognitive systems and security, addressing the unique challenges of securing cognitive architectures while managing infohazards. It covers security principles, threat models, and protective measures specific to cognitive systems.
 
 ## Prerequisites
 
@@ -287,28 +288,6 @@ This learning path focuses on the intersection of cognitive systems and security
 
 - Analysis platforms
 
-## Community and Support
-
-### 1. Security Networks
-
-- Research groups
-
-- Security forums
-
-- Professional organizations
-
-- Expert communities
-
-### 2. Industry Connections
-
-- Security vendors
-
-- Consulting services
-
-- Training providers
-
-- Certification bodies
-
 ## Next Steps
 
 ### 1. Advanced Research
@@ -330,14 +309,3 @@ This learning path focuses on the intersection of cognitive systems and security
 - Monitoring deployment
 
 - Response planning
-
-## Version History
-
-- Created: 2024-03-15
-
-- Last Updated: 2024-03-15
-
-- Status: Stable
-
-- Version: 1.0.0
-

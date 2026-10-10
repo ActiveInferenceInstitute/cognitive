@@ -34,557 +34,557 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
 ### Individual Behaviors
 
-- [[ant_behaviors]] - Single acts
+- [[ant_behaviors]] - Behaviors performed by single ants
 
-  - [[sensory_behaviors]] - Feel acts
+  - [[sensory_behaviors]] - Behaviors based on sensing the environment
 
-    - [[pheromone_detection]] - Smell find
+    - [[pheromone_detection]] - Sensing pheromone chemicals
 
-      - [[trail_following]] - Path track
+      - [[trail_following]] - Following pheromone trails to targets
 
-      - [[gradient_sensing]] - Strong weak
+      - [[gradient_sensing]] - Sensing concentration differences in a chemical signal
 
-    - [[tactile_sensing]] - Touch feel
+    - [[tactile_sensing]] - Sensing touch and surface texture
 
-      - [[antennation]] - Touch talk
+      - [[antennation]] - Antennal contact used for communication
 
-      - [[surface_detection]] - Ground feel
+      - [[surface_detection]] - Detecting properties of the surface underfoot
 
-  - [[motor_behaviors]] - Move acts
+  - [[motor_behaviors]] - Movement and body-action behaviors
 
-    - [[locomotion_patterns]] - Walk ways
+    - [[locomotion_patterns]] - Characteristic ways of moving
 
-      - [[random_walk]] - Random move
+      - [[random_walk]] - Undirected movement through the environment
 
-      - [[directed_movement]] - Aimed move
+      - [[directed_movement]] - Movement toward a target
 
-    - [[manipulation]] - Handle things
+    - manipulation - Handling and moving objects
 
-      - [[object_carrying]] - Thing move
+      - [[object_carrying]] - Carrying food or material to a destination
 
-      - [[nest_building]] - Home make
+      - [[nest_building]] - Constructing the nest
 
 ### Communication Systems
 
-- [[ant_communication]] - Talk ways
+- [[ant_communication]] - Signaling systems among ants
 
-  - [[chemical_communication]] - Smell talk
+  - [[chemical_communication]] - Communication through chemical signals
 
-    - [[pheromone_signals]] - Mark talk
+    - [[pheromone_signals]] - Chemical signals deposited or released by ants
 
-      - [[trail_pheromones]] - Path mark
+      - [[trail_pheromones]] - Chemical marks laid to guide nestmates to food
 
-      - [[alarm_pheromones]] - Danger mark
+      - [[alarm_pheromones]] - Chemical signals that warn of danger
 
-    - [[cuticular_hydrocarbons]] - Body smell
+    - [[cuticular_hydrocarbons]] - Waxy surface compounds that carry colony identity
 
-      - [[nestmate_recognition]] - Friend know
+      - [[nestmate_recognition]] - Identifying colony members by chemical cues
 
-      - [[task_signals]] - Job mark
+      - [[task_signals]] - Signals that convey task information
 
-  - [[tactile_communication]] - Touch talk
+  - [[tactile_communication]] - Communication through touch
 
-    - [[antennal_signals]] - Feel talk
+    - [[antennal_signals]] - Signals exchanged by antenna contact
 
-      - [[contact_rates]] - Touch times
+      - [[contact_rates]] - Frequency of encounters between ants
 
-      - [[movement_patterns]] - Touch ways
+      - movement patterns - Movements that convey information during contact
 
-    - [[vibrational_signals]] - Shake talk
+    - [[vibrational_signals]] - Communication through substrate vibration
 
-      - [[substrate_vibration]] - Ground shake
+      - [[substrate_vibration]] - Vibration transmitted through the nest surface
 
-      - [[body_drumming]] - Body tap
+      - [[body_drumming]] - Tapping the body against surfaces as a signal
 
 ### Interaction Networks
 
-- [[colony_networks]] - Group webs
+- [[colony_networks]] - Interaction structure within a colony
 
-  - [[spatial_networks]] - Space webs
+  - [[spatial_networks]] - Networks defined by where ants meet
 
-    - [[contact_networks]] - Touch webs
+    - [[contact_networks]] - Networks of who contacts whom
 
-      - [[interaction_frequency]] - Meet much
+      - [[interaction_frequency]] - How often ants meet one another
 
-      - [[spatial_distribution]] - Where spread
+      - [[spatial_distribution]] - How ants are distributed in space
 
-    - [[information_flow]] - Know flow
+    - [[information_flow]] - Spread of information through the colony
 
-      - [[local_transfer]] - Near share
+      - [[local_transfer]] - Information passed between nearby ants
 
-      - [[global_spread]] - Far reach
+      - [[global_spread]] - Information spreading across the whole colony
 
-  - [[temporal_networks]] - Time webs
+  - [[temporal_networks]] - Interaction patterns that change over time
 
-    - [[activity_patterns]] - Do when
+    - activity patterns - Temporal variation in what ants do
 
-      - [[daily_rhythms]] - Day time
+      - [[daily_rhythms]] - Daily cycles of colony activity
 
-      - [[task_sequences]] - Job order
+      - [[task_sequences]] - Order in which tasks are performed
 
-    - [[development_patterns]] - Grow webs
+    - [[development_patterns]] - Interaction patterns that change as the colony develops
 
-      - [[age_polyethism]] - Age jobs
+      - [[age_polyethism]] - Task assignment that changes with worker age
 
-      - [[colony_cycles]] - Group time
+      - [[colony_cycles]] - Recurring patterns of colony growth and activity
 
 ## Collective Functions
 
 ### Foraging Organization
 
-- [[ant_foraging]] - Food find
+- [[ant_foraging]] - Locating and gathering food
 
-  - [[search_strategies]] - Look ways
+  - [[search_strategies]] - Strategies for locating food sources
 
-    - [[exploration]] - New look
+    - [[exploration]] - Searching new areas for resources
 
-      - [[scouting_behavior]] - Scout do
+      - [[scouting_behavior]] - Individual ants searching for food
 
-      - [[territory_mapping]] - Space learn
+      - [[territory_mapping]] - Learning the layout of the foraging area
 
-    - [[exploitation]] - Use found
+    - [[exploitation]] - Using food sources already found
 
-      - [[trail_reinforcement]] - Path strong
+      - [[trail_reinforcement]] - Strengthening trails to productive food sources
 
-      - [[resource_assessment]] - Food check
+      - resource assessment - Evaluating the quality of a food source
 
-  - [[recruitment_systems]] - Help call
+  - [[recruitment_systems]] - Mechanisms for recruiting nestmates to food
 
-    - [[mass_recruitment]] - Many call
+    - [[mass_recruitment]] - Recruiting large numbers of nestmates
 
-      - [[trail_laying]] - Path make
+      - [[trail_laying]] - Depositing pheromone along a route
 
-      - [[group_raids]] - Team hunt
+      - [[group_raids]] - Coordinated group foraging or hunting raids
 
-    - [[tandem_running]] - Pair lead
+    - [[tandem_running]] - One ant leading a nestmate to a target
 
-      - [[leader_follower]] - Show way
+      - [[leader_follower]] - Leader guiding a follower to a target
 
-      - [[teaching_behavior]] - Learn give
+      - [[teaching_behavior]] - Informed ants instructing naive nestmates
 
 ### Nest Construction
 
-- [[nest_building]] - Home make
+- [[nest_building]] - Building the nest
 
-  - [[construction_behaviors]] - Build acts
+  - [[construction_behaviors]] - Behaviors involved in building
 
-    - [[material_handling]] - Stuff move
+    - [[material_handling]] - Moving and placing construction material
 
-      - [[soil_particles]] - Dirt move
+      - [[soil_particles]] - Excavated soil moved by workers
 
-      - [[building_materials]] - Build stuff
+      - [[building_materials]] - Materials used to build the nest
 
-    - [[structural_patterns]] - Shape make
+    - [[structural_patterns]] - Spatial organization of nest structures
 
-      - [[chamber_formation]] - Room make
+      - [[chamber_formation]] - Excavating and shaping nest chambers
 
-      - [[tunnel_networks]] - Path dig
+      - [[tunnel_networks]] - Networks of excavated passages
 
-  - [[climate_control]] - Air fix
+  - [[climate_control]] - Regulating temperature and humidity in the nest
 
-    - [[ventilation]] - Air flow
+    - [[ventilation]] - Air exchange through the nest
 
-      - [[tunnel_design]] - Path plan
+      - [[tunnel_design]] - Shaping tunnels to promote airflow
 
-      - [[airflow_regulation]] - Flow fix
+      - [[airflow_regulation]] - Adjusting airflow through the nest
 
-    - [[moisture_control]] - Wet dry
+    - [[moisture_control]] - Regulating humidity in the nest
 
-      - [[water_transport]] - Water move
+      - [[water_transport]] - Moving water into or within the nest
 
-      - [[humidity_regulation]] - Wet fix
+      - [[humidity_regulation]] - Maintaining nest humidity at suitable levels
 
 ### Defense Systems
 
-- [[colony_defense]] - Group safe
+- [[colony_defense]] - Protecting the colony from threats
 
-  - [[threat_response]] - Bad fix
+  - [[threat_response]] - Colony reactions to danger
 
-    - [[alarm_systems]] - Warn ways
+    - [[alarm_systems]] - Mechanisms for signaling danger
 
-      - [[alarm_signals]] - Danger tell
+      - [[alarm_signals]] - Signals that alert nestmates to danger
 
-      - [[mass_mobilization]] - Group wake
+      - [[mass_mobilization]] - Rapid recruitment of defenders
 
-    - [[defensive_tactics]] - Safe acts
+    - [[defensive_tactics]] - Methods used to defend the colony
 
-      - [[aggressive_response]] - Fight back
+      - [[aggressive_response]] - Attacking intruders to protect the colony
 
-      - [[nest_protection]] - Home guard
+      - [[nest_protection]] - Guarding and defending the nest
 
-  - [[immunity_systems]] - Sick fight
+  - [[immunity_systems]] - Defenses against pathogens and parasites
 
-    - [[social_immunity]] - Group health
+    - [[social_immunity]] - Collective disease defense among nestmates
 
-      - [[hygiene_behaviors]] - Clean acts
+      - [[hygiene_behaviors]] - Grooming and cleaning to limit disease
 
-      - [[pathogen_response]] - Sick fix
+      - [[pathogen_response]] - Responses to infection in the colony
 
-    - [[collective_resistance]] - Strong together
+    - [[collective_resistance]] - Group-level resistance to threats
 
-      - [[group_defenses]] - Team guard
+      - [[group_defenses]] - Defense carried out by groups of ants
 
-      - [[resilience]] - Bounce back
+      - [[resilience]] - Ability to recover from disturbance
 
 ## Emergent Properties
 
 ### Colony-Level Patterns
 
-- [[emergent_patterns]] - Group show
+- [[emergent_patterns]] - Colony-wide patterns arising from local interactions
 
-  - [[spatial_organization]] - Space make
+  - spatial organization - How the colony arranges itself in space
 
-    - [[territory_formation]] - Land claim
+    - [[territory_formation]] - Establishing areas used by a colony
 
-      - [[boundary_definition]] - Edge make
+      - [[boundary_definition]] - Establishing edges of a colony's territory
 
-      - [[resource_monopolization]] - Food own
+      - [[resource_monopolization]] - Controlling access to food sources
 
-    - [[traffic_organization]] - Move flow
+    - [[traffic_organization]] - Organization of ant movement along trails
 
-      - [[lane_formation]] - Path split
+      - [[lane_formation]] - Separate flows of ants in each direction
 
-      - [[congestion_control]] - Jam fix
+      - [[congestion_control]] - Preventing blockages in busy traffic
 
-  - [[temporal_organization]] - Time make
+  - [[temporal_organization]] - How colony organization changes over time
 
-    - [[activity_cycles]] - Do times
+    - [[activity_cycles]] - Recurring cycles of colony activity
 
-      - [[foraging_cycles]] - Food times
+      - [[foraging_cycles]] - Cycles of food collection
 
-      - [[maintenance_cycles]] - Fix times
+      - [[maintenance_cycles]] - Cycles of nest upkeep
 
-    - [[developmental_stages]] - Grow steps
+    - [[developmental_stages]] - Stages of colony growth
 
-      - [[colony_founding]] - Start time
+      - [[colony_founding]] - Establishment of a new colony
 
-      - [[mature_colony]] - Full time
+      - [[mature_colony]] - Established colony with full worker force
 
 ### Decision Making
 
-- [[collective_decisions]] - Group choose
+- [[collective_decisions]] - Group decisions made without central control
 
-  - [[choice_mechanisms]] - Pick ways
+  - [[choice_mechanisms]] - Mechanisms for selecting among options
 
-    - [[quorum_sensing]] - Enough check
+    - [[quorum_sensing]] - Choosing when enough ants have gathered
 
-      - [[threshold_response]] - Number need
+      - [[threshold_response]] - Number of ants needed to trigger a response
 
-      - [[consensus_building]] - Agree make
+      - [[consensus_building]] - Reaching agreement among nestmates
 
-    - [[competition_amplification]] - Best win
+    - [[competition_amplification]] - Stronger options gaining more support
 
-      - [[positive_feedback]] - Good more
+      - [[positive_feedback]] - Reinforcement that amplifies successful choices
 
-      - [[inhibitory_signals]] - Stop bad
+      - [[inhibitory_signals]] - Signals that suppress competing options
 
-  - [[optimization_processes]] - Best find
+  - [[optimization_processes]] - Improving colony performance
 
-    - [[path_optimization]] - Way best
+    - [[path_optimization]] - Selecting efficient routes
 
-      - [[shortest_path]] - Quick way
+      - [[shortest_path]] - Trails converging on the shortest route
 
-      - [[cost_efficiency]] - Save good
+      - [[cost_efficiency]] - Balancing foraging gains against costs
 
-    - [[resource_allocation]] - Give best
+    - [[resource_allocation]] - Distributing workers across needed tasks
 
-      - [[task_distribution]] - Job split
+      - [[task_distribution]] - Dividing work among colony members
 
-      - [[effort_balance]] - Work fair
+      - [[effort_balance]] - Balancing workload across colony members
 
 ### Adaptation Mechanisms
 
-- [[colony_adaptation]] - Group change
+- [[colony_adaptation]] - Colony adjustment to changing conditions
 
-  - [[behavioral_flexibility]] - Do change
+  - [[behavioral_flexibility]] - Adjusting behavior to circumstances
 
-    - [[task_switching]] - Job change
+    - [[task_switching]] - Switching between jobs as needs change
 
-      - [[response_thresholds]] - Need level
+      - [[response_thresholds]] - Stimulus levels that trigger a task
 
-      - [[workload_sensing]] - Work feel
+      - [[workload_sensing]] - Sensing how much work needs doing
 
-    - [[strategy_adjustment]] - Way change
+    - [[strategy_adjustment]] - Changing strategy as conditions change
 
-      - [[alternative_tactics]] - Other ways
+      - [[alternative_tactics]] - Alternative approaches to the same problem
 
-      - [[innovation]] - New find
+      - innovation - Discovering new behaviors or solutions
 
-  - [[developmental_plasticity]] - Grow change
+  - [[developmental_plasticity]] - Development shaping adult behavior and form
 
-    - [[caste_determination]] - Type make
+    - [[caste_determination]] - Determining which caste an individual becomes
 
-      - [[morphological_changes]] - Shape change
+      - [[morphological_changes]] - Differences in body form between castes
 
-      - [[behavioral_specialization]] - Job fit
+      - [[behavioral_specialization]] - Behavior specialized to caste or task
 
-    - [[colony_growth]] - Size change
+    - [[colony_growth]] - Increase in colony size over time
 
-      - [[resource_dependent]] - Food need
+      - [[resource_dependent]] - Growth limited by available food
 
-      - [[population_regulation]] - Size fix
+      - [[population_regulation]] - Regulating colony size
 
 ## Research Methods
 
 ### Behavioral Observation
 
-- [[ant_observation]] - Watch ways
+- [[ant_observation]] - Methods for observing ants
 
-  - [[field_methods]] - Wild watch
+  - [[field_methods]] - Observation of ants in the wild
 
-    - [[natural_colonies]] - Real nest
+    - [[natural_colonies]] - Colonies living in their natural setting
 
-      - [[activity_monitoring]] - Do watch
+      - [[activity_monitoring]] - Recording how active ants are
 
-      - [[spatial_tracking]] - Move watch
+      - [[spatial_tracking]] - Recording ant movement through space
 
-    - [[marked_individuals]] - Mark ants
+    - [[marked_individuals]] - Individually labeled ants
 
-      - [[paint_marking]] - Color mark
+      - [[paint_marking]] - Identifying ants with paint dots
 
-      - [[rfid_tracking]] - Chip track
+      - [[rfid_tracking]] - Tracking individuals with tiny radio tags
 
-  - [[lab_methods]] - Lab watch
+  - [[lab_methods]] - Methods for studying ants in the laboratory
 
-    - [[artificial_nests]] - Fake nest
+    - [[artificial_nests]] - Nests built for laboratory study
 
-      - [[controlled_environment]] - Fix space
+      - [[controlled_environment]] - Holding conditions constant for experiments
 
-      - [[observation_colonies]] - See through
+      - [[observation_colonies]] - Nests that allow direct viewing
 
-    - [[behavioral_assays]] - Test ways
+    - [[behavioral_assays]] - Experiments measuring behavioral responses
 
-      - [[choice_experiments]] - Pick test
+      - [[choice_experiments]] - Experiments offering ants a choice
 
-      - [[trail_following]] - Path test
+      - [[trail_following]] - Assays of response to pheromone trails
 
 ### Network Analysis
 
-- [[interaction_analysis]] - Talk check
+- interaction analysis - Analysis of who interacts with whom
 
-  - [[spatial_networks]] - Space nets
+  - [[spatial_networks]] - Networks of spatial contacts
 
-    - [[contact_mapping]] - Touch map
+    - [[contact_mapping]] - Maps of ant-to-ant contacts
 
-      - [[interaction_rates]] - Meet count
+      - [[interaction_rates]] - Counts of encounters per unit time
 
-      - [[network_structure]] - Web shape
+      - [[network_structure]] - Overall pattern of network connections
 
-    - [[information_networks]] - Know nets
+    - [[information_networks]] - Networks describing how information moves
 
-      - [[signal_propagation]] - Tell spread
+      - [[signal_propagation]] - How signals travel through the colony
 
-      - [[knowledge_distribution]] - Know where
+      - [[knowledge_distribution]] - How information is spread across ants
 
-  - [[temporal_networks]] - Time nets
+  - [[temporal_networks]] - Networks that change over time
 
-    - [[dynamic_patterns]] - Change paths
+    - dynamic patterns - Time-varying structure of interactions
 
-      - [[activity_sequences]] - Do order
+      - [[activity_sequences]] - Order in which activities occur
 
-      - [[feedback_loops]] - Loop flows
+      - [[feedback_loops]] - Positive and negative feedback regulating activity
 
-    - [[stability_analysis]] - Stay check
+    - [[stability_analysis]] - Analysis of how stable colony behavior is
 
-      - [[robustness]] - Strong how
+      - [[robustness]] - Resistance to disturbance
 
-      - [[resilience]] - Back how
+      - [[resilience]] - Ability to recover after disturbance
 
 ### Computational Models
 
-- [[ant_models]] - Math think
+- [[ant_models]] - Mathematical models of ant behavior
 
-  - [[agent_models]] - Ant math
+  - agent models - Models of individual ant agents
 
-    - [[individual_behavior]] - One math
+    - [[individual_behavior]] - Models of single-ant behavior
 
-      - [[movement_rules]] - Move math
+      - [[movement_rules]] - Mathematical rules for ant movement
 
-      - [[decision_rules]] - Choose math
+      - [[decision_rules]] - Mathematical rules for ant choices
 
-    - [[interaction_rules]] - Talk math
+    - [[interaction_rules]] - Rules governing ant-to-ant interaction
 
-      - [[local_rules]] - Near rules
+      - [[local_rules]] - Rules based on local information only
 
-      - [[feedback_mechanisms]] - Loop rules
+      - [[feedback_mechanisms]] - Rules that model feedback among ants
 
-  - [[colony_models]] - Group math
+  - [[colony_models]] - Models of whole-colony behavior
 
-    - [[emergence_models]] - Come math
+    - [[emergence_models]] - Models showing how patterns emerge
 
-      - [[pattern_formation]] - Shape math
+      - [[pattern_formation]] - Models of how spatial patterns form
 
-      - [[self_organization]] - Make math
+      - [[self_organization]] - Models of order arising without central control
 
-    - [[optimization_models]] - Best math
+    - [[optimization_models]] - Models seeking the best solution
 
-      - [[foraging_efficiency]] - Food math
+      - [[foraging_efficiency]] - Models of foraging success
 
-      - [[task_allocation]] - Job math
+      - [[task_allocation]] - Models of how tasks are divided
 
 ## Applications
 
 ### Bio-inspired Computing
 
-- [[ant_algorithms]] - Ant code
+- [[ant_algorithms]] - Algorithms inspired by ant behavior
 
-  - [[optimization_algorithms]] - Best code
+  - [[optimization_algorithms]] - Optimization methods inspired by ant colonies
 
-    - [[ant_colony_optimization]] - Path code
+    - [[ant_colony_optimization]] - Algorithm that finds routes using simulated pheromone
 
-      - [[routing_problems]] - Way find
+      - [[routing_problems]] - Problems of finding good routes
 
-      - [[scheduling_problems]] - Time fix
+      - [[scheduling_problems]] - Problems of arranging tasks in time
 
-    - [[swarm_intelligence]] - Group smart
+    - [[swarm_intelligence]] - Collective problem solving by simple agents
 
-      - [[distributed_control]] - Split boss
+      - [[distributed_control]] - Control without a central controller
 
-      - [[adaptive_systems]] - Change good
+      - [[adaptive_systems]] - Systems that adjust to changing conditions
 
-  - [[robotics_applications]] - Robot use
+  - robotics applications - Robot use
 
-    - [[swarm_robotics]] - Many bots
+    - [[swarm_robotics]] - Applications of ant behavior to robotics
 
-      - [[collective_tasks]] - Group jobs
+      - [[collective_tasks]] - Coordinating groups of simple robots
 
-      - [[distributed_control]] - Split run
+      - [[distributed_control]] - Control spread across many agents
 
-    - [[bio_inspired_design]] - Life copy
+    - [[bio_inspired_design]] - Design principles copied from biology
 
-      - [[movement_control]] - Move like
+      - [[movement_control]] - Movement control inspired by ants
 
-      - [[group_behavior]] - Team like
+      - [[group_behavior]] - Coordinated group behavior inspired by ants
 
 ### Ecological Applications
 
-- [[ecosystem_roles]] - World jobs
+- [[ecosystem_roles]] - Roles of ants in ecosystems
 
-  - [[environmental_impact]] - Earth change
+  - [[environmental_impact]] - Ant effects on their surroundings
 
-    - [[soil_modification]] - Dirt change
+    - [[soil_modification]] - Ant effects on soil properties
 
-      - [[nutrient_cycling]] - Food cycle
+      - [[nutrient_cycling]] - Movement of nutrients through the ecosystem
 
-      - [[soil_structure]] - Dirt build
+      - [[soil_structure]] - Effects on soil structure and composition
 
-    - [[plant_interactions]] - Plant talk
+    - [[plant_interactions]] - Ant relationships with plants
 
-      - [[seed_dispersal]] - Seed move
+      - [[seed_dispersal]] - Spread of seeds by ants
 
-      - [[plant_protection]] - Plant guard
+      - [[plant_protection]] - Ants defending plants from herbivores
 
-  - [[ecosystem_services]] - Help earth
+  - [[ecosystem_services]] - Benefits ants provide to ecosystems
 
-    - [[pest_control]] - Bug fix
+    - [[pest_control]] - Control of pest insects by ants
 
-      - [[predator_role]] - Hunt role
+      - [[predator_role]] - Ants as predators of other animals
 
-      - [[population_control]] - Size fix
+      - [[population_control]] - Regulation of other species' populations
 
-    - [[pollination]] - Plant help
+    - [[pollination]] - Pollination of plants
 
-      - [[flower_visits]] - Plant see
+      - [[flower_visits]] - Ants visiting flowers
 
-      - [[pollen_transfer]] - Dust move
+      - [[pollen_transfer]] - Transfer of pollen between flowers
 
 ### Conservation Implications
 
-- [[ant_conservation]] - Save ants
+- [[ant_conservation]] - Protecting ant species and habitats
 
-  - [[habitat_protection]] - Home save
+  - [[habitat_protection]] - Preserving the places ants live
 
-    - [[critical_habitats]] - Need space
+    - [[critical_habitats]] - Habitats essential for survival
 
-      - [[nesting_sites]] - Nest space
+      - [[nesting_sites]] - Sites where colonies build nests
 
-      - [[foraging_grounds]] - Food space
+      - [[foraging_grounds]] - Areas where ants search for food
 
-    - [[connectivity]] - Link save
+    - [[connectivity]] - Links between habitat patches
 
-      - [[movement_corridors]] - Move paths
+      - [[movement_corridors]] - Routes connecting separated habitats
 
-      - [[population_links]] - Group links
+      - [[population_links]] - Links between separated ant populations
 
-  - [[threat_management]] - Bad fix
+  - [[threat_management]] - Managing factors that endanger ants
 
-    - [[invasive_species]] - New bad
+    - [[invasive_species]] - Non-native species that threaten native ants
 
-      - [[competition]] - Fight new
+      - competition - Competition from other species
 
-      - [[displacement]] - Push out
+      - [[displacement]] - Native ants being pushed out of their range
 
-    - [[habitat_loss]] - Home loss
+    - [[habitat_loss]] - Loss of ant habitat
 
-      - [[fragmentation]] - Break up
+      - [[fragmentation]] - Habitat broken into smaller pieces
 
-      - [[degradation]] - Break down
+      - [[degradation]] - Decline in habitat quality
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[research_challenges]] - Study hard
+- [[research_challenges]] - Obstacles facing ant research
 
-  - [[measurement_limitations]] - Check hard
+  - [[measurement_limitations]] - Limits on how accurately ants can be measured
 
-    - [[individual_tracking]] - One watch
+    - [[individual_tracking]] - Difficulty tracking single ants
 
-      - [[small_size]] - Tiny hard
+      - [[small_size]] - Tiny body size limits tracking
 
-      - [[large_numbers]] - Many hard
+      - [[large_numbers]] - Very large colony size limits tracking
 
-    - [[interaction_complexity]] - Talk hard
+    - [[interaction_complexity]] - Difficulty of studying complex interactions
 
-      - [[multiple_signals]] - Many tells
+      - [[multiple_signals]] - Several signals acting at once
 
-      - [[context_dependence]] - Where matter
+      - context dependence - Signal meaning depends on context
 
-  - [[scaling_issues]] - Size hard
+  - scaling issues - Difficulties in studying colonies at large scale
 
-    - [[colony_size]] - Group big
+    - [[colony_size]] - Colony size complicating study
 
-      - [[population_dynamics]] - Change size
+      - [[population_dynamics]] - How colony numbers change over time
 
-      - [[interaction_networks]] - Talk size
+      - [[interaction_networks]] - How interactions grow with colony size
 
-    - [[temporal_scale]] - Time long
+    - [[temporal_scale]] - Challenges of long timescales
 
-      - [[development_time]] - Grow time
+      - [[development_time]] - Time required for colony development
 
-      - [[evolutionary_time]] - Change time
+      - [[evolutionary_time]] - Evolutionary change over many generations
 
 ### Emerging Approaches
 
-- [[new_methods]] - New ways
+- new methods - Emerging techniques for studying ants
 
-  - [[advanced_tracking]] - Watch new
+  - [[advanced_tracking]] - Improved tracking technology
 
-    - [[automated_monitoring]] - Robot watch
+    - [[automated_monitoring]] - Automated recording of ant behavior
 
-      - [[computer_vision]] - See math
+      - [[computer_vision]] - Image analysis for tracking ants
 
-      - [[machine_learning]] - Learn math
+      - [[machine_learning]] - Learning patterns from behavioral data
 
-    - [[molecular_tools]] - Small tools
+    - [[molecular_tools]] - Molecular techniques for studying ants
 
-      - [[genetic_markers]] - Gene mark
+      - [[genetic_markers]] - Genetic markers for identifying individuals
 
-      - [[chemical_analysis]] - Mix check
+      - [[chemical_analysis]] - Chemical analysis of ant signals
 
-  - [[integrative_studies]] - Join ways
+  - [[integrative_studies]] - Combining multiple approaches
 
-    - [[multi_scale_analysis]] - Size all
+    - [[multi_scale_analysis]] - Analysis across several scales
 
-      - [[individual_colony]] - One many
+      - [[individual_colony]] - Linking individual and colony behavior
 
-      - [[species_comparison]] - Type match
+      - [[species_comparison]] - Comparing behavior across species
 
-    - [[cross_disciplinary]] - Field mix
+    - [[cross_disciplinary]] - Combining methods from several fields
 
-      - [[physics_biology]] - Life math
+      - [[physics_biology]] - Applying physics to biological questions
 
-      - [[ecology_behavior]] - Live do
+      - [[ecology_behavior]] - Linking ecology and behavior
 
 ## References
 

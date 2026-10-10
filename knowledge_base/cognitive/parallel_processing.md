@@ -6,6 +6,8 @@ tags:
 - parallelism
 - computation
 - efficiency
+aliases:
+  - parallel_computation
 semantic_relations:
   - type: relates
     links:

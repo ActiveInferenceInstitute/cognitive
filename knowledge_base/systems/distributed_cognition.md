@@ -9,6 +9,8 @@ tags:
   - extended_mind
   - cognitive_science
   - collective_behavior
+aliases:
+  - distributed_systems
 semantic_relations:
   - type: relates
     links:

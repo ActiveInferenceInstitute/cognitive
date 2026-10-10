@@ -8,6 +8,8 @@ tags:
 - perception
 - action
 - motor_control
+aliases:
+  - sensorimotor_integration
 semantic_relations:
   - type: implements
     links:

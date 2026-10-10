@@ -11,6 +11,8 @@ tags:
   - exploration
   - information-gain
   - bayesian-design
+aliases:
+  - information_seeking
 semantic_relations:
   - type: foundation
     links:

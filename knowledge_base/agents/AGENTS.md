@@ -37,8 +37,9 @@ agents, continuous-time agents, and the design patterns behind them.
 
 ## Notes
 
-- Executable agent implementations live in `code/Things/`; see
-  `code/Things/AGENTS.md` for the index.
+- Of the folders in `code/Things/`, only `Simple_POMDP` and
+  `Continuous_Generic` are importable; see `code/Things/AGENTS.md` for the
+  index.
 - The validated discrete model family is in
   `code/tools/src/models/active_inference/`.
 - These pages are conceptual; pseudocode within them is illustrative and not

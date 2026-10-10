@@ -7,6 +7,8 @@ tags:
 - cognitive
 - neuroscience
 - computation
+aliases:
+  - top_down_predictions
 semantic_relations:
   - type: foundation
     links:
@@ -440,11 +442,11 @@ def train_network(network: PredictiveNetwork,
 
     - [[precision_estimation]] - Uncertainty assessment
 
-    - [[gain_control]] - Signal amplification
+    - [[gain_control]] - Scaling the influence of signals by their precision
 
   - [[uncertainty_processing]] - Handling ambiguity
 
-    - [[noise_estimation]] - Signal reliability
+    - [[noise_estimation]] - Estimating how unreliable a signal is
 
     - [[confidence_computation]] - Certainty assessment
 
@@ -452,13 +454,13 @@ def train_network(network: PredictiveNetwork,
 
 ### Cortical Organization
 
-- [[cortical_hierarchy]] - Brain structure
+- [[cortical_hierarchy]] - Layered organization of cortical areas
 
   - [[feedforward_connections]] - Ascending pathways
 
     - [[error_signals]] - Prediction error transmission
 
-    - [[feature_detection]] - Sensory processing
+    - [[feature_detection]] - Extracting basic features from sensory input
 
   - [[feedback_connections]] - Descending pathways
 
@@ -468,13 +470,13 @@ def train_network(network: PredictiveNetwork,
 
 ### Synaptic Mechanisms
 
-- [[synaptic_plasticity]] - Learning processes
+- [[synaptic_plasticity]] - Activity-dependent changes in synaptic strength
 
   - [[hebbian_learning]] - Connection strengthening
 
   - [[prediction_error_learning]] - Error-based updates
 
-  - [[precision_weighting]] - Connection modulation
+  - [[precision_weighting]] - Weighting prediction errors by their reliability
 
 ## Cognitive Functions
 
@@ -482,11 +484,11 @@ def train_network(network: PredictiveNetwork,
 
 - [[perceptual_inference]] - Sensory understanding
 
-  - [[object_recognition]] - Thing identification
+  - [[object_recognition]] - Identifying objects from sensory input
 
-  - [[scene_understanding]] - Context processing
+  - [[scene_understanding]] - Interpreting objects within their scene
 
-  - [[perceptual_organization]] - Pattern formation
+  - [[perceptual_organization]] - Grouping sensory input into coherent wholes
 
 ### Attention
 
@@ -496,7 +498,7 @@ def train_network(network: PredictiveNetwork,
 
   - [[top_down_attention]] - Goal-directed
 
-  - [[precision_allocation]] - Resource distribution
+  - [[precision_allocation]] - Distributing attention according to estimated precision
 
 ### Learning
 
@@ -510,7 +512,7 @@ def train_network(network: PredictiveNetwork,
 
 ### Action
 
-- [[active_inference]] - Behavior generation
+- [[active_inference]] - Acting to bring sensations in line with predictions
 
   - [[motor_control]] - Movement execution
 
@@ -524,9 +526,9 @@ def train_network(network: PredictiveNetwork,
 
 - [[psychiatric_disorders]] - Mental health
 
-  - [[schizophrenia]] - Reality processing
+  - [[schizophrenia]] - Disrupted weighting of predictions and sensory evidence
 
-  - [[autism]] - Social prediction
+  - [[autism]] - Altered prediction and precision in sensory and social processing
 
   - [[anxiety]] - Uncertainty processing
 
@@ -536,7 +538,7 @@ def train_network(network: PredictiveNetwork,
 
   - [[deep_learning]] - Neural networks
 
-  - [[reinforcement_learning]] - Interactive learning
+  - [[reinforcement_learning]] - Learning actions from reward feedback
 
   - [[unsupervised_learning]] - Pattern discovery
 
@@ -544,9 +546,9 @@ def train_network(network: PredictiveNetwork,
 
 ### Experimental Paradigms
 
-- [[psychophysics]] - Behavioral testing
+- [[psychophysics]] - Measuring relations between stimuli and perception
 
-  - [[illusion_studies]] - Perceptual effects
+  - [[illusion_studies]] - Illusions as probes of perceptual priors
 
   - [[attention_tasks]] - Focus assessment
 
@@ -556,11 +558,11 @@ def train_network(network: PredictiveNetwork,
 
 - [[brain_imaging]] - Neural measurement
 
-  - [[fmri_studies]] - Activity mapping
+  - [[fmri_studies]] - Mapping brain activity via blood oxygenation
 
-  - [[eeg_recording]] - Temporal dynamics
+  - [[eeg_recording]] - Scalp recording of fast electrical activity
 
-  - [[meg_analysis]] - Magnetic patterns
+  - [[meg_analysis]] - Analyzing magnetic fields from neural activity
 
 ## Theoretical Extensions
 
@@ -570,25 +572,25 @@ def train_network(network: PredictiveNetwork,
 
   - [[sensorimotor_contingencies]] - Action-perception
 
-  - [[interoception]] - Internal sensing
+  - [[interoception]] - Sensing the body's internal state
 
   - [[body_schema]] - Self-representation
 
 ### Social Predictive Processing
 
-- [[social_cognition]] - Interactive prediction
+- [[social_cognition]] - Predicting other people's states and actions
 
   - [[theory_of_mind]] - Mental state inference
 
-  - [[social_learning]] - Group knowledge
+  - [[social_learning]] - Learning by observing others
 
-  - [[cultural_learning]] - Societal patterns
+  - [[cultural_learning]] - Acquiring knowledge and practices from a culture
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[temporal_integration]] - Time processing
+- [[temporal_integration]] - Combining information across time
 
 - [[causal_learning]] - Cause discovery
 
@@ -596,11 +598,11 @@ def train_network(network: PredictiveNetwork,
 
 ### Emerging Applications
 
-- [[neuroprosthetics]] - Brain interfaces
+- [[neuroprosthetics]] - Devices that replace or augment neural function
 
-- [[brain_machine_interfaces]] - Neural control
+- [[brain_machine_interfaces]] - Controlling devices from brain signals
 
-- [[cognitive_enhancement]] - Ability improvement
+- cognitive enhancement - Ability improvement
 
 ## References
 

@@ -5,22 +5,14 @@ title: Active Inference in Neuroscience Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
-modified: 2024-03-15
 
-version: 2.0.0
 
 complexity: advanced
 
-processing_priority: 1
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: advanced
 
@@ -92,7 +84,7 @@ semantic_relations:
 
 ### Purpose and Scope
 
-This specialized learning path integrates Active Inference principles with neuroscience research, providing a comprehensive framework for understanding brain function and neural computation. It bridges theoretical neuroscience with computational modeling, focusing on neural dynamics and cognitive processes.
+This specialized learning path integrates Active Inference principles with neuroscience research, providing a framework for understanding brain function and neural computation. It bridges theoretical neuroscience with computational modeling, focusing on neural dynamics and cognitive processes.
 
 ### Target Audience
 
@@ -304,14 +296,6 @@ graph TB
 
 ## Core Learning Path
 
-### 1. Neural Inference Modeling (4 weeks)
-
-#### Week 1-2: Neural State Inference
-
-
-#### Week 3-4: Neural Decision Making
-
-
 ### 2. Neural Applications (6 weeks)
 
 #### Week 1-2: Perception
@@ -346,9 +330,6 @@ graph TB
 
 ### 3. Brain Intelligence (4 weeks)
 
-#### Week 1-2: Neural Learning
-
-
 #### Week 3-4: Neural Systems
 
 - Network dynamics
@@ -360,9 +341,6 @@ graph TB
 - System integration
 
 ### 4. Advanced Topics (4 weeks)
-
-#### Week 1-2: Brain-Environment Integration
-
 
 #### Week 3-4: Advanced Neuroscience
 
@@ -483,16 +461,6 @@ graph TB
 1. [[knowledge_base/research/brain_theory|Brain Theory Research]]
 
 1. [[knowledge_base/research/clinical_neuroscience|Clinical Neuroscience Research]]
-
-## Version History
-
-- Created: 2024-03-15
-
-- Last Updated: 2024-03-15
-
-- Status: Stable
-
-- Version: 1.0.0
 
 ## Integration Strategies
 
@@ -868,26 +836,6 @@ graph LR
 
   - Theory development
 
-#### Certification Path
-
-- Neural Systems
-
-  - Experimental methods
-
-  - Data analysis
-
-- Computational Neuroscience
-
-  - Model development
-
-  - System simulation
-
-- Research Methods
-
-  - Experimental design
-
-  - Statistical analysis
-
 ### Professional Network
 
 #### Research Community
@@ -1058,309 +1006,7 @@ graph TB
 
 ```
 
-## Support Resources
-
-### Research Support
-
-- Literature Database
-
-  - Neuroscience papers
-
-  - Neural computation
-
-  - Clinical studies
-
-- Computing Resources
-
-  - HPC clusters
-
-  - Cloud computing
-
-  - Neural simulators
-
-- Analysis Tools
-
-  - Neural analysis
-
-  - Visualization tools
-
-  - Statistical packages
-
-### Technical Support
-
-- Development Tools
-
-  - Neural frameworks
-
-  - Simulation tools
-
-  - Analysis suites
-
-- Documentation
-
-  - API references
-
-  - Implementation guides
-
-  - Best practices
-
-- Computing Resources
-
-  - Development environments
-
-  - Testing frameworks
-
-  - Deployment tools
-
-### Learning Support
-
-```mermaid
-
-mindmap
-
-    root((Neural
-
-    Resources))
-
-        Materials
-
-            Theory
-
-                Neuroscience
-
-                Computation
-
-            Implementation
-
-                Models
-
-                Experiments
-
-            Research
-
-                Papers
-
-                Protocols
-
-        Support
-
-            Technical
-
-                Tools
-
-                Platforms
-
-            Academic
-
-                Mentors
-
-                Groups
-
-            Clinical
-
-                Labs
-
-                Hospitals
-
-```
-
-## Version Control and Updates
-
-### Version History
-
-```mermaid
-
-gitGraph
-
-    commit id: "v1.0.0" tag: "Initial Release"
-
-    commit id: "v1.1.0"
-
-    branch feature/neural-integration
-
-    commit id: "neural-framework"
-
-    commit id: "validation-system"
-
-    checkout main
-
-    merge feature/neural-integration id: "v2.0.0" tag: "Major Update"
-
-    commit id: "v2.1.0"
-
-```
-
-### Change Management
-
-#### Major Updates
-
-- v2.0.0 (Current)
-
-  - Enhanced neural framework
-
-  - Advanced brain models
-
-  - Improved validation system
-
-  - Updated career paths
-
-- v1.1.0
-
-  - Added neural protocols
-
-  - Enhanced documentation
-
-  - New research projects
-
-- v1.0.0
-
-  - Initial curriculum
-
-  - Basic framework
-
-  - Core concepts
-
-#### Planned Improvements
-
-- Advanced neural models
-
-- Experimental protocols
-
-- Integration frameworks
-
-- Research extensions
-
-### Quality Metrics
-
-```mermaid
-
-xychart-beta
-
-    title "Learning Path Components Quality"
-
-    x-axis [Theory, Implementation, Experimental, Research, Support]
-
-    y-axis "Score" 0 --> 100
-
-    bar [95, 88, 92, 85, 90]
-
-```
-
-## Learning Analytics
-
-### Progress Tracking
-
-```mermaid
-
-xychart-beta
-
-    title "Skill Development Progress"
-
-    x-axis [Week 1, Week 6, Week 12, Week 20]
-
-    y-axis "Competency" 0 --> 100
-
-    line [15, 45, 75, 95]
-
-    line [10, 40, 70, 90]
-
-```
-
-### Performance Metrics
-
-- Research Skills
-
-  - Theory understanding
-
-  - Experimental design
-
-  - Data analysis
-
-- Technical Skills
-
-  - Model development
-
-  - Neural simulation
-
-  - Implementation
-
-- Neural Skills
-
-  - Systems understanding
-
-  - Experimental methods
-
-  - Data interpretation
-
-### Development Analytics
-
-```mermaid
-
-graph LR
-
-    subgraph Theory Development
-
-        T[Theory] --> M[Model]
-
-        M --> H[Hypothesis]
-
-    end
-
-    subgraph Experimental
-
-        E[Design] --> I[Implementation]
-
-        I --> V[Validation]
-
-    end
-
-    subgraph Clinical
-
-        D[Data] --> R[Results]
-
-        R --> C[Treatment]
-
-    end
-
-    H --> E
-
-    V --> D
-
-    style T,M,H fill:#f9f,stroke:#333
-
-    style E,I,V fill:#bbf,stroke:#333
-
-    style D,R,C fill:#bfb,stroke:#333
-
-```
-
 ## Final Notes
-
-### Success Stories
-
-- Research Impact
-
-  - Published papers
-
-  - Novel methods
-
-  - Field contributions
-
-- Clinical Applications
-
-  - Treatment models
-
-  - Neural interfaces
-
-  - Patient outcomes
-
-- Professional Growth
-
-  - Research leadership
-
-  - Industry influence
-
-  - Community building
 
 ### Additional Resources
 
@@ -1388,42 +1034,6 @@ graph LR
 
   - Professional forums
 
-### Contact Information
-
-- Research Support
-
-  - Principal investigators
-
-  - Lab managers
-
-  - Research coordinators
-
-- Clinical Support
-
-  - Neural specialists
-
-  - Clinical researchers
-
-  - Treatment experts
-
-- Technical Support
-
-  - System developers
-
-  - Tool specialists
-
-  - Integration experts
-
-## Advanced Learning Analytics and Community Integration
-
-### Social Learning Analytics Platform
-
-
-### Mentorship and Expert Guidance Integration
-
-
-### Dynamic Community Challenges and Competitions
-
 ## Knowledge Base Anchors
 
 - Neuroscience: [[knowledge_base/cognitive/predictive_coding]] · [[knowledge_base/cognitive/neural_plasticity]]
@@ -1449,161 +1059,3 @@ graph LR
   IT --> CRM
 
 ```
-
-```python
-
-class CommunityChallengePlatform:
-
-    def __init__(self):
-
-        """Initialize community challenge platform."""
-
-        self.challenge_generator = ChallengeGenerator()
-
-        self.team_formation = TeamFormation()
-
-        self.progress_tracker = ChallengeProgressTracker()
-
-        self.achievement_system = AchievementSystem()
-
-    def create_learning_challenges(self, community_skill_level, learning_objectives):
-
-        """Create engaging learning challenges for the community."""
-
-        # Generate appropriate challenges
-
-        challenges = self.challenge_generator.generate_challenges(
-
-            difficulty_level=community_skill_level,
-
-            objectives=learning_objectives
-
-        )
-
-        # Facilitate team formation
-
-        teams = self.team_formation.form_teams(challenges)
-
-        # Set up progress tracking
-
-        tracking_systems = self.progress_tracker.setup_tracking(challenges, teams)
-
-        # Initialize achievement system
-
-        achievement_framework = self.achievement_system.setup_achievements(challenges)
-
-        return {
-
-            'active_challenges': challenges,
-
-            'team_assignments': teams,
-
-            'progress_tracking': tracking_systems,
-
-            'achievement_framework': achievement_framework,
-
-            'leaderboards': self.create_leaderboards(challenges),
-
-            'collaboration_incentives': self.design_collaboration_incentives()
-
-        }
-
-community_challenge_types = {
-
-    'research_hackathons': {
-
-        'description': 'Intensive collaborative research and implementation events',
-
-        'duration': '48-72 hours',
-
-        'format': 'Teams tackle complex neuroscience problems',
-
-        'deliverables': [
-
-            'working_implementations',
-
-            'research_findings',
-
-            'presentations',
-
-            'peer_reviews'
-
-        ],
-
-        'learning_amplification': [
-
-            'intensive_collaboration',
-
-            'rapid_prototyping',
-
-            'creative_problem_solving',
-
-            'presentation_skills'
-
-        ]
-
-    },
-
-    'implementation_competitions': {
-
-        'description': 'Competitive implementation of neuroscience models',
-
-        'timeline': '2-4 weeks',
-
-        'evaluation_criteria': [
-
-            'accuracy',
-
-            'innovation',
-
-            'code_quality',
-
-            'documentation'
-
-        ],
-
-        'recognition_system': [
-
-            'peer_voting',
-
-            'expert_evaluation',
-
-            'community_impact',
-
-            'learning_demonstration'
-
-        ]
-
-    },
-
-    'knowledge_building_challenges': {
-
-        'description': 'Collaborative challenges to build comprehensive knowledge resources',
-
-        'examples': [
-
-            'comprehensive_tutorial_creation',
-
-            'case_study_development',
-
-            'problem_solving_frameworks',
-
-            'assessment_tool_creation'
-
-        ],
-
-        'community_benefits': [
-
-            'knowledge_consolidation',
-
-            'teaching_skill_development',
-
-            'resource_creation',
-
-            'community_contribution'
-
-        ]
-
-    }
-
-}

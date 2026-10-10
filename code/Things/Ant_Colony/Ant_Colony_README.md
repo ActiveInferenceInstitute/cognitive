@@ -1,310 +1,46 @@
-# Ant Colony - Active Inference Multi-Agent System
-
-## Overview
-
-This implementation models an ant colony as a multi-agent system where each ant (Nestmate) operates according to the Free Energy Principle (FEP). The system demonstrates how individual agents following active inference can give rise to emergent collective behaviors and self-organization.
-
-## Core Components
-
-### 1. Nestmate Agent
-
-Individual ant agents that implement active inference:
-
-- Sensory observations (pheromones, food, obstacles, nestmates)
-
-- Internal generative model of environment
-
-- Action selection through FEP
-
-- Belief updating and learning
-
-- Pheromone deposition behaviors
-
-### 2. Colony Environment
-
-Shared environment where agents interact:
-
-- Pheromone diffusion and evaporation
-
-- Food source dynamics
-
-- Obstacle and terrain features
-
-- Nest structure and organization
-
-- Physical constraints and interactions
-
-### 3. Multi-Agent Framework
-
-System for managing agent interactions:
-
-- Agent communication protocols
-
-- Spatial relationships
-
-- Task allocation
-
-- Resource distribution
-
-- Collective decision making
-
-## Implementation Details
-
-### Nestmate Agent Model
-
-```python
-
-class Nestmate:
-
-    def __init__(self):
-
-        # State space
-
-        self.position = None        # Physical location
-
-        self.orientation = None     # Heading direction
-
-        self.carrying = None        # What agent is carrying
-
-        self.energy = 1.0          # Energy level
-
-        # Sensory inputs
-
-        self.observations = {
-
-            'pheromone': None,     # Pheromone gradients
-
-            'food': None,          # Food sources
-
-            'nestmates': None,     # Other agents
-
-            'obstacles': None       # Environmental obstacles
-
-        }
-
-        # Internal model parameters
-
-        self.beliefs = None        # Current belief state
-
-        self.preferences = None    # Goal-directed preferences
-
-        self.policies = None       # Action policies
-
-        # Learning parameters
-
-        self.learning_rate = 0.1
-
-        self.exploration_rate = 0.2
-
-```
-
-### Key Features
-
-1. Active Inference Implementation
-
-- Hierarchical generative models
-
-- Precision-weighted prediction errors
-
-- Free energy minimization
-
-- Action-perception cycles
-
-- Belief updating through message passing
-
-1. Pheromone System
-
-- Multiple pheromone types
-
-- Diffusion mechanics
-
-- Evaporation rates
-
-- Gradient following
-
-- Trail reinforcement
-
-1. Task Allocation
-
-- Foraging
-
-- Nest maintenance
-
-- Brood care
-
-- Defense
-
-- Exploration
-
-1. Learning & Adaptation
-
-- Individual learning
-
-- Social learning
-
-- Environmental adaptation
-
-- Task switching
-
-- Skill development
-
-## Configuration
-
-The system is configured through YAML files:
-
-1. agent_config.yaml - Individual agent parameters
-
-1. colony_config.yaml - Colony-level parameters
-
-1. environment_config.yaml - Environmental settings
-
-1. simulation_config.yaml - Simulation parameters
-
-## Usage
-
-```python
-
-from ant_colony import Colony, Environment, Simulation
-
-# Initialize environment
-
-env = Environment(config_path='config/environment_config.yaml')
-
-# Create colony
-
-colony = Colony(
-
-    num_agents=100,
-
-    environment=env,
-
-    config_path='config/colony_config.yaml'
-
-)
-
-# Run simulation
-
-sim = Simulation(
-
-    colony=colony,
-
-    config_path='config/simulation_config.yaml'
-
-)
-
-sim.run(timesteps=1000)
-
-```
-
-## Analysis Tools
-
-1. Behavioral Analysis
-
-- Task distribution metrics
-
-- Spatial patterns
-
-- Temporal dynamics
-
-- Efficiency measures
-
-1. Network Analysis
-
-- Interaction networks
-
-- Information flow
-
-- Task networks
-
-- Spatial networks
-
-1. Collective Intelligence Metrics
-
-- Emergence measures
-
-- Synchronization indices
-
-- Collective decision accuracy
-
-- Adaptation rates
-
-## Visualization
-
-1. Real-time Visualization
-
-- Agent positions and movements
-
-- Pheromone gradients
-
-- Resource distribution
-
-- Task allocation
-
-1. Analysis Plots
-
-- Behavioral statistics
-
-- Learning curves
-
-- Network diagrams
-
-- Performance metrics
-
-## Project Structure
-
-```text
-
-ant_colony/
-
-├── agents/
-
-│   ├── nestmate.py
-
-│   ├── sensor.py
-
-│   └── actuator.py
-
-├── environment/
-
-│   ├── world.py
-
-│   ├── pheromone.py
-
-│   └── resources.py
-
-├── models/
-
-│   ├── generative_model.py
-
-│   ├── belief_update.py
-
-│   └── policy_selection.py
-
-├── analysis/
-
-│   ├── metrics.py
-
-│   ├── network.py
-
-│   └── visualization.py
-
-├── config/
-
-│   ├── agent_config.yaml
-
-│   ├── colony_config.yaml
-
-│   ├── environment_config.yaml
-
-│   └── simulation_config.yaml
-
-└── tests/
-
-    ├── test_agent.py
-
-    ├── test_environment.py
-
-    └── test_simulation.py
-
-```
-
+---
+title: Ant Colony Design Notes
+type: design_notes
+status: draft
+created: 2025-01-01
+updated: 2026-10-10
+tags:
+  - ant_colony
+  - multi_agent
+  - stigmergy
+  - design
+semantic_relations:
+  - type: relates
+    links:
+      - "[[code/Things/Ant_Colony/README|Ant Colony folder]]"
+      - "[[knowledge_base/biology/ant_colony_organization|Ant colony organization]]"
+      - "[[knowledge_base/cognitive/swarm_intelligence|Swarm intelligence]]"
+      - "[[docs/agents/agent_docs_readme|Agent documentation]]"
+---
+
+# Ant Colony: Design Notes
+
+> **Status: design sketch; no code in this repository.** The `code/Things/Ant_Colony/` folder contains documentation only (`README.md`, `AGENTS.md`, this page). There is no `ant_colony` package, no `Nestmate`, `Colony`, `Environment` or `Simulation` class, no YAML configuration and no tests. The only executable Things are `Simple_POMDP` and `Continuous_Generic` (see [[docs/api/api_reference|API reference]]).
+
+## Idea
+
+Model an ant colony as a multi-agent system in which each ant (a "nestmate") is an Active Inference agent. Colony-level behaviour (trail formation, task allocation) is expected to emerge from individual free energy minimization coupled through a shared environment, rather than from central control. This is a conceptual proposal, not a result obtained in this repository.
+
+## Proposed components
+
+- **Nestmate agent.** Observes local pheromone concentration, food, obstacles and neighbours; holds a generative model of its surroundings; selects actions by minimizing expected free energy; deposits pheromone as an action.
+- **Colony environment.** A shared grid with pheromone deposition, diffusion and evaporation, food sources and obstacles. Pheromone acts as the stigmergic channel: agents communicate only by changing the environment.
+- **Multi-agent layer.** Spatial interaction between nestmates and task allocation (foraging, nest maintenance, brood care, defence) arising from differences in beliefs and preferences.
+
+## Open modelling questions
+
+- How should pheromone fields enter the observation likelihood (A matrix): as a graded discrete observation or a continuous one?
+- Which preferences (C) produce trail following versus exploration, and how are they learned?
+- How does task switching arise: from precision changes, from different priors, or from explicit role states?
+- Which collective measures (task distribution, interaction networks, synchrony) would show emergence rather than assume it?
+
+## Where to start in this repository
+
+- Discrete-state agents: `code/Things/Simple_POMDP/` (executable, with tests).
+- Continuous-state agents: `code/Things/Continuous_Generic/` (executable).
+- Theory: [[knowledge_base/biology/ant_colony_organization|ant colony organization]], [[knowledge_base/biology/ant_communication_systems|ant communication systems]], [[knowledge_base/cognitive/swarm_intelligence|swarm intelligence]], [[knowledge_base/cognitive/collective_behavior|collective behavior]].

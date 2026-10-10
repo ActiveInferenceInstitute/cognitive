@@ -443,11 +443,11 @@ Contrast sensitivity is the visual system's ability to detect differences in lum
 
 - [[visual_neuroscience]]
 
-- [[clinical_vision]]
+- clinical vision
 
 - [[psychophysics]]
 
-- [[vision_research]]
+- vision research
 
-- [[ophthalmology]]
+- ophthalmology
 

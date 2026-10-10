@@ -8,6 +8,8 @@ tags:
 - perception
 - vision
 - movement
+aliases:
+  - motion_processing
 semantic_relations:
   - type: implements
     links:

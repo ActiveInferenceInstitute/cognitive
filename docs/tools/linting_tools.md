@@ -2,6 +2,7 @@
 title: Linting tools
 type: tool
 status: stable
+updated: 2026-10-10
 created: 2026-08-02
 tags:
   - linting
@@ -23,5 +24,7 @@ ruff check .
 ruff format code/Things code/tools/src code/scripts code/tests
 ```
 
-`ruff check` runs in CI together with mypy and compileall. See
+`ruff check` (rule sets `E`, `F`, `I`, `B`, `UP`, `SIM`; line length 100)
+runs in CI together with mypy and compileall. `ruff format` is a local step and
+is not run in CI. See
 `docs/development/README.md` for the complete development loop.

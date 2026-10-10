@@ -34,7 +34,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 - Prevention of profit from loss
 
-- Links to [[premium_calculation]] and [[claims_history]]
+- Links to [[premium_calculation]] and claims history
 
 ### 4. Proximate Cause
 
@@ -232,7 +232,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 - [[theoretical_advances]]
 
-- [[integration_methods]]
+- integration methods
 
 ## Related Concepts
 
@@ -240,7 +240,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 - [[policy_evaluation]]
 
-- [[claims_history]]
+- claims history
 
 - [[underwriting_guidelines]]
 

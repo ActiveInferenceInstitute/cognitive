@@ -1,5 +1,6 @@
 ---
 title: Variational Bounds and ELBO
+description: "Derivation of the evidence lower bound and variational free energy as a bound on log evidence, its equivalent forms, a two-state numerical example, and tighter multi-sample bounds."
 type: mathematical_concept
 status: stable
 created: 2025-08-08

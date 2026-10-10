@@ -7,6 +7,7 @@ from .matrix_utils import (
     ensure_matrix_properties,
     expected_free_energy,
     kl_divergence,
+    normalize_mass,
     softmax,
 )
 
@@ -15,5 +16,6 @@ __all__ = [
     "ensure_matrix_properties",
     "expected_free_energy",
     "kl_divergence",
+    "normalize_mass",
     "softmax",
 ]

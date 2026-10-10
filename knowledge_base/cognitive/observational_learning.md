@@ -8,6 +8,8 @@ tags:
   - learning
   - social
   - imitation
+aliases:
+  - social_modeling
 semantic_relations:
   - type: relates
     links:

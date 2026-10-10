@@ -19,7 +19,6 @@ semantic_relations:
     links:
       - "[[stereopsis]]"
       - "[[eye_movements]]"
-      - "[[visual_development]]"
 ---
 
 
@@ -433,7 +432,7 @@ Binocular vision is the coordinated use of both eyes to create a single, unified
 
 - [[eye_movements]]
 
-- [[visual_development]]
+- visual development
 
 - [[depth_perception]]
 
@@ -445,9 +444,9 @@ Binocular vision is the coordinated use of both eyes to create a single, unified
 
 - [[developmental_vision]]
 
-- [[clinical_vision]]
+- clinical vision
 
 - [[perceptual_psychology]]
 
-- [[ophthalmology]]
+- ophthalmology
 

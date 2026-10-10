@@ -1,288 +1,76 @@
 ---
-
-title: Validation Framework
-
+title: Validation
 type: guide
-
-status: draft
-
+status: stable
 created: 2024-02-12
-
+updated: 2026-10-10
 tags:
-
   - validation
-
   - quality
-
   - testing
-
 semantic_relations:
   - type: implements
     links:
-      - "[[ai_validation_framework]]"
+      - "[[docs/repo_docs/ai_validation_framework|Validation framework]]"
   - type: relates
     links:
-      - "[[unit_testing]]"
-      - "[[quality_metrics]]"
+      - "[[docs/repo_docs/unit_testing|Unit testing]]"
+      - "[[docs/development/README|Development resources]]"
 ---
 
-# Validation Framework
+# Validation
 
-## Overview
+What "validated" means in this repository, from the code to the documentation.
+The documentation checks are detailed in
+[[docs/repo_docs/ai_validation_framework|the validation framework]]; this page
+lists the whole set and the order to run it.
 
-This guide outlines the validation framework used to ensure theoretical consistency, implementation correctness, and quality standards across the cognitive modeling system.
+## Layers
 
-## Validation Layers
+| Layer | Question | Gate |
+|---|---|---|
+| Mathematics | Does the implementation match a closed form or identity? | `code/tests/test_math_oracles.py`, `test_dispatcher_semantics.py` |
+| Inputs | Does a malformed input raise `ValueError` rather than propagate? | `test_boundary_validation.py`, `test_config_validation.py`, `test_validation_branches.py` |
+| Behaviour | Do the models keep their lifecycle (step, reset, save, load)? | `test_model_lifecycle.py`, `test_simple_pomdp.py`, `test_pomdp_edge_paths.py` |
+| Test strength | Would the suite notice a wrong line? | `python -m scripts.mutation_check` (the `mutation-gate` CI job) |
+| Coverage | Is every branch exercised? | `pytest --cov`, floor `fail_under = 90` in `pyproject.toml` |
+| Static | Types and style | `ruff check .`, `mypy code/tools/src code/Things code/scripts`, `python -m compileall -q code` |
+| Documentation | Frontmatter, links, forbidden terms, catalogs, manuscript | `validate_docs.py`, `verify_links.py`, `check_markdown_links.py` |
+| Manuscript | Do figures and variables rebuild from the package? | `python -m scripts.build_manuscript --no-render --output <dir>` |
+| Runtime | Do the benchmarks still run? | `cognitive-benchmark --repetitions 1` |
+| Packaging | Does the wheel build and do the console scripts start? | `python -m build`, `twine check`, then each `--help` (CI `build-package` job) |
 
-### 1. Theoretical Validation
+## Order to run before a change
 
-- Mathematical consistency
-
-- Theoretical soundness
-
-- Formal proofs
-
-- Constraint satisfaction
-
-### 2. Implementation Validation
-
-- Code correctness
-
-- Algorithm implementation
-
-- Numerical stability
-
-- Performance optimization
-
-### 3. Empirical Validation
-
-- Experimental results
-
-- Benchmark comparisons
-
-- Real-world testing
-
-- Performance metrics
-
-## Validation Methods
-
-### Mathematical Validation
-
-```python
-
-def validate_probability_distribution(distribution):
-
-    """Validate probability distribution properties."""
-
-    # Check normalization
-
-    assert np.isclose(distribution.sum(), 1.0)
-
-    # Check non-negativity
-
-    assert np.all(distribution >= 0)
-
-    # Check numerical stability
-
-    assert np.all(np.isfinite(distribution))
-
+```bash
+python -m pytest -q --cov
+ruff check .
+mypy code/tools/src code/Things code/scripts
+python -m compileall -q code
+python code/scripts/validate_docs.py --json
+python code/scripts/verify_links.py . --json
+python -m scripts.mutation_check
 ```
 
-### Implementation Validation
-
-```python
-
-def validate_model_implementation(model):
-
-    """Validate model implementation."""
-
-    # Check interface compliance
-
-    validate_interface(model)
-
-    # Verify state consistency
-
-    validate_state(model)
-
-    # Test core functionality
-
-    validate_behavior(model)
-
-```
-
-### Empirical Validation
-
-```python
-
-def validate_model_performance(model, benchmark_data):
-
-    """Validate model performance."""
-
-    # Run benchmark tests
-
-    results = run_benchmarks(model, benchmark_data)
-
-    # Compare against baselines
-
-    validate_metrics(results, benchmarks)
-
-    # Check performance criteria
-
-    validate_performance(results)
-
-```
-
-## Validation Workflow
-
-### 1. Pre-implementation
-
-- Review theoretical foundations
-
-- Verify mathematical proofs
-
-- Check assumptions
-
-- Plan validation tests
-
-### 2. During Implementation
-
-- Unit testing
-
-- Integration testing
-
-- Property testing
-
-- Performance profiling
-
-### 3. Post-implementation
-
-- System validation
-
-- Benchmark testing
-
-- Documentation review
-
-- Code review
-
-## Validation Tools
-
-### Static Analysis
-
-- Type checking
-
-- Code linting
-
-- Complexity analysis
-
-- Dependency validation
-
-### Dynamic Analysis
-
-- Runtime monitoring
-
-- Memory profiling
-
-- Performance tracking
-
-- Coverage analysis
-
-### Quality Metrics
-
-- Code quality
-
-- Test coverage
-
-- Documentation completeness
-
-- Performance benchmarks
-
-### Documentation Link Integrity
-
-- Repository-wide index generation: `docs/repo_docs/repo_scripts/list_file_directory.py`
-
-- Link analysis and remediation: `docs/repo_docs/repo_scripts/fix_links.py`
-
-- Usage (from repo root):
-
-  ```bash
-
-  python3 docs/repo_docs/repo_scripts/list_file_directory.py --root .
-
-  python3 docs/repo_docs/repo_scripts/fix_links.py --root .
-
-  ```
-
-  Reports are emitted to `docs/repo_docs/repo_scripts/output`.
-
-## Best Practices
-
-### Documentation
-
-- Document assumptions
-
-- Specify constraints
-
-- Detail validation methods
-
-- Record test cases
-
-### Testing
-
-- Comprehensive test suite
-
-- Edge case coverage
-
-- Performance benchmarks
-
-- Integration tests
-
-### Review Process
-
-- Code review
-
-- Theory review
-
-- Documentation review
-
-- Performance review
-
-## Validation Checklist
-
-### Theory
-
-- [ ] Mathematical consistency
-
-- [ ] Theoretical soundness
-
-- [ ] Constraint satisfaction
-
-- [ ] Edge case handling
-
-### Implementation
-
-- [ ] Code correctness
-
-- [ ] Algorithm accuracy
-
-- [ ] Numerical stability
-
-- [ ] Performance optimization
-
-### Testing
-
-- [ ] Unit tests
-
-- [ ] Integration tests
-
-- [ ] Benchmark tests
-
-- [ ] Performance tests
-
-## Related Documentation
-
-- [[unit_testing]]
-
-- [[quality_metrics]]
-
-- [[ai_validation_framework]]
-
+The same sequence, plus the manuscript build and benchmarks, is
+[`docs/development/README.md`](../development/README.md). CI runs it in
+`.github/workflows/quality.yml` on Python 3.10 and 3.12.
+
+## Rules of thumb
+
+- A validator that cannot fail is not a gate. When you add a check, also add the
+  test that shows it rejecting a bad input.
+- Do not hide a failing step with `|| true` or by redirecting its errors; let the
+  step fail or check its exit code.
+- A checked-in number in prose or a manuscript must come from a generated
+  variable, not a typed literal; `docs/manuscript/` hydrates its values from the
+  package when `cognitive-build-manuscript` runs.
+- Record a negative result as a result. Do not delete a failing test to make the
+  suite green.
+
+## Related documentation
+
+- [[docs/repo_docs/ai_validation_framework|Validation framework]]
+- [[docs/repo_docs/unit_testing|Unit testing]]
+- [[docs/repo_docs/linking_validation|Link validation]]
+- [[docs/manuscript/README|Executable manuscript]]

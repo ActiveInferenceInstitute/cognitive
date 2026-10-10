@@ -10,7 +10,7 @@ from typing import Any
 import numpy as np
 import yaml
 
-from ...utils.matrix_utils import as_integer
+from ...utils.matrix_utils import as_integer, normalize_mass
 
 EPS = 1e-12
 
@@ -100,10 +100,7 @@ class ActiveInferenceModel(ABC):
         if matrix.ndim != 2 or matrix.shape[0] != self.state.beliefs.size:
             raise RuntimeError("A dispatcher or a valid generative_matrix is required")
         prediction = self.state.beliefs @ matrix
-        total = float(prediction.sum())
-        return (
-            prediction / total if total > EPS else np.full(prediction.shape, 1.0 / prediction.size)
-        )
+        return normalize_mass(prediction)
 
     def infer_policies(self) -> np.ndarray:
         """Infer and store the normalized first-action policy distribution."""
@@ -149,9 +146,8 @@ class ActiveInferenceModel(ABC):
         if prior.shape != self.state.beliefs.shape:
             raise ValueError("prior_beliefs must match beliefs")
         prior = np.maximum(prior, 0.0)
-        prior /= max(float(prior.sum()), EPS)
-        beliefs = np.maximum(self.state.beliefs, 0.0)
-        beliefs /= max(float(beliefs.sum()), EPS)
+        prior = normalize_mass(prior, empty="zeros")
+        beliefs = normalize_mass(np.maximum(self.state.beliefs, 0.0), empty="zeros")
         complexity = float(np.sum(beliefs * np.log((beliefs + EPS) / (prior + EPS))))
         accuracy = 0.5 * float(self.state.prediction_error)
         self.state.free_energy = accuracy + complexity
@@ -230,5 +226,4 @@ class ActiveInferenceModel(ABC):
             raise ValueError(
                 f"observation must be a finite, non-negative vector with shape {(size,)}"
             )
-        total = float(values.sum())
-        return values / total if total > EPS else np.full(size, 1.0 / size)
+        return normalize_mass(values)

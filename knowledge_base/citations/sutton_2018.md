@@ -7,6 +7,8 @@ tags:
   - citation
   - reinforcement-learning
   - decision-making
+aliases:
+  - sutton_barto_2018
 ---
 
 # Sutton & Barto (2018)

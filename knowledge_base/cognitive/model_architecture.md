@@ -169,7 +169,7 @@ See `docs/examples/README.md` for runnable examples.
 
 1. [[component_integration|Component Integration]]
 
-1. [[interface_design|Interface Design]]
+1. Interface Design
 
 1. [[data_flow|Data Flow]]
 
@@ -213,7 +213,7 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[testing_coverage|Insufficient Testing]]
 
-- [[scaling_issues|Poor Scalability]]
+- Poor Scalability
 
 - [[resource_efficiency|Resource Inefficiency]]
 
@@ -281,7 +281,7 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[component_coupling|Component Coupling]]
 
-- [[interface_design|Interface Design]]
+- Interface Design
 
 - [[data_flow|Data Flow]]
 
@@ -315,7 +315,7 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[system_validation|System Validation]]
 
-- [[integration_testing|Integration Testing]]
+- Integration Testing
 
 ## Validation Framework
 
@@ -373,9 +373,9 @@ See `docs/examples/README.md` for runnable examples.
 
 ### 2. Development Practices
 
-- [[version_control|Version Control]]
+- Version Control
 
-- [[code_review|Code Review]]
+- Code Review
 
 - [[testing_practices|Testing Practices]]
 
@@ -383,7 +383,7 @@ See `docs/examples/README.md` for runnable examples.
 
 ### 3. Quality Assurance
 
-- [[code_quality|Code Quality]]
+- Code Quality
 
 - [[test_coverage|Test Coverage]]
 

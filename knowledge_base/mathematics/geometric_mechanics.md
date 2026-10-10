@@ -1,5 +1,6 @@
 ---
 title: Geometric Mechanics
+description: "Mathematical background on geometric mechanics, covering phase space, symplectic structure, variational principles, momentum maps and reduction, with geometric integrators."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

@@ -1,5 +1,6 @@
 ---
 title: Cognitive Science Index
+description: "Navigation index for cognitive science pages on Active Inference, information processing, learning, cognitive processes, neural foundations, motor control and collective systems."
 type: index
 status: stable
 created: 2024-02-07

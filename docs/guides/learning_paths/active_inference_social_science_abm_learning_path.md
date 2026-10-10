@@ -2,6 +2,7 @@
 title: Active inference for social-science modelling
 type: learning_path
 status: stable
+updated: 2026-10-10
 ---
 
 # Active inference for social-science modelling

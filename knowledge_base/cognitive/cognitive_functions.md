@@ -11,6 +11,8 @@ tags:
   - memory
   - reasoning
   - executive-function
+aliases:
+  - cognitive_processes
 semantic_relations:
   - type: relates
     links:

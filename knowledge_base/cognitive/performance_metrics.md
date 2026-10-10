@@ -10,6 +10,8 @@ tags:
   - metrics
   - free-energy
   - active-inference
+aliases:
+  - performance_evaluation
 semantic_relations:
   - type: relates
     links:

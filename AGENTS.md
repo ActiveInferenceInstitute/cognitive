@@ -3,6 +3,7 @@ title: Cognitive Agents Index
 type: agents
 status: stable
 created: 2026-02-06
+updated: 2026-10-10
 tags:
   - agents
   - index
@@ -17,38 +18,50 @@ semantic_relations:
 
 # Cognitive Agents Index
 
-This document serves as the central entry point for all agent architectures and implementations within the Cognitive Modeling Framework.
+Entry point for the agent material in this repository. It separates what can
+be imported and run from what is design documentation only. The authoritative
+list of importable agents is [[docs/agents/agent_docs_readme|the agent documentation clearinghouse]].
 
-## 🏗️ Agent Logic & Frameworks
+## Agents that run
 
-### Core Frameworks
+- **Discrete Active Inference runtime** (`code/tools/src/models/active_inference/`):
+  `DiscreteGenerativeModel`, `ActiveInferenceDispatcher`, `HomeostaticFactory`,
+  all importable from `cognitive`. [[code/tools/src/models/active_inference/AGENTS|Documentation]]
+- **Simple POMDP** (`code/Things/Simple_POMDP/`): discrete Active Inference agent
+  with YAML configuration. [[code/Things/Simple_POMDP/AGENTS|Documentation]]
+- **Continuous Generic** (`code/Things/Continuous_Generic/`): continuous
+  state-space agent, `Things.Continuous_Generic.ContinuousActiveInference`.
+  [[code/Things/Continuous_Generic/AGENTS|Documentation]]
 
-- **Active Inference Agent** (`code/tools/src/models/active_inference/`): The primary implementation of the Active Inference agent, supporting belief updating, planning, and learning. [[code/tools/src/models/active_inference/AGENTS|View Documentation]]
-- **Generic POMDP** (`knowledge_base/agents/GenericPOMDP/`): A flexible Partially Observable Markov Decision Process framework. [[knowledge_base/agents/AGENTS|View Documentation]]
+## Agent designs without code
 
-### Specialized Implementations
+These folders under `code/Things/` and `knowledge_base/` hold documentation
+only. Treat them as design notes.
 
-- **Ant Colony** (`code/Things/Ant_Colony/`): Swarm intelligence and stigmergic coordination models. [[code/Things/Ant_Colony/AGENTS|View Documentation]]
-- **BioFirm** (`knowledge_base/BioFirm/`): Biological firm theory and organizational active inference. [[knowledge_base/BioFirm/AGENTS|View Documentation]]
-- **Continuous Time** (`knowledge_base/agents/Continuous_Time/`): Agents operating in continuous state-spaces. [[knowledge_base/agents/AGENTS|View Documentation]]
+- **Generic POMDP** (`knowledge_base/agents/GenericPOMDP/`): configuration and
+  state-space notes. [[knowledge_base/agents/GenericPOMDP/AGENTS|Documentation]]
+- **Continuous time** (`knowledge_base/agents/Continuous_Time/`): continuous-time
+  agent notes. [[knowledge_base/agents/AGENTS|Documentation]]
+- **Ant Colony** (`code/Things/Ant_Colony/`): swarm and stigmergy design notes.
+  [[code/Things/Ant_Colony/AGENTS|Documentation]]
+- **BioFirm** (`knowledge_base/BioFirm/`): biological firm theory.
+  [[knowledge_base/BioFirm/AGENTS|Documentation]]
+- **Generic Thing** (`code/Things/Generic_Thing/`): base entity notes and saved images.
+  [[code/Things/Generic_Thing/AGENTS|Documentation]]
 
-### Additional Implementations
+The full folder index is [[code/Things/README]].
 
-- **Simple POMDP** (`code/Things/Simple_POMDP/`): Educational discrete Active Inference. [[code/Things/Simple_POMDP/AGENTS|View Documentation]]
-- **Generic Thing** (`code/Things/Generic_Thing/`): Base active inference entity. [[code/Things/Generic_Thing/AGENTS|View Documentation]]
-
-## 📚 Knowledge Base
-
-For theoretical foundations and design patterns, refer to the **Knowledge Base**:
+## Knowledge base
 
 - [[knowledge_base/AGENTS|Active Inference Knowledge Base]]
 - [[knowledge_base/cognitive/active_inference_agent|Active Inference Agent Theory]]
 - [[knowledge_base/agents/architectures_overview|Agent Architectures Overview]]
 - [[knowledge_base/agents/index|Agent Architecture Index]]
 
-## 🛠️ Development Tools
+## Development tools
 
-- [[code/tools/AGENTS|Agent Development Tools]]: Utilities for building, testing, and visualizing agents.
+- [[code/tools/AGENTS|Cognitive tools instructions]]: the package source,
+  console scripts, and test commands.
 
----
-> **Note**: Each subdirectory in `code/Things/` or `knowledge_base/` contains specific `AGENTS.md` and `README.md` files detailing the unique logic and usage of those agents.
+Most subdirectories of `code/Things/` and `knowledge_base/` have their own
+`AGENTS.md` and `README.md`.

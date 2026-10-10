@@ -8,6 +8,8 @@ tags:
   - social_cognition
   - mentalizing
   - development
+aliases:
+  - true_belief
 semantic_relations:
   - type: relates
     links:

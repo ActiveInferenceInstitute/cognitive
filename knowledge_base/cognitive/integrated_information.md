@@ -8,6 +8,8 @@ tags:
   - consciousness
   - theory
   - information_theory
+aliases:
+  - information_integration
 semantic_relations:
   - type: relates
     links:

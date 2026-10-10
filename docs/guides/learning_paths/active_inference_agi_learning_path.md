@@ -5,22 +5,14 @@ title: Active Inference in AGI and Superintelligence Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
-modified: 2025-08-08
 
-version: 2.1.0
 
 complexity: advanced
 
-processing_priority: 1
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: expert
 
@@ -71,7 +63,7 @@ semantic_relations:
 
 - Work through Smith et al. (2022) step-by-step tutorial (for modeling fluency): [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8956124/)
 
-- Run repo labs (Generic_POMDP, BioFirm, Ant_Colony) and add TDD assertions for alignment/robustness (see “Repo-integrated labs”).
+- Encode a safety constraint in a `DiscreteGenerativeModel` and test the inferred policy (see “Repository labs”).
 
 - Join ongoing talks for context: Active Inference Institute livestreams: [activeinference.institute/livestreams](https://www.activeinference.institute/livestreams)
 
@@ -163,7 +155,7 @@ By completing this path, learners will be able to:
 
 - Accelerated progression with research focus
 
-- Emphasis on novel contributions and cutting-edge applications
+- Emphasis on novel contributions and current applications
 
 ## Quick Reference
 
@@ -183,7 +175,7 @@ By completing this path, learners will be able to:
 
 ### Purpose and Scope
 
-This advanced learning path explores the integration of Active Inference principles with Artificial General Intelligence (AGI) and superintelligence development. It focuses on safe and robust approaches to developing advanced AI systems, emphasizing theoretical foundations, practical implementation, and crucial safety considerations.
+This advanced learning path explores the integration of Active Inference principles with Artificial General Intelligence (AGI) and superintelligence development. It focuses on safe approaches to developing advanced AI systems, emphasizing theoretical foundations, practical implementation, and crucial safety considerations.
 
 ### Target Audience
 
@@ -199,7 +191,7 @@ By completing this path, learners will be able to:
 
 1. Design and implement safe AGI architectures using Active Inference principles
 
-1. Develop robust safety mechanisms for recursive self-improving systems
+1. Develop safety mechanisms for recursive self-improving systems
 
 1. Create and validate superintelligent system frameworks
 
@@ -215,71 +207,15 @@ By completing this path, learners will be able to:
 
 - Strategy: Long-term AI development planning
 
-### Repo-integrated labs (TDD)
+### Repository labs
 
-- AGI value-alignment sandbox (policies, priors, safety checks)
+Runnable material in this repository is the `cognitive` package, `Things.Simple_POMDP`, and `Things.Continuous_Generic`. The `Generic_POMDP`, `BioFirm`, `Ant_Colony`, and `Generic_Thing` folders contain documentation only, so there are no scripts to launch for them.
 
-  - Run baseline simulation
+- Executed starting points: [[docs/examples/index|Examples index]] and [[docs/api/api_examples|API examples]].
 
-    - Command:
+- Continuous-agent checks: `python -m pytest code/tests/visualization/test_continuous_generic.py -q`.
 
-      ```bash
-
-      python3 /home/trim/Documents/GitHub/cognitive/Things/Generic_POMDP/generic_pomdp.py
-
-      ```
-
-  - Verify plots produced under `Things/Generic_POMDP/Output/plots` against safety constraints
-
-  - Extend with a simple alignment prior; add an assertion in tests to detect regressions
-
-- Safety stress tests with BioFirm earth-systems scaffold
-
-  - Run dispatcher with provided configs
-
-    - Command:
-
-      ```bash
-
-      python3 /home/trim/Documents/GitHub/cognitive/Things/BioFirm/active_inference/dispatcher.py
-
-      ```
-
-  - Inspect outputs under `Things/BioFirm/output` and `logs`
-
-  - Add a unit test that asserts bounded policy entropy under specified perturbations
-
-- Adversarial exploration with swarm agents (risk-aware policies)
-
-  - Launch ant colony demo
-
-    - Command:
-
-      ```bash
-
-      python3 /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/ant_colony/main.py --config /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/config/colony_config.yaml
-
-      ```
-
-  - Instrument expected free energy components and confirm “conservative exploration” via tests
-
-- Repo tests to run quickly
-
-  -
-
-    ```bash
-
-    python3 -m pytest /home/trim/Documents/GitHub/cognitive/tests/visualization/test_continuous_generic.py -q
-
-    ```
-
-  -
-
-    ```bash
-
-    python3 -m pytest /home/trim/Documents/GitHub/cognitive/Things/Generic_Thing/tests -q
-
-    ```
+- Exercise: add a safety constraint to the action prior `E` or the preferences `C` of a `DiscreteGenerativeModel` and test that the inferred policy stays within the allowed actions.
 
 ## Path Selection Guide
 
@@ -543,7 +479,7 @@ Active Inference provides unique perspectives on AGI safety:
 
 - **Case Study Analysis**: Examine historical AI safety failures and near-misses
 
-- **Risk Modeling**: Create comprehensive risk models for different AGI scenarios
+- **Risk Modeling**: Create risk models for different AGI scenarios
 
 - **Stakeholder Mapping**: Identify all parties affected by AGI development decisions
 
@@ -593,7 +529,7 @@ Active Inference provides unique perspectives on AGI safety:
 
 - **Safety Proposal Design**: Create detailed proposals for specific safety mechanisms
 
-- **Risk Assessment Reports**: Develop comprehensive risk analyses for AGI scenarios
+- **Risk Assessment Reports**: Develop risk analyses for AGI scenarios
 
 - **Policy Recommendations**: Write policy briefings for non-technical decision-makers
 
@@ -679,7 +615,7 @@ AGI development could represent one of the most significant technological transi
 
 #### Assessment Methods
 
-- **Strategic Plans**: Develop comprehensive strategies for beneficial AGI development
+- **Strategic Plans**: Develop strategies for beneficial AGI development
 
 - **Future Scenarios**: Create detailed, plausible scenarios for AGI's long-term impact
 
@@ -751,7 +687,7 @@ Effective AGI governance requires engaging diverse stakeholders:
 
 - **Ethical Analysis Papers**: Write detailed analyses of specific ethical dilemmas
 
-- **Stakeholder Engagement Plans**: Design comprehensive engagement strategies
+- **Stakeholder Engagement Plans**: Design engagement strategies
 
 - **Public Presentations**: Present AGI concepts to simulated non-technical audiences
 
@@ -763,7 +699,7 @@ Effective AGI governance requires engaging diverse stakeholders:
 
 #### Option 1: Safety Framework Design
 
-Design a comprehensive safety framework for a specific AGI application domain:
+Design a safety framework for a specific AGI application domain:
 
 - **Literature Review**: Survey existing safety approaches and identify gaps
 
@@ -1019,21 +955,11 @@ graph LR
 
 ```
 
-### TDD milestones and rubric
+### Milestones
 
-- Milestone 1: Alignment prior added to `Generic_POMDP`
-
-  - Tests: policy selection remains within safe preference bounds (95% of seeds)
-
-  - Evidence: updated plots + passing assertions
-
-- Milestone 2: Robustness probe in `BioFirm` runs
-
-  - Tests: EFE components remain within configured thresholds under perturbations
-
-- Milestone 3: Risk-aware exploration in `Ant_Colony`
-
-  - Tests: reduced tail-risk of actions while maintaining task performance
+- M1: a safety constraint encoded in `E` or `C` keeps the inferred policy within the allowed actions for 95% of seeds.
+- M2: a perturbation sweep over `A` keeps the expected-free-energy components below thresholds you set.
+- M3: comparing `exploration_weight` values and `policy_aggregation` settings shows the effect of risk-aware exploration on the policy distribution.
 
 ### Cross-repo anchors
 
@@ -1047,9 +973,9 @@ graph LR
 
 - Tools
 
-  - `tools/src/visualization/matrix_plots.py`
+  - `code/tools/src/visualization/matrix_plots.py`
 
-  - `tools/src/utils/matrix_utils.py`
+  - `code/tools/src/utils/matrix_utils.py`
 
 ## Assessment and Evaluation Framework
 
@@ -1153,7 +1079,7 @@ Following our educational framework standards:
 
 **Mid-Module (Week 10): Safety Framework Proposal**
 
-- **Format**: Comprehensive proposal document
+- **Format**: Proposal document
 
 - **Task**: Design safety framework for specific AGI application domain
 
@@ -1187,7 +1113,7 @@ Following our educational framework standards:
 
 **Mid-Module (Week 17): Future Scenario Analysis**
 
-- **Format**: Comprehensive scenario planning exercise
+- **Format**: Scenario planning exercise
 
 - **Task**: Develop multiple plausible future scenarios for AGI development
 
@@ -1203,7 +1129,7 @@ Following our educational framework standards:
 
 - **Format**: Strategic planning document
 
-- **Task**: Develop comprehensive strategy for beneficial AGI development
+- **Task**: Develop strategy for beneficial AGI development
 
 - **Components**:
 
@@ -1221,7 +1147,7 @@ Following our educational framework standards:
 
 Choose from four capstone options:
 
-1. **Safety Framework Design**: Comprehensive safety framework for specific domain
+1. **Safety Framework Design**: Safety framework for specific domain
 
 1. **Policy Proposal Development**: Detailed AGI governance policy proposal
 
@@ -1243,7 +1169,7 @@ Choose from four capstone options:
 
 #### Learning Portfolio Components
 
-Each learner maintains a comprehensive portfolio demonstrating growth and integration:
+Each learner maintains a portfolio demonstrating growth and integration:
 
 **Required Portfolio Elements**:
 
@@ -1316,26 +1242,6 @@ Each learner maintains a comprehensive portfolio demonstrating growth and integr
   - Architecture design
 
   - Team leadership
-
-  - Strategic planning
-
-#### Certification Path
-
-- AGI Development
-
-  - Formal methods
-
-  - System architecture
-
-- Safety Engineering
-
-  - Verification systems
-
-  - Risk analysis
-
-- Research Leadership
-
-  - Project management
 
   - Strategic planning
 
@@ -1509,309 +1415,7 @@ graph TB
 
 ```
 
-## Support Resources
-
-### Research Support
-
-- Literature Database
-
-  - AGI papers
-
-  - Safety research
-
-  - Formal methods
-
-- Computing Resources
-
-  - HPC clusters
-
-  - Cloud computing
-
-  - Verification systems
-
-- Analysis Tools
-
-  - Formal verification
-
-  - Safety analysis
-
-  - Performance profiling
-
-### Technical Support
-
-- Development Tools
-
-  - AGI frameworks
-
-  - Safety toolkits
-
-  - Verification suites
-
-- Documentation
-
-  - Architecture specs
-
-  - Safety guidelines
-
-  - Best practices
-
-- Computing Resources
-
-  - Development environments
-
-  - Testing frameworks
-
-  - Deployment tools
-
-### Learning Support
-
-```mermaid
-
-mindmap
-
-    root((AGI
-
-    Resources))
-
-        Materials
-
-            Theory
-
-                Mathematics
-
-                Safety
-
-            Implementation
-
-                Systems
-
-                Verification
-
-            Research
-
-                Papers
-
-                Projects
-
-        Support
-
-            Technical
-
-                Tools
-
-                Frameworks
-
-            Academic
-
-                Mentors
-
-                Groups
-
-            Industry
-
-                Partners
-
-                Projects
-
-```
-
-## Version Control and Updates
-
-### Version History
-
-```mermaid
-
-gitGraph
-
-    commit id: "v1.0.0" tag: "Initial Release"
-
-    commit id: "v1.1.0"
-
-    branch feature/safety-integration
-
-    commit id: "safety-framework"
-
-    commit id: "verification-system"
-
-    checkout main
-
-    merge feature/safety-integration id: "v2.0.0" tag: "Major Update"
-
-    commit id: "v2.1.0"
-
-```
-
-### Change Management
-
-#### Major Updates
-
-- v2.0.0 (Current)
-
-  - Enhanced safety framework
-
-  - Formal verification system
-
-  - Advanced AGI components
-
-  - Updated career paths
-
-- v1.1.0
-
-  - Added safety mechanisms
-
-  - Enhanced documentation
-
-  - New research projects
-
-- v1.0.0
-
-  - Initial curriculum
-
-  - Basic framework
-
-  - Core concepts
-
-#### Planned Improvements
-
-- Advanced safety mechanisms
-
-- Formal verification tools
-
-- Integration frameworks
-
-- Research extensions
-
-### Quality Metrics
-
-```mermaid
-
-xychart-beta
-
-    title "Learning Path Components Quality"
-
-    x-axis [Theory, Safety, Implementation, Research, Support]
-
-    y-axis "Score" 0 --> 100
-
-    bar [95, 92, 88, 90, 85]
-
-```
-
-## Learning Analytics
-
-### Progress Tracking
-
-```mermaid
-
-xychart-beta
-
-    title "Skill Development Progress"
-
-    x-axis [Week 1, Week 8, Week 16, Week 24]
-
-    y-axis "Competency" 0 --> 100
-
-    line [20, 50, 80, 95]
-
-    line [15, 45, 75, 90]
-
-```
-
-### Performance Metrics
-
-- Research Skills
-
-  - Theory development
-
-  - Safety research
-
-  - Formal methods
-
-- Technical Skills
-
-  - System design
-
-  - Safety implementation
-
-  - Verification
-
-- Professional Skills
-
-  - Project leadership
-
-  - Research communication
-
-  - Community engagement
-
-### Development Analytics
-
-```mermaid
-
-graph LR
-
-    subgraph Theory Development
-
-        T[Theory] --> F[Formal Methods]
-
-        F --> P[Proofs]
-
-    end
-
-    subgraph Implementation
-
-        I[Design] --> S[Safety]
-
-        S --> V[Verification]
-
-    end
-
-    subgraph Validation
-
-        E[Empirical] --> A[Analysis]
-
-        A --> C[Certification]
-
-    end
-
-    P --> I
-
-    V --> E
-
-    style T,F,P fill:#f9f,stroke:#333
-
-    style I,S,V fill:#bbf,stroke:#333
-
-    style E,A,C fill:#bfb,stroke:#333
-
-```
-
 ## Final Notes
-
-### Success Stories
-
-- Research Impact
-
-  - Novel frameworks
-
-  - Safety advances
-
-  - Field contributions
-
-- Technical Achievements
-
-  - System implementations
-
-  - Safety certifications
-
-  - Tool development
-
-- Professional Growth
-
-  - Research leadership
-
-  - Industry influence
-
-  - Community building
 
 ### Additional Resources
 
@@ -1838,30 +1442,3 @@ graph LR
   - Safety networks
 
   - Technical forums
-
-### Contact Information
-
-- Research Support
-
-  - Principal investigators
-
-  - Safety researchers
-
-  - Theory experts
-
-- Technical Support
-
-  - System architects
-
-  - Safety engineers
-
-  - Tool developers
-
-- Community Support
-
-  - Group coordinators
-
-  - Project leaders
-
-  - Mentorship team
-

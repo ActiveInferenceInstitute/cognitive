@@ -1,4 +1,5 @@
 ---
+description: "Information gain as the KL divergence between prior and posterior beliefs, quantifying uncertainty reduction and driving the epistemic value of expected free energy."
 type: mathematical_concept
 id: information_gain_001
 created: 2024-02-05
@@ -320,11 +321,11 @@ def compute_information_gain(
 
 Links to:
 
-- [[numerical_methods]] - Implementation details
+- [[numerical_methods]] - Computing information gain in practice
 
-- [[probability_distributions]] - Distribution handling
+- [[probability_distributions]] - Representing and normalizing distributions
 
-- [[numerical_stability]] - Stability considerations
+- [[numerical_stability]] - Avoiding numerical error in logarithms and divisions
 
 ## Applications
 
@@ -338,11 +339,11 @@ Links to:
 
 - Links to:
 
-  - [[exploration_exploitation]] - Balance
+  - [[exploration_exploitation]] - Trade-off between gathering information and using it
 
-  - [[policy_selection]] - Action choice
+  - [[policy_selection]] - Choosing actions that minimize expected free energy
 
-  - [[efe_components]] - Value components
+  - [[efe_components]] - Epistemic and pragmatic terms of expected free energy
 
 ### Information Theory
 
@@ -354,11 +355,11 @@ Links to:
 
 - Links to:
 
-  - [[information_theory_axioms]] - Foundations
+  - [[information_theory_axioms]] - Axiomatic foundations of information theory
 
   - [[information_geometry]] - Geometric view
 
-  - [[information_flow]] - Dynamic aspects
+  - [[information_flow]] - How information moves through a system
 
 ## Properties
 
@@ -368,7 +369,7 @@ Links to:
 
    - = 0 iff distributions identical
 
-   - Links to [[information_bounds]]
+   - Links to information bounds
 
 1. **Asymmetry**
 
@@ -388,11 +389,11 @@ Links to:
 
 ## Related Concepts
 
-- [[uncertainty_resolution]] - Resolution process
+- [[uncertainty_resolution]] - Reduction of uncertainty through observation
 
-- [[active_learning]] - Learning strategy
+- [[active_learning]] - Choosing queries that maximize information gained
 
-- [[optimal_experiment_design]] - Design theory
+- [[optimal_experiment_design]] - Choosing experiments to maximize expected information
 
 - [[information_theory]] - Theoretical basis
 

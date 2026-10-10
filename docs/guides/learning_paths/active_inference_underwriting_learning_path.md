@@ -1,3 +1,10 @@
+---
+title: Active Inference & Underwriting Learning Path
+type: learning_path
+status: stable
+updated: 2026-10-10
+---
+
 # Active Inference & Underwriting Learning Path
 
 ## Quick Start
@@ -20,7 +27,7 @@
 
 ## Introduction
 
-This learning path provides a comprehensive guide to understanding the intersection of active inference and underwriting, designed for practitioners from both domains seeking to bridge these fields. The path integrates Risk Assessment Fundamentals with modern approaches to decision-making and uncertainty quantification.
+This learning path provides a guide to understanding the intersection of active inference and underwriting, designed for practitioners from both domains seeking to bridge these fields. The path integrates Risk Assessment Fundamentals with modern approaches to decision-making and uncertainty quantification.
 
 ## Prerequisites
 
@@ -38,7 +45,7 @@ This learning path provides a comprehensive guide to understanding the intersect
 
 #### Core Concepts
 
-- Comprehensive Risk Assessment - Systematic evaluation of risks and impacts
+- Risk Assessment - Systematic evaluation of risks and impacts
 
 - policy evaluation
 
@@ -441,32 +448,6 @@ This learning path provides a comprehensive guide to understanding the intersect
    - Duration: 3-4 weeks
 
    - Deliverable: Optimization engine
-
-## Certification Path
-
-### Level 1: Foundation Certificate
-
-- Core concept mastery
-
-- Basic implementation skills
-
-- Fundamental integration understanding
-
-### Level 2: Professional Certificate
-
-- Advanced implementation
-
-- System integration
-
-- Project portfolio
-
-### Level 3: Expert Certificate
-
-- Innovation contribution
-
-- Research implementation
-
-- Industry application
 
 ## Industry Integration
 

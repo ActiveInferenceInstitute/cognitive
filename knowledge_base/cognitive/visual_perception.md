@@ -10,6 +10,7 @@ tags:
 - neuroscience
 aliases:
   - visual_processing
+  - spatial_vision
 semantic_relations:
   - type: implements
     links:

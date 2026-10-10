@@ -8,6 +8,8 @@ tags:
   - perception
   - representation
   - computation
+aliases:
+  - feature_detection
 semantic_relations:
   - type: relates
     links:

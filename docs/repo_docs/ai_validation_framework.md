@@ -1,470 +1,91 @@
-# AI Validation Framework
-
 ---
-
-title: AI Validation Framework
-
+title: Validation framework
 type: guide
-
 status: stable
-
 created: 2024-02-06
-
+updated: 2026-10-10
 tags:
-
   - validation
-
   - quality
-
-  - ai
-
-  - metrics
-
-complexity: advanced
-
-processing_priority: 1
-
+  - documentation
 semantic_relations:
-
   - type: implements
-
-    links: [[machine_readability]]
-
-  - type: extends
-
-    links: [[validation_framework]]
-
+    links:
+      - "[[docs/repo_docs/documentation_standards|Documentation standards]]"
+  - type: relates
+    links:
+      - "[[docs/repo_docs/validation|Validation]]"
+      - "[[docs/repo_docs/linking_validation|Link validation]]"
 ---
 
-## Overview
-
-This guide defines comprehensive validation and quality assurance frameworks for AI-oriented documentation and knowledge management.
-
-## Validation Framework
-
-### Core Metrics
-
-```python
-
-# @core_metrics
-
-validation_metrics = {
-
-    "documentation": {
-
-        "completeness": float,     # Coverage of required sections
-
-        "consistency": float,      # Internal consistency
-
-        "coherence": float,        # Logical flow
-
-        "machine_readability": float  # AI processing score
-
-    },
-
-    "knowledge_graph": {
-
-        "connectivity": float,     # Graph connectivity
-
-        "coverage": float,         # Concept coverage
-
-        "density": float,          # Relationship density
-
-        "quality": float          # Overall quality score
-
-    },
-
-    "embeddings": {
-
-        "coverage": float,         # Embedding coverage
-
-        "discrimination": float,   # Discriminative power
-
-        "clustering": float,       # Cluster quality
-
-        "stability": float        # Embedding stability
-
-    }
-
-}
-
-```
-
-### Quality Thresholds
-
-```yaml
-
-quality_thresholds:
-
-  critical:
-
-    completeness: 1.0
-
-    consistency: 1.0
-
-    machine_readability: 1.0
-
-  standard:
-
-    completeness: 0.9
-
-    consistency: 0.9
-
-    machine_readability: 0.9
-
-  minimal:
-
-    completeness: 0.6
-
-    consistency: 0.6
-
-    machine_readability: 0.6
-
-```
-
-## Validation Rules
-
-### Documentation Validation
-
-```python
-
-# @documentation_validation
-
-def validate_documentation(doc: Document) -> ValidationResult:
-
-    """
-
-    Validate documentation quality
-
-    Validation steps:
-
-    1. Check structure completeness
-
-    2. Verify metadata consistency
-
-    3. Validate semantic markup
-
-    4. Assess machine readability
-
-    5. Verify link integrity
-
-    """
-
-    pass
-
-```
-
-### Knowledge Graph Validation
-
-```python
-
-# @graph_validation
-
-def validate_knowledge_graph(graph: KnowledgeGraph) -> ValidationResult:
-
-    """
-
-    Validate knowledge graph quality
-
-    Validation steps:
-
-    1. Check graph connectivity
-
-    2. Verify relationship consistency
-
-    3. Validate node properties
-
-    4. Assess coverage completeness
-
-    """
-
-    pass
-
-```
-
-### Embedding Validation
-
-```python
-
-# @embedding_validation
-
-def validate_embeddings(embeddings: dict) -> ValidationResult:
-
-    """
-
-    Validate embedding quality
-
-    Validation steps:
-
-    1. Check dimensionality
-
-    2. Verify normalization
-
-    3. Assess discrimination
-
-    4. Validate stability
-
-    """
-
-    pass
-
-```
-
-## Quality Assurance
-
-### Automated Checks
-
-
-### Continuous Validation
-
-```python
-
-# @continuous_validation
-
-def continuous_validation_pipeline():
-
-    """
-
-    Continuous validation pipeline
-
-    Steps:
-
-    1. Monitor changes
-
-    2. Trigger validations
-
-    3. Generate reports
-
-    4. Update metrics
-
-    """
-
-    pass
-
-```
-
-## Processing Pipeline
-
-### Validation Flow
-
-```mermaid
-
-graph TD
-
-    A[Input] --> B[Structure Validation]
-
-    B --> C[Content Validation]
-
-    C --> D[Semantic Validation]
-
-    D --> E[Graph Validation]
-
-    E --> F[Quality Report]
-
-```
-
-### Quality Monitoring
-
-```mermaid
-
-graph LR
-
-    A[Changes] --> B[Validation]
-
-    B --> C[Analysis]
-
-    C --> D[Reporting]
-
-    D --> E[Improvement]
-
-    E --> A
-
-```
-
-### Repository Link Health
-
-Automate documentation link health as part of validation:
-
-```bash
-
-# Inventory and wikilink extraction
-
-python3 docs/repo_docs/repo_scripts/list_file_directory.py --root . --output docs/repo_docs/repo_scripts/output
-
-# Suggested fixes and optional automated remediation
-
-python3 docs/repo_docs/repo_scripts/fix_links.py --root . --output docs/repo_docs/repo_scripts/output
-
-```
-
-## Integration Points
-
-### Documentation Integration
-
-
-### Knowledge Graph Integration
-
-
-## Reporting Framework
-
-### Quality Reports
-
-```python
-
-# @quality_reporting
-
-def generate_quality_report() -> Report:
-
-    """
-
-    Generate comprehensive quality report
-
-    Sections:
-
-    1. Overall metrics
-
-    2. Detailed analysis
-
-    3. Issue identification
-
-    4. Improvement suggestions
-
-    """
-
-    pass
-
-```
-
-### Metric Tracking
-
-```python
-
-# @metric_tracking
-
-def track_metrics(metrics: dict):
-
-    """
-
-    Track quality metrics over time
-
-    Features:
-
-    1. Trend analysis
-
-    2. Regression detection
-
-    3. Progress monitoring
-
-    4. Alert generation
-
-    """
-
-    pass
-
-```
-
-## Improvement Framework
-
-### Issue Resolution
-
-```python
-
-# @issue_resolution
-
-def resolve_issues(issues: list) -> ResolutionPlan:
-
-    """
-
-    Generate issue resolution plan
-
-    Steps:
-
-    1. Prioritize issues
-
-    2. Generate solutions
-
-    3. Plan implementation
-
-    4. Track resolution
-
-    """
-
-    pass
-
-```
-
-### Quality Enhancement
-
-```python
-
-# @quality_enhancement
-
-def enhance_quality(target: str) -> EnhancementPlan:
-
-    """
-
-    Generate quality enhancement plan
-
-    Steps:
-
-    1. Identify opportunities
-
-    2. Propose improvements
-
-    3. Plan implementation
-
-    4. Track progress
-
-    """
-
-    pass
-
-```
-
-## Best Practices
-
-### Validation Guidelines
-
-1. **Regular Validation**
-
-   - Automated daily checks
-
-   - Weekly comprehensive validation
-
-   - Monthly quality reviews
-
-1. **Quality Monitoring**
-
-   - Real-time metric tracking
-
-   - Trend analysis
-
-   - Regression detection
-
-1. **Continuous Improvement**
-
-   - Issue tracking
-
-   - Enhancement planning
-
-   - Progress monitoring
-
-## Related Documentation
-
-- [[ai_documentation_style]]
-
-- [[knowledge_graph_structure]]
-
-- [[quality_metrics]]
-
-- [[improvement_framework]]
-
-## References
-
-- [[validation_techniques]]
-
-- [[quality_assurance]]
-
-- [[metric_analysis]]
-
-- [[improvement_strategies]]
+# Validation framework
+
+Documentation quality is enforced by five scripts in `code/scripts/`, each also
+installed as a console command. There are no quality scores, embedding checks,
+or threshold files; every check is pass or fail.
+
+| Script | Console command | Checks |
+|---|---|---|
+| `validate_docs.py [root] [--json]` | `cognitive-validate-docs` | The aggregate gate (below). |
+| `verify_links.py [root] [--strict-wiki-links] [--json]` | `cognitive-verify-links` | Obsidian `[[wiki links]]`. |
+| `check_markdown_links.py [root] [--json]` | none | Standard `[text](target)` links and anchors. |
+| `normalize_frontmatter.py [root] (--check or --write)` | `cognitive-normalize-frontmatter` | `semantic_relations` links are quoted strings. |
+| `kb_index.py [root] (--check or --write)` | `cognitive-kb-index` | Generated `catalog.md` files are current. |
+
+Each exits non-zero when it finds a problem (`--check` for the last two).
+
+## What `validate_docs.py` checks
+
+It reads the files returned by `git ls-files`, so untracked files are not
+scanned, and reports `forbidden_terms`, `documentation_errors`, `links`,
+`markdown_links`, and `manuscript` sections in its JSON.
+
+1. **Forbidden terms.** Every `.md`, `.py`, `.yaml`, `.yml`, `.toml`, `.txt`,
+   `.json`, and `.sh` file is scanned for the whole-word, case-insensitive terms
+   in `docs/policy/documentation_terms.yaml`. The files that must spell the terms
+   are listed there as exempt.
+2. **Frontmatter.** A file that starts with `---` must have a non-empty YAML
+   mapping, no template values (`unique_identifier`, `timestamp`,
+   `lorem_ipsum`), and quoted `semantic_relations` links. A Markdown file that
+   does not start with `---` is not checked for frontmatter.
+3. **Python fences.** Fences tagged `python` or `py` must compile. They are not
+   executed.
+4. **Wiki links.** The `verify_links.py` report in default mode: explicit file
+   references that do not resolve are errors.
+5. **Markdown links.** The `check_markdown_links.py` report: broken file targets
+   are errors.
+6. **Catalogs.** Missing or stale knowledge-base catalogs are errors.
+7. **Exports.** Every name in `cognitive.__all__` must exist on the package.
+8. **Manuscript.** `docs/manuscript/` must contain the eleven numbered sections
+   `00` to `09` and `99`, with no duplicate `{#eq:}`, `{#fig:}`, `{#tbl:}`, or
+   `{#sec:}` labels, no unresolved `[@fig:...]`-style references, every citation key
+   present in `references.bib`, every figure path produced by
+   `code/scripts/build_manuscript.py`, and a `config.yaml` with an `experiment`
+   mapping.
+
+Anchor mismatches in either link checker are warnings and do not fail the gate.
+
+## Where the gates run
+
+CI (`.github/workflows/quality.yml`, the only workflow) runs
+`validate_docs.py --json` and `verify_links.py . --json` on every push and pull
+request, after the tests and static checks. Locally, run the same commands from
+the repository root; the full development loop is in
+[`docs/development/README.md`](../development/README.md). The repository has no
+pre-commit hook configuration.
+
+## Fixing a failure
+
+- Forbidden term: reword the sentence so it states what exists. Do not swap in
+  a synonym for the same claim.
+- Unquoted relation link: `python code/scripts/normalize_frontmatter.py --write .`
+- Stale catalog: `python code/scripts/kb_index.py --write .`
+- Broken link: correct the target, or write a bare concept name if no page is
+  meant (see [[docs/repo_docs/linking_validation|Link validation]]).
+
+## Related documentation
+
+- [[docs/repo_docs/validation|Validation]]
+- [[docs/repo_docs/linking_validation|Link validation]]
+- [[docs/repo_docs/documentation_standards|Documentation standards]]
+- [[docs/tools/doc_validator|Documentation validator notes]]

@@ -44,9 +44,7 @@ def test_mutation_names_are_unique() -> None:
 
 
 def _digest(paths: set[Path]) -> dict[Path, str]:
-    return {
-        path: hashlib.sha256(path.read_bytes()).hexdigest() for path in sorted(paths)
-    }
+    return {path: hashlib.sha256(path.read_bytes()).hexdigest() for path in sorted(paths)}
 
 
 def test_harness_detects_a_survivor_and_restores_the_source(tmp_path: Path) -> None:

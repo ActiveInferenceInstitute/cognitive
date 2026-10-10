@@ -49,6 +49,17 @@ class ContinuousActiveInference:
     function reproduces the applied update; the regression test
     ``test_step_follows_free_energy_gradient`` pins the identity for
     non-identity dynamics matrices.
+
+    When ``precision_learning_rate`` is positive the observation precision
+    tracks the inverse squared residual, which is unbounded in both directions:
+    a zero residual asks for ``1 / EPS`` and a large one for nearly zero. A
+    single step at ``1e12`` multiplies the gradient by ``dt * alpha * 1e12`` and
+    throws the beliefs far from the data, after which the huge residual drives
+    the precision to zero and freezes the update. The learned target is
+    therefore clipped to ``[precision_min, precision_max]``, and the initial
+    ``observation_precision`` must lie inside that interval when learning is
+    on. The sensory update is stable only while ``dt * alpha * precision_max``
+    stays below 2, so lower ``precision_max`` when raising ``dt`` or ``alpha``.
     """
 
     def __init__(
@@ -65,6 +76,8 @@ class ContinuousActiveInference:
         precision_learning_rate: float = 0.0,
         dynamics_weight: float = 1.0,
         seed: int | None = 0,
+        precision_min: float = 1e-3,
+        precision_max: float = 1e3,
     ) -> None:
         self.n_states = self._positive_int(n_states, "n_states")
         self.n_obs = self._positive_int(n_obs, "n_obs")
@@ -79,6 +92,12 @@ class ContinuousActiveInference:
             raise ValueError("dynamics_weight must be finite and non-negative")
         if seed is not None and (not isinstance(seed, int) or seed < 0):
             raise ValueError("seed must be a non-negative integer or None")
+        if not (np.isfinite(precision_min) and np.isfinite(precision_max)):
+            raise ValueError("precision_min and precision_max must be finite")
+        if not 0.0 < precision_min < precision_max:
+            raise ValueError("precision bounds must satisfy 0 < precision_min < precision_max")
+        self.precision_min = float(precision_min)
+        self.precision_max = float(precision_max)
         self.dt = float(dt)
         self.alpha = float(alpha)
         self.dynamics_weight = float(dynamics_weight)
@@ -104,6 +123,14 @@ class ContinuousActiveInference:
         self.observation_precision = self._precision_vector(
             observation_precision, self.n_obs, "observation_precision"
         )
+        if self.precision_learning_rate > 0 and (
+            np.any(self.observation_precision < self.precision_min)
+            or np.any(self.observation_precision > self.precision_max)
+        ):
+            raise ValueError(
+                "observation_precision must lie in [precision_min, precision_max] "
+                "when precision_learning_rate is positive"
+            )
         state_precision_vector = self._precision_vector(
             state_precision, self.n_states, "state_precision"
         )
@@ -197,10 +224,16 @@ class ContinuousActiveInference:
         if self.precision_learning_rate:
             residual = np.abs(prediction_error)
             observed_precision = 1.0 / np.maximum(residual**2, EPS)
-            target = np.full(self.n_obs, observed_precision.mean())
-            self.observation_precision = (
-                1.0 - self.precision_learning_rate
-            ) * self.observation_precision + self.precision_learning_rate * target
+            target = np.full(
+                self.n_obs,
+                np.clip(observed_precision.mean(), self.precision_min, self.precision_max),
+            )
+            self.observation_precision = np.clip(
+                (1.0 - self.precision_learning_rate) * self.observation_precision
+                + self.precision_learning_rate * target,
+                self.precision_min,
+                self.precision_max,
+            )
         self.state.belief_precisions = np.maximum(self.state.belief_precisions, EPS)
         free_energy = self._compute_free_energy(obs, means)
         action = self.observation_matrix.T @ (self.observation_precision * prediction_error)

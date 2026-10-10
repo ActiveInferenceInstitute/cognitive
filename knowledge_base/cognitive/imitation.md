@@ -42,4 +42,4 @@ Kilner, Friston, and Frith proposed that the mirror-neuron system is a product o
 - Meltzoff, A. N., & Moore, M. K. (1977). Imitation of facial and manual gestures by human neonates. *Science*.
 - Oostenbroek, J., et al. (2016). Comprehensive longitudinal study challenges the existence of neonatal imitation in humans. *Current Biology*.
 - Kilner, J. M., Friston, K. J., & Frith, C. D. (2007). Predictive coding: an account of the mirror neuron system. *Cognitive Processing*.
-- Chartrand, T. L., & Bargh, J. A. (1999). The chameleon effect. *Journal of Personality and Social Psychology*.
+- Chartrand, T. L., & Bargh, J. A. (1999). The chameleon effect: the perception-behavior link and social interaction. *Journal of Personality and Social Psychology*.

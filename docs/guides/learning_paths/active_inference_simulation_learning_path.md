@@ -5,24 +5,14 @@ title: Active Inference Simulation and Virtual Environments Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
-modified: 2024-03-15
 
-modified: 2025-08-08
-
-version: 3.1.0
 
 complexity: advanced
 
-processing_priority: 1
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: advanced
 
@@ -94,45 +84,27 @@ semantic_relations:
 
 - **Theory Component**: 30%
 
-## Repo-integrated labs (TDD)
+## Repository labs
 
-- Validate simulation stack against repo demos
+Runnable material in this repository is the `cognitive` package, `Things.Simple_POMDP`, and `Things.Continuous_Generic`. The `Generic_POMDP`, `BioFirm`, `Ant_Colony`, and `Generic_Thing` folders contain documentation only, so there are no scripts to launch for them.
 
-  - Generic POMDP baseline
+- Executed starting points: [[docs/examples/index|Examples index]] and [[docs/api/api_examples|API examples]].
 
-    ```bash
-    python3 /home/trim/Documents/GitHub/cognitive/Things/Generic_POMDP/generic_pomdp.py
-    ```
+- Continuous-agent checks: `python -m pytest code/tests/visualization/test_continuous_generic.py -q`.
 
-  - BioFirm dispatcher (digital-twin flavored analysis)
-
-    ```bash
-    python3 /home/trim/Documents/GitHub/cognitive/Things/BioFirm/active_inference/dispatcher.py
-    ```
-
-  - Ant Colony multi-agent sim
-
-    ```bash
-    python3 /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/ant_colony/main.py --config /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/config/colony_config.yaml
-    ```
-
-  - Quick tests
-
-    ```bash
-    python3 -m pytest /home/trim/Documents/GitHub/cognitive/tests/visualization/test_continuous_generic.py -q
-    ```
+- Exercise: run `cognitive-benchmark --repetitions 1` and read the JSON timings for the dispatcher, `SimplePOMDP`, and the continuous agent.
 
 ### Cross-repo anchors
 
 - `knowledge_base/mathematics/expected_free_energy.md` · `knowledge_base/mathematics/message_passing.md`
 
-- `tools/src/visualization/matrix_plots.py`
+- `code/tools/src/visualization/matrix_plots.py`
 
 ## Executive Summary
 
 ### Purpose and Scope
 
-This comprehensive learning path focuses on creating sophisticated simulation environments and virtual worlds for Active Inference systems, emphasizing multi-agent interactions, physics-based modeling, virtual reality integration, and digital twin implementations. The curriculum provides frameworks for building immersive, interactive, and realistic simulation environments that support advanced Active Inference research and applications.
+This learning path focuses on creating sophisticated simulation environments and virtual worlds for Active Inference systems, emphasizing multi-agent interactions, physics-based modeling, virtual reality integration, and digital twin implementations. The curriculum provides frameworks for building immersive, interactive, and realistic simulation environments that support advanced Active Inference research and applications.
 
 ### Target Audience
 
@@ -165,15 +137,6 @@ By completing this path, learners will be able to:
 - Industry: Digital twins, process simulation, predictive modeling
 
 ## Advanced Simulation and Virtual Environment Integration Framework
-
-### Multi-Agent Simulation Environment Architecture
-
-
-### Digital Twin and Real-World Integration Framework
-
-
-### Physics-Based Simulation and Behavior Modeling Framework
-
 
 ### Real-Time Interaction and Adaptive Content Framework
 

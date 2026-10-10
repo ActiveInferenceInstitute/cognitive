@@ -24,6 +24,8 @@ from cognitive.models.active_inference.dispatcher import ActiveInferenceDispatch
 from cognitive.models.active_inference.generative_model import DiscreteGenerativeModel
 from Things.Continuous_Generic import ContinuousActiveInference
 
+from scripts.markdown_fences import iter_fenced_blocks
+
 TOKEN_PATTERN = re.compile(r"\{\{([A-Z][A-Z0-9_]*)\}\}")
 
 
@@ -384,6 +386,25 @@ def _strip_crossref_caption_prefix(document: dict[str, Any]) -> None:
     visit(document)
 
 
+def _latex_preamble(source: str) -> str:
+    """Return the LaTeX of every closed ``latex`` fence in ``source``.
+
+    A preamble with no such fence used to produce an empty ``preamble.tex``, so
+    the PDF was typeset without the packages and macros the manuscript needs and
+    the first symptom was an undefined control sequence deep in the LaTeX log.
+    """
+    blocks = [
+        block.body
+        for block in iter_fenced_blocks(source)
+        if block.terminated and block.info.lower() == "latex"
+    ]
+    if not blocks:
+        raise ValueError(
+            "preamble.md contains no closed latex fence, so the PDF would have no preamble"
+        )
+    return "\n\n".join(blocks) + "\n"
+
+
 def _render(
     output: Path,
     combined: Path,
@@ -395,8 +416,7 @@ def _render(
     bibliography = output / "references.bib"
     preamble = output / "preamble.tex"
     preamble_source = (manuscript_dir / "preamble.md").read_text(encoding="utf-8")
-    latex_blocks = re.findall(r"```latex\n(.*?)\n```", preamble_source, flags=re.DOTALL)
-    preamble.write_text("\n\n".join(latex_blocks) + "\n", encoding="utf-8")
+    preamble.write_text(_latex_preamble(preamble_source), encoding="utf-8")
     with tempfile.TemporaryDirectory(prefix="cognitive-crossref-") as temporary_dir:
         crossref_json = Path(temporary_dir) / "crossref.json"
         preprocess = [

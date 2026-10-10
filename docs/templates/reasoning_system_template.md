@@ -2,7 +2,7 @@
 
 type: reasoning-system
 
-id: "{{reasoning_id}}"
+id: "{{reasoning_system_id}}"
 
 created: "{{date}}"
 
@@ -10,13 +10,13 @@ modified: "{{date}}"
 
 tags: [reasoning, inference, decision-making, problem-solving]
 
-aliases: ["{{reasoning_name}}", "{{reasoning_alias}}"]
+aliases: ["{{reasoning_system_name}}", "{{reasoning_alias}}"]
 
 related_systems: ["{{related_system_1}}", "{{related_system_2}}"]
 
 ---
 
-# Reasoning System: {{reasoning_name}}
+# Reasoning System: {{reasoning_system_name}}
 
 ## Metadata
 
@@ -84,7 +84,7 @@ graph TD
 
 graph TD
 
-    A[Reasoning System: {{reasoning_name}}] --> B[Knowledge Base]
+    A[Reasoning System: {{reasoning_system_name}}] --> B[Knowledge Base]
 
     A --> C[Inference Engine]
 
@@ -421,13 +421,13 @@ sequenceDiagram
 
 ```
 
-### API Specification
+### Interface
 
 ```yaml
 
-api:
+interface:
 
-  - endpoint: "reason"
+  - operation: "reason"
 
     parameters:
 
@@ -451,7 +451,7 @@ api:
 
       description: "Reasoning results including conclusion and explanation"
 
-  - endpoint: "explain"
+  - operation: "explain"
 
     parameters:
 

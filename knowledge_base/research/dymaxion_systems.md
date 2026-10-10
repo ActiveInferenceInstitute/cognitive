@@ -25,7 +25,7 @@ semantic_relations:
 
 ## The main designs
 
-- **Dymaxion House.** A design for a mass-producible, lightweight dwelling hung from a central mast, developed from Fuller's 1927 "4D" tower proposal. It was publicised in 1929 and never entered production.
+- **Dymaxion House.** A design for a mass-producible, lightweight dwelling hung from a central mast, developed from the "4D" housing design Fuller began in 1927. It was publicised in 1929 and never entered production.
 - **Dymaxion car.** A streamlined three-wheeled vehicle built in the early 1930s, with rear-wheel steering. A small number of prototypes were constructed. It was not commercialised, and its handling at speed has been criticised.
 - **Dymaxion deployment unit and Wichita House.** Metal prefabricated dwellings of the 1940s derived from grain-bin construction. They were prototyped but not produced at scale.
 - **Dymaxion map.** The best-known and most widely used survivor. The projection places the globe's surface onto the faces of a polyhedron, a cuboctahedron in the version published in *Life* magazine in 1943 and an icosahedron in later versions, which can then be unfolded flat. Patented in 1946, it keeps shapes and relative sizes of land masses closer to reality than the Mercator projection and shows the continents as a nearly continuous island. It has no fixed "up", and any layout necessarily cuts the surface somewhere.
@@ -45,7 +45,7 @@ See [[knowledge_base/research/design_science]] for the broader programme, [[know
 ## References
 
 - Fuller, R. B. (1938). *Nine Chains to the Moon*. J. B. Lippincott.
-- Fuller, R. B. (1975). *Synergetics: Explorations in the Geometry of Thinking*. Macmillan.
+- Fuller, R. B., with Applewhite, E. J. (1975). *Synergetics: Explorations in the Geometry of Thinking*. Macmillan.
 
 ## Related Resources
 

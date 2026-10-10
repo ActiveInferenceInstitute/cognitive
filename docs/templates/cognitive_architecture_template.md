@@ -2,7 +2,7 @@
 
 type: cognitive-architecture
 
-id: "{{architecture_id}}"
+id: "{{cognitive_architecture_id}}"
 
 created: "{{date}}"
 
@@ -10,13 +10,13 @@ modified: "{{date}}"
 
 tags: [cognitive-architecture, system, integration]
 
-aliases: ["{{architecture_name}}", "{{architecture_alias}}"]
+aliases: ["{{cognitive_architecture_name}}", "{{architecture_alias}}"]
 
 related_architectures: ["{{related_architecture_1}}", "{{related_architecture_2}}"]
 
 ---
 
-# Cognitive Architecture: {{architecture_name}}
+# Cognitive Architecture: {{cognitive_architecture_name}}
 
 ## Metadata
 
@@ -90,7 +90,7 @@ graph TD
 
 graph TD
 
-    A[Architecture: {{architecture_name}}] --> B[Perception Module]
+    A[Architecture: {{cognitive_architecture_name}}] --> B[Perception Module]
 
     A --> C[Cognitive Module]
 
@@ -301,45 +301,26 @@ requirements:
 See `docs/examples/README.md` for runnable examples.
 
 
-### Deployment Architecture
+### Module Layout
 
 ```mermaid
 
 flowchart TD
 
-    A[Client Application] --> B[API Gateway]
+    A[Entry Point] --> B[Perception Module]
 
-    B --> C[Perception Service]
+    A --> C[Cognition Module]
 
-    B --> D[Cognition Service]
+    A --> D[Memory Module]
 
-    B --> E[Memory Service]
+    A --> E[Action Module]
 
-    B --> F[Action Service]
-
-    B --> G[Learning Service]
-
-    C --> H[(Perception DB)]
-
-    D --> I[(Cognition DB)]
-
-    E --> J[(Memory DB)]
-
-    F --> K[(Action DB)]
-
-    G --> L[(Learning DB)]
-
-    M[Monitoring] --> C
-
-    M --> D
-
-    M --> E
-
-    M --> F
-
-    M --> G
+    A --> F[Learning Module]
 
 ```
+
+Replace the nodes with the real modules of {{cognitive_architecture_name}} and link each
+to its source directory.
 
 ## Capabilities
 

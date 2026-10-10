@@ -2,6 +2,7 @@
 title: Repository Policy Instructions
 type: instructions
 status: stable
+updated: 2026-10-10
 ---
 
 # Working with repository policy files

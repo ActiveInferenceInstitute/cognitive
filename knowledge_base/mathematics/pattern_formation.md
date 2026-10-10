@@ -9,6 +9,8 @@ tags:
   - reaction_diffusion
   - turing
   - morphogenesis
+aliases:
+  - spatial_patterns
 semantic_relations:
   - type: foundation
     links:

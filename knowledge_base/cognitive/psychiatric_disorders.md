@@ -8,6 +8,8 @@ tags:
   - psychiatry
   - psychopathology
   - nosology
+aliases:
+  - social_disorders
 semantic_relations:
   - type: relates
     links:

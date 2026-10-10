@@ -8,6 +8,8 @@ tags:
   - neurodevelopment
   - psychiatry
   - perception
+aliases:
+  - autism_spectrum
 semantic_relations:
   - type: relates
     links:
@@ -41,6 +43,6 @@ These proposals disagree about the mechanism (weak priors, high sensory precisio
 
 ## References
 - Pellicano, E., & Burr, D. (2012). When the world becomes "too real": a Bayesian explanation of autistic perception. *Trends in Cognitive Sciences*.
-- Lawson, R. P., Rees, G., & Friston, K. J. (2014). An aberrant precision account of autistic perception. *Frontiers in Human Neuroscience*.
+- Lawson, R. P., Rees, G., & Friston, K. J. (2014). An aberrant precision account of autism. *Frontiers in Human Neuroscience*.
 - Van de Cruys, S., et al. (2014). Precise minds in uncertain worlds: predictive coding in autism. *Psychological Review*.
 - Sinha, P., et al. (2014). Autism as a disorder of prediction. *PNAS*.

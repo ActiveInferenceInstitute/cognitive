@@ -9,6 +9,8 @@ tags:
 - fault-tolerance
 - reliability
 - engineering
+aliases:
+  - redundancy
 semantic_relations:
   - type: related_to
     links:

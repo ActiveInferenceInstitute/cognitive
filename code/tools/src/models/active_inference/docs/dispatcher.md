@@ -1,3 +1,10 @@
+---
+title: Dispatcher reference
+type: documentation
+status: stable
+updated: 2026-10-10
+---
+
 # Dispatcher reference
 
 `ActiveInferenceDispatcher` requires both an `InferenceConfig` and a

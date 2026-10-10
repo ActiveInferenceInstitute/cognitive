@@ -32,457 +32,457 @@ Language Processing encompasses the cognitive and neural mechanisms involved in 
 
 ### Phonological Processing
 
-- [[sound_processing]] - Speech sounds
+- [[sound_processing]] - Perceiving and producing speech sounds
 
-  - [[phoneme_processing]] - Sound units
+  - [[phoneme_processing]] - Handling the smallest speech sound units
 
-    - [[phoneme_recognition]] - Sound identify
+    - [[phoneme_recognition]] - Identifying phonemes in speech
 
-      - [[acoustic_analysis]] - Sound features
+      - [[acoustic_analysis]] - Extracting acoustic features of speech
 
-      - [[categorical_perception]] - Sound groups
+      - [[categorical_perception]] - Perceiving sounds as discrete categories
 
-    - [[phoneme_manipulation]] - Sound change
+    - [[phoneme_manipulation]] - Operating on speech sounds mentally
 
-      - [[phonological_awareness]] - Sound know
+      - [[phonological_awareness]] - Conscious knowledge of sound structure
 
-      - [[phonological_memory]] - Sound hold
+      - [[phonological_memory]] - Short-term retention of speech sounds
 
-  - [[prosodic_processing]] - Speech patterns
+  - [[prosodic_processing]] - Processing speech melody and rhythm
 
-    - [[intonation]] - Voice change
+    - [[intonation]] - Pitch variation across utterances
 
-      - [[pitch_contours]] - Tone shape
+      - [[pitch_contours]] - Pitch shapes across a phrase
 
-      - [[stress_patterns]] - Emphasis
+      - [[stress_patterns]] - Relative emphasis on syllables
 
-    - [[rhythm]] - Time pattern
+    - [[rhythm]] - Temporal patterning of speech
 
-      - [[temporal_structure]] - Time order
+      - [[temporal_structure]] - Timing relations among speech units
 
-      - [[meter]] - Beat pattern
+      - [[meter]] - Regular alternation of stressed syllables
 
 ### Lexical Processing
 
-- [[word_processing]] - Word handle
+- [[word_processing]] - Handling words in comprehension and production
 
-  - [[word_recognition]] - Word find
+  - [[word_recognition]] - Identifying words from input
 
-    - [[visual_word_form]] - See word
+    - [[visual_word_form]] - Recognizing printed words
 
-      - [[orthographic_processing]] - Letter process
+      - [[orthographic_processing]] - Processing letter strings and spelling
 
-      - [[morphological_analysis]] - Part process
+      - [[morphological_analysis]] - Decomposing words into meaningful parts
 
-    - [[auditory_word_form]] - Hear word
+    - [[auditory_word_form]] - Recognizing spoken words
 
-      - [[phonological_decoding]] - Sound map
+      - [[phonological_decoding]] - Mapping sounds onto word forms
 
-      - [[lexical_access]] - Word get
+      - [[lexical_access]] - Retrieving words from the mental lexicon
 
-  - [[word_production]] - Word make
+  - [[word_production]] - Generating words for speech
 
-    - [[word_selection]] - Choose word
+    - [[word_selection]] - Choosing the intended word
 
-      - [[semantic_activation]] - Mean wake
+      - [[semantic_activation]] - Activating meaning representations
 
-      - [[lemma_retrieval]] - Base get
+      - [[lemma_retrieval]] - Retrieving abstract word entries
 
-    - [[phonological_encoding]] - Sound make
+    - [[phonological_encoding]] - Building the sound form of a word
 
-      - [[syllable_program]] - Sound plan
+      - [[syllable_program]] - Selecting stored syllable motor programs
 
-      - [[articulation_plan]] - Say plan
+      - [[articulation_plan]] - Planning speech movements
 
 ### Syntactic Processing
 
-- [[grammar_processing]] - Rule use
+- [[grammar_processing]] - Applying grammatical rules
 
-  - [[syntactic_parsing]] - Structure find
+  - [[syntactic_parsing]] - Assigning structure to sentences
 
-    - [[phrase_structure]] - Part group
+    - [[phrase_structure]] - Grouping words into phrases
 
-      - [[constituent_analysis]] - Group find
+      - [[constituent_analysis]] - Identifying phrase constituents
 
-      - [[hierarchical_structure]] - Level order
+      - [[hierarchical_structure]] - Nested organization of phrases
 
-    - [[dependency_parsing]] - Link find
+    - [[dependency_parsing]] - Identifying head-dependent word relations
 
-      - [[grammatical_relations]] - Word links
+      - [[grammatical_relations]] - Syntactic links such as subject and object
 
-      - [[thematic_roles]] - Who what
+      - [[thematic_roles]] - Who did what to whom
 
-  - [[syntactic_generation]] - Structure make
+  - [[syntactic_generation]] - Building sentence structure in production
 
-    - [[sentence_planning]] - Plan make
+    - [[sentence_planning]] - Organizing a sentence before speaking
 
-      - [[structural_selection]] - Form pick
+      - [[structural_selection]] - Choosing a syntactic frame
 
-      - [[word_order]] - Order pick
+      - [[word_order]] - Ordering words within the sentence
 
-    - [[agreement_processing]] - Match make
+    - [[agreement_processing]] - Matching grammatical features between words
 
-      - [[feature_checking]] - Match check
+      - [[feature_checking]] - Verifying features such as number and gender
 
-      - [[constraint_satisfaction]] - Rule fit
+      - [[constraint_satisfaction]] - Meeting multiple grammatical constraints at once
 
 ### Semantic Processing
 
-- [[meaning_processing]] - Sense handle
+- [[meaning_processing]] - Interpreting meaning in language
 
-  - [[word_meaning]] - Word sense
+  - [[word_meaning]] - Meaning of individual words
 
-    - [[lexical_semantics]] - Word meaning
+    - [[lexical_semantics]] - Meaning relations among words
 
-      - [[sense_disambiguation]] - Pick mean
+      - [[sense_disambiguation]] - Choosing the right meaning of a word
 
-      - [[polysemy_resolution]] - Many mean
+      - [[polysemy_resolution]] - Resolving words with multiple related meanings
 
-    - [[conceptual_semantics]] - Idea meaning
+    - [[conceptual_semantics]] - Concept-based meaning representations
 
-      - [[category_knowledge]] - Group know
+      - [[category_knowledge]] - Knowledge of category membership
 
-      - [[feature_knowledge]] - Part know
+      - [[feature_knowledge]] - Knowledge of object properties
 
-  - [[sentence_meaning]] - Phrase sense
+  - [[sentence_meaning]] - Meaning of whole sentences
 
-    - [[compositional_semantics]] - Build mean
+    - [[compositional_semantics]] - Combining word meanings into sentence meaning
 
-      - [[predicate_argument]] - Who do what
+      - [[predicate_argument]] - Who does what to whom
 
-      - [[semantic_roles]] - Part jobs
+      - [[semantic_roles]] - Participant roles in events
 
-    - [[inference_generation]] - Extra mean
+    - [[inference_generation]] - Deriving meaning beyond the literal text
 
-      - [[logical_inference]] - Think more
+      - [[logical_inference]] - Drawing conclusions from stated information
 
-      - [[pragmatic_inference]] - Use more
+      - [[pragmatic_inference]] - Inferring speaker intent from context
 
 ## Neural Implementation
 
 ### Language Networks
 
-- [[language_circuits]] - Brain paths
+- [[language_circuits]] - Neural pathways for language
 
-  - [[ventral_stream]] - Meaning path
+  - [[ventral_stream]] - Pathway mapping sound to meaning
 
-    - [[temporal_regions]] - Time parts
+    - [[temporal_regions]] - Temporal lobe areas for language
 
-      - [[temporal_pole]] - Front time
+      - [[temporal_pole]] - Anterior temporal lobe region for semantic integration
 
-      - [[middle_temporal]] - Middle time
+      - [[middle_temporal]] - Lexical-semantic retrieval region
 
-    - [[inferior_frontal]] - Front low
+    - [[inferior_frontal]] - Frontal cortex region including Broca's area
 
-      - [[pars_triangularis]] - Triangle part
+      - [[pars_triangularis]] - Broca's area subregion for syntax and semantics
 
-      - [[pars_orbitalis]] - Orbit part
+      - [[pars_orbitalis]] - Inferior frontal subregion for semantic control
 
-  - [[dorsal_stream]] - Sound path
+  - [[dorsal_stream]] - Pathway mapping sound to articulation
 
-    - [[superior_temporal]] - Top time
+    - [[superior_temporal]] - Auditory and speech perception region
 
-      - [[primary_auditory]] - First hear
+      - [[primary_auditory]] - First cortical stage of auditory processing
 
-      - [[planum_temporale]] - Side time
+      - [[planum_temporale]] - Auditory region supporting speech analysis
 
-    - [[inferior_parietal]] - Low top
+    - [[inferior_parietal]] - Parietal region integrating phonological and semantic information
 
-      - [[angular_gyrus]] - Angle part
+      - [[angular_gyrus]] - Region supporting semantic integration and reading
 
-      - [[supramarginal]] - Above edge
+      - [[supramarginal]] - Region supporting phonological processing
 
 ### Circuit Mechanisms
 
-- [[language_mechanisms]] - Brain work
+- [[language_mechanisms]] - Neural mechanisms underlying language
 
-  - [[local_circuits]] - Near paths
+  - [[local_circuits]] - Small-scale cortical circuitry
 
-    - [[columnar_organization]] - Up down
+    - [[columnar_organization]] - Vertical organization of cortical neurons
 
-      - [[minicolumns]] - Small up
+      - [[minicolumns]] - Smallest vertical clusters of cortical neurons
 
-      - [[macrocolumns]] - Big up
+      - [[macrocolumns]] - Larger groupings of minicolumns
 
-    - [[layer_specificity]] - Level work
+    - [[layer_specificity]] - Distinct roles of cortical layers
 
-      - [[feedforward]] - Up send
+      - [[feedforward]] - Bottom-up signal transmission
 
-      - [[feedback]] - Down send
+      - [[feedback]] - Top-down signal transmission
 
-  - [[network_dynamics]] - Web work
+  - [[network_dynamics]] - Large-scale network activity over time
 
-    - [[oscillatory_patterns]] - Wave types
+    - [[oscillatory_patterns]] - Rhythmic neural activity
 
-      - [[gamma_synchrony]] - Fast match
+      - [[gamma_synchrony]] - Fast oscillatory coordination of local activity
 
-      - [[theta_coupling]] - Slow match
+      - [[theta_coupling]] - Slow oscillatory coordination across regions
 
-    - [[connectivity_patterns]] - Join types
+    - connectivity patterns - Types of inter-regional connectivity
 
-      - [[effective_connectivity]] - Cause flow
+      - [[effective_connectivity]] - Directed causal influence between regions
 
-      - [[functional_connectivity]] - Work flow
+      - [[functional_connectivity]] - Statistical correlation of activity between regions
 
 ### Neuromodulation
 
-- [[language_modulation]] - Change how
+- [[language_modulation]] - Modulatory influences on language processing
 
-  - [[attention_systems]] - Focus parts
+  - [[attention_systems]] - Neuromodulatory systems supporting attention
 
     - [[cholinergic]] - ACh system
 
-      - [[nucleus_basalis]] - Base spot
+      - [[nucleus_basalis]] - Basal forebrain source of acetylcholine
 
-      - [[cortical_projections]] - Brain send
+      - [[cortical_projections]] - Projections delivering acetylcholine to cortex
 
     - [[noradrenergic]] - NE system
 
-      - [[locus_coeruleus]] - Blue spot
+      - [[locus_coeruleus]] - Brainstem source of norepinephrine
 
-      - [[arousal_control]] - Wake manage
+      - arousal control - Regulation of alertness
 
-  - [[learning_systems]] - Learn parts
+  - [[learning_systems]] - Neuromodulatory systems supporting learning
 
     - [[dopaminergic]] - DA system
 
-      - [[reward_signals]] - Good mark
+      - [[reward_signals]] - Signals marking rewarding outcomes
 
-      - [[error_signals]] - Wrong mark
+      - [[error_signals]] - Signals marking prediction errors
 
     - [[serotonergic]] - 5HT system
 
-      - [[mood_regulation]] - Feel set
+      - [[mood_regulation]] - Regulation of mood and affect
 
-      - [[plasticity_modulation]] - Change help
+      - [[plasticity_modulation]] - Modulation of synaptic plasticity
 
 ## Processing Principles
 
 ### Information Flow
 
-- [[language_flow]] - Info move
+- [[language_flow]] - Movement of information through language processing
 
-  - [[bottom_up]] - Up flow
+  - [[bottom_up]] - Processing driven by sensory input
 
-    - [[feature_extraction]] - Part find
+    - [[feature_extraction]] - Pulling out basic input features
 
-      - [[acoustic_features]] - Sound bits
+      - [[acoustic_features]] - Basic properties of the sound signal
 
-      - [[visual_features]] - See bits
+      - [[visual_features]] - Basic properties of the visual input
 
-    - [[pattern_recognition]] - Shape find
+    - [[pattern_recognition]] - Identifying familiar patterns in input
 
-      - [[template_matching]] - Match find
+      - [[template_matching]] - Matching input to stored templates
 
-      - [[statistical_learning]] - Stats learn
+      - [[statistical_learning]] - Learning regularities from input
 
-  - [[top_down]] - Down flow
+  - [[top_down]] - Processing driven by prior knowledge
 
-    - [[prediction_generation]] - Guess make
+    - [[prediction_generation]] - Anticipating upcoming input
 
-      - [[context_effects]] - Where guess
+      - [[context_effects]] - Context shaping predictions
 
-      - [[expectation_effects]] - Think guess
+      - [[expectation_effects]] - Expectations shaping interpretation
 
-    - [[constraint_application]] - Rule use
+    - [[constraint_application]] - Using linguistic constraints to narrow interpretations
 
-      - [[syntactic_constraints]] - Grammar rules
+      - [[syntactic_constraints]] - Grammatical limits on interpretation
 
-      - [[semantic_constraints]] - Sense rules
+      - [[semantic_constraints]] - Meaning-based limits on interpretation
 
 ### Resource Management
 
-- [[language_resources]] - Power use
+- [[language_resources]] - Cognitive resources used by language processing
 
-  - [[attention_allocation]] - Focus give
+  - [[attention_allocation]] - Distributing attention across tasks
 
-    - [[selective_attention]] - Pick what
+    - [[selective_attention]] - Focusing on relevant input
 
-      - [[target_selection]] - Choose what
+      - [[target_selection]] - Choosing the relevant item
 
-      - [[distractor_suppression]] - Ignore what
+      - [[distractor_suppression]] - Filtering out irrelevant input
 
-    - [[sustained_attention]] - Keep focus
+    - [[sustained_attention]] - Maintaining focus over time
 
-      - [[vigilance]] - Stay watch
+      - [[vigilance]] - Staying alert for rare events
 
-      - [[fatigue_management]] - Tired handle
+      - [[fatigue_management]] - Coping with declining mental resources
 
-  - [[working_memory]] - Hold short
+  - [[working_memory]] - Short-term holding and manipulation of information
 
-    - [[phonological_loop]] - Sound hold
+    - [[phonological_loop]] - Temporary store for speech-based information
 
-      - [[verbal_rehearsal]] - Word repeat
+      - [[verbal_rehearsal]] - Silently repeating words to retain them
 
-      - [[articulatory_suppression]] - Say stop
+      - [[articulatory_suppression]] - Blocking rehearsal by repeating irrelevant speech
 
-    - [[executive_control]] - Boss manage
+    - [[executive_control]] - Supervising and coordinating processing
 
-      - [[updating]] - New change
+      - [[updating]] - Replacing contents of working memory
 
-      - [[monitoring]] - Check how
+      - monitoring - Checking performance for errors
 
 ### Integration Mechanisms
 
-- [[language_integration]] - Parts join
+- [[language_integration]] - Combining information across levels
 
-  - [[cross_level]] - Level join
+  - [[cross_level]] - Integration across linguistic levels
 
-    - [[form_meaning]] - Shape sense
+    - [[form_meaning]] - Linking word form to meaning
 
-      - [[sound_meaning]] - Sound sense
+      - [[sound_meaning]] - Linking phonology to semantics
 
-      - [[syntax_semantics]] - Rule sense
+      - [[syntax_semantics]] - Linking grammar to meaning
 
-    - [[time_integration]] - When join
+    - [[time_integration]] - Combining information over time
 
-      - [[temporal_binding]] - Time tie
+      - [[temporal_binding]] - Linking events within a time window
 
-      - [[sequence_integration]] - Order join
+      - [[sequence_integration]] - Combining ordered elements into wholes
 
-  - [[cross_modal]] - Sense join
+  - [[cross_modal]] - Integration across sensory modalities
 
-    - [[audio_visual]] - Hear see
+    - [[audio_visual]] - Combining auditory and visual input
 
-      - [[lip_reading]] - Mouth read
+      - [[lip_reading]] - Using mouth movements to decode speech
 
-      - [[face_voice]] - Look voice
+      - [[face_voice]] - Matching facial and vocal information
 
-    - [[gesture_speech]] - Move talk
+    - [[gesture_speech]] - Coordination of gesture with speech
 
-      - [[iconic_gesture]] - Show move
+      - [[iconic_gesture]] - Gestures depicting an object or action
 
-      - [[deictic_gesture]] - Point move
+      - [[deictic_gesture]] - Pointing gestures that indicate referents
 
 ## Applications
 
 ### Clinical Applications
 
-- [[language_disorders]] - Wrong talk
+- [[language_disorders]] - Impairments of language ability
 
-  - [[developmental_disorders]] - Grow wrong
+  - [[developmental_disorders]] - Language impairments arising in childhood
 
-    - [[specific_language_impairment]] - Talk hard
+    - [[specific_language_impairment]] - Language deficits without other cause
 
-      - [[grammatical_deficits]] - Rule hard
+      - [[grammatical_deficits]] - Impaired use of grammar
 
-      - [[processing_speed]] - Slow work
+      - [[processing_speed]] - Slowed language processing
 
-    - [[reading_disorders]] - Read hard
+    - [[reading_disorders]] - Impairments of reading
 
-      - [[dyslexia]] - Word hard
+      - [[dyslexia]] - Difficulty with word decoding
 
-      - [[comprehension_deficits]] - Understand hard
+      - [[comprehension_deficits]] - Impaired understanding of text
 
-  - [[acquired_disorders]] - Break wrong
+  - [[acquired_disorders]] - Impairments following brain injury
 
-    - [[aphasia]] - Talk lost
+    - [[aphasia]] - Acquired loss of language ability
 
-      - [[broca_aphasia]] - Say hard
+      - [[broca_aphasia]] - Effortful, nonfluent speech
 
-      - [[wernicke_aphasia]] - Understand hard
+      - [[wernicke_aphasia]] - Impaired comprehension with fluent speech
 
-    - [[alexia]] - Read lost
+    - [[alexia]] - Acquired loss of reading ability
 
-      - [[pure_alexia]] - Just read
+      - [[pure_alexia]] - Reading loss with intact writing
 
-      - [[deep_alexia]] - Mean read
+      - [[deep_alexia]] - Reading loss with semantic errors
 
 ### Educational Applications
 
-- [[language_learning]] - Learn talk
+- [[language_learning]] - Acquiring a first or second language
 
-  - [[first_language]] - First learn
+  - [[first_language]] - Native language acquisition
 
-    - [[early_acquisition]] - Young learn
+    - [[early_acquisition]] - Acquisition in infancy and early childhood
 
-      - [[babbling]] - Baby sound
+      - [[babbling]] - Early infant speech-like sounds
 
-      - [[word_learning]] - Word get
+      - [[word_learning]] - Acquiring new vocabulary items
 
-    - [[later_development]] - Old learn
+    - [[later_development]] - Language growth in later childhood
 
-      - [[complex_grammar]] - Hard rules
+      - [[complex_grammar]] - Acquisition of advanced syntactic structures
 
-      - [[literacy]] - Read write
+      - [[literacy]] - Reading and writing ability
 
-  - [[second_language]] - New learn
+  - [[second_language]] - Learning an additional language
 
-    - [[l2_acquisition]] - Next learn
+    - [[l2_acquisition]] - Acquisition of a second language
 
-      - [[transfer_effects]] - First help
+      - [[transfer_effects]] - First-language knowledge helping second-language use
 
-      - [[interference_effects]] - First block
+      - [[interference_effects]] - First-language habits disrupting second-language use
 
-    - [[bilingual_development]] - Two learn
+    - [[bilingual_development]] - Growth of two languages together
 
-      - [[language_control]] - Switch manage
+      - [[language_control]] - Managing which language is active
 
-      - [[cross_linguistic]] - Language mix
+      - [[cross_linguistic]] - Interaction between a bilingual's languages
 
 ### Technology Applications
 
-- [[language_technology]] - Tech help
+- [[language_technology]] - Technology supporting language use
 
-  - [[natural_language_processing]] - Computer talk
+  - [[natural_language_processing]] - Computational analysis of human language
 
-    - [[speech_recognition]] - Hear tech
+    - [[speech_recognition]] - Automatic transcription of speech
 
-      - [[acoustic_modeling]] - Sound math
+      - [[acoustic_modeling]] - Modeling sound-to-phoneme relations
 
-      - [[language_modeling]] - Talk math
+      - [[language_modeling]] - Modeling word sequence probabilities
 
-    - [[machine_translation]] - Change lang
+    - [[machine_translation]] - Automatic translation between languages
 
-      - [[statistical_translation]] - Stats change
+      - [[statistical_translation]] - Translation using statistical models
 
-      - [[neural_translation]] - Brain like
+      - [[neural_translation]] - Translation using neural networks
 
-  - [[assistive_technology]] - Help tech
+  - [[assistive_technology]] - Tools supporting people with disabilities
 
-    - [[communication_aids]] - Talk help
+    - [[communication_aids]] - Devices supporting communication
 
-      - [[speech_synthesis]] - Make talk
+      - [[speech_synthesis]] - Generating artificial speech
 
-      - [[augmentative_communication]] - More talk
+      - [[augmentative_communication]] - Supplementing or replacing speech
 
-    - [[learning_tools]] - Learn help
+    - [[learning_tools]] - Tools supporting learning
 
-      - [[language_training]] - Practice help
+      - [[language_training]] - Structured practice to improve language skills
 
-      - [[reading_support]] - Read help
+      - [[reading_support]] - Tools aiding reading
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[processing_complexity]] - Hard parts
+- [[processing_complexity]] - Computational demands of language processing
 
-  - [[real_time_constraints]] - Time hard
+  - [[real_time_constraints]] - Need to process speech as it arrives
 
-  - [[context_integration]] - Where join
+  - [[context_integration]] - Incorporating context into interpretation
 
-- [[individual_differences]] - Person change
+- [[individual_differences]] - Variation between people
 
-  - [[ability_variation]] - Can change
+  - [[ability_variation]] - Variation in language ability
 
-  - [[strategy_variation]] - How change
+  - [[strategy_variation]] - Variation in processing strategies
 
 ### Emerging Approaches
 
-- [[new_methods]] - New ways
+- new methods - Novel research approaches
 
-  - [[real_time_measures]] - Now check
+  - real time measures - Measures taken as language unfolds
 
-    - [[neural_decoding]] - Brain read
+    - [[neural_decoding]] - Inferring linguistic content from brain activity
 
-    - [[continuous_tracking]] - Keep watch
+    - [[continuous_tracking]] - Ongoing measurement of processing
 
-  - [[computational_models]] - Math think
+  - [[computational_models]] - Formal models of language processing
 
-    - [[deep_learning]] - Brain like
+    - [[deep_learning]] - Multilayer neural network methods
 
-    - [[bayesian_models]] - Chance think
+    - [[bayesian_models]] - Probabilistic models of inference
 
 ## References
 

@@ -19,7 +19,6 @@ semantic_relations:
     links:
       - "[[active_inference]]"
       - "[[free_energy_principle]]"
-      - "[[geometric_unity]]"
   - type: implements
     links:
       - "[[tensegrity]]"
@@ -543,7 +542,7 @@ class SynergeticOptimizer:
 
 - [[tensegrity]]
 
-- [[geometric_unity]]
+- geometric unity
 
 - [[complex_systems]]
 

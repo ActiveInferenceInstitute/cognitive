@@ -971,7 +971,7 @@ mindmap
 
 - Risk assessment and decision support
 
-### 2. [[decision_support|Decision Support]]
+### 2. Decision Support
 
 - Expert systems for complex domains
 

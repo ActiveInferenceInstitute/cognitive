@@ -5,12 +5,12 @@ title: Active Inference in Cognitive Security Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
 complexity: advanced
 
-processing_priority: 1
 
 tags:
 
@@ -70,7 +70,7 @@ flowchart LR
 
 ## Overview
 
-This specialized path focuses on applying Active Inference to cognitive security, infohazard management, and secure information processing. It integrates security principles with cognitive architectures while maintaining robust safeguards.
+This specialized path focuses on applying Active Inference to cognitive security, infohazard management, and secure information processing. It integrates security principles with cognitive architectures while maintaining safeguards.
 
 > Note: Core math links include VFE/EFE, policy selection, precision/temperature control, and numerical stability.
 
@@ -204,9 +204,6 @@ graph TD
 
 ### 1. Cognitive Security Modeling (4 weeks)
 
-#### Week 1-2: Security State Inference
-
-
 #### Week 3-4: Infohazard Management
 
 
@@ -332,9 +329,6 @@ Key metrics:
 - Hazard classification precision/recall
 
 ### 4. Advanced Topics (4 weeks)
-
-#### Week 1-2: Cognitive Defense
-
 
 #### Week 3-4: Future Security
 

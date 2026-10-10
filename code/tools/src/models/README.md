@@ -2,6 +2,7 @@
 title: Cognitive model modules
 type: documentation
 status: stable
+updated: 2026-10-10
 ---
 
 # Cognitive model modules

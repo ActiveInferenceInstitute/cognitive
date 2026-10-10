@@ -8,6 +8,8 @@ tags:
   - optimal_transport
   - wasserstein
   - probability
+aliases:
+  - wasserstein_metrics
 semantic_relations:
   - type: relates
     links:

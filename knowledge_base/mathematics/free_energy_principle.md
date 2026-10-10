@@ -11,13 +11,13 @@ tags:
 - cognitive_science
 - thermodynamics
 - information_theory
-aliases:
-- free_energy_principle
 - FEP
 msc:
 - 62B10
 - 94A17
 - 68T05
+aliases:
+- free_energy_principle
 semantic_relations:
   - type: foundation
     links:
@@ -2212,6 +2212,8 @@ class NonEquilibriumFreeEnergy:
         autocorr = np.correlate(time_series, time_series, mode='full')
 
         return autocorr[n-1:]  # Take positive lags only
+```
+
 
 ### Quantum Generalizations
 
@@ -2644,6 +2646,8 @@ class QuantumFreeEnergyPrinciple:
         ln_sigma = eigenvecs_sigma @ np.diag(np.log(eigenvals_sigma)) @ eigenvecs_sigma.conj().T
 
         return np.real(np.trace(rho @ (ln_rho - ln_sigma)))
+```
+
 
 ### Stochastic Thermodynamics Integration
 
@@ -2852,6 +2856,8 @@ if __name__ == "__main__":
     validate_advanced_extensions()
 
 ```text
+```
+
 
 ## Related Documentation
 

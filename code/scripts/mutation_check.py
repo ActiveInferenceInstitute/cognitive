@@ -283,6 +283,104 @@ MUTATIONS: tuple[Mutation, ...] = (
         ),
         tests=("code/tests/test_build_pipeline.py",),
     ),
+    Mutation(
+        name="normalization_floors_the_total_at_eps",
+        path="code/tools/src/utils/matrix_utils.py",
+        original="    positive = totals > 0.0\n",
+        mutated="    positive = totals > EPS\n",
+        rationale=(
+            "The defect fixed in the shared normalizer: a total below 1e-12 was "
+            "treated as empty, so a distribution of small entries became uniform."
+        ),
+        tests=("code/tests/test_scale_invariant_normalization.py",),
+    ),
+    Mutation(
+        name="goal_prior_is_not_scaled_by_temperature",
+        path="code/tools/src/models/active_inference/dispatcher.py",
+        original=(
+            "            first_action_values -= self.config.temperature * np.log(prior + 1e-12)\n"
+        ),
+        mutated="            first_action_values -= np.log(prior + 1e-12)\n",
+        rationale=(
+            "The variational and sampling policies applied ln(prior) / T while "
+            "the mean-field policy applied ln(prior); they agree only at T = 1."
+        ),
+        tests=("code/tests/test_suspect_defects.py",),
+    ),
+    Mutation(
+        name="adaptive_prior_ignores_prediction_error",
+        path="code/tools/src/models/active_inference/homeostatic.py",
+        original=(
+            "        sharpness = (1.0 - self.exploration_weight) / "
+            "(1.0 + self.exploration_weight * error)\n"
+        ),
+        mutated="        sharpness = (1.0 - self.exploration_weight) / 1.0\n",
+        rationale=(
+            "The exploration term was constant across entries, so the max-shift "
+            "removed it and prediction_error had no effect on the prior."
+        ),
+        tests=("code/tests/test_suspect_defects.py",),
+    ),
+    Mutation(
+        name="learned_precision_target_is_unbounded",
+        path="code/Things/Continuous_Generic/continuous_generic.py",
+        original=(
+            "                np.clip(observed_precision.mean(), "
+            "self.precision_min, self.precision_max),\n"
+        ),
+        mutated="                observed_precision.mean(),\n",
+        rationale=(
+            "An unclipped 1 / residual**2 target sent the precision to 1e12 after "
+            "one zero-residual step and threw the beliefs far from the data."
+        ),
+        tests=("code/tests/test_suspect_defects.py",),
+    ),
+    Mutation(
+        name="pomdp_inference_seed_is_ignored",
+        path="code/Things/Simple_POMDP/simple_pomdp.py",
+        original='            for label, value in (("seed", root), ("inference.seed", nested))\n',
+        mutated='            for label, value in (("seed", root), ("inference.seed", None))\n',
+        rationale="inference.seed was accepted by the schema and read by nothing.",
+        tests=("code/tests/test_suspect_defects.py",),
+    ),
+    Mutation(
+        name="pomdp_temperature_is_ignored",
+        path="code/Things/Simple_POMDP/simple_pomdp.py",
+        original="        if temperature is None:\n",
+        mutated="        if True:\n",
+        rationale="inference.temperature was accepted by the schema and read by nothing.",
+        tests=("code/tests/test_suspect_defects.py",),
+    ),
+    Mutation(
+        name="fence_closes_on_any_three_backticks",
+        path="code/scripts/markdown_fences.py",
+        original='len(closing["fence"]) >= length:\n',
+        mutated='len(closing["fence"]) >= 3:\n',
+        rationale=(
+            "A closing fence must be at least as long as its opener; otherwise "
+            "a three-backtick example ends a four-backtick block early."
+        ),
+        tests=("code/tests/test_markdown_fences.py",),
+    ),
+    Mutation(
+        name="unterminated_fence_ends_where_it_opens",
+        path="code/scripts/markdown_fences.py",
+        original="        last = len(lines) - 1\n",
+        mutated="        last = index\n",
+        rationale=(
+            "An unterminated fence runs to the end of the file; ending it at the "
+            "opening line reads its contents as headings."
+        ),
+        tests=("code/tests/test_markdown_fences.py",),
+    ),
+    Mutation(
+        name="falsy_relation_links_are_read_as_empty",
+        path="code/scripts/normalize_frontmatter.py",
+        original='        links = [] if entry.get("links") is None else entry["links"]\n',
+        mutated='        links = entry.get("links") or []\n',
+        rationale="`or []` turns 0, an empty string, and false into a valid empty list.",
+        tests=("code/tests/test_markdown_fences.py",),
+    ),
 )
 
 

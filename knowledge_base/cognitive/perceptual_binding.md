@@ -10,6 +10,8 @@ tags:
 - computation
 aliases:
   - feature_binding
+  - binding_problem
+  - spatial_binding
 semantic_relations:
   - type: implements
     links:

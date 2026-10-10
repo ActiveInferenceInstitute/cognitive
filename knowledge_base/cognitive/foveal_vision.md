@@ -445,9 +445,9 @@ Foveal vision refers to the high-acuity central vision mediated by the fovea, a 
 
 - [[perceptual_psychology]]
 
-- [[clinical_vision]]
+- clinical vision
 
-- [[vision_research]]
+- vision research
 
-- [[ophthalmology]]
+- ophthalmology
 

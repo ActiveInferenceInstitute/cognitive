@@ -1,4 +1,5 @@
 ---
+description: "How expected free energy per action is computed and used to update the policy prior E through a softmax with precision, including implementation, properties and related concepts."
 type: mathematical_concept
 id: expected_free_energy_update_001
 created: 2024-02-05

@@ -10,8 +10,7 @@ tags:
 - modeling
 semantic_relations:
   - type: implements
-    links:
-      - "[[brain_function]]"
+    links: []
   - type: related
     links:
       - "[[knowledge_base/biology/neuroscience]]"
@@ -32,327 +31,327 @@ Neural Computation describes how the brain processes information through its net
 
 ### Information Processing
 
-- [[neural_processing]] - Brain compute
+- [[neural_processing]] - How neural circuits transform information
 
-  - [[signal_processing]] - Message handle
+  - [[signal_processing]] - Filtering and transforming neural signals
 
-    - [[encoding]] - Convert info
+    - [[encoding]] - Converting stimuli into neural activity patterns
 
-    - [[transformation]] - Change info
+    - transformation - Mapping input representations onto new ones
 
-  - [[computation_types]] - Process kinds
+  - [[computation_types]] - Categories of neural computation
 
-    - [[local_computation]] - Near work
+    - [[local_computation]] - Processing within a small neural circuit
 
-    - [[distributed_computation]] - Spread work
+    - [[distributed_computation]] - Processing spread across many regions
 
 ### Network Organization
 
-- [[neural_architecture]] - Brain structure
+- [[neural_architecture]] - Large-scale organization of neural circuits
 
-  - [[circuit_organization]] - Connect how
+  - [[circuit_organization]] - Wiring patterns among neurons
 
-    - [[feedforward]] - Forward flow
+    - [[feedforward]] - One-way flow from input to output
 
-    - [[recurrent]] - Loop flow
+    - [[recurrent]] - Connections that feed activity back into the circuit
 
-  - [[hierarchy_levels]] - Layer order
+  - [[hierarchy_levels]] - Successive tiers of processing
 
-    - [[processing_stages]] - Step order
+    - [[processing_stages]] - Sequential steps from input to output
 
-    - [[abstraction_levels]] - Think level
+    - [[abstraction_levels]] - Increasingly abstract representations up the hierarchy
 
 ### Learning Mechanisms
 
-- [[neural_learning]] - Brain change
+- [[neural_learning]] - Experience-driven changes in neural circuits
 
-  - [[synaptic_plasticity]] - Connect change
+  - [[synaptic_plasticity]] - Activity-dependent change in synaptic strength
 
-    - [[hebbian_learning]] - Fire together
+    - [[hebbian_learning]] - Synapses strengthen when neurons fire together
 
-    - [[error_driven]] - Fix wrong
+    - [[error_driven]] - Learning that adjusts to reduce prediction error
 
-  - [[network_adaptation]] - System change
+  - [[network_adaptation]] - Network-wide adjustment to new demands
 
-    - [[weight_updates]] - Strength change
+    - [[weight_updates]] - Adjusting connection strengths during learning
 
-    - [[architecture_changes]] - Structure change
+    - [[architecture_changes]] - Growth or pruning of connections and units
 
 ## Computational Elements
 
 ### Neural Units
 
-- [[processing_units]] - Brain cells
+- [[processing_units]] - Neurons as basic computing elements
 
-  - [[neuron_models]] - Cell math
+  - [[neuron_models]] - Mathematical descriptions of neuron behavior
 
-    - [[activation_function]] - Fire math
+    - [[activation_function]] - Function mapping a unit's input to its output
 
-    - [[threshold_logic]] - When fire
+    - [[threshold_logic]] - Firing only when input exceeds a threshold
 
-  - [[population_coding]] - Group code
+  - [[population_coding]] - Information carried by groups of neurons
 
-    - [[rate_coding]] - How fast
+    - [[rate_coding]] - Information carried by firing rate
 
-    - [[temporal_coding]] - When time
+    - [[temporal_coding]] - Information carried by spike timing
 
 ### Synaptic Operations
 
-- [[connection_compute]] - Link math
+- [[connection_compute]] - Computation performed at synapses
 
-  - [[weight_operations]] - Strong math
+  - [[weight_operations]] - Operations that scale signals by synaptic strength
 
-    - [[multiplication]] - Times math
+    - [[multiplication]] - Scaling one signal by another
 
-    - [[integration]] - Add math
+    - integration - Summing inputs over space and time
 
-  - [[modulation]] - Change math
+  - [[modulation]] - Adjusting the gain or timing of signals
 
-    - [[gating]] - Allow math
+    - [[gating]] - Opening or blocking signal transmission
 
-    - [[scaling]] - Size math
+    - [[scaling]] - Adjusting signal magnitude by a factor
 
 ### Network Operations
 
-- [[circuit_compute]] - Group math
+- [[circuit_compute]] - Computation carried out by neural circuits
 
-  - [[pattern_operations]] - Shape math
+  - [[pattern_operations]] - Operations on patterns of activity
 
-    - [[pattern_completion]] - Fill math
+    - [[pattern_completion]] - Recovering a full pattern from partial input
 
-    - [[pattern_separation]] - Split math
+    - [[pattern_separation]] - Making similar inputs more distinct
 
-  - [[sequence_operations]] - Order math
+  - [[sequence_operations]] - Operations on ordered series of events
 
-    - [[temporal_integration]] - Time math
+    - [[temporal_integration]] - Combining inputs arriving over time
 
-    - [[prediction]] - Next math
+    - [[prediction]] - Anticipating upcoming input
 
 ## Implementation Mechanisms
 
 ### Circuit Dynamics
 
-- [[neural_dynamics]] - Change time
+- [[neural_dynamics]] - Time-varying behavior of neural activity
 
-  - [[activity_patterns]] - Fire patterns
+  - activity patterns - Spatiotemporal patterns of neural firing
 
-    - [[oscillations]] - Wave patterns
+    - [[oscillations]] - Rhythmic, repeating fluctuations in activity
 
-    - [[synchronization]] - Time match
+    - [[synchronization]] - Neurons firing in coordinated timing
 
-  - [[state_transitions]] - Change states
+  - [[state_transitions]] - Shifts between distinct activity states
 
-    - [[attractor_dynamics]] - Stable states
+    - [[attractor_dynamics]] - Activity settling into stable patterns
 
-    - [[trajectory_evolution]] - Path states
+    - [[trajectory_evolution]] - Path of network state through time
 
 ### Information Flow
 
-- [[signal_flow]] - Message move
+- [[signal_flow]] - Movement of signals through the network
 
-  - [[feedforward_flow]] - Forward send
+  - [[feedforward_flow]] - Signals passing from input toward output
 
-    - [[feature_extraction]] - Find things
+    - [[feature_extraction]] - Detecting informative features in the input
 
-    - [[transformation]] - Change things
+    - transformation - Reshaping features into new representations
 
-  - [[feedback_flow]] - Back send
+  - [[feedback_flow]] - Signals passing back to earlier stages
 
-    - [[top_down]] - High low
+    - [[top_down]] - Higher-level signals modulating lower stages
 
-    - [[prediction_error]] - Wrong mark
+    - [[prediction_error]] - Mismatch between expected and actual input
 
 ### Control Mechanisms
 
-- [[neural_control]] - Brain manage
+- [[neural_control]] - Mechanisms that regulate neural activity
 
-  - [[gain_control]] - Strength set
+  - [[gain_control]] - Adjusting response sensitivity
 
-    - [[amplification]] - Make big
+    - amplification - Boosting signal strength
 
-    - [[suppression]] - Make small
+    - [[suppression]] - Reducing signal strength
 
-  - [[gating]] - Allow flow
+  - [[gating]] - Controlling which signals pass through
 
-    - [[selective_routing]] - Path pick
+    - [[selective_routing]] - Directing signals along chosen pathways
 
-    - [[inhibitory_control]] - Stop flow
+    - [[inhibitory_control]] - Using inhibition to block unwanted activity
 
 ## Computational Functions
 
 ### Representation
 
-- [[neural_coding]] - Brain code
+- [[neural_coding]] - How neural activity represents information
 
-  - [[feature_representation]] - Thing code
+  - [[feature_representation]] - Neural encoding of stimulus features
 
-    - [[selectivity]] - What pick
+    - [[selectivity]] - Preferential response to particular stimuli
 
-    - [[invariance]] - What same
+    - [[invariance]] - Stable response despite stimulus changes
 
-  - [[distributed_representation]] - Spread code
+  - [[distributed_representation]] - Information spread over many units
 
-    - [[population_coding]] - Group code
+    - [[population_coding]] - Information carried by groups of neurons
 
-    - [[sparse_coding]] - Few code
+    - [[sparse_coding]] - Representing information with few active units
 
 ### Transformation
 
-- [[neural_transform]] - Change info
+- [[neural_transform]] - Operations that turn inputs into outputs
 
-  - [[linear_operations]] - Straight change
+  - [[linear_operations]] - Transformations preserving scaling and addition
 
-    - [[projection]] - Move data
+    - [[projection]] - Mapping activity into a different space
 
-    - [[combination]] - Mix data
+    - [[combination]] - Merging multiple inputs into one output
 
-  - [[nonlinear_operations]] - Curve change
+  - [[nonlinear_operations]] - Transformations that break simple proportionality
 
-    - [[thresholding]] - Cut data
+    - thresholding - Passing only inputs above a cutoff
 
-    - [[normalization]] - Scale data
+    - [[normalization]] - Dividing responses by overall activity level
 
 ### Learning
 
-- [[computation_learn]] - Get better
+- [[computation_learn]] - Improvement of computations through experience
 
-  - [[supervised_learning]] - Guide learn
+  - [[supervised_learning]] - Learning from labeled targets or teaching signals
 
-    - [[error_correction]] - Fix wrong
+    - [[error_correction]] - Adjusting weights to reduce output error
 
-    - [[gradient_descent]] - Down hill
+    - [[gradient_descent]] - Iteratively adjusting weights to reduce error
 
-  - [[unsupervised_learning]] - Self learn
+  - [[unsupervised_learning]] - Learning structure without labeled targets
 
-    - [[hebbian_learning]] - Together strong
+    - [[hebbian_learning]] - Co-active neurons strengthen their connection
 
-    - [[competitive_learning]] - Win take
+    - [[competitive_learning]] - Units compete and the winner updates its weights
 
 ## Applications
 
 ### Cognitive Models
 
-- [[brain_models]] - Think models
+- [[brain_models]] - Computational models of cognition
 
-  - [[perception_models]] - See models
+  - [[perception_models]] - Models of sensory perception
 
-    - [[visual_processing]] - See math
+    - [[visual_processing]] - Computations in the visual system
 
-    - [[auditory_processing]] - Hear math
+    - [[auditory_processing]] - Computations in the auditory system
 
-  - [[memory_models]] - Remember models
+  - [[memory_models]] - Models of memory formation and recall
 
-    - [[storage]] - Keep math
+    - [[storage]] - Encoding memories in synaptic changes
 
-    - [[retrieval]] - Get math
+    - [[retrieval]] - Reactivating stored patterns from partial cues
 
 ### Neural Engineering
 
-- [[brain_engineering]] - Build brain
+- [[brain_engineering]] - Engineering that interfaces with or mimics the brain
 
-  - [[neural_prosthetics]] - Replace parts
+  - [[neural_prosthetics]] - Devices that substitute for lost neural function
 
-    - [[sensory_devices]] - Feel help
+    - [[sensory_devices]] - Prostheses that restore sensory input
 
-    - [[motor_devices]] - Move help
+    - [[motor_devices]] - Prostheses that restore movement
 
-  - [[brain_interfaces]] - Connect brain
+  - [[brain_interfaces]] - Links between brain activity and devices
 
-    - [[recording]] - Watch brain
+    - recording - Reading neural activity into a device
 
-    - [[stimulation]] - Wake brain
+    - stimulation - Driving neural activity with electrical or magnetic input
 
 ### Clinical Applications
 
-- [[disorder_models]] - Wrong models
+- [[disorder_models]] - Models of how neural computation fails in disease
 
-  - [[dysfunction]] - Not work
+  - [[dysfunction]] - Disrupted neural computation
 
-    - [[circuit_problems]] - Path wrong
+    - [[circuit_problems]] - Faulty wiring or connectivity in circuits
 
-    - [[dynamic_problems]] - Change wrong
+    - [[dynamic_problems]] - Abnormal activity dynamics, such as seizures
 
-  - [[intervention]] - Fix try
+  - intervention - Treatments that aim to correct dysfunction
 
-    - [[stimulation]] - Wake help
+    - stimulation - Activating neural tissue for therapeutic effect
 
-    - [[modulation]] - Change help
+    - [[modulation]] - Altering circuit activity to treat dysfunction
 
 ## Research Methods
 
 ### Experimental Methods
 
-- [[neural_experiments]] - Brain test
+- [[neural_experiments]] - Experiments probing neural function
 
-  - [[recording]] - Watch fire
+  - recording - Measuring neural firing during tasks
 
-    - [[single_unit]] - One cell
+    - [[single_unit]] - Recording from individual neurons
 
-    - [[population]] - Many cell
+    - [[population]] - Recording from many neurons at once
 
-  - [[manipulation]] - Change brain
+  - manipulation - Experimentally altering neural activity
 
-    - [[stimulation]] - Wake parts
+    - stimulation - Activating selected brain regions
 
-    - [[inactivation]] - Stop parts
+    - [[inactivation]] - Temporarily silencing selected brain regions
 
 ### Computational Methods
 
-- [[simulation_methods]] - Fake brain
+- [[simulation_methods]] - Computer simulation of neural systems
 
-  - [[network_simulation]] - Copy brain
+  - [[network_simulation]] - Simulating networks of model neurons
 
-    - [[dynamics]] - Change math
+    - [[dynamics]] - Mathematics of how activity evolves over time
 
-    - [[learning]] - Better math
+    - [[learning]] - Models of how synapses change with experience
 
-  - [[analysis]] - Look math
+  - [[analysis]] - Quantitative analysis of model behavior
 
-    - [[stability]] - Stay math
+    - [[stability]] - Whether activity returns to equilibrium after perturbation
 
-    - [[optimization]] - Best math
+    - [[optimization]] - Finding parameters that minimize an objective
 
 ### Theory Development
 
-- [[neural_theory]] - Brain think
+- [[neural_theory]] - Theoretical accounts of neural computation
 
-  - [[principles]] - Basic rules
+  - [[principles]] - Core organizing rules of neural computation
 
-    - [[computation]] - Work rules
+    - [[computation]] - Rules describing what circuits compute
 
-    - [[organization]] - Build rules
+    - organization - Rules describing how circuits are arranged
 
-  - [[predictions]] - Guess what
+  - [[predictions]] - Testable predictions derived from the theory
 
-    - [[behavior]] - Do what
+    - [[behavior]] - Behavioral outcomes the theory predicts
 
-    - [[mechanism]] - How what
+    - [[mechanism]] - Neural mechanisms the theory proposes
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[scale_problems]] - Big hard
+- [[scale_problems]] - Difficulty scaling models to whole brains
 
-- [[complexity]] - Much hard
+- [[complexity]] - Difficulty of handling many interacting components
 
-- [[biological_realism]] - Real match
+- [[biological_realism]] - Fidelity of models to real neural biology
 
 ### Emerging Approaches
 
-- [[new_methods]] - New ways
+- new methods - Emerging techniques for studying and modeling circuits
 
-  - [[large_scale]] - Big look
+  - [[large_scale]] - Studying activity across large brain areas
 
-    - [[whole_brain]] - All brain
+    - [[whole_brain]] - Modeling or recording the entire brain
 
-    - [[long_time]] - Long watch
+    - [[long_time]] - Tracking neural activity over long periods
 
-  - [[new_theory]] - New think
+  - [[new_theory]] - Emerging theoretical accounts
 
-    - [[principles]] - New rules
+    - [[principles]] - Emerging general principles of computation
 
-    - [[frameworks]] - New views
+    - [[frameworks]] - Emerging conceptual frameworks
 
 ## References
 
@@ -372,7 +371,7 @@ Neural Computation describes how the brain processes information through its net
 
 - [[cognitive_architecture]]
 
-- [[brain_function]]
+- brain function
 
 - [[computation]]
 

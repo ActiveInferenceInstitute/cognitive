@@ -2,6 +2,7 @@
 title: Getting Started
 type: guide
 status: stable
+updated: 2026-10-10
 semantic_relations:
   - type: supports
     links:
@@ -34,7 +35,7 @@ python -m venv .venv
 .venv/bin/python -m pip install -e ".[dev]"
 ```
 
-On Windows, use `.venv\\Scripts\\python` instead of `.venv/bin/python`.
+On Windows, use `.venv\Scripts\python` instead of `.venv/bin/python`.
 
 The editable install provides the `cognitive`, `Things`, and `scripts` packages
 and these console commands:
@@ -103,6 +104,5 @@ section map and build contract.
 
 ## Licensing
 
-Code and executable package material are distributed under the MIT License in
-[`LICENSE`](../../LICENSE). Documentation and knowledge-base content are marked
-CC BY-NC-SA 4.0 in the repository's documentation notices.
+Code is MIT-licensed ([`LICENSE`](../../LICENSE)). Documentation and
+knowledge-base content are CC BY-NC-SA 4.0 (see the notice in `knowledge_base/index.md`).

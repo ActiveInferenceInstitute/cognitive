@@ -1,5 +1,6 @@
 ---
 title: Fisher Information
+description: "Short reference on the Fisher information matrix, which induces the Fisher-Rao metric, scales natural gradients, measures likelihood sensitivity and bounds estimator variance."
 type: mathematical_concept
 status: stable
 created: 2025-08-08
@@ -7,6 +8,8 @@ tags:
 - information-theory
 - estimation
 - geometry
+aliases:
+  - fisher_information_metric
 semantic_relations:
   - type: relates
     links:

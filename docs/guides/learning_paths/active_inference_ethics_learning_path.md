@@ -5,22 +5,14 @@ title: Active Inference Ethics and Responsible AI Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
-modified: 2024-03-15
 
-version: 3.0.0
 
 complexity: advanced
 
-processing_priority: 1
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: advanced
 
@@ -92,7 +84,7 @@ semantic_relations:
 
 ### Purpose and Scope
 
-This comprehensive learning path addresses the critical ethical dimensions of Active Inference systems, providing frameworks for responsible AI development, bias detection and mitigation, fairness assessment, and ethical governance. The curriculum emphasizes practical implementation of ethical principles while ensuring compliance with emerging AI regulations and maintaining public trust.
+This learning path addresses the critical ethical dimensions of Active Inference systems, providing frameworks for responsible AI development, bias detection and mitigation, fairness assessment, and ethical governance. The curriculum emphasizes practical implementation of ethical principles while ensuring compliance with emerging AI regulations and maintaining public trust.
 
 ### Target Audience
 
@@ -108,7 +100,7 @@ By completing this path, learners will be able to:
 
 1. Design and implement ethical Active Inference systems with built-in fairness mechanisms
 
-1. Conduct comprehensive bias audits and implement effective mitigation strategies
+1. Conduct bias audits and implement effective mitigation strategies
 
 1. Establish responsible AI governance frameworks for organizational compliance
 
@@ -125,15 +117,6 @@ By completing this path, learners will be able to:
 - Public Sector: Equitable public services, democratic AI systems
 
 ## Ethical AI and Responsible Development Framework
-
-### Comprehensive Bias Detection and Mitigation System
-
-
-### Ethical Decision-Making and Value Alignment Framework
-
-
-### Privacy Preservation and Data Protection Framework
-
 
 ### Regulatory Compliance and Standards Framework
 

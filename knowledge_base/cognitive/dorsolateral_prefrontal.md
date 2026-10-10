@@ -8,6 +8,8 @@ tags:
   - neuroanatomy
   - executive_function
   - prefrontal
+aliases:
+  - dorsolateral
 semantic_relations:
   - type: relates
     links:

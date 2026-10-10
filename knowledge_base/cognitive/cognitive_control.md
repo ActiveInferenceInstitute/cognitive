@@ -8,6 +8,10 @@ tags:
 - control
 - executive_function
 - computation
+aliases:
+  - behavioral_control
+  - control_network
+  - control_processes
 semantic_relations:
   - type: implements
     links:

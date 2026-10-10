@@ -1,5 +1,6 @@
 ---
 title: Complex Geometry
+description: "Mathematical background on complex geometry, covering complex manifolds, almost complex structures, Kahler geometry and Hodge theory, with computational examples."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

@@ -1,5 +1,6 @@
 ---
 title: Hamiltonian Mechanics
+description: "Mathematical background on Hamiltonian mechanics, covering phase space, Hamilton's equations, canonical transformations and action-angle variables, with computational examples."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

@@ -2,6 +2,7 @@
 title: Coverage tools
 type: tool
 status: stable
+updated: 2026-10-10
 created: 2026-08-02
 tags:
   - coverage
@@ -30,10 +31,9 @@ statement-only run counts a `raise ValueError(...)` guard as covered when only
 its passing side ever executes, which is precisely the case a test should be
 proving.
 
-`[tool.coverage.report]` declares **no `include` filter**. It previously listed
-five modules, which reported 93% while the measured figure across every module
-in `source` was 70%. A filtered report is not a coverage number for the
-package; it is a coverage number for whichever files someone chose to look at.
+`[tool.coverage.report]` declares **no `include` filter**. A filtered report is
+not a coverage number for the package; it is a coverage number for whichever
+files someone chose to look at.
 
 ## The floor
 
@@ -58,5 +58,5 @@ The report prints missing lines and partial branches (`show_missing = true`).
 An entry such as `136->138` is a branch that was only ever taken one way — the
 guard exists, and no test has made it fire.
 
-The CI workflow runs the same command, so a local pass and a CI pass mean the
-same thing. Tests write artifacts only to temporary directories.
+The CI workflow runs the same measurement (`python -m pytest -q -p pytest_cov
+--cov`), so a local pass and a CI pass mean the same thing. Tests write artifacts only to temporary directories.

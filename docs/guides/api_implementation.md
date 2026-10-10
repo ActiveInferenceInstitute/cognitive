@@ -2,6 +2,7 @@
 title: API implementation guide
 type: guide
 status: stable
+updated: 2026-10-10
 ---
 
 # API implementation guide

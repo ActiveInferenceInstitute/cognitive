@@ -135,7 +135,7 @@ See [[knowledge_organization]] for detailed patterns.
 
 - Implementation details ([[implementation_patterns]])
 
-- Validation frameworks ([[validation_framework]])
+- Validation frameworks (validation framework)
 
 #### Network Structure
 
@@ -147,7 +147,7 @@ See [[knowledge_organization]] for detailed patterns.
 
 ### 3. Version Management
 
-See [[version_control]] for implementation.
+See version control for implementation.
 
 ```python
 
@@ -375,7 +375,7 @@ quality_metrics = {
 
 ### 2. Validation Rules
 
-See [[validation_framework]] for implementation.
+See validation framework for implementation.
 
 ```python
 
@@ -421,13 +421,13 @@ validation_rules = {
 
 - Update [[linking_completeness]]
 
-- Follow [[version_control]]
+- Follow version control
 
-- Use [[semantic_processing]]
+- Use semantic processing
 
 ### 3. Quality Assurance
 
-- Run [[validation_framework]]
+- Run validation framework
 
 - Check [[quality_metrics]]
 
@@ -441,7 +441,7 @@ validation_rules = {
 
 - [[knowledge_organization]]
 
-- [[validation_framework]]
+- validation framework
 
 - [[quality_metrics]]
 

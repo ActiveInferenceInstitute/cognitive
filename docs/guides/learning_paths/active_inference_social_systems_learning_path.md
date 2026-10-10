@@ -5,22 +5,14 @@ title: Active Inference in Social Systems Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
-modified: 2024-03-15
 
-version: 2.0.0
 
 complexity: advanced
 
-processing_priority: 1
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: advanced
 
@@ -91,7 +83,7 @@ semantic_relations:
 
 ### Purpose and Scope
 
-This specialized learning path integrates Active Inference principles with social systems research, providing a comprehensive framework for understanding and modeling collective behavior and cultural dynamics. It bridges social science theory with computational modeling, focusing on emergent phenomena and complex social interactions.
+This specialized learning path integrates Active Inference principles with social systems research, providing a framework for understanding and modeling collective behavior and cultural dynamics. It bridges social science theory with computational modeling, focusing on emergent phenomena and complex social interactions.
 
 ### Target Audience
 
@@ -303,14 +295,6 @@ graph TB
 
 ## Core Learning Path
 
-### 1. Social Inference Modeling (4 weeks)
-
-#### Week 1-2: Social State Inference
-
-
-#### Week 3-4: Collective Decision Making
-
-
 ### 2. Social Applications (6 weeks)
 
 #### Week 1-2: Group Dynamics
@@ -345,9 +329,6 @@ graph TB
 
 ### 3. Collective Intelligence (4 weeks)
 
-#### Week 1-2: Social Learning
-
-
 #### Week 3-4: Collective Systems
 
 - Group coordination
@@ -359,9 +340,6 @@ graph TB
 - Distributed problem-solving
 
 ### 4. Advanced Topics (4 weeks)
-
-#### Week 1-2: Multi-scale Social Integration
-
 
 #### Week 3-4: Social Computation
 
@@ -482,16 +460,6 @@ graph TB
 1. [[knowledge_base/cognitive/collective_behavior|Collective Behavior Research]]
 
 1. [[knowledge_base/research/cultural_dynamics|Cultural Dynamics Research]]
-
-## Version History
-
-- Created: 2024-03-15
-
-- Last Updated: 2024-03-15
-
-- Status: Stable
-
-- Version: 1.0.0
 
 ## Integration Strategies
 
@@ -867,26 +835,6 @@ graph LR
 
   - Program evaluation
 
-#### Certification Path
-
-- Social Systems
-
-  - Theory foundations
-
-  - Research methods
-
-- Computational Methods
-
-  - Model development
-
-  - Network analysis
-
-- Policy Applications
-
-  - Impact assessment
-
-  - Program design
-
 ### Professional Network
 
 #### Research Community
@@ -1057,309 +1005,7 @@ graph TB
 
 ```
 
-## Support Resources
-
-### Research Support
-
-- Literature Database
-
-  - Social science papers
-
-  - Network analysis
-
-  - Cultural evolution
-
-- Computing Resources
-
-  - Simulation platforms
-
-  - Network tools
-
-  - Analysis software
-
-- Analysis Tools
-
-  - Statistical packages
-
-  - Visualization tools
-
-  - Network analysis
-
-### Technical Support
-
-- Development Tools
-
-  - Modeling frameworks
-
-  - Network libraries
-
-  - Analysis suites
-
-- Documentation
-
-  - API references
-
-  - Implementation guides
-
-  - Best practices
-
-- Computing Resources
-
-  - Development environments
-
-  - Data processing
-
-  - Visualization platforms
-
-### Learning Support
-
-```mermaid
-
-mindmap
-
-    root((Social
-
-    Resources))
-
-        Materials
-
-            Theory
-
-                Social
-
-                Systems
-
-            Implementation
-
-                Models
-
-                Studies
-
-            Research
-
-                Papers
-
-                Methods
-
-        Support
-
-            Technical
-
-                Tools
-
-                Data
-
-            Academic
-
-                Mentors
-
-                Groups
-
-            Policy
-
-                Centers
-
-                Programs
-
-```
-
-## Version Control and Updates
-
-### Version History
-
-```mermaid
-
-gitGraph
-
-    commit id: "v1.0.0" tag: "Initial Release"
-
-    commit id: "v1.1.0"
-
-    branch feature/social-integration
-
-    commit id: "social-framework"
-
-    commit id: "validation-system"
-
-    checkout main
-
-    merge feature/social-integration id: "v2.0.0" tag: "Major Update"
-
-    commit id: "v2.1.0"
-
-```
-
-### Change Management
-
-#### Major Updates
-
-- v2.0.0 (Current)
-
-  - Enhanced social framework
-
-  - Advanced cultural models
-
-  - Improved validation system
-
-  - Updated career paths
-
-- v1.1.0
-
-  - Added social systems
-
-  - Enhanced documentation
-
-  - New research projects
-
-- v1.0.0
-
-  - Initial curriculum
-
-  - Basic framework
-
-  - Core concepts
-
-#### Planned Improvements
-
-- Advanced social models
-
-- Cultural dynamics
-
-- Network analysis
-
-- Policy applications
-
-### Quality Metrics
-
-```mermaid
-
-xychart-beta
-
-    title "Learning Path Components Quality"
-
-    x-axis [Theory, Implementation, Research, Policy, Support]
-
-    y-axis "Score" 0 --> 100
-
-    bar [92, 88, 90, 85, 87]
-
-```
-
-## Learning Analytics
-
-### Progress Tracking
-
-```mermaid
-
-xychart-beta
-
-    title "Skill Development Progress"
-
-    x-axis [Week 1, Week 6, Week 12, Week 20]
-
-    y-axis "Competency" 0 --> 100
-
-    line [15, 45, 75, 95]
-
-    line [10, 40, 70, 90]
-
-```
-
-### Performance Metrics
-
-- Research Skills
-
-  - Theory development
-
-  - Study design
-
-  - Data analysis
-
-- Technical Skills
-
-  - Model implementation
-
-  - Network analysis
-
-  - System integration
-
-- Policy Skills
-
-  - Impact assessment
-
-  - Program design
-
-  - Evaluation methods
-
-### Development Analytics
-
-```mermaid
-
-graph LR
-
-    subgraph Theory Development
-
-        T[Theory] --> M[Model]
-
-        M --> H[Hypothesis]
-
-    end
-
-    subgraph Implementation
-
-        I[Study] --> E[Experiment]
-
-        E --> V[Validation]
-
-    end
-
-    subgraph Impact
-
-        D[Data] --> R[Results]
-
-        R --> C[Policy]
-
-    end
-
-    H --> I
-
-    V --> D
-
-    style T,M,H fill:#f9f,stroke:#333
-
-    style I,E,V fill:#bbf,stroke:#333
-
-    style D,R,C fill:#bfb,stroke:#333
-
-```
-
 ## Final Notes
-
-### Success Stories
-
-- Research Impact
-
-  - Novel theories
-
-  - Social frameworks
-
-  - Field contributions
-
-- Policy Applications
-
-  - Intervention design
-
-  - Program evaluation
-
-  - Social impact
-
-- Professional Growth
-
-  - Research leadership
-
-  - Policy influence
-
-  - Community building
 
 ### Additional Resources
 
@@ -1386,29 +1032,3 @@ graph LR
   - Policy forums
 
   - Professional networks
-
-### Contact Information
-
-- Research Support
-
-  - Principal investigators
-
-  - Research coordinators
-
-  - Study managers
-
-- Policy Support
-
-  - Policy analysts
-
-  - Program managers
-
-  - Impact evaluators
-
-- Technical Support
-
-  - System developers
-
-  - Data analysts
-
-  - Integration experts

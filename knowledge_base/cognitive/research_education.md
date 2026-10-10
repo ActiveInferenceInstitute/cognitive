@@ -224,11 +224,11 @@ def analyze_literature():
 
 - **Team Science**
 
-  - [[version_control]]
+  - version control
 
   - [[peer_review]]
 
-  - [[knowledge_sharing]]
+  - knowledge sharing
 
 ## Educational Tools
 
@@ -262,7 +262,7 @@ def generate_tutorial():
 
   - [[quiz_generation]]
 
-  - [[progress_tracking]]
+  - progress tracking
 
   - [[feedback_systems]]
 
@@ -388,13 +388,13 @@ module:
 
 ## Related Concepts
 
-- [[knowledge_management]]
+- knowledge management
 
 - [[learning_systems]]
 
 - [[research_methods]]
 
-- [[educational_design]]
+- educational design
 
 ## References
 

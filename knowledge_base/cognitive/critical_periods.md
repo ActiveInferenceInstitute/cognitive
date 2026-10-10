@@ -22,9 +22,9 @@ semantic_relations:
 A critical period is a limited developmental window in which a neural circuit is unusually sensitive to experience, so that appropriate input shapes it permanently and its absence or distortion produces lasting deficits. "Sensitive period" is the usual term for a softer version in which plasticity is high but not exclusive to that window and the effects are less strictly irreversible. The classic example is ocular dominance plasticity in visual cortex.
 
 ## Mechanism
-Wiesel and Hubel (1963) found that closing one eyelid of a kitten during early life shifted cortical responses toward the open eye and caused lasting loss of acuity in the deprived eye (amblyopia), whereas the same deprivation in adulthood had little effect. Later work identified the following features:
+Wiesel and Hubel (1963) found that closing one eyelid of a kitten during early life shifted cortical responses toward the open eye and caused lasting loss of acuity in the deprived eye (amblyopia), whereas later work showed the same deprivation in adulthood has little effect. Later work identified the following features:
 
-- **Onset** depends on maturation of inhibitory circuitry, in particular parvalbumin-expressing GABAergic interneurons; Hensch (2005) showed that reducing GABA synthesis delays onset and enhancing inhibition can advance it.
+- **Onset** depends on maturation of inhibitory circuitry, in particular parvalbumin-expressing GABAergic interneurons; work from Hensch's group, reviewed in Hensch (2005), found that reducing GABA synthesis delays onset and enhancing inhibition can advance it.
 - **Closure** involves molecular "brakes" that stabilize circuits, including perineuronal nets of extracellular matrix, myelin-associated signaling through the Nogo receptor, and changes in neuromodulatory signaling.
 - **Reopening**: in animal models, removing brakes or altering inhibition can restore juvenile-like plasticity in adults, which motivates therapies for amblyopia.
 

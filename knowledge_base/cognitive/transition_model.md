@@ -5,6 +5,9 @@ status: stable
 created: 2024-02-12
 updated: 2026-02-07
 tags: [active-inference, transition, dynamics, generative-model, POMDP]
+aliases:
+  - state_transitions
+  - state_prediction
 semantic_relations:
   - type: component_of
     links:

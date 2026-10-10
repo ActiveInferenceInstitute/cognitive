@@ -10,10 +10,12 @@ tags:
 - adaptation
 aliases:
   - plasticity
+  - experience_dependent
+  - developmental_plasticity
+  - neural_learning
 semantic_relations:
   - type: implements
-    links:
-      - "[[brain_function]]"
+    links: []
   - type: related
     links:
       - "[[learning_mechanisms]]"
@@ -33,327 +35,327 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 ### Synaptic Plasticity
 
-- [[synaptic_modification]] - Connection changes
+- [[synaptic_modification]] - Changes in synaptic strength
 
-  - [[hebbian_plasticity]] - Activity dependent
+  - [[hebbian_plasticity]] - Activity-dependent strengthening of co-active synapses
 
     - [[ltp]] - Long-term potentiation
 
-      - [[early_ltp]] - Initial phase
+      - [[early_ltp]] - Initial protein-synthesis-independent phase of LTP
 
-      - [[late_ltp]] - Sustained phase
+      - [[late_ltp]] - Protein-synthesis-dependent persistent phase of LTP
 
     - [[ltd]] - Long-term depression
 
-      - [[homosynaptic]] - Input specific
+      - [[homosynaptic]] - Change limited to the stimulated input
 
-      - [[heterosynaptic]] - Input independent
+      - [[heterosynaptic]] - Change spreading to non-stimulated synapses
 
-  - [[homeostatic_plasticity]] - Balance
+  - [[homeostatic_plasticity]] - Stabilizing neuronal activity around a set point
 
-    - [[synaptic_scaling]] - Strength adjust
+    - [[synaptic_scaling]] - Global adjustment of synaptic strengths
 
-    - [[metaplasticity]] - Change threshold
+    - [[metaplasticity]] - Activity-dependent shifts in plasticity thresholds
 
 ### Structural Plasticity
 
-- [[morphological_changes]] - Physical changes
+- [[morphological_changes]] - Changes in neuronal shape and structure
 
-  - [[dendritic_plasticity]] - Input structure
+  - [[dendritic_plasticity]] - Remodeling of input-receiving dendrites
 
-    - [[spine_dynamics]] - Connection points
+    - [[spine_dynamics]] - Growth, shrinkage, and turnover of dendritic spines
 
-    - [[branch_remodeling]] - Tree structure
+    - [[branch_remodeling]] - Reshaping of dendritic branches
 
-  - [[axonal_plasticity]] - Output structure
+  - [[axonal_plasticity]] - Remodeling of output-carrying axons
 
-    - [[terminal_remodeling]] - Connections
+    - [[terminal_remodeling]] - Structural changes at axon terminals
 
-    - [[myelination]] - Conduction speed
+    - [[myelination]] - Insulation that speeds axonal conduction
 
 ### Network Plasticity
 
-- [[circuit_modification]] - System changes
+- [[circuit_modification]] - Changes in circuit connectivity
 
-  - [[circuit_refinement]] - Fine tuning
+  - [[circuit_refinement]] - Activity-driven tuning of connections
 
     - [[pruning]] - Connection removal
 
-    - [[strengthening]] - Enhancement
+    - strengthening - Reinforcing frequently used connections
 
-  - [[reorganization]] - Layout change
+  - [[reorganization]] - Large-scale rewiring of circuits
 
-    - [[map_plasticity]] - Region function
+    - [[map_plasticity]] - Shifts in cortical map representations
 
-    - [[compensation]] - Damage response
+    - compensation - Taking over lost function after injury
 
 ## Molecular Mechanisms
 
 ### Signaling Cascades
 
-- [[molecular_pathways]] - Chemical signals
+- [[molecular_pathways]] - Intracellular signaling routes driving plasticity
 
-  - [[calcium_signaling]] - Primary trigger
+  - [[calcium_signaling]] - Calcium influx that triggers plasticity
 
-    - [[nmda_receptors]] - Coincidence
+    - [[nmda_receptors]] - Coincidence detectors for pre- and postsynaptic activity
 
-    - [[voltage_channels]] - Activity
+    - [[voltage_channels]] - Voltage-gated channels admitting calcium on depolarization
 
-  - [[second_messengers]] - Internal signal
+  - [[second_messengers]] - Intracellular molecules relaying receptor signals
 
-    - [[camp_pathway]] - Classic cascade
+    - [[camp_pathway]] - Cyclic AMP signaling cascade via PKA
 
-    - [[mapk_pathway]] - Growth related
+    - [[mapk_pathway]] - Kinase cascade linking signals to gene expression
 
 ### Gene Expression
 
 - [[transcriptional_regulation]] - Gene control
 
-  - [[immediate_early_genes]] - Rapid response
+  - [[immediate_early_genes]] - Genes switched on quickly by neuronal activity
 
     - [[cfos]] - Activity marker
 
-    - [[arc]] - Plasticity gene
+    - [[arc]] - Activity-regulated gene supporting synaptic plasticity
 
-  - [[late_response_genes]] - Sustained
+  - [[late_response_genes]] - Genes expressed hours after stimulation
 
     - [[bdnf]] - Growth factor
 
-    - [[structural_proteins]] - Building
+    - [[structural_proteins]] - Proteins forming synaptic and cytoskeletal structure
 
 ### Protein Synthesis
 
-- [[translation_regulation]] - Protein making
+- [[translation_regulation]] - Control of protein synthesis
 
-  - [[local_translation]] - Synapse specific
+  - [[local_translation]] - Protein synthesis at individual synapses
 
-    - [[mrna_transport]] - Location
+    - [[mrna_transport]] - Delivery of mRNA to dendrites and synapses
 
-    - [[translation_control]] - Timing
+    - [[translation_control]] - Regulation of when mRNAs are translated
 
-  - [[cellular_translation]] - Cell wide
+  - [[cellular_translation]] - Protein synthesis in the cell body
 
-    - [[protein_trafficking]] - Movement
+    - [[protein_trafficking]] - Transport of proteins to their destinations
 
-    - [[degradation]] - Removal
+    - [[degradation]] - Breakdown of proteins no longer needed
 
 ## Temporal Dynamics
 
 ### Immediate Changes
 
-- [[rapid_plasticity]] - Quick adjust
+- [[rapid_plasticity]] - Changes within seconds to minutes
 
-  - [[ion_channel]] - Direct
+  - [[ion_channel]] - Changes in channel properties altering excitability
 
-    - [[receptor_phosphorylation]] - Chemical
+    - [[receptor_phosphorylation]] - Phosphorylation altering receptor function
 
-    - [[channel_insertion]] - Numbers
+    - [[channel_insertion]] - Adding or removing receptors at the membrane
 
-  - [[transmitter_release]] - Communication
+  - [[transmitter_release]] - Presynaptic release of neurotransmitter
 
-    - [[probability]] - Likelihood
+    - [[probability]] - Chance that a vesicle is released per spike
 
-    - [[quantal_content]] - Amount
+    - [[quantal_content]] - Number of vesicles released per spike
 
 ### Short-term Changes
 
 - [[temporary_plasticity]] - Minutes/hours
 
-  - [[facilitation]] - Enhancement
+  - [[facilitation]] - Transient increase in synaptic response
 
-    - [[paired_pulse]] - Brief
+    - [[paired_pulse]] - Enhancement after closely spaced stimuli
 
-    - [[post_tetanic]] - Longer
+    - [[post_tetanic]] - Enhancement lasting after high-frequency stimulation
 
-  - [[depression]] - Reduction
+  - [[depression]] - Transient decrease in synaptic response
 
-    - [[depletion]] - Resource
+    - [[depletion]] - Exhaustion of releasable vesicles
 
-    - [[receptor_desensitization]] - Response
+    - [[receptor_desensitization]] - Reduced receptor response under sustained stimulation
 
 ### Long-term Changes
 
 - [[persistent_plasticity]] - Days/longer
 
-  - [[consolidation]] - Stabilization
+  - [[consolidation]] - Stabilizing changes into lasting form
 
-    - [[synaptic_consolidation]] - Local
+    - [[synaptic_consolidation]] - Stabilization at individual synapses over hours
 
-    - [[systems_consolidation]] - Network
+    - [[systems_consolidation]] - Gradual redistribution of memories across brain regions
 
-  - [[maintenance]] - Persistence
+  - maintenance - Keeping changes stable over time
 
-    - [[molecular_switches]] - State keep
+    - [[molecular_switches]] - Self-sustaining molecular states preserving changes
 
-    - [[structural_changes]] - Physical
+    - [[structural_changes]] - Lasting anatomical changes at synapses
 
 ## Functional Domains
 
 ### Sensory Plasticity
 
-- [[sensory_adaptation]] - Input change
+- [[sensory_adaptation]] - Adjustment to altered sensory input
 
-  - [[map_reorganization]] - Layout
+  - [[map_reorganization]] - Remapping of sensory cortical representations
 
-    - [[critical_periods]] - Development
+    - [[critical_periods]] - Developmental windows of heightened plasticity
 
-    - [[adult_plasticity]] - Mature
+    - [[adult_plasticity]] - Plasticity retained in the mature brain
 
   - [[cross_modal]] - Between senses
 
-    - [[compensation]] - Loss adapt
+    - compensation - Adapting to loss of a sense
 
-    - [[enhancement]] - Other boost
+    - enhancement - Improved function in remaining senses
 
 ### Motor Plasticity
 
-- [[motor_adaptation]] - Movement change
+- [[motor_adaptation]] - Adjusting movements to altered conditions
 
-  - [[skill_acquisition]] - Learning
+  - [[skill_acquisition]] - Learning new motor skills
 
-    - [[sequence_learning]] - Order
+    - [[sequence_learning]] - Learning ordered movement sequences
 
-    - [[coordination]] - Together
+    - [[coordination]] - Combining movements into smooth actions
 
-  - [[recovery]] - After damage
+  - [[recovery]] - Regaining function after injury
 
-    - [[compensation]] - Strategy
+    - compensation - Using alternative strategies after injury
 
-    - [[restitution]] - Rebuild
+    - [[restitution]] - Restoring original function of damaged circuits
 
 ### Cognitive Plasticity
 
-- [[cognitive_adaptation]] - Mental change
+- [[cognitive_adaptation]] - Adjusting cognitive function to demands
 
-  - [[learning_related]] - Knowledge
+  - [[learning_related]] - Plasticity driven by learning
 
-    - [[memory_formation]] - Storage
+    - [[memory_formation]] - Encoding new memories
 
-    - [[skill_development]] - Ability
+    - [[skill_development]] - Gradual improvement through practice
 
-  - [[compensation]] - Problem solve
+  - compensation - Using alternative cognitive routes after impairment
 
-    - [[strategy_change]] - Method
+    - [[strategy_change]] - Switching to different cognitive strategies
 
-    - [[network_recruitment]] - Different use
+    - [[network_recruitment]] - Enlisting additional brain regions for a task
 
 ## Applications
 
 ### Clinical Applications
 
-- [[therapeutic_plasticity]] - Treatment
+- [[therapeutic_plasticity]] - Harnessing plasticity for treatment
 
-  - [[rehabilitation]] - Recovery
+  - rehabilitation - Restoring function after injury or disease
 
-    - [[physical_therapy]] - Movement
+    - [[physical_therapy]] - Movement-based retraining
 
-    - [[cognitive_therapy]] - Mental
+    - [[cognitive_therapy]] - Training of cognitive functions
 
-  - [[enhancement]] - Improvement
+  - enhancement - Boosting function beyond baseline
 
-    - [[brain_stimulation]] - Direct
+    - [[brain_stimulation]] - Electrical or magnetic modulation of neural activity
 
-    - [[drug_treatment]] - Chemical
+    - [[drug_treatment]] - Pharmacological modulation of plasticity
 
 ### Educational Applications
 
-- [[learning_optimization]] - Better learn
+- [[learning_optimization]] - Improving learning outcomes using plasticity principles
 
-  - [[critical_periods]] - Best times
+  - [[critical_periods]] - Windows of heightened learning capacity
 
-    - [[window_identification]] - When
+    - [[window_identification]] - Determining when plasticity peaks
 
-    - [[intervention_timing]] - Planning
+    - [[intervention_timing]] - Scheduling interventions within sensitive windows
 
-  - [[training_programs]] - Methods
+  - [[training_programs]] - Structured practice regimens
 
-    - [[intensity]] - How much
+    - [[intensity]] - Amount of training per session
 
-    - [[specificity]] - What kind
+    - [[specificity]] - Match of training to the target skill
 
 ### Technology Applications
 
-- [[plasticity_technology]] - Tools
+- [[plasticity_technology]] - Technologies that engage plasticity
 
-  - [[neural_interfaces]] - Brain connect
+  - [[neural_interfaces]] - Devices linking the brain to external systems
 
-    - [[neuroprosthetics]] - Replace
+    - [[neuroprosthetics]] - Devices replacing lost neural function
 
-    - [[brain_machine]] - Enhance
+    - [[brain_machine]] - Direct communication between brain and device
 
-  - [[stimulation_devices]] - Activate
+  - [[stimulation_devices]] - Devices that stimulate neural tissue
 
-    - [[electrical]] - Current
+    - [[electrical]] - Stimulation with electrical current
 
-    - [[magnetic]] - Field
+    - [[magnetic]] - Stimulation with magnetic fields
 
 ## Research Methods
 
 ### Cellular Methods
 
-- [[molecular_techniques]] - Chemical study
+- [[molecular_techniques]] - Methods for studying cellular mechanisms
 
-  - [[imaging]] - Looking
+  - imaging - Visualizing cellular activity and structure
 
-    - [[calcium_imaging]] - Activity
+    - [[calcium_imaging]] - Optical recording of neuronal activity
 
-    - [[structural_imaging]] - Shape
+    - [[structural_imaging]] - Visualizing synapse and dendrite morphology
 
-  - [[manipulation]] - Changing
+  - manipulation - Experimentally altering neural activity
 
-    - [[optogenetics]] - Light
+    - [[optogenetics]] - Controlling neurons with light
 
-    - [[chemogenetics]] - Drug
+    - [[chemogenetics]] - Controlling neurons with designer drugs
 
 ### Systems Methods
 
-- [[network_analysis]] - Connection study
+- [[network_analysis]] - Analyzing connectivity among brain regions
 
-  - [[connectivity]] - Links
+  - [[connectivity]] - Measures of connections between regions
 
-    - [[structural]] - Physical
+    - structural - Anatomical connections
 
-    - [[functional]] - Activity
+    - functional - Correlated activity between regions
 
-  - [[dynamics]] - Change
+  - [[dynamics]] - Activity changes over time
 
-    - [[stability]] - Stay same
+    - [[stability]] - Resistance of network state to change
 
-    - [[flexibility]] - Change able
+    - [[flexibility]] - Capacity of networks to reconfigure
 
 ### Behavioral Methods
 
-- [[plasticity_assessment]] - Change measure
+- [[plasticity_assessment]] - Measuring plasticity-related change
 
-  - [[performance]] - Doing
+  - [[performance]] - Behavioral task outcomes
 
-    - [[learning_curves]] - Progress
+    - [[learning_curves]] - Performance improvement across practice
 
-    - [[retention]] - Keep
+    - [[retention]] - Persistence of learning over time
 
-  - [[transfer]] - Spread
+  - [[transfer]] - Application of learning to new contexts
 
-    - [[generalization]] - Other use
+    - [[generalization]] - Applying learning to untrained situations
 
-    - [[interference]] - Conflict
+    - [[interference]] - Disruption of learning by competing tasks
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[mechanism_understanding]] - How works
+- mechanism understanding - Clarifying how plasticity mechanisms operate
 
-- [[individual_differences]] - Person vary
+- [[individual_differences]] - Variation between people
 
-- [[therapeutic_targeting]] - Treatment aim
+- [[therapeutic_targeting]] - Matching treatment to plasticity mechanisms
 
 ### Emerging Approaches
 
-- [[closed_loop_systems]] - Real time
+- [[closed_loop_systems]] - Stimulation adjusted by ongoing neural feedback
 
-- [[multimodal_intervention]] - Combined
+- [[multimodal_intervention]] - Combining several interventions
 
-- [[personalized_plasticity]] - Individual
+- [[personalized_plasticity]] - Interventions tailored to individual brains
 
 ## References
 

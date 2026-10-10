@@ -23,7 +23,6 @@ semantic_relations:
     links:
       - "[[active_inference]]"
       - "[[free_energy_principle]]"
-      - "[[geometric_unity]]"
 ---
 
 
@@ -513,7 +512,7 @@ graph LR
 
    - [[cache_optimization]]
 
-   - [[memory_management]]
+   - memory management
 
    - [[data_structures]]
 

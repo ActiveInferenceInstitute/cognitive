@@ -3,7 +3,7 @@ title: Ant Colony Usage Example
 type: documentation
 status: stable
 created: 2024-01-01
-updated: 2026-08-02
+updated: 2026-10-10
 tags:
   - ant_colony
   - example

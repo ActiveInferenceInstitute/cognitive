@@ -7,8 +7,12 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
+try:
+    from scripts.markdown_fences import strip_fenced_blocks
+except ImportError:  # run as a file: the script directory is on sys.path
+    from markdown_fences import strip_fenced_blocks  # type: ignore[no-redef]
+
 WIKI_LINK_PATTERN = re.compile(r"\[\[([^\]]+)\]\]")
-CODE_BLOCK_PATTERN = re.compile(r"```[\s\S]*?```|~~~[\s\S]*?~~~")
 INLINE_CODE_PATTERN = re.compile(r"`[^`\n]+`")
 MATRIX_LITERAL_PATTERN = re.compile(r"^[\d,\s\[\]\.]+$")
 
@@ -70,6 +74,9 @@ class LinkReport:
     skipped_concept_links: int = 0
     indexed_markdown_files: int = 0
     anchor_warnings: list[dict[str, str]] = field(default_factory=list)
+    # Markdown files that could not be read. Their links were not checked, so a
+    # report with entries here is not a clean report.
+    unreadable_files: list[dict[str, str]] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
@@ -88,8 +95,7 @@ def _iter_files(root_dir: Path):
 
 
 def _strip_markdown_code(content: str) -> str:
-    without_blocks = CODE_BLOCK_PATTERN.sub("", content)
-    return INLINE_CODE_PATTERN.sub("", without_blocks)
+    return INLINE_CODE_PATTERN.sub("", strip_fenced_blocks(content))
 
 
 def _normalise_key(value: str) -> str:
@@ -144,10 +150,10 @@ def _heading_slugs(filepath: Path) -> set[str]:
     slugs: set[str] = set()
     try:
         content = filepath.read_text(encoding="utf-8")
-    except OSError:
+    except (OSError, UnicodeDecodeError):
         return slugs
     # A "# comment" inside a fenced block is not a heading and cannot be an anchor.
-    for line in CODE_BLOCK_PATTERN.sub("", content).splitlines():
+    for line in strip_fenced_blocks(content).splitlines():
         stripped = line.strip()
         if not stripped.startswith("#") or stripped.startswith("#!"):
             continue
@@ -269,8 +275,10 @@ def verify_link_report(
 
         try:
             content = filepath.read_text(encoding="utf-8")
-        except OSError as exc:
-            print(f"Error reading {filepath}: {exc}")
+        except (OSError, UnicodeDecodeError) as exc:
+            report.unreadable_files.append(
+                {"source": filepath.relative_to(root_path).as_posix(), "error": str(exc)}
+            )
             continue
 
         content_no_code = _strip_markdown_code(content)
@@ -367,12 +375,13 @@ def main(argv: list[str] | None = None) -> int:
                     "skipped_concept_links": report.skipped_concept_links,
                     "indexed_markdown_files": report.indexed_markdown_files,
                     "anchor_warnings": report.anchor_warnings,
+                    "unreadable_files": report.unreadable_files,
                 },
                 indent=2,
                 sort_keys=True,
             )
         )
-        return int(bool(report.broken_links))
+        return int(bool(report.broken_links or report.unreadable_files))
 
     print(f"Index built with {report.indexed_markdown_files} markdown files.")
     print(f"Checked {report.checked_links} wiki links.")
@@ -392,6 +401,13 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  Fragment: #{warning['fragment']}")
             print("-" * 20)
 
+    if report.unreadable_files:
+        print(f"Could not read {len(report.unreadable_files)} files; their links were not checked:")
+        for unreadable in report.unreadable_files:
+            print(f"  Source: {unreadable['source']}")
+            print(f"  Error: {unreadable['error']}")
+            print("-" * 20)
+
     if report.broken_links:
         print(f"Found {len(report.broken_links)} broken file links:")
         for broken in report.broken_links:
@@ -399,6 +415,8 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  Link: [[{broken['link']}]]")
             print(f"  Target: {broken['target']}")
             print("-" * 20)
+        return 1
+    if report.unreadable_files:
         return 1
 
     print("All file links verified successfully!")

@@ -3,7 +3,7 @@ title: Active Inference Institute Thing Documentation
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2026-08-02
+updated: 2026-10-10
 tags:
   - agents
   - active_inference_institute
@@ -11,16 +11,16 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - "[[README|Thing readme]]"
-      - "[[active_inference_institute|Active Inference Institute notes]]"
-      - "[[../AGENTS|Things index]]"
+      - "[[code/Things/ActiveInferenceInstitute/README|Thing readme]]"
+      - "[[code/Things/ActiveInferenceInstitute/active_inference_institute|Active Inference Institute notes]]"
+      - "[[code/Things/AGENTS|Things index]]"
 ---
 
 # Active Inference Institute Thing Documentation
 
-This folder documents an Active Inference Institute themed agent concept. The
-folder contains `README.md` and `active_inference_institute.md`; it is an
-archived concept study rather than an importable implementation.
+This folder holds a short description of the Active Inference Institute. It
+contains `README.md`, `AGENTS.md`, and `active_inference_institute.md`; it has no
+code and defines no agent.
 
 ## Notes
 

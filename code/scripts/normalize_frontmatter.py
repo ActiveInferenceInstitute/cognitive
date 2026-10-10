@@ -133,7 +133,9 @@ def unquoted_links(front: dict[str, Any]) -> list[str]:
         if not isinstance(entry, dict):
             problems.append(f"relation is not a mapping: {entry!r}")
             continue
-        links = entry.get("links") or []
+        # An empty ``links:`` key parses to None and means "no links"; any other
+        # falsy value (0, "", false) is bad input, not an empty list.
+        links = [] if entry.get("links") is None else entry["links"]
         if not isinstance(links, list):
             problems.append(f"links of '{entry.get('type')}' is not a list")
             continue
@@ -164,10 +166,12 @@ def main(argv: list[str] | None = None) -> int:
 
     root = Path(args.root).resolve()
     drifted: list[Path] = []
+    unreadable: list[Path] = []
     for path in tracked_markdown(root):
         try:
             text = path.read_text(encoding="utf-8")
         except UnicodeDecodeError:
+            unreadable.append(path)
             continue
         updated = normalize_text(text)
         if updated == text:
@@ -180,7 +184,9 @@ def main(argv: list[str] | None = None) -> int:
         print(path.relative_to(root).as_posix())
     verb = "rewrote" if args.write else "found"
     print(f"{verb} {len(drifted)} file(s) with unquoted semantic_relations links", file=sys.stderr)
-    return 1 if (drifted and not args.write) else 0
+    for path in unreadable:
+        print(f"not valid UTF-8, not checked: {path.relative_to(root).as_posix()}", file=sys.stderr)
+    return 1 if ((drifted and not args.write) or unreadable) else 0
 
 
 if __name__ == "__main__":

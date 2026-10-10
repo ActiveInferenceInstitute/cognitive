@@ -5,12 +5,12 @@ title: Active Inference in Educational Programs Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-25
 
 complexity: intermediate
 
-processing_priority: 2
 
 tags:
 
@@ -61,7 +61,7 @@ semantic_relations:
 
 ## Overview
 
-This learning path explores the application of active inference principles to educational programs and learning initiatives. It provides a comprehensive framework for understanding, designing, and optimizing educational experiences through the lens of predictive processing and free energy minimization. The path integrates cognitive science, educational theory, and active inference to create more effective, adaptive, and personalized learning environments.
+This learning path explores the application of active inference principles to educational programs and learning initiatives. It provides a framework for understanding, designing, and optimizing educational experiences through the lens of predictive processing and free energy minimization. The path integrates cognitive science, educational theory, and active inference to create more effective, adaptive, and personalized learning environments.
 
 ## Prerequisites
 
@@ -309,7 +309,7 @@ This learning path explores the application of active inference principles to ed
 
   - Dynamic difficulty adjustment
 
-  - Multi-modal content for robust model building
+  - Multi-modal content for model building
 
 - **Learning Resources**
 
@@ -880,12 +880,3 @@ Evaluation of one of the implementation projects based on:
 - [[active_inference_social_learning_path|Active Inference in Social Systems]]
 
 - [[active_inference_neuroscience_learning_path|Active Inference in Neuroscience]]
-
-### Certification Path
-
-1. **Foundation Certificate**: Active Inference in Educational Contexts
-
-1. **Practitioner Certificate**: Designing Predictive Learning Systems
-
-1. **Expert Certificate**: Advanced Educational Applications of Active Inference
-

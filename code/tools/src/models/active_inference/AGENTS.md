@@ -2,6 +2,7 @@
 title: Discrete Active Inference runtime instructions
 type: agents
 status: stable
+updated: 2026-10-10
 ---
 
 # Discrete Active Inference runtime

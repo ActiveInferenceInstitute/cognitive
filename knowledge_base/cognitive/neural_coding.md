@@ -43,7 +43,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
     - [[stimulus_dependence]] - Input relationship
 
-    - [[context_dependence]] - State effects
+    - context dependence - State effects
 
 ### Temporal Coding
 
@@ -85,7 +85,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[tuning_curves]] - Selectivity profiles
 
-    - [[orientation_tuning]] - Direction preference
+    - [[orientation_tuning]] - Preference for particular stimulus orientations
 
     - [[frequency_tuning]] - Spectral preference
 
@@ -115,13 +115,13 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[neural_networks]] - Large-scale organization
 
-  - [[connectivity_patterns]] - Connection structure
+  - connectivity patterns - Connection structure
 
     - [[small_world]] - Efficient organization
 
     - [[scale_free]] - Hub organization
 
-  - [[dynamic_patterns]] - Activity structure
+  - dynamic patterns - Activity structure
 
     - [[synchronization]] - Coordinated activity
 
@@ -137,13 +137,13 @@ Neural Coding refers to how information is represented and transformed by neuron
 
     - [[edge_detection]] - Visual features
 
-    - [[frequency_analysis]] - Auditory features
+    - frequency analysis - Auditory features
 
   - [[feature_integration]] - Complex properties
 
-    - [[object_recognition]] - Thing identification
+    - [[object_recognition]] - Identifying objects from sensory input
 
-    - [[scene_analysis]] - Context processing
+    - [[scene_analysis]] - Parsing visual scenes into objects and layout
 
 ### Processing
 
@@ -157,9 +157,9 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[nonlinear_processing]] - Complex operations
 
-    - [[thresholding]] - Response gating
+    - thresholding - Response gating
 
-    - [[multiplication]] - Input multiplication
+    - [[multiplication]] - Gain modulation through combined inputs
 
 ### Decoding
 
@@ -193,7 +193,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
     - [[redundancy]] - Information overlap
 
-    - [[sparseness]] - Code density
+    - [[sparseness]] - Small fraction of neurons active at once
 
 ### Computational Theory
 
@@ -201,15 +201,15 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[computational_primitives]] - Basic operations
 
-    - [[integration]] - Input combination
+    - integration - Input combination
 
-    - [[thresholding]] - Decision making
+    - thresholding - Responding only above a set input level
 
   - [[computational_complexity]] - Processing demands
 
-    - [[space_complexity]] - Resource requirements
+    - [[space_complexity]] - Memory needed as input grows
 
-    - [[time_complexity]] - Processing speed
+    - [[time_complexity]] - Computation time as input grows
 
 ### Learning Theory
 
@@ -307,15 +307,15 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[abstract_models]] - Simplified principles
 
-  - [[hybrid_models]] - Combined approaches
+  - hybrid models - Combined approaches
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[scaling_issues]] - Large-scale recording
+- scaling issues - Large-scale recording
 
-- [[noise_handling]] - Signal separation
+- noise handling - Signal separation
 
 - [[causal_analysis]] - Mechanism identification
 

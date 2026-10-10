@@ -41,7 +41,7 @@ MathGloss proposes a knowledge graph for undergraduate mathematics, integrating 
 
   - Aliases: rate of change, differential
 
-  - Prereqs: [[limits]] · [[continuity]]
+  - Prereqs: [[limits]] · continuity
 
   - Links: [[variational_calculus]] · [[optimization_theory]]
 

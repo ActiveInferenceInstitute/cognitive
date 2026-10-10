@@ -1,3 +1,10 @@
+---
+title: Active Inference Pragmatism Learning Path
+type: learning_path
+status: stable
+updated: 2026-10-10
+---
+
 # Active Inference Pragmatism Learning Path
 
 ## Quick Start

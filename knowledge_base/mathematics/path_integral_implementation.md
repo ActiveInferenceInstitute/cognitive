@@ -1,4 +1,5 @@
 ---
+description: "Implementation guide for path integral methods, covering path discretization, stability analysis, MCMC and variational path sampling, and Active Inference free energy computation."
 type: implementation
 id: path_integral_implementation_001
 created: 2024-02-05
@@ -82,7 +83,7 @@ Links to:
 
 - [[numerical_stability]]
 
-- [[error_analysis]]
+- error analysis
 
 - [[conservation_laws]]
 
@@ -392,7 +393,7 @@ Links to:
 
 - [[unit_testing]]
 
-- [[integration_testing]]
+- integration testing
 
 - [[test_driven_development]]
 

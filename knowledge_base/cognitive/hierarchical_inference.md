@@ -8,6 +8,8 @@ tags:
 - inference
 - active_inference
 - hierarchy
+aliases:
+  - hierarchical_learning
 semantic_relations:
   - type: implements
     links:

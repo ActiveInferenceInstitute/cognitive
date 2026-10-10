@@ -8,6 +8,8 @@ tags:
 - inference
 - predictive_processing
 - neural_computation
+aliases:
+  - perception_models
 semantic_relations:
   - type: implements
     links:
@@ -223,7 +225,7 @@ where:
 
 - [[perceptual_enhancement]] - Improved perception
 
-- [[therapeutic_applications]] - Clinical use
+- therapeutic applications - Clinical use
 
 ## References
 

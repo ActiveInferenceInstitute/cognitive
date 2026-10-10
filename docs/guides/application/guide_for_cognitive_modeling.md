@@ -2,6 +2,7 @@
 title: Guide for cognitive modelling
 type: guide
 status: stable
+updated: 2026-10-10
 ---
 
 # Guide for cognitive modelling

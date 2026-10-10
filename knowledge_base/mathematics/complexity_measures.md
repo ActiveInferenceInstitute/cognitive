@@ -9,6 +9,8 @@ tags:
   - information_theory
   - kolmogorov
   - mdl
+aliases:
+  - complexity_analysis
 semantic_relations:
   - type: foundation
     links:

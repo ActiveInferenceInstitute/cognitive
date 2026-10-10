@@ -8,6 +8,8 @@ tags:
 - learning
 - adaptation
 - computation
+aliases:
+  - feedback_learning
 semantic_relations:
   - type: implements
     links:

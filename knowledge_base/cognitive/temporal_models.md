@@ -8,6 +8,9 @@ tags:
 - temporal
 - active_inference
 - modeling
+aliases:
+  - temporal_dependencies
+  - temporal_dynamics
 semantic_relations:
   - type: implements
     links:
@@ -508,7 +511,7 @@ class ValidationFramework:
 
 - [[structural_validation|Structural Validation]]
 
-- [[empirical_validation|Empirical Validation]]
+- Empirical Validation
 
 - [[theoretical_validation|Theoretical Validation]]
 
@@ -552,7 +555,7 @@ class ValidationFramework:
 
 - [[runtime_optimization|Runtime Optimization]]
 
-- [[memory_optimization|Memory Optimization]]
+- Memory Optimization
 
 ### 3. Debugging Strategies
 

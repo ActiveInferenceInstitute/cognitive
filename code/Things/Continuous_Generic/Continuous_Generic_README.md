@@ -1,262 +1,120 @@
-# Continuous Generic Active Inference
+---
+title: Continuous Generic active inference
+type: reference
+status: stable
+updated: 2026-10-10
+semantic_relations:
+  - type: related_to
+    links:
+      - "[[docs/api/api_reference|API reference]]"
+---
 
-This implementation provides a continuous-time, continuous-state space active inference agent. The agent learns and operates in continuous domains using modern deep learning techniques while adhering to active inference principles.
+# Continuous Generic active inference
 
-## Overview
+`ContinuousActiveInference` (`code/Things/Continuous_Generic/continuous_generic.py`)
+is a NumPy-only agent that performs precision-weighted gradient descent on a
+free energy defined over generalized coordinates. It contains no neural
+networks, no learned generative or recognition model, and no gradient-based
+action optimiser. `ContinuousVisualizer` (`visualization.py`) renders its
+histories. Both are exported from `Things.Continuous_Generic`, together with
+`ContinuousState`.
 
-The implementation consists of several key components:
+## Files
 
-1. **Generative Model**: A neural network that learns:
+```text
+code/Things/Continuous_Generic/
+  __init__.py                exports
+  continuous_generic.py      agent and ContinuousState
+  visualization.py           ContinuousVisualizer
+  README.md                  short overview
+  Continuous_Generic_README.md  this file
+  AGENTS.md                  agent notes
+```
 
-   - Observation model p(o|s)
+There is no configuration file and no `requirements.txt`; the agent is
+configured by constructor arguments. A visualisation test lives in
+`code/tests/visualization/test_continuous_generic.py`.
 
-   - State transition dynamics p(s'|s,a)
+## Model
 
-1. **Recognition Model**: A neural network that implements:
+Beliefs are a matrix `belief_means` of shape `(n_states, n_orders)`. Column 0
+is the latent state and later columns are its successive derivatives. The free
+energy computed by the agent is
 
-   - Approximate posterior q(s|o)
+```text
+F = 1/2 * sum_i Pi_obs[i] * (o - G mu_0)[i]^2
+    + dynamics_weight * 1/2 * sum_k sum_i Pi_state[i, k] * (mu_{k+1} - D mu_k)[i]^2
+```
 
-   - Belief updating through variational inference
+with `G` the observation matrix, `D` the dynamics matrix, and `Pi` the
+precisions. `step(observation)` moves the beliefs by `dt * alpha * (-dF/dmu)`,
+optionally adapts the observation precision, advances `state.time` by `dt`, and
+returns `(action, free_energy)`. The returned action is the precision-weighted
+prediction error projected through `G.T`, an array of shape `(n_states,)`.
 
-1. **Action Selection**: Continuous action selection through:
+## Constructor arguments
 
-   - Expected Free Energy minimization
+| Argument | Default | Meaning |
+|---|---|---|
+| `n_states`, `n_obs`, `n_orders` | 2, 2, 3 | positive integers |
+| `dt` | 0.01 | step length, positive |
+| `alpha` | 0.1 | gradient step size, positive |
+| `observation_matrix` | identity-like | shape `(n_obs, n_states)` |
+| `dynamics_matrix` | identity | shape `(n_states, n_states)` |
+| `observation_precision`, `state_precision` | 1.0 | positive scalar or vector |
+| `precision_learning_rate` | 0.0 | in `[0, 1]`; positive values adapt the observation precision |
+| `dynamics_weight` | 1.0 | non-negative weight of the dynamic term |
+| `seed` | 0 | non-negative integer or `None` |
+| `precision_min`, `precision_max` | 1e-3, 1e3 | clip range for learned precision |
 
-   - Gradient-based optimization
+Invalid values raise `ValueError`. `reset(belief_means=None)` restores beliefs
+and time. `state` is a `ContinuousState` with `belief_means`,
+`belief_precisions`, and `time`.
 
-1. **Visualization**: Comprehensive visualization tools for:
-
-   - Belief evolution
-
-   - Free energy landscapes
-
-   - Phase space trajectories
-
-   - Action distributions
-
-## Mathematical Framework
-
-The implementation follows the active inference framework in continuous time:
-
-1. **Free Energy**:
-
-   ```text
-
-   F = ⟨ln q(s,θ) - ln p(o,s,θ)⟩_q
-
-   ```
-
-1. **Belief Updating**:
-
-   ```text
-
-   ∂_t q(s) = -∂_s F[q]
-
-   ```
-
-1. **Action Selection**:
-
-   ```text
-
-   a = -∂_a F
-
-   ```
-
-## Installation
-
-1. Clone the repository
-
-1. Install dependencies:
-
-   ```bash
-
-   pip install -r requirements.txt
-
-   ```
-
-## Usage
-
-Basic usage example:
+## Example
 
 ```python
+import tempfile
+from pathlib import Path
 
-from continuous_generic import ContinuousActiveInference
+import matplotlib
 
-from visualization import ContinuousVisualizer
+matplotlib.use("Agg")
 
-# Initialize agent
+import numpy as np
 
-agent = ContinuousActiveInference(
+from Things.Continuous_Generic import ContinuousActiveInference, ContinuousVisualizer
 
-    state_dim=2,
+agent = ContinuousActiveInference(n_states=2, n_obs=2, n_orders=3, dt=0.05, alpha=0.5, seed=1)
+history = {"belief_means": [], "time": [], "actions": [], "free_energy": []}
+for _ in range(10):
+    action, free_energy = agent.step(np.array([1.0, -1.0]))
+    history["belief_means"].append(agent.state.belief_means.copy())
+    history["time"].append(agent.state.time)
+    history["actions"].append(action)
+    history["free_energy"].append(free_energy)
 
-    obs_dim=2,
-
-    action_dim=1
-
-)
-
-# Initialize visualizer
-
-visualizer = ContinuousVisualizer("Output")
-
-# Run simulation
-
-obs = initial_observation
-
-for t in range(100):
-
-    # Take step
-
-    action, free_energy = agent.step(obs)
-
-    # Get next observation from environment
-
-    obs = environment_step(action)
-
-    # Visualize (every 10 steps)
-
-    if t % 10 == 0:
-
-        visualizer.create_summary_plot(
-
-            agent.state.history,
-
-            f"Output/summary_t{t:03d}.png"
-
-        )
-
+with tempfile.TemporaryDirectory() as tmp:
+    viz = ContinuousVisualizer(tmp)
+    viz.create_summary_plot(history, Path(tmp) / "summary.png")
+    gif = viz.save_animation(history, Path(tmp) / "beliefs.gif", fps=5)
+    assert (Path(tmp) / "summary.png").exists() and gif.exists()
 ```
 
-## Configuration
+## Visualisation
 
-The behavior can be configured through `configuration.yaml`:
+`ContinuousVisualizer(output_dir)` provides:
 
-```yaml
-
-model:
-
-  state_dim: 2          # State space dimension
-
-  obs_dim: 2           # Observation space dimension
-
-  action_dim: 1        # Action space dimension
-
-  hidden_dim: 64       # Neural network hidden dimension
-
-  dt: 0.01            # Integration time step
-
-  learning_rate: 1e-3  # Optimization learning rate
-
-  temperature: 1.0     # Action selection temperature
-
-```
-
-## Implementation Details
-
-### Generative Model
-
-The generative model uses deep neural networks to learn:
-
-1. Observation mapping from states to observations
-
-1. State transition dynamics under actions
-
-```python
-
-class GenerativeModel(nn.Module):
-
-    def __init__(self, state_dim, obs_dim):
-
-        self.obs_net = nn.Sequential(...)    # p(o|s)
-
-        self.dynamics_net = nn.Sequential(...) # p(s'|s,a)
-
-```
-
-### Recognition Model
-
-The recognition model implements variational inference:
-
-1. Approximate posterior over states
-
-1. Belief updating through gradient descent
-
-```python
-
-class RecognitionModel(nn.Module):
-
-    def __init__(self, obs_dim, state_dim):
-
-        self.encoder = nn.Sequential(...)  # q(s|o)
-
-```
-
-### Action Selection
-
-Actions are selected by minimizing expected free energy:
-
-1. Predict future observations
-
-1. Compute expected free energy gradients
-
-1. Optimize actions through gradient descent
-
-## Visualization
-
-The visualization module provides tools for analyzing agent behavior:
-
-1. **Belief Evolution**: Track belief updates over time
-
-1. **Free Energy**: Monitor optimization progress
-
-1. **Phase Space**: Visualize belief trajectories
-
-1. **Action Evolution**: Analyze action selection
-
-## Testing
-
-Comprehensive test suite available:
-
-```bash
-
-pytest test_continuous_generic.py
-
-```
-
-Tests cover:
-
-1. Model initialization
-
-1. Belief updating
-
-1. Action selection
-
-1. Visualization
-
-1. State saving/loading
-
-## Contributing
-
-1. Fork the repository
-
-1. Create feature branch
-
-1. Commit changes
-
-1. Push to branch
-
-1. Create pull request
-
-## License
-
-MIT License
+- `plot_belief_evolution(belief_means, belief_precisions, output_path)`
+- `plot_generalized_coordinates_relationships(belief_means, time, output_path)`
+- `save_animation(history, output_path, fps=30)`, a Pillow GIF with one frame
+  per history sample
+- `create_summary_plot(history, output_path)`, a 2 by 2 figure of beliefs,
+  phase space (first two states), free energy, and actions; the history needs
+  `belief_means`, `actions`, and `free_energy`, and optionally `time`
 
 ## References
 
-1. Friston, K. J., et al. (2017). Active inference, curiosity and insight.
-
-1. Buckley, C. L., et al. (2017). The free energy principle for action and perception: A mathematical review.
-
-1. Tschantz, A., et al. (2020). Learning action-oriented models through active inference.
-
+- Friston, K. J. et al. (2017). Active inference, curiosity and insight.
+- Buckley, C. L. et al. (2017). The free energy principle for action and
+  perception: a mathematical review.

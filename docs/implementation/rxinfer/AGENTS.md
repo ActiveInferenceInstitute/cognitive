@@ -1,15 +1,13 @@
 ---
-title: RxInfer integration documentation instructions
+title: RxInfer documentation instructions
 type: agents
 status: stable
 created: 2025-01-01
-updated: 2026-08-02
+updated: 2026-10-10
 tags:
   - agents
   - rxinfer
   - implementation
-  - probabilistic_programming
-  - active_inference
 semantic_relations:
   - type: organizes
     links:
@@ -21,25 +19,20 @@ semantic_relations:
       - "[[factor_graphs|Factor graphs]]"
 ---
 
-# RxInfer integration documentation instructions
+# RxInfer documentation instructions
 
-This subtree documents the RxInfer (Julia) probabilistic-programming
-integration used for message-passing and variational-inference models.
+This subtree describes RxInfer.jl, an external Julia library. It is not used by the Python package.
 
 ## Structure
 
-- The top-level `rxinfer/*.md` pages are local integration notes: model
-  specification, message passing, variational inference, factor graphs, and
-  the systems-engineering guidebook.
-- The `docs/` subfolder is vendored RxInfer documentation (a Documenter.jl
-  site: `make.jl`, `Project.toml`, `src/`). Treat it as a read-only third-party
-  snapshot; edits there should only be made when refreshing the vendor copy.
+- The top-level `rxinfer/*.md` pages are local summaries of the official documentation.
+- The `docs/` subfolder is a copy of the RxInfer documentation source (`make.jl`, `Project.toml`, `src/`). Treat it as a read-only third-party snapshot; change it only when refreshing the copy.
 
 ## Rules
 
-- RxInfer notes are conceptual and use Julia syntax; they are not part of the
-  Python package and are excluded from its linters.
-- Do not present Python classes for RxInfer components; the integration is
-  documented in Julia terms.
-- Keep `docs/implementation/rxinfer/AGENTS.md` and `README.md` in sync when
-  the vendor copy is refreshed.
+- Every local page begins with a note that it describes an external project and links to <https://docs.rxinfer.com/stable/>.
+- State only what the official documentation or the vendored copy supports. Do not invent API names, keyword arguments, or internals.
+- Do not present Python classes for RxInfer components; there are none.
+- Julia snippets are not run here; take them from the official documentation.
+- Use only URLs that resolve; the verified ones are listed in each page's "Official documentation" section.
+- Keep `README.md` in sync with the pages that exist.

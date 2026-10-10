@@ -11,6 +11,7 @@ from typing import Any
 
 from scripts.check_markdown_links import verify_markdown_link_report
 from scripts.kb_index import stale_catalogs
+from scripts.markdown_fences import iter_fenced_blocks
 from scripts.normalize_frontmatter import unquoted_links
 from scripts.verify_links import verify_link_report
 
@@ -41,9 +42,6 @@ def load_term_policy(root: Path) -> tuple[list[str], set[str]]:
     if not isinstance(exempt, list) or not all(isinstance(path, str) for path in exempt):
         raise ValueError(f"{TERM_POLICY_PATH} exempt_paths must be a list of paths")
     return [term.strip() for term in terms], set(exempt)
-
-
-_FENCE = re.compile(r"(^|\n)(```|~~~)([^\n]*)\n([\s\S]*?)(?:\n\2)(?=\n|$)")
 
 
 def tracked_files(root: Path) -> list[Path]:
@@ -94,16 +92,37 @@ def _validate_frontmatter(path: Path, content: str) -> list[str]:
 
 
 def _validate_python_blocks(path: Path, content: str) -> list[str]:
+    """Compile each unindented, closed ``python`` fence.
+
+    Fences nested in list items are routinely schematic signatures, and a fence
+    that is never closed has no known end, so neither is compiled. A fence that
+    opens inside a longer fence is example text, not a block, which is why the
+    blocks come from the fence tracker and not a pattern.
+    """
     errors: list[str] = []
-    for match in _FENCE.finditer(content):
-        language = match.group(3).strip().lower().split()[0:1]
-        if language not in [["python"], ["py"]]:
+    for block in iter_fenced_blocks(content):
+        language = block.info.lower().split()[0:1]
+        if language not in [["python"], ["py"]] or block.indent or not block.terminated:
             continue
         try:
-            compile(match.group(4), str(path), "exec")
+            compile(block.body, str(path), "exec")
         except SyntaxError as exc:
             errors.append(f"{path}: Python example line {exc.lineno}: {exc.msg}")
     return errors
+
+
+def unterminated_fences(path: Path, content: str) -> list[str]:
+    """Describe each code fence that is never closed.
+
+    CommonMark renders everything after such a fence as code, so the rest of
+    the page is lost to readers and to the link and anchor checks. ``validate``
+    reports each one both here and as a documentation error.
+    """
+    return [
+        f"{path}: code fence opened at line {block.start_line} is never closed"
+        for block in iter_fenced_blocks(content)
+        if not block.terminated
+    ]
 
 
 def _validate_exports() -> list[str]:
@@ -187,13 +206,16 @@ def validate(root: str | Path = ".") -> dict[str, Any]:
     files = tracked_files(root_path)
     errors: list[str] = []
     forbidden: list[dict[str, str]] = []
+    unclosed: list[str] = []
     terms, exempt_paths = load_term_policy(root_path)
     for path in _text_files(files):
+        relative = path.relative_to(root_path).as_posix()
         try:
             content = path.read_text(encoding="utf-8")
-        except UnicodeDecodeError:
+        except UnicodeDecodeError as exc:
+            # Skipping would exempt the file from every check below.
+            errors.append(f"{relative}: not valid UTF-8, so it was not checked: {exc.reason}")
             continue
-        relative = path.relative_to(root_path).as_posix()
         if relative in exempt_paths:
             continue
         for term in terms:
@@ -201,10 +223,17 @@ def validate(root: str | Path = ".") -> dict[str, Any]:
                 forbidden.append({"path": relative, "term": term})
         errors.extend(_validate_frontmatter(path, content))
         errors.extend(_validate_python_blocks(path, content))
+        if path.suffix.lower() == ".md":
+            unclosed.extend(unterminated_fences(path.relative_to(root_path), content))
+    errors.extend(unclosed)
     links = verify_link_report(root_path, strict_wiki_links=False)
     if links.broken_links:
         errors.append(f"{len(links.broken_links)} explicit wiki links do not resolve")
+    for unreadable in links.unreadable_files:
+        errors.append(f"{unreadable['source']}: wiki links not checked: {unreadable['error']}")
     markdown_links = verify_markdown_link_report(root_path)
+    for unreadable in markdown_links.unreadable_files:
+        errors.append(f"{unreadable['source']}: Markdown links not checked: {unreadable['error']}")
     if markdown_links.broken_links:
         errors.append(f"{len(markdown_links.broken_links)} standard Markdown links do not resolve")
     stale = stale_catalogs(root_path)
@@ -226,6 +255,7 @@ def validate(root: str | Path = ".") -> dict[str, Any]:
         },
         "forbidden_terms": forbidden,
         "documentation_errors": errors,
+        "unterminated_fences": unclosed,
         "links": {
             "checked": links.checked_links,
             "resolved": links.resolved_links,
@@ -259,6 +289,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Checked {report['markdown_links']['checked']} standard Markdown links.")
         print(f"Found {len(report['forbidden_terms'])} forbidden-term occurrences.")
         print(f"Found {len(report['documentation_errors'])} documentation errors.")
+        print(f"Found {len(report['unterminated_fences'])} unterminated code fences.")
     return 0 if report["ok"] else 1
 
 

@@ -8,6 +8,8 @@ tags:
 - computation
 - inference
 - learning
+aliases:
+  - update_beliefs
 semantic_relations:
   - type: implements
     links:

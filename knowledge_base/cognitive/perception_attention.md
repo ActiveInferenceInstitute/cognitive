@@ -35,47 +35,47 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
   - [[visual_processing]] - Vision system
 
-    - [[feature_detection]] - Basic elements
+    - [[feature_detection]] - Picking out edges, colors, and other elements
 
-    - [[object_recognition]] - Thing identify
+    - [[object_recognition]] - Identifying what an object is
 
   - [[auditory_processing]] - Sound system
 
-    - [[frequency_analysis]] - Tone process
+    - frequency analysis - Separating sounds by pitch
 
-    - [[speech_perception]] - Language hear
+    - [[speech_perception]] - Hearing spoken language
 
 ### Perceptual Organization
 
-- [[gestalt_principles]] - Pattern rules
+- [[gestalt_principles]] - Rules for organizing parts into wholes
 
-  - [[grouping_laws]] - Together rules
+  - [[grouping_laws]] - Rules for grouping elements together
 
-    - [[proximity]] - Near group
+    - [[proximity]] - Grouping elements that are near each other
 
-    - [[similarity]] - Like group
+    - [[similarity]] - Grouping elements that look alike
 
-  - [[figure_ground]] - Object back
+  - [[figure_ground]] - Separating an object from its background
 
-    - [[contour_integration]] - Edge find
+    - [[contour_integration]] - Linking edge fragments into continuous outlines
 
-    - [[depth_perception]] - Space see
+    - [[depth_perception]] - Seeing the distance of objects
 
 ### Attention Mechanisms
 
 - [[attention_systems]] - Focus control
 
-  - [[selective_attention]] - Choose what
+  - [[selective_attention]] - Choosing which inputs to process
 
-    - [[spatial_attention]] - Where focus
+    - [[spatial_attention]] - Focusing on a location
 
-    - [[feature_attention]] - What focus
+    - [[feature_attention]] - Focusing on a feature such as color
 
-  - [[divided_attention]] - Split focus
+  - [[divided_attention]] - Splitting attention across several tasks
 
-    - [[resource_allocation]] - Share how
+    - [[resource_allocation]] - Sharing limited attention among tasks
 
-    - [[task_switching]] - Change what
+    - [[task_switching]] - Shifting attention from one task to another
 
 ## Neural Implementation
 
@@ -83,275 +83,275 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 - [[sensory_pathways]] - Input paths
 
-  - [[primary_areas]] - First process
+  - [[primary_areas]] - First cortical stage of sensory processing
 
-    - [[visual_cortex]] - See area
+    - [[visual_cortex]] - Cortical area processing vision
 
-    - [[auditory_cortex]] - Hear area
+    - [[auditory_cortex]] - Cortical area processing sound
 
-  - [[association_areas]] - High process
+  - [[association_areas]] - Higher cortical areas combining sensory information
 
-    - [[temporal_cortex]] - Thing know
+    - [[temporal_cortex]] - Region for recognizing objects
 
-    - [[parietal_cortex]] - Space know
+    - [[parietal_cortex]] - Region for spatial processing
 
 ### Attention Networks
 
-- [[attention_networks]] - Focus paths
+- [[attention_networks]] - Brain networks directing attention
 
-  - [[dorsal_network]] - Top control
+  - [[dorsal_network]] - Network for top-down, goal-driven attention
 
-    - [[frontal_eye_fields]] - Look control
+    - [[frontal_eye_fields]] - Frontal region controlling eye movements
 
-    - [[parietal_areas]] - Space control
+    - [[parietal_areas]] - Parietal regions mapping space and priority
 
-  - [[ventral_network]] - Bottom detect
+  - [[ventral_network]] - Network for detecting unexpected stimuli
 
-    - [[temporoparietal]] - Change spot
+    - [[temporoparietal]] - Junction region detecting behaviorally relevant change
 
-    - [[ventral_frontal]] - Break in
+    - [[ventral_frontal]] - Frontal region that interrupts ongoing attention
 
 ### Integration Mechanisms
 
-- [[integration_circuits]] - Combine paths
+- integration circuits - Circuits combining information across senses and attention
 
-  - [[multisensory]] - Sense join
+  - [[multisensory]] - Combining information from several senses
 
-    - [[crossmodal]] - Between sense
+    - [[crossmodal]] - Interactions between different senses
 
-    - [[temporal_binding]] - Time join
+    - [[temporal_binding]] - Linking inputs that occur at the same time
 
-  - [[attention_modulation]] - Focus change
+  - [[attention_modulation]] - Attention changing sensory responses
 
-    - [[gain_control]] - Strong change
+    - [[gain_control]] - Boosting or reducing neural response strength
 
-    - [[synchronization]] - Time match
+    - [[synchronization]] - Neurons firing in matched timing
 
 ## Processing Principles
 
 ### Bottom-up Processing
 
-- [[stimulus_driven]] - Input lead
+- [[stimulus_driven]] - Processing led by the input itself
 
-  - [[feature_extraction]] - Thing find
+  - [[feature_extraction]] - Pulling basic properties from the input
 
-    - [[basic_features]] - Simple find
+    - [[basic_features]] - Simple properties such as orientation
 
-    - [[complex_features]] - Hard find
+    - [[complex_features]] - Combinations of simple properties
 
-  - [[salience_detection]] - Stand out
+  - [[salience_detection]] - Detecting what stands out
 
-    - [[novelty]] - New thing
+    - novelty - Standing out because it is new
 
-    - [[contrast]] - Different thing
+    - [[contrast]] - Standing out because it differs from surroundings
 
 ### Top-down Processing
 
-- [[knowledge_driven]] - Think lead
+- [[knowledge_driven]] - Processing led by prior knowledge and goals
 
-  - [[expectation_effects]] - Think ahead
+  - [[expectation_effects]] - Expectations shaping what is perceived
 
-    - [[prior_knowledge]] - Know before
+    - [[prior_knowledge]] - Stored knowledge guiding interpretation
 
-    - [[context_effects]] - Where effect
+    - [[context_effects]] - Surroundings shaping interpretation
 
-  - [[goal_directed]] - Want lead
+  - [[goal_directed]] - Processing led by current goals
 
-    - [[task_sets]] - Do plans
+    - [[task_sets]] - Configurations of attention for a task
 
-    - [[search_templates]] - Look for
+    - [[search_templates]] - Mental targets used during visual search
 
 ### Resource Management
 
-- [[attention_resources]] - Focus power
+- [[attention_resources]] - Limited capacity for attention
 
-  - [[capacity_limits]] - How much
+  - [[capacity_limits]] - Limits on how much can be processed
 
-    - [[processing_load]] - Work amount
+    - [[processing_load]] - Amount of information being processed
 
-    - [[interference]] - Block effect
+    - [[interference]] - Competing inputs degrading performance
 
-  - [[efficiency]] - How good
+  - efficiency - How little attention a task requires
 
-    - [[automaticity]] - No think
+    - [[automaticity]] - Processing that needs no conscious effort
 
-    - [[effort]] - Try hard
+    - [[effort]] - Deliberate mental exertion
 
 ## Perceptual Phenomena
 
 ### Constancies
 
-- [[perceptual_constancy]] - Stay same
+- [[perceptual_constancy]] - Stable percepts despite changing input
 
-  - [[size_constancy]] - Size stay
+  - [[size_constancy]] - Perceived size staying stable
 
-    - [[distance_scaling]] - Far small
+    - [[distance_scaling]] - Adjusting size estimates for distance
 
-    - [[context_scaling]] - Where size
+    - [[context_scaling]] - Adjusting size estimates using surrounding cues
 
-  - [[shape_constancy]] - Shape stay
+  - [[shape_constancy]] - Perceived shape staying stable
 
-    - [[orientation]] - Turn same
+    - [[orientation]] - Perceived shape staying stable despite tilt
 
-    - [[viewpoint]] - Look same
+    - [[viewpoint]] - Perceived shape staying stable across viewing angles
 
 ### Illusions
 
-- [[perceptual_illusions]] - Wrong see
+- [[perceptual_illusions]] - Percepts that differ from physical reality
 
-  - [[visual_illusions]] - See wrong
+  - [[visual_illusions]] - Illusions in vision
 
-    - [[geometric]] - Shape wrong
+    - [[geometric]] - Illusions of size, length, or angle
 
-    - [[motion]] - Move wrong
+    - [[motion]] - Illusions of apparent movement
 
-  - [[crossmodal_illusions]] - Sense wrong
+  - [[crossmodal_illusions]] - Illusions from interaction between senses
 
-    - [[audio_visual]] - See hear
+    - [[audio_visual]] - Sound altering what is seen, or reverse
 
-    - [[tactile_visual]] - See feel
+    - [[tactile_visual]] - Touch and vision altering each other
 
 ### Adaptation
 
-- [[sensory_adaptation]] - Change fit
+- [[sensory_adaptation]] - Reduced response to constant stimulation
 
-  - [[light_adaptation]] - See fit
+  - [[light_adaptation]] - Adjusting vision to changing light levels
 
-    - [[dark_adapt]] - Dark see
+    - [[dark_adapt]] - Gaining sensitivity in dim light
 
-    - [[bright_adapt]] - Light see
+    - [[bright_adapt]] - Losing sensitivity in bright light
 
-  - [[motion_adaptation]] - Move fit
+  - [[motion_adaptation]] - Reduced response to constant motion
 
-    - [[after_effects]] - After see
+    - [[after_effects]] - Illusory motion after prolonged viewing
 
-    - [[motion_null]] - Move stop
+    - [[motion_null]] - Condition where no motion is perceived
 
 ## Applications
 
 ### Clinical Applications
 
-- [[perceptual_disorders]] - See wrong
+- [[perceptual_disorders]] - Conditions that impair perception
 
-  - [[agnosia]] - Know wrong
+  - [[agnosia]] - Failure to recognize despite intact sensation
 
-    - [[visual_agnosia]] - Thing wrong
+    - [[visual_agnosia]] - Failure to recognize objects by sight
 
-    - [[auditory_agnosia]] - Sound wrong
+    - [[auditory_agnosia]] - Failure to recognize sounds
 
-  - [[attention_disorders]] - Focus wrong
+  - [[attention_disorders]] - Conditions that impair attention
 
-    - [[neglect]] - Side miss
+    - [[neglect]] - Ignoring one side of space
 
-    - [[adhd]] - Focus hard
+    - [[adhd]] - Difficulty sustaining attention and controlling impulses
 
 ### Technology Applications
 
-- [[perception_technology]] - Tech use
+- [[perception_technology]] - Technology that supports perception
 
-  - [[display_systems]] - Show tech
+  - [[display_systems]] - Devices that present information
 
-    - [[visual_displays]] - See tech
+    - [[visual_displays]] - Screens presenting visual information
 
-    - [[auditory_displays]] - Hear tech
+    - [[auditory_displays]] - Systems presenting information as sound
 
-  - [[attention_support]] - Focus help
+  - attention support - Tools that help direct attention
 
-    - [[alert_systems]] - Warn help
+    - [[alert_systems]] - Systems that warn of important events
 
-    - [[filter_systems]] - Choose help
+    - [[filter_systems]] - Systems that screen out irrelevant information
 
 ### Enhancement Methods
 
-- [[perception_training]] - Better see
+- [[perception_training]] - Training that improves perception
 
-  - [[perceptual_learning]] - Learn see
+  - [[perceptual_learning]] - Improved perception through practice
 
-    - [[discrimination]] - Tell apart
+    - [[discrimination]] - Telling similar stimuli apart
 
-    - [[detection]] - Find thing
+    - [[detection]] - Noticing that a stimulus is present
 
-  - [[attention_training]] - Learn focus
+  - [[attention_training]] - Training that improves attention
 
-    - [[meditation]] - Mind train
+    - [[meditation]] - Mental practice for training attention
 
-    - [[cognitive_training]] - Think train
+    - [[cognitive_training]] - Exercises for improving mental skills
 
 ## Research Methods
 
 ### Psychophysics
 
-- [[behavioral_methods]] - Do test
+- [[behavioral_methods]] - Measures based on behavioral responses
 
-  - [[threshold_measurement]] - Limit find
+  - [[threshold_measurement]] - Finding the smallest detectable stimulus
 
-    - [[detection]] - Can see
+    - [[detection]] - Measuring the smallest noticeable stimulus
 
-    - [[discrimination]] - Tell diff
+    - [[discrimination]] - Measuring the smallest noticeable difference
 
-  - [[scaling_methods]] - How much
+  - [[scaling_methods]] - Ways of measuring perceived intensity
 
-    - [[magnitude]] - Size judge
+    - [[magnitude]] - Rating the perceived size of a stimulus
 
-    - [[matching]] - Same find
+    - [[matching]] - Adjusting one stimulus to equal another
 
 ### Neural Recording
 
-- [[brain_measures]] - Brain watch
+- brain measures - Neural methods for studying perception
 
-  - [[imaging]] - Brain look
+  - imaging - Brain scanning methods
 
-    - [[functional_imaging]] - Work see
+    - functional imaging - Scanning brain activity during tasks
 
-    - [[structural_imaging]] - Build see
+    - [[structural_imaging]] - Scanning brain anatomy
 
-  - [[electrophysiology]] - Cell watch
+  - [[electrophysiology]] - Recording electrical activity from neurons
 
-    - [[single_unit]] - One cell
+    - [[single_unit]] - Recording from one neuron
 
-    - [[population]] - Many cell
+    - [[population]] - Recording from many neurons together
 
 ### Computational Models
 
-- [[perception_models]] - Math think
+- [[perception_models]] - Formal models of perception and attention
 
-  - [[feature_models]] - Thing math
+  - [[feature_models]] - Models built on feature processing
 
-    - [[filter_theory]] - Choose math
+    - [[filter_theory]] - Models where filters select inputs
 
-    - [[template_matching]] - Match math
+    - [[template_matching]] - Models matching input to stored patterns
 
-  - [[attention_models]] - Focus math
+  - [[attention_models]] - Models of attention
 
-    - [[spotlight]] - Light math
+    - [[spotlight]] - Attention as a movable beam
 
-    - [[resource]] - Share math
+    - [[resource]] - Attention as a limited shared supply
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[binding_problem]] - Join hard
+- [[binding_problem]] - How features are joined into one object
 
-- [[consciousness_link]] - Aware link
+- [[consciousness_link]] - Relation between perception and awareness
 
-- [[individual_differences]] - Person vary
+- [[individual_differences]] - Variation between people
 
 ### Emerging Approaches
 
-- [[real_time_methods]] - Now watch
+- [[real_time_methods]] - Measures taken during ongoing activity
 
-  - [[mobile_recording]] - Move watch
+  - [[mobile_recording]] - Recording while people move around
 
-    - [[eye_tracking]] - Look watch
+    - [[eye_tracking]] - Recording where the eyes look
 
-    - [[motion_capture]] - Move watch
+    - [[motion_capture]] - Recording body movement
 
-  - [[natural_tasks]] - Real do
+  - [[natural_tasks]] - Tasks resembling everyday activity
 
-    - [[ecological]] - World real
+    - [[ecological]] - Studying perception in real settings
 
-    - [[social]] - People real
+    - [[social]] - Studying perception in social settings
 
 ## References
 

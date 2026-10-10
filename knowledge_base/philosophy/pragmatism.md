@@ -8,6 +8,8 @@ tags:
 - epistemology
 - american_philosophy
 - truth_theory
+aliases:
+  - pragmaticism
 semantic_relations:
   - type: foundational_theory
     links:

@@ -8,6 +8,8 @@ tags:
 - attention
 - control
 - volition
+aliases:
+  - top_down_attention
 semantic_relations:
   - type: implements
     links:

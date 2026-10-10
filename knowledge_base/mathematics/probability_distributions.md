@@ -7,6 +7,8 @@ updated: 2026-10-09
 tags:
 - probability
 - mathematics
+aliases:
+  - categorical_distribution
 semantic_relations:
   - type: relates_to
     links:

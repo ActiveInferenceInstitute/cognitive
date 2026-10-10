@@ -8,6 +8,8 @@ tags:
 - attention
 - control
 - executive_function
+aliases:
+  - attention_control
 semantic_relations:
   - type: implements
     links:

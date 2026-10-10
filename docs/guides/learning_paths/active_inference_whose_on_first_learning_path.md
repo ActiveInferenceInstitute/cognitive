@@ -1,3 +1,10 @@
+---
+title: "Active Inference Learning Path: Who's on First?"
+type: learning_path
+status: stable
+updated: 2026-10-10
+---
+
 # Active Inference Learning Path: Who's on First?
 
 ## Quick Start
@@ -382,6 +389,8 @@ P(\text{outcome}|\theta) &= \int P(\text{outcome}|s,\theta)P(s|\theta)ds \\
 
 #### 1. Preprocessing Pipeline
 
+Schematic sketch only: the helper functions are not defined here and are not part of this repository.
+
 ```python
 
 def preprocess_data(raw_data):
@@ -512,5 +521,5 @@ Remember, just as Abbott and Costello's routine seems confusing at first but has
 
 ## Appendix E: Historical Data Analysis
 
-[Comprehensive statistical analysis of historical baseball data using neuroimaging techniques]
+[Statistical analysis of historical baseball data using neuroimaging techniques]
 

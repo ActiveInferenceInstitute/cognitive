@@ -7,6 +7,8 @@ tags:
 - mathematics
 - probability
 - foundations
+aliases:
+  - measure_spaces
 semantic_relations:
   - type: foundation
     links:

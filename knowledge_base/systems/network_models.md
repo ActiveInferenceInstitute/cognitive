@@ -9,6 +9,8 @@ tags:
   - graph_theory
   - small_world
   - scale_free
+aliases:
+  - interaction_networks
 semantic_relations:
   - type: relates
     links:

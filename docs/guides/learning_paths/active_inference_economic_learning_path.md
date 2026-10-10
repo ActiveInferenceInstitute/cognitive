@@ -5,12 +5,12 @@ title: Active Inference in Economic Systems Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
 complexity: advanced
 
-processing_priority: 1
 
 tags:
 
@@ -154,9 +154,6 @@ This learning path is designed as a co-learning program between Economics depart
 
 #### Module 1: Market Dynamics (2 weeks)
 
-##### Market State Inference
-
-
 ##### Economic Decision Making
 
 
@@ -189,12 +186,6 @@ This learning path is designed as a co-learning program between Economics depart
 - Market Efficiency
 
 #### Module 4: Economic Policy & Networks (4 weeks)
-
-##### Policy Design
-
-
-##### Complex Economic Networks
-
 
 ##### Impact Analysis
 
@@ -573,8 +564,6 @@ This learning path is designed as a co-learning program between Economics depart
 See `docs/examples/README.md` for runnable examples.
 
 
-### Smart Resource Curation Pipeline
-
 ## Knowledge Base Anchors
 
 - Economics-related math: [[knowledge_base/mathematics/expected_free_energy]] · [[knowledge_base/mathematics/optimization_theory]] · [[knowledge_base/mathematics/network_science]]
@@ -600,131 +589,3 @@ graph LR
   NET --> CRM
 
 ```
-
-```python
-
-class SmartCurationPipeline:
-
-    def __init__(self):
-
-        """Initialize smart curation pipeline."""
-
-        self.content_analyzer = ContentAnalyzer()
-
-        self.quality_validator = QualityValidator()
-
-        self.relevance_scorer = RelevanceScorer()
-
-        self.integration_processor = IntegrationProcessor()
-
-    def process_new_resource(self, resource_url, metadata=None):
-
-        """Process and integrate new resource into system."""
-
-        # Content analysis
-
-        content = self.content_analyzer.extract_content(resource_url)
-
-        topics = self.content_analyzer.identify_topics(content)
-
-        complexity = self.content_analyzer.assess_complexity(content)
-
-        # Quality validation
-
-        quality_metrics = self.quality_validator.assess(resource_url, content)
-
-        # Relevance scoring
-
-        relevance_scores = {}
-
-        for path in self.get_all_learning_paths():
-
-            relevance_scores[path] = self.relevance_scorer.score(
-
-                content, topics, path.concepts
-
-            )
-
-        # Integration processing
-
-        integration_points = self.integration_processor.identify_integration_points(
-
-            topics, relevance_scores
-
-        )
-
-        # Knowledge base linking
-
-        kb_links = self.generate_kb_links(topics, content)
-
-        # Cross-path connections
-
-        cross_connections = self.identify_cross_path_connections(
-
-            topics, relevance_scores
-
-        )
-
-        return {
-
-            'resource_metadata': {
-
-                'quality_score': quality_metrics.overall_score,
-
-                'complexity_level': complexity,
-
-                'primary_topics': topics,
-
-                'kb_integration_points': kb_links,
-
-                'cross_path_connections': cross_connections
-
-            },
-
-            'integration_recommendations': integration_points,
-
-            'suggested_placements': self.suggest_optimal_placement(relevance_scores)
-
-        }
-
-### Personalized Resource Dashboard
-
-learning_resource_dashboard = {
-
-    'current_module_resources': {
-
-        'essential_readings': 'automatically_curated',
-
-        'supplementary_materials': 'learner_customizable',
-
-        'interactive_tools': 'skill_level_adapted',
-
-        'assessment_resources': 'progress_aligned'
-
-    },
-
-    'discovery_recommendations': {
-
-        'trending_content': 'community_validated',
-
-        'advanced_materials': 'readiness_based',
-
-        'cross_disciplinary': 'interest_driven',
-
-        'career_relevant': 'goal_aligned'
-
-    },
-
-    'progress_integrated': {
-
-        'completed_resources': 'achievement_tracked',
-
-        'bookmarked_materials': 'revisit_scheduled',
-
-        'peer_shared': 'collaboration_enhanced',
-
-        'mentor_recommended': 'guidance_integrated'
-
-    }
-
-}

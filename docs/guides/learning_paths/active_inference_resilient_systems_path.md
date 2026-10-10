@@ -5,6 +5,7 @@ title: Resilient Systems Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-25
 
@@ -52,7 +53,7 @@ semantic_relations:
 
 ## Overview
 
-This learning path provides a comprehensive understanding of resilient systems design, implementation, and maintenance. Resilient systems maintain functionality in the face of failures, adapt to changing conditions, and recover gracefully from disruptions. This knowledge is essential for building reliable software, infrastructure, and distributed systems in today's complex technological landscape.
+This learning path provides an understanding of resilient systems design, implementation, and maintenance. Resilient systems maintain functionality in the face of failures, adapt to changing conditions, and recover gracefully from disruptions. This knowledge is essential for building reliable software, infrastructure, and distributed systems in today's complex technological landscape.
 
 ## Learning Path Structure
 
@@ -817,42 +818,3 @@ Evaluation of one of the implementation projects based on:
 1. Resilience Engineering Association
 
 1. Cloud Native Computing Foundation (CNCF) communities
-
-## Certification Path
-
-### Foundational Certification: Resilient Systems Associate
-
-**Focus Areas**:
-
-- Basic resilience concepts
-
-- Common patterns and implementations
-
-- Fundamental monitoring practices
-
-- Recovery basics
-
-### Advanced Certification: Resilient Systems Professional
-
-**Focus Areas**:
-
-- Complex resilience strategies
-
-- Multi-system resilience
-
-- Advanced chaos engineering
-
-- Resilience measurement and improvement
-
-### Expert Certification: Resilient Systems Architect
-
-**Focus Areas**:
-
-- Enterprise-scale resilience
-
-- Multi-region resilience strategies
-
-- Resilience program development
-
-- Advanced testing and verification
-

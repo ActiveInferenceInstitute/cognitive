@@ -1,140 +1,62 @@
-# Implementation Guides
-
 ---
-
-title: Implementation Guides
-
+title: Implementation guides
 type: index
-
 status: stable
-
 created: 2024-02-06
-
+updated: 2026-10-10
 tags:
-
   - guides
-
   - implementation
-
-  - documentation
-
 semantic_relations:
-
-  - type: implements
-
-    links: [[knowledge_base/cognitive/cognitive_modeling_concepts]]
-
   - type: relates
-
     links:
-
-      - [[docs/api/api_documentation]]
-
-      - [[docs/examples/usage_examples]]
-
+      - "[[docs/api/api_documentation]]"
+      - "[[docs/examples/usage_examples]]"
+      - "[[knowledge_base/cognitive/cognitive_modeling_concepts]]"
 ---
 
-## Overview
+# Implementation guides
 
-This directory contains practical guides and tutorials for implementing and using the cognitive modeling system.
+Guides that exist, grouped by task. Topics without a page here (for example
+performance tuning, scaling, memory management, and release process) have no
+guide in this repository.
 
-## Getting Started
+## Getting started
 
-### Setup Guides
+- [[docs/repo_docs/getting_started|Getting started]]
+- [[docs/repo_docs/package_documentation|Package documentation]]
+- [[docs/repo_docs/obsidian_linking|Obsidian linking]]
+- [[knowledge_base/mathematics/pomdp_structure|POMDP structure]]
 
-- [[installation_guide]] - System installation
+## Building agents
 
-- [[configuration_guide]] - Initial configuration
+- [[docs/guides/agent_development|Agent development]]
+- [[docs/guides/api_implementation|API implementation]]
+- [[docs/repo_docs/model_implementation|Model implementation]]
+- [[implementation_patterns|Implementation patterns]]
+- [[docs/api/api_reference|API reference]] and [[docs/api/api_examples|API examples]]
 
-- [[quickstart_guide]] - Quick start tutorial
+## Testing and validation
 
-### Core Concepts
+- [[docs/repo_docs/unit_testing|Unit testing]]
+- [[docs/repo_docs/testing_guidelines|Testing guidelines]]
+- [[docs/repo_docs/validation|Validation]]
+- [[docs/tools/benchmark_tools|Benchmark tools]] and
+  [[docs/tools/mutation_testing|mutation testing]]
 
-- [[pomdp_structure]] - POMDP structure guide
+## Documentation and contribution
 
-- [[obsidian_linking]] - Obsidian linking guide
+- [[docs/repo_docs/documentation_standards|Documentation standards]]
+- [[docs/development/contribution_guide|Contribution guide]]
+- [[docs/templates/README|Templates]]
 
-- [[package_documentation]] - Package documentation guide
+## Julia and RxInfer
 
-## Implementation Guides
+The Julia inference library RxInfer is documented under
+[[docs/implementation/rxinfer/README|RxInfer integration]]. It is an external
+project and is not used by the Python package.
 
-### Model Development
+## Related
 
-- [[model_implementation]] - Implementing cognitive models
-
-- [[belief_system]] - Building belief systems
-
-- [[action_system]] - Implementing action selection
-
-### Integration
-
-- [[system_integration]] - System integration guide
-
-- [[api_usage]] - API usage examples
-
-- [[extension_guide]] - Extending the system
-
-### Testing
-
-- [[testing_guide]] - Testing methodology
-
-- [[validation_guide]] - Model validation
-
-- [[benchmark_guide]] - Performance benchmarking
-
-## Advanced Topics
-
-### Optimization
-
-- [[performance_tuning]] - Performance optimization
-
-- [[scaling_guide]] - Scaling considerations
-
-- [[memory_management]] - Memory optimization
-
-### Research Tools
-
-- [[experiment_guide]] - Running experiments
-
-- [[analysis_tools]] - Data analysis tools
-
-- [[visualization_guide]] - Data visualization
-
-### Development
-
-- [[development_workflow]] - Development practices
-
-- [[contribution_guide]] - Contributing guidelines
-
-- [[release_process]] - Release management
-
-## Best Practices
-
-### Documentation
-
-- [[documentation_guide]] - Documentation standards
-
-- [[example_writing]] - Writing examples
-
-- [[api_documentation]] - API documentation
-
-### Quality Assurance
-
-- [[code_review]] - Code review process
-
-- [[testing_standards]] - Testing standards
-
-- [[performance_standards]] - Performance standards
-
-## Related Sections
-
-- [[knowledge_base/cognitive/cognitive_modeling_concepts|Core Concepts]]
-
-- [[docs/examples/usage_examples|Usage Examples]]
-
-- [[docs/api/api_documentation|API Reference]]
-
-## Contributing
-
-See [[docs/templates/guide_template|Guide Template]] for creating new guides.
-
+- [[docs/examples/usage_examples|Usage examples]]
+- [[docs/api/api_documentation|API documentation]]

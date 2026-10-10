@@ -1,5 +1,6 @@
 ---
 title: Exponential Family Distributions
+description: "Short reference on exponential family distributions, with canonical form, natural parameters and log-partition function, and conjugacy that simplifies variational inference."
 type: mathematical_concept
 status: stable
 created: 2025-08-08

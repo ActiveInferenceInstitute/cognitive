@@ -447,7 +447,7 @@ Illusory contours are perceived edges or boundaries that do not physically exist
 
 - [[cognitive_neuroscience]]
 
-- [[vision_research]]
+- vision research
 
-- [[visual_development]]
+- visual development
 

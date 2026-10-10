@@ -1,5 +1,6 @@
 ---
 title: [[biofirm_framework|BioFirm Framework]]
+description: "Conceptual framework applying Active Inference and the Free Energy Principle to bioregional stewardship, covering proposed architecture and deployment; no runtime ships here."
 type: concept
 status: stable
 ---

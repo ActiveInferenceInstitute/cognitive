@@ -1,505 +1,88 @@
-# AI Semantic Processing Guide
-
 ---
-
-title: AI Semantic Processing Guide
-
+title: Semantic structure of the vault
 type: guide
-
 status: stable
-
 created: 2024-02-06
-
+updated: 2026-10-10
 tags:
-
   - semantic
-
-  - embeddings
-
-  - ai
-
-  - processing
-
-complexity: advanced
-
-processing_priority: 1
-
+  - frontmatter
+  - links
 semantic_relations:
-
-  - type: implements
-
-    links: [[machine_readability]]
-
-  - type: extends
-
-    links: [[knowledge_organization]]
-
-embeddings:
-
-  model: sentence-transformers/all-mpnet-base-v2
-
-  dimensions: 768
-
+  - type: relates
+    links:
+      - "[[docs/repo_docs/ai_file_organization|File organization]]"
+      - "[[docs/repo_docs/ai_validation_framework|Validation framework]]"
+      - "[[docs/repo_docs/obsidian_linking|Obsidian linking]]"
 ---
 
-## Overview
+# Semantic structure of the vault
 
-This guide defines semantic processing standards and embedding strategies for hyper-intelligent agents to effectively process and understand the knowledge base.
+The knowledge base is a graph. Its structure comes from three plain-text
+mechanisms, all checked by scripts in `code/scripts/`. The repository does not
+compute text embeddings, run semantic search, or infer relationships
+automatically; there is no such code in `code/tools/src/`.
 
-## Semantic Processing Framework
+## 1. Wiki links
 
-### Text Embeddings
+`[[target]]`, `[[target|display text]]`, and `[[target#heading]]` link pages.
+Obsidian builds its graph view and backlinks from them. Resolution and checking
+are described in [[docs/repo_docs/obsidian_linking|Obsidian linking]].
 
-```python
+## 2. Typed relations in frontmatter
 
-# @embedding_specification
-
-embedding_config = {
-
-    "models": {
-
-        "text": "sentence-transformers/all-mpnet-base-v2",
-
-        "code": "microsoft/codebert-base",
-
-        "graph": "knowledge-graph-bert"
-
-    },
-
-    "dimensions": {
-
-        "text": 768,
-
-        "code": 768,
-
-        "graph": 512
-
-    },
-
-    "pooling": "mean",
-
-    "normalization": "l2"
-
-}
-
-```
-
-### Semantic Markers
+A page declares typed relations to other pages:
 
 ```yaml
-
-semantic_markers:
-
-  concept:
-
-    prefix: "#CONCEPT:"
-
-    weight: 1.0
-
-    embedding_type: "text"
-
-  implementation:
-
-    prefix: "#IMPL:"
-
-    weight: 0.8
-
-    embedding_type: "code"
-
-  relationship:
-
-    prefix: "#REL:"
-
-    weight: 0.9
-
-    embedding_type: "graph"
-
+semantic_relations:
+  - type: implements
+    links:
+      - "[[knowledge_base/cognitive/active_inference|Active Inference]]"
+  - type: relates
+    links:
+      - "[[knowledge_base/mathematics/information_theory|Information theory]]"
 ```
 
-## Knowledge Graph Integration
-
-### Graph Structure
-
-
-### Relationship Types
-
-```yaml
-
-relationship_types:
-
-  hierarchical:
-
-    - is_a: 0.9          # Type hierarchy
-
-    - part_of: 0.8       # Composition
-
-    - implements: 0.7    # Implementation
-
-  semantic:
-
-    - similar_to: 0.6    # Semantic similarity
-
-    - related_to: 0.5    # General relation
-
-    - references: 0.4    # Reference relation
-
-  temporal:
-
-    - precedes: 0.8      # Temporal ordering
-
-    - depends_on: 0.7    # Dependency
-
-    - evolves_to: 0.6    # Evolution
-
-```
-
-## Processing Instructions
-
-### Embedding Generation
-
-```python
-
-# @embedding_generation
-
-def generate_embeddings(content: str, type: str) -> dict:
-
-    """
-
-    Generate embeddings for content
-
-    Processing steps:
-
-    1. Preprocess content based on type
-
-    2. Select appropriate model
-
-    3. Generate embeddings
-
-    4. Post-process and validate
-
-    """
-
-    pass
-
-```
-
-### Semantic Analysis
-
-```python
-
-# @semantic_analysis
-
-def analyze_semantics(node: KnowledgeGraphNode) -> dict:
-
-    """
-
-    Analyze semantic content
-
-    Analysis steps:
-
-    1. Extract key concepts
-
-    2. Identify relationships
-
-    3. Compute similarities
-
-    4. Generate insights
-
-    """
-
-    pass
-
-```
-
-## Query Processing
-
-### Semantic Search
-
-```python
-
-# @semantic_search
-
-def semantic_search(query: str, context: dict) -> list:
-
-    """
-
-    Semantic search implementation
-
-    Search process:
-
-    1. Embed query
-
-    2. Compute similarities
-
-    3. Filter by context
-
-    4. Rank results
-
-    """
-
-    pass
-
-```
-
-### Relationship Inference
-
-```python
-
-# @relationship_inference
-
-def infer_relationships(source: KnowledgeGraphNode, target: KnowledgeGraphNode) -> list:
-
-    """
-
-    Infer relationships between nodes
-
-    Inference steps:
-
-    1. Compare embeddings
-
-    2. Analyze context
-
-    3. Apply inference rules
-
-    4. Validate relationships
-
-    """
-
-    pass
-
-```
-
-## Processing Pipeline
-
-### Document Processing
-
-```mermaid
-
-graph TD
-
-    A[Raw Document] --> B[Text Extraction]
-
-    B --> C[Semantic Parsing]
-
-    C --> D[Embedding Generation]
-
-    D --> E[Graph Integration]
-
-    E --> F[Validation]
-
-```
-
-### Query Processing
-
-```mermaid
-
-graph LR
-
-    A[Query] --> B[Query Embedding]
-
-    B --> C[Similarity Search]
-
-    C --> D[Context Analysis]
-
-    D --> E[Result Ranking]
-
-```
-
-## Optimization Guidelines
-
-### Embedding Optimization
-
-```python
-
-# @embedding_optimization
-
-optimization_config = {
-
-    "caching": {
-
-        "strategy": "least_recently_used",
-
-        "max_size": "10GB",
-
-        "ttl": "24h"
-
-    },
-
-    "computation": {
-
-        "batch_size": 32,
-
-        "precision": "float16",
-
-        "device": "cuda"
-
-    },
-
-    "storage": {
-
-        "format": "memory_mapped",
-
-        "compression": "lz4",
-
-        "indexing": "faiss"
-
-    }
-
-}
-
-```
-
-### Performance Tuning
-
-```yaml
-
-performance_config:
-
-  embedding_generation:
-
-    batch_size: 32
-
-    max_length: 512
-
-    truncation: true
-
-  similarity_search:
-
-    index_type: "IVFFlat"
-
-    nprobe: 16
-
-    metric: "cosine"
-
-  graph_operations:
-
-    max_depth: 3
-
-    beam_width: 5
-
-    pruning_threshold: 0.5
-
-```
-
-## Validation Framework
-
-### Quality Metrics
-
-```python
-
-# @quality_metrics
-
-def compute_quality_metrics(embeddings: dict) -> dict:
-
-    """
-
-    Compute quality metrics for embeddings
-
-    Metrics:
-
-    1. Coverage
-
-    2. Consistency
-
-    3. Coherence
-
-    4. Discriminative power
-
-    """
-
-    return {
-
-        "coverage": 0.95,
-
-        "consistency": 0.92,
-
-        "coherence": 0.88,
-
-        "discrimination": 0.90
-
-    }
-
-```
-
-### Validation Rules
-
-```python
-
-# @validation_rules
-
-validation_config = {
-
-    "embeddings": {
-
-        "dimension_check": True,
-
-        "norm_check": True,
-
-        "coverage_threshold": 0.9
-
-    },
-
-    "relationships": {
-
-        "symmetry_check": True,
-
-        "transitivity_check": True,
-
-        "cycle_detection": True
-
-    },
-
-    "graph": {
-
-        "connectivity_check": True,
-
-        "consistency_check": True,
-
-        "completeness_check": True
-
-    }
-
-}
-
-```
-
-## Integration Examples
-
-### Knowledge Base Integration
-
-The repository's real knowledge-node tooling is `cognitive-create-node`
-(backed by `cognitive.utils.create_node.NodeCreator`), which creates a node
-from a YAML template with validated frontmatter:
+The `type` is free text. The most common values in the vault are `relates`,
+`implements`, `foundation`, `related`, `extends`, `relates_to`, `organizes`, and
+`documents`; prefer an existing value to a new one. The `links` must be quoted
+strings. `normalize_frontmatter.py` enforces this:
 
 ```bash
-
-# Create a knowledge node from a template (see --help for options)
-
-cognitive-create-node --help
-
+python code/scripts/normalize_frontmatter.py --check .   # list drifted files, exit 1 if any
+python code/scripts/normalize_frontmatter.py --write .   # rewrite them in place
 ```
 
-Frontmatter `semantic_relations` provide the integration links; the
-documentation validators (`python code/scripts/validate_docs.py --json` and
-`python code/scripts/verify_links.py . --json`) check that explicit links
-resolve.
+It rewrites only the `semantic_relations` block and leaves every other key and
+the body untouched. `validate_docs.py` reports an unquoted link as a
+documentation error.
 
-## Related Documentation
+## 3. Generated catalogs
 
-- [[ai_documentation_style]]
+`kb_index.py` writes a `catalog.md` for each knowledge-base domain from the
+pages' titles and descriptions (see
+[[docs/repo_docs/ai_file_organization|File organization]]). A page missing from
+its catalog makes `validate_docs.py` report a stale catalog.
 
-- [[knowledge_graph_structure]]
+## Querying the graph
 
-- [[embedding_framework]]
+Use the tools you already have: Obsidian's search and graph view, `rg` over the
+Markdown, or a script that reads the frontmatter with `yaml.safe_load`. For
+example, this lists the relation types declared on one page:
 
-- [[semantic_search]]
+```python
+import re
+from pathlib import Path
 
-## References
+import yaml
 
-- [[embedding_techniques]]
+text = Path("docs/repo_docs/ai_semantic_processing.md").read_text(encoding="utf-8")
+front = yaml.safe_load(re.match(r"---\n(.*?)\n---\n", text, re.S).group(1))
+print([relation["type"] for relation in front["semantic_relations"]])
+```
 
-- [[semantic_processing]]
+## Related documentation
 
-- [[graph_algorithms]]
-
-- [[optimization_strategies]]
+- [[docs/repo_docs/ai_file_organization|File organization]]
+- [[docs/repo_docs/ai_validation_framework|Validation framework]]
+- [[docs/repo_docs/linking_patterns|Linking patterns]]

@@ -8,6 +8,8 @@ status: stable
 
 created: 2024-02-07
 
+updated: 2026-10-10
+
 tags:
 
   - template
@@ -19,7 +21,7 @@ tags:
 semantic_relations:
   - type: template_for
     links:
-      - "[[cognitive_concepts]]"
+      - "[[knowledge_base/index|Knowledge base index]]"
 ---
 
 # [Concept Name]
@@ -107,13 +109,13 @@ semantic_relations:
 
 ### Prerequisites
 
-- [[concept1|Prerequisite Concept 1]]
+- Prerequisite Concept 1
 
-- [[concept2|Prerequisite Concept 2]]
+- Prerequisite Concept 2
 
 ### Dependencies
 
-- [[concept3|Dependent Concept 1]]
+- Dependent Concept 1
 
 - [[concept4|Dependent Concept 2]]
 

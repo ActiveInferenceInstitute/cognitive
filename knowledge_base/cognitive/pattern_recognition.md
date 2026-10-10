@@ -8,6 +8,8 @@ tags:
 - perception
 - learning
 - neural_processing
+aliases:
+  - pattern_detection
 semantic_relations:
   - type: implements
     links:

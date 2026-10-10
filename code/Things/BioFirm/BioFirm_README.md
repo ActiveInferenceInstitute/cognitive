@@ -1,334 +1,65 @@
-# BioFirm Active Inference Model
+---
+title: BioFirm Model Design Notes
+type: design_notes
+status: draft
+created: 2025-01-01
+updated: 2026-10-10
+tags:
+  - biofirm
+  - homeostasis
+  - pomdp
+  - design
+semantic_relations:
+  - type: relates
+    links:
+      - "[[code/Things/BioFirm/README|BioFirm folder]]"
+      - "[[knowledge_base/BioFirm/biofirm_framework|BioFirm framework]]"
+      - "[[knowledge_base/cognitive/homeostatic_control_theory|Homeostatic control theory]]"
+      - "[[knowledge_base/mathematics/active_inference_pomdp|Active inference POMDP]]"
+---
 
-A homeostatic control model using Active Inference principles for bioregion management. This implementation demonstrates how Active Inference can be used for maintaining system stability through partial observations.
+# BioFirm: Homeostatic Control Model (Design Notes)
 
-## Overview
+> **Status: design sketch; no code in this repository.** `code/Things/BioFirm/` contains documentation only (`README.md`, `AGENTS.md`, this page and `docs/earth_systems_schema.md`). There are no `biofirm_model.py`, `biofirm_environment.py`, `biofirm_analysis.py` or `example.py` files, no simulation runner, no HTML report and no recorded performance numbers. For an executable discrete-state POMDP agent, use `code/Things/Simple_POMDP/`.
 
-The BioFirm model implements a Partially Observable Markov Decision Process (POMDP) using Active Inference principles. The model aims to maintain a system in a homeostatic range by:
+## Model specification
 
-1. Making observations from a simplified 3-state observation space (Low/Medium/High)
+BioFirm is specified as a partially observable Markov decision process in which an agent keeps a system inside a homeostatic range.
 
-1. Inferring the true underlying 5-state environment (Too Low, Lower Bound, Medium, Upper Bound, Too High)
+| Space | Size | Values |
+|-------|------|--------|
+| Observations | 3 | LOW, MEDIUM, HIGH |
+| Hidden states | 5 | TOO_LOW, LOWER_BOUND, MEDIUM, UPPER_BOUND, TOO_HIGH |
+| Actions | 3 | DECREASE, MAINTAIN, INCREASE |
 
-1. Selecting actions (Decrease/Maintain/Increase) to keep the system in the desired state
+The agent receives a coarse observation, infers the finer hidden state, and chooses an action that moves the state toward MEDIUM.
 
-## Model Components
+## Generative model
 
-### State Spaces
+- **A** (observation model): P(o|s), column stochastic, mapping five states to three observations.
+- **B** (transitions): P(s'|s,a), one column-stochastic matrix per action.
+- **C** (preferences): log-probabilities over observations, strongly favouring MEDIUM.
+- **D** (prior): initial belief over hidden states, uniform by default.
 
-- **Observation Space**: 3 states
+## Inference scheme
 
-  - LOW (0)
+- **Perception:** minimize variational free energy (accuracy plus complexity) to update beliefs.
+- **Action:** compute expected free energy per action (epistemic plus pragmatic value) and select by softmax over negative expected free energy.
+- **Learning:** optional adaptation of A, B and C.
 
-  - MEDIUM (1)
+See [[knowledge_base/mathematics/variational_free_energy|variational free energy]] and [[knowledge_base/mathematics/expected_free_energy|expected free energy]] for the derivations.
 
-  - HIGH (2)
+## Quantities worth tracking if implemented
 
-- **Environment Space**: 5 states
+Time in the desired range, mean state deviation, recovery speed after perturbation, belief entropy, belief accuracy against the true state, and action entropy.
 
-  - TOO_LOW (0)
+## Possible extensions
 
-  - LOWER_BOUND (1)
-
-  - MEDIUM (2)
-
-  - UPPER_BOUND (3)
-
-  - TOO_HIGH (4)
-
-- **Action Space**: 3 actions
-
-  - DECREASE (0)
-
-  - MAINTAIN (1)
-
-  - INCREASE (2)
-
-### Active Inference Components
-
-1. **Variational Free Energy (VFE)**
-
-   - **Accuracy Term**: Measures how well beliefs explain observations
-
-   - **Complexity Term**: KL divergence from prior beliefs
-
-   - **Total VFE**: Accuracy + Complexity, minimized during perception
-
-1. **Expected Free Energy (EFE)**
-
-   - **Epistemic Value**: Information gain from potential actions
-
-   - **Pragmatic Value**: Expected reward/preference satisfaction
-
-   - **Action Selection**: Softmax over negative EFE
-
-1. **Belief Dynamics**
-
-   - **Prior Beliefs**: Initial state distribution
-
-   - **Posterior Beliefs**: Updated through VFE minimization
-
-   - **Belief Entropy**: Uncertainty measure
-
-   - **Belief Accuracy**: Match between beliefs and true state
-
-1. **Action-Perception Cycle**
-
-   - **Perception**: VFE minimization updates beliefs
-
-   - **Action**: EFE minimization selects actions
-
-   - **Learning**: Parameter updates (if enabled)
-
-### Implementation Matrices
-
-1. **A Matrix** (Observation Model)
-
-   - Maps environment states to observations
-
-   - Represents the likelihood P(o|s)
-
-   - Column stochastic (probabilities sum to 1)
-
-1. **B Matrix** (Transition Model)
-
-   - Defines state transitions for each action
-
-   - Represents dynamics P(s'|s,a)
-
-   - Column stochastic per action
-
-1. **C Matrix** (Preferences)
-
-   - Defines preferred observations
-
-   - Encoded as log probabilities
-
-   - Strongly prefers MEDIUM observations
-
-1. **D Matrix** (Prior Beliefs)
-
-   - Initial beliefs over environment states
-
-   - Uniform prior by default
-
-## Analysis Tools
-
-The `biofirm_analysis.py` module provides comprehensive analysis tools:
-
-1. **Free Energy Analysis**
-
-   - VFE component tracking
-
-   - EFE distributions
-
-   - Information metrics
-
-   - Component balance ratios
-
-1. **Belief Dynamics Analysis**
-
-   - Belief evolution heatmaps
-
-   - Entropy tracking
-
-   - Accuracy monitoring
-
-   - Change rate analysis
-
-1. **Action Analysis**
-
-   - State-action distributions
-
-   - Action entropy
-
-   - Policy transitions
-
-   - EFE-action relationships
-
-1. **Visualization Suite**
-
-   - Interactive plots
-
-   - Time series analysis
-
-   - State space visualization
-
-   - Information flow diagrams
-
-## Implementation
-
-The implementation consists of four main components:
-
-1. `biofirm_model.py`: Core Active Inference implementation
-
-   - Belief updating through VFE minimization
-
-   - Action selection using EFE
-
-   - Matrix initialization and management
-
-1. `biofirm_environment.py`: Environment simulation
-
-   - True state transitions
-
-   - Observation generation
-
-   - Reward computation
-
-1. `biofirm_analysis.py`: Analysis tools
-
-   - Free energy component analysis
-
-   - Belief dynamics visualization
-
-   - Action-policy analysis
-
-   - Performance metrics
-
-1. `example.py`: Usage demonstration
-
-   - Simulation runner
-
-   - Visualization tools
-
-   - Performance metrics
-
-## Usage
-
-To run the example simulation with analysis:
-
-```bash
-
-python example.py
-
-```
-
-This will:
-
-1. Run a 300-step simulation
-
-1. Generate comprehensive visualizations:
-
-   - Free energy components
-
-   - Belief dynamics
-
-   - Action selection patterns
-
-1. Create an HTML report with:
-
-   - Summary statistics
-
-   - Interactive plots
-
-   - Performance metrics
-
-## Theory
-
-The model implements Active Inference principles:
-
-1. **Perception** (State Estimation)
-
-   - Minimizes VFE through belief updates
-
-   - Balances accuracy and complexity
-
-   - Maintains uncertainty estimates
-
-1. **Action** (Policy Selection)
-
-   - Minimizes EFE for action selection
-
-   - Balances exploration and exploitation
-
-   - Considers future outcomes
-
-1. **Learning** (Parameter Adaptation)
-
-   - Updates model parameters
-
-   - Refines preferences
-
-   - Improves predictions
-
-## Performance Metrics
-
-The model tracks multiple performance dimensions:
-
-1. **Homeostatic Control**
-
-   - Mean state deviation
-
-   - State variance
-
-   - Time in desired range
-
-   - Recovery speed
-
-1. **Information Processing**
-
-   - Belief accuracy
-
-   - Prediction error
-
-   - Information gain
-
-   - Uncertainty reduction
-
-1. **Action Efficiency**
-
-   - Action entropy
-
-   - Policy consistency
-
-   - Transition smoothness
-
-   - Recovery patterns
-
-## Extensions
-
-Possible extensions to this basic model:
-
-1. **Learning**
-
-   - Parameter adaptation
-
-   - Model structure learning
-
-   - Preference learning
-
-1. **Hierarchical Structure**
-
-   - Multiple timescales
-
-   - Nested control loops
-
-   - Abstract goal states
-
-1. **Enhanced Dynamics**
-
-   - Continuous state spaces
-
-   - Nonlinear transitions
-
-   - Stochastic effects
-
-1. **Multi-Agent Systems**
-
-   - Coupled dynamics
-
-   - Collective behavior
-
-   - Emergent properties
+Hierarchical control over several timescales (see [[code/Things/BioFirm/docs/earth_systems_schema|Earth systems schema]]), continuous state spaces, preference learning, and coupled multi-agent dynamics.
 
 ## References
 
-1. Friston, K. (2010). The free-energy principle: a unified brain theory?
-
-1. Da Costa, L., et al. (2020). Active inference on discrete state-spaces.
-
-1. Parr, T., & Friston, K. J. (2019). Generalised free energy and active inference.
-
-1. Buckley, C. L., et al. (2017). The free energy principle for action and perception.
-
+1. Friston, K. (2010). The free-energy principle: a unified brain theory? *Nature Reviews Neuroscience*.
+2. Da Costa, L., et al. (2020). Active inference on discrete state-spaces: a synthesis. *Journal of Mathematical Psychology*.
+3. Parr, T., & Friston, K. J. (2019). Generalised free energy and active inference. *Biological Cybernetics*.
+4. Buckley, C. L., et al. (2017). The free energy principle for action and perception: a mathematical review. *Journal of Mathematical Psychology*.

@@ -276,7 +276,7 @@ Links to:
 
 - [[uncertainty_resolution]] - Resolution process
 
-- [[information_metrics]] - Measurement tools
+- [[information_metrics]] - Quantities measuring information content
 
 ### 3. Exploration Drive Component
 
@@ -294,7 +294,7 @@ Links to:
 
 - [[policy_selection]] - Action selection
 
-- [[temperature_parameter]] - Control parameter
+- [[temperature_parameter]] - Parameter controlling randomness of choice
 
 ## Enhanced Implementation
 
@@ -644,11 +644,11 @@ class EpistemicValueCalculator:
 
    - Links to:
 
-     - [[information_seeking]] - Active strategies
+     - [[information_seeking]] - Actively gathering information to reduce uncertainty
 
-     - [[uncertainty_resolution]] - Uncertainty handling
+     - [[uncertainty_resolution]] - Reducing uncertainty about hidden states
 
-     - [[active_learning]] - Learning strategies
+     - [[active_learning]] - Choosing data to learn from most efficiently
 
 1. **Policy Selection**
 
@@ -658,11 +658,11 @@ class EpistemicValueCalculator:
 
    - Links to:
 
-     - [[policy_selection]] - Selection methods
+     - [[policy_selection]] - Choosing policies using expected free energy
 
-     - [[temperature_parameter]] - Control parameter
+     - [[temperature_parameter]] - Parameter controlling randomness of choice
 
-     - [[efe_components]] - Component balance
+     - [[efe_components]] - Balance between epistemic and pragmatic terms
 
 ### Other Frameworks
 
@@ -676,9 +676,9 @@ class EpistemicValueCalculator:
 
      - [[intrinsic_motivation]] - Internal rewards
 
-     - [[curiosity_learning]] - Curiosity models
+     - [[curiosity_learning]] - Learning driven by novelty and information gain
 
-     - [[exploration_strategies]] - Strategy types
+     - [[exploration_strategies]] - Approaches for exploring unknown options
 
 1. **Bayesian Optimization**
 
@@ -688,11 +688,11 @@ class EpistemicValueCalculator:
 
    - Links to:
 
-     - [[acquisition_functions]] - Selection criteria
+     - [[acquisition_functions]] - Functions scoring which point to sample next
 
-     - [[bayesian_optimization]] - Optimization framework
+     - [[bayesian_optimization]] - Sample-efficient optimization using a probabilistic model
 
-     - [[gaussian_processes]] - Surrogate models
+     - [[gaussian_processes]] - Probabilistic models used as surrogates
 
 ## Analysis Methods
 
@@ -708,9 +708,9 @@ class EpistemicValueCalculator:
 
      - [[entropy]] - Uncertainty measure
 
-     - [[mutual_information]] - Symmetric measure
+     - [[mutual_information]] - Information shared between two variables
 
-     - [[fisher_information]] - Geometric measure
+     - [[fisher_information]] - Curvature of the likelihood over parameters
 
 1. **Visualization**
 
@@ -726,11 +726,11 @@ class EpistemicValueCalculator:
 
      - [[uncertainty_visualization]] - Uncertainty plots
 
-     - [[exploration_visualization]] - Path plots
+     - [[exploration_visualization]] - Plots of exploration trajectories
 
 ## Related Concepts
 
-- [[pragmatic_value]] - Complementary value
+- [[pragmatic_value]] - Goal-directed counterpart to epistemic value
 
 - [[free_energy_principle]] - Theoretical basis
 
@@ -1054,7 +1054,7 @@ graph TD
 
 - [[matrix_operations]] - Core computations
 
-- [[numerical_methods]] - Numerical stability
+- [[numerical_methods]] - Methods for stable numerical computation
 
 - [[visualization_tools]] - Plotting utilities
 

@@ -5,24 +5,14 @@ title: Active Inference in Robotics Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
-modified: 2024-03-15
 
-modified: 2025-08-08
-
-version: 3.1.0
 
 complexity: advanced
 
-processing_priority: 1
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: advanced
 
@@ -92,21 +82,15 @@ semantic_relations:
 
 - **Theory Component**: 35%
 
-## Repo-integrated labs (TDD)
+## Repository labs
 
-- Validate control loops with Generic POMDP simplifications (timing budgets)
+Runnable material in this repository is the `cognitive` package, `Things.Simple_POMDP`, and `Things.Continuous_Generic`. The `Generic_POMDP`, `BioFirm`, `Ant_Colony`, and `Generic_Thing` folders contain documentation only, so there are no scripts to launch for them.
 
-  ```bash
-  python3 /home/trim/Documents/GitHub/cognitive/Things/Generic_POMDP/generic_pomdp.py
-  ```
+- Executed starting points: [[docs/examples/index|Examples index]] and [[docs/api/api_examples|API examples]].
 
-- Swarm robotics concepts via Ant Colony
+- Continuous-agent checks: `python -m pytest code/tests/visualization/test_continuous_generic.py -q`.
 
-  ```bash
-  python3 /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/ant_colony/main.py --config /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/config/colony_config.yaml
-  ```
-
-  - Add tests for info-gain exploration under resource constraints
+- Exercise: time `ContinuousActiveInference.step(observation)` inside a control loop of your own.
 
 ### Cross-repo anchors
 
@@ -116,7 +100,7 @@ semantic_relations:
 
 ### Purpose and Scope
 
-This comprehensive learning path integrates Active Inference principles with robotics and autonomous systems, providing theoretical foundations and practical implementation skills for developing intelligent robotic systems. The curriculum emphasizes real-time control, sensorimotor integration, and embodied cognition principles.
+This learning path integrates Active Inference principles with robotics and autonomous systems, providing theoretical foundations and practical implementation skills for developing intelligent robotic systems. The curriculum emphasizes real-time control, sensorimotor integration, and embodied cognition principles.
 
 ### Target Audience
 
@@ -147,22 +131,6 @@ By completing this path, learners will be able to:
 - Healthcare: Medical robotics and assistive devices
 
 - Defense: Autonomous systems and swarm robotics
-
-## Advanced Technical Infrastructure
-
-### Cloud-Integrated Development Environment
-
-
-### Collaborative Development Platform
-
-
-### Performance Optimization and Monitoring
-
-
-## Comprehensive Project Portfolio
-
-### Advanced Robotics Projects
-
 
 ## Path Selection Guide
 
@@ -344,14 +312,6 @@ graph TB
 
 ## Core Learning Path
 
-### 1. Robot Inference Modeling (4 weeks)
-
-#### Week 1-2: Robot State Inference
-
-
-#### Week 3-4: Robot Decision Making
-
-
 ### 2. Robotics Applications (6 weeks)
 
 #### Week 1-2: Basic Control
@@ -386,9 +346,6 @@ graph TB
 
 ### 3. Robot Intelligence (4 weeks)
 
-#### Week 1-2: Robot Learning
-
-
 #### Week 3-4: Robot Systems
 
 - System integration
@@ -400,9 +357,6 @@ graph TB
 - Skill transfer
 
 ### 4. Advanced Topics (4 weeks)
-
-#### Week 1-2: Robot-Environment Integration
-
 
 #### Week 3-4: Advanced Robotics
 
@@ -523,16 +477,6 @@ graph TB
 1. [[knowledge_base/research/autonomous_systems|Autonomous Systems Research]]
 
 1. [[knowledge_base/research/cognitive_robotics|Cognitive Robotics Research]]
-
-## Version History
-
-- Created: 2024-03-15
-
-- Last Updated: 2024-03-15
-
-- Status: Stable
-
-- Version: 1.0.0
 
 ## Integration Strategies
 
@@ -908,26 +852,6 @@ graph LR
 
   - Innovation design
 
-#### Certification Path
-
-- Robotics Systems
-
-  - Control theory
-
-  - System integration
-
-- Autonomous Systems
-
-  - Robot learning
-
-  - Behavior design
-
-- Research Methods
-
-  - Experimental design
-
-  - Statistical analysis
-
 ### Professional Network
 
 #### Research Community
@@ -1098,309 +1022,7 @@ graph TB
 
 ```
 
-## Support Resources
-
-### Research Support
-
-- Literature Database
-
-  - Robotics papers
-
-  - Control theory
-
-  - System integration
-
-- Computing Resources
-
-  - Simulation platforms
-
-  - Cloud computing
-
-  - Development tools
-
-- Analysis Tools
-
-  - Performance analysis
-
-  - Visualization tools
-
-  - Statistical packages
-
-### Technical Support
-
-- Development Tools
-
-  - ROS/ROS2
-
-  - Control libraries
-
-  - Integration frameworks
-
-- Documentation
-
-  - API references
-
-  - Implementation guides
-
-  - Best practices
-
-- Hardware Resources
-
-  - Robot platforms
-
-  - Sensor systems
-
-  - Control hardware
-
-### Learning Support
-
-```mermaid
-
-mindmap
-
-    root((Robotics
-
-    Resources))
-
-        Materials
-
-            Theory
-
-                Control
-
-                Systems
-
-            Implementation
-
-                Development
-
-                Integration
-
-            Research
-
-                Papers
-
-                Projects
-
-        Support
-
-            Technical
-
-                Tools
-
-                Hardware
-
-            Academic
-
-                Labs
-
-                Groups
-
-            Industry
-
-                Partners
-
-                Projects
-
-```
-
-## Version Control and Updates
-
-### Version History (Robotics)
-
-```mermaid
-
-gitGraph
-
-    commit id: "v1.0.0" tag: "Initial Release"
-
-    commit id: "v1.1.0"
-
-    branch feature/control-integration
-
-    commit id: "control-framework"
-
-    commit id: "validation-system"
-
-    checkout main
-
-    merge feature/control-integration id: "v2.0.0" tag: "Major Update"
-
-    commit id: "v2.1.0"
-
-```
-
-### Change Management (Robotics)
-
-#### Major Updates
-
-- v2.0.0 (Current)
-
-  - Enhanced control framework
-
-  - Advanced robot systems
-
-  - Improved validation system
-
-  - Updated career paths
-
-- v1.1.0
-
-  - Added control systems
-
-  - Enhanced documentation
-
-  - New research projects
-
-- v1.0.0
-
-  - Initial curriculum
-
-  - Basic framework
-
-  - Core concepts
-
-#### Planned Improvements
-
-- Advanced control systems
-
-- Multi-robot integration
-
-- Learning frameworks
-
-- Research extensions
-
-### Quality Metrics
-
-```mermaid
-
-xychart-beta
-
-    title "Learning Path Components Quality"
-
-    x-axis [Theory, Implementation, Integration, Research, Support]
-
-    y-axis "Score" 0 --> 100
-
-    bar [92, 95, 88, 90, 85]
-
-```
-
-## Learning Analytics
-
-### Robotics Learning Progress Tracking
-
-```mermaid
-
-xychart-beta
-
-    title "Skill Development Progress"
-
-    x-axis [Week 1, Week 6, Week 12, Week 20]
-
-    y-axis "Competency" 0 --> 100
-
-    line [20, 50, 80, 95]
-
-    line [15, 45, 75, 90]
-
-```
-
-### Skill and System Performance Metrics
-
-- Engineering Skills
-
-  - Control systems
-
-  - System integration
-
-  - Hardware implementation
-
-- Research Skills
-
-  - Algorithm development
-
-  - Experimental design
-
-  - Data analysis
-
-- Technical Skills
-
-  - Programming
-
-  - System architecture
-
-  - Documentation
-
-### Development Analytics
-
-```mermaid
-
-graph LR
-
-    subgraph Theory Development
-
-        T[Theory] --> M[Model]
-
-        M --> S[Simulation]
-
-    end
-
-    subgraph Implementation
-
-        I[Integration] --> E[Experiment]
-
-        E --> V[Validation]
-
-    end
-
-    subgraph Deployment
-
-        D[Development] --> R[Release]
-
-        R --> C[Certification]
-
-    end
-
-    S --> I
-
-    V --> D
-
-    style T,M,S fill:#f9f,stroke:#333
-
-    style I,E,V fill:#bbf,stroke:#333
-
-    style D,R,C fill:#bfb,stroke:#333
-
-```
-
 ## Final Notes
-
-### Success Stories
-
-- Research Impact
-
-  - Novel systems
-
-  - Control frameworks
-
-  - Field contributions
-
-- Technical Achievements
-
-  - System implementations
-
-  - Integration solutions
-
-  - Performance improvements
-
-- Professional Growth
-
-  - Technical leadership
-
-  - Industry influence
-
-  - Community building
 
 ### Additional Resources
 
@@ -1427,29 +1049,3 @@ graph LR
   - Technical forums
 
   - Professional networks
-
-### Contact Information
-
-- Research Support
-
-  - Principal investigators
-
-  - Lab managers
-
-  - Research coordinators
-
-- Technical Support
-
-  - System engineers
-
-  - Control specialists
-
-  - Integration experts
-
-- Industry Support
-
-  - Robotics companies
-
-  - Manufacturing firms
-
-  - Research institutes

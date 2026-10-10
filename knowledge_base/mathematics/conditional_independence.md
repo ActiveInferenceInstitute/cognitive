@@ -8,6 +8,8 @@ tags:
 - probability
 - statistics
 - graphical-models
+aliases:
+  - independence_testing
 semantic_relations:
   - type: foundation
     links:

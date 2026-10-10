@@ -23,6 +23,11 @@ from pathlib import Path
 
 import yaml
 
+try:
+    from scripts.markdown_fences import strip_fenced_blocks
+except ImportError:  # run as a file: the script directory is on sys.path
+    from markdown_fences import strip_fenced_blocks  # type: ignore[no-redef]
+
 KB_NAME = "knowledge_base"
 CATALOG = "catalog.md"
 # Navigation and generated files are not catalogued: they are the catalogue.
@@ -80,21 +85,14 @@ def _paragraphs(body: str) -> list[tuple[str | None, str]]:
     result: list[tuple[str | None, str]] = []
     heading: str | None = None
     buffer: list[str] = []
-    in_fence = False
 
     def flush() -> None:
         if buffer:
             result.append((heading, " ".join(buffer)))
             buffer.clear()
 
-    for line in body.splitlines():
+    for line in strip_fenced_blocks(body, replacement="\n").splitlines():
         stripped = line.strip()
-        if stripped.startswith(("```", "~~~")):
-            flush()
-            in_fence = not in_fence
-            continue
-        if in_fence:
-            continue
         if stripped.startswith("#"):
             flush()
             heading = stripped.lstrip("#").strip().lower()

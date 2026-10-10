@@ -8,7 +8,7 @@ status: stable
 
 created: 2024-02-07
 
-modified: 2024-03-14
+updated: 2026-10-10
 
 version: 2.0.0
 
@@ -26,9 +26,9 @@ tags:
 
 authors:
 
-  - name: Template Team
+  - name: "{{author_name}}"
 
-    role: Curriculum Design
+    role: "{{author_role}}"
 
 difficulty_level: intermediate # beginner, intermediate, advanced, expert
 
@@ -41,11 +41,11 @@ certification_track: false
 semantic_relations:
   - type: template_for
     links:
-      - "[[learning_paths]]"
+      - "[[docs/guides/learning_paths/catalog_of_learning_paths|Learning path catalog]]"
   - type: related_to
     links:
-      - "[[curriculum_design]]"
-      - "[[educational_standards]]"
+      - "[[docs/guides/learning_paths/active_inference_learning_path|Active Inference learning path]]"
+      - "[[docs/repo_docs/documentation_standards|Documentation standards]]"
 ---
 
 # [Learning Path Name]
@@ -168,7 +168,7 @@ By completing this path, learners will be able to:
 
 #### Core Concepts
 
-- [[concept1|Core Concept 1]]
+- Core Concept 1
 
   - Key Points:
 
@@ -188,9 +188,9 @@ By completing this path, learners will be able to:
 
     - [Exercise 2]
 
-- [[concept2|Core Concept 2]]
+- Core Concept 2
 
-- [[concept3|Core Concept 3]]
+- Core Concept 3
 
 #### Practical Exercises
 

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import Literal
+
 import numpy as np
 
 EPS = 1e-12
@@ -24,15 +26,46 @@ def as_integer(value: object, name: str) -> int:
     return index
 
 
+def normalize_mass(
+    values: np.ndarray,
+    axis: int = -1,
+    *,
+    empty: Literal["uniform", "zeros"] = "uniform",
+) -> np.ndarray:
+    """Divide non-negative ``values`` by their sum along ``axis``.
+
+    The result is scale-invariant: ``normalize_mass(c * v)`` equals
+    ``normalize_mass(v)`` for every ``c > 0``, however small. A fixed floor such
+    as ``EPS = 1e-12`` on the total would instead treat a distribution whose
+    entries are merely small as empty. Only a total that is not positive is
+    empty, and ``empty`` chooses its replacement: ``"uniform"`` gives every
+    entry ``1 / n`` along ``axis`` and ``"zeros"`` leaves the slice at zero.
+
+    Callers validate that ``values`` is finite and non-negative; this function
+    only normalizes. A total that overflows to infinity is rescaled by the
+    largest entry first so that finite input never yields an all-zero result.
+    """
+    array = np.asarray(values, dtype=float)
+    with np.errstate(over="ignore"):  # an overflowing total is handled just below
+        totals = array.sum(axis=axis, keepdims=True)
+    overflow = ~np.isfinite(totals)
+    if np.any(overflow):
+        peak = np.max(np.abs(array), axis=axis, keepdims=True)
+        array = array / np.where(overflow & (peak > 0), peak, 1.0)
+        totals = array.sum(axis=axis, keepdims=True)
+    positive = totals > 0.0
+    fill = 1.0 / array.shape[axis] if empty == "uniform" else 0.0
+    return np.where(positive, array / np.where(positive, totals, 1.0), fill)
+
+
 def _probability(values: np.ndarray, name: str, axis: int = 0) -> np.ndarray:
     """Normalize ``values`` into a probability distribution along ``axis``."""
     array = np.asarray(values, dtype=float)
     if array.size == 0 or not np.all(np.isfinite(array)) or np.any(array < 0):
         raise ValueError(f"{name} must be finite and non-negative")
-    total = array.sum(axis=axis, keepdims=True)
-    if np.any(total <= EPS):
+    if np.any(array.sum(axis=axis, keepdims=True) <= 0.0):
         raise ValueError(f"{name} must contain positive mass")
-    return array / total
+    return normalize_mass(array, axis)
 
 
 def ensure_matrix_properties(
@@ -43,7 +76,9 @@ def ensure_matrix_properties(
 
     The input must be non-empty and finite: a NaN column would otherwise fail
     the ``sum > EPS`` test and be replaced by a uniform distribution, turning
-    corrupt data into a plausible-looking result. A stochastic constraint also
+    corrupt data into a plausible-looking result. Normalization is
+    scale-invariant (see :func:`normalize_mass`): only a column or row whose
+    entries sum to exactly zero becomes uniform. A stochastic constraint also
     requires non-negative entries; request ``"non_negative"`` as well to clip
     negative values first.
     """
@@ -71,15 +106,9 @@ def ensure_matrix_properties(
             "add 'non_negative' to clip negative values first"
         )
     if "column_stochastic" in requested:
-        sums = values.sum(axis=0, keepdims=True)
-        values = np.divide(
-            values, sums, out=np.full_like(values, 1.0 / values.shape[0]), where=sums > EPS
-        )
+        values = normalize_mass(values, axis=0)
     elif "row_stochastic" in requested:
-        sums = values.sum(axis=-1, keepdims=True)
-        values = np.divide(
-            values, sums, out=np.full_like(values, 1.0 / values.shape[-1]), where=sums > EPS
-        )
+        values = normalize_mass(values, axis=-1)
     return values
 
 
@@ -168,5 +197,6 @@ __all__ = [
     "ensure_matrix_properties",
     "expected_free_energy",
     "kl_divergence",
+    "normalize_mass",
     "softmax",
 ]

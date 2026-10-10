@@ -7,7 +7,7 @@ from itertools import islice, product
 
 import numpy as np
 
-from ...utils.matrix_utils import as_integer
+from ...utils.matrix_utils import as_integer, normalize_mass
 
 EPS = 1e-12
 
@@ -16,18 +16,14 @@ def _as_probability_vector(values: np.ndarray, *, name: str) -> np.ndarray:
     array = np.asarray(values, dtype=float).reshape(-1)
     if array.size == 0 or not np.all(np.isfinite(array)) or np.any(array < 0):
         raise ValueError(f"{name} must be a finite, non-negative, non-empty vector")
-    total = float(array.sum())
-    if total <= EPS:
+    if float(array.sum()) <= 0.0:
         raise ValueError(f"{name} must contain positive mass")
-    return array / total
+    return normalize_mass(array)
 
 
 def _normalize(values: np.ndarray) -> np.ndarray:
     array = np.maximum(np.asarray(values, dtype=float), 0.0)
-    total = float(array.sum())
-    if total <= EPS:
-        return np.full(array.shape, 1.0 / array.size, dtype=float)
-    return array / total
+    return normalize_mass(array.reshape(-1)).reshape(array.shape)
 
 
 def _entropy(distribution: np.ndarray) -> float:

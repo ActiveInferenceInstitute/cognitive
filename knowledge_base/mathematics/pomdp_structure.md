@@ -245,11 +245,11 @@ from the installed package; see `docs/tools/plotting_tools.md`.
 
 - [[matrix_operations]]
 
-- [[visualization_guide]]
+- visualization guide
 
-- [[implementation_guide]]
+- implementation guide
 
-- [[version_control]]
+- version control
 
 ## References
 

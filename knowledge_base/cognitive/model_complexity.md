@@ -8,6 +8,8 @@ tags:
 - computation
 - complexity
 - optimization
+aliases:
+  - complexity
 semantic_relations:
   - type: implements
     links:

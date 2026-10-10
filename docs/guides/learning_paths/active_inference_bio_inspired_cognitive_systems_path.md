@@ -5,22 +5,14 @@ title: Bio-Inspired Cognitive Systems Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
-modified: 2025-08-08
 
-version: 2.1.0
 
 complexity: advanced
 
-processing_priority: 1
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
 
 difficulty_level: advanced
 
@@ -68,9 +60,9 @@ semantic_relations:
 
 ## Quick Start
 
-- Launch the ant colony simulation and add info-gain foraging checks; compare to baseline
+- Read the ant colony material ([[docs/guides/ant_colony_guide|Ant colony guide]]); the folder is documentation only, so a simulation is your own code
 
-- Build a cell-level inference sketch with repo primitives; verify belief update trends
+- Build a cell-level inference sketch with the `cognitive` package; verify belief update trends
 
 - Prototype a simple GA vs. swarm policy selection; assert convergence stability
 
@@ -98,7 +90,7 @@ semantic_relations:
 
 ### Purpose and Scope
 
-This comprehensive learning path explores the intersection of biological systems and cognitive architectures, focusing on bio-inspired approaches to cognitive system design. It integrates principles from neuroscience, evolutionary biology, and cognitive science to develop more natural, adaptive, and robust computational systems using Active Inference principles.
+This learning path explores the intersection of biological systems and cognitive architectures, focusing on bio-inspired approaches to cognitive system design. It integrates principles from neuroscience, evolutionary biology, and cognitive science to develop more natural and adaptive computational systems using Active Inference principles.
 
 ### Target Audience
 
@@ -130,31 +122,15 @@ By completing this path, learners will be able to:
 
 - Biotechnology: Computational biology, synthetic biology
 
-### Repo-integrated labs (TDD)
+### Repository labs
 
-- Swarm coordination from biology to code
+Runnable material in this repository is the `cognitive` package, `Things.Simple_POMDP`, and `Things.Continuous_Generic`. The `Generic_POMDP`, `BioFirm`, `Ant_Colony`, and `Generic_Thing` folders contain documentation only, so there are no scripts to launch for them.
 
-  - Start the ant colony simulation
+- Executed starting points: [[docs/examples/index|Examples index]] and [[docs/api/api_examples|API examples]].
 
-    ```bash
+- Continuous-agent checks: `python -m pytest code/tests/visualization/test_continuous_generic.py -q`.
 
-    python3 /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/ant_colony/main.py --config /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/config/colony_config.yaml
-
-    ```
-
-  - Add tests in `Things/Ant_Colony/ant_colony/utils/data_collection.py` usages to verify information-gain-oriented foraging
-
-- Cellular-to-network modeling bridge
-
-  - Use `tools/src/models/active_inference` primitives to sketch cell-level inference
-
-  - Validate via unit tests that belief updates match expected qualitative trends
-
-- Bio-inspired optimization
-
-  - Implement small GA baseline and compare to swarm policy selection using repo matrices
-
-  - Add assertions on convergence speed and stability
+- Exercise: encode a small signalling task as a `DiscreteGenerativeModel` and compare belief updates under the `variational` and `mean_field` methods.
 
 ### Foundations
 
@@ -254,7 +230,7 @@ assessment_dimensions:
 
 **Research Track** (Prerequisites: 9-10/10)
 
-- Focus on novel research and cutting-edge applications
+- Focus on novel research and current applications
 
 - **Start Here If**: Extensive research experience in related fields
 
@@ -262,123 +238,21 @@ assessment_dimensions:
 
 ### Foundation Track Bridge (4 weeks)
 
-#### Week 1-2: Biological Foundations for Engineers
-
-
 #### Week 3-4: Computational Foundations for Biologists
 
-```python
+- **Computational Thinking and Algorithms**
 
-computational_modules = {
+  - Concepts: Algorithm design principles; Data structures and complexity; Machine learning fundamentals; Optimization and search
 
-    'week_3': {
+  - Practice: basic algorithms; data structure practice; ml model implementation
 
-        'title': 'Computational Thinking and Algorithms',
+  - Assessments: algorithm design; implementation project
 
-        'concepts': [
+- **Systems Design and Architecture**
 
-            'Algorithm design principles',
+  - Concepts: System architecture principles; Modular design and interfaces; Distributed systems basics; Performance and scalability
 
-            'Data structures and complexity',
+  - Practice: modular system design; interface specification; performance analysis
 
-            'Machine learning fundamentals',
+  - Assessments: system design project; architecture review
 
-            'Optimization and search'
-
-        ],
-
-        'implementations': [
-
-            'basic_algorithms',
-
-            'data_structure_practice',
-
-            'ml_model_implementation'
-
-        ],
-
-        'assessments': ['algorithm_design', 'implementation_project']
-
-    },
-
-    'week_4': {
-
-        'title': 'Systems Design and Architecture',
-
-        'concepts': [
-
-            'System architecture principles',
-
-            'Modular design and interfaces',
-
-            'Distributed systems basics',
-
-            'Performance and scalability'
-
-        ],
-
-        'implementations': [
-
-            'modular_system_design',
-
-            'interface_specification',
-
-            'performance_analysis'
-
-        ],
-
-        'assessments': ['system_design_project', 'architecture_review']
-
-    }
-
-}
-
-```
-
-### Module 1: Bio-Inspired Architecture Design (4 weeks)
-
-#### Week 1-2: Neural-Inspired Architectures
-
-
-#### Week 3-4: Evolutionary Architecture Adaptation
-
-
-### Module 2: Natural Computation Mechanisms (5 weeks)
-
-#### Week 1-2: Cellular and Molecular Computation
-
-
-#### Week 3-4: Swarm Intelligence and Collective Behavior
-
-
-#### Week 5: Embodied Cognition Systems
-
-
-### Module 3: Adaptive Learning Systems (4 weeks)
-
-#### Week 1-2: Biological Learning Mechanisms
-
-
-#### Week 3-4: Evolutionary and Developmental Learning
-
-
-### Module 4: Integration and Applications (4 weeks)
-
-#### Week 1-2: Multi-Scale Integration
-
-
-#### Week 3-4: Real-World Applications
-
-
-### Assessment Framework
-
-
-## Version History
-
-- Created: 2024-03-15
-
-- Last Updated: 2024-03-15
-
-- Status: Stable
-
-- Version: 1.0.0

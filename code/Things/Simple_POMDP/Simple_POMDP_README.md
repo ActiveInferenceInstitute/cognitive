@@ -1,539 +1,156 @@
+---
+title: SimplePOMDP
+type: reference
+status: stable
+updated: 2026-10-10
+semantic_relations:
+  - type: related_to
+    links:
+      - "[[docs/api/api_reference|API reference]]"
+      - "[[code/Things/Simple_POMDP/AGENTS|Simple POMDP agent notes]]"
+---
+
 # SimplePOMDP
 
-A simple implementation of a Partially Observable Markov Decision Process (POMDP) using Active Inference principles. This implementation demonstrates how Active Inference can be used for decision-making and belief updating in partially observable environments.
+`SimplePOMDP` (`code/Things/Simple_POMDP/simple_pomdp.py`) is a seeded discrete
+POMDP agent with exact Bayesian belief updates and one-step expected free
+energy action selection. It is importable as `Things.Simple_POMDP`, which
+exports `SimplePOMDP`, `SimplePOMDPState`, and `compute_expected_free_energy`.
 
-## Overview
-
-The SimplePOMDP implementation includes:
-
-- A configurable state space with partial observability
-
-- Action selection using Active Inference principles
-
-- Belief updating based on observations and actions
-
-- Visualization tools for analyzing model behavior
-
-- Comprehensive test suite
-
-## Structure
+## Files
 
 ```text
-
-SimplePOMDP/
-
-├── README.md              # This file
-
-├── configuration.yaml     # Model configuration
-
-├── simple_pomdp.py       # Main implementation
-
-└── tests/
-
-    └── test_simple_pomdp.py  # Test suite
-
+code/Things/Simple_POMDP/
+  __init__.py            exports
+  simple_pomdp.py        agent, state dataclass, plotter
+  README.md              short overview
+  Simple_POMDP_README.md this file
+  AGENTS.md              agent notes
 ```
 
-## Features
-
-### State Space
-
-- Configurable number of states
-
-- Partial observability through observation matrix
-
-- Belief state tracking and updating
-
-### Actions
-
-- Configurable action space
-
-- Action selection using Expected Free Energy
-
-- Policy evaluation and selection
-
-### Matrices
-
-1. **A Matrix** (Observation/Likelihood)
-
-   - Maps states to observations
-
-   - Column stochastic (probabilities sum to 1)
-
-   - Configurable initialization
-
-1. **B Matrix** (Transition/Dynamics)
-
-   - State transition probabilities for each action
-
-   - Row stochastic for each action
-
-   - Supports identity-based initialization
-
-1. **C Matrix** (Preferences)
-
-   - Defines preferred observations
-
-   - Supports goal-directed behavior
-
-   - Time-horizon dependent preferences
-
-1. **D Matrix** (Prior Beliefs)
-
-   - Initial belief distribution over states
-
-   - Uniform or custom initialization
-
-   - Ensures valid probability distribution
-
-1. **E Matrix** (Policies)
-
-   - Defines available action sequences
-
-   - Supports various policy types
-
-   - Used for action selection
-
-### Visualization
-
-- Belief evolution over time
-
-- Free energy landscape visualization
-
-- Policy evaluation plots
-
-- State transition diagrams
-
-- Observation likelihood heatmaps
+There is no bundled configuration file; configurations are a YAML path or a
+dict. Tests live in `code/tests/test_simple_pomdp.py`.
 
 ## Configuration
 
-The model is configured through a YAML file with the following sections:
+The configuration must contain exactly the sections `model`, `state_space`,
+`observation_space`, `action_space`, `matrices`, `inference`, and
+`visualization`, plus an optional root `seed`. Unknown sections or fields raise
+`ValueError`.
 
-```yaml
+| Section | Accepted fields |
+|---|---|
+| `model` | `name`, `description`, `version` |
+| `state_space` | `num_states`, `state_labels`, `initial_state` |
+| `observation_space` | `num_observations`, `observation_labels` |
+| `action_space` | `num_actions`, `action_labels` |
+| `inference` | `learning_rate`, `temperature`, `seed`, `time_horizon` / `temporal_horizon` (must be 1) |
+| `visualization` | `output_dir`, `formats`, `dpi`, `style` |
 
-model:
+Every `inference` field is either used or rejected with a `ValueError`:
 
-  name: "SimplePOMDP"
+| Field | Effect |
+|---|---|
+| `learning_rate` | Weight of the exact Bayes posterior in the belief update, in `[0, 1]`. |
+| `temperature` | Positive number. `step()` samples the action from `softmax(-(G - ln E) / temperature)`, where `G` is the one-step expected free energy and `E` the action prior. Omit it for greedy selection, the zero-temperature limit. |
+| `seed` | Seeds the generator behind transitions, observations, and sampled actions. The root-level `seed` is equivalent; giving both with different values is an error. |
+| `time_horizon`, `temporal_horizon` | Must be 1 when present: the agent scores single actions. Use `ActiveInferenceDispatcher` for multi-step policies. |
+| `num_iterations`, `policy_learning_rate` | Rejected: the belief update is one exact Bayes step and `E` is never learned, so nothing would read them. |
 
-  description: "..."
+`matrices` must define exactly `A_matrix` to `E_matrix`;
+each takes `shape`, `initialization` (`uniform`, `random`,
+`random_stochastic`, `identity_based`, `log_preferences`),
+`initialization_params`, `constraints` (`non_negative`, `column_stochastic`,
+`sum_to_one`; `row_stochastic` for 2-D matrices only), `description`, and
+`learning_rate`.
 
-  version: "0.1.0"
+## Matrix conventions
 
-state_space:
+- `A[o, s]`: observation likelihood, shape `(observations, states)`, column
+  stochastic.
+- `B[s_next, s_prev, a]`: transitions, shape `(states, states, actions)`,
+  column stochastic for every action.
+- `C`: one finite log-preference per observation.
+- `D`: prior over states, normalised on construction.
+- `E`: prior over actions, normalised on construction.
 
-  num_states: 3
+## Behaviour
 
-  state_labels: [...]
+- `step(action=None)` samples the next state from `B`, samples an observation
+  from `A`, applies a Bayes update of the beliefs, and returns
+  `(observation, free_energy)`. With no action, it picks one by one-step
+  expected free energy minus the log action prior: greedy when `temperature` is
+  absent, softmax-sampled when it is set.
+- `learning_rate` blends the Bayesian posterior into the previous belief.
+- `run(steps, actions=None)` calls `step` repeatedly; `reset()` restores the
+  prior, time, and history.
+- `save_state(path)` and `load_state(path)` write and read versioned YAML
+  (`schema_version: 1`) including the history.
+- The seed defaults to 7 when neither the root nor `inference` sets one.
+- `state.history` records `states`, `observations`, `actions`, `beliefs`,
+  `free_energy`, `efe_total`, `efe_epistemic`, and `efe_pragmatic`.
 
-  initial_state: 0
-
-observation_space:
-
-  num_observations: 2
-
-  observation_labels: [...]
-
-action_space:
-
-  num_actions: 2
-
-  action_labels: [...]
-
-matrices:
-
-  A_matrix: {...}
-
-  B_matrix: {...}
-
-  C_matrix: {...}
-
-  D_matrix: {...}
-
-  E_matrix: {...}
-
-inference:
-
-  time_horizon: 5
-
-  num_iterations: 10
-
-  learning_rate: 0.1
-
-  temperature: 1.0
-
-visualization:
-
-  output_dir: "..."
-
-  formats: ["png"]
-
-  style: {...}
-
-```
-
-## Usage
-
-### Basic Usage
+## Example
 
 ```python
+import tempfile
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
 
 from Things.Simple_POMDP import SimplePOMDP
 
-# Initialize the model
+with tempfile.TemporaryDirectory() as tmp:
+    config = {
+        "model": {"name": "two_state", "version": "1"},
+        "state_space": {"num_states": 2, "state_labels": ["a", "b"], "initial_state": 0},
+        "observation_space": {"num_observations": 2, "observation_labels": ["a", "b"]},
+        "action_space": {"num_actions": 2, "action_labels": ["stay", "switch"]},
+        "matrices": {
+            "A_matrix": {"shape": [2, 2], "initialization": "identity_based"},
+            "B_matrix": {"shape": [2, 2, 2], "initialization": "identity_based"},
+            "C_matrix": {
+                "shape": [2],
+                "initialization": "log_preferences",
+                "initialization_params": {"preferences": [0.0, 1.0]},
+            },
+            "D_matrix": {"shape": [2], "initialization": "uniform"},
+            "E_matrix": {"shape": [2], "initialization": "uniform"},
+        },
+        "inference": {"learning_rate": 1.0, "temperature": 1.0},
+        "visualization": {"output_dir": str(Path(tmp) / "plots")},
+        "seed": 4,
+    }
+    agent = SimplePOMDP(config)
+    observation, free_energy = agent.step()
+    agent.run(4)
+    assert agent.state.time_step == 5
 
-model = SimplePOMDP("path/to/config.yaml")
-
-# Take a step with automatic action selection
-
-observation, free_energy = model.step()
-
-# Take a step with specified action
-
-observation, free_energy = model.step(action=0)
-
-# Generate visualizations
-
-model.visualize("belief_evolution")
-
-model.visualize("free_energy_landscape")
-
-model.visualize("policy_evaluation")
-
+    agent.visualize("belief_evolution")
+    assert (Path(tmp) / "plots" / "belief_evolution.png").exists()
 ```
 
-### Running Tests
+## Visualisation
+
+`visualize(plot_type)` saves `<output_dir>/<plot_type>.png` and returns the
+closed figure. Supported plot types:
+
+- `belief_evolution`
+- `free_energy_landscape`
+- `policy_evaluation`
+- `state_transitions`
+- `observation_likelihood`
+- `efe_components_detailed`
+
+Any other name raises `ValueError`.
+
+## Tests
 
 ```bash
-
-# Run all tests
-
-python -m pytest code/tests/test_simple_pomdp.py
-
-# Run specific test
-
-python -m pytest code/tests/test_simple_pomdp.py::test_initialization
-
-# Run with coverage
-
-python -m pytest code/tests/test_simple_pomdp.py --cov=Things.Simple_POMDP
-
+.venv/bin/python -m pytest code/tests/test_simple_pomdp.py -q
 ```
 
-## Visualization Outputs
-
-All visualization outputs are saved to the configured output directory. Available plots include:
-
-1. **Belief Evolution**
-
-   - Shows how beliefs about states change over time
-
-   - Line plot with one line per state
-
-   - Saved as `belief_evolution.png`
-
-1. **Free Energy Landscape**
-
-   - 3D surface plot of expected free energy
-
-   - Shows relationship between beliefs and free energy
-
-   - Saved as `free_energy_landscape.png`
-
-1. **Policy Evaluation**
-
-   - Bar plot of expected free energy for each policy
-
-   - Helps understand action selection
-
-   - Saved as `policy_evaluation.png`
-
-1. **State Transitions**
-
-   - Heatmap of transition probabilities for each action
-
-   - Shows dynamics of the environment
-
-   - Saved as `state_transitions.png`
-
-1. **Observation Likelihood**
-
-   - Heatmap of observation probabilities given states
-
-   - Shows observation model structure
-
-   - Saved as `observation_likelihood.png`
-
-1. **Belief History**
-
-   - Heatmap visualization of belief evolution
-
-   - Shows complete belief history over time
-
-   - Color intensity indicates belief strength
-
-   - Saved as `belief_history.png`
-
-1. **Free Energy History**
-
-   - Line plot of free energy values over time
-
-   - Includes trend line for convergence analysis
-
-   - Saved as `free_energy_history.png`
-
-1. **Action History**
-
-   - Scatter plot of selected actions over time
-
-   - Color gradient shows temporal progression
-
-   - Includes jittering for better visibility
-
-   - Saved as `action_history.png`
-
-1. **State Distribution**
-
-   - Combined visualization of:
-
-     - Current belief distribution (bar plot)
-
-     - Belief entropy history (line plot)
-
-   - Saved as `state_distribution.png`
-
-### Example Usage
-
-```python
-
-# Generate standard visualizations
-
-model.visualize("belief_evolution")
-
-model.visualize("free_energy_landscape")
-
-model.visualize("policy_evaluation")
-
-# Generate advanced visualizations
-
-model.visualize("belief_history")
-
-model.visualize("free_energy_history")
-
-model.visualize("action_history")
-
-model.visualize("state_distribution")
-
-```
-
-## Testing
-
-The test suite provides comprehensive coverage of the implementation:
-
-### Core Functionality Tests
-
-1. **Initialization Tests**
-
-   - Matrix shapes and types
-
-   - Configuration validation
-
-   - Initial state setup
-
-1. **Functional Tests**
-
-   - Step execution
-
-   - Action selection
-
-   - Belief updating
-
-   - Free energy computation
-
-1. **Visualization Tests**
-
-   - Plot generation
-
-   - File saving
-
-   - Figure properties
-
-1. **Validation Tests**
-
-   - Matrix properties
-
-   - Probability constraints
-
-   - Error handling
-
-### Advanced Tests
-
-1. **Convergence Tests**
-
-   - Belief convergence under consistent observations
-
-   - Entropy reduction over time
-
-   - Temporal consistency of state transitions
-
-1. **Policy Tests**
-
-   - Policy preference validation
-
-   - Action selection distribution
-
-   - Expected free energy computation
-
-1. **Edge Case Tests**
-
-   - Deterministic beliefs
-
-   - Uniform beliefs
-
-   - Extreme preferences
-
-   - Learning rate sensitivity
-
-1. **Visualization Property Tests**
-
-   - Axis labels and titles
-
-   - Data representation
-
-   - Plot elements and styling
-
-### Running Tests
-
-```bash
-
-# Run all tests
-
-python -m pytest code/tests/test_simple_pomdp.py
-
-# Run specific test categories
-
-python -m pytest code/tests/test_simple_pomdp.py -k "test_belief"  # Belief-related tests
-
-python -m pytest code/tests/test_simple_pomdp.py -k "test_visualization"  # Visualization tests
-
-python -m pytest code/tests/test_simple_pomdp.py -k "test_edge"  # Edge case tests
-
-# Run with coverage report
-
-python -m pytest code/tests/test_simple_pomdp.py --cov=Things.Simple_POMDP --cov-report=html
-
-```
-
-### Test Output
-
-- Test results are displayed in the terminal
-
-- Coverage report shows code coverage statistics
-
-- Visualization outputs are saved to the configured directory
-
-- Generated files are logged after test completion
-
-## Implementation Details
-
-### Active Inference Components
-
-1. **Belief Updating**
-
-   - Uses Bayes rule to update beliefs based on observations
-
-   - Incorporates action effects through transition matrix
-
-   - Maintains proper probability distributions
-
-1. **Action Selection**
-
-   - Computes expected free energy for each policy
-
-   - Considers both ambiguity and risk
-
-   - Uses softmax for action probabilities
-
-1. **Free Energy Computation**
-
-   - Includes both variational free energy and expected free energy
-
-   - Accounts for preferences through C matrix
-
-   - Handles multi-step policies
-
-### Matrix Properties
-
-All matrices maintain specific properties:
-
-- **A Matrix**: Column stochastic, non-negative
-
-- **B Matrix**: Row stochastic per action, non-negative
-
-- **C Matrix**: Arbitrary values for preferences
-
-- **D Matrix**: Sums to one, non-negative
-
-- **E Matrix**: Integer values representing actions
-
-## Testing
-
-The test suite covers:
-
-1. **Initialization Tests**
-
-   - Matrix shapes and types
-
-   - Configuration validation
-
-   - Initial state setup
-
-1. **Functional Tests**
-
-   - Step execution
-
-   - Action selection
-
-   - Belief updating
-
-   - Free energy computation
-
-1. **Visualization Tests**
-
-   - Plot generation
-
-   - File saving
-
-   - Figure properties
-
-1. **Validation Tests**
-
-   - Matrix properties
-
-   - Probability constraints
-
-   - Error handling
-
-## Contributing
-
-When contributing to this implementation:
-
-1. Follow the project's code style
-
-1. Add tests for new functionality
-
-1. Update documentation
-
-1. Ensure all tests pass
-
-1. Verify visualization outputs
-
-## Dependencies
-
-- NumPy: Matrix operations and probability computations
-
-- Matplotlib: Visualization generation
-
-- PyYAML: Configuration file parsing
-
-- pytest: Testing framework
+Dependencies are NumPy, Matplotlib, and PyYAML, plus the `cognitive` package
+for `DiscreteGenerativeModel` and matrix helpers.

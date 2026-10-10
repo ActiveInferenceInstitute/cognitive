@@ -1,5 +1,6 @@
 ---
 title: Mutual Information Estimators
+description: "Survey of mutual information estimators, including plug-in histogram, nearest-neighbour KSG and variational bounds such as MINE and InfoNCE, and their use in Active Inference."
 type: mathematical_concept
 status: draft
 created: 2025-08-08

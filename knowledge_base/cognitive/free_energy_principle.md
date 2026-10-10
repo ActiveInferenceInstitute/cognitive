@@ -16,6 +16,8 @@ tags:
 - information_theory
 - dynamical_systems
 - self_organization
+aliases:
+  - friston_free_energy
 semantic_relations:
   - type: foundation_for
     links:
@@ -298,7 +300,7 @@ Properties:
 
   - [[neural_dynamics]]
 
-  - [[network_formation]]
+  - network formation
 
 - [[immune_system]]
 
@@ -350,7 +352,7 @@ Properties:
 
   - [[social_coordination]]
 
-  - [[group_dynamics]]
+  - group dynamics
 
 - [[social_networks]]
 
@@ -768,7 +770,7 @@ class DynamicsSolver:
 
    - [[gpu_acceleration]]
 
-   - [[memory_management]]
+   - memory management
 
    - [[algorithmic_efficiency]]
 
@@ -2325,7 +2327,7 @@ class PredictiveCodingNetwork:
 
     - [[model_comparison]]
 
-    - [[empirical_validation]]
+    - empirical validation
 
   - [[learning_theory]]
 
@@ -2453,7 +2455,7 @@ class PredictiveCodingNetwork:
 
 - [[medical_applications]]
 
-  - [[personalized_medicine]]
+  - personalized medicine
 
     - [[disease_modeling]]
 
@@ -2467,7 +2469,7 @@ class PredictiveCodingNetwork:
 
     - [[neurological_intervention]]
 
-    - [[cognitive_enhancement]]
+    - cognitive enhancement
 
   - [[aging_research]]
 

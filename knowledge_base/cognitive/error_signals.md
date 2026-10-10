@@ -8,6 +8,8 @@ tags:
   - active_inference
   - prediction_error
   - precision
+aliases:
+  - error_detection
 semantic_relations:
   - type: relates
     links:

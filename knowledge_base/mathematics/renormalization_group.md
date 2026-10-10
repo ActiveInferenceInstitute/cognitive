@@ -30,7 +30,7 @@ semantic_relations:
 
 ## Renormalization Groups: Overview and Principles
 
-Renormalization groups constitute a central theoretical framework in [[physics]], particularly in [[quantum_field_theory|quantum field theory]] and [[statistical_physics|statistical mechanics]]. The fundamental idea behind RG is to systematically study how physical systems behave when observed at different scales. The RG approach involves "coarse-graining," a procedure where microscopic degrees of freedom are integrated out or averaged over, resulting in effective theories at larger scales. This method allows physicists to understand how physical parameters evolve as the scale of observation changes, identifying [[fixed points]] and [[critical_phenomena|critical phenomena]].
+Renormalization groups constitute a central theoretical framework in physics, particularly in [[quantum_field_theory|quantum field theory]] and [[statistical_physics|statistical mechanics]]. The fundamental idea behind RG is to systematically study how physical systems behave when observed at different scales. The RG approach involves "coarse-graining," a procedure where microscopic degrees of freedom are integrated out or averaged over, resulting in effective theories at larger scales. This method allows physicists to understand how physical parameters evolve as the scale of observation changes, identifying [[fixed points]] and [[critical_phenomena|critical phenomena]].
 
 ```mermaid
 

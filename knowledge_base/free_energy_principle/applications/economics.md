@@ -13,6 +13,8 @@ tags:
   - market_dynamics
   - game_theory
   - behavioral_economics
+aliases:
+  - economic_systems
 semantic_relations:
   - type: relates
     links:

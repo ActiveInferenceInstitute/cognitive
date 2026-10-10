@@ -9,6 +9,8 @@ tags:
   - active-inference
   - learning
   - allostasis
+aliases:
+  - strategy_adjustment
 semantic_relations:
   - type: implements
     links:

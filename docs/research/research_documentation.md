@@ -1,226 +1,53 @@
-# Research Documentation
-
 ---
-
-title: Research Documentation
-
-type: index
-
+title: Research documentation
+type: guide
 status: stable
-
 created: 2024-02-06
-
+updated: 2026-10-10
 tags:
-
   - research
-
   - theory
-
-  - mathematics
-
-  - statistics
-
 semantic_relations:
-
-  - type: implements
-
-    links: [[knowledge_base/cognitive/cognitive_modeling_concepts]]
-
   - type: relates
-
     links:
-
-      - [[knowledge_base/cognitive/cognitive_modeling_concepts]]
-
-      - [[knowledge_base/mathematics/active_inference_pomdp]]
-
+      - "[[knowledge_base/cognitive/cognitive_modeling_concepts]]"
+      - "[[knowledge_base/mathematics/active_inference_pomdp]]"
+      - "[[docs/api/api_reference]]"
 ---
 
-## Overview
-
-This directory contains research documentation focusing on theoretical foundations, mathematical frameworks, and statistical methods in cognitive modeling.
-
-## Theoretical Foundations
-
-### POMDP Framework
-
-- [[active_inference_pomdp]] - Active Inference POMDP formulation
-
-- [[belief_updating]] - Belief update mechanisms
-
-- [[state_estimation]] - State estimation methods
-
-- [[policy_selection]] - Policy selection theory
-
-### Statistical Theory
-
-- [[variational_methods]] - Variational inference methods
-
-- [[information_theory]] - Information theoretic foundations
-
-- [[game_theory]] - Game theoretic principles
-
-- [[statistical_foundations]] - Core statistical concepts
-
-## Mathematical Components
-
-### Matrix Operations
-
-- [[A_matrix]] - Observation model
-
-- [[B_matrix]] - Transition dynamics
-
-- [[C_matrix]] - Preferences
-
-- [[D_matrix]] - Prior beliefs
-
-- [[E_matrix]] - Action distribution
-
-### Free Energy Formulations
-
-- [[variational_free_energy]] - VFE computation
-
-- [[expected_free_energy]] - EFE formulation
-
-- [[efe_components]] - EFE decomposition
-
-- [[free_energy_principle]] - Theoretical foundation
-
-### Information Measures
-
-- [[epistemic_value]] - Information gain
-
-- [[pragmatic_value]] - Goal-directed value
-
-- [[expected_free_energy_update]] - EFE updates
-
-- [[compute_efe]] - EFE computation
-
-## Implementation Theory
-
-### Core Algorithms
-
-- [[belief_propagation]] - Message passing algorithms
-
-- [[variational_inference]] - Variational methods
-
-- [[monte_carlo_methods]] - Sampling approaches
-
-- [[gradient_descent]] - Optimization techniques
-
-### State Space Models
-
-- [[state_spaces]] - State space theory
-
-- [[markov_models]] - Markov processes
-
-- [[hidden_states]] - Hidden state inference
-
-- [[observation_models]] - Observation modeling
-
-### Policy Optimization
-
-- [[policy_optimization]] - Policy improvement
-
-- [[action_selection]] - Action selection methods
-
-- [[exploration_exploitation]] - Exploration strategies
-
-- [[temperature_parameter]] - Temperature scaling
-
-## Validation Framework
-
-### Statistical Tests
-
-- [[hypothesis_testing]] - Statistical testing
-
-- [[model_comparison]] - Model evaluation
-
-- [[parameter_estimation]] - Parameter inference
-
-- [[goodness_of_fit]] - Fit measures
-
-### Performance Metrics
-
-- [[information_metrics]] - Information measures
-
-- [[prediction_error]] - Error metrics
-
-- [[convergence_analysis]] - Convergence studies
-
-- [[stability_analysis]] - Stability measures
-
-## Research Methods
-
-### Experimental Design
-
-- [[experiment_design]] - Design principles
-
-- [[control_variables]] - Control methods
-
-- [[sampling_strategies]] - Sampling approaches
-
-- [[power_analysis]] - Statistical power
-
-### Data Analysis
-
-- [[statistical_analysis]] - Analysis methods
-
-- [[bayesian_analysis]] - Bayesian approaches
-
-- [[frequentist_analysis]] - Frequentist methods
-
-- [[causal_analysis]] - Causality studies
-
-### Visualization
-
-- [[data_visualization]] - Visualization methods
-
-- [[belief_evolution]] - Belief trajectories
-
-- [[free_energy_landscape]] - Energy landscapes
-
-- [[policy_visualization]] - Policy analysis
-
-## Integration Points
-
-### Theory Integration
-
-- [[active_inference_theory]] - Active inference
-
-- [[predictive_coding]] - Predictive processing
-
-- [[optimal_control]] - Control theory
-
-- [[reinforcement_learning]] - RL connections
-
-### Implementation Links
-
-- [[model_implementation]] - Implementation guides
-
-- [[numerical_methods]] - Numerical approaches
-
-- [[optimization_methods]] - Optimization techniques
-
-- [[validation_methods]] - Validation approaches
-
-## Related Documentation
-
-- [[knowledge_base/cognitive/cognitive_modeling_concepts|Core Concepts]]
-
-- [[docs/implementation/implementation_guides|Implementation Guides]]
-
-- [[docs/api/api_documentation|API Documentation]]
-
-- [[docs/examples/usage_examples|Usage Examples]]
-
-## References
-
-- [[friston_2017]] - Active Inference
-
-- [[da_costa_2020]] - Active Inference POMDP
-
-- [[parr_2019]] - Free Energy Theory
-
-- [[buckley_2017]] - Tutorial Paper
-
+# Research documentation
+
+This page maps each research topic to the place where it is actually documented
+or implemented. The package computes the discrete-state quantities below; the
+rest is theory in the knowledge base.
+
+## Where each topic lives
+
+| Topic | Theory | Executable in this repository |
+|---|---|---|
+| POMDP generative model (A, B, C, D, E) | [[knowledge_base/mathematics/active_inference_pomdp]], [[knowledge_base/mathematics/pomdp_structure]] | `DiscreteGenerativeModel` |
+| Belief updating | [[knowledge_base/mathematics/belief_updating]] | `DiscreteGenerativeModel.posterior`, `ActiveInferenceDispatcher.dispatch_belief_update` |
+| Expected free energy | [[knowledge_base/mathematics/expected_free_energy]], [[knowledge_base/mathematics/efe_components]] | `DiscreteGenerativeModel.expected_free_energy` (total = risk + ambiguity) |
+| Policy selection | [[knowledge_base/mathematics/policy_selection]] | `ActiveInferenceDispatcher.dispatch_policy_inference`, `enumerate_policies`, `evaluate_policy` |
+| Variational and sampling inference | [[knowledge_base/mathematics/variational_inference]] | `InferenceMethod` values `variational`, `sampling`, `mean_field` |
+| Continuous generalized coordinates | [[knowledge_base/mathematics/continuous_time_models]] | `Things.Continuous_Generic.ContinuousActiveInference` |
+| Homeostatic control | [[knowledge_base/cognitive/homeostatic_control_theory]] | `HomeostaticInference`, `HomeostaticFactory` |
+| Hierarchical models | [[knowledge_base/cognitive/hierarchical_models]] | not built; `policy_type="hierarchical"` raises `ValueError` |
+| Multi-agent and swarm systems | [[knowledge_base/cognitive/multi_agent_active_inference]], [[knowledge_base/cognitive/swarm_intelligence]] | not built; `code/Things/Ant_Colony/` and `code/Things/KG_Multi_Agent/` contain documentation only |
+
+## How results are produced
+
+- Unit and property checks: `python -m pytest -q` (the suite is in `code/tests/`;
+  `test_math_oracles.py` compares the package against independent calculations).
+- Runtime numbers: `cognitive-benchmark` writes machine-readable timings.
+- Manuscript numbers: `cognitive-build-manuscript` injects values from the build
+  into the text; see [[docs/manuscript/06_reproducibility|the reproducibility chapter]].
+
+There is no research-specific API; see [[docs/api/research_api|Research API]].
+
+## Related documentation
+
+- [[docs/implementation/implementation_guides|Implementation guides]]
+- [[docs/api/api_documentation|API documentation]]
+- [[docs/examples/usage_examples|Usage examples]]
+- [[docs/guides/research_guides|Research guides]]

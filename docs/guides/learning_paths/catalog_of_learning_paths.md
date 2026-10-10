@@ -1,33 +1,16 @@
 ---
-
-title: Catalog of Learning Paths
-
+title: Catalog of learning paths
 type: catalog
-
 status: stable
-
 created: 2024-03-15
-
-modified: 2024-03-15
-modified: 2025-08-08
-
-version: 2.0.0
-
-processing_priority: 1
-
-authors:
-
-  - name: Cognitive Systems Team
-
-    role: Research & Development
-
+updated: 2026-10-10
 ---
 
 # Catalog of Learning Paths
 
-## Educational Framework Overview
+## Overview
 
-This catalog presents our comprehensive collection of Active Inference learning paths, each designed as an **educational curriculum** that prioritizes learning outcomes over technical implementation. Every path follows our educational framework ensuring optimal learning experiences.
+This catalog presents the collection of Active Inference learning paths, each designed as an **educational curriculum** that prioritizes learning outcomes over technical implementation.
 
 ## Core Learning Paths
 
@@ -179,7 +162,7 @@ This catalog presents our comprehensive collection of Active Inference learning 
 
 #### [[active_inference_agi_learning_path|AGI and Superintelligence Path]]
 
-- **Educational Focus**: Safe and robust artificial general intelligence
+- **Educational Focus**: Safe artificial general intelligence
 
 - **Target Audience**: AI safety researchers and AGI developers
 
@@ -219,7 +202,7 @@ This catalog presents our comprehensive collection of Active Inference learning 
 
 #### [[active_inference_security_learning_path|Security and Robustness Path]]
 
-- **Educational Focus**: Secure and robust Active Inference systems
+- **Educational Focus**: Secure Active Inference systems
 
 - **Target Audience**: Security researchers and system architects
 
@@ -231,7 +214,7 @@ This catalog presents our comprehensive collection of Active Inference learning 
 
   - Identify security vulnerabilities in AI systems
 
-  - Design robust defense mechanisms
+  - Design defense mechanisms
 
   - Implement secure Active Inference architectures
 
@@ -469,7 +452,7 @@ This catalog presents our comprehensive collection of Active Inference learning 
 
 - Playful disambiguation, shared context, and communication in learning
 
-## Complete Alphabetical Index (requested set)
+## Complete Alphabetical Index
 
 - [[active_inference_agi_learning_path]]
 - [[active_inference_bio_inspired_cognitive_systems_path]]
@@ -590,186 +573,6 @@ graph TB
 
 - **Educational Technology**: Merge educational, computational, and cognitive paths
 
-### Assessment and Certification Framework
-
-#### Competency Levels
-
-```yaml
-
-competency_framework:
-
-  foundation_level:
-
-    requirements:
-
-      - conceptual_understanding: 80%
-
-      - basic_application: 75%
-
-      - knowledge_connections: 70%
-
-    certification: "Active Inference Foundation Certificate"
-
-  practitioner_level:
-
-    requirements:
-
-      - advanced_application: 85%
-
-      - domain_integration: 80%
-
-      - project_completion: 90%
-
-    certification: "Active Inference Practitioner Certificate"
-
-  expert_level:
-
-    requirements:
-
-      - research_contribution: 90%
-
-      - teaching_capability: 85%
-
-      - innovation_demonstration: 90%
-
-    certification: "Active Inference Expert Certificate"
-
-  specialist_level:
-
-    requirements:
-
-      - domain_mastery: 95%
-
-      - cross_domain_synthesis: 90%
-
-      - community_leadership: 85%
-
-    certification: "Active Inference Specialist Certificate"
-
-```
-
-#### Portfolio Assessment
-
-Each learner develops a comprehensive portfolio demonstrating:
-
-- **Conceptual Understanding**: Essays, concept maps, peer explanations
-
-- **Practical Application**: Case studies, problem solutions, project work
-
-- **Integration Skills**: Cross-domain connections, synthesis projects
-
-- **Communication**: Presentations, teaching demonstrations, publications
-
-### Learning Support Resources
-
-#### Academic Resources
-
-- **Curated Reading Lists**: Essential papers and books for each path
-
-- **Video Lectures**: Conceptual explanations and expert interviews
-
-- **Interactive Simulations**: Hands-on exploration of key concepts
-
-- **Discussion Forums**: Peer learning and expert guidance
-
-#### Practical Resources
-
-- **Case Study Library**: Real-world applications across domains
-
-- **Project Templates**: Structured approaches to learning projects
-
-- **Assessment Rubrics**: Clear criteria for evaluating learning outcomes
-
-- **Mentor Network**: Connections with practitioners and researchers
-
-#### Technical Resources
-
-- **Tool Introductions**: Educational tutorials for relevant software
-
-- **Code Repositories**: Minimal, well-documented examples
-
-- **Data Sets**: Practice data for learning applications
-
-- **Simulation Environments**: Standardized platforms for exploration
-
-### Quality Assurance and Continuous Improvement
-
-#### Educational Effectiveness Monitoring
-
-```yaml
-
-monitoring_framework:
-
-  learner_outcomes:
-
-    - completion_rates_by_path
-
-    - concept_mastery_assessments
-
-    - skill_demonstration_quality
-
-    - knowledge_retention_tracking
-
-  engagement_metrics:
-
-    - time_spent_learning
-
-    - discussion_participation
-
-    - project_submission_quality
-
-    - peer_interaction_frequency
-
-  career_impact:
-
-    - professional_advancement
-
-    - research_contributions
-
-    - community_involvement
-
-    - real_world_applications
-
-```
-
-#### Feedback Integration Process
-
-1. **Continuous Collection**: Regular learner surveys and analytics
-
-1. **Expert Review**: Academic and industry expert evaluation
-
-1. **Peer Assessment**: Learner-to-learner feedback systems
-
-1. **Iterative Improvement**: Regular content updates and enhancements
-
-### Getting Started Guide
-
-#### For Learners
-
-1. **Assessment**: Complete background and interest assessment
-
-1. **Path Selection**: Choose primary path based on goals and background
-
-1. **Learning Plan**: Develop personalized timeline and milestones
-
-1. **Community Connection**: Join relevant discussion groups and find mentors
-
-1. **Portfolio Development**: Begin documenting learning journey
-
-#### For Educators
-
-1. **Path Familiarization**: Review educational framework and content
-
-1. **Adaptation Planning**: Customize content for specific contexts
-
-1. **Assessment Design**: Develop appropriate evaluation methods
-
-1. **Community Building**: Foster collaborative learning environments
-
-1. **Outcome Tracking**: Monitor and support learner progress
-
-This catalog ensures all learning paths function as comprehensive educational experiences that prioritize understanding, application, and skill development over technical implementation details.
-
 ## Centralized External Web Resources Hub
 
 Use these authoritative gateways across paths:
@@ -812,11 +615,13 @@ Use these authoritative gateways across paths:
 
   - Simulation/ML: Gymnasium, PettingZoo, SimPy, PyTorch, JAX, NumPyro
 
-### Repo-integrated quick runners
+### Repository quick runners
 
 ```bash
-python3 /home/trim/Documents/GitHub/cognitive/Things/Generic_POMDP/generic_pomdp.py
-python3 /home/trim/Documents/GitHub/cognitive/Things/BioFirm/active_inference/dispatcher.py
-python3 /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/ant_colony/main.py --config /home/trim/Documents/GitHub/cognitive/Things/Ant_Colony/config/colony_config.yaml
-python3 -m pytest /home/trim/Documents/GitHub/cognitive/tests/visualization/test_continuous_generic.py -q
+python -m pip install -e ".[dev]"
+python -m pytest code/tests/visualization/test_continuous_generic.py -q
+cognitive-benchmark --repetitions 1
+cognitive-build-manuscript --no-pdf --output build/manuscript
 ```
+
+The `Generic_POMDP`, `BioFirm`, and `Ant_Colony` folders contain documentation only; the executed examples are listed in [[docs/examples/index|Examples index]].

@@ -1,422 +1,93 @@
-# Documentation Linking Analysis
-
 ---
-
-title: Documentation Linking Analysis
-
+title: Linking analysis
 type: guide
-
 status: stable
-
 created: 2024-02-06
-
+updated: 2026-10-10
 tags:
-
   - linking
-
-  - validation
-
   - analysis
-
   - documentation
-
 semantic_relations:
-
   - type: implements
-
-    links: [[obsidian_linking]]
-
+    links:
+      - "[[docs/repo_docs/obsidian_linking|Obsidian linking]]"
   - type: extends
-
-    links: [[ai_validation_framework]]
-
+    links:
+      - "[[docs/repo_docs/ai_validation_framework|Validation framework]]"
 ---
 
-## Overview
+# Linking analysis
 
-This guide analyzes the current linking patterns and provides validation frameworks for maintaining high-quality documentation relationships.
+How to measure the state of the vault's links with what the repository already
+provides. There are no stored link-quality scores or threshold files; every
+number comes from running a script, so it is current by construction.
 
-## Link Pattern Analysis
+## Link health
 
-### Core Link Types
-
-```yaml
-
-link_types:
-
-  hierarchical:
-
-    - parent_child:     # Concept hierarchies
-
-        pattern: "[[parent]] -> [[child]]"
-
-        validation: "bidirectional"
-
-    - implementation:   # Concept to implementation
-
-        pattern: "[[concept]] -> [[implementation]]"
-
-        validation: "traceable"
-
-    - documentation:    # Documentation relationships
-
-        pattern: "[[guide]] -> [[reference]]"
-
-        validation: "consistent"
-
-  semantic:
-
-    - prerequisite:     # Required knowledge
-
-        pattern: "[[prereq]] -> [[concept]]"
-
-        confidence: 0.8
-
-    - related:         # Related concepts
-
-        pattern: "[[concept_a]] <-> [[concept_b]]"
-
-        similarity: 0.7
-
-    - extends:         # Extension relationships
-
-        pattern: "[[base]] -> [[extension]]"
-
-        validation: "complete"
-
-```
-
-### Link Categories
-
-#### Knowledge Organization
+`verify_links.py --json` is the source of link counts. This script reports the
+share of links that resolve to a page versus those that are bare concept names:
 
 ```python
+import json
+import subprocess
+import sys
 
-# @knowledge_links
-
-knowledge_structure = {
-
-    "concepts": {
-
-        "required": ["parent", "children", "implementations"],
-
-        "optional": ["related", "examples", "references"]
-
-    },
-
-    "implementations": {
-
-        "required": ["concept", "tests", "documentation"],
-
-        "optional": ["examples", "extensions", "optimizations"]
-
-    },
-
-    "documentation": {
-
-        "required": ["overview", "details", "references"],
-
-        "optional": ["examples", "tutorials", "guides"]
-
-    }
-
-}
-
+result = subprocess.run(
+    [sys.executable, "code/scripts/verify_links.py", ".", "--json"],
+    capture_output=True,
+    text=True,
+)
+report = json.loads(result.stdout)
+concept_share = report["skipped_concept_links"] / report["checked_links"]
+print(f"{report['checked_links']} links, {concept_share:.0%} are concept links")
+print(f"{len(report['broken_links'])} broken, {len(report['anchor_warnings'])} anchor warnings")
 ```
 
-#### Research Integration
+Run it from the repository root. At the time of writing, about a third of the
+vault's wiki links are concept links and none are broken. The concept share is
+the number to watch: it is the part of the graph the gate does not protect. To
+list the unresolved bare names, run `verify_links.py . --strict-wiki-links
+--json` and read `broken_links`.
+
+## Relation types
+
+The typed relations in frontmatter can be tallied directly from the YAML:
 
 ```python
+import re
+from collections import Counter
+from pathlib import Path
 
-# @research_links
+import yaml
 
-research_structure = {
-
-    "papers": {
-
-        "required": ["methodology", "results", "references"],
-
-        "optional": ["data", "code", "supplements"]
-
-    },
-
-    "experiments": {
-
-        "required": ["protocol", "data", "analysis"],
-
-        "optional": ["code", "results", "visualizations"]
-
-    },
-
-    "results": {
-
-        "required": ["data", "analysis", "conclusions"],
-
-        "optional": ["visualizations", "interpretations", "implications"]
-
-    }
-
-}
-
+types = Counter()
+for path in Path("knowledge_base").rglob("*.md"):
+    match = re.match(r"---\n(.*?)\n---\n", path.read_text(encoding="utf-8"), re.S)
+    front = (yaml.safe_load(match.group(1)) if match else None) or {}
+    for relation in front.get("semantic_relations") or []:
+        if isinstance(relation, dict):
+            types[relation.get("type")] += 1
+print(types.most_common(5))
 ```
 
-## Validation Framework
-
-### Link Validation Rules
-
-```python
-
-# @link_validation
-
-def validate_links(document):
-
-    """
-
-    Validate document links
-
-    Validation steps:
-
-    1. Check required links
-
-    2. Verify bidirectional links
-
-    3. Validate link types
-
-    4. Check link consistency
-
-    """
-
-    required = check_required_links(document)
-
-    bidirectional = verify_bidirectional(document)
-
-    types = validate_link_types(document)
-
-    consistency = check_consistency(document)
-
-    return {
-
-        "required_complete": required,
-
-        "bidirectional_valid": bidirectional,
-
-        "types_valid": types,
-
-        "consistency_score": consistency
-
-    }
-
-```
-
-### Repository Link Analysis Commands
-
-Run these from the repository root to generate a complete link graph and suggested remediations:
-
-```bash
-
-# Build inventory (files.json/csv/txt) and wikilink graph
-
-python3 docs/repo_docs/repo_scripts/list_file_directory.py --root . --output docs/repo_docs/repo_scripts/output
-
-# Analyze and fix broken/ambiguous/missing backlinks
-
-python3 docs/repo_docs/repo_scripts/fix_links.py --root . --output docs/repo_docs/repo_scripts/output
-
-```
-
-### Quality Metrics
-
-```python
-
-# @quality_metrics
-
-link_quality = {
-
-    "completeness": {
-
-        "required_links": 0.95,    # Required link coverage
-
-        "optional_links": 0.75,    # Optional link coverage
-
-        "bidirectional": 0.90      # Bidirectional link completion
-
-    },
-
-    "consistency": {
-
-        "naming": 0.95,           # Consistent naming
-
-        "structure": 0.90,        # Structural consistency
-
-        "hierarchy": 0.85         # Hierarchical consistency
-
-    },
-
-    "validity": {
-
-        "broken_links": 0.0,      # No broken links
-
-        "circular_refs": 0.0,     # No circular references
-
-        "orphaned_docs": 0.0      # No orphaned documents
-
-    }
-
-}
-
-```
-
-## Link Patterns
-
-### Documentation Flow
-
-```mermaid
-
-graph TD
-
-    A[Concepts] --> B[Implementations]
-
-    B --> C[Documentation]
-
-    C --> D[Examples]
-
-    D --> E[Tests]
-
-    F[Research] --> G[Papers]
-
-    G --> H[Results]
-
-    H --> I[Knowledge Base]
-
-```
-
-### Knowledge Graph
-
-```mermaid
-
-graph LR
-
-    A[Core Concepts] --> B[Extensions]
-
-    B --> C[Implementations]
-
-    C --> D[Applications]
-
-    E[Research] --> F[Experiments]
-
-    F --> G[Results]
-
-    G --> H[Integration]
-
-```
-
-## Improvement Framework
-
-### Link Enhancement
-
-```python
-
-# @link_enhancement
-
-def enhance_links(document):
-
-    """
-
-    Enhance document links
-
-    Enhancement steps:
-
-    1. Add missing required links
-
-    2. Complete bidirectional links
-
-    3. Add semantic annotations
-
-    4. Update link metadata
-
-    """
-
-    pass
-
-```
-
-### Quality Monitoring
-
-```python
-
-# @quality_monitoring
-
-def monitor_quality():
-
-    """
-
-    Monitor link quality
-
-    Monitoring steps:
-
-    1. Track quality metrics
-
-    2. Identify issues
-
-    3. Generate reports
-
-    4. Suggest improvements
-
-    """
-
-    pass
-
-```
-
-## Best Practices
-
-### 1. Link Organization
-
-- Group related links logically
-
-- Maintain consistent structure
-
-- Use appropriate annotations
-
-- Include validation blocks
-
-### 2. Link Maintenance
-
-- Regular link validation
-
-- Update bidirectional links
-
-- Remove obsolete links
-
-- Add new relationships
-
-### 3. Link Quality
-
-- Clear relationship types
-
-- Appropriate context
-
-- Meaningful descriptions
-
-- Proper categorization
-
-## Related Documentation
-
-- [[obsidian_linking]]
-
-- [[ai_validation_framework]]
-
-- [[documentation_standards]]
-
-- [[knowledge_organization]]
-
-## References
-
-- [[linking_patterns]]
-
-- [[validation_methods]]
-
-- [[quality_assurance]]
-
-- [[documentation_tools]]
-
+The most common types are `relates`, `implements`, `foundation`, `related`, and
+`extends`. `relates` and `related` overlap, as do `foundation` and
+`foundation_for`; consolidating them would change many files and is not done
+by any script.
+
+## What the graph does not tell you
+
+- **Orphans.** Obsidian's graph view (`showOrphans` is on in
+  `.obsidian/graph.json`) shows pages with no links. No script reports them; the
+  generated `catalog.md` files are what guarantee every knowledge-base page is
+  listed somewhere.
+- **Link meaning.** A resolved link says the target exists, not that it is the
+  right page. Reading is the only check.
+- **External URLs.** They are not fetched by any checker.
+
+## Related documentation
+
+- [[docs/repo_docs/linking_validation|Link validation]]
+- [[docs/repo_docs/linking_completeness|Linking completeness]]
+- [[docs/repo_docs/ai_semantic_processing|Semantic structure]]

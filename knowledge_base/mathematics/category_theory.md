@@ -1,5 +1,6 @@
 ---
 title: Category Theory
+description: "Mathematical background on category theory, covering categories, functors, natural transformations, adjoints, limits and colimits, and applications, with computational examples."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

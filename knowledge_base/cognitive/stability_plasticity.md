@@ -280,7 +280,7 @@ class DualMemoryArchitecture:
 
   - [[neuromodulation|Neuromodulation]]
 
-### 3. [[learning_strategies|Learning Strategies]]
+### 3. Learning Strategies
 
 - **Pattern Separation**:
 
@@ -336,7 +336,7 @@ class DualMemoryArchitecture:
 
   - [[cognitive/working_memory|Working Memory]]
 
-### 3. [[practical_applications|Practical Applications]]
+### 3. Practical Applications
 
 - **Machine Learning**:
 

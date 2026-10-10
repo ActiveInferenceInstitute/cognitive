@@ -102,7 +102,7 @@ ylabel: "Probability"
 
 ## Update Rules
 
-- [[empirical_prior]] - Learning from data
+- [[empirical_prior]] - Prior estimated from observed data
 
 - [[hierarchical_prior]] - Multi-level priors
 
@@ -182,11 +182,11 @@ class PriorBeliefs:
 
 ### Belief Initialization
 
-- [[cold_start]] - Initial beliefs
+- [[cold_start]] - Starting inference with no prior experience
 
-- [[belief_reset]] - Recovery states
+- [[belief_reset]] - Restoring prior beliefs after a surprising event
 
-- [[default_behavior]] - Default policies
+- [[default_behavior]] - Fallback behavior under uninformative priors
 
 ### Information Processing
 
@@ -198,13 +198,13 @@ class PriorBeliefs:
 
 ## Related Components
 
-- [[s_space]] - State space
+- [[s_space]] - Set of hidden states the prior covers
 
 - [[belief_state]] - Current beliefs
 
 - [[information_gain]] - Epistemic value
 
-- [[prior_knowledge]] - Knowledge encoding
+- [[prior_knowledge]] - Background knowledge expressed as a prior
 
 ## References
 

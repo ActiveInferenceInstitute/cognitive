@@ -1,291 +1,65 @@
 ---
-
-title: Machine Learning Guide
-
+title: Machine learning and learning in this package
 type: guide
-
-status: draft
-
+status: stable
 created: 2024-02-12
-
+updated: 2026-10-10
 tags:
-
   - machine-learning
-
-  - ai
-
+  - learning
   - guide
-
 semantic_relations:
   - type: implements
     links:
-      - "[[ai_validation_framework]]"
+      - "[[docs/repo_docs/ai_validation_framework|Validation framework]]"
   - type: relates
     links:
-      - "[[active_inference]]"
-      - "[[predictive_processing]]"
+      - "[[knowledge_base/cognitive/active_inference|Active Inference]]"
+      - "[[knowledge_base/cognitive/predictive_processing|Predictive processing]]"
 ---
 
-# Machine Learning Guide
-
-## Overview
-
-This guide covers machine learning concepts, implementations, and best practices in the cognitive modeling framework.
-
-## Core Concepts
-
-### Learning Paradigms
-
-1. Active Inference
-
-   - Free energy minimization
-
-   - Belief updating
-
-   - Action selection
-
-   - See [[knowledge_base/cognitive/active_inference]]
-
-1. Predictive Processing
-
-   - Prediction error minimization
-
-   - Hierarchical inference
-
-   - Precision weighting
-
-   - See [[knowledge_base/cognitive/predictive_processing]]
-
-1. Variational Methods
-
-   - Variational inference
-
-   - Variational Bayes
-
-   - Mean field approximation
-
-   - See [[knowledge_base/mathematics/variational_inference]]
-
-## Implementation
-
-### Model Architecture
-
-#### Base Components
-
-
-#### Learning Components
-
-
-### Training Process
-
-1. Data Preparation
-
-   ```python
-
-   def prepare_data(self, observations):
-
-       """Prepare data for learning."""
-
-       return self.preprocessor.transform(observations)
-
-   ```
-
-1. Model Training
-
-   ```python
-
-   def train_model(self, data, epochs=100):
-
-       """Train the cognitive model."""
-
-       for epoch in range(epochs):
-
-           self.update_beliefs(data)
-
-           self.optimize_policy()
-
-           self.evaluate_performance()
-
-   ```
-
-1. Evaluation
-
-   ```python
-
-   def evaluate_model(self, test_data):
-
-       """Evaluate model performance."""
-
-       predictions = self.model.predict(test_data)
-
-       metrics = self.compute_metrics(predictions)
-
-       return metrics
-
-   ```
-
-## Best Practices
-
-### Model Design
-
-1. Use hierarchical architectures
-
-1. Implement belief updating
-
-1. Enable active inference
-
-1. Support online learning
-
-### Training Process
-
-1. Validate assumptions
-
-1. Monitor convergence
-
-1. Track metrics
-
-1. Save checkpoints
-
-### Evaluation Methods
-
-1. Use multiple metrics
-
-1. Test edge cases
-
-1. Validate stability
-
-1. Compare baselines
-
-## Advanced Topics
-
-### Transfer Learning
-
-- Pre-trained models
-
-- Domain adaptation
-
-- Knowledge transfer
-
-- See knowledge_base/cognitive/transfer_learning
-
-### Meta-Learning
-
-- Learning to learn
-
-- Adaptation strategies
-
-- Parameter optimization
-
-- See [[knowledge_base/cognitive/meta_learning]]
-
-### Continual Learning
-
-- Catastrophic forgetting
-
-- Memory consolidation
-
-- Stability-plasticity
-
-- See knowledge_base/cognitive/continual_learning
-
-## Integration
-
-### With Active Inference
-
-
-### With Predictive Processing
-
-
-## Validation
-
-### Model Validation
-
-1. Test prediction accuracy
-
-1. Validate belief updates
-
-1. Check action selection
-
-1. Verify learning stability
-
-### Performance Metrics
-
-1. Prediction error
-
-1. Free energy
-
-1. Action efficiency
-
-1. Learning rate
-
-## Examples
-
-### Basic Learning
-
-```python
-
-# Initialize model
-
-model = CognitiveModel()
-
-# Train model
-
-data = load_training_data()
-
-model.train(data)
-
-# Evaluate
-
-results = model.evaluate(test_data)
-
-```
-
-### Advanced Learning
-
-```python
-
-# Initialize with transfer learning
-
-model = CognitiveModel(pretrained=True)
-
-# Configure meta-learning
-
-model.enable_meta_learning()
-
-# Train with continual learning
-
-model.train_continual(data_stream)
-
-```
-
-## Troubleshooting
-
-### Common Issues
-
-1. Convergence problems
-
-1. Memory limitations
-
-1. Performance bottlenecks
-
-1. Integration errors
-
-### Solutions
-
-1. Adjust learning rates
-
-1. Optimize memory usage
-
-1. Profile performance
-
-1. Debug integration
-
-## Related Documentation
-
-- [[knowledge_base/cognitive/active_inference]]
-
-- [[knowledge_base/cognitive/predictive_processing]]
-
-- [[knowledge_base/mathematics/variational_inference]]
-
-- [[docs/repo_docs/ai_validation_framework]]
+# Machine learning and learning in this package
+
+The package is not a machine-learning library. It has no training loops,
+datasets, optimizers, or dependency on PyTorch, TensorFlow, JAX, or scikit-learn;
+its runtime dependencies are `click`, `jinja2`, `matplotlib`, `networkx`,
+`numpy`, `Pillow`, `plotly`, `PyYAML`, and `seaborn`. "Learning" here means the
+following, all in NumPy.
+
+## What learns
+
+| Mechanism | Where | What changes |
+|---|---|---|
+| Belief updating | `ActiveInferenceDispatcher.dispatch_belief_update` | State beliefs move toward the posterior; `InferenceConfig.learning_rate` in (0, 1] sets the step size |
+| Precision updating | `ActiveInferenceModel.update_precision(beta)`, `ActiveInferenceDispatcher.update_precision` | Precision tracks the inverse of recent prediction error |
+| Continuous precision learning | `ContinuousActiveInference(precision_learning_rate=...)` | Observation precision adapts when the rate is positive (default `0.0`, so off) |
+| Adaptive exploration | `HomeostaticInference.update_parameters({"stability_index": ...})` | For an adaptive controller, `exploration_weight` is set from the stability index and clipped to 0.1 to 0.5 |
+
+The generative model matrices (`A`, `B`, `C`, `D`, `E`) are fixed once a
+`DiscreteGenerativeModel` is built; the package does not learn them from data.
+`InferenceConfig` takes a `learning_rate`, a `temperature`, and a
+`num_samples` for the sampling method, none of which trains parameters.
+
+## If you want to learn parameters
+
+Fit the arrays outside the package (for example by counting transitions in your
+own data), then pass them to `DiscreteGenerativeModel`, which validates shapes
+and normalization. Keep that fitting code in your own project or add it here
+with tests in `code/tests/` and an entry in `CHANGELOG.md`.
+
+## Background reading in the knowledge base
+
+- [[knowledge_base/cognitive/active_inference|Active Inference]] and
+  [[knowledge_base/cognitive/predictive_processing|Predictive processing]]
+- [[knowledge_base/cognitive/reinforcement_learning|Reinforcement learning]],
+  [[knowledge_base/cognitive/deep_learning|Deep learning]], and
+  [[knowledge_base/cognitive/policy_learning|Policy learning]]
+- [[knowledge_base/mathematics/parameter_learning|Parameter learning]]
+
+These pages are conceptual. They describe the ideas, not code in the package.
+
+## Related documentation
+
+- [[docs/api/api_reference|API reference]]
+- [[docs/repo_docs/model_implementation|Model implementation]]
+- [[docs/repo_docs/validation|Validation]]

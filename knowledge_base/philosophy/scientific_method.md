@@ -8,6 +8,8 @@ tags:
   - philosophy_of_science
   - methodology
   - inference
+aliases:
+  - philosophy_of_science
 semantic_relations:
   - type: relates
     links:

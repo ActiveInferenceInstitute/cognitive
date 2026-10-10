@@ -2,6 +2,7 @@
 title: Build system
 type: tool
 status: stable
+updated: 2026-10-10
 created: 2026-08-02
 tags:
   - build
@@ -21,9 +22,12 @@ The repository's build tooling:
   (backed by `code/scripts/build_manuscript.py`) renders the executable
   manuscript: deterministic figures, auto-numbered equations and tables,
   Pandoc citations, HTML, and optionally a XeLaTeX PDF. Build output is
-  ignored by Git; use `--no-pdf` without a LaTeX installation.
+  ignored by Git; use `--no-pdf` without a LaTeX installation and
+  `--no-render` to skip Pandoc as well. Options: `--config`, `--output`,
+  `--no-pdf`, `--no-render`.
 - **Package build** — `pyproject.toml` declares the setuptools configuration
   and the installed CLI entry points. Install with
   `python -m pip install -e ".[dev]"`.
 
-See `docs/manuscript/README.md` for the full build contract.
+There is no Makefile or other build runner. See `docs/manuscript/README.md`
+for the full build contract.

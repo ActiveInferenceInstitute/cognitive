@@ -8,6 +8,9 @@ tags:
   - language
   - audition
   - perception
+aliases:
+  - speech_recognition
+  - phoneme_recognition
 semantic_relations:
   - type: relates
     links:

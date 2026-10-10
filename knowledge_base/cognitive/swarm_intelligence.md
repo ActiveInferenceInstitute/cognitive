@@ -34,459 +34,459 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
 ### Emergence Properties
 
-- [[emergent_behavior]] - Group show
+- [[emergent_behavior]] - Group-level patterns arising from simple interactions
 
-  - [[collective_properties]] - Group traits
+  - [[collective_properties]] - Characteristics of the group as a whole
 
-    - [[global_patterns]] - Big shapes
+    - [[global_patterns]] - Large-scale organization across the group
 
-      - [[spatial_patterns]] - Space forms
+      - [[spatial_patterns]] - Organization across space
 
-      - [[temporal_patterns]] - Time forms
+      - temporal patterns - Organization across time
 
-    - [[system_properties]] - Group facts
+    - [[system_properties]] - Properties of the whole system
 
-      - [[robustness]] - Stay strong
+      - [[robustness]] - Ability to keep functioning despite disruptions
 
-      - [[flexibility]] - Change good
+      - [[flexibility]] - Ability to adapt to changing conditions
 
-  - [[scaling_relations]] - Size laws
+  - [[scaling_relations]] - How behavior changes with group size
 
-    - [[size_effects]] - How big
+    - [[size_effects]] - Influence of group size on behavior
 
-      - [[critical_mass]] - Need size
+      - [[critical_mass]] - Minimum group size for a behavior to appear
 
-      - [[saturation_effects]] - Too big
+      - [[saturation_effects]] - Diminishing returns at large group size
 
-    - [[efficiency_scaling]] - Work size
+    - [[efficiency_scaling]] - How efficiency changes with group size
 
-      - [[communication_costs]] - Talk cost
+      - [[communication_costs]] - Costs of exchanging information
 
-      - [[coordination_costs]] - Team cost
+      - [[coordination_costs]] - Costs of aligning group actions
 
 ### Local Interactions
 
-- [[agent_interactions]] - Part talk
+- [[agent_interactions]] - Exchanges between individual agents
 
-  - [[direct_interactions]] - Touch talk
+  - [[direct_interactions]] - Agent-to-agent contact or signaling
 
-    - [[physical_contact]] - Body touch
+    - [[physical_contact]] - Bodily contact between agents
 
-      - [[collision_avoidance]] - Miss hit
+      - [[collision_avoidance]] - Steering to avoid hitting neighbors
 
-      - [[alignment_forces]] - Line up
+      - [[alignment_forces]] - Tendency to match neighbors' heading
 
-    - [[signal_exchange]] - Sign swap
+    - [[signal_exchange]] - Passing signals between agents
 
-      - [[local_communication]] - Near talk
+      - [[local_communication]] - Communication limited to nearby agents
 
-      - [[information_transfer]] - Know give
+      - [[information_transfer]] - Passing information between agents
 
-  - [[indirect_interactions]] - Mark talk
+  - [[indirect_interactions]] - Interaction mediated by the environment
 
-    - [[stigmergy]] - Mark leave
+    - [[stigmergy]] - Coordination through marks left in the environment
 
-      - [[environment_modification]] - Change place
+      - [[environment_modification]] - Altering surroundings to influence others
 
-      - [[trace_following]] - Mark follow
+      - [[trace_following]] - Following marks left by others
 
-    - [[field_effects]] - Space change
+    - [[field_effects]] - Influence of spatial gradients on behavior
 
-      - [[attraction_fields]] - Pull force
+      - [[attraction_fields]] - Spatial fields drawing agents together
 
-      - [[repulsion_fields]] - Push force
+      - [[repulsion_fields]] - Spatial fields pushing agents apart
 
 ### Self-Organization
 
-- [[organization_mechanisms]] - Make order
+- [[organization_mechanisms]] - Processes producing order without central control
 
-  - [[feedback_loops]] - Loop effect
+  - [[feedback_loops]] - Cycles where outputs influence later inputs
 
-    - [[positive_feedback]] - More more
+    - [[positive_feedback]] - Feedback that amplifies change
 
-      - [[recruitment]] - Join call
+      - [[recruitment]] - Drawing more agents into an activity
 
-      - [[amplification]] - Make strong
+      - amplification - Growth of a signal or behavior
 
-    - [[negative_feedback]] - Less less
+    - [[negative_feedback]] - Feedback that counteracts change
 
-      - [[inhibition]] - Stop some
+      - [[inhibition]] - Signals that suppress further activity
 
-      - [[saturation]] - Full stop
+      - [[saturation]] - Capacity limit that dampens further response
 
-  - [[threshold_responses]] - Jump change
+  - [[threshold_responses]] - Behavior triggered at a critical stimulus level
 
-    - [[response_thresholds]] - Need level
+    - [[response_thresholds]] - Stimulus level needed to trigger a response
 
-      - [[activation_threshold]] - Start point
+      - [[activation_threshold]] - Level at which a behavior begins
 
-      - [[inhibition_threshold]] - Stop point
+      - [[inhibition_threshold]] - Level at which a behavior stops
 
-    - [[phase_transitions]] - State jump
+    - [[phase_transitions]] - Abrupt shifts between collective states
 
-      - [[critical_points]] - Change point
+      - [[critical_points]] - Parameter values where behavior shifts abruptly
 
-      - [[hysteresis]] - History effect
+      - [[hysteresis]] - Dependence of system state on its past history
 
 ## Natural Systems
 
 ### Insect Colonies
 
-- [[social_insects]] - Bug teams
+- [[social_insects]] - Insects living in cooperative colonies
 
-  - [[ant_colonies]] - Ant groups
+  - [[ant_colonies]] - Colonies of cooperating ants
 
-    - [[foraging_systems]] - Food find
+    - [[foraging_systems]] - Collective food searching and retrieval
 
-      - [[trail_formation]] - Path make
+      - [[trail_formation]] - Building pheromone trails to resources
 
-      - [[resource_allocation]] - Food split
+      - [[resource_allocation]] - Distributing workers among food sources
 
-    - [[nest_organization]] - Home make
+    - [[nest_organization]] - Structure and layout of the nest
 
-      - [[building_behavior]] - Make home
+      - [[building_behavior]] - Constructing the nest
 
-      - [[maintenance_tasks]] - Keep fix
+      - [[maintenance_tasks]] - Upkeep and repair of the nest
 
-  - [[bee_colonies]] - Bee groups
+  - [[bee_colonies]] - Colonies of cooperating bees
 
-    - [[hive_decisions]] - Home choose
+    - [[hive_decisions]] - Collective decisions such as choosing a new nest site
 
-      - [[scout_system]] - Look find
+      - [[scout_system]] - Scouts exploring and reporting options
 
-      - [[dance_language]] - Dance tell
+      - [[dance_language]] - Waggle dances communicating food locations
 
-    - [[foraging_organization]] - Food plan
+    - [[foraging_organization]] - Allocation of foragers to food sources
 
-      - [[nectar_collection]] - Sweet get
+      - [[nectar_collection]] - Gathering nectar from flowers
 
-      - [[pollen_gathering]] - Dust get
+      - [[pollen_gathering]] - Collecting pollen for the colony
 
 ### Animal Groups
 
-- [[animal_collectives]] - Beast groups
+- [[animal_collectives]] - Groups of animals moving or acting together
 
-  - [[fish_schools]] - Fish groups
+  - [[fish_schools]] - Coordinated groups of swimming fish
 
-    - [[movement_patterns]] - Swim ways
+    - movement patterns - Collective swimming patterns
 
-      - [[alignment_behavior]] - Line swim
+      - [[alignment_behavior]] - Matching swimming direction with neighbors
 
-      - [[cohesion_forces]] - Stay close
+      - [[cohesion_forces]] - Attraction keeping the group together
 
-    - [[predator_response]] - Safe acts
+    - [[predator_response]] - Collective responses to predator attack
 
-      - [[confusion_effect]] - Mix up
+      - [[confusion_effect]] - Predator difficulty targeting individuals in a group
 
-      - [[flash_expansion]] - Quick spread
+      - [[flash_expansion]] - Rapid outward burst of a group under attack
 
-  - [[bird_flocks]] - Bird groups
+  - [[bird_flocks]] - Coordinated groups of flying birds
 
-    - [[flight_formations]] - Fly shapes
+    - [[flight_formations]] - Characteristic shapes of flying groups
 
-      - [[v_formation]] - Vee shape
+      - [[v_formation]] - V-shaped flight arrangement
 
-      - [[cluster_formation]] - Ball shape
+      - [[cluster_formation]] - Dense compact grouping
 
-    - [[collective_motion]] - Move ways
+    - [[collective_motion]] - Coordinated movement of many individuals
 
-      - [[synchronization]] - Same time
+      - [[synchronization]] - Alignment of timing across individuals
 
-      - [[leadership]] - Lead follow
+      - leadership - Influence of some individuals on group direction
 
 ### Cellular Systems
 
-- [[cell_collectives]] - Cell groups
+- [[cell_collectives]] - Groups of cells acting together
 
-  - [[bacterial_colonies]] - Bug small
+  - [[bacterial_colonies]] - Communities of bacteria
 
-    - [[growth_patterns]] - Grow shapes
+    - growth patterns - Spatial shapes taken by colony growth
 
-      - [[branching_patterns]] - Tree shape
+      - [[branching_patterns]] - Tree-like colony growth
 
-      - [[circular_patterns]] - Round shape
+      - [[circular_patterns]] - Ring or disc-shaped colony growth
 
-    - [[chemical_coordination]] - Talk smell
+    - [[chemical_coordination]] - Coordination through chemical signals
 
-      - [[quorum_sensing]] - Group feel
+      - [[quorum_sensing]] - Detecting population density through chemical signals
 
-      - [[biofilm_formation]] - Stick make
+      - [[biofilm_formation]] - Building surface-attached microbial communities
 
-  - [[tissue_organization]] - Body parts
+  - [[tissue_organization]] - Arrangement of cells into tissue
 
-    - [[morphogenesis]] - Shape make
+    - [[morphogenesis]] - Development of biological form
 
-      - [[pattern_formation]] - Form make
+      - [[pattern_formation]] - Emergence of spatial structure from local interactions
 
-      - [[tissue_polarity]] - Side know
+      - [[tissue_polarity]] - Directional orientation of cells within tissue
 
-    - [[collective_migration]] - Move group
+    - [[collective_migration]] - Coordinated movement of cell groups
 
-      - [[wound_healing]] - Fix hurt
+      - [[wound_healing]] - Collective cell movement that closes an injury
 
-      - [[cancer_spread]] - Bad grow
+      - [[cancer_spread]] - Invasion of tumor cells into surrounding tissue
 
 ## Computational Models
 
 ### Mathematical Frameworks
 
-- [[swarm_models]] - Group math
+- [[swarm_models]] - Mathematical models of swarm behavior
 
-  - [[particle_systems]] - Dot math
+  - [[particle_systems]] - Models representing agents as interacting particles
 
-    - [[interaction_rules]] - Talk rules
+    - [[interaction_rules]] - Rules governing how agents influence each other
 
-      - [[force_models]] - Push pull
+      - [[force_models]] - Models using attractive and repulsive forces
 
-      - [[velocity_matching]] - Speed match
+      - [[velocity_matching]] - Adjusting speed to match neighbors
 
-    - [[boundary_conditions]] - Edge rules
+    - [[boundary_conditions]] - Rules for behavior at domain edges
 
-      - [[periodic_boundaries]] - Wrap edge
+      - [[periodic_boundaries]] - Edges that wrap around to the opposite side
 
-      - [[reflecting_boundaries]] - Bounce edge
+      - [[reflecting_boundaries]] - Edges that reflect agents back inward
 
-  - [[field_models]] - Space math
+  - [[field_models]] - Models using continuous spatial fields
 
-    - [[potential_fields]] - Force space
+    - [[potential_fields]] - Force landscapes guiding agent motion
 
-      - [[attraction_potentials]] - Pull map
+      - [[attraction_potentials]] - Potentials drawing agents toward targets
 
-      - [[repulsion_potentials]] - Push map
+      - [[repulsion_potentials]] - Potentials pushing agents away
 
-    - [[information_fields]] - Know space
+    - [[information_fields]] - Spatial distribution of information
 
-      - [[pheromone_models]] - Mark spread
+      - [[pheromone_models]] - Models of chemical signal diffusion and decay
 
-      - [[gradient_fields]] - Strong weak
+      - [[gradient_fields]] - Fields varying smoothly in strength across space
 
 ### Optimization Algorithms
 
-- [[swarm_optimization]] - Group best
+- [[swarm_optimization]] - Optimization algorithms inspired by swarms
 
-  - [[particle_swarm]] - Dot search
+  - [[particle_swarm]] - Optimization by moving particles through a search space
 
-    - [[position_update]] - Move rules
+    - [[position_update]] - Rules for moving particles
 
-      - [[velocity_update]] - Speed change
+      - [[velocity_update]] - Rules for changing particle velocity
 
-      - [[position_memory]] - Place mind
+      - [[position_memory]] - Remembering the best positions found
 
-    - [[search_strategies]] - Find ways
+    - [[search_strategies]] - Methods for exploring candidate solutions
 
-      - [[exploration]] - Look wide
+      - [[exploration]] - Searching broadly for new solutions
 
-      - [[exploitation]] - Use good
+      - [[exploitation]] - Refining known good solutions
 
-  - [[ant_colony]] - Ant search
+  - [[ant_colony]] - Optimization inspired by ant foraging
 
-    - [[construction_rules]] - Build how
+    - [[construction_rules]] - Rules for building candidate solutions
 
-      - [[solution_building]] - Answer make
+      - [[solution_building]] - Assembling solutions step by step
 
-      - [[pheromone_update]] - Mark change
+      - [[pheromone_update]] - Adjusting pheromone levels on solution components
 
-    - [[selection_rules]] - Pick how
+    - [[selection_rules]] - Rules for choosing among options
 
-      - [[probabilistic_choice]] - Maybe pick
+      - [[probabilistic_choice]] - Choosing options with weighted probabilities
 
-      - [[heuristic_information]] - Hint use
+      - [[heuristic_information]] - Problem-specific guidance for choices
 
 ### Control Systems
 
-- [[swarm_control]] - Group boss
+- [[swarm_control]] - Controlling collective behavior
 
-  - [[distributed_control]] - Split boss
+  - [[distributed_control]] - Control spread across agents without a center
 
-    - [[local_rules]] - Near rules
+    - [[local_rules]] - Rules using only nearby information
 
-      - [[neighbor_interactions]] - Next talk
+      - [[neighbor_interactions]] - Interactions with adjacent agents
 
-      - [[response_functions]] - Do how
+      - [[response_functions]] - Mappings from stimuli to behavior
 
-    - [[global_objectives]] - Big goals
+    - [[global_objectives]] - Goals defined for the whole swarm
 
-      - [[task_allocation]] - Job split
+      - [[task_allocation]] - Assigning tasks among agents
 
-      - [[resource_distribution]] - Stuff share
+      - [[resource_distribution]] - Spreading resources across the swarm
 
-  - [[adaptive_control]] - Change boss
+  - [[adaptive_control]] - Control that adjusts to changing conditions
 
-    - [[learning_systems]] - Learn ways
+    - [[learning_systems]] - Mechanisms that improve behavior with experience
 
-      - [[reinforcement_learning]] - Good learn
+      - [[reinforcement_learning]] - Learning from rewards and penalties
 
-      - [[evolutionary_learning]] - Time learn
+      - [[evolutionary_learning]] - Improvement through selection across generations
 
-    - [[robustness_mechanisms]] - Stay good
+    - [[robustness_mechanisms]] - Mechanisms preserving performance under disruption
 
-      - [[fault_tolerance]] - Break ok
+      - [[fault_tolerance]] - Continued function despite agent failures
 
-      - [[self_repair]] - Fix self
+      - [[self_repair]] - Restoring function after damage
 
 ## Applications
 
 ### Engineering Systems
 
-- [[swarm_engineering]] - Build group
+- [[swarm_engineering]] - Designing artificial swarm systems
 
-  - [[robotic_swarms]] - Robot teams
+  - [[robotic_swarms]] - Groups of cooperating robots
 
-    - [[swarm_robotics]] - Many bots
+    - [[swarm_robotics]] - Coordination of many simple robots
 
-      - [[collective_transport]] - Move thing
+      - [[collective_transport]] - Robots jointly carrying objects
 
-      - [[pattern_formation]] - Make shape
+      - [[pattern_formation]] - Arranging robots into target shapes
 
-    - [[distributed_sensing]] - Look spread
+    - [[distributed_sensing]] - Sensing shared across many agents
 
-      - [[sensor_networks]] - Feel web
+      - [[sensor_networks]] - Networks of spatially distributed sensors
 
-      - [[collective_perception]] - See group
+      - [[collective_perception]] - Group-level sensing and judgment of the environment
 
-  - [[communication_systems]] - Talk nets
+  - communication systems - Systems for exchanging information among agents
 
-    - [[network_routing]] - Path find
+    - [[network_routing]] - Selecting paths for data in a network
 
-      - [[adaptive_routing]] - Change path
+      - [[adaptive_routing]] - Adjusting routes to changing conditions
 
-      - [[load_balancing]] - Share fair
+      - [[load_balancing]] - Spreading work evenly across resources
 
-    - [[data_distribution]] - Know spread
+    - [[data_distribution]] - Spreading data across nodes
 
-      - [[information_flow]] - Tell flow
+      - [[information_flow]] - Movement of information through a system
 
-      - [[resource_sharing]] - Give share
+      - resource sharing - Pooling resources across agents
 
 ### Optimization Problems
 
-- [[problem_solving]] - Fix things
+- [[problem_solving]] - Using swarm methods to solve problems
 
-  - [[search_problems]] - Find things
+  - [[search_problems]] - Finding good solutions in large spaces
 
-    - [[routing_problems]] - Path problems
+    - [[routing_problems]] - Finding efficient paths
 
-      - [[traveling_salesman]] - Visit all
+      - [[traveling_salesman]] - Finding the shortest route visiting every city
 
-      - [[vehicle_routing]] - Truck paths
+      - [[vehicle_routing]] - Planning efficient routes for vehicle fleets
 
-    - [[scheduling_problems]] - Time problems
+    - [[scheduling_problems]] - Assigning tasks to time slots
 
-      - [[task_scheduling]] - Job times
+      - [[task_scheduling]] - Ordering tasks in time
 
-      - [[resource_scheduling]] - Thing times
+      - [[resource_scheduling]] - Allocating resources over time
 
-  - [[design_problems]] - Make things
+  - [[design_problems]] - Choosing configurations that meet goals
 
-    - [[layout_optimization]] - Place best
+    - [[layout_optimization]] - Finding the best spatial arrangement
 
-      - [[facility_location]] - Where put
+      - [[facility_location]] - Choosing sites for facilities
 
-      - [[network_design]] - Web make
+      - [[network_design]] - Planning network structure
 
-    - [[parameter_tuning]] - Number fix
+    - [[parameter_tuning]] - Adjusting parameters for better performance
 
-      - [[system_optimization]] - Thing best
+      - [[system_optimization]] - Improving overall system performance
 
-      - [[control_optimization]] - Run best
+      - [[control_optimization]] - Improving control performance
 
 ### Social Systems
 
-- [[human_swarms]] - People groups
+- [[human_swarms]] - Collective behavior of human groups
 
-  - [[crowd_behavior]] - Crowd acts
+  - [[crowd_behavior]] - Collective behavior of crowds
 
-    - [[movement_patterns]] - Move ways
+    - movement patterns - Patterns of crowd motion
 
-      - [[pedestrian_flow]] - Walk paths
+      - [[pedestrian_flow]] - Movement of people through space
 
-      - [[evacuation_dynamics]] - Leave fast
+      - [[evacuation_dynamics]] - Crowd movement during emergency exit
 
-    - [[opinion_dynamics]] - Think spread
+    - [[opinion_dynamics]] - How opinions spread and change in groups
 
-      - [[consensus_formation]] - Agree make
+      - [[consensus_formation]] - Group converging on a shared view
 
-      - [[information_cascade]] - Know fall
+      - [[information_cascade]] - Individuals following others' choices over their own information
 
-  - [[organizational_swarms]] - Work groups
+  - [[organizational_swarms]] - Swarm-like behavior in organizations
 
-    - [[decision_making]] - Choose ways
+    - [[decision_making]] - Collective choice among alternatives
 
-      - [[collective_intelligence]] - Group smart
+      - [[collective_intelligence]] - Group performance exceeding that of individuals
 
-      - [[wisdom_crowds]] - Many know
+      - [[wisdom_crowds]] - Accurate group judgment from aggregated estimates
 
-    - [[coordination_systems]] - Team ways
+    - [[coordination_systems]] - Mechanisms aligning group activity
 
-      - [[task_markets]] - Job trade
+      - [[task_markets]] - Market-based allocation of tasks
 
-      - [[resource_commons]] - Share things
+      - [[resource_commons]] - Resources shared by a community
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[scaling_challenges]] - Size hard
+- [[scaling_challenges]] - Difficulties as swarms grow larger
 
-  - [[complexity_management]] - Much hard
+  - [[complexity_management]] - Handling growing system complexity
 
-    - [[interaction_complexity]] - Talk hard
+    - [[interaction_complexity]] - Complexity from numerous agent interactions
 
-      - [[communication_overhead]] - Tell cost
+      - [[communication_overhead]] - Cost of exchanging information
 
-      - [[coordination_burden]] - Team cost
+      - [[coordination_burden]] - Cost of aligning many agents
 
-    - [[behavioral_complexity]] - Do hard
+    - [[behavioral_complexity]] - Complexity of agent behavior
 
-      - [[rule_complexity]] - Law hard
+      - [[rule_complexity]] - Complexity of the governing rules
 
-      - [[strategy_space]] - Way size
+      - [[strategy_space]] - Number of possible agent strategies
 
-  - [[performance_scaling]] - Work size
+  - [[performance_scaling]] - How performance changes with swarm size
 
-    - [[efficiency_limits]] - Good max
+    - [[efficiency_limits]] - Upper bounds on efficiency
 
-      - [[communication_bounds]] - Talk max
+      - [[communication_bounds]] - Limits imposed by communication capacity
 
-      - [[computation_bounds]] - Think max
+      - [[computation_bounds]] - Limits imposed by computing capacity
 
-    - [[robustness_scaling]] - Strong size
+    - [[robustness_scaling]] - How resilience changes with swarm size
 
-      - [[failure_modes]] - Break ways
+      - [[failure_modes]] - Ways a system can fail
 
-      - [[recovery_dynamics]] - Fix ways
+      - [[recovery_dynamics]] - How systems recover after failure
 
 ### Emerging Approaches
 
-- [[new_directions]] - Next ways
+- [[new_directions]] - Emerging research areas
 
-  - [[hybrid_systems]] - Mix types
+  - [[hybrid_systems]] - Systems combining different agent types
 
-    - [[human_swarm]] - People bots
+    - [[human_swarm]] - Teams of humans and robot swarms
 
-      - [[interface_design]] - Talk make
+      - interface design - Designing interfaces for human control of swarms
 
-      - [[interaction_patterns]] - Work ways
+      - interaction patterns - How humans and swarms work together
 
-    - [[bio_hybrid]] - Life mix
+    - [[bio_hybrid]] - Systems combining living and artificial parts
 
-      - [[cell_robot]] - Tiny bots
+      - [[cell_robot]] - Robots at the scale of cells
 
-      - [[organism_machine]] - Life tech
+      - [[organism_machine]] - Living organisms integrated with machines
 
-  - [[advanced_methods]] - New how
+  - [[advanced_methods]] - Newer research techniques
 
-    - [[learning_swarms]] - Learn groups
+    - [[learning_swarms]] - Swarms that learn from experience
 
-      - [[collective_learning]] - Group learn
+      - [[collective_learning]] - Learning by the group as a whole
 
-      - [[adaptive_strategies]] - Change learn
+      - [[adaptive_strategies]] - Strategies that adjust through learning
 
-    - [[cognitive_swarms]] - Think groups
+    - [[cognitive_swarms]] - Swarms with cognitive capabilities
 
-      - [[distributed_memory]] - Mind spread
+      - [[distributed_memory]] - Memory stored across many agents
 
-      - [[collective_planning]] - Plan group
+      - [[collective_planning]] - Group-level planning
 
 ## References
 

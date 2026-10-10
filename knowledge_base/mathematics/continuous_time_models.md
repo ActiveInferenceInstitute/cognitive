@@ -1,5 +1,6 @@
 ---
 title: Continuous-Time Models
+description: "Continuous-time generative models written as differential equations in generalized coordinates, where perception is a gradient flow on free energy and action suppresses error."
 type: mathematical_concept
 status: stable
 created: 2026-10-09

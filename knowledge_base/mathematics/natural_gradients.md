@@ -1,5 +1,6 @@
 ---
 title: Natural Gradients
+description: "Short reference on natural gradients, which precondition gradient steps with the inverse Fisher information for scale-invariant updates in variational inference."
 type: mathematical_concept
 status: stable
 created: 2025-08-08
@@ -8,6 +9,7 @@ tags:
 - information-geometry
 aliases:
   - natural_gradient
+  - natural_gradient_descent
 semantic_relations:
   - type: relates
     links:

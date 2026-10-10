@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import yaml
 from cognitive.models.active_inference.generative_model import DiscreteGenerativeModel
-from cognitive.utils.matrix_utils import as_integer
+from cognitive.utils.matrix_utils import as_integer, normalize_mass
 
 EPS = 1e-12
 
@@ -36,11 +36,7 @@ def _normalize(vector: np.ndarray) -> np.ndarray:
     vector = np.asarray(vector, dtype=float).reshape(-1)
     if vector.size == 0 or not np.all(np.isfinite(vector)):
         raise ValueError("Probability vector must be finite and non-empty")
-    vector = np.maximum(vector, 0.0)
-    total = float(vector.sum())
-    if total <= EPS:
-        return np.ones_like(vector, dtype=float) / vector.size
-    return vector / total
+    return normalize_mass(np.maximum(vector, 0.0))
 
 
 def _softmax(values: np.ndarray, temperature: float = 1.0) -> np.ndarray:
@@ -81,6 +77,27 @@ def compute_expected_free_energy(
 
 
 class SimplePOMDP:
+    """Seeded discrete POMDP agent with one-step expected-free-energy planning.
+
+    Every ``inference`` field is either used or rejected:
+
+    * ``learning_rate`` blends the Bayesian posterior into the belief.
+    * ``temperature`` makes action selection stochastic: ``step()`` samples an
+      action from ``softmax(-(G - ln E) / temperature)``, where ``G`` is the
+      one-step expected free energy and ``E`` the action prior. Omit it for
+      greedy selection (the minimum of ``G - ln E``, the zero-temperature limit).
+    * ``seed`` seeds the random generator that samples transitions,
+      observations, and actions. The root-level ``seed`` does the same; giving
+      both with different values raises ``ValueError``. With neither, the
+      seed is 7.
+    * ``time_horizon`` / ``temporal_horizon`` must be 1 when present: the agent
+      scores single actions, so a longer horizon would be silently ignored.
+      Use ``ActiveInferenceDispatcher`` for multi-step policies.
+    * ``num_iterations`` and ``policy_learning_rate`` are rejected: the belief
+      update is one exact Bayes step and the action prior ``E`` is never
+      learned, so nothing would read them.
+    """
+
     REQUIRED_SECTIONS = {
         "model",
         "state_space",
@@ -94,7 +111,7 @@ class SimplePOMDP:
     def __init__(self, config: str | Path | dict[str, Any]):
         self.config = self._load_config(config)
         self._validate_config()
-        self.rng = np.random.default_rng(self.config.get("seed", 7))
+        self.rng = np.random.default_rng(self._resolve_seed())
 
         self.A = self._initialize_matrix("A_matrix")
         self.B = self._initialize_matrix("B_matrix")
@@ -139,16 +156,19 @@ class SimplePOMDP:
         self._validate_section("action_space", {"num_actions", "action_labels"})
         self._validate_section(
             "inference",
+            # num_iterations and policy_learning_rate are named here only so that
+            # _validate_inference can explain why they are rejected.
             {
                 "time_horizon",
                 "temporal_horizon",
-                "num_iterations",
                 "learning_rate",
                 "temperature",
-                "policy_learning_rate",
                 "seed",
+                "num_iterations",
+                "policy_learning_rate",
             },
         )
+        self._validate_inference()
         self._validate_section("visualization", {"output_dir", "formats", "dpi", "style"})
         matrices = self.config.get("matrices")
         if not isinstance(matrices, dict):
@@ -172,6 +192,45 @@ class SimplePOMDP:
             unknown = set(spec).difference(allowed)
             if unknown:
                 raise ValueError(f"Unknown {name} fields: {sorted(unknown)}")
+
+    def _validate_inference(self) -> None:
+        """Reject inference fields that this agent would otherwise ignore."""
+        inference = self.config["inference"]
+        unused = sorted({"num_iterations", "policy_learning_rate"}.intersection(inference))
+        if unused:
+            raise ValueError(
+                f"inference fields {unused} are not used by SimplePOMDP (one exact Bayes "
+                "update per step, action prior never learned); remove them"
+            )
+        for key in ("time_horizon", "temporal_horizon"):
+            if key in inference and as_integer(inference[key], f"inference.{key}") != 1:
+                raise ValueError(
+                    f"inference.{key} must be 1: SimplePOMDP plans one step ahead. "
+                    "Use ActiveInferenceDispatcher for multi-step policies"
+                )
+        if "temperature" in inference:
+            temperature = inference["temperature"]
+            if isinstance(temperature, bool) or not isinstance(temperature, (int, float)):
+                raise ValueError("inference.temperature must be a positive number")
+            _softmax(np.zeros(1), temperature)  # rejects non-finite and non-positive values
+
+    def _resolve_seed(self) -> int:
+        """Return the generator seed from the root and ``inference`` settings."""
+        root = self.config.get("seed")
+        nested = self.config["inference"].get("seed")
+        seeds = {
+            as_integer(value, label)
+            for label, value in (("seed", root), ("inference.seed", nested))
+            if value is not None
+        }
+        if len(seeds) > 1:
+            raise ValueError(
+                f"seed ({root!r}) and inference.seed ({nested!r}) disagree; set only one"
+            )
+        seed = seeds.pop() if seeds else 7
+        if seed < 0:
+            raise ValueError("seed must be a non-negative integer")
+        return seed
 
     def _validate_section(self, name: str, allowed: set[str]) -> None:
         value = self.config.get(name)
@@ -250,25 +309,18 @@ class SimplePOMDP:
                 raise ValueError("B_matrix uses column_stochastic, not row_stochastic")
             return self._row_normalize(matrix)
         if constraint == "sum_to_one":
-            total = float(matrix.sum())
-            if total <= EPS:
+            if float(matrix.sum()) <= 0.0:
                 raise ValueError("sum_to_one cannot normalize an all-zero matrix")
-            return matrix / total
+            return matrix / float(matrix.sum())
         raise ValueError(f"Unsupported matrix constraint: {constraint}")
 
     @staticmethod
     def _column_normalize(matrix: np.ndarray) -> np.ndarray:
-        matrix = np.maximum(matrix, 0.0)
-        sums = matrix.sum(axis=0, keepdims=True)
-        sums = np.where(sums <= EPS, 1.0, sums)
-        return matrix / sums
+        return normalize_mass(np.maximum(matrix, 0.0), axis=0, empty="zeros")
 
     @staticmethod
     def _row_normalize(matrix: np.ndarray) -> np.ndarray:
-        matrix = np.maximum(matrix, 0.0)
-        sums = matrix.sum(axis=1, keepdims=True)
-        sums = np.where(sums <= EPS, 1.0, sums)
-        return matrix / sums
+        return normalize_mass(np.maximum(matrix, 0.0), axis=1, empty="zeros")
 
     @classmethod
     def _normalize_transition_tensor(cls, tensor: np.ndarray) -> np.ndarray:
@@ -409,8 +461,8 @@ class SimplePOMDP:
     def _update_beliefs(self, observation: int, action: int) -> float:
         predicted = self.B[:, :, action] @ self.state.beliefs
         likelihood = self.A[observation, :]
-        # Divide by the evidence itself, not through _normalize, whose EPS floor
-        # would replace a small but positive posterior mass with a uniform belief.
+        # Divide by the evidence itself so that a small but positive posterior
+        # mass keeps its shape; only exactly zero evidence falls back to uniform.
         unnormalized = predicted * likelihood
         evidence_mass = float(unnormalized.sum())
         posterior = (
@@ -429,7 +481,11 @@ class SimplePOMDP:
         total, _, _ = self._expected_free_energy_components()
         action_prior = _normalize(self.E)
         scores = total - np.log(action_prior + EPS)
-        return int(np.argmin(scores)), total
+        temperature = self.config["inference"].get("temperature")
+        if temperature is None:
+            return int(np.argmin(scores)), total
+        probabilities = _softmax(-scores, float(temperature))
+        return int(self.rng.choice(probabilities.size, p=probabilities)), total
 
     def _expected_free_energy_components(self) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
         totals: list[float] = []

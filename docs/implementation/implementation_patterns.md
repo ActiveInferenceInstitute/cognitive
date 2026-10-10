@@ -1,129 +1,97 @@
-# Implementation Patterns Guide
-
 ---
-
-title: Implementation Patterns Guide
-
+title: Implementation patterns
 type: guide
-
 status: stable
-
 created: 2024-02-06
-
+updated: 2026-10-10
 tags:
-
   - implementation
-
   - patterns
-
-  - design
-
-  - architecture
-
 semantic_relations:
-
-  - type: implements
-
-    links:
-
-      - [[knowledge_base/cognitive/active_inference|Active Inference]]
-
-      - [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]]
-
   - type: relates
-
     links:
-
-      - [[docs/api/api_reference|API Reference]]
-
-      - [[knowledge_base/cognitive/theoretical_foundations|Theoretical Foundations]]
-
+      - "[[docs/api/api_reference|API reference]]"
+      - "[[docs/guides/api_implementation|API implementation guide]]"
+      - "[[docs/guides/agent_development|Agent development guide]]"
+      - "[[knowledge_base/cognitive/active_inference|Active inference]]"
 ---
 
-## Overview
+# Implementation patterns
 
-This guide outlines implementation patterns for translating cognitive science theory into practical code. While the [[knowledge_base/cognitive/cognitive_science|knowledge base]] provides theoretical foundations, this guide focuses on concrete implementation strategies.
+Patterns that the package itself follows, each checked by the code snippet or the
+test named next to it. The class and function names are listed in
+[[docs/api/api_reference|the API reference]].
 
-## Core Implementation Patterns
+## Validate at construction, fail loudly
 
-### Active Inference Implementation
+`DiscreteGenerativeModel` and `InferenceConfig` reject inconsistent shapes and
+out-of-range values with `ValueError` instead of repairing them. Unknown keys in a
+YAML configuration are rejected too. The following runs:
 
+```python
+import numpy as np
 
-### Belief Updating Pattern
+from cognitive import InferenceConfig
 
+try:
+    InferenceConfig("variational", "hierarchical", 2, 0.5, 1.0)
+except ValueError as error:
+    print("rejected:", error)
+else:
+    raise AssertionError("only the discrete policy type is supported")
+```
 
-### Policy Selection Pattern
+## Seed every stochastic component
 
+`InferenceConfig(seed=...)` (default `0`) seeds the dispatcher's random generator,
+and `SimplePOMDP` and `ContinuousActiveInference` accept a `seed`. Two
+dispatchers built with the same seed produce the same sampling-method output:
 
-### Perception Implementation Pattern
+```python
+import numpy as np
 
+from cognitive import ActiveInferenceDispatcher, DiscreteGenerativeModel, InferenceConfig, ModelState
 
-## Design Patterns
+model = DiscreteGenerativeModel(
+    A=np.array([[0.9, 0.1], [0.1, 0.9]]),
+    B=np.stack([np.eye(2), np.array([[0.1, 0.9], [0.9, 0.1]])], axis=2),
+    C=np.array([0.0, 1.0]),
+    D=np.array([0.5, 0.5]),
+    E=np.array([0.5, 0.5]),
+)
+outputs = []
+for _ in range(2):
+    dispatcher = ActiveInferenceDispatcher(
+        InferenceConfig("sampling", "discrete", 2, 0.5, 1.0, seed=3), model
+    )
+    state = ModelState(model.D.copy(), model.E.copy(), 1.0, 0.0, 0.0)
+    outputs.append(dispatcher.dispatch_belief_update(1, state))
+assert np.allclose(outputs[0], outputs[1])
+```
 
-### 1. Model-View-Controller
+## Check that probability outputs are normalized
 
+Beliefs and policy distributions returned by the dispatcher sum to one; assert
+that in any new code path rather than trusting it. See the dispatcher example in
+[[docs/api/api_reference|the API reference]].
 
-### 2. Observer Pattern
+## Persist and restore state explicitly
 
+`save_state` and `load_state` on `SimplePOMDP` and `ActiveInferenceModel`
+round-trip a validated state through YAML; the round trip is tested in
+`code/tests/test_model_lifecycle.py`. See
+[[docs/api/api_examples|the API examples]] for a worked case.
 
-## Integration Patterns
+## Test against an independent calculation
 
-### 1. Component Integration
+New maths gets a test that compares it with a closed form or an algebraically
+equivalent computation, not with its own output
+(`code/tests/test_math_oracles.py`). The mutation check
+(`cognitive-mutation-check`) records each defect that was fixed so the test that
+caught it stays load-bearing.
 
+## Related
 
-### 2. Pipeline Pattern
-
-
-## Validation Patterns
-
-### 1. Model Validation
-
-
-### 2. Testing Pattern
-
-
-## Best Practices
-
-### 1. Code Organization
-
-- Follow Code Organization Guide
-
-- Use [[docs/repo_docs/naming_conventions|Naming Conventions]]
-
-- Implement [[docs/repo_docs/documentation_standards|Documentation Standards]]
-
-### 2. Performance Optimization
-
-- Follow [[knowledge_base/cognitive/performance_optimization|Optimization Guide]]
-
-- Use Profiling Guide
-
-- Monitor [[knowledge_base/cognitive/performance_metrics|Performance Metrics]]
-
-### 3. Quality Assurance
-
-- Implement Testing Guidelines
-
-- Follow Code Review Process
-
-- Use Validation Framework
-
-## Related Documentation
-
-- [[knowledge_base/cognitive/cognitive_science|Cognitive Science Theory]]
-
-- [[docs/api/api_reference|API Reference]]
-
-- System Integration
-
-- Validation Guide
-
-## References
-
-- [[knowledge_base/cognitive/active_inference|Active Inference]]
-
-- [[knowledge_base/cognitive/free_energy_principle|Free Energy Principle]]
-
-- [[knowledge_base/cognitive/predictive_processing|Predictive Processing]]
-
-- [[knowledge_base/cognitive/theoretical_foundations|Theoretical Foundations]]
+- [[docs/implementation/README|Implementation index]]
+- [[docs/repo_docs/unit_testing|Unit testing]]
+- [[docs/repo_docs/naming_conventions|Naming conventions]]

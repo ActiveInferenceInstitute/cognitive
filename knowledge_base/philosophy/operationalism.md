@@ -20,7 +20,6 @@ semantic_relations:
       - "[[instrumentalism]]"
       - "[[scientific_method]]"
       - "[[measurement_theory]]"
-      - "[[physics]]"
 ---
 
 

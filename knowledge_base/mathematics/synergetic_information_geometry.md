@@ -23,7 +23,6 @@ semantic_relations:
     links:
       - "[[tensegrity]]"
       - "[[vector_equilibrium]]"
-      - "[[geometric_unity]]"
 ---
 
 

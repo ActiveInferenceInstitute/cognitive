@@ -10,6 +10,7 @@ tags:
 - logic
 aliases:
   - problem_solving
+  - solution_finding
 semantic_relations:
   - type: implements
     links:
@@ -33,377 +34,377 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 ### Reasoning Types
 
-- [[logical_reasoning]] - Logic think
+- [[logical_reasoning]] - Drawing conclusions by formal rules of inference
 
-  - [[deductive_reasoning]] - Rule apply
+  - [[deductive_reasoning]] - Deriving specific conclusions from general rules
 
-    - [[syllogistic_logic]] - If then
+    - [[syllogistic_logic]] - Conclusions drawn from two linked premises
 
-    - [[categorical_logic]] - Group sort
+    - [[categorical_logic]] - Reasoning about category membership and class relations
 
-  - [[inductive_reasoning]] - Pattern find
+  - [[inductive_reasoning]] - Inferring general rules from specific cases
 
-    - [[generalization]] - Rule make
+    - [[generalization]] - Extending observed cases to a general rule
 
-    - [[analogy]] - Like find
+    - [[analogy]] - Mapping a familiar case onto a new one
 
 ### Problem Solving
 
-- [[solution_finding]] - Answer get
+- [[solution_finding]] - Searching for a way to reach the goal
 
-  - [[problem_space]] - All ways
+  - [[problem_space]] - Set of all states and moves a problem allows
 
-    - [[initial_state]] - Start where
+    - [[initial_state]] - The situation at the start of a problem
 
-    - [[goal_state]] - Want where
+    - [[goal_state]] - The situation that counts as solved
 
-  - [[solution_strategies]] - How solve
+  - [[solution_strategies]] - General approaches to reaching a solution
 
-    - [[algorithm]] - Sure way
+    - [[algorithm]] - Step-by-step procedure guaranteed to find a solution
 
-    - [[heuristic]] - Quick way
+    - [[heuristic]] - Fast rule of thumb that often works
 
 ### Decision Making
 
-- [[choice_processes]] - Pick how
+- [[choice_processes]] - Mental steps for selecting among options
 
-  - [[option_evaluation]] - Worth check
+  - [[option_evaluation]] - Assessing the merits of each option
 
-    - [[value_assessment]] - Good bad
+    - [[value_assessment]] - Judging how desirable an outcome is
 
-    - [[probability_estimation]] - How likely
+    - [[probability_estimation]] - Judging how likely an outcome is
 
-  - [[strategy_selection]] - Way pick
+  - strategy selection - Choosing which approach to use
 
-    - [[risk_assessment]] - Danger check
+    - [[risk_assessment]] - Judging the likelihood and cost of harm
 
-    - [[effort_evaluation]] - Work check
+    - [[effort_evaluation]] - Judging the effort an approach would require
 
 ## Cognitive Processes
 
 ### Information Processing
 
-- [[cognitive_operations]] - Think steps
+- [[cognitive_operations]] - Basic mental steps in solving a problem
 
-  - [[representation]] - Problem see
+  - [[representation]] - How a problem is mentally depicted
 
-    - [[mental_models]] - Mind picture
+    - [[mental_models]] - Internal simulations of how a situation works
 
-    - [[problem_encoding]] - Info code
+    - [[problem_encoding]] - Translating problem information into internal form
 
-  - [[transformation]] - Change how
+  - transformation - Applying operations to change the current state
 
-    - [[state_space]] - All possible
+    - [[state_space]] - All states reachable in a problem
 
-    - [[operator_space]] - All actions
+    - [[operator_space]] - All actions available for changing state
 
 ### Memory Systems
 
-- [[memory_use]] - Know use
+- [[memory_use]] - Drawing on memory while solving problems
 
-  - [[working_memory]] - Hold now
+  - [[working_memory]] - Holding and manipulating information in the moment
 
-    - [[active_maintenance]] - Keep mind
+    - [[active_maintenance]] - Keeping information active against decay
 
-    - [[manipulation]] - Change think
+    - manipulation - Operating on information held in mind
 
-  - [[long_term_memory]] - Know stored
+  - [[long_term_memory]] - Durable storage of knowledge and experience
 
-    - [[knowledge_retrieval]] - Get know
+    - [[knowledge_retrieval]] - Recalling relevant knowledge from memory
 
-    - [[experience_use]] - Past use
+    - [[experience_use]] - Applying earlier experience to the current problem
 
 ### Executive Control
 
-- [[control_processes]] - Manage how
+- [[control_processes]] - Executive processes that direct problem solving
 
-  - [[planning]] - Plan make
+  - [[planning]] - Organizing steps toward a goal
 
-    - [[goal_setting]] - Want what
+    - [[goal_setting]] - Defining what the solution should achieve
 
-    - [[step_sequence]] - Order how
+    - [[step_sequence]] - Ordering actions into a workable sequence
 
-  - [[monitoring]] - Check how
+  - monitoring - Tracking progress and performance
 
-    - [[progress_check]] - How far
+    - [[progress_check]] - Judging distance remaining to the goal
 
-    - [[error_detection]] - Wrong find
+    - [[error_detection]] - Noticing mistakes in one's reasoning or actions
 
 ## Problem Types
 
 ### Well-Defined Problems
 
-- [[structured_problems]] - Clear what
+- [[structured_problems]] - Problems with clear goals, rules, and states
 
-  - [[puzzle_problems]] - Rule clear
+  - [[puzzle_problems]] - Problems with explicit rules and a definite answer
 
-    - [[transformation]] - Change state
+    - transformation - Moving from one problem state to another
 
-    - [[arrangement]] - Order right
+    - [[arrangement]] - Placing elements into a required order
 
-  - [[calculation]] - Math solve
+  - [[calculation]] - Solving problems by numerical computation
 
-    - [[arithmetic]] - Number work
+    - [[arithmetic]] - Operations on numbers
 
-    - [[algebra]] - Symbol work
+    - [[algebra]] - Manipulating symbols and equations
 
 ### Ill-Defined Problems
 
-- [[open_problems]] - Not clear
+- [[open_problems]] - Problems with vague goals or missing information
 
-  - [[design_problems]] - Make new
+  - [[design_problems]] - Problems of creating a new artifact or plan
 
-    - [[creative_solutions]] - New think
+    - [[creative_solutions]] - Novel answers that meet the problem's needs
 
-    - [[constraint_satisfaction]] - Rule fit
+    - [[constraint_satisfaction]] - Finding solutions that meet all stated constraints
 
-  - [[social_problems]] - People fix
+  - [[social_problems]] - Problems involving the needs of several people
 
-    - [[conflict_resolution]] - Fight fix
+    - [[conflict_resolution]] - Settling disagreements between parties
 
-    - [[negotiation]] - Deal make
+    - [[negotiation]] - Reaching agreement through bargaining
 
 ### Complex Problems
 
-- [[complex_problems]] - Hard solve
+- [[complex_problems]] - Problems with many interacting parts
 
-  - [[dynamic_problems]] - Change time
+  - [[dynamic_problems]] - Problems whose conditions change as you act
 
-    - [[temporal_dynamics]] - Time change
+    - [[temporal_dynamics]] - How problem conditions evolve over time
 
-    - [[feedback_loops]] - Circle effect
+    - [[feedback_loops]] - Outcomes that loop back to influence causes
 
-  - [[multi_goal]] - Many want
+  - [[multi_goal]] - Problems with several goals at once
 
-    - [[trade_offs]] - Give take
+    - [[trade_offs]] - Gaining on one goal at a cost to another
 
-    - [[priority_management]] - What first
+    - [[priority_management]] - Ordering goals by importance
 
 ## Solution Strategies
 
 ### Algorithmic Approaches
 
-- [[systematic_methods]] - Sure way
+- [[systematic_methods]] - Methodical procedures that cover all possibilities
 
-  - [[exhaustive_search]] - Try all
+  - [[exhaustive_search]] - Checking every possible solution
 
-    - [[breadth_first]] - Wide search
+    - [[breadth_first]] - Exploring all options at one level before going deeper
 
-    - [[depth_first]] - Deep search
+    - [[depth_first]] - Following one path fully before backtracking
 
-  - [[divide_conquer]] - Break down
+  - [[divide_conquer]] - Splitting a problem into solvable parts
 
-    - [[subproblem]] - Small part
+    - [[subproblem]] - A smaller problem within the larger one
 
-    - [[integration]] - Put back
+    - integration - Recombining partial solutions into a whole
 
 ### Heuristic Approaches
 
-- [[quick_methods]] - Fast way
+- [[quick_methods]] - Shortcut methods that trade certainty for speed
 
-  - [[means_ends]] - Gap close
+  - [[means_ends]] - Reducing the gap between current state and goal
 
-    - [[subgoal]] - Step goal
+    - [[subgoal]] - Intermediate goal on the way to the main goal
 
-    - [[difference_reduction]] - Less far
+    - [[difference_reduction]] - Choosing moves that shrink distance to the goal
 
-  - [[analogy_use]] - Like use
+  - [[analogy_use]] - Solving new problems by borrowing past solutions
 
-    - [[case_based]] - Before like
+    - [[case_based]] - Reasoning from similar past cases
 
-    - [[pattern_matching]] - Match find
+    - [[pattern_matching]] - Recognizing a familiar problem pattern
 
 ### Creative Approaches
 
-- [[creative_solving]] - New way
+- [[creative_solving]] - Generating novel approaches to problems
 
-  - [[divergent_thinking]] - Many way
+  - [[divergent_thinking]] - Generating many different possible ideas
 
-    - [[brainstorming]] - Idea make
+    - [[brainstorming]] - Producing many ideas without early judgment
 
-    - [[lateral_thinking]] - Side way
+    - [[lateral_thinking]] - Approaching problems from unconventional angles
 
-  - [[insight]] - Sudden see
+  - [[insight]] - Sudden realization of a solution
 
-    - [[restructuring]] - New view
+    - [[restructuring]] - Reframing the problem in a new way
 
-    - [[incubation]] - Wait think
+    - [[incubation]] - Stepping away so unconscious processing can work
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[reasoning_networks]] - Think parts
+- [[reasoning_networks]] - Brain regions supporting reasoning
 
-  - [[prefrontal]] - Front brain
+  - [[prefrontal]] - Frontal cortex supporting planning and reasoning
 
-    - [[dorsolateral]] - Side front
+    - [[dorsolateral]] - Upper-lateral prefrontal region for working memory and rules
 
-    - [[ventrolateral]] - Low front
+    - [[ventrolateral]] - Lower-lateral prefrontal region for retrieval and selection
 
-  - [[parietal]] - Back top
+  - [[parietal]] - Parietal cortex supporting spatial and numerical reasoning
 
-    - [[superior_parietal]] - High back
+    - [[superior_parietal]] - Upper parietal region for spatial attention and manipulation
 
-    - [[inferior_parietal]] - Low back
+    - [[inferior_parietal]] - Lower parietal region for numerical and symbolic processing
 
 ### Processing Dynamics
 
-- [[neural_dynamics]] - Brain work
+- [[neural_dynamics]] - Time-varying brain activity during reasoning
 
-  - [[activation_patterns]] - Fire how
+  - [[activation_patterns]] - Patterns of brain activation during problem solving
 
-    - [[sequential]] - Order fire
+    - [[sequential]] - Activity unfolding one step after another
 
-    - [[parallel]] - Same time
+    - [[parallel]] - Several processes running at once
 
-  - [[integration]] - Put together
+  - integration - Combining activity across regions
 
-    - [[binding]] - Join info
+    - [[binding]] - Linking features into a unified representation
 
-    - [[coordination]] - Work together
+    - [[coordination]] - Synchronizing activity across regions
 
 ### Learning Effects
 
-- [[neural_learning]] - Brain change
+- [[neural_learning]] - Brain changes produced by practice
 
-  - [[strategy_learning]] - Way learn
+  - strategy learning - Learning which approaches work best
 
-    - [[reinforcement]] - Good bad
+    - [[reinforcement]] - Strengthening strategies through reward and penalty
 
-    - [[practice_effects]] - Do more
+    - [[practice_effects]] - Performance gains from repeated practice
 
-  - [[expertise]] - Know deep
+  - [[expertise]] - Highly organized knowledge from long experience
 
-    - [[knowledge_structures]] - Know build
+    - [[knowledge_structures]] - Organized chunks and schemas in memory
 
-    - [[automaticity]] - No think
+    - [[automaticity]] - Performance requiring little conscious effort
 
 ## Applications
 
 ### Educational Applications
 
-- [[learning_support]] - Learn help
+- [[learning_support]] - Educational aids for learning to reason
 
-  - [[strategy_training]] - Way teach
+  - [[strategy_training]] - Teaching effective problem-solving approaches
 
-    - [[metacognition]] - Think about
+    - [[metacognition]] - Awareness and control of one's own thinking
 
-    - [[self_regulation]] - Self manage
+    - [[self_regulation]] - Managing one's own thoughts and effort
 
-  - [[problem_design]] - Make task
+  - [[problem_design]] - Designing tasks that promote learning
 
-    - [[scaffolding]] - Help right
+    - [[scaffolding]] - Temporary support that is gradually withdrawn
 
-    - [[difficulty_scaling]] - Hard right
+    - [[difficulty_scaling]] - Matching task difficulty to learner ability
 
 ### Clinical Applications
 
-- [[cognitive_therapy]] - Think fix
+- [[cognitive_therapy]] - Therapy that corrects distorted thinking
 
-  - [[reasoning_disorders]] - Think wrong
+  - [[reasoning_disorders]] - Conditions impairing reasoning ability
 
-    - [[logical_errors]] - Wrong way
+    - [[logical_errors]] - Faulty inferences or reasoning fallacies
 
-    - [[bias_correction]] - Wrong fix
+    - [[bias_correction]] - Methods for reducing systematic reasoning biases
 
-  - [[problem_training]] - Solve teach
+  - [[problem_training]] - Training in solving problems
 
-    - [[strategy_development]] - Way make
+    - [[strategy_development]] - Building effective problem-solving approaches
 
-    - [[coping_skills]] - Deal how
+    - [[coping_skills]] - Skills for managing stress and difficulty
 
 ### Professional Applications
 
-- [[work_applications]] - Job use
+- [[work_applications]] - Uses of reasoning research in workplaces
 
-  - [[decision_support]] - Choose help
+  - decision support - Tools that assist decision makers
 
-    - [[analysis_tools]] - Look deep
+    - [[analysis_tools]] - Tools for analyzing data and options
 
-    - [[risk_assessment]] - Safe check
+    - [[risk_assessment]] - Evaluating the likelihood and impact of risks
 
-  - [[innovation]] - New make
+  - innovation - Developing new products or methods
 
-    - [[creative_methods]] - New way
+    - [[creative_methods]] - Techniques for generating original ideas
 
-    - [[solution_finding]] - Fix how
+    - [[solution_finding]] - Developing a workable answer to a real problem
 
 ## Research Methods
 
 ### Behavioral Methods
 
-- [[performance_measure]] - Do check
+- [[performance_measure]] - Measures of task performance
 
-  - [[problem_tasks]] - Solve task
+  - [[problem_tasks]] - Tasks used to study problem solving
 
-    - [[solution_time]] - How fast
+    - [[solution_time]] - Time taken to reach a solution
 
-    - [[accuracy]] - How right
+    - accuracy - Proportion of correct answers
 
-  - [[strategy_analysis]] - Way look
+  - [[strategy_analysis]] - Identifying which strategies people use
 
-    - [[protocol_analysis]] - Say think
+    - [[protocol_analysis]] - Analyzing think-aloud verbal reports of solvers
 
-    - [[error_analysis]] - Wrong look
+    - error analysis - Studying the pattern of mistakes made
 
 ### Neural Methods
 
-- [[brain_measure]] - Brain look
+- [[brain_measure]] - Measuring brain activity during reasoning
 
-  - [[imaging]] - Picture take
+  - imaging - Mapping brain activity with scans
 
-    - [[activation]] - Work where
+    - activation - Where brain regions become active
 
-    - [[connectivity]] - Join how
+    - [[connectivity]] - How brain regions interact
 
-  - [[recording]] - Signal watch
+  - recording - Measuring electrical or magnetic brain signals
 
-    - [[eeg]] - Wave watch
+    - [[eeg]] - Scalp recording of electrical brain activity
 
-    - [[meg]] - Field watch
+    - [[meg]] - Recording magnetic fields from brain activity
 
 ### Computational Models
 
-- [[cognitive_models]] - Think math
+- [[cognitive_models]] - Computational models of mental processes
 
-  - [[process_models]] - Step math
+  - process models - Models that specify processing steps
 
-    - [[production_systems]] - Rule math
+    - [[production_systems]] - Models built on if-then rules
 
-    - [[network_models]] - Join math
+    - [[network_models]] - Models built from connected units
 
-  - [[learning_models]] - Change math
+  - [[learning_models]] - Models of how performance improves with experience
 
-    - [[reinforcement]] - Good bad
+    - [[reinforcement]] - Strengthening strategies through reward and penalty
 
-    - [[skill_acquisition]] - Get good
+    - [[skill_acquisition]] - Gaining proficiency through practice
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[complexity_scaling]] - Big hard
+- complexity scaling - Difficulty of extending models to complex problems
 
-- [[ecological_validity]] - Real match
+- [[ecological_validity]] - Whether findings hold in real-world settings
 
-- [[individual_differences]] - Person vary
+- [[individual_differences]] - Differences between people in reasoning ability
 
 ### Emerging Approaches
 
-- [[new_methods]] - New way
+- new methods - Emerging approaches to studying reasoning
 
-  - [[real_world]] - Life real
+  - [[real_world]] - Studying reasoning in everyday settings
 
-    - [[naturalistic]] - Normal do
+    - [[naturalistic]] - Observing behavior in natural contexts
 
-    - [[longitudinal]] - Long time
+    - [[longitudinal]] - Following the same people over long periods
 
-  - [[technology_use]] - Tech help
+  - [[technology_use]] - Technology applied to reasoning research and support
 
-    - [[ai_augmented]] - Smart help
+    - [[ai_augmented]] - Human reasoning supported by AI tools
 
-    - [[virtual_reality]] - Fake world
+    - [[virtual_reality]] - Immersive simulated settings for testing reasoning
 
 ## References
 

@@ -1,5 +1,6 @@
 ---
 title: Worked Example — Variational Free Energy
+description: "Numerical worked example of variational free energy on a two-state, two-outcome categorical model, with exact posterior, evidence and gradient descent on beliefs."
 type: example
 status: draft
 created: 2025-08-08

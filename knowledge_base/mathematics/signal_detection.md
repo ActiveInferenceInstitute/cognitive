@@ -8,6 +8,8 @@ tags:
   - signal_detection_theory
   - decision_theory
   - psychophysics
+aliases:
+  - detection
 semantic_relations:
   - type: relates
     links:

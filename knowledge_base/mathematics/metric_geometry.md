@@ -1,5 +1,6 @@
 ---
 title: Metric Geometry
+description: "Mathematical background on metric geometry, covering metric spaces, length structures, curvature and convergence theory, with computational examples."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

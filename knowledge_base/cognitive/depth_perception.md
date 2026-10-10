@@ -395,7 +395,7 @@ Depth perception is the visual ability to perceive the world in three dimensions
 
 - [[computational_vision]]
 
-- [[clinical_vision]]
+- clinical vision
 
 - [[developmental_vision]]
 

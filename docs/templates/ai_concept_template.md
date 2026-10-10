@@ -8,6 +8,8 @@ status: stable
 
 created: 2024-02-12
 
+updated: 2026-10-10
+
 tags:
 
   - template
@@ -40,13 +42,13 @@ This template provides a standardized structure for documenting AI and cognitive
 
 ---
 
-title: ${concept_name}
+title: "{{concept_name}}"
 
 type: concept
 
 status: draft
 
-created: ${date}
+created: "{{date}}"
 
 tags:
 
@@ -54,7 +56,7 @@ tags:
 
   - ai
 
-  - ${specific_tags}
+  - "{{specific_tags}}"
 
 semantic_relations:
 
@@ -72,7 +74,7 @@ semantic_relations:
 
 ---
 
-# ${concept_name}
+# {{concept_name}}
 
 ## Overview
 
@@ -238,21 +240,21 @@ Standard benchmarks and results.
 
 ### Required Variables
 
-- ${concept_name} - Name of the concept
+- `{{concept_name}}` - Name of the concept
 
-- ${date} - Creation date
+- `{{date}}` - Creation date
 
-- ${specific_tags} - Concept-specific tags
+- `{{specific_tags}}` - Concept-specific tags
 
 ### Optional Variables
 
-- ${description} - Brief description
+- `{{description}}` - Brief description
 
-- ${author} - Content author
+- `{{author}}` - Content author
 
-- ${version} - Version number
+- `{{version}}` - Version number
 
-- ${references} - Reference list
+- `{{references}}` - Reference list
 
 ## Examples
 
@@ -284,16 +286,16 @@ semantic_relations:
 
   - type: implements
 
-    links: [[free_energy_principle]]
+    links:
 
+
+      - "[[free_energy_principle]]"
   - type: relates
 
     links:
 
-      - [[predictive_processing]]
-
-      - [[belief_updating]]
-
+      - "[[predictive_processing]]"
+      - "[[belief_updating]]"
 ---
 
 # Active Inference
@@ -332,16 +334,16 @@ semantic_relations:
 
   - type: extends
 
-    links: [[information_theory]]
+    links:
 
+
+      - "[[information_theory]]"
   - type: relates
 
     links:
 
-      - [[active_inference]]
-
-      - [[variational_inference]]
-
+      - "[[active_inference]]"
+      - "[[variational_inference]]"
 ---
 
 # Free Energy Principle

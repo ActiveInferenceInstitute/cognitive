@@ -5,6 +5,8 @@ status: stable
 created: 2024-02-12
 updated: 2026-02-07
 tags: [stability, dynamical_systems, lyapunov, convergence]
+aliases:
+  - stability
 semantic_relations:
   - type: relates
     links:

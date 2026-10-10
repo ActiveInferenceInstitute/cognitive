@@ -1,5 +1,6 @@
 ---
 title: Agents Index
+description: "Index of agent types and architectures, covering Active Inference, POMDP, swarm, hierarchical, memory-based and learning agents, with implementation components and examples."
 type: index
 status: stable
 created: 2024-02-07

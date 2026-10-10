@@ -5,6 +5,7 @@ title: Edge-Cognitive Systems Learning Path
 type: learning_path
 
 status: stable
+updated: 2026-10-10
 
 created: 2024-03-15
 
@@ -283,28 +284,6 @@ This learning path explores the integration of cognitive systems with edge compu
 
 - Analysis platforms
 
-## Community and Support
-
-### 1. Technical Networks
-
-- Research groups
-
-- Developer communities
-
-- Professional organizations
-
-- Expert forums
-
-### 2. Industry Connections
-
-- Technology providers
-
-- Solution vendors
-
-- Consulting services
-
-- Training resources
-
 ## Next Steps
 
 ### 1. Advanced Research
@@ -326,14 +305,3 @@ This learning path explores the integration of cognitive systems with edge compu
 - Resource optimization
 
 - Network integration
-
-## Version History
-
-- Created: 2024-03-15
-
-- Last Updated: 2024-03-15
-
-- Status: Stable
-
-- Version: 1.0.0
-

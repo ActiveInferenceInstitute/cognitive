@@ -20,7 +20,7 @@ semantic_relations:
 
 # BioFirm Knowledge Base
 
-This knowledge base contains 7 comprehensive documents covering Biological Firm Theory, an innovative framework that integrates Active Inference with ecological economics and biological principles. The content explores how biological systems can inform economic and organizational theory through cognitive and adaptive principles.
+This knowledge base covers Biological Firm Theory (see the [[knowledge_base/BioFirm/catalog|catalog]] for every page), an innovative framework that integrates Active Inference with ecological economics and biological principles. The content explores how biological systems can inform economic and organizational theory through cognitive and adaptive principles.
 
 ## 🌿 Overview
 
@@ -70,13 +70,13 @@ The BioFirm knowledge base presents Biological Firm Theory as a synthesis of Act
 - [[knowledge_base/systems/Social-Ecological Systems]]
 - [[knowledge_base/mathematics/free_energy_principle|Free Energy Principle]]
 
-### Implementation Examples
-- [[code/Things/BioFirm/README|BioFirm Implementation]]
-- [[tools/src/models/active_inference|Active Inference Models]]
+### Related design notes
+- [[code/Things/BioFirm/README|BioFirm design notes]] (documentation only)
+- [[code/tools/src/models/active_inference/README|Active Inference Models]]
 
 ## 📈 Quality Metrics
 
-- **Coverage**: 7 specialized BioFirm documents
+- **Coverage**: every page is listed in the [[knowledge_base/BioFirm/catalog|catalog]]
 - **Integration**: Strong synthesis of multiple domains
 - **Innovation**: Novel theoretical framework development
 - **Applications**: Practical ecological-economic modeling

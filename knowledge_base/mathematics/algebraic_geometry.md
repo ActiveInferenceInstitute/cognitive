@@ -1,5 +1,6 @@
 ---
 title: Algebraic Geometry
+description: "Mathematical background on algebraic geometry, covering affine varieties, schemes, cohomology, intersection theory, moduli spaces and mirror symmetry, with computational examples."
 type: mathematical_concept
 status: stable
 created: 2024-02-12

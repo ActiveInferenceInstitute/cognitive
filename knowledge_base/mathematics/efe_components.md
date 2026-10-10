@@ -1,4 +1,5 @@
 ---
+description: "Breakdown of expected free energy into epistemic value and pragmatic value, with diagrams, formulation, implementation and visualization of each component."
 type: visualization
 id: efe_components_001
 created: 2024-02-05
@@ -297,7 +298,7 @@ def plot_efe_components(model, save: bool = True) -> plt.Figure:
 
 Links to:
 
-- [[visualization_guide]] - Visualization standards
+- visualization guide - Visualization standards
 
 - [[plotting_utilities]] - Plotting tools
 

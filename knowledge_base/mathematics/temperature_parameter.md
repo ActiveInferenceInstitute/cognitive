@@ -1,4 +1,5 @@
 ---
+description: "The inverse temperature parameter gamma in the softmax over expected free energy, which sets the exploration-exploitation balance, with implementation and annealing schedules."
 type: mathematical_concept
 id: temperature_parameter_001
 created: 2024-02-05
@@ -26,7 +27,7 @@ Links to:
 
 - [[policy_selection]] - Action selection
 
-- [[precision_parameter]] - Active inference perspective
+- [[precision_parameter]] - Inverse-temperature analogue in active inference
 
 ## Mathematical Formulation
 
@@ -136,9 +137,9 @@ Links to:
 
    - Links to:
 
-     - [[policy_selection]] - Selection methods
+     - [[policy_selection]] - Choosing policies with softmax over values
 
-     - [[efe_components]] - Value components
+     - [[efe_components]] - Terms that make up expected free energy
 
      - [[decision_making]] - Choice behavior
 
@@ -150,11 +151,11 @@ Links to:
 
    - Links to:
 
-     - [[learning_rate]] - Learning control
+     - [[learning_rate]] - Step size of parameter updates
 
-     - [[uncertainty_estimation]] - Uncertainty measures
+     - [[uncertainty_estimation]] - Estimating uncertainty in beliefs
 
-     - [[adaptive_control]] - Control methods
+     - [[adaptive_control]] - Adjusting parameters in response to feedback
 
 ### Optimization Methods
 
@@ -166,11 +167,11 @@ Links to:
 
    - Links to:
 
-     - [[annealing_schedules]] - Schedule types
+     - [[annealing_schedules]] - Rules for lowering temperature over time
 
-     - [[convergence_control]] - Control methods
+     - [[convergence_control]] - Managing speed and stability of convergence
 
-     - [[optimization_strategies]] - Strategy types
+     - [[optimization_strategies]] - Approaches to searching for optima
 
 1. **Stochastic Search**
 
@@ -180,11 +181,11 @@ Links to:
 
    - Links to:
 
-     - [[stochastic_optimization]] - Methods
+     - [[stochastic_optimization]] - Optimization using random sampling
 
-     - [[search_strategies]] - Search types
+     - [[search_strategies]] - Approaches to searching a solution space
 
-     - [[exploration_methods]] - Exploration types
+     - [[exploration_methods]] - Ways of sampling unexplored options
 
 ## Analysis Methods
 
@@ -198,11 +199,11 @@ Links to:
 
    - Links to:
 
-     - [[parameter_tuning]] - Tuning methods
+     - [[parameter_tuning]] - Adjusting parameters to improve performance
 
-     - [[hyperparameter_optimization]] - Optimization
+     - [[hyperparameter_optimization]] - Searching for the best hyperparameter values
 
-     - [[sensitivity_analysis]] - Impact analysis
+     - [[sensitivity_analysis]] - Measuring how outputs respond to parameter changes
 
 1. **Visualization**
 
@@ -214,23 +215,23 @@ Links to:
 
    - Links to:
 
-     - [[decision_visualization]] - Choice plots
+     - [[decision_visualization]] - Plots of choice probabilities
 
-     - [[exploration_visualization]] - Path plots
+     - [[exploration_visualization]] - Plots of exploration trajectories
 
-     - [[learning_visualization]] - Learning plots
+     - [[learning_visualization]] - Plots of learning progress
 
 ## Related Concepts
 
-- [[softmax_function]] - Probability transformation
+- [[softmax_function]] - Maps values to choice probabilities
 
-- [[precision_parameter]] - Active inference precision
+- [[precision_parameter]] - Confidence in policy selection in active inference
 
 - [[exploration_control]] - Exploration management
 
-- [[optimization_parameters]] - Parameter control
+- [[optimization_parameters]] - Settings that govern optimization behavior
 
-- [[learning_dynamics]] - Learning behavior
+- [[learning_dynamics]] - How learning progresses over time
 
 ## References
 
@@ -540,7 +541,7 @@ graph LR
 
 ### Analysis Tools
 
-- [[parameter_sensitivity]] - Impact analysis
+- [[parameter_sensitivity]] - Effect of parameter changes on outcomes
 
 - [[convergence_metrics]] - Learning progress
 
@@ -556,7 +557,7 @@ graph LR
 
 - [[gradient_methods]] - Optimization techniques
 
-- [[sampling_strategies]] - Action selection
+- [[sampling_strategies]] - Methods for drawing actions from a distribution
 
 - [[probability_distributions]] - Distribution handling
 
@@ -572,5 +573,5 @@ graph LR
 
 - [[optimization_theory]] - Search principles
 
-- [[learning_dynamics]] - System behavior
+- [[learning_dynamics]] - Time course of learning in the system
 

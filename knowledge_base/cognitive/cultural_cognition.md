@@ -7,6 +7,8 @@ updated: 2026-10-09
 tags:
   - cognitive
   - active_inference
+aliases:
+  - cultural_variation
 semantic_relations:
   - type: relates_to
     links:

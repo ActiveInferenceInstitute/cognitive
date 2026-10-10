@@ -49,10 +49,8 @@ def config_path(tmp_path):
         },
         "inference": {
             "time_horizon": 1,  # Single-step policies
-            "num_iterations": 10,
             "learning_rate": 0.5,  # For belief updates
             "temperature": 1.0,  # For policy selection
-            "policy_learning_rate": 0.2,  # For E matrix updates
         },
         "visualization": {
             "output_dir": str(tmp_path / "viz_output"),
@@ -127,10 +125,8 @@ def model(output_dir):
         },
         "inference": {
             "time_horizon": 1,  # Single-step policies
-            "num_iterations": 10,
             "learning_rate": 0.5,  # For belief updates
             "temperature": 1.0,  # For policy selection
-            "policy_learning_rate": 0.2,  # For E matrix updates
         },
         "visualization": {
             "output_dir": str(output_dir),

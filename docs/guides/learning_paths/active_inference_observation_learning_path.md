@@ -5,12 +5,12 @@ title: Active Inference and Observation Learning Path
 type: learning_path
 
 status: in_development
+updated: 2026-10-10
 
 created: 2024-03-15
 
 complexity: intermediate
 
-processing_priority: 1
 
 tags:
 
@@ -57,7 +57,7 @@ semantic_relations:
 
 ## Overview
 
-This learning path explores the profound relationship between observation, human judgment, and active inference. It examines how the act of observation itself shapes our understanding and beliefs, while connecting these insights to the mathematical framework of active inference. The path integrates perspectives from cognitive science, philosophy of mind, and computational neuroscience to build a comprehensive understanding of how agents (both human and artificial) perceive, learn from, and influence their environment through observation.
+This learning path explores the profound relationship between observation, human judgment, and active inference. It examines how the act of observation itself shapes our understanding and beliefs, while connecting these insights to the mathematical framework of active inference. The path integrates perspectives from cognitive science, philosophy of mind, and computational neuroscience to build an understanding of how agents (both human and artificial) perceive, learn from, and influence their environment through observation.
 
 ## Prerequisites
 

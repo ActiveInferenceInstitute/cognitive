@@ -8,6 +8,8 @@ tags:
   - bayesian
   - cognitive_modeling
   - model_evidence
+aliases:
+  - bayesian_modeling
 semantic_relations:
   - type: relates
     links:

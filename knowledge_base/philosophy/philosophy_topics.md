@@ -1,5 +1,6 @@
 ---
 title: Philosophical Topics Index
+description: "Index of philosophy topics across theoretical, practical and applied philosophy, interdisciplinary links to science, society and technology, and historical traditions."
 type: index
 status: stable
 created: 2024-03-20
@@ -19,7 +20,6 @@ semantic_relations:
     links:
       - "[[cognitive_science]]"
       - "[[mathematics]]"
-      - "[[physics]]"
 ---
 
 
@@ -111,7 +111,7 @@ graph TD
 
 - [[time_and_space]]
 
-  - [[continuity]]
+  - continuity
 
   - [[infinity]]
 
@@ -1071,7 +1071,7 @@ graph TD
 
   - [[empirical_methods]]
 
-  - [[data_analysis]]
+  - data analysis
 
 - [[experimental_design]]
 
@@ -1183,7 +1183,7 @@ graph TD
 
   - [[synthesis_approaches]]
 
-- [[knowledge_integration]]
+- knowledge integration
 
   - [[interdisciplinary_synthesis]]
 
@@ -1191,7 +1191,7 @@ graph TD
 
   - [[boundary_objects]]
 
-- [[practical_applications]]
+- practical applications
 
   - [[problem_solving]]
 
@@ -1563,7 +1563,7 @@ graph TD
 
   - [[brain_intervention]]
 
-  - [[cognitive_enhancement]]
+  - cognitive enhancement
 
   - [[neuroimaging_ethics]]
 
@@ -2065,7 +2065,7 @@ graph TD
 
   - [[prediction_limitations]]
 
-  - [[knowledge_integration]]
+  - knowledge integration
 
 - [[complexity_methods]]
 

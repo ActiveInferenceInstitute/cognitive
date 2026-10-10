@@ -10,6 +10,7 @@ from typing import Any
 import numpy as np
 import yaml
 
+from ...utils.matrix_utils import normalize_mass
 from .base import ModelState
 from .generative_model import DiscreteGenerativeModel
 
@@ -196,6 +197,10 @@ class ActiveInferenceDispatcher:
         This public method lets model classes (such as
         ``ActiveInferenceModel``) compute expected free energy without reaching
         into private dispatcher internals.
+
+        With a ``goal_prior`` the returned value is ``G - T * ln(prior)`` so that
+        ``softmax(-value / T)`` is ``prior * exp(-G / T)`` normalized, the same
+        distribution the mean-field method computes from ``ln(prior) - G / T``.
         """
         policies = self.model.enumerate_policies(
             self.config.temporal_horizon,
@@ -237,7 +242,13 @@ class ActiveInferenceDispatcher:
                 )
         if goal_prior is not None:
             prior = self._action_prior(goal_prior)
-            first_action_values -= np.log(prior + 1e-12)
+            # The policy posterior is q(a) proportional to E(a) * exp(-G(a) / T):
+            # the prior multiplies the tempered likelihood and is not itself
+            # tempered. Folding it into the energy as -T * ln(E) makes
+            # softmax(-energy / T) equal that product for every temperature,
+            # and matches the mean-field logits ln(E) - G / T. A bare
+            # -ln(E) would reach the softmax as ln(E) / T.
+            first_action_values -= self.config.temperature * np.log(prior + 1e-12)
         return first_action_values
 
     def update_precision(self, prediction_error: float) -> float:
@@ -273,11 +284,7 @@ class ActiveInferenceDispatcher:
         array = np.asarray(values, dtype=float).reshape(-1)
         if array.size != size or not np.all(np.isfinite(array)):
             raise ValueError(f"Expected {size} finite values")
-        array = np.maximum(array, 0.0)
-        total = float(array.sum())
-        if total <= 1e-12:
-            return np.full(size, 1.0 / size)
-        return array / total
+        return normalize_mass(np.maximum(array, 0.0))
 
     @staticmethod
     def _softmax(values: np.ndarray) -> np.ndarray:
