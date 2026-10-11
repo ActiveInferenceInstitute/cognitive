@@ -92,3 +92,10 @@ for eta in (0.5, 1.0):                               # natural gradient / mirror
 - [[stochastic_optimization]]
 - [[convergence_control]]
 - [[natural_gradients]] · [[search_strategies]] · [[policy_search_methods]]
+
+## References
+
+- Amari, S. (1998). Natural gradient works efficiently in learning. Neural Computation, 10(2), 251-276.
+- Beck, A., & Teboulle, M. (2003). Mirror descent and nonlinear projected subgradient methods for convex optimization. Operations Research Letters, 31(3), 167-175.
+- Blei, D. M., Kucukelbir, A., & McAuliffe, J. D. (2017). Variational inference: A review for statisticians. Journal of the American Statistical Association, 112(518), 859-877.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.

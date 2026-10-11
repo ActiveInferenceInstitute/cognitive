@@ -109,3 +109,11 @@ print("P(a)", dispatcher.dispatch_policy_inference(state))
 
 - [[expected_free_energy]], [[epistemic_value]], [[policy_selection]], [[mutual_information]]
 - [[worked_example_vfe]], [[worked_examples_index]]
+
+## References
+
+- Friston, K., Rigoli, F., Ognibene, D., Mathys, C., FitzGerald, T., & Pezzulo, G. (2015). Active inference and epistemic value. Cognitive Neuroscience, 6(4), 187-214.
+- Da Costa, L., Parr, T., Sajid, N., Veselic, S., Neacsu, V., & Friston, K. (2020). Active inference on discrete state-spaces: a synthesis. Journal of Mathematical Psychology, 99, 102447.
+- Parr, T., & Friston, K. (2019). Generalised free energy and active inference. Biological Cybernetics, 113(5-6), 495-513.
+- Sajid, N., Ball, P. J., Parr, T., & Friston, K. J. (2021). Active inference: demystified and compared. Neural Computation, 33(3), 674-712.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.

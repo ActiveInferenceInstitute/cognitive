@@ -48,7 +48,7 @@ This document provides a comprehensive overview of agent architectures implement
 | Architecture | Temporal | State Space | Inference | Complexity | Applications |
 |-------------|----------|-------------|-----------|------------|--------------|
 | **Generic POMDP** | Discrete | Partially Observable | Variational | Medium | General purpose AI |
-| **Continuous-Time** | Continuous | Partially Observable | Path Integral | High | Neuroscience, control |
+| **Continuous-Time** | Continuous | Partially Observable | Generalised filtering / path integral | High | Neuroscience, control |
 | **Hierarchical** | Hybrid | Hierarchical | Multi-scale | High | Complex cognition |
 | **Multi-Agent** | Various | Distributed | Consensus | Very High | Social systems |
 | **Swarm** | Discrete | Collective | Emergent | Medium | Robotics, optimization |
@@ -423,13 +423,13 @@ class HybridAgent:
 ### Computational Complexity
 
 #### Time Complexity
-- **Generic POMDP**: O(n_states × n_actions × horizon)
+- **Generic POMDP**: O(n_policies × horizon × n_states²), with n_policies growing exponentially in horizon under exhaustive policy enumeration
 - **Continuous-Time**: O(integration_steps × state_dimension²)
 - **Hierarchical**: O(∑ levels × level_complexity)
 - **Swarm**: O(n_agents × communication_complexity)
 
 #### Space Complexity
-- **Generic POMDP**: O(n_states × n_observations)
+- **Generic POMDP**: O(n_states × n_observations + n_states² × n_actions)
 - **Continuous-Time**: O(state_trajectory_length × state_dimension)
 - **Hierarchical**: O(∑ levels × level_space)
 - **Swarm**: O(n_agents × individual_space)
@@ -526,3 +526,14 @@ class ArchitectureValidator:
 ---
 
 > **Evolution Continues**: Agent architectures continue to evolve with advances in theory and computation.
+
+## References
+
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: A process theory. Neural Computation, 29(1), 1-49.
+- Da Costa, L., Parr, T., Sajid, N., Veselic, S., Neacsu, V., & Friston, K. (2020). Active inference on discrete state-spaces: A synthesis. Journal of Mathematical Psychology, 99, 102447.
+- Buckley, C. L., Kim, C. S., McGregor, S., & Seth, A. K. (2017). The free energy principle for action and perception: A mathematical review. Journal of Mathematical Psychology, 81, 55-79.
+- Friston, K., Stephan, K., Li, B., & Daunizeau, J. (2010). Generalised filtering. Mathematical Problems in Engineering, 2010, 621670.
+- Pezzulo, G., Rigoli, F., & Friston, K. J. (2018). Hierarchical active inference: A theory of motivated control. Trends in Cognitive Sciences, 22(4), 294-306.
+- Kaelbling, L. P., Littman, M. L., & Cassandra, A. R. (1998). Planning and acting in partially observable stochastic domains. Artificial Intelligence, 101(1-2), 99-134.
+- Dorigo, M., Maniezzo, V., & Colorni, A. (1996). Ant system: Optimization by a colony of cooperating agents. IEEE Transactions on Systems, Man, and Cybernetics, Part B, 26(1), 29-41.

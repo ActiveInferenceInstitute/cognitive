@@ -624,3 +624,11 @@ def imitation_assessment(imitator, demonstrator_actions):
 - [[imitation]] - Direct behavioral reproduction
 - [[collective_behavior]] - Group-level social dynamics
 - [[cultural_evolution]] - Cultural transmission processes
+
+## References
+
+- Bandura, A. (1977). Social Learning Theory. Prentice Hall.
+- Rizzolatti, G., & Craighero, L. (2004). The mirror-neuron system. Annual Review of Neuroscience, 27, 169-192.
+- Heyes, C. (2012). What's social about social learning? Journal of Comparative Psychology, 126(2), 193-202.
+- Laland, K. N. (2004). Social learning strategies. Learning & Behavior, 32(1), 4-14.
+- Boyd, R., & Richerson, P. J. (1985). Culture and the Evolutionary Process. University of Chicago Press.

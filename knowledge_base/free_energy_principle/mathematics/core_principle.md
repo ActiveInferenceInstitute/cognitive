@@ -199,7 +199,7 @@ Where:
 
 ### Fluctuation Theorems
 
-The principle of least action connects to fluctuation theorems:
+Fluctuation theorems constrain the work done during state transitions; for example, the Jarzynski equality (Jarzynski, 1997) with zero free-energy difference gives:
 
 ```math
 \langle e^{-W} \rangle = 1
@@ -574,7 +574,7 @@ F[q] \geq -\ln p(o) \geq H[o]
 This ensures that variational free energy provides an upper bound on the true surprise.
 
 #### Thermodynamic Consistency
-The principle maintains thermodynamic consistency through the fluctuation theorems and entropy production bounds.
+The principle is related to thermodynamics through fluctuation theorems and entropy production bounds (Parr et al., 2020).
 
 ## 🔗 Related Concepts
 
@@ -601,7 +601,7 @@ The principle maintains thermodynamic consistency through the fluctuation theore
 ### Primary Literature
 - Friston (2010): "The free-energy principle: a unified brain theory?"
 - Parr et al. (2022): "Active inference: the free energy principle in mind, brain, and behavior"
-- Friston et al. (2017): "Active Inference and Learning"
+- Friston et al. (2016): "Active inference and learning"
 
 ### Mathematical Foundations
 - Beal (2003): "Variational algorithms for approximate Bayesian inference"
@@ -628,3 +628,13 @@ The principle maintains thermodynamic consistency through the fluctuation theore
 ---
 
 > **Research Foundation**: Serves as the theoretical basis for active inference, predictive coding, and related approaches in cognitive science and artificial intelligence.
+
+## References
+
+- Friston, K. (2010). The free-energy principle: a unified brain theory? *Nature Reviews Neuroscience*, 11(2), 127-138.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). *Active Inference: The Free Energy Principle in Mind, Brain, and Behavior*. MIT Press.
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., O'Doherty, J., & Pezzulo, G. (2016). Active inference and learning. *Neuroscience & Biobehavioral Reviews*, 68, 862-879.
+- Blei, D. M., Kucukelbir, A., & McAuliffe, J. D. (2017). Variational inference: a review for statisticians. *Journal of the American Statistical Association*, 112(518), 859-877.
+- Parr, T., Da Costa, L., & Friston, K. (2020). Markov blankets, information geometry and stochastic thermodynamics. *Philosophical Transactions of the Royal Society A*, 378(2164), 20190159.
+- Jarzynski, C. (1997). Nonequilibrium equality for free energy differences. *Physical Review Letters*, 78(14), 2690-2693.

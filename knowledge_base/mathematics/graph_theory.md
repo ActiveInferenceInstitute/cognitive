@@ -1098,3 +1098,11 @@ This provides a fundamental connection between spectral properties and graph par
 
 - [[complexity_theory]]
 
+
+## References
+
+- Diestel, R. (2017). Graph Theory (5th ed.). Springer.
+- Chung, F. R. K. (1997). Spectral Graph Theory. American Mathematical Society.
+- Fiedler, M. (1973). Algebraic connectivity of graphs. Czechoslovak Mathematical Journal, 23(2), 298-305.
+- Newman, M. E. J. (2006). Modularity and community structure in networks. Proceedings of the National Academy of Sciences, 103(23), 8577-8582.
+- Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to Algorithms (3rd ed.). MIT Press.

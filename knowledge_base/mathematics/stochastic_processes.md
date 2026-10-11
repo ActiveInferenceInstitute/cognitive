@@ -567,3 +567,11 @@ class SDESolver:
 
 - [[complex_systems]]
 
+## References
+
+- Øksendal, B. (2003). Stochastic differential equations: An introduction with applications (6th ed.). Springer.
+- Karatzas, I., & Shreve, S. E. (1991). Brownian motion and stochastic calculus (2nd ed.). Springer.
+- Gardiner, C. W. (2009). Stochastic methods: A handbook for the natural and social sciences (4th ed.). Springer.
+- Kloeden, P. E., & Platen, E. (1992). Numerical solution of stochastic differential equations. Springer.
+- Kalman, R. E. (1960). A new approach to linear filtering and prediction problems. Journal of Basic Engineering, 82(1), 35-45.
+- Gillespie, D. T. (1977). Exact stochastic simulation of coupled chemical reactions. The Journal of Physical Chemistry, 81(25), 2340-2361.

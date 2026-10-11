@@ -550,3 +550,10 @@ class TensegrityStability:
 
 - [[geodesic_geometry]]
 
+## References
+
+- Roth, B., & Whiteley, W. (1981). Tensegrity frameworks. Transactions of the American Mathematical Society, 265(2), 419-446.
+- Connelly, R., & Whiteley, W. (1996). Second-order rigidity and prestress stability for tensegrity frameworks. SIAM Journal on Discrete Mathematics, 9(3), 453-491.
+- Skelton, R. E., & de Oliveira, M. C. (2009). Tensegrity Systems. Springer.
+- Amari, S., & Nagaoka, H. (2000). Methods of Information Geometry. American Mathematical Society.
+- Fuller, R. B., & Applewhite, E. J. (1975). Synergetics: Explorations in the Geometry of Thinking. Macmillan.

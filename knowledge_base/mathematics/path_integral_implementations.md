@@ -1423,7 +1423,7 @@ if __name__ == "__main__":
 
 ### Connection to Expected Free Energy
 
-Path integrals naturally implement expected free energy minimization:
+Path integral sampling can be used to approximate expected free energy minimization over trajectories; the expected free energy is written here schematically:
 
 ```math
 
@@ -1512,3 +1512,12 @@ Extend to multi-scale planning:
 ## See also
 
 - [[path_integral_implementation|Path Integral Implementation]] - companion page
+
+## References
+
+- Kappen, H. J. (2005). Linear theory for control of nonlinear stochastic systems. Physical Review Letters, 95(20), 200201.
+- Kappen, H. J. (2005). Path integrals and symmetry breaking for optimal control theory. Journal of Statistical Mechanics: Theory and Experiment, 2005(11), P11011.
+- Theodorou, E., Buchli, J., & Schaal, S. (2010). A generalized path integral control approach to reinforcement learning. Journal of Machine Learning Research, 11, 3137-3181.
+- Todorov, E. (2009). Efficient computation of optimal actions. Proceedings of the National Academy of Sciences, 106(28), 11478-11483.
+- Friston, K., Daunizeau, J., Kilner, J., & Kiebel, S. J. (2010). Action and behavior: A free-energy formulation. Biological Cybernetics, 102(3), 227-260.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.

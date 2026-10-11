@@ -408,3 +408,11 @@ class DualMemoryArchitecture:
 
 - [[learning_dynamics|Learning Dynamics]]
 
+
+## References
+
+- Grossberg, S. (1980). How does a brain build a cognitive code? Psychological Review, 87(1), 1-51.
+- McCloskey, M., & Cohen, N. J. (1989). Catastrophic interference in connectionist networks: The sequential learning problem. Psychology of Learning and Motivation, 24, 109-165.
+- McClelland, J. L., McNaughton, B. L., & O'Reilly, R. C. (1995). Why there are complementary learning systems in the hippocampus and neocortex: Insights from the successes and failures of connectionist models of learning and memory. Psychological Review, 102(3), 419-457.
+- Abraham, W. C., & Robins, A. (2005). Memory retention: The synaptic stability versus plasticity dilemma. Trends in Neurosciences, 28(2), 73-78.
+- Kirkpatrick, J., Pascanu, R., Rabinowitz, N., Veness, J., Desjardins, G., Rusu, A. A., et al. (2017). Overcoming catastrophic forgetting in neural networks. Proceedings of the National Academy of Sciences, 114(13), 3521-3526.

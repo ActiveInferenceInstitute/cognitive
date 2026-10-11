@@ -41,7 +41,7 @@ Emergent property = F(microscopic properties)
 where F is computable but not predictable without full simulation
 ```
 
-Example: Temperature is weakly emergent from molecular kinetics -- it can be computed but is not a property of any individual molecule.
+Example: the large-scale patterns of Conway's Game of Life follow from the local rules but can in general only be found by running the simulation (Bedau, 1997).
 
 ### Strong Emergence
 
@@ -92,7 +92,7 @@ At each level, a new Markov blanket forms from the collective dynamics of the le
 
 ### Emergence Criteria
 
-A level n+1 property is **genuinely emergent** (in the FEP sense) if:
+A level n+1 property is **genuinely emergent** (in a proposed FEP sense, not a standard definition) if:
 
 ```
 F_{n+1} != sum_i F_{n,i} + coupling_corrections
@@ -200,14 +200,16 @@ The FEP suggests a form of universality in biological systems: despite wildly di
 
 This is because the FEP follows from general principles (ergodicity, Markov blankets, steady state) that do not depend on microscopic details -- just as thermodynamics follows from statistical mechanics regardless of molecular specifics.
 
-## Key References
-
-1. Bedau, M. A. (1997). Weak emergence. *Philosophical Perspectives*, 11, 375-399.
-2. Friston, K. (2019). A free energy principle for a particular physics. *arXiv preprint* arXiv:1906.10184.
-3. Rosas, F. E., Mediano, P. A. M., Jensen, H. J., Seth, A. K., Barrett, A. B., Carhart-Harris, R. L., & Bor, D. (2020). Reconciling emergences: An information-theoretic approach to identify causal emergence in multivariate data. *PLoS Computational Biology*, 16(12), e1008289.
-4. Hoel, E. P. (2017). When the map is better than the territory. *Entropy*, 19(5), 188.
-5. Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrodinger's question. *Physics of Life Reviews*, 24, 1-16.
-
 ## See also
 
 - [[knowledge_base/systems/emergence|Emergence in Complex Systems]]
+
+## References
+- Bedau, M. A. (1997). Weak emergence. Philosophical Perspectives, 11, 375-399.
+- Chalmers, D. J. (2006). Strong and weak emergence. In P. Clayton & P. Davies (Eds.), The Re-Emergence of Emergence (pp. 244-254). Oxford University Press.
+- Hoel, E. P. (2017). When the map is better than the territory. Entropy, 19(5), 188.
+- Rosas, F. E., Mediano, P. A. M., Jensen, H. J., Seth, A. K., Barrett, A. B., Carhart-Harris, R. L., & Bor, D. (2020). Reconciling emergences: An information-theoretic approach to identify causal emergence in multivariate data. PLoS Computational Biology, 16(12), e1008289.
+- Williams, P. L., & Beer, R. D. (2010). Nonnegative decomposition of multivariate information. arXiv:1004.2515.
+- Wilson, K. G. (1975). The renormalization group: Critical phenomena and the Kondo problem. Reviews of Modern Physics, 47(4), 773-840.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
+- Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrödinger's question: A free-energy formulation. Physics of Life Reviews, 24, 1-16.

@@ -596,3 +596,9 @@ class SubRiemannianHeat:
 
 1. [[geometric_mechanics|Geometric Mechanics]]
 
+## References
+
+- Hörmander, L. (1967). Hypoelliptic second order differential equations. Acta Mathematica, 119, 147-171.
+- Rothschild, L. P., & Stein, E. M. (1976). Hypoelliptic differential operators and nilpotent groups. Acta Mathematica, 137, 247-320.
+- Montgomery, R. (2002). A Tour of Subriemannian Geometries, Their Geodesics and Applications. American Mathematical Society.
+- Agrachev, A., Barilari, D., & Boscain, U. (2019). A Comprehensive Introduction to Sub-Riemannian Geometry. Cambridge University Press.

@@ -661,3 +661,12 @@ The key takeaways from these implementations are:
 ---
 
 > **Research Enablement**: These implementations provide a foundation for further research into biological computation, collective intelligence, and bio-inspired algorithms.
+
+## References
+
+- Deneubourg, J.-L., Aron, S., Goss, S., & Pasteels, J. M. (1990). The self-organizing exploratory pattern of the Argentine ant. Journal of Insect Behavior, 3, 159-168.
+- Dorigo, M., Maniezzo, V., & Colorni, A. (1996). Ant system: Optimization by a colony of cooperating agents. IEEE Transactions on Systems, Man, and Cybernetics, Part B, 26, 29-41.
+- Dorigo, M., & Stützle, T. (2004). Ant Colony Optimization. MIT Press.
+- Karaboga, D., & Basturk, B. (2007). A powerful and efficient algorithm for numerical function optimization: Artificial bee colony (ABC) algorithm. Journal of Global Optimization, 39, 459-471.
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: A process theory. Neural Computation, 29(1), 1-49.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.

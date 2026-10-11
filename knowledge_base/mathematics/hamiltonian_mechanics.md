@@ -594,3 +594,10 @@ class HamiltonianPerturbation:
 
 1. [[integrable_systems|Integrable Systems]]
 
+
+## References
+
+- Arnold, V. I. (1989). Mathematical Methods of Classical Mechanics (2nd ed.). Springer.
+- Goldstein, H., Poole, C., & Safko, J. (2002). Classical Mechanics (3rd ed.). Addison Wesley.
+- Arnold, V. I. (1963). Proof of a theorem of A. N. Kolmogorov on the invariance of quasi-periodic motions under small perturbations of the Hamiltonian. Russian Mathematical Surveys, 18(5), 9-36.
+- Hairer, E., Lubich, C., & Wanner, G. (2006). Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations (2nd ed.). Springer.

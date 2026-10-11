@@ -218,7 +218,7 @@ Low HRV is associated with reduced allostatic flexibility and is a risk factor f
 
 ### Polyvagal Theory and Active Inference
 
-Porges' polyvagal theory proposes three hierarchical autonomic subsystems:
+Porges' polyvagal theory (Porges, 2007; a contested theory) proposes three hierarchical autonomic subsystems:
 1. **Ventral vagal** (social engagement): Safe environments, prosocial behavior
 2. **Sympathetic** (mobilization): Threat requiring active response
 3. **Dorsal vagal** (immobilization): Overwhelming threat, shutdown
@@ -286,17 +286,17 @@ The cortisol awakening response (CAR) -- the sharp rise in cortisol upon waking 
 
 ### HPA Dysregulation
 
-HPA axis dysregulation (too high or too low cortisol, blunted or exaggerated responses) represents a failure of allostatic regulation -- the generative model of the body's stress state is inaccurate, leading to inappropriate regulatory actions:
+HPA axis dysregulation (too high or too low cortisol, blunted or exaggerated responses) can be framed as a failure of allostatic regulation -- the generative model of the body's stress state is inaccurate, leading to inappropriate regulatory actions:
 
-- **Hypercortisolism**: Generative model overestimates threat (anxiety, Cushing's)
-- **Hypocortisolism**: Generative model underestimates threat (burnout, chronic fatigue)
+- **Hypercortisolism**: Generative model overestimates threat (proposed mapping, e.g. in some anxiety states)
+- **Hypocortisolism**: Generative model underestimates threat (proposed mapping, e.g. in some burnout and chronic fatigue states)
 - **Blunted diurnal rhythm**: Loss of circadian predictions (depression, PTSD)
 
 ## Allostatic Load
 
 ### Definition
 
-Allostatic load (McEwen, 1998) is the cumulative wear and tear on the body caused by repeated or chronic allostatic activation. It represents the cost of maintaining the NESS under challenging conditions:
+Allostatic load (McEwen & Stellar, 1993; McEwen, 1998) is the cumulative wear and tear on the body caused by repeated or chronic allostatic activation. It represents the cost of maintaining the NESS under challenging conditions:
 
 ```math
 \text{Allostatic load} = \int_0^T |\text{allostatic adjustment}(t)| \, dt
@@ -368,15 +368,6 @@ Allostatic regulation operates at multiple levels:
 
 Each level corresponds to a level in the hierarchical generative model, with higher levels providing context that modulates lower-level regulation.
 
-## Key References
-
-- Sterling, P. (2012). Allostasis: A model of predictive regulation. Physiology & Behavior, 106(1), 5-15.
-- McEwen, B. S. (1998). Stress, adaptation, and disease: Allostasis and allostatic load. Annals of the New York Academy of Sciences, 840, 33-44.
-- Seth, A. K. (2013). Interoceptive inference, emotion, and the embodied self. Trends in Cognitive Sciences, 17(11), 565-573.
-- Stephan, K. E., et al. (2016). Allostatic self-efficacy: A metacognitive theory of dyshomeostasis-induced fatigue and depression. Frontiers in Human Neuroscience, 10, 550.
-- Barrett, L. F., & Simmons, W. K. (2015). Interoceptive predictions in the brain. Nature Reviews Neuroscience, 16(7), 419-429.
-- Pezzulo, G., Rigoli, F., & Friston, K. (2015). Active inference, homeostatic regulation and adaptive behavioural control. Progress in Neurobiology, 134, 17-35.
-
 ## Cross-References
 
 - [[cognitive/active_inference|Active Inference]] - Overarching framework for allostatic regulation
@@ -387,3 +378,19 @@ Each level corresponds to a level in the hierarchical generative model, with hig
 - [[cognitive/free_energy_principle|Free Energy Principle]] - Theoretical foundation
 - [[cognitive/predictive_coding|Predictive Coding]] - Prediction error-based architecture
 - [[philosophy/dark_room_problem|Dark Room Problem]] - Why organisms actively seek varied states
+
+## References
+
+- Barrett, L. F., & Simmons, W. K. (2015). Interoceptive predictions in the brain. Nature Reviews Neuroscience, 16(7), 419-429.
+- Cannon, W. B. (1932). The wisdom of the body. W. W. Norton & Company.
+- Craig, A. D. (2002). How do you feel? Interoception: The sense of the physiological condition of the body. Nature Reviews Neuroscience, 3(8), 655-666.
+- McEwen, B. S. (1998). Stress, adaptation, and disease: Allostasis and allostatic load. Annals of the New York Academy of Sciences, 840, 33-44.
+- McEwen, B. S., & Stellar, E. (1993). Stress and the individual: Mechanisms leading to disease. Archives of Internal Medicine, 153(18), 2093-2101.
+- Peters, A., McEwen, B. S., & Friston, K. (2017). Uncertainty and stress: Why it causes diseases and how it is mastered by the brain. Progress in Neurobiology, 156, 164-188.
+- Pezzulo, G., Rigoli, F., & Friston, K. (2015). Active inference, homeostatic regulation and adaptive behavioural control. Progress in Neurobiology, 134, 17-35.
+- Porges, S. W. (2007). The polyvagal perspective. Biological Psychology, 74(2), 116-143.
+- Seth, A. K. (2013). Interoceptive inference, emotion, and the embodied self. Trends in Cognitive Sciences, 17(11), 565-573.
+- Stephan, K. E., Manjaly, Z. M., Mathys, C. D., Weber, L. A. E., Paliwal, S., Gard, T., ... Petzschner, F. H. (2016). Allostatic self-efficacy: A metacognitive theory of dyshomeostasis-induced fatigue and depression. Frontiers in Human Neuroscience, 10, 550.
+- Sterling, P. (2012). Allostasis: A model of predictive regulation. Physiology & Behavior, 106(1), 5-15.
+- Sterling, P., & Eyer, J. (1988). Allostasis: A new paradigm to explain arousal pathology. In S. Fisher & J. Reason (Eds.), Handbook of life stress, cognition and health. Wiley.
+- Thayer, J. F., & Lane, R. D. (2000). A model of neurovisceral integration in emotion regulation and dysregulation. Journal of Affective Disorders, 61(3), 201-216.

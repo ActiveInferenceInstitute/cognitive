@@ -559,7 +559,7 @@ class QuantumGroup:
 
 1. **Theoretical Challenges**
 
-   - Formality Conjecture
+   - Formality beyond Kontsevich's theorem for $\mathbb{R}^d$
 
    - Integration Problem
 
@@ -583,3 +583,12 @@ class QuantumGroup:
 
 1. [[integrable_systems|Integrable Systems]]
 
+## References
+
+- Weinstein, A. (1983). The local structure of Poisson manifolds. Journal of Differential Geometry, 18(3).
+- Vaisman, I. (1994). Lectures on the geometry of Poisson manifolds. Birkhäuser.
+- Marsden, J. E., & Ratiu, T. S. (1994). Introduction to mechanics and symmetry. Springer.
+- Marsden, J., & Weinstein, A. (1974). Reduction of symplectic manifolds with symmetry. Reports on Mathematical Physics, 5(1), 121-130.
+- Kontsevich, M. (2003). Deformation quantization of Poisson manifolds. Letters in Mathematical Physics, 66(3), 157-216.
+- Crainic, M., & Fernandes, R. L. (2004). Integrability of Poisson brackets. Journal of Differential Geometry, 66(1).
+- Crainic, M., Fernandes, R. L., & Mărcuț, I. (2021). Lectures on Poisson geometry. American Mathematical Society.

@@ -98,3 +98,10 @@ for error in (0.5, 0.1, 0.1, 0.1):
 - [[precision_parameter]]
 - [[hyperparameter_optimization]]
 - [[sensitivity_analysis]] · [[temperature_parameter]] · [[convergence_control]]
+
+## References
+
+- Bergstra, J., & Bengio, Y. (2012). Random search for hyper-parameter optimization. Journal of Machine Learning Research, 13, 281-305.
+- Snoek, J., Larochelle, H., & Adams, R. P. (2012). Practical Bayesian optimization of machine learning algorithms. Advances in Neural Information Processing Systems, 25.
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: A process theory. Neural Computation, 29(1), 1-49.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.

@@ -103,7 +103,7 @@ Where `x` is spatial position. This means:
 - Prediction errors at unattended locations are largely ignored
 - Stimuli at attended locations are perceived more accurately and rapidly
 
-**Posner cueing paradigm**: A valid cue pre-allocates precision to the cued location, so targets there benefit from higher gain on prediction errors. Invalid cues allocate precision to the wrong location, requiring a shift in precision allocation (cost of attentional reorienting).
+**Posner cueing paradigm** (Posner, 1980): A valid cue pre-allocates precision to the cued location, so targets there benefit from higher gain on prediction errors. Invalid cues allocate precision to the wrong location, requiring a shift in precision allocation (cost of attentional reorienting).
 
 ### Feature-Based Attention
 
@@ -161,7 +161,7 @@ Gain modulation is achieved through:
 | **Serotonin (5-HT)** | Temporal precision | Weight distal outcomes more heavily |
 
 **Evidence**:
-- ACh increases sensory gain in V1 (Gil et al., 1997)
+- ACh increases sensory gain in macaque V1 (Disney et al., 2007)
 - ACh blockade (scopolamine) impairs attention tasks
 - NE modulates signal-to-noise ratio in cortical networks
 - DA modulates the vigor of action selection
@@ -296,11 +296,14 @@ The eyes move to locations that promise the most information gain (resolving unc
 3. Novel scenes attract more fixations than familiar scenes (more uncertainty)
 4. Saccade latencies correlate with the expected information gain of the target
 
-## Key References
+## References
 
-1. Feldman, H., & Friston, K. (2010). Attention, uncertainty, and free-energy. *Frontiers in Human Neuroscience*, 4, 215.
-2. Parr, T., & Friston, K. J. (2019). Attention or salience? *Current Opinion in Psychology*, 29, 1-7.
-3. Kanai, R., Komura, Y., Shipp, S., & Friston, K. (2015). Cerebral hierarchies: predictive processing, precision and the pulvinar. *Philosophical Transactions of the Royal Society B*, 370(1668), 20140169.
-4. Mirza, M. B., Adams, R. A., Mathys, C., & Friston, K. J. (2018). Human visual exploration reduces uncertainty about the sensed world. *PLoS One*, 13(1), e0190429.
-5. Itti, L., & Baldi, P. (2009). Bayesian surprise attracts human attention. *Vision Research*, 49(10), 1295-1306.
-6. Hohwy, J. (2012). Attention and conscious perception in the hypothesis testing brain. *Frontiers in Psychology*, 3, 96.
+- Feldman, H., & Friston, K. J. (2010). Attention, uncertainty, and free-energy. *Frontiers in Human Neuroscience*, 4, 215.
+- Parr, T., & Friston, K. J. (2019). Attention or salience? *Current Opinion in Psychology*, 29, 1-5.
+- Itti, L., & Baldi, P. (2009). Bayesian surprise attracts human attention. *Vision Research*, 49(10), 1295-1306.
+- Posner, M. I. (1980). Orienting of attention. *Quarterly Journal of Experimental Psychology*, 32(1), 3-25.
+- Lawson, R. P., Rees, G., & Friston, K. J. (2014). An aberrant precision account of autism. *Frontiers in Human Neuroscience*, 8, 302.
+- Mirza, M. B., Adams, R. A., Mathys, C., & Friston, K. J. (2018). Human visual exploration reduces uncertainty about the sensed world. *PLoS ONE*, 13(1), e0190429.
+- Disney, A. A., Aoki, C., & Hawken, M. J. (2007). Gain modulation by nicotine in macaque V1. *Neuron*, 56(4), 701-713.
+- Kanai, R., Komura, Y., Shipp, S., & Friston, K. (2015). Cerebral hierarchies: predictive processing, precision and the pulvinar. *Philosophical Transactions of the Royal Society B*, 370(1668), 20140169.
+- Hohwy, J. (2012). Attention and conscious perception in the hypothesis testing brain. *Frontiers in Psychology*, 3, 96.

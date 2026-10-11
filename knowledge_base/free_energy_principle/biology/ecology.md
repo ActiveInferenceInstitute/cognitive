@@ -223,10 +223,14 @@ Species extinction -> Loss of a unique generative model -> Reduced ensemble cove
 
 This provides a formal argument for biodiversity conservation: it maintains the inferential capacity of the ecosystem.
 
-## Key References
+## References
 
-1. Constant, A., Ramstead, M. J. D., Veissiere, S. P., & Friston, K. (2019). Regimes of expectations: An active inference model of social conformity and human decision making. *Frontiers in Psychology*, 10, 679.
-2. Kauffman, S. A. (1993). *The Origins of Order*. Oxford University Press.
-3. Odling-Smee, F. J., Laland, K. N., & Feldman, M. W. (2003). *Niche Construction: The Neglected Process in Evolution*. Princeton University Press.
-4. Levin, S. A. (1998). Ecosystems and the biosphere as complex adaptive systems. *Ecosystems*, 1(5), 431-436.
-5. Scheffer, M. (2009). *Critical Transitions in Nature and Society*. Princeton University Press.
+- Odling-Smee, F. J., Laland, K. N., & Feldman, M. W. (2003). *Niche Construction: The Neglected Process in Evolution*. Princeton University Press.
+- Constant, A., Ramstead, M. J. D., Veissiere, S. P. L., Campbell, J. O., & Friston, K. J. (2018). A variational approach to niche construction. *Journal of the Royal Society Interface*, 15(141), 20170685.
+- Jones, C. G., Lawton, J. H., & Shachak, M. (1994). Organisms as ecosystem engineers. *Oikos*, 69(3), 373-386.
+- Scheffer, M., Carpenter, S., Foley, J. A., Folke, C., & Walker, B. (2001). Catastrophic shifts in ecosystems. *Nature*, 413(6856), 591-596.
+- Scheffer, M. (2009). *Critical Transitions in Nature and Society*. Princeton University Press.
+- Yachi, S., & Loreau, M. (1999). Biodiversity and ecosystem productivity in a fluctuating environment: the insurance hypothesis. *Proceedings of the National Academy of Sciences*, 96(4), 1463-1468.
+- Constant, A., Ramstead, M. J. D., Veissiere, S. P. L., & Friston, K. (2019). Regimes of expectations: An active inference model of social conformity and human decision making. *Frontiers in Psychology*, 10, 679.
+- Kauffman, S. A. (1993). *The Origins of Order: Self-Organization and Selection in Evolution*. Oxford University Press.
+- Levin, S. A. (1998). Ecosystems and the biosphere as complex adaptive systems. *Ecosystems*, 1(5), 431-436.

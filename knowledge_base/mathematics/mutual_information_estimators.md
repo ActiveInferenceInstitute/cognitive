@@ -89,3 +89,12 @@ print(round(float(dv), 4), round(float(nwj), 4), round(float(dv_half), 4))
 ## See also
 
 - [[mutual_information]] · [[epistemic_value]] · [[entropy]] · [[kl_divergence]]
+
+## References
+
+- Kraskov, A., Stögbauer, H., & Grassberger, P. (2004). Estimating mutual information. Physical Review E, 69(6), 066138.
+- Paninski, L. (2003). Estimation of entropy and mutual information. Neural Computation, 15(6), 1191-1253.
+- Nguyen, X., Wainwright, M. J., & Jordan, M. I. (2010). Estimating divergence functionals and the likelihood ratio by convex risk minimization. IEEE Transactions on Information Theory, 56(11), 5847-5861.
+- Belghazi, M. I., Baratin, A., Rajeshwar, S., Ozair, S., Bengio, Y., Courville, A., & Hjelm, R. D. (2018). Mutual information neural estimation. Proceedings of the 35th International Conference on Machine Learning (PMLR 80), 531-540.
+- Poole, B., Ozair, S., van den Oord, A., Alemi, A. A., & Tucker, G. (2019). On variational bounds of mutual information. Proceedings of the 36th International Conference on Machine Learning (PMLR 97), 5171-5180.
+- van den Oord, A., Li, Y., & Vinyals, O. (2018). Representation learning with contrastive predictive coding. arXiv:1807.03748.

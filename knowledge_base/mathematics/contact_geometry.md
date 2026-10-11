@@ -562,3 +562,9 @@ class ContactControlSystem:
 
 1. [[sub_riemannian_geometry|Sub-Riemannian Geometry]]
 
+
+## References
+- Geiges, H. (2008). An Introduction to Contact Topology. Cambridge University Press.
+- Arnold, V. I. (1989). Mathematical Methods of Classical Mechanics (2nd ed.). Springer.
+- Chekanov, Y. (2002). Differential algebra of Legendrian links. Inventiones Mathematicae, 150(3), 441-483.
+- Bravetti, A., Cruz, H., & Tapias, D. (2017). Contact Hamiltonian mechanics. Annals of Physics, 376, 17-39.

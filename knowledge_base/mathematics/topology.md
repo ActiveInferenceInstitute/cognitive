@@ -473,3 +473,10 @@ class ManifoldLearner:
 
 1. [[sheaf_theory|Sheaf Theory]]
 
+## References
+
+- Munkres, J. R. (2000). Topology (2nd ed.). Prentice Hall.
+- Hatcher, A. (2002). Algebraic Topology. Cambridge University Press.
+- Bott, R., & Tu, L. W. (1982). Differential Forms in Algebraic Topology. Springer.
+- Carlsson, G. (2009). Topology and data. Bulletin of the American Mathematical Society, 46(2), 255-308.
+- Fefferman, C., Mitter, S., & Narayanan, H. (2016). Testing the manifold hypothesis. Journal of the American Mathematical Society, 29(4), 983-1049.

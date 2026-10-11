@@ -544,3 +544,10 @@ class FloerHomology:
 
 1. [[quantum_mechanics|Quantum Mechanics]]
 
+## References
+
+- Arnold, V. I. (1989). Mathematical Methods of Classical Mechanics (2nd ed.). Springer.
+- McDuff, D., & Salamon, D. (2017). Introduction to Symplectic Topology (3rd ed.). Oxford University Press.
+- Marsden, J., & Weinstein, A. (1974). Reduction of symplectic manifolds with symmetry. Reports on Mathematical Physics, 5(1), 121-130.
+- Floer, A. (1988). Morse theory for Lagrangian intersections. Journal of Differential Geometry, 28(3), 513-547.
+- Strominger, A., Yau, S.-T., & Zaslow, E. (1996). Mirror symmetry is T-duality. Nuclear Physics B, 479(1-2), 243-259.

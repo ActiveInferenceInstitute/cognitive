@@ -142,7 +142,7 @@ Mathematical foundations specifically relevant to active inference and free ener
 
 #### Markov Blankets (`markov_blankets/`)
 - **Definition**: Boundaries separating internal/external states
-- **Conditional Independence**: (sˢⁱ|sⁱ) ⊥ (sᵉ|sⁱ)
+- **Conditional Independence**: internal states ⊥ external states | blanket (sensory and active) states
 - **Self-Organization**: Spontaneous emergence of boundaries
 - **Scale Separation**: Micro/meso/macro level dynamics
 
@@ -238,7 +238,7 @@ Mathematical Concepts
 
 ### Foundational Texts
 - **Logic**: Gödel's incompleteness theorems, Tarski's truth definitions
-- **Set Theory**: Cohen's continuum hypothesis, forcing techniques
+- **Set Theory**: Cohen's independence proof for the continuum hypothesis, forcing techniques
 - **Algebra**: Galois theory, representation theory
 - **Analysis**: Lebesgue integration, functional analysis
 
@@ -289,3 +289,18 @@ Mathematical Concepts
 ---
 
 > **Computational Power**: Enables quantitative analysis and predictive modeling of cognitive phenomena.
+
+## References
+
+- Gödel, K. (1931). Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. Monatshefte für Mathematik und Physik, 38, 173-198.
+- Cohen, P. J. (1963). The independence of the continuum hypothesis. Proceedings of the National Academy of Sciences, 50(6), 1143-1148.
+- Kolmogorov, A. N. (1956). Foundations of the theory of probability (N. Morrison, Trans.; 2nd English ed.). Chelsea.
+- Cover, T. M., & Thomas, J. A. (2006). Elements of information theory (2nd ed.). Wiley-Interscience.
+- Pearl, J. (1988). Probabilistic reasoning in intelligent systems: Networks of plausible inference. Morgan Kaufmann.
+- Bishop, C. M. (2006). Pattern recognition and machine learning. Springer.
+- Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep learning. MIT Press.
+- Busemeyer, J. R., & Bruza, P. D. (2012). Quantum models of cognition and decision. Cambridge University Press.
+- Blei, D. M., Kucukelbir, A., & McAuliffe, J. D. (2017). Variational inference: A review for statisticians. Journal of the American Statistical Association, 112(518), 859-877.
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.
+- Feldman, H., & Friston, K. J. (2010). Attention, uncertainty, and free-energy. Frontiers in Human Neuroscience, 4, 215.

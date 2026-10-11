@@ -669,3 +669,15 @@ class BioInspiredHybridOptimization:
 ---
 
 > **Computational Inspiration**: Natural foraging strategies provide powerful metaphors for solving complex optimization problems in computer science, logistics, resource management, and artificial intelligence.
+
+## References
+
+- Goss, S., Aron, S., Deneubourg, J.-L., & Pasteels, J. M. (1989). Self-organized shortcuts in the Argentine ant. Naturwissenschaften, 76, 579-581.
+- Deneubourg, J.-L., Aron, S., Goss, S., & Pasteels, J. M. (1990). The self-organizing exploratory pattern of the Argentine ant. Journal of Insect Behavior, 3, 159-168.
+- Dorigo, M., Maniezzo, V., & Colorni, A. (1996). Ant system: Optimization by a colony of cooperating agents. IEEE Transactions on Systems, Man, and Cybernetics, Part B, 26, 29-41.
+- Seeley, T. D., Camazine, S., & Sneyd, J. (1991). Collective decision-making in honey bees: How colonies choose among nectar sources. Behavioral Ecology and Sociobiology, 28, 277-290.
+- Seeley, T. D. (1995). The Wisdom of the Hive: The Social Physiology of Honey Bee Colonies. Harvard University Press.
+- Charnov, E. L. (1976). Optimal foraging, the marginal value theorem. Theoretical Population Biology, 9, 129-136.
+- Stephens, D. W., & Krebs, J. R. (1986). Foraging Theory. Princeton University Press.
+- Karaboga, D., & Basturk, B. (2007). A powerful and efficient algorithm for numerical function optimization: Artificial bee colony (ABC) algorithm. Journal of Global Optimization, 39, 459-471.
+- Kennedy, J., & Eberhart, R. (1995). Particle swarm optimization. Proceedings of ICNN'95 - International Conference on Neural Networks, 4, 1942-1948.

@@ -63,11 +63,11 @@ Foundational concepts applicable across all system types.
 Systems exhibiting emergent behavior and self-organization.
 
 #### Emergence (`emergence/`)
-- **Weak Emergence**: Predictable from component properties
+- **Weak Emergence**: Derivable from component properties and interactions (in principle, by simulation)
 - **Strong Emergence**: Novel properties not reducible to components
 - **Self-Organization**: Spontaneous order formation
 - **Phase Transitions**: Qualitative changes in system behavior
-- **Criticality**: Systems operating at the edge of chaos
+- **Criticality**: Systems poised near a critical point (often loosely called the "edge of chaos")
 - **Scale-Free Networks**: Power-law distributions in connectivity
 
 #### Network Theory (`network_theory/`)
@@ -94,7 +94,7 @@ Systems that learn and evolve over time.
 - **Information Theory**: Communication and computation in systems
 - **Feedback Control**: Error correction and goal-directed behavior
 - **Requisite Variety**: System complexity matching environmental complexity
-- **Ultrar stability**: Hierarchical control with multiple feedback loops
+- **Ultrastability**: Adaptation through second-order feedback that resets a system's own parameters (Ashby)
 - **Conversation Theory**: Learning through communication
 
 #### Evolutionary Systems (`evolutionary_systems/`)
@@ -264,14 +264,14 @@ Engineered Systems
 - **Hierarchical Organization**: Multi-scale inference and control
 - **Feedback Control**: Error correction through perception and action
 - **Adaptation**: Model updating through experience
-- **Emergence**: Consciousness as emergent system property
+- **Emergence**: Consciousness proposed as an emergent system property
 
 ### Complex Adaptive Systems
 - **Agent-Based Models**: Individual cognitive agents in populations
 - **Network Dynamics**: Neural and social network interactions
 - **Self-Organization**: Spontaneous pattern formation in cognition
 - **Phase Transitions**: Qualitative changes in cognitive states
-- **Criticality**: Optimal information processing at the edge of chaos
+- **Criticality**: Hypothesized advantages for information processing near critical regimes (contested; Mitchell et al., 1993)
 
 ### Systems Engineering for AI
 - **Robust Design**: Fault-tolerant cognitive architectures
@@ -358,3 +358,18 @@ Engineered Systems
 ---
 
 > **Theoretical Foundation**: Grounds cognitive modeling in general systems principles and dynamics.
+
+## References
+
+- von Bertalanffy, L. (1968). General system theory: Foundations, development, applications. George Braziller.
+- Wiener, N. (1948). Cybernetics: Or control and communication in the animal and the machine. MIT Press.
+- Ashby, W. R. (1956). An introduction to cybernetics. Chapman & Hall.
+- Forrester, J. W. (1961). Industrial dynamics. MIT Press.
+- Kauffman, S. A. (1993). The origins of order: Self-organization and selection in evolution. Oxford University Press.
+- Prigogine, I., & Stengers, I. (1984). Order out of chaos: Man's new dialogue with nature. Bantam Books.
+- Holland, J. H. (1995). Hidden order: How adaptation builds complexity. Addison-Wesley.
+- Mitchell, M. (2009). Complexity: A guided tour. Oxford University Press.
+- Holling, C. S. (1973). Resilience and stability of ecological systems. Annual Review of Ecology and Systematics, 4, 1-23.
+- Mitchell, M., Hraber, P. T., & Crutchfield, J. P. (1993). Revisiting the edge of chaos: Evolving cellular automata to perform computations. Complex Systems, 7, 89-130.
+- Kitano, H. (2002). Systems biology: A brief overview. Science, 295(5560), 1662-1664.
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.

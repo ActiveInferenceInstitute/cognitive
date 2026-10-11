@@ -577,19 +577,21 @@ class ExpressionController:
 ## References
 
 ### Foundational Texts
-- alon 2019 - "An Introduction to Systems Biology, 2nd Edition"
-- davidson 2006 - "The Regulatory Genome: Gene Regulatory Networks in Development and Evolution"
-- karlebach 2008 - "Modelling and Analysis of Gene Regulatory Networks"
+- Alon, U. (2019). An Introduction to Systems Biology: Design Principles of Biological Circuits (2nd ed.). Chapman and Hall/CRC.
+- Davidson, E. H. (2006). The Regulatory Genome: Gene Regulatory Networks in Development and Evolution. Academic Press.
+- Karlebach, G., & Shamir, R. (2008). Modelling and analysis of gene regulatory networks. Nature Reviews Molecular Cell Biology, 9, 770-780.
 
 ### Advanced Topics
-- de jong 2002 - "Modeling and Simulation of Genetic Regulatory Systems"
-- smolen 2000 - "Genetic Control of Cell Division Patterns"
-- levchenko 2003 - "Dynamics of Cell Signaling"
+- de Jong, H. (2002). Modeling and simulation of genetic regulatory systems: A literature review. Journal of Computational Biology, 9, 67-103.
+- Gardner, T. S., Cantor, C. R., & Collins, J. J. (2000). Construction of a genetic toggle switch in Escherichia coli. Nature, 403, 339-342.
+- Elowitz, M. B., & Leibler, S. (2000). A synthetic oscillatory network of transcriptional regulators. Nature, 403, 335-338.
+- Mangan, S., & Alon, U. (2003). Structure and function of the feed-forward loop network motif. Proceedings of the National Academy of Sciences, 100, 11980-11985.
+- Elowitz, M. B., Levine, A. J., Siggia, E. D., & Swain, P. S. (2002). Stochastic gene expression in a single cell. Science, 297, 1183-1186.
 
 ### Computational Methods
-- markowetz 2007 - "Inferring Cellular Networks"
-- prill 2010 - "Towards a Rigorous Assessment of Systems Biology Models"
-- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
+- Markowetz, F., & Spang, R. (2007). Inferring cellular networks - a review. BMC Bioinformatics, 8(Suppl 6), S5.
+- Marbach, D., Costello, J. C., Kuffner, R., Vega, N. M., Prill, R. J., Camacho, D. M., et al. (2012). Wisdom of crowds for robust gene network inference. Nature Methods, 9, 796-804.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184. [[friston_2019]]
 
 ## See Also
 

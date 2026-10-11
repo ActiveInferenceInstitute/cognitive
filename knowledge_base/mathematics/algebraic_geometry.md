@@ -88,7 +88,7 @@ semantic_relations:
 
    - U is open set
 
-   - O_{X,p} is local ring
+   - O_{X,p} is local ring (sections must also be locally given by fractions a/f with f nonvanishing)
 
 ## Advanced Concepts
 
@@ -486,3 +486,10 @@ class IntersectionTheory:
 
 1. Number Theory
 
+
+## References
+- Hartshorne, R. (1977). Algebraic Geometry. Springer.
+- Eisenbud, D., & Harris, J. (2000). The Geometry of Schemes. Springer.
+- Fulton, W. (1998). Intersection Theory (2nd ed.). Springer.
+- Deligne, P., & Mumford, D. (1969). The irreducibility of the space of curves of given genus. Publications Mathematiques de l'IHES, 36, 75-109.
+- Cox, D. A., & Katz, S. (1999). Mirror Symmetry and Algebraic Geometry. American Mathematical Society.

@@ -87,10 +87,10 @@ x(t + dt) = x(t) + f(x(t + dt/2)) dt + \sigma(x(t + dt/2)) \Delta W(t)
 The two interpretations are related by a noise-induced drift correction:
 
 ```math
-f_{\text{Strat}} = f_{\text{Ito}} + \frac{1}{2} \sum_j \sigma_{kj} \frac{\partial \sigma_{ij}}{\partial x_k}
+f_{\text{Ito}} = f_{\text{Strat}} + \frac{1}{2} \sum_{j,k} \sigma_{kj} \frac{\partial \sigma_{ij}}{\partial x_k}
 ```
 
-The FEP literature generally uses the Stratonovich interpretation because it preserves the standard chain rule and has a more natural physical interpretation (the noise represents a physical process, not a mathematical artifact).
+The FEP literature commonly assumes state-independent noise amplitude, for which the two interpretations coincide. The Stratonovich interpretation preserves the standard chain rule, which is why it is often used for physical noise.
 
 ## Brownian Motion
 
@@ -118,7 +118,7 @@ where `m` is mass, `gamma` is friction, `F_ext` is external force, `k_B` is Bolt
 \gamma \dot{x} = F_{ext}(x) + \sqrt{2\gamma k_B T} \, \xi(t)
 ```
 
-or, dividing by `gamma`:
+or, dividing by `gamma` (taking `gamma = 1` in the force term, as in the sections below):
 
 ```math
 \dot{x} = -\nabla V(x) + \sqrt{2D} \, \xi(t)
@@ -203,7 +203,7 @@ The solenoidal component circulates the system around contours of constant surpr
 The fluctuation-dissipation theorem (FDT) relates the amplitude of spontaneous fluctuations to the system's response to external perturbations:
 
 ```math
-\langle x(t) x(0) \rangle = \frac{k_B T}{\gamma} e^{-\gamma t / m} \quad \text{(for a simple harmonic oscillator in a bath)}
+\langle v(t) v(0) \rangle = \frac{k_B T}{m} e^{-\gamma t / m} \quad \text{(velocity of a free Brownian particle)}
 ```
 
 More generally, the FDT states that the noise power spectrum is proportional to the imaginary part of the response function:
@@ -214,12 +214,12 @@ S(\omega) = \frac{2 k_B T}{\omega} \text{Im}[\chi(\omega)]
 
 ### FDT in the FEP
 
-The FDT has a deep connection to the FEP: it ensures that systems at equilibrium cannot gain information from their fluctuations (there is no "free lunch" of information). In non-equilibrium systems (like living organisms), the FDT is violated -- and this violation is precisely what allows organisms to extract information from their environment and maintain organized states far from equilibrium.
+The FDT is relevant to the FEP because it holds at equilibrium (detailed balance) and is generally violated in non-equilibrium steady states such as those the FEP ascribes to living systems. Reading this violation as what lets organisms maintain organized states far from equilibrium is an interpretation, not a theorem.
 
-The degree of FDT violation can be quantified by the entropy production rate:
+The degree of FDT violation is linked to energy dissipation (Harada & Sasa, 2005), and the entropy production rate of an overdamped diffusion is, in units of $k_B$:
 
 ```math
-\dot{S}_{prod} = \frac{1}{T} \int J(x) \cdot D^{-1} J(x) \frac{dx}{p_{ss}(x)} \geq 0
+\dot{S}_{prod} = \int J(x) \cdot D^{-1} J(x) \frac{dx}{p_{ss}(x)} \geq 0
 ```
 
 where `J(x)` is the probability current. Living systems have positive entropy production, reflecting their fundamentally non-equilibrium nature.
@@ -247,7 +247,7 @@ f(x) = -D \nabla V(x)
 with no solenoidal component. In this case, the steady-state density is Boltzmann-Gibbs:
 
 ```math
-p_{ss}(x) \propto \exp(-V(x) / D)
+p_{ss}(x) \propto \exp(-V(x))
 ```
 
 ### Detailed Balance Violation in Living Systems
@@ -340,7 +340,7 @@ This kernel satisfies detailed balance (approximately, for small `epsilon`) with
 ### Convergence Rates
 
 The mixing time of Langevin MCMC depends on properties of the target distribution:
-- **Strongly log-concave targets**: Mixing in `O(d / epsilon)` steps (d = dimension, epsilon = accuracy)
+- **Strongly log-concave targets**: Number of steps polynomial in the dimension `d` and the inverse accuracy `1/epsilon` (Dalalyan, 2017)
 - **Multi-modal targets**: Exponentially slow mixing due to energy barriers between modes
 - **Ill-conditioned targets**: Slow mixing due to disparate scales in different directions (preconditioning helps)
 
@@ -375,15 +375,6 @@ Population-level dynamics in evolutionary biology:
 - Diffusion = genetic drift (random fluctuations due to finite population)
 - Steady state = evolutionary stable strategies
 
-## Key References
-
-- Langevin, P. (1908). Sur la theorie du mouvement brownien. Comptes Rendus de l'Academie des Sciences, 146, 530-533.
-- Gardiner, C. W. (2009). Stochastic Methods: A Handbook for the Natural and Social Sciences. Springer.
-- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
-- Roberts, G. O., & Tweedie, R. L. (1996). Exponential convergence of Langevin distributions and their discrete approximations. Bernoulli, 2(4), 341-363.
-- Fiser, J., Berkes, P., Orban, G., & Lengyel, M. (2010). Statistically optimal perception and learning. Trends in Cognitive Sciences, 14(3), 119-130.
-- Welling, M., & Teh, Y. W. (2011). Bayesian learning via stochastic gradient Langevin dynamics. ICML.
-
 ## Cross-References
 
 - [[mathematics/fokker_planck|Fokker-Planck Equation]] - Density dynamics corresponding to Langevin trajectories
@@ -394,3 +385,14 @@ Population-level dynamics in evolutionary biology:
 - [[mathematics/variational_free_energy|Variational Free Energy]] - The potential for the gradient flow
 - [[mathematics/markov_blankets|Markov Blankets]] - Partition structure for coupled Langevin systems
 - [[mathematics/path_integral|Path Integral]] - Path integral formulation of Langevin dynamics
+
+## References
+
+- Langevin, P. (1908). Sur la theorie du mouvement brownien. Comptes Rendus de l'Academie des Sciences, 146, 530-533.
+- Gardiner, C. W. (2009). Stochastic Methods: A Handbook for the Natural and Social Sciences (4th ed.). Springer.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
+- Roberts, G. O., & Tweedie, R. L. (1996). Exponential convergence of Langevin distributions and their discrete approximations. Bernoulli, 2(4), 341-363.
+- Welling, M., & Teh, Y. W. (2011). Bayesian learning via stochastic gradient Langevin dynamics. Proceedings of the 28th International Conference on Machine Learning (ICML).
+- Fiser, J., Berkes, P., Orban, G., & Lengyel, M. (2010). Statistically optimal perception and learning: from behavior to neural representations. Trends in Cognitive Sciences, 14(3), 119-130.
+- Harada, T., & Sasa, S. (2005). Equality connecting energy dissipation with a violation of the fluctuation-response relation. Physical Review Letters, 95(13), 130602.
+- Dalalyan, A. S. (2017). Theoretical guarantees for approximate sampling from smooth and log-concave densities. Journal of the Royal Statistical Society Series B, 79(3), 651-676.

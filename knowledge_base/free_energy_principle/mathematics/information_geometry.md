@@ -72,7 +72,7 @@ g = [[1/sigma^2, 0], [0, 2/sigma^4]]
 
 The geometry is hyperbolic -- the space of Gaussian distributions has negative curvature. Distributions with small variance are "far apart" in the Fisher metric even if their means are close.
 
-**For the FEP**: The Fisher information metric on the space of recognition densities defines the geometry of the inference problem. Free energy minimization follows geodesics (or natural gradients) on this manifold.
+**For the FEP**: The Fisher information metric on the space of recognition densities defines the geometry of the inference problem. Free energy minimization can be viewed as following natural gradients (steepest descent in the Fisher metric) on this manifold.
 
 ### Geodesics and Distances
 
@@ -84,7 +84,7 @@ d(theta_1, theta_2) = integral_0^1 sqrt(g_{ij}(theta(t)) * dtheta_i/dt * dtheta_
 
 Where `theta(t)` is the geodesic path connecting `theta_1` to `theta_2`.
 
-For exponential families, geodesics have elegant closed-form expressions. The `e-geodesic` (exponential geodesic) connects distributions through mixture in the natural parameter space; the `m-geodesic` (mixture geodesic) connects through mixture in the expectation parameter space.
+For exponential families, geodesics have elegant closed-form expressions. The `e-geodesic` (exponential geodesic) is a straight line in the natural parameters (a normalized geometric mixture of the two densities); the `m-geodesic` (mixture geodesic) is a straight line in the expectation parameters (a linear mixture of the two densities).
 
 ## KL Divergence as Divergence Function
 
@@ -191,7 +191,7 @@ F[q] = D_KL[q(s) || p(s|o)] - ln p(o)
 - `D_KL[q || p(s|o)]` is the divergence from q to the true posterior
 - Minimizing F moves q toward p(s|o) along the natural gradient direction
 
-The trajectory of free energy minimization traces a path on the statistical manifold, and the natural gradient ensures this path is a geodesic (in the appropriate geometry).
+The trajectory of free energy minimization traces a path on the statistical manifold, and the natural gradient makes this path the steepest descent in the Fisher metric (a gradient flow, which is not in general a geodesic).
 
 ### The Projection Interpretation
 
@@ -203,7 +203,7 @@ q* = argmin_{q in Q} D_KL[q || p(s|o)]
 
 Where `Q` is the restricted family. This is the distribution in `Q` that is closest to the true posterior in KL divergence.
 
-The I-projection has the property of **moment matching**: for exponential family Q, the I-projection matches the expected sufficient statistics of the true posterior. For Gaussian Q, this means q* matches the mean and covariance of the true posterior (Laplace approximation).
+The M-projection (see below) has the property of **moment matching**: for exponential family Q, it matches the expected sufficient statistics of the true posterior. The I-projection generally does not; for Gaussian Q the Laplace approximation instead matches the posterior mode and its local curvature.
 
 ### Dual Projections
 
@@ -276,7 +276,7 @@ In information-geometric terms, entropy production is related to the Fisher-Rao 
 Sigma_dot >= (dL/dt)^2 / (2 * D)
 ```
 
-Where `L` is the Fisher-Rao length and `D` is a diffusion coefficient. This is the **thermodynamic uncertainty relation**.
+Where `L` is the Fisher-Rao length and `D` is a diffusion coefficient. This is a thermodynamic speed limit in the spirit of Ito (2018), related to but distinct from the thermodynamic uncertainty relation.
 
 **For the FEP**: The rate of free energy minimization (how fast the organism updates its beliefs) is bounded by the entropy production (the thermodynamic cost of inference). This provides a physical basis for the computational cost of inference.
 
@@ -370,7 +370,7 @@ This is a prediction error: the difference between expected sufficient statistic
 Natural gradient descent in neural networks is approximated by various methods:
 - **Fisher diagonal**: Approximate `g^{-1}` with only diagonal entries
 - **K-FAC**: Kronecker-factored approximate curvature
-- **ADAM optimizer**: Implicitly approximates natural gradient through adaptive learning rates
+- **ADAM optimizer**: Loosely related to a diagonal natural gradient through adaptive per-parameter learning rates
 
 For deep active inference, natural gradient methods improve convergence speed and stability.
 
@@ -382,16 +382,17 @@ Information geometry suggests:
 3. Precision weighting is the neural implementation of the Fisher metric
 4. Attention mechanisms optimize the local geometry of inference
 
-## Key References
-
-1. Amari, S. (2016). *Information Geometry and Its Applications*. Springer.
-2. Amari, S. (1998). Natural gradient works efficiently in learning. *Neural Computation*, 10(2), 251-276.
-3. Ay, N., Jost, J., Le, H. V., & Schwachhofer, L. (2017). *Information Geometry*. Springer.
-4. Parr, T., Da Costa, L., & Friston, K. (2020). Markov blankets, information geometry and stochastic thermodynamics. *Philosophical Transactions of the Royal Society A*, 378(2164), 20190159.
-5. Caticha, A. (2015). The basics of information geometry. In *AIP Conference Proceedings* (Vol. 1641, pp. 15-26).
-6. Nielsen, F. (2020). An elementary introduction to information geometry. *Entropy*, 22(10), 1100.
-7. Da Costa, L., Parr, T., Sengupta, B., & Friston, K. (2021). Neural dynamics under active inference: plausibility and efficiency of energy minimization. *Entropy*, 23(4), 454.
-
 ## See also
 
 - [[knowledge_base/mathematics/information_geometry|Information Geometry]]
+
+## References
+
+- Amari, S. (2016). *Information Geometry and Its Applications*. Springer.
+- Amari, S. (1998). Natural gradient works efficiently in learning. *Neural Computation*, 10(2), 251-276.
+- Ay, N., Jost, J., Le, H. V., & Schwachhofer, L. (2017). *Information Geometry*. Springer.
+- Nielsen, F. (2020). An elementary introduction to information geometry. *Entropy*, 22(10), 1100.
+- Parr, T., Da Costa, L., & Friston, K. (2020). Markov blankets, information geometry and stochastic thermodynamics. *Philosophical Transactions of the Royal Society A*, 378(2164), 20190159.
+- Ito, S. (2018). Stochastic thermodynamic interpretation of information geometry. *Physical Review Letters*, 121(3), 030605.
+- Da Costa, L., Parr, T., Sengupta, B., & Friston, K. (2021). Neural dynamics under active inference: plausibility and efficiency of information processing. *Entropy*, 23(4), 454.
+- Caticha, A. (2015). The basics of information geometry. *AIP Conference Proceedings*, 1641, 15-26.

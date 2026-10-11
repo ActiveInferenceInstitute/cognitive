@@ -121,6 +121,8 @@ where:
 
 - $g_{ij}$ is Fisher metric
 
+The metric (kinetic) term is a modelling choice of this page; the free action of the free energy principle integrates the free energy over time without it (see Friston, 2010).
+
 #### Euler-Lagrange Equations
 
 ```math
@@ -182,6 +184,8 @@ h_{ij}(\pi) = \mathbb{E}_{P_\pi}\left[\frac{\partial \log P_\pi}{\partial \pi^i}
 G(\pi) = \int_{\mathcal{M}} g_{ij}(\theta)\dot{\theta}^i\dot{\theta}^j d\mu(\theta)
 
 ```
+
+This is a schematic path-energy functional specific to this page, not the standard definition of expected free energy (Parr et al., 2022).
 
 #### Policy Update
 
@@ -1395,3 +1399,11 @@ if __name__ == "__main__":
 
 - [[variational_methods]]
 
+
+## References
+
+- Amari, S., & Nagaoka, H. (2000). Methods of Information Geometry. American Mathematical Society and Oxford University Press.
+- Amari, S. (1998). Natural gradient works efficiently in learning. Neural Computation, 10(2), 251-276.
+- Arnold, V. I. (1989). Mathematical Methods of Classical Mechanics (2nd ed.). Springer.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.
+- Friston, K. (2010). The free-energy principle: a unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.

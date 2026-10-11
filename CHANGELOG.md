@@ -209,6 +209,24 @@ produced a wrong or arbitrary result now raise `ValueError`.
   package and quote the numbers it returns. Every reference was checked against
   PubMed, Crossref and publisher records, and the checks corrected titles, authors, page
   ranges, attributions and a number of over-stated claims.
+- About 165 existing pages that cited nothing now carry a verified `## References` list
+  (about 850 entries, each checked against Crossref, PubMed, arXiv, publisher or
+  encyclopedia records). Reviewing those pages found and fixed real errors:
+  - expected free energy decompositions with a wrong sign or a stray term
+    (`active_inference`, `expected_free_energy`, `measure_theoretic_active_inference`,
+    `active_inference_connections`), and a rewritten derivation on
+    `free_energy_principle/mathematics/expected_free_energy`;
+  - a double-counted entropy term in `variational_free_energy`, an inverted
+    likelihood ratio in `psychophysics`, an impossible stability condition
+    (`|lambda| < 0`) in `advanced_taylor_series`, and wrong signs, factors and drift
+    corrections in `fokker_planck` and `langevin_dynamics`;
+  - `policy_selection` summed variational free energy where expected free energy
+    belongs and named an inverse temperature `temperature`;
+  - misattributed works and arguments (a novel cited as a metaverse reference, a critique
+    credited to the wrong authors, the "mob psychology" charge, wrong years and
+    journals), and unsupported claims (invented patent and licensing tiers on a
+    BioFirm page) that were corrected, softened or removed.
+  Pages that had both an older `Key References` list and a verified list now have one.
 - Link lists now carry accurate glosses (4,987 rewritten). About 6,000 links to generic
   labels that no page should exist for (`new_methods`, `version_control`,
   `adaptive_strategies`) were unlinked, and existing pages gained `aliases:` so a

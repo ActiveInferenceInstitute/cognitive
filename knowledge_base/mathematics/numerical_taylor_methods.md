@@ -610,3 +610,10 @@ class StabilityController:
 
 - [[dynamical_systems]]
 
+## References
+
+- Hairer, E., Nørsett, S. P., & Wanner, G. (1993). Solving ordinary differential equations I: Nonstiff problems (2nd rev. ed.). Springer.
+- Jorba, À., & Zou, M. (2005). A software package for the numerical integration of ODEs by means of high-order Taylor methods. Experimental Mathematics, 14(1), 99-117.
+- Baker, G. A., & Graves-Morris, P. (1996). Padé approximants (2nd ed.). Cambridge University Press.
+- Higham, N. J. (2002). Accuracy and stability of numerical algorithms (2nd ed.). Society for Industrial and Applied Mathematics.
+- Friston, K., Stephan, K., Li, B., & Daunizeau, J. (2010). Generalised filtering. Mathematical Problems in Engineering, 2010, 621670.

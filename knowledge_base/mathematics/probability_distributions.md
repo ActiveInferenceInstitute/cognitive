@@ -89,3 +89,11 @@ print(closed_form, (log_p - log_q).mean())
 - [[probability_theory]]
 - [[statistical_foundations]]
 - [[exponential_family]] · [[entropy]] · [[kl_divergence]]
+
+## References
+
+- Bishop, C. M. (2006). Pattern recognition and machine learning. Springer.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). Bayesian data analysis (3rd ed.). Chapman and Hall/CRC.
+- Cover, T. M., & Thomas, J. A. (2006). Elements of information theory (2nd ed.). Wiley.
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2016). Active inference and learning. Neuroscience & Biobehavioral Reviews, 68, 862-879.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.

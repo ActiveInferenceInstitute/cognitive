@@ -88,3 +88,10 @@ print(grad.round(2), 2 * (m - target))
 - [[knowledge_base/mathematics/variational_methods]]
 - [[knowledge_base/biology/evolutionary_biology]]
 - [[policy_search_methods]] · [[natural_gradients]] · [[stochastic_optimization]]
+
+## References
+
+- Holland, J. H. (1975). Adaptation in Natural and Artificial Systems. University of Michigan Press.
+- Hansen, N., & Ostermeier, A. (2001). Completely derandomized self-adaptation in evolution strategies. Evolutionary Computation, 9(2), 159-195.
+- Wierstra, D., Schaul, T., Glasmachers, T., Sun, Y., Peters, J., & Schmidhuber, J. (2014). Natural evolution strategies. Journal of Machine Learning Research, 15, 949-980.
+- Harper, M. (2009). The replicator equation as an inference dynamic. arXiv:0911.1763.

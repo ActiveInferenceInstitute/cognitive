@@ -71,7 +71,7 @@ Narratively free:   depth >> 0, alternatives >> 0, + narrative self  (human agen
 
 ### Formal Definition of Autonomy
 
-An autonomous system, under the FEP, is one whose dynamics are primarily driven by its internal states rather than external perturbations:
+One illustrative operationalisation (not a standard result in the FEP literature) treats an autonomous system as one whose dynamics are primarily driven by its internal states rather than external perturbations:
 
 ```
 Autonomy = I(a; mu) / I(a; psi)
@@ -213,7 +213,7 @@ The agent "knows" the best policy but selects a suboptimal one because policy pr
 
 ### Dopamine and Volition
 
-Since dopamine encodes policy precision (gamma), dopaminergic dysfunction directly affects volition:
+Since dopamine has been proposed to encode policy precision (gamma; Friston et al., 2014), dopaminergic dysfunction may affect volition:
 
 - **Parkinson's disease** (low DA): Difficulty initiating action (low gamma -> flat policy distribution)
 - **Addiction** (aberrant DA): Excessive commitment to drug-seeking policies (high gamma for one policy)
@@ -259,11 +259,11 @@ This provides a principled basis for gradations of responsibility:
 - Addiction: Aberrant precision -> modified responsibility
 - Fully deliberative adult: Full counterfactual depth -> full responsibility
 
-## Key References
-
-1. Friston, K., Schwartenbeck, P., FitzGerald, T., Moutoussis, M., Behrens, T., & Dolan, R. J. (2014). The anatomy of choice: dopamine and decision-making. *Philosophical Transactions of the Royal Society B*, 369(1655), 20130481.
-2. Seth, A. K. (2021). *Being You*. Dutton. Chapters on free will and agency.
-3. Clark, A. (2016). *Surfing Uncertainty*. Oxford University Press. Chapter 9.
-4. Kirchhoff, M., & Froese, T. (2017). Where there is life there is mind. *Entropy*, 19(4), 169.
-5. Dennett, D. C. (2003). *Freedom Evolves*. Viking.
-6. Friston, K. J., Da Costa, L., & Parr, T. (2023). Some interesting observations on the free energy principle. *Entropy*, 25(8), 1216.
+## References
+- Friston, K., Schwartenbeck, P., FitzGerald, T., Moutoussis, M., Behrens, T., & Dolan, R. J. (2014). The anatomy of choice: Dopamine and decision-making. Philosophical Transactions of the Royal Society B, 369(1655), 20130481.
+- Friston, K. J., Da Costa, L., & Parr, T. (2021). Some interesting observations on the free energy principle. Entropy, 23(8), 1076.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.
+- Dennett, D. C. (2003). Freedom Evolves. Viking.
+- Seth, A. K. (2021). Being You: A New Science of Consciousness. Dutton.
+- Clark, A. (2016). Surfing Uncertainty: Prediction, Action, and the Embodied Mind. Oxford University Press.
+- Kirchhoff, M. D., & Froese, T. (2017). Where there is life there is mind: In support of a strong life-mind continuity thesis. Entropy, 19(4), 169.

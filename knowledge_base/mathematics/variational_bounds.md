@@ -106,3 +106,11 @@ In the repository, `DiscreteGenerativeModel.posterior` computes the exact poster
 
 - [[variational_inference]] · [[variational_free_energy]] · [[kl_divergence]]
 - [[message_passing]] · [[belief_updating]]
+
+## References
+
+- Bishop, C. M. (2006). Pattern Recognition and Machine Learning. Springer.
+- Blei, D. M., Kucukelbir, A., & McAuliffe, J. D. (2017). Variational inference: a review for statisticians. Journal of the American Statistical Association, 112(518), 859-877.
+- Burda, Y., Grosse, R., & Salakhutdinov, R. (2015). Importance weighted autoencoders. arXiv:1509.00519.
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: a process theory. Neural Computation, 29(1), 1-49.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.

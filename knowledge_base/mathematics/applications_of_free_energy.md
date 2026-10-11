@@ -73,3 +73,11 @@ print(helmholtz(uniform), helmholtz(uniform) + kT * np.log(Z), kT * kl)
 - [[knowledge_base/free_energy_principle/README]]
 - [[knowledge_base/mathematics/variational_methods]]
 - [[variational_bounds]] · [[vfe_components]] · [[expected_free_energy]]
+
+## References
+- Jaynes, E. T. (1957). Information theory and statistical mechanics. Physical Review, 106(4), 620-630.
+- Neal, R. M., & Hinton, G. E. (1998). A view of the EM algorithm that justifies incremental, sparse, and other variants. In M. I. Jordan (Ed.), Learning in Graphical Models (pp. 355-368). Kluwer.
+- Blei, D. M., Kucukelbir, A., & McAuliffe, J. D. (2017). Variational inference: A review for statisticians. Journal of the American Statistical Association, 112(518), 859-877.
+- Kingma, D. P., & Welling, M. (2014). Auto-encoding variational Bayes. International Conference on Learning Representations. arXiv:1312.6114.
+- Rao, R. P. N., & Ballard, D. H. (1999). Predictive coding in the visual cortex: A functional interpretation of some extra-classical receptive-field effects. Nature Neuroscience, 2(1), 79-87.
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.

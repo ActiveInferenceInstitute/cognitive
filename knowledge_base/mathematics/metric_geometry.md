@@ -497,7 +497,7 @@ class GeometricGroup:
 
    ```math
 
-   \text{ObsDiam}(X,d,μ,κ) = \inf\{\text{diam}(f_*(μ)) : f \text{ is 1-Lipschitz}\}
+   \text{ObsDiam}(X,d,μ,κ) = \sup\{\text{diam}(f_*(μ); 1-κ) : f \text{ is 1-Lipschitz}\}
 
    ```
 
@@ -569,3 +569,11 @@ class GeometricGroup:
 
 1. [[sub_riemannian_geometry|Sub-Riemannian Geometry]]
 
+
+## References
+
+- Burago, D., Burago, Y., & Ivanov, S. (2001). A Course in Metric Geometry. American Mathematical Society.
+- Bridson, M. R., & Haefliger, A. (1999). Metric Spaces of Non-Positive Curvature. Springer.
+- Gromov, M. (2007). Metric Structures for Riemannian and Non-Riemannian Spaces. Birkhauser.
+- Ledoux, M. (2001). The Concentration of Measure Phenomenon. American Mathematical Society.
+- Villani, C. (2009). Optimal Transport: Old and New. Springer.

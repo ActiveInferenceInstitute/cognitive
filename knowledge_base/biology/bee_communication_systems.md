@@ -57,9 +57,9 @@ class WaggleDanceDecoder:
         self.sun_azimuth_reference = 0.0  # Solar reference point
 
     def decode_distance(self, waggle_duration: float) -> float:
-        """Convert waggle duration to distance (von Frisch's formula)"""
-        # Distance = 0.95 * duration (in meters)
-        return 0.95 * waggle_duration
+        """Convert waggle duration to distance (linear calibration, after von Frisch)"""
+        # Roughly 1 s of waggle run per kilometre; the slope varies with population and landscape
+        return 1000.0 * waggle_duration
 
     def decode_direction(self, waggle_angle: float, sun_azimuth: float) -> float:
         """Convert dance angle to compass direction"""
@@ -86,7 +86,7 @@ d = k \times t_w
 where:
 - $d$ is distance to food source (meters)
 - $t_w$ is waggle phase duration (seconds)
-- $k = 1.0  # approximate waggle calibration (illustrative)$ (calibration constant)
+- $k$ is a calibration constant of roughly 1000 m per second of waggle run, which varies between populations and landscapes
 
 **Direction Encoding:**
 ```math
@@ -137,7 +137,7 @@ class WaggleDanceCommunication:
         distance, bearing = self.calculate_relative_position(target_location)
 
         dance_parameters = {
-            'waggle_duration': distance / 0.95,  # Convert to dance time
+            'waggle_duration': distance / 1000.0,  # Convert to dance time (about 1 s per km)
             'waggle_angle': self.calculate_dance_angle(bearing),
             'dance_intensity': self.encode_quality(resource_quality),
             'scent_marks': self.attach_chemical_cues(target_location)
@@ -226,7 +226,7 @@ class QueenMandibularPheromones:
         self.queen_signals = {
             '9-ODA': 'reproduction_suppression',
             '9-HDA': 'worker_ovary_inhibition',
-            'HVA': 'swarm_preparation'
+            'HVA': 'retinue_attraction'
         }
         self.signal_strength = {}  # Varies with queen age and health
 
@@ -683,3 +683,15 @@ Communication systems co-evolve with:
 ---
 
 > **Evolutionary Refinement**: Bee communication systems have evolved remarkable precision and flexibility, adapting to diverse environments and social complexities across bee species.
+
+## References
+
+> The code blocks and numeric parameters on this page are illustrative sketches, not values taken from the cited studies.
+
+- von Frisch, K. (1967). The Dance Language and Orientation of Bees. Belknap Press of Harvard University Press.
+- Esch, H. E., Zhang, S., Srinivasan, M. V., & Tautz, J. (2001). Honeybee dances communicate distances measured by optic flow. Nature, 411, 581-583.
+- Riley, J. R., Greggers, U., Smith, A. D., Reynolds, D. R., & Menzel, R. (2005). The flight paths of honeybees recruited by the waggle dance. Nature, 435, 205-207.
+- Seeley, T. D. (2010). Honeybee Democracy. Princeton University Press.
+- Slessor, K. N., Winston, M. L., & Le Conte, Y. (2005). Pheromone communication in the honeybee (Apis mellifera L.). Journal of Chemical Ecology, 31, 2731-2745.
+- Boch, R., Shearer, D. A., & Stone, B. C. (1962). Identification of iso-amyl acetate as an active component in the sting pheromone of the honey bee. Nature, 195, 1018-1020.
+- Nieh, J. C. (2004). Recruitment communication in stingless bees (Hymenoptera, Apidae, Meliponini). Apidologie, 35, 159-182.

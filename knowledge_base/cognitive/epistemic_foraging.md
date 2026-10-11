@@ -304,14 +304,14 @@ In the brain, epistemic value may be computed through:
 - **Dopaminergic prediction errors**: Signaling the discrepancy between expected and actual information gain
 - **Cholinergic modulation**: Setting the gain on sensory prediction errors to reflect expected precision
 
-## Key References
+## References
 
 - Friston, K., et al. (2015). Active inference and epistemic value. Cognitive Neuroscience, 6(4), 187-214.
-- Parr, T., & Friston, K. (2017). Uncertainty, epistemics and active inference. Journal of the Royal Society Interface, 14(136).
+- Parr, T., & Friston, K. (2017). Uncertainty, epistemics and active inference. Journal of the Royal Society Interface, 14(136), 20170376.
 - Mirza, M. B., et al. (2016). Scene construction, visual foraging, and active inference. Frontiers in Computational Neuroscience, 10, 56.
 - Schwartenbeck, P., et al. (2019). Computational mechanisms of curiosity and goal-directed exploration. eLife, 8, e41703.
 - Lindley, D. V. (1956). On a measure of the information provided by an experiment. Annals of Mathematical Statistics, 27(4), 986-1005.
-- Gottlieb, J., & Bhui, R. (2018). Deciding when to decide. Current Opinion in Behavioral Sciences, 22, 25-31.
+- Gottlieb, J., & Oudeyer, P.-Y. (2018). Towards a neuroscience of active sampling and curiosity. Nature Reviews Neuroscience, 19(12), 758-770.
 
 ## Cross-References
 

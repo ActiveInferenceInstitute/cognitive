@@ -90,7 +90,7 @@ Taylor series expansions provide the mathematical foundation for continuous-time
 
 & \frac{d\tilde{x}}{dt} = D\tilde{x} - \frac{\partial F}{\partial \tilde{x}} \\
 
-& \text{Shift Operator:} \\
+& \text{Shift Operator (Taylor-coefficient coordinates } x^{(n)}/n!\text{):} \\
 
 & D = \begin{pmatrix}
 
@@ -544,7 +544,7 @@ class HierarchicalPredictor:
 
 & \text{Stability Condition:} \\
 
-& \max_{i} |\lambda_i(D - \partial^2F/\partial\tilde{x}^2)| < 0
+& \max_{i} \mathrm{Re}\,\lambda_i(D - \partial^2F/\partial\tilde{x}^2) < 0
 
 \end{aligned}
 
@@ -654,3 +654,10 @@ class HierarchicalPredictor:
 
 - [[variational_methods]]
 
+
+## References
+- Rudin, W. (1976). Principles of Mathematical Analysis (3rd ed.). McGraw-Hill.
+- Friston, K. J. (2008). Variational filtering. NeuroImage, 41(3), 747-766.
+- Friston, K., Stephan, K., Li, B., & Daunizeau, J. (2010). Generalised filtering. Mathematical Problems in Engineering, 2010, 621670.
+- Buckley, C. L., Kim, C. S., McGregor, S., & Seth, A. K. (2017). The free energy principle for action and perception: A mathematical review. Journal of Mathematical Psychology, 81, 55-79.
+- Amari, S. (1998). Natural gradient works efficiently in learning. Neural Computation, 10(2), 251-276.

@@ -8,7 +8,7 @@ status: stable
 
 ## Overview
 
-The [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]] represents a comprehensive framework for modeling complex [[knowledge_base/systems/Social-Ecological Systems|social-ecological systems]] through [[knowledge_base/cognitive/free_energy_principle|active inference]]. It implements a [[knowledge_base/cognitive/active_inference/Hierarchical_Models|heterarchical]] nested structure of federated [[knowledge_base/mathematics/markov_blankets|Markov Blankets]], enabling multi-scale representation and inference across interconnected ecological, climatic, social, and economic domains.
+The [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]] represents a comprehensive framework for modeling complex [[knowledge_base/systems/Social-Ecological Systems|social-ecological systems]] through [[knowledge_base/cognitive/free_energy_principle|active inference]]. It proposes a [[knowledge_base/cognitive/active_inference/Hierarchical_Models|heterarchical]] nested structure of federated [[knowledge_base/mathematics/markov_blankets|Markov Blankets]], enabling multi-scale representation and inference across interconnected ecological, climatic, social, and economic domains.
 
 ## Theoretical Framework
 
@@ -38,7 +38,7 @@ Each component is encapsulated within nested [[knowledge_base/mathematics/markov
 
 ### Federation Principles
 
-The system implements federated learning and inference through:
+The framework proposes federated learning and inference through:
 
 - Scale-specific state representations
 
@@ -668,3 +668,12 @@ class ActiveInferenceLearner:
 
 - [[cognitive/hierarchical_processing|Hierarchical Processing]]
 
+## References
+
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.
+- Kirchhoff, M., Parr, T., Palacios, E., Friston, K., & Kiverstein, J. (2018). The Markov blankets of life: Autonomy, active inference and the free energy principle. Journal of The Royal Society Interface, 15(138), 20170792.
+- Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrödinger's question: A free-energy formulation. Physics of Life Reviews, 24, 1-16.
+- Friston, K., Parr, T., Heins, C., Constant, A., Friedman, D., Isomura, T., et al. (2024). Federated inference and belief sharing. Neuroscience & Biobehavioral Reviews, 156, 105500.
+- McCulloch, W. S. (1945). A heterarchy of values determined by the topology of nervous nets. Bulletin of Mathematical Biophysics, 7(2), 89-93.
+- Folke, C. (2006). Resilience: The emergence of a perspective for social-ecological systems analyses. Global Environmental Change, 16(3), 253-267.
+- Berkes, F., Colding, J., & Folke, C. (2000). Rediscovery of traditional ecological knowledge as adaptive management. Ecological Applications, 10(5), 1251-1262.

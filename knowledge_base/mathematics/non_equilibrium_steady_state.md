@@ -117,7 +117,7 @@ These directed cycles cannot exist at equilibrium -- they require continuous ene
 NESS systems are fundamentally irreversible: the probability of a forward trajectory differs from the probability of the time-reversed trajectory:
 
 ```math
-\frac{P[\text{forward path}]}{P[\text{reverse path}]} = e^{\Delta S_{prod}} > 1
+\frac{P[\text{forward path}]}{P[\text{reverse path}]} = e^{\Delta S_{prod}}
 ```
 
 where `Delta S_prod` is the entropy produced along the path. This irreversibility is what distinguishes living from dead matter.
@@ -236,7 +236,7 @@ Self-organization is the emergence of ordered patterns without external design o
 
 ### Criticality and Self-Organized Criticality
 
-Some systems self-organize to the boundary between order and disorder (self-organized criticality, SOC). The SOC hypothesis proposes that:
+Some systems self-organize to the boundary between order and disorder (self-organized criticality, SOC). The SOC hypothesis proposes, as a conjecture rather than an established result, that:
 
 ```math
 \text{Optimal inference} \iff \text{Critical dynamics}
@@ -367,15 +367,6 @@ Evidence for NESS in biological systems:
 - **Gene regulatory networks**: Irreversible switching between cell states
 - **Behavioral data**: Directed sequences of behavior with non-time-reversible statistics
 
-## Key References
-
-- Prigogine, I. (1977). Self-Organization in Non-Equilibrium Systems. Wiley.
-- Seifert, U. (2012). Stochastic thermodynamics, fluctuation theorems and molecular machines. Reports on Progress in Physics, 75(12), 126001.
-- Da Costa, L., et al. (2021). Bayesian mechanics for stationary processes. Proceedings of the Royal Society A, 477(2256).
-- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
-- Jarzynski, C. (1997). Nonequilibrium equality for free energy differences. Physical Review Letters, 78(14), 2690.
-- Crooks, G. E. (1999). Entropy production fluctuation theorem and the nonequilibrium work relation for free energy differences. Physical Review E, 60(3), 2721.
-
 ## Cross-References
 
 - [[mathematics/fokker_planck|Fokker-Planck Equation]] - Equation governing density evolution to NESS
@@ -386,3 +377,13 @@ Evidence for NESS in biological systems:
 - [[biology/allostatic_regulation|Allostatic Regulation]] - Maintaining physiological NESS
 - [[biology/morphogenesis|Morphogenesis]] - Pattern formation as NESS
 - [[systems/circular_causality|Circular Causality]] - Cyclic dynamics at NESS
+
+## References
+
+- Nicolis, G., & Prigogine, I. (1977). Self-organization in nonequilibrium systems: From dissipative structures to order through fluctuations. Wiley.
+- Seifert, U. (2012). Stochastic thermodynamics, fluctuation theorems and molecular machines. Reports on Progress in Physics, 75(12), 126001.
+- Jarzynski, C. (1997). Nonequilibrium equality for free energy differences. Physical Review Letters, 78(14), 2690-2693.
+- Crooks, G. E. (1999). Entropy production fluctuation theorem and the nonequilibrium work relation for free energy differences. Physical Review E, 60(3), 2721-2726.
+- Friston, K. (2013). Life as we know it. Journal of The Royal Society Interface, 10(86), 20130475.
+- Da Costa, L., Friston, K., Heins, C., & Pavliotis, G. A. (2021). Bayesian mechanics for stationary processes. Proceedings of the Royal Society A, 477(2256), 20210518.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.

@@ -422,9 +422,9 @@ class EvolutionaryGame:
 
 & \text{Canonical Equation:} \\
 
-& \frac{d}{dt}x = \frac{1}{2}\mu\sigma^2N(x)\left.\frac{\partial^2W(y,x)}{\partial y^2}\right|_{y=x} \\
+& \frac{d}{dt}x = \frac{1}{2}\mu\sigma^2N(x)\left.\frac{\partial W(y,x)}{\partial y}\right|_{y=x} \\
 
-& \text{Invasion Fitness:} \\
+& \text{Selection Gradient:} \\
 
 & S(y,x) = \left.\frac{\partial\ln W(y,x)}{\partial y}\right|_{y=x}
 
@@ -442,7 +442,7 @@ class EvolutionaryGame:
 
 & W(x^*,x^*) > W(x,x^*) \text{ for all } x \neq x^* \\
 
-& \text{Convergence Stability:} \\
+& \text{Local Uninvadability:} \\
 
 & \left.\frac{\partial^2W(y,x)}{\partial y^2}\right|_{y=x=x^*} < 0
 
@@ -534,19 +534,22 @@ class EvolutionaryGame:
 ## References
 
 ### Foundational Texts
-- nowak 2006 - "Evolutionary Dynamics: Exploring the Equations of Life"
-- rice 2004 - "Evolutionary Theory: Mathematical and Conceptual Foundations"
-- hartl 2006 - "Essential Genetics: From Genes to Genome"
+- Nowak, M. A. (2006). Evolutionary Dynamics: Exploring the Equations of Life. Belknap Press of Harvard University Press.
+- Rice, S. H. (2004). Evolutionary Theory: Mathematical and Conceptual Foundations. Sinauer Associates.
+- Hofbauer, J., & Sigmund, K. (1998). Evolutionary Games and Population Dynamics. Cambridge University Press.
+- Price, G. R. (1970). Selection and covariance. Nature, 227, 520-521.
+- Taylor, P. D., & Jonker, L. B. (1978). Evolutionary stable strategies and game dynamics. Mathematical Biosciences, 40, 145-156.
+- Heisler, I. L., & Damuth, J. (1987). A method for analyzing selection in hierarchically structured populations. American Naturalist, 130, 582-602.
 
 ### Advanced Topics
-- page 2002 - "The Structure and Dynamics of Evolutionary Systems"
-- dieckmann 2000 - "The Geometry of Ecological Interactions"
-- geritz 1998 - "Evolutionary Branching and Sympatric Speciation"
+- Page, K. M., & Nowak, M. A. (2002). Unifying evolutionary dynamics. Journal of Theoretical Biology, 219, 93-98.
+- Dieckmann, U., & Law, R. (1996). The dynamical theory of coevolution: A derivation from stochastic ecological processes. Journal of Mathematical Biology, 34, 579-612.
+- Geritz, S. A. H., Kisdi, E., Meszena, G., & Metz, J. A. J. (1998). Evolutionarily singular strategies and the adaptive growth and branching of the evolutionary tree. Evolutionary Ecology, 12, 35-57.
 
 ### Modern Methods
-- back 1996 - "Evolutionary Computation: Toward a New Philosophy of Machine Intelligence"
-- floreano 2008 - "Bio-Inspired Artificial Intelligence"
-- stanley 2019 - "Designing Artificial Neural Networks through Neuroevolution"
+- Fogel, D. B. (1995). Evolutionary Computation: Toward a New Philosophy of Machine Intelligence. IEEE Press.
+- Floreano, D., & Mattiussi, C. (2008). Bio-Inspired Artificial Intelligence: Theories, Methods, and Technologies. MIT Press.
+- Stanley, K. O., Clune, J., Lehman, J., & Miikkulainen, R. (2019). Designing neural networks through neuroevolution. Nature Machine Intelligence, 1, 24-35.
 
 ## See Also
 

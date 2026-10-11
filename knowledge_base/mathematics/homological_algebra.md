@@ -576,3 +576,11 @@ class TriangulatedCategory:
 
 1. [[spectral_sequences|Spectral Sequences]]
 
+
+## References
+
+- Cartan, H., & Eilenberg, S. (1956). Homological Algebra. Princeton University Press.
+- Weibel, C. A. (1994). An Introduction to Homological Algebra. Cambridge University Press.
+- Gelfand, S. I., & Manin, Y. I. (2003). Methods of Homological Algebra (2nd ed.). Springer.
+- Keller, B. (2006). On differential graded categories. In Proceedings of the International Congress of Mathematicians, Madrid 2006 (Vol. II, pp. 151-190). European Mathematical Society.
+- Toen, B., & Vezzosi, G. (2005). Homotopical algebraic geometry I: Topos theory. Advances in Mathematics, 193(2), 257-372.

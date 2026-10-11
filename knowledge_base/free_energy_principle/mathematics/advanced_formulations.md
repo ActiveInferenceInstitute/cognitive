@@ -257,7 +257,7 @@ Where `Q_internal` is the heat dissipated by the internal dynamics.
 Q >= kT * ln 2 per bit erased
 ```
 
-This means belief updating (erasing old beliefs and writing new ones) has a minimum energetic cost. The brain's metabolic rate is partially explained by the thermodynamic cost of continuous inference.
+This means belief updating (erasing old beliefs and writing new ones) has a minimum energetic cost. The brain's metabolic rate may partly reflect the thermodynamic cost of continuous inference (Landauer, 1961), although this has not been established quantitatively.
 
 ### Fluctuation Theorems
 
@@ -268,7 +268,7 @@ E[exp(-W / kT)] = exp(-Delta_F / kT)
 
 Where `W` is the work done on the system and `Delta_F` is the free energy difference.
 
-In the FEP context, this relates the "work" of belief updating to the change in variational free energy. The Jarzynski equality ensures that, on average, the variational free energy change equals the thermodynamic work minus dissipation.
+In the FEP context, this relates the "work" of belief updating to the change in variational free energy. This is a heuristic analogy rather than an established result: the Jarzynski equality (Jarzynski, 1997) relates thermodynamic work to free-energy differences of a physical system.
 
 **Crooks fluctuation theorem**:
 ```
@@ -281,7 +281,7 @@ This connects the probability of forward (perception) and reverse (generation) p
 
 ### The Magnum Opus
 
-Friston's 2019 monograph "A free energy principle for a particular physics" represents the most ambitious formulation of the FEP. It attempts to derive the FEP from the mere existence of things -- from the fact that some systems can be distinguished from their environment.
+Friston's 2019 preprint "A free energy principle for a particular physics" (arXiv:1906.10184) represents the most ambitious formulation of the FEP. It attempts to derive the FEP from the mere existence of things -- from the fact that some systems can be distinguished from their environment.
 
 ### The Argument Structure
 
@@ -408,14 +408,18 @@ Exact free energy minimization is generally intractable:
 | Monte Carlo | O(N * n) per N samples | Arbitrary | Low (sampling noise) |
 | Amortized inference | O(1) after training | Depends on architecture | High (pattern recognition) |
 
-The brain likely uses a combination: **amortized inference** for rapid pattern recognition (feedforward processing), **iterative inference** for difficult cases (recurrent processing), and **sampling** for complex multi-modal posteriors (neural variability).
+The brain may use a combination (the complexities in the table are indicative orders, not exact): **amortized inference** for rapid pattern recognition (feedforward processing), **iterative inference** for difficult cases (recurrent processing), and **sampling** for complex multi-modal posteriors (neural variability).
 
-## Key References
+## References
 
-1. Friston, K. (2019). A free energy principle for a particular physics. *arXiv preprint* arXiv:1906.10184.
-2. Friston, K. (2008). Variational filtering. *NeuroImage*, 41(3), 747-766.
-3. Ramstead, M. J. D., et al. (2023). On Bayesian mechanics: a physics of and by beliefs. *Interface Focus*, 13(3), 20220029.
-4. Sakthivadivel, D. A. R. (2022). Towards a geometry and analysis for Bayesian mechanics. *arXiv preprint* arXiv:2204.11900.
-5. Fields, C., Friston, K., Glazebrook, J. F., & Levin, M. (2022). A free energy principle for generic quantum systems. *Progress in Biophysics and Molecular Biology*, 173, 36-59.
-6. Da Costa, L., Friston, K., Heins, C., & Pavliotis, G. A. (2021). Bayesian mechanics for stationary processes. *Proceedings of the Royal Society A*, 477(2256), 20210518.
-7. Parr, T., Da Costa, L., & Friston, K. (2020). Markov blankets, information geometry and stochastic thermodynamics. *Philosophical Transactions of the Royal Society A*, 378(2164), 20190159.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
+- Friston, K., Da Costa, L., Sakthivadivel, D. A. R., Heins, C., Pavliotis, G. A., Ramstead, M., & Parr, T. (2023). Path integrals, particular kinds, and strange things. *Physics of Life Reviews*, 47, 35-62.
+- Ramstead, M. J. D., Sakthivadivel, D. A. R., Heins, C., Koudahl, M., Millidge, B., Da Costa, L., Klein, B., & Friston, K. J. (2023). On Bayesian mechanics: a physics of and by beliefs. *Interface Focus*, 13(3), 20220029.
+- Da Costa, L., Friston, K., Heins, C., & Pavliotis, G. A. (2021). Bayesian mechanics for stationary processes. *Proceedings of the Royal Society A*, 477(2256), 20210518.
+- Parr, T., Da Costa, L., & Friston, K. (2020). Markov blankets, information geometry and stochastic thermodynamics. *Philosophical Transactions of the Royal Society A*, 378(2164), 20190159.
+- Fields, C., Friston, K., Glazebrook, J. F., & Levin, M. (2022). A free energy principle for generic quantum systems. *Progress in Biophysics and Molecular Biology*, 173, 36-59.
+- Friston, K. (2008). Variational filtering. *NeuroImage*, 41(3), 747-766.
+- Landauer, R. (1961). Irreversibility and heat generation in the computing process. *IBM Journal of Research and Development*, 5(3), 183-191.
+- Jarzynski, C. (1997). Nonequilibrium equality for free energy differences. *Physical Review Letters*, 78(14), 2690-2693.
+- Crooks, G. E. (1999). Entropy production fluctuation theorem and the nonequilibrium work relation for free energy differences. *Physical Review E*, 60(3), 2721-2726.
+- Sakthivadivel, D. A. R. (2022). Towards a geometry and analysis for Bayesian mechanics. arXiv:2204.11900.

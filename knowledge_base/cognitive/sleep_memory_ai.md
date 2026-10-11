@@ -694,3 +694,11 @@ class SleepDisorderModeling:
 ---
 
 > **Precision Optimization**: Sleep dynamically adjusts prediction precision across sensory, motor, cognitive, and emotional domains, optimizing the balance between flexibility and stability in the generative model.
+
+## References
+
+- Hobson, J. A., & Friston, K. J. (2012). Waking and dreaming consciousness: Neurobiological and functional considerations. Progress in Neurobiology, 98(1), 82-98.
+- Hobson, J. A., Hong, C. C.-H., & Friston, K. J. (2014). Virtual reality and consciousness inference in dreaming. Frontiers in Psychology, 5, 1133.
+- Diekelmann, S., & Born, J. (2010). The memory function of sleep. Nature Reviews Neuroscience, 11(2), 114-126.
+- Wilson, M. A., & McNaughton, B. L. (1994). Reactivation of hippocampal ensemble memories during sleep. Science, 265(5172), 676-679.
+- Tononi, G., & Cirelli, C. (2014). Sleep and the price of plasticity: From synaptic and cellular homeostasis to memory consolidation and integration. Neuron, 81(1), 12-34.

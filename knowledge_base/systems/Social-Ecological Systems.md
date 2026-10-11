@@ -250,3 +250,11 @@ graph LR
 - [[bioregional_stewardship_theory]] - Place-based governance and stewardship
 - [[ecosystem_management]] - Ecosystem-level management strategies
 
+
+## References
+
+- Berkes, F., Colding, J., & Folke, C. (Eds.). (2003). Navigating social-ecological systems: Building resilience for complexity and change. Cambridge University Press.
+- Folke, C., Hahn, T., Olsson, P., & Norberg, J. (2005). Adaptive governance of social-ecological systems. Annual Review of Environment and Resources, 30, 441-473.
+- Gunderson, L. H., & Holling, C. S. (Eds.). (2002). Panarchy: Understanding transformations in human and natural systems. Island Press.
+- Ostrom, E. (2005). Understanding institutional diversity. Princeton University Press.
+- Ostrom, E. (2009). A general framework for analyzing sustainability of social-ecological systems. Science, 325(5939), 419-422.

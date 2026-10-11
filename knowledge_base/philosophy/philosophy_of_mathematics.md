@@ -37,8 +37,8 @@ Mathematical objects exist independently of human minds and culture.
 Denies the existence of abstract mathematical objects.
 
 **Variants:**
-- **Predicativism**: Mathematical objects are constructed from concrete entities
-- **Fictionalism**: Mathematical statements are metaphorical, not literally true
+- **Reductive nominalism**: Mathematical talk is paraphrased in terms of concrete entities
+- **Fictionalism**: Mathematical statements are useful fictions, not literally true (Field)
 - **Modal Structuralism**: Focuses on possible structures rather than actual objects
 
 **Arguments:**
@@ -188,3 +188,11 @@ graph TD
   Logic --> HTT[Homotopy Type Theory]
 ```
 
+
+## References
+
+- Benacerraf, P. (1965). What numbers could not be. The Philosophical Review, 74(1), 47-73.
+- Benacerraf, P. (1973). Mathematical truth. The Journal of Philosophy, 70(19), 661-679.
+- Field, H. (1980). Science without numbers: A defence of nominalism. Princeton University Press.
+- Shapiro, S. (1997). Philosophy of mathematics: Structure and ontology. Oxford University Press.
+- The Univalent Foundations Program. (2013). Homotopy type theory: Univalent foundations of mathematics. Institute for Advanced Study.

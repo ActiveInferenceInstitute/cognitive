@@ -135,7 +135,7 @@ A bioregion is a geographical area defined by natural ecological and cultural bo
 - **Freshwater Ecosystems**: Largest freshwater system in North America
 - **Indigenous Stewardship**: Native American watershed management
 - **Cross-Border Governance**: US-Canada bioregional cooperation
-- **Industrial existing**: Remediation of polluted ecosystems
+- **Industrial Pollution**: Remediation of polluted ecosystems
 
 ### Mediterranean Basins
 - **Climate Adaptation**: Drought-resistant stewardship practices
@@ -209,21 +209,15 @@ A bioregion is a geographical area defined by natural ecological and cultural bo
 - **Biodiversity Conservation**: Protecting global biological heritage
 - **Sustainable Development**: Meeting needs within planetary boundaries
 
-## 📚 Key References
+## See also
 
-### Foundational Works
-- **Sale (1985)**: Dwellers in the Land: The Bioregional Vision
-- **Aberley (1999)**: Interpreting Bioregionalism
-- **McGinnis (1999)**: Bioregionalism
+- [[Social-Ecological Systems]]
+- [[traditional_ecological_knowledge]]
 
-### Contemporary Applications
-- **Berg and Dasmann (1977)**: Reinhabiting California
-- **Thayer (2003)**: LifePlace: Bioregional Thought and Practice
-- **Lyle (1994)**: Regenerative Design for Sustainable Development
-
-### Related Concepts
-- [[adaptive_comanagement]] - Collaborative adaptive management
-- [[resilience_thinking]] - System resilience and adaptation
-- [[traditional_ecological_knowledge]] - Indigenous knowledge systems
-- [[Social-Ecological Systems]] - Coupled human-natural systems
-
+## References
+- Aberley, D. (1999). Interpreting bioregionalism: A story from many voices. In M. V. McGinnis (Ed.), Bioregionalism. Routledge.
+- Berg, P., & Dasmann, R. (1977). Reinhabiting California. The Ecologist, 7(10).
+- Lyle, J. T. (1994). Regenerative design for sustainable development. Wiley.
+- McGinnis, M. V. (Ed.). (1999). Bioregionalism. Routledge.
+- Sale, K. (1985). Dwellers in the land: The bioregional vision. Sierra Club Books.
+- Thayer, R. L., Jr. (2003). LifePlace: Bioregional thought and practice. University of California Press.

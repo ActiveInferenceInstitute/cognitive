@@ -539,3 +539,11 @@ class DissipativeStructure:
 
 - [[complex_systems]]
 
+## References
+
+- Onsager, L. (1931). Reciprocal relations in irreversible processes. I. Physical Review, 37(4), 405-426.
+- Onsager, L. (1931). Reciprocal relations in irreversible processes. II. Physical Review, 38(12), 2265-2279.
+- de Groot, S. R., & Mazur, P. (1962). Non-equilibrium thermodynamics. North-Holland.
+- Kondepudi, D., & Prigogine, I. (2014). Modern thermodynamics: From heat engines to dissipative structures (2nd ed.). Wiley.
+- Nicolis, G., & Prigogine, I. (1977). Self-organization in nonequilibrium systems: From dissipative structures to order through fluctuations. Wiley.
+- Seifert, U. (2012). Stochastic thermodynamics, fluctuation theorems and molecular machines. Reports on Progress in Physics, 75(12), 126001.

@@ -36,7 +36,7 @@ semantic_relations:
 
 ## Overview
 
-Ant colony organization represents the pinnacle of biological self-organization and distributed intelligence. Through sophisticated caste systems, dynamic task allocation, and adaptive division of labor, ant colonies achieve complex collective outcomes from simple individual behaviors. This organizational structure enables colonies to scale from dozens to millions of individuals while maintaining efficiency, resilience, and adaptive capacity.
+Ant colony organization is a prominent example of biological self-organization and distributed control. Through sophisticated caste systems, dynamic task allocation, and adaptive division of labor, ant colonies achieve complex collective outcomes from simple individual behaviors. This organizational structure enables colonies to scale from dozens to millions of individuals while maintaining efficiency, resilience, and adaptive capacity.
 
 ## Caste System Architecture
 
@@ -79,19 +79,19 @@ class WorkerPolymorphism:
         self.minor_workers = {
             'size_range': 'small',
             'tasks': ['nursing', 'maintenance', 'food_processing'],
-            'proportion': 0.7
+            'proportion': 0.7  # illustrative value
         }
 
         self.media_workers = {
             'size_range': 'medium',
             'tasks': ['foraging', 'nest_defense', 'construction'],
-            'proportion': 0.2
+            'proportion': 0.2  # illustrative value
         }
 
         self.major_workers = {
             'size_range': 'large',
             'tasks': ['defense', 'prey_transport', 'seed_milling'],
-            'proportion': 0.1
+            'proportion': 0.1  # illustrative value
         }
 
     def allocate_workers_by_size(self, task_requirements: dict) -> dict:
@@ -406,6 +406,7 @@ class ColonyScalingRelationships:
     """How colony organization scales with size"""
 
     def __init__(self):
+        # Illustrative scaling forms, not empirically established relationships
         self.scaling_laws = {
             'caste_ratios': 'logarithmic_scaling',
             'communication_complexity': 'power_law_scaling',
@@ -434,6 +435,8 @@ where:
 - $s_j$ is stimulus intensity for task $j$
 - $\theta_{i,j}$ is response threshold of individual $i$ for task $j$
 - $\beta$ controls response steepness
+
+This logistic form is a variant of the fixed response-threshold model of Bonabeau, Theraulaz and Deneubourg (1996), whose canonical form is $s^n / (s^n + \theta^n)$.
 
 #### Optimal Task Allocation
 ```python
@@ -672,3 +675,12 @@ class SwarmTaskAllocation:
 ---
 
 > **Scaling Excellence**: Ant colony organization scales remarkably well, maintaining efficiency and adaptability from small colonies to massive supercolonies through sophisticated communication, coordination, and division of labor mechanisms.
+
+## References
+
+- Bonabeau, E., Theraulaz, G., & Deneubourg, J.-L. (1996). Quantitative study of the fixed threshold model for the regulation of division of labour in insect societies. Proceedings of the Royal Society of London. Series B: Biological Sciences, 263(1376), 1565-1569.
+- Gordon, D. M. (1996). The organization of work in social insect colonies. Nature, 380(6570), 121-124.
+- Holldobler, B., & Wilson, E. O. (1990). The ants. Belknap Press of Harvard University Press.
+- Oster, G. F., & Wilson, E. O. (1978). Caste and ecology in the social insects. Princeton University Press.
+- Robinson, G. E. (1992). Regulation of division of labor in insect societies. Annual Review of Entomology, 37, 637-665.
+- Theraulaz, G., Bonabeau, E., & Deneubourg, J.-L. (1998). Response threshold reinforcements and division of labour in insect societies. Proceedings of the Royal Society of London. Series B: Biological Sciences, 265(1393), 327-332.

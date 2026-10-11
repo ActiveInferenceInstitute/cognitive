@@ -100,3 +100,10 @@ except ValueError as error:
 - [[optimization_strategies]]
 - [[exploration_methods]]
 - [[policy_search_methods]] · [[policy_selection]] · [[expected_free_energy]]
+
+## References
+
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.
+- Sajid, N., Ball, P. J., Parr, T., & Friston, K. J. (2021). Active inference: Demystified and compared. Neural Computation, 33(3), 674-712.
+- Lawler, E. L., & Wood, D. E. (1966). Branch-and-bound methods: A survey. Operations Research, 14(4), 699-719.
+- Browne, C. B., Powley, E., Whitehouse, D., Lucas, S. M., Cowling, P. I., Rohlfshagen, P., Tavener, S., Perez, D., Samothrakis, S., & Colton, S. (2012). A survey of Monte Carlo tree search methods. IEEE Transactions on Computational Intelligence and AI in Games, 4(1), 1-43.

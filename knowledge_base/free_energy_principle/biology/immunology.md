@@ -97,7 +97,7 @@ The resolution phase is critical: just as perception converges when prediction e
 
 ### Clonal Selection as Bayesian Model Selection
 
-The adaptive immune system learns through clonal selection, which is formally equivalent to Bayesian model selection:
+The adaptive immune system learns through clonal selection, which can be framed as Bayesian model selection:
 
 ```
 Population of naive lymphocytes = prior model space
@@ -106,7 +106,7 @@ Clonal expansion of matching cells = posterior (model evidence selects best-fitt
 Memory cells = updated prior (learned model)
 ```
 
-Each lymphocyte clone has a unique receptor (generative model) that "predicts" specific molecular patterns. Clonal selection amplifies the clones whose receptors best predict the actual pathogen -- this IS Bayesian model selection.
+Each lymphocyte clone has a unique receptor (generative model) that "predicts" specific molecular patterns. Clonal selection amplifies the clones whose receptors best predict the actual pathogen -- this can be read as Bayesian model selection.
 
 ### Affinity Maturation as Parameter Learning
 
@@ -119,7 +119,7 @@ Selection: Higher-affinity variants selected (free energy minimization)
 Round n: Converged to high-affinity antibodies (optimized parameters)
 ```
 
-This is stochastic gradient descent on a free energy landscape, with mutations providing the gradient perturbations and selection implementing the descent.
+This can be framed as stochastic gradient descent on a free energy landscape, with mutations providing the gradient perturbations and selection implementing the descent.
 
 ### Immune Memory as Updated Priors
 
@@ -190,14 +190,19 @@ This bidirectional communication enables coordinated inference:
 - **Sickness behavior** (fatigue, anhedonia, social withdrawal) is the brain's response to immune prediction errors -- the brain changes its prior preferences to prioritize recovery
 - **Psychoneuroimmunology**: Mental states affect immune function through precision modulation of the immune generative model
 
-## Key References
-
-1. Ramstead, M. J. D., et al. (2018). Answering Schrodinger's question: A free-energy formulation. *Physics of Life Reviews*, 24, 1-16.
-2. Tauber, A. I. (2017). *Immunity: The Evolution of an Idea*. Oxford University Press.
-3. Pradeu, T. (2012). *The Limits of the Self: Immunology and Biological Identity*. Oxford University Press.
-4. Cohen, I. R. (2000). *Tending Adam's Garden: Evolving the Cognitive Immune Self*. Academic Press.
-5. Tracey, K. J. (2009). Reflex control of immunity. *Nature Reviews Immunology*, 9(6), 418-428.
-
 ## See also
 
 - [[knowledge_base/biology/immunology|Immunology]]
+
+## References
+
+- Janeway, C. A. (1989). Approaching the asymptote? Evolution and revolution in immunology. *Cold Spring Harbor Symposia on Quantitative Biology*, 54, 1-13.
+- Matzinger, P. (2002). The danger model: a renewed sense of self. *Science*, 296(5566), 301-305.
+- Pradeu, T. (2012). *The Limits of the Self: Immunology and Biological Identity*. Oxford University Press.
+- Victora, G. D., & Nussenzweig, M. C. (2012). Germinal centers. *Annual Review of Immunology*, 30, 429-457.
+- Medzhitov, R. (2008). Origin and physiological roles of inflammation. *Nature*, 454(7203), 428-435.
+- Dantzer, R., O'Connor, J. C., Freund, G. G., Johnson, R. W., & Kelley, K. W. (2008). From inflammation to sickness and depression: when the immune system subjugates the brain. *Nature Reviews Neuroscience*, 9(1), 46-56.
+- Tracey, K. J. (2009). Reflex control of immunity. *Nature Reviews Immunology*, 9(6), 418-428.
+- Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrodinger's question: A free-energy formulation. *Physics of Life Reviews*, 24, 1-16.
+- Tauber, A. I. (2017). *Immunity: The Evolution of an Idea*. Oxford University Press.
+- Cohen, I. R. (2000). *Tending Adam's Garden: Evolving the Cognitive Immune Self*. Academic Press.

@@ -233,9 +233,9 @@ class ExperienceDependentDevelopment:
         """Simulate critical periods in development."""
 
         critical_periods = {
-            'visual_cortex': {'start': 0, 'peak': 3, 'end': 7},  # months
-            'language': {'start': 6, 'peak': 12, 'end': 36},     # months
-            'social_cognition': {'start': 9, 'peak': 18, 'end': 60}  # months
+            'visual_cortex': {'start': 0, 'peak': 3, 'end': 7},  # months (illustrative values, not empirical estimates)
+            'language': {'start': 6, 'peak': 12, 'end': 36},     # months (illustrative values, not empirical estimates)
+            'social_cognition': {'start': 9, 'peak': 18, 'end': 60}  # months (illustrative values, not empirical estimates)
         }
 
         period_effects = {}
@@ -740,3 +740,11 @@ class EducationalActiveInference:
 ---
 
 > **Experience-Dependent Refinement**: The developing brain optimizes its generative models through active engagement with the environment, guided by variational free energy minimization.
+
+## References
+
+- Piaget, J., & Inhelder, B. (1969). The Psychology of the Child. Basic Books.
+- Gopnik, A., & Wellman, H. M. (2012). Reconstructing constructivism: causal models, Bayesian learning mechanisms, and the theory theory. Psychological Bulletin, 138(6), 1085-1108.
+- Kidd, C., Piantadosi, S. T., & Aslin, R. N. (2012). The Goldilocks effect: human infants allocate attention to visual sequences that are neither too simple nor too complex. PLoS ONE, 7(5), e36399.
+- Hensch, T. K. (2005). Critical period plasticity in local cortical circuits. Nature Reviews Neuroscience, 6(11), 877-888.
+- van der Maas, H. L. J., & Molenaar, P. C. M. (1992). Stagewise cognitive development: an application of catastrophe theory. Psychological Review, 99(3), 395-417.

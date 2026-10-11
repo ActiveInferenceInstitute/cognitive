@@ -1300,7 +1300,7 @@ where:
 
 where:
 
-- $\Phi$ is integrated information
+- $\Phi$ is an integrated-information-style measure (a schematic form; formal definitions are in Oizumi et al., 2014)
 
 - $H$ is entropy
 
@@ -1537,3 +1537,13 @@ where:
 ## See also
 
 - [[knowledge_base/systems/complex_systems|Complex Systems Theory]]
+
+## References
+- Strogatz, S. H. (2015). Nonlinear Dynamics and Chaos (2nd ed.). Westview Press.
+- Newman, M. E. J. (2003). The structure and function of complex networks. SIAM Review, 45(2), 167-256.
+- Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of 'small-world' networks. Nature, 393, 440-442.
+- Barabasi, A.-L., & Albert, R. (1999). Emergence of scaling in random networks. Science, 286, 509-512.
+- Bak, P., Tang, C., & Wiesenfeld, K. (1987). Self-organized criticality: An explanation of the 1/f noise. Physical Review Letters, 59, 381-384.
+- Schreiber, T. (2000). Measuring information transfer. Physical Review Letters, 85, 461-464.
+- Oizumi, M., Albantakis, L., & Tononi, G. (2014). From the phenomenology to the mechanisms of consciousness: Integrated information theory 3.0. PLoS Computational Biology, 10(5), e1003588.
+- Turing, A. M. (1952). The chemical basis of morphogenesis. Philosophical Transactions of the Royal Society B, 237, 37-72.

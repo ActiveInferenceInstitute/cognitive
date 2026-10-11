@@ -30,13 +30,13 @@ semantic_relations:
 
 # Consciousness Theory and Active Inference
 
-This document explores consciousness through the lens of Active Inference, examining how self-aware experience emerges from the minimization of variational free energy. It integrates phenomenological approaches with computational neuroscience to understand the nature of conscious experience.
+This document explores consciousness through the lens of Active Inference, examining how self-aware experience can be modeled as arising from the minimization of variational free energy. It integrates phenomenological approaches with computational neuroscience to understand the nature of conscious experience.
 
 ## 🧠 Consciousness as Active Inference
 
 ### The Phenomenal Self-Model
 
-Consciousness emerges from the brain's generative model of itself and its environment:
+On this account, consciousness is proposed to arise from the brain's generative model of itself and its environment:
 
 ```mermaid
 graph TD
@@ -652,7 +652,7 @@ class MetacognitiveMonitor:
 
 ---
 
-> **Consciousness as Active Inference**: Consciousness emerges from the brain's self-model, maintained through minimization of variational free energy about the self and its relationship to the world.
+> **Consciousness as Active Inference**: On this account, consciousness is proposed to arise from the brain's self-model, maintained through minimization of variational free energy about the self and its relationship to the world.
 
 ---
 
@@ -660,4 +660,12 @@ class MetacognitiveMonitor:
 
 ---
 
-> **Phenomenal Experience**: The qualitative "what it's like" aspect of consciousness arises from precision-weighted prediction errors in hierarchical generative models.
+> **Phenomenal Experience**: The qualitative "what it's like" aspect of consciousness is hypothesized to arise from precision-weighted prediction errors in hierarchical generative models.
+
+## References
+
+- Hohwy, J. (2016). The self-evidencing brain. Noûs, 50(2), 259-285.
+- Friston, K. (2018). Am I self-conscious? (Or does self-organization entail self-consciousness?). Frontiers in Psychology, 9, 579.
+- Block, N. (1995). On a confusion about a function of consciousness. Behavioral and Brain Sciences, 18(2), 227-247.
+- Dehaene, S., & Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. Neuron, 70(2), 200-227.
+- Tononi, G. (2004). An information integration theory of consciousness. BMC Neuroscience, 5, 42.

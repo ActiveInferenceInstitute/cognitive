@@ -104,3 +104,10 @@ The repository's `DiscreteGenerativeModel.posterior(observation, prior)` in `cod
 
 - [[variational_free_energy]], [[vfe_components]], [[variational_bounds]], [[belief_updating]]
 - [[worked_example_efe]], [[worked_examples_index]]
+
+## References
+
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.
+- Da Costa, L., Parr, T., Sajid, N., Veselic, S., Neacsu, V., & Friston, K. (2020). Active inference on discrete state-spaces: a synthesis. Journal of Mathematical Psychology, 99, 102447.
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: a process theory. Neural Computation, 29(1), 1-49.
+- Blei, D. M., Kucukelbir, A., & McAuliffe, J. D. (2017). Variational inference: a review for statisticians. Journal of the American Statistical Association, 112(518), 859-877.

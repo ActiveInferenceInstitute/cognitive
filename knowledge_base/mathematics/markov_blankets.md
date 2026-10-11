@@ -210,7 +210,7 @@ Pearl blankets are defined graph-theoretically. Given a Bayesian network, the Ma
 
 ### Friston Blankets
 
-Friston blankets (sometimes called "Friston-Pearl blankets" or "active blankets") are defined dynamically. They arise from the particular partition of a stochastic dynamical system at a non-equilibrium steady state (NESS). These blankets:
+Friston blankets are defined dynamically. They arise from the particular partition of a stochastic dynamical system at a non-equilibrium steady state (NESS). These blankets:
 - Require a dynamical system with a steady-state density
 - Are defined through the sparsity structure of the system's Jacobian or coupling
 - Have internal structure (sensory/active partition) with causal directionality
@@ -279,7 +279,7 @@ Markov blankets arise naturally in physical systems due to spatial locality -- p
 In biological systems, the Markov blanket often corresponds to a physical membrane or boundary:
 - Cell membrane separates intracellular from extracellular states
 - Skin separates organism from environment
-- Blood-brain barrier separates neural from metabolic states
+- Blood-brain barrier separates brain tissue from circulating blood
 
 However, the blanket need not be a physical membrane -- it is a statistical concept defined by conditional independence. In social systems, for example, the blanket might be constituted by communicative actions rather than physical barriers.
 
@@ -295,7 +295,7 @@ The paradigmatic biological Markov blanket is the cell membrane:
 
 ### Neural Level
 
-At the neural level, Markov blankets can be identified at multiple scales:
+At the neural level, Markov blankets can be drawn at multiple scales; the following assignments are illustrative rather than established:
 - **Single neuron**: Dendritic inputs (sensory), axonal outputs (active), soma (internal)
 - **Cortical column**: Input layer IV (sensory), output layers II/III and V/VI (active), layers II-VI (internal)
 - **Brain region**: Afferent connections (sensory), efferent connections (active), local circuitry (internal)
@@ -365,7 +365,7 @@ This geometric structure connects Markov blankets to information geometry and pr
 
 ### Existence Conditions
 
-Not all dynamical systems possess Markov blankets. Sufficient conditions include:
+Not all dynamical systems possess Markov blankets. Conditions commonly assumed in the literature include:
 
 1. **Sparse coupling**: The system's interaction structure must have sufficient sparsity
 2. **Steady state**: The system must possess a non-equilibrium steady state (or at least a slowly evolving quasi-steady state)
@@ -433,15 +433,6 @@ Some authors distinguish between static (instantaneous) and dynamic (persistent)
 
 The question of whether Markov blankets define the "identity" of a system has philosophical implications. If a system's boundary is statistical rather than physical, what determines where one system ends and another begins? This connects to questions about personal identity, consciousness, and the nature of biological individuality.
 
-## Key References
-
-- Pearl, J. (1988). Probabilistic Reasoning in Intelligent Systems. Morgan Kaufmann.
-- Friston, K. (2013). Life as we know it. Journal of the Royal Society Interface, 10(86), 20130475.
-- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
-- Kirchhoff, M., et al. (2018). The Markov blankets of life. Journal of the Royal Society Interface, 15(138).
-- Sakthivadivel, D. (2022). Towards a geometry and analysis for Bayesian mechanics. arXiv:2204.11900.
-- Bruineberg, J., et al. (2022). The emperor's new Markov blankets. Behavioral and Brain Sciences, 45, e183.
-
 ## Cross-References
 
 - [[mathematics/conditional_independence|Conditional Independence]] - Core mathematical property
@@ -456,3 +447,13 @@ The question of whether Markov blankets define the "identity" of a system has ph
 ## See also
 
 - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets: Statistical Boundaries and Bayesian Mechanics]]
+
+## References
+
+- Pearl, J. (1988). Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference. Morgan Kaufmann.
+- Friston, K. (2013). Life as we know it. Journal of the Royal Society Interface, 10(86), 20130475.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
+- Kirchhoff, M., Parr, T., Palacios, E., Friston, K., & Kiverstein, J. (2018). The Markov blankets of life: autonomy, active inference and the free energy principle. Journal of the Royal Society Interface, 15(138), 20170792.
+- Bruineberg, J., Dolega, K., Dewhurst, J., & Baltieri, M. (2022). The emperor's new Markov blankets. Behavioral and Brain Sciences, 45, e183.
+- Sakthivadivel, D. A. R. (2022). Towards a geometry and analysis for Bayesian mechanics. arXiv:2204.11900.
+- Friston, K., Da Costa, L., Sakthivadivel, D. A. R., Heins, C., Pavliotis, G. A., Ramstead, M., & Parr, T. (2023). Path integrals, particular kinds, and strange things. Physics of Life Reviews, 47, 35-62.

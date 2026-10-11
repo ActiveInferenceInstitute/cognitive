@@ -64,7 +64,7 @@ where `D = sigma sigma^T` is the diffusion tensor.
 
 ### Compact Notation
 
-In compact (operator) notation:
+In compact (operator) notation, written for constant $D$ (for state-dependent $D$ the diffusion term is $\frac{1}{2}\sum_{i,j}\partial_i\partial_j[D_{ij}p]$):
 
 ```math
 \frac{\partial p}{\partial t} = -\nabla \cdot (f p) + \frac{1}{2} \nabla \cdot (D \nabla p)
@@ -98,7 +98,7 @@ The precise form of the FPE depends on the stochastic calculus convention:
 \frac{\partial p}{\partial t} = -\nabla \cdot (\tilde{f} p) + \frac{1}{2} \nabla \cdot (D \nabla p)
 ```
 
-where `tilde{f}` includes a noise-induced drift correction. The FEP literature typically uses the Stratonovich convention because it preserves the chain rule and has a more natural physical interpretation.
+where `tilde{f}` includes a noise-induced drift correction. The FEP literature commonly assumes state-independent noise amplitude, for which the Ito and Stratonovich forms coincide.
 
 ## Forward and Backward Equations
 
@@ -189,12 +189,12 @@ This is the relative entropy (KL divergence) of the current distribution from th
 Under Fokker-Planck dynamics, the free energy decreases monotonically:
 
 ```math
-\frac{dF}{dt} = -\int \frac{J^2}{Dp} dx \leq 0
+\frac{dF}{dt} = -2\int \frac{J^2}{Dp} dx \leq 0
 ```
 
-where `J` is the probability current. This is a form of the H-theorem: the system relaxes toward its steady state by minimizing free energy.
+where `J` is the probability current (scalar `D`, detailed balance so that `J_ss = 0`). This is a form of the H-theorem: the system relaxes toward its steady state by minimizing free energy.
 
-The rate of free energy dissipation equals the entropy production rate, connecting the FPE to the second law of thermodynamics.
+Under detailed balance the rate of free energy dissipation equals the entropy production rate, connecting the FPE to the second law of thermodynamics.
 
 ### Variational Free Energy in the FEP
 
@@ -234,22 +234,22 @@ is the quantity that the FEP says organisms minimize (on average). States with h
 The central mathematical tool connecting the FPE to the FEP is the Helmholtz decomposition of the flow `f(x)` into gradient (dissipative) and solenoidal (conservative) components:
 
 ```math
-f(x) = -(D + Q) \nabla \ln p_{ss}(x) + \nabla \cdot D
+f(x) = \left(\tfrac{1}{2}D - Q\right) \nabla \ln p_{ss}(x) + \tfrac{1}{2}\nabla \cdot D
 ```
 
 where:
 - `D` is the (symmetric) diffusion tensor
-- `Q` is an antisymmetric matrix (the solenoidal flow)
+- `Q` is an antisymmetric matrix (the solenoidal flow; taken constant here)
 
 This can be rewritten as:
 
 ```math
-f(x) = \underbrace{-D \nabla \ln p_{ss}(x)}_{\text{dissipative (gradient) flow}} + \underbrace{-Q \nabla \ln p_{ss}(x)}_{\text{solenoidal (curl) flow}} + \underbrace{\nabla \cdot D}_{\text{noise gradient correction}}
+f(x) = \underbrace{\tfrac{1}{2}D \nabla \ln p_{ss}(x)}_{\text{dissipative (gradient) flow}} + \underbrace{-Q \nabla \ln p_{ss}(x)}_{\text{solenoidal (curl) flow}} + \underbrace{\tfrac{1}{2}\nabla \cdot D}_{\text{noise gradient correction}}
 ```
 
 ### Dissipative and Solenoidal Flows
 
-**Dissipative (gradient) flow**: `f_D = -D nabla ln p_ss`
+**Dissipative (gradient) flow**: `f_D = (1/2) D nabla ln p_ss`
 - Moves probability down the free energy gradient
 - Drives the system toward the NESS
 - Produces entropy
@@ -269,7 +269,7 @@ The Helmholtz decomposition is crucial for the FEP because:
 
 2. **Solenoidal flow enables circulation**: Living systems are not simply gradient-descent machines. The solenoidal component allows cyclical dynamics (circadian rhythms, homeostatic cycles, behavioral routines) that maintain the NESS without changing the steady-state density.
 
-3. **The decomposition is unique**: Given `p_ss` and `D`, the Helmholtz decomposition of `f` into `D` and `Q` components is unique, providing a principled way to separate "inference-like" dynamics from "circulation-like" dynamics.
+3. **The dissipative part is fixed by `p_ss` and `D`**: the solenoidal part is what remains of `f`, providing a principled way to separate "inference-like" dynamics from "circulation-like" dynamics.
 
 ## Relation to Bayesian Mechanics
 
@@ -353,15 +353,6 @@ For discrete-state systems (as in POMDP-based active inference), the FPE becomes
 
 where `W_ij` is the transition rate from state j to state i. This connects the continuous-state FPE formalism to discrete active inference.
 
-## Key References
-
-- Risken, H. (1989). The Fokker-Planck Equation. Springer.
-- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
-- Pavliotis, G. A. (2014). Stochastic Processes and Applications. Springer.
-- Gardiner, C. W. (2009). Stochastic Methods. Springer.
-- Sakthivadivel, D. (2022). Towards a geometry and analysis for Bayesian mechanics. arXiv:2204.11900.
-- Da Costa, L., et al. (2021). Bayesian mechanics for stationary processes. Proceedings of the Royal Society A, 477(2256).
-
 ## Cross-References
 
 - [[mathematics/langevin_dynamics|Langevin Dynamics]] - The stochastic equation whose density the FPE describes
@@ -372,3 +363,12 @@ where `W_ij` is the transition rate from state j to state i. This connects the c
 - [[mathematics/variational_free_energy|Variational Free Energy]] - The functional minimized by internal state dynamics
 - [[mathematics/path_integral|Path Integral]] - Alternative formulation of stochastic dynamics
 - [[systems/circular_causality|Circular Causality]] - Solenoidal flows and cyclic dynamics
+
+## References
+
+- Risken, H. (1989). The Fokker-Planck Equation: Methods of Solution and Applications (2nd ed.). Springer.
+- Gardiner, C. W. (2009). Stochastic Methods: A Handbook for the Natural and Social Sciences (4th ed.). Springer.
+- Pavliotis, G. A. (2014). Stochastic Processes and Applications: Diffusion Processes, the Fokker-Planck and Langevin Equations. Springer.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
+- Da Costa, L., Friston, K., Heins, C., & Pavliotis, G. A. (2021). Bayesian mechanics for stationary processes. Proceedings of the Royal Society A, 477(2256), 20210518.
+- Sakthivadivel, D. A. R. (2022). Towards a geometry and analysis for Bayesian mechanics. arXiv:2204.11900.

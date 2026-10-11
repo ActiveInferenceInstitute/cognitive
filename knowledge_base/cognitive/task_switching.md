@@ -250,3 +250,11 @@ New techniques for studying task switching:
 - [[executive_functions]] - Higher-level cognitive control
 - [[cognitive_flexibility]] - Adaptation to changing demands
 
+
+## References
+
+- Rogers, R. D., & Monsell, S. (1995). Costs of a predictible switch between simple cognitive tasks. Journal of Experimental Psychology: General, 124(2), 207-231.
+- Monsell, S. (2003). Task switching. Trends in Cognitive Sciences, 7(3), 134-140.
+- Kiesel, A., Steinhauser, M., Wendt, M., Falkenstein, M., Jost, K., Philipp, A. M., & Koch, I. (2010). Control and interference in task switching: A review. Psychological Bulletin, 136(5), 849-874.
+- Braver, T. S. (2012). The variable nature of cognitive control: A dual mechanisms framework. Trends in Cognitive Sciences, 16(2), 106-113.
+- Arrington, C. M., & Logan, G. D. (2004). The cost of a voluntary task switch. Psychological Science, 15(9), 610-615.

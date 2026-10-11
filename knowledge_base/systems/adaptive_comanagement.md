@@ -242,26 +242,17 @@ graph TD
 - **Stakeholder Coordination**: Aligning diverse perspectives
 - **Uncertainty Management**: Dealing with complex system uncertainties
 
-## 📚 Key References
+## See also
 
-### Foundational Works
-- **Armitage et al. (2009)**: Adaptive co-management for social-ecological complexity
-- **Carlsson and Berkes (2005)**: Co-management: concepts and methodological implications
-- **Folke et al. (2005)**: Adaptive governance of social-ecological systems
+- [[Social-Ecological Systems]]
 
-### Case Studies
-- **Berkes (2009)**: Community-based conservation in a globalized world
-- **Pinkerton (1989)**: Co-operative management of local fisheries
-- **Plummer and FitzGibbon (2004)**: Some observations on the terminology in co-operative environmental management
-
-### Theoretical Developments
-- **Ostrom (1990)**: Governing the commons
-- **Holling (1978)**: Adaptive environmental assessment and management
-- **Lee (1993)**: Compass and gyroscope
-
-### Related Concepts
-- [[resilience_thinking]] - Building system resilience and adaptability
-- [[Social-Ecological Systems]] - Coupled human-natural systems
-- [[ecosystem_management]] - Ecosystem-level management approaches
-- [[learning_initiatives]] - Knowledge building and capacity development
-
+## References
+- Armitage, D. R., Plummer, R., Berkes, F., Arthur, R. I., Charles, A. T., Davidson-Hunt, I. J., ... Wollenberg, E. K. (2009). Adaptive co-management for social-ecological complexity. Frontiers in Ecology and the Environment, 7(2), 95-102.
+- Berkes, F. (2007). Community-based conservation in a globalized world. Proceedings of the National Academy of Sciences, 104(39), 15188-15193.
+- Carlsson, L., & Berkes, F. (2005). Co-management: Concepts and methodological implications. Journal of Environmental Management, 75(1), 65-76.
+- Folke, C., Hahn, T., Olsson, P., & Norberg, J. (2005). Adaptive governance of social-ecological systems. Annual Review of Environment and Resources, 30, 441-473.
+- Holling, C. S. (Ed.). (1978). Adaptive environmental assessment and management. Wiley.
+- Lee, K. N. (1993). Compass and gyroscope: Integrating science and politics for the environment. Island Press.
+- Ostrom, E. (1990). Governing the commons: The evolution of institutions for collective action. Cambridge University Press.
+- Pinkerton, E. (Ed.). (1989). Co-operative management of local fisheries: New directions for improved management and community development. University of British Columbia Press.
+- Plummer, R., & FitzGibbon, J. (2004). Some observations on the terminology in co-operative environmental management. Journal of Environmental Management, 70(1), 63-72.

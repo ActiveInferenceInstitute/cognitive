@@ -40,7 +40,7 @@ semantic_relations:
 
 ## Overview
 
-Apidology is the scientific study of bees (superfamily Apoidea), encompassing their biology, behavior, ecology, and crucial role in pollination. This field is particularly important due to the essential ecosystem services bees provide and their significance in agriculture.
+Apidology is the scientific study of bees (clade Anthophila, within the superfamily Apoidea), encompassing their biology, behavior, ecology, and crucial role in pollination. This field is particularly important due to the essential ecosystem services bees provide and their significance in agriculture.
 
 ## Core Concepts
 
@@ -267,7 +267,7 @@ class BeePhenology:
 - **Pollination Services**: Essential for crop production and wild plant reproduction
 - **Biodiversity Maintenance**: Support for plant diversity and ecosystem stability
 - **Nutrient Cycling**: Decomposition and soil improvement through nesting activities
-- **Biological Control**: Natural pest regulation in agricultural systems
+- **Food Webs**: Prey, hosts and nest resources for predators, parasitoids and cleptoparasites
 
 ## Research Methods
 
@@ -441,6 +441,7 @@ class PollinationService:
 
         """Determine colony requirements"""
 
+        # Illustrative values; recommended stocking rates vary by crop, cultivar and region
         colonies_per_hectare = {
 
             'almonds': 2.5,
@@ -658,16 +659,30 @@ class PredictiveBeeColony:
 
 ### Foundational Texts
 1. **The Biology of the Honey Bee** (Winston, 1987) - Comprehensive bee biology
-2. **Bee Conservation** (Buchmann & Nabhan, 2012) - Conservation biology approaches
+2. **The Forgotten Pollinators** (Buchmann & Nabhan, 1996) - Pollinator biology and conservation
 3. **Pollination Biology** (Real, 1983) - Ecological and evolutionary perspectives
 
 ### Advanced Topics
-4. **Social Evolution in Bees** (Michener, 1974) - Evolutionary social systems
-5. **Bee Health and Management** (Morse & Calderone, 2000) - Applied apiculture
-6. **The Spirit of the Hive** (Butler, 1979) - Bee cognition and behavior
+4. **The Social Behavior of the Bees** (Michener, 1974) - Evolutionary social systems
+5. **Importance of Pollinators in Changing Landscapes for World Crops** (Klein et al., 2007) - Crop dependence on animal pollination
+6. **The Spirit of the Hive** (Page, 2013) - Mechanisms of social evolution in honey bees
 
 ### Modern Research
-7. **Information Processing in Social Insects** (Seeley, 1995) - Collective intelligence
+7. **The Wisdom of the Hive** (Seeley, 1995) - Collective decision-making in honey bee colonies
 8. **Cognitive Ecology of Pollination** (Chittka & Thomson, 2001) - Bee learning and memory
-9. **Mathematical Models of Bee Behavior** (Camazine et al., 2003) - Quantitative approaches
+9. **Self-Organization in Biological Systems** (Camazine et al., 2001) - Quantitative approaches
 
+
+### Full Citations
+
+- Buchmann, S. L., & Nabhan, G. P. (1996). The forgotten pollinators. Island Press.
+- Camazine, S., Deneubourg, J.-L., Franks, N. R., Sneyd, J., Theraulaz, G., & Bonabeau, E. (2001). Self-organization in biological systems. Princeton University Press.
+- Chittka, L., & Thomson, J. D. (Eds.). (2001). Cognitive ecology of pollination: Animal behaviour and floral evolution. Cambridge University Press.
+- Klein, A.-M., Vaissiere, B. E., Cane, J. H., Steffan-Dewenter, I., Cunningham, S. A., Kremen, C., & Tscharntke, T. (2007). Importance of pollinators in changing landscapes for world crops. Proceedings of the Royal Society B: Biological Sciences, 274(1608), 303-313.
+- Michener, C. D. (1974). The social behavior of the bees: A comparative study. Belknap Press of Harvard University Press.
+- Page, R. E., Jr. (2013). The spirit of the hive: The mechanisms of social evolution. Harvard University Press.
+- Potts, S. G., Biesmeijer, J. C., Kremen, C., Neumann, P., Schweiger, O., & Kunin, W. E. (2010). Global pollinator declines: Trends, impacts and drivers. Trends in Ecology & Evolution, 25(6), 345-353.
+- Real, L. (Ed.). (1983). Pollination biology. Academic Press.
+- Seeley, T. D. (1995). The wisdom of the hive: The social physiology of honey bee colonies. Harvard University Press.
+- vanEngelsdorp, D., Evans, J. D., Saegerman, C., Mullin, C., Haubruge, E., Nguyen, B. K., ... Pettis, J. S. (2009). Colony collapse disorder: A descriptive study. PLoS ONE, 4(8), e6481.
+- Winston, M. L. (1987). The biology of the honey bee. Harvard University Press.

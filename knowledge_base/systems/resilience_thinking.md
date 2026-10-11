@@ -282,27 +282,21 @@ graph TD
 - **Transformation Planning**: Managing fundamental system changes
 - **Stakeholder Alignment**: Coordinating diverse interests and knowledge
 
-## 📚 Key References
+## See also
 
-### Foundational Works
-- **Holling (1973)**: Resilience and stability of ecological systems
-- **Gunderson and Holling (2002)**: Panarchy: Understanding transformations in human and natural systems
-- **Walker and Salt (2006)**: Resilience thinking: Sustaining ecosystems and people in a changing world
-- **Folke et al. (2010)**: Resilience thinking: Integrating resilience, adaptability and transformability
+- [[learning_initiatives]]
+- [[Social-Ecological Systems]]
 
-### Theoretical Developments
-- **Carpenter et al. (2001)**: From metaphor to measurement: Resilience of what to what?
-- **Adger (2000)**: Social and ecological resilience: Are they related?
-- **Brand and Jax (2007)**: Focusing the meaning(s) of resilience: Resilience as a descriptive concept and a boundary object
-
-### Applications
-- **Berkes et al. (2003)**: Navigating social-ecological systems: Building resilience for complexity and change
-- **Levin (1999)**: Fragile dominion: Complexity and the commons
-- **Scheffer (2009)**: Critical transitions in nature and society
-
-### Related Concepts
-- [[adaptive_comanagement]] - Collaborative adaptive management
-- [[Social-Ecological Systems]] - Coupled human-natural systems
-- [[ecosystem_management]] - Ecosystem-level management approaches
-- [[learning_initiatives]] - Knowledge building and adaptation
-
+## References
+- Adger, W. N. (2000). Social and ecological resilience: Are they related? Progress in Human Geography, 24(3), 347-364.
+- Berkes, F., Colding, J., & Folke, C. (Eds.). (2003). Navigating social-ecological systems: Building resilience for complexity and change. Cambridge University Press.
+- Brand, F. S., & Jax, K. (2007). Focusing the meaning(s) of resilience: Resilience as a descriptive concept and a boundary object. Ecology and Society, 12(1), 23.
+- Carpenter, S., Walker, B., Anderies, J. M., & Abel, N. (2001). From metaphor to measurement: Resilience of what to what? Ecosystems, 4(8), 765-781.
+- Folke, C., Carpenter, S. R., Walker, B., Scheffer, M., Chapin, T., & Rockstrom, J. (2010). Resilience thinking: Integrating resilience, adaptability and transformability. Ecology and Society, 15(4), 20.
+- Gunderson, L. H., & Holling, C. S. (Eds.). (2002). Panarchy: Understanding transformations in human and natural systems. Island Press.
+- Holling, C. S. (1973). Resilience and stability of ecological systems. Annual Review of Ecology and Systematics, 4, 1-23.
+- Levin, S. A. (1999). Fragile dominion: Complexity and the commons. Perseus Books.
+- Scheffer, M., Carpenter, S., Foley, J. A., Folke, C., & Walker, B. (2001). Catastrophic shifts in ecosystems. Nature, 413(6856), 591-596.
+- Walker, B., & Salt, D. (2006). Resilience thinking: Sustaining ecosystems and people in a changing world. Island Press.
+- Yachi, S., & Loreau, M. (1999). Biodiversity and ecosystem productivity in a fluctuating environment: The insurance hypothesis. Proceedings of the National Academy of Sciences, 96(4), 1463-1468.
+- Scheffer, M. (2009). Critical transitions in nature and society. Princeton University Press.

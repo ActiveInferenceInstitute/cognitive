@@ -642,7 +642,7 @@ class EmotionalDisorderModeling:
 
 ---
 
-> **Emotional Active Inference**: Emotions emerge as precision-weighted predictions that modulate attention, memory, and behavior to minimize variational free energy in affective domains.
+> **Emotional Active Inference**: Emotions are modeled as precision-weighted predictions that modulate attention, memory, and behavior to minimize variational free energy in affective domains.
 
 ---
 
@@ -651,3 +651,11 @@ class EmotionalDisorderModeling:
 ---
 
 > **Precision and Affect**: Emotional states modulate the precision of predictions across sensory, cognitive, and behavioral domains, shaping attention and learning.
+
+## References
+
+- Seth, A. K. (2013). Interoceptive inference, emotion, and the embodied self. Trends in Cognitive Sciences, 17(11), 565-573.
+- Barrett, L. F. (2017). The theory of constructed emotion: an active inference account of interoception and categorization. Social Cognitive and Affective Neuroscience, 12(1), 1-23.
+- Joffily, M., & Coricelli, G. (2013). Emotional valence and the free-energy principle. PLoS Computational Biology, 9(6), e1003094.
+- Smith, R., Parr, T., & Friston, K. J. (2019). Simulating emotions: an active inference model of emotional state inference and emotion concept learning. Frontiers in Psychology, 10, 2844.
+- Hesp, C., Smith, R., Parr, T., Allen, M., Friston, K. J., & Ramstead, M. J. D. (2021). Deeply felt affect: the emergence of valence in deep active inference. Neural Computation, 33(2), 398-446.

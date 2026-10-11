@@ -85,6 +85,8 @@ class AlarmPheromoneSystem:
 
     def __init__(self):
         self.alarm_signals = {
+            # Compound classes used as alarm signals in different ant lineages;
+            # the pairing with threat types is illustrative, not a one-to-one mapping
             'attack': 'pyrazines',      # Immediate threat response
             'disturbance': 'iridoids',  # Nest disturbance
             'predator': 'formic acid'   # Specific predator cues
@@ -108,8 +110,8 @@ class QueenPheromoneRegulation:
 
     def __init__(self):
         self.queen_signals = {
-            'fertility': '9-ODA',           # Suppress worker reproduction
-            'colony_cohesion': 'homopteran', # Maintain social bonds
+            'fertility': 'cuticular_hydrocarbons',  # Suppress worker reproduction
+            'colony_cohesion': 'colony_odor_cues',  # Maintain social bonds
             'worker_maturation': 'primer_pheromones'  # Control development
         }
 
@@ -233,8 +235,8 @@ class TremorCommunication:
     """Substrate vibration signaling"""
 
     def __init__(self, substrate_type: str):
-        self.frequency_range = (20, 200)  # Hz
-        self.amplitude_range = (0.1, 10.0)  # mm
+        self.frequency_range = (20, 200)  # Hz (illustrative)
+        self.amplitude_range = (0.1, 10.0)  # mm (illustrative)
         self.substrate = substrate_type
 
     def generate_tremor_signal(self, message_type: str, intensity: float):
@@ -275,14 +277,14 @@ class StridulatoryCommunication:
 ### Airborne Sound Communication
 
 #### Acoustic Signals
-High-frequency sounds for alarm and coordination:
+Weak airborne sounds, secondary to substrate-borne vibration, associated with alarm and coordination:
 
 ```python
 class AcousticCommunication:
     """Airborne sound signaling"""
 
     def __init__(self):
-        self.frequency_range = (500, 5000)  # Hz
+        self.frequency_range = (500, 5000)  # Hz (illustrative)
         self.signal_patterns = {
             'distress': 'rapid_clicks',
             'recruitment': 'pulsed_signals',
@@ -584,3 +586,13 @@ Communication systems co-evolve with:
 ---
 
 > **Evolutionary Adaptation**: Ant communication systems have co-evolved with colony social structure, environmental challenges, and cognitive capabilities, resulting in highly efficient information processing.
+
+## References
+
+- Beckers, R., Deneubourg, J. L., & Goss, S. (1992). Trails and U-turns in the selection of a path by the ant Lasius niger. Journal of Theoretical Biology, 159(4), 397-415.
+- Dorigo, M., Maniezzo, V., & Colorni, A. (1996). Ant system: Optimization by a colony of cooperating agents. IEEE Transactions on Systems, Man, and Cybernetics, Part B, 26(1), 29-41.
+- Grasse, P.-P. (1959). La reconstruction du nid et les coordinations interindividuelles chez Bellicositermes natalensis et Cubitermes sp. Insectes Sociaux, 6(1), 41-80.
+- Hickling, R., & Brown, R. L. (2000). Analysis of acoustic communication by ants. Journal of the Acoustical Society of America, 108(4), 1920-1929.
+- Holldobler, B., & Wilson, E. O. (1990). The ants. Belknap Press of Harvard University Press.
+- Jackson, D. E., & Ratnieks, F. L. W. (2006). Communication in ants. Current Biology, 16(15), R570-R574.
+- Van Oystaeyen, A., Oliveira, R. C., Holman, L., van Zweden, J. S., Romero, C., Oi, C. A., ... Wenseleers, T. (2014). Conserved class of queen pheromones stops social insect workers from reproducing. Science, 343(6168), 287-290.

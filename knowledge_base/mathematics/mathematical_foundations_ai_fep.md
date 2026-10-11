@@ -157,9 +157,11 @@ G(\pi) = \mathbb{E}_{q(o,s|\pi)}\left[\log q(s|\pi) - \log p(o,s)\right]
 
 ```math
 
-G = \underbrace{\mathbb{E}_{q}[D_{KL}[q(s|\pi)||p(s|o,\pi)]]}_{\text{epistemic value}} + \underbrace{\mathbb{E}_{q}[\log q(o|\pi) - \log p(o)]}_{\text{pragmatic value}}
+G = \underbrace{D_{KL}[q(o|\pi)\|p(o)]}_{\text{risk (pragmatic value)}} + \underbrace{\mathbb{E}_{q(s|\pi)}\big[H[p(o|s)]\big]}_{\text{ambiguity (epistemic value)}}
 
 ```
+
+Here $p(o)$ is the prior over preferred outcomes. This risk-plus-ambiguity form (Parr et al., 2022) follows from the definition above when the approximate posterior equals the exact posterior.
 
 ## Active Inference Framework
 
@@ -489,3 +491,11 @@ class GeometricActiveInference:
 
 - [[information_geometry]]
 
+
+## References
+
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.
+- Friston, K. (2010). The free-energy principle: a unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Da Costa, L., Parr, T., Sajid, N., Veselic, S., Neacsu, V., & Friston, K. (2020). Active inference on discrete state-spaces: A synthesis. Journal of Mathematical Psychology, 99, 102447.
+- Friston, K., Rigoli, F., Ognibene, D., Mathys, C., FitzGerald, T., & Pezzulo, G. (2015). Active inference and epistemic value. Cognitive Neuroscience, 6(4), 187-214.
+- Amari, S., & Nagaoka, H. (2000). Methods of Information Geometry. American Mathematical Society and Oxford University Press.

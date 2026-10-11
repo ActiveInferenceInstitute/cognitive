@@ -454,7 +454,7 @@ def compute_transfer_entropy(x: np.ndarray,
 
     cond_space = np.column_stack([x_future.reshape(-1,1), x_embedded])
 
-# Use Kraskov-Stögbauer-Grassberger estimator
+# Use k-nearest-neighbour entropy estimates
 
     te = _ksg_entropy_estimator(joint_space, k) - _ksg_entropy_estimator(cond_space, k)
 
@@ -462,7 +462,7 @@ def compute_transfer_entropy(x: np.ndarray,
 
 def _ksg_entropy_estimator(data: np.ndarray, k: int) -> float:
 
-    """Kraskov-Stögbauer-Grassberger entropy estimator."""
+    """k-nearest-neighbour entropy estimator."""
 
     n, d = data.shape
 
@@ -2783,3 +2783,11 @@ if __name__ == "__main__":
 ## See also
 
 - [[knowledge_base/systems/dynamical_systems|Dynamical Systems in Complex Systems]]
+
+## References
+
+- Strogatz, S. H. (2015). Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering (2nd ed.). Westview Press.
+- Khalil, H. K. (2002). Nonlinear Systems (3rd ed.). Prentice Hall.
+- LaSalle, J. P. (1960). Some extensions of Liapunov's second method. IRE Transactions on Circuit Theory, 7(4), 520-527.
+- Hairer, E., Lubich, C., & Wanner, G. (2006). Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations (2nd ed.). Springer.
+- Schreiber, T. (2000). Measuring information transfer. Physical Review Letters, 85(2), 461-464.

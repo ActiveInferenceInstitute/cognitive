@@ -116,7 +116,7 @@ Chaotic (supercritical): Perturbations amplify; unstable, unpredictable
 
 ### Why Criticality?
 
-Under the FEP, criticality is optimal for inference because it maximizes:
+Within the FEP literature, criticality is argued (as a conjecture, not a derived result) to be advantageous for inference because it can maximize:
 
 1. **Dynamic range**: Sensitivity to a wide range of input amplitudes
 2. **Information transmission**: Maximum mutual information between input and output
@@ -238,11 +238,13 @@ Cities are CAS with nested Markov blankets:
 - Self-organization of spatial structure, economic activity, social networks
 - Adaptive cycles in urban development and decay
 
-## Key References
-
-1. Holland, J. H. (1992). *Adaptation in Natural and Artificial Systems*. MIT Press.
-2. Gunderson, L. H., & Holling, C. S. (2002). *Panarchy: Understanding Transformations in Human and Natural Systems*. Island Press.
-3. Beggs, J. M., & Plenz, D. (2003). Neuronal avalanches in neocortical circuits. *Journal of Neuroscience*, 23(35), 11167-11177.
-4. Carlson, J. M., & Doyle, J. (2002). Complexity and robustness. *Proceedings of the National Academy of Sciences*, 99(suppl 1), 2538-2545.
-5. Ramstead, M. J. D., et al. (2018). Answering Schrodinger's question. *Physics of Life Reviews*, 24, 1-16.
-6. Levin, S. A. (1998). Ecosystems and the biosphere as complex adaptive systems. *Ecosystems*, 1(5), 431-436.
+## References
+- Levin, S. A. (1998). Ecosystems and the biosphere as complex adaptive systems. Ecosystems, 1(5), 431-436.
+- Beggs, J. M., & Plenz, D. (2003). Neuronal avalanches in neocortical circuits. Journal of Neuroscience, 23(35), 11167-11177.
+- Kinouchi, O., & Copelli, M. (2006). Optimal dynamical range of excitable networks at criticality. Nature Physics, 2(5), 348-351.
+- Carlson, J. M., & Doyle, J. (2002). Complexity and robustness. Proceedings of the National Academy of Sciences, 99(suppl 1), 2538-2545.
+- Albert, R., Jeong, H., & Barabasi, A.-L. (2000). Error and attack tolerance of complex networks. Nature, 406, 378-382.
+- Holling, C. S. (2001). Understanding the complexity of economic, ecological, and social systems. Ecosystems, 4(5), 390-405.
+- Gunderson, L. H., & Holling, C. S. (Eds.). (2002). Panarchy: Understanding Transformations in Human and Natural Systems. Island Press.
+- Holland, J. H. (1992). Adaptation in Natural and Artificial Systems. MIT Press.
+- Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrödinger's question: A free-energy formulation. Physics of Life Reviews, 24, 1-16.

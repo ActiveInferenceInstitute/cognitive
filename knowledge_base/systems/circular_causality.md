@@ -412,15 +412,6 @@ Information flows in both directions in circular causality:
 
 The rate of information flow in each direction determines the relative influence of bottom-up and top-down causation, which is modulated by precision (see [[cognitive/precision_weighting|Precision Weighting]]).
 
-## Key References
-
-- Haken, H. (2004). Synergetics: Introduction and Advanced Topics. Springer.
-- Hofstadter, D. R. (1979). Godel, Escher, Bach: An Eternal Golden Braid. Basic Books.
-- Edelman, G. M. (1989). The Remembered Present: A Biological Theory of Consciousness. Basic Books.
-- Kelso, J. A. S. (1995). Dynamic Patterns: The Self-Organization of Brain and Behavior. MIT Press.
-- Friston, K. (2008). Hierarchical models in the brain. PLoS Computational Biology, 4(11), e1000211.
-- Thompson, E., & Varela, F. J. (2001). Radical embodiment: Neural dynamics and consciousness. Trends in Cognitive Sciences, 5(10), 418-425.
-
 ## Cross-References
 
 - [[systems/emergence|Emergence]] - How macro properties arise from micro dynamics
@@ -433,3 +424,15 @@ The rate of information flow in each direction determines the relative influence
 - [[biology/morphogenesis|Morphogenesis]] - Circular causality in biological development
 - [[cognitive/precision_weighting|Precision Weighting]] - Modulates balance of top-down and bottom-up
 - [[mathematics/markov_blankets|Markov Blankets]] - Formal boundaries in circular causal systems
+
+## References
+
+- Edelman, G. M. (1989). The remembered present: A biological theory of consciousness. Basic Books.
+- Friston, K. (2008). Hierarchical models in the brain. PLoS Computational Biology, 4(11), e1000211.
+- Haken, H. (1977). Synergetics: An introduction. Springer.
+- Haken, H. (2004). Synergetics: Introduction and advanced topics. Springer.
+- Hofstadter, D. R. (1979). Godel, Escher, Bach: An eternal golden braid. Basic Books.
+- Hofstadter, D. R. (2007). I am a strange loop. Basic Books.
+- Kelso, J. A. S. (1995). Dynamic patterns: The self-organization of brain and behavior. MIT Press.
+- Maturana, H. R., & Varela, F. J. (1980). Autopoiesis and cognition: The realization of the living. D. Reidel.
+- Thompson, E., & Varela, F. J. (2001). Radical embodiment: Neural dynamics and consciousness. Trends in Cognitive Sciences, 5(10), 418-425.

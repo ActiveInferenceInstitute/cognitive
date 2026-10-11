@@ -77,17 +77,17 @@ Alan Turing (1952) showed that a system of two reacting and diffusing chemicals 
 The instability condition (in the simplest case):
 
 ```math
-\text{Pattern formation when: } D_{inhibitor} / D_{activator} > (a + d)^2 / (4 \cdot \text{det}(J))
+\text{Pattern formation requires: } \delta a + d > 0 \ \text{and} \ (\delta a + d)^2 > 4\,\delta\,\text{det}(J), \quad \delta = D_{inhibitor} / D_{activator}
 ```
 
-where J is the Jacobian of the reaction kinetics evaluated at the homogeneous steady state.
+where J is the Jacobian of the reaction kinetics evaluated at the homogeneous steady state, with diagonal entries a (activator self-enhancement, positive) and d (inhibitor self-decay, negative), and the homogeneous state must itself be stable without diffusion.
 
 ### Types of Turing Patterns
 
 Depending on parameters, Turing systems produce:
 - **Spots**: Isolated peaks of activator concentration (e.g., animal coat patterns)
 - **Stripes**: Alternating bands of high and low concentration (e.g., zebrafish stripes)
-- **Labyrinthine patterns**: Interconnected networks (e.g., brain folds)
+- **Labyrinthine patterns**: Interconnected maze-like networks (e.g., skin patterns of some fishes)
 - **Hexagonal arrays**: Regular arrangements (e.g., hair follicle spacing)
 
 ### Turing Patterns as Free Energy Minima
@@ -282,15 +282,6 @@ The attractor is robust (small perturbations are corrected), which explains the 
 
 Just as development is convergence to the organismic attractor, death is the destruction of that attractor -- the loss of the NESS. When the system can no longer maintain the conditions necessary for the attractor to exist (due to accumulated damage, resource depletion, or catastrophic perturbation), the system relaxes to thermodynamic equilibrium.
 
-## Key References
-
-- Turing, A. M. (1952). The chemical basis of morphogenesis. Philosophical Transactions of the Royal Society B, 237(641), 37-72.
-- Friston, K., Levin, M., Sengupta, B., & Pezzulo, G. (2015). Knowing one's place: A free-energy approach to pattern regulation. Journal of the Royal Society Interface, 12(105), 20141383.
-- Levin, M. (2019). The computational boundary of a "self": Developmental bioelectricity drives multicellularity and scale-free cognition. Frontiers in Psychology, 10, 2688.
-- Wolpert, L. (1969). Positional information and the spatial pattern of cellular differentiation. Journal of Theoretical Biology, 25(1), 1-47.
-- Kondo, S., & Miura, T. (2010). Reaction-diffusion model as a framework for understanding biological pattern formation. Science, 329(5999), 1616-1620.
-- Waddington, C. H. (1957). The Strategy of the Genes. Allen & Unwin.
-
 ## Cross-References
 
 - [[cognitive/free_energy_principle|Free Energy Principle]] - Theoretical framework
@@ -301,3 +292,15 @@ Just as development is convergence to the organismic attractor, death is the des
 - [[systems/emergence|Emergence]] - Emergence of form from cellular interactions
 - [[systems/circular_causality|Circular Causality]] - Top-down/bottom-up causation in development
 - [[biology/niche_construction|Niche Construction]] - Organisms shaping their own developmental environment
+
+## References
+
+- Turing, A. M. (1952). The chemical basis of morphogenesis. Philosophical Transactions of the Royal Society of London B, 237(641), 37-72.
+- Wolpert, L. (1969). Positional information and the spatial pattern of cellular differentiation. Journal of Theoretical Biology, 25(1), 1-47.
+- Waddington, C. H. (1957). The Strategy of the Genes. Allen & Unwin.
+- Kondo, S., & Miura, T. (2010). Reaction-diffusion model as a framework for understanding biological pattern formation. Science, 329(5999), 1616-1620.
+- Sick, S., Reinker, S., Timmer, J., & Schlake, T. (2006). WNT and DKK determine hair follicle spacing through a reaction-diffusion mechanism. Science, 314(5804), 1447-1450.
+- Nakamasu, A., Takahashi, G., Kanbe, A., & Kondo, S. (2009). Interactions between zebrafish pigment cells responsible for the generation of Turing patterns. Proceedings of the National Academy of Sciences, 106(21), 8429-8434.
+- Collier, J. R., Monk, N. A. M., Maini, P. K., & Lewis, J. H. (1996). Pattern formation by lateral inhibition with feedback: A mathematical model of Delta-Notch intercellular signalling. Journal of Theoretical Biology, 183(4), 429-446.
+- Friston, K., Levin, M., Sengupta, B., & Pezzulo, G. (2015). Knowing one's place: A free-energy approach to pattern regulation. Journal of the Royal Society Interface, 12(105), 20141383.
+- Levin, M. (2019). The computational boundary of a "self": Developmental bioelectricity drives multicellularity and scale-free cognition. Frontiers in Psychology, 10, 2688.

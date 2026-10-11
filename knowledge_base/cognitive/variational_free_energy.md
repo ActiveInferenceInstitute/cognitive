@@ -31,7 +31,7 @@ Variational free energy is a key quantity in active inference and the free energ
 
 The variational free energy F is defined as:
 
-F(θ,μ) = E_{q(θ)}[ln q(θ) - ln p(y,θ)] + H[q(θ)]
+F(θ,μ) = E_{q(θ)}[ln q(θ) - ln p(y,θ)] = E_{q(θ)}[-ln p(y,θ)] - H[q(θ)]
 
 Where:
 
@@ -51,7 +51,7 @@ class VariationalFreeEnergy:
     def calculate_vfe(self, observations, variational_params):
         """Calculate variational free energy for given observations."""
 
-        # Energy term: E_q[ln q - ln p(y,θ)]
+        # Energy term: E_q[-ln p(y,θ)]
         energy = self.calculate_energy_term(observations, variational_params)
 
         # Entropy term: -H[q(θ)]
@@ -79,7 +79,7 @@ class VariationalFreeEnergy:
             # Evaluate variational log-probability
             log_variational = self.variational_log_probability(latent_sample, variational_params)
 
-            energy += log_variational - log_joint
+            energy += -log_joint
 
         return energy / n_samples
 
@@ -101,7 +101,7 @@ Variational free energy provides a lower bound on model evidence:
 
 ln p(y) ≥ E_{q(θ)}[ln p(y,θ)] - E_{q(θ)}[ln q(θ)] = -F
 
-This relationship enables variational inference as maximum likelihood learning.
+Because the bound is tractable, minimizing F gives an approximation to maximum-likelihood (model evidence) inference.
 
 ## Perception as Inference
 
@@ -547,3 +547,11 @@ class ScalableVariationalInference:
 
 - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]]
 - [[knowledge_base/mathematics/variational_free_energy|Variational Free Energy]]
+
+## References
+
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Buckley, C. L., Kim, C. S., McGregor, S., & Seth, A. K. (2017). The free energy principle for action and perception: A mathematical review. Journal of Mathematical Psychology, 81, 55-79.
+- Blei, D. M., Kucukelbir, A., & McAuliffe, J. D. (2017). Variational inference: A review for statisticians. Journal of the American Statistical Association, 112(518), 859-877.
+- Amari, S. (1998). Natural gradient works efficiently in learning. Neural Computation, 10(2), 251-276.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.

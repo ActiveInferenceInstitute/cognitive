@@ -30,13 +30,13 @@ Emergence is mathematically characterized by phase transitions and self-organiza
 #### Phase Transitions
 ```
 Critical Point: Small parameter changes → Large-scale reorganization
-H(λ) = -∑ p_i ln p_i  (Entropy increases at criticality)
+H(λ) = -∑ p_i ln p_i  (Shannon entropy as one order measure)
 ```
 
 Where:
 - `λ`: Control parameter (temperature, coupling strength)
 - `H`: System entropy measuring disorder
-- Critical systems operate at the "edge of chaos"
+- Some critical systems are described as operating near the "edge of chaos" (a contested characterization)
 
 #### Self-Organization Equations
 ```
@@ -117,7 +117,7 @@ Consciousness and cognition emerge from neural interactions.
 #### Synaptic Plasticity
 ```
 Hebbian Learning: "Neurons that fire together wire together"
-Δw_ij ∝ x_i x_j  (Covariance-based weight changes)
+Δw_ij ∝ x_i x_j  (Correlation-based weight changes)
 ```
 
 Where:
@@ -137,7 +137,7 @@ Higher-order cognition emerges from neural processes:
 - **Attention**: Emergent focusing from distributed neural competition
 - **Memory**: Patterns of activity emerging from synaptic connectivity
 - **Decision-Making**: Choices emerging from value-based neural competition
-- **Consciousness**: Self-awareness emerging from integrated information
+- **Consciousness**: Self-awareness proposed to emerge from neural integration (contested)
 
 ### Social Cognitive Emergence
 Group cognition emerges from individual minds interacting.
@@ -208,7 +208,7 @@ Rule 30: Simple local rules → Complex global patterns
 ```
 
 Emergent phenomena:
-- **Game of Life**: Self-reproducing patterns from simple rules
+- **Game of Life**: Persistent moving patterns (gliders) from simple rules
 - **Turing Machines**: Computation emerging from state transitions
 - **Artificial Chemistry**: Molecular-like interactions in silico
 - **Evolutionary Algorithms**: Adaptation emerging from selection
@@ -303,7 +303,7 @@ Controlled studies demonstrating emergence.
 
 #### Laboratory Experiments
 - **Boid Simulations**: Artificial flocks exhibiting biological movement patterns
-- **Dictator Games**: Fairness norms emerging in economic games
+- **Ultimatum Games**: Fairness norms in economic games
 - **Stag Hunt Games**: Coordination conventions emerging from repeated play
 - **Ant Colony Experiments**: Self-organizing foraging behavior
 
@@ -353,7 +353,7 @@ Micro-level laws + Initial conditions → Novel macro-level laws
 
 #### Weak Emergence
 ```
-Micro-level laws → Predictable macro-level patterns
+Micro-level laws → Macro-level patterns derivable (often only by simulation)
 ```
 
 - **Computational Irreducibility**: Patterns requiring simulation to predict
@@ -396,26 +396,6 @@ Emergence raises fundamental questions about reality and knowledge.
 - **Education**: Teaching emergence as a fundamental scientific concept
 - **Ethics**: Moral implications of emergent artificial intelligence
 
-## 📚 Key References
-
-### Foundational Works
-- [[systems/emergence|Emergence Principles]]
-- [[mathematics/complex_systems|Complex Systems Mathematics]]
-- [[biology/evolutionary_dynamics|Evolutionary Emergence]]
-- [[cognitive/collective_behavior|Social Emergence]]
-
-### Domain-Specific Studies
-- Friston, K. (2013). Life as We Know It
-- [[systems/complex_systems|Complex Systems Theory]]
-- Swarm Intelligence
-- [[cognitive/swarm_intelligence|Cognitive Swarm Intelligence]]
-
-### Integration Papers
-- **Anderson (1972)**: More is Different - foundational emergence paper
-- **Laughlin et al. (2000)**: The Middle Way - emergence in physics
-- **Bedau & Humphreys (2008)**: Emergence: Contemporary Readings
-- **Corning (2002)**: The Re-Emergence of Emergence
-
 ---
 
 > **Universal Principle**: Emergence provides a unified explanation for pattern formation and self-organization across all domains of science.
@@ -431,3 +411,19 @@ Emergence raises fundamental questions about reality and knowledge.
 ---
 
 > **Design Principle**: Informs creation of artificial systems that exhibit desired emergent properties.
+
+## See also
+
+- [[cognitive/swarm_intelligence]]
+- [[systems/complex_systems]]
+
+## References
+- Anderson, P. W. (1972). More is different. Science, 177(4047), 393-396.
+- Bedau, M. A., & Humphreys, P. (Eds.). (2008). Emergence: Contemporary readings in philosophy and science. MIT Press.
+- Corning, P. A. (2002). The re-emergence of "emergence": A venerable concept in search of a theory. Complexity, 7(6), 18-30.
+- Friston, K. (2013). Life as we know it. Journal of The Royal Society Interface, 10(86), 20130475.
+- Laughlin, R. B., Pines, D., Schmalian, J., Stojkovic, B. P., & Wolynes, P. (2000). The middle way. Proceedings of the National Academy of Sciences, 97(1), 32-37.
+- Turing, A. M. (1952). The chemical basis of morphogenesis. Philosophical Transactions of the Royal Society of London B, 237(641), 37-72.
+- Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of 'small-world' networks. Nature, 393(6684), 440-442.
+- Barabási, A.-L., & Albert, R. (1999). Emergence of scaling in random networks. Science, 286(5439), 509-512.
+- Reynolds, C. W. (1987). Flocks, herds and schools: A distributed behavioral model. ACM SIGGRAPH Computer Graphics, 21(4), 25-34.

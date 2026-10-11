@@ -682,7 +682,7 @@ The [[path_integral_free_energy|path integral formulation of active inference]] 
 
 1. **[[stochastic_active_inference|Stochastic Dynamics]]**: Both can be expressed in terms of Langevin dynamics and other stochastic processes across scales.
 
-1. **Least Action Principle**: The path of least variational free energy in Active Inference parallels the least action principle in physics that underlies RG.
+1. **Least Action Principle**: The path of least variational free energy in Active Inference parallels the least action principle in physics.
 
 ```mermaid
 
@@ -854,3 +854,14 @@ Several exciting open questions exist at this intersection:
 
 - [[path_integral_free_energy|Path Integral Free Energy]]
 
+## References
+
+- Wilson, K. G. (1971). Renormalization group and critical phenomena. I. Renormalization group and the Kadanoff scaling picture. Physical Review B, 4(9), 3174-3183.
+- Wilson, K. G. (1983). The renormalization group and critical phenomena. Reviews of Modern Physics, 55(3), 583-600.
+- Cardy, J. (1996). Scaling and renormalization in statistical physics. Cambridge University Press.
+- Polchinski, J. (1984). Renormalization and effective lagrangians. Nuclear Physics B, 231(2), 269-295.
+- Mehta, P., & Schwab, D. J. (2014). An exact mapping between the variational renormalization group and deep learning. arXiv:1410.3831.
+- Berman, D. S., Klinger, M. S., & Stapleton, A. G. (2023). Bayesian renormalization. arXiv:2305.10491.
+- Friston, K., Da Costa, L., Sakthivadivel, D. A. R., Heins, C., Pavliotis, G. A., Ramstead, M., & Parr, T. (2023). Path integrals, particular kinds, and strange things. Physics of Life Reviews, 47, 35-62.
+- Lawson, R. P., Rees, G., & Friston, K. J. (2014). An aberrant precision account of autism. Frontiers in Human Neuroscience, 8, 302.
+- Adams, R. A., Stephan, K. E., Brown, H. R., Frith, C. D., & Friston, K. J. (2013). The computational anatomy of psychosis. Frontiers in Psychiatry, 4, 47.

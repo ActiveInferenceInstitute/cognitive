@@ -798,3 +798,11 @@ class MotorRehabilitationSystem:
 ---
 
 > **Hierarchical Coordination**: Motor control operates across multiple time scales, from strategic planning to moment-to-moment execution, coordinated through hierarchical Active Inference.
+
+## References
+
+- Wolpert, D. M., & Kawato, M. (1998). Multiple paired forward and inverse models for motor control. Neural Networks, 11(7-8), 1317-1329.
+- Adams, R. A., Shipp, S., & Friston, K. J. (2013). Predictions not commands: active inference in the motor system. Brain Structure and Function, 218(3), 611-643.
+- Friston, K. J., Daunizeau, J., Kilner, J., & Kiebel, S. J. (2010). Action and behavior: a free-energy formulation. Biological Cybernetics, 102(3), 227-260.
+- Shadmehr, R., Smith, M. A., & Krakauer, J. W. (2010). Error correction, sensory prediction, and adaptation in motor control. Annual Review of Neuroscience, 33, 89-108.
+- Todorov, E., & Jordan, M. I. (2002). Optimal feedback control as a theory of motor coordination. Nature Neuroscience, 5(11), 1226-1235.

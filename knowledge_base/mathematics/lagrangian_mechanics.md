@@ -594,3 +594,10 @@ class LagrangianControl:
 
 1. [[control_theory|Control Theory]]
 
+
+## References
+
+- Arnold, V. I. (1989). Mathematical Methods of Classical Mechanics (2nd ed.). Springer.
+- Goldstein, H., Poole, C., & Safko, J. (2002). Classical Mechanics (3rd ed.). Addison Wesley.
+- Marsden, J. E., & West, M. (2001). Discrete mechanics and variational integrators. Acta Numerica, 10, 357-514.
+- Hairer, E., Lubich, C., & Wanner, G. (2006). Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations (2nd ed.). Springer.

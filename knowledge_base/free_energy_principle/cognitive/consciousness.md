@@ -138,7 +138,7 @@ Unconscious processing = epsilon (the prediction errors that update mu)
 We experience a stable, coherent world (the predictions) rather than the raw, noisy sensory data (the errors). This explains:
 - **Change blindness**: We are conscious of our predictions, and predictions update slowly
 - **Perceptual filling-in**: The blind spot is filled by predictions, not data
-- **Dreams**: Conscious experience during sleep is driven entirely by predictions (no sensory data)
+- **Dreams**: Conscious experience during sleep is driven largely by predictions rather than sensory data (Hobson & Friston, 2012)
 
 ## Integrated Information and the FEP
 
@@ -179,7 +179,7 @@ Anesthesia -> Pi -> 0 (all precisions reduced)
 -> No conscious experience
 ```
 
-**NREM sleep**: Reduces the temporal depth of the generative model
+**NREM sleep**: May reduce the temporal depth of the generative model (speculative)
 ```
 NREM -> Temporal_depth -> 0
 -> No counterfactual processing
@@ -187,7 +187,7 @@ NREM -> Temporal_depth -> 0
 -> Unconscious (dreamless sleep)
 ```
 
-**REM sleep**: Maintains temporal depth but disconnects from sensory input
+**REM sleep**: May maintain temporal depth while disconnected from sensory input (Hobson & Friston, 2012)
 ```
 REM -> Sensory precision -> 0, but Prior precision maintained
 -> Generative model runs autonomously
@@ -227,16 +227,22 @@ Several philosophical approaches attempt to bridge this gap:
 
 See [[knowledge_base/free_energy_principle/philosophy/mind_body_problem]] for extended discussion.
 
-## Key References
-
-1. Friston, K. (2018). Am I self-conscious? (Or does self-organization entail self-consciousness?). *Frontiers in Psychology*, 9, 579.
-2. Hohwy, J. (2013). *The Predictive Mind*. Oxford University Press. Chapters 8-10.
-3. Seth, A. K. (2021). *Being You: A New Science of Consciousness*. Dutton.
-4. Clark, A. (2019). Consciousness as generative entanglement. *Journal of Philosophy*, 116(12), 645-662.
-5. Williford, K., Bennequin, D., Friston, K., & Rudrauf, D. (2018). The projective consciousness model and phenomenal selfhood. *Frontiers in Psychology*, 9, 2571.
-6. Solms, M. (2021). *The Hidden Spring: A Journey to the Source of Consciousness*. Norton.
-7. Chang, A. Y., Biehl, M., Yu, Y., & Kanai, R. (2020). Information closure theory of consciousness. *Frontiers in Psychology*, 11, 1504.
-
 ## See also
 
 - [[knowledge_base/cognitive/consciousness|Consciousness]]
+
+## References
+
+- Friston, K. (2018). Am I self-conscious? (Or does self-organization entail self-consciousness?). *Frontiers in Psychology*, 9, 579.
+- Hobson, J. A., & Friston, K. J. (2012). Waking and dreaming consciousness: neurobiological and functional considerations. *Progress in Neurobiology*, 98(1), 82-98.
+- Dehaene, S., Sergent, C., & Changeux, J.-P. (2003). A neuronal network model linking subjective reports and objective physiological data during conscious perception. *Proceedings of the National Academy of Sciences*, 100(14), 8520-8525.
+- Baars, B. J. (1988). *A Cognitive Theory of Consciousness*. Cambridge University Press.
+- Chalmers, D. J. (1995). Facing up to the problem of consciousness. *Journal of Consciousness Studies*, 2(3), 200-219.
+- Tononi, G. (2008). Consciousness as integrated information: a provisional manifesto. *The Biological Bulletin*, 215(3), 216-242.
+- Solms, M. (2019). The hard problem of consciousness and the free energy principle. *Frontiers in Psychology*, 9, 2714.
+- Hohwy, J. (2013). *The Predictive Mind*. Oxford University Press.
+- Seth, A. K. (2021). *Being You: A New Science of Consciousness*. Dutton.
+- Clark, A. (2019). Consciousness as generative entanglement. *Journal of Philosophy*, 116(12), 645-662.
+- Williford, K., Bennequin, D., Friston, K., & Rudrauf, D. (2018). The projective consciousness model and phenomenal selfhood. *Frontiers in Psychology*, 9, 2571.
+- Solms, M. (2021). *The Hidden Spring: A Journey to the Source of Consciousness*. W. W. Norton.
+- Chang, A. Y., Biehl, M., Yu, Y., & Kanai, R. (2020). Information closure theory of consciousness. *Frontiers in Psychology*, 11, 1504.

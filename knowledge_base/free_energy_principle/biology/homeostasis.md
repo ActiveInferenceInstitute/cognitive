@@ -312,7 +312,7 @@ Where $c$ represents nutrient concentrations and $\mu$ represents chemical poten
 
 ### Physiological Measurements
 
-FEP predictions align with physiological data:
+The FEP offers a qualitative reading of the following physiological observations (interpretations, not direct quantitative tests):
 
 1. **Heart Rate Variability**: Autonomic regulation minimizes free energy
 2. **Blood Glucose Dynamics**: Insulin-glucagon balance optimizes homeostasis
@@ -320,7 +320,7 @@ FEP predictions align with physiological data:
 
 ### Clinical Applications
 
-FEP explains pathological conditions:
+The FEP offers interpretations of pathological conditions:
 
 - **Diabetes**: Impaired glucose homeostasis increases free energy
 - **Hypertension**: Dysregulated cardiovascular control
@@ -470,14 +470,14 @@ def assess_allostatic_load(free_energy_trajectory, threshold=1.0):
 - Joffily & Coricelli (2013): "Emotional valence and the free-energy principle"
 
 ### Physiological Applications
-- Pezzulo et al. (2015): "The anatomy of choice"
+- Pezzulo et al. (2015): "Active inference, homeostatic regulation and adaptive behavioural control"
 - Barrett & Simmons (2015): "Interoceptive predictions"
 - Seth (2013): "Interoceptive inference"
 
 ### Reviews
-- Friston et al. (2017): "Active Inference and Learning"
-- Tsilidis et al. (2013): "Free energy and the brain"
-- Badcock et al. (2019): "The hierarchical basis of neurovisceral integration"
+- Friston et al. (2016): "Active inference and learning"
+- Friston et al. (2006): "A free energy principle for the brain"
+- Smith et al. (2017): "The hierarchical basis of neurovisceral integration"
 
 ---
 
@@ -498,3 +498,13 @@ def assess_allostatic_load(free_energy_trajectory, threshold=1.0):
 ## See also
 
 - [[knowledge_base/biology/homeostasis|Homeostasis]]
+
+## References
+
+- Friston, K. (2013). Life as we know it. *Journal of the Royal Society Interface*, 10(86), 20130475.
+- Sterling, P. (2012). Allostasis: a model of predictive regulation. *Physiology & Behavior*, 106(1), 5-15.
+- Pezzulo, G., Rigoli, F., & Friston, K. (2015). Active inference, homeostatic regulation and adaptive behavioural control. *Progress in Neurobiology*, 134, 17-35.
+- Seth, A. K. (2013). Interoceptive inference, emotion, and the embodied self. *Trends in Cognitive Sciences*, 17(11), 565-573.
+- Barrett, L. F., & Simmons, W. K. (2015). Interoceptive predictions in the brain. *Nature Reviews Neuroscience*, 16(7), 419-429.
+- McEwen, B. S. (1998). Protective and damaging effects of stress mediators. *New England Journal of Medicine*, 338(3), 171-179.
+- Joffily, M., & Coricelli, G. (2013). Emotional valence and the free-energy principle. *PLoS Computational Biology*, 9(6), e1003094.

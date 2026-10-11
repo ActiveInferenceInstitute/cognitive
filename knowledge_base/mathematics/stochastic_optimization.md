@@ -85,3 +85,11 @@ for label, T0, decay in (("cold", 0.02, 1.0), ("annealed", 1.0, 0.998)):
 - [[annealing_schedules]]
 - [[optimization_strategies]]
 - [[langevin_dynamics]] · [[temperature_parameter]] · [[policy_search_methods]]
+
+## References
+
+- Robbins, H., & Monro, S. (1951). A stochastic approximation method. The Annals of Mathematical Statistics, 22(3), 400-407.
+- Bottou, L., Curtis, F. E., & Nocedal, J. (2018). Optimization methods for large-scale machine learning. SIAM Review, 60(2), 223-311.
+- Kirkpatrick, S., Gelatt, C. D., & Vecchi, M. P. (1983). Optimization by simulated annealing. Science, 220(4598), 671-680.
+- Hajek, B. (1988). Cooling schedules for optimal annealing. Mathematics of Operations Research, 13(2), 311-329.
+- Risken, H. (1996). The Fokker-Planck equation: Methods of solution and applications (2nd ed.). Springer.

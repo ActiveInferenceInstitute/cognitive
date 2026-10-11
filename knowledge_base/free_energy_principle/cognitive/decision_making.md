@@ -252,16 +252,18 @@ The TD error:
 delta = r + gamma * V(s') - V(s)
 ```
 
-corresponds to the change in (negative) expected free energy after observing a reward and transitioning to a new state. Dopaminergic prediction errors are EFE prediction errors.
-
-## Key References
-
-1. Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: a process theory. *Neural Computation*, 29(1), 1-49.
-2. Pezzulo, G., Rigoli, F., & Friston, K. J. (2018). Hierarchical active inference: a theory of motivated control. *Trends in Cognitive Sciences*, 22(4), 294-306.
-3. Schwartenbeck, P., FitzGerald, T., Dolan, R. J., & Friston, K. (2013). Exploration, novelty, surprise, and free energy minimization. *Frontiers in Psychology*, 4, 710.
-4. Da Costa, L., et al. (2020). Active inference on discrete state-spaces: A synthesis. *Journal of Mathematical Psychology*, 99, 102447.
-5. Parr, T., Pezzulo, G., & Friston, K. J. (2022). *Active Inference*. MIT Press. Chapters 7-9.
+corresponds to the change in (negative) expected free energy after observing a reward and transitioning to a new state. Dopaminergic responses have been interpreted as encoding changes in (negative) expected free energy and policy precision (Friston et al., 2014).
 
 ## See also
 
 - [[knowledge_base/cognitive/decision_making|Decision Making]]
+
+## References
+
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: a process theory. *Neural Computation*, 29(1), 1-49.
+- Pezzulo, G., Rigoli, F., & Friston, K. J. (2018). Hierarchical active inference: a theory of motivated control. *Trends in Cognitive Sciences*, 22(4), 294-306.
+- Schwartenbeck, P., FitzGerald, T., Dolan, R. J., & Friston, K. (2013). Exploration, novelty, surprise, and free energy minimization. *Frontiers in Psychology*, 4, 710.
+- Friston, K., Schwartenbeck, P., FitzGerald, T., Moutoussis, M., Behrens, T., & Dolan, R. J. (2014). The anatomy of choice: dopamine and decision-making. *Philosophical Transactions of the Royal Society B*, 369(1655), 20130481.
+- Da Costa, L., Sajid, N., Parr, T., Friston, K., & Smith, R. (2023). Reward maximization through discrete active inference. *Neural Computation*, 35(5), 807-852.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). *Active Inference: The Free Energy Principle in Mind, Brain, and Behavior*. MIT Press.
+- Da Costa, L., Parr, T., Sajid, N., Veselic, S., Neacsu, V., & Friston, K. (2020). Active inference on discrete state-spaces: A synthesis. *Journal of Mathematical Psychology*, 99, 102447.

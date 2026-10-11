@@ -52,7 +52,7 @@ The brain actively predicts sensory input and minimizes prediction errors throug
 #### Hierarchical Predictive Processing
 ```
 ε = o - g(s)
-Δs ∝ -δε/δs
+Δs ∝ (∂g/∂s)ᵀ ε
 ```
 
 Where:
@@ -75,9 +75,9 @@ G(π) = E_{q(o|π)} [ln q(o|π) - ln p(o|π,θ)]
 ```
 
 Where:
-- `G(π)`: Expected free energy for policy π
+- `G(π)`: Expected free energy for policy π (shown as its risk term; the full expression adds an ambiguity term)
 - `q(o|π)`: Predicted observations under policy
-- `p(o|π,θ)`: Preferred observations
+- `p(o|π,θ)`: Preferred observations (prior preferences over outcomes)
 
 ## 🔄 Systems Theory Integration
 
@@ -212,13 +212,13 @@ Applied to:
 ## 🔬 Empirical Evidence
 
 ### Neuroscientific Support
-Brain imaging and electrophysiological studies support active inference predictions.
+Some brain imaging and electrophysiological findings are compatible with active inference and predictive coding, although direct tests of its distinctive predictions remain limited.
 
 #### Neural Correlates
 - **Predictive Coding**: Hierarchical error minimization in visual cortex
 - **Precision Weighting**: Neuromodulatory control of attention
-- **Motor Preparation**: Expected free energy in premotor cortex
-- **Conscious Processing**: Self-evidencing in default mode network
+- **Motor Preparation**: Proposed role of expected free energy in premotor and motor circuits (largely model-based, not yet directly tested)
+- **Conscious Processing**: Proposed links between self-evidencing and large-scale brain networks (speculative)
 
 #### Behavioral Evidence
 - **Perceptual Inference**: Hallucinations as uncontrolled inference
@@ -227,7 +227,7 @@ Brain imaging and electrophysiological studies support active inference predicti
 - **Learning**: Bayesian updating in category learning tasks
 
 ### Biological Evidence
-Physiological and behavioral studies demonstrate active inference in living systems.
+Physiological and behavioral studies are consistent with, but do not uniquely demonstrate, active inference in living systems.
 
 #### Physiological Regulation
 - **Allostasis**: Anticipatory physiological adaptation
@@ -298,23 +298,6 @@ Active inference has profound implications for philosophy of mind and science.
 - **Environmental Management**: Ecosystem regulation and conservation
 - **Policy Design**: Governance through collective decision-making
 
-## 📚 Key References
-
-### Core Concepts
-- Friston, K. (2017). Active Inference: A Process Theory
-- Friston, K. (2010). The Free-Energy Principle: A Unified Brain Theory?
-- Friston, K. (2009). Predictive Coding under the Free Energy Principle
-
-### Domain Applications
-- Clark, A. (2013). Whatever Next? Predictive Brains, Situated Agents, and the Future of Cognitive Science
-- Friston, K. (2013). Life as We Know It
-- Parr, T., Pezzulo, G., & Friston, K. (2019). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior
-
-### Integration Works
-- Active Inference Agent Architecture
-- Complex Systems Theory
-- Biological Network Dynamics
-
 ---
 
 > **Unified Framework**: Active inference provides a mathematically principled account of adaptive behavior across all domains of science.
@@ -330,3 +313,13 @@ Active inference has profound implications for philosophy of mind and science.
 ---
 
 > **Practical Applications**: Informs design of autonomous systems, therapeutic interventions, and environmental management strategies.
+
+## References
+
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: A process theory. Neural Computation, 29(1), 1-49.
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11, 127-138.
+- Friston, K., & Kiebel, S. (2009). Predictive coding under the free-energy principle. Philosophical Transactions of the Royal Society B, 364, 1211-1221.
+- Friston, K. (2013). Life as we know it. Journal of the Royal Society Interface, 10, 20130475.
+- Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. Behavioral and Brain Sciences, 36, 181-204.
+- Hohwy, J. (2016). The self-evidencing brain. Nous, 50, 259-285.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.

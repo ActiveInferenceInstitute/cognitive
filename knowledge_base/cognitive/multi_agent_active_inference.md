@@ -168,7 +168,7 @@ The spontaneous synchronization of coupled oscillators (Kuramoto model) can be r
 
 ### Game-Theoretic Connection
 
-A profound connection exists between game theory and multi-agent active inference: Nash equilibria in games correspond to non-equilibrium steady states (NESS) of the coupled dynamical system formed by multiple free-energy-minimizing agents.
+Game theory and multi-agent active inference can be related: Nash equilibria in games can be read as non-equilibrium steady states (NESS) of the coupled dynamical system formed by multiple free-energy-minimizing agents.
 
 At a Nash equilibrium, no agent can reduce its free energy by unilaterally changing its policy. Formally, for each agent i:
 
@@ -182,7 +182,7 @@ This connects to the FEP through the observation that a NESS is characterized by
 \nabla \cdot (f(x) p_{ss}(x)) = 0
 ```
 
-when decomposed across agents, yields exactly the Nash equilibrium conditions when the flow `f` is identified with free energy gradient descent.
+when decomposed across agents, can be read as the Nash equilibrium conditions if the flow `f` is identified with free energy gradient descent.
 
 ### Beyond Classical Nash
 
@@ -300,7 +300,7 @@ The stability of institutions reflects their status as free energy minima for th
 
 ### Convergence
 
-Under mild regularity conditions (ergodicity, finite state spaces, connected communication structure), multi-agent belief updating converges to a consensus:
+Under idealized conditions (ergodicity, finite state spaces, connected communication structure), multi-agent belief updating can be expected to converge to a consensus:
 
 ```math
 \lim_{t \to \infty} D_{KL}[Q_i(s, t) || Q_j(s, t)] = 0 \quad \forall i, j
@@ -338,15 +338,6 @@ Multi-agent active inference systems exhibit robustness to individual agent fail
 - Symbiotic relationships as coupled free energy minimization
 - Ecosystem stability through multi-species active inference
 
-## Key References
-
-- Friston, K., & Frith, C. (2015). A duet for one. Consciousness and Cognition, 36, 390-405.
-- Vasil, J., et al. (2020). A world unto itself: Human communication as active inference. Frontiers in Psychology, 11, 417.
-- Kaufmann, R., et al. (2021). The active inference approach to ecological perception. Frontiers in Psychology, 12.
-- Friston, K., et al. (2022). Designing ecosystems of intelligence from first principles. arXiv preprint.
-- Albarracin, M., et al. (2022). Epistemic communities under active inference. Entropy, 24(4), 476.
-- Da Costa, L., et al. (2020). Active inference on discrete state-spaces. Journal of Mathematical Psychology, 99.
-
 ## Cross-References
 
 - [[active_inference|Active Inference]] - Single-agent foundation
@@ -357,3 +348,15 @@ Multi-agent active inference systems exhibit robustness to individual agent fail
 - [[biology/niche_construction|Niche Construction]] - Environmental modification by agents
 - [[philosophy/enactivism|Enactivism]] - Participatory sense-making
 - [[knowledge_base/systems/circular_causality|Circular Causality]] - Reciprocal agent-environment dynamics
+
+## References
+
+- Friston, K., & Frith, C. (2015). A duet for one. Consciousness and Cognition, 36, 390-405.
+- Vasil, J., Badcock, P. B., Constant, A., Friston, K., & Ramstead, M. J. D. (2020). A world unto itself: Human communication as active inference. Frontiers in Psychology, 11, 417.
+- Friston, K., Da Costa, L., Hafner, D., Hesp, C., & Parr, T. (2021). Sophisticated inference. Neural Computation, 33(3), 713-763.
+- Kaufmann, R., Gupta, P., & Taylor, J. (2021). An active inference model of collective intelligence. Entropy, 23(7), 830.
+- Maynard Smith, J., & Price, G. R. (1973). The logic of animal conflict. Nature, 246, 15-18.
+- Linson, A., Clark, A., Ramamoorthy, S., & Friston, K. (2018). The active inference approach to ecological perception: General information dynamics for natural and artificial embodied cognition. Frontiers in Robotics and AI, 5, 21.
+- Friston, K., Ramstead, M. J. D., Kiefer, A. B., et al. (2024). Designing ecosystems of intelligence from first principles. Collective Intelligence, 3(1), 26339137231222481.
+- Albarracin, M., Demekas, D., Ramstead, M. J. D., & Heins, C. (2022). Epistemic communities under active inference. Entropy, 24(4), 476.
+- Da Costa, L., Parr, T., Sajid, N., Veselic, S., Neacsu, V., & Friston, K. (2020). Active inference on discrete state-spaces: A synthesis. Journal of Mathematical Psychology, 99, 102447.

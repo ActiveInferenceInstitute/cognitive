@@ -379,7 +379,7 @@ class DataIntegration:
 
 & \text{Model Evidence:} \\
 
-& \ln p(x) = F + \text{KL}[q(θ)||p(θ|x)] \\
+& \ln p(x) = -F + \text{KL}[q(θ)||p(θ|x)] \\
 
 & \text{Predictive Distribution:} \\
 
@@ -644,19 +644,23 @@ class BioinformaticsActiveInference:
 ## References
 
 ### Foundational Texts
-- durbin 1998 - "Biological Sequence Analysis"
-- mount 2004 - "Bioinformatics: Sequence and Genome Analysis"
-- baxevanis 2005 - "Bioinformatics and Functional Genomics"
+- Durbin, R., Eddy, S. R., Krogh, A., & Mitchison, G. (1998). Biological Sequence Analysis: Probabilistic Models of Proteins and Nucleic Acids. Cambridge University Press.
+- Rabiner, L. R. (1989). A tutorial on hidden Markov models and selected applications in speech recognition. Proceedings of the IEEE, 77, 257-286.
+- Pevsner, J. (2015). Bioinformatics and Functional Genomics (3rd ed.). Wiley-Blackwell.
 
 ### Machine Learning Methods
-- bishop 2006 - "Pattern Recognition and Machine Learning"
-- murphy 2012 - "Machine Learning: A Probabilistic Perspective"
-- nielsen 2015 - "Neural Networks and Deep Learning"
+- Bishop, C. M. (2006). Pattern Recognition and Machine Learning. Springer.
+- Murphy, K. P. (2012). Machine Learning: A Probabilistic Perspective. MIT Press.
+- Kingma, D. P., & Welling, M. (2013). Auto-encoding variational Bayes. arXiv:1312.6114.
+- Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017). Attention is all you need. arXiv:1706.03762.
+- Chen, R. T. Q., Rubanova, Y., Bettencourt, J., & Duvenaud, D. (2018). Neural ordinary differential equations. arXiv:1806.07366.
+- Schreiber, T. (2000). Measuring information transfer. Physical Review Letters, 85, 461-464.
+- Jaynes, E. T. (1957). Information theory and statistical mechanics. Physical Review, 106, 620-630.
 
 ### Active Inference Applications
-- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
-- [[parr_2022]] - "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior"
-- [[buckley_2017]] - "The Free Energy Principle for Action and Perception"
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184. [[friston_2019]]
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press. [[parr_2022]]
+- Buckley, C. L., Kim, C. S., McGregor, S., & Seth, A. K. (2017). The free energy principle for action and perception: A mathematical review. Journal of Mathematical Psychology, 81, 55-79. [[buckley_2017]]
 
 ## See Also
 

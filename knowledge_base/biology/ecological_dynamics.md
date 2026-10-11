@@ -391,9 +391,9 @@ Mathematical descriptions of diversity:
 
 & S = cA^z \\
 
-& \text{Relative Abundance:} \\
+& \text{Relative Abundance (Fisher log-series):} \\
 
-& P(n) = \frac{\theta^n}{n!}e^{-\theta} \\
+& S(n) = \alpha\frac{x^n}{n} \\
 
 & \text{Beta Diversity:} \\
 
@@ -555,19 +555,22 @@ Mathematical descriptions of diversity:
 ## References
 
 ### Foundational Texts
-- may 1976 - "Theoretical Ecology: Principles and Applications"
-- begon 2005 - "Ecology: From Individuals to Ecosystems"
-- odum 1971 - "Fundamentals of Ecology"
+- May, R. M. (Ed.). (1976). Theoretical Ecology: Principles and Applications. Saunders.
+- Begon, M., Townsend, C. R., & Harper, J. L. (2006). Ecology: From Individuals to Ecosystems (4th ed.). Blackwell.
+- Odum, E. P. (1971). Fundamentals of Ecology (3rd ed.). Saunders.
+- May, R. M. (1972). Will a large complex system be stable? Nature, 238, 413-414.
 
 ### Advanced Topics
-- levin 1992 - "The Problem of Pattern and Scale in Ecology"
-- hubbell 2001 - "The Unified Neutral Theory of Biodiversity"
-- bascompte 2006 - "The Structure of Plant-Animal Mutualistic Networks"
+- Levin, S. A. (1992). The problem of pattern and scale in ecology. Ecology, 73, 1943-1967.
+- Hubbell, S. P. (2001). The Unified Neutral Theory of Biodiversity and Biogeography. Princeton University Press.
+- Bascompte, J., Jordano, P., Melian, C. J., & Olesen, J. M. (2003). The nested assembly of plant-animal mutualistic networks. Proceedings of the National Academy of Sciences, 100, 9383-9387.
+- Fisher, R. A., Corbet, A. S., & Williams, C. B. (1943). The relation between the number of species and the number of individuals in a random sample of an animal population. Journal of Animal Ecology, 12, 42-58.
+- Newman, M. E. J. (2006). Modularity and community structure in networks. Proceedings of the National Academy of Sciences, 103, 8577-8582.
 
 ### Modern Methods
-- grimm 2005 - "Individual-Based Modeling and Ecology"
-- deangelis 2014 - "Individual-Based Models and Approaches in Ecology"
-- railsback 2019 - "Agent-Based and Individual-Based Modeling"
+- Grimm, V., & Railsback, S. F. (2005). Individual-Based Modeling and Ecology. Princeton University Press.
+- DeAngelis, D. L., & Grimm, V. (2014). Individual-based models in ecology after four decades. F1000Prime Reports, 6, 39.
+- Railsback, S. F., & Grimm, V. (2019). Agent-Based and Individual-Based Modeling: A Practical Introduction (2nd ed.). Princeton University Press.
 
 ## See Also
 

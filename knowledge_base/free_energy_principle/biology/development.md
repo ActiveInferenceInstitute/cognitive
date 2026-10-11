@@ -151,7 +151,7 @@ Parent's experience -> Epigenetic modification -> Offspring's prior
 
 This is a form of **intergenerational prior transfer**: the parent's posterior (learned from experience) becomes the offspring's prior (innate tendencies).
 
-Example: Parental stress exposure can alter offspring's stress response through epigenetic modification of HPA axis genes -- the parent's "learned" stress model is partially transmitted as an innate prior in the offspring.
+Example: In rodents, variation in maternal care alters offspring stress responses through epigenetic modification of the glucocorticoid receptor gene (Weaver et al., 2004) -- one way a parent's experience can be partially transmitted as an innate prior in the offspring.
 
 ## Neural Development as Model Building
 
@@ -182,10 +182,14 @@ Spontaneous activity = self-generated "virtual" observations
 
 The developing generative model uses its own activity as training data, bootstrapping the inference machinery before real sensory data arrives. This is analogous to the "wake-sleep" algorithm: the generative model produces samples, and the recognition model learns to infer from them.
 
-## Key References
+## References
 
-1. Friston, K., & Buzsaki, G. (2016). The functional anatomy of time: what and when in the brain. *Trends in Cognitive Sciences*, 20(7), 500-511.
-2. Levin, M. (2021). Bioelectric signaling: Reprogrammable circuits underlying embryogenesis, regeneration, and cancer. *Cell*, 184(6), 1971-1989.
-3. Greenough, W. T., Black, J. E., & Wallace, C. S. (1987). Experience and brain development. *Child Development*, 58(3), 539-559.
-4. Hensch, T. K. (2005). Critical period plasticity in local cortical circuits. *Nature Reviews Neuroscience*, 6(11), 877-888.
-5. Badcock, P. B., Friston, K. J., & Ramstead, M. J. D. (2019). The hierarchically mechanistic mind: A free-energy formulation of the human psyche. *Physics of Life Reviews*, 31, 104-121.
+- Friston, K., Levin, M., Sengupta, B., & Pezzulo, G. (2015). Knowing one's place: a free-energy approach to pattern regulation. *Journal of the Royal Society Interface*, 12(105), 20141383.
+- Kuchling, F., Friston, K., Georgiev, G., & Levin, M. (2020). Morphogenesis as Bayesian inference: a variational approach to pattern formation and control in complex biological systems. *Physics of Life Reviews*, 33, 88-108.
+- Greenough, W. T., Black, J. E., & Wallace, C. S. (1987). Experience and brain development. *Child Development*, 58(3), 539-559.
+- Hensch, T. K. (2005). Critical period plasticity in local cortical circuits. *Nature Reviews Neuroscience*, 6(11), 877-888.
+- Maya Vetencourt, J. F., Sale, A., Viegi, A., Baroncelli, L., De Pasquale, R., O'Leary, O. F., Castren, E., & Maffei, L. (2008). The antidepressant fluoxetine restores plasticity in the adult visual cortex. *Science*, 320(5874), 385-388.
+- Weaver, I. C. G., Cervoni, N., Champagne, F. A., D'Alessio, A. C., Sharma, S., Seckl, J. R., Dymov, S., Szyf, M., & Meaney, M. J. (2004). Epigenetic programming by maternal behavior. *Nature Neuroscience*, 7(8), 847-854.
+- Friston, K., & Buzsaki, G. (2016). The functional anatomy of time: what and when in the brain. *Trends in Cognitive Sciences*, 20(7), 500-511.
+- Levin, M. (2021). Bioelectric signaling: Reprogrammable circuits underlying embryogenesis, regeneration, and cancer. *Cell*, 184(8), 1971-1989.
+- Badcock, P. B., Friston, K. J., & Ramstead, M. J. D. (2019). The hierarchically mechanistic mind: A free-energy formulation of the human psyche. *Physics of Life Reviews*, 31, 104-121.

@@ -154,10 +154,10 @@ class AntSeedDispersal:
 ```
 
 **Myrmecochorous Plants:**
-- **Violet Family** (Violaceae): 60% of species ant-dispersed
-- **Bloodroot Family** (Iridaceae): Many geophytes
+- **Violet Family** (Violaceae): Many *Viola* species are ant-dispersed
+- **Iris Family** (Iridaceae): Some geophytes
 - **Lily Family** (Liliaceae): Some woodland species
-- **Orchid Family** (Orchidaceae): Tropical species
+- **Ant-garden epiphytes** of tropical forests, including some orchids
 
 ### Decomposition and Nutrient Cycling
 
@@ -215,7 +215,7 @@ class BeeCropPollination:
 ```
 
 **Global Pollination Value:**
-- **Agricultural Crops:** 75% dependent on animal pollination
+- **Agricultural Crops:** About 75% of leading crop types benefit to some degree from animal pollination
 - **Economic Value:** $235-577 billion annually worldwide
 - **Food Production:** 35% of global food production by volume
 - **Nutrient Security:** Essential micronutrients from pollinated crops
@@ -346,9 +346,9 @@ class EconomicValuation:
 
 **Global Economic Estimates:**
 - **Pollination Services:** $235-577 billion/year
-- **Biological Control:** $4.5-54 billion/year (conservative estimate)
-- **Soil Ecosystem Services:** $6.6 trillion/year (global soil value)
-- **Total Insect Services:** Potentially trillions of dollars annually
+- **Biological Control:** Billions of dollars per year (about $4.5 billion per year for native insects in the United States alone)
+- **Soil Ecosystem Services:** Large but poorly constrained global valuation
+- **Total Insect Services:** Potentially hundreds of billions of dollars annually
 
 ### Spatial and Temporal Valuation
 
@@ -599,7 +599,7 @@ class ServiceEnhancementTechnologies:
 
 ---
 
-> **Essential Services**: Ants and bees provide critical ecosystem services valued at trillions of dollars annually, supporting agriculture, biodiversity, and ecosystem stability worldwide.
+> **Essential Services**: Ants and bees provide critical ecosystem services valued at hundreds of billions of dollars annually, supporting agriculture, biodiversity, and ecosystem stability worldwide.
 
 ---
 
@@ -612,3 +612,14 @@ class ServiceEnhancementTechnologies:
 ---
 
 > **Restoration Opportunities**: Strategic habitat creation, threat reduction, and population enhancement can restore insect-mediated ecosystem services and support global sustainability goals.
+
+## References
+
+- Folgarait, P. J. (1998). Ant biodiversity and its relationship to ecosystem functioning: A review. Biodiversity and Conservation, 7, 1221-1244.
+- Jones, C. G., Lawton, J. H., & Shachak, M. (1994). Organisms as ecosystem engineers. Oikos, 69, 373-386.
+- Lengyel, S., Gove, A. D., Latimer, A. M., Majer, J. D., & Dunn, R. R. (2010). Convergent evolution of seed dispersal by ants, and phylogeny and biogeography in flowering plants: A global survey. Perspectives in Plant Ecology, Evolution and Systematics, 12, 43-55.
+- Van Mele, P. (2008). A historical review of research on the weaver ant Oecophylla in biological control. Agricultural and Forest Entomology, 10, 13-22.
+- Klein, A.-M., Vaissiere, B. E., Cane, J. H., Steffan-Dewenter, I., Cunningham, S. A., Kremen, C., & Tscharntke, T. (2007). Importance of pollinators in changing landscapes for world crops. Proceedings of the Royal Society B, 274, 303-313.
+- Lautenbach, S., Seppelt, R., Liebscher, J., & Dormann, C. F. (2012). Spatial and temporal trends of global pollination benefit. PLoS ONE, 7, e35954.
+- Potts, S. G., Imperatriz-Fonseca, V., Ngo, H. T., Aizen, M. A., Biesmeijer, J. C., Breeze, T. D., et al. (2016). Safeguarding pollinators and their values to human well-being. Nature, 540, 220-229.
+- Losey, J. E., & Vaughan, M. (2006). The economic value of ecological services provided by insects. BioScience, 56, 311-323.

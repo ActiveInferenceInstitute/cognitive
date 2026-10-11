@@ -50,7 +50,7 @@ Level 2: Meta-inference          q'(q(s)) = inference about Level 1
 Level 3: Narrative self-model    q''(q'(q(s))) = inference about Level 2
 ```
 
-On this account, a thermostat performs Level 1 inference (it responds to temperature), but it lacks Level 2 meta-inference -- it has no model of its own sensing process. A conscious system, by contrast, has hierarchical depth sufficient to represent its own representational processes. This yields what Seth (2021) calls a "beast machine" -- an organism that models its own modeling.
+On this account, a thermostat performs Level 1 inference (it responds to temperature), but it lacks Level 2 meta-inference -- it has no model of its own sensing process. A conscious system, by contrast, has hierarchical depth sufficient to represent its own representational processes. This contrasts with Seth's (2021) "beast machine" view, on which experience is grounded in regulating the living body rather than in modelling one's own modelling.
 
 The mathematical expression of this hierarchy involves nested free energy functionals:
 
@@ -75,7 +75,7 @@ Awareness ~ the overall precision landscape across the hierarchy
 
 When precision is high at a given level, prediction errors at that level are amplified and drive belief updating more strongly. This corresponds phenomenologically to "paying attention to" that aspect of experience. Conversely, low precision renders prediction errors at that level relatively inert -- corresponding to unconscious or preattentive processing.
 
-Seth and Friston (2016) propose that consciousness depends not merely on inference but on the **capacity to modulate precision** -- to allocate computational resources flexibly across the hierarchy. Precision optimization provides a formal account of:
+Seth and Friston (2016) analyse precision-weighting of interoceptive prediction errors in emotion; this page extends the idea, proposing that consciousness depends not merely on inference but on the **capacity to modulate precision** -- to allocate computational resources flexibly across the hierarchy. Precision optimization provides a formal account of:
 
 - **Selective attention**: High precision assigned to task-relevant prediction errors
 - **Phenomenal awareness**: The global precision landscape constituting the "shape" of experience
@@ -102,7 +102,7 @@ This mapping from formal quantities to phenomenal qualities is not mere metaphor
 
 The "hard problem" of consciousness (Chalmers, 1995) asks why physical processes give rise to subjective experience at all. The FEP engages this problem from several angles:
 
-**Strategy 1: Deflation.** Some FEP theorists (notably Hohwy, 2013) argue that the hard problem is less intractable than it appears. If the FEP can account for *all* the structural and functional properties of consciousness -- the hierarchical organization, the unity, the temporal depth, the self-referential character -- then perhaps there is no residual "hard" problem. The appearance of a gap between function and experience may be an artifact of our current theoretical limitations.
+**Strategy 1: Deflation.** Some theorists (in the spirit of the "real problem" approach of Seth, 2021) argue that the hard problem is less intractable than it appears. If the FEP can account for *all* the structural and functional properties of consciousness -- the hierarchical organization, the unity, the temporal depth, the self-referential character -- then perhaps there is no residual "hard" problem. The appearance of a gap between function and experience may be an artifact of our current theoretical limitations.
 
 **Strategy 2: Process Identity.** Under dual-aspect monism (see [[mind_body_problem|Mind-Body Problem]]), the inferential dynamics described by the FEP and the phenomenal experience are not two things but two descriptions of one process:
 
@@ -257,7 +257,7 @@ FEP formalization: Consciousness = hierarchical free energy minimization
                    with meta-inferential depth and precision optimization
 ```
 
-Clark's (2016) "controlled hallucination" metaphor captures the idea that perception is not passive reception but active construction -- the brain generates predictions (hallucinations) that are controlled (constrained) by sensory prediction errors.
+The "controlled hallucination" metaphor (used by Clark, 2016, and popularised by Seth, 2021) captures the idea that perception is not passive reception but active construction -- the brain generates predictions (hallucinations) that are controlled (constrained) by sensory prediction errors.
 
 ### Enactivism and the FEP
 
@@ -296,20 +296,6 @@ The FEP adds to higher-order theories a specification of the computational mecha
 
 7. **The explanatory gap for qualia**: Even granting the FEP account of the *structure* of experience, can it explain the *quality* -- why red looks red and not blue? The FEP seems to explain relational properties (red is the state that covaries with certain wavelengths) but not intrinsic qualities.
 
-## Key References
-
-1. Seth, A. K. (2021). *Being You: A New Science of Consciousness*. Dutton.
-2. Seth, A. K., & Friston, K. J. (2016). Active interoceptive inference and the emotional brain. *Philosophical Transactions of the Royal Society B*, 371(1708), 20160007.
-3. Friston, K. J. (2018). Am I self-conscious? (Or does self-organization entail self-consciousness?). *Frontiers in Psychology*, 9, 579.
-4. Hohwy, J. (2013). *The Predictive Mind*. Oxford University Press.
-5. Clark, A. (2016). *Surfing Uncertainty: Prediction, Action, and the Embodied Mind*. Oxford University Press.
-6. Tononi, G. (2008). Consciousness as integrated information: A provisional manifesto. *Biological Bulletin*, 215(3), 216-242.
-7. Tononi, G., Boly, M., Massimini, M., & Koch, C. (2016). Integrated information theory: An updated account. *Archives Italiennes de Biologie*, 154(2-3), 56-90.
-8. Chalmers, D. J. (1995). Facing up to the problem of consciousness. *Journal of Consciousness Studies*, 2(3), 200-219.
-9. Dehaene, S., & Naccache, L. (2001). Towards a cognitive neuroscience of consciousness. *Cognition*, 79(1-2), 1-37.
-10. Bruineberg, J., Kiverstein, J., & Rietveld, E. (2018). The anticipating brain is not a scientist: The free-energy principle from an ecological-enactive perspective. *Synthese*, 195(6), 2417-2444.
-11. Ramstead, M. J. D., Friston, K. J., & Hippolito, I. (2020). Is the free energy principle a formal theory of semantics? *Entropy*, 22(8), 889.
-
 ## See Also
 
 - [[mind_body_problem|Mind-Body Problem]] -- Broader context for consciousness within philosophy of mind
@@ -320,3 +306,23 @@ The FEP adds to higher-order theories a specification of the computational mecha
 - [[knowledge_base/free_energy_principle/cognitive/perception|Perception]] -- Perceptual inference as the basis of experience
 - [[knowledge_base/free_energy_principle/mathematics/variational_free_energy|Variational Free Energy]] -- The mathematical core
 - [[knowledge_base/free_energy_principle/systems/emergence|Emergence]] -- How consciousness may emerge from simpler processes
+
+## References
+- Chalmers, D. J. (1995). Facing up to the problem of consciousness. Journal of Consciousness Studies, 2(3), 200-219.
+- Tononi, G. (2004). An information integration theory of consciousness. BMC Neuroscience, 5, 42.
+- Tononi, G. (2008). Consciousness as integrated information: A provisional manifesto. Biological Bulletin, 215(3), 216-242.
+- Baars, B. J. (1988). A Cognitive Theory of Consciousness. Cambridge University Press.
+- Dehaene, S., & Naccache, L. (2001). Towards a cognitive neuroscience of consciousness: Basic evidence and a workspace framework. Cognition, 79(1-2), 1-37.
+- Seth, A. K., & Friston, K. J. (2016). Active interoceptive inference and the emotional brain. Philosophical Transactions of the Royal Society B, 371(1708), 20160007.
+- Seth, A. K. (2021). Being You: A New Science of Consciousness. Dutton.
+- Hohwy, J. (2013). The Predictive Mind. Oxford University Press.
+- Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. Behavioral and Brain Sciences, 36(3), 181-204.
+- Clark, A. (2016). Surfing Uncertainty: Prediction, Action, and the Embodied Mind. Oxford University Press.
+- Varela, F. J., Thompson, E., & Rosch, E. (1991). The Embodied Mind: Cognitive Science and Human Experience. MIT Press.
+- Thompson, E. (2007). Mind in Life: Biology, Phenomenology, and the Sciences of Mind. Harvard University Press.
+- Rosenthal, D. M. (2005). Consciousness and Mind. Oxford University Press.
+- Brown, R., Lau, H., & LeDoux, J. E. (2019). Understanding the higher-order approach to consciousness. Trends in Cognitive Sciences, 23(9), 754-768.
+- Friston, K. J. (2018). Am I self-conscious? (Or does self-organization entail self-consciousness?). Frontiers in Psychology, 9, 579.
+- Tononi, G., Boly, M., Massimini, M., & Koch, C. (2016). Integrated information theory: From consciousness to its physical substrate. Nature Reviews Neuroscience, 17(7), 450-461.
+- Bruineberg, J., Kiverstein, J., & Rietveld, E. (2018). The anticipating brain is not a scientist: The free-energy principle from an ecological-enactive perspective. Synthese, 195(6), 2417-2444.
+- Ramstead, M. J. D., Friston, K. J., & Hipólito, I. (2020). Is the free energy principle a formal theory of semantics? From variational density dynamics to neural and phenotypic representations. Entropy, 22(8), 889.

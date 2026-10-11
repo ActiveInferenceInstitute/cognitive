@@ -36,7 +36,7 @@ semantic_relations:
 
 ## Overview
 
-Active Inference provides a powerful framework for understanding social insect behavior, revealing how ants and bees implement sophisticated predictive processing at both individual and collective levels. The free energy principle, as instantiated through active inference, offers a unified theory explaining the emergence of complex social behaviors from simple individual inference processes. This connection bridges neuroscience, behavioral ecology, and collective intelligence.
+Active Inference provides a powerful framework for understanding social insect behavior, suggesting how ants and bees might implement predictive processing at both individual and collective levels. The free energy principle, as instantiated through active inference, offers a candidate account of how complex social behaviors could emerge from simple individual inference processes. This connection bridges neuroscience, behavioral ecology, and collective intelligence.
 
 ## Individual-Level Active Inference
 
@@ -331,17 +331,20 @@ class BeeSwarmActiveInference:
 
 #### Individual Free Energy Functional
 ```math
-F = \sum_{t} \left[ \ln p(\tilde{s}_t | m_t) - \ln p(s_t | \tilde{s}_t, \pi_t) + \ln q(\tilde{s}_t) - \ln p(\tilde{s}_t | m_t) \right]
+F = \mathbb{E}_{q(x)}\left[ \ln q(x) - \ln p(o, x \mid m) \right] = D_{KL}\left[ q(x) \,\|\, p(x \mid o, m) \right] - \ln p(o \mid m)
 ```
 
 where:
 - $F$ is variational free energy
-- $\tilde{s}_t$ are predicted sensory states
-- $s_t$ are actual sensory states
-- $m_t$ is the internal model
-- $\pi_t$ is the selected policy
+- $x$ are hidden states
+- $o$ are observations (sensory states)
+- $q(x)$ is the approximate posterior belief
+- $m$ is the internal generative model
 
 #### Collective Free Energy
+
+The collective formulations below are heuristic sketches, not established results.
+
 ```math
 F_{collective} = F_{individual} + \sum_{i,j} I(s_i, s_j | \Pi)
 ```
@@ -498,7 +501,7 @@ where:
 - $D_{KL}$ is Kullback-Leibler divergence measuring social alignment
 
 #### Collective Active Inference
-The collective free energy principle extends individual inference to group-level predictive processing:
+A heuristic extension of individual inference to group-level predictive processing:
 
 ```math
 \frac{d}{dt} \langle \ln q(s) \rangle = -\langle \epsilon \rangle \cdot \nabla \langle \ln q(s) \rangle + \eta(t)
@@ -671,7 +674,7 @@ class HierarchicalActiveInference:
 
 ---
 
-> **Unified Framework**: Active Inference provides a unified theoretical framework explaining how social insects achieve sophisticated collective intelligence through distributed predictive processing.
+> **Unified Framework**: Active Inference offers a candidate theoretical framework for how social insects might achieve collective intelligence through distributed predictive processing.
 
 ---
 
@@ -684,3 +687,15 @@ class HierarchicalActiveInference:
 ---
 
 > **Computational Insights**: Biological active inference in ants and bees inspires novel algorithms for distributed intelligence, offering solutions to problems in robotics, multi-agent systems, and artificial intelligence.
+
+## References
+
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Friston, K. (2013). Life as we know it. Journal of The Royal Society Interface, 10(86), 20130475.
+- Friston, K., Levin, M., Sengupta, B., & Pezzulo, G. (2015). Knowing one's place: A free-energy approach to pattern regulation. Journal of The Royal Society Interface, 12(105), 20141383.
+- Heins, C., Millidge, B., Da Costa, L., Mann, R. P., Friston, K. J., & Couzin, I. D. (2024). Collective behavior from surprise minimization. Proceedings of the National Academy of Sciences, 121(17), e2320239121.
+- Holldobler, B., & Wilson, E. O. (1990). The ants. Belknap Press of Harvard University Press.
+- Kirchhoff, M., Parr, T., Palacios, E., Friston, K., & Kiverstein, J. (2018). The Markov blankets of life: Autonomy, active inference and the free energy principle. Journal of The Royal Society Interface, 15(138), 20170792.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.
+- Seeley, T. D. (2010). Honeybee democracy. Princeton University Press.
+- von Frisch, K. (1967). The dance language and orientation of bees. Harvard University Press.

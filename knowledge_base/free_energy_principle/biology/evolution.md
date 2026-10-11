@@ -187,11 +187,14 @@ After: Multicellular organism minimizes free energy as a whole
 
 This is formalized through nested Markov blankets: the organism's blanket encompasses the blankets of its constituent cells.
 
-## Key References
+## References
 
-1. Campbell, J. O. (2016). Universal Darwinism as a process of Bayesian inference. *Frontiers in Systems Neuroscience*, 10, 49.
-2. Kauffman, S. A. (1993). *The Origins of Order: Self-Organization and Selection in Evolution*. Oxford University Press.
-3. Laland, K. N., et al. (2015). The extended evolutionary synthesis: its structure, assumptions and predictions. *Proceedings of the Royal Society B*, 282(1813), 20151019.
-4. Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrodinger's question: A free-energy formulation. *Physics of Life Reviews*, 24, 1-16.
-5. Friston, K. (2013). Life as we know it. *Journal of the Royal Society Interface*, 10(86), 20130475.
-6. Maynard Smith, J., & Szathmary, E. (1995). *The Major Transitions in Evolution*. Oxford University Press.
+- Campbell, J. O. (2016). Universal Darwinism as a process of Bayesian inference. *Frontiers in Systems Neuroscience*, 10, 49.
+- Friston, K. (2013). Life as we know it. *Journal of the Royal Society Interface*, 10(86), 20130475.
+- Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrodinger's question: a free-energy formulation. *Physics of Life Reviews*, 24, 1-16.
+- Constant, A., Ramstead, M. J. D., Veissiere, S. P. L., Campbell, J. O., & Friston, K. J. (2018). A variational approach to niche construction. *Journal of the Royal Society Interface*, 15(141), 20170685.
+- Odling-Smee, F. J., Laland, K. N., & Feldman, M. W. (2003). *Niche Construction: The Neglected Process in Evolution*. Princeton University Press.
+- Maynard Smith, J., & Szathmary, E. (1995). *The Major Transitions in Evolution*. Oxford University Press.
+- Baldwin, J. M. (1896). A new factor in evolution. *The American Naturalist*, 30(354), 441-451.
+- Kauffman, S. A. (1993). *The Origins of Order: Self-Organization and Selection in Evolution*. Oxford University Press.
+- Laland, K. N., Uller, T., Feldman, M. W., Sterelny, K., Muller, G. B., Moczek, A., Jablonka, E., & Odling-Smee, J. (2015). The extended evolutionary synthesis: its structure, assumptions and predictions. *Proceedings of the Royal Society B*, 282(1813), 20151019.

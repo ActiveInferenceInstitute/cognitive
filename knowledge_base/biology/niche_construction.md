@@ -146,7 +146,7 @@ Examples of cultural niche construction:
 
 ### Cumulative Culture
 
-Humans are unique in their capacity for cumulative cultural niche construction -- each generation builds on the modifications of previous generations:
+Humans are distinctive in the extent of their cumulative cultural niche construction -- each generation builds on the modifications of previous generations:
 
 ```math
 \text{Niche}_{gen+1} = \text{Niche}_{gen} + \Delta\text{Niche}_{gen+1}
@@ -202,7 +202,7 @@ Under the FEP, pathological niche construction reduces the system's free energy 
 
 ### Formal Framework
 
-Ramstead, Constant, and Friston (2019) introduced "variational ecology" -- a formal framework for understanding niche construction through the FEP. The key idea is that the organism and its environment are coupled through a shared Markov blanket, and both sides of this blanket evolve to minimize a joint free energy:
+Ramstead, Constant, Badcock, and Friston (2019) introduced "variational ecology" -- a formal framework for understanding niche construction through the FEP. The key idea is that the organism and its environment are coupled through a shared Markov blanket, and both sides of this blanket evolve to minimize a joint free energy:
 
 ```math
 F_{joint}(O, E) = F_{organism}(O | E) + F_{environment}(E | O)
@@ -287,7 +287,7 @@ Under the FEP, each ant minimizes its local free energy based on sensory observa
 
 ### Colony Thermoregulation
 
-Leafcutter ant colonies maintain stable internal temperatures despite external fluctuations -- a form of allostatic regulation at the superorganism level. The nest architecture (depth, insulation, ventilation) serves as the colony's extended body, and workers collectively maintain it through continuous modification.
+Leafcutter ant colonies maintain stable internal conditions (gas exchange, humidity, and fungus-garden temperature) despite external fluctuations -- a form of allostatic regulation at the superorganism level. The nest architecture (depth, insulation, ventilation) serves as the colony's extended body, and workers collectively maintain it through continuous modification.
 
 ## Evolutionary Implications
 
@@ -307,21 +307,12 @@ By creating novel environments, niche construction can drive speciation. Organis
 
 ### The Triple Inheritance System
 
-Modern evolutionary theory recognizes three inheritance systems:
+Extended-synthesis accounts of evolution distinguish three inheritance systems:
 1. **Genetic**: DNA sequences transmitted through reproduction
 2. **Epigenetic**: Gene expression patterns transmitted through cellular mechanisms
 3. **Ecological**: Environmental modifications transmitted through niche construction
 
 All three contribute to the transmission of the organism's generative model across generations.
-
-## Key References
-
-- Odling-Smee, F. J., Laland, K. N., & Feldman, M. W. (2003). Niche Construction: The Neglected Process in Evolution. Princeton University Press.
-- Dawkins, R. (1982). The Extended Phenotype. Oxford University Press.
-- Laland, K. N., et al. (2015). The extended evolutionary synthesis: Its structure, assumptions and predictions. Proceedings of the Royal Society B, 282(1813), 20151019.
-- Ramstead, M. J. D., Constant, A., Badcock, P. B., & Friston, K. J. (2019). Variational ecology and the physics of sentient systems. Physics of Life Reviews, 31, 188-205.
-- Constant, A., Ramstead, M. J. D., Veissiere, S. P. L., & Friston, K. J. (2019). Regimes of expectations: An active inference model of social conformity and human decision making. Frontiers in Psychology, 10, 679.
-- Turner, J. S. (2000). The Extended Organism: The Physiology of Animal-Built Structures. Harvard University Press.
 
 ## Cross-References
 
@@ -333,3 +324,18 @@ All three contribute to the transmission of the organism's generative model acro
 - [[philosophy/enactivism|Enactivism]] - Organism-environment co-constitution
 - [[philosophy/4e_cognition|4E Cognition]] - Extended mind through niche construction
 - [[biology/morphogenesis|Morphogenesis]] - Developmental niche construction
+
+## References
+
+- Odling-Smee, F. J., Laland, K. N., & Feldman, M. W. (2003). Niche Construction: The Neglected Process in Evolution. Princeton University Press.
+- Dawkins, R. (1982). The Extended Phenotype. Oxford University Press.
+- Turner, J. S. (2000). The Extended Organism: The Physiology of Animal-Built Structures. Harvard University Press.
+- Laland, K. N., Uller, T., Feldman, M. W., Sterelny, K., Muller, G. B., Moczek, A., Jablonka, E., & Odling-Smee, J. (2015). The extended evolutionary synthesis: Its structure, assumptions and predictions. Proceedings of the Royal Society B, 282(1813), 20151019.
+- Danchin, E., Charmantier, A., Champagne, F. A., Mesoudi, A., Pujol, B., & Blanchet, S. (2011). Beyond DNA: Integrating inclusive inheritance into an extended theory of evolution. Nature Reviews Genetics, 12, 475-486.
+- Tishkoff, S. A., Reed, F. A., Ranciaro, A., Voight, B. F., Babbitt, C. C., Silverman, J. S., et al. (2007). Convergent adaptation of human lactase persistence in Africa and Europe. Nature Genetics, 39, 31-40.
+- Perry, G. H., Dominy, N. J., Claw, K. G., Lee, A. S., Fiegler, H., Redon, R., et al. (2007). Diet and the evolution of human amylase gene copy number variation. Nature Genetics, 39, 1256-1260.
+- Theraulaz, G., & Bonabeau, E. (1999). A brief history of stigmergy. Artificial Life, 5, 97-116.
+- Heylighen, F. (2016). Stigmergy as a universal coordination mechanism I: Definition and components. Cognitive Systems Research, 38, 4-13.
+- Kleineidam, C., & Roces, F. (2000). Carbon dioxide concentrations and nest ventilation in nests of the leaf-cutting ant Atta vollenweideri. Insectes Sociaux, 47, 241-248.
+- Ramstead, M. J. D., Constant, A., Badcock, P. B., & Friston, K. J. (2019). Variational ecology and the physics of sentient systems. Physics of Life Reviews, 31, 188-205.
+- Constant, A., Ramstead, M. J. D., Veissiere, S. P. L., & Friston, K. J. (2019). Regimes of expectations: An active inference model of social conformity and human decision making. Frontiers in Psychology, 10, 679.

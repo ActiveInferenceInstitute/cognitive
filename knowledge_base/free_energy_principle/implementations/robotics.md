@@ -233,10 +233,11 @@ Swarm behavior emerges from local active inference:
 4. **Human-robot interaction**: Modeling human behavior for safe, intuitive collaboration
 5. **Multi-modal integration**: Combining vision, touch, proprioception, and force under a unified generative model
 
-## Key References
+## References
 
-1. Pio-Lopez, L., Nizard, A., Friston, K., & Pezzulo, G. (2016). Active inference and robot control: a case study. *Journal of the Royal Society Interface*, 13(122), 20160616.
-2. Lanillos, P., et al. (2021). Active inference in robotics and artificial agents: Survey and challenges. *arXiv preprint* arXiv:2112.01871.
-3. Oliver, G., Lanillos, P., & Cheng, G. (2021). An empirical study of active inference on a humanoid robot. *IEEE Transactions on Cognitive and Developmental Systems*, 14(2), 462-471.
-4. Sancaktar, C., van Gerven, M. A. J., & Lanillos, P. (2020). End-to-end pixel-based deep active inference for body perception and action. *IEEE International Conference on Development and Learning*.
-5. Da Costa, L., et al. (2022). How active inference could help revolutionize robotics. *Entropy*, 24(3), 361.
+- Pio-Lopez, L., Nizard, A., Friston, K., & Pezzulo, G. (2016). Active inference and robot control: a case study. *Journal of the Royal Society Interface*, 13(122), 20160616.
+- Lanillos, P., Meo, C., Pezzato, C., Meera, A. A., Baioumy, M., Ohata, W., Tschantz, A., Millidge, B., Wisse, M., Buckley, C. L., & Tani, J. (2021). Active inference in robotics and artificial agents: survey and challenges. arXiv:2112.01871.
+- Oliver, G., Lanillos, P., & Cheng, G. (2022). An empirical study of active inference on a humanoid robot. *IEEE Transactions on Cognitive and Developmental Systems*, 14(2), 462-471.
+- Sancaktar, C., van Gerven, M. A. J., & Lanillos, P. (2020). End-to-end pixel-based deep active inference for body perception and action. In *2020 Joint IEEE 10th International Conference on Development and Learning and Epigenetic Robotics (ICDL-EpiRob)* (pp. 1-8). IEEE.
+- Da Costa, L., Lanillos, P., Sajid, N., Friston, K., & Khan, S. (2022). How active inference could help revolutionise robotics. *Entropy*, 24(3), 361.
+- Adams, R. A., Shipp, S., & Friston, K. J. (2013). Predictions not commands: active inference in the motor system. *Brain Structure and Function*, 218(3), 611-643.

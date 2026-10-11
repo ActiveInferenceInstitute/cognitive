@@ -130,7 +130,7 @@ semantic_relations:
 
    - H^{p,q} are Dolbeault cohomology groups
 
-   - M is Kähler manifold
+   - M is a compact Kähler manifold
 
 1. **Harmonic Forms**
 
@@ -548,3 +548,11 @@ class MirrorSymmetry:
 
 1. Hodge Theory
 
+
+## References
+- Huybrechts, D. (2005). Complex Geometry: An Introduction. Springer.
+- Griffiths, P., & Harris, J. (1978). Principles of Algebraic Geometry. Wiley.
+- Voisin, C. (2002). Hodge Theory and Complex Algebraic Geometry I. Cambridge University Press.
+- Newlander, A., & Nirenberg, L. (1957). Complex analytic coordinates in almost complex manifolds. Annals of Mathematics, 65(3), 391-404.
+- Kodaira, K., & Spencer, D. C. (1958). On deformations of complex analytic structures, I-II. Annals of Mathematics, 67(2-3), 328-466.
+- Yau, S.-T. (1978). On the Ricci curvature of a compact Kahler manifold and the complex Monge-Ampere equation, I. Communications on Pure and Applied Mathematics, 31(3), 339-411.

@@ -95,7 +95,7 @@ The listener infers the hidden meaning behind the observable utterance using the
 
 ### Pragmatic Communication
 
-The Gricean maxims of conversation emerge naturally from EFE minimization:
+The Gricean maxims of conversation (Grice, 1975) can be given an informal reading in terms of EFE minimization:
 
 | Gricean Maxim | FEP Derivation |
 |--------------|----------------|
@@ -225,15 +225,19 @@ a_deceptive = argmin_a { F_self + D_KL[q_other(s_true) || q_other(s_false)] }
 
 The deceiver acts to make the other agent's beliefs about the world diverge from reality.
 
-## Key References
-
-1. Friston, K., & Frith, C. D. (2015). A duet for one. *Consciousness and Cognition*, 36, 390-405.
-2. Vasil, J., Badcock, P. B., Constant, A., Friston, K., & Ramstead, M. J. D. (2020). A world unto itself: Human communication as active inference. *Frontiers in Psychology*, 11, 417.
-3. Veissiere, S. P., Constant, A., Ramstead, M. J. D., Friston, K. J., & Kirmayer, L. J. (2020). Thinking through other minds: A variational approach to cognition and culture. *Behavioral and Brain Sciences*, 43, e90.
-4. Moutoussis, M., Fearon, P., El-Deredy, W., Dolan, R. J., & Friston, K. J. (2014). Bayesian inferences about the self (and others): A review. *Consciousness and Cognition*, 25, 67-76.
-5. Parr, T., Pezzulo, G., & Friston, K. J. (2022). *Active Inference*. MIT Press. Chapter 11.
-
 ## See also
 
 - [[knowledge_base/cognitive/social_cognition|Social Cognition]]
 - [[knowledge_base/research/social_cognition|Social Cognition]]
+
+## References
+
+- Friston, K., & Frith, C. (2015). A duet for one. *Consciousness and Cognition*, 36, 390-405.
+- Friston, K. J., & Frith, C. D. (2015). Active inference, communication and hermeneutics. *Cortex*, 68, 129-143.
+- Vasil, J., Badcock, P. B., Constant, A., Friston, K., & Ramstead, M. J. D. (2020). A world unto itself: human communication as active inference. *Frontiers in Psychology*, 11, 417.
+- Veissiere, S. P. L., Constant, A., Ramstead, M. J. D., Friston, K. J., & Kirmayer, L. J. (2020). Thinking through other minds: a variational approach to cognition and culture. *Behavioral and Brain Sciences*, 43, e90.
+- Premack, D., & Woodruff, G. (1978). Does the chimpanzee have a theory of mind? *Behavioral and Brain Sciences*, 1(4), 515-526.
+- Grice, H. P. (1975). Logic and conversation. In P. Cole & J. L. Morgan (Eds.), *Syntax and Semantics, Vol. 3: Speech Acts* (pp. 41-58). Academic Press.
+- Ondobaka, S., Kilner, J., & Friston, K. (2017). The role of interoceptive inference in theory of mind. *Brain and Cognition*, 112, 64-68.
+- Moutoussis, M., Fearon, P., El-Deredy, W., Dolan, R. J., & Friston, K. J. (2014). Bayesian inferences about the self (and others): a review. *Consciousness and Cognition*, 25, 67-76.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). *Active Inference: The Free Energy Principle in Mind, Brain, and Behavior*. MIT Press.

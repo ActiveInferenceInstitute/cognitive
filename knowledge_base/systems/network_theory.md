@@ -271,23 +271,13 @@ Network theory provides a framework for understanding complex systems through th
 - **Communication Networks**: Information routing optimization
 - **Transportation Networks**: Traffic flow optimization
 
-## 📚 Key References
+## References
 
-### Foundational Works
-- **Newman (2010)**: Networks: An Introduction
-- **Barabasi (2016)**: Network Science
-- **Watts (2003)**: Six Degrees: The Science of a Connected Age
-- **Strogatz (2001)**: Exploring complex networks
-
-### Advanced Topics
-- **Boccaletti et al. (2006)**: Complex networks: Structure and dynamics
-- **Dorogovtsev and Mendes (2003)**: Evolution of networks
-- **Cohen and Havlin (2010)**: Complex networks: Structure, robustness and function
-- **Porter et al. (2016)**: Dynamical processes on complex networks
-
-### Related Concepts
-- [[complex_systems]] - Network-based complex systems
-- [[message_passing_networks]] - Information flow in networks
-- [[knowledge_base/mathematics/graph_theory]] - Mathematical foundations
-- [[knowledge_base/mathematics/network_science]] - Statistical network analysis
-
+- Barabasi, A.-L. (2016). Network science. Cambridge University Press.
+- Barrat, A., Barthelemy, M., & Vespignani, A. (2008). Dynamical processes on complex networks. Cambridge University Press.
+- Boccaletti, S., Latora, V., Moreno, Y., Chavez, M., & Hwang, D.-U. (2006). Complex networks: Structure and dynamics. Physics Reports, 424(4-5), 175-308.
+- Cohen, R., & Havlin, S. (2010). Complex networks: Structure, robustness and function. Cambridge University Press.
+- Dorogovtsev, S. N., & Mendes, J. F. F. (2003). Evolution of networks: From biological nets to the Internet and WWW. Oxford University Press.
+- Newman, M. E. J. (2010). Networks: An introduction. Oxford University Press.
+- Strogatz, S. H. (2001). Exploring complex networks. Nature, 410(6825), 268-276.
+- Watts, D. J. (2003). Six degrees: The science of a connected age. W. W. Norton & Company.

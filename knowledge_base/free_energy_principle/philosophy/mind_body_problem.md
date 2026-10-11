@@ -61,7 +61,7 @@ These are not two separate things but two descriptions of the same thing:
 - From the outside: A system of coupled differential equations
 - From the inside: A system performing inference about its environment
 
-This is Friston's position: "The free energy principle is a dual-aspect monism in which the internal dynamics of a self-organizing system can always be cast as belief updating or inference" (Friston, 2019).
+Friston (2019) casts the internal states of such a system as parameterising beliefs about its external states, a reading often glossed as dual-aspect.
 
 ## Process Metaphysics and the FEP
 
@@ -180,11 +180,15 @@ The FEP suggests that selfhood is:
 
 This is consistent with Buddhist no-self (anatta) reinterpreted through Western information theory: there is no fixed, essential self -- only a dynamic process of self-modeling that creates the illusion of a stable self.
 
-## Key References
-
-1. Friston, K. (2019). A free energy principle for a particular physics. *arXiv preprint* arXiv:1906.10184.
-2. Hohwy, J. (2013). *The Predictive Mind*. Oxford University Press. Chapters 10-12.
-3. Clark, A. (2016). *Surfing Uncertainty*. Oxford University Press.
-4. Seth, A. K. (2021). *Being You*. Dutton.
-5. Kirchhoff, M., & Froese, T. (2017). Where there is life there is mind: In support of a strong life-mind continuity thesis. *Entropy*, 19(4), 169.
-6. Ramstead, M. J. D., Friston, K. J., & Hippolito, I. (2020). Is the free energy principle a formal theory of semantics? From variational density dynamics to neural and phenotypic representations. *Entropy*, 22(8), 889.
+## References
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
+- Place, U. T. (1956). Is consciousness a brain process? British Journal of Psychology, 47(1), 44-50.
+- Smart, J. J. C. (1959). Sensations and brain processes. Philosophical Review, 68(2), 141-156.
+- Putnam, H. (1967). Psychological predicates. In W. H. Capitan & D. D. Merrill (Eds.), Art, Mind, and Religion. University of Pittsburgh Press.
+- Chalmers, D. J. (2015). Panpsychism and panprotopsychism. In T. Alter & Y. Nagasawa (Eds.), Consciousness in the Physical World: Perspectives on Russellian Monism. Oxford University Press.
+- Whitehead, A. N. (1929). Process and Reality: An Essay in Cosmology. Macmillan.
+- Kirchhoff, M. D., & Froese, T. (2017). Where there is life there is mind: In support of a strong life-mind continuity thesis. Entropy, 19(4), 169.
+- Hohwy, J. (2013). The Predictive Mind. Oxford University Press.
+- Clark, A. (2016). Surfing Uncertainty: Prediction, Action, and the Embodied Mind. Oxford University Press.
+- Seth, A. K. (2021). Being You: A New Science of Consciousness. Faber & Faber.
+- Ramstead, M. J. D., Friston, K. J., & Hipólito, I. (2020). Is the free-energy principle a formal theory of semantics? From variational density dynamics to neural and phenotypic representations. Entropy, 22(8), 889.

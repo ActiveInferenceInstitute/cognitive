@@ -695,3 +695,12 @@ The implementations above provide the foundation for more advanced methods used 
 
 **See Also**: [[README]] for overview, [[statistical_foundations]] for theory, [[numerical_methods]] for algorithms
 
+## References
+
+- Wainwright, M. J., & Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. Foundations and Trends in Machine Learning, 1(1-2), 1-305.
+- Bishop, C. M. (2006). Pattern recognition and machine learning. Springer.
+- Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). Bayesian data analysis (3rd ed.). Chapman and Hall/CRC.
+- Tierney, L., & Kadane, J. B. (1986). Accurate approximations for posterior moments and marginal densities. Journal of the American Statistical Association, 81(393), 82-86.
+- Kass, R. E., & Raftery, A. E. (1995). Bayes factors. Journal of the American Statistical Association, 90(430), 773-795.
+- Robert, C. P., & Casella, G. (2004). Monte Carlo statistical methods (2nd ed.). Springer.
+- Amari, S., & Nagaoka, H. (2000). Methods of information geometry. American Mathematical Society.

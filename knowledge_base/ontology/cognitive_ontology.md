@@ -279,7 +279,7 @@ SystemProperty
 
 concept: ActiveInferenceAgent
 
-definition: "An agent that minimizes expected free energy through perception, learning, and action"
+definition: "An agent that minimizes variational free energy through perception and learning, and selects policies that minimize expected free energy"
 
 properties:
 
@@ -291,7 +291,7 @@ properties:
 
   - minimizes: ExpectedFreeEnergy
 
-mathematical_formulation: "min_π G(π) = E[ln Q(s|π) - ln P(s|o,π)]"
+mathematical_formulation: "G(π) = E_{Q(o,s|π)}[ln Q(s|π) - ln P(o,s)]; select π that minimizes G(π)"
 
 ```
 
@@ -453,3 +453,12 @@ mathematical_formulation: "F = E_q[ln q(s) - ln p(o,s)]"
 
 - [[knowledge_base/systems/systems_theory]]
 
+## References
+
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: A process theory. Neural Computation, 29(1), 1-49.
+- Da Costa, L., Parr, T., Sajid, N., Veselic, S., Neacsu, V., & Friston, K. (2020). Active inference on discrete state-spaces: A synthesis. Journal of Mathematical Psychology, 99, 102447.
+- Gruber, T. R. (1993). A translation approach to portable ontology specifications. Knowledge Acquisition, 5(2), 199-220.
+- Arp, R., Smith, B., & Spear, A. D. (2015). Building ontologies with Basic Formal Ontology. MIT Press.
+- Niles, I., & Pease, A. (2001). Towards a standard upper ontology. In Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2001) (pp. 2-9). ACM.

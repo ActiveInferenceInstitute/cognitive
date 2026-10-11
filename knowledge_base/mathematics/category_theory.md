@@ -480,3 +480,11 @@ class Functor:
 
 1. [[logic|Logic]]
 
+
+## References
+- Eilenberg, S., & Mac Lane, S. (1945). General theory of natural equivalences. Transactions of the American Mathematical Society, 58(2), 231-294.
+- Mac Lane, S. (1998). Categories for the Working Mathematician (2nd ed.). Springer.
+- Riehl, E. (2016). Category Theory in Context. Dover.
+- Mac Lane, S., & Moerdijk, I. (1992). Sheaves in Geometry and Logic: A First Introduction to Topos Theory. Springer.
+- Lurie, J. (2009). Higher Topos Theory. Princeton University Press.
+- Weibel, C. A. (1994). An Introduction to Homological Algebra. Cambridge University Press.

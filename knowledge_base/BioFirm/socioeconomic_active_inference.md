@@ -394,3 +394,10 @@ where:
 
 - Sustainable Economics
 
+## References
+
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.
+- Ostrom, E. (2009). A general framework for analyzing sustainability of social-ecological systems. Science, 325(5939), 419-422.
+- Folke, C. (2006). Resilience: The emergence of a perspective for social-ecological systems analyses. Global Environmental Change, 16(3), 253-267.
+- Berkes, F., Colding, J., & Folke, C. (2000). Rediscovery of traditional ecological knowledge as adaptive management. Ecological Applications, 10(5), 1251-1262.

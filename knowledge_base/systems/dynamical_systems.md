@@ -90,7 +90,7 @@ Dynamical systems theory provides the mathematical foundation for understanding 
 - **Homoclinic**: Connection between saddle points
 - **Heteroclinic**: Connections between different saddles
 - **Blue Sky**: Catastrophe bifurcations
-- **Infinite Period**: Homoclinic tangency
+- **Infinite Period**: Cycle period diverges as an orbit meets a fixed point (saddle-node on an invariant circle)
 
 ### Critical Phenomena
 - **Phase Transitions**: Qualitative changes in system behavior
@@ -238,26 +238,20 @@ Dynamical systems theory provides the mathematical foundation for understanding 
 - **Learning**: Online adaptation in changing environments
 - **Decision Making**: Temporal sequencing of actions
 
-## 📚 Key References
-
-### Mathematical Foundations
-- **Ott (2002)**: Chaos in Dynamical Systems
-- **Strogatz (2018)**: Nonlinear Dynamics and Chaos
-- **Holmes (2012)**: Introduction to Perturbation Methods
-- **Kuznetsov (2004)**: Elements of Applied Bifurcation Theory
-
-### Complex Systems Applications
-- **Newman (2010)**: Networks: An Introduction
-- **Barrat et al. (2008)**: Dynamical Processes on Complex Networks
-- **Pikovsky et al. (2001)**: Synchronization: A Universal Concept in Nonlinear Sciences
-- **Arenas et al. (2008)**: Synchronization in complex networks
-
-### Related Concepts
-- [[knowledge_base/mathematics/dynamical_systems]] - Mathematical foundations
-- [[complex_systems]] - Complex system dynamics
-- [[adaptive_systems]] - Learning and adaptation
-- [[network_theory]] - Network dynamical systems
-
 ## See also
 
+- [[network_theory]]
 - [[knowledge_base/mathematics/dynamical_systems|Dynamical Systems]]
+
+## References
+
+- Arenas, A., Diaz-Guilera, A., Kurths, J., Moreno, Y., & Zhou, C. (2008). Synchronization in complex networks. Physics Reports, 469(3), 93-153.
+- Barrat, A., Barthelemy, M., & Vespignani, A. (2008). Dynamical processes on complex networks. Cambridge University Press.
+- Holmes, M. H. (2012). Introduction to perturbation methods (2nd ed.). Springer.
+- Kuznetsov, Y. A. (2004). Elements of applied bifurcation theory (3rd ed.). Springer.
+- Newman, M. E. J. (2010). Networks: An introduction. Oxford University Press.
+- Ott, E. (2002). Chaos in dynamical systems (2nd ed.). Cambridge University Press.
+- Ott, E., Grebogi, C., & Yorke, J. A. (1990). Controlling chaos. Physical Review Letters, 64(11), 1196-1199.
+- Pikovsky, A., Rosenblum, M., & Kurths, J. (2001). Synchronization: A universal concept in nonlinear sciences. Cambridge University Press.
+- Pyragas, K. (1992). Continuous control of chaos by self-controlling feedback. Physics Letters A, 170(6), 421-428.
+- Strogatz, S. H. (2018). Nonlinear dynamics and chaos: With applications to physics, biology, chemistry, and engineering (2nd ed.). CRC Press.

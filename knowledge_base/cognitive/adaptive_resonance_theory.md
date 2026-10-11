@@ -201,7 +201,7 @@ class HebbianLearning:
 
 ### 1. [[knowledge_base/mathematics/differential_equations|System Dynamics]]
 
-The complete system dynamics are described by coupled differential equations:
+The activity dynamics take a shunting (membrane-equation) form of the kind used in Grossberg's models:
 
 ```math
 
@@ -221,7 +221,7 @@ where:
 
 ### 2. Resonance Conditions
 
-Extended resonance condition incorporating multiple factors:
+A generalized resonance score (an illustrative extension; the standard Fuzzy ART match criterion is |x ∧ w|/|x| ≥ ρ, Carpenter et al., 1991):
 
 ```math
 
@@ -547,3 +547,10 @@ class ARTOptimization:
 
 - [[cognitive/artificial_intelligence|Artificial Intelligence]]
 
+## References
+
+- Grossberg, S. (1980). How does a brain build a cognitive code? Psychological Review, 87(1), 1-51.
+- Carpenter, G. A., & Grossberg, S. (1987). A massively parallel architecture for a self-organizing neural pattern recognition machine. Computer Vision, Graphics, and Image Processing, 37(1), 54-115.
+- Carpenter, G. A., Grossberg, S., & Rosen, D. B. (1991). Fuzzy ART: fast stable learning and categorization of analog patterns by an adaptive resonance system. Neural Networks, 4(6), 759-771.
+- Grossberg, S. (2000). The complementary brain: unifying brain dynamics and modularity. Trends in Cognitive Sciences, 4(6), 233-246.
+- Grossberg, S. (2013). Adaptive Resonance Theory: how a brain learns to consciously attend, learn, and recognize a changing world. Neural Networks, 37, 1-47.

@@ -494,3 +494,10 @@ def train_node(node: NeuralODE,
 
 - [[dynamical_systems]]
 
+
+## References
+- Coddington, E. A., & Levinson, N. (1955). Theory of Ordinary Differential Equations. McGraw-Hill.
+- Hairer, E., Norsett, S. P., & Wanner, G. (1993). Solving Ordinary Differential Equations I: Nonstiff Problems (2nd rev. ed.). Springer.
+- Hairer, E., & Wanner, G. (1996). Solving Ordinary Differential Equations II: Stiff and Differential-Algebraic Problems (2nd rev. ed.). Springer.
+- Evans, L. C. (2010). Partial Differential Equations (2nd ed.). American Mathematical Society.
+- Chen, R. T. Q., Rubanova, Y., Bettencourt, J., & Duvenaud, D. (2018). Neural ordinary differential equations. Advances in Neural Information Processing Systems, 31. arXiv:1806.07366.

@@ -277,31 +277,20 @@ Emergence refers to the phenomenon where complex patterns, behaviors, or propert
 - **Multi-Scale Inference**: Reasoning across organizational levels
 - **Social Coordination**: Emergent cooperation mechanisms
 
-## 📚 Key References
-
-### Foundational Works
-- **Anderson (1972)**: More is different
-- **Bedau and Humphreys (2008)**: Emergence: Contemporary readings
-- **Goldstein (1999)**: Emergence as a construct
-- **Laughlin (2005)**: A different universe
-
-### Theoretical Developments
-- **Holland (1998)**: Emergence: From chaos to order
-- **Corning (2002)**: The re-emergence of emergence
-- **Clayton and Davies (2006)**: The re-emergence of emergence
-- **Batterman (2002)**: The devil in the details
-
-### Applications
-- **Johnson (2001)**: Emergence: The connected lives of ants, brains, cities, and software
-- **Solé and Goodwin (2000)**: Signs of life: How complexity pervades biology
-- **Kaufmann (1995)**: At home in the universe
-
-### Related Concepts
-- [[complex_systems]] - Complex system foundations
-- [[self_organization]] - Spontaneous organization processes
-- [[swarm_intelligence]] - Collective problem-solving
-- [[knowledge_base/cognitive/emergence_self_organization]] - Cognitive emergence
-
 ## See also
 
 - [[knowledge_base/free_energy_principle/systems/emergence|Emergence From Inference Hierarchies]]
+
+## References
+
+- Anderson, P. W. (1972). More is different. Science, 177(4047), 393-396.
+- Batterman, R. W. (2002). The devil in the details: Asymptotic reasoning in explanation, reduction, and emergence. Oxford University Press.
+- Bedau, M. A., & Humphreys, P. (Eds.). (2008). Emergence: Contemporary readings in philosophy and science. MIT Press.
+- Clayton, P., & Davies, P. (Eds.). (2006). The re-emergence of emergence: The emergentist hypothesis from science to religion. Oxford University Press.
+- Corning, P. A. (2002). The re-emergence of "emergence": A venerable concept in search of a theory. Complexity, 7(6), 18-30.
+- Goldstein, J. (1999). Emergence as a construct: History and issues. Emergence, 1(1), 49-72.
+- Holland, J. H. (1998). Emergence: From chaos to order. Addison-Wesley.
+- Johnson, S. (2001). Emergence: The connected lives of ants, brains, cities, and software. Scribner.
+- Kauffman, S. A. (1995). At home in the universe: The search for the laws of self-organization and complexity. Oxford University Press.
+- Laughlin, R. B. (2005). A different universe: Reinventing physics from the bottom down. Basic Books.
+- Sole, R., & Goodwin, B. (2000). Signs of life: How complexity pervades biology. Basic Books.

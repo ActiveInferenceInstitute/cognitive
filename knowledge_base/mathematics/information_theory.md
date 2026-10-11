@@ -140,7 +140,7 @@ Information Theory provides a mathematical framework for quantifying, storing, a
 
    ```math
 
-   Γ_{ijk}^{(α)} = E[\frac{∂}{\∂θ_i}log p(x|θ)\frac{∂}{\∂θ_j}log p(x|θ)\frac{∂}{\∂θ_k}log p(x|θ)]
+   Γ_{ijk}^{(α)} = E[(\frac{∂²}{∂θ_i∂θ_j}log p(x|θ) + \frac{1-α}{2}\frac{∂}{∂θ_i}log p(x|θ)\frac{∂}{∂θ_j}log p(x|θ))\frac{∂}{∂θ_k}log p(x|θ)]
 
    ```
 
@@ -388,11 +388,11 @@ Information Theory provides a mathematical framework for quantifying, storing, a
 
 ### Quantum Computing
 
-1. **Quantum Channel Capacity**
+1. **Classical Capacity of a Quantum Channel**
 
    ```math
 
-   Q(N) = lim_{n→∞} \frac{1}{n}χ(N^⊗n)
+   C(N) = lim_{n→∞} \frac{1}{n}χ(N^⊗n)
 
    ```
 
@@ -970,3 +970,11 @@ class InformationProcessor:
 
 - [[coding_theory]]
 
+
+## References
+
+- Shannon, C. E. (1948). A mathematical theory of communication. Bell System Technical Journal, 27(3), 379-423.
+- Cover, T. M., & Thomas, J. A. (2006). Elements of Information Theory (2nd ed.). Wiley.
+- Amari, S., & Nagaoka, H. (2000). Methods of Information Geometry. American Mathematical Society and Oxford University Press.
+- Tishby, N., Pereira, F. C., & Bialek, W. (2000). The information bottleneck method. arXiv:physics/0004057.
+- Holevo, A. S. (1998). The capacity of the quantum channel with general signal states. IEEE Transactions on Information Theory, 44(1), 269-273.

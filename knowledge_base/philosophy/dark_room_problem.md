@@ -54,7 +54,7 @@ The conclusion contradicts virtually everything we know about living systems:
 
 ### Historical Context
 
-The dark room problem was identified early in discussions of the FEP (Friston, Thornton, & Clark, 2012) and has been a recurring topic of philosophical debate. Versions of the argument have been raised by:
+The dark room problem was raised early in discussions of the FEP and answered directly by Friston, Thornton, and Clark (2012); it has been a recurring topic of philosophical debate. Versions of the argument have been raised by:
 - Critics who see it as a fatal objection to the FEP
 - Philosophers seeking to understand the scope and limits of free energy minimization
 - Computational scientists wanting to understand why active inference agents explore
@@ -242,7 +242,7 @@ The dark room is the ultimate boring environment: it provides zero information g
 
 ### Optimal Stimulation Theory
 
-The FEP provides a formal version of optimal stimulation theory (Hebb, 1955): organisms seek an intermediate level of stimulation -- not too much (overwhelming, high prediction error) and not too little (boring, zero information gain). The optimal level is determined by the organism's current model accuracy:
+The FEP offers a formal analogue of the optimal-stimulation idea (Hebb, 1955): organisms seek an intermediate level of stimulation -- not too much (overwhelming, high prediction error) and not too little (boring, zero information gain). The optimal level is determined by the organism's current model accuracy:
 
 - **High model uncertainty**: Seek moderate, interpretable stimulation (learnable novelty)
 - **Low model uncertainty**: Seek higher novelty (to continue learning and reduce residual uncertainty)
@@ -294,14 +294,6 @@ Even if the dark room problem has a satisfactory resolution, it serves as a valu
 
 4. **The unity of cognition and life**: The dark room problem highlights that the FEP is not a theory of cognition separate from biology but a theory of how living systems maintain themselves through inference
 
-## Key References
-
-- Friston, K., Thornton, C., & Clark, A. (2012). Free-energy minimization and the dark-room problem. Frontiers in Psychology, 3, 130.
-- Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. Behavioral and Brain Sciences, 36(3), 181-204.
-- Schwartenbeck, P., et al. (2013). Exploration, novelty, surprise, and free energy minimization. Frontiers in Psychology, 4, 710.
-- Sun, Z., & Firestone, C. (2020). The dark room problem. Trends in Cognitive Sciences, 24(5), 346-348.
-- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
-
 ## Cross-References
 
 - [[cognitive/free_energy_principle|Free Energy Principle]] - The theory the dark room problem challenges
@@ -312,3 +304,13 @@ Even if the dark room problem has a satisfactory resolution, it serves as a valu
 - [[cognitive/precision_weighting|Precision Weighting]] - Modulates the balance between epistemic and pragmatic drives
 - [[mathematics/variational_free_energy|Variational Free Energy]] - The quantity being minimized
 - [[cognitive/embodied_cognition|Embodied Cognition]] - The body's needs prevent dark room solutions
+
+## References
+
+- Friston, K., Thornton, C., & Clark, A. (2012). Free-energy minimization and the dark-room problem. Frontiers in Psychology, 3, 130.
+- Friston, K., Rigoli, F., Ognibene, D., Mathys, C., FitzGerald, T., & Pezzulo, G. (2015). Active inference and epistemic value. Cognitive Neuroscience, 6(4), 187-214.
+- Schwartenbeck, P., FitzGerald, T., Dolan, R. J., & Friston, K. (2013). Exploration, novelty, surprise, and free energy minimization. Frontiers in Psychology, 4, 710.
+- Sun, Z., & Firestone, C. (2020). The dark room problem. Trends in Cognitive Sciences, 24(5), 346-348.
+- Hebb, D. O. (1955). Drives and the C.N.S. (conceptual nervous system). Psychological Review, 62(4), 243-254.
+- Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. Behavioral and Brain Sciences, 36(3), 181-204.
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.

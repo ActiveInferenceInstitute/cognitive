@@ -311,3 +311,9 @@ class ResonanceLearning:
 - [[pattern_recognition|Pattern Recognition]]
 - [[learning_theory|Learning Theory]]
 - [[neural_plasticity|Neural Plasticity]]
+
+## References
+
+- Grossberg, S. (1976). Adaptive pattern classification and universal recoding: II. Feedback, expectation, olfaction, illusions. Biological Cybernetics, 23(4), 187-202.
+- Carpenter, G. A., & Grossberg, S. (1987). A massively parallel architecture for a self-organizing neural pattern recognition machine. Computer Vision, Graphics, and Image Processing, 37(1), 54-115.
+- Grossberg, S. (2013). Adaptive Resonance Theory: How a brain learns to consciously attend, learn, and recognize a changing world. Neural Networks, 37, 1-47.

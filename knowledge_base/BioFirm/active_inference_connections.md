@@ -211,7 +211,7 @@ The expected free energy for policy selection:
 
 ```math
 
-G = E_q[ln q(s') - ln p(s',o')]
+G(π) = E_{q(o',s'|π)}[ln q(s'|π) - ln p(o',s')]
 
 ```
 
@@ -225,7 +225,7 @@ where:
 
 ### 3. [[mathematics/policy_selection|Policy Selection]]
 
-Optimal policy selection through minimization:
+Policy selection by minimization (the deterministic limit of q(π) = σ(−G(π)) in standard Active Inference):
 
 ```math
 
@@ -409,3 +409,11 @@ class DomainIntegrator:
 
 - [[knowledge_base/cognitive/hierarchical_models|Hierarchical Models]]
 
+## References
+
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.
+- Da Costa, L., Parr, T., Sajid, N., Veselic, S., Neacsu, V., & Friston, K. (2020). Active inference on discrete state-spaces: A synthesis. Journal of Mathematical Psychology, 99, 102447.
+- Kirchhoff, M., Parr, T., Palacios, E., Friston, K., & Kiverstein, J. (2018). The Markov blankets of life: Autonomy, active inference and the free energy principle. Journal of The Royal Society Interface, 15(138), 20170792.
+- Pezzulo, G., Rigoli, F., & Friston, K. J. (2018). Hierarchical active inference: A theory of motivated control. Trends in Cognitive Sciences, 22(4), 294-306.
+- Folke, C. (2006). Resilience: The emergence of a perspective for social-ecological systems analyses. Global Environmental Change, 16(3), 253-267.

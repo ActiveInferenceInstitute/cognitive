@@ -219,31 +219,21 @@ Complex systems theory provides a framework for understanding systems composed o
 - **Anomaly Detection**: Identifying unusual system behaviors
 - **Adaptation Strategies**: Responding to changing system conditions
 
-## 📚 Key References
-
-### Foundational Works
-- **Anderson (1972)**: More is different
-- **Gell-Mann (1994)**: The quark and the jaguar
-- **Kauffman (1993)**: The origins of order
-- **Watts and Strogatz (1998)**: Collective dynamics of 'small-world' networks
-
-### Theoretical Developments
-- **Barabasi and Albert (1999)**: Emergence of scaling in random networks
-- **Bak (1996)**: How nature works: The science of self-organized criticality
-- **Holland (1995)**: Hidden order: How adaptation builds complexity
-- **Mitchell (2009)**: Complexity: A guided tour
-
-### Applications
-- **Levin (1999)**: Fragile dominion: Complexity and the commons
-- **Page (2011)**: Diversity and complexity
-- **Miller and Page (2007)**: Complex adaptive systems
-
-### Related Concepts
-- [[emergence]] - Emergence of complex behavior
-- [[self_organization]] - Spontaneous organization
-- [[adaptive_systems]] - Learning and adaptation
-- [[network_theory]] - Network structure and dynamics
-
 ## See also
 
+- [[network_theory]]
 - [[knowledge_base/mathematics/complex_systems|Complex Systems]]
+
+## References
+
+- Anderson, P. W. (1972). More is different. Science, 177(4047), 393-396.
+- Bak, P. (1996). How nature works: The science of self-organized criticality. Copernicus.
+- Barabasi, A.-L., & Albert, R. (1999). Emergence of scaling in random networks. Science, 286(5439), 509-512.
+- Gell-Mann, M. (1994). The quark and the jaguar: Adventures in the simple and the complex. W. H. Freeman.
+- Holland, J. H. (1995). Hidden order: How adaptation builds complexity. Addison-Wesley.
+- Kauffman, S. A. (1993). The origins of order: Self-organization and selection in evolution. Oxford University Press.
+- Levin, S. A. (1999). Fragile dominion: Complexity and the commons. Perseus Books.
+- Miller, J. H., & Page, S. E. (2007). Complex adaptive systems: An introduction to computational models of social life. Princeton University Press.
+- Mitchell, M. (2009). Complexity: A guided tour. Oxford University Press.
+- Page, S. E. (2011). Diversity and complexity. Princeton University Press.
+- Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of 'small-world' networks. Nature, 393(6684), 440-442.

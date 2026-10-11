@@ -107,7 +107,7 @@ The biological basis of cognition and consciousness.
 - **Neural Correlates**: Brain regions associated with conscious experience
 - **Thalamic Function**: Sensory gating, arousal, sleep-wake cycles
 - **Default Mode Network**: Self-referential processing, mind-wandering
-- **Global Workspace**: Integrated information, broadcast mechanisms
+- **Global Workspace**: Global broadcast of information across brain systems
 
 ### Active Inference in Biology
 Biological implementations of active inference principles.
@@ -183,7 +183,7 @@ Organisms → Populations → Communities → Ecosystems → Biosphere
 ```
 
 ### Time Scales
-- **Microseconds**: Neural action potentials, enzyme reactions
+- **Milliseconds**: Neural action potentials, fast enzyme reactions
 - **Seconds-Minutes**: Hormone responses, behavioral decisions
 - **Hours-Days**: Circadian rhythms, immune responses
 - **Weeks-Months**: Development, learning, reproduction
@@ -230,7 +230,7 @@ Organisms → Populations → Communities → Ecosystems → Biosphere
 - **Homeostasis**: Free energy minimization in physiological systems
 - **Foraging**: Expected free energy minimization in food acquisition
 - **Social Behavior**: Collective decision-making through active inference
-- **Evolution**: Natural selection as model optimization
+- **Evolution**: Natural selection as model optimization (an Active Inference interpretation)
 
 ### Biological Constraints on Cognition
 - **Neural Architecture**: Physical limits on information processing
@@ -276,7 +276,7 @@ Domain → Kingdom → Phylum → Class → Order → Family → Genus → Speci
 ## 📚 Biological Literature Ontology
 
 ### Foundational Texts
-- **Molecular Biology**: Watson & Crick, Central Dogma
+- **Molecular Biology**: Watson & Crick (DNA structure), Crick (Central Dogma)
 - **Evolutionary Biology**: Darwin, Modern Synthesis
 - **Ecology**: Odum, Ecosystem Ecology
 - **Neuroscience**: Kandel, Principles of Neural Science
@@ -288,7 +288,7 @@ Domain → Kingdom → Phylum → Class → Order → Family → Genus → Speci
 - **Conservation Biology**: Soulé, biodiversity crisis
 
 ### Cognitive Biology
-- **Neuroethology**: Tinbergen, animal behavior
+- **Ethology**: Tinbergen, animal behavior
 - **Cognitive Ecology**: Real, animal cognition
 - **Evolutionary Psychology**: Cosmides & Tooby, evolved mind
 - **Animal Consciousness**: Griffin, cognitive ethology
@@ -334,3 +334,18 @@ Domain → Kingdom → Phylum → Class → Order → Family → Genus → Speci
 ---
 
 > **Interdisciplinary Bridge**: Connects biological mechanisms with cognitive theories and computational models.
+
+## References
+
+- Watson, J. D., & Crick, F. H. C. (1953). Molecular structure of nucleic acids: A structure for deoxyribose nucleic acid. Nature, 171(4356), 737-738.
+- Crick, F. (1970). Central dogma of molecular biology. Nature, 227(5258), 561-563.
+- Kandel, E. R., Schwartz, J. H., Jessell, T. M., Siegelbaum, S. A., & Hudspeth, A. J. (Eds.). (2013). Principles of neural science (5th ed.). McGraw-Hill.
+- Kitano, H. (2002). Systems biology: A brief overview. Science, 295(5560), 1662-1664.
+- Soulé, M. E. (1985). What is conservation biology? BioScience, 35(11), 727-734.
+- Tinbergen, N. (1963). On aims and methods of ethology. Zeitschrift für Tierpsychologie, 20(4), 410-433.
+- Griffin, D. R. (1976). The question of animal awareness: Evolutionary continuity of mental experience. Rockefeller University Press.
+- Matzinger, P. (1994). Tolerance, danger, and the extended family. Annual Review of Immunology, 12, 991-1045.
+- Miller, M. B., & Bassler, B. L. (2001). Quorum sensing in bacteria. Annual Review of Microbiology, 55, 165-199.
+- Real, L. A. (1993). Toward a cognitive ecology. Trends in Ecology & Evolution, 8(11), 413-417.
+- Pezzulo, G., Rigoli, F., & Friston, K. (2015). Active inference, homeostatic regulation and adaptive behavioural control. Progress in Neurobiology, 134, 17-35.
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.

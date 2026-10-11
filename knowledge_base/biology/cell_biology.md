@@ -681,18 +681,20 @@ class CellSignalingNetwork:
 ## References
 
 ### Foundational Texts
-- alberts 2014 - "Molecular Biology of the Cell, 6th Edition"
-- phillips 2012 - "Physical Biology of the Cell, 2nd Edition"
-- pollard 2016 - "Cell Biology, 3rd Edition"
+- Alberts, B., Johnson, A., Lewis, J., Morgan, D., Raff, M., Roberts, K., & Walter, P. (2014). Molecular Biology of the Cell (6th ed.). Garland Science.
+- Phillips, R., Kondev, J., Theriot, J., & Garcia, H. (2012). Physical Biology of the Cell (2nd ed.). Garland Science.
+- Goldman, D. E. (1943). Potential, impedance, and rectification in membranes. Journal of General Physiology, 27, 37-60.
 
 ### Specialized Topics
-- howard 2001 - "Mechanics of Motor Proteins and the Cytoskeleton"
-- bray 2001 - "Cell Movements: From Molecules to Motility"
-- karp 2010 - "Cell and Molecular Biology: Concepts and Experiments"
+- Howard, J. (2001). Mechanics of Motor Proteins and the Cytoskeleton. Sinauer Associates.
+- Bray, D. (2001). Cell Movements: From Molecules to Motility (2nd ed.). Garland Science.
+- Helfrich, W. (1973). Elastic properties of lipid bilayers: Theory and possible experiments. Zeitschrift fur Naturforschung C, 28, 693-703.
+- Bell, G. I. (1978). Models for the specific adhesion of cells to cells. Science, 200, 618-627.
+- Milo, R., Shen-Orr, S., Itzkovitz, S., Kashtan, N., Chklovskii, D., & Alon, U. (2002). Network motifs: Simple building blocks of complex networks. Science, 298, 824-827.
 
 ### Active Inference Applications
-- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
-- [[parr_2022]] - "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior"
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184. [[friston_2019]]
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press. [[parr_2022]]
 
 ## See Also
 

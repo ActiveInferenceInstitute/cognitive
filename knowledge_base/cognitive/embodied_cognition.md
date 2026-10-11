@@ -304,7 +304,7 @@ The embodied cognition perspective, formalized through the FEP, has implications
 
 Compliant, deformable bodies can perform complex computations through their physics, reducing the computational burden on the control system. This principle suggests that AI systems with soft, compliant bodies may achieve more natural, adaptable behavior than rigid systems with more powerful controllers.
 
-## Key References
+## References
 
 - Clark, A. (2015). Surfing Uncertainty: Prediction, Action, and the Embodied Mind. Oxford University Press.
 - Seth, A. K. (2013). Interoceptive inference, emotion, and the embodied self. Trends in Cognitive Sciences, 17(11), 565-573.
@@ -312,7 +312,7 @@ Compliant, deformable bodies can perform complex computations through their phys
 - O'Regan, J. K., & Noe, A. (2001). A sensorimotor account of vision and visual consciousness. Behavioral and Brain Sciences, 24(5), 939-973.
 - Gibson, J. J. (1979). The Ecological Approach to Visual Perception. Houghton Mifflin.
 - Allen, M., & Friston, K. (2018). From cognitivism to autopoiesis: Towards a computational framework for the embodied mind. Synthese, 195(6), 2459-2482.
-- Barrett, L. F. (2017). The theory of constructed emotion. Emotion, 17(1), 28-42.
+- Barrett, L. F. (2017). The theory of constructed emotion: an active inference account of interoception and categorization. Social Cognitive and Affective Neuroscience, 12(1), 1-23.
 
 ## Cross-References
 

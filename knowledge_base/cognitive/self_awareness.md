@@ -511,3 +511,11 @@ class ArtificialSelfAwareness:
 - [[theory_of_mind]] - Understanding others' mental states
 - [[consciousness_and_awareness]] - Broader consciousness concepts
 - [[self_modeling]] - Mathematical approaches to self-representation
+
+## References
+
+- Gallup, G. G. (1970). Chimpanzees: Self-recognition. Science, 167(3914), 86-87.
+- Northoff, G., Heinzel, A., de Greck, M., Bermpohl, F., Dobrowolny, H., & Panksepp, J. (2006). Self-referential processing in our brain: A meta-analysis of imaging studies on the self. NeuroImage, 31(1), 440-457.
+- Gallagher, S. (2000). Philosophical conceptions of the self: Implications for cognitive science. Trends in Cognitive Sciences, 4(1), 14-21.
+- Rogers, T. B., Kuiper, N. A., & Kirker, W. S. (1977). Self-reference and the encoding of personal information. Journal of Personality and Social Psychology, 35(9), 677-688.
+- Craig, A. D. (2002). How do you feel? Interoception: The sense of the physiological condition of the body. Nature Reviews Neuroscience, 3(8), 655-666.

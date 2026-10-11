@@ -605,3 +605,10 @@ class AdaptiveController:
 
 - [[adaptive_control]]
 
+
+## References
+- Bellman, R. (1957). Dynamic Programming. Princeton University Press.
+- Kalman, R. E. (1960). A new approach to linear filtering and prediction problems. Journal of Basic Engineering, 82(1), 35-45.
+- Astrom, K. J., & Murray, R. M. (2008). Feedback Systems: An Introduction for Scientists and Engineers. Princeton University Press.
+- Khalil, H. K. (2002). Nonlinear Systems (3rd ed.). Prentice Hall.
+- Friston, K. (2011). What is optimal about motor control? Neuron, 72(3), 488-498.

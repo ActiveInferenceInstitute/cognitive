@@ -233,12 +233,14 @@ The central philosophical tension is about representations:
 - The generative model is not stored anywhere; it is the dynamics of the system itself (dynamical reading)
 - Representation is a useful description from the observer's perspective but not a property of the system itself (instrumentalist reading)
 
-### Kirchhoff and Froese's Critique
+### Di Paolo, Thompson and Beer's Critique
 
-Kirchhoff and Froese (2017) argue that:
-- The Markov blanket formalism reintroduces the very boundary between organism and environment that enactivism seeks to dissolve
-- The FEP's internal states are functionally isolated from external states (by the blanket), contradicting enactivism's emphasis on direct organism-environment coupling
-- The free energy minimization framework is inherently representational, even if one avoids the word "representation"
+Di Paolo, Thompson, and Beer (2022) argue that claims of compatibility between the FEP and the theories of autopoiesis and enaction rest on misreadings of key enactive concepts. Their main points are:
+- Processes of self-distinction in operationally closed systems are conflated with Markov blankets, and the operational definition of autopoiesis and the distinction between a system's structure and its organization are overlooked
+- The FEP assumes systems that reach a non-equilibrium steady state and are enveloped by a Markov blanket; they argue this conflicts with the historicity of sense-making and with enactive notions of adaptivity and agency, which involve changes in parameters, constraints, and dynamical laws
+- The enactive view of transactional and constitutive relations between organisms and environments poses a challenge to the FEP
+
+They conclude that, as currently formulated, the FEP is in tension with autopoiesis and enaction rather than easily integrated with them. By contrast, Kirchhoff and Froese (2017) use enactive ideas (autopoiesis and adaptivity) to constrain a non-cognitivist reading of the FEP and defend a strong life-mind continuity thesis.
 
 ### Responses
 
@@ -309,16 +311,6 @@ An adaptive system selects policies that minimize expected future free energy, a
 
 Enactivists emphasize that organisms are adaptive, not optimal. The FEP is compatible with this: free energy minimization is achieved approximately, under constraints, and with respect to a particular (possibly inaccurate) generative model. Organisms are satisficing, not optimizing -- they do "well enough" to maintain their NESS, not "the best possible" by some external criterion.
 
-## Key References
-
-- Maturana, H. R., & Varela, F. J. (1980). Autopoiesis and Cognition. D. Reidel.
-- Varela, F. J., Thompson, E., & Rosch, E. (1991). The Embodied Mind. MIT Press.
-- Thompson, E. (2007). Mind in Life: Biology, Phenomenology, and the Sciences of Mind. Harvard University Press.
-- Di Paolo, E. A. (2005). Autopoiesis, adaptivity, teleology, agency. Phenomenology and the Cognitive Sciences, 4(4), 429-452.
-- De Jaegher, H., & Di Paolo, E. (2007). Participatory sense-making. Phenomenology and the Cognitive Sciences, 6(4), 485-507.
-- Bruineberg, J., Kiverstein, J., & Rietveld, E. (2018). The anticipating brain is not a scientist. Synthese, 195(6), 2417-2444.
-- Kirchhoff, M., & Froese, T. (2017). Where there is life there is mind. Entropy, 19(4), 169.
-
 ## Cross-References
 
 - [[philosophy/4e_cognition|4E Cognition]] - Broader framework including enactivism
@@ -329,3 +321,15 @@ Enactivists emphasize that organisms are adaptive, not optimal. The FEP is compa
 - [[biology/niche_construction|Niche Construction]] - Organism-environment co-constitution
 - [[systems/circular_causality|Circular Causality]] - Self-referential dynamics in autonomous systems
 - [[cognitive/sensorimotor_coordination|Sensorimotor Coordination]] - Action-perception coupling
+
+## References
+
+- Maturana, H. R., & Varela, F. J. (1980). Autopoiesis and Cognition: The Realization of the Living. D. Reidel.
+- Di Paolo, E. A. (2005). Autopoiesis, adaptivity, teleology, agency. Phenomenology and the Cognitive Sciences, 4(4), 429-452.
+- De Jaegher, H., & Di Paolo, E. (2007). Participatory sense-making: An enactive approach to social cognition. Phenomenology and the Cognitive Sciences, 6(4), 485-507.
+- Rietveld, E., & Kiverstein, J. (2014). A rich landscape of affordances. Ecological Psychology, 26(4), 325-352.
+- Bruineberg, J., Kiverstein, J., & Rietveld, E. (2018). The anticipating brain is not a scientist: The free-energy principle from an ecological-enactive perspective. Synthese, 195(6), 2417-2444.
+- Kirchhoff, M. D., & Froese, T. (2017). Where there is life there is mind: In support of a strong life-mind continuity thesis. Entropy, 19(4), 169.
+- Di Paolo, E. A., Thompson, E., & Beer, R. D. (2022). Laying down a forking path: Tensions between enaction and the free energy principle. Philosophy and the Mind Sciences, 3.
+- Varela, F. J., Thompson, E., & Rosch, E. (1991). The Embodied Mind: Cognitive Science and Human Experience. MIT Press.
+- Thompson, E. (2007). Mind in Life: Biology, Phenomenology, and the Sciences of Mind. Harvard University Press.

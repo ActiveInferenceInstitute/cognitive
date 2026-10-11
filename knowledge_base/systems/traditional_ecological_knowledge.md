@@ -462,3 +462,9 @@ class CulturalEcologicalSystem:
 
 - sustainable practices
 
+
+## References
+
+- Berkes, F. (1999). Sacred ecology: Traditional ecological knowledge and resource management. Taylor & Francis.
+- Berkes, F., Colding, J., & Folke, C. (2000). Rediscovery of traditional ecological knowledge as adaptive management. Ecological Applications, 10(5), 1251-1262.
+- Folke, C. (2004). Traditional knowledge in social-ecological systems. Ecology and Society, 9(3), 7.

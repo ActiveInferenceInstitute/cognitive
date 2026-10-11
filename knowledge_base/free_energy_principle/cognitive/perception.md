@@ -433,8 +433,8 @@ def evaluate_attention_mechanism(attention_system, attention_tasks):
 - Hohwy (2013): "The predictive mind"
 
 ### Applications
-- Summerfield et al. (2006): "Neuronal population coding"
-- den Ouden et al. (2012): "A hierarchical generative model"
+- Summerfield et al. (2008): "Neural repetition suppression reflects fulfilled perceptual expectations"
+- den Ouden et al. (2012): "How prediction errors shape perception, attention, and motivation"
 - Kanai et al. (2015): "Cerebral hierarchies"
 
 ### Reviews
@@ -457,3 +457,13 @@ def evaluate_attention_mechanism(attention_system, attention_tasks):
 ---
 
 > **Attention as Precision**: Attention mechanisms modulate the precision (reliability) of prediction errors in variational inference.
+
+## References
+
+- Rao, R. P. N., & Ballard, D. H. (1999). Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects. *Nature Neuroscience*, 2(1), 79-87.
+- Friston, K. (2005). A theory of cortical responses. *Philosophical Transactions of the Royal Society B*, 360(1456), 815-836.
+- Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. *Behavioral and Brain Sciences*, 36(3), 181-204.
+- Buckley, C. L., Kim, C. S., McGregor, S., & Seth, A. K. (2017). The free energy principle for action and perception: a mathematical review. *Journal of Mathematical Psychology*, 81, 55-79.
+- Friston, K., Adams, R. A., Perrinet, L., & Breakspear, M. (2012). Perceptions as hypotheses: saccades as experiments. *Frontiers in Psychology*, 3, 151.
+- Corlett, P. R., Horga, G., Fletcher, P. C., Alderson-Day, B., Schmack, K., & Powers, A. R. (2019). Hallucinations and strong priors. *Trends in Cognitive Sciences*, 23(2), 114-127.
+- Kording, K. P., Beierholm, U., Ma, W. J., Quartz, S., Tenenbaum, J. B., & Shams, L. (2007). Causal inference in multisensory perception. *PLoS ONE*, 2(9), e943.

@@ -118,7 +118,7 @@ The truncated factorization -- the hallmark of Pearl's do-calculus -- arises nat
 
 ### Counterfactual Reasoning
 
-Pearl's (2000) three-level hierarchy of causal reasoning maps onto FEP inference:
+Pearl's three-level hierarchy of causal reasoning (the "ladder of causation"; Pearl & Mackenzie, 2018) maps onto FEP inference:
 
 ```
 Level 1 - Association:     p(o | o')              What is?
@@ -257,7 +257,7 @@ In this framework, "the mind causes behavior" is recast as: high-level generativ
 Hoel (2017) and colleagues have argued for **causal emergence** -- the idea that higher-level descriptions can be more causally efficacious than lower-level descriptions. The measure of causal emergence uses effective information (EI):
 
 ```
-Effective Information: EI(X -> Y) = H(Y | do(X ~ uniform)) - H(Y | do(X = x))
+Effective Information: EI(X -> Y) = H(Y | do(X ~ uniform)) - E_x[H(Y | do(X = x))]
 
 Causal emergence: EI at macro-level > EI at micro-level
 ```
@@ -347,20 +347,6 @@ The FEP suggests a compatibilist resolution: the agent is "free" in the sense th
 
 6. **Causal responsibility**: If actions are the result of free energy minimizing inference, in what sense is the agent causally responsible for its actions? This connects to ethical and legal questions about moral responsibility.
 
-## Key References
-
-1. Pearl, J. (2000). *Causality: Models, Reasoning, and Inference*. Cambridge University Press.
-2. Pearl, J. (2009). *Causality* (2nd ed.). Cambridge University Press.
-3. Pearl, J., & Mackenzie, D. (2018). *The Book of Why: The New Science of Cause and Effect*. Basic Books.
-4. Woodward, J. (2003). *Making Things Happen: A Theory of Causal Explanation*. Oxford University Press.
-5. Friston, K. J. (2019). A free energy principle for a particular physics. *arXiv preprint* arXiv:1906.10184.
-6. Friston, K. J., Parr, T., & de Vries, B. (2017). The graphical brain: Belief propagation and active inference. *Network Neuroscience*, 1(4), 381-414.
-7. Hoel, E. P. (2017). When the map is better than the territory. *Entropy*, 19(5), 188.
-8. Hoel, E. P., Albantakis, L., & Tononi, G. (2013). Quantifying causal emergence shows that macro can beat micro. *Proceedings of the National Academy of Sciences*, 110(49), 19790-19795.
-9. Bongers, S., Forr, P., Peters, J., & Mooij, J. M. (2021). Foundations of structural causal models with cycles and latent variables. *Annals of Statistics*, 49(5), 2885-2915.
-10. Gopnik, A., Glymour, C., Sobel, D. M., Schulz, L. E., Kushnir, T., & Danks, D. (2004). A theory of causal learning in children. *Psychological Review*, 111(1), 3-32.
-11. Kirchhoff, M. D., & Froese, T. (2017). Where there is life there is mind: In support of a strong life-mind continuity thesis. *Entropy*, 19(4), 169.
-
 ## See Also
 
 - [[epistemology|Epistemology]] -- Causal knowledge and Bayesian belief revision
@@ -372,3 +358,17 @@ The FEP suggests a compatibilist resolution: the agent is "free" in the sense th
 - [[knowledge_base/free_energy_principle/mathematics/markov_blankets|Markov Blankets]] -- The causal boundary formalism
 - [[knowledge_base/free_energy_principle/mathematics/expected_free_energy|Expected Free Energy]] -- Counterfactual evaluation of policies
 - [[knowledge_base/free_energy_principle/systems/emergence|Emergence]] -- Causal emergence in complex systems
+
+## References
+- Pearl, J. (2000). Causality: Models, Reasoning, and Inference. Cambridge University Press.
+- Pearl, J. (2009). Causality: Models, Reasoning, and Inference (2nd ed.). Cambridge University Press.
+- Pearl, J., & Mackenzie, D. (2018). The Book of Why: The New Science of Cause and Effect. Basic Books.
+- Woodward, J. (2003). Making Things Happen: A Theory of Causal Explanation. Oxford University Press.
+- Hoel, E. P., Albantakis, L., & Tononi, G. (2013). Quantifying causal emergence shows that macro can beat micro. Proceedings of the National Academy of Sciences, 110(49), 19790-19795.
+- Hoel, E. P. (2017). When the map is better than the territory. Entropy, 19(5), 188.
+- Bongers, S., Forre, P., Peters, J., & Mooij, J. M. (2021). Foundations of structural causal models with cycles and latent variables. Annals of Statistics, 49(5), 2885-2915.
+- Gopnik, A., Glymour, C., Sobel, D. M., Schulz, L. E., Kushnir, T., & Danks, D. (2004). A theory of causal learning in children: Causal maps and Bayes nets. Psychological Review, 111(1), 3-32.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
+- Friston, K. J., Parr, T., & de Vries, B. (2017). The graphical brain: Belief propagation and active inference. Network Neuroscience, 1(4), 381-414.
+- Kirchhoff, M. D., & Froese, T. (2017). Where there is life there is mind: In support of a strong life-mind continuity thesis. Entropy, 19(4), 169.

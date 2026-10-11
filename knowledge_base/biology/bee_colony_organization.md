@@ -46,16 +46,17 @@ class QueenReproductiveMonopoly:
     """Queen's reproductive dominance and regulation"""
 
     def __init__(self):
+        # Queen mandibular pheromone is a blend; component roles here are indicative only
         self.queen_pheromones = {
-            '9-oxo-decenoic_acid': 'worker_ovary_inhibition',
-            '9-hydroxy-decenoic_acid': 'queen_signal',
-            '10-hydroxy-decenoic_acid': 'brood_estimation'
+            '9-oxo-decenoic_acid': 'queen_signal_and_drone_attraction',
+            '9-hydroxy-decenoic_acid': 'worker_attraction',
+            '10-hydroxy-decenoic_acid': 'royal_jelly_component'
         }
 
         self.reproductive_suppression = {
             'mechanism': 'pheromonal_inhibition',
             'target': 'worker_ovary_development',
-            'effectiveness': 'near_total_suppression'
+            'effectiveness': 'high_in_queenright_colonies'
         }
 
     def maintain_reproductive_monopoly(self, colony_state: dict) -> dict:
@@ -146,6 +147,7 @@ class WorkerAgeTaskProgression:
     """Age-based task specialization in workers"""
 
     def __init__(self):
+        # Approximate day ranges; timing shifts with colony demographics and needs
         self.age_task_sequence = {
             'days_1_5': {
                 'tasks': ['cell_cleaning', 'brood_care', 'honey_ripening'],
@@ -250,8 +252,8 @@ class QueenAttendanceBehavior:
         }
 
         self.attendance_rotations = {
-            'shift_duration': '30_minutes',
-            'group_size': '10_15_workers',
+            'shift_duration': '30_minutes',   # illustrative
+            'group_size': '10_15_workers',    # illustrative
             'rotation_frequency': 'continuous'
         }
 
@@ -302,7 +304,7 @@ class SmallColonyDynamics:
     """Organization in small bee colonies"""
 
     def __init__(self):
-        self.colony_size_range = (100, 1000)  # individuals
+        self.colony_size_range = (100, 1000)  # individuals (illustrative)
         self.organizational_features = {
             'task_overlap': 'high',
             'communication': 'direct_interaction',
@@ -324,7 +326,7 @@ class LargeColonyOrganization:
     """Organization in large bee colonies"""
 
     def __init__(self):
-        self.colony_size_range = (10000, 80000)  # individuals
+        self.colony_size_range = (10000, 80000)  # individuals (illustrative)
         self.organizational_features = {
             'task_specialization': 'high',
             'communication': 'dance_language',
@@ -348,6 +350,7 @@ class ColonySizeScaling:
     """How organization scales with colony size"""
 
     def __init__(self):
+        # Illustrative scaling forms, not empirically established relationships
         self.scaling_relationships = {
             'forager_proportion': 'power_law_increase',
             'dance_information_load': 'logarithmic_increase',
@@ -560,7 +563,7 @@ class DanceInformationPropagation:
     """Model of information spread through dances"""
 
     def __init__(self):
-        self.information_decay_rate = 0.1
+        self.information_decay_rate = 0.1  # illustrative
         self.attention_probability = {}
         self.memory_retention = {}
 
@@ -692,3 +695,15 @@ class CommunicationBasedCoordination:
 ---
 
 > **Adaptive Scaling**: Bee colony organization scales remarkably well, maintaining efficiency through communication sophistication, task flexibility, and reproductive regulation across colony sizes and environmental conditions.
+
+## References
+
+- Huang, Z.-Y., & Robinson, G. E. (1992). Honeybee colony integration: Worker-worker interactions mediate hormonally regulated plasticity in division of labor. Proceedings of the National Academy of Sciences, 89(24), 11726-11729.
+- Michener, C. D. (1974). The social behavior of the bees: A comparative study. Belknap Press of Harvard University Press.
+- Ratnieks, F. L. W. (1993). Egg-laying, egg-removal, and ovary development by workers in queenright honey bee colonies. Behavioral Ecology and Sociobiology, 32(3).
+- Robinson, G. E. (1992). Regulation of division of labor in insect societies. Annual Review of Entomology, 37, 637-665.
+- Seeley, T. D. (1982). Adaptive significance of the age polyethism schedule in honeybee colonies. Behavioral Ecology and Sociobiology, 11(4), 287-293.
+- Seeley, T. D. (1992). The tremble dance of the honey bee: Message and meanings. Behavioral Ecology and Sociobiology, 31(6).
+- Seeley, T. D. (1995). The wisdom of the hive: The social physiology of honey bee colonies. Harvard University Press.
+- Slessor, K. N., Winston, M. L., & Le Conte, Y. (2005). Pheromone communication in the honeybee (Apis mellifera L.). Journal of Chemical Ecology, 31(11), 2731-2745.
+- von Frisch, K. (1967). The dance language and orientation of bees. Harvard University Press.

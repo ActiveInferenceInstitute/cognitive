@@ -289,16 +289,6 @@ How far does cognitive extension go? Some argue for "radical extension" where en
 
 4E cognition raises questions about the boundary between individual and collective cognition. If my smartphone is part of my cognitive system, what about the cloud server it connects to? What about the people who created the apps? The FEP provides formal tools (nested blankets) but does not resolve these philosophical questions.
 
-## Key References
-
-- Clark, A., & Chalmers, D. J. (1998). The extended mind. Analysis, 58(1), 7-19.
-- Clark, A. (2015). Surfing Uncertainty: Prediction, Action, and the Embodied Mind. Oxford University Press.
-- Varela, F. J., Thompson, E., & Rosch, E. (1991). The Embodied Mind. MIT Press.
-- Rietveld, E., & Kiverstein, J. (2014). A rich landscape of affordances. Ecological Psychology, 26(4), 325-352.
-- Gallagher, S. (2017). Enactivist Interventions: Rethinking the Mind. Oxford University Press.
-- Kirchhoff, M., & Kiverstein, J. (2019). Extended Consciousness and Predictive Processing. Routledge.
-- Ramstead, M. J. D., Kirchhoff, M. D., & Friston, K. J. (2020). A tale of two densities: Active inference is enactive inference. Adaptive Behavior, 28(4), 225-239.
-
 ## Cross-References
 
 - [[philosophy/enactivism|Enactivism]] - Foundational enactive approach
@@ -309,3 +299,14 @@ How far does cognitive extension go? Some argue for "radical extension" where en
 - [[biology/niche_construction|Niche Construction]] - Environmental modification as cognitive extension
 - [[cognitive/multi_agent_active_inference|Multi-Agent Active Inference]] - Social aspects of 4E cognition
 - [[systems/circular_causality|Circular Causality]] - Reciprocal organism-environment dynamics
+
+## References
+
+- Clark, A., & Chalmers, D. J. (1998). The extended mind. Analysis, 58(1), 7-19.
+- Varela, F. J., Thompson, E., & Rosch, E. (1991). The Embodied Mind: Cognitive Science and Human Experience. MIT Press.
+- O'Regan, J. K., & Noë, A. (2001). A sensorimotor account of vision and visual consciousness. Behavioral and Brain Sciences, 24(5), 939-973.
+- Rietveld, E., & Kiverstein, J. (2014). A rich landscape of affordances. Ecological Psychology, 26(4), 325-352.
+- Ramstead, M. J. D., Kirchhoff, M. D., & Friston, K. J. (2020). A tale of two densities: Active inference is enactive inference. Adaptive Behavior, 28(4), 225-239.
+- Clark, A. (2016). Surfing Uncertainty: Prediction, Action, and the Embodied Mind. Oxford University Press.
+- Gallagher, S. (2017). Enactivist Interventions: Rethinking the Mind. Oxford University Press.
+- Kirchhoff, M. D., & Kiverstein, J. (2019). Extended Consciousness and Predictive Processing: A Third-Wave View. Routledge.

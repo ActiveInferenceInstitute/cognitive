@@ -612,7 +612,7 @@ As we continue this journey of connecting realities, the Metaverse offers both p
 
 1. Ramstead, M. J. D., Kirchhoff, M. D., & Friston, K. J. (2020). A tale of two densities: Active inference is enactive inference. Adaptive Behavior, 28(4), 225-239.
 
-1. Williams, D. (2020). Predictive minds and small-scale models: Kenneth Craik's contribution to cognitive science. Philosophical Explorations, 23(2), 158-173.
+1. Williams, D. (2018). Predictive minds and small-scale models: Kenneth Craik's contribution to cognitive science. Philosophical Explorations, 21(2), 245-263.
 
 ### 11.4 Social and Cultural Analysis
 
@@ -620,9 +620,17 @@ As we continue this journey of connecting realities, the Metaverse offers both p
 
 1. Yee, N. (2014). The Proteus Paradox: How Online Games and Virtual Worlds Change Us—And How They Don't. Yale University Press.
 
-1. Parkin, S. (2020). The Island of Missing Trees. Farrar, Straus and Giroux.
-
 1. Meadows, M. S. (2007). I, Avatar: The Culture and Consequences of Having a Second Life. New Riders.
 
 1. Chatfield, T. (2012). How to Thrive in the Digital Age. Pan Macmillan.
 
+
+## References
+
+- Bailenson, J. (2018). Experience on demand: What virtual reality is, how it works, and what it can do. W. W. Norton & Company.
+- Boellstorff, T. (2008). Coming of age in Second Life: An anthropologist explores the virtually human. Princeton University Press.
+- Castronova, E. (2005). Synthetic worlds: The business and culture of online games. University of Chicago Press.
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Milgram, P., & Kishino, F. (1994). A taxonomy of mixed reality visual displays. IEICE Transactions on Information and Systems, E77-D(12), 1321-1329.
+- Slater, M., & Sanchez-Vives, M. V. (2016). Enhancing our lives with immersive virtual reality. Frontiers in Robotics and AI, 3, 74.
+- Stephenson, N. (1992). Snow crash. Bantam Books.

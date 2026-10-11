@@ -108,7 +108,7 @@ With equality achieved when $q(s) = p(s|o)$.
 
 ### Convexity Properties
 
-Under certain conditions, variational free energy is convex in the variational parameters, ensuring convergence of optimization algorithms.
+Variational free energy is convex in the density q for a fixed generative model (it equals a KL divergence plus a constant), but it is generally non-convex in the parameters of a restricted variational family, so optimization can reach local minima.
 
 ### Information Geometry
 
@@ -524,7 +524,7 @@ def benchmark_inference_accuracy(vfe_system, test_cases):
 
 ### Advanced Topics
 - Caticha (2012): "Entropic inference and the foundations of physics"
-- Friston et al. (2017): "Active Inference and Learning"
+- Friston et al. (2016): "Active inference and learning"
 - Parr & Friston (2018): "The anatomy of inference"
 
 ### Textbooks
@@ -552,3 +552,13 @@ def benchmark_inference_accuracy(vfe_system, test_cases):
 
 - [[knowledge_base/cognitive/variational_free_energy|Variational Free Energy]]
 - [[knowledge_base/mathematics/variational_free_energy|Variational Free Energy]]
+
+## References
+
+- Friston, K. (2009). The free-energy principle: a rough guide to the brain? *Trends in Cognitive Sciences*, 13(7), 293-301.
+- Beal, M. J. (2003). *Variational Algorithms for Approximate Bayesian Inference* [Doctoral dissertation]. Gatsby Computational Neuroscience Unit, University College London.
+- Winn, J., & Bishop, C. M. (2005). Variational message passing. *Journal of Machine Learning Research*, 6, 661-694.
+- Bishop, C. M. (2006). *Pattern Recognition and Machine Learning*. Springer.
+- Blei, D. M., Kucukelbir, A., & McAuliffe, J. D. (2017). Variational inference: a review for statisticians. *Journal of the American Statistical Association*, 112(518), 859-877.
+- Parr, T., & Friston, K. J. (2018). The anatomy of inference: generative models and brain structure. *Frontiers in Computational Neuroscience*, 12, 90.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.

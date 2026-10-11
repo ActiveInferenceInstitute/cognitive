@@ -79,3 +79,10 @@ print(np.float32(1) + np.float32(1e-8) == np.float32(1))          # True
 - [[numerical_stability]]
 - [[precision_parameter]]
 - [[softmax_function]] · [[kl_divergence]] · [[entropy]]
+
+## References
+
+- Higham, N. J. (2002). Accuracy and stability of numerical algorithms (2nd ed.). Society for Industrial and Applied Mathematics.
+- Blanchard, P., Higham, D. J., & Higham, N. J. (2021). Accurately computing the log-sum-exp and softmax functions. IMA Journal of Numerical Analysis, 41(4), 2311-2330.
+- Goldberg, D. (1991). What every computer scientist should know about floating-point arithmetic. ACM Computing Surveys, 23(1), 5-48.
+- Cover, T. M., & Thomas, J. A. (2006). Elements of information theory (2nd ed.). Wiley.

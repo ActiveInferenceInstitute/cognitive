@@ -558,3 +558,10 @@ class CriticalPhenomena:
 
 - [[active_inference]]
 
+## References
+
+- Kardar, M. (2007). Statistical physics of particles. Cambridge University Press.
+- Goldenfeld, N. (1992). Lectures on phase transitions and the renormalization group. Addison-Wesley.
+- Jaynes, E. T. (1957). Information theory and statistical mechanics. Physical Review, 106(4), 620-630.
+- Hohenberg, P. C., & Halperin, B. I. (1977). Theory of dynamic critical phenomena. Reviews of Modern Physics, 49(3), 435-479.
+- Swendsen, R. H., & Wang, J.-S. (1987). Nonuniversal critical dynamics in Monte Carlo simulations. Physical Review Letters, 58(2), 86-88.

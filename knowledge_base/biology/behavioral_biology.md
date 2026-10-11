@@ -696,19 +696,21 @@ class BehavioralLearningAgent:
 ## References
 
 ### Foundational Texts
-- krebs 2009 - "Behavioral Ecology: An Evolutionary Approach"
-- alcock 2013 - "Animal Behavior: An Evolutionary Approach"
-- tinbergen 1963 - "The Study of Instinct"
+- Davies, N. B., Krebs, J. R., & West, S. A. (2012). An Introduction to Behavioural Ecology (4th ed.). Wiley-Blackwell.
+- Alcock, J. (2013). Animal Behavior: An Evolutionary Approach (10th ed.). Sinauer Associates.
+- Tinbergen, N. (1951). The Study of Instinct. Clarendon Press.
+- Maynard Smith, J., & Price, G. R. (1973). The logic of animal conflict. Nature, 246, 15-18.
 
 ### Theoretical Frameworks
-- dayan 2001 - "Theoretical Neuroscience"
-- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
-- [[sutton_2018]] - "Reinforcement Learning: An Introduction"
+- Dayan, P., & Abbott, L. F. (2001). Theoretical Neuroscience: Computational and Mathematical Modeling of Neural Systems. MIT Press.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184. [[friston_2019]]
+- Sutton, R. S., & Barto, A. G. (2018). Reinforcement Learning: An Introduction (2nd ed.). MIT Press. [[sutton_2018]]
 
 ### Active Inference Applications
-- [[parr_2022]] - "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior"
-- [[buckley_2017]] - "The Free Energy Principle for Action and Perception"
-- [[friston_2017]] - "Active Inference and Learning"
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press. [[parr_2022]]
+- Buckley, C. L., Kim, C. S., McGregor, S., & Seth, A. K. (2017). The free energy principle for action and perception: A mathematical review. Journal of Mathematical Psychology, 81, 55-79. [[buckley_2017]]
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., O'Doherty, J., & Pezzulo, G. (2016). Active inference and learning. Neuroscience & Biobehavioral Reviews, 68, 862-879. [[friston_2017]]
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: A process theory. Neural Computation, 29(1), 1-49.
 
 ## See Also
 

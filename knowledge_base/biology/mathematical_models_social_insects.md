@@ -106,8 +106,8 @@ Constrains pheromone levels within bounds to avoid stagnation:
 ```
 
 where:
-- $\tau_{min} = \frac{\tau_{max}(1-\sqrt[p]{0.05})}{(\rho-1)\sqrt[p]{0.05}}$ for $p$ nodes
-- $\tau_{max} = \frac{1}{\rho L_{best}^{NN}}$ where $L_{best}^{NN}$ is nearest neighbor tour length
+- $\tau_{min} = \frac{\tau_{max}(1-\sqrt[n]{p_{best}})}{(n/2-1)\sqrt[n]{p_{best}}}$ for $n$ nodes, where $p_{best}$ (for example 0.05) is the target probability of constructing the best tour
+- $\tau_{max} = \frac{1}{\rho L_{best}}$ where $L_{best}$ is the best-so-far tour length
 
 ### Theoretical Convergence Analysis
 
@@ -149,7 +149,7 @@ v_{ij} = x_{ij} + \phi_{ij}(x_{ij} - x_{kj})
 
 where:
 - $v_{ij}$ is new candidate solution
-- $x_{kj}$ is randomly selected solution ($k \neq j$)
+- $x_{kj}$ is randomly selected solution ($k \neq i$)
 - $\phi_{ij}$ is random number in [-1, 1]
 
 **Onlooker Bee Phase:**
@@ -174,7 +174,7 @@ Abandonment of exhausted sources:
 ```math
 d = k \times t_w
 ```
-where $d$ is distance, $t_w$ is waggle duration, $k \approx 0.95$ m/s
+where $d$ is distance, $t_w$ is waggle duration, and $k$ is a calibration constant of roughly 1000 m per second of waggle run (it varies between populations and landscapes)
 
 **Direction Encoding:**
 ```math
@@ -338,7 +338,7 @@ class CoevolutionaryOptimization:
 ### Random Walk Models
 
 #### Lévy Flight Foraging
-Ant foraging can be modeled as Lévy flights:
+Search movements of foragers are sometimes modeled as Lévy flights (empirical support in insects is debated):
 
 ```math
 P(l) \sim \frac{1}{l^{1+\mu}} \text{ for } l > l_0
@@ -388,7 +388,7 @@ class ColonyStateMarkovChain:
 #### ACO Algorithm Complexity
 - **Single Iteration:** $O(m \cdot n^2)$ where $m$ ants, $n$ cities
 - **Pheromone Updates:** $O(n^2)$
-- **Convergence:** Typically $O(n^2)$ iterations for TSP
+- **Convergence:** Problem-dependent; convergence results exist for restricted ACO variants but no general polynomial bound on iterations is known
 
 #### ABC Algorithm Complexity
 - **Employed Bee Phase:** $O(SN \cdot D)$ where $SN$ food sources, $D$ dimensions
@@ -407,19 +407,19 @@ class ColonyStateMarkovChain:
 ### Convergence Properties
 
 #### Convergence Rates
-Theoretical convergence bounds for ACO:
+Time for an undeposited pheromone trail to decay to a fraction $\epsilon$ of its value (a heuristic proxy for convergence time, not a proven bound):
 
 ```math
-E[T] \leq \frac{\log(1/\epsilon)}{\log(1/(1-\rho))}
+T = \frac{\log(1/\epsilon)}{\log(1/(1-\rho))}
 ```
 
 where:
-- $E[T]$ is expected convergence time
-- $\epsilon$ is convergence tolerance
+- $T$ is the decay time in iterations
+- $\epsilon$ is the residual fraction
 - $\rho$ is pheromone evaporation rate
 
 #### Optimization Quality
-Expected solution quality bounds:
+Solution quality target (illustrative; no such guarantee holds for general ACO on NP-hard problems):
 
 ```math
 E[L_{best}] \leq (1 + \epsilon) L_{opt} + \delta
@@ -583,7 +583,7 @@ class HypernetworkColonyModel:
 
 ---
 
-> **Mathematical Rigor**: Social insect optimization provides mathematically rigorous frameworks for understanding distributed intelligence, with proven convergence properties and well-defined computational complexity.
+> **Mathematical Rigor**: Social insect optimization provides mathematically rigorous frameworks for understanding distributed intelligence, with convergence results for restricted algorithm variants and well-defined per-iteration computational complexity.
 
 ---
 
@@ -596,3 +596,17 @@ class HypernetworkColonyModel:
 ---
 
 > **Scalable Solutions**: Mathematical formulations enable algorithms that scale from biological realism to large-scale computational optimization problems across diverse domains.
+
+## References
+
+- Dorigo, M., Maniezzo, V., & Colorni, A. (1996). Ant system: Optimization by a colony of cooperating agents. IEEE Transactions on Systems, Man, and Cybernetics, Part B, 26, 29-41.
+- Dorigo, M., & Gambardella, L. M. (1997). Ant colony system: A cooperative learning approach to the traveling salesman problem. IEEE Transactions on Evolutionary Computation, 1, 53-66.
+- Stützle, T., & Hoos, H. H. (2000). MAX-MIN Ant System. Future Generation Computer Systems, 16, 889-914.
+- Gutjahr, W. J. (2000). A graph-based ant system and its convergence. Future Generation Computer Systems, 16, 873-888.
+- Stützle, T., & Dorigo, M. (2002). A short convergence proof for a class of ant colony optimization algorithms. IEEE Transactions on Evolutionary Computation, 6, 358-365.
+- Dorigo, M., & Stützle, T. (2004). Ant Colony Optimization. MIT Press.
+- Karaboga, D., & Basturk, B. (2007). A powerful and efficient algorithm for numerical function optimization: Artificial bee colony (ABC) algorithm. Journal of Global Optimization, 39, 459-471.
+- Esch, H. E., Zhang, S., Srinivasan, M. V., & Tautz, J. (2001). Honeybee dances communicate distances measured by optic flow. Nature, 411, 581-583.
+- Charnov, E. L. (1976). Optimal foraging, the marginal value theorem. Theoretical Population Biology, 9, 129-136.
+- Viswanathan, G. M., Buldyrev, S. V., Havlin, S., da Luz, M. G. E., Raposo, E. P., & Stanley, H. E. (1999). Optimizing the success of random searches. Nature, 401, 911-914.
+- Edwards, A. M., Phillips, R. A., Watkins, N. W., Freeman, M. P., Murphy, E. J., Afanasyev, V., et al. (2007). Revisiting Lévy flight search patterns of wandering albatrosses, bumblebees and deer. Nature, 449, 1044-1048.

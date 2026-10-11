@@ -113,7 +113,7 @@ class PesticideThreatAssessment:
 ```
 
 **Pesticide Impact Evidence:**
-- **Neonicotinoids:** 30-90% reduction in bee populations
+- **Neonicotinoids:** Reduced bumble bee colony growth and queen production in field-realistic exposure experiments
 - **Organophosphates:** Acute toxicity to foraging ants
 - **Sublethal Effects:** Impaired navigation, reproduction, immunity
 - **Synergistic Effects:** Combined pesticide-pathogen interactions
@@ -148,8 +148,8 @@ class ClimateChangeThreatAssessment:
 ```
 
 **Climate Change Projections:**
-- **Range Shifts:** 200-500km poleward movement expected
-- **Phenological Mismatches:** 10-30 day timing disruptions
+- **Range Shifts:** Poleward and upslope movement, documented across taxa and for bumble bees
+- **Phenological Mismatches:** Shifts in the timing of flowering and pollinator activity
 - **Heat Stress:** Increased colony mortality in extreme events
 - **Altered Interactions:** Changes in species co-occurrence patterns
 
@@ -183,7 +183,7 @@ class InvasiveSpeciesThreatAssessment:
 ```
 
 **Invasive Species Impacts:**
-- **Varroa Mite:** 30-90% honey bee colony losses
+- **Varroa Mite:** A leading cause of honey bee colony losses worldwide
 - **Fire Ants:** Competitive exclusion of native ants
 - **Asian Hornets:** Predation on honey bees and wasps
 - **Pathogens:** Spillover from managed to wild populations
@@ -222,7 +222,7 @@ class BeeVulnerabilityAssessment:
 ```
 
 **Conservation Status:**
-- **Bumble Bees:** 50% of North American species threatened
+- **Bumble Bees:** Several North American species have declined sharply in relative abundance and range
 - **Solitary Bees:** Many species data deficient
 - **Tropical Bees:** High vulnerability to deforestation
 - **Island Species:** Extreme vulnerability to invasion
@@ -649,3 +649,15 @@ class GlobalConservationNetworks:
 ---
 
 > **Hope Through Action**: Targeted conservation programs, habitat restoration, population enhancement, and policy reforms can reverse declines and restore insect populations, ensuring continued ecosystem services and biodiversity benefits.
+
+## References
+
+- Potts, S. G., Biesmeijer, J. C., Kremen, C., Neumann, P., Schweiger, O., & Kunin, W. E. (2010). Global pollinator declines: Trends, impacts and drivers. Trends in Ecology & Evolution, 25, 345-353.
+- Potts, S. G., Imperatriz-Fonseca, V., Ngo, H. T., Aizen, M. A., Biesmeijer, J. C., Breeze, T. D., et al. (2016). Safeguarding pollinators and their values to human well-being. Nature, 540, 220-229.
+- Goulson, D., Nicholls, E., Botias, C., & Rotheray, E. L. (2015). Bee declines driven by combined stress from parasites, pesticides, and lack of flowers. Science, 347, 1255957.
+- Cameron, S. A., Lozier, J. D., Strange, J. P., Koch, J. B., Cordes, N., Solter, L. F., & Griswold, T. L. (2011). Patterns of widespread decline in North American bumble bees. Proceedings of the National Academy of Sciences, 108, 662-667.
+- Whitehorn, P. R., O'Connor, S., Wackers, F. L., & Goulson, D. (2012). Neonicotinoid pesticide reduces bumble bee colony growth and queen production. Science, 336, 351-352.
+- Rosenkranz, P., Aumeier, P., & Ziegelmann, B. (2010). Biology and control of Varroa destructor. Journal of Invertebrate Pathology, 103, S96-S119.
+- Chen, I.-C., Hill, J. K., Ohlemuller, R., Roy, D. B., & Thomas, C. D. (2011). Rapid range shifts of species associated with high levels of climate warming. Science, 333, 1024-1026.
+- Underwood, E. C., & Fisher, B. L. (2006). The role of ants in conservation monitoring: If, when, and how. Biological Conservation, 132, 166-182.
+- Gallai, N., Salles, J.-M., Settele, J., & Vaissiere, B. E. (2009). Economic valuation of the vulnerability of world agriculture confronted with pollinator decline. Ecological Economics, 68, 810-821.

@@ -604,3 +604,10 @@ class ThermodynamicCycle:
 
 - [[non_equilibrium_thermodynamics]]
 
+## References
+
+- Callen, H. B. (1985). Thermodynamics and an Introduction to Thermostatistics (2nd ed.). Wiley.
+- Landauer, R. (1961). Irreversibility and heat generation in the computing process. IBM Journal of Research and Development, 5(3), 183-191.
+- Bennett, C. H. (1982). The thermodynamics of computation: a review. International Journal of Theoretical Physics, 21(12), 905-940.
+- Jaynes, E. T. (1957). Information theory and statistical mechanics. Physical Review, 106(4), 620-630.
+- Friston, K. (2010). The free-energy principle: a unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.

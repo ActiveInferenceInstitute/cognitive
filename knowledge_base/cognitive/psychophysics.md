@@ -184,13 +184,13 @@ def calculate_criterion(self, hit_rate, fa_rate, d_prime):
     """Calculate decision criterion β."""
 
     # Likelihood ratio at criterion
-    beta = norm.pdf(norm.ppf(fa_rate)) / norm.pdf(norm.ppf(hit_rate))
+    beta = norm.pdf(norm.ppf(hit_rate)) / norm.pdf(norm.ppf(fa_rate))
 
     # Alternative calculation using z-scores
     z_hit = norm.ppf(hit_rate)
     z_fa = norm.ppf(fa_rate)
 
-    beta_alt = np.exp((z_fa**2 - z_hit**2) / (2 * d_prime))
+    beta_alt = np.exp((z_fa**2 - z_hit**2) / 2)
 
     return beta, beta_alt
 ```
@@ -577,3 +577,10 @@ def compare_psychophysical_models(data, models):
 - [[signal_detection_theory]] - Decision-making under uncertainty
 - [[psychometric_function]] - Mathematical models of perception
 
+
+## References
+
+- Green, D. M., & Swets, J. A. (1966). Signal Detection Theory and Psychophysics. Wiley.
+- Wichmann, F. A., & Hill, N. J. (2001). The psychometric function: I. Fitting, sampling, and goodness of fit. Perception & Psychophysics, 63(8), 1293-1313.
+- Knill, D. C., & Pouget, A. (2004). The Bayesian brain: The role of uncertainty in neural coding and computation. Trends in Neurosciences, 27(12), 712-719.
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.

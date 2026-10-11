@@ -233,11 +233,13 @@ Social knowledge: q_group(s_social | o_communication) -- group's beliefs about s
 
 Each level has its own generative model and its own epistemic limitations. No single level has complete knowledge.
 
-## Key References
-
-1. Hohwy, J. (2013). *The Predictive Mind*. Oxford University Press.
-2. Clark, A. (2016). *Surfing Uncertainty*. Oxford University Press.
-3. Friston, K. (2010). The free-energy principle: a unified brain theory? *Nature Reviews Neuroscience*, 11(2), 127-138.
-4. Talbott, W. (2016). Bayesian epistemology. In *Stanford Encyclopedia of Philosophy*.
-5. van Fraassen, B. C. (1980). *The Scientific Image*. Oxford University Press.
-6. Ramstead, M. J. D., et al. (2020). Is the free energy principle a formal theory of semantics? *Entropy*, 22(8), 889.
+## References
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.
+- Hohwy, J. (2013). The Predictive Mind. Oxford University Press.
+- Gettier, E. L. (1963). Is justified true belief knowledge? Analysis, 23(6), 121-123.
+- Kuhn, T. S. (1962). The Structure of Scientific Revolutions. University of Chicago Press.
+- Talbott, W. (2016). Bayesian epistemology. In E. N. Zalta (Ed.), The Stanford Encyclopedia of Philosophy (Winter 2016 ed.).
+- Clark, A. (2016). Surfing Uncertainty: Prediction, Action, and the Embodied Mind. Oxford University Press.
+- van Fraassen, B. C. (1980). The Scientific Image. Oxford University Press.
+- Ramstead, M. J. D., Friston, K. J., & Hipólito, I. (2020). Is the free energy principle a formal theory of semantics? From variational density dynamics to neural and phenotypic representations. Entropy, 22(8), 889.

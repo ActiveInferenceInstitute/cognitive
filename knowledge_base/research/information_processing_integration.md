@@ -40,7 +40,7 @@ Where:
 
 #### Channel Capacity
 ```
-C = max I(X;Y)  (Maximum information transmission rate)
+C = max_{p(x)} I(X;Y)  (Maximum information transmission rate)
 ```
 
 Key concepts:
@@ -162,7 +162,7 @@ Information flows and transformations in complex networks.
 
 #### Information Flow in Networks
 ```
-Information centrality: Sum of shortest paths through node
+Closeness centrality: Inverse of mean shortest-path distance from a node to all others
 Betweenness centrality: Fraction of shortest paths passing through node
 ```
 
@@ -321,7 +321,7 @@ Information processing provides a common language across domains.
 
 #### Information as Fundamental
 ```
-Matter → Energy → Information  (Hierarchical emergence)
+Matter → Energy → Information  (an organizing heuristic, not an established physical hierarchy)
 ```
 
 Implications:
@@ -363,8 +363,8 @@ Emerging information processing technologies.
 ```
 
 Applications:
-- **Quantum Computing**: Exponential computational power
-- **Quantum Communication**: Unbreakable encryption
+- **Quantum Computing**: Speedups on specific problems (e.g., factoring, search)
+- **Quantum Communication**: Information-theoretically secure key distribution
 - **Quantum Sensing**: Ultra-precise measurements
 - **Quantum Simulation**: Modeling complex systems
 
@@ -392,26 +392,6 @@ Medical information systems:
 - **Medical Imaging**: Diagnostic information processing
 - **Drug Discovery**: Molecular information analysis
 
-## 📚 Key References
-
-### Foundational Works
-- [[mathematics/information_theory|Information Theory]]
-- [[cognitive/information_processing|Cognitive Information Processing]]
-- Neural Computation
-- [[systems/network_theory|Network Information Dynamics]]
-
-### Domain Integration
-- Shannon, C. E. (1948). A Mathematical Theory of Communication
-- **Shannon & Weaver (1949)**: The Mathematical Theory of Communication
-- **Chaitin (1966)**: On the Length of Programs for Computing Finite Binary Sequences
-- **Turing (1936)**: On Computable Numbers
-
-### Modern Applications
-- **Integrated Information Theory**: Consciousness as integrated information
-- **Free Energy Principle**: Information processing in biological systems
-- **Neural Engineering Framework**: Brain-machine interfaces
-- **Global Brain**: Planetary-scale information processing
-
 ---
 
 > **Universal Principle**: Information processing provides a unified framework for understanding computation, cognition, and adaptation across all domains.
@@ -427,3 +407,16 @@ Medical information systems:
 ---
 
 > **Design Principle**: Informs creation of efficient and adaptive information processing systems in technology and biology.
+
+## References
+
+- Shannon, C. E. (1948). A mathematical theory of communication. Bell System Technical Journal, 27(3), 379-423; 27(4), 623-656.
+- Shannon, C. E., & Weaver, W. (1949). The mathematical theory of communication. University of Illinois Press.
+- Chaitin, G. J. (1966). On the length of programs for computing finite binary sequences. Journal of the ACM, 13(4), 547-569.
+- Turing, A. M. (1936). On computable numbers, with an application to the Entscheidungsproblem. Proceedings of the London Mathematical Society, s2-42(1), 230-265.
+- Cover, T. M., & Thomas, J. A. (2006). Elements of information theory (2nd ed.). Wiley-Interscience.
+- Landauer, R. (1961). Irreversibility and heat generation in the computing process. IBM Journal of Research and Development, 5(3), 183-191.
+- Rao, R. P. N., & Ballard, D. H. (1999). Predictive coding in the visual cortex: A functional interpretation of some extra-classical receptive-field effects. Nature Neuroscience, 2(1), 79-87.
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Tononi, G. (2008). Consciousness as integrated information: A provisional manifesto. The Biological Bulletin, 215(3), 216-242.
+- Eliasmith, C., & Anderson, C. H. (2003). Neural engineering: Computation, representation, and dynamics in neurobiological systems. MIT Press.

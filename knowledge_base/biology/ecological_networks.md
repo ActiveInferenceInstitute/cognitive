@@ -551,24 +551,26 @@ class NetworkInformation:
 ## References
 
 ### Foundational Texts
-- bascompte 2006 - "The Structure of Plant-Animal Mutualistic Networks"
-- newman 2010 - "Networks: An Introduction"
-- proulx 2005 - "Network Thinking in Ecology and Evolution"
+- Bascompte, J., & Jordano, P. (2007). Plant-animal mutualistic networks: The architecture of biodiversity. Annual Review of Ecology, Evolution, and Systematics, 38, 567-593.
+- Newman, M. E. J. (2010). Networks: An Introduction. Oxford University Press.
+- Proulx, S. R., Promislow, D. E. L., & Phillips, P. C. (2005). Network thinking in ecology and evolution. Trends in Ecology & Evolution, 20, 345-353.
+- Pascual, M., & Dunne, J. A. (Eds.). (2006). Ecological Networks: Linking Structure to Dynamics in Food Webs. Oxford University Press.
 
 ### Theoretical Ecology
-- may 1972 - "Will a Large Complex System be Stable?"
-- macarthur 1955 - "On the Relation Between Reproductive Value and Optimal Predation"
-- levins 1968 - "Evolution in Changing Environments"
+- May, R. M. (1972). Will a large complex system be stable? Nature, 238, 413-414.
+- MacArthur, R. (1955). Fluctuations of animal populations and a measure of community stability. Ecology, 36, 533-536.
+- Levins, R. (1968). Evolution in Changing Environments: Some Theoretical Explorations. Princeton University Press.
+- Allesina, S., & Tang, S. (2012). Stability criteria for complex ecosystems. Nature, 483, 205-208.
+- Dunne, J. A., Williams, R. J., & Martinez, N. D. (2002). Food-web structure and network theory: The role of connectance and size. Proceedings of the National Academy of Sciences, 99, 12917-12922.
 
 ### Information Theory in Ecology
-- utoft 1973 - "Information Theory in Ecology"
-- matsuda 1992 - "The Role of Information in Complex Systems"
-- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
+- Schreiber, T. (2000). Measuring information transfer. Physical Review Letters, 85, 461-464.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184. [[friston_2019]]
 
 ### Network Analysis
-- borgatti 2009 - "Network Analysis for the Social Sciences"
-- brandes 2005 - "Network Analysis: Methodological Foundations"
-- barabasi 2016 - "Network Science"
+- Barabasi, A.-L., & Posfai, M. (2016). Network Science. Cambridge University Press.
+- Newman, M. E. J. (2006). Modularity and community structure in networks. Proceedings of the National Academy of Sciences, 103, 8577-8582.
+- Milo, R., Shen-Orr, S., Itzkovitz, S., Kashtan, N., Chklovskii, D., & Alon, U. (2002). Network motifs: Simple building blocks of complex networks. Science, 298, 824-827.
 
 ## See Also
 

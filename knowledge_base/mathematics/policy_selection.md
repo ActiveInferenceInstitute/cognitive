@@ -251,9 +251,9 @@ The connection between policy selection and VFE can be expressed through:
 
 & \text{Discrete Time:} \\
 
-& P(\pi) = \sigma(-\gamma G(\pi)) \text{ where } G(\pi) = \sum_\tau F_\tau(\pi) \\
+& P(\pi) = \sigma(-\gamma G(\pi)) \text{ where } G(\pi) = \sum_\tau G_\tau(\pi) \\
 
-& F_\tau(\pi) = \text{KL}[q(s_\tau|\pi)||p(s_\tau|o_{1:\tau})] - \ln p(o_\tau|o_{1:\tau-1},\pi) \\
+& G_\tau(\pi) = D_{KL}[q(o_\tau|\pi)\,||\,p(o_\tau)] + \mathbb{E}_{q(s_\tau|\pi)}\big[H[p(o_\tau|s_\tau)]\big] \quad \text{(risk + ambiguity)} \\
 
 & \text{Continuous Time:} \\
 
@@ -275,11 +275,11 @@ Policy selection connects to planning through:
 
 & \text{Value Function:} \\
 
-& V_\pi(s_t) = -\mathbb{E}_\pi\left[\sum_{\tau=t}^T F_\tau|\pi,s_t\right] \\
+& V_\pi(s_t) = -\mathbb{E}_\pi\left[\sum_{\tau=t}^T G_\tau|\pi,s_t\right] \\
 
 & \text{Policy Gradient:} \\
 
-& \nabla_\pi P(\pi) = -\gamma\mathbb{E}_\pi[\nabla_\pi G(\pi)] \\
+& \nabla_\theta \ln P_\theta(\pi) = -\gamma\left(\nabla_\theta G(\pi) - \mathbb{E}_{P_\theta}[\nabla_\theta G]\right) \quad \text{(policy parameters } \theta\text{)} \\
 
 & \text{Optimal Policy:} \\
 
@@ -361,13 +361,13 @@ class AdvancedPolicySelector:
 
                                  policies: List[Policy],
 
-                                 vfes: List[float],
+                                 efes: List[float],
 
-                                 temperature: float) -> np.ndarray:
+                                 precision: float) -> np.ndarray:
 
-        """Update policy distribution using softmax"""
+        """Update policy distribution: softmax of -precision * expected free energy"""
 
-        return softmax(-temperature * np.array(vfes))
+        return softmax(-precision * np.array(efes))
 
 ```
 

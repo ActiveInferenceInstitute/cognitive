@@ -52,7 +52,7 @@ This article unifies synergetics, geodesic geometry, and information geometry th
 
 & \text{Synergetic Connection:} \\
 
-& \Gamma_{ijk} = \frac{1}{2}g^{il}(\partial_j g_{kl} + \partial_k g_{jl} - \partial_l g_{jk})
+& \Gamma^{i}_{jk} = \frac{1}{2}g^{il}(\partial_j g_{kl} + \partial_k g_{jl} - \partial_l g_{jk})
 
 \end{aligned}
 
@@ -624,3 +624,10 @@ class SynergeticStability:
 
 - [[vector_equilibrium]]
 
+## References
+
+- Fuller, R. B., & Applewhite, E. J. (1975). Synergetics: Explorations in the Geometry of Thinking. Macmillan.
+- Amari, S., & Nagaoka, H. (2000). Methods of Information Geometry. American Mathematical Society.
+- Amari, S. (1998). Natural gradient works efficiently in learning. Neural Computation, 10(2), 251-276.
+- Friston, K. (2010). The free-energy principle: a unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.

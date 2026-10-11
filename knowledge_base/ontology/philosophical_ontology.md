@@ -147,9 +147,9 @@ Foundational questions about cognition and mental representation.
 Philosophical foundations and implications of active inference.
 
 #### Free Energy Principle (`free_energy_philosophy/`)
-- **Metaphysical Implications**: Reality as inference
-- **Epistemological Foundations**: Knowledge as model minimization
-- **Phenomenological Accounts**: Experience as prediction error
+- **Metaphysical Implications**: Debated readings of perception and cognition as inference (e.g., Hohwy, 2013)
+- **Epistemological Foundations**: Knowledge as model-evidence maximization (free energy minimization)
+- **Phenomenological Accounts**: Experience as the content of predictions, corrected by prediction error
 - **Causal Structure**: Markov blankets as metaphysical boundaries
 - **Self-Organization**: Life as self-evidencing process
 - **Consciousness**: Self-model evidence maximization
@@ -247,7 +247,7 @@ Philosophical foundations and implications of active inference.
 
 ### Foundations of Active Inference
 - **Epistemological Basis**: Knowledge as probabilistic inference
-- **Metaphysical Framework**: Reality as generative model
+- **Metaphysical Framework**: Agents' models of reality as generative models
 - **Ethical Implications**: Responsibility in self-organizing systems
 - **Consciousness Theory**: Self-evidencing as basis of awareness
 - **Free Will**: Compatibilism in deterministic inference systems
@@ -346,3 +346,18 @@ Philosophical foundations and implications of active inference.
 ---
 
 > **Interdisciplinary Bridge**: Connects scientific findings with broader questions about reality, knowledge, and value.
+
+## References
+
+- Popper, K. R. (1959). The logic of scientific discovery. Hutchinson.
+- Kuhn, T. S. (1962). The structure of scientific revolutions. University of Chicago Press.
+- Lakatos, I. (1970). Falsification and the methodology of scientific research programmes. In I. Lakatos & A. Musgrave (Eds.), Criticism and the growth of knowledge (pp. 91-196). Cambridge University Press.
+- Hempel, C. G., & Oppenheim, P. (1948). Studies in the logic of explanation. Philosophy of Science, 15(2), 135-175.
+- Gettier, E. L. (1963). Is justified true belief knowledge? Analysis, 23(6), 121-123.
+- Chalmers, D. J. (1995). Facing up to the problem of consciousness. Journal of Consciousness Studies, 2(3), 200-219.
+- Block, N. (1995). On a confusion about a function of consciousness. Behavioral and Brain Sciences, 18(2), 227-247.
+- Clark, A., & Chalmers, D. (1998). The extended mind. Analysis, 58(1), 7-19.
+- Tononi, G. (2008). Consciousness as integrated information: A provisional manifesto. The Biological Bulletin, 215(3), 216-242.
+- Hohwy, J. (2013). The predictive mind. Oxford University Press.
+- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrödinger's question: A free-energy formulation. Physics of Life Reviews, 24, 1-16.

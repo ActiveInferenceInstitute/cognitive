@@ -28,7 +28,7 @@ semantic_relations:
 
 ## Overview
 
-Peircean Semiotics, developed by Charles Sanders Peirce, provides a comprehensive theory of signs, meaning, and representation. It forms a foundational framework for understanding how meaning emerges through triadic sign relations and serves as a basis for modern theories of [[active_inference|active inference]] and [[information_theory|information processing]].
+Peircean Semiotics, developed by Charles Sanders Peirce, provides a comprehensive theory of signs, meaning, and representation. It forms a foundational framework for understanding how meaning emerges through triadic sign relations and has been related to modern theories of [[active_inference|active inference]] and [[information_theory|information processing]].
 
 ```mermaid
 
@@ -520,19 +520,19 @@ timeline
 
         1867 : On a New List of Categories : Foundation of triadic logic
 
-        1868 : Questions Concerning Reality : Theory of signs
+        1868 : Some Consequences of Four Incapacities : Theory of signs
 
     section Middle Period
 
         1885 : One, Two, Three : Development of categories
 
-        1895 : Of Reasoning in General : Logic and semiotics
+        1895 : Of Reasoning in General (Short Logic, Chapter I) : Logic and semiotics
 
     section Late Period
 
-        1902 : Minute Logic : Mature theory
+        1902 : Minute Logic (projected treatise) : Mature theory
 
-        1910 : Signs and Categories : Final developments
+        1903-1911 : Correspondence with Lady Welby : Final developments
 
 ```
 
@@ -1030,3 +1030,10 @@ class QuantumSemiotics:
 
 - [[artificial_intelligence]]
 
+
+## References
+
+- Peirce, C. S. (1868). On a new list of categories. Proceedings of the American Academy of Arts and Sciences, 7, 287-298.
+- Peirce Edition Project (Ed.). (1998). The Essential Peirce: Selected Philosophical Writings, Volume 2 (1893-1913). Indiana University Press.
+- Short, T. L. (2007). Peirce's Theory of Signs. Cambridge University Press.
+- Atkin, A. (2006; rev. 2022). Peirce's theory of signs. Stanford Encyclopedia of Philosophy.

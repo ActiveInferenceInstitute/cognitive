@@ -221,7 +221,7 @@ where:
 
 ```math
 
-F[q] = D_{KL}(q\|p) + \log Z
+F[q] = D_{KL}(q\|\bar{p}) - \log Z
 
 ```
 
@@ -229,7 +229,7 @@ where:
 
 - $D_{KL}$ is Kullback-Leibler divergence
 
-- $Z$ is normalization constant
+- $Z = p(\Omega)$ is the normalization constant of the target measure and $\bar{p} = p/Z$ is the normalized target
 
 ### 2. Expected Free Energy
 
@@ -251,9 +251,11 @@ where:
 
 ```math
 
-G(\pi) = \underbrace{\int_\Omega D_{KL}(q_\pi(\cdot|s)\|p(\cdot|s,\pi)) dq_\pi(s)}_{\text{epistemic value}} + \underbrace{\int_{\Omega'} \log \frac{dq_\pi}{dp} dq_\pi}_{\text{pragmatic value}}
+G(\pi) = \underbrace{D_{KL}(q_\pi(o)\|p(o))}_{\text{risk (pragmatic value)}} + \underbrace{\int_\Omega H[p(\cdot|s)]\, dq_\pi(s)}_{\text{ambiguity (epistemic value)}}
 
 ```
+
+Here $p(o)$ is the prior over preferred outcomes and $H[p(\cdot|s)]$ is the entropy of the likelihood. This is the standard risk-plus-ambiguity decomposition (Parr et al., 2022), which holds when the approximate posterior equals the exact posterior.
 
 ## Implementation
 
@@ -639,3 +641,11 @@ class ConditionalExpectation:
 
 - [[variational_methods]]
 
+
+## References
+
+- Billingsley, P. (1995). Probability and Measure (3rd ed.). Wiley.
+- Rudin, W. (1987). Real and Complex Analysis (3rd ed.). McGraw-Hill.
+- Kullback, S., & Leibler, R. A. (1951). On information and sufficiency. Annals of Mathematical Statistics, 22(1), 79-86.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.
+- Da Costa, L., Parr, T., Sajid, N., Veselic, S., Neacsu, V., & Friston, K. (2020). Active inference on discrete state-spaces: A synthesis. Journal of Mathematical Psychology, 99, 102447.

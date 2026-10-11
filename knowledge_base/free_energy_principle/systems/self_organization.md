@@ -118,7 +118,7 @@ At criticality:
 - Maximum information transmission capacity
 ```
 
-**The critical brain hypothesis**: The brain may operate near criticality to maximize its inferential capacity. Near criticality, the Fisher information (and hence the capacity for precision-weighted inference) is maximized.
+**The critical brain hypothesis**: The brain may operate near criticality to maximize its inferential capacity. Near criticality, Fisher information is expected to peak, which has been linked to inferential capacity (a conjecture, not a derived result; see Beggs & Plenz, 2003).
 
 ## Attractors and the Free Energy Landscape
 
@@ -176,7 +176,7 @@ The emergence of order parameters can be quantified information-theoretically:
 Synergy = I(X; Y) - max(I(X_1; Y), I(X_2; Y))
 ```
 
-Where X = (X_1, X_2) are microscopic variables and Y is a macroscopic observable. Synergy measures information that is only available in the combined system -- the hallmark of genuine emergence.
+Where X = (X_1, X_2) are microscopic variables and Y is a macroscopic observable. This simple proxy (see Williams & Beer, 2010, for a formal decomposition) measures information that is only available in the combined system -- a candidate marker of emergence.
 
 ## Autopoiesis and the FEP
 
@@ -236,11 +236,15 @@ Developing neural network:
   - Result: Self-organized computational architecture for inference
 ```
 
-## Key References
-
-1. Prigogine, I. (1977). *Self-Organization in Nonequilibrium Systems*. Wiley.
-2. Haken, H. (2004). *Synergetics: Introduction and Advanced Topics*. Springer.
-3. Friston, K. (2019). A free energy principle for a particular physics. *arXiv preprint* arXiv:1906.10184.
-4. Kauffman, S. A. (1993). *The Origins of Order*. Oxford University Press.
-5. Kelso, J. A. S. (1995). *Dynamic Patterns: The Self-Organization of Brain and Behavior*. MIT Press.
-6. England, J. L. (2013). Statistical physics of self-replication. *Journal of Chemical Physics*, 139(12), 121923.
+## References
+- Nicolis, G., & Prigogine, I. (1977). Self-Organization in Nonequilibrium Systems: From Dissipative Structures to Order through Fluctuations. Wiley.
+- Haken, H. (2004). Synergetics: Introduction and Advanced Topics. Springer.
+- Schrodinger, E. (1944). What Is Life? The Physical Aspect of the Living Cell. Cambridge University Press.
+- Maturana, H. R., & Varela, F. J. (1980). Autopoiesis and Cognition: The Realization of the Living. D. Reidel.
+- Beggs, J. M., & Plenz, D. (2003). Neuronal avalanches in neocortical circuits. Journal of Neuroscience, 23(35), 11167-11177.
+- Williams, P. L., & Beer, R. D. (2010). Nonnegative decomposition of multivariate information. arXiv:1004.2515.
+- Friston, K. (2013). Life as we know it. Journal of the Royal Society Interface, 10(86), 20130475.
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
+- Kauffman, S. A. (1993). The Origins of Order: Self-Organization and Selection in Evolution. Oxford University Press.
+- Kelso, J. A. S. (1995). Dynamic Patterns: The Self-Organization of Brain and Behavior. MIT Press.
+- England, J. L. (2013). Statistical physics of self-replication. The Journal of Chemical Physics, 139(12), 121923.

@@ -3012,3 +3012,11 @@ class PrecisionWeighting:
 
 - [[free_energy_principle|Free Energy Principle]]
 
+
+## References
+- Rudin, W. (1976). Principles of Mathematical Analysis (3rd ed.). McGraw-Hill.
+- Arnold, V. I. (1989). Mathematical Methods of Classical Mechanics (2nd ed.). Springer.
+- Oksendal, B. (2003). Stochastic Differential Equations: An Introduction with Applications (6th ed.). Springer.
+- Baydin, A. G., Pearlmutter, B. A., Radul, A. A., & Siskind, J. M. (2018). Automatic differentiation in machine learning: A survey. Journal of Machine Learning Research, 18(153), 1-43.
+- Black, F., & Scholes, M. (1973). The pricing of options and corporate liabilities. Journal of Political Economy, 81(3), 637-654.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.

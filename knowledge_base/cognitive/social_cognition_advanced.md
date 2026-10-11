@@ -697,3 +697,11 @@ class AnxietyDepressionSocialCognition:
 ---
 
 > **Neural Social Networks**: Specialized brain networks support social cognition, with mirror neurons for action understanding and mentalizing networks for theory of mind.
+
+## References
+
+- Premack, D., & Woodruff, G. (1978). Does the chimpanzee have a theory of mind? Behavioral and Brain Sciences, 1(4), 515-526.
+- Frith, C. D., & Frith, U. (2006). The neural basis of mentalizing. Neuron, 50(4), 531-534.
+- Kilner, J. M., Friston, K. J., & Frith, C. D. (2007). Predictive coding: An account of the mirror neuron system. Cognitive Processing, 8(3), 159-166.
+- Friston, K., & Frith, C. (2015). Active inference, communication and hermeneutics. Cortex, 68, 129-143.
+- Lawson, R. P., Rees, G., & Friston, K. J. (2014). An aberrant precision account of autism. Frontiers in Human Neuroscience, 8, 302.

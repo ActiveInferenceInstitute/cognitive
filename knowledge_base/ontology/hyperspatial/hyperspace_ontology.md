@@ -116,19 +116,23 @@ graph TD
 
        subgraph "Category Relations"
 
-           A[Top] --> B[Mfd]
+           B[Mfd] -->|forget smooth structure| A[Top]
 
-           B --> C[Met]
+           C[Met] -->|metric topology| A
 
-           C --> D[Prob]
+           A -->|Borel sigma-algebra| M[Meas]
 
-           E[Vect] --> F[Hilb]
+           M -->|Giry monad: probability measures| M
+
+           F[Hilb] -->|forget inner product| E[Vect]
 
        end
 
    ```
 
-1. **Natural Transformations**
+   These are forgetful functors, so they run toward the structurally poorer category. A Riemannian metric on a manifold induces a metric space (the geodesic distance on each connected component), but this needs the extra choice of metric and is not a functor from Mfd alone; it is a functor from the category of Riemannian manifolds to Met. Probability enters by equipping a topological or metric space with its Borel sigma-algebra and applying the Giry monad on measurable spaces.
+
+1. **Related Functors and Constructions**
 
    - [[forgetful_functors]]
 
@@ -984,7 +988,7 @@ graph TD
 
    & \text{Metric Space:} \\
 
-   & (X, d): d(x,y) \geq 0, d(x,y) = d(y,x), d(x,z) \leq d(x,y) + d(y,z) \\
+   & (X, d): d(x,y) \geq 0, \; d(x,y) = 0 \iff x = y, \; d(x,y) = d(y,x), \; d(x,z) \leq d(x,y) + d(y,z) \\
 
    & \text{Geodesic Space:} \\
 
@@ -1364,7 +1368,7 @@ graph LR
 
         E[Area Formula] --> F[Coarea Formula]
 
-        F --> G[Federer Principle]
+        C --> G[Federer-Fleming Compactness Theorem]
 
     end
 
@@ -1386,7 +1390,7 @@ graph LR
 
    & \text{Rectifiability:} \\
 
-   & \mathcal{H}^s\text{-measurable } E \text{ is rectifiable if } E \subset \bigcup_{i=1}^∞ f_i(\mathbb{R}^s)
+   & \mathcal{H}^s\text{-measurable } E \text{ is countably rectifiable if } \mathcal{H}^s\Big(E \setminus \bigcup_{i=1}^∞ f_i(\mathbb{R}^s)\Big) = 0 \text{ for Lipschitz maps } f_i
 
    \end{aligned}
 
@@ -1866,3 +1870,15 @@ graph TD
 
    - [[dependent_types|Dependent Types]]
 
+## References
+
+- Amari, S., & Nagaoka, H. (2000). Methods of information geometry. American Mathematical Society and Oxford University Press.
+- Mac Lane, S. (1998). Categories for the working mathematician (2nd ed.). Springer.
+- Lee, J. M. (2012). Introduction to smooth manifolds (2nd ed.). Springer.
+- Federer, H. (1969). Geometric measure theory. Springer.
+- Nielsen, M. A., & Chuang, I. L. (2010). Quantum computation and quantum information (10th anniversary ed.). Cambridge University Press.
+- Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30. arXiv:1706.03762.
+- Bronstein, M. M., Bruna, J., Cohen, T., & Veličković, P. (2021). Geometric deep learning: Grids, groups, graphs, geodesics, and gauges. arXiv:2104.13478.
+- Milgram, P., & Kishino, F. (1994). A taxonomy of mixed reality visual displays. IEICE Transactions on Information and Systems, E77-D(12), 1321-1329.
+- Friston, K., Ramstead, M. J. D., Kiefer, A. B., Tschantz, A., Buckley, C. L., Albarracin, M., et al. (2024). Designing ecosystems of intelligence from first principles. Collective Intelligence, 3(1).
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active inference: The free energy principle in mind, brain, and behavior. MIT Press.

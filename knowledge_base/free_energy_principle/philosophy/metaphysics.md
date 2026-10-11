@@ -119,7 +119,7 @@ Several philosophers have challenged the ontological interpretation of Markov bl
 
 - **Temporal ambiguity**: Markov blankets in the FEP literature are identified at the non-equilibrium steady state. But real systems are rarely at exact NESS. The blanket is an idealization, not a precise boundary.
 
-- **The blanket-as-pearl problem**: For any set of variables, a Markov blanket can in principle be identified. Does every set of variables constitute a "thing"? If so, the ontological claim is trivial.
+- **The Pearl-versus-Friston blanket problem** (Bruineberg et al., 2022): For any set of variables, a Markov blanket can in principle be identified. Does every set of variables constitute a "thing"? If so, the ontological claim is trivial.
 
 ### Process Ontology (Whitehead Connections)
 
@@ -357,9 +357,9 @@ The FEP can be seen as a mathematical formalization of autopoiesis: the Markov b
 The FEP resonates with information-theoretic approaches to ontology (Wheeler's "it from bit," Floridi's informational structural realism):
 
 ```
-Wheeler: "Every it -- every particle, every field of force, even the
-          spacetime continuum itself -- derives its function, its meaning,
-          its very existence entirely from binary choices, bits."
+Wheeler (1990, paraphrased): every particle, every field of force, even the
+          spacetime continuum derives its function, meaning and existence
+          from answers to yes-or-no questions: binary choices, bits.
 
 FEP:     Every "thing" derives its existence from the information-theoretic
          structure of the Markov blanket -- the conditional independence
@@ -400,21 +400,6 @@ This yields a non-reductive, holistic mereology: the whole is not merely the sum
 
 7. **FEP and quantum mechanics**: Several authors have noted formal parallels between the FEP and quantum mechanics (both involve variational principles, both feature observer-dependent descriptions). Are these parallels superficial or do they indicate a deeper connection?
 
-## Key References
-
-1. Friston, K. J. (2019). A free energy principle for a particular physics. *arXiv preprint* arXiv:1906.10184.
-2. Kirchhoff, M. D., Parr, T., Palacios, E., Friston, K. J., & Kiverstein, J. (2018). The Markov blankets of life: Autonomy, active inference, and the free energy principle. *Journal of the Royal Society Interface*, 15(138), 20170792.
-3. Kirchhoff, M. D., & Froese, T. (2017). Where there is life there is mind: In support of a strong life-mind continuity thesis. *Entropy*, 19(4), 169.
-4. Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrodinger's question: A free-energy formulation. *Physics of Life Reviews*, 24, 1-16.
-5. Bruineberg, J., Dolega, K., Dewhurst, J., & Baltieri, M. (2022). The Emperor's new Markov blankets. *Behavioral and Brain Sciences*, 45, e183.
-6. Colombo, M., & Palacios, P. (2021). Non-equilibrium thermodynamics and the free energy principle in biology. *Biology & Philosophy*, 36(5), 41.
-7. Colombo, M. (2021). First principles in the life sciences: The free energy principle, organicism, and mechanism. *Synthese*, 198, 3463-3488.
-8. Whitehead, A. N. (1929). *Process and Reality*. Macmillan.
-9. Chalmers, D. J. (2015). Panpsychism and panprotopsychism. In T. Alter & Y. Nagasawa (Eds.), *Consciousness in the Physical World: Perspectives on Russellian Monism*. Oxford University Press.
-10. Tegmark, M. (2014). *Our Mathematical Universe: My Quest for the Ultimate Nature of Reality*. Knopf.
-11. Maturana, H. R., & Varela, F. J. (1980). *Autopoiesis and Cognition: The Realization of the Living*. D. Reidel.
-12. Ramstead, M. J. D., Friston, K. J., & Hippolito, I. (2020). Is the free energy principle a formal theory of semantics? *Entropy*, 22(8), 889.
-
 ## See Also
 
 - [[mind_body_problem|Mind-Body Problem]] -- Dual-aspect monism and the FEP
@@ -428,3 +413,18 @@ This yields a non-reductive, holistic mereology: the whole is not merely the sum
 - [[knowledge_base/free_energy_principle/systems/self_organization|Self-Organization]] -- How structure maintains itself
 - [[knowledge_base/free_energy_principle/systems/emergence|Emergence]] -- Emergent properties and levels
 - [[knowledge_base/free_energy_principle/biology/evolution|Evolution]] -- Evolutionary ontology and the FEP
+
+## References
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184.
+- Kirchhoff, M., Parr, T., Palacios, E., Friston, K., & Kiverstein, J. (2018). The Markov blankets of life: Autonomy, active inference and the free energy principle. Journal of the Royal Society Interface, 15(138), 20170792.
+- Bruineberg, J., Dolega, K., Dewhurst, J., & Baltieri, M. (2022). The Emperor's new Markov blankets. Behavioral and Brain Sciences, 45, e183.
+- Colombo, M., & Palacios, P. (2021). Non-equilibrium thermodynamics and the free energy principle in biology. Biology & Philosophy, 36, 41.
+- Whitehead, A. N. (1929). Process and Reality: An Essay in Cosmology. Macmillan.
+- Maturana, H. R., & Varela, F. J. (1980). Autopoiesis and Cognition: The Realization of the Living. D. Reidel.
+- Wheeler, J. A. (1990). Information, physics, quantum: The search for links. In W. H. Zurek (Ed.), Complexity, Entropy, and the Physics of Information. Addison-Wesley.
+- Chalmers, D. J. (2015). Panpsychism and panprotopsychism. In T. Alter & Y. Nagasawa (Eds.), Consciousness in the Physical World: Perspectives on Russellian Monism. Oxford University Press.
+- Kirchhoff, M. D., & Froese, T. (2017). Where there is life there is mind: In support of a strong life-mind continuity thesis. Entropy, 19(4), 169.
+- Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrödinger's question: A free-energy formulation. Physics of Life Reviews, 24, 1-16.
+- Colombo, M., & Wright, C. (2021). First principles in the life sciences: The free-energy principle, organicism, and mechanism. Synthese, 198, 3463-3488.
+- Tegmark, M. (2014). Our Mathematical Universe: My Quest for the Ultimate Nature of Reality. Knopf.
+- Ramstead, M. J. D., Friston, K. J., & Hipólito, I. (2020). Is the free energy principle a formal theory of semantics? From variational density dynamics to neural and phenotypic representations. Entropy, 22(8), 889.

@@ -591,7 +591,7 @@ class MetabolicNetworkControl:
 
 & \text{Entropy:} \\
 
-& S = k_B\ln W + k_BT\left(\frac{\partial \ln Z}{\partial T}\right)_V
+& S = k_B\ln Z + k_BT\left(\frac{\partial \ln Z}{\partial T}\right)_V
 
 \end{aligned}
 
@@ -605,11 +605,11 @@ class MetabolicNetworkControl:
 
 & \text{Deficiency Zero Theorem:} \\
 
-& \text{rank}(\mathbf{S}) = \dim(\text{ker}(\mathbf{Y})) \\
+& \delta = n - \ell - \text{rank}(\mathbf{S}) = 0 \\
 
 & \text{Complex Balance:} \\
 
-& \sum_{y \to y'} k_{y\to y'}c^y = \sum_{y' \to y} k_{y'\to y}c^{y'} \\
+& \sum_{y' \to y} k_{y'\to y}c^{y'} = c^{y}\sum_{y \to y'} k_{y\to y'} \\
 
 & \text{Detailed Balance:} \\
 
@@ -689,19 +689,23 @@ class MetabolicNetworkControl:
 ## References
 
 ### Foundational Texts
-- voet 2016 - "Biochemistry, 5th Edition"
-- berg 2015 - "Biochemistry, 8th Edition"
-- lehninger 2013 - "Lehninger Principles of Biochemistry"
+- Berg, J. M., Tymoczko, J. L., Gatto, G. J., & Stryer, L. (2015). Biochemistry (8th ed.). W. H. Freeman.
+- Nelson, D. L., & Cox, M. M. (2013). Lehninger Principles of Biochemistry (6th ed.). W. H. Freeman.
+- Briggs, G. E., & Haldane, J. B. S. (1925). A note on the kinetics of enzyme action. Biochemical Journal, 19, 338-339.
 
 ### Advanced Topics
-- beard 2008 - "Chemical Biophysics: Quantitative Analysis of Cellular Systems"
-- qian 2006 - "Open-System Nonequilibrium Steady State: Statistical Thermodynamics of Computational Systems"
-- heinrich 1996 - "The Regulation of Cellular Systems"
+- Beard, D. A., & Qian, H. (2008). Chemical Biophysics: Quantitative Analysis of Cellular Systems. Cambridge University Press.
+- Qian, H. (2006). Open-system nonequilibrium steady state: Statistical thermodynamics, fluctuations, and chemical oscillations. Journal of Physical Chemistry B, 110, 15063-15074.
+- Heinrich, R., & Schuster, S. (1996). The Regulation of Cellular Systems. Chapman & Hall.
+- Heinrich, R., & Rapoport, T. A. (1974). A linear steady-state treatment of enzymatic chains: General properties, control and effector strength. European Journal of Biochemistry, 42, 89-95.
+- Feinberg, M. (1987). Chemical reaction network structure and the stability of complex isothermal reactors - I. The deficiency zero and deficiency one theorems. Chemical Engineering Science, 42, 2229-2268.
+- Gillespie, D. T. (1977). Exact stochastic simulation of coupled chemical reactions. Journal of Physical Chemistry, 81, 2340-2361.
+- Orth, J. D., Thiele, I., & Palsson, B. O. (2010). What is flux balance analysis? Nature Biotechnology, 28, 245-248.
 
 ### Active Inference Applications
-- [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
-- [[parr_2022]] - "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior"
-- ramstead 2021 - "On the Free Energy Principle and the Nature of Computation"
+- Friston, K. (2019). A free energy principle for a particular physics. arXiv:1906.10184. [[friston_2019]]
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press. [[parr_2022]]
+- Ramstead, M. J. D., Badcock, P. B., & Friston, K. J. (2018). Answering Schrodinger's question: A free-energy formulation. Physics of Life Reviews, 24, 1-16.
 
 ## See Also
 

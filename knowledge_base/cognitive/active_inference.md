@@ -114,17 +114,17 @@ timeline
 
         2003-2005 : Free Energy Principle : Initial formulation in neuroscience
 
-        2006-2008 : Dynamic Causal Modeling : Generative models for brain connectivity
+        2003-2008 : Dynamic Causal Modeling : Generative models for brain connectivity
 
     section Development
 
         2009-2012 : Predictive Coding : Hierarchical message passing architectures
 
-        2013-2015 : First Active Inference Models : Extension to action and behavior
+        2009-2015 : First Active Inference Models : Extension to action and behavior
 
     section Maturation
 
-        2016-2018 : Expected Free Energy : Formal framework for planning and exploration
+        2015-2018 : Expected Free Energy : Formal framework for planning and exploration
 
         2019-2021 : Sophisticated Inference : Hierarchical planning and inference
 
@@ -146,13 +146,13 @@ The development of active inference has spanned multiple disciplines:
 
 - **Karl Friston**: Originator of the Free Energy Principle and active inference
 
-- **Christopher Buckley**: Formalized connections to control theory
+- **Christopher Buckley**: Co-author of a mathematical review of the free energy principle for action and perception
 
-- **Thomas Parr**: Extended frameworks to hierarchical models
+- **Thomas Parr**: Co-author of the 2022 Active Inference textbook
 
 - **Maxwell Ramstead**: Cultural and social applications
 
-- **Lancelot Da Costa**: Connections to stochastic optimal control
+- **Lancelot Da Costa**: Lead author of the discrete state-space synthesis of active inference
 
 ## Core Concepts
 
@@ -176,7 +176,7 @@ The expected free energy for a specific time point decomposes into:
 
 ```math
 
-G(π,τ) = \underbrace{\mathbb{E}_{q(o_τ,s_τ|π)}[\ln q(s_τ|π) - \ln p(s_τ|o_τ,π)]}_{\text{epistemic value}} + \underbrace{\mathbb{E}_{q(o_τ,s_τ|π)}[\ln q(o_τ|π) - \ln p(o_τ)]}_{\text{pragmatic value}}
+G(π,τ) = \underbrace{\mathbb{E}_{q(o_τ,s_τ|π)}[\ln q(s_τ|π) - \ln p(s_τ|o_τ,π)]}_{\text{negative epistemic value}} + \underbrace{\mathbb{E}_{q(o_τ|π)}[-\ln p(o_τ)]}_{\text{negative pragmatic value}}
 
 ```
 
@@ -286,7 +286,7 @@ With further algebraic manipulation and assumptions about conditional independen
 
 \begin{aligned}
 
-G(π,τ) &= \underbrace{\mathbb{E}_{q(o_τ,s_τ|π)}[\ln q(s_τ|π) - \ln q(s_τ|o_τ,π)]}_{\text{Expected information gain (epistemic value)}} + \underbrace{\mathbb{E}_{q(o_τ|π)}[-\ln p(o_τ)]}_{\text{Expected surprise (pragmatic value)}}
+G(π,τ) &= \underbrace{\mathbb{E}_{q(o_τ,s_τ|π)}[\ln q(s_τ|π) - \ln q(s_τ|o_τ,π)]}_{\text{Negative expected information gain (epistemic term)}} + \underbrace{\mathbb{E}_{q(o_τ|π)}[-\ln p(o_τ)]}_{\text{Expected surprise under preferences (pragmatic term)}}
 
 \end{aligned}
 
@@ -1873,3 +1873,10 @@ class LearningActiveInferenceAgent(BasicActiveInferenceAgent):
 > - Documentation and knowledge base content: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 > - Code and examples: MIT License (see `LICENSE`)
 
+## References
+
+- Friston, K. (2010). The free-energy principle: a unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138.
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: a process theory. Neural Computation, 29(1), 1-49.
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.
+- Da Costa, L., Parr, T., Sajid, N., Veselic, S., Neacsu, V., & Friston, K. (2020). Active inference on discrete state-spaces: a synthesis. Journal of Mathematical Psychology, 99, 102447.
+- Buckley, C. L., Kim, C. S., McGregor, S., & Seth, A. K. (2017). The free energy principle for action and perception: a mathematical review. Journal of Mathematical Psychology, 81, 55-79.

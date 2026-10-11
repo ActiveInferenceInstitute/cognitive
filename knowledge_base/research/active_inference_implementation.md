@@ -120,7 +120,7 @@ class VariationalInference:
         expected_log_prior = jnp.sum(self.qs * jnp.log(self.model.D))
 
         # Variational free energy
-        F = expected_log_prior - expected_log_likelihood - entropy
+        F = -expected_log_prior - expected_log_likelihood - entropy
 
         return float(F)
 
@@ -142,7 +142,7 @@ class VariationalInference:
             entropy = -jnp.sum(qs_norm * jnp.log(qs_norm + 1e-16))
             expected_log_prior = jnp.sum(qs_norm * jnp.log(self.model.D + 1e-16))
 
-            return expected_log_prior - expected_log_likelihood - entropy
+            return -expected_log_prior - expected_log_likelihood - entropy
 
         # Gradient descent on free energy
         grad_fn = grad(free_energy)
@@ -189,29 +189,24 @@ class ActionSelection:
         Returns:
             Expected free energy value
         """
-        G = 0.0
+        # Predictive posterior over states: q(s'|a) = sum_s p(s'|s,a) q(s)
+        qs_next = self.model.B[:, :, action] @ qs
 
-        # Sum over possible next states and observations
-        for s_next in range(self.model.n_states):
-            # Transition probability: p(s'|s,a)
-            transition_prob = self.model.B[s_next, :, action]
+        # Predictive posterior over observations: q(o'|a) = sum_s' p(o'|s') q(s'|a)
+        qo_next = self.model.A @ qs_next
 
-            # Predictive posterior: q(s'|a) = ∑_s q(s) p(s'|s,a)
-            qs_next = qs * transition_prob
-            qs_next = qs_next / jnp.sum(qs_next)
+        # Risk: KL[q(o'|a) || p(o*)], divergence from preferred observations
+        risk = jnp.sum(
+            qo_next * (jnp.log(qo_next + 1e-16) - jnp.log(self.model.C + 1e-16))
+        )
 
-            for o_next in range(self.model.n_observations):
-                # Likelihood: p(o'|s')
-                likelihood = self.model.A[o_next, s_next]
+        # Ambiguity: E_{q(s'|a)} H[p(o'|s')], expected uncertainty of the likelihood
+        ambiguity = -jnp.sum(
+            qs_next * jnp.sum(self.model.A * jnp.log(self.model.A + 1e-16), axis=0)
+        )
 
-                # Posterior predictive: q(o'|a) = ∑_{s'} q(s'|a) p(o'|s')
-                qo_next = jnp.sum(qs_next * self.model.A[o_next, :])
-
-                # Expected free energy components
-                extrinsic_term = qo_next * jnp.log(qo_next / (self.model.C[o_next] + 1e-16))
-                epistemic_term = qs_next[s_next] * jnp.log(qs_next[s_next] / (qs[s_next] + 1e-16))
-
-                G += likelihood * jnp.sum(qs * transition_prob) * (extrinsic_term + epistemic_term)
+        # Expected free energy
+        G = risk + ambiguity
 
         return float(G)
 
@@ -779,3 +774,12 @@ class MultiAgentActiveInference:
 ---
 
 > **Research Enablement**: Accelerates implementation of active inference in real systems.
+
+## References
+
+- Parr, T., Pezzulo, G., & Friston, K. J. (2022). Active Inference: The Free Energy Principle in Mind, Brain, and Behavior. MIT Press.
+- Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: A process theory. Neural Computation, 29(1), 1-49.
+- Da Costa, L., Parr, T., Sajid, N., Veselic, S., Neacsu, V., & Friston, K. (2020). Active inference on discrete state-spaces: A synthesis. Journal of Mathematical Psychology, 99, 102447.
+- Smith, R., Friston, K. J., & Whyte, C. J. (2022). A step-by-step tutorial on active inference and its application to empirical data. Journal of Mathematical Psychology, 107, 102632.
+- Heins, C., Millidge, B., Demekas, D., Klein, B., Friston, K., Couzin, I. D., & Tschantz, A. (2022). pymdp: A Python library for active inference in discrete state spaces. Journal of Open Source Software, 7(73), 4098.
+- Sajid, N., Ball, P. J., Parr, T., & Friston, K. J. (2021). Active inference: Demystified and compared. Neural Computation, 33(3), 674-712.

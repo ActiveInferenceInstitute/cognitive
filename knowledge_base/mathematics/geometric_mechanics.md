@@ -1474,3 +1474,10 @@ class FunctionSpace:
 
 1. [[symplectic_geometry|Symplectic Geometry]]
 
+
+## References
+
+- Arnold, V. I. (1989). Mathematical Methods of Classical Mechanics (2nd ed.). Springer.
+- Marsden, J. E., & Ratiu, T. S. (1999). Introduction to Mechanics and Symmetry (2nd ed.). Springer.
+- Marsden, J., & Weinstein, A. (1974). Reduction of symplectic manifolds with symmetry. Reports on Mathematical Physics, 5(1), 121-130.
+- Marsden, J. E., & West, M. (2001). Discrete mechanics and variational integrators. Acta Numerica, 10, 357-514.

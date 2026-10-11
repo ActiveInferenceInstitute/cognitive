@@ -156,7 +156,7 @@ D &= \begin{bmatrix}
 
 0 & 1 & 0 & \cdots \\
 
-0 & 0 & 2 & \cdots \\
+0 & 0 & 1 & \cdots \\
 
 0 & 0 & 0 & \ddots \\
 
@@ -1009,3 +1009,11 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[stochastic_processes]]
 
+
+## References
+
+- Friston, K. (2008). Hierarchical models in the brain. PLoS Computational Biology, 4(11), e1000211.
+- Friston, K. J., Trujillo-Barreto, N., & Daunizeau, J. (2008). DEM: A variational treatment of dynamic systems. NeuroImage, 41(3), 849-885.
+- Friston, K., Stephan, K., Li, B., & Daunizeau, J. (2010). Generalised filtering. Mathematical Problems in Engineering, 2010, 621670.
+- Buckley, C. L., Kim, C. S., McGregor, S., & Seth, A. K. (2017). The free energy principle for action and perception: A mathematical review. Journal of Mathematical Psychology, 81, 55-79.
+- Arnold, V. I. (1989). Mathematical Methods of Classical Mechanics (2nd ed.). Springer.

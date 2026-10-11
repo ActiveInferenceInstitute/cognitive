@@ -48,9 +48,9 @@ class EvolutionaryConvergenceAnalysis:
 
     def __init__(self):
         self.phylogenetic_distance = {
-            'ants_bees': '125_million_years_separation',
-            'ants_wasps': '150_million_years_common_ancestor',
-            'bees_wasps': '175_million_years_separation'
+            'ants_bees': 'over_125_million_years_separation',
+            'ants_wasps': 'older_than_ant_crown_group',
+            'bees_wasps': 'older_than_bee_crown_group'
         }
 
         self.convergent_traits = {
@@ -71,8 +71,8 @@ class EvolutionaryConvergenceAnalysis:
 ```
 
 **Evolutionary Timeline:**
-- **Ants:** Eusociality evolved ~100-150 million years ago
-- **Bees:** Eusociality evolved ~50-80 million years ago
+- **Ants:** The ant crown group arose in the Cretaceous, with estimates of roughly 115-170 million years ago depending on the study
+- **Bees:** Eusociality in corbiculate bees arose at least ~87 million years ago, with younger independent origins elsewhere (for example halictid bees)
 - **Convergence:** Independent development of similar social traits
 - **Divergence:** Adaptation to different ecological contexts
 
@@ -184,7 +184,7 @@ class ColonyScalingComparison:
             },
             'bee_colonies': {
                 'range': 'hundreds_to_tens_thousands',
-                'scaling_exponent': 'superlinear_increase',
+                'scaling_exponent': 'species_dependent',
                 'communication_limit': 'dance_information'
             }
         }
@@ -199,7 +199,7 @@ class ColonyScalingComparison:
 
 **Scaling Differences:**
 - **Ants:** Can scale to millions (army ants), limited by local communication
-- **Bees:** Typically thousands, limited by dance information capacity
+- **Bees:** Typically thousands to tens of thousands (honey bees); whether dance information limits colony size is a hypothesis, not an established result
 - **Efficiency:** Different scaling relationships for task performance
 - **Robustness:** Different failure modes at large scales
 
@@ -771,7 +771,7 @@ class MonitoringTechnologyIntegration:
 
 ---
 
-> **Convergent Evolution**: Despite 125 million years of separate evolution, ants and bees have independently developed remarkably similar social systems, demonstrating the power of natural selection for complex collective behavior.
+> **Convergent Evolution**: Despite more than 125 million years of separate evolution, ants and bees have independently developed remarkably similar social systems, demonstrating the power of natural selection for complex collective behavior.
 
 ---
 
@@ -784,3 +784,16 @@ class MonitoringTechnologyIntegration:
 ---
 
 > **Conservation Integration**: The shared threats and complementary roles of ants and bees suggest that integrated conservation strategies will be more effective than single-species approaches, maximizing biodiversity benefits and ecosystem service provision.
+
+## References
+
+- Hölldobler, B., & Wilson, E. O. (1990). The Ants. Belknap Press of Harvard University Press.
+- Hölldobler, B., & Wilson, E. O. (2009). The Superorganism: The Beauty, Elegance, and Strangeness of Insect Societies. W. W. Norton.
+- Seeley, T. D. (1995). The Wisdom of the Hive: The Social Physiology of Honey Bee Colonies. Harvard University Press.
+- Bourke, A. F. G. (2011). Principles of Social Evolution. Oxford University Press.
+- Moreau, C. S., Bell, C. D., Vila, R., Archibald, S. B., & Pierce, N. E. (2006). Phylogeny of the ants: Diversification in the age of angiosperms. Science, 312, 101-104.
+- Brady, S. G., Schultz, T. R., Fisher, B. L., & Ward, P. S. (2006). Evaluating alternative hypotheses for the early evolution and diversification of ants. Proceedings of the National Academy of Sciences, 103, 18172-18177.
+- Cardinal, S., & Danforth, B. N. (2011). The antiquity and evolutionary history of social behavior in bees. PLoS ONE, 6, e21086.
+- Hou, C., Kaspari, M., Vander Zanden, H. B., & Gillooly, J. F. (2010). Energetic basis of colonial living in social insects. Proceedings of the National Academy of Sciences, 107, 3634-3638.
+- Dorigo, M., & Stützle, T. (2004). Ant Colony Optimization. MIT Press.
+- Karaboga, D., & Basturk, B. (2007). A powerful and efficient algorithm for numerical function optimization: Artificial bee colony (ABC) algorithm. Journal of Global Optimization, 39, 459-471.
