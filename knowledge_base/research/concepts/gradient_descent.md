@@ -2,6 +2,8 @@
 title: "Gradient Descent"
 type: "concept"
 status: stable
+aliases:
+  - gradient_methods
 ---
 
 # Gradient Descent

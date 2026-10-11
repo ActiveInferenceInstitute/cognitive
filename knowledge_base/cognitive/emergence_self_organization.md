@@ -20,6 +20,9 @@ semantic_relations:
       - "[[dynamical_systems]]"
       - "[[pattern_formation]]"
       - "[[information_theory]]"
+aliases:
+  - emergence_theory
+  - emergent_properties
 ---
 
 
@@ -42,7 +45,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[nonlinearity]] - Outputs not proportional to inputs
 
-      - [[sensitivity]] - Small changes producing large effects
+      - sensitivity - Small changes producing large effects
 
     - [[irreducibility]] - Can't break
 
@@ -62,7 +65,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[adaptation]] - Adjusting to fit changing conditions
 
-      - [[self_repair]] - Autonomous restoration of damaged structure
+      - self repair - Autonomous restoration of damaged structure
 
 ### Self-Organization Mechanisms
 
@@ -100,7 +103,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
 - [[scale_properties]] - Features that vary across spatial or temporal scales
 
-  - [[hierarchical_emergence]] - Successive emergence across nested levels
+  - hierarchical emergence - Successive emergence across nested levels
 
     - [[bottom_up]] - Higher-level structure arising from component interactions
 
@@ -142,7 +145,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[bifurcation]] - Qualitative change in behavior at a parameter value
 
-    - [[structure_formation]] - Emergence of organized structure
+    - structure formation - Emergence of organized structure
 
       - [[nucleation]] - Onset of a new phase at seed sites
 
@@ -150,13 +153,13 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
   - temporal patterns - Ordered structure unfolding in time
 
-    - [[rhythm_generation]] - Production of regular periodic activity
+    - rhythm generation - Production of regular periodic activity
 
       - [[oscillation]] - Repeated periodic variation of a state
 
       - [[synchronization]] - Alignment of timing across oscillating components
 
-    - [[sequence_formation]] - Emergence of ordered temporal sequences
+    - sequence formation - Emergence of ordered temporal sequences
 
       - [[phase_transitions]] - Abrupt change between qualitatively distinct states
 
@@ -186,13 +189,13 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[wave_patterns]] - Propagating waves of activity
 
-      - [[cascade_effects]] - Chain reactions spreading through a system
+      - cascade effects - Chain reactions spreading through a system
 
-    - [[collective_computation]] - Computation carried out by many interacting components
+    - collective computation - Computation carried out by many interacting components
 
       - [[distributed_processing]] - Computation divided across many components
 
-      - [[consensus_formation]] - Convergence of components on a shared state
+      - consensus formation - Convergence of components on a shared state
 
 ### Adaptation Processes
 
@@ -204,7 +207,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[connection_changes]] - Modification of links between components
 
-      - [[weight_updates]] - Adjustment of connection strengths
+      - weight updates - Adjustment of connection strengths
 
     - [[memory_formation]] - Encoding and stabilizing stored information
 
@@ -212,9 +215,9 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[pattern_recognition]] - Identifying regularities in input
 
-  - [[evolution_dynamics]] - Change in populations over generations
+  - evolution dynamics - Change in populations over generations
 
-    - [[selection_processes]] - Differential survival of variants
+    - selection processes - Differential survival of variants
 
       - [[fitness_landscapes]] - Mapping of fitness over possible configurations
 
@@ -240,7 +243,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - growth patterns - Characteristic forms produced by growth
 
-    - [[fluid_dynamics]] - Patterns arising in fluid motion
+    - fluid dynamics - Patterns arising in fluid motion
 
       - [[convection_patterns]] - Ordered flow cells driven by heat gradients
 
@@ -250,7 +253,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
     - [[dissipative_structures]] - Ordered structures maintained by dissipating energy
 
-      - [[energy_flow]] - Transfer of energy through a system
+      - energy flow - Transfer of energy through a system
 
       - [[entropy_production]] - Rate at which a process generates entropy
 
@@ -268,7 +271,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
     - [[protein_folding]] - Folding of a protein chain into its 3D structure
 
-      - [[structure_prediction]] - Computing structure from sequence
+      - structure prediction - Computing structure from sequence
 
       - [[energy_landscape]] - Free energy as a function of conformation
 
@@ -290,7 +293,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - network formation - Emergence of connected structure among units
 
-      - [[circuit_refinement]] - Experience-driven pruning and tuning of neural circuits
+      - circuit refinement - Experience-driven pruning and tuning of neural circuits
 
 ### Social Systems
 
@@ -318,7 +321,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[tradition_maintenance]] - Persistence of practices across generations
 
-    - [[knowledge_systems]] - Shared stores of knowledge in a group
+    - knowledge systems - Shared stores of knowledge in a group
 
       - [[collective_learning]] - Learning that occurs across a group
 
@@ -340,9 +343,9 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
     - [[stability_analysis]] - Assessing whether states persist under perturbation
 
-      - [[perturbation_studies]] - Probing systems with controlled disturbances
+      - perturbation studies - Probing systems with controlled disturbances
 
-      - [[resilience_measures]] - Metrics of recovery after disturbance
+      - resilience measures - Metrics of recovery after disturbance
 
   - [[prediction_methods]] - Methods for forecasting system behavior
 
@@ -386,7 +389,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
     - [[adaptive_control]] - Control that adjusts to changing conditions
 
-      - [[learning_control]] - Control improved through learning
+      - learning control - Control improved through learning
 
       - [[evolutionary_control]] - Control refined through evolutionary search
 
@@ -402,7 +405,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[incentive_structures]] - Arrangements of rewards that shape behavior
 
-    - [[network_design]] - Designing network structure
+    - network design - Designing network structure
 
       - [[communication_patterns]] - Channels and flows of communication
 
@@ -420,7 +423,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[creativity_support]] - Supporting novel idea generation
 
-      - [[adaptation_support]] - Supporting adjustment to change
+      - adaptation support - Supporting adjustment to change
 
 ## Research Methods
 
@@ -432,29 +435,29 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
     - [[spatial_analysis]] - Analyzing spatial structure
 
-      - [[structure_measures]] - Quantifying structure
+      - structure measures - Quantifying structure
 
-      - [[distribution_analysis]] - Analyzing how quantities are distributed
+      - distribution analysis - Analyzing how quantities are distributed
 
     - [[temporal_analysis]] - Analyzing time-varying behavior
 
-      - [[sequence_analysis]] - Analyzing ordered sequences of events
+      - sequence analysis - Analyzing ordered sequences of events
 
-      - [[dynamics_analysis]] - Analyzing how states change over time
+      - dynamics analysis - Analyzing how states change over time
 
   - interaction analysis - Analyzing interactions among components
 
     - [[network_analysis]] - Analyzing network structure
 
-      - [[connectivity_measures]] - Quantifying connections between nodes
+      - connectivity measures - Quantifying connections between nodes
 
       - [[flow_analysis]] - Tracing flows through a system
 
-    - [[causality_analysis]] - Identifying causal relations
+    - causality analysis - Identifying causal relations
 
       - [[influence_mapping]] - Mapping which components influence others
 
-      - [[feedback_analysis]] - Identifying and characterizing feedback loops
+      - feedback analysis - Identifying and characterizing feedback loops
 
 ### Experimental Methods
 
@@ -468,15 +471,15 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[threshold_testing]] - Locating critical values where behavior changes
 
-    - [[perturbation_studies]] - Probing systems with controlled disturbances
+    - perturbation studies - Probing systems with controlled disturbances
 
-      - [[response_analysis]] - Analyzing system response to perturbation
+      - response analysis - Analyzing system response to perturbation
 
       - [[recovery_analysis]] - Analyzing return to baseline after disturbance
 
   - [[comparative_studies]] - Comparing systems to find shared principles
 
-    - [[system_comparison]] - Comparing different systems
+    - system comparison - Comparing different systems
 
       - [[feature_analysis]] - Analyzing individual features
 
@@ -486,7 +489,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[level_analysis]] - Analyzing each level of organization
 
-      - [[size_effects]] - Dependence of behavior on system size
+      - size effects - Dependence of behavior on system size
 
 ### Modeling Methods
 
@@ -504,7 +507,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[ensemble_methods]] - Statistical analysis over ensembles of states
 
-      - [[field_theories]] - Continuous-field descriptions of spatial systems
+      - field theories - Continuous-field descriptions of spatial systems
 
   - [[computational_models]] - Models implemented and run on computers
 
@@ -512,7 +515,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[interaction_rules]] - Rules governing agent interactions
 
-      - [[behavior_rules]] - Rules governing agent behavior
+      - behavior rules - Rules governing agent behavior
 
     - [[network_models]] - Models built on network structure
 
@@ -526,7 +529,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
 - [[emergence_challenges]] - Open difficulties in studying emergence
 
-  - [[theoretical_challenges]] - Conceptual difficulties in emergence theory
+  - theoretical challenges - Conceptual difficulties in emergence theory
 
     - [[causality_problems]] - Difficulty assigning causes across levels
 
@@ -538,13 +541,13 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[uncertainty_propagation]] - Spread of uncertainty through a model
 
-      - [[long_term_dynamics]] - Behavior over long time horizons
+      - long term dynamics - Behavior over long time horizons
 
-  - [[practical_challenges]] - Difficulties in applying emergence methods
+  - practical challenges - Difficulties in applying emergence methods
 
     - measurement issues - Difficulties measuring emergent quantities
 
-      - [[multi_scale]] - Difficulty handling many scales at once
+      - multi scale - Difficulty handling many scales at once
 
       - [[indirect_effects]] - Effects mediated through intermediate components
 

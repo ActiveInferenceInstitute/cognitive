@@ -23,7 +23,6 @@ semantic_relations:
       - "[[social_insect_cognition]]"
   - type: implements
     links:
-      - "[[reproductive_division]]"
       - "[[task_allocation]]"
   - type: relates
     links:
@@ -667,7 +666,7 @@ class CommunicationBasedCoordination:
 - [[evolution_of_eusociality]] - Evolutionary origins of bee sociality
 
 ### Organizational Theory
-- [[reproductive_division]] - Queen-worker dynamics
+- reproductive division - Queen-worker dynamics
 - [[task_allocation]] - Worker task specialization
 - communication systems - Bee communication networks
 - [[resource_management]] - Colony resource organization

@@ -21,6 +21,8 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[evidence_accumulation]]"
       - "[[bayesian_inference]]"
+aliases:
+  - bayesian_model_selection
 ---
 
 

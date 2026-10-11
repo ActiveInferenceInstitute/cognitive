@@ -14,6 +14,8 @@ semantic_relations:
       - "[[brain_machine_interfaces]]"
       - "[[neural_plasticity]]"
       - "[[sensory_processing]]"
+aliases:
+  - neural_prosthetics
 ---
 
 # Neuroprosthetics

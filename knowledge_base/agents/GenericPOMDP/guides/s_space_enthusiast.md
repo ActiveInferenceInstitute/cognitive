@@ -506,7 +506,7 @@ Want to explore more? Check out:
 
 - [[state_visualization]] - Visualizing state spaces
 
-- [[state_optimization]] - Optimizing state representations
+- state optimization - Optimizing state representations
 
 Remember: S-Space is like the DNA of your system - it contains all the information needed to understand what's happening and what could happen next!
 

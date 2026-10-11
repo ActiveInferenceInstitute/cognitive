@@ -19,6 +19,8 @@ semantic_relations:
       - "[[complex_geometry]]"
       - "[[poisson_geometry]]"
       - "[[contact_geometry]]"
+aliases:
+  - symplectic_manifolds
 ---
 
 

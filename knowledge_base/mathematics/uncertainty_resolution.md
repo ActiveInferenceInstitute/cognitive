@@ -589,7 +589,7 @@ Links to:
 
 - visualization guide - Visualization standards
 
-- [[plotting_utilities]] - Plotting tools
+- plotting utilities - Plotting tools
 
 - [[interactive_visualization]] - Interactive features
 
@@ -763,11 +763,11 @@ graph LR
 
 - [[convergence_analysis]] - Assessing whether learning has converged
 
-- [[visualization_methods]] - Visual analysis
+- visualization methods - Visual analysis
 
 - [[performance_evaluation]] - System assessment
 
-- [[statistical_tests]] - Tests for validating results
+- statistical tests - Tests for validating results
 
 ### Implementation Aspects
 
@@ -785,7 +785,7 @@ graph LR
 
 - [[information_geometry]] - Geometry of probability distributions
 
-- [[statistical_inference]] - Drawing conclusions about parameters from data
+- statistical inference - Drawing conclusions about parameters from data
 
 - [[decision_theory]] - Choosing actions under uncertainty
 

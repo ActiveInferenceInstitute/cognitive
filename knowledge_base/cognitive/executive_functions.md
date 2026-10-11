@@ -44,7 +44,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
   - manipulation - Transforming information held in mind
 
-    - [[updating]] - Replacing working memory contents with new input
+    - updating - Replacing working memory contents with new input
 
     - [[reordering]] - Rearranging items held in working memory
 
@@ -60,7 +60,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
   - [[cognitive_inhibition]] - Suppressing irrelevant thoughts and information
 
-    - [[distraction_resistance]] - Maintaining focus despite competing stimuli
+    - distraction resistance - Maintaining focus despite competing stimuli
 
     - [[thought_suppression]] - Deliberately keeping unwanted thoughts out of mind
 
@@ -106,7 +106,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
     - [[target_selection]] - Choosing which stimulus to attend to
 
-    - [[distractor_suppression]] - Filtering out irrelevant stimuli
+    - distractor suppression - Filtering out irrelevant stimuli
 
   - [[sustained_attention]] - Maintaining focus over extended periods
 
@@ -140,7 +140,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
     - [[dorsolateral]] - Dorsolateral prefrontal cortex, supporting working memory and planning
 
-    - [[ventrolateral]] - Ventrolateral prefrontal cortex, supporting inhibition and selection
+    - ventrolateral - Ventrolateral prefrontal cortex, supporting inhibition and selection
 
   - [[cingulate_cortex]] - Medial cortex involved in monitoring and conflict detection
 
@@ -150,7 +150,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 ### Circuit Mechanisms
 
-- [[control_circuits]] - Neural circuits implementing cognitive control
+- control circuits - Neural circuits implementing cognitive control
 
   - [[local_circuits]] - Connections within a single brain region
 
@@ -158,7 +158,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
     - [[inhibitory_circuits]] - Circuits that suppress competing activity
 
-  - [[long_range]] - Connections linking distant brain regions
+  - long range - Connections linking distant brain regions
 
     - [[frontoparietal]] - Frontal-parietal network for flexible control
 
@@ -176,7 +176,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
   - [[norepinephrine_system]] - Neuromodulator system for arousal and alertness
 
-    - [[arousal_regulation]] - Adjusting overall alertness level
+    - arousal regulation - Adjusting overall alertness level
 
     - [[attention_regulation]] - Controlling where attention is directed
 
@@ -184,15 +184,15 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 ### Developmental Trajectory
 
-- [[executive_development]] - Maturation of executive functions over time
+- executive development - Maturation of executive functions over time
 
-  - [[early_development]] - Emergence of control abilities in early childhood
+  - early development - Emergence of control abilities in early childhood
 
     - [[basic_control]] - Early, simple forms of self-control
 
     - [[emergence]] - First appearance of control abilities
 
-  - [[later_development]] - Continued maturation across adolescence and adulthood
+  - later development - Continued maturation across adolescence and adulthood
 
     - refinement - Increasing accuracy and efficiency of control
 
@@ -236,7 +236,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 - [[academic_executive]] - Executive functions in schooling
 
-  - [[learning_support]] - Aids that help students learn
+  - learning support - Aids that help students learn
 
     - study strategies - Methods for organizing and retaining material
 
@@ -262,7 +262,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
     - [[cognitive_training]] - Practice exercises targeting cognitive skills
 
-    - [[strategy_teaching]] - Instruction in compensatory strategies
+    - strategy teaching - Instruction in compensatory strategies
 
 ### Workplace Applications
 
@@ -272,13 +272,13 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
     - [[efficiency_improvement]] - Getting more done with less effort
 
-    - [[error_reduction]] - Lowering the rate of mistakes
+    - error reduction - Lowering the rate of mistakes
 
   - stress management - Coping with work pressure
 
     - [[load_management]] - Handling cognitive workload
 
-    - [[adaptation_support]] - Helping people adjust to change
+    - adaptation support - Helping people adjust to change
 
 ## Research Methods
 
@@ -300,7 +300,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 ### Neural Methods
 
-- [[brain_assessment]] - Measuring neural correlates of control
+- brain assessment - Measuring neural correlates of control
 
   - imaging - Brain imaging techniques
 
@@ -326,9 +326,9 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
   - [[network_models]] - Models of interacting brain networks
 
-    - [[circuit_models]] - Models of neural circuit dynamics
+    - circuit models - Models of neural circuit dynamics
 
-    - [[system_models]] - Models of whole-system control
+    - system models - Models of whole-system control
 
 ## Future Directions
 
@@ -346,7 +346,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 - technology enhanced - Technology-assisted training and support
 
-- [[integrative_methods]] - Approaches combining multiple methods
+- integrative methods - Approaches combining multiple methods
 
 ## References
 

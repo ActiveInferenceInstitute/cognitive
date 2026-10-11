@@ -2,6 +2,8 @@
 title: "Probability Theory"
 type: "mathematical_concept"
 status: stable
+aliases:
+  - probability_axioms
 ---
 
 # Probability Theory

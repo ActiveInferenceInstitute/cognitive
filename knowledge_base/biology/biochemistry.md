@@ -16,7 +16,6 @@ processing_priority: 1
 semantic_relations:
   - type: foundation
     links:
-      - "[[metabolism]]"
       - "[[enzyme_kinetics]]"
       - "[[thermodynamics]]"
       - "[[knowledge_base/cognitive/active_inference]]"
@@ -24,7 +23,6 @@ semantic_relations:
     links:
       - "[[metabolic_networks]]"
       - "[[protein_chemistry]]"
-      - "[[cellular_energetics]]"
       - "[[knowledge_base/agents/architectures_overview]]"
   - type: relates
     links:
@@ -709,7 +707,7 @@ class MetabolicNetworkControl:
 ## See Also
 
 - [[molecular_biology]]
-- [[metabolism]]
+- metabolism
 - [[enzyme_kinetics]]
 - [[thermodynamics]]
 - [[biophysics]]

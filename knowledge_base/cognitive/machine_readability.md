@@ -70,7 +70,7 @@ def extract_parameters(markdown_file):
 
   - [[semantic_search]]
 
-  - [[concept_clustering]]
+  - concept clustering
 
 ## Automation Capabilities
 
@@ -154,7 +154,7 @@ def prepare_training_data():
 
   - [[code_completion]]
 
-  - [[documentation_generation]]
+  - documentation generation
 
   - [[error_prediction]]
 
@@ -354,7 +354,7 @@ graph LR
 
 - **Tool Integration**
 
-  - [[workflow_integration]]
+  - workflow integration
 
   - [[tool_chaining]]
 
@@ -366,7 +366,7 @@ graph LR
 
 - [[static_analyzers]]
 
-- [[validation_tools]]
+- validation tools
 
 - [[automation_frameworks]]
 

@@ -485,7 +485,7 @@ quality_requirements = {
 
 ### 3. Quality Control
 
-- Run [[validation_tools]]
+- Run validation tools
 
 - Check [[quality_metrics]]
 

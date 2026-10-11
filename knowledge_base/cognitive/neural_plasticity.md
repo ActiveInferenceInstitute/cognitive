@@ -13,6 +13,7 @@ aliases:
   - experience_dependent
   - developmental_plasticity
   - neural_learning
+  - plasticity_mechanisms
 semantic_relations:
   - type: implements
     links: []
@@ -59,11 +60,11 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 ### Structural Plasticity
 
-- [[morphological_changes]] - Changes in neuronal shape and structure
+- morphological changes - Changes in neuronal shape and structure
 
   - [[dendritic_plasticity]] - Remodeling of input-receiving dendrites
 
-    - [[spine_dynamics]] - Growth, shrinkage, and turnover of dendritic spines
+    - spine dynamics - Growth, shrinkage, and turnover of dendritic spines
 
     - [[branch_remodeling]] - Reshaping of dendritic branches
 
@@ -75,15 +76,15 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 ### Network Plasticity
 
-- [[circuit_modification]] - Changes in circuit connectivity
+- circuit modification - Changes in circuit connectivity
 
-  - [[circuit_refinement]] - Activity-driven tuning of connections
+  - circuit refinement - Activity-driven tuning of connections
 
     - [[pruning]] - Connection removal
 
     - strengthening - Reinforcing frequently used connections
 
-  - [[reorganization]] - Large-scale rewiring of circuits
+  - reorganization - Large-scale rewiring of circuits
 
     - [[map_plasticity]] - Shifts in cortical map representations
 
@@ -109,9 +110,9 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 ### Gene Expression
 
-- [[transcriptional_regulation]] - Gene control
+- transcriptional regulation - Gene control
 
-  - [[immediate_early_genes]] - Genes switched on quickly by neuronal activity
+  - immediate early genes - Genes switched on quickly by neuronal activity
 
     - [[cfos]] - Activity marker
 
@@ -137,7 +138,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
     - [[protein_trafficking]] - Transport of proteins to their destinations
 
-    - [[degradation]] - Breakdown of proteins no longer needed
+    - degradation - Breakdown of proteins no longer needed
 
 ## Temporal Dynamics
 
@@ -161,7 +162,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 - [[temporary_plasticity]] - Minutes/hours
 
-  - [[facilitation]] - Transient increase in synaptic response
+  - facilitation - Transient increase in synaptic response
 
     - [[paired_pulse]] - Enhancement after closely spaced stimuli
 
@@ -217,7 +218,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
     - [[coordination]] - Combining movements into smooth actions
 
-  - [[recovery]] - Regaining function after injury
+  - recovery - Regaining function after injury
 
     - compensation - Using alternative strategies after injury
 
@@ -247,7 +248,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
   - rehabilitation - Restoring function after injury or disease
 
-    - [[physical_therapy]] - Movement-based retraining
+    - physical therapy - Movement-based retraining
 
     - [[cognitive_therapy]] - Training of cognitive functions
 
@@ -259,7 +260,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 ### Educational Applications
 
-- [[learning_optimization]] - Improving learning outcomes using plasticity principles
+- learning optimization - Improving learning outcomes using plasticity principles
 
   - [[critical_periods]] - Windows of heightened learning capacity
 
@@ -271,7 +272,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
     - [[intensity]] - Amount of training per session
 
-    - [[specificity]] - Match of training to the target skill
+    - specificity - Match of training to the target skill
 
 ### Technology Applications
 
@@ -299,7 +300,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
     - [[calcium_imaging]] - Optical recording of neuronal activity
 
-    - [[structural_imaging]] - Visualizing synapse and dendrite morphology
+    - structural imaging - Visualizing synapse and dendrite morphology
 
   - manipulation - Experimentally altering neural activity
 
@@ -327,7 +328,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 - [[plasticity_assessment]] - Measuring plasticity-related change
 
-  - [[performance]] - Behavioral task outcomes
+  - performance - Behavioral task outcomes
 
     - [[learning_curves]] - Performance improvement across practice
 
@@ -375,7 +376,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 - [[development]]
 
-- [[recovery]]
+- recovery
 
 - [[adaptation]]
 

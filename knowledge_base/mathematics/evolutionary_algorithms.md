@@ -15,6 +15,8 @@ semantic_relations:
       - "[[knowledge_base/mathematics/policy_search_methods]]"
       - "[[knowledge_base/mathematics/natural_gradients]]"
       - "[[knowledge_base/mathematics/stochastic_optimization]]"
+aliases:
+  - evolutionary_computation
 ---
 
 # Evolutionary Algorithms

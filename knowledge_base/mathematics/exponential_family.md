@@ -9,6 +9,7 @@ tags:
 - statistics
 aliases:
   - exponential_families
+  - sufficient_statistics
 semantic_relations:
   - type: relates
     links:

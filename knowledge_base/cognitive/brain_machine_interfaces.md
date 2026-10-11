@@ -14,6 +14,8 @@ semantic_relations:
       - "[[neural_decoding]]"
       - "[[neuroprosthetics]]"
       - "[[motor_control]]"
+aliases:
+  - neural_interfaces
 ---
 
 # Brain-Machine Interfaces

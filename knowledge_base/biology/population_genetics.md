@@ -17,7 +17,6 @@ semantic_relations:
   - type: foundation
     links:
       - "[[evolutionary_dynamics]]"
-      - "[[molecular_evolution]]"
       - "[[quantitative_genetics]]"
   - type: implements
     links:
@@ -26,9 +25,7 @@ semantic_relations:
       - "[[genetic_drift]]"
   - type: relates
     links:
-      - "[[ecological_genetics]]"
       - "[[molecular_biology]]"
-      - "[[statistical_genetics]]"
 ---
 
 
@@ -596,17 +593,17 @@ class SelectionAnalyzer:
 
 - [[wakeley_2008]] - "Coalescent Theory: An Introduction"
 
-- [[nielsen_2005]] - "Statistical Methods in Molecular Evolution"
+- nielsen 2005 - "Statistical Methods in Molecular Evolution"
 
 ## See Also
 
 - [[evolutionary_dynamics]]
 
-- [[molecular_evolution]]
+- molecular evolution
 
 - [[quantitative_genetics]]
 
-- [[statistical_genetics]]
+- statistical genetics
 
-- [[ecological_genetics]]
+- ecological genetics
 

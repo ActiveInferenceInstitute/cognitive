@@ -13,6 +13,7 @@ aliases:
   - memory_models
   - memory_processes
   - long_term_memory
+  - squire_memory_systems
 semantic_relations:
   - type: implements
     links:
@@ -46,7 +47,7 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
     - [[interference_control]] - Distraction handling
 
-  - [[storage_systems]] - Short-term stores for verbal and visual information
+  - storage systems - Short-term stores for verbal and visual information
 
     - [[phonological_loop]] - Rehearsal of verbal information
 
@@ -64,7 +65,7 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
     - [[source_memory]] - Memory for where and when information was learned
 
-    - [[temporal_memory]] - Memory for temporal order of events
+    - temporal memory - Memory for temporal order of events
 
   - [[semantic_memory]] - Factual knowledge
 
@@ -118,11 +119,11 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 - [[memory_circuits]] - Neural circuits supporting memory
 
-  - [[encoding_circuits]] - Circuits that capture new information
+  - encoding circuits - Circuits that capture new information
 
     - [[attention_networks]] - Attention networks selecting information to encode
 
-    - [[novelty_detection]] - Detecting novel or significant events
+    - novelty detection - Detecting novel or significant events
 
   - [[consolidation_circuits]] - Circuits stabilizing memories after encoding
 
@@ -142,7 +143,7 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
   - [[protein_synthesis]] - Protein production sustaining memory traces
 
-    - [[immediate_early_genes]] - Genes rapidly activated by neural activity
+    - immediate early genes - Genes rapidly activated by neural activity
 
     - [[structural_proteins]] - Proteins supporting synaptic structure
 
@@ -184,13 +185,13 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 - [[memory_retrieval]] - Access processes
 
-  - [[recall]] - Active reconstruction
+  - recall - Active reconstruction
 
     - [[free_recall]] - Recall without cues
 
     - [[cued_recall]] - Recall aided by cues
 
-  - [[recognition]] - Judging whether an item was encountered before
+  - recognition - Judging whether an item was encountered before
 
     - [[recollection]] - Retrieval of specific contextual details
 
@@ -206,19 +207,19 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
     - [[categorical_structure]] - Grouping of items into categories
 
-    - [[associative_networks]] - Linked memory representations
+    - associative networks - Linked memory representations
 
   - [[schema_organization]] - Knowledge frameworks
 
-    - [[mental_models]] - Internal representations of how things work
+    - mental models - Internal representations of how things work
 
     - [[scripts]] - Event sequences
 
 ### Dynamics
 
-- [[memory_dynamics]] - Changes in memory over time
+- memory dynamics - Changes in memory over time
 
-  - [[forgetting]] - Information loss
+  - forgetting - Information loss
 
     - [[decay]] - Time-based
 
@@ -234,7 +235,7 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 - [[memory_features]] - Qualities that describe memories
 
-  - [[specificity]] - Level of detail retained
+  - specificity - Level of detail retained
 
     - [[gist]] - Core meaning
 
@@ -242,7 +243,7 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
   - [[durability]] - Persistence
 
-    - [[strength]] - How firmly a memory is stored
+    - strength - How firmly a memory is stored
 
     - [[accessibility]] - Retrieval ease
 
@@ -270,7 +271,7 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 ### Therapeutic Approaches
 
-- [[memory_rehabilitation]] - Interventions for memory impairment
+- memory rehabilitation - Interventions for memory impairment
 
   - [[cognitive_training]] - Repeated practice to improve memory
 
@@ -334,9 +335,9 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
 ### Technological
 
-- [[memory_technology]] - Technology supporting memory
+- memory technology - Technology supporting memory
 
-  - [[memory_prosthetics]] - Devices that compensate for memory loss
+  - memory prosthetics - Devices that compensate for memory loss
 
   - [[brain_computer_interfaces]] - Brain-machine links to memory systems
 

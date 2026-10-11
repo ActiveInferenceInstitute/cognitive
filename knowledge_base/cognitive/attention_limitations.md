@@ -15,6 +15,8 @@ semantic_relations:
       - "[[attentional_blink]]"
       - "[[change_blindness]]"
       - "[[inattentional_blindness]]"
+aliases:
+  - attention_resources
 ---
 
 # Attention Limitations

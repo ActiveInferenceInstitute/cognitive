@@ -12,6 +12,8 @@ semantic_relations:
       - "[[resilience_thinking]]"
       - "[[ecosystem_management]]"
       - "[[learning_initiatives]]"
+aliases:
+  - adaptive_governance
 ---
 
 

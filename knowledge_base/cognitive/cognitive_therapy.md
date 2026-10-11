@@ -15,6 +15,8 @@ semantic_relations:
       - "[[behavioral_therapy]]"
       - "[[clinical_psychology]]"
       - "[[computational_psychiatry]]"
+aliases:
+  - cognitive_restructuring
 ---
 
 # Cognitive Therapy

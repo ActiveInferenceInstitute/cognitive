@@ -15,6 +15,9 @@ semantic_relations:
       - "[[language_processing]]"
       - "[[statistical_learning]]"
       - "[[critical_periods]]"
+aliases:
+  - first_language
+  - l2_acquisition
 ---
 
 # Language Learning

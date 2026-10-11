@@ -90,7 +90,7 @@ ylabel: "Probability"
 
 - [[information_theory]]
 
-- [[entropy_analysis]]
+- entropy analysis
 
 ### Learning Effects
 
@@ -112,7 +112,7 @@ ylabel: "Probability"
 
 - Initializes [[belief_state]]
 
-- Affects [[free_energy_computation]]
+- Affects free energy computation
 
 - Guides [[exploration_exploitation]]
 
@@ -192,7 +192,7 @@ class PriorBeliefs:
 
 - [[surprise_computation]]
 
-- [[novelty_detection]]
+- novelty detection
 
 - [[anomaly_detection]]
 

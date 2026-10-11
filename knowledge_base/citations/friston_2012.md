@@ -188,7 +188,7 @@ Knowledge as temporal prediction:
 ### Extensions
 - [[friston_2013]] - Life as we know it (biological applications)
 - [[buckley_2017]] - Free energy principle for action and perception
-- [[seth_2020]] - Consciousness and self-modeling
+- seth 2020 - Consciousness and self-modeling
 
 ## Code and Implementations
 - **Temporal Models**: Neural network implementations

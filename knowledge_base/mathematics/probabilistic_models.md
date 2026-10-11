@@ -233,7 +233,7 @@ Related: [[hierarchical_models]], [[multilevel_modeling]], [[mixed_effects_model
 
 - [[statistical_computing|Statistical computing]] packages
 
-- [[inference_engines|Inference engines]]
+- Inference engines
 
 ### 2. Computational Methods
 

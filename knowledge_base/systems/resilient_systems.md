@@ -14,9 +14,6 @@ semantic_relations:
     links:
       - "[[knowledge_base/systems/fault_tolerance|Fault Tolerance]]"
       - "[[knowledge_base/systems/systems_theory|Systems Theory]]"
-  - type: prerequisite_for
-    links:
-      - "[[Resilient Systems Learning Path]]"
   - type: builds_on
     links:
       - "[[knowledge_base/systems/systems_theory|Systems Theory]]"

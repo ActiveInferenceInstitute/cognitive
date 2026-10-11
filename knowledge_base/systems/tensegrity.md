@@ -21,9 +21,7 @@ semantic_relations:
       - "[[synergetics]]"
   - type: implements
     links:
-      - "[[structural_dynamics]]"
       - "[[geodesic_geometry]]"
-      - "[[network_resilience]]"
   - type: relates
     links:
       - "[[spatial_computing]]"
@@ -528,7 +526,7 @@ class TensegrityOptimizer:
 
 ## References
 
-- [[fuller_1975]] - "Synergetics: Explorations in the Geometry of Thinking"
+- fuller 1975 - "Synergetics: Explorations in the Geometry of Thinking"
 
 - [[motro_2003]] - "Tensegrity: Structural Systems for the Future"
 
@@ -542,7 +540,7 @@ class TensegrityOptimizer:
 
 - [[synergetics]]
 
-- [[structural_dynamics]]
+- structural dynamics
 
 - [[network_theory]]
 

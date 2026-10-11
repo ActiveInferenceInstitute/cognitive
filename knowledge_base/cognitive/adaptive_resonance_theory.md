@@ -37,7 +37,7 @@ semantic_relations:
 
   - [[catastrophic_forgetting|Catastrophic Forgetting]] prevention
 
-  - [[incremental_learning|Incremental Learning]] support
+  - Incremental Learning support
 
   - [[cognitive/memory_consolidation|Memory Consolidation]]
 
@@ -507,7 +507,7 @@ class ARTOptimization:
 
   - [[unified_art|Unified ART]]
 
-  - [[hybrid_architectures|Hybrid Architectures]]
+  - Hybrid Architectures
 
   - [[cognitive_synthesis|Cognitive Synthesis]]
 

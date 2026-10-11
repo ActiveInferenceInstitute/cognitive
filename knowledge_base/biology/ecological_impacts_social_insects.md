@@ -29,7 +29,6 @@ semantic_relations:
   - type: relates
     links:
       - "[[conservation_biology]]"
-      - "[[soil_ecology]]"
       - "[[pollination_biology]]"
 ---
 
@@ -583,7 +582,7 @@ class ServiceEnhancementTechnologies:
 ### Ecological Foundations
 - [[ecological_dynamics]] - Ecosystem process dynamics
 - [[biodiversity]] - Species diversity and conservation
-- [[soil_ecology]] - Soil ecosystem processes
+- soil ecology - Soil ecosystem processes
 - [[pollination_biology]] - Pollination ecology and mechanisms
 
 ### Conservation Applications
@@ -594,8 +593,8 @@ class ServiceEnhancementTechnologies:
 
 ### Economic and Policy Aspects
 - [[ecosystem_services]] - Economic valuation of services
-- [[sustainable_development]] - Sustainable resource management
-- [[environmental_policy]] - Policy frameworks for conservation
+- sustainable development - Sustainable resource management
+- environmental policy - Policy frameworks for conservation
 - [[agricultural_ecology]] - Agriculture-ecosystem interactions
 
 ---

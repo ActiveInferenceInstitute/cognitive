@@ -21,7 +21,6 @@ semantic_relations:
       - "[[social_learning]]"
       - "[[theory_of_mind]]"
       - "[[collective_behavior]]"
-      - "[[trust]]"
 ---
 
 
@@ -40,7 +39,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
   - [[joint_attention]] - Attending to the same object together
 
-    - [[gaze_following]] - Looking where another person looks
+    - gaze following - Looking where another person looks
 
       - [[attention_sharing]] - Directing others' attention to the same target
 
@@ -50,7 +49,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - [[spatial_coordination]] - Aligning positions and movements in space
 
-      - [[temporal_coordination]] - Aligning the timing of actions
+      - temporal coordination - Aligning the timing of actions
 
   - [[action_synchrony]] - Moving in time with others
 
@@ -84,7 +83,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - [[relationship_value]] - Long-term value of a relationship
 
-  - [[trust_decisions]] - Choosing whether to trust a partner
+  - trust decisions - Choosing whether to trust a partner
 
     - [[partner_evaluation]] - Judging which partners are trustworthy
 
@@ -108,9 +107,9 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - [[mutual_benefits]] - Gains that accrue to all partners
 
-      - [[reciprocity]] - Returning favors in kind
+      - reciprocity - Returning favors in kind
 
-    - [[punishment_avoidance]] - Learning to avoid social punishment
+    - punishment avoidance - Learning to avoid social punishment
 
       - [[social_sanctions]] - Penalties imposed by a group
 
@@ -118,7 +117,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
   - strategy learning - Learning which strategies work
 
-    - [[cooperation_patterns]] - Recurring patterns of cooperative behavior
+    - cooperation patterns - Recurring patterns of cooperative behavior
 
       - [[successful_strategies]] - Strategies that sustain cooperation
 
@@ -168,7 +167,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
 - [[cooperation_circuits]] - Neural circuits supporting cooperation
 
-  - [[reward_circuits]] - Circuits processing reward
+  - reward circuits - Circuits processing reward
 
     - [[social_reward]] - Reward gained from social interaction
 
@@ -184,7 +183,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
   - [[trust_circuits]] - Circuits supporting trust
 
-    - [[bond_formation]] - Forming social attachments
+    - bond formation - Forming social attachments
 
       - [[attachment_signals]] - Neural signals of closeness
 
@@ -218,7 +217,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
     - [[cortisol_system]] - Hormonal stress-response system
 
-      - [[threat_response]] - Defensive reaction to threat
+      - threat response - Defensive reaction to threat
 
       - [[resource_conservation]] - Saving effort and resources under stress
 
@@ -250,9 +249,9 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
   - [[group_cooperation]] - Cooperation among many individuals
 
-    - [[collective_action]] - Joint action toward a shared goal
+    - collective action - Joint action toward a shared goal
 
-      - [[public_goods]] - Shared resources that benefit everyone
+      - public goods - Shared resources that benefit everyone
 
       - [[common_pool]] - Shared resource open to all members
 
@@ -264,7 +263,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
 ### Cooperation Dynamics
 
-- [[cooperation_patterns]] - How cooperation develops and persists
+- cooperation patterns - How cooperation develops and persists
 
   - [[stability_factors]] - Factors that sustain cooperation
 
@@ -338,7 +337,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - [[trust_networks]] - Networks of trusting relationships
 
-      - [[reciprocity_systems]] - Networks of exchanged favors
+      - reciprocity systems - Networks of exchanged favors
 
     - [[collective_efficacy]] - Shared belief that the group can succeed
 
@@ -378,7 +377,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - [[cooperation_deficits]] - Reduced capacity to cooperate
 
-  - [[intervention_approaches]] - Treatment approaches for cooperation problems
+  - intervention approaches - Treatment approaches for cooperation problems
 
     - [[skill_training]] - Teaching skills that support cooperation
 
@@ -436,9 +435,9 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - [[prisoners_dilemma]] - Game pitting mutual cooperation against defection
 
-      - [[public_goods]] - Game where contributions benefit all players
+      - public goods - Game where contributions benefit all players
 
-    - [[social_dilemmas]] - Situations where self-interest conflicts with group interest
+    - social dilemmas - Situations where self-interest conflicts with group interest
 
       - [[resource_dilemmas]] - Dilemmas over dividing limited resources
 
@@ -446,9 +445,9 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
   - [[field_studies]] - Observing cooperation in natural settings
 
-    - [[natural_observation]] - Watching behavior as it naturally occurs
+    - natural observation - Watching behavior as it naturally occurs
 
-      - [[behavior_coding]] - Categorizing observed behaviors
+      - behavior coding - Categorizing observed behaviors
 
       - interaction analysis - Coding how people interact
 
@@ -484,7 +483,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - coupling - Degree to which partners' brain activity is linked
 
-    - [[real_time_methods]] - Methods measuring interaction as it unfolds
+    - real time methods - Methods measuring interaction as it unfolds
 
       - [[neural_markers]] - Brain signals indicating cooperative states
 
@@ -520,13 +519,13 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - [[diffusion]] - Models of spread through a network
 
-      - [[cascade_effects]] - Chain reactions of behavioral change
+      - cascade effects - Chain reactions of behavioral change
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[measurement_complexity]] - Difficulty measuring cooperation reliably
+- measurement complexity - Difficulty measuring cooperation reliably
 
   - [[ecological_validity]] - Whether lab findings hold in real life
 
@@ -544,9 +543,9 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
 - new methods - Emerging research methods
 
-  - [[real_world_studies]] - Studies conducted in everyday settings
+  - real world studies - Studies conducted in everyday settings
 
-    - [[mobile_assessment]] - Measurement using portable devices
+    - mobile assessment - Measurement using portable devices
 
       - [[sensor_data]] - Data from wearable and environmental sensors
 
@@ -554,7 +553,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
     - [[longitudinal_tracking]] - Following people over extended periods
 
-      - [[development_patterns]] - Tracking how cooperation develops
+      - development patterns - Tracking how cooperation develops
 
       - [[change_processes]] - Tracking how behavior changes
 
@@ -588,9 +587,9 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
 - [[decision_making]]
 
-- [[trust]]
+- trust
 
-- [[reciprocity]]
+- reciprocity
 
 - [[collective_behavior]]
 

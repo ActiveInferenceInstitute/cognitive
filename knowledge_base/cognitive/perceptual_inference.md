@@ -95,7 +95,7 @@ where:
 
 ### Computational Processes
 
-- [[neural_inference]] - Brain computations
+- neural inference - Brain computations
 
   - [[population_coding]] - Neural representation
 
@@ -117,9 +117,9 @@ where:
 
 ### Illusions and Effects
 
-- [[perceptual_illusions]] - Systematic misperceptions
+- perceptual illusions - Systematic misperceptions
 
-  - [[visual_illusions]] - Visual effects
+  - visual illusions - Visual effects
 
   - [[auditory_illusions]] - Auditory effects
 
@@ -149,7 +149,7 @@ where:
 
 ### Clinical Applications
 
-- [[perceptual_disorders]] - Dysfunction patterns
+- perceptual disorders - Dysfunction patterns
 
   - [[visual_agnosia]] - Object recognition deficits
 
@@ -233,7 +233,7 @@ where:
 
 - [[friston_free_energy]]
 
-- [[knill_pouget_bayesian]]
+- knill pouget bayesian
 
 - [[rao_ballard_predictive]]
 

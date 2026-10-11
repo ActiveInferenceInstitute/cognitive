@@ -12,13 +12,11 @@ tags:
 semantic_relations:
   - type: foundation
     links:
-      - "[[commutative_algebra]]"
       - "[[category_theory]]"
   - type: relates
     links:
       - "[[differential_geometry]]"
       - "[[complex_geometry]]"
-      - "[[number_theory]]"
 ---
 
 
@@ -480,11 +478,11 @@ class IntersectionTheory:
 
 ## Related Topics
 
-1. [[commutative_algebra|Commutative Algebra]]
+1. Commutative Algebra
 
 1. [[category_theory|Category Theory]]
 
 1. [[complex_geometry|Complex Geometry]]
 
-1. [[number_theory|Number Theory]]
+1. Number Theory
 

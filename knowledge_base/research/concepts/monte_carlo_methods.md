@@ -12,6 +12,10 @@ semantic_relations:
       - "[[parameter_estimation]]"
       - "[[knowledge_base/mathematics/stochastic_processes]]"
       - "[[bayesian_analysis]]"
+aliases:
+  - mcmc
+  - mcmc_methods
+  - monte_carlo
 ---
 
 # Monte Carlo Methods

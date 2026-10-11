@@ -13,12 +13,10 @@ semantic_relations:
   - type: foundation
     links:
       - "[[differential_geometry]]"
-      - "[[complex_analysis]]"
   - type: relates
     links:
       - "[[algebraic_geometry]]"
       - "[[symplectic_geometry]]"
-      - "[[hodge_theory]]"
 ---
 
 
@@ -548,5 +546,5 @@ class MirrorSymmetry:
 
 1. [[symplectic_geometry|Symplectic Geometry]]
 
-1. [[hodge_theory|Hodge Theory]]
+1. Hodge Theory
 

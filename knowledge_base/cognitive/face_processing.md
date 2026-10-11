@@ -16,6 +16,9 @@ semantic_relations:
       - "[[social_cognition]]"
       - "[[object_recognition]]"
       - "[[emotion_recognition]]"
+aliases:
+  - face_circuits
+  - fusiform_face
 ---
 
 # Face Processing

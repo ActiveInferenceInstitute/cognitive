@@ -496,11 +496,11 @@ Energy optimization represents the processes by which cognitive systems minimize
 
 - [[computational_optimization]]
 
-- [[metabolic_theory]]
+- metabolic theory
 
 - [[cognitive_neuroscience]]
 
-- [[energy_efficiency]]
+- energy efficiency
 
 - [[clinical_applications]]
 

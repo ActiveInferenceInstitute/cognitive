@@ -227,7 +227,7 @@ Links to:
 
 - [[precision_parameter]] - Confidence in policy selection in active inference
 
-- [[exploration_control]] - Exploration management
+- exploration control - Exploration management
 
 - [[optimization_parameters]] - Settings that govern optimization behavior
 
@@ -549,7 +549,7 @@ graph LR
 
 - [[performance_evaluation]] - System assessment
 
-- [[visualization_methods]] - Visual analysis
+- visualization methods - Visual analysis
 
 ### Implementation Aspects
 

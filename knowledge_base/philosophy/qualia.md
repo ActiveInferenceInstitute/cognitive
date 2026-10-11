@@ -16,6 +16,8 @@ semantic_relations:
       - "[[philosophy_of_mind]]"
       - "[[phenomenology]]"
       - "[[predictive_processing]]"
+aliases:
+  - phenomenal_experience
 ---
 
 # Qualia

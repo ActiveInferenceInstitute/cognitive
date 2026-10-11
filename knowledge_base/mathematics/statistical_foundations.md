@@ -209,7 +209,7 @@ Related concepts: [[conditional_independence]], [[d_separation]], [[markov_prope
 
 - **[[stochastic_processes]]** - Random processes theory
 
-- **[[markov_processes]]** - Markovian dynamics
+- **markov processes** - Markovian dynamics
 
 - **[[martingale_theory]]** - Martingales and stopping times
 
@@ -551,7 +551,7 @@ Related: [[information_gain]], [[minimum_description_length]], [[channel_capacit
 
 - [[mcmc]] - MCMC algorithms
 
-- [[particle_methods]] - Particle filters
+- particle methods - Particle filters
 
 ### Software Tools
 
@@ -559,7 +559,7 @@ Related: [[information_gain]], [[minimum_description_length]], [[channel_capacit
 
 - [[probabilistic_programming]] - PPL frameworks
 
-- [[inference_engines]] - Inference libraries
+- inference engines - Inference libraries
 
 - [[visualization_tools]] - Plotting utilities
 
@@ -569,7 +569,7 @@ Related: [[information_gain]], [[minimum_description_length]], [[channel_capacit
 
 - [[cross_validation]] - CV methods
 
-- [[bootstrapping]] - Bootstrap techniques
+- bootstrapping - Bootstrap techniques
 
 - [[model_diagnostics]] - Diagnostic tools
 

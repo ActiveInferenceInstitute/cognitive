@@ -12,6 +12,8 @@ semantic_relations:
       - "[[systems_biology]]"
       - "[[ecological_networks]]"
       - "[[systems_theory]]"
+aliases:
+  - biological_organization
 ---
 
 

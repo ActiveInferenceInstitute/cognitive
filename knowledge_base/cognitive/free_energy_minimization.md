@@ -51,7 +51,7 @@ where:
 
 - [[prediction_error]] - Discrepancy between predicted and actual observations
 
-  - [[sensory_prediction_errors]] - Differences in sensory domain
+  - sensory prediction errors - Differences in sensory domain
 
   - [[higher_order_prediction_errors]] - Differences in abstract features
 
@@ -71,7 +71,7 @@ where:
 
 - [[predictive_coding]] - Neural architecture for free energy minimization
 
-  - [[error_units]] - Neurons encoding prediction errors
+  - error units - Neurons encoding prediction errors
 
   - [[prediction_units]] - Neurons encoding expectations
 
@@ -93,7 +93,7 @@ where:
 
   - [[hebbian_learning]] - Connection strengthening
 
-  - [[prediction_error_learning]] - Error-driven updates
+  - prediction error learning - Error-driven updates
 
   - [[precision_weighting]] - Uncertainty-based learning
 
@@ -149,7 +149,7 @@ where:
 
   - [[fluctuation_theorems]] - Relations governing entropy fluctuations in small systems
 
-  - [[steady_state_dynamics]] - Stable configurations
+  - steady state dynamics - Stable configurations
 
 ### Complex Systems
 
@@ -187,5 +187,5 @@ where:
 
 - [[predictive_coding_applications]]
 
-- [[active_inference_tutorial]]
+- active inference tutorial
 

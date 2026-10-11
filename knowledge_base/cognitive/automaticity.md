@@ -15,6 +15,8 @@ semantic_relations:
       - "[[skill_acquisition]]"
       - "[[cognitive_control]]"
       - "[[procedural_memory]]"
+aliases:
+  - automatic_processing
 ---
 
 # Automaticity

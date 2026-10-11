@@ -17,6 +17,8 @@ semantic_relations:
       - "[[decision_theory]]"
       - "[[pragmatic_value]]"
       - "[[expected_free_energy]]"
+aliases:
+  - utility_maximization
 ---
 
 # Utility Theory

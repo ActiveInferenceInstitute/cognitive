@@ -15,6 +15,9 @@ semantic_relations:
       - "[[social_cognition]]"
       - "[[perceptual_inference]]"
       - "[[active_inference]]"
+aliases:
+  - expression_recognition
+  - facial_expression
 ---
 
 # Emotion Recognition

@@ -21,7 +21,6 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - "[[python framework]]"
       - "[[active inference discrete]]"
   - type: extends
     links:

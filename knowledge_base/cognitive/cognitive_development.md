@@ -10,10 +10,8 @@ tags:
 - plasticity
 aliases:
   - brain_development
+  - piaget_development
 semantic_relations:
-  - type: implements
-    links:
-      - "[[developmental_processes]]"
   - type: related
     links:
       - "[[learning_mechanisms]]"
@@ -35,25 +33,25 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 - [[brain_maturation]] - Neural development
 
-  - [[structural_development]] - Anatomical growth of neural structures
+  - structural development - Anatomical growth of neural structures
 
     - [[synaptogenesis]] - Connection formation
 
     - [[myelination]] - Insulation of axons that speeds signal conduction
 
-  - [[functional_development]] - Maturation of neural and cognitive function
+  - functional development - Maturation of neural and cognitive function
 
-    - [[circuit_formation]] - Network building
+    - circuit formation - Network building
 
     - specialization - Regions becoming specialized for particular functions
 
 ### Learning Processes
 
-- [[developmental_learning]] - Learning that shapes abilities across development
+- developmental learning - Learning that shapes abilities across development
 
   - [[experience_dependent]] - Development shaped by individual experience
 
-    - [[activity_dependent]] - Neural refinement driven by patterns of activity
+    - activity dependent - Neural refinement driven by patterns of activity
 
     - [[practice_effects]] - Skill gains from repeated practice
 
@@ -65,19 +63,19 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 ### Adaptation Systems
 
-- [[developmental_adaptation]] - Adjustment of development to circumstances
+- developmental adaptation - Adjustment of development to circumstances
 
   - [[environmental_adaptation]] - Development adjusting to environmental conditions
 
-    - [[niche_adaptation]] - Tuning to the specific ecological niche
+    - niche adaptation - Tuning to the specific ecological niche
 
-    - [[cultural_adaptation]] - Tuning to cultural practices and expectations
+    - cultural adaptation - Tuning to cultural practices and expectations
 
-  - [[compensatory_processes]] - Mechanisms offsetting deficits or loss
+  - compensatory processes - Mechanisms offsetting deficits or loss
 
-    - [[alternative_strategies]] - Different routes to the same cognitive goal
+    - alternative strategies - Different routes to the same cognitive goal
 
-    - [[resource_reallocation]] - Shifting neural resources to other functions
+    - resource reallocation - Shifting neural resources to other functions
 
 ## Developmental Stages
 
@@ -89,7 +87,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - [[object_permanence]] - Understanding that objects persist when unseen
 
-    - [[means_ends]] - Using actions as means to reach goals
+    - means ends - Using actions as means to reach goals
 
   - [[perceptual_development]] - Maturation of perceptual abilities
 
@@ -155,7 +153,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - [[depth_perception]] - Perceiving distance and three-dimensional layout
 
-    - [[pattern_vision]] - Detecting shapes and visual patterns
+    - pattern vision - Detecting shapes and visual patterns
 
   - [[auditory_development]] - Maturation of hearing and auditory processing
 
@@ -165,11 +163,11 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 ### Attention Development
 
-- [[attention_development]] - Maturation of attention
+- attention development - Maturation of attention
 
   - [[selective_attention]] - Focusing on relevant stimuli
 
-    - [[distraction_resistance]] - Ignoring irrelevant stimuli while attending
+    - distraction resistance - Ignoring irrelevant stimuli while attending
 
     - [[attention_control]] - Voluntary direction of attention
 
@@ -177,11 +175,11 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - [[vigilance]] - Sustained readiness to detect rare events
 
-    - [[effort_control]] - Deliberate regulation of attention and behavior
+    - effort control - Deliberate regulation of attention and behavior
 
 ### Memory Development
 
-- [[memory_development]] - Maturation of memory systems
+- memory development - Maturation of memory systems
 
   - [[working_memory]] - Temporarily holding and manipulating information
 
@@ -227,7 +225,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - [[local_circuits]] - Connections within a single region
 
-    - [[long_range]] - Connections between distant brain regions
+    - long range - Connections between distant brain regions
 
 ### Plasticity Mechanisms
 
@@ -241,7 +239,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
   - [[injury_response]] - Reorganization and recovery after brain injury
 
-    - [[reorganization]] - Functional remapping of neural circuits
+    - reorganization - Functional remapping of neural circuits
 
     - compensation - Other brain areas taking over lost function
 
@@ -259,29 +257,29 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - [[receptor_expression]] - Changes in receptor abundance and type
 
-    - [[sensitivity]] - Responsiveness of receptors to transmitters
+    - sensitivity - Responsiveness of receptors to transmitters
 
 ## Environmental Influences
 
 ### Physical Environment
 
-- [[environmental_factors]] - External conditions influencing development
+- environmental factors - External conditions influencing development
 
   - [[sensory_input]] - Stimulation received through the senses
 
-    - [[enrichment]] - Stimulating environments that support development
+    - enrichment - Stimulating environments that support development
 
-    - [[deprivation]] - Lack of adequate sensory or social stimulation
+    - deprivation - Lack of adequate sensory or social stimulation
 
-  - [[physical_activity]] - Effects of movement on development
+  - physical activity - Effects of movement on development
 
-    - [[exercise]] - Physical exercise and its cognitive benefits
+    - exercise - Physical exercise and its cognitive benefits
 
-    - [[skill_practice]] - Learning through repeated practice
+    - skill practice - Learning through repeated practice
 
 ### Social Environment
 
-- [[social_influences]] - Effects of other people on development
+- social influences - Effects of other people on development
 
   - [[family_effects]] - Influence of the family environment
 
@@ -297,15 +295,15 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 ### Cultural Context
 
-- [[cultural_influences]] - Effects of culture on development
+- cultural influences - Effects of culture on development
 
-  - [[educational_practices]] - Instructional approaches in schooling
+  - educational practices - Instructional approaches in schooling
 
     - teaching methods - Instructional techniques that support learning
 
-    - [[curriculum]] - Content and sequence of instruction
+    - curriculum - Content and sequence of instruction
 
-  - [[cultural_values]] - Culturally shared beliefs about what matters
+  - cultural values - Culturally shared beliefs about what matters
 
     - [[goals]] - Developmental goals set by a culture
 
@@ -317,9 +315,9 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 - educational design - Planning learning around developmental stages
 
-  - [[curriculum_development]] - Designing curricula suited to developmental level
+  - curriculum development - Designing curricula suited to developmental level
 
-    - [[sequence]] - Ordering material from simple to complex
+    - sequence - Ordering material from simple to complex
 
     - [[methods]] - Teaching methods matched to developmental level
 
@@ -335,7 +333,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
   - [[diagnosis]] - Identifying developmental conditions
 
-    - [[assessment_methods]] - Tools for evaluating developmental status
+    - assessment methods - Tools for evaluating developmental status
 
     - [[early_detection]] - Identifying conditions at young ages
 
@@ -375,7 +373,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
   - [[observational_methods]] - Recording behavior as it occurs
 
-    - [[naturalistic]] - Observation in everyday settings
+    - naturalistic - Observation in everyday settings
 
     - [[structured]] - Observation using prescribed tasks
 
@@ -389,27 +387,27 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - functional - Imaging of brain activity
 
-  - [[activity_measures]] - Recording neural and behavioral activity
+  - activity measures - Recording neural and behavioral activity
 
     - [[eeg]] - Electrical brain activity recorded at the scalp
 
-    - [[eye_tracking]] - Recording where and how long someone looks
+    - eye tracking - Recording where and how long someone looks
 
 ### Longitudinal Methods
 
 - [[time_studies]] - Studies following change across time
 
-  - [[longitudinal]] - Following the same individuals over time
+  - longitudinal - Following the same individuals over time
 
-    - [[growth_curves]] - Modeling individual change trajectories
+    - growth curves - Modeling individual change trajectories
 
     - [[stability]] - Consistency of traits over time
 
-  - [[cross_sectional]] - Comparing different age groups at one time
+  - cross sectional - Comparing different age groups at one time
 
     - [[age_differences]] - Differences between age groups
 
-    - [[cohort_effects]] - Differences due to generation or birth cohort
+    - cohort effects - Differences due to generation or birth cohort
 
 ## Future Directions
 
@@ -433,11 +431,11 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 - [[piaget_development]]
 
-- [[vygotsky_social]]
+- vygotsky social
 
-- [[carey_conceptual]]
+- carey conceptual
 
-- [[johnson_brain]]
+- johnson brain
 
 ## Related Concepts
 

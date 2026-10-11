@@ -553,7 +553,7 @@ class PopulationGame:
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
-- [[nowak_2006]] - "Evolutionary Dynamics"
+- nowak 2006 - "Evolutionary Dynamics"
 
 ## See Also
 

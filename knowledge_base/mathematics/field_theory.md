@@ -16,6 +16,8 @@ semantic_relations:
       - "[[variational_calculus]]"
       - "[[lagrangian_mechanics]]"
       - "[[path_integral]]"
+aliases:
+  - classical_field_theory
 ---
 
 # Field Theory

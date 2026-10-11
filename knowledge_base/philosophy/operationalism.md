@@ -27,7 +27,7 @@ semantic_relations:
 
 ## Overview
 
-Operationalism (also known as operationism or operational definition) is a philosophical and methodological approach that defines theoretical concepts solely in terms of the operations or procedures used to measure or observe them. Emerging from physics in the 1920s and subsequently influencing [[philosophy_of_science]], [[psychology]], and social sciences, operationalism represents a significant attempt to ground scientific concepts in empirically verifiable operations rather than abstract metaphysical properties.
+Operationalism (also known as operationism or operational definition) is a philosophical and methodological approach that defines theoretical concepts solely in terms of the operations or procedures used to measure or observe them. Emerging from physics in the 1920s and subsequently influencing [[philosophy_of_science]], psychology, and social sciences, operationalism represents a significant attempt to ground scientific concepts in empirically verifiable operations rather than abstract metaphysical properties.
 
 ```mermaid
 
@@ -451,7 +451,7 @@ Modern extensions include:
 
 1. **Computable Definitions**: Concepts defined as algorithms or computational procedures
 
-1. **[[machine_learning_operations|Machine Learning Operations (MLOps)]]**: Operational specifications for AI systems
+1. **Machine Learning Operations (MLOps)**: Operational specifications for AI systems
 
 1. **[[reproducible_research|Reproducible Research]]**: Computational notebooks as operational definitions
 
@@ -1121,7 +1121,7 @@ These discussions reflect the continued relevance of operationalist themes in ph
 
 Operationalization remains central in:
 
-1. **[[precision_medicine|Precision Medicine]]**: Operationalizing personalized treatment protocols
+1. **Precision Medicine**: Operationalizing personalized treatment protocols
 
 1. **[[computational_social_science|Computational Social Science]]**: Digital operational definitions of social phenomena
 
@@ -1163,7 +1163,7 @@ In these emerging fields, operational approaches must balance precise measuremen
 
 - [[data_science]]
 
-- [[machine_learning_operations]]
+- machine learning operations
 
 - [[theory_ladenness]]
 

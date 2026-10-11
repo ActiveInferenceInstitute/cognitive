@@ -34,7 +34,7 @@ This agent implements a POMDP (Partially Observable Markov Decision Process) usi
 
 - [[s_space]] - Hidden state space
 
-- [[pi_space]] - Policy space
+- pi space - Policy space
 
 ## Matrix Dimensions
 

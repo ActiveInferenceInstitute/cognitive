@@ -15,6 +15,8 @@ semantic_relations:
       - "[[predictive_coding]]"
       - "[[hierarchical_processing]]"
       - "[[exogenous_attention]]"
+aliases:
+  - bottom_up_processing
 ---
 
 # Bottom-Up Processing

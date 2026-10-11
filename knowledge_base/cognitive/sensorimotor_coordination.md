@@ -468,5 +468,5 @@ Sensorimotor coordination refers to the integrated control of perception and act
 
 - [[motor_control_theory]]
 
-- [[computational_motor_control]]
+- computational motor control
 

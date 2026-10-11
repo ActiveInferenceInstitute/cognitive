@@ -16,7 +16,6 @@ semantic_relations:
       - "[[algebraic_topology]]"
   - type: relates
     links:
-      - "[[manifold_theory]]"
       - "[[homology_theory]]"
       - "[[homotopy_theory]]"
 ---

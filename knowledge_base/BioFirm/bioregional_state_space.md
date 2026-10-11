@@ -62,7 +62,7 @@ The system implements federated learning and inference through:
 
 - [[Habitat_Connectivity|Habitat connectivity]]
 
-  - [[Network_Metrics|Network metrics]]
+  - Network metrics
 
   - [[Ecological_Corridors|Corridor quality]]
 
@@ -98,9 +98,9 @@ The system implements federated learning and inference through:
 
   - [[Temporal_Trends|Temporal trends]]
 
-  - [[Spatial_Distribution|Spatial distribution]]
+  - Spatial distribution
 
-  - [[Extreme_Events|Extremes frequency]]
+  - Extremes frequency
 
 - [[Precipitation_Regimes|Precipitation regimes]]
 
@@ -126,7 +126,7 @@ The system implements federated learning and inference through:
 
   - [[Land_Cover_Change|Land cover changes]]
 
-- [[Extreme_Events|Extreme event frequency]]
+- Extreme event frequency
 
   - [[Event_Classification|Event typology]]
 
@@ -140,7 +140,7 @@ The system implements federated learning and inference through:
 
   - [[Participation_Metrics|Participation metrics]]
 
-  - [[Social_Networks|Network strength]]
+  - Network strength
 
   - [[Knowledge_Sharing|Knowledge sharing]]
 
@@ -210,7 +210,7 @@ The system implements federated learning and inference through:
 
   - [[knowledge_base/cognitive/performance_metrics|Performance metrics]]
 
-- [[Resource_Efficiency|Resource efficiency metrics]]
+- Resource efficiency metrics
 
   - [[Use_Optimization|Use optimization]]
 

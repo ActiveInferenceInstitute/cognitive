@@ -15,6 +15,10 @@ semantic_relations:
       - "[[consciousness_studies]]"
       - "[[cognitive_architecture]]"
       - "[[active_inference]]"
+aliases:
+  - access_consciousness
+  - broadcast
+  - broadcast_mechanisms
 ---
 
 # Global Workspace Theory

@@ -44,7 +44,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
       - temporal patterns - Organization across time
 
-    - [[system_properties]] - Properties of the whole system
+    - system properties - Properties of the whole system
 
       - [[robustness]] - Ability to keep functioning despite disruptions
 
@@ -52,7 +52,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
   - [[scaling_relations]] - How behavior changes with group size
 
-    - [[size_effects]] - Influence of group size on behavior
+    - size effects - Influence of group size on behavior
 
       - [[critical_mass]] - Minimum group size for a behavior to appear
 
@@ -80,7 +80,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
       - [[local_communication]] - Communication limited to nearby agents
 
-      - [[information_transfer]] - Passing information between agents
+      - information transfer - Passing information between agents
 
   - [[indirect_interactions]] - Interaction mediated by the environment
 
@@ -188,7 +188,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
       - [[cluster_formation]] - Dense compact grouping
 
-    - [[collective_motion]] - Coordinated movement of many individuals
+    - collective motion - Coordinated movement of many individuals
 
       - [[synchronization]] - Alignment of timing across individuals
 
@@ -232,7 +232,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
 - [[swarm_models]] - Mathematical models of swarm behavior
 
-  - [[particle_systems]] - Models representing agents as interacting particles
+  - particle systems - Models representing agents as interacting particles
 
     - [[interaction_rules]] - Rules governing how agents influence each other
 
@@ -298,7 +298,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
   - [[distributed_control]] - Control spread across agents without a center
 
-    - [[local_rules]] - Rules using only nearby information
+    - local rules - Rules using only nearby information
 
       - [[neighbor_interactions]] - Interactions with adjacent agents
 
@@ -308,7 +308,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
       - [[task_allocation]] - Assigning tasks among agents
 
-      - [[resource_distribution]] - Spreading resources across the swarm
+      - resource distribution - Spreading resources across the swarm
 
   - [[adaptive_control]] - Control that adjusts to changing conditions
 
@@ -322,7 +322,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
       - [[fault_tolerance]] - Continued function despite agent failures
 
-      - [[self_repair]] - Restoring function after damage
+      - self repair - Restoring function after damage
 
 ## Applications
 
@@ -340,7 +340,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
     - [[distributed_sensing]] - Sensing shared across many agents
 
-      - [[sensor_networks]] - Networks of spatially distributed sensors
+      - sensor networks - Networks of spatially distributed sensors
 
       - [[collective_perception]] - Group-level sensing and judgment of the environment
 
@@ -364,29 +364,29 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
   - [[search_problems]] - Finding good solutions in large spaces
 
-    - [[routing_problems]] - Finding efficient paths
+    - routing problems - Finding efficient paths
 
       - [[traveling_salesman]] - Finding the shortest route visiting every city
 
       - [[vehicle_routing]] - Planning efficient routes for vehicle fleets
 
-    - [[scheduling_problems]] - Assigning tasks to time slots
+    - scheduling problems - Assigning tasks to time slots
 
       - [[task_scheduling]] - Ordering tasks in time
 
       - [[resource_scheduling]] - Allocating resources over time
 
-  - [[design_problems]] - Choosing configurations that meet goals
+  - design problems - Choosing configurations that meet goals
 
     - [[layout_optimization]] - Finding the best spatial arrangement
 
       - [[facility_location]] - Choosing sites for facilities
 
-      - [[network_design]] - Planning network structure
+      - network design - Planning network structure
 
     - [[parameter_tuning]] - Adjusting parameters for better performance
 
-      - [[system_optimization]] - Improving overall system performance
+      - system optimization - Improving overall system performance
 
       - [[control_optimization]] - Improving control performance
 
@@ -404,7 +404,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
     - [[opinion_dynamics]] - How opinions spread and change in groups
 
-      - [[consensus_formation]] - Group converging on a shared view
+      - consensus formation - Group converging on a shared view
 
       - [[information_cascade]] - Individuals following others' choices over their own information
 
@@ -416,7 +416,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
       - [[wisdom_crowds]] - Accurate group judgment from aggregated estimates
 
-    - [[coordination_systems]] - Mechanisms aligning group activity
+    - coordination systems - Mechanisms aligning group activity
 
       - [[task_markets]] - Market-based allocation of tasks
 
@@ -430,7 +430,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
   - [[complexity_management]] - Handling growing system complexity
 
-    - [[interaction_complexity]] - Complexity from numerous agent interactions
+    - interaction complexity - Complexity from numerous agent interactions
 
       - [[communication_overhead]] - Cost of exchanging information
 
@@ -454,13 +454,13 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
       - [[failure_modes]] - Ways a system can fail
 
-      - [[recovery_dynamics]] - How systems recover after failure
+      - recovery dynamics - How systems recover after failure
 
 ### Emerging Approaches
 
 - [[new_directions]] - Emerging research areas
 
-  - [[hybrid_systems]] - Systems combining different agent types
+  - hybrid systems - Systems combining different agent types
 
     - [[human_swarm]] - Teams of humans and robot swarms
 
@@ -480,7 +480,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
       - [[collective_learning]] - Learning by the group as a whole
 
-      - [[adaptive_strategies]] - Strategies that adjust through learning
+      - adaptive strategies - Strategies that adjust through learning
 
     - [[cognitive_swarms]] - Swarms with cognitive capabilities
 

@@ -15,6 +15,8 @@ semantic_relations:
     links:
       - "[[knowledge_base/agents/GenericPOMDP/README]]"
       - "[[knowledge_base/cognitive/active_inference]]"
+aliases:
+  - pomdp_formalism
 ---
 
 

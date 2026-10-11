@@ -37,7 +37,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
   - [[hierarchical_organization]] - Nested levels of biological structure
 
-    - [[scale_separation]] - Separation of processes by characteristic scale
+    - scale separation - Separation of processes by characteristic scale
 
       - [[temporal_scales]] - Durations over which processes unfold
 
@@ -65,9 +65,9 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
 ### Network Architecture
 
-- [[biological_networks]] - Interaction webs among biological components
+- biological networks - Interaction webs among biological components
 
-  - [[cellular_networks]] - Interaction networks within and between cells
+  - cellular networks - Interaction networks within and between cells
 
     - [[metabolic_networks]] - Networks of biochemical reactions
 
@@ -87,7 +87,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[trophic_levels]] - Feeding tiers in an ecosystem
 
-      - [[energy_flow]] - Movement of energy through feeding tiers
+      - energy flow - Movement of energy through feeding tiers
 
     - [[interaction_networks]] - Networks of relationships between species
 
@@ -145,7 +145,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[enzyme_cascades]] - Sequential enzyme reactions that amplify signals
 
-      - [[molecular_machines]] - Protein complexes performing mechanical work
+      - molecular machines - Protein complexes performing mechanical work
 
   - [[genetic_networks]] - Networks of interacting genes
 
@@ -153,7 +153,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[transcription_control]] - Regulation of gene transcription
 
-      - [[expression_patterns]] - Spatial and temporal profiles of gene activity
+      - expression patterns - Spatial and temporal profiles of gene activity
 
     - [[evolution_networks]]
 
@@ -201,9 +201,9 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
     - [[organ_systems]] - Groups of organs serving a shared function
 
-      - [[functional_integration]] - Combining parts into coordinated function
+      - functional integration - Combining parts into coordinated function
 
-      - [[regulatory_circuits]] - Feedback circuits maintaining physiological balance
+      - regulatory circuits - Feedback circuits maintaining physiological balance
 
     - [[neural_networks]] - Networks of interconnected neurons
 
@@ -235,7 +235,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[symbiosis]] - Close long-term association between species
 
-      - [[predator_prey]] - Consumer and victim species interactions
+      - predator prey - Consumer and victim species interactions
 
     - [[community_structure]] - Composition and organization of species groups
 
@@ -269,19 +269,19 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[hub_identification]] - Finding highly connected nodes
 
-      - [[module_detection]] - Finding densely connected groups of nodes
+      - module detection - Finding densely connected groups of nodes
 
-    - [[network_metrics]] - Quantitative measures of network structure
+    - network metrics - Quantitative measures of network structure
 
       - [[centrality]] - Measures of node importance
 
       - [[clustering]] - Tendency of nodes to form tight groups
 
-  - [[dynamics_analysis]] - Study of network behavior over time
+  - dynamics analysis - Study of network behavior over time
 
     - [[flow_patterns]] - Routes of material or information movement
 
-      - [[path_analysis]] - Study of routes between nodes
+      - path analysis - Study of routes between nodes
 
       - [[bottleneck_detection]] - Finding points that limit flow
 
@@ -289,7 +289,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[robustness_measures]] - Metrics of tolerance to perturbation
 
-      - [[vulnerability_assessment]] - Identifying weak points prone to failure
+      - vulnerability assessment - Identifying weak points prone to failure
 
 ### Systems Modeling
 
@@ -315,7 +315,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[cellular_automata]] - Grid models with local update rules
 
-      - [[particle_systems]] - Models of many interacting particles
+      - particle systems - Models of many interacting particles
 
     - [[network_models]] - Models representing systems as graphs
 
@@ -347,7 +347,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[motif_detection]] - Finding recurring network substructures
 
-      - [[correlation_analysis]] - Measuring statistical association between variables
+      - correlation analysis - Measuring statistical association between variables
 
     - integration methods - Techniques for combining data sources
 
@@ -381,9 +381,9 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[genetic_profiles]] - Individual genetic makeup
 
-      - [[response_patterns]] - How patients respond to treatment
+      - response patterns - How patients respond to treatment
 
-    - [[treatment_optimization]] - Tuning treatments for best outcomes
+    - treatment optimization - Tuning treatments for best outcomes
 
       - [[drug_combinations]] - Using multiple drugs together
 
@@ -401,7 +401,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[metabolic_engineering]] - Redesigning metabolic pathways for production
 
-    - [[system_optimization]] - Tuning engineered systems for performance
+    - system optimization - Tuning engineered systems for performance
 
       - [[yield_improvement]] - Increasing product output
 
@@ -443,7 +443,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
     - [[response_prediction]] - Forecasting how systems react to change
 
-      - [[vulnerability_assessment]] - Identifying weak points prone to failure
+      - vulnerability assessment - Identifying weak points prone to failure
 
       - [[resilience_analysis]] - Assessing capacity to recover from disturbance
 
@@ -485,7 +485,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[learning_dynamics]] - How learning changes over time
 
-      - [[evolution_dynamics]] - Changes in populations across generations
+      - evolution dynamics - Changes in populations across generations
 
 ### Emerging Approaches
 
@@ -497,7 +497,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[single_cell]] - Measurement of individual cells
 
-      - [[real_time]] - Continuous observation as processes unfold
+      - real time - Continuous observation as processes unfold
 
     - [[computation_tools]] - Computational tools for analysis
 
@@ -515,7 +515,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
     - [[theory_integration]] - Combining theoretical frameworks
 
-      - [[physics_biology]] - Physical principles applied to living systems
+      - physics biology - Physical principles applied to living systems
 
       - [[information_biology]] - Information-theoretic views of living systems
 

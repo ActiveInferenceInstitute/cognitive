@@ -20,7 +20,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - Environmental scanning
 
-- Links to: [[risk_factors]], [[risk_disclosure]]
+- Links to: risk factors, risk disclosure
 
 ### 2. Risk Analysis
 
@@ -40,7 +40,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - Treatment priorities
 
-- Connected to: [[risk_classification]], [[risk_appetite]]
+- Connected to: risk classification, risk appetite
 
 ## Assessment Methodologies
 
@@ -74,13 +74,13 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 #### 1. Data-Driven Assessment
 
-- Machine learning models ([[machine_learning_basics]])
+- Machine learning models (machine learning basics)
 
 - Predictive analytics
 
 - Pattern recognition
 
-- Links to: [[automated_underwriting]]
+- Links to: automated underwriting
 
 #### 2. Dynamic Risk Assessment
 
@@ -90,7 +90,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - Adaptive modeling
 
-- Related to: [[dynamic_risk_assessment]], [[real_time_adjustment]]
+- Related to: dynamic risk assessment, [[real_time_adjustment]]
 
 #### 3. Bayesian Methods
 
@@ -186,7 +186,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - Liquidity risk
 
-- Related to: [[premium_calculation]]
+- Related to: premium calculation
 
 #### 2. Operational Risks
 
@@ -248,7 +248,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - Quality control
 
-- Related to: [[application_review_process]]
+- Related to: application review process
 
 ### 2. Analysis Framework
 
@@ -258,7 +258,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - Result interpretation
 
-- Links to: [[risk_factor_analysis]]
+- Links to: risk factor analysis
 
 ### 3. Decision Making
 
@@ -280,7 +280,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - Audit trail
 
-- Related to: [[underwriting_guidelines]]
+- Related to: underwriting guidelines
 
 ### 2. Quality Control
 
@@ -298,7 +298,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - Feedback integration
 
-- Links to: [[experience_integration]]
+- Links to: experience integration
 
 ## Challenges and Solutions
 
@@ -350,7 +350,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
    - Computer vision
 
-   - Related to: [[novel_applications]]
+   - Related to: novel applications
 
 1. **Real-time Assessment**
 
@@ -372,21 +372,21 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 ## Related Concepts
 
-- [[risk_assessment_fundamentals]]
+- risk assessment fundamentals
 
 - [[underwriting_principles]]
 
 - [[active_inference_basics]]
 
-- [[portfolio_optimization]]
+- portfolio optimization
 
-- [[risk_mitigation]]
+- risk mitigation
 
 ## Learning Resources
 
-- [[academic_papers]]
+- academic papers
 
-- [[technical_documentation]]
+- technical documentation
 
 - [[case_studies]]
 
@@ -394,11 +394,11 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 ## Assessment and Validation
 
-- [[concept_understanding]]
+- concept understanding
 
-- [[technical_proficiency]]
+- technical proficiency
 
-- [[integration_capability]]
+- integration capability
 
 - [[problem_solving_skills]]
 

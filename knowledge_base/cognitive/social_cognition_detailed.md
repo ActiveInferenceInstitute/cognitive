@@ -35,11 +35,11 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
   - [[face_processing]] - Perceiving and interpreting faces
 
-    - [[identity_recognition]] - Recognizing who a person is
+    - identity recognition - Recognizing who a person is
 
     - [[expression_recognition]] - Recognizing emotions from facial expressions
 
-  - [[body_perception]] - Perceiving other people's bodies and postures
+  - body perception - Perceiving other people's bodies and postures
 
     - [[biological_motion]] - Perceiving the movement of living agents
 
@@ -49,17 +49,17 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 - [[mental_state_attribution]] - Inferring others' beliefs, desires, and intentions
 
-  - [[belief_understanding]] - Understanding what others believe
+  - belief understanding - Understanding what others believe
 
     - [[false_belief]] - Recognizing that others can hold mistaken beliefs
 
     - [[true_belief]] - Recognizing others' accurate beliefs
 
-  - [[intention_inference]] - Inferring what others intend
+  - intention inference - Inferring what others intend
 
     - [[goal_detection]] - Identifying the goals of others' actions
 
-    - [[desire_inference]] - Inferring what others want
+    - desire inference - Inferring what others want
 
 ### Social Learning
 
@@ -67,13 +67,13 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
   - [[norm_acquisition]] - Learning social rules
 
-    - [[cultural_norms]] - Shared behavioral expectations of a group
+    - cultural norms - Shared behavioral expectations of a group
 
     - [[social_conventions]] - Customary rules for social behavior
 
   - [[value_learning]] - Learning what is considered worthwhile
 
-    - [[moral_values]] - Beliefs about right and wrong
+    - moral values - Beliefs about right and wrong
 
     - [[social_preferences]] - Preferences concerning outcomes for others
 
@@ -89,7 +89,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
     - [[contextual_cues]] - Situational information that shapes interpretation
 
-  - [[interpretation]] - Assigning meaning to social cues
+  - interpretation - Assigning meaning to social cues
 
     - [[intention_attribution]] - Explaining behavior by others' intentions
 
@@ -101,7 +101,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
   - [[cooperation_decisions]] - Decisions about cooperating with others
 
-    - [[trust_decisions]] - Decisions about whom to trust
+    - trust decisions - Decisions about whom to trust
 
     - [[fairness_judgments]] - Judgments about equitable outcomes
 
@@ -131,7 +131,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Social Brain Networks
 
-- [[social_brain]] - Brain regions supporting social cognition
+- social brain - Brain regions supporting social cognition
 
   - [[mentalizing_network]] - Network supporting inference of mental states
 
@@ -147,7 +147,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Circuit Mechanisms
 
-- [[social_circuits]] - Neural circuits for social processing
+- social circuits - Neural circuits for social processing
 
   - [[face_circuits]] - Circuits specialized for face processing
 
@@ -163,7 +163,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Neuromodulation
 
-- [[social_modulation]] - Neurochemical influences on social behavior
+- social modulation - Neurochemical influences on social behavior
 
   - [[oxytocin_system]] - Neuropeptide system for bonding and trust
 
@@ -173,7 +173,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
   - [[dopamine_system]] - Neuromodulator system for reward and motivation
 
-    - [[reward_learning]] - Learning from social and other rewards
+    - reward learning - Learning from social and other rewards
 
     - [[motivation]] - Drive to pursue goals and rewards
 
@@ -183,13 +183,13 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 - [[social_communication]] - Exchange of information between people
 
-  - [[verbal_communication]] - Communication using spoken words
+  - verbal communication - Communication using spoken words
 
     - [[language_use]] - Using language in social contexts
 
     - [[speech_acts]] - Actions performed through utterances, such as requesting
 
-  - [[nonverbal_communication]] - Communication without words
+  - nonverbal communication - Communication without words
 
     - [[gesture]] - Hand and body movements that convey meaning
 
@@ -199,17 +199,17 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 - [[social_relations]] - Relationships between people
 
-  - [[attachment]] - Enduring emotional bonds
+  - attachment - Enduring emotional bonds
 
-    - [[bond_formation]] - Developing close emotional ties
+    - bond formation - Developing close emotional ties
 
     - [[trust_building]] - Developing mutual trust over time
 
   - [[group_relations]] - Relationships within and between groups
 
-    - [[group_identity]] - Sense of belonging to a group
+    - group identity - Sense of belonging to a group
 
-    - [[social_status]] - A person's standing or rank within a group
+    - social status - A person's standing or rank within a group
 
 ### Cultural Participation
 
@@ -225,7 +225,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
     - [[moral_behavior]] - Actions guided by moral principles
 
-    - [[cultural_practices]] - Customary activities of a cultural group
+    - cultural practices - Customary activities of a cultural group
 
 ## Development
 
@@ -269,7 +269,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
     - parenting - Parental child-rearing practices
 
-    - [[sibling_relations]] - Relationships between brothers and sisters
+    - sibling relations - Relationships between brothers and sisters
 
   - [[peer_influence]] - Influence of same-age peers
 
@@ -291,17 +291,17 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
   - [[social_anxiety]] - Fear of social evaluation
 
-    - [[interaction_avoidance]] - Avoiding social situations
+    - interaction avoidance - Avoiding social situations
 
-    - [[performance_anxiety]] - Fear of being judged during performance
+    - performance anxiety - Fear of being judged during performance
 
 ### Educational Applications
 
-- [[social_education]] - Teaching social skills
+- social education - Teaching social skills
 
   - [[skill_training]] - Structured practice of specific skills
 
-    - [[communication_skills]] - Abilities for effective exchange of information
+    - communication skills - Abilities for effective exchange of information
 
     - [[conflict_resolution]] - Resolving disagreements constructively
 
@@ -309,7 +309,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
     - [[classroom_dynamics]] - Social interactions within a class
 
-    - [[peer_relations]] - Relationships among peers
+    - peer relations - Relationships among peers
 
 ### Professional Applications
 
@@ -323,7 +323,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
   - [[collaboration]] - Working jointly toward a shared goal
 
-    - [[team_coordination]] - Aligning team members' actions
+    - team coordination - Aligning team members' actions
 
     - [[negotiation]] - Reaching agreement between parties
 
@@ -335,15 +335,15 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
   - interaction analysis - Systematic study of social exchanges
 
-    - [[conversation_analysis]] - Detailed study of the structure of talk
+    - conversation analysis - Detailed study of the structure of talk
 
-    - [[behavior_coding]] - Categorizing observed behavior systematically
+    - behavior coding - Categorizing observed behavior systematically
 
   - [[experimental_games]] - Game-based tests of social decisions
 
     - [[economic_games]] - Games using monetary payoffs to study decisions
 
-    - [[social_dilemmas]] - Situations where individual and group interests conflict
+    - social dilemmas - Situations where individual and group interests conflict
 
 ### Neural Methods
 
@@ -381,7 +381,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Current Challenges
 
-- [[measurement_complexity]] - Difficulty measuring social processes
+- measurement complexity - Difficulty measuring social processes
 
 - [[ecological_validity]] - Relevance of findings to real-world settings
 
@@ -391,13 +391,13 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 - new methods - Novel approaches to studying social cognition
 
-  - [[real_world_studies]] - Research conducted in everyday settings
+  - real world studies - Research conducted in everyday settings
 
-    - [[mobile_assessment]] - Measurement using portable devices
+    - mobile assessment - Measurement using portable devices
 
-    - [[natural_observation]] - Observing behavior in natural settings
+    - natural observation - Observing behavior in natural settings
 
-  - [[technology_use]] - Using technology in social cognition research
+  - technology use - Using technology in social cognition research
 
     - [[virtual_reality]] - Simulated environments for controlled experiments
 
@@ -409,7 +409,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 - [[frith_making]]
 
-- [[lieberman_social]]
+- lieberman social
 
 - [[dunbar_social]]
 

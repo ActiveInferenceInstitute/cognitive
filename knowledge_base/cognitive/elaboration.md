@@ -16,6 +16,8 @@ semantic_relations:
       - "[[semantic_memory]]"
       - "[[learning_theory]]"
       - "[[schema_integration]]"
+aliases:
+  - elaborative_rehearsal
 ---
 
 # Elaboration

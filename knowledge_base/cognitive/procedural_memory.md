@@ -21,6 +21,8 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[motor_control]]"
       - "[[skill_acquisition]]"
+aliases:
+  - procedural_learning
 ---
 
 
@@ -488,7 +490,7 @@ Procedural memory is the system responsible for the acquisition, maintenance, an
 
 - [[motor_neuroscience]]
 
-- [[computational_motor_control]]
+- computational motor control
 
 - [[skill_learning]]
 

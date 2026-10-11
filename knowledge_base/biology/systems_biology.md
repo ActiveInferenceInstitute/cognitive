@@ -11,6 +11,7 @@ tags:
 aliases:
 - biological-systems
 - integrative-biology
+- biological_systems
 complexity: advanced
 processing_priority: 1
 semantic_relations:
@@ -21,7 +22,6 @@ semantic_relations:
       - "[[complex_systems]]"
   - type: implements
     links:
-      - "[[biological_networks]]"
       - "[[cellular_systems]]"
       - "[[metabolic_networks]]"
   - type: relates
@@ -540,7 +540,7 @@ class CellularSystem:
 
 - [[kitano_2002]] - "Systems Biology: A Brief Overview"
 
-- [[parr_2020]] - "Markov Blankets, Information Geometry and Stochastic Thermodynamics"
+- parr 2020 - "Markov Blankets, Information Geometry and Stochastic Thermodynamics"
 
 - [[ramstead_2018]] - "Answering Schrödinger's Question: A Free-Energy Formulation"
 

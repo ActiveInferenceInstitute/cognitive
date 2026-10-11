@@ -958,7 +958,7 @@ class InformationProcessor:
 
 1. [[quantum_computing|Quantum Computing]]
 
-1. [[statistical_inference|Statistical Inference]]
+1. Statistical Inference
 
 ## Related Documentation
 

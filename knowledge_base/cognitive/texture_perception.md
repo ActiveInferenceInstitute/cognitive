@@ -18,8 +18,6 @@ semantic_relations:
   - type: related
     links:
       - "[[form_perception]]"
-      - "[[surface_perception]]"
-      - "[[material_perception]]"
 ---
 
 
@@ -475,9 +473,9 @@ Texture perception is the visual system's ability to process and interpret surfa
 
 ## Related Concepts
 
-- [[surface_perception]]
+- surface perception
 
-- [[material_perception]]
+- material perception
 
 - [[pattern_recognition]]
 

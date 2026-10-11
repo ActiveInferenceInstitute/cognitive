@@ -15,6 +15,8 @@ semantic_relations:
       - "[[knowledge_base/biology/plant_biology]]"
       - "[[knowledge_base/biology/bee_colony_organization]]"
       - "[[knowledge_base/biology/ecological_networks]]"
+aliases:
+  - pollination
 ---
 
 # Pollination Biology

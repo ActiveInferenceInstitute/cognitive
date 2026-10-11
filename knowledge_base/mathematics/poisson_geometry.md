@@ -17,8 +17,9 @@ semantic_relations:
   - type: relates
     links:
       - "[[quantum_groups]]"
-      - "[[deformation_quantization]]"
       - "[[integrable_systems]]"
+aliases:
+  - poisson_brackets
 ---
 
 
@@ -578,7 +579,7 @@ class QuantumGroup:
 
 1. [[quantum_groups|Quantum Groups]]
 
-1. [[deformation_quantization|Deformation Quantization]]
+1. Deformation Quantization
 
 1. [[integrable_systems|Integrable Systems]]
 

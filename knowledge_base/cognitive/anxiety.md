@@ -15,6 +15,9 @@ semantic_relations:
       - "[[emotional_processing]]"
       - "[[precision_weighting]]"
       - "[[active_inference]]"
+aliases:
+  - anxiety_disorders
+  - generalized_anxiety
 ---
 
 # Anxiety

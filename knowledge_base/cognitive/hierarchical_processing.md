@@ -33,13 +33,13 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
 ### Structural Organization
 
-- [[processing_levels]] - Layered architecture
+- processing levels - Layered architecture
 
   - [[primary_processing]] - Basic feature extraction
 
-  - [[intermediate_processing]] - Feature combination
+  - intermediate processing - Feature combination
 
-  - [[high_level_processing]] - Abstract representation
+  - high level processing - Abstract representation
 
 ### Information Flow
 
@@ -65,9 +65,9 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
 ### Anatomical Organization
 
-- [[cortical_hierarchy]] - Brain structure
+- cortical hierarchy - Brain structure
 
-  - [[primary_areas]] - Sensory processing
+  - primary areas - Sensory processing
 
   - [[association_areas]] - Integration
 
@@ -103,7 +103,7 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
   - [[information_compression]] - Efficient coding
 
-  - [[feature_selection]] - Relevant extraction
+  - feature selection - Relevant extraction
 
 ### Representation Learning
 
@@ -119,11 +119,11 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
 - [[temporal_dynamics]] - Time evolution
 
-  - [[processing_stages]] - Sequential steps
+  - processing stages - Sequential steps
 
   - [[parallel_processing]] - Simultaneous computation
 
-  - [[recurrent_processing]] - Iterative refinement
+  - recurrent processing - Iterative refinement
 
 ## Applications
 

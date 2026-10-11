@@ -10,6 +10,7 @@ tags:
   - introspection
 aliases:
   - self_knowledge
+  - self_consciousness
 semantic_relations:
   - type: relates
     links:

@@ -458,7 +458,7 @@ class FreeEnergyGradients:
 
   - Complexity control
 
-- [[representation_learning]]
+- representation learning
 
   - Feature extraction
 
@@ -488,7 +488,7 @@ class FreeEnergyGradients:
 
   - Entanglement effects
 
-- [[relativistic_free_energy]]
+- relativistic free energy
 
   - Spacetime structure
 
@@ -2152,11 +2152,11 @@ class StochasticFreeEnergyAnalysis:
 
 - [[friston_2010]] - "The free-energy principle: a unified brain theory?"
 
-- [[wainwright_2008]] - "Graphical Models, Exponential Families, and Variational Inference"
+- wainwright 2008 - "Graphical Models, Exponential Families, and Variational Inference"
 
 - [[amari_2016]] - "Information Geometry and Its Applications"
 
-- [[parr_2020]] - "Markov blankets, information geometry and stochastic thermodynamics"
+- parr 2020 - "Markov blankets, information geometry and stochastic thermodynamics"
 
 - [[rockafellar_1970]] - "Convex Analysis"
 

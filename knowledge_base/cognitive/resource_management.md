@@ -498,7 +498,7 @@ Resource management represents the processes by which cognitive systems allocate
 
 - [[cognitive_neuroscience]]
 
-- [[resource_theory]]
+- resource theory
 
 - [[clinical_applications]]
 

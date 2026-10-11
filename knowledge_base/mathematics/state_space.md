@@ -18,6 +18,8 @@ semantic_relations:
       - "[[state_spaces]]"
       - "[[state_space_abstraction]]"
       - "[[active_inference_pomdp]]"
+aliases:
+  - state_space_theory
 ---
 
 # State Space

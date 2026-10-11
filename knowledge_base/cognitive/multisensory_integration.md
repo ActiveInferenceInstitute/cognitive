@@ -464,7 +464,7 @@ Multisensory integration refers to the brain's ability to combine information fr
 
 - [[predictive_processing]]
 
-- [[sensory_networks]]
+- sensory networks
 
 - [[cognitive_neuroscience]]
 

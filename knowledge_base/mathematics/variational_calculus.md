@@ -77,7 +77,7 @@ J[f] = \int_a^b L(x, f(x), f'(x))dx
 
 where:
 
-- $L$ is the Lagrangian (see [[classical_mechanics]], [[field_theory]])
+- $L$ is the Lagrangian (see classical mechanics, [[field_theory]])
 
 - $f$ is the function to optimize
 
@@ -349,13 +349,13 @@ class PathIntegrator:
 
   - Phase transitions (see [[critical_phenomena]])
 
-- [[field_theories]] (see also [[quantum_field_theory]])
+- field theories (see also [[quantum_field_theory]])
 
   - Quantum fields (see [[quantum_mechanics]])
 
   - Statistical fields (see [[statistical_field_theory]])
 
-  - Gauge theories (see [[gauge_theory]])
+  - Gauge theories (see gauge theory)
 
 ### 2. Machine Learning
 
@@ -453,7 +453,7 @@ class PathIntegrator:
 
 ### 1. Physics
 
-- [[classical_mechanics]] (see also [[hamiltonian_mechanics]], [[lagrangian_mechanics]])
+- classical mechanics (see also [[hamiltonian_mechanics]], [[lagrangian_mechanics]])
 
   - Least action (see [[principle_of_least_action]])
 
@@ -569,7 +569,7 @@ class PathIntegrator:
 
 - [[amari_2000]] - "Methods of Information Geometry"
 
-- [[blei_2017]] - "Variational Inference: A Review for Statisticians"
+- blei 2017 - "Variational Inference: A Review for Statisticians"
 
 ## See Also
 

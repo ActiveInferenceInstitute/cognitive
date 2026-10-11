@@ -170,7 +170,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Policy selection methods
 
-- [[predictive_models]] - Predictive processing models
+- predictive models - Predictive processing models
 
   - Hierarchical networks
 
@@ -386,7 +386,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Entanglement analogies
 
-- [[quantum_active_inference]] - Quantum extensions
+- quantum active inference - Quantum extensions
 
   - Quantum free energy
 
@@ -414,7 +414,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Evolutionary Perspectives
 
-- [[evolutionary_cognition]] - Evolutionary aspects
+- evolutionary cognition - Evolutionary aspects
 
   - Adaptive behavior
 
@@ -434,7 +434,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Formal Methods
 
-- [[formal_verification]] - Verification techniques
+- formal verification - Verification techniques
 
   - Model checking
 
@@ -460,7 +460,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Statistical analysis
 
-- [[theoretical_validation]] - Theoretical validation
+- theoretical validation - Theoretical validation
 
   - Mathematical proofs
 
@@ -562,7 +562,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Open Challenges
 
-- [[theoretical_challenges]] - Theoretical issues
+- theoretical challenges - Theoretical issues
 
   - Scaling problems
 
@@ -570,7 +570,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Foundational questions
 
-- [[practical_challenges]] - Practical issues
+- practical challenges - Practical issues
 
   - Implementation barriers
 
@@ -748,7 +748,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Continuous integration
 
-- [[documentation_systems]] - Systems for maintaining documentation
+- documentation systems - Systems for maintaining documentation
 
   - API documentation
 
@@ -768,7 +768,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Control patterns
 
-- [[scaling_patterns]] - Scaling approaches
+- scaling patterns - Scaling approaches
 
   - Horizontal scaling
 
@@ -786,7 +786,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Quality Attributes
 
-- [[system_properties]] - System qualities
+- system properties - System qualities
 
   - Reliability
 
@@ -856,7 +856,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Higher-order theories
 
-- [[intentionality]] - Mental content
+- intentionality - Mental content
 
   - Representationalism
 
@@ -866,7 +866,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Epistemology
 
-- [[knowledge_theory]] - Theories of the nature of knowledge
+- knowledge theory - Theories of the nature of knowledge
 
   - Justified belief
 
@@ -892,7 +892,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Ethics and Implications
 
-- [[ethical_considerations]] - Ethical issues in cognitive science and AI
+- ethical considerations - Ethical issues in cognitive science and AI
 
   - Research ethics
 

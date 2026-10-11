@@ -49,7 +49,7 @@ The Bayesian Brain hypothesis proposes that the brain implements Bayesian infere
 
 - [[uncertainty_representation]] - How the brain encodes probability distributions
 
-  - [[sensory_uncertainty]] - Input noise
+  - sensory uncertainty - Input noise
 
   - [[model_uncertainty]] - Uncertainty about which model is correct
 
@@ -169,7 +169,7 @@ where:
 
 - [[bayesian_learning]] - Updating beliefs from experience
 
-  - [[model_updating]] - Belief revision
+  - model updating - Belief revision
 
   - [[structure_learning]] - Learning model structure from data
 
@@ -205,7 +205,7 @@ where:
 
   - [[feedback_optimization]] - Tuning interface feedback to improve control
 
-  - [[adaptive_interfaces]] - Interfaces that adapt to the user
+  - adaptive interfaces - Interfaces that adapt to the user
 
 ## Research Methods
 
@@ -265,7 +265,7 @@ where:
 
 - [[emergent_properties]] - Properties arising from component interactions
 
-  - [[collective_computation]] - Computation arising from many interacting units
+  - collective computation - Computation arising from many interacting units
 
   - [[self_organization]] - Spontaneous order
 
@@ -279,7 +279,7 @@ where:
 
 - [[biological_plausibility]] - Whether algorithms can run in real neurons
 
-- [[real_time_processing]] - Speed requirements
+- real time processing - Speed requirements
 
 ### Emerging Applications
 
@@ -291,7 +291,7 @@ where:
 
 ## References
 
-- [[knill_pouget_bayesian]]
+- knill pouget bayesian
 
 - [[friston_free_energy]]
 

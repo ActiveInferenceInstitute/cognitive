@@ -16,6 +16,8 @@ semantic_relations:
       - "[[predictive_processing]]"
       - "[[fmri_studies]]"
       - "[[prediction_error]]"
+aliases:
+  - eeg
 ---
 
 # EEG Recording

@@ -389,7 +389,7 @@ end
 
 ## Theoretical Results
 
-### 1. [[error_minimization|Error Minimization]]
+### 1. Error Minimization
 
 ```julia
 

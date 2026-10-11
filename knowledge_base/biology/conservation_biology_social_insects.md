@@ -629,8 +629,8 @@ class GlobalConservationNetworks:
 - [[habitat_fragmentation]] - Landscape ecology principles
 
 ### Policy and Implementation
-- [[environmental_policy]] - Conservation policy frameworks
-- [[sustainable_development]] - Sustainable resource management
+- environmental policy - Conservation policy frameworks
+- sustainable development - Sustainable resource management
 - [[ecosystem_services]] - Service valuation approaches
 - [[restoration_ecology]] - Ecological restoration science
 

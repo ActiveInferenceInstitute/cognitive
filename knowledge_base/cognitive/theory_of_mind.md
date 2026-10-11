@@ -10,6 +10,8 @@ tags:
   - development
 aliases:
   - true_belief
+  - mental_state_attribution
+  - mentalizing_network
 semantic_relations:
   - type: relates
     links:

@@ -294,7 +294,7 @@ Links to:
 
    - Links to:
 
-     - [[value_visualization]] - Value plots
+     - value visualization - Value plots
 
      - [[preference_visualization]] - Preference plots
 

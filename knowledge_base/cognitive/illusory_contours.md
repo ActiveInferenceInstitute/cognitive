@@ -20,6 +20,8 @@ semantic_relations:
       - "[[visual_completion]]"
       - "[[gestalt_principles]]"
       - "[[form_perception]]"
+aliases:
+  - visual_completion
 ---
 
 

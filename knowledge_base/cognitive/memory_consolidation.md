@@ -488,7 +488,7 @@ Memory consolidation represents the processes by which initially labile memories
 
 - [[predictive_processing]]
 
-- [[memory_research]]
+- memory research
 
 - [[neuroscience]]
 

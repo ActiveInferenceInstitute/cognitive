@@ -21,7 +21,6 @@ semantic_relations:
     links:
       - "[[s_space]]"
       - "[[a_space]]"
-      - "[[belief_space]]"
   - type: influences
     links:
       - "[[belief_updating]]"
@@ -139,7 +138,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Optimization
 
-- [[observation_optimization]] - Efficiency
+- observation optimization - Efficiency
 
   - Memory management
 
@@ -329,7 +328,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Optimization Strategies
 
-- [[observation_optimization]] - Performance
+- observation optimization - Performance
 
   - Space efficiency
 
@@ -355,11 +354,11 @@ P(o|s,a) : S × A × O → [0,1]
 
 - [[action_space]]
 
-- [[belief_space]]
+- belief space
 
 - [[perception_processing]]
 
 - [[active_inference]]
 
-- [[uncertainty_handling]]
+- uncertainty handling
 

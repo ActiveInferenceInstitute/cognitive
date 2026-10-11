@@ -528,7 +528,7 @@ class SynergeticOptimizer:
 
 ## References
 
-- [[fuller_1975]] - "Synergetics: Explorations in the Geometry of Thinking"
+- fuller 1975 - "Synergetics: Explorations in the Geometry of Thinking"
 
 - [[fuller_1979]] - "Synergetics 2"
 

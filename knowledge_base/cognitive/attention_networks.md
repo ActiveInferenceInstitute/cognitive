@@ -10,6 +10,7 @@ tags:
 - networks
 aliases:
   - attention_systems
+  - alerting_network
 semantic_relations:
   - type: implements
     links:

@@ -18,7 +18,6 @@ semantic_relations:
       - "[[non_equilibrium_thermodynamics]]"
   - type: implements
     links:
-      - "[[energy_conservation]]"
       - "[[entropy_production]]"
       - "[[heat_transfer]]"
   - type: relates

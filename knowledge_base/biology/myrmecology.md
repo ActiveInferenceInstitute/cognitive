@@ -28,7 +28,6 @@ semantic_relations:
   - type: relates
     links:
       - "[[apidology]]"
-      - "[[social_behavior]]"
       - "[[ecological_dynamics]]"
 ---
 

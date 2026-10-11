@@ -37,13 +37,13 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[reward_processing]] - Benefit evaluation
 
-    - [[primary_rewards]] - Basic needs
+    - primary rewards - Basic needs
 
-    - [[secondary_rewards]] - Learned values
+    - secondary rewards - Learned values
 
-  - [[cost_processing]] - Effort/risk
+  - cost processing - Effort/risk
 
-    - [[energy_costs]] - Resource use
+    - energy costs - Resource use
 
     - [[opportunity_costs]] - Value forgone by choosing one alternative
 
@@ -57,7 +57,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - noise filtering - Clean-up
 
-  - [[memory_evidence]] - Stored information
+  - memory evidence - Stored information
 
     - [[episodic_recall]] - Past experiences
 
@@ -65,9 +65,9 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Choice Mechanisms
 
-- [[choice_selection]] - Option picking
+- choice selection - Option picking
 
-  - [[option_comparison]] - Alternative evaluation
+  - option comparison - Alternative evaluation
 
     - [[value_comparison]] - Comparing the subjective values of options
 
@@ -77,15 +77,15 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - [[decision_bounds]] - Choice criteria
 
-    - [[urgency_signals]] - Time pressure
+    - urgency signals - Time pressure
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[decision_networks]] - Neural systems
+- decision networks - Neural systems
 
-  - [[valuation_network]] - Worth coding
+  - valuation network - Worth coding
 
     - [[ventral_striatum]] - Subcortical hub for reward and motivation
 
@@ -99,7 +99,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Circuit Mechanisms
 
-- [[decision_circuits]] - Neural computation
+- decision circuits - Neural computation
 
   - [[accumulator_circuits]] - Evidence build-up
 
@@ -115,11 +115,11 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Neuromodulation
 
-- [[decision_modulation]] - Neurotransmitter influences on choice
+- decision modulation - Neurotransmitter influences on choice
 
   - [[dopamine_system]] - Reward/learning
 
-    - [[reward_prediction]] - Anticipating the reward an action will bring
+    - reward prediction - Anticipating the reward an action will bring
 
     - [[motivation_control]] - Regulating drive to pursue goals
 
@@ -169,7 +169,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[value_learning]] - Learning how rewarding each option is
 
-    - [[reward_learning]] - Outcome association
+    - reward learning - Outcome association
 
     - [[punishment_learning]] - Learning to avoid actions with bad outcomes
 
@@ -233,7 +233,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Clinical Applications
 
-- [[decision_disorders]] - Clinical disruptions of choice behavior
+- decision disorders - Clinical disruptions of choice behavior
 
   - [[addiction]] - Maladaptive choice
 
@@ -265,13 +265,13 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Technology Applications
 
-- [[decision_technology]] - Support tools
+- decision technology - Support tools
 
   - decision support - Choice aids
 
     - [[information_systems]] - Systems that collect and present decision data
 
-    - [[recommendation_systems]] - Suggestions
+    - recommendation systems - Suggestions
 
   - [[automated_decisions]] - Choices made by algorithms without human input
 
@@ -323,11 +323,11 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - [[reinforcement_learning]] - Learning action values from reward feedback
 
-  - [[neural_models]] - Brain mechanisms
+  - neural models - Brain mechanisms
 
-    - [[circuit_models]] - Network function
+    - circuit models - Network function
 
-    - [[system_models]] - Large-scale
+    - system models - Large-scale
 
 ## Future Directions
 
@@ -345,7 +345,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 - [[adaptive_systems]] - Systems that adjust to the user's behavior
 
-- [[collective_decisions]] - Group choice
+- collective decisions - Group choice
 
 ## References
 
@@ -353,9 +353,9 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 - [[kahneman_tversky]]
 
-- [[dolan_dayan]]
+- dolan dayan
 
-- [[rangel_hare]]
+- rangel hare
 
 ## Related Concepts
 
@@ -377,21 +377,21 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[reward_processing]] - Evaluating how rewarding an outcome is
 
-    - [[primary_rewards]] - Innate rewards such as food and water
+    - primary rewards - Innate rewards such as food and water
 
       - [[survival_value]] - Value tied to staying alive
 
       - [[hedonic_value]] - Value derived from pleasure or enjoyment
 
-    - [[secondary_rewards]] - Rewards valued through learned association
+    - secondary rewards - Rewards valued through learned association
 
       - [[social_value]] - Value gained from social interaction
 
       - [[abstract_value]] - Value of ideas, money, and symbolic goods
 
-  - [[cost_processing]] - Evaluating the costs of an action
+  - cost processing - Evaluating the costs of an action
 
-    - [[energy_costs]] - Energy expended to carry out an action
+    - energy costs - Energy expended to carry out an action
 
       - [[metabolic_cost]] - Physical energy demands of an action
 
@@ -421,7 +421,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - noise filtering - Removing irrelevant fluctuations from input
 
-  - [[memory_evidence]] - Evidence retrieved from memory
+  - memory evidence - Evidence retrieved from memory
 
     - [[episodic_recall]] - Recalling specific past events
 
@@ -433,11 +433,11 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - [[rule_application]] - Applying learned rules to the choice
 
-      - [[category_knowledge]] - Knowledge about category membership
+      - category knowledge - Knowledge about category membership
 
 ### Choice Mechanisms
 
-- [[choice_selection]] - Selecting among available options
+- choice selection - Selecting among available options
 
   - [[option_evaluation]] - Assessing the merits of each option
 
@@ -459,7 +459,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - [[evidence_threshold]] - Amount of evidence required to commit
 
-      - [[urgency_signals]] - Growing pressure to decide as time passes
+      - urgency signals - Growing pressure to decide as time passes
 
     - strategy selection - Choosing which decision approach to use
 
@@ -471,9 +471,9 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Brain Networks
 
-- [[decision_networks]] - Interacting brain regions underlying choice
+- decision networks - Interacting brain regions underlying choice
 
-  - [[valuation_network]] - Regions that compute subjective value
+  - valuation network - Regions that compute subjective value
 
     - [[ventral_striatum]] - Reward and motivation hub
 
@@ -503,7 +503,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Circuit Mechanisms
 
-- [[decision_circuits]] - Neural pathways computing choices
+- decision circuits - Neural pathways computing choices
 
   - [[accumulator_circuits]] - Circuits that sum evidence over time
 
@@ -511,7 +511,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - [[temporal_integration]] - Summing evidence across time
 
-      - [[spatial_integration]] - Combining evidence across space or sources
+      - spatial integration - Combining evidence across space or sources
 
     - [[threshold_mechanisms]] - Mechanisms that trigger a choice at a bound
 
@@ -535,11 +535,11 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Neuromodulation
 
-- [[decision_modulation]] - Neuromodulator effects on decision processes
+- decision modulation - Neuromodulator effects on decision processes
 
   - [[dopamine_system]] - Dopamine pathways for reward and motivation
 
-    - [[reward_prediction]] - Predicting upcoming reward
+    - reward prediction - Predicting upcoming reward
 
       - [[prediction_errors]] - Gap between expected and actual outcome
 
@@ -577,7 +577,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - [[sampling_processes]] - Drawing samples of information
 
-      - [[integration_processes]] - Combining samples into a running estimate
+      - integration processes - Combining samples into a running estimate
 
     - [[value_construction]] - Building value estimates during choice
 
@@ -633,13 +633,13 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Integration Mechanisms
 
-- [[decision_integration]] - Combining multiple inputs into one choice
+- decision integration - Combining multiple inputs into one choice
 
   - [[multimodal_integration]] - Merging information from several senses
 
     - [[sensory_fusion]] - Merging sensory signals into a single estimate
 
-      - [[visual_integration]] - Combining visual cues
+      - visual integration - Combining visual cues
 
       - [[auditory_integration]] - Combining auditory cues
 
@@ -667,7 +667,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Clinical Applications
 
-- [[decision_disorders]] - Conditions that impair choice behavior
+- decision disorders - Conditions that impair choice behavior
 
   - [[impulsivity]] - Acting without adequate forethought
 
@@ -689,7 +689,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - [[overthinking]] - Excessive deliberation that delays choice
 
-      - [[avoidance]] - Evading decisions to escape discomfort
+      - avoidance - Evading decisions to escape discomfort
 
     - [[ambivalence]] - Holding conflicting feelings about options
 
@@ -701,7 +701,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 - [[decision_therapy]] - Therapies that improve decision-making
 
-  - [[cognitive_strategies]] - Mental techniques that improve choices
+  - cognitive strategies - Mental techniques that improve choices
 
     - [[decision_analysis]] - Structured breakdown of a choice
 
@@ -715,37 +715,37 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - [[debiasing_techniques]] - Methods that reduce biased judgment
 
-  - [[behavioral_strategies]] - Behavior-based methods for better choices
+  - behavioral strategies - Behavior-based methods for better choices
 
     - [[exposure_training]] - Gradual confrontation with feared decisions
 
-      - [[gradual_exposure]] - Stepwise exposure to rising difficulty
+      - gradual exposure - Stepwise exposure to rising difficulty
 
       - [[feedback_learning]] - Learning from outcomes of past choices
 
     - [[skill_building]] - Developing practical decision skills
 
-      - [[coping_skills]] - Strategies for managing stress and setbacks
+      - coping skills - Strategies for managing stress and setbacks
 
-      - [[planning_skills]] - Skills for setting goals and sequencing steps
+      - planning skills - Skills for setting goals and sequencing steps
 
 ### Technology Applications
 
-- [[decision_technology]] - Technology that supports decision-making
+- decision technology - Technology that supports decision-making
 
   - decision support - Tools that assist people in choosing
 
     - [[analysis_tools]] - Software for analyzing options and data
 
-      - [[option_comparison]] - Tools for side-by-side comparison of options
+      - option comparison - Tools for side-by-side comparison of options
 
       - [[risk_assessment]] - Tools that estimate the likelihood and impact of risk
 
-    - [[recommendation_systems]] - Systems that suggest options based on preferences
+    - recommendation systems - Systems that suggest options based on preferences
 
       - [[preference_learning]] - Inferring a user's preferences from behavior
 
-      - [[personalization]] - Tailoring advice to the individual
+      - personalization - Tailoring advice to the individual
 
   - monitoring systems - Systems that track behavior and outcomes
 
@@ -773,7 +773,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 - mechanism understanding - Explaining how decision processes operate
 
-  - [[integration_processes]] - How separate inputs are combined
+  - integration processes - How separate inputs are combined
 
   - [[individual_differences]] - Variation in decision style across people
 
@@ -797,9 +797,9 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 - [[kahneman_tversky]]
 
-- [[dolan_dayan]]
+- dolan dayan
 
-- [[rangel_hare]]
+- rangel hare
 
 - [[rushworth_decision]]
 

@@ -55,7 +55,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
     - [[similarity]] - Grouping elements that look alike
 
-  - [[figure_ground]] - Separating an object from its background
+  - figure ground - Separating an object from its background
 
     - [[contour_integration]] - Linking edge fragments into continuous outlines
 
@@ -83,7 +83,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 - [[sensory_pathways]] - Input paths
 
-  - [[primary_areas]] - First cortical stage of sensory processing
+  - primary areas - First cortical stage of sensory processing
 
     - [[visual_cortex]] - Cortical area processing vision
 
@@ -99,17 +99,17 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 - [[attention_networks]] - Brain networks directing attention
 
-  - [[dorsal_network]] - Network for top-down, goal-driven attention
+  - dorsal network - Network for top-down, goal-driven attention
 
     - [[frontal_eye_fields]] - Frontal region controlling eye movements
 
     - [[parietal_areas]] - Parietal regions mapping space and priority
 
-  - [[ventral_network]] - Network for detecting unexpected stimuli
+  - ventral network - Network for detecting unexpected stimuli
 
     - [[temporoparietal]] - Junction region detecting behaviorally relevant change
 
-    - [[ventral_frontal]] - Frontal region that interrupts ongoing attention
+    - ventral frontal - Frontal region that interrupts ongoing attention
 
 ### Integration Mechanisms
 
@@ -121,7 +121,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
     - [[temporal_binding]] - Linking inputs that occur at the same time
 
-  - [[attention_modulation]] - Attention changing sensory responses
+  - attention modulation - Attention changing sensory responses
 
     - [[gain_control]] - Boosting or reducing neural response strength
 
@@ -157,7 +157,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
   - [[goal_directed]] - Processing led by current goals
 
-    - [[task_sets]] - Configurations of attention for a task
+    - task sets - Configurations of attention for a task
 
     - [[search_templates]] - Mental targets used during visual search
 
@@ -197,9 +197,9 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 ### Illusions
 
-- [[perceptual_illusions]] - Percepts that differ from physical reality
+- perceptual illusions - Percepts that differ from physical reality
 
-  - [[visual_illusions]] - Illusions in vision
+  - visual illusions - Illusions in vision
 
     - [[geometric]] - Illusions of size, length, or angle
 
@@ -231,7 +231,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 ### Clinical Applications
 
-- [[perceptual_disorders]] - Conditions that impair perception
+- perceptual disorders - Conditions that impair perception
 
   - [[agnosia]] - Failure to recognize despite intact sensation
 
@@ -303,13 +303,13 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
     - functional imaging - Scanning brain activity during tasks
 
-    - [[structural_imaging]] - Scanning brain anatomy
+    - structural imaging - Scanning brain anatomy
 
   - [[electrophysiology]] - Recording electrical activity from neurons
 
     - [[single_unit]] - Recording from one neuron
 
-    - [[population]] - Recording from many neurons together
+    - population - Recording from many neurons together
 
 ### Computational Models
 
@@ -339,11 +339,11 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 ### Emerging Approaches
 
-- [[real_time_methods]] - Measures taken during ongoing activity
+- real time methods - Measures taken during ongoing activity
 
   - [[mobile_recording]] - Recording while people move around
 
-    - [[eye_tracking]] - Recording where the eyes look
+    - eye tracking - Recording where the eyes look
 
     - [[motion_capture]] - Recording body movement
 

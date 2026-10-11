@@ -11,6 +11,7 @@ tags:
 aliases:
   - feynman_path_integral
   - path_integrals
+  - path_integral_formulation
 semantic_relations:
   - type: foundation_for
     links:

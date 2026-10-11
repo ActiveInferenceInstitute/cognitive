@@ -16,6 +16,8 @@ semantic_relations:
       - "[[emotional_processing]]"
       - "[[interoception]]"
       - "[[reward_processing]]"
+aliases:
+  - major_depression
 ---
 
 # Depression

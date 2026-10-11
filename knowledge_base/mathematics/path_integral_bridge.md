@@ -416,7 +416,7 @@ class CognitiveProcessor:
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
-- [[parr_friston_2020]] - "Markov blankets, information geometry and stochastic thermodynamics"
+- parr friston 2020 - "Markov blankets, information geometry and stochastic thermodynamics"
 
 - [[buckley_2017]] - "The free energy principle for action and perception: A mathematical review"
 

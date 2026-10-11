@@ -352,7 +352,7 @@ This article maps the deep connections between path integral formulations and ot
 
 ## References
 
-- [[feynman_1948]] - "Space-Time Approach to Non-Relativistic Quantum Mechanics"
+- feynman 1948 - "Space-Time Approach to Non-Relativistic Quantum Mechanics"
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 

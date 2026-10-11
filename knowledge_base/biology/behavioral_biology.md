@@ -702,7 +702,7 @@ class BehavioralLearningAgent:
 - [[tinbergen_1963]] - "The Study of Instinct"
 
 ### Theoretical Frameworks
-- [[dayan_2001]] - "Theoretical Neuroscience"
+- dayan 2001 - "Theoretical Neuroscience"
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 - [[sutton_2018]] - "Reinforcement Learning: An Introduction"
 

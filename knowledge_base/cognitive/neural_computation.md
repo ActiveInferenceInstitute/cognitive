@@ -31,7 +31,7 @@ Neural Computation describes how the brain processes information through its net
 
 ### Information Processing
 
-- [[neural_processing]] - How neural circuits transform information
+- neural processing - How neural circuits transform information
 
   - [[signal_processing]] - Filtering and transforming neural signals
 
@@ -57,7 +57,7 @@ Neural Computation describes how the brain processes information through its net
 
   - [[hierarchy_levels]] - Successive tiers of processing
 
-    - [[processing_stages]] - Sequential steps from input to output
+    - processing stages - Sequential steps from input to output
 
     - [[abstraction_levels]] - Increasingly abstract representations up the hierarchy
 
@@ -69,11 +69,11 @@ Neural Computation describes how the brain processes information through its net
 
     - [[hebbian_learning]] - Synapses strengthen when neurons fire together
 
-    - [[error_driven]] - Learning that adjusts to reduce prediction error
+    - error driven - Learning that adjusts to reduce prediction error
 
   - [[network_adaptation]] - Network-wide adjustment to new demands
 
-    - [[weight_updates]] - Adjusting connection strengths during learning
+    - weight updates - Adjusting connection strengths during learning
 
     - [[architecture_changes]] - Growth or pruning of connections and units
 
@@ -101,13 +101,13 @@ Neural Computation describes how the brain processes information through its net
 
   - [[weight_operations]] - Operations that scale signals by synaptic strength
 
-    - [[multiplication]] - Scaling one signal by another
+    - multiplication - Scaling one signal by another
 
     - integration - Summing inputs over space and time
 
-  - [[modulation]] - Adjusting the gain or timing of signals
+  - modulation - Adjusting the gain or timing of signals
 
-    - [[gating]] - Opening or blocking signal transmission
+    - gating - Opening or blocking signal transmission
 
     - [[scaling]] - Adjusting signal magnitude by a factor
 
@@ -169,9 +169,9 @@ Neural Computation describes how the brain processes information through its net
 
     - amplification - Boosting signal strength
 
-    - [[suppression]] - Reducing signal strength
+    - suppression - Reducing signal strength
 
-  - [[gating]] - Controlling which signals pass through
+  - gating - Controlling which signals pass through
 
     - [[selective_routing]] - Directing signals along chosen pathways
 
@@ -269,13 +269,13 @@ Neural Computation describes how the brain processes information through its net
 
     - [[circuit_problems]] - Faulty wiring or connectivity in circuits
 
-    - [[dynamic_problems]] - Abnormal activity dynamics, such as seizures
+    - dynamic problems - Abnormal activity dynamics, such as seizures
 
   - intervention - Treatments that aim to correct dysfunction
 
     - stimulation - Activating neural tissue for therapeutic effect
 
-    - [[modulation]] - Altering circuit activity to treat dysfunction
+    - modulation - Altering circuit activity to treat dysfunction
 
 ## Research Methods
 
@@ -287,7 +287,7 @@ Neural Computation describes how the brain processes information through its net
 
     - [[single_unit]] - Recording from individual neurons
 
-    - [[population]] - Recording from many neurons at once
+    - population - Recording from many neurons at once
 
   - manipulation - Experimentally altering neural activity
 
@@ -305,7 +305,7 @@ Neural Computation describes how the brain processes information through its net
 
     - [[learning]] - Models of how synapses change with experience
 
-  - [[analysis]] - Quantitative analysis of model behavior
+  - analysis - Quantitative analysis of model behavior
 
     - [[stability]] - Whether activity returns to equilibrium after perturbation
 
@@ -315,9 +315,9 @@ Neural Computation describes how the brain processes information through its net
 
 - [[neural_theory]] - Theoretical accounts of neural computation
 
-  - [[principles]] - Core organizing rules of neural computation
+  - principles - Core organizing rules of neural computation
 
-    - [[computation]] - Rules describing what circuits compute
+    - computation - Rules describing what circuits compute
 
     - organization - Rules describing how circuits are arranged
 
@@ -349,7 +349,7 @@ Neural Computation describes how the brain processes information through its net
 
   - [[new_theory]] - Emerging theoretical accounts
 
-    - [[principles]] - Emerging general principles of computation
+    - principles - Emerging general principles of computation
 
     - [[frameworks]] - Emerging conceptual frameworks
 
@@ -373,7 +373,7 @@ Neural Computation describes how the brain processes information through its net
 
 - brain function
 
-- [[computation]]
+- computation
 
 - [[learning_theory]]
 

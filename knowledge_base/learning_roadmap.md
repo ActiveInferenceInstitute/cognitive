@@ -323,7 +323,7 @@ Clinical Applications → AI Development → Research Methods
 - **Required Reading**:
   - Clinical Applications
   - [[cognitive/artificial_intelligence|Artificial Intelligence]]
-  - [[research_methodology|Research Methodology]]
+  - Research Methodology
 
 - **Key Topics**:
   - Mental health applications

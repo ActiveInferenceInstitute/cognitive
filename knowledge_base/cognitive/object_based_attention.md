@@ -464,7 +464,7 @@ Object-based attention refers to the selective processing of information based o
 
 - [[cognitive_neuroscience]]
 
-- [[visual_cognition]]
+- visual cognition
 
 - [[computational_psychiatry]]
 

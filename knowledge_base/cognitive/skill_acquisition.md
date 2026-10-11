@@ -14,6 +14,8 @@ aliases:
   - skill_training
   - expertise
   - skill_development
+  - cognitive_skill
+  - cognitive_skills
 semantic_relations:
   - type: implements
     links:
@@ -49,7 +51,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
     - refinement - Gradual improvement of performance
 
-    - [[error_reduction]] - Decreasing mistakes with practice
+    - error reduction - Decreasing mistakes with practice
 
   - [[autonomous_stage]] - Stage of fluent, expert performance
 
@@ -63,13 +65,13 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
   - [[basic_operations]] - Elementary actions underlying a skill
 
-    - [[movement_primitives]] - Basic units of movement
+    - movement primitives - Basic units of movement
 
-    - [[cognitive_operations]] - Elementary mental steps
+    - cognitive operations - Elementary mental steps
 
   - integration - Combining components into smooth performance
 
-    - [[sequence_formation]] - Ordering components into correct sequences
+    - sequence formation - Ordering components into correct sequences
 
     - [[coordination]] - Timing multiple components together
 
@@ -97,7 +99,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
   - [[quantity_effects]] - Effects of the amount of practice
 
-    - [[repetition]] - Repeating a task to strengthen learning
+    - repetition - Repeating a task to strengthen learning
 
     - [[time_invested]] - Total practice time accumulated
 
@@ -129,7 +131,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
   - [[procedural_memory]] - Memory for learned skills and routines
 
-    - [[motor_programs]] - Stored motor commands for movements
+    - motor programs - Stored motor commands for movements
 
     - [[action_sequences]] - Stored ordered series of actions
 
@@ -137,7 +139,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
     - task knowledge - Facts about the task and its goals
 
-    - [[strategy_knowledge]] - Knowledge of effective approaches
+    - strategy knowledge - Knowledge of effective approaches
 
 ## Neural Implementation
 
@@ -195,17 +197,17 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 - [[movement_skills]] - Skills involving bodily movement
 
-  - [[fine_motor]] - Skills requiring small, precise movements
+  - fine motor - Skills requiring small, precise movements
 
     - manipulation - Fine control of objects by hand
 
     - [[precision]] - Accuracy of movement
 
-  - [[gross_motor]] - Skills using large muscle groups
+  - gross motor - Skills using large muscle groups
 
     - [[locomotion]] - Moving the body through space
 
-    - [[balance]] - Maintaining posture and stability
+    - balance - Maintaining posture and stability
 
 ### Cognitive Skills
 
@@ -213,13 +215,13 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
   - [[problem_solving]] - Skills for resolving problems
 
-    - [[analysis]] - Breaking a problem into components
+    - analysis - Breaking a problem into components
 
     - [[solution_finding]] - Finding solutions to problems
 
   - [[decision_making]] - Skills for choosing among options
 
-    - [[evaluation]] - Judging the value of options
+    - evaluation - Judging the value of options
 
     - [[selection]] - Choosing the best option
 
@@ -229,7 +231,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
   - [[communication]] - Skills for exchanging information
 
-    - [[expression]] - Conveying thoughts and feelings
+    - expression - Conveying thoughts and feelings
 
     - [[understanding]] - Interpreting what others convey
 
@@ -253,9 +255,9 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
   - [[practice_design]] - Designing practice for skill learning
 
-    - [[progression]] - Gradually increasing task difficulty
+    - progression - Gradually increasing task difficulty
 
-    - [[variation]] - Varying practice conditions
+    - variation - Varying practice conditions
 
 ### Training Applications
 
@@ -285,7 +287,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
   - intervention - Rehabilitation approaches to restore skill
 
-    - [[retraining]] - Relearning lost skills
+    - retraining - Relearning lost skills
 
     - compensation - Alternative strategies replacing lost abilities
 
@@ -299,17 +301,17 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
     - accuracy - Proportion of correct responses
 
-    - [[speed]] - Time taken to perform the skill
+    - speed - Time taken to perform the skill
 
   - [[learning_curves]] - Plots of performance across practice
 
-    - [[rate]] - Speed of improvement with practice
+    - rate - Speed of improvement with practice
 
     - [[plateau]] - Period when improvement levels off
 
 ### Neural Methods
 
-- [[brain_assessment]] - Measuring brain activity related to skill
+- brain assessment - Measuring brain activity related to skill
 
   - activation - Which regions are active during skill use
 
@@ -335,9 +337,9 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
   - [[performance_models]] - Models of performance outcomes
 
-    - [[error_models]] - Models of error patterns
+    - error models - Models of error patterns
 
-    - [[optimization_models]] - Models of performance optimization
+    - optimization models - Models of performance optimization
 
 ## Future Directions
 
@@ -351,7 +353,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Emerging Approaches
 
-- [[personalized_learning]] - Training adapted to the learner
+- personalized learning - Training adapted to the learner
 
 - technology enhanced - Training supported by technology
 
@@ -379,5 +381,5 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 - [[practice]]
 
-- [[performance]]
+- performance
 

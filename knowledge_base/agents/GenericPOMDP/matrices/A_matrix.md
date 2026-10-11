@@ -99,7 +99,7 @@ ylabel: "Observations"
 
 - Used in [[belief_updating]]
 
-- Affects [[free_energy_computation]]
+- Affects free energy computation
 
 - Links to [[observation_model]]
 

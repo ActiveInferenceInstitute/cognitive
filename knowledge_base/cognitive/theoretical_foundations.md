@@ -87,7 +87,7 @@ See [[cognitive_phenomena|Cognitive Phenomena]] for detailed theory.
 
 - [[policy_selection]] - Strategy choice
 
-- [[goal_hierarchies]] - Objective organization
+- goal hierarchies - Objective organization
 
 ## Documentation Integration
 

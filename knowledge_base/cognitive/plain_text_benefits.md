@@ -61,7 +61,7 @@ Plain text formats serve as the foundation for our cognitive modeling ecosystem,
 
   - [[automated_validation]]
 
-  - [[documentation_generation]]
+  - documentation generation
 
   - [[model_extraction]]
 
@@ -145,7 +145,7 @@ See [[educational_resources]] for examples.
 
   - Structured text for [[dataset_creation]]
 
-  - Annotated examples for [[model_training]]
+  - Annotated examples for model training
 
   - Version-controlled datasets
 
@@ -155,7 +155,7 @@ See [[educational_resources]] for examples.
 
   - [[graph_analysis]]
 
-  - [[concept_clustering]]
+  - concept clustering
 
   - [[relationship_mining]]
 
@@ -219,7 +219,7 @@ experiment:
 
   - [[concept_dependencies]]
 
-  - [[learning_objectives]]
+  - learning objectives
 
 ### 2. Interactive Examples
 
@@ -251,7 +251,7 @@ def belief_update(observation):
 
 - **Formal Specifications**
 
-  - [[formal_methods]]
+  - formal methods
 
   - [[model_verification]]
 
@@ -271,11 +271,11 @@ def belief_update(observation):
 
 - **System Growth**
 
-  - [[modular_design]]
+  - modular design
 
   - [[extensible_architecture]]
 
-  - [[scaling_patterns]]
+  - scaling patterns
 
 ## Best Practices
 
@@ -359,9 +359,9 @@ graph LR
 
 - version control
 
-- [[documentation_systems]]
+- documentation systems
 
-- [[research_methods]]
+- research methods
 
 ## References
 

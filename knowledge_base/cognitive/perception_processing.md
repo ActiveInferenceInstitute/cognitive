@@ -18,6 +18,8 @@ semantic_relations:
       - "[[belief_updating]]"
       - "[[memory_systems]]"
       - "[[predictive_processing]]"
+aliases:
+  - perceptual_processing
 ---
 
 

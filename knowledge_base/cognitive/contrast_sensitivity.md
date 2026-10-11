@@ -437,7 +437,7 @@ Contrast sensitivity is the visual system's ability to detect differences in lum
 
 - [[visual_adaptation]]
 
-- [[pattern_vision]]
+- pattern vision
 
 ## References
 

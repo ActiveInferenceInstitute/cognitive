@@ -10,6 +10,9 @@ tags:
   - information_theory
 aliases:
   - information_integration
+  - phi_measure
+  - phi_measures
+  - tononi_phi
 semantic_relations:
   - type: relates
     links:

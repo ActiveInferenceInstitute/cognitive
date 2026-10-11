@@ -15,6 +15,9 @@ semantic_relations:
       - "[[cognitive_development]]"
       - "[[critical_periods]]"
       - "[[morphogenesis]]"
+aliases:
+  - synapse_formation
+  - synaptogenesis
 ---
 
 # Neural Development

@@ -17,8 +17,9 @@ semantic_relations:
   - type: relates
     links:
       - "[[sub_riemannian_geometry]]"
-      - "[[geometric_group_theory]]"
       - "[[optimal_transport]]"
+aliases:
+  - metric_spaces
 ---
 
 
@@ -562,7 +563,7 @@ class GeometricGroup:
 
 1. [[differential_geometry|Differential Geometry]]
 
-1. [[geometric_group_theory|Geometric Group Theory]]
+1. Geometric Group Theory
 
 1. [[optimal_transport|Optimal Transport]]
 

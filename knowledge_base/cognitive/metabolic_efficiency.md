@@ -492,9 +492,9 @@ Metabolic efficiency represents the optimization of energy utilization in cognit
 
 ## References
 
-- [[metabolic_theory]]
+- metabolic theory
 
-- [[energy_efficiency]]
+- energy efficiency
 
 - [[cognitive_neuroscience]]
 

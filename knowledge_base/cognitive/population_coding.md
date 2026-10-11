@@ -14,6 +14,8 @@ semantic_relations:
       - "[[neural_coding]]"
       - "[[bayesian_inference]]"
       - "[[neural_computation]]"
+aliases:
+  - tuning_curves
 ---
 
 # Population Coding

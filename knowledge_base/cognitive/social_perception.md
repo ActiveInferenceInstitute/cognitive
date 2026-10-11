@@ -16,6 +16,8 @@ semantic_relations:
       - "[[biological_motion]]"
       - "[[emotion_recognition]]"
       - "[[theory_of_mind]]"
+aliases:
+  - person_perception
 ---
 
 # Social Perception

@@ -16,7 +16,6 @@ semantic_relations:
       - "[[cognitive_functions]]"
   - type: related
     links:
-      - "[[speech_production]]"
       - "[[language_comprehension]]"
       - "[[neurolinguistics]]"
 ---
@@ -35,7 +34,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 - [[speech_perception]] - Sound processing
 
-  - [[phonological_processing]] - Sound structure
+  - phonological processing - Sound structure
 
     - [[phoneme_recognition]] - Identifying the basic sounds of speech
 
@@ -49,15 +48,15 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Language Production
 
-- [[speech_production]] - Planning and producing spoken language
+- speech production - Planning and producing spoken language
 
   - [[lexical_selection]] - Word choice
 
-    - [[word_retrieval]] - Finding words
+    - word retrieval - Finding words
 
-    - [[semantic_access]] - Retrieving the meaning to be expressed
+    - semantic access - Retrieving the meaning to be expressed
 
-  - [[articulation]] - Movements that produce speech sounds
+  - articulation - Movements that produce speech sounds
 
     - [[motor_planning]] - Preparing speech movements
 
@@ -69,15 +68,15 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
   - [[syntax]] - Rules for ordering words into sentences
 
-    - [[sentence_structure]] - How words are arranged in sentences
+    - sentence structure - How words are arranged in sentences
 
     - [[grammatical_rules]] - Constraints on well-formed sentences
 
-  - [[semantics]] - Study of meaning in language
+  - semantics - Study of meaning in language
 
-    - [[word_meaning]] - Lexical semantics
+    - word meaning - Lexical semantics
 
-    - [[sentence_meaning]] - Meaning built from word meanings and structure
+    - sentence meaning - Meaning built from word meanings and structure
 
 ## Neural Implementation
 
@@ -99,13 +98,13 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Circuit Mechanisms
 
-- [[language_circuits]] - Local neural circuits for language
+- language circuits - Local neural circuits for language
 
   - [[phonological_circuits]] - Sound processing
 
     - [[auditory_cortex]] - Sound analysis
 
-    - [[motor_circuits]] - Speech production
+    - motor circuits - Speech production
 
   - [[semantic_circuits]] - Meaning processing
 
@@ -115,7 +114,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Neuromodulation
 
-- [[language_modulation]] - Neurochemical modulation of language processing
+- language modulation - Neurochemical modulation of language processing
 
   - [[dopamine_system]] - Learning/reward
 
@@ -157,7 +156,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - [[distributional_learning]] - Learning categories from input distributions
 
-  - [[rule_learning]] - Grammar acquisition
+  - rule learning - Grammar acquisition
 
     - [[parameter_setting]] - Fixing grammatical parameters from input
 
@@ -177,7 +176,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - [[word_prediction]] - Anticipating the upcoming word
 
-    - [[structure_prediction]] - Anticipating upcoming syntactic structure
+    - structure prediction - Anticipating upcoming syntactic structure
 
 ## Language Domains
 
@@ -195,7 +194,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - [[onset_rhyme]] - Division of syllables into onset and rime
 
-    - [[stress_patterns]] - Patterns of emphasis across syllables
+    - stress patterns - Patterns of emphasis across syllables
 
 ### Morphology
 
@@ -215,9 +214,9 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Syntax
 
-- [[sentence_structure]] - Grammatical organization of sentences
+- sentence structure - Grammatical organization of sentences
 
-  - [[phrase_structure]] - Grouping words into phrases
+  - phrase structure - Grouping words into phrases
 
     - [[noun_phrases]] - Phrases built around a noun
 
@@ -233,7 +232,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Clinical Applications
 
-- [[language_disorders]] - Impairments of language function
+- language disorders - Impairments of language function
 
   - [[aphasia]] - Acquired impairment of language after brain damage
 
@@ -257,27 +256,27 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - [[metalinguistic_awareness]] - Awareness of language as an object
 
-  - [[second_language]] - Language learned after the first
+  - second language - Language learned after the first
 
     - [[l2_acquisition]] - Process of learning a second language
 
-    - [[bilingual_development]] - Development of two languages
+    - bilingual development - Development of two languages
 
 ### Technology Applications
 
-- [[language_technology]] - Technologies built around language
+- language technology - Technologies built around language
 
   - [[natural_language_processing]] - Computational processing of human language
 
     - [[speech_recognition]] - Sound to text
 
-    - [[machine_translation]] - Automatic translation between languages
+    - machine translation - Automatic translation between languages
 
   - [[language_assistance]] - Tools that support language use
 
     - [[writing_support]] - Tools that help with composing text
 
-    - [[reading_support]] - Tools that aid reading comprehension
+    - reading support - Tools that aid reading comprehension
 
 ## Research Methods
 
@@ -333,7 +332,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Current Challenges
 
-- [[processing_complexity]] - Handling the complexity of natural language
+- processing complexity - Handling the complexity of natural language
 
 - [[individual_differences]] - Person variation
 
@@ -349,13 +348,13 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ## References
 
-- [[chomsky_language]]
+- chomsky language
 
-- [[pinker_language]]
+- pinker language
 
-- [[hickok_poeppel]]
+- hickok poeppel
 
-- [[friederici_language]]
+- friederici language
 
 ## Related Concepts
 

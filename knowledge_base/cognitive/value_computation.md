@@ -16,6 +16,10 @@ semantic_relations:
       - "[[reward_processing]]"
       - "[[value_learning]]"
       - "[[expected_free_energy]]"
+aliases:
+  - value_coding
+  - value_comparison
+  - value_integration
 ---
 
 # Value Computation

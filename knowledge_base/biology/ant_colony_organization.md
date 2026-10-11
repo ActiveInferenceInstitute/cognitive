@@ -12,7 +12,7 @@ tags:
   - social_structure
   - task_allocation
   - collective_behavior
-aliases: [ant-caste-system, ant-social-organization, ant-division-of-labor]
+aliases: [ant-caste-system, ant-social-organization, ant-division-of-labor, ant_colonies, colony_organization]
 complexity: advanced
 processing_priority: 1
 semantic_relations:

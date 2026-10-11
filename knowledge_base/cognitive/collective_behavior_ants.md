@@ -38,7 +38,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
   - [[sensory_behaviors]] - Behaviors based on sensing the environment
 
-    - [[pheromone_detection]] - Sensing pheromone chemicals
+    - pheromone detection - Sensing pheromone chemicals
 
       - [[trail_following]] - Following pheromone trails to targets
 
@@ -62,7 +62,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
       - [[object_carrying]] - Carrying food or material to a destination
 
-      - [[nest_building]] - Constructing the nest
+      - nest building - Constructing the nest
 
 ### Communication Systems
 
@@ -78,7 +78,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
     - [[cuticular_hydrocarbons]] - Waxy surface compounds that carry colony identity
 
-      - [[nestmate_recognition]] - Identifying colony members by chemical cues
+      - nestmate recognition - Identifying colony members by chemical cues
 
       - [[task_signals]] - Signals that convey task information
 
@@ -100,21 +100,21 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
 - [[colony_networks]] - Interaction structure within a colony
 
-  - [[spatial_networks]] - Networks defined by where ants meet
+  - spatial networks - Networks defined by where ants meet
 
     - [[contact_networks]] - Networks of who contacts whom
 
       - [[interaction_frequency]] - How often ants meet one another
 
-      - [[spatial_distribution]] - How ants are distributed in space
+      - spatial distribution - How ants are distributed in space
 
     - [[information_flow]] - Spread of information through the colony
 
-      - [[local_transfer]] - Information passed between nearby ants
+      - local transfer - Information passed between nearby ants
 
-      - [[global_spread]] - Information spreading across the whole colony
+      - global spread - Information spreading across the whole colony
 
-  - [[temporal_networks]] - Interaction patterns that change over time
+  - temporal networks - Interaction patterns that change over time
 
     - activity patterns - Temporal variation in what ants do
 
@@ -122,7 +122,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
       - [[task_sequences]] - Order in which tasks are performed
 
-    - [[development_patterns]] - Interaction patterns that change as the colony develops
+    - development patterns - Interaction patterns that change as the colony develops
 
       - [[age_polyethism]] - Task assignment that changes with worker age
 
@@ -148,7 +148,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
       - resource assessment - Evaluating the quality of a food source
 
-  - [[recruitment_systems]] - Mechanisms for recruiting nestmates to food
+  - recruitment systems - Mechanisms for recruiting nestmates to food
 
     - [[mass_recruitment]] - Recruiting large numbers of nestmates
 
@@ -164,7 +164,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
 ### Nest Construction
 
-- [[nest_building]] - Building the nest
+- nest building - Building the nest
 
   - [[construction_behaviors]] - Behaviors involved in building
 
@@ -198,7 +198,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
 - [[colony_defense]] - Protecting the colony from threats
 
-  - [[threat_response]] - Colony reactions to danger
+  - threat response - Colony reactions to danger
 
     - [[alarm_systems]] - Mechanisms for signaling danger
 
@@ -210,7 +210,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
       - [[aggressive_response]] - Attacking intruders to protect the colony
 
-      - [[nest_protection]] - Guarding and defending the nest
+      - nest protection - Guarding and defending the nest
 
   - [[immunity_systems]] - Defenses against pathogens and parasites
 
@@ -230,7 +230,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
 ### Colony-Level Patterns
 
-- [[emergent_patterns]] - Colony-wide patterns arising from local interactions
+- emergent patterns - Colony-wide patterns arising from local interactions
 
   - spatial organization - How the colony arranges itself in space
 
@@ -246,9 +246,9 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
       - [[congestion_control]] - Preventing blockages in busy traffic
 
-  - [[temporal_organization]] - How colony organization changes over time
+  - temporal organization - How colony organization changes over time
 
-    - [[activity_cycles]] - Recurring cycles of colony activity
+    - activity cycles - Recurring cycles of colony activity
 
       - [[foraging_cycles]] - Cycles of food collection
 
@@ -262,15 +262,15 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
 ### Decision Making
 
-- [[collective_decisions]] - Group decisions made without central control
+- collective decisions - Group decisions made without central control
 
-  - [[choice_mechanisms]] - Mechanisms for selecting among options
+  - choice mechanisms - Mechanisms for selecting among options
 
     - [[quorum_sensing]] - Choosing when enough ants have gathered
 
       - [[threshold_response]] - Number of ants needed to trigger a response
 
-      - [[consensus_building]] - Reaching agreement among nestmates
+      - consensus building - Reaching agreement among nestmates
 
     - [[competition_amplification]] - Stronger options gaining more support
 
@@ -294,7 +294,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
 ### Adaptation Mechanisms
 
-- [[colony_adaptation]] - Colony adjustment to changing conditions
+- colony adaptation - Colony adjustment to changing conditions
 
   - [[behavioral_flexibility]] - Adjusting behavior to circumstances
 
@@ -302,7 +302,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
       - [[response_thresholds]] - Stimulus levels that trigger a task
 
-      - [[workload_sensing]] - Sensing how much work needs doing
+      - workload sensing - Sensing how much work needs doing
 
     - [[strategy_adjustment]] - Changing strategy as conditions change
 
@@ -314,7 +314,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
     - [[caste_determination]] - Determining which caste an individual becomes
 
-      - [[morphological_changes]] - Differences in body form between castes
+      - morphological changes - Differences in body form between castes
 
       - [[behavioral_specialization]] - Behavior specialized to caste or task
 
@@ -340,9 +340,9 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
     - [[marked_individuals]] - Individually labeled ants
 
-      - [[paint_marking]] - Identifying ants with paint dots
+      - paint marking - Identifying ants with paint dots
 
-      - [[rfid_tracking]] - Tracking individuals with tiny radio tags
+      - rfid tracking - Tracking individuals with tiny radio tags
 
   - [[lab_methods]] - Methods for studying ants in the laboratory
 
@@ -362,7 +362,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
 - interaction analysis - Analysis of who interacts with whom
 
-  - [[spatial_networks]] - Networks of spatial contacts
+  - spatial networks - Networks of spatial contacts
 
     - [[contact_mapping]] - Maps of ant-to-ant contacts
 
@@ -376,7 +376,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
       - [[knowledge_distribution]] - How information is spread across ants
 
-  - [[temporal_networks]] - Networks that change over time
+  - temporal networks - Networks that change over time
 
     - dynamic patterns - Time-varying structure of interactions
 
@@ -404,9 +404,9 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
     - [[interaction_rules]] - Rules governing ant-to-ant interaction
 
-      - [[local_rules]] - Rules based on local information only
+      - local rules - Rules based on local information only
 
-      - [[feedback_mechanisms]] - Rules that model feedback among ants
+      - feedback mechanisms - Rules that model feedback among ants
 
   - [[colony_models]] - Models of whole-colony behavior
 
@@ -416,7 +416,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
       - [[self_organization]] - Models of order arising without central control
 
-    - [[optimization_models]] - Models seeking the best solution
+    - optimization models - Models seeking the best solution
 
       - [[foraging_efficiency]] - Models of foraging success
 
@@ -432,9 +432,9 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
     - [[ant_colony_optimization]] - Algorithm that finds routes using simulated pheromone
 
-      - [[routing_problems]] - Problems of finding good routes
+      - routing problems - Problems of finding good routes
 
-      - [[scheduling_problems]] - Problems of arranging tasks in time
+      - scheduling problems - Problems of arranging tasks in time
 
     - [[swarm_intelligence]] - Collective problem solving by simple agents
 
@@ -452,7 +452,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
     - [[bio_inspired_design]] - Design principles copied from biology
 
-      - [[movement_control]] - Movement control inspired by ants
+      - movement control - Movement control inspired by ants
 
       - [[group_behavior]] - Coordinated group behavior inspired by ants
 
@@ -466,13 +466,13 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
       - [[nutrient_cycling]] - Movement of nutrients through the ecosystem
 
-      - [[soil_structure]] - Effects on soil structure and composition
+      - soil structure - Effects on soil structure and composition
 
     - [[plant_interactions]] - Ant relationships with plants
 
       - [[seed_dispersal]] - Spread of seeds by ants
 
-      - [[plant_protection]] - Ants defending plants from herbivores
+      - plant protection - Ants defending plants from herbivores
 
   - [[ecosystem_services]] - Benefits ants provide to ecosystems
 
@@ -480,7 +480,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
       - [[predator_role]] - Ants as predators of other animals
 
-      - [[population_control]] - Regulation of other species' populations
+      - population control - Regulation of other species' populations
 
     - [[pollination]] - Pollination of plants
 
@@ -492,7 +492,7 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
 - [[ant_conservation]] - Protecting ant species and habitats
 
-  - [[habitat_protection]] - Preserving the places ants live
+  - habitat protection - Preserving the places ants live
 
     - [[critical_habitats]] - Habitats essential for survival
 
@@ -518,23 +518,23 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
       - [[fragmentation]] - Habitat broken into smaller pieces
 
-      - [[degradation]] - Decline in habitat quality
+      - degradation - Decline in habitat quality
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[research_challenges]] - Obstacles facing ant research
+- research challenges - Obstacles facing ant research
 
   - [[measurement_limitations]] - Limits on how accurately ants can be measured
 
-    - [[individual_tracking]] - Difficulty tracking single ants
+    - individual tracking - Difficulty tracking single ants
 
       - [[small_size]] - Tiny body size limits tracking
 
       - [[large_numbers]] - Very large colony size limits tracking
 
-    - [[interaction_complexity]] - Difficulty of studying complex interactions
+    - interaction complexity - Difficulty of studying complex interactions
 
       - [[multiple_signals]] - Several signals acting at once
 
@@ -582,15 +582,15 @@ Collective Behavior in Ants represents a paradigmatic example of emergent intell
 
     - [[cross_disciplinary]] - Combining methods from several fields
 
-      - [[physics_biology]] - Applying physics to biological questions
+      - physics biology - Applying physics to biological questions
 
       - [[ecology_behavior]] - Linking ecology and behavior
 
 ## References
 
-- [[holldobler_wilson]]
+- holldobler wilson
 
-- [[gordon_organization]]
+- gordon organization
 
 - [[detrain_deneubourg]]
 

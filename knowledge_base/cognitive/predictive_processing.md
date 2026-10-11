@@ -440,7 +440,7 @@ def train_network(network: PredictiveNetwork,
 
   - [[attention_mechanisms]] - Resource allocation
 
-    - [[precision_estimation]] - Uncertainty assessment
+    - precision estimation - Uncertainty assessment
 
     - [[gain_control]] - Scaling the influence of signals by their precision
 
@@ -454,7 +454,7 @@ def train_network(network: PredictiveNetwork,
 
 ### Cortical Organization
 
-- [[cortical_hierarchy]] - Layered organization of cortical areas
+- cortical hierarchy - Layered organization of cortical areas
 
   - [[feedforward_connections]] - Ascending pathways
 
@@ -474,7 +474,7 @@ def train_network(network: PredictiveNetwork,
 
   - [[hebbian_learning]] - Connection strengthening
 
-  - [[prediction_error_learning]] - Error-based updates
+  - prediction error learning - Error-based updates
 
   - [[precision_weighting]] - Weighting prediction errors by their reliability
 
@@ -504,7 +504,7 @@ def train_network(network: PredictiveNetwork,
 
 - [[predictive_learning]] - Knowledge acquisition
 
-  - [[model_updating]] - Belief revision
+  - model updating - Belief revision
 
   - [[structure_learning]] - Pattern discovery
 
@@ -550,7 +550,7 @@ def train_network(network: PredictiveNetwork,
 
   - [[illusion_studies]] - Illusions as probes of perceptual priors
 
-  - [[attention_tasks]] - Focus assessment
+  - attention tasks - Focus assessment
 
   - [[learning_experiments]] - Acquisition testing
 
@@ -592,7 +592,7 @@ def train_network(network: PredictiveNetwork,
 
 - [[temporal_integration]] - Combining information across time
 
-- [[causal_learning]] - Cause discovery
+- causal learning - Cause discovery
 
 - [[metacognition]] - Self-awareness
 

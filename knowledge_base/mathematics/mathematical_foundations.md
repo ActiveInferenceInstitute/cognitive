@@ -620,7 +620,7 @@ The mathematical foundations of cognitive phenomena integrate principles from [[
 
 ## References
 
-- [[jordan_1999]] - "Introduction to Variational Methods"
+- jordan 1999 - "Introduction to Variational Methods"
 
 - [[friston_2010]] - "The Free-Energy Principle"
 

@@ -52,13 +52,13 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 - [[solution_finding]] - Searching for a way to reach the goal
 
-  - [[problem_space]] - Set of all states and moves a problem allows
+  - problem space - Set of all states and moves a problem allows
 
     - [[initial_state]] - The situation at the start of a problem
 
-    - [[goal_state]] - The situation that counts as solved
+    - goal state - The situation that counts as solved
 
-  - [[solution_strategies]] - General approaches to reaching a solution
+  - solution strategies - General approaches to reaching a solution
 
     - [[algorithm]] - Step-by-step procedure guaranteed to find a solution
 
@@ -84,11 +84,11 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 ### Information Processing
 
-- [[cognitive_operations]] - Basic mental steps in solving a problem
+- cognitive operations - Basic mental steps in solving a problem
 
-  - [[representation]] - How a problem is mentally depicted
+  - representation - How a problem is mentally depicted
 
-    - [[mental_models]] - Internal simulations of how a situation works
+    - mental models - Internal simulations of how a situation works
 
     - [[problem_encoding]] - Translating problem information into internal form
 
@@ -96,7 +96,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
     - [[state_space]] - All states reachable in a problem
 
-    - [[operator_space]] - All actions available for changing state
+    - operator space - All actions available for changing state
 
 ### Memory Systems
 
@@ -152,7 +152,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 - [[open_problems]] - Problems with vague goals or missing information
 
-  - [[design_problems]] - Problems of creating a new artifact or plan
+  - design problems - Problems of creating a new artifact or plan
 
     - [[creative_solutions]] - Novel answers that meet the problem's needs
 
@@ -168,7 +168,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 - [[complex_problems]] - Problems with many interacting parts
 
-  - [[dynamic_problems]] - Problems whose conditions change as you act
+  - dynamic problems - Problems whose conditions change as you act
 
     - [[temporal_dynamics]] - How problem conditions evolve over time
 
@@ -186,7 +186,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 - [[systematic_methods]] - Methodical procedures that cover all possibilities
 
-  - [[exhaustive_search]] - Checking every possible solution
+  - exhaustive search - Checking every possible solution
 
     - [[breadth_first]] - Exploring all options at one level before going deeper
 
@@ -202,7 +202,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 - [[quick_methods]] - Shortcut methods that trade certainty for speed
 
-  - [[means_ends]] - Reducing the gap between current state and goal
+  - means ends - Reducing the gap between current state and goal
 
     - [[subgoal]] - Intermediate goal on the way to the main goal
 
@@ -226,9 +226,9 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
   - [[insight]] - Sudden realization of a solution
 
-    - [[restructuring]] - Reframing the problem in a new way
+    - restructuring - Reframing the problem in a new way
 
-    - [[incubation]] - Stepping away so unconscious processing can work
+    - incubation - Stepping away so unconscious processing can work
 
 ## Neural Implementation
 
@@ -240,7 +240,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
     - [[dorsolateral]] - Upper-lateral prefrontal region for working memory and rules
 
-    - [[ventrolateral]] - Lower-lateral prefrontal region for retrieval and selection
+    - ventrolateral - Lower-lateral prefrontal region for retrieval and selection
 
   - [[parietal]] - Parietal cortex supporting spatial and numerical reasoning
 
@@ -252,7 +252,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 - [[neural_dynamics]] - Time-varying brain activity during reasoning
 
-  - [[activation_patterns]] - Patterns of brain activation during problem solving
+  - activation patterns - Patterns of brain activation during problem solving
 
     - [[sequential]] - Activity unfolding one step after another
 
@@ -284,9 +284,9 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 ### Educational Applications
 
-- [[learning_support]] - Educational aids for learning to reason
+- learning support - Educational aids for learning to reason
 
-  - [[strategy_training]] - Teaching effective problem-solving approaches
+  - strategy training - Teaching effective problem-solving approaches
 
     - [[metacognition]] - Awareness and control of one's own thinking
 
@@ -294,9 +294,9 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
   - [[problem_design]] - Designing tasks that promote learning
 
-    - [[scaffolding]] - Temporary support that is gradually withdrawn
+    - scaffolding - Temporary support that is gradually withdrawn
 
-    - [[difficulty_scaling]] - Matching task difficulty to learner ability
+    - difficulty scaling - Matching task difficulty to learner ability
 
 ### Clinical Applications
 
@@ -312,7 +312,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
     - [[strategy_development]] - Building effective problem-solving approaches
 
-    - [[coping_skills]] - Skills for managing stress and difficulty
+    - coping skills - Skills for managing stress and difficulty
 
 ### Professional Applications
 
@@ -396,11 +396,11 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
   - [[real_world]] - Studying reasoning in everyday settings
 
-    - [[naturalistic]] - Observing behavior in natural contexts
+    - naturalistic - Observing behavior in natural contexts
 
-    - [[longitudinal]] - Following the same people over long periods
+    - longitudinal - Following the same people over long periods
 
-  - [[technology_use]] - Technology applied to reasoning research and support
+  - technology use - Technology applied to reasoning research and support
 
     - [[ai_augmented]] - Human reasoning supported by AI tools
 

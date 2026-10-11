@@ -188,7 +188,7 @@ Fundamental units of knowledge representation:
 
 - Temporal horizons
 
-- See [[goal_hierarchies]]
+- See goal hierarchies
 
 #### Action Selection
 

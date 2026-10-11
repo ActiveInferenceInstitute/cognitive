@@ -15,6 +15,8 @@ semantic_relations:
       - "[[neural_plasticity]]"
       - "[[synaptic_plasticity]]"
       - "[[structure_learning]]"
+aliases:
+  - structural_changes
 ---
 
 # Structural Plasticity

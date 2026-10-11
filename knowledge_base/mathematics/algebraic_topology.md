@@ -16,6 +16,8 @@ semantic_relations:
       - "[[homological_algebra]]"
       - "[[category_theory]]"
       - "[[differential_geometry]]"
+aliases:
+  - homology_theory
 ---
 
 # Algebraic Topology

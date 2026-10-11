@@ -25,7 +25,6 @@ semantic_relations:
   - type: foundational_for
     links:
       - "[[active inference discrete]]"
-      - "[[python framework]]"
   - type: extends
     links:
       - "[[friston_2017_curiosity]]"

@@ -313,7 +313,7 @@ class CuriosityDrivenExplorer:
 
 - [[exploration_strategies]]
 - [[curiosity_driven_learning]]
-- [[intrinsic_motivation]]
+- intrinsic motivation
 
 ### Decision Making
 

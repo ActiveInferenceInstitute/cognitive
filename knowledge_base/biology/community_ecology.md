@@ -15,6 +15,9 @@ semantic_relations:
       - "[[ecological_dynamics]]"
       - "[[ecological_networks]]"
       - "[[biodiversity]]"
+aliases:
+  - food_webs
+  - metacommunity_theory
 ---
 
 # Community Ecology

@@ -14,6 +14,9 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[motor_control]]"
       - "[[procedural_memory]]"
+aliases:
+  - motor_adaptation
+  - motor_skills
 ---
 
 # Motor Learning

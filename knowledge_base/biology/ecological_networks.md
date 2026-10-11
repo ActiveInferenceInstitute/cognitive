@@ -553,7 +553,7 @@ class NetworkInformation:
 ## References
 
 ### Foundational Texts
-- [[bascompte_2006]] - "The Structure of Plant-Animal Mutualistic Networks"
+- bascompte 2006 - "The Structure of Plant-Animal Mutualistic Networks"
 - [[newman_2010]] - "Networks: An Introduction"
 - [[proulx_2005]] - "Network Thinking in Ecology and Evolution"
 

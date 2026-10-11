@@ -15,6 +15,8 @@ semantic_relations:
       - "[[electrophysiology]]"
       - "[[neural_coding]]"
       - "[[population_coding]]"
+aliases:
+  - single_unit_recording
 ---
 
 # Single-Unit Recording

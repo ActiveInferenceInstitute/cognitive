@@ -1436,7 +1436,7 @@ class PathIntegralFreeEnergy:
 
 - friston - Free Energy Principle
 
-- [[parr]] - Active Inference
+- parr - Active Inference
 
 - [[amari]] - Information Geometry
 

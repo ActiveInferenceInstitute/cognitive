@@ -15,6 +15,8 @@ semantic_relations:
       - "[[ecological_dynamics]]"
       - "[[ecosystem_services]]"
       - "[[community_ecology]]"
+aliases:
+  - nutrient_cycling
 ---
 
 # Ecosystem Processes

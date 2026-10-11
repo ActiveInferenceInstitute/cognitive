@@ -548,9 +548,9 @@ class GenomeAnalyzer:
 
 - [[griffiths_2015]] - "Introduction to Genetic Analysis"
 
-- [[hartl_2006]] - "Essential Genetics"
+- hartl 2006 - "Essential Genetics"
 
-- [[nielsen_2005]] - "Statistical Methods in Molecular Evolution"
+- nielsen 2005 - "Statistical Methods in Molecular Evolution"
 
 - [[wray_2008]] - "Molecular Population Genetics"
 

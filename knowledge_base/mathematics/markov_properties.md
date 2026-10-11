@@ -417,7 +417,7 @@ end
 
 ```
 
-### 3. [[hammersley_clifford|Hammersley-Clifford Theorem]]
+### 3. Hammersley-Clifford Theorem
 
 ```julia
 

@@ -39,17 +39,17 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
     - [[expression_recognition]] - Emotion
 
-  - [[body_perception]] - Body information
+  - body perception - Body information
 
     - [[biological_motion]] - Movement
 
-    - [[gesture_recognition]] - Actions
+    - gesture recognition - Actions
 
 ### Theory of Mind
 
 - [[mental_state_attribution]] - Mind reading
 
-  - [[belief_understanding]] - Others' thoughts
+  - belief understanding - Others' thoughts
 
     - [[false_belief]] - Others' beliefs that differ from reality
 
@@ -81,7 +81,7 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
 ### Brain Networks
 
-- [[social_brain]] - Neural systems
+- social brain - Neural systems
 
   - [[mentalizing_network]] - Theory of mind
 
@@ -91,13 +91,13 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
   - [[mirror_system]] - Action understanding
 
-    - [[inferior_frontal]] - Action matching
+    - inferior frontal - Action matching
 
     - [[inferior_parietal]] - Goal coding
 
 ### Circuit Mechanisms
 
-- [[social_circuits]] - Local networks
+- social circuits - Local networks
 
   - [[face_circuits]] - Face processing
 
@@ -113,7 +113,7 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
 ### Neuromodulation
 
-- [[social_modulation]] - Neuromodulatory influence on social behavior
+- social modulation - Neuromodulatory influence on social behavior
 
   - [[oxytocin_system]] - Bonding/trust
 
@@ -131,19 +131,19 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
 ### Inference Mechanisms
 
-- [[social_inference]] - Inferring others' mental states and intentions
+- social inference - Inferring others' mental states and intentions
 
-  - [[intention_inference]] - Goal detection
+  - intention inference - Goal detection
 
     - [[action_observation]] - Watching and interpreting others' actions
 
-    - [[outcome_prediction]] - Predicting consequences of actions
+    - outcome prediction - Predicting consequences of actions
 
   - [[mental_inference]] - Mind reading
 
     - [[belief_inference]] - Inferring what others believe
 
-    - [[desire_inference]] - Inferring what others want
+    - desire inference - Inferring what others want
 
 ### Learning Processes
 
@@ -167,7 +167,7 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
   - [[joint_attention]] - Shared focus
 
-    - [[gaze_following]] - Following another's gaze direction
+    - gaze following - Following another's gaze direction
 
     - [[pointing_understanding]] - Interpreting pointing gestures
 
@@ -185,9 +185,9 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
   - [[communication]] - Exchange of information between individuals
 
-    - [[verbal_communication]] - Speech
+    - verbal communication - Speech
 
-    - [[nonverbal_communication]] - Gestures, posture, and expression
+    - nonverbal communication - Gestures, posture, and expression
 
   - [[cooperation]] - Working together
 
@@ -203,7 +203,7 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
     - [[social_bonding]] - Forming emotional ties
 
-    - [[group_identity]] - Sense of membership in a group
+    - group identity - Sense of membership in a group
 
   - [[group_function]] - How groups carry out tasks
 
@@ -223,9 +223,9 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
   - [[value_systems]] - Organized sets of shared values
 
-    - [[moral_values]] - Right/wrong
+    - moral values - Right/wrong
 
-    - [[cultural_values]] - Values shared within a culture
+    - cultural values - Values shared within a culture
 
 ## Applications
 
@@ -241,17 +241,17 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
   - [[social_anxiety]] - Fear of social evaluation
 
-    - [[interaction_avoidance]] - Withdrawal
+    - interaction avoidance - Withdrawal
 
-    - [[performance_anxiety]] - Anxiety about being judged
+    - performance anxiety - Anxiety about being judged
 
 ### Educational Applications
 
-- [[social_education]] - Teaching social competence
+- social education - Teaching social competence
 
   - [[social_skills_training]] - Structured practice of social abilities
 
-    - [[communication_skills]] - Talk/listen
+    - communication skills - Talk/listen
 
     - [[conflict_resolution]] - Resolving disputes between people
 
@@ -281,11 +281,11 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
 ### Behavioral Methods
 
-- [[social_behavior]] - Study of behavior in social contexts
+- social behavior - Study of behavior in social contexts
 
   - interaction analysis - Examining moment-to-moment exchanges
 
-    - [[conversation_analysis]] - Study of turn-taking in conversation
+    - conversation analysis - Study of turn-taking in conversation
 
     - [[nonverbal_analysis]] - Study of gesture and posture
 
@@ -353,7 +353,7 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
 - [[dunbar_social_mind]]
 
-- [[lieberman_social]]
+- lieberman social
 
 ## Related Concepts
 

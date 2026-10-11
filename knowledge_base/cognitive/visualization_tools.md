@@ -11,7 +11,6 @@ semantic_relations:
     links:
       - "[[graph_visualization]]"
       - "[[matrix_plots]]"
-      - "[[diagnostics]]"
       - "[[network_analysis]]"
       - "[[performance_optimization]]"
       - "[[model_validation]]"
@@ -412,7 +411,7 @@ def visualization_pipeline(model_results, config):
 
 - [[graph_visualization]] - Graph-based representation techniques
 - [[matrix_plots]] - Matrix visualization methods
-- [[diagnostics]] - Model diagnostic procedures
+- diagnostics - Model diagnostic procedures
 - [[performance_optimization]] - Optimization visualization
 - [[model_validation]] - Validation techniques
 

@@ -674,7 +674,7 @@ class EpistemicValueCalculator:
 
    - Links to:
 
-     - [[intrinsic_motivation]] - Internal rewards
+     - intrinsic motivation - Internal rewards
 
      - [[curiosity_learning]] - Learning driven by novelty and information gain
 
@@ -748,7 +748,7 @@ class EpistemicValueCalculator:
 
 - [[mackay_2003]] - Information Theory
 
-- [[schmidhuber_2010]] - Artificial Curiosity
+- schmidhuber 2010 - Artificial Curiosity
 
 ## Temporal Evolution
 
@@ -1070,7 +1070,7 @@ graph TD
 
 - [[visualization_suite]] - Visual analysis
 
-- [[statistical_tests]] - Validation methods
+- statistical tests - Validation methods
 
 - [[performance_evaluation]] - Efficiency metrics
 
@@ -1082,7 +1082,7 @@ graph TD
 
 - [[mackay_2003]] - Information Theory
 
-- [[schmidhuber_2010]] - Artificial Curiosity
+- schmidhuber 2010 - Artificial Curiosity
 
 ## Temporal Evolution
 
@@ -1626,7 +1626,7 @@ def adapt_temperature(
 
    - Path integral formulations
 
-   - Links to [[continuous_state_spaces]]
+   - Links to continuous state spaces
 
 1. **Meta-Learning**
 

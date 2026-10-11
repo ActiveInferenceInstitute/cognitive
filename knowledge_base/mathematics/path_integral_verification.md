@@ -251,11 +251,11 @@ aliases:
 
    Links to:
 
-   - [[geometric_integration]]
+   - geometric integration
 
    - [[symplectic_methods]]
 
-   - [[energy_conservation]]
+   - energy conservation
 
 1. **Sampling Methods**
 
@@ -327,7 +327,7 @@ aliases:
 
 1. **Implementation Guide**
 
-   - Add [[error_estimation]] methods
+   - Add error estimation methods
 
    - Include [[adaptive_methods]]
 

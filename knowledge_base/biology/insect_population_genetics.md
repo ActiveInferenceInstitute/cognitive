@@ -22,7 +22,6 @@ semantic_relations:
       - "[[evolutionary_dynamics]]"
   - type: implements
     links:
-      - "[[statistical_methods]]"
       - "[[bioinformatics]]"
       - "[[genomics]]"
   - type: relates

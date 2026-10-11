@@ -14,6 +14,8 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[predictive_coding]]"
       - "[[synaptic_plasticity]]"
+aliases:
+  - hebbian_plasticity
 ---
 
 # Hebbian Learning

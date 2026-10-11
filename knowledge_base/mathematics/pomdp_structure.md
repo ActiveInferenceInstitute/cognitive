@@ -55,7 +55,7 @@ Fundamental spaces are defined separately:
 
 - [[s_space]] - Hidden state space
 
-- [[pi_space]] - Policy space
+- pi space - Policy space
 
 ## Machine Readability
 

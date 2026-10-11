@@ -29,6 +29,8 @@ semantic_relations:
       - "[[probability_theory]]"
       - "[[information_theory]]"
       - "[[graph_theory]]"
+aliases:
+  - expectation_propagation
 ---
 
 
@@ -374,7 +376,7 @@ end
 
 - Natural language processing
 
-### 2. [[continuous_state_spaces|Continuous State Spaces]]
+### 2. Continuous State Spaces
 
 - Kalman filtering
 

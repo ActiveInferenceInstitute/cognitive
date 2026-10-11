@@ -319,7 +319,7 @@ class ActionDistribution:
 
 ### Analysis
 
-- [[entropy_analysis]] - Distribution uncertainty
+- entropy analysis - Distribution uncertainty
 
 - [[information_gain]] - Information theoretic measures
 
@@ -333,7 +333,7 @@ class ActionDistribution:
 
 - [[policy_selection]] - Higher-level selection
 
-- [[behavioral_modeling]] - Behavioral analysis
+- behavioral modeling - Behavioral analysis
 
 ## References
 

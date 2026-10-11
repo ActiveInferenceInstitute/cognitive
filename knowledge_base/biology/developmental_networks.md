@@ -561,9 +561,9 @@ class CellFateAnalyzer:
 
 ## References
 
-- [[wolpert_2015]] - "Principles of Development"
+- wolpert 2015 - "Principles of Development"
 
-- [[murray_2003]] - "Mathematical Biology II: Spatial Models"
+- murray 2003 - "Mathematical Biology II: Spatial Models"
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 

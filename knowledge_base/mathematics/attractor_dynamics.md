@@ -18,6 +18,8 @@ semantic_relations:
       - "[[non_equilibrium_steady_state]]"
       - "[[self_organization]]"
       - "[[nonlinear_dynamics]]"
+aliases:
+  - strange_attractors
 ---
 
 # Attractor Dynamics

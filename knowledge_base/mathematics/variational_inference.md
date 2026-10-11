@@ -32,6 +32,9 @@ semantic_relations:
       - "[[message_passing]]"
       - "[[bayesian_inference]]"
       - "[[belief_updating]]"
+aliases:
+  - mean_field
+  - mean_field_approximation
 ---
 
 

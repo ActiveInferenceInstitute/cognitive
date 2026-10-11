@@ -17,6 +17,8 @@ semantic_relations:
     links:
       - "[[variational_free_energy]]"
       - "[[epistemic_value]]"
+aliases:
+  - kullback_leibler_divergence
 ---
 
 

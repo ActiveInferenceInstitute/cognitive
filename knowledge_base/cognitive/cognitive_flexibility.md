@@ -10,6 +10,7 @@ tags:
   - learning
 aliases:
   - flexibility
+  - behavioral_flexibility
 semantic_relations:
   - type: relates
     links:

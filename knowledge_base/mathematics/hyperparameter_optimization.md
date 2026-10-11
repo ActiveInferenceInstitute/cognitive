@@ -13,6 +13,8 @@ semantic_relations:
       - "[[parameter_tuning]]"
       - "[[sensitivity_analysis]]"
       - "[[stochastic_optimization]]"
+aliases:
+  - hyperparameters
 ---
 
 

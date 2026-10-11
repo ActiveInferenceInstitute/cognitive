@@ -480,7 +480,7 @@ Bayesian inference represents the process by which cognitive systems update beli
 
 ## References
 
-- [[bayesian_theory]]
+- bayesian theory
 
 - [[probability_theory]]
 

@@ -14,6 +14,8 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[synaptic_plasticity]]"
       - "[[stability_plasticity]]"
+aliases:
+  - synaptic_scaling
 ---
 
 # Homeostatic Plasticity

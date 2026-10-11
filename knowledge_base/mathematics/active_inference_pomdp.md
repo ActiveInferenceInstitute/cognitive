@@ -11,6 +11,7 @@ tags:
 - mathematics
 aliases:
 - active-inference-pomdp
+- active inference discrete
 semantic_relations:
   - type: implements
     links:
@@ -73,7 +74,7 @@ Active Inference formulation of Partially Observable Markov Decision Processes (
 
 - Non-negative: $P(o|s) \geq 0$
 
-- Links to [[likelihood_mapping]] and [[sensory_uncertainty]]
+- Links to [[likelihood_mapping]] and sensory uncertainty
 
 ### Transition Model (B)
 
@@ -147,7 +148,7 @@ Alternative but equivalent views (for intuition): ambiguity + risk, or expected 
 
 - [[update_beliefs]]: Belief updating using VFE
 
-- [[select_policy]]: Policy selection using EFE
+- select policy: Policy selection using EFE
 
 ### Matrix Validation
 

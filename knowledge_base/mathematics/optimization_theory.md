@@ -864,7 +864,7 @@ class ValueIterator:
 
 ## References
 
-- [[bertsekas]] - Dynamic Programming and Optimal Control
+- bertsekas - Dynamic Programming and Optimal Control
 
 - [[amari]] - Information Geometry and Its Applications
 

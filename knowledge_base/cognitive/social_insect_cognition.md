@@ -21,6 +21,8 @@ semantic_relations:
       - "[[emergence_self_organization]]"
       - "[[learning_mechanisms]]"
       - "[[adaptation]]"
+aliases:
+  - social_insects
 ---
 
 
@@ -41,9 +43,9 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
     - [[chemical_sensing]] - Detecting odors and chemical signals
 
-      - [[pheromone_detection]] - Sensing pheromone trails and signals
+      - pheromone detection - Sensing pheromone trails and signals
 
-      - [[nestmate_recognition]] - Identifying colony members by chemical cues
+      - nestmate recognition - Identifying colony members by chemical cues
 
     - [[mechanical_sensing]] - Detecting touch and vibration
 
@@ -51,7 +53,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - [[contact_information]] - Information gained through physical contact
 
-  - [[neural_processing]] - Information processing in the insect brain
+  - neural processing - Information processing in the insect brain
 
     - [[learning_mechanisms]] - Processes that change behavior with experience
 
@@ -69,7 +71,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
 - [[group_cognition]] - Information processing at the colony level
 
-  - [[information_sharing]] - Exchange of information among colony members
+  - information sharing - Exchange of information among colony members
 
     - communication systems - Channels colony members use to signal
 
@@ -79,19 +81,19 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
     - [[information_flow]] - Movement of information through the colony
 
-      - [[local_transfer]] - Exchange between nearby individuals
+      - local transfer - Exchange between nearby individuals
 
-      - [[global_spread]] - Propagation across the whole colony
+      - global spread - Propagation across the whole colony
 
   - [[decision_making]] - Colony-level choice among alternatives
 
-    - [[consensus_building]] - Reaching agreement among individuals
+    - consensus building - Reaching agreement among individuals
 
       - [[quorum_sensing]] - Committing once enough individuals agree
 
       - [[opinion_pooling]] - Combining individual assessments
 
-    - [[choice_mechanisms]] - Rules that select among options
+    - choice mechanisms - Rules that select among options
 
       - [[threshold_response]] - Acting once a stimulus passes a threshold
 
@@ -99,7 +101,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
 ### Adaptive Mechanisms
 
-- [[colony_adaptation]] - Colony-level adjustment to changing conditions
+- colony adaptation - Colony-level adjustment to changing conditions
 
   - [[behavioral_flexibility]] - Adjusting behavior to circumstances
 
@@ -107,7 +109,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - [[response_thresholds]] - Stimulus levels that trigger task engagement
 
-      - [[workload_sensing]] - Detecting how much work needs doing
+      - workload sensing - Detecting how much work needs doing
 
     - [[strategy_adjustment]] - Changing behavioral strategy
 
@@ -115,7 +117,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - [[exploitation]] - Using known good options
 
-  - [[learning_processes]] - Mechanisms of learning from experience
+  - learning processes - Mechanisms of learning from experience
 
     - [[collective_learning]] - Learning distributed across the colony
 
@@ -127,7 +129,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - [[spatial_memory]] - Memory for locations and routes
 
-      - [[temporal_memory]] - Memory for timing of events
+      - temporal memory - Memory for timing of events
 
 ## Cognitive Functions
 
@@ -141,7 +143,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - [[step_counting]] - Estimating distance from steps taken
 
-      - [[energy_cost]] - Estimating distance from energy expended
+      - energy cost - Estimating distance from energy expended
 
     - [[direction_sensing]] - Determining heading
 
@@ -189,11 +191,11 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - [[directed_search]] - Search guided by cues or memory
 
-    - [[recruitment_systems]] - Mobilizing nestmates to a resource
+    - recruitment systems - Mobilizing nestmates to a resource
 
-      - [[information_transfer]] - Passing location information to nestmates
+      - information transfer - Passing location information to nestmates
 
-      - [[team_coordination]] - Coordinating group effort at a resource
+      - team coordination - Coordinating group effort at a resource
 
 ### Social Organization
 
@@ -209,13 +211,13 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
     - [[work_coordination]] - Aligning the efforts of workers
 
-      - [[activity_cycles]] - Rhythms of colony activity over time
+      - activity cycles - Rhythms of colony activity over time
 
       - spatial organization - Arrangement of workers in nest space
 
   - [[colony_regulation]] - Maintaining colony function
 
-    - [[population_control]] - Regulating colony size
+    - population control - Regulating colony size
 
       - [[birth_regulation]] - Controlling brood production
 
@@ -223,7 +225,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
     - [[resource_management]] - Handling colony resources
 
-      - [[storage_systems]] - Storing food and materials
+      - storage systems - Storing food and materials
 
       - [[distribution]] - Sharing resources among members
 
@@ -273,7 +275,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - [[weakening]] - Decreasing synaptic efficacy
 
-    - [[circuit_modification]] - Rewiring of neural circuits
+    - circuit modification - Rewiring of neural circuits
 
       - [[pruning]] - Removal of unused connections
 
@@ -349,15 +351,15 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
     - [[environmental_control]] - Experimentally changing the surroundings
 
-      - [[resource_manipulation]] - Altering food availability
+      - resource manipulation - Altering food availability
 
       - [[social_manipulation]] - Altering group composition
 
     - [[individual_marking]] - Identifying individual insects
 
-      - [[paint_marking]] - Identifying insects with paint dots
+      - paint marking - Identifying insects with paint dots
 
-      - [[rfid_tracking]] - Tracking tagged insects with radio tags
+      - rfid tracking - Tracking tagged insects with radio tags
 
 ### Neural Analysis
 
@@ -379,7 +381,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
   - [[function_studies]] - Studies of neural function
 
-    - [[activity_recording]] - Measuring neural activity
+    - activity recording - Measuring neural activity
 
       - [[electrical_recording]] - Recording electrical activity of neurons
 
@@ -407,7 +409,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - [[hierarchy_analysis]] - Analyzing dominance or rank structure
 
-      - [[module_detection]] - Finding subgroups within a network
+      - module detection - Finding subgroups within a network
 
   - [[emergence_analysis]] - Studying group-level properties from individual rules
 
@@ -417,9 +419,9 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - temporal patterns - Regularities in timing
 
-    - [[causality_analysis]] - Identifying causes of group behavior
+    - causality analysis - Identifying causes of group behavior
 
-      - [[feedback_analysis]] - Analyzing reinforcing and balancing loops
+      - feedback analysis - Analyzing reinforcing and balancing loops
 
       - [[regulation_study]] - Studying how colonies maintain stability
 
@@ -463,15 +465,15 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
   - [[biological_control]] - Using natural enemies against pests
 
-    - [[predator_prey]] - Predators suppressing pest populations
+    - predator prey - Predators suppressing pest populations
 
       - [[population_dynamics]] - Changes in pest and predator numbers
 
-      - [[efficiency_analysis]] - Evaluating how well control works
+      - efficiency analysis - Evaluating how well control works
 
     - [[habitat_management]] - Managing habitat to favor beneficial insects
 
-      - [[resource_manipulation]] - Providing food that supports beneficial insects
+      - resource manipulation - Providing food that supports beneficial insects
 
       - [[shelter_provision]] - Providing refuges for beneficial insects
 
@@ -483,7 +485,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - [[repulsion]] - Deterring insects with chemical cues
 
-    - [[plant_protection]] - Protecting crops from damage
+    - plant protection - Protecting crops from damage
 
       - [[defense_induction]] - Triggering plant defenses
 
@@ -495,11 +497,11 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
   - [[population_management]] - Managing insect population levels
 
-    - [[habitat_protection]] - Preserving habitat for insects
+    - habitat protection - Preserving habitat for insects
 
       - [[resource_preservation]] - Protecting food resources
 
-      - [[nest_protection]] - Protecting nesting sites
+      - nest protection - Protecting nesting sites
 
     - [[population_monitoring]] - Surveying insect populations
 
@@ -517,7 +519,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
     - [[soil_services]] - Insect contributions to soil function
 
-      - [[soil_structure]] - Soil aeration and aggregate formation
+      - soil structure - Soil aeration and aggregate formation
 
       - [[nutrient_cycling]] - Recycling nutrients through the ecosystem
 
@@ -525,11 +527,11 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
 ### Current Challenges
 
-- [[research_challenges]] - Open difficulties in the field
+- research challenges - Open difficulties in the field
 
   - [[measurement_challenges]] - Difficulties in collecting data
 
-    - [[individual_tracking]] - Following individual insects over time
+    - individual tracking - Following individual insects over time
 
       - [[small_scale]] - Difficulty of working with tiny animals
 
@@ -539,13 +541,13 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - [[size_constraints]] - Limits imposed by small brain size
 
-      - [[activity_recording]] - Recording neural activity in small brains
+      - activity recording - Recording neural activity in small brains
 
   - [[analysis_challenges]] - Difficulties in interpreting data
 
     - [[data_complexity]] - Large, high-dimensional datasets
 
-      - [[multi_scale]] - Linking individual and colony scales
+      - multi scale - Linking individual and colony scales
 
       - [[temporal_dynamics]] - Changes across multiple timescales
 
@@ -561,7 +563,7 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
   - [[technical_advances]] - Improvements in experimental tools
 
-    - [[imaging_methods]] - Visualizing neural and behavioral activity
+    - imaging methods - Visualizing neural and behavioral activity
 
       - [[microscopy]] - High-resolution imaging of small structures
 
@@ -581,21 +583,21 @@ Social Insect Cognition examines how cognitive processes emerge from the interac
 
       - [[network_analysis]] - Graph-based analysis of interactions
 
-    - [[theory_development]] - Building explanatory frameworks
+    - theory development - Building explanatory frameworks
 
-      - [[predictive_models]] - Models that forecast behavior
+      - predictive models - Models that forecast behavior
 
-      - [[unified_theories]] - Frameworks linking individual and collective cognition
+      - unified theories - Frameworks linking individual and collective cognition
 
 ## References
 
 - [[seeley_wisdom]]
 
-- [[holldobler_wilson]]
+- holldobler wilson
 
 - [[menzel_learning]]
 
-- [[gordon_organization]]
+- gordon organization
 
 ## Related Concepts
 

@@ -26,7 +26,6 @@ semantic_relations:
   - type: foundational_for
     links:
       - "[[knowledge_base/mathematics/expected_free_energy]]"
-      - "[[curiosity]]"
       - "[[exploration]]"
   - type: extends
     links:

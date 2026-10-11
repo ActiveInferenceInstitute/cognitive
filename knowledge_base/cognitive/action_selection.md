@@ -270,7 +270,7 @@ class ExecutionController:
 
 ### 1. Hierarchical Selection
 
-- [[hierarchical_policies]]
+- hierarchical policies
 
   - Temporal abstraction
 
@@ -625,7 +625,7 @@ class MultiObjectiveActionSelector:
 
 ### 1. Theoretical Extensions
 
-- [[quantum_decision_making]]
+- quantum decision making
 
   - Quantum probability
 
@@ -661,7 +661,7 @@ class MultiObjectiveActionSelector:
 
 ### 3. Methods Development
 
-- [[deep_active_inference]]
+- deep active inference
 
   - Neural architectures
 

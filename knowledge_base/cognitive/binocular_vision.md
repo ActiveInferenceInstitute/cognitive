@@ -19,6 +19,8 @@ semantic_relations:
     links:
       - "[[stereopsis]]"
       - "[[eye_movements]]"
+aliases:
+  - stereopsis
 ---
 
 
@@ -442,7 +444,7 @@ Binocular vision is the coordinated use of both eyes to create a single, unified
 
 - [[visual_neuroscience]]
 
-- [[developmental_vision]]
+- developmental vision
 
 - clinical vision
 

@@ -404,7 +404,7 @@ Want to learn more? Check out:
 
 - [[action_combination]] - Combining actions creatively
 
-- [[movement_control]] - Making smooth movements
+- movement control - Making smooth movements
 
 - [[game_mechanics]] - Designing fun actions
 

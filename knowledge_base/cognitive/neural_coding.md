@@ -17,6 +17,8 @@ semantic_relations:
       - "[[information_theory]]"
       - "[[population_coding]]"
       - "[[temporal_coding]]"
+aliases:
+  - rate_coding
 ---
 
 
@@ -101,7 +103,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[feedforward_circuits]] - Sequential processing
 
-    - [[convergence]] - Input integration
+    - convergence - Input integration
 
     - [[divergence]] - Output distribution
 
@@ -159,7 +161,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
     - thresholding - Response gating
 
-    - [[multiplication]] - Gain modulation through combined inputs
+    - multiplication - Gain modulation through combined inputs
 
 ### Decoding
 
@@ -183,7 +185,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[neural_information]] - Coding principles
 
-  - [[information_content]] - Message quantity
+  - information content - Message quantity
 
     - [[entropy]] - Uncertainty measure
 
@@ -219,7 +221,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
     - [[hebbian_learning]] - Association rules
 
-    - [[error_driven_learning]] - Correction rules
+    - error driven learning - Correction rules
 
   - [[structural_plasticity]] - Circuit changes
 
@@ -267,7 +269,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[spiking_networks]] - Pulse-based
 
-    - [[event_driven]] - Spike processing
+    - event driven - Spike processing
 
     - [[temporal_coding]] - Time-based
 
@@ -287,7 +289,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[multi_unit]] - Local populations
 
-  - [[field_potentials]] - Population activity
+  - field potentials - Population activity
 
 ### Analysis Methods
 
@@ -297,7 +299,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[spike_trains]] - Temporal patterns
 
-  - [[correlation_analysis]] - Relationship measures
+  - correlation analysis - Relationship measures
 
 ### Modeling Approaches
 

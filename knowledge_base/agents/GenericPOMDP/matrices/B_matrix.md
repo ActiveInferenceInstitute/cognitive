@@ -218,7 +218,7 @@ def update_transitions_bayes(self,
 
 ### Structure Learning
 
-- [[causal_discovery]] - Structure identification
+- causal discovery - Structure identification
 
   - Sparsity patterns
 

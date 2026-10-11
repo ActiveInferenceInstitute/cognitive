@@ -1640,7 +1640,7 @@ class FourierAnalysis:
 
 ### Harmonic Analysis
 
-- [[harmonic_analysis|Harmonic Analysis]]
+- Harmonic Analysis
 
   - Fourier transforms
 
@@ -1672,7 +1672,7 @@ class FourierAnalysis:
 
 ### Operator Theory
 
-- [[operator_theory|Operator Theory]]
+- Operator Theory
 
   - Self-adjoint operators
 
@@ -1682,13 +1682,13 @@ class FourierAnalysis:
 
 ## Related Documentation
 
-- [[complex_analysis|Complex Analysis]]
+- Complex Analysis
 
 - [[functional_analysis|Functional Analysis]]
 
-- [[harmonic_analysis|Harmonic Analysis]]
+- Harmonic Analysis
 
-- [[operator_theory|Operator Theory]]
+- Operator Theory
 
 - [[signal_processing|Signal Processing]]
 
@@ -2144,7 +2144,7 @@ class DifferentialForms:
 
 ### Geometric Deep Learning
 
-- [[geometric_deep_learning|Geometric Deep Learning]]
+- Geometric Deep Learning
 
   - Manifold learning
 
@@ -2170,7 +2170,7 @@ class DifferentialForms:
 
 - [[neural_odes|Neural ODEs]]
 
-- [[geometric_deep_learning|Geometric Deep Learning]]
+- Geometric Deep Learning
 
 - [[information_geometry|Information Geometry]]
 
@@ -2616,7 +2616,7 @@ class FinancialModels:
 
 ### Neural SDEs
 
-- [[neural_sdes|Neural SDEs]]
+- Neural SDEs
 
   - Continuous-time latent models
 
@@ -2642,7 +2642,7 @@ class FinancialModels:
 
 - [[financial_mathematics|Financial Mathematics]]
 
-- [[neural_sdes|Neural SDEs]]
+- Neural SDEs
 
 - [[stochastic_optimization|Stochastic Optimization]]
 

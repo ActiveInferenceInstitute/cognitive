@@ -433,7 +433,7 @@ Apparent motion is the perception of movement from a series of static images or 
 
 - [[temporal_processing]]
 
-- [[visual_integration]]
+- visual integration
 
 - [[perceptual_organization]]
 

@@ -147,9 +147,9 @@ graph TD
 
 ```
 
-- [[knowledge_theory]]
+- knowledge theory
 
-  - [[truth_theories]]
+  - truth theories
 
   - [[justification]]
 
@@ -221,7 +221,7 @@ graph TD
 
   - [[set_theory]]
 
-  - [[model_theory]]
+  - model theory
 
   - [[proof_theory]]
 
@@ -267,7 +267,7 @@ graph TD
 
 - [[applied_ethics]]
 
-  - [[bioethics]]
+  - bioethics
 
   - [[environmental_ethics]]
 
@@ -279,7 +279,7 @@ graph TD
 
   - [[moral_relativism]]
 
-  - [[moral_psychology]]
+  - moral psychology
 
 #### Political Philosophy
 
@@ -321,7 +321,7 @@ graph TD
 
 - [[government]]
 
-  - [[democracy]]
+  - democracy
 
   - [[authoritarianism]]
 
@@ -369,19 +369,19 @@ graph TD
 
   - [[beauty]]
 
-  - [[representation]]
+  - representation
 
-  - [[expression]]
+  - expression
 
 - [[criticism]]
 
-  - [[interpretation]]
+  - interpretation
 
-  - [[evaluation]]
+  - evaluation
 
   - [[genre_theory]]
 
-- [[aesthetic_experience]]
+- aesthetic experience
 
   - [[perception]]
 
@@ -479,7 +479,7 @@ graph TD
 
   - [[qualia]]
 
-  - [[intentionality]]
+  - intentionality
 
   - [[self]]
 
@@ -541,7 +541,7 @@ graph TD
 
   - [[syntax]]
 
-  - [[semantics]]
+  - semantics
 
   - [[pragmatics]]
 
@@ -563,7 +563,7 @@ graph TD
 
 - [[philosophy_of_physics]]
 
-- [[philosophy_of_biology]]
+- philosophy of biology
 
 - [[philosophy_of_mathematics]]
 
@@ -585,7 +585,7 @@ graph TD
 
 - [[artificial_intelligence_ethics]]
 
-- [[information_ethics]]
+- information ethics
 
 ## Historical Traditions
 
@@ -627,7 +627,7 @@ graph TD
 
 - [[logical_analysis]]
 
-- [[linguistic_analysis]]
+- linguistic analysis
 
 - [[phenomenological_analysis]]
 
@@ -649,7 +649,7 @@ graph TD
 
 - [[critical_theory]]
 
-- [[feminist_philosophy]]
+- feminist philosophy
 
 ## Advanced Philosophical Topics
 
@@ -687,13 +687,13 @@ graph TD
 
   - [[agency]]
 
-  - [[intention]]
+  - intention
 
   - [[responsibility]]
 
 - [[motivation_theory]]
 
-  - [[desire_theory]]
+  - desire theory
 
   - [[practical_reason]]
 
@@ -705,7 +705,7 @@ graph TD
 
   - [[game_theory]]
 
-  - [[collective_action]]
+  - collective action
 
 ### Philosophy of Information
 
@@ -743,7 +743,7 @@ graph TD
 
   - [[information_dynamics]]
 
-  - [[information_ethics]]
+  - information ethics
 
 - [[computational_theory]]
 
@@ -757,7 +757,7 @@ graph TD
 
   - [[data_semantics]]
 
-  - [[information_content]]
+  - information content
 
   - [[semantic_value]]
 
@@ -811,7 +811,7 @@ graph TD
 
   - [[nature_value]]
 
-  - [[future_generations]]
+  - future generations
 
   - [[environmental_justice]]
 
@@ -903,7 +903,7 @@ graph TD
 
 - [[cognitive_theory]]
 
-  - [[mental_representation]]
+  - mental representation
 
   - [[information_processing]]
 
@@ -1011,11 +1011,11 @@ graph TD
 
 ```
 
-- [[formal_methods]]
+- formal methods
 
   - [[proof_theory]]
 
-  - [[model_theory]]
+  - model theory
 
   - [[type_theory]]
 
@@ -1083,11 +1083,11 @@ graph TD
 
 - [[experimental_domains]]
 
-  - [[moral_psychology]]
+  - moral psychology
 
   - [[cognitive_science]]
 
-  - [[linguistic_analysis]]
+  - linguistic analysis
 
 ## Integrative Approaches
 
@@ -1177,7 +1177,7 @@ graph TD
 
 - [[transdisciplinary_methods]]
 
-  - [[integrative_methods]]
+  - integrative methods
 
   - [[boundary_crossing]]
 
@@ -1777,7 +1777,7 @@ graph TD
 
 ```
 
-- [[aesthetic_experience]]
+- aesthetic experience
 
   - [[theories_of_beauty]]
 
@@ -1997,7 +1997,7 @@ graph TD
 
 ```
 
-- [[future_generations]]
+- future generations
 
   - [[intergenerational_responsibility]]
 
@@ -2017,7 +2017,7 @@ graph TD
 
   - [[genetic_modification]]
 
-  - [[human_enhancement]]
+  - human enhancement
 
   - [[artificial_superintelligence]]
 
@@ -2379,7 +2379,7 @@ graph TD
 
   - [[tapu_sacred]]
 
-  - [[reciprocity_systems]]
+  - reciprocity systems
 
   - [[community_ethics]]
 
@@ -2845,7 +2845,7 @@ graph TD
 
   - [[performativity_theory]]
 
-  - [[desire_theory]]
+  - desire theory
 
   - [[sexual_subjectivity]]
 
@@ -3085,7 +3085,7 @@ graph TD
 
 - [[philosophy_cognitive_science]]
 
-  - [[mental_representation]]
+  - mental representation
 
   - [[computational_theory_mind]]
 
@@ -3169,7 +3169,7 @@ graph TD
 
   - [[healthcare_justice]]
 
-  - [[human_enhancement]]
+  - human enhancement
 
   - [[medical_paternalism]]
 
@@ -3265,7 +3265,7 @@ graph TD
 
 ```
 
-- [[philosophy_of_biology]]
+- philosophy of biology
 
   - [[life_definition]]
 
@@ -3337,7 +3337,7 @@ graph TD
 
 - [[ai_ethics]]
 
-  - [[value_alignment]]
+  - value alignment
 
   - [[ai_autonomy]]
 

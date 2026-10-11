@@ -21,6 +21,9 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[attention_mechanisms]]"
       - "[[executive_processes]]"
+aliases:
+  - baddeley_working_memory
+  - working_memory_control
 ---
 
 

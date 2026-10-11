@@ -167,9 +167,9 @@ Policy selection is used in:
 
 - [[optimality_guarantees]]
 
-- [[exploration_control]]
+- exploration control
 
-- [[policy_convergence]]
+- policy convergence
 
 ### Computational Properties
 
@@ -187,7 +187,7 @@ Policy selection is used in:
 
 - [[epsilon_greedy]]
 
-- [[thompson_sampling]]
+- thompson sampling
 
 ### Multi-Step
 
@@ -201,7 +201,7 @@ Policy selection is used in:
 
 - [[option_framework]]
 
-- [[hierarchical_policies]]
+- hierarchical policies
 
 - [[abstraction_levels]]
 

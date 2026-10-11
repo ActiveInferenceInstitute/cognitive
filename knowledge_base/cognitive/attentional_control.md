@@ -10,6 +10,7 @@ tags:
 - executive_function
 aliases:
   - attention_control
+  - attention_regulation
 semantic_relations:
   - type: implements
     links:

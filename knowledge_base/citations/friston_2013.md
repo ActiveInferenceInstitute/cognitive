@@ -203,7 +203,7 @@ Where self-evidencing drives conscious experience.
 
 ### Philosophical Extensions
 - [[clark_2013]] - Predictive brains and situated agents
-- [[seth_2020]] - Consciousness and self-modeling
+- seth 2020 - Consciousness and self-modeling
 - [[pezzulo_2021]] - Geometry of knowledge
 
 ## Code and Implementations

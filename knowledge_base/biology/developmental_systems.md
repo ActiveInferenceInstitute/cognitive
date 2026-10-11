@@ -18,7 +18,6 @@ semantic_relations:
     links:
       - "[[morphogenesis]]"
       - "[[pattern_formation]]"
-      - "[[cell_differentiation]]"
       - "[[knowledge_base/cognitive/active_inference]]"
   - type: implements
     links:
@@ -558,11 +557,11 @@ Cell state transitions:
 
 ## References
 
-- [[wolpert_2015]] - "Principles of Development"
+- wolpert 2015 - "Principles of Development"
 
-- [[murray_2003]] - "Mathematical Biology II: Spatial Models and Biomedical Applications"
+- murray 2003 - "Mathematical Biology II: Spatial Models and Biomedical Applications"
 
-- [[davidson_2006]] - "The Regulatory Genome"
+- davidson 2006 - "The Regulatory Genome"
 
 - [[thompson_1917]] - "On Growth and Form"
 
@@ -574,7 +573,7 @@ Cell state transitions:
 
 - [[gene_regulatory_networks]]
 
-- [[tissue_mechanics]]
+- tissue mechanics
 
-- [[cell_differentiation]]
+- cell differentiation
 

@@ -496,7 +496,7 @@ Performance optimization represents the processes by which cognitive systems max
 
 - [[cognitive_neuroscience]]
 
-- [[performance_science]]
+- performance science
 
 - [[clinical_applications]]
 

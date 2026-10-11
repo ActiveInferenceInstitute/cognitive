@@ -25,7 +25,6 @@ semantic_relations:
   - type: foundational_for
     links:
       - "[[knowledge_base/mathematics/markov_blankets]]"
-      - "[[autonomy]]"
   - type: extends
     links:
       - "[[friston_2013]]"

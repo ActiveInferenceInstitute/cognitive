@@ -10,6 +10,7 @@ tags:
 - multisensory
 aliases:
   - cross_modal
+  - audio_visual
 semantic_relations:
   - type: implements
     links:

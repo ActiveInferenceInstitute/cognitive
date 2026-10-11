@@ -22,8 +22,6 @@ semantic_relations:
       - "[[knowledge_base/cognitive/active_inference]]"
   - type: implements
     links:
-      - "[[sequence_analysis]]"
-      - "[[network_inference]]"
       - "[[machine_learning]]"
       - "[[knowledge_base/agents/architectures_overview]]"
   - type: relates

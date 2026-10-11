@@ -27,7 +27,6 @@ semantic_relations:
       - "[[optimization_theory]]"
       - "[[control_theory]]"
       - "[[chaos_theory]]"
-      - "[[fractal_geometry]]"
 ---
 
 
@@ -1531,7 +1530,7 @@ where:
 
 - [[chaos_theory]]
 
-- [[fractal_geometry]]
+- fractal geometry
 
 - [[agent_based_modeling]]
 

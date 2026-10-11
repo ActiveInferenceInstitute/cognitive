@@ -488,7 +488,7 @@ Error correction represents the processes by which cognitive systems detect and 
 
 ## References
 
-- [[computational_learning]]
+- computational learning
 
 - [[control_theory]]
 
@@ -496,5 +496,5 @@ Error correction represents the processes by which cognitive systems detect and 
 
 - [[clinical_applications]]
 
-- [[performance_science]]
+- performance science
 

@@ -2,6 +2,8 @@
 title: [[BioFirm_Active_Inference_Integration]]
 type: concept
 status: stable
+aliases:
+  - BioFirm_Active_Inference_Integration
 ---
 
 # [[BioFirm_Active_Inference_Integration]]

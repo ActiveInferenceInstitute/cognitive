@@ -173,7 +173,7 @@ E = update_policy_prior(
 
 - [[probability_conservation]] - Output is valid probability distribution
 
-- [[policy_convergence]] - Converges to optimal policy under right conditions
+- policy convergence - Converges to optimal policy under right conditions
 
 - [[learning_dynamics]] - Controlled by learning rate and precision
 

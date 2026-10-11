@@ -66,7 +66,7 @@ The Free Energy Principle (FEP) proposes that all self-organizing systems that p
 
    - [[non_equilibrium_thermodynamics]]
 
-   - [[steady_state_dynamics]]
+   - steady state dynamics
 
    - [[dissipative_structures]]
 
@@ -252,7 +252,7 @@ Components:
 
 - [[gradient_descent]]
 
-- [[stochastic_integration]]
+- stochastic integration
 
 - [[noise_processes]]
 
@@ -280,7 +280,7 @@ Properties:
 
 - [[cellular_homeostasis]]
 
-  - [[membrane_dynamics]]
+  - membrane dynamics
 
   - [[metabolic_networks]]
 
@@ -292,7 +292,7 @@ Properties:
 
   - [[genetic_circuits]]
 
-  - [[expression_patterns]]
+  - expression patterns
 
 - [[neural_systems]]
 
@@ -354,13 +354,13 @@ Properties:
 
   - group dynamics
 
-- [[social_networks]]
+- social networks
 
   - [[information_diffusion]]
 
   - [[social_learning]]
 
-  - [[network_evolution]]
+  - network evolution
 
 - [[cultural_evolution]]
 
@@ -418,7 +418,7 @@ Properties:
 
 - [[entropy_production]]
 
-  - [[irreversible_processes]]
+  - irreversible processes
 
   - [[heat_dissipation]]
 
@@ -452,7 +452,7 @@ Properties:
 
 - [[attractors]]
 
-  - [[fixed_points]]
+  - fixed points
 
   - [[limit_cycles]]
 
@@ -508,7 +508,7 @@ Properties:
 
   - [[noise_spectra]]
 
-  - [[correlation_functions]]
+  - correlation functions
 
   - [[power_laws]]
 
@@ -520,7 +520,7 @@ Properties:
 
   - [[physiological_adaptation]]
 
-  - [[feedback_mechanisms]]
+  - feedback mechanisms
 
 - Adaptive responses
 
@@ -552,7 +552,7 @@ Properties:
 
    - [[monte_carlo_methods]]
 
-   - [[molecular_dynamics]]
+   - molecular dynamics
 
    - [[agent_based_models]]
 
@@ -580,7 +580,7 @@ Properties:
 
   - [[hierarchical_processing]]
 
-  - [[functional_networks]]
+  - functional networks
 
   - [[modular_organization]]
 
@@ -608,7 +608,7 @@ Properties:
 
   - [[probabilistic_models]]
 
-  - [[representation_learning]]
+  - representation learning
 
 - [[neural_networks]]
 
@@ -638,7 +638,7 @@ Properties:
 
 - [[self_organization]]
 
-  - [[emergent_patterns]]
+  - emergent patterns
 
   - [[collective_behavior]]
 
@@ -646,7 +646,7 @@ Properties:
 
 - [[emergence]]
 
-  - [[hierarchical_emergence]]
+  - hierarchical emergence
 
   - [[downward_causation]]
 
@@ -748,7 +748,7 @@ class DynamicsSolver:
 
    - [[adaptive_step_size]]
 
-   - [[error_estimation]]
+   - error estimation
 
    - [[conservation_laws]]
 
@@ -768,7 +768,7 @@ class DynamicsSolver:
 
    - [[parallel_computation]]
 
-   - [[gpu_acceleration]]
+   - gpu acceleration
 
    - memory management
 
@@ -782,7 +782,7 @@ class DynamicsSolver:
 
    - [[information_measures]]
 
-   - [[stability_metrics]]
+   - stability metrics
 
 ## Research Frontiers
 
@@ -824,11 +824,11 @@ class DynamicsSolver:
 
 1. [[quantum_free_energy]]
 
-   - [[quantum_measurement]]
+   - quantum measurement
 
    - [[quantum_control]]
 
-   - [[quantum_inference]]
+   - quantum inference
 
 1. [[non_ergodic_systems]]
 
@@ -890,7 +890,7 @@ class DynamicsSolver:
 
 - [[friston_2013]] - "Life as we know it"
 
-- [[parr_friston_2020]] - "Markov blankets, information geometry and stochastic thermodynamics"
+- parr friston 2020 - "Markov blankets, information geometry and stochastic thermodynamics"
 
 - [[ramstead_2019]] - "A tale of two densities"
 
@@ -898,7 +898,7 @@ class DynamicsSolver:
 
 - [[ao_2008]] - "Emerging of stochastic dynamical equalities and steady state thermodynamics"
 
-- [[seifert_2012]] - "Stochastic thermodynamics, fluctuation theorems and molecular machines"
+- seifert 2012 - "Stochastic thermodynamics, fluctuation theorems and molecular machines"
 
 - [[still_2012]] - "Thermodynamic cost of prediction"
 
@@ -948,7 +948,7 @@ class DynamicsSolver:
 
     - [[fisher_metric]]
 
-    - [[alpha_connections]]
+    - alpha connections
 
     - [[divergence_functions]]
 
@@ -956,7 +956,7 @@ class DynamicsSolver:
 
 - [[path_integral_formulation]]
 
-  - [[action_functional]]
+  - action functional
 
     - [[least_action_principle]]
 
@@ -968,7 +968,7 @@ class DynamicsSolver:
 
     - [[free_energy_functionals]]
 
-    - [[generating_functionals]]
+    - generating functionals
 
     - [[cumulant_expansion]]
 
@@ -988,7 +988,7 @@ class DynamicsSolver:
 
     - [[causal_information]]
 
-    - [[directed_information]]
+    - directed information
 
     - [[granger_causality]]
 
@@ -1000,7 +1000,7 @@ class DynamicsSolver:
 
     - [[information_integration]]
 
-  - [[predictive_information]]
+  - predictive information
 
     - [[complexity_measures]]
 
@@ -1452,9 +1452,9 @@ class PolicySelection:
 
 - [[structure_learning]]
 
-  - [[causal_discovery]]
+  - causal discovery
 
-  - [[network_inference]]
+  - network inference
 
   - [[model_selection]]
 
@@ -1464,7 +1464,7 @@ class PolicySelection:
 
   - [[hold_out_testing]]
 
-  - [[bootstrapping]]
+  - bootstrapping
 
 ### 2. Perturbation Analysis
 
@@ -1474,7 +1474,7 @@ class PolicySelection:
 
   - [[controlled_perturbation]]
 
-  - [[response_analysis]]
+  - response analysis
 
 - [[stability_testing]]
 
@@ -1482,13 +1482,13 @@ class PolicySelection:
 
   - [[sensitivity_analysis]]
 
-  - [[resilience_measures]]
+  - resilience measures
 
 - [[adaptation_experiments]]
 
   - [[learning_curves]]
 
-  - [[recovery_dynamics]]
+  - recovery dynamics
 
   - [[plasticity_measures]]
 
@@ -1500,9 +1500,9 @@ class PolicySelection:
 
   - [[information_criteria]]
 
-  - [[predictive_performance]]
+  - predictive performance
 
-- [[system_comparison]]
+- system comparison
 
   - [[behavioral_similarity]]
 
@@ -1524,7 +1524,7 @@ class PolicySelection:
 
 - [[quantum_free_energy]]
 
-  - [[quantum_measurement]]
+  - quantum measurement
 
     - [[collapse_dynamics]]
 
@@ -1540,13 +1540,13 @@ class PolicySelection:
 
     - [[quantum_filtering]]
 
-  - [[quantum_inference]]
+  - quantum inference
 
     - [[quantum_state_estimation]]
 
     - [[quantum_tomography]]
 
-    - [[quantum_learning]]
+    - quantum learning
 
 ### 2. Complex Networks
 
@@ -1564,17 +1564,17 @@ class PolicySelection:
 
     - [[synchronization]]
 
-    - [[network_resilience]]
+    - network resilience
 
     - [[perturbation_propagation]]
 
-  - [[network_evolution]]
+  - network evolution
 
     - [[adaptive_networks]]
 
     - [[growth_models]]
 
-    - [[network_plasticity]]
+    - network plasticity
 
 ### 3. Biological Systems
 
@@ -1592,11 +1592,11 @@ class PolicySelection:
 
     - [[energy_transduction]]
 
-    - [[molecular_machines]]
+    - molecular machines
 
     - [[brownian_ratchets]]
 
-  - [[cellular_networks]]
+  - cellular networks
 
     - [[metabolic_networks]]
 
@@ -1622,7 +1622,7 @@ class PolicySelection:
 
     - [[self_propelled_particles]]
 
-    - [[collective_motion]]
+    - collective motion
 
     - [[phase_transitions]]
 
@@ -1670,7 +1670,7 @@ class PolicySelection:
 
     - [[hierarchical_prediction]]
 
-    - [[error_minimization]]
+    - error minimization
 
     - [[active_inference]]
 
@@ -1680,7 +1680,7 @@ class PolicySelection:
 
     - [[enactive_cognition]]
 
-    - [[situated_learning]]
+    - situated learning
 
   - [[consciousness_studies]]
 
@@ -1734,7 +1734,7 @@ Components:
 
 Properties:
 
-- [[function_spaces]]
+- function spaces
 
 - [[inner_products]]
 
@@ -1934,7 +1934,7 @@ Structures:
 
 - [[symplectic_manifolds]]
 
-  - [[phase_space]]
+  - phase space
 
   - [[hamiltonian_flows]]
 
@@ -1976,19 +1976,19 @@ Components:
 
 - [[path_integrals]]
 
-  - [[functional_integration]]
+  - functional integration
 
   - [[stationary_phase_approximation]]
 
-  - [[steepest_descent]]
+  - steepest descent
 
 - [[effective_action]]
 
   - [[one_particle_irreducible]]
 
-  - [[generating_functionals]]
+  - generating functionals
 
-  - [[ward_identities]]
+  - ward identities
 
 - [[renormalization_group]]
 
@@ -1996,7 +1996,7 @@ Components:
 
   - [[beta_functions]]
 
-  - [[fixed_points]]
+  - fixed points
 
 ### 3. Information Dynamics
 
@@ -2018,7 +2018,7 @@ Concepts:
 
 - [[entropy_production]]
 
-  - [[irreversible_processes]]
+  - irreversible processes
 
   - [[fluctuation_theorems]]
 
@@ -2030,7 +2030,7 @@ Concepts:
 
   - [[granger_causality]]
 
-  - [[directed_information]]
+  - directed information
 
 - [[integrated_information]]
 
@@ -2199,7 +2199,7 @@ class PredictiveCodingNetwork:
 
     - [[excess_entropy]]
 
-    - [[predictive_information]]
+    - predictive information
 
 ### 3. Geometric Analysis
 
@@ -2219,13 +2219,13 @@ class PredictiveCodingNetwork:
 
     - [[chern_classes]]
 
-    - [[pontryagin_classes]]
+    - pontryagin classes
 
 ## Advanced Applications and Extensions
 
 ### 1. Quantum Extensions
 
-- [[quantum_free_energy_principle]]
+- quantum free energy principle
 
   - [[quantum_markov_blankets]]
 
@@ -2235,13 +2235,13 @@ class PredictiveCodingNetwork:
 
     - [[entanglement_boundaries]]
 
-  - [[quantum_active_inference]]
+  - quantum active inference
 
     - [[quantum_control_theory]]
 
-    - [[quantum_learning]]
+    - quantum learning
 
-    - [[quantum_decision_making]]
+    - quantum decision making
 
   - [[quantum_information_geometry]]
 
@@ -2253,7 +2253,7 @@ class PredictiveCodingNetwork:
 
 ### 2. Relativistic Extensions
 
-- [[relativistic_free_energy]]
+- relativistic free energy
 
   - [[spacetime_thermodynamics]]
 
@@ -2301,7 +2301,7 @@ class PredictiveCodingNetwork:
 
   - [[cosmic_evolution]]
 
-    - [[structure_formation]]
+    - structure formation
 
     - [[dark_energy]]
 
@@ -2311,7 +2311,7 @@ class PredictiveCodingNetwork:
 
 ### 1. Epistemological Framework
 
-- [[bayesian_epistemology]]
+- bayesian epistemology
 
   - [[knowledge_representation]]
 
@@ -2335,7 +2335,7 @@ class PredictiveCodingNetwork:
 
     - [[abductive_reasoning]]
 
-    - [[causal_learning]]
+    - causal learning
 
 ### 2. Metaphysical Considerations
 
@@ -2371,7 +2371,7 @@ class PredictiveCodingNetwork:
 
   - [[ethical_decision_making]]
 
-    - [[value_alignment]]
+    - value alignment
 
     - [[moral_uncertainty]]
 
@@ -2459,7 +2459,7 @@ class PredictiveCodingNetwork:
 
     - [[disease_modeling]]
 
-    - [[treatment_optimization]]
+    - treatment optimization
 
     - [[health_prediction]]
 
@@ -2499,7 +2499,7 @@ S[φ] &= -\text{Tr}(\rho\ln\rho) \\
 
 Frameworks:
 
-- [[unified_theories]]
+- unified theories
 
 - [[emergence_principles]]
 
@@ -2543,7 +2543,7 @@ Frameworks:
 
 - [[societal_impact]]
 
-  - [[ethical_considerations]]
+  - ethical considerations
 
   - [[policy_implications]]
 

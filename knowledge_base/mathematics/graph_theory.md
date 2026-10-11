@@ -16,10 +16,6 @@ semantic_relations:
       - "[[probabilistic_graphical_models]]"
       - "[[network_science]]"
       - "[[markov_random_fields]]"
-  - type: implements
-    links:
-      - "[[discrete_mathematics]]"
-      - "[[combinatorics]]"
   - type: relates
     links:
       - "[[optimization_theory]]"
@@ -1092,9 +1088,9 @@ This provides a fundamental connection between spectral properties and graph par
 
 ## Related Documentation
 
-- [[discrete_mathematics]]
+- discrete mathematics
 
-- [[combinatorics]]
+- combinatorics
 
 - [[probabilistic_graphical_models]]
 

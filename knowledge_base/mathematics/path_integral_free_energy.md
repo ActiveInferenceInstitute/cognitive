@@ -154,7 +154,7 @@ where:
 
   ```
 
-- [[free_energy_landscapes]]:
+- free energy landscapes:
 
   ```math
 
@@ -1060,7 +1060,7 @@ class PrecisionDynamics:
 
 ### 1. Quantum Extensions
 
-- [[quantum_path_integral]] connects to [[quantum_free_energy_principle]]
+- [[quantum_path_integral]] connects to quantum free energy principle
 
   - Feynman path integral formulation
 
@@ -1220,7 +1220,7 @@ class PrecisionDynamics:
 
 ### 3. Biological Systems
 
-- [[molecular_dynamics]]
+- molecular dynamics
 
   - Protein folding
 
@@ -1406,7 +1406,7 @@ class PrecisionDynamics:
 
 ### B. Functional Analysis
 
-- [[function_spaces]]
+- function spaces
 
   - Sobolev spaces
 
@@ -1510,13 +1510,13 @@ def advanced_path_integral_example():
 
 ## References
 
-- [[feynman_1965]] - "The Feynman Lectures on Physics, Vol. III"
+- feynman 1965 - "The Feynman Lectures on Physics, Vol. III"
 
-- [[kleinert_2009]] - "Path Integrals in Quantum Mechanics, Statistics, and Polymer Physics"
+- kleinert 2009 - "Path Integrals in Quantum Mechanics, Statistics, and Polymer Physics"
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
-- [[seifert_2012]] - "Stochastic Thermodynamics, Fluctuation Theorems"
+- seifert 2012 - "Stochastic Thermodynamics, Fluctuation Theorems"
 
 - [[amari_2000]] - "Information Geometry and Its Applications"
 

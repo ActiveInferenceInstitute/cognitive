@@ -106,7 +106,7 @@ semantic_relations:
 
 - [[temporal_integration]] - Time-based sensory combination
 
-- [[spatial_integration]] - Space-based sensory combination
+- spatial integration - Space-based sensory combination
 
 - [[sensory_gating]] - Filtering of sensory information
 
@@ -186,13 +186,13 @@ semantic_relations:
 
 - [[retrieval]] - Access to stored information
 
-- [[forgetting]] - Loss or inhibition of information
+- forgetting - Loss or inhibition of information
 
 - [[reconsolidation]] - Memory modification
 
 - [[interference]] - Memory disruption
 
-- [[facilitation]] - Memory enhancement
+- facilitation - Memory enhancement
 
 - [[priming]] - Memory influence on processing
 
@@ -228,11 +228,11 @@ semantic_relations:
 
 - [[analogical_reasoning]] - Comparison-based inference
 
-- [[causal_reasoning]] - Understanding cause and effect
+- causal reasoning - Understanding cause and effect
 
 ### Problem Solving
 
-- [[problem_representation]] - Mental modeling of problems
+- problem representation - Mental modeling of problems
 
 - strategy selection - Choice of solution approaches
 
@@ -280,7 +280,7 @@ semantic_relations:
 
 - [[emotion_recognition]] - Recognition of emotional expressions
 
-- [[social_inference]] - Understanding social situations
+- social inference - Understanding social situations
 
 - [[empathy]] - Sharing and understanding others' feelings
 
@@ -318,11 +318,11 @@ semantic_relations:
 
 ### Language Production
 
-- [[word_retrieval]] - Access to word knowledge
+- word retrieval - Access to word knowledge
 
-- [[sentence_planning]] - Planning utterances
+- sentence planning - Planning utterances
 
-- [[articulation]] - Production of speech sounds
+- articulation - Production of speech sounds
 
 - [[fluency]] - Smooth speech production
 
@@ -356,7 +356,7 @@ semantic_relations:
 
 - [[emotional_memory]] - Memory for emotional events
 
-- [[mood_regulation]] - Management of emotional states
+- mood regulation - Management of emotional states
 
 ### Motivation
 
@@ -388,7 +388,7 @@ semantic_relations:
 
 - [[dynamical_systems]] - Time-based processing
 
-- [[reinforcement_models]] - Learning-based processing
+- reinforcement models - Learning-based processing
 
 ### Validation Methods
 
@@ -456,7 +456,7 @@ semantic_relations:
 
 ### Embedded Cognition
 
-- [[situated_learning]] - Context-dependent learning
+- situated learning - Context-dependent learning
 
 - [[environmental_coupling]] - Mind-environment interaction
 
@@ -468,7 +468,7 @@ semantic_relations:
 
 - [[cognitive_offloading]] - Use of external resources
 
-- [[tool_use]] - Cognitive tool integration
+- tool use - Cognitive tool integration
 
 - [[distributed_cognition]] - Cognition across systems
 
@@ -488,7 +488,7 @@ semantic_relations:
 
 ### Stigmergy
 
-- [[environmental_modification]] - Environment alteration
+- environmental modification - Environment alteration
 
 - [[trace_based_communication]] - Communication through traces
 
@@ -514,7 +514,7 @@ semantic_relations:
 
 - [[social_scaffolding]] - Social support structures
 
-- [[cultural_adaptation]] - Adaptation to cultural environment
+- cultural adaptation - Adaptation to cultural environment
 
 ## Collective Intelligence
 
@@ -540,7 +540,7 @@ semantic_relations:
 
 ### Distributed Intelligence
 
-- [[information_sharing]] - Knowledge distribution
+- information sharing - Knowledge distribution
 
 - [[task_distribution]] - Work allocation
 
@@ -554,7 +554,7 @@ semantic_relations:
 
 - [[neuroscience]]
 
-- [[psychology]]
+- psychology
 
 - [[artificial_intelligence]]
 
@@ -562,7 +562,7 @@ semantic_relations:
 
 - [[systems_theory]]
 
-- [[evolutionary_cognition]]
+- evolutionary cognition
 
 - [[cultural_evolution]]
 
@@ -586,7 +586,7 @@ semantic_relations:
 
     - [[prediction_error]] - Mismatch between predictions and sensations
 
-    - [[precision_estimation]] - Uncertainty quantification
+    - precision estimation - Uncertainty quantification
 
   - [[action_selection]] - Motor control and behavioral choice
 
@@ -644,13 +644,13 @@ semantic_relations:
 
       - [[category_learning]] - Classification and grouping
 
-      - [[schema_formation]] - Knowledge organization
+      - schema formation - Knowledge organization
 
   - [[procedural_memory]] - Skill-based learning
 
     - [[motor_learning]] - Movement skill acquisition
 
-    - [[habit_formation]] - Automatic behavior patterns
+    - habit formation - Automatic behavior patterns
 
   - [[memory_processes]] - Core operations
 
@@ -668,9 +668,9 @@ semantic_relations:
 
     - [[retrieval]] - Memory access
 
-      - [[recall]] - Active memory reconstruction
+      - recall - Active memory reconstruction
 
-      - [[recognition]] - Familiarity detection
+      - recognition - Familiarity detection
 
 ### Attention Networks
 
@@ -688,7 +688,7 @@ semantic_relations:
 
     - [[overt_attention]] - Shifting attention by moving the eyes
 
-  - [[executive_network]] - Control processes
+  - executive network - Control processes
 
     - [[conflict_monitoring]] - Detecting competing responses
 
@@ -792,7 +792,7 @@ semantic_relations:
 
     - [[face_processing]] - Facial information extraction
 
-      - [[identity_recognition]] - Person identification
+      - identity recognition - Person identification
 
       - [[emotion_recognition]] - Affect detection
 
@@ -804,11 +804,11 @@ semantic_relations:
 
 - [[language_processing]] - Language comprehension and production
 
-  - [[phonological_processing]] - Sound structure processing
+  - phonological processing - Sound structure processing
 
     - [[phoneme_recognition]] - Speech sound identification
 
-    - [[phonological_awareness]] - Sound structure awareness
+    - phonological awareness - Sound structure awareness
 
     - [[phonological_memory]] - Sound pattern storage
 
@@ -816,21 +816,21 @@ semantic_relations:
 
     - [[word_recognition]] - Word identification
 
-      - [[orthographic_processing]] - Visual word form
+      - orthographic processing - Visual word form
 
-      - [[semantic_access]] - Meaning activation
+      - semantic access - Meaning activation
 
     - [[lexical_retrieval]] - Word finding
 
       - [[lemma_selection]] - Choosing a word entry to express a concept
 
-      - [[phonological_encoding]] - Sound form assembly
+      - phonological encoding - Sound form assembly
 
   - [[syntactic_processing]] - Grammar processing
 
     - [[parsing]] - Sentence structure analysis
 
-      - [[dependency_parsing]] - Relationship extraction
+      - dependency parsing - Relationship extraction
 
       - [[constituent_parsing]] - Phrase structure
 
@@ -848,9 +848,9 @@ semantic_relations:
 
     - [[discourse_processing]] - Text-level processing
 
-    - [[inference_generation]] - Hidden meaning extraction
+    - inference generation - Hidden meaning extraction
 
-    - [[context_integration]] - Situation incorporation
+    - context integration - Situation incorporation
 
 ### Emotional Processing and Regulation
 
@@ -904,7 +904,7 @@ semantic_relations:
 
       - [[corollary_discharge]] - Sensory prediction
 
-  - [[motor_execution]] - Movement implementation
+  - motor execution - Movement implementation
 
     - [[motor_units]] - A motor neuron and the muscle fibers it controls
 
@@ -946,7 +946,7 @@ semantic_relations:
 
       - [[spatial_binding]] - Space-based integration
 
-  - [[intermediate_processing]] - Pattern analysis
+  - intermediate processing - Pattern analysis
 
     - [[pattern_recognition]] - Object identification
 
@@ -958,9 +958,9 @@ semantic_relations:
 
       - [[grouping]] - Combining elements into perceptual wholes
 
-      - [[figure_ground]] - Object-background separation
+      - figure ground - Object-background separation
 
-  - [[high_level_processing]] - Complex perception
+  - high level processing - Complex perception
 
     - [[object_recognition]] - Object identification
 
@@ -1006,7 +1006,7 @@ semantic_relations:
 
       - [[mental_state_awareness]] - Awareness of one's own mental states
 
-  - [[neural_correlates]] - Brain basis
+  - neural correlates - Brain basis
 
     - [[default_mode_network]] - Network active during rest and self-related thought
 
@@ -1018,33 +1018,33 @@ semantic_relations:
 
 - [[problem_solving]] - Solution generation and implementation
 
-  - [[problem_representation]] - Problem understanding
+  - problem representation - Problem understanding
 
-    - [[problem_space]] - Solution possibilities
+    - problem space - Solution possibilities
 
       - [[state_space]] - Problem states
 
-      - [[operator_space]] - Available actions
+      - operator space - Available actions
 
-    - [[goal_representation]] - Desired outcome
+    - goal representation - Desired outcome
 
-      - [[goal_state]] - Target condition
+      - goal state - Target condition
 
       - [[subgoal_structure]] - Intermediate targets
 
-  - [[solution_strategies]] - Problem-solving approaches
+  - solution strategies - Problem-solving approaches
 
     - [[algorithmic_solving]] - Systematic approaches
 
-      - [[exhaustive_search]] - Complete space search
+      - exhaustive search - Complete space search
 
       - [[heuristic_search]] - Guided search
 
     - [[insight_solving]] - Sudden understanding
 
-      - [[restructuring]] - Problem reframing
+      - restructuring - Problem reframing
 
-      - [[incubation]] - Unconscious processing
+      - incubation - Unconscious processing
 
   - [[reasoning_processes]] - Logical thinking
 
@@ -1058,7 +1058,7 @@ semantic_relations:
 
       - [[analogical_reasoning]] - Similarity-based
 
-      - [[causal_reasoning]] - Cause-effect analysis
+      - causal reasoning - Cause-effect analysis
 
 ### Metacognition and Self-Awareness
 
@@ -1068,15 +1068,15 @@ semantic_relations:
 
     - task knowledge - Task understanding
 
-      - [[difficulty_assessment]] - Challenge evaluation
+      - difficulty assessment - Challenge evaluation
 
-      - [[strategy_knowledge]] - Approach awareness
+      - strategy knowledge - Approach awareness
 
     - [[self_knowledge]] - Personal capabilities
 
-      - [[ability_awareness]] - Skill understanding
+      - ability awareness - Skill understanding
 
-      - [[limitation_awareness]] - Constraint recognition
+      - limitation awareness - Constraint recognition
 
   - [[metacognitive_regulation]] - Planning, monitoring, and adjusting one's thinking
 
@@ -1086,7 +1086,7 @@ semantic_relations:
 
       - [[error_detection]] - Mistake recognition
 
-    - [[control]] - Process adjustment
+    - control - Process adjustment
 
       - strategy selection - Approach choice
 

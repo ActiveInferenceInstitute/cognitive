@@ -25,6 +25,8 @@ semantic_relations:
       - "[[active_inference_theory]]"
       - "[[message_passing]]"
       - "[[variational_inference]]"
+aliases:
+  - statistical_computing
 ---
 
 

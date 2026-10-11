@@ -319,7 +319,7 @@ end
 
 ```
 
-### 2. [[probabilistic_operations|Probabilistic Operations]]
+### 2. Probabilistic Operations
 
 ```mermaid
 
@@ -551,7 +551,7 @@ end
 
 ```
 
-### 2. [[probabilistic_operations|Probabilistic Operations]]
+### 2. Probabilistic Operations
 
 ```mermaid
 

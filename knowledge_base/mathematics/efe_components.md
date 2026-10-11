@@ -300,7 +300,7 @@ Links to:
 
 - visualization guide - Visualization standards
 
-- [[plotting_utilities]] - Plotting tools
+- plotting utilities - Plotting tools
 
 - [[matrix_plots]] - Matrix visualization
 
@@ -476,7 +476,7 @@ Links to:
 
    - Distribution shape
 
-   - Links to [[distribution_analysis]]
+   - Links to distribution analysis
 
 1. **Selection Dynamics**
 
@@ -496,7 +496,7 @@ Links to:
 
    - Resource utilization
 
-   - Links to [[efficiency_analysis]]
+   - Links to efficiency analysis
 
 ## Related Visualizations
 

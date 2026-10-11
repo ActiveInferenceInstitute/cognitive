@@ -15,6 +15,8 @@ semantic_relations:
       - "[[conservation_biology]]"
       - "[[ecosystem_services]]"
       - "[[community_ecology]]"
+aliases:
+  - biodiversity_assessment
 ---
 
 # Biodiversity

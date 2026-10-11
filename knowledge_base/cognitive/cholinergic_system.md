@@ -15,6 +15,9 @@ semantic_relations:
       - "[[dopamine_system]]"
       - "[[attention_mechanisms]]"
       - "[[precision_weighting]]"
+aliases:
+  - cholinergic
+  - nucleus_basalis
 ---
 
 # Cholinergic System

@@ -18,6 +18,8 @@ semantic_relations:
       - "[[markov_blanket]]"
       - "[[message_passing]]"
       - "[[causality]]"
+aliases:
+  - transfer_entropy
 ---
 
 # Information Flow

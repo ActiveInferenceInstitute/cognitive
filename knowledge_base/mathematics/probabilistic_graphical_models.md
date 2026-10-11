@@ -407,7 +407,7 @@ end
 
 ## Applications
 
-### 1. [[probabilistic_reasoning|Probabilistic Reasoning]]
+### 1. Probabilistic Reasoning
 
 - Medical diagnosis
 

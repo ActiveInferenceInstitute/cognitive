@@ -325,9 +325,9 @@ Links to:
 
 - [[parallel_processing]]
 
-- [[distributed_computing]]
+- distributed computing
 
-- [[gpu_acceleration]]
+- gpu acceleration
 
 ### Adaptive Methods
 

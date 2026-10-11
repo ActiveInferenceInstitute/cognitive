@@ -54,7 +54,7 @@ Model architecture defines the structural organization and design principles for
 
 - [[working_memory|Memory States]]
 
-- [[event_processing|Event Types]]
+- Event Types
 
 #### Continuous Variables
 
@@ -88,9 +88,9 @@ Model architecture defines the structural organization and design principles for
 
 - [[deep_models|Deep Models]] (multiple timescales)
 
-- [[hybrid_architectures|Hybrid Architectures]]
+- Hybrid Architectures
 
-- [[scale_separation|Scale Separation]]
+- Scale Separation
 
 ### 4. Hierarchical Structure
 
@@ -112,7 +112,7 @@ Model architecture defines the structural organization and design principles for
 
 - [[lateral_connections|Lateral Connections]]
 
-- [[recurrent_processing|Recurrent Processing]]
+- Recurrent Processing
 
 ## Implementation Framework
 
@@ -163,7 +163,7 @@ See `docs/examples/README.md` for runnable examples.
 
 1. [[adaptation_rules|Configure Adaptation]]
 
-1. [[learning_rates|Set Learning Rates]]
+1. Set Learning Rates
 
 ### 5. Integration Strategy
 
@@ -171,7 +171,7 @@ See `docs/examples/README.md` for runnable examples.
 
 1. Interface Design
 
-1. [[data_flow|Data Flow]]
+1. Data Flow
 
 1. [[process_coordination|Process Coordination]]
 
@@ -189,7 +189,7 @@ See `docs/examples/README.md` for runnable examples.
 
 ### 2. Implementation Guidelines
 
-- [[modular_design|Modular Design]]
+- Modular Design
 
 - [[interface_clarity|Clear Interfaces]]
 
@@ -205,7 +205,7 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[complexity_control|Complexity Control]]
 
-- [[uncertainty_handling|Uncertainty Handling]]
+- Uncertainty Handling
 
 ### 4. Common Pitfalls
 
@@ -215,7 +215,7 @@ See `docs/examples/README.md` for runnable examples.
 
 - Poor Scalability
 
-- [[resource_efficiency|Resource Inefficiency]]
+- Resource Inefficiency
 
 ## Applications
 
@@ -245,7 +245,7 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[autonomous_systems|Autonomous Systems]]
 
-- [[adaptive_interfaces|Adaptive Interfaces]]
+- Adaptive Interfaces
 
 ### 3. Temporal Applications
 
@@ -271,7 +271,7 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[systems_biology|Systems Biology]]
 
-- [[behavioral_modeling|Behavioral Modeling]]
+- Behavioral Modeling
 
 - [[developmental_robotics|Developmental Robotics]]
 
@@ -283,7 +283,7 @@ See `docs/examples/README.md` for runnable examples.
 
 - Interface Design
 
-- [[data_flow|Data Flow]]
+- Data Flow
 
 - [[process_synchronization|Process Synchronization]]
 
@@ -303,7 +303,7 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[shared_memory|Shared Memory]]
 
-- [[event_driven|Event-Driven]]
+- Event-Driven
 
 - [[pipeline_processing|Pipeline Processing]]
 

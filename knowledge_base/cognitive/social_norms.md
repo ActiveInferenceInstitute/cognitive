@@ -15,6 +15,8 @@ semantic_relations:
       - "[[cultural_cognition]]"
       - "[[cooperation]]"
       - "[[active_inference]]"
+aliases:
+  - norm_acquisition
 ---
 
 # Social Norms

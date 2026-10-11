@@ -10,6 +10,7 @@ tags:
   - probability
 aliases:
   - wasserstein_metrics
+  - wasserstein_geometry
 semantic_relations:
   - type: relates
     links:

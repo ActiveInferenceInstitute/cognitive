@@ -7,6 +7,8 @@ tags:
   - citation
   - information-geometry
   - mathematics
+aliases:
+  - amari
 ---
 
 # Amari (2000)

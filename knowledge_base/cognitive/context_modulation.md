@@ -15,6 +15,8 @@ semantic_relations:
       - "[[gain_control]]"
       - "[[precision_weighting]]"
       - "[[preference_learning]]"
+aliases:
+  - contextual_modulation
 ---
 
 # Context Modulation

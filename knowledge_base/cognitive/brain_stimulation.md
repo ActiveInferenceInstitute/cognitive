@@ -15,6 +15,8 @@ semantic_relations:
       - "[[neural_plasticity]]"
       - "[[cognitive_neuroscience]]"
       - "[[brain_machine_interfaces]]"
+aliases:
+  - neural_stimulation
 ---
 
 # Brain Stimulation

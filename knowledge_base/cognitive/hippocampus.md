@@ -16,6 +16,8 @@ semantic_relations:
       - "[[memory_consolidation]]"
       - "[[spatial_cognition]]"
       - "[[pattern_completion]]"
+aliases:
+  - hippocampal
 ---
 
 # Hippocampus

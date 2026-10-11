@@ -10,6 +10,8 @@ tags:
 - inference
 aliases:
   - sensory_evidence
+  - accumulator_circuits
+  - drift_diffusion
 semantic_relations:
   - type: implements
     links:

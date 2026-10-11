@@ -15,6 +15,8 @@ semantic_relations:
       - "[[implicit_memory]]"
       - "[[semantic_memory]]"
       - "[[consciousness]]"
+aliases:
+  - priming
 ---
 
 # Priming Effects

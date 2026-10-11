@@ -22,15 +22,12 @@ semantic_relations:
       - "[[knowledge_base/cognitive/active_inference]]"
   - type: implements
     links:
-      - "[[membrane_dynamics]]"
       - "[[cytoskeleton]]"
-      - "[[cell_signaling]]"
       - "[[knowledge_base/agents/architectures_overview]]"
   - type: relates
     links:
       - "[[developmental_systems]]"
       - "[[systems_biology]]"
-      - "[[tissue_mechanics]]"
       - "[[neuroscience]]"
 ---
 
@@ -684,8 +681,8 @@ class CellSignalingNetwork:
 ## References
 
 ### Foundational Texts
-- [[alberts_2014]] - "Molecular Biology of the Cell, 6th Edition"
-- [[phillips_2012]] - "Physical Biology of the Cell, 2nd Edition"
+- alberts 2014 - "Molecular Biology of the Cell, 6th Edition"
+- phillips 2012 - "Physical Biology of the Cell, 2nd Edition"
 - [[pollard_2016]] - "Cell Biology, 3rd Edition"
 
 ### Specialized Topics

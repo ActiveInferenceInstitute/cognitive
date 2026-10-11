@@ -26,6 +26,8 @@ semantic_relations:
       - "[[information_theory]]"
       - "[[dynamical_systems]]"
       - "[[complex_systems]]"
+aliases:
+  - stochastic_thermodynamics
 ---
 
 

@@ -258,3 +258,16 @@ def test_malformed_or_odd_aliases_are_ignored(tmp_path):
 
     assert report.resolved_links == 1  # the string form is accepted, nothing else
     assert report.skipped_concept_links == 1
+
+
+def test_alias_names_ignore_case_hyphens_and_underscores(tmp_path):
+    write_markdown(
+        tmp_path / "geometry.md",
+        "---\naliases:\n- riemannian-geometry\n- Free Energy\n---\n\n# G\n",
+    )
+    write_markdown(tmp_path / "index.md", "[[riemannian_geometry]] [[free_energy]] [[Free-Energy]]")
+
+    report = verify_link_report(tmp_path)
+
+    assert report.resolved_links == 3
+    assert report.skipped_concept_links == 0

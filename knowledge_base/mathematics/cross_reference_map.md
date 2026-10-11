@@ -154,7 +154,7 @@ statistical_foundations:
 
 - **[[information_theory]]** ↔ **[[entropy]]** ↔ **[[mutual_information]]**
 
-- **[[stochastic_processes]]** ↔ **[[markov_processes]]** ↔ **[[diffusion_processes]]**
+- **[[stochastic_processes]]** ↔ **markov processes** ↔ **[[diffusion_processes]]**
 
 ### 2. Active Inference Hierarchy
 
@@ -392,9 +392,9 @@ graph LR
 
 - **[[fisher_information]]** defines **[[riemannian_metric]]**
 
-- **[[natural_gradients]]** follow **[[steepest_descent]]** on manifolds
+- **[[natural_gradients]]** follow **steepest descent** on manifolds
 
-- **[[alpha_connections]]** generalize **[[exponential_families]]**
+- **alpha connections** generalize **[[exponential_families]]**
 
 ### Path Integral Framework
 

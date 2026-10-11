@@ -270,7 +270,7 @@ The Active Inference loop is used for:
 
 - [[hierarchical_active_inference]]
 
-- [[deep_active_inference]]
+- deep active inference
 
 - [[stochastic_active_inference]]
 
@@ -304,7 +304,7 @@ The Active Inference loop is used for:
 
 - [[friston_2006]] - Original formulation
 
-- [[active_inference_tutorial]]
+- active inference tutorial
 
 - implementation guide
 

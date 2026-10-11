@@ -14,7 +14,6 @@ semantic_relations:
   - type: foundational_theory
     links:
       - "[[epistemology]]"
-      - "[[truth_theories]]"
       - "[[philosophy_of_science]]"
   - type: relates
     links:
@@ -220,7 +219,7 @@ Pragmatists reject [[foundationalism|foundationalist epistemology]], advocating 
 
 - Inquiry is an ongoing social process without a determinate endpoint
 
-This [[fallibilism]] connects pragmatism to [[karl_popper|Popper's]] philosophy of science and contemporary [[bayesian_epistemology]], though with different emphasis on the social and practical dimensions of knowledge.
+This [[fallibilism]] connects pragmatism to [[karl_popper|Popper's]] philosophy of science and contemporary bayesian epistemology, though with different emphasis on the social and practical dimensions of knowledge.
 
 ### Experience and Experimentalism
 
@@ -330,7 +329,7 @@ James popularized pragmatism and applied it to:
 
 - **Stream of Consciousness**: Described the continuous flow of mental life
 
-James's psychological insights anticipated developments in [[cognitive_psychology]], [[phenomenology_of_consciousness]], and [[4e_cognition|4E cognition]].
+James's psychological insights anticipated developments in cognitive psychology, [[phenomenology_of_consciousness]], and [[4e_cognition|4E cognition]].
 
 ### John Dewey (1859-1952)
 
@@ -368,13 +367,13 @@ Dewey extended pragmatism into:
 
 - **Aesthetics**: Theorized art as consummatory experience integrated with everyday life
 
-- **Social Philosophy**: Advocated for participatory [[democracy]] and social reform
+- **Social Philosophy**: Advocated for participatory democracy and social reform
 
 - **Ethics**: Developed a theory of valuation based on critical intelligence
 
 - **Naturalism**: Reconstructed traditional philosophical problems within a [[naturalism|naturalistic]] framework
 
-Dewey's work continues to influence [[educational_philosophy]], [[democratic_theory]], and approaches to [[social_inquiry]].
+Dewey's work continues to influence [[educational_philosophy]], democratic theory, and approaches to [[social_inquiry]].
 
 ### Jane Addams (1860-1935)
 
@@ -388,7 +387,7 @@ Though often overlooked in philosophical histories, Addams developed pragmatism 
 
 - **Peace Activism**: Applied pragmatism to [[international_relations]]
 
-Addams's work represents an important bridge between pragmatism and [[feminist_philosophy]], [[care_ethics]], and [[social_work]] theory.
+Addams's work represents an important bridge between pragmatism and feminist philosophy, [[care_ethics]], and [[social_work]] theory.
 
 ## Applications and Methodology
 
@@ -500,7 +499,7 @@ Value judgments involve:
 
 1. Testing proposed solutions in experience
 
-This perspective shares affinities with [[virtue_ethics]], [[consequentialism]], and [[moral_particularism]], while offering distinctive contributions to [[environmental_ethics]] and [[bioethics]].
+This perspective shares affinities with [[virtue_ethics]], [[consequentialism]], and [[moral_particularism]], while offering distinctive contributions to [[environmental_ethics]] and bioethics.
 
 ### Scientific Method
 
@@ -724,7 +723,7 @@ Additionally, pragmatism has seen renewed engagement with:
 
 1. **[[critical_theory]]**: Through concerns with social critique and progressive change
 
-1. **[[american_philosophy]]**: As the cornerstone of a distinctive philosophical tradition
+1. **american philosophy**: As the cornerstone of a distinctive philosophical tradition
 
 ## Critiques and Responses
 
@@ -1008,7 +1007,7 @@ class PragmaticCommunication:
 
 - [[process_philosophy]]
 
-- [[american_philosophy]]
+- american philosophy
 
 - [[operationalism]]
 
@@ -1026,7 +1025,7 @@ class PragmaticCommunication:
 
 - [[social_epistemology]]
 
-- [[democratic_theory]]
+- democratic theory
 
 - [[peircean_semiotics]]
 

@@ -14,7 +14,6 @@ tags:
 semantic_relations:
   - type: foundation_for
     links:
-      - "[[sustainable_practices]]"
       - "[[ecological_management]]"
       - "[[adaptive_governance]]"
   - type: implements
@@ -27,7 +26,6 @@ semantic_relations:
       - "[[knowledge_base/systems/Social-Ecological Systems]]"
       - "[[collective_intelligence]]"
       - "[[cultural_evolution]]"
-      - "[[cognitive_ecology]]"
 ---
 
 
@@ -457,11 +455,11 @@ class CulturalEcologicalSystem:
 
 - [[knowledge_base/systems/Social-Ecological Systems]]
 
-- [[cognitive_ecology]]
+- cognitive ecology
 
 - [[cultural_evolution]]
 
 - [[adaptive_governance]]
 
-- [[sustainable_practices]]
+- sustainable practices
 

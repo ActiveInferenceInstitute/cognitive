@@ -15,6 +15,8 @@ semantic_relations:
       - "[[pattern_recognition]]"
       - "[[semantic_memory]]"
       - "[[unsupervised_learning]]"
+aliases:
+  - concept_learning
 ---
 
 # Category Learning

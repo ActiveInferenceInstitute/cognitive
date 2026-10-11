@@ -554,9 +554,9 @@ class MolecularNetworkAnalyzer:
 
 ## References
 
-- [[alberts_2014]] - "Molecular Biology of the Cell"
+- alberts 2014 - "Molecular Biology of the Cell"
 
-- [[phillips_2012]] - "Physical Biology of the Cell"
+- phillips 2012 - "Physical Biology of the Cell"
 
 - [[alon_2006]] - "An Introduction to Systems Biology"
 

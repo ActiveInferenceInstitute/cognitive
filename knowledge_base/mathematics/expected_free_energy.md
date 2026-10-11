@@ -454,7 +454,7 @@ end
 
 ```
 
-### 2. [[convergence|Convergence]]
+### 2. Convergence
 
 ```julia
 

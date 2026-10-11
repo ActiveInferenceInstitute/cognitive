@@ -21,6 +21,8 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[temporal_binding]]"
       - "[[perceptual_binding]]"
+aliases:
+  - gamma_synchrony
 ---
 
 

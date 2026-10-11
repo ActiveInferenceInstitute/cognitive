@@ -11,6 +11,7 @@ tags:
 aliases:
 - gene-networks
 - regulatory-networks
+- genetic_circuits
 complexity: advanced
 processing_priority: 1
 semantic_relations:
@@ -22,7 +23,6 @@ semantic_relations:
       - "[[knowledge_base/cognitive/active_inference]]"
   - type: implements
     links:
-      - "[[transcriptional_regulation]]"
       - "[[network_motifs]]"
       - "[[gene_expression]]"
       - "[[knowledge_base/agents/architectures_overview]]"
@@ -578,7 +578,7 @@ class ExpressionController:
 
 ### Foundational Texts
 - [[alon_2019]] - "An Introduction to Systems Biology, 2nd Edition"
-- [[davidson_2006]] - "The Regulatory Genome: Gene Regulatory Networks in Development and Evolution"
+- davidson 2006 - "The Regulatory Genome: Gene Regulatory Networks in Development and Evolution"
 - [[karlebach_2008]] - "Modelling and Analysis of Gene Regulatory Networks"
 
 ### Advanced Topics

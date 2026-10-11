@@ -23,7 +23,6 @@ semantic_relations:
     links:
       - "[[immune_response]]"
       - "[[antibody_dynamics]]"
-      - "[[cell_signaling]]"
   - type: relates
     links:
       - "[[developmental_systems]]"

@@ -19,6 +19,8 @@ semantic_relations:
       - "[[derived_categories]]"
       - "[[spectral_sequences]]"
       - "[[sheaf_theory]]"
+aliases:
+  - spectral_sequences
 ---
 
 

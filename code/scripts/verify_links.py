@@ -108,8 +108,8 @@ def _normalise_key(value: str) -> str:
 
 
 def _alias_key(value: str) -> str:
-    """Normalise an alias or link name so ``Free Energy`` matches ``free_energy``."""
-    return " ".join(_normalise_key(value).replace("_", " ").split())
+    """Normalise a name so ``Free Energy``, ``free_energy`` and ``free-energy`` agree."""
+    return " ".join(_normalise_key(value).replace("_", " ").replace("-", " ").split())
 
 
 def _frontmatter_aliases(path: Path) -> list[str]:

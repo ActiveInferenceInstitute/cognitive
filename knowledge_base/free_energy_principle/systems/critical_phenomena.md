@@ -16,6 +16,7 @@ tags:
 aliases:
   - critical_points
   - criticality
+  - universality_classes
 semantic_relations:
   - type: foundation
     links:

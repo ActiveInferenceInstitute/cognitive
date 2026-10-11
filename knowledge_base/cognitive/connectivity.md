@@ -15,6 +15,10 @@ semantic_relations:
       - "[[network_analysis]]"
       - "[[neural_synchrony]]"
       - "[[hierarchical_processing]]"
+aliases:
+  - connectivity_analysis
+  - effective_connectivity
+  - functional_connectivity
 ---
 
 # Brain Connectivity

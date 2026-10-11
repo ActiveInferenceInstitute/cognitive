@@ -23,7 +23,6 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - "[[bayesian mechanics]]"
       - "[[stationary processes]]"
   - type: extends
     links:

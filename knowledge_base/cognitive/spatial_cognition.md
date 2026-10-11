@@ -9,6 +9,7 @@ tags:
   - active_inference
 aliases:
   - spatial_processing
+  - spatial_intelligence
 semantic_relations:
   - type: relates_to
     links:

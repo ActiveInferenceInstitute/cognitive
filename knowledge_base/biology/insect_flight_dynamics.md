@@ -18,7 +18,6 @@ semantic_relations:
   - type: foundation
     links:
       - "[[mathematical_entomology]]"
-      - "[[fluid_dynamics]]"
       - "[[biomechanics]]"
   - type: implements
     links:

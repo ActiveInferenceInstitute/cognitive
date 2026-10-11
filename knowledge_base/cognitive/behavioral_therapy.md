@@ -15,6 +15,8 @@ semantic_relations:
       - "[[associative_learning]]"
       - "[[clinical_psychology]]"
       - "[[computational_psychiatry]]"
+aliases:
+  - exposure_therapy
 ---
 
 # Behavioral Therapy

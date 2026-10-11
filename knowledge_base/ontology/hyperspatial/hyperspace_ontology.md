@@ -106,7 +106,7 @@ graph TD
 
    - [[metric_spaces|Met]]
 
-   - [[probability_spaces|Prob]]
+   - Prob
 
 1. **Functorial Relations**
 
@@ -320,13 +320,13 @@ graph TD
 
 1. **Perception Pipeline**
 
-   - [[sensor_fusion|Sensor Fusion]]
+   - Sensor Fusion
 
    - [[scene_understanding|Scene Understanding]]
 
    - [[object_recognition|Object Recognition]]
 
-   - [[spatial_mapping|Spatial Mapping]]
+   - Spatial Mapping
 
 1. **Reality Synthesis**
 
@@ -354,7 +354,7 @@ graph TD
 
 1. **Interaction Systems**
 
-   - [[gesture_recognition]]
+   - gesture recognition
 
    - [[voice_commands]]
 
@@ -504,7 +504,7 @@ graph LR
 
    - [[parallel_processing]]
 
-   - [[distributed_computing]]
+   - distributed computing
 
    - [[quantum_acceleration]]
 
@@ -638,17 +638,17 @@ graph TD
 
    - [[mixed_reality_blending]]
 
-   - [[reality_anchoring]]
+   - reality anchoring
 
 1. **Information Flows**
 
-   - [[sensor_fusion]]
+   - sensor fusion
 
    - [[spatial_queries]]
 
    - [[geometric_inference]]
 
-   - [[occlusion_handling]]
+   - occlusion handling
 
 ## Geometric Foundations
 
@@ -684,7 +684,7 @@ graph LR
 
    - Fiber: [[transformation_group]]
 
-   - Structure: [[gauge_theory]]
+   - Structure: gauge theory
 
 1. **Associated Bundles**
 
@@ -788,9 +788,9 @@ graph TD
 
 1. **Physical Reality**
 
-   - [[sensor_networks]]
+   - sensor networks
 
-   - [[spatial_mapping]]
+   - spatial mapping
 
    - [[environment_understanding]]
 
@@ -806,9 +806,9 @@ graph TD
 
    - [[registration_systems]]
 
-   - [[occlusion_handling]]
+   - occlusion handling
 
-   - [[reality_anchoring]]
+   - reality anchoring
 
 ## Implementation Guidelines
 
@@ -1344,7 +1344,7 @@ graph TD
 
    - [[chern_classes]]
 
-   - [[pontryagin_classes]]
+   - pontryagin classes
 
    - [[euler_class]]
 
@@ -1610,7 +1610,7 @@ graph TD
 
    - [[lorentzian_manifolds|General Relativity]]
 
-   - [[phase_space|Hamiltonian Mechanics]]
+   - Hamiltonian Mechanics
 
    - [[symplectic_manifolds|Symplectic Geometry]]
 
@@ -1626,7 +1626,7 @@ graph TD
 
    - [[banach_spaces|Banach Space]]
 
-   - [[probability_spaces|Probability Theory]]
+   - Probability Theory
 
    - [[measure_spaces|Measure Theory]]
 
@@ -1638,7 +1638,7 @@ graph TD
 
    - [[policy_spaces|Policy Manifolds]]
 
-   - [[free_energy_landscapes|Free Energy Geometry]]
+   - Free Energy Geometry
 
    - [[prediction_spaces|Predictive Manifolds]]
 
@@ -1832,9 +1832,9 @@ graph TD
 
    - [[measure_theory|Measure Theory]]
 
-   - [[geometric_integration|Geometric Integration]]
+   - Geometric Integration
 
-   - [[stochastic_integration|Stochastic Integration]]
+   - Stochastic Integration
 
    - [[path_integrals|Path Integrals]]
 
@@ -1856,9 +1856,9 @@ graph TD
 
    - [[type_theory_integration|Type Theory Integration]]
 
-   - [[program_synthesis|Program Synthesis]]
+   - Program Synthesis
 
-   - [[formal_verification|Formal Verification]]
+   - Formal Verification
 
    - [[automated_reasoning|Automated Reasoning]]
 

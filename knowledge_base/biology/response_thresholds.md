@@ -15,6 +15,8 @@ semantic_relations:
       - "[[task_allocation]]"
       - "[[division_of_labor]]"
       - "[[swarm_intelligence]]"
+aliases:
+  - threshold_response
 ---
 
 # Response Thresholds

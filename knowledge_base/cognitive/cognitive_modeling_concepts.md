@@ -202,7 +202,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
 ### Machine Learning Integration
 
-- [[model_training]] - Training procedures
+- model training - Training procedures
 
   - Data preparation
 

@@ -13,6 +13,7 @@ aliases:
   - inhibition
   - impulse_control
   - response_inhibition
+  - behavioral_inhibition
 semantic_relations:
   - type: relates
     links:

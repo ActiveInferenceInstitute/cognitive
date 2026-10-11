@@ -11,6 +11,9 @@ tags:
 aliases:
 - riemannian-geometry
 - geometric-mechanics
+- differential_forms
+- riemannian_geometry
+- riemannian_manifolds
 semantic_relations:
   - type: implements
     links:
@@ -756,7 +759,7 @@ semantic_relations:
 
     links:
 
-      - [[manifold_theory]]
+      - manifold theory
 
       - [[topology]]
 

@@ -695,7 +695,7 @@ numerical_implementations = {
 
 - friston - Active Inference
 
-- [[parr]] - Mathematical Foundations
+- parr - Mathematical Foundations
 
 - [[da_costa]] - Information Geometry
 

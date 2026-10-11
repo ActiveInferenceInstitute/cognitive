@@ -16,6 +16,10 @@ semantic_relations:
       - "[[perceptual_inference]]"
       - "[[selective_attention]]"
       - "[[hierarchical_processing]]"
+aliases:
+  - feedback_connections
+  - feedback_processing
+  - top_down_processing
 ---
 
 # Top-Down Processing

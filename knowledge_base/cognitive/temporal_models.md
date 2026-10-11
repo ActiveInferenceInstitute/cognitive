@@ -51,7 +51,7 @@ Temporal models in [[active_inference|Active Inference]] represent how states an
 
 - [[continuous_time_active_inference|Continuous Dynamics]]
 
-- [[event_processing|Event Sequences]]
+- Event Sequences
 
 - [[state_transitions|State Transitions]]
 
@@ -459,7 +459,7 @@ class ValidationFramework:
 
 - [[structure_learning|Structure Learning]]
 
-- [[temporal_abstraction|Temporal Abstraction]]
+- Temporal Abstraction
 
 - [[sequence_discovery|Sequence Discovery]]
 
@@ -471,7 +471,7 @@ class ValidationFramework:
 
 - [[information_flow|Information Flow]]
 
-- [[temporal_coupling|Temporal Coupling]]
+- Temporal Coupling
 
 ### 5. Model Selection Properties
 
@@ -479,7 +479,7 @@ class ValidationFramework:
 
 - [[complexity_measures|Complexity Measures]]
 
-- [[predictive_performance|Predictive Performance]]
+- Predictive Performance
 
 - [[generalization_capacity|Generalization]]
 
@@ -513,7 +513,7 @@ class ValidationFramework:
 
 - Empirical Validation
 
-- [[theoretical_validation|Theoretical Validation]]
+- Theoretical Validation
 
 ### 3. Performance Metrics
 
@@ -545,7 +545,7 @@ class ValidationFramework:
 
 - [[memory_constraints|Memory Constraints]]
 
-- [[real_time_processing|Real-time Processing]]
+- Real-time Processing
 
 ### 2. Optimization Methods
 
@@ -595,7 +595,7 @@ class ValidationFramework:
 
 - [[long_term_dependencies|Long-term Dependencies]]
 
-- [[error_accumulation|Error Accumulation]]
+- Error Accumulation
 
 - [[state_explosion|State Explosion]]
 

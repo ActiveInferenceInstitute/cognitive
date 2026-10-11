@@ -10,9 +10,6 @@ tags:
 - plasticity
 - neuroscience
 semantic_relations:
-  - type: implements
-    links:
-      - "[[developmental_processes]]"
   - type: related
     links:
       - "[[learning_mechanisms]]"
@@ -35,7 +32,7 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
 - [[neural_development]] - Growth and maturation of the nervous system
 
-  - [[structural_development]] - Physical construction of neural tissue and wiring
+  - structural development - Physical construction of neural tissue and wiring
 
     - [[neurogenesis]] - Birth of new neurons
 
@@ -43,13 +40,13 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[cell_migration]] - Neurons moving to their final positions
 
-    - [[circuit_formation]] - Assembly of neurons into working circuits
+    - circuit formation - Assembly of neurons into working circuits
 
       - [[axon_growth]] - Axons extending toward their targets
 
       - [[synaptogenesis]] - Formation of new synaptic connections
 
-  - [[functional_development]] - Maturation of what neural systems can do
+  - functional development - Maturation of what neural systems can do
 
     - [[myelination]] - Insulating axons to speed signal conduction
 
@@ -59,17 +56,17 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
     - specialization - Regions taking on distinct roles
 
-      - [[functional_networks]] - Coordinated groups of regions working together
+      - functional networks - Coordinated groups of regions working together
 
       - [[efficiency_gain]] - Less effort needed for the same performance
 
 ### Learning Processes
 
-- [[developmental_learning]] - How learning shapes the developing brain
+- developmental learning - How learning shapes the developing brain
 
   - [[experience_dependent]] - Change driven by individual experience
 
-    - [[activity_dependent]] - Change driven by neural activity patterns
+    - activity dependent - Change driven by neural activity patterns
 
       - [[hebbian_learning]] - Co-active neurons strengthen their connections
 
@@ -97,11 +94,11 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
 ### Adaptation Systems
 
-- [[developmental_adaptation]] - Adjusting to conditions during development
+- developmental adaptation - Adjusting to conditions during development
 
   - [[environmental_adaptation]] - Fitting development to the surroundings
 
-    - [[niche_adaptation]] - Tuning development to a particular ecological niche
+    - niche adaptation - Tuning development to a particular ecological niche
 
       - [[resource_use]] - Making use of available resources
 
@@ -113,15 +110,15 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[social_norms]] - Learning the shared rules of a group
 
-  - [[compensatory_processes]] - Ways of offsetting a deficit
+  - compensatory processes - Ways of offsetting a deficit
 
-    - [[alternative_strategies]] - Different routes to the same goal
+    - alternative strategies - Different routes to the same goal
 
       - [[behavioral_compensation]] - Changing behavior to offset a deficit
 
       - [[cognitive_compensation]] - Using other mental processes to offset a deficit
 
-    - [[resource_reallocation]] - Shifting resources to where they are needed
+    - resource reallocation - Shifting resources to where they are needed
 
       - [[effort_shift]] - Redirecting effort to different demands
 
@@ -133,11 +130,11 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
 - [[motor_development]] - Growth of movement abilities
 
-  - [[gross_motor]] - Large-muscle movements of the whole body
+  - gross motor - Large-muscle movements of the whole body
 
     - [[postural_control]] - Holding the body in stable positions
 
-      - [[balance]] - Keeping the body upright and steady
+      - balance - Keeping the body upright and steady
 
       - [[coordination]] - Smooth combination of movements
 
@@ -145,19 +142,19 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[crawling]] - Moving along the floor on hands and knees
 
-      - [[walking]] - Upright movement on two feet
+      - walking - Upright movement on two feet
 
-  - [[fine_motor]] - Small precise movements of hands and fingers
+  - fine motor - Small precise movements of hands and fingers
 
-    - [[hand_control]] - Directing the hands with precision
+    - hand control - Directing the hands with precision
 
-      - [[reaching]] - Extending the arm toward a target
+      - reaching - Extending the arm toward a target
 
       - [[grasping]] - Closing the hand around an object
 
     - manipulation - Handling and using objects
 
-      - [[tool_use]] - Using objects as instruments for goals
+      - tool use - Using objects as instruments for goals
 
       - [[writing]] - Producing marks with a pen or pencil
 
@@ -167,21 +164,21 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
   - [[basic_functions]] - Early foundational mental abilities
 
-    - [[attention_development]] - Growth of attentional control
+    - attention development - Growth of attentional control
 
       - [[selective_attention]] - Focusing on relevant information
 
       - [[sustained_attention]] - Maintaining focus over time
 
-    - [[memory_development]] - Growth of memory abilities
+    - memory development - Growth of memory abilities
 
       - [[working_memory]] - Holding information in mind for current use
 
-      - [[long_term]] - Durable storage of information
+      - long term - Durable storage of information
 
   - [[higher_functions]] - Later-developing complex mental abilities
 
-    - [[executive_development]] - Growth of goal-directed control
+    - executive development - Growth of goal-directed control
 
       - [[inhibitory_control]] - Suppressing unwanted impulses and responses
 
@@ -191,7 +188,7 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - monitoring - Tracking one's own mental performance
 
-      - [[control]] - Directing one's own mental processes
+      - control - Directing one's own mental processes
 
 ### Social-Emotional Development
 
@@ -213,13 +210,13 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
   - [[social_development]] - Growth of relationships and social skills
 
-    - [[attachment]] - Emotional bond with a caregiver
+    - attachment - Emotional bond with a caregiver
 
       - [[secure_base]] - Caregiver as a safe base for exploring
 
-      - [[internal_models]] - Mental representations of relationships
+      - internal models - Mental representations of relationships
 
-    - [[peer_relations]] - Relationships with age mates
+    - peer relations - Relationships with age mates
 
       - social skills - Abilities for interacting with others
 
@@ -235,7 +232,7 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
     - [[cortical_networks]] - Networks within the cerebral cortex
 
-      - [[sensory_networks]] - Networks processing sensory input
+      - sensory networks - Networks processing sensory input
 
       - [[motor_networks]] - Networks controlling movement
 
@@ -243,19 +240,19 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[emotion_networks]] - Networks processing emotion
 
-      - [[reward_networks]] - Networks processing reward and motivation
+      - reward networks - Networks processing reward and motivation
 
-  - [[distributed_networks]] - Networks spanning many distant regions
+  - distributed networks - Networks spanning many distant regions
 
     - [[attention_networks]] - Networks directing attention
 
       - [[alerting_network]] - Network maintaining readiness to respond
 
-      - [[executive_network]] - Network for control and conflict resolution
+      - executive network - Network for control and conflict resolution
 
     - [[default_network]] - Network active during rest and self-reflection
 
-      - [[self_processing]] - Network activity about oneself
+      - self processing - Network activity about oneself
 
       - [[social_cognition]] - Network activity about other people
 
@@ -315,7 +312,7 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[dendrite_growth]] - Extension and branching of dendrites
 
-      - [[spine_dynamics]] - Formation and loss of dendritic spines
+      - spine dynamics - Formation and loss of dendritic spines
 
     - [[physiological]] - Changes in how cells function
 
@@ -327,39 +324,39 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
 ### Physical Environment
 
-- [[environmental_factors]] - External influences on development
+- environmental factors - External influences on development
 
   - [[sensory_environment]] - Sensory input available to the child
 
-    - [[enrichment]] - Rich, stimulating surroundings
+    - enrichment - Rich, stimulating surroundings
 
       - [[complexity]] - Variety and richness of stimulation
 
       - novelty - Exposure to new experiences
 
-    - [[deprivation]] - Lack of adequate stimulation
+    - deprivation - Lack of adequate stimulation
 
       - [[restriction]] - Reduced range of experience
 
       - [[monotony]] - Repetitive, unvaried stimulation
 
-  - [[physical_activity]] - Bodily movement and its effects
+  - physical activity - Bodily movement and its effects
 
-    - [[exercise]] - Sustained physical exertion
+    - exercise - Sustained physical exertion
 
       - [[aerobic]] - Exercise raising heart rate and oxygen use
 
-      - [[strength]] - Exercise building muscle power
+      - strength - Exercise building muscle power
 
-    - [[skill_practice]] - Repeating a skill to improve it
+    - skill practice - Repeating a skill to improve it
 
-      - [[repetition]] - Doing the same action again
+      - repetition - Doing the same action again
 
-      - [[variation]] - Practicing in varied conditions
+      - variation - Practicing in varied conditions
 
 ### Social Environment
 
-- [[social_influences]] - Effects of other people on development
+- social influences - Effects of other people on development
 
   - [[family_environment]] - Home and family context
 
@@ -369,7 +366,7 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[interaction_style]] - Characteristic manner of caregiver communication
 
-    - [[sibling_relations]] - Relationships between brothers and sisters
+    - sibling relations - Relationships between brothers and sisters
 
       - [[cooperation]] - Working together toward shared goals
 
@@ -387,17 +384,17 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[social_roles]] - Positions with expected behaviors
 
-      - [[social_status]] - Standing within a group
+      - social status - Standing within a group
 
 ### Cultural Context
 
-- [[cultural_influences]] - Effects of culture on development
+- cultural influences - Effects of culture on development
 
-  - [[educational_practices]] - Culturally shaped ways of teaching
+  - educational practices - Culturally shaped ways of teaching
 
     - [[formal_education]] - Structured teaching in schools
 
-      - [[curriculum]] - Planned content of instruction
+      - curriculum - Planned content of instruction
 
       - teaching methods - Techniques used to deliver instruction
 
@@ -405,7 +402,7 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[daily_activities]] - Learning through everyday routines
 
-      - [[cultural_practices]] - Customs shared by a community
+      - cultural practices - Customs shared by a community
 
   - [[societal_values]] - What a society regards as important
 
@@ -415,9 +412,9 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[independence]] - Valuing self-reliance and autonomy
 
-    - [[cultural_norms]] - Shared standards of acceptable behavior
+    - cultural norms - Shared standards of acceptable behavior
 
-      - [[behavior_rules]] - Explicit rules for conduct
+      - behavior rules - Explicit rules for conduct
 
       - [[social_expectations]] - What others anticipate from a person
 
@@ -427,7 +424,7 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
 - educational design - Planning instruction for learners
 
-  - [[curriculum_development]] - Planning what and when to teach
+  - curriculum development - Planning what and when to teach
 
     - [[content_selection]] - Choosing what to teach
 
@@ -437,7 +434,7 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
     - [[sequence_design]] - Ordering material for learning
 
-      - [[progression]] - Moving from simpler to harder material
+      - progression - Moving from simpler to harder material
 
       - integration - Linking material across topics
 
@@ -451,19 +448,19 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
     - [[assessment_approaches]] - Ways of checking learning
 
-      - [[formative]] - Assessment during learning to guide teaching
+      - formative - Assessment during learning to guide teaching
 
-      - [[summative]] - Assessment after learning to judge outcomes
+      - summative - Assessment after learning to judge outcomes
 
 ### Clinical Applications
 
 - [[developmental_disorders]] - Conditions that alter typical development
 
-  - [[assessment_methods]] - Ways of evaluating development
+  - assessment methods - Ways of evaluating development
 
     - [[diagnostic_tools]] - Instruments for identifying a disorder
 
-      - [[behavioral_measures]] - Measures based on observed behavior
+      - behavioral measures - Measures based on observed behavior
 
       - [[cognitive_measures]] - Measures of mental abilities
 
@@ -473,7 +470,7 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[outcome_measures]] - Measures of final results
 
-  - [[intervention_approaches]] - Ways of helping affected children
+  - intervention approaches - Ways of helping affected children
 
     - [[early_intervention]] - Support started at a young age
 
@@ -485,7 +482,7 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[skill_training]] - Teaching a specific skill directly
 
-      - [[strategy_teaching]] - Teaching ways of approaching tasks
+      - strategy teaching - Teaching ways of approaching tasks
 
 ### Research Methods
 
@@ -493,9 +490,9 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
   - [[longitudinal_methods]] - Following the same people over time
 
-    - [[growth_curves]] - Plots of change in an ability with age
+    - growth curves - Plots of change in an ability with age
 
-      - [[trajectory_analysis]] - Describing paths of change over time
+      - trajectory analysis - Describing paths of change over time
 
       - [[milestone_tracking]] - Recording when key abilities appear
 
@@ -505,17 +502,17 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
       - [[change_patterns]] - Forms that developmental change takes
 
-  - [[cross_sectional]] - Comparing different age groups at one time
+  - cross sectional - Comparing different age groups at one time
 
     - [[age_comparisons]] - Contrasting performance across ages
 
-      - [[cohort_effects]] - Differences due to birth year
+      - cohort effects - Differences due to birth year
 
       - [[period_effects]] - Differences due to time of testing
 
     - [[individual_differences]] - Variation between people
 
-      - [[variability]] - Spread of performance among individuals
+      - variability - Spread of performance among individuals
 
       - [[patterns]] - Recurring forms of variation
 
@@ -555,11 +552,11 @@ Cognitive Development encompasses the emergence, maturation, and refinement of m
 
 - [[piaget_development]]
 
-- [[vygotsky_social]]
+- vygotsky social
 
-- [[carey_conceptual]]
+- carey conceptual
 
-- [[johnson_brain]]
+- johnson brain
 
 ## Related Concepts
 

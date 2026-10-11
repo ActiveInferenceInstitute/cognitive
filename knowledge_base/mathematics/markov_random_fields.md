@@ -51,7 +51,7 @@ where:
 
 - C is the set of maximal cliques
 
-- ψ_c are [[potential_functions|potential functions]]
+- ψ_c are potential functions
 
 ### 2. [[markov_property|Markov Property]]
 
@@ -63,7 +63,7 @@ p(x_i | x_{-i}) = p(x_i | ne(x_i))
 
 where ne(x_i) denotes the neighbors of x_i
 
-### 3. [[hammersley_clifford|Hammersley-Clifford Theorem]]
+### 3. Hammersley-Clifford Theorem
 
 ```math
 
@@ -125,7 +125,7 @@ end
 
 ```
 
-### 2. [[potential_functions|Potential Functions]]
+### 2. Potential Functions
 
 #### Tabular Potentials
 

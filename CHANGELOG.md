@@ -201,14 +201,16 @@ produced a wrong or arbitrary result now raise `ValueError`.
 
 ### Documentation
 
-- The knowledge base gained 358 concept pages and 72 one-paragraph pages were
-  rewritten into articles. Worked examples are computed with the package and quote
-  the numbers it returns. The references on these pages were checked against
+- The knowledge base gained 441 concept pages and 72 one-paragraph pages were rewritten
+  into articles. The last 83 pages cover names that two pages already linked: named brain
+  regions and clinical conditions, probability and geometry topics, philosophical
+  positions and molecular biology. Worked examples are computed with the package and
+  quote the numbers it returns. The references on these pages were checked against
   PubMed, Crossref and publisher records.
-- Link lists now carry accurate glosses (4,987 rewritten); 493 references to
-  generic labels that no page should exist for (`new_methods`, `version_control`)
-  were unlinked, and 124 pages gained `aliases:` so a synonym opens the page that
-  covers it.
+- Link lists now carry accurate glosses (4,987 rewritten). 1,945 links to names that no
+  page should exist for (`new_methods`, `version_control`, `adaptive_strategies`) were
+  unlinked, and 235 pages gained `aliases:` so a synonym or variant name opens the page
+  that covers it.
 - `knowledge_base/mathematics/expected_free_energy.md` states the canonical
   decomposition the package uses. It previously equated epistemic value plus risk
   with ambiguity plus risk.

@@ -14,6 +14,8 @@ semantic_relations:
       - "[[proof_theory]]"
       - "[[category_theory]]"
       - "[[probabilistic_programming]]"
+aliases:
+  - dependent_types
 ---
 
 # Type Theory

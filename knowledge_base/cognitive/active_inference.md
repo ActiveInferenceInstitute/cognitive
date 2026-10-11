@@ -48,6 +48,8 @@ semantic_relations:
       - "[[continuous_time_active_inference]]"
       - "[[bayesian_inference]]"
       - "[[control_theory]]"
+aliases:
+  - active_inference_basics
 ---
 
 # Active Inference

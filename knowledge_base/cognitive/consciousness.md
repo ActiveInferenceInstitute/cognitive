@@ -31,33 +31,33 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 ### Levels of Consciousness
 
-- [[consciousness_levels]] - Awareness states
+- consciousness levels - Awareness states
 
   - [[wakefulness]] - Level of arousal and responsiveness
 
     - [[alertness]] - Highest arousal, ready to respond
 
-    - [[drowsiness]] - Reduced awareness
+    - drowsiness - Reduced awareness
 
-  - [[altered_states]] - Modified consciousness
+  - altered states - Modified consciousness
 
-    - [[sleep_states]] - Consciousness changes across sleep stages
+    - sleep states - Consciousness changes across sleep stages
 
-    - [[meditative_states]] - States induced by meditation practice
+    - meditative states - States induced by meditation practice
 
 ### Contents of Consciousness
 
-- [[conscious_contents]] - Experience types
+- conscious contents - Experience types
 
-  - [[sensory_consciousness]] - Perceptual awareness
+  - sensory consciousness - Perceptual awareness
 
-    - [[visual_awareness]] - Sight experience
+    - visual awareness - Sight experience
 
     - [[auditory_awareness]] - Sound experience
 
-  - [[cognitive_consciousness]] - Thought awareness
+  - cognitive consciousness - Thought awareness
 
-    - [[thought_awareness]] - Awareness of one's own thoughts
+    - thought awareness - Awareness of one's own thoughts
 
     - [[emotional_awareness]] - Awareness of one's own emotions
 
@@ -97,7 +97,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 ### Circuit Mechanisms
 
-- [[conscious_processing]] - Neural activity patterns underlying awareness
+- conscious processing - Neural activity patterns underlying awareness
 
   - [[information_integration]] - Combining information into unified experience
 
@@ -109,19 +109,19 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
     - [[broadcast_mechanisms]] - Spreading information to many brain areas
 
-    - [[access_mechanisms]] - Making information available for reasoning and report
+    - access mechanisms - Making information available for reasoning and report
 
 ### Neuromodulation
 
-- [[consciousness_modulation]] - Regulation of conscious state by brain systems
+- consciousness modulation - Regulation of conscious state by brain systems
 
-  - [[arousal_systems]] - Brain systems maintaining wakefulness
+  - arousal systems - Brain systems maintaining wakefulness
 
     - [[reticular_activation]] - Brainstem network driving cortical arousal
 
     - [[thalamic_regulation]] - Thalamic control of information flow to cortex
 
-  - [[neurotransmitter_systems]] - Chemical signaling that modulates awareness
+  - neurotransmitter systems - Chemical signaling that modulates awareness
 
     - [[cholinergic]] - Attention/arousal
 
@@ -137,7 +137,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
     - [[causal_structure]] - Cause-effect
 
-    - [[information_structure]] - Structure of cause-effect relations in a system
+    - information structure - Structure of cause-effect relations in a system
 
   - [[exclusion_principle]] - Only one maximally integrated boundary is conscious
 
@@ -149,7 +149,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 - [[global_workspace]] - Theory of conscious access through broadcast
 
-  - [[workspace_dynamics]] - Activity patterns of the global workspace
+  - workspace dynamics - Activity patterns of the global workspace
 
     - competition - Content selection
 
@@ -157,21 +157,21 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
   - [[access_consciousness]] - Information available for reasoning and report
 
-    - [[reportability]] - Ability to report an experience
+    - reportability - Ability to report an experience
 
-    - [[cognitive_access]] - Availability of content to cognitive systems
+    - cognitive access - Availability of content to cognitive systems
 
 ### Predictive Processing
 
-- [[conscious_prediction]] - Predictive processing account of consciousness
+- conscious prediction - Predictive processing account of consciousness
 
-  - [[prediction_hierarchy]] - Layered predictions from abstract to concrete
+  - prediction hierarchy - Layered predictions from abstract to concrete
 
     - [[top_down_predictions]] - Expectations
 
-    - [[bottom_up_errors]] - Prediction errors passed up the hierarchy
+    - bottom up errors - Prediction errors passed up the hierarchy
 
-  - [[conscious_inference]] - Experience as inference about hidden causes
+  - conscious inference - Experience as inference about hidden causes
 
     - [[perceptual_inference]] - Inferring causes of sensory input
 
@@ -231,7 +231,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 ### Disorders of Consciousness
 
-- [[consciousness_disorders]] - Conditions with impaired consciousness
+- consciousness disorders - Conditions with impaired consciousness
 
   - [[coma]] - Unresponsiveness
 
@@ -239,7 +239,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
     - [[minimal_consciousness]] - Fluctuating but definite awareness
 
-  - [[locked_in]] - Awareness intact
+  - locked in - Awareness intact
 
     - [[complete]] - Total paralysis
 
@@ -317,7 +317,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
   - [[voluntary_action]] - Actions initiated by the agent's intention
 
-    - [[intention]] - Mental state directing an action
+    - intention - Mental state directing an action
 
     - [[decision]] - Choosing among options
 
@@ -341,7 +341,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 - [[artificial_consciousness]] - Machine awareness
 
-- [[consciousness_enhancement]] - Augmenting conscious capacities
+- consciousness enhancement - Augmenting conscious capacities
 
 - therapeutic applications - Clinical uses for disorders of consciousness
 
@@ -349,11 +349,11 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 - [[tononi_phi]]
 
-- [[dehaene_consciousness]]
+- dehaene consciousness
 
-- [[block_consciousness]]
+- block consciousness
 
-- [[chalmers_mind]]
+- chalmers mind
 
 ## Related Concepts
 

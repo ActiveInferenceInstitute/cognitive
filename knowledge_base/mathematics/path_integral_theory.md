@@ -29,7 +29,7 @@ where:
 
 - $\mathcal{D}[x(\tau)]$ is the [[functional_measure]]
 
-- $S[x(\tau)]$ is the [[action_functional]]
+- $S[x(\tau)]$ is the action functional
 
 - Links to [[wiener_measure]] and [[feynman_kac]]
 
@@ -104,9 +104,9 @@ Connections to:
 
 - [[field_theory]]
 
-- [[correlation_functions]]
+- correlation functions
 
-- [[ward_identities]]
+- ward identities
 
 ### Effective Action
 
@@ -354,11 +354,11 @@ Links to:
 
 ## References
 
-- [[feynman_1965]] - Path Integral Formulation of Quantum Mechanics
+- feynman 1965 - Path Integral Formulation of Quantum Mechanics
 
 - [[zinn_justin_2002]] - Path Integrals in Quantum Field Theory
 
-- [[kleinert_2009]] - Path Integrals in Quantum Mechanics, Statistics, and Polymer Physics
+- kleinert 2009 - Path Integrals in Quantum Mechanics, Statistics, and Polymer Physics
 
 - [[friston_2019]] - A Free Energy Principle for a Particular Physics
 

@@ -382,7 +382,7 @@ class AmortizedInference:
 
   - Mixed mode
 
-- [[program_synthesis]]
+- program synthesis
 
   - Grammar induction
 
@@ -456,7 +456,7 @@ class AmortizedInference:
 
   - Consensus methods
 
-- [[neural_inference]]
+- neural inference
 
   - Learned optimizers
 
@@ -484,7 +484,7 @@ class AmortizedInference:
 
 ## References
 
-- [[blei_2017]] - "Variational Inference: A Review for Statisticians"
+- blei 2017 - "Variational Inference: A Review for Statisticians"
 
 - [[kingma_2014]] - "Auto-Encoding Variational Bayes"
 
@@ -591,9 +591,9 @@ See `docs/examples/README.md` for runnable examples.
 
 ## References
 
-- [[jordan_1999]] - Introduction to Variational Methods
+- jordan 1999 - Introduction to Variational Methods
 
-- [[wainwright_2008]] - Graphical Models
+- wainwright 2008 - Graphical Models
 
 - [[zhang_2018]] - Natural Gradient Methods
 

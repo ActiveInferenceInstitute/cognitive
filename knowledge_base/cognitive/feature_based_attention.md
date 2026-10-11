@@ -21,6 +21,8 @@ semantic_relations:
       - "[[object_based_attention]]"
       - "[[active_inference]]"
       - "[[free_energy_principle]]"
+aliases:
+  - feature_attention
 ---
 
 

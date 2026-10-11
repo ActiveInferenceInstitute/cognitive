@@ -19,6 +19,8 @@ semantic_relations:
       - "[[working_memory]]"
       - "[[perception]]"
       - "[[consciousness]]"
+aliases:
+  - attention_models
 ---
 
 
@@ -40,7 +42,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
   - [[feature_attention]] - Attribute-based
 
-    - [[feature_selection]] - Attending to specific stimulus features
+    - feature selection - Attending to specific stimulus features
 
     - [[conjunction_search]] - Search for targets defined by feature combinations
 
@@ -48,9 +50,9 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 - [[attentional_control]] - Executive function
 
-  - [[top_down_control]] - Goal-directed
+  - top down control - Goal-directed
 
-    - [[task_sets]] - Goal maintenance
+    - task sets - Goal maintenance
 
     - [[priority_maps]] - Spatial maps combining salience and relevance
 
@@ -70,7 +72,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
     - [[interference_control]] - Distraction handling
 
-  - [[resource_distribution]] - Allocating limited attention across tasks
+  - resource distribution - Allocating limited attention across tasks
 
     - [[divided_attention]] - Multi-tasking
 
@@ -82,17 +84,17 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 - [[attention_networks]] - Large-scale brain networks supporting attention
 
-  - [[dorsal_network]] - Top-down control
+  - dorsal network - Top-down control
 
     - [[frontal_eye_fields]] - Spatial attention
 
     - [[posterior_parietal]] - Priority maps
 
-  - [[ventral_network]] - Bottom-up capture
+  - ventral network - Bottom-up capture
 
     - [[temporoparietal]] - Detecting unexpected stimuli and reorienting
 
-    - [[ventral_frontal]] - Ventral frontal response to unexpected events
+    - ventral frontal - Ventral frontal response to unexpected events
 
 ### Circuit Mechanisms
 
@@ -108,11 +110,11 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
     - [[gamma_synchrony]] - Fast oscillatory coupling within local circuits
 
-    - [[theta_coupling]] - Slow oscillatory coupling across brain regions
+    - theta coupling - Slow oscillatory coupling across brain regions
 
 ### Neuromodulation
 
-- [[attention_modulation]] - Neuromodulatory regulation of attention
+- attention modulation - Neuromodulatory regulation of attention
 
   - [[cholinergic_system]] - Acetylcholine-based modulatory system
 
@@ -170,7 +172,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
     - [[inhibitory_control]] - Suppressing unwanted responses
 
-  - [[performance_monitoring]] - Evaluation
+  - performance monitoring - Evaluation
 
     - [[error_detection]] - Detecting errors in performance
 
@@ -192,7 +194,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
     - [[bottleneck_theory]] - Limited-capacity stage in processing
 
-    - [[resource_theory]] - Attention as a limited, divisible resource
+    - resource theory - Attention as a limited, divisible resource
 
 ### Control Theory
 
@@ -218,7 +220,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
     - [[reward_association]] - Linking stimuli to rewards
 
-    - [[punishment_avoidance]] - Learning to avoid punished stimuli
+    - punishment avoidance - Learning to avoid punished stimuli
 
   - strategy learning - Learning effective attentional strategies
 
@@ -262,7 +264,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 ### Behavioral Testing
 
-- [[attention_tasks]] - Tasks that measure attention
+- attention tasks - Tasks that measure attention
 
   - [[visual_search]] - Finding targets
 
@@ -284,7 +286,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 - [[attention_models]] - Computational models for testing theories
 
-  - [[neural_models]] - Brain-based
+  - neural models - Brain-based
 
   - [[cognitive_models]] - Mind-based
 

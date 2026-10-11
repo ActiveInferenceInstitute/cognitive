@@ -44,21 +44,21 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
   - [[self_knowledge]] - Knowing one's own abilities and limits
 
-    - [[ability_awareness]] - Knowing what one can do
+    - ability awareness - Knowing what one can do
 
-    - [[limitation_awareness]] - Knowing what one cannot do well
+    - limitation awareness - Knowing what one cannot do well
 
 ### Metacognitive Monitoring
 
 - [[monitoring_processes]] - Tracking one's own mental states and performance
 
-  - [[state_monitoring]] - Checking one's current mental state
+  - state monitoring - Checking one's current mental state
 
     - [[comprehension]] - Checking whether one understands
 
     - [[progress]] - Checking how far one has come
 
-  - [[performance_monitoring]] - Checking how well one is doing
+  - performance monitoring - Checking how well one is doing
 
     - [[error_detection]] - Noticing that a mistake has occurred
 
@@ -84,7 +84,7 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
 ### Learning Regulation
 
-- [[learning_control]] - Directing one's own learning
+- learning control - Directing one's own learning
 
   - [[study_planning]] - Planning how to study
 
@@ -120,7 +120,7 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
   - [[problem_analysis]] - Examining the structure of a problem
 
-    - [[difficulty_assessment]] - Judging how hard a problem is
+    - difficulty assessment - Judging how hard a problem is
 
     - [[resource_needs]] - Working out what resources are required
 
@@ -158,9 +158,9 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
     - [[conflict_monitoring]] - Detecting competing responses
 
-  - [[control_circuits]] - Circuits that adjust behavior
+  - control circuits - Circuits that adjust behavior
 
-    - [[top_down_control]] - Higher regions steering lower ones
+    - top down control - Higher regions steering lower ones
 
     - [[regulatory_signals]] - Signals that adjust ongoing processing
 
@@ -186,7 +186,7 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
 - [[metacognitive_development]] - How metacognition grows with age
 
-  - [[early_development]] - Metacognition in young children
+  - early development - Metacognition in young children
 
     - [[basic_awareness]] - Simple awareness of one's own thinking
 
@@ -236,7 +236,7 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
 - [[learning_enhancement]] - Improving learning through metacognition
 
-  - [[strategy_training]] - Teaching learning strategies
+  - strategy training - Teaching learning strategies
 
     - [[monitoring_skills]] - Skills for checking one's own understanding
 
@@ -244,7 +244,7 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
   - [[self_regulated_learning]] - Learners managing their own learning
 
-    - [[planning_skills]] - Skills for planning learning
+    - planning skills - Skills for planning learning
 
     - [[evaluation_skills]] - Skills for judging learning outcomes
 
@@ -256,7 +256,7 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
     - awareness training - Teaching people to notice their thinking
 
-    - [[control_training]] - Training better control of thoughts
+    - control training - Training better control of thoughts
 
   - rehabilitation - Restoring function after impairment
 
@@ -324,7 +324,7 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
     - [[error_compute]] - Computing the probability of an error
 
-  - [[control_models]] - Models of control processes
+  - control models - Models of control processes
 
     - [[strategy_select]] - Computing which strategy to choose
 

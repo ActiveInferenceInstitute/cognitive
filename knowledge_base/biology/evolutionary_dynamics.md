@@ -534,9 +534,9 @@ class EvolutionaryGame:
 ## References
 
 ### Foundational Texts
-- [[nowak_2006]] - "Evolutionary Dynamics: Exploring the Equations of Life"
+- nowak 2006 - "Evolutionary Dynamics: Exploring the Equations of Life"
 - [[rice_2004]] - "Evolutionary Theory: Mathematical and Conceptual Foundations"
-- [[hartl_2006]] - "Essential Genetics: From Genes to Genome"
+- hartl 2006 - "Essential Genetics: From Genes to Genome"
 
 ### Advanced Topics
 - [[page_2002]] - "The Structure and Dynamics of Evolutionary Systems"

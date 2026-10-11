@@ -16,6 +16,8 @@ semantic_relations:
       - "[[peircean_semiotics]]"
       - "[[bayesian_inference]]"
       - "[[active_inference]]"
+aliases:
+  - formal_logic
 ---
 
 # Logic

@@ -15,6 +15,8 @@ semantic_relations:
       - "[[task_allocation]]"
       - "[[ant_colony_organization]]"
       - "[[swarm_intelligence]]"
+aliases:
+  - task_distribution
 ---
 
 # Division of Labor

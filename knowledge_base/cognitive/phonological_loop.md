@@ -14,6 +14,8 @@ semantic_relations:
       - "[[working_memory]]"
       - "[[language_processing]]"
       - "[[active_inference]]"
+aliases:
+  - phonological_memory
 ---
 
 # Phonological Loop

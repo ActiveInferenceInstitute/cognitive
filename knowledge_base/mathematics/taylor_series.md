@@ -350,7 +350,7 @@ class TaylorErrorAnalyzer:
 
 - [[hierarchical_inference|Hierarchical models]]
 
-- [[temporal_abstraction]]
+- temporal abstraction
 
 - [[scale_space_theory]]
 

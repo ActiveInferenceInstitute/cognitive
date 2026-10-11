@@ -18,7 +18,6 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - "[[bayesian mechanics]]"
       - "[[particular partition]]"
   - type: extends
     links:

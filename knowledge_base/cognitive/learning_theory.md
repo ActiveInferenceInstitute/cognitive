@@ -50,9 +50,9 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 ### Learning Mechanisms
 
-- [[learning_processes]] - Mechanisms through which learning occurs
+- learning processes - Mechanisms through which learning occurs
 
-  - [[error_driven]] - Learning by correcting prediction errors
+  - error driven - Learning by correcting prediction errors
 
     - [[prediction_error]] - Difference between expected and actual outcome
 
@@ -66,9 +66,9 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 ### Knowledge Organization
 
-- [[knowledge_structure]] - How knowledge is organized
+- knowledge structure - How knowledge is organized
 
-  - [[schema_formation]] - Building organized frameworks of knowledge
+  - schema formation - Building organized frameworks of knowledge
 
     - [[category_learning]] - Learning to group items into categories
 
@@ -92,7 +92,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
     - manipulation - Transforming information held in working memory
 
-  - [[long_term]] - Durable storage of information
+  - long term - Durable storage of information
 
     - [[declarative]] - Memory for facts and events
 
@@ -174,7 +174,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
     - [[cortical]] - Cortical storage of consolidated knowledge
 
-  - [[reward_networks]] - Networks that process reward
+  - reward networks - Networks that process reward
 
     - [[dopamine]] - Neuromodulator signaling reward prediction errors
 
@@ -188,7 +188,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
   - [[selective_attention]] - Choose what
 
-    - [[relevance]] - Importance of information to current goals
+    - relevance - Importance of information to current goals
 
     - [[salience]] - Prominence that captures attention
 
@@ -208,7 +208,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
     - [[massed_practice]] - Practice concentrated in one session
 
-  - [[variability]] - Varying conditions during practice
+  - variability - Varying conditions during practice
 
     - [[context_variation]] - Varying the setting of practice
 
@@ -238,15 +238,15 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
   - [[instruction_design]] - Planning instruction to achieve learning goals
 
-    - [[sequence]] - Ordering of material for instruction
+    - sequence - Ordering of material for instruction
 
-    - [[scaffolding]] - Temporary support that is gradually withdrawn
+    - scaffolding - Temporary support that is gradually withdrawn
 
   - assessment - Measuring what has been learned
 
-    - [[formative]] - Assessment during learning to guide teaching
+    - formative - Assessment during learning to guide teaching
 
-    - [[summative]] - Assessment at the end to judge attainment
+    - summative - Assessment at the end to judge attainment
 
 ### Clinical Applications
 
@@ -262,7 +262,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
     - [[skill_retraining]] - Relearning skills lost to injury or disease
 
-    - [[habit_formation]] - Establishing automatic behaviors through repetition
+    - habit formation - Establishing automatic behaviors through repetition
 
 ### Technology Applications
 
@@ -270,9 +270,9 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
   - [[adaptive_learning]] - Instruction that adjusts to the learner
 
-    - [[personalization]] - Tailoring content to the individual learner
+    - personalization - Tailoring content to the individual learner
 
-    - [[difficulty_scaling]] - Adjusting task difficulty to the learner's level
+    - difficulty scaling - Adjusting task difficulty to the learner's level
 
   - [[feedback_systems]] - Systems that deliver feedback to learners
 
@@ -286,15 +286,15 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 - [[learning_measures]] - Ways of measuring learning
 
-  - [[performance_tests]] - Tests of task performance
+  - performance tests - Tests of task performance
 
     - accuracy - Proportion of correct responses
 
-    - [[speed]] - Time taken to respond or complete a task
+    - speed - Time taken to respond or complete a task
 
   - [[learning_curves]] - Performance plotted against practice
 
-    - [[rate]] - Speed of improvement with practice
+    - rate - Speed of improvement with practice
 
     - [[asymptote]] - Performance level reached after extended practice
 
@@ -302,13 +302,13 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 - brain measures - Neural measures of learning
 
-  - [[activity_measures]] - Measures of neural activity
+  - activity measures - Measures of neural activity
 
     - activation - Which brain regions are active during learning
 
     - [[connectivity]] - Functional coupling between brain regions
 
-  - [[structure_measures]] - Measures of brain structure
+  - structure measures - Measures of brain structure
 
     - [[anatomy]] - Structural changes in brain tissue
 
@@ -320,9 +320,9 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
   - process models - Models of the steps in learning processes
 
-    - [[reinforcement_models]] - Models of learning from reward
+    - reinforcement models - Models of learning from reward
 
-    - [[error_models]] - Models of learning from prediction errors
+    - error models - Models of learning from prediction errors
 
   - [[network_models]] - Models based on connected units
 
@@ -342,11 +342,11 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 ### Emerging Approaches
 
-- [[personalized_learning]] - Instruction tailored to the individual
+- personalized learning - Instruction tailored to the individual
 
   - [[adaptive_systems]] - Systems that adjust to learner performance
 
-    - [[real_time]] - Adjustment during learning as it happens
+    - real time - Adjustment during learning as it happens
 
     - [[predictive]] - Anticipating learner needs from data
 

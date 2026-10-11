@@ -76,9 +76,9 @@ paper:
 
   - [[literature_review]]
 
-  - [[concept_mapping]]
+  - concept mapping
 
-  - [[theory_development]]
+  - theory development
 
 ## Educational Framework
 
@@ -330,7 +330,7 @@ graph LR
 
 - **Pedagogical Design**
 
-  - [[learning_objectives]]
+  - learning objectives
 
   - [[content_structure]]
 
@@ -340,7 +340,7 @@ graph LR
 
 - **Unified Approach**
 
-  - [[workflow_integration]]
+  - workflow integration
 
   - [[tool_compatibility]]
 
@@ -392,13 +392,13 @@ module:
 
 - [[learning_systems]]
 
-- [[research_methods]]
+- research methods
 
 - educational design
 
 ## References
 
-- [[research_methodology]]
+- research methodology
 
 - [[educational_theory]]
 

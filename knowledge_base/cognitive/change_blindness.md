@@ -464,7 +464,7 @@ Change blindness refers to the failure to detect changes in visual scenes, even 
 
 - [[cognitive_neuroscience]]
 
-- [[visual_cognition]]
+- visual cognition
 
 - [[computational_psychiatry]]
 

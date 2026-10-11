@@ -18,7 +18,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 - Mutual trust between insurer and insured
 
-- Related: [[policy_evaluation]], [[risk_disclosure]]
+- Related: [[policy_evaluation]], risk disclosure
 
 ### 2. Insurable Interest
 
@@ -26,7 +26,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 - Legal right to insure
 
-- Connection to [[risk_appetite]] and [[coverage_limits]]
+- Connection to risk appetite and [[coverage_limits]]
 
 ### 3. Indemnity
 
@@ -34,7 +34,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 - Prevention of profit from loss
 
-- Links to [[premium_calculation]] and claims history
+- Links to premium calculation and claims history
 
 ### 4. Proximate Cause
 
@@ -42,7 +42,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 - Causation chain analysis
 
-- Connects to [[risk_factors]] and [[severity_assessment]]
+- Connects to risk factors and [[severity_assessment]]
 
 ### 5. Risk Pooling
 
@@ -58,7 +58,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 1. **Information Gathering**
 
-   - Application review ([[application_review_process]])
+   - Application review (application review process)
 
    - Documentation requirements
 
@@ -66,7 +66,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 1. **Risk Analysis**
 
-   - Factor evaluation ([[risk_factor_analysis]])
+   - Factor evaluation (risk factor analysis)
 
    - Probability assessment ([[probability_theory]])
 
@@ -74,7 +74,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 1. **Decision Making**
 
-   - Risk classification ([[risk_classification]])
+   - Risk classification (risk classification)
 
    - Premium determination ([[premium_rating]])
 
@@ -84,19 +84,19 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 #### Data-Driven Underwriting
 
-- Machine learning integration ([[machine_learning_basics]])
+- Machine learning integration (machine learning basics)
 
 - Predictive analytics
 
-- Automated assessment ([[automated_underwriting]])
+- Automated assessment (automated underwriting)
 
 #### Risk Modeling
 
 - Statistical approaches ([[statistical_modeling]])
 
-- Dynamic assessment ([[dynamic_risk_assessment]])
+- Dynamic assessment (dynamic risk assessment)
 
-- Portfolio considerations ([[portfolio_optimization]])
+- Portfolio considerations (portfolio optimization)
 
 ## Integration with Active Inference
 
@@ -114,13 +114,13 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
    - Policy decisions ([[policy_selection]])
 
-   - Risk mitigation ([[risk_mitigation]])
+   - Risk mitigation (risk mitigation)
 
    - Portfolio actions
 
 1. **Learning Systems**
 
-   - Experience incorporation ([[experience_integration]])
+   - Experience incorporation (experience integration)
 
    - Model refinement ([[model_learning]])
 
@@ -228,21 +228,21 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 ### Innovation Areas
 
-- [[novel_applications]]
+- novel applications
 
-- [[theoretical_advances]]
+- theoretical advances
 
 - integration methods
 
 ## Related Concepts
 
-- [[risk_assessment_fundamentals]]
+- risk assessment fundamentals
 
 - [[policy_evaluation]]
 
 - claims history
 
-- [[underwriting_guidelines]]
+- underwriting guidelines
 
 - [[portfolio_management]]
 
@@ -250,21 +250,21 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 ## Resources and Further Reading
 
-- [[academic_papers]]
+- academic papers
 
 - [[industry_reports]]
 
 - [[best_practices]]
 
-- [[technical_documentation]]
+- technical documentation
 
 ## Assessment Criteria
 
-- [[concept_understanding]]
+- concept understanding
 
-- [[technical_proficiency]]
+- technical proficiency
 
-- [[integration_capability]]
+- integration capability
 
 ---
 

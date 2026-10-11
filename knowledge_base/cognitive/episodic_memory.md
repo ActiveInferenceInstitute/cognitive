@@ -21,6 +21,8 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[temporal_binding]]"
       - "[[temporal_integration]]"
+aliases:
+  - episodic_recall
 ---
 
 
@@ -478,7 +480,7 @@ Episodic memory is the system responsible for encoding, storing, and retrieving 
 
 - [[predictive_processing]]
 
-- [[memory_research]]
+- memory research
 
 - [[cognitive_neuroscience]]
 

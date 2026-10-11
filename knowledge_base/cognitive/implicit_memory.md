@@ -492,5 +492,5 @@ Implicit memory represents the unconscious influence of past experience on curre
 
 - [[computational_neuroscience]]
 
-- [[cognitive_psychology]]
+- cognitive psychology
 

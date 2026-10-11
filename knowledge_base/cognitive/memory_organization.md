@@ -35,7 +35,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
 ### Memory Systems Architecture
 
-- [[memory_hierarchy]] - Organization of memory into tiers
+- memory hierarchy - Organization of memory into tiers
 
   - [[sensory_memory]] - Very brief storage of sensory input
 
@@ -69,7 +69,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
 ### Knowledge Organization
 
-- [[knowledge_structure]] - How stored knowledge is arranged
+- knowledge structure - How stored knowledge is arranged
 
   - [[semantic_organization]] - Arrangement of knowledge by meaning
 
@@ -79,7 +79,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
       - [[prototype_effects]] - Best examples representing a category
 
-    - [[associative_networks]] - Networks of linked concepts
+    - associative networks - Networks of linked concepts
 
       - [[semantic_relations]] - Meaning-based links between concepts
 
@@ -87,7 +87,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
   - [[episodic_organization]] - Arrangement of memories of events
 
-    - [[temporal_organization]] - Ordering of memories in time
+    - temporal organization - Ordering of memories in time
 
       - [[sequence_memory]] - Memory for the order of events
 
@@ -101,7 +101,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
 ### Memory Integration
 
-- [[memory_integration]] - Combining information across memory systems
+- memory integration - Combining information across memory systems
 
   - [[cross_system_binding]] - Linking content across memory systems
 
@@ -151,7 +151,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
       - [[interlaminar_connections]] - Links between cortical layers
 
-  - [[distributed_networks]] - Long-range connections across brain regions
+  - distributed networks - Long-range connections across brain regions
 
     - [[hub_networks]] - Highly connected integrating regions
 
@@ -169,11 +169,11 @@ Memory Organization encompasses the structural and functional principles by whic
 
 - [[memory_circuits]] - Neural pathways that support remembering
 
-  - [[encoding_circuits]] - Circuits forming new memories
+  - encoding circuits - Circuits forming new memories
 
     - [[pattern_separation]] - Making similar inputs distinct
 
-      - [[orthogonalization]] - Making representations non-overlapping
+      - orthogonalization - Making representations non-overlapping
 
       - [[sparse_coding]] - Representing items with few active neurons
 
@@ -199,7 +199,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
 ### Access Mechanisms
 
-- [[memory_access]] - Mechanisms for reaching stored memories
+- memory access - Mechanisms for reaching stored memories
 
   - [[retrieval_circuits]] - Circuits that recover stored memories
 
@@ -209,7 +209,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
       - [[parallel_search]] - Simultaneous checking of many memories
 
-    - [[selection_processes]] - Choosing among candidate memories
+    - selection processes - Choosing among candidate memories
 
       - competition - Rivalry among candidate memories
 
@@ -233,7 +233,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
 ### Hierarchical Structure
 
-- [[memory_hierarchy]] - Ordering of memory by abstraction and control
+- memory hierarchy - Ordering of memory by abstraction and control
 
   - [[abstraction_levels]] - Degrees of detachment from specifics
 
@@ -249,7 +249,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
       - [[schemas]] - Organized knowledge frameworks for situations
 
-  - [[processing_levels]] - Degrees of control and depth in processing
+  - processing levels - Degrees of control and depth in processing
 
     - [[automatic_processing]] - Fast, effortless processing
 
@@ -257,7 +257,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
       - [[skill_level]] - Practiced, fluent performance
 
-    - [[controlled_processing]] - Slow, effortful, deliberate processing
+    - controlled processing - Slow, effortful, deliberate processing
 
       - [[strategic_level]] - Planning and goal-directed processing
 
@@ -297,7 +297,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
 ### Dynamic Properties
 
-- [[memory_dynamics]] - Change in memory over time
+- memory dynamics - Change in memory over time
 
   - [[plasticity_mechanisms]] - Processes that alter synaptic strength
 
@@ -351,7 +351,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
     - [[schema_construction]] - Building organized knowledge frameworks
 
-      - [[concept_mapping]] - Diagramming relations among ideas
+      - concept mapping - Diagramming relations among ideas
 
       - [[hierarchical_learning]] - Learning organized in nested levels
 
@@ -363,7 +363,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
 ### Clinical Applications
 
-- [[memory_rehabilitation]] - Restoring or compensating for impairment
+- memory rehabilitation - Restoring or compensating for impairment
 
   - [[compensation_strategies]] - Working around memory deficits
 
@@ -381,7 +381,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
   - [[restoration_approaches]] - Methods to recover lost function
 
-    - [[retraining]] - Relearning lost skills
+    - retraining - Relearning lost skills
 
       - [[targeted_practice]] - Practice focused on specific deficits
 
@@ -395,11 +395,11 @@ Memory Organization encompasses the structural and functional principles by whic
 
 ### Technology Applications
 
-- [[memory_technology]] - Technology supporting remembering
+- memory technology - Technology supporting remembering
 
   - [[augmentation_systems]] - Systems that extend memory capacity
 
-    - [[memory_prosthetics]] - Devices that replace lost memory function
+    - memory prosthetics - Devices that replace lost memory function
 
       - [[storage_devices]] - External records of information
 
@@ -419,7 +419,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
       - [[symbolic_systems]] - Rule-based computational models
 
-    - [[hybrid_systems]] - Combining neural and symbolic approaches
+    - hybrid systems - Combining neural and symbolic approaches
 
       - [[human_ai]] - Collaboration between people and AI
 
@@ -445,7 +445,7 @@ Memory Organization encompasses the structural and functional principles by whic
 
 - new methods - Emerging approaches to memory research
 
-  - [[real_time_monitoring]] - Continuous tracking of memory states
+  - real time monitoring - Continuous tracking of memory states
 
     - [[state_tracking]] - Following the current memory state
 

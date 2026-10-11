@@ -21,9 +21,10 @@ semantic_relations:
       - "[[probabilistic_graphical_models]]"
   - type: related
     links:
-      - "[[path_analysis]]"
       - "[[graphical_separation]]"
       - "[[markov_blanket]]"
+aliases:
+  - graphical_separation
 ---
 
 

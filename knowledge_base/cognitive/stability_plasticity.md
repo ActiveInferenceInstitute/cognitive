@@ -98,7 +98,7 @@ class StabilityPlasticityDynamics:
 
   - [[intermediate_term|Intermediate-term]]
 
-  - [[long_term_dynamics|Long-term Dynamics]]
+  - Long-term Dynamics
 
 ### 3. [[adaptive_mechanisms|Adaptive Mechanisms]]
 
@@ -166,7 +166,7 @@ where:
 
 - g(w_{ij}): Weight decay function
 
-### 2. [[stability_metrics|Stability Metrics]]
+### 2. Stability Metrics
 
 Stability index computation:
 
@@ -284,7 +284,7 @@ class DualMemoryArchitecture:
 
 - **Pattern Separation**:
 
-  - [[orthogonalization|Orthogonalization]]
+  - Orthogonalization
 
   - [[sparse_coding|Sparse Coding]]
 
@@ -342,7 +342,7 @@ class DualMemoryArchitecture:
 
   - [[lifelong_learning|Lifelong Learning]]
 
-  - [[incremental_learning|Incremental Learning]]
+  - Incremental Learning
 
   - [[online_learning|Online Learning]]
 
@@ -356,7 +356,7 @@ class DualMemoryArchitecture:
 
 ## Research Directions
 
-### 1. [[theoretical_advances|Theoretical Advances]]
+### 1. Theoretical Advances
 
 - **Mathematical Models**:
 
@@ -368,11 +368,11 @@ class DualMemoryArchitecture:
 
 - **Biological Insights**:
 
-  - [[neural_mechanisms|Neural Mechanisms]]
+  - Neural Mechanisms
 
   - [[synaptic_dynamics|Synaptic Dynamics]]
 
-  - [[network_plasticity|Network Plasticity]]
+  - Network Plasticity
 
 ### 2. [[computational_approaches|Computational Approaches]]
 

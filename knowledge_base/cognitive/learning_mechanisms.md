@@ -902,7 +902,7 @@ class MetaLearner:
 
 - [[cognitive_neuroscience]]
 
-- [[computational_learning]]
+- computational learning
 
 - [[clinical_psychology]]
 

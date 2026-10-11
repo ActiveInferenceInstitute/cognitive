@@ -15,6 +15,9 @@ semantic_relations:
       - "[[cognitive_control]]"
       - "[[self_regulation]]"
       - "[[active_inference]]"
+aliases:
+  - gross_emotion_regulation
+  - reappraisal
 ---
 
 # Emotion Regulation

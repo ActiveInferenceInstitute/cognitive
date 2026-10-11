@@ -652,7 +652,7 @@ mindmap
 
 ### 3. Stochastic Approaches
 
-- [[particle_methods]]
+- particle methods
 
   - Sequential importance sampling
 

@@ -21,6 +21,8 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[concept_learning]]"
       - "[[knowledge_representation]]"
+aliases:
+  - semantic_knowledge
 ---
 
 
@@ -486,5 +488,5 @@ Semantic memory represents the system for storing, organizing, and retrieving co
 
 - [[computational_semantics]]
 
-- [[knowledge_systems]]
+- knowledge systems
 

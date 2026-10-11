@@ -562,7 +562,7 @@ Mathematical descriptions of diversity:
 ### Advanced Topics
 - [[levin_1992]] - "The Problem of Pattern and Scale in Ecology"
 - [[hubbell_2001]] - "The Unified Neutral Theory of Biodiversity"
-- [[bascompte_2006]] - "The Structure of Plant-Animal Mutualistic Networks"
+- bascompte 2006 - "The Structure of Plant-Animal Mutualistic Networks"
 
 ### Modern Methods
 - [[grimm_2005]] - "Individual-Based Modeling and Ecology"

@@ -491,7 +491,7 @@ Belief updating represents the process by which cognitive systems revise their b
 
 - [[learning_theory]]
 
-- [[bayesian_theory]]
+- bayesian theory
 
 - [[cognitive_science]]
 

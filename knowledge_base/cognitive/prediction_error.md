@@ -33,7 +33,7 @@ Prediction Error represents the discrepancy between predicted and actual outcome
 
 ### Sensory Prediction Errors
 
-- [[sensory_prediction_errors]] - Discrepancies in sensory input
+- sensory prediction errors - Discrepancies in sensory input
 
   - [[visual_prediction_errors]] - Visual domain mismatches
 
@@ -65,7 +65,7 @@ Prediction Error represents the discrepancy between predicted and actual outcome
 
 ### Circuit Architecture
 
-- [[error_units]] - Specialized error-computing neurons
+- error units - Specialized error-computing neurons
 
   - [[superficial_pyramidal_cells]] - Error-encoding neurons
 
@@ -123,13 +123,13 @@ where:
 
 ### Error Integration
 
-- [[error_accumulation]] - Temporal integration
+- error accumulation - Temporal integration
 
   - [[evidence_accumulation]] - Decision-making
 
   - [[belief_updating]] - Model revision
 
-  - [[learning_rates]] - Update speed control
+  - learning rates - Update speed control
 
 ## Functional Roles
 
@@ -145,7 +145,7 @@ where:
 
 ### Learning
 
-- [[error_driven_learning]] - Learning driven by prediction errors
+- error driven learning - Learning driven by prediction errors
 
   - [[supervised_learning]] - Learning from labeled examples
 
@@ -191,7 +191,7 @@ where:
 
   - [[error_awareness]] - Error detection skills
 
-  - [[learning_optimization]] - Tuning conditions to improve learning
+  - learning optimization - Tuning conditions to improve learning
 
   - [[cognitive_flexibility]] - Switching strategies as demands change
 

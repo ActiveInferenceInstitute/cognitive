@@ -370,7 +370,7 @@ Path integral information theory unifies path integrals with information-theoret
 
 ## References
 
-- [[feynman_1948]] - "Space-Time Approach to Non-Relativistic Quantum Mechanics"
+- feynman 1948 - "Space-Time Approach to Non-Relativistic Quantum Mechanics"
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 

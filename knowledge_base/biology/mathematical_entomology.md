@@ -22,7 +22,6 @@ semantic_relations:
       - "[[evolutionary_dynamics]]"
   - type: implements
     links:
-      - "[[statistical_methods]]"
       - "[[differential_equations]]"
       - "[[network_theory]]"
   - type: relates

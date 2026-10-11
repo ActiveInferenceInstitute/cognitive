@@ -284,7 +284,7 @@ def plot_efe_components(model, action: int):
 
 - [[update_beliefs]]: Belief updating
 
-- [[select_policy]]: Policy selection
+- select policy: Policy selection
 
 ## References
 

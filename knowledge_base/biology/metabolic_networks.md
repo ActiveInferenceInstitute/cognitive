@@ -22,7 +22,6 @@ semantic_relations:
   - type: implements
     links:
       - "[[metabolic_pathways]]"
-      - "[[cellular_energetics]]"
       - "[[metabolic_regulation]]"
   - type: relates
     links:
