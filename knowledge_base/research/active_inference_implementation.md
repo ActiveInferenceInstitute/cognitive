@@ -14,7 +14,6 @@ semantic_relations:
     links:
       - "[[mathematics/free_energy_principle]]"
       - "[[cognitive/active_inference]]"
-      - "[[Implementation Tools]]"
 ---
 
 # Active Inference Implementation Guide

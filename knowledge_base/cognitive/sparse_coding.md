@@ -14,6 +14,8 @@ semantic_relations:
       - "[[neural_coding]]"
       - "[[predictive_coding]]"
       - "[[neural_efficiency]]"
+aliases:
+  - sparseness
 ---
 
 # Sparse Coding

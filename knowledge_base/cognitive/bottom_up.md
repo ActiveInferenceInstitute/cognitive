@@ -17,6 +17,7 @@ semantic_relations:
       - "[[exogenous_attention]]"
 aliases:
   - bottom_up_processing
+  - bottom_up_control
 ---
 
 # Bottom-Up Processing

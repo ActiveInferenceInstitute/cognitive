@@ -9,9 +9,6 @@ tags:
 - neural_systems
 - behavior
 semantic_relations:
-  - type: implements
-    links:
-      - "[[action_systems]]"
   - type: related
     links:
       - "[[motor_learning]]"
@@ -35,15 +32,15 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
   - goal representation - Target states
 
-    - [[spatial_goals]] - Location targets
+    - spatial goals - Location targets
 
-    - [[object_goals]] - Manipulation targets
+    - object goals - Manipulation targets
 
-  - [[sequence_planning]] - Action order
+  - sequence planning - Action order
 
     - movement primitives - Basic units
 
-    - [[action_chains]] - Combined sequences
+    - action chains - Combined sequences
 
 ### Execution Systems
 
@@ -51,9 +48,9 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
   - motor programs - Action patterns
 
-    - [[central_patterns]] - Rhythmic patterns from central pattern generators
+    - central patterns - Rhythmic patterns from central pattern generators
 
-    - [[learned_sequences]] - Acquired patterns
+    - learned sequences - Acquired patterns
 
   - coordination systems - Movement organization
 
@@ -65,17 +62,17 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
 - [[feedback_control]] - Error correction
 
-  - [[sensory_feedback]] - Input monitoring
+  - sensory feedback - Input monitoring
 
-    - [[visual_feedback]] - Visual guidance
+    - visual feedback - Visual guidance
 
-    - [[proprioceptive_feedback]] - Position sense
+    - proprioceptive feedback - Position sense
 
   - [[error_correction]] - Adjusting movement to reduce error
 
-    - [[online_corrections]] - Real-time fixes
+    - online corrections - Real-time fixes
 
-    - [[adaptive_changes]] - Learning-based
+    - adaptive changes - Learning-based
 
 ## Neural Implementation
 
@@ -99,13 +96,13 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
 - motor circuits - Local networks
 
-  - [[cortical_circuits]] - Cortical control
+  - cortical circuits - Cortical control
 
     - columnar organization - Cortical columns as functional units
 
-    - [[horizontal_connections]] - Lateral links integrating cortical activity
+    - horizontal connections - Lateral links integrating cortical activity
 
-  - [[subcortical_circuits]] - Deep structures
+  - subcortical circuits - Deep structures
 
     - [[basal_ganglia]] - Action selection
 
@@ -113,7 +110,7 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
 ### Neuromodulation
 
-- [[motor_modulation]] - Neuromodulatory control of movement
+- motor modulation - Neuromodulatory control of movement
 
   - [[dopamine_system]] - Learning/motivation
 
@@ -125,7 +122,7 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
     - [[neuromuscular_junction]] - Synapse where motor neurons activate muscle
 
-    - [[spinal_circuits]] - Spinal circuits for reflexes and rhythm generation
+    - spinal circuits - Spinal circuits for reflexes and rhythm generation
 
 ## Computational Principles
 
@@ -133,11 +130,11 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
 - [[optimal_control]] - Movement optimization
 
-  - [[cost_functions]] - Performance metrics
+  - cost functions - Performance metrics
 
     - energy cost - Metabolic efficiency
 
-    - [[accuracy_cost]] - Target precision
+    - accuracy cost - Target precision
 
   - [[state_estimation]] - Estimating the state of body and environment
 
@@ -149,7 +146,7 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
 - [[motor_learning]] - Skill acquisition
 
-  - [[error_based_learning]] - Correction-driven
+  - error based learning - Correction-driven
 
     - [[adaptation]] - Short-term changes
 
@@ -163,17 +160,17 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
 ### Coordination Principles
 
-- [[movement_coordination]] - Action organization
+- movement coordination - Action organization
 
   - synergy formation - Combining movement elements into coordinated units
 
     - [[muscle_synergies]] - Groups of muscles activated together
 
-    - [[joint_coordination]] - Multi-joint control
+    - joint coordination - Multi-joint control
 
   - rhythm generation - Generating rhythmic movement patterns
 
-    - [[pattern_generation]] - Basic rhythms
+    - pattern generation - Basic rhythms
 
     - temporal coupling - Timing relations
 
@@ -181,57 +178,57 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
 ### Discrete Actions
 
-- [[discrete_movements]] - Single actions
+- discrete movements - Single actions
 
   - reaching - Target acquisition
 
-    - [[arm_control]] - Control of arm movements
+    - arm control - Control of arm movements
 
     - hand control - Control of hand and finger movements
 
-  - [[pointing]] - Target indication
+  - pointing - Target indication
 
     - [[eye_hand_coordination]] - Visual-manual
 
-    - [[spatial_accuracy]] - Accuracy of movement endpoints
+    - spatial accuracy - Accuracy of movement endpoints
 
 ### Continuous Actions
 
-- [[continuous_movements]] - Ongoing actions
+- continuous movements - Ongoing actions
 
   - [[locomotion]] - Body transport
 
     - walking - Bipedal gait
 
-    - [[running]] - Fast locomotion
+    - running - Fast locomotion
 
-  - [[tracking]] - Following moving targets
+  - tracking - Following moving targets
 
     - [[pursuit_movements]] - Smooth following
 
-    - [[interception]] - Target catching
+    - interception - Target catching
 
 ### Complex Actions
 
-- [[complex_movements]] - Combined actions
+- complex movements - Combined actions
 
-  - [[sequential_actions]] - Action series
+  - sequential actions - Action series
 
     - [[action_sequences]] - Movement chains
 
-    - [[transitions]] - Between-action shifts
+    - transitions - Between-action shifts
 
   - [[bimanual_coordination]] - Two-hand actions
 
-    - [[symmetrical_movements]] - Movements mirrored across both limbs
+    - symmetrical movements - Movements mirrored across both limbs
 
-    - [[asymmetrical_movements]] - Different movements performed by each limb
+    - asymmetrical movements - Different movements performed by each limb
 
 ## Applications
 
 ### Clinical Applications
 
-- [[motor_disorders]] - Movement problems
+- motor disorders - Movement problems
 
   - [[parkinsons]] - Disorder from basal ganglia dopamine loss
 
@@ -247,13 +244,13 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
 ### Rehabilitation
 
-- [[motor_rehabilitation]] - Restoring movement after injury
+- motor rehabilitation - Restoring movement after injury
 
   - physical therapy - Movement training
 
-    - [[exercise_therapy]] - Structured practice
+    - exercise therapy - Structured practice
 
-    - [[functional_training]] - Task-specific
+    - functional training - Task-specific
 
   - [[occupational_therapy]] - Daily activities
 
@@ -263,15 +260,15 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
 ### Technology
 
-- [[motor_technology]] - Movement aids
+- motor technology - Movement aids
 
-  - [[prosthetics]] - Limb replacement
+  - prosthetics - Limb replacement
 
-    - [[upper_limb]] - Arm/hand
+    - upper limb - Arm/hand
 
-    - [[lower_limb]] - Leg/foot
+    - lower limb - Leg/foot
 
-  - [[assistive_devices]] - Devices that support movement
+  - assistive devices - Devices that support movement
 
     - [[exoskeletons]] - External support
 
@@ -281,23 +278,23 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
 ### Movement Analysis
 
-- [[motion_analysis]] - Movement study
+- motion analysis - Movement study
 
   - [[kinematics]] - Description of motion without regard to forces
 
     - trajectory analysis - Analyzing movement paths
 
-    - [[joint_angles]] - Limb posture described by joint angles
+    - joint angles - Limb posture described by joint angles
 
   - [[kinetics]] - Forces/torques
 
-    - [[force_measurement]] - Measuring forces produced during movement
+    - force measurement - Measuring forces produced during movement
 
-    - [[muscle_activity]] - EMG recording
+    - muscle activity - EMG recording
 
 ### Neural Recording
 
-- [[motor_recording]] - Recording neural activity during movement
+- motor recording - Recording neural activity during movement
 
   - [[single_unit]] - Recording individual neuron activity
 
@@ -309,11 +306,11 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
     - [[beta_oscillations]] - Rhythm associated with steady motor state
 
-    - [[gamma_activity]] - High-frequency activity linked to movement processing
+    - gamma activity - High-frequency activity linked to movement processing
 
 ### Computational Modeling
 
-- [[motor_models]] - Theory testing
+- motor models - Theory testing
 
   - control models - Movement generation
 
@@ -323,9 +320,9 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
   - [[learning_models]] - Skill acquisition
 
-    - [[adaptation_models]] - Short-term change
+    - adaptation models - Short-term change
 
-    - [[skill_models]] - Long-term learning
+    - skill models - Long-term learning
 
 ## Future Directions
 
@@ -341,19 +338,19 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
 - [[brain_machine_interfaces]] - Controlling devices directly from brain signals
 
-- [[adaptive_prosthetics]] - Prostheses that adjust to the user
+- adaptive prosthetics - Prostheses that adjust to the user
 
-- [[virtual_rehabilitation]] - Rehabilitation using virtual environments
+- virtual rehabilitation - Rehabilitation using virtual environments
 
 ## References
 
-- [[wolpert_motor_control]]
+- wolpert motor control
 
-- [[shadmehr_learning]]
+- shadmehr learning
 
-- [[scott_optimal_feedback]]
+- scott optimal feedback
 
-- [[bizzi_motor_primitives]]
+- bizzi motor primitives
 
 ## Related Concepts
 

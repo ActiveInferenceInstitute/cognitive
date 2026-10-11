@@ -33,21 +33,21 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
 ### System Properties
 
-- [[biological_complexity]] - Intricate organization across levels of living systems
+- biological complexity - Intricate organization across levels of living systems
 
   - [[hierarchical_organization]] - Nested levels of biological structure
 
     - scale separation - Separation of processes by characteristic scale
 
-      - [[temporal_scales]] - Durations over which processes unfold
+      - temporal scales - Durations over which processes unfold
 
-      - [[spatial_scales]] - Physical sizes at which processes operate
+      - spatial scales - Physical sizes at which processes operate
 
-    - [[level_interaction]] - Exchange of influence between organizational levels
+    - level interaction - Exchange of influence between organizational levels
 
-      - [[upward_effects]] - Lower-level processes shaping higher-level behavior
+      - upward effects - Lower-level processes shaping higher-level behavior
 
-      - [[downward_effects]] - Higher-level constraints shaping lower-level components
+      - downward effects - Higher-level constraints shaping lower-level components
 
   - [[emergent_properties]] - Features arising from component interactions
 
@@ -61,7 +61,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[redundancy]] - Duplicate components that provide backup
 
-      - [[adaptability]] - Adjusting to changing conditions
+      - adaptability - Adjusting to changing conditions
 
 ### Network Architecture
 
@@ -71,15 +71,15 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
     - [[metabolic_networks]] - Networks of biochemical reactions
 
-      - [[reaction_paths]] - Sequences of biochemical transformations
+      - reaction paths - Sequences of biochemical transformations
 
-      - [[regulation]] - Control of reaction rates and pathways
+      - regulation - Control of reaction rates and pathways
 
-    - [[signaling_networks]] - Networks transmitting molecular signals
+    - signaling networks - Networks transmitting molecular signals
 
       - [[information_flow]] - Transfer of signals through a network
 
-      - [[response_paths]] - Routes from signal to cellular response
+      - response paths - Routes from signal to cellular response
 
   - [[ecological_networks]] - Interaction networks among species
 
@@ -97,9 +97,9 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
 ### Dynamic Processes
 
-- [[biological_dynamics]] - Time-dependent behavior of living systems
+- biological dynamics - Time-dependent behavior of living systems
 
-  - [[regulatory_dynamics]] - Time-dependent control of biological processes
+  - regulatory dynamics - Time-dependent control of biological processes
 
     - [[feedback_loops]] - Outputs that influence their own inputs
 
@@ -121,73 +121,73 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[differentiation]] - Specialization of cells into distinct types
 
-    - [[growth_control]] - Regulation of tissue and organism growth
+    - growth control - Regulation of tissue and organism growth
 
       - [[scaling]] - Preserving proportions as size changes
 
-      - [[proportion]] - Relative sizes of parts within a whole
+      - proportion - Relative sizes of parts within a whole
 
 ## System Levels
 
 ### Molecular Systems
 
-- [[molecular_complexity]] - Intricate organization at the molecular level
+- molecular complexity - Intricate organization at the molecular level
 
-  - [[protein_networks]] - Networks of interacting proteins
+  - protein networks - Networks of interacting proteins
 
-    - [[interaction_maps]] - Maps of molecular interactions
+    - interaction maps - Maps of molecular interactions
 
       - [[binding_sites]] - Locations where molecules attach
 
       - [[allosteric_effects]] - Activity changes caused by binding at a distant site
 
-    - [[function_modules]] - Groups of molecules performing a shared function
+    - function modules - Groups of molecules performing a shared function
 
       - [[enzyme_cascades]] - Sequential enzyme reactions that amplify signals
 
       - molecular machines - Protein complexes performing mechanical work
 
-  - [[genetic_networks]] - Networks of interacting genes
+  - genetic networks - Networks of interacting genes
 
-    - [[regulation_circuits]] - Gene interactions controlling expression
+    - regulation circuits - Gene interactions controlling expression
 
-      - [[transcription_control]] - Regulation of gene transcription
+      - transcription control - Regulation of gene transcription
 
       - expression patterns - Spatial and temporal profiles of gene activity
 
-    - [[evolution_networks]]
+    - evolution networks
 
-      - [[mutation_effects]] - Consequences of genetic mutations
+      - mutation effects - Consequences of genetic mutations
 
       - [[selection_pressure]] - Environmental forces favoring certain traits
 
 ### Cellular Systems
 
-- [[cell_complexity]] - Intricate internal organization of cells
+- cell complexity - Intricate internal organization of cells
 
-  - [[organelle_networks]] - Interacting cellular compartments
+  - organelle networks - Interacting cellular compartments
 
-    - [[transport_systems]] - Mechanisms moving materials within cells
+    - transport systems - Mechanisms moving materials within cells
 
       - [[vesicle_traffic]] - Membrane-bound transport between compartments
 
       - [[molecular_motors]] - Proteins converting chemical energy into movement
 
-    - [[metabolism_systems]] - Systems of cellular chemical reactions
+    - metabolism systems - Systems of cellular chemical reactions
 
-      - [[energy_production]] - Generation of usable cellular energy
+      - energy production - Generation of usable cellular energy
 
-      - [[waste_management]] - Removal and recycling of cellular waste
+      - waste management - Removal and recycling of cellular waste
 
-  - [[cell_communication]] - Signal exchange between cells
+  - cell communication - Signal exchange between cells
 
-    - [[signal_systems]] - Systems transmitting signals within cells
+    - signal systems - Systems transmitting signals within cells
 
-      - [[receptor_networks]] - Receptors detecting and relaying signals
+      - receptor networks - Receptors detecting and relaying signals
 
-      - [[response_pathways]] - Pathways turning signals into cellular responses
+      - response pathways - Pathways turning signals into cellular responses
 
-    - [[cell_coordination]] - Aligned activity among groups of cells
+    - cell coordination - Aligned activity among groups of cells
 
       - [[synchronization]] - Alignment of rhythms across components
 
@@ -195,11 +195,11 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
 ### Organism Systems
 
-- [[organism_complexity]] - Intricate organization of whole organisms
+- organism complexity - Intricate organization of whole organisms
 
-  - [[physiological_networks]] - Interacting body systems
+  - physiological networks - Interacting body systems
 
-    - [[organ_systems]] - Groups of organs serving a shared function
+    - organ systems - Groups of organs serving a shared function
 
       - functional integration - Combining parts into coordinated function
 
@@ -207,13 +207,13 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
     - [[neural_networks]] - Networks of interconnected neurons
 
-      - [[circuit_dynamics]] - Activity patterns within neural circuits
+      - circuit dynamics - Activity patterns within neural circuits
 
       - [[plasticity]] - Capacity of connections to change with experience
 
-  - [[behavioral_systems]] - Systems organizing organism behavior
+  - behavioral systems - Systems organizing organism behavior
 
-    - [[action_patterns]] - Organized sequences of behavior
+    - action patterns - Organized sequences of behavior
 
       - [[motor_control]] - Regulation of movement
 
@@ -227,47 +227,47 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
 ### Ecological Systems
 
-- [[eco_complexity]] - Intricate organization of ecosystems
+- eco complexity - Intricate organization of ecosystems
 
-  - [[species_networks]] - Interaction webs among species
+  - species networks - Interaction webs among species
 
-    - [[interaction_types]] - Categories of relationships between species
+    - interaction types - Categories of relationships between species
 
       - [[symbiosis]] - Close long-term association between species
 
       - predator prey - Consumer and victim species interactions
 
-    - [[community_structure]] - Composition and organization of species groups
+    - community structure - Composition and organization of species groups
 
-      - [[diversity]] - Variety of species and traits
+      - diversity - Variety of species and traits
 
       - [[stability]] - Persistence of a state under disturbance
 
   - [[ecosystem_dynamics]] - Time-dependent change in ecosystems
 
-    - [[resource_flows]] - Movement of resources through ecosystems
+    - resource flows - Movement of resources through ecosystems
 
       - [[nutrient_cycles]] - Recycling of nutrients through ecosystems
 
-      - [[energy_transfer]] - Passage of energy between organisms
+      - energy transfer - Passage of energy between organisms
 
     - [[population_dynamics]] - Changes in population size over time
 
       - growth patterns - Ways populations expand over time
 
-      - [[extinction_risks]] - Likelihood of species loss
+      - extinction risks - Likelihood of species loss
 
 ## Analysis Methods
 
 ### Network Analysis
 
-- [[biological_networks_analysis]] - Quantitative study of biological networks
+- biological networks analysis - Quantitative study of biological networks
 
-  - [[topology_analysis]] - Study of how network connections are arranged
+  - topology analysis - Study of how network connections are arranged
 
     - connectivity patterns - Arrangement of links between nodes
 
-      - [[hub_identification]] - Finding highly connected nodes
+      - hub identification - Finding highly connected nodes
 
       - module detection - Finding densely connected groups of nodes
 
@@ -275,25 +275,25 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[centrality]] - Measures of node importance
 
-      - [[clustering]] - Tendency of nodes to form tight groups
+      - clustering - Tendency of nodes to form tight groups
 
   - dynamics analysis - Study of network behavior over time
 
-    - [[flow_patterns]] - Routes of material or information movement
+    - flow patterns - Routes of material or information movement
 
       - path analysis - Study of routes between nodes
 
-      - [[bottleneck_detection]] - Finding points that limit flow
+      - bottleneck detection - Finding points that limit flow
 
     - [[stability_analysis]] - Assessing resistance to disturbance
 
-      - [[robustness_measures]] - Metrics of tolerance to perturbation
+      - robustness measures - Metrics of tolerance to perturbation
 
       - vulnerability assessment - Identifying weak points prone to failure
 
 ### Systems Modeling
 
-- [[biological_modeling]] - Mathematical and computational models of living systems
+- biological modeling - Mathematical and computational models of living systems
 
   - mathematical models - Equation-based descriptions of system behavior
 
@@ -301,11 +301,11 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[rate_equations]] - Equations for reaction or growth rates
 
-      - [[spatial_models]] - Models that include spatial structure
+      - spatial models - Models that include spatial structure
 
-    - [[stochastic_models]] - Models incorporating random variation
+    - stochastic models - Models incorporating random variation
 
-      - [[noise_effects]] - Impact of random fluctuations
+      - noise effects - Impact of random fluctuations
 
       - [[probability_distributions]] - Descriptions of how likely outcomes are
 
@@ -325,33 +325,33 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
 ### Data Integration
 
-- [[biological_data]] - Experimental data on living systems
+- biological data - Experimental data on living systems
 
-  - [[multi_scale_data]] - Data spanning several organizational levels
+  - multi scale data - Data spanning several organizational levels
 
-    - [[molecular_data]] - Data on molecules and their interactions
+    - molecular data - Data on molecules and their interactions
 
-      - [[sequence_data]] - DNA, RNA, and protein sequences
+      - sequence data - DNA, RNA, and protein sequences
 
-      - [[structure_data]] - Three-dimensional molecular structures
+      - structure data - Three-dimensional molecular structures
 
-    - [[system_data]] - Data on whole-system behavior
+    - system data - Data on whole-system behavior
 
-      - [[network_data]] - Data on connections among components
+      - network data - Data on connections among components
 
-      - [[dynamics_data]] - Time-series measurements of system change
+      - dynamics data - Time-series measurements of system change
 
   - data analysis - Extracting patterns and meaning from data
 
     - [[pattern_recognition]] - Detecting regularities in data
 
-      - [[motif_detection]] - Finding recurring network substructures
+      - motif detection - Finding recurring network substructures
 
       - correlation analysis - Measuring statistical association between variables
 
     - integration methods - Techniques for combining data sources
 
-      - [[data_fusion]] - Merging data from multiple sources
+      - data fusion - Merging data from multiple sources
 
       - knowledge integration - Combining findings into a unified understanding
 
@@ -361,41 +361,41 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
 - [[systems_medicine]] - Medicine applying systems-level analysis
 
-  - [[disease_networks]] - Networks linking diseases and molecular causes
+  - disease networks - Networks linking diseases and molecular causes
 
-    - [[pathology_mapping]] - Mapping disease-related changes across the body
+    - pathology mapping - Mapping disease-related changes across the body
 
-      - [[disease_mechanisms]] - Processes underlying disease onset
+      - disease mechanisms - Processes underlying disease onset
 
-      - [[progression_patterns]] - How disease develops over time
+      - progression patterns - How disease develops over time
 
-    - [[treatment_strategies]] - Approaches to treating disease
+    - treatment strategies - Approaches to treating disease
 
-      - [[drug_targets]] - Molecules a drug is designed to act on
+      - drug targets - Molecules a drug is designed to act on
 
-      - [[intervention_points]] - Network locations where treatment can act
+      - intervention points - Network locations where treatment can act
 
   - personalized medicine - Treatment tailored to individual patients
 
     - [[individual_variation]] - Differences between patients
 
-      - [[genetic_profiles]] - Individual genetic makeup
+      - genetic profiles - Individual genetic makeup
 
       - response patterns - How patients respond to treatment
 
     - treatment optimization - Tuning treatments for best outcomes
 
-      - [[drug_combinations]] - Using multiple drugs together
+      - drug combinations - Using multiple drugs together
 
-      - [[timing_protocols]] - Schedules for administering treatment
+      - timing protocols - Schedules for administering treatment
 
 ### Biotechnology Applications
 
-- [[systems_biotechnology]] - Biotechnology using systems-level design
+- systems biotechnology - Biotechnology using systems-level design
 
   - [[synthetic_biology]] - Engineering new biological parts and systems
 
-    - [[circuit_design]] - Designing engineered regulatory circuits
+    - circuit design - Designing engineered regulatory circuits
 
       - [[genetic_circuits]] - Engineered gene regulatory circuits
 
@@ -403,23 +403,23 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
     - system optimization - Tuning engineered systems for performance
 
-      - [[yield_improvement]] - Increasing product output
+      - yield improvement - Increasing product output
 
-      - [[stability_enhancement]] - Improving reliability of engineered systems
+      - stability enhancement - Improving reliability of engineered systems
 
-  - [[bioprocess_engineering]] - Designing large-scale biological production
+  - bioprocess engineering - Designing large-scale biological production
 
-    - [[process_control]] - Regulating production process conditions
+    - process control - Regulating production process conditions
 
       - [[feedback_systems]] - Control loops that correct deviations
 
       - monitoring systems - Tracking process conditions in real time
 
-    - [[scale_up]] - Moving processes to industrial volumes
+    - scale up - Moving processes to industrial volumes
 
-      - [[efficiency_optimization]] - Improving output per unit of input
+      - efficiency optimization - Improving output per unit of input
 
-      - [[robustness_improvement]] - Increasing tolerance to disturbance
+      - robustness improvement - Increasing tolerance to disturbance
 
 ### Environmental Applications
 
@@ -427,55 +427,55 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
   - [[ecosystem_management]] - Managing ecosystems for sustained function
 
-    - [[conservation_strategies]] - Approaches to protecting species and habitats
+    - conservation strategies - Approaches to protecting species and habitats
 
-      - [[biodiversity_preservation]] - Protecting the variety of life
+      - biodiversity preservation - Protecting the variety of life
 
       - [[restoration_ecology]] - Repairing degraded ecosystems
 
     - [[resource_management]] - Managing the use of natural resources
 
-      - [[sustainable_use]] - Resource use that can continue indefinitely
+      - sustainable use - Resource use that can continue indefinitely
 
-      - [[impact_mitigation]] - Reducing harmful environmental effects
+      - impact mitigation - Reducing harmful environmental effects
 
-  - [[climate_adaptation]] - Adjusting to a changing climate
+  - climate adaptation - Adjusting to a changing climate
 
-    - [[response_prediction]] - Forecasting how systems react to change
+    - response prediction - Forecasting how systems react to change
 
       - vulnerability assessment - Identifying weak points prone to failure
 
-      - [[resilience_analysis]] - Assessing capacity to recover from disturbance
+      - resilience analysis - Assessing capacity to recover from disturbance
 
     - [[adaptation_strategies]] - Plans for adjusting to change
 
       - [[ecosystem_engineering]] - Modification of habitats by organisms or people
 
-      - [[species_management]] - Managing populations of particular species
+      - species management - Managing populations of particular species
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[complexity_challenges]] - Obstacles in studying complex systems
+- complexity challenges - Obstacles in studying complex systems
 
-  - [[scale_integration]] - Linking processes across scales
+  - scale integration - Linking processes across scales
 
-    - [[multi_scale_modeling]] - Models spanning several scales
+    - multi scale modeling - Models spanning several scales
 
-      - [[scale_coupling]] - Interaction between processes at different scales
+      - scale coupling - Interaction between processes at different scales
 
-      - [[emergent_effects]] - Outcomes not predictable from components alone
+      - emergent effects - Outcomes not predictable from components alone
 
-    - [[data_challenges]] - Difficulties in collecting and using data
+    - data challenges - Difficulties in collecting and using data
 
-      - [[heterogeneity]] - Variation among components
+      - heterogeneity - Variation among components
 
       - noise handling - Separating signal from random variation
 
-  - [[dynamic_complexity]] - Complexity arising from time-dependent behavior
+  - dynamic complexity - Complexity arising from time-dependent behavior
 
-    - [[nonlinear_effects]] - Outputs not proportional to inputs
+    - nonlinear effects - Outputs not proportional to inputs
 
       - [[chaos]] - Sensitive dependence on initial conditions
 
@@ -491,43 +491,43 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
 - new methods - Emerging research approaches
 
-  - [[advanced_technologies]] - Emerging experimental and computational tools
+  - advanced technologies - Emerging experimental and computational tools
 
-    - [[measurement_tools]] - Instruments for observing biological systems
+    - measurement tools - Instruments for observing biological systems
 
-      - [[single_cell]] - Measurement of individual cells
+      - single cell - Measurement of individual cells
 
       - real time - Continuous observation as processes unfold
 
-    - [[computation_tools]] - Computational tools for analysis
+    - computation tools - Computational tools for analysis
 
       - [[machine_learning]] - Algorithms that learn patterns from data
 
-      - [[big_data]] - Large, high-volume datasets
+      - big data - Large, high-volume datasets
 
-  - [[integrative_approaches]] - Methods combining multiple perspectives
+  - integrative approaches - Methods combining multiple perspectives
 
-    - [[multi_scale_integration]] - Combining information across scales
+    - multi scale integration - Combining information across scales
 
-      - [[vertical_integration]] - Linking levels from molecules to organisms
+      - vertical integration - Linking levels from molecules to organisms
 
-      - [[horizontal_integration]] - Linking components within one level
+      - horizontal integration - Linking components within one level
 
-    - [[theory_integration]] - Combining theoretical frameworks
+    - theory integration - Combining theoretical frameworks
 
       - physics biology - Physical principles applied to living systems
 
-      - [[information_biology]] - Information-theoretic views of living systems
+      - information biology - Information-theoretic views of living systems
 
 ## References
 
-- [[kitano_systems]]
+- kitano systems
 
-- [[alon_systems]]
+- alon systems
 
-- [[newman_networks]]
+- newman networks
 
-- [[levin_ecosystems]]
+- levin ecosystems
 
 ## Related Concepts
 

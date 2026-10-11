@@ -19,6 +19,7 @@ aliases:
   - connectivity_analysis
   - effective_connectivity
   - functional_connectivity
+  - neural_connectivity
 ---
 
 # Brain Connectivity

@@ -12,6 +12,7 @@ aliases:
   - feature_binding
   - binding_problem
   - spatial_binding
+  - binding
 semantic_relations:
   - type: implements
     links:

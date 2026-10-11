@@ -16,6 +16,8 @@ semantic_relations:
       - "[[memory_systems]]"
       - "[[working_memory]]"
       - "[[neural_coding]]"
+aliases:
+  - memory_encoding
 ---
 
 # Encoding

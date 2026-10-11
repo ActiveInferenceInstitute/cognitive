@@ -622,7 +622,7 @@ class EpistemicValueCalculator:
 
    - Zero for certain states
 
-   - Links to [[uncertainty_measures]]
+   - Links to uncertainty measures
 
 1. **Policy Dependence**
 
@@ -676,7 +676,7 @@ class EpistemicValueCalculator:
 
      - intrinsic motivation - Internal rewards
 
-     - [[curiosity_learning]] - Learning driven by novelty and information gain
+     - curiosity learning - Learning driven by novelty and information gain
 
      - [[exploration_strategies]] - Approaches for exploring unknown options
 
@@ -722,9 +722,9 @@ class EpistemicValueCalculator:
 
    - Links to:
 
-     - [[information_visualization]] - Information plots
+     - information visualization - Information plots
 
-     - [[uncertainty_visualization]] - Uncertainty plots
+     - uncertainty visualization - Uncertainty plots
 
      - [[exploration_visualization]] - Plots of exploration trajectories
 

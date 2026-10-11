@@ -16,6 +16,8 @@ semantic_relations:
       - "[[knowledge_base/cognitive/energy_optimization]]"
       - "[[knowledge_base/biology/foraging_optimization]]"
       - "[[knowledge_base/cognitive/precision_mechanisms]]"
+aliases:
+  - resource_allocate
 ---
 
 # Resource Allocation

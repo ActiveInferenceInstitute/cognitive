@@ -697,7 +697,7 @@ numerical_implementations = {
 
 - parr - Mathematical Foundations
 
-- [[da_costa]] - Information Geometry
+- da costa - Information Geometry
 
-- [[bogacz]] - Tutorial Review
+- bogacz - Tutorial Review
 

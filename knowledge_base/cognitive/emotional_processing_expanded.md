@@ -35,19 +35,19 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
 - emotion elicitation - Processes that initiate an emotion
 
-  - [[trigger_processing]] - Detecting events that provoke emotion
+  - trigger processing - Detecting events that provoke emotion
 
     - external triggers - Environmental events that provoke emotion
 
-      - [[sensory_events]] - Sights, sounds, and other sensory stimuli
+      - sensory events - Sights, sounds, and other sensory stimuli
 
-      - [[social_events]] - Interpersonal events that provoke emotion
+      - social events - Interpersonal events that provoke emotion
 
     - internal triggers - Internally generated emotion triggers
 
-      - [[thoughts]] - Thoughts that provoke emotion
+      - thoughts - Thoughts that provoke emotion
 
-      - [[memories]] - Recalled memories that provoke emotion
+      - memories - Recalled memories that provoke emotion
 
   - appraisal processes - Evaluating events for emotional significance
 
@@ -55,13 +55,13 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
       - relevance - Whether an event matters to the person
 
-      - [[goal_impact]] - Effect of an event on goals
+      - goal impact - Effect of an event on goals
 
     - [[secondary_appraisal]] - Assessing resources for responding
 
       - [[coping_potential]] - Perceived ability to handle the situation
 
-      - [[future_implications]] - Expected later consequences of an event
+      - future implications - Expected later consequences of an event
 
 ### Emotional Response
 
@@ -87,11 +87,11 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
       - [[facial_expression]] - Emotion shown through the face
 
-      - [[body_language]] - Emotion shown through posture and gesture
+      - body language - Emotion shown through posture and gesture
 
     - action tendencies - Urges to act in emotion-specific ways
 
-      - [[approach]] - Moving toward a stimulus
+      - approach - Moving toward a stimulus
 
       - avoidance - Moving away from a stimulus
 
@@ -99,27 +99,27 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
 - regulation processes - Managing emotional experience and expression
 
-  - [[automatic_regulation]] - Regulation without conscious effort
+  - automatic regulation - Regulation without conscious effort
 
     - [[habituation]] - Declining response to repeated stimuli
 
-      - [[response_decrease]] - Reduced emotional reaction over time
+      - response decrease - Reduced emotional reaction over time
 
-      - [[threshold_change]] - Stronger stimuli needed to evoke response
+      - threshold change - Stronger stimuli needed to evoke response
 
     - [[emotional_inertia]] - Resistance of emotional state to change
 
       - persistence - Emotional state lasting over time
 
-      - [[recovery_rate]] - Speed of return to baseline
+      - recovery rate - Speed of return to baseline
 
-  - [[controlled_regulation]] - Deliberate, effortful regulation
+  - controlled regulation - Deliberate, effortful regulation
 
     - cognitive strategies - Regulating emotion by changing thinking
 
       - [[reappraisal]] - Reinterpreting an event's meaning
 
-      - [[distraction]] - Shifting attention away from the trigger
+      - distraction - Shifting attention away from the trigger
 
     - behavioral strategies - Regulating emotion through actions
 
@@ -137,7 +137,7 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
     - [[amygdala]] - Emotional salience and fear processing
 
-      - [[threat_detection]] - Rapid identification of danger
+      - threat detection - Rapid identification of danger
 
       - [[emotional_learning]] - Acquiring emotional associations through experience
 
@@ -147,11 +147,11 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
       - [[emotional_memory]] - Storage of emotionally charged events
 
-  - [[cortical_regions]] - Cortical areas shaping emotion
+  - cortical regions - Cortical areas shaping emotion
 
     - [[prefrontal]] - Prefrontal control of emotion
 
-      - [[ventromedial]] - Value and emotion-related evaluation
+      - ventromedial - Value and emotion-related evaluation
 
       - [[dorsolateral]] - Cognitive control of emotion
 
@@ -165,33 +165,33 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
 - [[emotion_circuits]] - Neural pathways for emotion processing
 
-  - [[processing_streams]] - Parallel routes of emotional information
+  - processing streams - Parallel routes of emotional information
 
-    - [[fast_pathway]] - Rapid, coarse emotional processing
+    - fast pathway - Rapid, coarse emotional processing
 
-      - [[subcortical_route]] - Direct thalamus-to-amygdala path
+      - subcortical route - Direct thalamus-to-amygdala path
 
-      - [[automatic_response]] - Rapid reaction without deliberation
+      - automatic response - Rapid reaction without deliberation
 
-    - [[slow_pathway]] - Slower, detailed emotional processing
+    - slow pathway - Slower, detailed emotional processing
 
-      - [[cortical_route]] - Path through sensory cortex
+      - cortical route - Path through sensory cortex
 
-      - [[deliberate_response]] - Reflective, considered reaction
+      - deliberate response - Reflective, considered reaction
 
   - integration circuits - Circuits combining emotion pathways
 
-    - [[emotion_cognition]] - Interaction of emotion and cognition
+    - emotion cognition - Interaction of emotion and cognition
 
-      - [[attention_emotion]] - Emotional influences on attention
+      - attention emotion - Emotional influences on attention
 
-      - [[memory_emotion]] - Emotional influences on memory
+      - memory emotion - Emotional influences on memory
 
-    - [[emotion_motivation]] - Links between emotion and motivated behavior
+    - emotion motivation - Links between emotion and motivated behavior
 
       - reward circuits - Pathways signaling reward and approach
 
-      - [[aversion_circuits]] - Pathways signaling punishment and avoidance
+      - aversion circuits - Pathways signaling punishment and avoidance
 
 ### Neuromodulation
 
@@ -211,7 +211,7 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
       - [[vasopressin]] - Linked to aggression and social bonding
 
-  - [[hormone_systems]] - Hormonal influences on emotion
+  - hormone systems - Hormonal influences on emotion
 
     - [[stress_hormones]] - Hormones released under stress
 
@@ -219,7 +219,7 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
       - [[adrenaline]] - Hormone driving fight-or-flight responses
 
-    - [[social_hormones]] - Hormones shaping social behavior
+    - social hormones - Hormones shaping social behavior
 
       - [[testosterone]] - Linked to dominance and status
 
@@ -229,31 +229,31 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
 ### Information Flow
 
-- [[emotion_processing]] - Overall flow of emotional information
+- emotion processing - Overall flow of emotional information
 
   - [[bottom_up]] - Processing driven by sensory input
 
     - [[sensory_processing]] - Intake of sensory input
 
-      - [[body_signals]] - Internal bodily signals
+      - body signals - Internal bodily signals
 
-      - [[environment_signals]] - External environmental signals
+      - environment signals - External environmental signals
 
-    - [[automatic_evaluation]] - Rapid valence assessment
+    - automatic evaluation - Rapid valence assessment
 
-      - [[valence_detection]] - Detecting pleasantness or unpleasantness
+      - valence detection - Detecting pleasantness or unpleasantness
 
-      - [[arousal_detection]] - Detecting intensity of activation
+      - arousal detection - Detecting intensity of activation
 
   - [[top_down]] - Expectation- and goal-driven processing
 
-    - [[cognitive_influence]] - Cognitive effects on emotion
+    - cognitive influence - Cognitive effects on emotion
 
       - [[expectation_effects]] - Predictions shaping emotional response
 
-      - [[attention_effects]] - Attention shaping emotional response
+      - attention effects - Attention shaping emotional response
 
-    - [[regulatory_control]] - Executive control over emotion
+    - regulatory control - Executive control over emotion
 
       - [[goal_maintenance]] - Keeping regulation goals active
 
@@ -261,17 +261,17 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
 ### Integration Mechanisms
 
-- [[emotion_integration]] - Combining emotional information sources
+- emotion integration - Combining emotional information sources
 
   - [[cross_modal]] - Combining across sensory modalities
 
     - [[sensory_integration]] - Combining sensory inputs
 
-      - [[visual_emotional]] - Visual input combined with emotion
+      - visual emotional - Visual input combined with emotion
 
-      - [[auditory_emotional]] - Auditory input combined with emotion
+      - auditory emotional - Auditory input combined with emotion
 
-    - [[cognitive_integration]] - Combining emotion with cognition
+    - cognitive integration - Combining emotion with cognition
 
       - memory integration - Combining emotion with memory
 
@@ -279,17 +279,17 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
   - [[temporal_integration]] - Combining emotional information over time
 
-    - [[emotional_dynamics]] - Time course of emotional change
+    - emotional dynamics - Time course of emotional change
 
-      - [[onset_dynamics]] - How emotions begin
+      - onset dynamics - How emotions begin
 
-      - [[offset_dynamics]] - How emotions end
+      - offset dynamics - How emotions end
 
-    - [[emotional_sequences]] - Ordered series of emotional states
+    - emotional sequences - Ordered series of emotional states
 
-      - [[emotion_transitions]] - Shifts between emotional states
+      - emotion transitions - Shifts between emotional states
 
-      - [[emotion_patterns]] - Recurring emotional trajectories
+      - emotion patterns - Recurring emotional trajectories
 
 ### Learning Mechanisms
 
@@ -299,15 +299,15 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
     - [[classical_conditioning]] - Learning stimulus-stimulus pairings
 
-      - [[stimulus_association]] - Linking stimuli to emotional outcomes
+      - stimulus association - Linking stimuli to emotional outcomes
 
-      - [[response_learning]] - Learning emotional responses
+      - response learning - Learning emotional responses
 
     - [[evaluative_conditioning]] - Changing liking through pairing
 
-      - [[preference_formation]] - Developing likes and dislikes
+      - preference formation - Developing likes and dislikes
 
-      - [[attitude_learning]] - Acquiring evaluative attitudes
+      - attitude learning - Acquiring evaluative attitudes
 
   - [[social_learning]] - Learning from other people
 
@@ -317,7 +317,7 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
       - vicarious learning - Learning from others' experiences
 
-    - [[instructed_learning]] - Learning from verbal instruction
+    - instructed learning - Learning from verbal instruction
 
       - rule learning - Learning emotional rules and norms
 
@@ -331,13 +331,13 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
   - [[anxiety_disorders]] - Disorders of excessive fear and worry
 
-    - [[fear_disorders]] - Disorders of excessive fear
+    - fear disorders - Disorders of excessive fear
 
       - [[phobias]] - Intense fear of specific objects
 
-      - [[panic]] - Sudden episodes of intense fear
+      - panic - Sudden episodes of intense fear
 
-    - [[worry_disorders]] - Disorders of persistent worry
+    - worry disorders - Disorders of persistent worry
 
       - [[generalized_anxiety]] - Chronic, wide-ranging worry
 
@@ -349,45 +349,45 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
       - [[major_depression]] - Severe episodic depression
 
-      - [[persistent_depression]] - Chronic low-grade depression
+      - persistent depression - Chronic low-grade depression
 
-    - [[bipolar]] - Alternating depressive and manic episodes
+    - bipolar - Alternating depressive and manic episodes
 
       - [[mania]] - Elevated, hyperactive mood episodes
 
-      - [[cycling]] - Rapid alternation of mood episodes
+      - cycling - Rapid alternation of mood episodes
 
 ### Therapeutic Approaches
 
 - emotion therapy - Treatments for emotional difficulties
 
-  - [[cognitive_approaches]] - Treatments targeting thought patterns
+  - cognitive approaches - Treatments targeting thought patterns
 
     - [[cognitive_restructuring]] - Replacing unhelpful thoughts
 
-      - [[belief_change]] - Revising maladaptive beliefs
+      - belief change - Revising maladaptive beliefs
 
-      - [[perspective_change]] - Adopting alternative viewpoints
+      - perspective change - Adopting alternative viewpoints
 
     - mindfulness - Present-moment, nonjudgmental attention
 
       - awareness training - Building awareness of internal states
 
-      - [[acceptance]] - Allowing experiences without struggle
+      - acceptance - Allowing experiences without struggle
 
-  - [[behavioral_approaches]] - Treatments targeting behavior
+  - behavioral approaches - Treatments targeting behavior
 
     - [[exposure_therapy]] - Confronting feared stimuli
 
       - gradual exposure - Stepwise confrontation of fears
 
-      - [[response_prevention]] - Blocking avoidance and safety behaviors
+      - response prevention - Blocking avoidance and safety behaviors
 
     - activation - Increasing engagement in rewarding activity
 
-      - [[pleasant_activities]] - Scheduling rewarding activities
+      - pleasant activities - Scheduling rewarding activities
 
-      - [[social_engagement]] - Increasing social contact
+      - social engagement - Increasing social contact
 
 ### Technology Applications
 
@@ -397,15 +397,15 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
     - physiological monitoring - Measuring bodily signals
 
-      - [[heart_tracking]] - Monitoring heart activity
+      - heart tracking - Monitoring heart activity
 
-      - [[skin_response]] - Monitoring skin conductance
+      - skin response - Monitoring skin conductance
 
-    - [[behavioral_monitoring]] - Measuring observable behavior
+    - behavioral monitoring - Measuring observable behavior
 
       - expression analysis - Analyzing facial expressions
 
-      - [[voice_analysis]] - Analyzing vocal features
+      - voice analysis - Analyzing vocal features
 
   - emotion support - Tools that assist emotional well-being
 
@@ -415,11 +415,11 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
       - stress management - Techniques for reducing stress
 
-    - [[intervention_tools]] - Tools delivering interventions
+    - intervention tools - Tools delivering interventions
 
       - mood tracking - Recording mood over time
 
-      - [[therapy_apps]] - Mobile applications delivering therapy
+      - therapy apps - Mobile applications delivering therapy
 
 ## Future Directions
 
@@ -427,7 +427,7 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
 - measurement issues - Difficulty measuring emotion reliably
 
-  - [[subjective_nature]] - Emotion as private experience
+  - subjective nature - Emotion as private experience
 
   - [[temporal_dynamics]] - Changes in emotion over time
 
@@ -435,17 +435,17 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
   - response patterns - Characteristic emotional response profiles
 
-  - [[regulation_styles]] - Habitual regulation strategies
+  - regulation styles - Habitual regulation strategies
 
 ### Emerging Approaches
 
 - new methods - Novel measurement and intervention approaches
 
-  - [[real_time_assessment]] - Measuring emotion as it unfolds
+  - real time assessment - Measuring emotion as it unfolds
 
-    - [[continuous_monitoring]] - Ongoing tracking of emotional state
+    - continuous monitoring - Ongoing tracking of emotional state
 
-    - [[multimodal_tracking]] - Tracking across multiple signals
+    - multimodal tracking - Tracking across multiple signals
 
   - personalized intervention - Interventions tailored to the individual
 

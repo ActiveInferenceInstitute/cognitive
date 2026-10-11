@@ -73,9 +73,9 @@ $Z = \int \mathcal{D}[x(\tau)] \exp(-\beta H[x(\tau)])$
 
 where:
 
-- $\beta$ is inverse temperature ([[thermodynamic_beta]])
+- $\beta$ is inverse temperature (thermodynamic beta)
 
-- $H$ is the [[hamiltonian_functional]]
+- $H$ is the hamiltonian functional
 
 - Links to [[free_energy_principle]]
 
@@ -90,7 +90,7 @@ Links to:
 
 - [[dissipation_function]]
 
-- [[response_theory]]
+- response theory
 
 ## Field Theory Aspects
 
@@ -136,7 +136,7 @@ Links to:
 
 - [[effective_field_theory]]
 
-- [[renormalization_flow]]
+- renormalization flow
 
 ## Active Inference Extensions
 
@@ -150,7 +150,7 @@ where:
 
 - $q[x(\tau)]$ is the [[variational_density]]
 
-- $p[x(\tau)]$ is the [[target_density]]
+- $p[x(\tau)]$ is the target density
 
 - Links to [[variational_calculus]]
 
@@ -182,7 +182,7 @@ class MarkovBlanketDynamics:
 
 Links to:
 
-- [[markov_blanket_theory]]
+- markov blanket theory
 
 - [[synchronization_dynamics]]
 
@@ -230,9 +230,9 @@ Links to:
 
 - [[critical_phenomena]]
 
-- [[scaling_theory]]
+- scaling theory
 
-- [[universality]]
+- universality
 
 ### Geometric Phase
 
@@ -340,9 +340,9 @@ Links to:
 
 - [[phase_transitions]]
 
-- [[critical_dynamics]]
+- critical dynamics
 
-- [[non_equilibrium_processes]]
+- non equilibrium processes
 
 ### Active Matter
 
@@ -356,7 +356,7 @@ Links to:
 
 - feynman 1965 - Path Integral Formulation of Quantum Mechanics
 
-- [[zinn_justin_2002]] - Path Integrals in Quantum Field Theory
+- zinn justin 2002 - Path Integrals in Quantum Field Theory
 
 - kleinert 2009 - Path Integrals in Quantum Mechanics, Statistics, and Polymer Physics
 

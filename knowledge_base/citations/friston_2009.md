@@ -152,14 +152,14 @@ Synaptic plasticity implements learning of model parameters:
 ## Related Work
 
 ### Foundational Papers
-- [[friston_2005]] - Dynamic causal modeling
-- [[friston_2007]] - Variational filtering
+- friston 2005 - Dynamic causal modeling
+- friston 2007 - Variational filtering
 - [[friston_2010]] - Free energy principle
 
 ### Extensions
 - [[friston_2017]] - Active Inference process theory
 - [[clark_2013]] - Predictive brains review
-- [[hodgkinson_2019]] - Motor control applications
+- hodgkinson 2019 - Motor control applications
 
 ## Code and Implementations
 - **SPM**: Statistical Parametric Mapping (MATLAB)

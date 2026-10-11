@@ -39,21 +39,21 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Learning Stages
 
-- [[acquisition_stages]] - Progression of stages in learning a skill
+- acquisition stages - Progression of stages in learning a skill
 
-  - [[cognitive_stage]] - Initial stage of understanding task demands
+  - cognitive stage - Initial stage of understanding task demands
 
-    - [[task_comprehension]] - Grasping the task goals and rules
+    - task comprehension - Grasping the task goals and rules
 
-    - [[strategy_formation]] - Developing an approach to perform the task
+    - strategy formation - Developing an approach to perform the task
 
-  - [[associative_stage]] - Stage of practice and error reduction
+  - associative stage - Stage of practice and error reduction
 
     - refinement - Gradual improvement of performance
 
     - error reduction - Decreasing mistakes with practice
 
-  - [[autonomous_stage]] - Stage of fluent, expert performance
+  - autonomous stage - Stage of fluent, expert performance
 
     - [[automaticity]] - Performance requiring little conscious attention
 
@@ -61,9 +61,9 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Performance Components
 
-- [[skill_elements]] - Component parts that make up a skill
+- skill elements - Component parts that make up a skill
 
-  - [[basic_operations]] - Elementary actions underlying a skill
+  - basic operations - Elementary actions underlying a skill
 
     - movement primitives - Basic units of movement
 
@@ -77,7 +77,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Control Processes
 
-- [[skill_control]] - Regulation of skilled performance
+- skill control - Regulation of skilled performance
 
   - monitoring - Observing one's own performance
 
@@ -85,7 +85,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
     - [[performance_evaluation]] - Judging the quality of performance
 
-  - [[adjustment]] - Modifying performance in response to feedback
+  - adjustment - Modifying performance in response to feedback
 
     - [[error_correction]] - Adjusting actions to remove errors
 
@@ -95,39 +95,39 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Practice Effects
 
-- [[practice_impact]] - Effects of practice on learning
+- practice impact - Effects of practice on learning
 
-  - [[quantity_effects]] - Effects of the amount of practice
+  - quantity effects - Effects of the amount of practice
 
     - repetition - Repeating a task to strengthen learning
 
-    - [[time_invested]] - Total practice time accumulated
+    - time invested - Total practice time accumulated
 
-  - [[quality_effects]] - Effects of the type of practice
+  - quality effects - Effects of the type of practice
 
-    - [[focused_practice]] - Practice with full concentration
+    - focused practice - Practice with full concentration
 
     - [[deliberate_practice]] - Structured practice targeting weaknesses
 
 ### Feedback Processing
 
-- [[feedback_use]] - Use of information about performance
+- feedback use - Use of information about performance
 
   - [[intrinsic_feedback]] - Feedback arising from the performer's own senses
 
     - [[proprioception]] - Sensing body position and movement
 
-    - [[task_outcome]] - Observed results of an action
+    - task outcome - Observed results of an action
 
-  - [[extrinsic_feedback]] - Feedback supplied by an outside source
+  - extrinsic feedback - Feedback supplied by an outside source
 
     - instruction - Verbal or demonstrated guidance
 
-    - [[correction]] - External feedback that identifies errors
+    - correction - External feedback that identifies errors
 
 ### Memory Formation
 
-- [[skill_memory]] - Retention of how to perform skills
+- skill memory - Retention of how to perform skills
 
   - [[procedural_memory]] - Memory for learned skills and routines
 
@@ -145,7 +145,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Brain Networks
 
-- [[skill_networks]] - Brain networks supporting skills
+- skill networks - Brain networks supporting skills
 
   - [[motor_networks]] - Networks controlling movement
 
@@ -153,7 +153,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
     - [[cerebellum]] - Coordinates and refines movement
 
-  - [[cognitive_networks]] - Networks supporting mental skills
+  - cognitive networks - Networks supporting mental skills
 
     - [[prefrontal]] - Planning and executive control
 
@@ -161,7 +161,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Plasticity Mechanisms
 
-- [[skill_plasticity]] - Brain changes underlying skill learning
+- skill plasticity - Brain changes underlying skill learning
 
   - [[synaptic_changes]] - Changes in synaptic connections
 
@@ -169,7 +169,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
     - [[pruning]] - Elimination of unused connections
 
-  - [[network_changes]] - Reorganization of brain networks
+  - network changes - Reorganization of brain networks
 
     - efficiency - Reduced neural cost of performance
 
@@ -177,17 +177,17 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Learning Systems
 
-- [[brain_learning]] - Brain systems supporting learning
+- brain learning - Brain systems supporting learning
 
-  - [[fast_learning]] - Rapid learning from few exposures
+  - fast learning - Rapid learning from few exposures
 
     - [[hippocampal]] - Rapid encoding of new episodes
 
     - [[prefrontal]] - Rapid, flexible strategy-based learning
 
-  - [[slow_learning]] - Gradual learning over many repetitions
+  - slow learning - Gradual learning over many repetitions
 
-    - [[striatal]] - Gradual habit formation
+    - striatal - Gradual habit formation
 
     - [[cerebellar]] - Gradual refinement of movement timing
 
@@ -195,7 +195,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Motor Skills
 
-- [[movement_skills]] - Skills involving bodily movement
+- movement skills - Skills involving bodily movement
 
   - fine motor - Skills requiring small, precise movements
 
@@ -211,7 +211,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Cognitive Skills
 
-- [[mental_skills]] - Skills based on mental processes
+- mental skills - Skills based on mental processes
 
   - [[problem_solving]] - Skills for resolving problems
 
@@ -223,37 +223,37 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
     - evaluation - Judging the value of options
 
-    - [[selection]] - Choosing the best option
+    - selection - Choosing the best option
 
 ### Social Skills
 
-- [[interaction_skills]] - Skills used in dealing with others
+- interaction skills - Skills used in dealing with others
 
   - [[communication]] - Skills for exchanging information
 
     - expression - Conveying thoughts and feelings
 
-    - [[understanding]] - Interpreting what others convey
+    - understanding - Interpreting what others convey
 
   - [[social_cognition]] - Reasoning about other people
 
     - [[perspective_taking]] - Understanding another person's viewpoint
 
-    - [[social_rules]] - Norms governing group behavior
+    - social rules - Norms governing group behavior
 
 ## Applications
 
 ### Educational Applications
 
-- [[learning_design]] - Designing instruction for learning
+- learning design - Designing instruction for learning
 
   - instruction - Teaching methods for skills
 
-    - [[demonstration]] - Showing how a skill is performed
+    - demonstration - Showing how a skill is performed
 
-    - [[explanation]] - Explaining the reasons behind actions
+    - explanation - Explaining the reasons behind actions
 
-  - [[practice_design]] - Designing practice for skill learning
+  - practice design - Designing practice for skill learning
 
     - progression - Gradually increasing task difficulty
 
@@ -263,13 +263,13 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 - [[skill_training]] - Programs for building skills
 
-  - [[basic_training]] - Introductory training for novices
+  - basic training - Introductory training for novices
 
-    - [[foundation_skills]] - Core skills that later learning builds on
+    - foundation skills - Core skills that later learning builds on
 
-    - [[progression_steps]] - Advancing through graded training steps
+    - progression steps - Advancing through graded training steps
 
-  - [[advanced_training]] - Training for high levels of expertise
+  - advanced training - Training for high levels of expertise
 
     - refinement - Fine-tuning of skilled performance
 
@@ -277,13 +277,13 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Rehabilitation Applications
 
-- [[skill_recovery]] - Restoring skills after injury or illness
+- skill recovery - Restoring skills after injury or illness
 
   - assessment - Evaluating current skill level
 
-    - [[deficit_evaluation]] - Identifying which abilities are impaired
+    - deficit evaluation - Identifying which abilities are impaired
 
-    - [[capacity_testing]] - Testing remaining functional capacity
+    - capacity testing - Testing remaining functional capacity
 
   - intervention - Rehabilitation approaches to restore skill
 
@@ -295,9 +295,9 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Behavioral Methods
 
-- [[performance_assessment]] - Measuring skilled performance
+- performance assessment - Measuring skilled performance
 
-  - [[skill_testing]] - Tests of skill level
+  - skill testing - Tests of skill level
 
     - accuracy - Proportion of correct responses
 
@@ -307,7 +307,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
     - rate - Speed of improvement with practice
 
-    - [[plateau]] - Period when improvement levels off
+    - plateau - Period when improvement levels off
 
 ### Neural Methods
 
@@ -315,9 +315,9 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
   - activation - Which regions are active during skill use
 
-    - [[task_activity]] - Brain activity during task performance
+    - task activity - Brain activity during task performance
 
-    - [[rest_activity]] - Brain activity at rest
+    - rest activity - Brain activity at rest
 
   - [[connectivity]] - Interaction between brain regions
 
@@ -327,15 +327,15 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 ### Computational Methods
 
-- [[skill_modeling]] - Mathematical models of skill learning
+- skill modeling - Mathematical models of skill learning
 
   - [[learning_models]] - Models of how skills are acquired
 
-    - [[rate_models]] - Models describing learning speed
+    - rate models - Models describing learning speed
 
-    - [[stage_models]] - Models of discrete learning stages
+    - stage models - Models of discrete learning stages
 
-  - [[performance_models]] - Models of performance outcomes
+  - performance models - Models of performance outcomes
 
     - error models - Models of error patterns
 
@@ -347,9 +347,9 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 - [[individual_differences]] - Differences in learning among individuals
 
-- [[transfer_limits]] - Difficulty transferring skills to new tasks
+- transfer limits - Difficulty transferring skills to new tasks
 
-- [[plateau_effects]] - Slowing of improvement with practice
+- plateau effects - Slowing of improvement with practice
 
 ### Emerging Approaches
 
@@ -357,17 +357,17 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 - technology enhanced - Training supported by technology
 
-- [[hybrid_training]] - Combining several training approaches
+- hybrid training - Combining several training approaches
 
 ## References
 
 - [[fitts_posner]]
 
-- [[anderson_skill]]
+- anderson skill
 
-- [[ericsson_expertise]]
+- ericsson expertise
 
-- [[willingham_motor]]
+- willingham motor
 
 ## Related Concepts
 
@@ -379,7 +379,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 - [[expertise]]
 
-- [[practice]]
+- practice
 
 - performance
 

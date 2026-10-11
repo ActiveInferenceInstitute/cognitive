@@ -358,5 +358,5 @@ This article maps the deep connections between path integral formulations and ot
 
 - [[amari_2000]] - "Information Geometry and Its Applications"
 
-- [[pearl_2009]] - "Causality: Models, Reasoning, and Inference"
+- pearl 2009 - "Causality: Models, Reasoning, and Inference"
 

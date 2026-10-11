@@ -1046,13 +1046,13 @@ class StochasticPathIntegralComputer:
 
 ## References
 
-- [[friston_2022]] - "The Free Energy Principle: A Unified Brain Theory?"
+- friston 2022 - "The Free Energy Principle: A Unified Brain Theory?"
 
 - [[parr_2022]] - "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior"
 
-- [[da_costa_2022]] - "The Mathematics of Active Inference"
+- da costa 2022 - "The Mathematics of Active Inference"
 
-- [[ramstead_2022]] - "Neural and cognitive architectures for active inference"
+- ramstead 2022 - "Neural and cognitive architectures for active inference"
 
 ## See Also
 

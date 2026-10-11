@@ -26,6 +26,8 @@ semantic_relations:
     links:
       - "[[mathematics/variational_free_energy|Variational Free Energy]]"
       - "[[mathematics/markov_blankets|Markov Blankets]]"
+aliases:
+  - fokker_planck_equation
 ---
 
 # Fokker-Planck Equation

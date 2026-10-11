@@ -35,45 +35,45 @@ The Bayesian Brain hypothesis proposes that the brain implements Bayesian infere
 
   - [[prior_beliefs]] - Existing knowledge
 
-    - [[learned_priors]] - Experience-based
+    - learned priors - Experience-based
 
-    - [[structural_priors]] - Architecture-based
+    - structural priors - Architecture-based
 
-  - [[likelihood_computation]] - Computing how well hypotheses explain the data
+  - likelihood computation - Computing how well hypotheses explain the data
 
-    - [[sensory_likelihood]] - Probability of sensory input given a cause
+    - sensory likelihood - Probability of sensory input given a cause
 
-    - [[causal_likelihood]] - Cause-effect relations
+    - causal likelihood - Cause-effect relations
 
 ### Uncertainty Processing
 
-- [[uncertainty_representation]] - How the brain encodes probability distributions
+- uncertainty representation - How the brain encodes probability distributions
 
   - sensory uncertainty - Input noise
 
-  - [[model_uncertainty]] - Uncertainty about which model is correct
+  - model uncertainty - Uncertainty about which model is correct
 
-  - [[structural_uncertainty]] - Uncertainty about model structure
+  - structural uncertainty - Uncertainty about model structure
 
 ### Hierarchical Organization
 
 - [[hierarchical_inference]] - Multi-level processing
 
-  - [[hierarchical_priors]] - Level-specific knowledge
+  - hierarchical priors - Level-specific knowledge
 
-  - [[hierarchical_likelihood]] - Level-specific evidence
+  - hierarchical likelihood - Level-specific evidence
 
-  - [[posterior_propagation]] - Between-level updates
+  - posterior propagation - Between-level updates
 
 ## Neural Implementation
 
 ### Circuit Mechanisms
 
-- [[probabilistic_circuits]] - Neural circuits computing with probabilities
+- probabilistic circuits - Neural circuits computing with probabilities
 
   - [[population_coding]] - Distributed representation
 
-    - [[probabilistic_population]] - Population activity encoding probability distributions
+    - probabilistic population - Population activity encoding probability distributions
 
     - [[neural_sampling]] - Neural activity as samples from a distribution
 
@@ -85,7 +85,7 @@ The Bayesian Brain hypothesis proposes that the brain implements Bayesian infere
 
 ### Synaptic Mechanisms
 
-- [[synaptic_computation]] - Local processing
+- synaptic computation - Local processing
 
   - [[synaptic_weights]] - Connection strengths encoding learned priors
 
@@ -97,9 +97,9 @@ The Bayesian Brain hypothesis proposes that the brain implements Bayesian infere
 
 - [[bayesian_networks]] - Directed graphical models of dependencies
 
-  - [[directed_connections]] - Causal structure
+  - directed connections - Causal structure
 
-  - [[reciprocal_connections]] - Two-way links between neural areas
+  - reciprocal connections - Two-way links between neural areas
 
   - [[lateral_connections]] - Within-level interaction
 
@@ -147,7 +147,7 @@ where:
 
 ### Perception
 
-- [[bayesian_perception]] - Perception as probabilistic inference about causes
+- bayesian perception - Perception as probabilistic inference about causes
 
   - [[cue_integration]] - Multi-sensory fusion
 
@@ -157,7 +157,7 @@ where:
 
 ### Decision Making
 
-- [[bayesian_decision]] - Choosing actions by expected utility
+- bayesian decision - Choosing actions by expected utility
 
   - [[value_computation]] - Utility estimation
 
@@ -189,7 +189,7 @@ where:
 
 ### Artificial Intelligence
 
-- [[bayesian_ai]] - Bayesian methods in artificial intelligence
+- bayesian ai - Bayesian methods in artificial intelligence
 
   - [[probabilistic_programming]] - Languages for specifying probabilistic models
 
@@ -201,9 +201,9 @@ where:
 
 - [[brain_machine_interfaces]] - Devices linking neural activity to machines
 
-  - [[decoder_design]] - Decoding intent from neural signals
+  - decoder design - Decoding intent from neural signals
 
-  - [[feedback_optimization]] - Tuning interface feedback to improve control
+  - feedback optimization - Tuning interface feedback to improve control
 
   - adaptive interfaces - Interfaces that adapt to the user
 
@@ -213,11 +213,11 @@ where:
 
 - [[psychophysics]] - Relating stimuli to perceptual judgments
 
-  - [[threshold_estimation]] - Sensitivity measurement
+  - threshold estimation - Sensitivity measurement
 
-  - [[uncertainty_measurement]] - Measuring confidence in judgments
+  - uncertainty measurement - Measuring confidence in judgments
 
-  - [[prior_manipulation]] - Altering expectations to test priors
+  - prior manipulation - Altering expectations to test priors
 
 ### Neural Recording
 
@@ -235,7 +235,7 @@ where:
 
   - [[generative_models]] - Models of how observations arise from causes
 
-  - [[inference_models]] - Models of how beliefs are computed
+  - inference models - Models of how beliefs are computed
 
   - [[learning_models]] - Models of how beliefs and parameters change
 
@@ -245,7 +245,7 @@ where:
 
 - [[information_processing]] - Transformation of signals in neural systems
 
-  - [[entropy_computation]] - Uncertainty measure
+  - entropy computation - Uncertainty measure
 
   - [[mutual_information]] - Dependency measure
 
@@ -255,7 +255,7 @@ where:
 
 - [[computational_complexity]] - Processing demands
 
-  - [[algorithmic_complexity]] - Resource cost of an algorithm
+  - algorithmic complexity - Resource cost of an algorithm
 
   - [[sample_complexity]] - Data requirements
 
@@ -295,9 +295,9 @@ where:
 
 - [[friston_free_energy]]
 
-- [[doya_bayesian_brain]]
+- doya bayesian brain
 
-- [[ma_probabilistic_population]]
+- ma probabilistic population
 
 ## Related Concepts
 
@@ -307,7 +307,7 @@ where:
 
 - [[free_energy_principle]]
 
-- [[probabilistic_computation]]
+- probabilistic computation
 
 - [[neural_coding]]
 

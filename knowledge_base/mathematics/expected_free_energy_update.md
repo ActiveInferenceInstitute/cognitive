@@ -171,7 +171,7 @@ E = update_policy_prior(
 
 ### Mathematical Properties
 
-- [[probability_conservation]] - Output is valid probability distribution
+- probability conservation - Output is valid probability distribution
 
 - policy convergence - Converges to optimal policy under right conditions
 
@@ -183,7 +183,7 @@ E = update_policy_prior(
 
 - [[computational_efficiency]] - Vectorized operations
 
-- [[memory_usage]] - O(n_actions) space complexity
+- memory usage - O(n_actions) space complexity
 
 ## Related Concepts
 
@@ -1047,9 +1047,9 @@ This provides theoretical foundation for adaptive learning rate schedules in EFE
 
 - [[parr_2019]] - Policy learning
 
-- [[robbins_monro_1951]] - Stochastic approximation theory
+- robbins monro 1951 - Stochastic approximation theory
 
-- [[mcallester_1999]] - PAC-Bayes bounds
+- mcallester 1999 - PAC-Bayes bounds
 
-- [[borkar_2008]] - Stochastic approximation algorithms
+- borkar 2008 - Stochastic approximation algorithms
 

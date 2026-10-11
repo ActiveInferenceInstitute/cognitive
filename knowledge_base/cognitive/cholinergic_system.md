@@ -18,6 +18,7 @@ semantic_relations:
 aliases:
   - cholinergic
   - nucleus_basalis
+  - acetylcholine_system
 ---
 
 # Cholinergic System

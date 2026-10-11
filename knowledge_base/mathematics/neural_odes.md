@@ -18,6 +18,8 @@ semantic_relations:
       - "[[normalizing_flows]]"
       - "[[diffusion_models]]"
       - "[[deep_learning]]"
+aliases:
+  - neural_ode
 ---
 
 # Neural ODEs

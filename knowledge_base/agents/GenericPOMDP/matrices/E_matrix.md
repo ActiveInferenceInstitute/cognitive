@@ -101,7 +101,7 @@ def sample_action(E: np.ndarray) -> int:
 
 Links to:
 
-- [[stochastic_sampling]]
+- stochastic sampling
 
 - [[categorical_distribution]]
 
@@ -323,7 +323,7 @@ class ActionDistribution:
 
 - [[information_gain]] - Information theoretic measures
 
-- [[decision_metrics]] - Performance evaluation
+- decision metrics - Performance evaluation
 
 ## Related Components
 

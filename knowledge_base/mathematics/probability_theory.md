@@ -1802,15 +1802,15 @@ def plot_probability_map(
 
 ## References
 
-1. [[kolmogorov_1933]] - "Foundations of the Theory of Probability"
+1. kolmogorov 1933 - "Foundations of the Theory of Probability"
 
-1. [[feller_1968]] - "An Introduction to Probability Theory and Its Applications"
+1. feller 1968 - "An Introduction to Probability Theory and Its Applications"
 
-1. [[billingsley_1995]] - "Probability and Measure"
+1. billingsley 1995 - "Probability and Measure"
 
-1. [[durrett_2019]] - "Probability: Theory and Examples"
+1. durrett 2019 - "Probability: Theory and Examples"
 
-1. [[williams_1991]] - "Probability with Martingales"
+1. williams 1991 - "Probability with Martingales"
 
-1. [[kallenberg_2002]] - "Foundations of Modern Probability"
+1. kallenberg 2002 - "Foundations of Modern Probability"
 

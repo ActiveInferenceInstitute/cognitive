@@ -15,6 +15,9 @@ semantic_relations:
       - "[[dopamine_system]]"
       - "[[emotional_processing]]"
       - "[[computational_psychiatry]]"
+aliases:
+  - serotonergic
+  - serotonin_system
 ---
 
 # Serotonin

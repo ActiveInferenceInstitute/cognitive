@@ -20,11 +20,6 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[free_energy_principle]]"
       - "[[developmental_systems]]"
-  - type: implements
-    links:
-      - "[[plant_development]]"
-      - "[[plant_physiology]]"
-      - "[[plant_networks]]"
   - type: relates
     links:
       - "[[cell_biology]]"
@@ -547,13 +542,13 @@ class PlantNetworks:
 
 ## References
 
-- [[taiz_2015]] - "Plant Physiology and Development"
+- taiz 2015 - "Plant Physiology and Development"
 
-- [[niklas_2016]] - "Plant Physics"
+- niklas 2016 - "Plant Physics"
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
-- [[prusinkiewicz_2018]] - "Computational Models of Plant Development"
+- prusinkiewicz 2018 - "Computational Models of Plant Development"
 
 ## See Also
 

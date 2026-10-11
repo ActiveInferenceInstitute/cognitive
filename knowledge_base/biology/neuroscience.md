@@ -550,13 +550,13 @@ class NeuralCircuit:
 
 ## References
 
-- [[kandel_2021]] - "Principles of Neural Science"
+- kandel 2021 - "Principles of Neural Science"
 
 - dayan 2001 - "Theoretical Neuroscience"
 
-- [[izhikevich_2007]] - "Dynamical Systems in Neuroscience"
+- izhikevich 2007 - "Dynamical Systems in Neuroscience"
 
-- [[gerstner_2014]] - "Neuronal Dynamics"
+- gerstner 2014 - "Neuronal Dynamics"
 
 ## See Also
 

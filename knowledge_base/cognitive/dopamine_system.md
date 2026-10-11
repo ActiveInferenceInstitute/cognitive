@@ -10,6 +10,7 @@ tags:
   - neuroscience
 aliases:
   - dopamine
+  - dopaminergic
 semantic_relations:
   - type: relates
     links:

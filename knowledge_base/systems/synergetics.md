@@ -530,11 +530,11 @@ class SynergeticOptimizer:
 
 - fuller 1975 - "Synergetics: Explorations in the Geometry of Thinking"
 
-- [[fuller_1979]] - "Synergetics 2"
+- fuller 1979 - "Synergetics 2"
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
-- [[haken_1983]] - "Synergetics: An Introduction"
+- haken 1983 - "Synergetics: An Introduction"
 
 ## See Also
 

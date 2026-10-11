@@ -11,6 +11,7 @@ tags:
 aliases:
   - bottom_up_attention
   - salience_detection
+  - stimulus_driven
 semantic_relations:
   - type: implements
     links:

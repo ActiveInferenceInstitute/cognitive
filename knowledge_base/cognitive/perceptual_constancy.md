@@ -17,6 +17,8 @@ semantic_relations:
       - "[[color_processing]]"
       - "[[perceptual_inference]]"
       - "[[perception_attention]]"
+aliases:
+  - perceptual_constancies
 ---
 
 # Perceptual Constancy

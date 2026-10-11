@@ -488,7 +488,7 @@ Procedural memory is the system responsible for the acquisition, maintenance, an
 
 - [[memory_systems]]
 
-- [[motor_neuroscience]]
+- motor neuroscience
 
 - computational motor control
 

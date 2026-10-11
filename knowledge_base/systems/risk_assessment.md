@@ -90,7 +90,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - Adaptive modeling
 
-- Related to: dynamic risk assessment, [[real_time_adjustment]]
+- Related to: dynamic risk assessment, real time adjustment
 
 #### 3. Bayesian Methods
 
@@ -100,7 +100,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - Uncertainty quantification
 
-- Connected to: [[bayesian_methods]], [[probabilistic_framework]]
+- Connected to: bayesian methods, probabilistic framework
 
 ## Integration with Active Inference
 
@@ -196,7 +196,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - Human factors
 
-- Links to: [[process_automation]]
+- Links to: process automation
 
 #### 3. Strategic Risks
 
@@ -218,7 +218,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
    - Factor weighting
 
-   - Related to: [[risk_scoring_model]]
+   - Related to: risk scoring model
 
 1. **Analytics Platforms**
 
@@ -228,7 +228,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
    - Reporting
 
-   - Links to: [[statistical_analysis_tools]]
+   - Links to: statistical analysis tools
 
 1. **Decision Support Systems**
 
@@ -360,7 +360,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
    - Dynamic pricing
 
-   - Links to: [[dynamic_policy_pricing]]
+   - Links to: dynamic policy pricing
 
 1. **Behavioral Analytics**
 
@@ -388,7 +388,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - technical documentation
 
-- [[case_studies]]
+- case studies
 
 - [[best_practices]]
 
@@ -400,7 +400,7 @@ Risk assessment is a systematic process of evaluating potential risks and their 
 
 - integration capability
 
-- [[problem_solving_skills]]
+- problem solving skills
 
 ---
 

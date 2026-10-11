@@ -388,9 +388,9 @@ where:
 
 - [[Economic_Systems]]
 
-- [[Governance_Systems]]
+- Governance Systems
 
-- [[Community_Development]]
+- Community Development
 
-- [[Sustainable_Economics]]
+- Sustainable Economics
 

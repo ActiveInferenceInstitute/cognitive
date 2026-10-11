@@ -15,6 +15,8 @@ semantic_relations:
       - "[[conservation_biology]]"
       - "[[ecosystem_management]]"
       - "[[resilience]]"
+aliases:
+  - habitat_restoration
 ---
 
 # Restoration Ecology

@@ -15,6 +15,8 @@ semantic_relations:
       - "[[knowledge_base/free_energy_principle/applications/ai_safety]]"
       - "[[knowledge_base/cognitive/preference_learning]]"
       - "[[knowledge_base/systems/technology_ethics]]"
+aliases:
+  - artificial_superintelligence
 ---
 
 # Superintelligence Research

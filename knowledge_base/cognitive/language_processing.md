@@ -44,13 +44,13 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - [[lexical_access]] - Retrieving word forms and meanings from memory
 
-    - [[morphological_processing]] - Word structure
+    - morphological processing - Word structure
 
 ### Language Production
 
 - speech production - Planning and producing spoken language
 
-  - [[lexical_selection]] - Word choice
+  - lexical selection - Word choice
 
     - word retrieval - Finding words
 
@@ -60,17 +60,17 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - [[motor_planning]] - Preparing speech movements
 
-    - [[phonetic_encoding]] - Assembling sound sequences for articulation
+    - phonetic encoding - Assembling sound sequences for articulation
 
 ### Linguistic Structure
 
-- [[language_structure]] - Organization of language into levels
+- language structure - Organization of language into levels
 
   - [[syntax]] - Rules for ordering words into sentences
 
     - sentence structure - How words are arranged in sentences
 
-    - [[grammatical_rules]] - Constraints on well-formed sentences
+    - grammatical rules - Constraints on well-formed sentences
 
   - semantics - Study of meaning in language
 
@@ -82,7 +82,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Brain Networks
 
-- [[language_networks]] - Brain systems supporting language
+- language networks - Brain systems supporting language
 
   - [[perisylvian_network]] - Core cortical regions around the Sylvian fissure
 
@@ -90,7 +90,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - [[wernickes_area]] - Region central to language comprehension
 
-  - [[semantic_network]] - Brain regions storing and retrieving meaning
+  - semantic network - Brain regions storing and retrieving meaning
 
     - [[temporal_pole]] - Region supporting conceptual knowledge
 
@@ -100,17 +100,17 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 - language circuits - Local neural circuits for language
 
-  - [[phonological_circuits]] - Sound processing
+  - phonological circuits - Sound processing
 
     - [[auditory_cortex]] - Sound analysis
 
     - motor circuits - Speech production
 
-  - [[semantic_circuits]] - Meaning processing
+  - semantic circuits - Meaning processing
 
-    - [[temporal_circuits]] - Word meaning
+    - temporal circuits - Word meaning
 
-    - [[frontal_circuits]] - Selecting among competing alternatives
+    - frontal circuits - Selecting among competing alternatives
 
 ### Neuromodulation
 
@@ -126,13 +126,13 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - [[selective_attention]] - Focusing on relevant linguistic input
 
-    - [[learning_consolidation]] - Stabilizing newly learned material in memory
+    - learning consolidation - Stabilizing newly learned material in memory
 
 ## Computational Principles
 
 ### Processing Models
 
-- [[language_computation]] - Processing theory
+- language computation - Processing theory
 
   - [[serial_processing]] - Stages processed one after another
 
@@ -158,23 +158,23 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
   - rule learning - Grammar acquisition
 
-    - [[parameter_setting]] - Fixing grammatical parameters from input
+    - parameter setting - Fixing grammatical parameters from input
 
-    - [[constraint_learning]] - Learning which structures are not allowed
+    - constraint learning - Learning which structures are not allowed
 
 ### Information Theory
 
-- [[linguistic_information]] - Information carried by linguistic structure
+- linguistic information - Information carried by linguistic structure
 
-  - [[entropy_measures]] - Measures of uncertainty in language
+  - entropy measures - Measures of uncertainty in language
 
-    - [[word_entropy]] - Lexical uncertainty
+    - word entropy - Lexical uncertainty
 
-    - [[syntactic_entropy]] - Structure uncertainty
+    - syntactic entropy - Structure uncertainty
 
-  - [[predictability]] - How expected a word or structure is
+  - predictability - How expected a word or structure is
 
-    - [[word_prediction]] - Anticipating the upcoming word
+    - word prediction - Anticipating the upcoming word
 
     - structure prediction - Anticipating upcoming syntactic structure
 
@@ -182,9 +182,9 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Phonology
 
-- [[sound_structure]] - Speech sounds
+- sound structure - Speech sounds
 
-  - [[phoneme_system]] - Sound units
+  - phoneme system - Sound units
 
     - [[consonants]] - Speech sounds made with airway constriction
 
@@ -198,17 +198,17 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Morphology
 
-- [[word_structure]] - Word formation
+- word structure - Word formation
 
-  - [[morpheme_types]] - Categories of minimal meaningful units
+  - morpheme types - Categories of minimal meaningful units
 
-    - [[roots]] - Core meaning
+    - roots - Core meaning
 
     - [[affixes]] - Elements attached to roots to modify them
 
   - [[word_formation]] - Building words
 
-    - [[derivation]] - Forming new words from existing ones
+    - derivation - Forming new words from existing ones
 
     - [[inflection]] - Word forms marking tense, number, and case
 
@@ -222,11 +222,11 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - [[verb_phrases]] - Phrases built around a verb
 
-  - [[movement_operations]] - Operations that move sentence elements
+  - movement operations - Operations that move sentence elements
 
     - [[wh_movement]] - Fronting of question words
 
-    - [[passivization]] - Converting active sentences to passive
+    - passivization - Converting active sentences to passive
 
 ## Applications
 
@@ -248,11 +248,11 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Educational Applications
 
-- [[language_education]] - Teaching and learning of languages
+- language education - Teaching and learning of languages
 
   - [[first_language]] - Language acquired from early childhood
 
-    - [[literacy_development]] - Reading/writing
+    - literacy development - Reading/writing
 
     - [[metalinguistic_awareness]] - Awareness of language as an object
 
@@ -272,9 +272,9 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - machine translation - Automatic translation between languages
 
-  - [[language_assistance]] - Tools that support language use
+  - language assistance - Tools that support language use
 
-    - [[writing_support]] - Tools that help with composing text
+    - writing support - Tools that help with composing text
 
     - reading support - Tools that aid reading comprehension
 
@@ -282,7 +282,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Behavioral Methods
 
-- [[language_behavior]] - Observable language use and performance
+- language behavior - Observable language use and performance
 
   - [[psycholinguistics]] - Study of language processing in the mind
 
@@ -290,7 +290,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
     - error analysis - Mistake patterns
 
-  - [[corpus_analysis]] - Analysis of language use in text collections
+  - corpus analysis - Analysis of language use in text collections
 
     - frequency analysis - Counting how often words occur
 
@@ -298,35 +298,35 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 ### Neural Methods
 
-- [[language_imaging]] - Imaging brain activity during language tasks
+- language imaging - Imaging brain activity during language tasks
 
   - functional imaging - Imaging of brain activity during tasks
 
     - [[language_lateralization]] - Dominance of one hemisphere for language
 
-    - [[network_organization]] - Organization of connected language regions
+    - network organization - Organization of connected language regions
 
-  - [[temporal_measures]] - Time course
+  - temporal measures - Time course
 
-    - [[erp_studies]] - Studies of event-related electrical responses
+    - erp studies - Studies of event-related electrical responses
 
-    - [[meg_studies]] - Studies using magnetoencephalography
+    - meg studies - Studies using magnetoencephalography
 
 ### Computational Models
 
-- [[language_models]] - Models for testing language theories
+- language models - Models for testing language theories
 
-  - [[processing_models]] - Models of comprehension and production
+  - processing models - Models of comprehension and production
 
-    - [[parsing_models]] - Models of building sentence structure
+    - parsing models - Models of building sentence structure
 
-    - [[semantic_models]] - Models of meaning representation
+    - semantic models - Models of meaning representation
 
   - [[learning_models]] - Models of language acquisition
 
     - [[statistical_models]] - Pattern finding
 
-    - [[rule_models]] - Models using explicit grammatical rules
+    - rule models - Models using explicit grammatical rules
 
 ## Future Directions
 
@@ -336,7 +336,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 - [[individual_differences]] - Person variation
 
-- [[multilingual_processing]] - Multiple languages
+- multilingual processing - Multiple languages
 
 ### Emerging Approaches
 
@@ -344,7 +344,7 @@ Language Processing encompasses the neural and cognitive mechanisms involved in 
 
 - [[brain_stimulation]] - Stimulating the brain to influence language
 
-- [[artificial_language]]
+- artificial language
 
 ## References
 

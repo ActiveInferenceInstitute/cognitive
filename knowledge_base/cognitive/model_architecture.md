@@ -34,11 +34,11 @@ Model architecture defines the structural organization and design principles for
 
 - Identification of [[markov_blanket|Markov Blanket]]
 
-- [[agent_environment_interface|Agent-Environment Interface]]
+- Agent-Environment Interface
 
 - [[sensorimotor_coordination|Sensorimotor Channels]]
 
-- [[internal_states|Internal State Representation]]
+- Internal State Representation
 
 ### 2. Variable Types
 
@@ -66,9 +66,9 @@ Model architecture defines the structural organization and design principles for
 
 - [[continuous_time_active_inference|Dynamics]]
 
-- [[spatial_representation|Spatial Variables]]
+- Spatial Variables
 
-- [[physiological_states|Physiological States]]
+- Physiological States
 
 ### 3. Temporal Organization
 
@@ -84,9 +84,9 @@ Model architecture defines the structural organization and design principles for
 
 #### Processing Depth
 
-- [[shallow_models|Shallow Models]] (single timescale)
+- Shallow Models (single timescale)
 
-- [[deep_models|Deep Models]] (multiple timescales)
+- Deep Models (multiple timescales)
 
 - Hybrid Architectures
 
@@ -102,7 +102,7 @@ Model architecture defines the structural organization and design principles for
 
 - [[neural_architectures|Neural Implementation]]
 
-- [[cross_level_interactions|Cross-level Interactions]]
+- Cross-level Interactions
 
 ### 5. Information Flow
 
@@ -125,7 +125,7 @@ See `docs/examples/README.md` for runnable examples.
 
 ### 1. System Definition
 
-1. [[system_boundaries|Identify System Boundaries]]
+1. Identify System Boundaries
 
 1. [[state_space|Define State Space]]
 
@@ -137,7 +137,7 @@ See `docs/examples/README.md` for runnable examples.
 
 ### 2. Model Structure
 
-1. [[variable_types|Choose Variable Types]]
+1. Choose Variable Types
 
 1. [[hierarchical_organization|Define Hierarchy]]
 
@@ -147,33 +147,33 @@ See `docs/examples/README.md` for runnable examples.
 
 ### 3. Temporal Aspects
 
-1. [[timescale_selection|Determine Timescales]]
+1. Determine Timescales
 
-1. [[prediction_horizon|Configure Prediction Horizon]]
+1. Configure Prediction Horizon
 
-1. [[update_schedule|Set Update Schedules]]
+1. Set Update Schedules
 
 1. [[temporal_dependencies|Define Dependencies]]
 
 ### 4. Learning Configuration
 
-1. [[fixed_components|Set Fixed Components]]
+1. Set Fixed Components
 
-1. [[learnable_parameters|Define Parameters]]
+1. Define Parameters
 
-1. [[adaptation_rules|Configure Adaptation]]
+1. Configure Adaptation
 
 1. Set Learning Rates
 
 ### 5. Integration Strategy
 
-1. [[component_integration|Component Integration]]
+1. Component Integration
 
 1. Interface Design
 
 1. Data Flow
 
-1. [[process_coordination|Process Coordination]]
+1. Process Coordination
 
 ## Best Practices
 
@@ -183,19 +183,19 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[computational_efficiency|Ensure Efficiency]]
 
-- [[model_interpretability|Maintain Interpretability]]
+- Maintain Interpretability
 
-- [[system_scalability|Support Scalability]]
+- Support Scalability
 
 ### 2. Implementation Guidelines
 
 - Modular Design
 
-- [[interface_clarity|Clear Interfaces]]
+- Clear Interfaces
 
-- [[error_handling|Error Handling]]
+- Error Handling
 
-- [[testing_strategy|Comprehensive Testing]]
+- Comprehensive Testing
 
 ### 3. Optimization Strategies
 
@@ -203,15 +203,15 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[resource_management|Resource Management]]
 
-- [[complexity_control|Complexity Control]]
+- Complexity Control
 
 - Uncertainty Handling
 
 ### 4. Common Pitfalls
 
-- [[architecture_complexity|Overcomplicated Architectures]]
+- Overcomplicated Architectures
 
-- [[testing_coverage|Insufficient Testing]]
+- Insufficient Testing
 
 - Poor Scalability
 
@@ -239,7 +239,7 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[robotics|Robotics Systems]]
 
-- [[cognitive_agents|Cognitive Agents]]
+- Cognitive Agents
 
 - [[clinical_applications|Clinical Tools]]
 
@@ -249,17 +249,17 @@ See `docs/examples/README.md` for runnable examples.
 
 ### 3. Temporal Applications
 
-- [[sequence_processing|Sequence Processing]]
+- Sequence Processing
 
-- [[planning_control|Planning and Control]]
+- Planning and Control
 
-- [[learning_adaptation|Learning and Adaptation]]
+- Learning and Adaptation
 
 - [[meta_learning|Meta-Learning]]
 
-- [[temporal_prediction|Temporal Prediction]]
+- Temporal Prediction
 
-- [[dynamic_control|Dynamic Control]]
+- Dynamic Control
 
 ### 4. Research Domains
 
@@ -279,41 +279,41 @@ See `docs/examples/README.md` for runnable examples.
 
 ### 1. Component Integration
 
-- [[component_coupling|Component Coupling]]
+- Component Coupling
 
 - Interface Design
 
 - Data Flow
 
-- [[process_synchronization|Process Synchronization]]
+- Process Synchronization
 
 ### 2. Interface Types
 
-- [[data_interfaces|Data Interfaces]]
+- Data Interfaces
 
-- [[control_interfaces|Control Interfaces]]
+- Control Interfaces
 
-- [[event_interfaces|Event Interfaces]]
+- Event Interfaces
 
-- [[resource_interfaces|Resource Interfaces]]
+- Resource Interfaces
 
 ### 3. Integration Patterns
 
 - [[message_passing|Message Passing]]
 
-- [[shared_memory|Shared Memory]]
+- Shared Memory
 
 - Event-Driven
 
-- [[pipeline_processing|Pipeline Processing]]
+- Pipeline Processing
 
 ### 4. System Validation
 
-- [[component_validation|Component Validation]]
+- Component Validation
 
-- [[interface_validation|Interface Validation]]
+- Interface Validation
 
-- [[system_validation|System Validation]]
+- System Validation
 
 - Integration Testing
 
@@ -321,55 +321,55 @@ See `docs/examples/README.md` for runnable examples.
 
 ### 1. Structural Validation
 
-- [[boundary_validation|Boundary Validation]]
+- Boundary Validation
 
-- [[hierarchy_validation|Hierarchy Validation]]
+- Hierarchy Validation
 
-- [[connectivity_validation|Connectivity Validation]]
+- Connectivity Validation
 
-- [[state_space_validation|State Space Validation]]
+- State Space Validation
 
 ### 2. Functional Validation
 
-- [[inference_validation|Inference Validation]]
+- Inference Validation
 
-- [[prediction_validation|Prediction Validation]]
+- Prediction Validation
 
-- [[learning_validation|Learning Validation]]
+- Learning Validation
 
-- [[adaptation_validation|Adaptation Validation]]
+- Adaptation Validation
 
 ### 3. Performance Validation
 
-- [[efficiency_validation|Efficiency Validation]]
+- Efficiency Validation
 
-- [[scalability_validation|Scalability Validation]]
+- Scalability Validation
 
-- [[reliability_validation|Reliability Validation]]
+- Reliability Validation
 
-- [[robustness_validation|Robustness Validation]]
+- Robustness Validation
 
 ### 4. System-Level Validation
 
-- [[integration_validation|Integration Validation]]
+- Integration Validation
 
-- [[behavior_validation|Behavior Validation]]
+- Behavior Validation
 
-- [[requirement_validation|Requirement Validation]]
+- Requirement Validation
 
-- [[specification_validation|Specification Validation]]
+- Specification Validation
 
 ## Implementation Guidelines
 
 ### 1. Code Organization
 
-- [[module_structure|Module Structure]]
+- Module Structure
 
-- [[class_hierarchy|Class Hierarchy]]
+- Class Hierarchy
 
-- [[interface_definitions|Interface Definitions]]
+- Interface Definitions
 
-- [[dependency_management|Dependency Management]]
+- Dependency Management
 
 ### 2. Development Practices
 
@@ -377,29 +377,29 @@ See `docs/examples/README.md` for runnable examples.
 
 - Code Review
 
-- [[testing_practices|Testing Practices]]
+- Testing Practices
 
-- [[documentation_practices|Documentation Practices]]
+- Documentation Practices
 
 ### 3. Quality Assurance
 
 - Code Quality
 
-- [[test_coverage|Test Coverage]]
+- Test Coverage
 
-- [[performance_profiling|Performance Profiling]]
+- Performance Profiling
 
-- [[security_practices|Security Practices]]
+- Security Practices
 
 ### 4. Maintenance Procedures
 
-- [[code_maintenance|Code Maintenance]]
+- Code Maintenance
 
-- [[system_updates|System Updates]]
+- System Updates
 
-- [[bug_tracking|Bug Tracking]]
+- Bug Tracking
 
-- [[feature_management|Feature Management]]
+- Feature Management
 
 ## References
 

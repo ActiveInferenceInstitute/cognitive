@@ -38,11 +38,11 @@ semantic_relations:
 
 ### Related Work
 
-- [[paper1|Related Paper 1]]
+- Related Paper 1
 
-- [[paper2|Related Paper 2]]
+- Related Paper 2
 
-- [[paper3|Related Paper 3]]
+- Related Paper 3
 
 ## Theoretical Framework
 
@@ -259,30 +259,30 @@ parameters:
 
 ### Code References
 
-- [[code1|Code Reference 1]]
+- Code Reference 1
 
-- [[code2|Code Reference 2]]
+- Code Reference 2
 
-- [[code3|Code Reference 3]]
+- Code Reference 3
 
 ### Documentation
 
-- [[doc1|Documentation 1]]
+- Documentation 1
 
-- [[doc2|Documentation 2]]
+- Documentation 2
 
-- [[doc3|Documentation 3]]
+- Documentation 3
 
 ## Related Research
 
 ### Prerequisites
 
-- [[research1|Related Research 1]]
+- Related Research 1
 
-- [[research2|Related Research 2]]
+- Related Research 2
 
 ### Follow-up Work
 
-- [[followup1|Follow-up Research 1]]
+- Follow-up Research 1
 
-- [[followup2|Follow-up Research 2]]
+- Follow-up Research 2

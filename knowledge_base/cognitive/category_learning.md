@@ -17,6 +17,7 @@ semantic_relations:
       - "[[unsupervised_learning]]"
 aliases:
   - concept_learning
+  - category_formation
 ---
 
 # Category Learning

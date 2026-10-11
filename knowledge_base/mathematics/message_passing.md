@@ -31,6 +31,7 @@ semantic_relations:
       - "[[graph_theory]]"
 aliases:
   - expectation_propagation
+  - message_passing_inference
 ---
 
 
@@ -202,7 +203,7 @@ p(\mathbf{x}_f) \propto \psi_f(\mathbf{x}_f) \prod_{x \in N(f)} \mu_{x \to f}(x)
 
 **Loopy Graphs**: Fixed point approximation (when convergent)
 
-Related: [[belief_propagation]], [[factor_graphs]], [[marginal_computation]]
+Related: [[belief_propagation]], [[factor_graphs]], marginal computation
 
 ## Algorithms
 
@@ -324,7 +325,7 @@ end
 
 - Stability analysis
 
-### 2. [[message_approximation|Message Approximation]]
+### 2. Message Approximation
 
 - Particle methods
 
@@ -332,7 +333,7 @@ end
 
 - Discrete approximations
 
-### 3. [[parallel_message_passing|Parallel Message Passing]]
+### 3. Parallel Message Passing
 
 - Asynchronous updates
 
@@ -384,7 +385,7 @@ end
 
 - Gaussian processes
 
-### 3. [[adaptive_message_passing|Adaptive Message Passing]]
+### 3. Adaptive Message Passing
 
 - Dynamic schedules
 

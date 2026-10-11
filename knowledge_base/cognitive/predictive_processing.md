@@ -428,7 +428,7 @@ def train_network(network: PredictiveNetwork,
 
     - [[prior_beliefs]] - Existing knowledge
 
-  - [[bottom_up_prediction_errors]] - Ascending corrections
+  - bottom up prediction errors - Ascending corrections
 
     - [[prediction_error]] - Mismatch signals
 
@@ -444,11 +444,11 @@ def train_network(network: PredictiveNetwork,
 
     - [[gain_control]] - Scaling the influence of signals by their precision
 
-  - [[uncertainty_processing]] - Handling ambiguity
+  - uncertainty processing - Handling ambiguity
 
-    - [[noise_estimation]] - Estimating how unreliable a signal is
+    - noise estimation - Estimating how unreliable a signal is
 
-    - [[confidence_computation]] - Certainty assessment
+    - confidence computation - Certainty assessment
 
 ## Neural Implementation
 
@@ -456,7 +456,7 @@ def train_network(network: PredictiveNetwork,
 
 - cortical hierarchy - Layered organization of cortical areas
 
-  - [[feedforward_connections]] - Ascending pathways
+  - feedforward connections - Ascending pathways
 
     - [[error_signals]] - Prediction error transmission
 
@@ -464,7 +464,7 @@ def train_network(network: PredictiveNetwork,
 
   - [[feedback_connections]] - Descending pathways
 
-    - [[prediction_signals]] - Expectation transmission
+    - prediction signals - Expectation transmission
 
     - [[context_modulation]] - Contextual influence
 
@@ -498,11 +498,11 @@ def train_network(network: PredictiveNetwork,
 
   - [[top_down_attention]] - Goal-directed
 
-  - [[precision_allocation]] - Distributing attention according to estimated precision
+  - precision allocation - Distributing attention according to estimated precision
 
 ### Learning
 
-- [[predictive_learning]] - Knowledge acquisition
+- predictive learning - Knowledge acquisition
 
   - model updating - Belief revision
 
@@ -518,7 +518,7 @@ def train_network(network: PredictiveNetwork,
 
   - [[action_selection]] - Choice making
 
-  - [[behavioral_learning]] - Skill development
+  - behavioral learning - Skill development
 
 ## Applications
 
@@ -548,11 +548,11 @@ def train_network(network: PredictiveNetwork,
 
 - [[psychophysics]] - Measuring relations between stimuli and perception
 
-  - [[illusion_studies]] - Illusions as probes of perceptual priors
+  - illusion studies - Illusions as probes of perceptual priors
 
   - attention tasks - Focus assessment
 
-  - [[learning_experiments]] - Acquisition testing
+  - learning experiments - Acquisition testing
 
 ### Neuroimaging
 
@@ -562,7 +562,7 @@ def train_network(network: PredictiveNetwork,
 
   - [[eeg_recording]] - Scalp recording of fast electrical activity
 
-  - [[meg_analysis]] - Analyzing magnetic fields from neural activity
+  - meg analysis - Analyzing magnetic fields from neural activity
 
 ## Theoretical Extensions
 
@@ -612,5 +612,5 @@ def train_network(network: PredictiveNetwork,
 
 - [[hohwy_predictive_mind]]
 
-- [[seth_cybernetic_bayesian]]
+- seth cybernetic bayesian
 

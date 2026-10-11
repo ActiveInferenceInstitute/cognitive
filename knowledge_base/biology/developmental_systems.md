@@ -563,7 +563,7 @@ Cell state transitions:
 
 - davidson 2006 - "The Regulatory Genome"
 
-- [[thompson_1917]] - "On Growth and Form"
+- thompson 1917 - "On Growth and Form"
 
 ## See Also
 

@@ -17,6 +17,8 @@ semantic_relations:
       - "[[social_neuroscience]]"
       - "[[emotional_processing]]"
       - "[[amygdala]]"
+aliases:
+  - vasopressin_system
 ---
 
 # Vasopressin

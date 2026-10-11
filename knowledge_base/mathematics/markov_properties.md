@@ -85,7 +85,7 @@ where:
 
 ## Mathematical Framework
 
-### 1. [[graph_separation|Graph Separation]]
+### 1. Graph Separation
 
 ```julia
 
@@ -143,7 +143,7 @@ end
 
 ```
 
-### 3. [[factorization|Factorization Properties]]
+### 3. Factorization Properties
 
 ```julia
 
@@ -171,7 +171,7 @@ end
 
 ## Implementations
 
-### 1. [[local_markov|Local Markov]] Verification
+### 1. Local Markov Verification
 
 ```julia
 
@@ -207,7 +207,7 @@ end
 
 ```
 
-### 2. [[global_markov|Global Markov]] Verification
+### 2. Global Markov Verification
 
 ```julia
 
@@ -307,7 +307,7 @@ end
 
 ```
 
-### 2. [[directed_models|Directed Models]]
+### 2. Directed Models
 
 #### Bayesian Networks
 
@@ -371,7 +371,7 @@ end
 
 ## Theoretical Results
 
-### 1. [[equivalence_theorems|Equivalence Theorems]]
+### 1. Equivalence Theorems
 
 ```julia
 
@@ -391,7 +391,7 @@ end
 
 ```
 
-### 2. [[separation_criteria|Separation Criteria]]
+### 2. Separation Criteria
 
 ```julia
 

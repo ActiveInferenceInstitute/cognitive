@@ -15,6 +15,8 @@ semantic_relations:
       - "[[hierarchical_processing]]"
       - "[[bayesian_brain]]"
       - "[[predictive_coding]]"
+aliases:
+  - lateral_interactions
 ---
 
 # Lateral Connections

@@ -438,7 +438,7 @@ Binocular vision is the coordinated use of both eyes to create a single, unified
 
 - [[depth_perception]]
 
-- [[visual_plasticity]]
+- visual plasticity
 
 ## References
 

@@ -21,7 +21,6 @@ semantic_relations:
   - type: implements
     links:
       - "[[hardy_weinberg_equilibrium]]"
-      - "[[selection_theory]]"
       - "[[genetic_drift]]"
   - type: relates
     links:
@@ -587,11 +586,11 @@ class SelectionAnalyzer:
 
 ## References
 
-- [[kimura_1983]] - "The Neutral Theory of Molecular Evolution"
+- kimura 1983 - "The Neutral Theory of Molecular Evolution"
 
-- [[ewens_2004]] - "Mathematical Population Genetics"
+- ewens 2004 - "Mathematical Population Genetics"
 
-- [[wakeley_2008]] - "Coalescent Theory: An Introduction"
+- wakeley 2008 - "Coalescent Theory: An Introduction"
 
 - nielsen 2005 - "Statistical Methods in Molecular Evolution"
 

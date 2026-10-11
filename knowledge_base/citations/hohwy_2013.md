@@ -27,6 +27,8 @@ semantic_relations:
     links:
       - "[[clark_2013]]"
       - "[[andrews_2021]]"
+aliases:
+  - hohwy_predictive_mind
 ---
 
 # The Predictive Mind

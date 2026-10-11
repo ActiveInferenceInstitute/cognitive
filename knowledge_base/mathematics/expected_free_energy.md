@@ -390,7 +390,7 @@ end
 
 ```
 
-### 3. [[goal_directed_behavior|Goal-Directed Behavior]]
+### 3. Goal-Directed Behavior
 
 ```julia
 
@@ -430,7 +430,7 @@ end
 
 ## Theoretical Results
 
-### 1. [[optimality|Optimality]]
+### 1. Optimality
 
 ```julia
 

@@ -22,8 +22,6 @@ semantic_relations:
       - "[[knowledge_base/cognitive/active_inference]]"
   - type: implements
     links:
-      - "[[food_web_dynamics]]"
-      - "[[species_interactions]]"
       - "[[ecosystem_stability]]"
       - "[[knowledge_base/agents/architectures_overview]]"
   - type: relates
@@ -554,23 +552,23 @@ class NetworkInformation:
 
 ### Foundational Texts
 - bascompte 2006 - "The Structure of Plant-Animal Mutualistic Networks"
-- [[newman_2010]] - "Networks: An Introduction"
-- [[proulx_2005]] - "Network Thinking in Ecology and Evolution"
+- newman 2010 - "Networks: An Introduction"
+- proulx 2005 - "Network Thinking in Ecology and Evolution"
 
 ### Theoretical Ecology
-- [[may_1972]] - "Will a Large Complex System be Stable?"
-- [[macarthur_1955]] - "On the Relation Between Reproductive Value and Optimal Predation"
-- [[levins_1968]] - "Evolution in Changing Environments"
+- may 1972 - "Will a Large Complex System be Stable?"
+- macarthur 1955 - "On the Relation Between Reproductive Value and Optimal Predation"
+- levins 1968 - "Evolution in Changing Environments"
 
 ### Information Theory in Ecology
-- [[utoft_1973]] - "Information Theory in Ecology"
-- [[matsuda_1992]] - "The Role of Information in Complex Systems"
+- utoft 1973 - "Information Theory in Ecology"
+- matsuda 1992 - "The Role of Information in Complex Systems"
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
 ### Network Analysis
-- [[borgatti_2009]] - "Network Analysis for the Social Sciences"
-- [[brandes_2005]] - "Network Analysis: Methodological Foundations"
-- [[barabasi_2016]] - "Network Science"
+- borgatti 2009 - "Network Analysis for the Social Sciences"
+- brandes 2005 - "Network Analysis: Methodological Foundations"
+- barabasi 2016 - "Network Science"
 
 ## See Also
 

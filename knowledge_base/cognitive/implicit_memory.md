@@ -21,6 +21,8 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[procedural_memory]]"
       - "[[priming_effects]]"
+aliases:
+  - non_declarative_memory
 ---
 
 

@@ -15,6 +15,8 @@ semantic_relations:
       - "[[allostatic_regulation]]"
       - "[[emotional_processing]]"
       - "[[homeostasis]]"
+aliases:
+  - cortisol_system
 ---
 
 # Cortisol

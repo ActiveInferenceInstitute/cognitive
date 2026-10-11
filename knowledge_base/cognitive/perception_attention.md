@@ -53,7 +53,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
     - [[proximity]] - Grouping elements that are near each other
 
-    - [[similarity]] - Grouping elements that look alike
+    - similarity - Grouping elements that look alike
 
   - figure ground - Separating an object from its background
 
@@ -81,7 +81,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 ### Sensory Networks
 
-- [[sensory_pathways]] - Input paths
+- sensory pathways - Input paths
 
   - primary areas - First cortical stage of sensory processing
 
@@ -91,7 +91,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
   - [[association_areas]] - Higher cortical areas combining sensory information
 
-    - [[temporal_cortex]] - Region for recognizing objects
+    - temporal cortex - Region for recognizing objects
 
     - [[parietal_cortex]] - Region for spatial processing
 
@@ -135,19 +135,19 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
   - [[feature_extraction]] - Pulling basic properties from the input
 
-    - [[basic_features]] - Simple properties such as orientation
+    - basic features - Simple properties such as orientation
 
-    - [[complex_features]] - Combinations of simple properties
+    - complex features - Combinations of simple properties
 
   - [[salience_detection]] - Detecting what stands out
 
     - novelty - Standing out because it is new
 
-    - [[contrast]] - Standing out because it differs from surroundings
+    - contrast - Standing out because it differs from surroundings
 
 ### Top-down Processing
 
-- [[knowledge_driven]] - Processing led by prior knowledge and goals
+- knowledge driven - Processing led by prior knowledge and goals
 
   - [[expectation_effects]] - Expectations shaping what is perceived
 
@@ -155,11 +155,11 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
     - [[context_effects]] - Surroundings shaping interpretation
 
-  - [[goal_directed]] - Processing led by current goals
+  - goal directed - Processing led by current goals
 
     - task sets - Configurations of attention for a task
 
-    - [[search_templates]] - Mental targets used during visual search
+    - search templates - Mental targets used during visual search
 
 ### Resource Management
 
@@ -167,7 +167,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
   - [[capacity_limits]] - Limits on how much can be processed
 
-    - [[processing_load]] - Amount of information being processed
+    - processing load - Amount of information being processed
 
     - [[interference]] - Competing inputs degrading performance
 
@@ -175,7 +175,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
     - [[automaticity]] - Processing that needs no conscious effort
 
-    - [[effort]] - Deliberate mental exertion
+    - effort - Deliberate mental exertion
 
 ## Perceptual Phenomena
 
@@ -185,15 +185,15 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
   - [[size_constancy]] - Perceived size staying stable
 
-    - [[distance_scaling]] - Adjusting size estimates for distance
+    - distance scaling - Adjusting size estimates for distance
 
-    - [[context_scaling]] - Adjusting size estimates using surrounding cues
+    - context scaling - Adjusting size estimates using surrounding cues
 
   - [[shape_constancy]] - Perceived shape staying stable
 
-    - [[orientation]] - Perceived shape staying stable despite tilt
+    - orientation - Perceived shape staying stable despite tilt
 
-    - [[viewpoint]] - Perceived shape staying stable across viewing angles
+    - viewpoint - Perceived shape staying stable across viewing angles
 
 ### Illusions
 
@@ -201,15 +201,15 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
   - visual illusions - Illusions in vision
 
-    - [[geometric]] - Illusions of size, length, or angle
+    - geometric - Illusions of size, length, or angle
 
-    - [[motion]] - Illusions of apparent movement
+    - motion - Illusions of apparent movement
 
   - [[crossmodal_illusions]] - Illusions from interaction between senses
 
     - [[audio_visual]] - Sound altering what is seen, or reverse
 
-    - [[tactile_visual]] - Touch and vision altering each other
+    - tactile visual - Touch and vision altering each other
 
 ### Adaptation
 
@@ -217,15 +217,15 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
   - [[light_adaptation]] - Adjusting vision to changing light levels
 
-    - [[dark_adapt]] - Gaining sensitivity in dim light
+    - dark adapt - Gaining sensitivity in dim light
 
-    - [[bright_adapt]] - Losing sensitivity in bright light
+    - bright adapt - Losing sensitivity in bright light
 
-  - [[motion_adaptation]] - Reduced response to constant motion
+  - motion adaptation - Reduced response to constant motion
 
-    - [[after_effects]] - Illusory motion after prolonged viewing
+    - after effects - Illusory motion after prolonged viewing
 
-    - [[motion_null]] - Condition where no motion is perceived
+    - motion null - Condition where no motion is perceived
 
 ## Applications
 
@@ -239,7 +239,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
     - [[auditory_agnosia]] - Failure to recognize sounds
 
-  - [[attention_disorders]] - Conditions that impair attention
+  - attention disorders - Conditions that impair attention
 
     - [[neglect]] - Ignoring one side of space
 
@@ -247,23 +247,23 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 ### Technology Applications
 
-- [[perception_technology]] - Technology that supports perception
+- perception technology - Technology that supports perception
 
-  - [[display_systems]] - Devices that present information
+  - display systems - Devices that present information
 
-    - [[visual_displays]] - Screens presenting visual information
+    - visual displays - Screens presenting visual information
 
-    - [[auditory_displays]] - Systems presenting information as sound
+    - auditory displays - Systems presenting information as sound
 
   - attention support - Tools that help direct attention
 
-    - [[alert_systems]] - Systems that warn of important events
+    - alert systems - Systems that warn of important events
 
-    - [[filter_systems]] - Systems that screen out irrelevant information
+    - filter systems - Systems that screen out irrelevant information
 
 ### Enhancement Methods
 
-- [[perception_training]] - Training that improves perception
+- perception training - Training that improves perception
 
   - [[perceptual_learning]] - Improved perception through practice
 
@@ -281,7 +281,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 ### Psychophysics
 
-- [[behavioral_methods]] - Measures based on behavioral responses
+- behavioral methods - Measures based on behavioral responses
 
   - [[threshold_measurement]] - Finding the smallest detectable stimulus
 
@@ -289,11 +289,11 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
     - [[discrimination]] - Measuring the smallest noticeable difference
 
-  - [[scaling_methods]] - Ways of measuring perceived intensity
+  - scaling methods - Ways of measuring perceived intensity
 
-    - [[magnitude]] - Rating the perceived size of a stimulus
+    - magnitude - Rating the perceived size of a stimulus
 
-    - [[matching]] - Adjusting one stimulus to equal another
+    - matching - Adjusting one stimulus to equal another
 
 ### Neural Recording
 
@@ -315,7 +315,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 - [[perception_models]] - Formal models of perception and attention
 
-  - [[feature_models]] - Models built on feature processing
+  - feature models - Models built on feature processing
 
     - [[filter_theory]] - Models where filters select inputs
 
@@ -325,7 +325,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
     - [[spotlight]] - Attention as a movable beam
 
-    - [[resource]] - Attention as a limited shared supply
+    - resource - Attention as a limited shared supply
 
 ## Future Directions
 
@@ -333,7 +333,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 - [[binding_problem]] - How features are joined into one object
 
-- [[consciousness_link]] - Relation between perception and awareness
+- consciousness link - Relation between perception and awareness
 
 - [[individual_differences]] - Variation between people
 
@@ -341,17 +341,17 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
 - real time methods - Measures taken during ongoing activity
 
-  - [[mobile_recording]] - Recording while people move around
+  - mobile recording - Recording while people move around
 
     - eye tracking - Recording where the eyes look
 
-    - [[motion_capture]] - Recording body movement
+    - motion capture - Recording body movement
 
-  - [[natural_tasks]] - Tasks resembling everyday activity
+  - natural tasks - Tasks resembling everyday activity
 
-    - [[ecological]] - Studying perception in real settings
+    - ecological - Studying perception in real settings
 
-    - [[social]] - Studying perception in social settings
+    - social - Studying perception in social settings
 
 ## References
 

@@ -24,6 +24,8 @@ semantic_relations:
     links:
       - "[[active_inference_theory]]"
       - "[[knowledge_base/cognitive/active_inference]]"
+aliases:
+  - probabilistic_programming_languages
 ---
 
 # Probabilistic Programming

@@ -17,6 +17,8 @@ semantic_relations:
       - "[[parameter_estimation]]"
       - "[[maximum_likelihood]]"
       - "[[statistical_foundations]]"
+aliases:
+  - cramer_rao
 ---
 
 # Cramér-Rao Bound

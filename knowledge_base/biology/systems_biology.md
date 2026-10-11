@@ -22,7 +22,6 @@ semantic_relations:
       - "[[complex_systems]]"
   - type: implements
     links:
-      - "[[cellular_systems]]"
       - "[[metabolic_networks]]"
   - type: relates
     links:
@@ -538,7 +537,7 @@ class CellularSystem:
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
-- [[kitano_2002]] - "Systems Biology: A Brief Overview"
+- kitano 2002 - "Systems Biology: A Brief Overview"
 
 - parr 2020 - "Markov Blankets, Information Geometry and Stochastic Thermodynamics"
 

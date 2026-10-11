@@ -476,9 +476,9 @@ def train_network(network: PrecisionNetwork,
 
 ## References
 
-- [[precision_theory]]
+- precision theory
 
-- [[attention_theory]]
+- attention theory
 
 - [[cognitive_science]]
 

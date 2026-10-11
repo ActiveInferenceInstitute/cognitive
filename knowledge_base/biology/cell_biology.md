@@ -683,12 +683,12 @@ class CellSignalingNetwork:
 ### Foundational Texts
 - alberts 2014 - "Molecular Biology of the Cell, 6th Edition"
 - phillips 2012 - "Physical Biology of the Cell, 2nd Edition"
-- [[pollard_2016]] - "Cell Biology, 3rd Edition"
+- pollard 2016 - "Cell Biology, 3rd Edition"
 
 ### Specialized Topics
-- [[howard_2001]] - "Mechanics of Motor Proteins and the Cytoskeleton"
-- [[bray_2001]] - "Cell Movements: From Molecules to Motility"
-- [[karp_2010]] - "Cell and Molecular Biology: Concepts and Experiments"
+- howard 2001 - "Mechanics of Motor Proteins and the Cytoskeleton"
+- bray 2001 - "Cell Movements: From Molecules to Motility"
+- karp 2010 - "Cell and Molecular Biology: Concepts and Experiments"
 
 ### Active Inference Applications
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"

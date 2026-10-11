@@ -53,7 +53,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
     - visual awareness - Sight experience
 
-    - [[auditory_awareness]] - Sound experience
+    - auditory awareness - Sound experience
 
   - cognitive consciousness - Thought awareness
 
@@ -65,7 +65,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 - [[self_consciousness]] - Self-knowledge
 
-  - [[bodily_awareness]] - Awareness of one's own body
+  - bodily awareness - Awareness of one's own body
 
     - [[body_schema]] - Body representation
 
@@ -75,7 +75,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
     - [[self_reflection]] - Inner examination
 
-    - [[agency_awareness]] - Action ownership
+    - agency awareness - Action ownership
 
 ## Neural Implementation
 
@@ -119,7 +119,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
     - [[reticular_activation]] - Brainstem network driving cortical arousal
 
-    - [[thalamic_regulation]] - Thalamic control of information flow to cortex
+    - thalamic regulation - Thalamic control of information flow to cortex
 
   - neurotransmitter systems - Chemical signaling that modulates awareness
 
@@ -141,7 +141,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
   - [[exclusion_principle]] - Only one maximally integrated boundary is conscious
 
-    - [[spatiotemporal_grain]] - Spatial and temporal resolution of conscious elements
+    - spatiotemporal grain - Spatial and temporal resolution of conscious elements
 
     - [[causal_exclusion]] - Only the maximal cause-effect structure counts
 
@@ -181,15 +181,15 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 ### Behavioral Methods
 
-- [[consciousness_tasks]] - Tasks for studying and measuring awareness
+- consciousness tasks - Tasks for studying and measuring awareness
 
-  - [[report_paradigms]] - Explicit measures
+  - report paradigms - Explicit measures
 
-    - [[subjective_reports]] - Participants' own accounts of experience
+    - subjective reports - Participants' own accounts of experience
 
     - [[confidence_ratings]] - Participants' self-rated certainty
 
-  - [[implicit_measures]] - Indirect tests
+  - implicit measures - Indirect tests
 
     - [[priming_effects]] - Influence of stimuli not consciously perceived
 
@@ -197,13 +197,13 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 ### Neural Measures
 
-- [[consciousness_imaging]] - Imaging brain activity during awareness tasks
+- consciousness imaging - Imaging brain activity during awareness tasks
 
   - [[contrastive_analysis]] - Comparing conscious and unconscious conditions
 
-    - [[seen_unseen]] - Contrast between seen and unseen stimuli
+    - seen unseen - Contrast between seen and unseen stimuli
 
-    - [[conscious_unconscious]] - Contrast between conscious and unconscious processing
+    - conscious unconscious - Contrast between conscious and unconscious processing
 
   - [[connectivity_analysis]] - Measuring interactions between brain regions
 
@@ -213,13 +213,13 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 ### Manipulation Methods
 
-- [[consciousness_manipulation]] - Experimentally altering conscious state
+- consciousness manipulation - Experimentally altering conscious state
 
-  - [[stimulation_methods]] - Direct stimulation of brain tissue
+  - stimulation methods - Direct stimulation of brain tissue
 
     - [[tms]] - Transcranial magnetic stimulation
 
-    - [[tdes]] - Transcranial electrical stimulation
+    - tdes - Transcranial electrical stimulation
 
   - pharmacological - Drug-based manipulation
 
@@ -241,41 +241,41 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
   - locked in - Awareness intact
 
-    - [[complete]] - Total paralysis
+    - complete - Total paralysis
 
-    - [[incomplete]] - Partial movement
+    - incomplete - Partial movement
 
 ### Assessment Tools
 
-- [[consciousness_assessment]] - Evaluation
+- consciousness assessment - Evaluation
 
-  - [[behavioral_scales]] - Bedside scales rating behavioral responses
+  - behavioral scales - Bedside scales rating behavioral responses
 
     - [[coma_scale]] - Scale rating eye, verbal, and motor responses
 
-    - [[awareness_scale]] - Scale rating level of awareness
+    - awareness scale - Scale rating level of awareness
 
   - brain measures - Neural tests
 
-    - [[eeg_markers]] - EEG signatures of conscious state
+    - eeg markers - EEG signatures of conscious state
 
-    - [[imaging_markers]] - Imaging signatures of conscious state
+    - imaging markers - Imaging signatures of conscious state
 
 ### Treatment Approaches
 
-- [[consciousness_treatment]] - Intervention
+- consciousness treatment - Intervention
 
   - pharmacological - Drug therapy
 
     - [[stimulants]] - Drugs that raise arousal
 
-    - [[modulators]] - Drugs that adjust neurotransmitter activity
+    - modulators - Drugs that adjust neurotransmitter activity
 
   - stimulation - Brain stimulation therapy
 
-    - [[deep_brain]] - Implanted electrodes stimulating deep structures
+    - deep brain - Implanted electrodes stimulating deep structures
 
-    - [[transcranial]] - Non-invasive stimulation through the skull
+    - transcranial - Non-invasive stimulation through the skull
 
 ## Philosophical Aspects
 
@@ -289,11 +289,11 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
     - [[explanatory_gap]] - Gap between physical explanation and experience
 
-  - [[consciousness_emergence]] - How consciousness arises from brain activity
+  - consciousness emergence - How consciousness arises from brain activity
 
-    - [[physical_basis]] - Consciousness grounded in physical processes
+    - physical basis - Consciousness grounded in physical processes
 
-    - [[information_basis]] - Consciousness grounded in information structure
+    - information basis - Consciousness grounded in information structure
 
 ### Unity Problem
 
@@ -305,7 +305,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
     - [[spatial_binding]] - Combining features at a location into one object
 
-  - [[self_unity]] - Sense of being one continuous self
+  - self unity - Sense of being one continuous self
 
     - [[narrative_self]] - Self built from a life story
 
@@ -319,13 +319,13 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
     - intention - Mental state directing an action
 
-    - [[decision]] - Choosing among options
+    - decision - Choosing among options
 
-  - [[conscious_control]] - Conscious influence over action
+  - conscious control - Conscious influence over action
 
-    - [[veto_power]] - Ability to cancel an action before execution
+    - veto power - Ability to cancel an action before execution
 
-    - [[action_awareness]] - Awareness of one's own actions
+    - action awareness - Awareness of one's own actions
 
 ## Future Directions
 
@@ -333,9 +333,9 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 - [[measurement_problem]] - Difficulty measuring consciousness objectively
 
-- [[neural_basis]] - Brain mechanisms underlying consciousness
+- neural basis - Brain mechanisms underlying consciousness
 
-- [[clinical_translation]] - Applying findings in patient care
+- clinical translation - Applying findings in patient care
 
 ### Emerging Approaches
 

@@ -46,9 +46,9 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - drowsiness - Reduced awareness
 
-      - [[sleep_onset]] - Sleep transition
+      - sleep onset - Sleep transition
 
-      - [[consciousness_fluctuation]] - Moment-to-moment variation in awareness
+      - consciousness fluctuation - Moment-to-moment variation in awareness
 
   - altered states - Modified consciousness
 
@@ -72,11 +72,11 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - visual awareness - Sight experience
 
-      - [[object_consciousness]] - Awareness of objects
+      - object consciousness - Awareness of objects
 
-      - [[spatial_consciousness]] - Awareness of spatial layout
+      - spatial consciousness - Awareness of spatial layout
 
-    - [[bodily_consciousness]] - Experience of one's own body
+    - bodily consciousness - Experience of one's own body
 
       - [[interoception]] - Internal sensing
 
@@ -92,15 +92,15 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - [[emotional_awareness]] - Awareness of one's own emotions
 
-      - [[affect_consciousness]] - Felt experience of emotion
+      - affect consciousness - Felt experience of emotion
 
-      - [[mood_awareness]] - Awareness of one's current mood
+      - mood awareness - Awareness of one's current mood
 
 ### Self-Awareness
 
 - [[self_consciousness]] - Self-knowledge
 
-  - [[bodily_self]] - Sense of the body as one's own
+  - bodily self - Sense of the body as one's own
 
     - [[body_ownership]] - Feeling that the body is one's own
 
@@ -108,25 +108,25 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
       - [[peripersonal_space]] - Space immediately around the body
 
-    - [[agency_experience]] - Feeling of controlling one's actions
+    - agency experience - Feeling of controlling one's actions
 
-      - [[action_ownership]] - Sense that an action is one's own
+      - action ownership - Sense that an action is one's own
 
       - [[effort_sense]] - Felt sense of exerted effort
 
-  - [[psychological_self]] - Sense of oneself as a thinker with traits
+  - psychological self - Sense of oneself as a thinker with traits
 
     - [[self_reflection]] - Examining one's own thoughts and motives
 
       - [[self_knowledge]] - Beliefs about one's own traits and abilities
 
-      - [[self_evaluation]] - Judging one's own qualities and performance
+      - self evaluation - Judging one's own qualities and performance
 
     - [[autobiographical_self]] - Self defined by personal history
 
       - [[personal_identity]] - Sense of being the same person over time
 
-      - [[life_narrative]] - Story a person tells about their life
+      - life narrative - Story a person tells about their life
 
 ## Neural Implementation
 
@@ -144,7 +144,7 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - [[posterior_cingulate]] - Hub of the default-mode network
 
-      - [[autobiographical_processing]] - Retrieving and constructing personal memories
+      - autobiographical processing - Retrieving and constructing personal memories
 
       - [[scene_construction]] - Imagining coherent scenes from memory
 
@@ -174,23 +174,23 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
       - [[spatial_binding]] - Combining features at a location into one object
 
-    - [[semantic_binding]] - Combining meaning elements into one concept
+    - semantic binding - Combining meaning elements into one concept
 
-      - [[concept_integration]] - Merging concepts into new ones
+      - concept integration - Merging concepts into new ones
 
-      - [[context_binding]] - Linking content to its context
+      - context binding - Linking content to its context
 
   - [[global_workspace]] - Broadcast of information across brain systems
 
     - [[broadcast_mechanisms]] - Spreading information to many brain areas
 
-      - [[cortical_broadcast]] - Spread of signals across the cortex
+      - cortical broadcast - Spread of signals across the cortex
 
       - [[feedback_loops]] - Recurrent signals from higher to lower areas
 
     - access mechanisms - Making information available for reasoning and report
 
-      - [[attention_gating]] - Attention controlling which content gains access
+      - attention gating - Attention controlling which content gains access
 
       - memory access - Retrieving stored information into awareness
 
@@ -202,27 +202,27 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - [[reticular_activation]] - Brainstem network driving cortical arousal
 
-      - [[brainstem_arousal]] - Brainstem nuclei sustaining wakefulness
+      - brainstem arousal - Brainstem nuclei sustaining wakefulness
 
       - [[thalamic_relay]] - Thalamic transmission of signals to cortex
 
-    - [[cortical_activation]] - Cortical activity raised by arousal systems
+    - cortical activation - Cortical activity raised by arousal systems
 
       - [[cholinergic_system]] - Acetylcholine-based arousal system
 
       - [[noradrenergic_system]] - Norepinephrine-based arousal system
 
-  - [[state_regulation]] - Regulation of the level of conscious state
+  - state regulation - Regulation of the level of conscious state
 
     - [[homeostatic_control]] - Keeping physiological variables in balance
 
-      - [[sleep_regulation]] - Control of sleep timing and depth
+      - sleep regulation - Control of sleep timing and depth
 
-      - [[energy_regulation]] - Regulation of metabolic energy use
+      - energy regulation - Regulation of metabolic energy use
 
-    - [[circadian_control]] - Control by the roughly 24-hour body clock
+    - circadian control - Control by the roughly 24-hour body clock
 
-      - [[daily_rhythm]] - Daily cycle of sleep and wake
+      - daily rhythm - Daily cycle of sleep and wake
 
       - [[state_transitions]] - Switches between conscious states
 
@@ -236,9 +236,9 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - competition - Selection of content for broadcast
 
-      - [[attention_competition]] - Competition among stimuli for attention
+      - attention competition - Competition among stimuli for attention
 
-      - [[memory_competition]] - Competition among memories for retrieval
+      - memory competition - Competition among memories for retrieval
 
     - [[broadcast]] - Sharing information across brain systems
 
@@ -250,15 +250,15 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - reportability - Ability to report an experience
 
-      - [[verbal_report]] - Describing an experience in words
+      - verbal report - Describing an experience in words
 
-      - [[behavioral_report]] - Indicating an experience through action
+      - behavioral report - Indicating an experience through action
 
     - cognitive access - Availability of content to cognitive systems
 
-      - [[deliberate_control]] - Planned, effortful control of action
+      - deliberate control - Planned, effortful control of action
 
-      - [[rational_thought]] - Reasoning that draws on conscious content
+      - rational thought - Reasoning that draws on conscious content
 
 ### Integrated Information Theory
 
@@ -266,7 +266,7 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
   - [[phi_measure]] - Measure of integrated information
 
-    - [[causal_power]] - Ability of a system to affect itself
+    - causal power - Ability of a system to affect itself
 
       - [[effective_information]] - Information generated by a system's cause-effect structure
 
@@ -274,23 +274,23 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - information structure - Structure of cause-effect relations in a system
 
-      - [[compositional_information]] - Information carried by combinations of parts
+      - compositional information - Information carried by combinations of parts
 
-      - [[exclusion_information]] - Information defining a single maximal boundary
+      - exclusion information - Information defining a single maximal boundary
 
-  - [[consciousness_structure]] - Structure of conscious experience
+  - consciousness structure - Structure of conscious experience
 
-    - [[qualia_space]] - Space of possible experiences
+    - qualia space - Space of possible experiences
 
-      - [[experience_structure]] - Internal structure of a single experience
+      - experience structure - Internal structure of a single experience
 
-      - [[phenomenal_organization]] - Organization of experienced elements
+      - phenomenal organization - Organization of experienced elements
 
-    - [[conceptual_structure]] - Structure of concepts in the mind
+    - conceptual structure - Structure of concepts in the mind
 
-      - [[concept_space]] - Space of possible concepts
+      - concept space - Space of possible concepts
 
-      - [[meaning_structure]] - Structure of relations that give meaning
+      - meaning structure - Structure of relations that give meaning
 
 ### Predictive Processing
 
@@ -302,7 +302,7 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
       - [[prior_beliefs]] - Expectations held before new evidence
 
-      - [[model_predictions]] - Predictions generated by the internal model
+      - model predictions - Predictions generated by the internal model
 
     - bottom up errors - Prediction errors passed up the hierarchy
 
@@ -314,15 +314,15 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - [[perceptual_inference]] - Inferring causes of sensory input
 
-      - [[scene_prediction]] - Predicting the layout of a scene
+      - scene prediction - Predicting the layout of a scene
 
-      - [[object_prediction]] - Predicting which objects are present
+      - object prediction - Predicting which objects are present
 
     - [[active_inference]] - Acting to fulfill predictions
 
       - [[action_selection]] - Choosing actions that minimize expected free energy
 
-      - [[behavior_prediction]] - Predicting the outcomes of one's behavior
+      - behavior prediction - Predicting the outcomes of one's behavior
 
 ## Applications
 
@@ -348,9 +348,9 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - [[delirium]] - Acute confusion with fluctuating attention
 
-      - [[attention_disorder]] - Impaired ability to focus attention
+      - attention disorder - Impaired ability to focus attention
 
-      - [[awareness_fluctuation]] - Shifts in level of awareness over time
+      - awareness fluctuation - Shifts in level of awareness over time
 
     - [[dissociation]] - Disruption of integrated perception, memory, or identity
 
@@ -360,23 +360,23 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
 ### Research Methods
 
-- [[consciousness_methods]] - Methods for studying consciousness
+- consciousness methods - Methods for studying consciousness
 
   - behavioral measures - Assessing awareness from behavior
 
-    - [[report_methods]] - Assessing awareness from participant reports
+    - report methods - Assessing awareness from participant reports
 
-      - [[subjective_scales]] - Scales rating subjective experience
+      - subjective scales - Scales rating subjective experience
 
       - [[confidence_ratings]] - Participants' self-rated certainty
 
-    - [[objective_measures]] - Awareness inferred from task performance
+    - objective measures - Awareness inferred from task performance
 
       - performance tests - Accuracy-based tests of perception
 
-      - [[response_measures]] - Responses recorded during tasks
+      - response measures - Responses recorded during tasks
 
-  - [[neural_measures]] - Brain-based indicators of awareness
+  - neural measures - Brain-based indicators of awareness
 
     - imaging methods - Brain imaging techniques
 
@@ -386,9 +386,9 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - [[electrophysiology]] - Recording electrical brain activity
 
-      - [[neural_signatures]] - Brain activity patterns tied to awareness
+      - neural signatures - Brain activity patterns tied to awareness
 
-      - [[state_markers]] - Indicators of conscious state
+      - state markers - Indicators of conscious state
 
 ### Enhancement Applications
 
@@ -396,31 +396,31 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
   - awareness training - Training that improves awareness
 
-    - [[meditation_practice]] - Practice that trains attention and awareness
+    - meditation practice - Practice that trains attention and awareness
 
       - [[attention_training]] - Training to improve attentional control
 
-      - [[awareness_cultivation]] - Developing sustained awareness
+      - awareness cultivation - Developing sustained awareness
 
-    - [[metacognitive_training]] - Training to monitor one's own thinking
+    - metacognitive training - Training to monitor one's own thinking
 
-      - [[monitoring_training]] - Training to monitor mental states
+      - monitoring training - Training to monitor mental states
 
       - control training - Training to regulate mental states
 
   - state optimization - Tuning mental state for performance
 
-    - [[peak_performance]] - Performing at the highest level
+    - peak performance - Performing at the highest level
 
-      - [[flow_cultivation]] - Fostering states of absorbed engagement
+      - flow cultivation - Fostering states of absorbed engagement
 
-      - [[optimal_arousal]] - Arousal level that best supports performance
+      - optimal arousal - Arousal level that best supports performance
 
-    - [[recovery_enhancement]] - Improving mental and physical recovery
+    - recovery enhancement - Improving mental and physical recovery
 
-      - [[sleep_optimization]] - Improving sleep quality and timing
+      - sleep optimization - Improving sleep quality and timing
 
-      - [[restoration_methods]] - Methods for restoring energy and focus
+      - restoration methods - Methods for restoring energy and focus
 
 ## Future Directions
 
@@ -428,15 +428,15 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
 - [[measurement_problem]] - Difficulty measuring consciousness objectively
 
-  - [[subjective_objective]] - Gap between experience and measurement
+  - subjective objective - Gap between experience and measurement
 
-  - [[state_classification]] - Sorting states of consciousness into types
+  - state classification - Sorting states of consciousness into types
 
 - mechanism understanding - Understanding how consciousness is produced
 
   - neural correlates - Brain activity associated with consciousness
 
-  - [[causal_mechanisms]] - Mechanisms that cause consciousness
+  - causal mechanisms - Mechanisms that cause consciousness
 
 ### Emerging Approaches
 
@@ -446,13 +446,13 @@ Consciousness and Awareness encompass the fundamental aspects of subjective expe
 
     - state monitoring - Tracking the current state of consciousness
 
-    - [[content_tracking]] - Tracking what is being experienced
+    - content tracking - Tracking what is being experienced
 
-  - [[intervention_development]] - Developing treatments for consciousness disorders
+  - intervention development - Developing treatments for consciousness disorders
 
-    - [[targeted_stimulation]] - Stimulating specific brain regions
+    - targeted stimulation - Stimulating specific brain regions
 
-    - [[chemical_modulation]] - Using drugs to alter conscious state
+    - chemical modulation - Using drugs to alter conscious state
 
 ## References
 

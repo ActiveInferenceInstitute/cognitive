@@ -10,6 +10,8 @@ tags:
 - undirected-graphs
 aliases:
   - undirected_graphical_models
+  - markov_networks
+  - undirected_models
 semantic_relations:
   - type: foundation
     links:
@@ -75,7 +77,7 @@ where E_c are energy functions
 
 ## Core Components
 
-### 1. [[graph_structure|Graph Structure]]
+### 1. Graph Structure
 
 ```julia
 
@@ -453,7 +455,7 @@ end
 
 ## Applications
 
-### 1. [[image_processing|Image Processing]]
+### 1. Image Processing
 
 #### Image Segmentation
 
@@ -539,7 +541,7 @@ end
 
 ## Integration with Other Models
 
-### 1. [[conversion_methods|Conversion Methods]]
+### 1. Conversion Methods
 
 #### From Bayesian Network
 

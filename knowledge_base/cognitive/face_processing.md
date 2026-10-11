@@ -19,6 +19,7 @@ semantic_relations:
 aliases:
   - face_circuits
   - fusiform_face
+  - face_recognition
 ---
 
 # Face Processing

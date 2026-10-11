@@ -64,17 +64,17 @@ paper:
 
   - [[experiment_design]]
 
-  - [[data_collection]]
+  - data collection
 
-  - [[result_analysis]]
+  - result analysis
 
-  - [[replication_protocols]]
+  - replication protocols
 
 ### 3. Knowledge Synthesis
 
 - **Integration Patterns**
 
-  - [[literature_review]]
+  - literature review
 
   - concept mapping
 
@@ -102,11 +102,11 @@ graph TD
 
 - **Structured Learning**
 
-  - [[foundational_concepts]]
+  - foundational concepts
 
-  - [[intermediate_topics]]
+  - intermediate topics
 
-  - [[advanced_applications]]
+  - advanced applications
 
 ### 3. Interactive Learning
 
@@ -142,9 +142,9 @@ class ActiveInferenceAgent:
 
 - **Hierarchical Structure**
 
-  - [[concept_hierarchy]]
+  - concept hierarchy
 
-  - [[relationship_mapping]]
+  - relationship mapping
 
   - [[knowledge_graphs]]
 
@@ -178,11 +178,11 @@ class ActiveInferenceAgent:
 
 - **Learning Assessment**
 
-  - [[skill_progression]]
+  - skill progression
 
-  - [[knowledge_gaps]]
+  - knowledge gaps
 
-  - [[mastery_criteria]]
+  - mastery criteria
 
 ## Research Tools
 
@@ -214,9 +214,9 @@ def analyze_literature():
 
 - **Research Support**
 
-  - [[data_collection_tools]]
+  - data collection tools
 
-  - [[analysis_scripts]]
+  - analysis scripts
 
   - [[visualization_tools]]
 
@@ -226,7 +226,7 @@ def analyze_literature():
 
   - version control
 
-  - [[peer_review]]
+  - peer review
 
   - knowledge sharing
 
@@ -260,7 +260,7 @@ def generate_tutorial():
 
 - **Learning Evaluation**
 
-  - [[quiz_generation]]
+  - quiz generation
 
   - progress tracking
 
@@ -270,11 +270,11 @@ def generate_tutorial():
 
 - **Hands-on Learning**
 
-  - [[code_playgrounds]]
+  - code playgrounds
 
-  - [[interactive_notebooks]]
+  - interactive notebooks
 
-  - [[simulation_environments]]
+  - simulation environments
 
 ## Integration Benefits
 
@@ -298,21 +298,21 @@ graph LR
 
 - **Bidirectional Transfer**
 
-  - [[research_to_education]]
+  - research to education
 
-  - [[education_to_research]]
+  - education to research
 
-  - [[practice_to_theory]]
+  - practice to theory
 
 ### 3. Continuous Improvement
 
 - **Iterative Development**
 
-  - [[feedback_incorporation]]
+  - feedback incorporation
 
-  - [[content_refinement]]
+  - content refinement
 
-  - [[system_evolution]]
+  - system evolution
 
 ## Best Practices
 
@@ -320,11 +320,11 @@ graph LR
 
 - **Scientific Rigor**
 
-  - [[methodology_documentation]]
+  - methodology documentation
 
-  - [[result_reproduction]]
+  - result reproduction
 
-  - [[peer_review_process]]
+  - peer review process
 
 ### 2. Educational Content
 
@@ -332,9 +332,9 @@ graph LR
 
   - learning objectives
 
-  - [[content_structure]]
+  - content structure
 
-  - [[assessment_design]]
+  - assessment design
 
 ### 3. Integration Methods
 
@@ -342,9 +342,9 @@ graph LR
 
   - workflow integration
 
-  - [[tool_compatibility]]
+  - tool compatibility
 
-  - [[system_coherence]]
+  - system coherence
 
 ## Implementation Examples
 
@@ -400,9 +400,9 @@ module:
 
 - research methodology
 
-- [[educational_theory]]
+- educational theory
 
 - [[knowledge_organization]]
 
-- [[learning_science]]
+- learning science
 

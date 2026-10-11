@@ -207,10 +207,12 @@ produced a wrong or arbitrary result now raise `ValueError`.
   positions and molecular biology. Worked examples are computed with the package and
   quote the numbers it returns. The references on these pages were checked against
   PubMed, Crossref and publisher records.
-- Link lists now carry accurate glosses (4,987 rewritten). 1,945 links to names that no
-  page should exist for (`new_methods`, `version_control`, `adaptive_strategies`) were
-  unlinked, and 235 pages gained `aliases:` so a synonym or variant name opens the page
-  that covers it.
+- Link lists now carry accurate glosses (4,987 rewritten). About 6,000 links to generic
+  labels that no page should exist for (`new_methods`, `version_control`,
+  `adaptive_strategies`) were unlinked, and existing pages gained `aliases:` so a
+  synonym or variant name opens the page that covers it. About 1,300 `[[concept]]`
+  names remain without a page: each is a specific, well-defined concept (a named
+  region, effect, method or theory) kept as a marker for a page worth writing.
 - `knowledge_base/mathematics/expected_free_energy.md` states the canonical
   decomposition the package uses. It previously equated epistemic value plus risk
   with ambiguity plus risk.

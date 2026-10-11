@@ -18,6 +18,8 @@ semantic_relations:
       - "[[knowledge_base/mathematics/optimal_control]]"
       - "[[knowledge_base/mathematics/generalized_coordinates]]"
       - "[[knowledge_base/research/cognitive_robotics]]"
+aliases:
+  - robotics_control
 ---
 
 # Robot Control

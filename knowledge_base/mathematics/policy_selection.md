@@ -61,7 +61,7 @@ graph LR
 
 - [[E_matrix]] definition
 
-- [[action_constraints]]
+- action constraints
 
 ### Selection Mechanism
 
@@ -165,7 +165,7 @@ Policy selection is used in:
 
 ### Mathematical Properties
 
-- [[optimality_guarantees]]
+- optimality guarantees
 
 - exploration control
 
@@ -173,9 +173,9 @@ Policy selection is used in:
 
 ### Computational Properties
 
-- [[sampling_efficiency]]
+- sampling efficiency
 
-- [[parallelization]]
+- parallelization
 
 - scalability
 
@@ -183,7 +183,7 @@ Policy selection is used in:
 
 ### Single-Step
 
-- [[greedy_selection]]
+- greedy selection
 
 - [[epsilon_greedy]]
 
@@ -191,7 +191,7 @@ Policy selection is used in:
 
 ### Multi-Step
 
-- [[tree_search]]
+- tree search
 
 - [[monte_carlo]]
 
@@ -219,21 +219,21 @@ Policy selection is used in:
 
 - [[temperature_annealing]]
 
-- [[precision_adaptation]]
+- precision adaptation
 
 - [[numerical_stability]]
 
 ### Optimization
 
-- [[policy_caching]]
+- policy caching
 
-- [[batch_processing]]
+- batch processing
 
-- [[pruning_strategies]]
+- pruning strategies
 
 ## References
 
-- [[friston_policies]] - Policy theory
+- friston policies - Policy theory
 
 - [[active_inference_control]] - Control applications
 
@@ -1289,13 +1289,13 @@ class StochasticHMC:
 
 ## References
 
-- [[amari_2022]] - "Information Geometry and Its Applications"
+- amari 2022 - "Information Geometry and Its Applications"
 
-- [[marsden_2022]] - "Geometric Methods in Policy Optimization"
+- marsden 2022 - "Geometric Methods in Policy Optimization"
 
-- [[weinberg_2022]] - "Quantum Theory of Policy Fields"
+- weinberg 2022 - "Quantum Theory of Policy Fields"
 
-- [[jordan_2022]] - "Hamiltonian Monte Carlo in Practice"
+- jordan 2022 - "Hamiltonian Monte Carlo in Practice"
 
 ## See Also
 

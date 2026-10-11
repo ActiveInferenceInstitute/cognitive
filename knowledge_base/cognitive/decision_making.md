@@ -75,7 +75,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[threshold_crossing]] - Evidence reaching the level that triggers a choice
 
-    - [[decision_bounds]] - Choice criteria
+    - decision bounds - Choice criteria
 
     - urgency signals - Time pressure
 
@@ -103,11 +103,11 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[accumulator_circuits]] - Evidence build-up
 
-    - [[integration_neurons]] - Neurons that accumulate evidence over time
+    - integration neurons - Neurons that accumulate evidence over time
 
-    - [[threshold_units]] - Units that fire once evidence passes a bound
+    - threshold units - Units that fire once evidence passes a bound
 
-  - [[comparison_circuits]] - Option evaluation
+  - comparison circuits - Option evaluation
 
     - [[mutual_inhibition]] - Competing populations suppress each other's activity
 
@@ -121,7 +121,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - reward prediction - Anticipating the reward an action will bring
 
-    - [[motivation_control]] - Regulating drive to pursue goals
+    - motivation control - Regulating drive to pursue goals
 
   - [[serotonin_system]] - Patience/inhibition
 
@@ -143,13 +143,13 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[race_models]] - Independent accumulators racing to a bound
 
-    - [[accumulator_race]] - Parallel build-up
+    - accumulator race - Parallel build-up
 
     - [[stopping_rules]] - Choice timing
 
 ### Optimization Principles
 
-- [[decision_optimization]] - Best choice
+- decision optimization - Best choice
 
   - [[utility_maximization]] - Value optimization
 
@@ -157,21 +157,21 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - [[risk_preference]] - Uncertainty attitude
 
-  - [[cost_minimization]] - Choosing options with the lowest total cost
+  - cost minimization - Choosing options with the lowest total cost
 
-    - [[effort_optimization]] - Balancing effort spent against expected payoff
+    - effort optimization - Balancing effort spent against expected payoff
 
-    - [[time_optimization]] - Speed-accuracy
+    - time optimization - Speed-accuracy
 
 ### Learning Processes
 
-- [[decision_learning]] - Improving choices through experience
+- decision learning - Improving choices through experience
 
   - [[value_learning]] - Learning how rewarding each option is
 
     - reward learning - Outcome association
 
-    - [[punishment_learning]] - Learning to avoid actions with bad outcomes
+    - punishment learning - Learning to avoid actions with bad outcomes
 
   - strategy learning - Learning which approach suits which situation
 
@@ -183,31 +183,31 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Perceptual Decisions
 
-- [[perceptual_choice]] - Sensory-based
+- perceptual choice - Sensory-based
 
   - [[detection]] - Presence/absence
 
-    - [[threshold_detection]] - Detecting the weakest noticeable stimulus
+    - threshold detection - Detecting the weakest noticeable stimulus
 
-    - [[change_detection]] - Noticing changes between successive stimuli
+    - change detection - Noticing changes between successive stimuli
 
   - [[discrimination]] - Difference judgment
 
-    - [[feature_discrimination]] - Telling stimuli apart by a single attribute
+    - feature discrimination - Telling stimuli apart by a single attribute
 
-    - [[pattern_discrimination]] - Telling apart complex multi-feature stimuli
+    - pattern discrimination - Telling apart complex multi-feature stimuli
 
 ### Value-based Decisions
 
-- [[value_choice]] - Preference-based
+- value choice - Preference-based
 
-  - [[economic_choice]] - Resource decisions
+  - economic choice - Resource decisions
 
-    - [[risk_decisions]] - Choices among options with uncertain outcomes
+    - risk decisions - Choices among options with uncertain outcomes
 
-    - [[temporal_choice]] - Time trade-offs
+    - temporal choice - Time trade-offs
 
-  - [[social_choice]] - Interactive decisions
+  - social choice - Interactive decisions
 
     - [[cooperation]] - Joint benefit
 
@@ -219,15 +219,15 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[target_selection]] - Goal choice
 
-    - [[spatial_target]] - Choosing a goal by its location
+    - spatial target - Choosing a goal by its location
 
-    - [[object_target]] - Choosing a goal by the object itself
+    - object target - Choosing a goal by the object itself
 
-  - [[movement_selection]] - Choosing which movement to execute
+  - movement selection - Choosing which movement to execute
 
-    - [[trajectory_choice]] - Choosing the route a movement follows
+    - trajectory choice - Choosing the route a movement follows
 
-    - [[timing_choice]] - Choosing when to start an action
+    - timing choice - Choosing when to start an action
 
 ## Applications
 
@@ -243,25 +243,25 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[impulsivity]] - Acting without adequate forethought or restraint
 
-    - [[premature_choice]] - Choosing before enough evidence is gathered
+    - premature choice - Choosing before enough evidence is gathered
 
-    - [[risky_choice]] - Choosing options with excessive risk of loss
+    - risky choice - Choosing options with excessive risk of loss
 
 ### Economic Applications
 
-- [[economic_decisions]] - Market behavior
+- economic decisions - Market behavior
 
-  - [[consumer_choice]] - Buying decisions
+  - consumer choice - Buying decisions
 
-    - [[product_choice]] - What to buy
+    - product choice - What to buy
 
-    - [[price_sensitivity]] - Responsiveness of demand to price changes
+    - price sensitivity - Responsiveness of demand to price changes
 
-  - [[investment_decisions]] - Allocating money in pursuit of future returns
+  - investment decisions - Allocating money in pursuit of future returns
 
-    - [[portfolio_choice]] - Asset mix
+    - portfolio choice - Asset mix
 
-    - [[risk_management]] - Identifying and limiting potential losses
+    - risk management - Identifying and limiting potential losses
 
 ### Technology Applications
 
@@ -269,45 +269,45 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - decision support - Choice aids
 
-    - [[information_systems]] - Systems that collect and present decision data
+    - information systems - Systems that collect and present decision data
 
     - recommendation systems - Suggestions
 
-  - [[automated_decisions]] - Choices made by algorithms without human input
+  - automated decisions - Choices made by algorithms without human input
 
     - [[autonomous_systems]] - Self-deciding
 
-    - [[hybrid_decisions]] - Human-AI
+    - hybrid decisions - Human-AI
 
 ## Research Methods
 
 ### Behavioral Testing
 
-- [[decision_tasks]] - Choice measurement
+- decision tasks - Choice measurement
 
   - [[psychophysics]] - Relating physical stimuli to perceptual judgments
 
     - [[threshold_measurement]] - Estimating the smallest detectable stimulus
 
-    - [[bias_measurement]] - Quantifying systematic leanings in choices
+    - bias measurement - Quantifying systematic leanings in choices
 
   - [[economic_games]] - Tasks with monetary stakes and strategic choices
 
-    - [[gambling_tasks]] - Tasks probing risk-taking with uncertain payoffs
+    - gambling tasks - Tasks probing risk-taking with uncertain payoffs
 
-    - [[social_games]] - Tasks probing choices between interacting players
+    - social games - Tasks probing choices between interacting players
 
 ### Neural Recording
 
-- [[decision_recording]] - Brain activity
+- decision recording - Brain activity
 
   - [[single_unit]] - Neuron firing
 
-    - [[choice_probability]] - How well a neuron's firing predicts the choice
+    - choice probability - How well a neuron's firing predicts the choice
 
     - [[value_coding]] - Neural signals that represent option value
 
-  - [[population_recording]] - Group activity
+  - population recording - Group activity
 
     - [[network_dynamics]] - Time-varying activity patterns across a network
 
@@ -315,9 +315,9 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Computational Modeling
 
-- [[decision_modeling]] - Theory testing
+- decision modeling - Theory testing
 
-  - [[behavioral_models]] - Choice patterns
+  - behavioral models - Choice patterns
 
     - [[sequential_sampling]] - Models of evidence sampled over time until a bound
 
@@ -349,7 +349,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ## References
 
-- [[gold_shadlen_neural]]
+- gold shadlen neural
 
 - [[kahneman_tversky]]
 
@@ -379,29 +379,29 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - primary rewards - Innate rewards such as food and water
 
-      - [[survival_value]] - Value tied to staying alive
+      - survival value - Value tied to staying alive
 
-      - [[hedonic_value]] - Value derived from pleasure or enjoyment
+      - hedonic value - Value derived from pleasure or enjoyment
 
     - secondary rewards - Rewards valued through learned association
 
-      - [[social_value]] - Value gained from social interaction
+      - social value - Value gained from social interaction
 
-      - [[abstract_value]] - Value of ideas, money, and symbolic goods
+      - abstract value - Value of ideas, money, and symbolic goods
 
   - cost processing - Evaluating the costs of an action
 
     - energy costs - Energy expended to carry out an action
 
-      - [[metabolic_cost]] - Physical energy demands of an action
+      - metabolic cost - Physical energy demands of an action
 
-      - [[cognitive_cost]] - Mental effort required to decide or act
+      - cognitive cost - Mental effort required to decide or act
 
-    - [[risk_costs]] - Expected losses from risky outcomes
+    - risk costs - Expected losses from risky outcomes
 
-      - [[uncertainty_cost]] - Penalty attached to unknown outcomes
+      - uncertainty cost - Penalty attached to unknown outcomes
 
-      - [[loss_potential]] - Size of what could be lost
+      - loss potential - Size of what could be lost
 
 ### Evidence Processing
 
@@ -409,7 +409,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[sensory_evidence]] - Evidence drawn from sensory input
 
-    - [[perceptual_sampling]] - Repeatedly sampling stimulus information
+    - perceptual sampling - Repeatedly sampling stimulus information
 
       - [[feature_extraction]] - Pulling out informative stimulus features
 
@@ -425,13 +425,13 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - [[episodic_recall]] - Recalling specific past events
 
-      - [[past_outcomes]] - Results of earlier similar choices
+      - past outcomes - Results of earlier similar choices
 
-      - [[similar_cases]] - Comparable prior situations
+      - similar cases - Comparable prior situations
 
     - [[semantic_knowledge]] - General factual knowledge
 
-      - [[rule_application]] - Applying learned rules to the choice
+      - rule application - Applying learned rules to the choice
 
       - category knowledge - Knowledge about category membership
 
@@ -443,7 +443,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - [[value_comparison]] - Comparing option values against each other
 
-      - [[relative_value]] - Value judged against alternatives
+      - relative value - Value judged against alternatives
 
       - [[reference_points]] - Baselines against which outcomes are judged
 
@@ -451,13 +451,13 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - [[subjective_probability]] - Personal estimate of how likely an outcome is
 
-      - [[risk_attitude]] - Tendency to seek or avoid risk
+      - risk attitude - Tendency to seek or avoid risk
 
-  - [[decision_criteria]] - Standards used to settle on a choice
+  - decision criteria - Standards used to settle on a choice
 
-    - [[threshold_setting]] - Setting how much evidence is needed to choose
+    - threshold setting - Setting how much evidence is needed to choose
 
-      - [[evidence_threshold]] - Amount of evidence required to commit
+      - evidence threshold - Amount of evidence required to commit
 
       - urgency signals - Growing pressure to decide as time passes
 
@@ -479,13 +479,13 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - [[reward_signals]] - Neural signals indicating reward
 
-      - [[motivation_signals]] - Neural signals driving effort toward goals
+      - motivation signals - Neural signals driving effort toward goals
 
     - [[orbitofrontal]] - Region encoding the value of options
 
       - [[value_coding]] - Neural representation of option value
 
-      - [[outcome_coding]] - Neural representation of expected outcomes
+      - outcome coding - Neural representation of expected outcomes
 
   - [[control_network]] - Regions that regulate and direct choices
 
@@ -513,25 +513,25 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - spatial integration - Combining evidence across space or sources
 
-    - [[threshold_mechanisms]] - Mechanisms that trigger a choice at a bound
+    - threshold mechanisms - Mechanisms that trigger a choice at a bound
 
       - [[threshold_crossing]] - Moment evidence reaches the decision bound
 
       - [[winner_take_all]] - Strongest option suppresses its competitors
 
-  - [[value_circuits]] - Circuits that compute option value
+  - value circuits - Circuits that compute option value
 
-    - [[reward_computation]] - Computing the reward an option offers
+    - reward computation - Computing the reward an option offers
 
-      - [[utility_coding]] - Neural encoding of subjective utility
+      - utility coding - Neural encoding of subjective utility
 
-      - [[risk_coding]] - Neural encoding of outcome uncertainty
+      - risk coding - Neural encoding of outcome uncertainty
 
-    - [[cost_computation]] - Computing the costs an option incurs
+    - cost computation - Computing the costs an option incurs
 
-      - [[effort_coding]] - Neural encoding of required effort
+      - effort coding - Neural encoding of required effort
 
-      - [[loss_coding]] - Neural encoding of potential losses
+      - loss coding - Neural encoding of potential losses
 
 ### Neuromodulation
 
@@ -545,19 +545,19 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - [[incentive_salience]] - Motivational pull of reward-related cues
 
-    - [[action_motivation]] - Drive to initiate effortful actions
+    - action motivation - Drive to initiate effortful actions
 
-      - [[approach_behavior]] - Moving toward rewarding stimuli
+      - approach behavior - Moving toward rewarding stimuli
 
       - [[exploration]] - Sampling unfamiliar options to gain information
 
   - [[noradrenaline_system]] - Noradrenaline pathways regulating arousal and uncertainty
 
-    - [[uncertainty_signals]] - Signals that track unreliable information
+    - uncertainty signals - Signals that track unreliable information
 
-      - [[surprise_detection]] - Noticing unexpected events
+      - surprise detection - Noticing unexpected events
 
-      - [[volatility_tracking]] - Tracking how quickly the environment changes
+      - volatility tracking - Tracking how quickly the environment changes
 
     - arousal control - Regulating alertness level
 
@@ -569,29 +569,29 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Information Flow
 
-- [[decision_processing]] - Stages through which a decision unfolds
+- decision processing - Stages through which a decision unfolds
 
   - [[bottom_up]] - Processing driven by sensory input
 
-    - [[evidence_gathering]] - Collecting stimulus-driven evidence
+    - evidence gathering - Collecting stimulus-driven evidence
 
-      - [[sampling_processes]] - Drawing samples of information
+      - sampling processes - Drawing samples of information
 
       - integration processes - Combining samples into a running estimate
 
-    - [[value_construction]] - Building value estimates during choice
+    - value construction - Building value estimates during choice
 
-      - [[feature_valuation]] - Valuing options by their individual attributes
+      - feature valuation - Valuing options by their individual attributes
 
       - [[context_effects]] - Influence of surrounding options on choice
 
   - [[top_down]] - Processing guided by goals and expectations
 
-    - [[goal_influence]] - Goals shaping which evidence gets attention
+    - goal influence - Goals shaping which evidence gets attention
 
-      - [[preference_bias]] - Existing preferences tilting the choice
+      - preference bias - Existing preferences tilting the choice
 
-      - [[strategy_bias]] - Chosen strategy tilting the choice
+      - strategy bias - Chosen strategy tilting the choice
 
     - [[control_processes]] - Executive processes that direct decision behavior
 
@@ -601,9 +601,9 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 ### Resource Management
 
-- [[decision_resources]] - Cognitive and motivational capacity available for deciding
+- decision resources - Cognitive and motivational capacity available for deciding
 
-  - [[cognitive_resources]] - Attention and memory capacity for deciding
+  - cognitive resources - Attention and memory capacity for deciding
 
     - [[attention_allocation]] - Distributing attention among options and cues
 
@@ -613,23 +613,23 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - [[working_memory]] - Holding options in mind briefly
 
-      - [[option_maintenance]] - Keeping candidate options active in mind
+      - option maintenance - Keeping candidate options active in mind
 
-      - [[comparison_process]] - Weighing options against each other
+      - comparison process - Weighing options against each other
 
-  - [[motivational_resources]] - Drive available to sustain effort
+  - motivational resources - Drive available to sustain effort
 
     - [[effort_allocation]] - Deciding how much effort to invest
 
-      - [[energy_management]] - Pacing energy expenditure over time
+      - energy management - Pacing energy expenditure over time
 
       - persistence - Continuing effort despite obstacles
 
-    - [[emotional_resources]] - Capacity to regulate emotion while deciding
+    - emotional resources - Capacity to regulate emotion while deciding
 
       - stress management - Coping with stress during decisions
 
-      - [[mood_effects]] - Influence of mood on choices
+      - mood effects - Influence of mood on choices
 
 ### Integration Mechanisms
 
@@ -641,27 +641,27 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - visual integration - Combining visual cues
 
-      - [[auditory_integration]] - Combining auditory cues
+      - auditory integration - Combining auditory cues
 
-    - [[evidence_combination]] - Pooling multiple pieces of evidence
+    - evidence combination - Pooling multiple pieces of evidence
 
-      - [[weighted_averaging]] - Averaging cues in proportion to reliability
+      - weighted averaging - Averaging cues in proportion to reliability
 
-      - [[bayesian_integration]] - Combining cues and priors by Bayes' rule
+      - bayesian integration - Combining cues and priors by Bayes' rule
 
   - [[value_integration]] - Combining attribute values into overall value
 
-    - [[attribute_integration]] - Merging an option's attributes into one score
+    - attribute integration - Merging an option's attributes into one score
 
-      - [[feature_combination]] - Combining separate features into a whole
+      - feature combination - Combining separate features into a whole
 
       - [[dimension_reduction]] - Compressing many attributes into a few
 
     - [[temporal_integration]] - Combining information across time
 
-      - [[history_effects]] - Influence of previous trials on current choice
+      - history effects - Influence of previous trials on current choice
 
-      - [[future_projection]] - Anticipating likely future outcomes
+      - future projection - Anticipating likely future outcomes
 
 ## Applications
 
@@ -673,33 +673,33 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - [[response_inhibition]] - Impaired ability to withhold responses
 
-      - [[premature_response]] - Responding before the evidence warrants
+      - premature response - Responding before the evidence warrants
 
       - [[perseveration]] - Repeating a response despite changed demands
 
-    - [[risk_taking]] - Seeking options with a high chance of harm
+    - risk taking - Seeking options with a high chance of harm
 
-      - [[reward_sensitivity]] - Heightened drive toward rewards
+      - reward sensitivity - Heightened drive toward rewards
 
-      - [[punishment_insensitivity]] - Reduced learning from negative consequences
+      - punishment insensitivity - Reduced learning from negative consequences
 
-  - [[indecision]] - Difficulty committing to a choice
+  - indecision - Difficulty committing to a choice
 
     - [[choice_paralysis]] - Can't pick
 
-      - [[overthinking]] - Excessive deliberation that delays choice
+      - overthinking - Excessive deliberation that delays choice
 
       - avoidance - Evading decisions to escape discomfort
 
     - [[ambivalence]] - Holding conflicting feelings about options
 
-      - [[conflict_anxiety]] - Anxiety arising from competing options
+      - conflict anxiety - Anxiety arising from competing options
 
-      - [[commitment_fear]] - Fear of being bound to a choice
+      - commitment fear - Fear of being bound to a choice
 
 ### Therapeutic Approaches
 
-- [[decision_therapy]] - Therapies that improve decision-making
+- decision therapy - Therapies that improve decision-making
 
   - cognitive strategies - Mental techniques that improve choices
 
@@ -707,23 +707,23 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - [[option_evaluation]] - Assessing the merits of each option
 
-      - [[consequence_analysis]] - Considering likely results of each option
+      - consequence analysis - Considering likely results of each option
 
-    - [[bias_awareness]] - Recognizing one's own decision biases
+    - bias awareness - Recognizing one's own decision biases
 
-      - [[bias_identification]] - Spotting specific biases in one's choices
+      - bias identification - Spotting specific biases in one's choices
 
-      - [[debiasing_techniques]] - Methods that reduce biased judgment
+      - debiasing techniques - Methods that reduce biased judgment
 
   - behavioral strategies - Behavior-based methods for better choices
 
-    - [[exposure_training]] - Gradual confrontation with feared decisions
+    - exposure training - Gradual confrontation with feared decisions
 
       - gradual exposure - Stepwise exposure to rising difficulty
 
       - [[feedback_learning]] - Learning from outcomes of past choices
 
-    - [[skill_building]] - Developing practical decision skills
+    - skill building - Developing practical decision skills
 
       - coping skills - Strategies for managing stress and setbacks
 
@@ -751,13 +751,13 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
     - behavior tracking - Recording what people actually do
 
-      - [[choice_patterns]] - Recurring regularities in a person's choices
+      - choice patterns - Recurring regularities in a person's choices
 
-      - [[outcome_tracking]] - Recording the results of decisions
+      - outcome tracking - Recording the results of decisions
 
-    - [[adaptation_systems]] - Systems that adjust to changing conditions
+    - adaptation systems - Systems that adjust to changing conditions
 
-      - [[dynamic_adjustment]] - Updating recommendations as conditions change
+      - dynamic adjustment - Updating recommendations as conditions change
 
       - [[learning_algorithms]] - Algorithms that improve from experience
 
@@ -767,7 +767,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 - measurement issues - Difficulty measuring decision processes reliably
 
-  - [[preference_stability]] - Whether preferences stay constant over time
+  - preference stability - Whether preferences stay constant over time
 
   - context dependence - Choices shifting with the situation
 
@@ -801,7 +801,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
 - rangel hare
 
-- [[rushworth_decision]]
+- rushworth decision
 
 ## Related Concepts
 

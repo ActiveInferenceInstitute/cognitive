@@ -15,6 +15,7 @@ semantic_relations:
       - "[[stochastic_optimization]]"
 aliases:
   - hyperparameters
+  - hyperparameter_tuning
 ---
 
 

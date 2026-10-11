@@ -17,6 +17,8 @@ semantic_relations:
       - "[[generative_models]]"
       - "[[neural_odes]]"
       - "[[diffusion_models]]"
+aliases:
+  - flow_based_models
 ---
 
 # Normalizing Flows

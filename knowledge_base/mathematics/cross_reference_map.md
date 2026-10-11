@@ -452,7 +452,7 @@ graph TB
 
 #### Specific Links
 
-- **[[path_integral_theory]]** extends **[[quantum_mechanics]]** to **[[stochastic_systems]]**
+- **[[path_integral_theory]]** extends **[[quantum_mechanics]]** to **stochastic systems**
 
 - **[[path_integral_free_energy]]** implements **[[partition_function]]** calculations
 

@@ -19,6 +19,7 @@ semantic_relations:
       - "[[expected_free_energy]]"
 aliases:
   - utility_maximization
+  - utility_functions
 ---
 
 # Utility Theory

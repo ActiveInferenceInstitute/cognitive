@@ -50,7 +50,7 @@ The system implements federated learning and inference through:
 
 ## Core Components
 
-### [[Ecological_State]]
+### Ecological State
 
 - [[Biodiversity|Biodiversity levels]]
 
@@ -60,7 +60,7 @@ The system implements federated learning and inference through:
 
   - [[Genetic_Diversity|Genetic diversity measures]]
 
-- [[Habitat_Connectivity|Habitat connectivity]]
+- Habitat connectivity
 
   - Network metrics
 
@@ -70,7 +70,7 @@ The system implements federated learning and inference through:
 
 - [[Ecosystem_Services|Ecosystem services provision]]
 
-  - [[Supporting_Services|Supporting services]]
+  - Supporting services
 
   - [[Regulating_Services|Regulating services]]
 
@@ -78,97 +78,97 @@ The system implements federated learning and inference through:
 
 - [[Species_Richness]]
 
-  - [[Taxonomic_Groups|Taxonomic groups]]
+  - Taxonomic groups
 
-  - [[Functional_Groups|Functional groups]]
+  - Functional groups
 
   - [[Indicator_Species|Indicator species]]
 
-- [[Ecological_Integrity|Ecological integrity metrics]]
+- Ecological integrity metrics
 
-  - [[System_Stability|System stability]]
+  - System stability
 
-  - [[Ecological_Resilience|Resilience indicators]]
+  - Resilience indicators
 
-  - [[Disturbance_Response|Disturbance responses]]
+  - Disturbance responses
 
-### [[Climate_State]]
+### Climate State
 
-- [[Temperature_Patterns|Temperature patterns]]
+- Temperature patterns
 
-  - [[Temporal_Trends|Temporal trends]]
+  - Temporal trends
 
   - Spatial distribution
 
   - Extremes frequency
 
-- [[Precipitation_Regimes|Precipitation regimes]]
+- Precipitation regimes
 
-  - [[Seasonal_Patterns|Seasonal patterns]]
+  - Seasonal patterns
 
-  - [[Precipitation_Intensity|Intensity distribution]]
+  - Intensity distribution
 
-  - [[Drought_Indices|Drought indices]]
+  - Drought indices
 
-- [[Carbon_Storage|Carbon storage capacity]]
+- Carbon storage capacity
 
-  - [[Biomass_Pools|Biomass pools]]
+  - Biomass pools
 
   - [[Soil_Carbon|Soil carbon]]
 
-  - [[Carbon_Fluxes|Carbon fluxes]]
+  - Carbon fluxes
 
 - [[Albedo|Albedo measurements]]
 
-  - [[Surface_Reflectivity|Surface reflectivity]]
+  - Surface reflectivity
 
-  - [[Seasonal_Variation|Seasonal variation]]
+  - Seasonal variation
 
   - [[Land_Cover_Change|Land cover changes]]
 
 - Extreme event frequency
 
-  - [[Event_Classification|Event typology]]
+  - Event typology
 
-  - [[Event_Intensity|Intensity metrics]]
+  - Intensity metrics
 
-  - [[Recovery_Patterns|Recovery patterns]]
+  - Recovery patterns
 
-### [[Social_State]]
+### Social State
 
-- [[Community_Engagement|Community engagement levels]]
+- Community engagement levels
 
-  - [[Participation_Metrics|Participation metrics]]
+  - Participation metrics
 
   - Network strength
 
-  - [[Knowledge_Sharing|Knowledge sharing]]
+  - Knowledge sharing
 
-- [[Traditional_Knowledge|Traditional knowledge integration]]
+- Traditional knowledge integration
 
-  - [[Practice_Preservation|Practice preservation]]
+  - Practice preservation
 
-  - [[Intergenerational_Transfer|Intergenerational transfer]]
+  - Intergenerational transfer
 
-  - [[Knowledge_Application|Application scope]]
+  - Application scope
 
-- [[Stewardship_Practices]]
+- Stewardship Practices
 
-  - [[Management_Approaches|Management approaches]]
+  - Management approaches
 
-  - [[Monitoring_Systems|Monitoring systems]]
+  - Monitoring systems
 
   - [[knowledge_base/cognitive/adaptation_strategies|Adaptation strategies]]
 
-- [[Resource_Governance|Resource governance structures]]
+- Resource governance structures
 
-  - [[Decision_Processes|Decision processes]]
+  - Decision processes
 
-  - [[Rights_Distribution|Rights distribution]]
+  - Rights distribution
 
   - [[Conflict_Resolution|Conflict resolution]]
 
-- [[Social_Resilience|Social resilience indicators]]
+- Social resilience indicators
 
   - [[Adaptive_Capacity|Adaptive capacity]]
 
@@ -176,51 +176,51 @@ The system implements federated learning and inference through:
 
   - [[Response_Diversity|Response diversity]]
 
-### [[Economic_State]]
+### Economic State
 
-- [[Sustainable_Livelihoods|Sustainable livelihood metrics]]
+- Sustainable livelihood metrics
 
-  - [[Income_Diversity|Income diversity]]
+  - Income diversity
 
-  - [[Resource_Access|Resource access]]
+  - Resource access
 
-  - [[Economic_Security|Economic security]]
+  - Economic security
 
-- [[Circular_Economy|Circular economy indicators]]
+- Circular economy indicators
 
-  - [[Material_Flows|Material flows]]
+  - Material flows
 
-  - [[Waste_Reduction|Waste reduction]]
+  - Waste reduction
 
-  - [[Resource_Cycling|Resource cycling]]
+  - Resource cycling
 
-- [[Ecosystem_Valuation|Ecosystem valuation measures]]
+- Ecosystem valuation measures
 
-  - [[Service_Pricing|Service pricing]]
+  - Service pricing
 
   - [[Natural_Capital|Natural capital]]
 
-  - [[Benefit_Distribution|Benefit distribution]]
+  - Benefit distribution
 
-- [[Green_Infrastructure|Green infrastructure development]]
+- Green infrastructure development
 
-  - [[Investment_Levels|Investment levels]]
+  - Investment levels
 
-  - [[System_Integration|System integration]]
+  - System integration
 
   - [[knowledge_base/cognitive/performance_metrics|Performance metrics]]
 
 - Resource efficiency metrics
 
-  - [[Use_Optimization|Use optimization]]
+  - Use optimization
 
-  - [[Impact_Reduction|Impact reduction]]
+  - Impact reduction
 
-  - [[Innovation_Adoption|Innovation adoption]]
+  - Innovation adoption
 
 ## Implementation Details
 
-### [[State_Space_Implementation|State Space Structure]]
+### State Space Structure
 
 ```python
 
@@ -274,9 +274,9 @@ class BioregionalState:
 
 ```
 
-### [[Markov_Blanket_Implementation|Markov Blanket Implementation]]
+### Markov Blanket Implementation
 
-#### 1. [[Local_Scale_Implementation|Local Scale]]
+#### 1. Local Scale
 
 ```python
 
@@ -316,7 +316,7 @@ class LocalMarkovBlanket:
 
 ```
 
-#### 2. [[Landscape_Scale_Implementation|Landscape Scale]]
+#### 2. Landscape Scale
 
 ```python
 
@@ -350,7 +350,7 @@ class LandscapeMarkovBlanket:
 
 ```
 
-#### 3. [[Regional_Scale_Implementation|Regional Scale]]
+#### 3. Regional Scale
 
 ```python
 
@@ -386,9 +386,9 @@ class RegionalMarkovBlanket:
 
 ```
 
-### [[Federation_Implementation|Federation Mechanisms]]
+### Federation Mechanisms
 
-#### 1. [[State_Aggregation_Implementation|State Aggregation]]
+#### 1. State Aggregation
 
 ```python
 
@@ -428,7 +428,7 @@ class StateAggregator:
 
 ```
 
-#### 2. [[Update_Rules_Implementation|Update Rules]]
+#### 2. Update Rules
 
 ```python
 
@@ -478,7 +478,7 @@ class UpdateRules:
 
 ```
 
-#### 3. [[Inference_Process_Implementation|Inference Process]]
+#### 3. Inference Process
 
 ```python
 
@@ -528,7 +528,7 @@ class MultiScaleInference:
 
 ## Integration with Active Inference
 
-### 1. [[Free_Energy_Implementation|Free Energy Computation]]
+### 1. Free Energy Computation
 
 ```python
 
@@ -570,7 +570,7 @@ class FreeEnergyComputer:
 
 ```
 
-### 2. [[Policy_Selection_Implementation|Policy Selection]]
+### 2. Policy Selection
 
 ```python
 
@@ -616,7 +616,7 @@ class PolicySelector:
 
 ```
 
-### 3. [[Learning_Implementation|Learning Implementation]]
+### 3. Learning Implementation
 
 ```python
 

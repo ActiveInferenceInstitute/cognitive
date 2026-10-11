@@ -19,9 +19,6 @@ tags:
   - realism
   - instrumentalism
 semantic_relations:
-  - type: foundational_for
-    links:
-      - "[[philosophy of fep]]"
   - type: extends
     links:
       - "[[hohwy_2013]]"

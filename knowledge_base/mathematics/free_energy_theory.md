@@ -1440,11 +1440,11 @@ class PathIntegralFreeEnergy:
 
 - [[amari]] - Information Geometry
 
-- [[baez]] - Categorical Probability Theory
+- baez - Categorical Probability Theory
 
 - [[jarzynski]] - Non-equilibrium Work Relations
 
 - [[crooks]] - Fluctuation Theorems
 
-- [[sekimoto]] - Stochastic Thermodynamics
+- sekimoto - Stochastic Thermodynamics
 

@@ -55,11 +55,11 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
     - [[true_belief]] - Others' beliefs that match reality
 
-  - [[intention_understanding]] - Others' goals
+  - intention understanding - Others' goals
 
     - [[goal_inference]] - Purpose detection
 
-    - [[action_prediction]] - Behavior forecast
+    - action prediction - Behavior forecast
 
 ### Social Learning
 
@@ -67,15 +67,15 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
   - [[observational_learning]] - Watching others
 
-    - [[action_learning]] - Learning actions by watching others
+    - action learning - Learning actions by watching others
 
-    - [[outcome_learning]] - Learning from observed consequences
+    - outcome learning - Learning from observed consequences
 
   - [[cultural_learning]] - Group knowledge
 
     - [[norm_acquisition]] - Rule learning
 
-    - [[value_transmission]] - Passing values between individuals
+    - value transmission - Passing values between individuals
 
 ## Neural Implementation
 
@@ -105,7 +105,7 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
     - [[superior_temporal]] - Region processing gaze and expressions
 
-  - [[empathy_circuits]] - Feeling sharing
+  - empathy circuits - Feeling sharing
 
     - [[anterior_insula]] - Region for emotional awareness
 
@@ -119,11 +119,11 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
     - [[social_reward]] - Reward gained from social contact
 
-    - [[social_memory]] - Remembering familiar individuals
+    - social memory - Remembering familiar individuals
 
   - [[vasopressin_system]] - Neuropeptide system shaping social behavior
 
-    - [[aggression]] - Hostile behavior toward others
+    - aggression - Hostile behavior toward others
 
     - [[pair_bonding]] - Formation of enduring partner attachment
 
@@ -135,29 +135,29 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
   - intention inference - Goal detection
 
-    - [[action_observation]] - Watching and interpreting others' actions
+    - action observation - Watching and interpreting others' actions
 
     - outcome prediction - Predicting consequences of actions
 
-  - [[mental_inference]] - Mind reading
+  - mental inference - Mind reading
 
-    - [[belief_inference]] - Inferring what others believe
+    - belief inference - Inferring what others believe
 
     - desire inference - Inferring what others want
 
 ### Learning Processes
 
-- [[social_learning_mechanisms]] - Processes for learning from others
+- social learning mechanisms - Processes for learning from others
 
-  - [[imitation_learning]] - Copying
+  - imitation learning - Copying
 
-    - [[action_matching]] - Reproducing observed movements
+    - action matching - Reproducing observed movements
 
     - [[goal_emulation]] - Reproducing the goal by one's own means
 
   - [[reinforcement_learning]] - Learning from rewards and penalties
 
-    - [[social_reward_learning]] - Good/bad
+    - social reward learning - Good/bad
 
     - [[social_punishment]] - Sanctions that discourage behavior
 
@@ -169,13 +169,13 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
     - gaze following - Following another's gaze direction
 
-    - [[pointing_understanding]] - Interpreting pointing gestures
+    - pointing understanding - Interpreting pointing gestures
 
-  - [[action_coordination]] - Aligning actions between partners
+  - action coordination - Aligning actions between partners
 
     - [[synchronization]] - Aligning the timing of actions
 
-    - [[role_division]] - Allocating tasks among partners
+    - role division - Allocating tasks among partners
 
 ## Social Phenomena
 
@@ -199,29 +199,29 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
 - group dynamics - Collective behavior
 
-  - [[group_formation]] - Coming together
+  - group formation - Coming together
 
-    - [[social_bonding]] - Forming emotional ties
+    - social bonding - Forming emotional ties
 
     - group identity - Sense of membership in a group
 
-  - [[group_function]] - How groups carry out tasks
+  - group function - How groups carry out tasks
 
     - leadership - Guiding group decisions and actions
 
-    - [[followership]] - Following and supporting a leader
+    - followership - Following and supporting a leader
 
 ### Cultural Processes
 
 - [[cultural_cognition]] - Cognition shaped by shared culture
 
-  - [[norm_processing]] - Processing of shared social rules
+  - norm processing - Processing of shared social rules
 
-    - [[norm_detection]] - Inferring unwritten social rules
+    - norm detection - Inferring unwritten social rules
 
-    - [[norm_enforcement]] - Sanctioning violations of norms
+    - norm enforcement - Sanctioning violations of norms
 
-  - [[value_systems]] - Organized sets of shared values
+  - value systems - Organized sets of shared values
 
     - moral values - Right/wrong
 
@@ -237,7 +237,7 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
     - [[social_communication]] - Reciprocal exchange of social signals
 
-    - [[repetitive_behavior]] - Restricted, repeated actions or interests
+    - repetitive behavior - Restricted, repeated actions or interests
 
   - [[social_anxiety]] - Fear of social evaluation
 
@@ -249,13 +249,13 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
 - social education - Teaching social competence
 
-  - [[social_skills_training]] - Structured practice of social abilities
+  - social skills training - Structured practice of social abilities
 
     - communication skills - Talk/listen
 
     - [[conflict_resolution]] - Resolving disputes between people
 
-  - [[emotional_education]] - Teaching emotional understanding
+  - emotional education - Teaching emotional understanding
 
     - [[emotion_recognition]] - Identifying emotions in others
 
@@ -263,19 +263,19 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
 ### Technology Applications
 
-- [[social_technology]] - Technology supporting social interaction
+- social technology - Technology supporting social interaction
 
   - [[social_robotics]] - Robots designed for social interaction
 
     - [[human_robot_interaction]] - Communication between people and robots
 
-    - [[social_assistance]] - Robots providing practical support
+    - social assistance - Robots providing practical support
 
-  - [[virtual_agents]] - Software characters that interact socially
+  - virtual agents - Software characters that interact socially
 
-    - [[avatars]] - Digital representations of users
+    - avatars - Digital representations of users
 
-    - [[chatbots]] - Conversational software agents
+    - chatbots - Conversational software agents
 
 ## Research Methods
 
@@ -287,13 +287,13 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
     - conversation analysis - Study of turn-taking in conversation
 
-    - [[nonverbal_analysis]] - Study of gesture and posture
+    - nonverbal analysis - Study of gesture and posture
 
-  - [[group_observation]] - Observing the behavior of groups
+  - group observation - Observing the behavior of groups
 
     - [[network_analysis]] - Mapping relationships among individuals
 
-    - [[role_analysis]] - Examining roles within groups
+    - role analysis - Examining roles within groups
 
 ### Neural Methods
 
@@ -305,11 +305,11 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
     - coupling - Mutual influence between interacting brains
 
-  - [[social_imaging]] - Imaging brain activity during social tasks
+  - social imaging - Imaging brain activity during social tasks
 
-    - [[face_responses]] - Neural responses to faces
+    - face responses - Neural responses to faces
 
-    - [[theory_mind_areas]] - Brain regions for mental-state reasoning
+    - theory mind areas - Brain regions for mental-state reasoning
 
 ### Computational Models
 
@@ -339,19 +339,19 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
 ### Emerging Approaches
 
-- [[real_time_interaction]] - Studying interaction as it unfolds
+- real time interaction - Studying interaction as it unfolds
 
 - [[computational_psychiatry]] - Computational modeling of psychiatric disorders
 
-- [[social_artificial_intelligence]] - AI systems that reason about social interaction
+- social artificial intelligence - AI systems that reason about social interaction
 
 ## References
 
-- [[frith_social_brain]]
+- frith social brain
 
-- [[tomasello_cultural]]
+- tomasello cultural
 
-- [[dunbar_social_mind]]
+- dunbar social mind
 
 - lieberman social
 
@@ -365,7 +365,7 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
 - [[communication]]
 
-- [[culture]]
+- culture
 
 - [[development]]
 

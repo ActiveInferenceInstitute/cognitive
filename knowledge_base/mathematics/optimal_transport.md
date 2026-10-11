@@ -11,6 +11,8 @@ tags:
 aliases:
   - wasserstein_metrics
   - wasserstein_geometry
+  - transportation_theory
+  - wasserstein_metric
 semantic_relations:
   - type: relates
     links:

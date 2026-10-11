@@ -43,7 +43,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
     - [[biological_motion]] - Perceiving the movement of living agents
 
-    - [[action_understanding]] - Interpreting the goals behind others' actions
+    - action understanding - Interpreting the goals behind others' actions
 
 ### Theory of Mind
 
@@ -57,19 +57,19 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
   - intention inference - Inferring what others intend
 
-    - [[goal_detection]] - Identifying the goals of others' actions
+    - goal detection - Identifying the goals of others' actions
 
     - desire inference - Inferring what others want
 
 ### Social Learning
 
-- [[social_knowledge]] - Knowledge acquired about the social world
+- social knowledge - Knowledge acquired about the social world
 
   - [[norm_acquisition]] - Learning social rules
 
     - cultural norms - Shared behavioral expectations of a group
 
-    - [[social_conventions]] - Customary rules for social behavior
+    - social conventions - Customary rules for social behavior
 
   - [[value_learning]] - Learning what is considered worthwhile
 
@@ -81,51 +81,51 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Social Information Processing
 
-- [[social_cognition_steps]] - Sequence of processing stages in social cognition
+- social cognition steps - Sequence of processing stages in social cognition
 
-  - [[cue_detection]] - Detecting social cues
+  - cue detection - Detecting social cues
 
-    - [[social_signals]] - Signals conveyed by other people
+    - social signals - Signals conveyed by other people
 
-    - [[contextual_cues]] - Situational information that shapes interpretation
+    - contextual cues - Situational information that shapes interpretation
 
   - interpretation - Assigning meaning to social cues
 
-    - [[intention_attribution]] - Explaining behavior by others' intentions
+    - intention attribution - Explaining behavior by others' intentions
 
     - [[causal_attribution]] - Explaining the causes of events or behavior
 
 ### Social Decision Making
 
-- [[social_choices]] - Decisions involving other people
+- social choices - Decisions involving other people
 
-  - [[cooperation_decisions]] - Decisions about cooperating with others
+  - cooperation decisions - Decisions about cooperating with others
 
     - trust decisions - Decisions about whom to trust
 
-    - [[fairness_judgments]] - Judgments about equitable outcomes
+    - fairness judgments - Judgments about equitable outcomes
 
-  - [[competition_decisions]] - Decisions in competitive situations
+  - competition decisions - Decisions in competitive situations
 
     - [[resource_allocation]] - Deciding how to distribute resources
 
-    - [[strategic_thinking]] - Anticipating others' choices to plan actions
+    - strategic thinking - Anticipating others' choices to plan actions
 
 ### Social Regulation
 
-- [[interaction_control]] - Regulating one's behavior in social exchanges
+- interaction control - Regulating one's behavior in social exchanges
 
-  - [[behavior_regulation]] - Adjusting actions to social demands
+  - behavior regulation - Adjusting actions to social demands
 
     - [[impulse_control]] - Resisting socially inappropriate urges
 
-    - [[norm_compliance]] - Following social rules
+    - norm compliance - Following social rules
 
   - [[emotion_regulation]] - Managing one's emotional responses
 
-    - [[expression_control]] - Modulating outward emotional expression
+    - expression control - Modulating outward emotional expression
 
-    - [[empathy_control]] - Modulating how strongly others' feelings are shared
+    - empathy control - Modulating how strongly others' feelings are shared
 
 ## Neural Implementation
 
@@ -167,9 +167,9 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
   - [[oxytocin_system]] - Neuropeptide system for bonding and trust
 
-    - [[trust_effects]] - Increased trust under oxytocin
+    - trust effects - Increased trust under oxytocin
 
-    - [[attachment_effects]] - Strengthened attachment under oxytocin
+    - attachment effects - Strengthened attachment under oxytocin
 
   - [[dopamine_system]] - Neuromodulator system for reward and motivation
 
@@ -185,7 +185,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
   - verbal communication - Communication using spoken words
 
-    - [[language_use]] - Using language in social contexts
+    - language use - Using language in social contexts
 
     - [[speech_acts]] - Actions performed through utterances, such as requesting
 
@@ -197,7 +197,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Relationship Management
 
-- [[social_relations]] - Relationships between people
+- social relations - Relationships between people
 
   - attachment - Enduring emotional bonds
 
@@ -205,7 +205,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
     - [[trust_building]] - Developing mutual trust over time
 
-  - [[group_relations]] - Relationships within and between groups
+  - group relations - Relationships within and between groups
 
     - group identity - Sense of belonging to a group
 
@@ -213,17 +213,17 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Cultural Participation
 
-- [[cultural_engagement]] - Participation in cultural life
+- cultural engagement - Participation in cultural life
 
-  - [[norm_following]] - Acting in line with social norms
+  - norm following - Acting in line with social norms
 
-    - [[social_scripts]] - Learned sequences of expected behavior
+    - social scripts - Learned sequences of expected behavior
 
-    - [[ritual_participation]] - Taking part in shared ceremonies
+    - ritual participation - Taking part in shared ceremonies
 
-  - [[value_expression]] - Showing one's values through action
+  - value expression - Showing one's values through action
 
-    - [[moral_behavior]] - Actions guided by moral principles
+    - moral behavior - Actions guided by moral principles
 
     - cultural practices - Customary activities of a cultural group
 
@@ -231,25 +231,25 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Social Development
 
-- [[social_growth]] - Development of social abilities
+- social growth - Development of social abilities
 
-  - [[early_social]] - Social development in early childhood
+  - early social - Social development in early childhood
 
-    - [[attachment_formation]] - Forming first bonds with caregivers
+    - attachment formation - Forming first bonds with caregivers
 
-    - [[basic_interaction]] - First simple exchanges with others
+    - basic interaction - First simple exchanges with others
 
-  - [[advanced_social]] - Social development in later childhood and adulthood
+  - advanced social - Social development in later childhood and adulthood
 
-    - [[complex_understanding]] - Understanding nuanced social situations
+    - complex understanding - Understanding nuanced social situations
 
-    - [[social_expertise]] - Skilled handling of social situations
+    - social expertise - Skilled handling of social situations
 
 ### Individual Differences
 
-- [[social_variation]] - Individual differences in social functioning
+- social variation - Individual differences in social functioning
 
-  - [[social_ability]] - Individual differences in social skill
+  - social ability - Individual differences in social skill
 
     - [[social_intelligence]] - Skill in understanding and navigating social situations
 
@@ -259,21 +259,21 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
     - [[temperament]] - Inborn dispositions of reactivity and regulation
 
-    - [[social_style]] - Characteristic manner of interacting with others
+    - social style - Characteristic manner of interacting with others
 
 ### Environmental Effects
 
-- [[social_context]] - Environmental influences on social development
+- social context - Environmental influences on social development
 
-  - [[family_influence]] - Learning shaped by family
+  - family influence - Learning shaped by family
 
     - parenting - Parental child-rearing practices
 
     - sibling relations - Relationships between brothers and sisters
 
-  - [[peer_influence]] - Influence of same-age peers
+  - peer influence - Influence of same-age peers
 
-    - [[peer_pressure]] - Pressure from peers to conform
+    - peer pressure - Pressure from peers to conform
 
     - [[social_modeling]] - Learning by imitating others
 
@@ -287,7 +287,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
     - [[social_communication]] - Difficulties in social communication
 
-    - [[social_understanding]] - Difficulties interpreting others' perspectives and cues
+    - social understanding - Difficulties interpreting others' perspectives and cues
 
   - [[social_anxiety]] - Fear of social evaluation
 
@@ -305,23 +305,23 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
     - [[conflict_resolution]] - Resolving disagreements constructively
 
-  - [[social_integration]] - Helping people participate in groups
+  - social integration - Helping people participate in groups
 
-    - [[classroom_dynamics]] - Social interactions within a class
+    - classroom dynamics - Social interactions within a class
 
     - peer relations - Relationships among peers
 
 ### Professional Applications
 
-- [[workplace_social]] - Social processes at work
+- workplace social - Social processes at work
 
   - leadership - Guiding and motivating groups
 
-    - [[team_management]] - Directing and supporting a team
+    - team management - Directing and supporting a team
 
-    - [[influence_skills]] - Ability to shape others' attitudes and actions
+    - influence skills - Ability to shape others' attitudes and actions
 
-  - [[collaboration]] - Working jointly toward a shared goal
+  - collaboration - Working jointly toward a shared goal
 
     - team coordination - Aligning team members' actions
 
@@ -331,7 +331,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Behavioral Methods
 
-- [[social_measures]] - Methods for measuring social behavior
+- social measures - Methods for measuring social behavior
 
   - interaction analysis - Systematic study of social exchanges
 
@@ -339,7 +339,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
     - behavior coding - Categorizing observed behavior systematically
 
-  - [[experimental_games]] - Game-based tests of social decisions
+  - experimental games - Game-based tests of social decisions
 
     - [[economic_games]] - Games using monetary payoffs to study decisions
 
@@ -347,7 +347,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Neural Methods
 
-- [[social_brain_measures]] - Neuroimaging of social processing
+- social brain measures - Neuroimaging of social processing
 
   - [[hyperscanning]] - Recording brain activity from interacting people simultaneously
 
@@ -363,7 +363,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ### Computational Models
 
-- [[social_models]] - Computational models of social behavior
+- social models - Computational models of social behavior
 
   - agent models - Models of individual decision makers
 
@@ -405,13 +405,13 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
 ## References
 
-- [[adolphs_social]]
+- adolphs social
 
-- [[frith_making]]
+- frith making
 
 - lieberman social
 
-- [[dunbar_social]]
+- dunbar social
 
 ## Related Concepts
 

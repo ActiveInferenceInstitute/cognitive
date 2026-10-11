@@ -19,6 +19,8 @@ semantic_relations:
       - "[[thermodynamics]]"
       - "[[geometric_mechanics]]"
       - "[[control_theory]]"
+aliases:
+  - contact_manifolds
 ---
 
 

@@ -28,7 +28,7 @@ semantic_relations:
 
 The [[cognitive/stability_plasticity|Stability-Plasticity Dilemma]] refers to the fundamental challenge in [[learning_systems|learning systems]] of balancing between two competing requirements:
 
-1. **Stability**: The ability to maintain existing knowledge ([[memory_stability|memory stability]])
+1. **Stability**: The ability to maintain existing knowledge (memory stability)
 
 1. **Plasticity**: The capacity to learn new information ([[cognitive/neural_plasticity|neural plasticity]])
 
@@ -90,17 +90,17 @@ class StabilityPlasticityDynamics:
 
   - [[systems_consolidation|Systems Consolidation]]
 
-  - [[behavioral_consolidation|Behavioral Consolidation]]
+  - Behavioral Consolidation
 
 - **Temporal Dynamics**:
 
-  - [[short_term_dynamics|Short-term Dynamics]]
+  - Short-term Dynamics
 
-  - [[intermediate_term|Intermediate-term]]
+  - Intermediate-term
 
   - Long-term Dynamics
 
-### 3. [[adaptive_mechanisms|Adaptive Mechanisms]]
+### 3. Adaptive Mechanisms
 
 ```python
 
@@ -146,7 +146,7 @@ class AdaptivePlasticity:
 
 ## Mathematical Framework
 
-### 1. [[plasticity_equations|Plasticity Equations]]
+### 1. Plasticity Equations
 
 The general form of plasticity-modulated learning:
 
@@ -186,7 +186,7 @@ where:
 
 - N: Number of weight vectors
 
-### 3. [[balance_optimization|Balance Optimization]]
+### 3. Balance Optimization
 
 Optimization objective:
 
@@ -208,7 +208,7 @@ where:
 
 ## Implementation Strategies
 
-### 1. [[architectural_solutions|Architectural Solutions]]
+### 1. Architectural Solutions
 
 ```python
 
@@ -262,13 +262,13 @@ class DualMemoryArchitecture:
 
 ```
 
-### 2. [[regulatory_mechanisms|Regulatory Mechanisms]]
+### 2. Regulatory Mechanisms
 
 - **Homeostatic Regulation**:
 
   - [[synaptic_scaling|Synaptic Scaling]]
 
-  - [[threshold_regulation|Threshold Regulation]]
+  - Threshold Regulation
 
   - [[metaplasticity|Metaplasticity]]
 
@@ -276,7 +276,7 @@ class DualMemoryArchitecture:
 
   - [[inhibitory_control|Inhibitory Control]]
 
-  - [[excitatory_balance|Excitatory Balance]]
+  - Excitatory Balance
 
   - [[neuromodulation|Neuromodulation]]
 
@@ -294,7 +294,7 @@ class DualMemoryArchitecture:
 
   - [[cognitive/schema_integration|Schema Integration]]
 
-  - [[knowledge_consolidation|Knowledge Consolidation]]
+  - Knowledge Consolidation
 
   - [[transfer_learning|Transfer Learning]]
 
@@ -308,7 +308,7 @@ class DualMemoryArchitecture:
 
   - [[adaptive_resonance|Adaptive Resonance Theory]]
 
-  - [[hierarchical_memory|Hierarchical Memory Networks]]
+  - Hierarchical Memory Networks
 
 - **Learning Algorithms**:
 
@@ -330,9 +330,9 @@ class DualMemoryArchitecture:
 
 - **Memory Systems**:
 
-  - [[hippocampal_memory|Hippocampal Memory]]
+  - Hippocampal Memory
 
-  - [[cortical_memory|Cortical Memory]]
+  - Cortical Memory
 
   - [[cognitive/working_memory|Working Memory]]
 
@@ -340,7 +340,7 @@ class DualMemoryArchitecture:
 
 - **Machine Learning**:
 
-  - [[lifelong_learning|Lifelong Learning]]
+  - Lifelong Learning
 
   - Incremental Learning
 
@@ -370,27 +370,27 @@ class DualMemoryArchitecture:
 
   - Neural Mechanisms
 
-  - [[synaptic_dynamics|Synaptic Dynamics]]
+  - Synaptic Dynamics
 
   - Network Plasticity
 
-### 2. [[computational_approaches|Computational Approaches]]
+### 2. Computational Approaches
 
 - **Algorithm Development**:
 
   - [[cognitive/meta_learning|Meta-Learning]]
 
-  - [[adaptive_algorithms|Adaptive Algorithms]]
+  - Adaptive Algorithms
 
-  - [[hybrid_approaches|Hybrid Approaches]]
+  - Hybrid Approaches
 
 - **System Design**:
 
-  - [[modular_systems|Modular Systems]]
+  - Modular Systems
 
-  - [[adaptive_architectures|Adaptive Architectures]]
+  - Adaptive Architectures
 
-  - [[distributed_learning|Distributed Learning]]
+  - Distributed Learning
 
 ## See Also
 

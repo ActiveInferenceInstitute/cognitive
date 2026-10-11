@@ -15,6 +15,8 @@ semantic_relations:
       - "[[neural_synchrony]]"
       - "[[neural_dynamics]]"
       - "[[electrophysiology]]"
+aliases:
+  - brain_rhythms
 ---
 
 # Neural Oscillations

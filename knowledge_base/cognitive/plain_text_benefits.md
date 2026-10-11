@@ -13,7 +13,6 @@ semantic_relations:
       - "[[git_workflow]]"
       - "[[obsidian_usage]]"
       - "[[knowledge_organization]]"
-      - "[[model_generalization]]"
   - type: implements
     links:
       - "[[plain_text_benefits]]"
@@ -31,7 +30,7 @@ Plain text formats serve as the foundation for our cognitive modeling ecosystem,
 
 - **Git-Friendly Format**
 
-  - Line-by-line [[diff_tracking]]
+  - Line-by-line diff tracking
 
   - Meaningful change history
 
@@ -45,7 +44,7 @@ Plain text formats serve as the foundation for our cognitive modeling ecosystem,
 
 - **Obsidian Integration**
 
-  - [[bidirectional_linking]]
+  - bidirectional linking
 
   - [[graph_visualization]]
 
@@ -59,23 +58,23 @@ Plain text formats serve as the foundation for our cognitive modeling ecosystem,
 
 - **Automated Processing**
 
-  - [[automated_validation]]
+  - automated validation
 
   - documentation generation
 
-  - [[model_extraction]]
+  - model extraction
 
-  - [[dependency_analysis]]
+  - dependency analysis
 
 ### 4. Research Benefits
 
 - **Reproducibility**
 
-  - [[experiment_tracking]]
+  - experiment tracking
 
   - version control
 
-  - [[parameter_logging]]
+  - parameter logging
 
 - **Collaboration**
 
@@ -83,7 +82,7 @@ Plain text formats serve as the foundation for our cognitive modeling ecosystem,
 
   - knowledge sharing
 
-  - [[distributed_development]]
+  - distributed development
 
 ## Applications
 
@@ -135,7 +134,7 @@ See [[knowledge_representation]] for more.
 
 - Linked learning paths
 
-See [[educational_resources]] for examples.
+See educational resources for examples.
 
 ## Intelligence Augmentation
 
@@ -143,7 +142,7 @@ See [[educational_resources]] for examples.
 
 - **Training Data Generation**
 
-  - Structured text for [[dataset_creation]]
+  - Structured text for dataset creation
 
   - Annotated examples for model training
 
@@ -153,11 +152,11 @@ See [[educational_resources]] for examples.
 
 - **Pattern Recognition**
 
-  - [[graph_analysis]]
+  - graph analysis
 
   - concept clustering
 
-  - [[relationship_mining]]
+  - relationship mining
 
 ### 3. Model Generalization
 
@@ -165,9 +164,9 @@ See [[educational_resources]] for examples.
 
   - [[cross_domain_mapping]]
 
-  - [[abstraction_layers]]
+  - abstraction layers
 
-  - [[parameter_sharing]]
+  - parameter sharing
 
 ## Research Workflow
 
@@ -175,7 +174,7 @@ See [[educational_resources]] for examples.
 
 - **Reference Management**
 
-  - [[reference_linking]]
+  - reference linking
 
   - [[knowledge_graphs]]
 
@@ -207,7 +206,7 @@ experiment:
 
   - [[visualization_tools]]
 
-  - [[result_interpretation]]
+  - result interpretation
 
 ## Educational Applications
 
@@ -215,9 +214,9 @@ experiment:
 
 - **Structured Learning**
 
-  - [[prerequisite_chains]]
+  - prerequisite chains
 
-  - [[concept_dependencies]]
+  - concept dependencies
 
   - learning objectives
 
@@ -239,11 +238,11 @@ def belief_update(observation):
 
 - **Progress Tracking**
 
-  - [[concept_mastery]]
+  - concept mastery
 
   - [[skill_development]]
 
-  - [[understanding_gaps]]
+  - understanding gaps
 
 ## Model Generalization
 
@@ -253,9 +252,9 @@ def belief_update(observation):
 
   - formal methods
 
-  - [[model_verification]]
+  - model verification
 
-  - [[property_checking]]
+  - property checking
 
 ### 2. Cross-Domain Transfer
 
@@ -273,7 +272,7 @@ def belief_update(observation):
 
   - modular design
 
-  - [[extensible_architecture]]
+  - extensible architecture
 
   - scaling patterns
 
@@ -301,21 +300,21 @@ See [[project_structure]] for details.
 
 - **Consistent Formatting**
 
-  - [[markdown_style]]
+  - markdown style
 
-  - [[docstring_format]]
+  - docstring format
 
-  - [[comment_guidelines]]
+  - comment guidelines
 
 ### 3. Version Control
 
 - **Meaningful History**
 
-  - [[commit_messages]]
+  - commit messages
 
-  - [[branch_strategy]]
+  - branch strategy
 
-  - [[release_management]]
+  - release management
 
 ## Integration Examples
 
@@ -365,11 +364,11 @@ graph LR
 
 ## References
 
-- [[plain_text_manifesto]]
+- plain text manifesto
 
-- [[git_best_practices]]
+- git best practices
 
-- [[obsidian_methodology]]
+- obsidian methodology
 
-- [[research_workflow]]
+- research workflow
 

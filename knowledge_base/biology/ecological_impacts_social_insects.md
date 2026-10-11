@@ -595,7 +595,7 @@ class ServiceEnhancementTechnologies:
 - [[ecosystem_services]] - Economic valuation of services
 - sustainable development - Sustainable resource management
 - environmental policy - Policy frameworks for conservation
-- [[agricultural_ecology]] - Agriculture-ecosystem interactions
+- agricultural ecology - Agriculture-ecosystem interactions
 
 ---
 

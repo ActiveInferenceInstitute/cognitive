@@ -60,7 +60,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
     - [[salience_detection]] - Detecting stimuli that stand out from context
 
-    - [[emotional_salience]] - Prioritizing emotionally significant stimuli
+    - emotional salience - Prioritizing emotionally significant stimuli
 
 ### Resource Allocation
 
@@ -76,7 +76,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
     - [[divided_attention]] - Multi-tasking
 
-    - [[attention_switching]] - Task shifting
+    - attention switching - Task shifting
 
 ## Neural Implementation
 
@@ -98,13 +98,13 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 ### Circuit Mechanisms
 
-- [[attention_circuits]] - Neural implementation
+- attention circuits - Neural implementation
 
   - [[gain_modulation]] - Signal enhancement
 
     - [[neural_gain]] - Scaling of neural response strength
 
-    - [[response_suppression]] - Reduced neural responses to unattended stimuli
+    - response suppression - Reduced neural responses to unattended stimuli
 
   - [[synchronization]] - Temporal coordination
 
@@ -120,7 +120,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
     - [[nucleus_basalis]] - Basal forebrain source of cortical acetylcholine
 
-    - [[cortical_modulation]] - Cortical targets of cholinergic input
+    - cortical modulation - Cortical targets of cholinergic input
 
   - [[noradrenergic_system]] - Norepinephrine-based modulatory system
 
@@ -132,15 +132,15 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 ### Perception
 
-- [[perceptual_attention]] - Sensory selection
+- perceptual attention - Sensory selection
 
   - [[visual_attention]] - Selective processing of visual input
 
-    - [[spatial_selection]] - Selecting stimuli by spatial location
+    - spatial selection - Selecting stimuli by spatial location
 
-    - [[object_selection]] - Selecting whole objects as attentional units
+    - object selection - Selecting whole objects as attentional units
 
-  - [[auditory_attention]] - Selective processing of auditory input
+  - auditory attention - Selective processing of auditory input
 
     - [[auditory_streaming]] - Sound separation
 
@@ -148,27 +148,27 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 ### Memory
 
-- [[attention_memory]] - Attentional influences on memory
+- attention memory - Attentional influences on memory
 
-  - [[encoding_attention]] - Attention shaping what gets encoded
+  - encoding attention - Attention shaping what gets encoded
 
-    - [[selective_encoding]] - Preferential encoding of relevant information
+    - selective encoding - Preferential encoding of relevant information
 
-    - [[depth_processing]] - Depth of processing during encoding
+    - depth processing - Depth of processing during encoding
 
-  - [[retrieval_attention]] - Attention guiding memory retrieval
+  - retrieval attention - Attention guiding memory retrieval
 
-    - [[search_control]] - Strategic control of memory search
+    - search control - Strategic control of memory search
 
     - monitoring - Checking the accuracy of retrieved memories
 
 ### Action
 
-- [[motor_attention]] - Attention in action planning and execution
+- motor attention - Attention in action planning and execution
 
   - [[action_selection]] - Choosing among competing actions
 
-    - [[response_preparation]] - Preparing a selected response
+    - response preparation - Preparing a selected response
 
     - [[inhibitory_control]] - Suppressing unwanted responses
 
@@ -182,7 +182,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 ### Information Theory
 
-- [[attention_information]] - Information-theoretic account of selection
+- attention information - Information-theoretic account of selection
 
   - [[information_gain]] - Reduction in uncertainty from sampling
 
@@ -204,9 +204,9 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
     - [[error_signals]] - Signals of mismatch between goal and state
 
-    - [[adjustment_mechanisms]] - Adjusting attention to reduce errors
+    - adjustment mechanisms - Adjusting attention to reduce errors
 
-  - [[predictive_control]] - Control based on anticipated demands
+  - predictive control - Control based on anticipated demands
 
     - [[forward_models]] - Predicting consequences of actions
 
@@ -214,11 +214,11 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 ### Learning Theory
 
-- [[attention_learning]] - Learning to allocate attention
+- attention learning - Learning to allocate attention
 
   - [[value_learning]] - Learning which stimuli are valuable
 
-    - [[reward_association]] - Linking stimuli to rewards
+    - reward association - Linking stimuli to rewards
 
     - punishment avoidance - Learning to avoid punished stimuli
 
@@ -226,23 +226,23 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
     - [[search_strategies]] - Efficient search
 
-    - [[allocation_strategies]] - Strategies for distributing attention
+    - allocation strategies - Strategies for distributing attention
 
 ## Clinical Applications
 
 ### Attention Disorders
 
-- [[attention_deficit]] - ADHD
+- attention deficit - ADHD
 
-  - [[hyperactivity]] - Excess movement
+  - hyperactivity - Excess movement
 
   - [[impulsivity]] - Acting without adequate forethought
 
-  - [[inattention]] - Focus problems
+  - inattention - Focus problems
 
 ### Neurological Conditions
 
-- [[attention_deficits]] - Attention impairments after brain injury
+- attention deficits - Attention impairments after brain injury
 
   - [[spatial_neglect]] - Failure to attend to one side of space
 
@@ -252,13 +252,13 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 ### Therapeutic Approaches
 
-- [[attention_therapy]] - Interventions for attention problems
+- attention therapy - Interventions for attention problems
 
   - [[cognitive_training]] - Repeated practice to improve attention
 
   - [[behavioral_therapy]] - Behavioral techniques for managing attention problems
 
-  - [[medication]] - Drug treatment
+  - medication - Drug treatment
 
 ## Research Methods
 
@@ -268,19 +268,19 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
   - [[visual_search]] - Finding targets
 
-  - [[cueing_paradigms]] - Tasks using cues to direct attention
+  - cueing paradigms - Tasks using cues to direct attention
 
   - [[dual_tasks]] - Multi-tasking
 
 ### Neural Recording
 
-- [[attention_imaging]] - Imaging of brain activity during attention
+- attention imaging - Imaging of brain activity during attention
 
-  - [[fmri_attention]] - Spatial localization of attention effects with fMRI
+  - fmri attention - Spatial localization of attention effects with fMRI
 
-  - [[eeg_attention]] - Temporal dynamics of attention via EEG
+  - eeg attention - Temporal dynamics of attention via EEG
 
-  - [[meg_attention]] - Millisecond-scale cortical dynamics via MEG
+  - meg attention - Millisecond-scale cortical dynamics via MEG
 
 ### Computational Modeling
 
@@ -296,9 +296,9 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 ### Educational
 
-- [[learning_applications]] - Attention research applied to learning
+- learning applications - Attention research applied to learning
 
-  - [[classroom_attention]] - Attention in classroom settings
+  - classroom attention - Attention in classroom settings
 
   - study strategies - Strategies for focused studying
 
@@ -316,11 +316,11 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
 ### Technology
 
-- [[attention_technology]] - Technology that measures or supports attention
+- attention technology - Technology that measures or supports attention
 
-  - [[attention_interfaces]] - Interfaces that manage user attention
+  - attention interfaces - Interfaces that manage user attention
 
-  - [[attention_monitoring]] - Tracking user attention, such as gaze
+  - attention monitoring - Tracking user attention, such as gaze
 
   - attention support - Tools that help sustain attention
 
@@ -539,15 +539,15 @@ Where:
 
 - [[closed_loop_systems]] - Systems that adapt to measured attention
 
-- [[artificial_attention]] - Attention mechanisms in artificial systems
+- artificial attention - Attention mechanisms in artificial systems
 
 ## References
 
 - [[posner_attention]]
 
-- [[desimone_duncan]]
+- desimone duncan
 
-- [[corbetta_shulman]]
+- corbetta shulman
 
 - [[lavie_load]]
 

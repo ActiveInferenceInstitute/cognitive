@@ -15,6 +15,8 @@ semantic_relations:
       - "[[predictive_coding]]"
       - "[[bayesian_brain]]"
       - "[[hebbian_learning]]"
+aliases:
+  - neural_plausibility
 ---
 
 # Biological Plausibility

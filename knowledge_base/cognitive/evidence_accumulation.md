@@ -12,6 +12,7 @@ aliases:
   - sensory_evidence
   - accumulator_circuits
   - drift_diffusion
+  - evidence_integration
 semantic_relations:
   - type: implements
     links:

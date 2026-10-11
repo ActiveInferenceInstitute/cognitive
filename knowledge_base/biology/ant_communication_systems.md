@@ -12,7 +12,7 @@ tags:
   - chemical_signals
   - vibrational_signals
   - tactile_signals
-aliases: [ant-signaling, ant-chemical-communication, formicid-communication]
+aliases: [ant-signaling, ant-chemical-communication, formicid-communication, ant_communication]
 complexity: intermediate
 processing_priority: 1
 semantic_relations:

@@ -12,8 +12,6 @@ semantic_relations:
   - type: organizes
     links:
       - "[[active inference agents]]"
-      - "[[pomdp agents]]"
-      - "[[swarm agents]]"
 ---
 
 

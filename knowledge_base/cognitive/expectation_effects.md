@@ -16,6 +16,8 @@ semantic_relations:
       - "[[prediction_error]]"
       - "[[precision_weighting]]"
       - "[[predictive_perception]]"
+aliases:
+  - expectation_bias
 ---
 
 # Expectation Effects

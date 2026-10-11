@@ -22,7 +22,6 @@ semantic_relations:
   - type: implements
     links:
       - "[[immune_response]]"
-      - "[[antibody_dynamics]]"
   - type: relates
     links:
       - "[[developmental_systems]]"
@@ -533,13 +532,13 @@ class ImmuneNetwork:
 
 ## References
 
-- [[murphy_2022]] - "Janeway's Immunobiology"
+- murphy 2022 - "Janeway's Immunobiology"
 
-- [[perelson_2002]] - "Modelling Viral and Immune System Dynamics"
+- perelson 2002 - "Modelling Viral and Immune System Dynamics"
 
-- [[chakraborty_2010]] - "Statistical Mechanical Concepts in Immunology"
+- chakraborty 2010 - "Statistical Mechanical Concepts in Immunology"
 
-- [[germain_2011]] - "Systems Biology in Immunology"
+- germain 2011 - "Systems Biology in Immunology"
 
 ## See Also
 

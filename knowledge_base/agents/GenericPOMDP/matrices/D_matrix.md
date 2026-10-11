@@ -104,9 +104,9 @@ ylabel: "Probability"
 
 - [[empirical_prior]] - Prior estimated from observed data
 
-- [[hierarchical_prior]] - Multi-level priors
+- hierarchical prior - Multi-level priors
 
-- [[context_prior]] - Context-dependent priors
+- context prior - Context-dependent priors
 
 ## Integration
 
@@ -174,7 +174,7 @@ class PriorBeliefs:
 
 - [[bayesian_updating]] - Posterior computation
 
-- [[prior_learning]] - Adapting priors
+- prior learning - Adapting priors
 
 - [[structure_learning]] - Learning belief structure
 
@@ -182,15 +182,15 @@ class PriorBeliefs:
 
 ### Belief Initialization
 
-- [[cold_start]] - Starting inference with no prior experience
+- cold start - Starting inference with no prior experience
 
-- [[belief_reset]] - Restoring prior beliefs after a surprising event
+- belief reset - Restoring prior beliefs after a surprising event
 
-- [[default_behavior]] - Fallback behavior under uninformative priors
+- default behavior - Fallback behavior under uninformative priors
 
 ### Information Processing
 
-- [[surprise_computation]]
+- surprise computation
 
 - novelty detection
 

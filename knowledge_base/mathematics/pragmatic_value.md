@@ -218,7 +218,7 @@ Links to:
 
      - [[goal_specification]] - Goal definition
 
-     - [[preference_encoding]] - Preference representation
+     - preference encoding - Preference representation
 
      - [[utility_maximization]] - Value optimization
 
@@ -278,9 +278,9 @@ Links to:
 
    - Links to:
 
-     - [[utility_metrics]] - Value measures
+     - utility metrics - Value measures
 
-     - [[goal_metrics]] - Achievement measures
+     - goal metrics - Achievement measures
 
      - [[performance_metrics]] - System evaluation
 
@@ -296,9 +296,9 @@ Links to:
 
      - value visualization - Value plots
 
-     - [[preference_visualization]] - Preference plots
+     - preference visualization - Preference plots
 
-     - [[goal_visualization]] - Achievement plots
+     - goal visualization - Achievement plots
 
 ## Related Concepts
 
@@ -316,11 +316,11 @@ Links to:
 
 - [[friston_2017]] - Active Inference
 
-- [[von_neumann_1944]] - Utility Theory
+- von neumann 1944 - Utility Theory
 
 - [[sutton_barto_2018]] - Reinforcement Learning
 
-- [[bertsekas_2005]] - Dynamic Programming
+- bertsekas 2005 - Dynamic Programming
 
 ## Goal-Directed Behavior
 

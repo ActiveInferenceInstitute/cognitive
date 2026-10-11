@@ -22,7 +22,6 @@ semantic_relations:
   - type: implements
     links:
       - "[[metabolic_networks]]"
-      - "[[protein_chemistry]]"
       - "[[knowledge_base/agents/architectures_overview]]"
   - type: relates
     links:
@@ -690,19 +689,19 @@ class MetabolicNetworkControl:
 ## References
 
 ### Foundational Texts
-- [[voet_2016]] - "Biochemistry, 5th Edition"
-- [[berg_2015]] - "Biochemistry, 8th Edition"
-- [[lehninger_2013]] - "Lehninger Principles of Biochemistry"
+- voet 2016 - "Biochemistry, 5th Edition"
+- berg 2015 - "Biochemistry, 8th Edition"
+- lehninger 2013 - "Lehninger Principles of Biochemistry"
 
 ### Advanced Topics
-- [[beard_2008]] - "Chemical Biophysics: Quantitative Analysis of Cellular Systems"
-- [[qian_2006]] - "Open-System Nonequilibrium Steady State: Statistical Thermodynamics of Computational Systems"
-- [[heinrich_1996]] - "The Regulation of Cellular Systems"
+- beard 2008 - "Chemical Biophysics: Quantitative Analysis of Cellular Systems"
+- qian 2006 - "Open-System Nonequilibrium Steady State: Statistical Thermodynamics of Computational Systems"
+- heinrich 1996 - "The Regulation of Cellular Systems"
 
 ### Active Inference Applications
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 - [[parr_2022]] - "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior"
-- [[ramstead_2021]] - "On the Free Energy Principle and the Nature of Computation"
+- ramstead 2021 - "On the Free Energy Principle and the Nature of Computation"
 
 ## See Also
 

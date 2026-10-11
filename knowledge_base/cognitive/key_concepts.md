@@ -42,7 +42,7 @@ Fundamental units of knowledge representation:
 
 - Contain beliefs, goals, and actions
 
-- See [[agent_concepts]]
+- See agent concepts
 
 #### Belief Nodes
 
@@ -52,7 +52,7 @@ Fundamental units of knowledge representation:
 
 - Update through observations
 
-- See [[belief_concepts]]
+- See belief concepts
 
 #### Goal Nodes
 
@@ -62,7 +62,7 @@ Fundamental units of knowledge representation:
 
 - Guide policy selection
 
-- See [[goal_concepts]]
+- See goal concepts
 
 ### Relationships
 
@@ -102,7 +102,7 @@ Fundamental units of knowledge representation:
 
 ### Implementation
 
-- [[active_inference_intro]]
+- active inference intro
 
 - [[model_architecture]]
 
@@ -204,13 +204,13 @@ Fundamental units of knowledge representation:
 
 1. Maintain [[linking_patterns]]
 
-1. Follow [[maintenance_guide]]
+1. Follow maintenance guide
 
 ### Version Control
 
 1. Follow [[git_workflow]]
 
-1. Use [[branching_strategy]]
+1. Use branching strategy
 
 1. Review deployment guide
 
@@ -256,7 +256,7 @@ Fundamental units of knowledge representation:
 
 - Performance analysis
 
-- See [[optimization_guide]]
+- See optimization guide
 
 ### Scaling
 
@@ -264,7 +264,7 @@ Fundamental units of knowledge representation:
 
 - Performance optimization
 
-- See [[scaling_guide]]
+- See scaling guide
 
 ## Related Concepts
 
@@ -278,9 +278,9 @@ Fundamental units of knowledge representation:
 
 ## References
 
-- [[research_papers]]
+- research papers
 
 - implementation examples
 
-- [[further_reading]]
+- further reading
 

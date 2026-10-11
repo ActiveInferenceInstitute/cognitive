@@ -27,7 +27,6 @@ semantic_relations:
       - "[[state_prediction]]"
   - type: relates_to
     links:
-      - "[[dynamics_model]]"
       - "[[control_theory]]"
 ---
 
@@ -62,7 +61,7 @@ The B-matrix is a fundamental component in POMDPs and active inference framework
 
 ### Structural Characteristics
 
-- [[matrix_structure]] - Layout of rows, columns, and action slices
+- matrix structure - Layout of rows, columns, and action slices
 
   - Dimensionality
 
@@ -118,7 +117,7 @@ constraints:
 
 ### Probabilistic Properties
 
-- [[transition_properties]] - Formal properties of the transition dynamics
+- transition properties - Formal properties of the transition dynamics
 
   - Stochasticity
 
@@ -161,7 +160,7 @@ See `docs/examples/README.md` for runnable examples.
 
 ### Storage Formats
 
-- [[matrix_storage]] - Storing and indexing matrices in memory
+- matrix storage - Storing and indexing matrices in memory
 
   - Dense arrays
 
@@ -173,7 +172,7 @@ See `docs/examples/README.md` for runnable examples.
 
 ### Computational Methods
 
-- [[transition_computation]] - Computing transition matrices and updates
+- transition computation - Computing transition matrices and updates
 
   - Matrix operations
 
@@ -230,7 +229,7 @@ def update_transitions_bayes(self,
 
 ### Online Adaptation
 
-- [[dynamic_learning]] - Real-time updates
+- dynamic learning - Real-time updates
 
   - Incremental learning
 
@@ -324,7 +323,7 @@ def simulate_trajectory(self,
 
 ### With State Space
 
-- [[state_space_integration]] - Linking transitions to the state space
+- state space integration - Linking transitions to the state space
 
   - State encoding
 
@@ -336,7 +335,7 @@ def simulate_trajectory(self,
 
 ### With Action Space
 
-- [[action_space_integration]] - Action effects
+- action space integration - Action effects
 
   - Action encoding
 
@@ -348,7 +347,7 @@ def simulate_trajectory(self,
 
 ### With Observation Model
 
-- [[observation_integration]] - Linking transitions to observations
+- observation integration - Linking transitions to observations
 
   - Hidden states
 
@@ -362,7 +361,7 @@ def simulate_trajectory(self,
 
 ### Information Theory
 
-- [[transition_information]] - Information measures
+- transition information - Information measures
 
   - Entropy rate
 
@@ -374,7 +373,7 @@ def simulate_trajectory(self,
 
 ### Geometric Properties
 
-- [[transition_geometry]] - Geometric aspects
+- transition geometry - Geometric aspects
 
   - Manifold structure
 
@@ -386,7 +385,7 @@ def simulate_trajectory(self,
 
 ### Stability Analysis
 
-- [[transition_stability]] - Stability properties
+- transition stability - Stability properties
 
   - Fixed points
 
@@ -400,7 +399,7 @@ def simulate_trajectory(self,
 
 ### Computational Optimization
 
-- [[computation_optimization]] - Speeding up transition computation
+- computation optimization - Speeding up transition computation
 
   - Matrix operations
 
@@ -462,7 +461,7 @@ def simulate_trajectory(self,
 
 ### Maintenance Procedures
 
-- [[maintenance_procedures]] - Maintaining and updating matrices over time
+- maintenance procedures - Maintaining and updating matrices over time
 
   - Updates
 
@@ -476,7 +475,7 @@ def simulate_trajectory(self,
 
 - [[markov_decision_process]]
 
-- [[transition_learning]]
+- transition learning
 
 - [[control_theory]]
 
@@ -492,7 +491,7 @@ def simulate_trajectory(self,
 
 - [[state_space]] - Set of possible hidden states
 
-- [[policy_space]] - Set of candidate action sequences
+- policy space - Set of candidate action sequences
 
 - [[active_inference]] - Framework unifying perception and action
 

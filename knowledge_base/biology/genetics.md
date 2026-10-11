@@ -23,7 +23,6 @@ semantic_relations:
     links:
       - "[[gene_expression]]"
       - "[[genetic_regulation]]"
-      - "[[genome_organization]]"
   - type: relates
     links:
       - "[[developmental_systems]]"
@@ -546,13 +545,13 @@ class GenomeAnalyzer:
 
 ## References
 
-- [[griffiths_2015]] - "Introduction to Genetic Analysis"
+- griffiths 2015 - "Introduction to Genetic Analysis"
 
 - hartl 2006 - "Essential Genetics"
 
 - nielsen 2005 - "Statistical Methods in Molecular Evolution"
 
-- [[wray_2008]] - "Molecular Population Genetics"
+- wray 2008 - "Molecular Population Genetics"
 
 ## See Also
 

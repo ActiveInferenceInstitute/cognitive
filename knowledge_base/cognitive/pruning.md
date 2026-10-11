@@ -15,6 +15,9 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[synaptic_plasticity]]"
       - "[[neural_plasticity]]"
+aliases:
+  - synapse_elimination
+  - synaptic_pruning
 ---
 
 # Pruning

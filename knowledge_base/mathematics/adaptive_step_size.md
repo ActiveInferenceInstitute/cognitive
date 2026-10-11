@@ -16,6 +16,9 @@ semantic_relations:
       - "[[taylor_series]]"
       - "[[numerical_stability]]"
       - "[[optimization_algorithms]]"
+aliases:
+  - adaptive_timesteps
+  - step_size_adaptation
 ---
 
 # Adaptive Step Size

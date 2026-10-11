@@ -22,7 +22,6 @@ semantic_relations:
       - "[[knowledge_base/cognitive/active_inference]]"
   - type: implements
     links:
-      - "[[behavioral_dynamics]]"
       - "[[decision_making]]"
       - "[[learning_theory]]"
       - "[[knowledge_base/agents/architectures_overview]]"
@@ -697,9 +696,9 @@ class BehavioralLearningAgent:
 ## References
 
 ### Foundational Texts
-- [[krebs_2009]] - "Behavioral Ecology: An Evolutionary Approach"
-- [[alcock_2013]] - "Animal Behavior: An Evolutionary Approach"
-- [[tinbergen_1963]] - "The Study of Instinct"
+- krebs 2009 - "Behavioral Ecology: An Evolutionary Approach"
+- alcock 2013 - "Animal Behavior: An Evolutionary Approach"
+- tinbergen 1963 - "The Study of Instinct"
 
 ### Theoretical Frameworks
 - dayan 2001 - "Theoretical Neuroscience"

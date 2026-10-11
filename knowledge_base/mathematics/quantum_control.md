@@ -16,6 +16,8 @@ semantic_relations:
       - "[[optimal_control]]"
       - "[[lie_theory]]"
       - "[[quantum_free_energy]]"
+aliases:
+  - quantum_control_theory
 ---
 
 # Quantum Control

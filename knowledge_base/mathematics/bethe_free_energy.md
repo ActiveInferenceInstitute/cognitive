@@ -15,6 +15,8 @@ semantic_relations:
   - type: connects
     links:
       - "[[variational_free_energy]]"
+aliases:
+  - bethe_approximation
 ---
 
 

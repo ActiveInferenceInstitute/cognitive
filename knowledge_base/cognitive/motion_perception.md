@@ -788,7 +788,7 @@ class PredictiveMotionProcessor:
 
 - [[action_recognition]]
 
-- [[navigation]]
+- navigation
 
 ## References
 

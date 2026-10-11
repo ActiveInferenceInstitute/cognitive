@@ -344,7 +344,7 @@ class ExecutionController:
 
 ### 2. Decision Making
 
-- [[value_based_choice]]
+- value based choice
 
   - Reward processing
 

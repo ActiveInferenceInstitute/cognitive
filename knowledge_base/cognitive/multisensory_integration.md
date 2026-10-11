@@ -12,6 +12,8 @@ aliases:
   - sensory_integration
   - multimodal_integration
   - perceptual_integration
+  - multisensory
+  - sensory_fusion
 semantic_relations:
   - type: implements
     links:

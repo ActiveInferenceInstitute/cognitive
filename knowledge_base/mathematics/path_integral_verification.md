@@ -111,9 +111,9 @@ aliases:
 
    Links to:
 
-   - [[normalization_conditions]]
+   - normalization conditions
 
-   - [[thermodynamic_consistency]]
+   - thermodynamic consistency
 
    - [[gibbs_measures]]
 
@@ -253,17 +253,17 @@ aliases:
 
    - geometric integration
 
-   - [[symplectic_methods]]
+   - symplectic methods
 
    - energy conservation
 
 1. **Sampling Methods**
 
-   - Add [[mcmc_diagnostics]]
+   - Add mcmc diagnostics
 
    - Include [[effective_sample_size]]
 
-   - Link to [[convergence_diagnostics]]
+   - Link to convergence diagnostics
 
 ### Performance Optimization
 
@@ -311,7 +311,7 @@ aliases:
 
    - [[optimization_techniques]]
 
-   - [[parallel_efficiency]]
+   - parallel efficiency
 
 ## Documentation Updates
 
@@ -319,7 +319,7 @@ aliases:
 
 1. **Path Integral Theory**
 
-   - Add [[stochastic_analysis]] section
+   - Add stochastic analysis section
 
    - Enhance [[field_theory]] connections
 
@@ -329,7 +329,7 @@ aliases:
 
    - Add error estimation methods
 
-   - Include [[adaptive_methods]]
+   - Include adaptive methods
 
    - Link to [[performance_optimization]]
 
@@ -337,7 +337,7 @@ aliases:
 
 1. **Bridge Concepts**
 
-   - Add [[discretization_theory]]
+   - Add discretization theory
 
    - Include [[numerical_analysis]]
 
@@ -353,11 +353,11 @@ aliases:
 
 ## References
 
-- [[hairer_2006]] - Geometric Numerical Integration
+- hairer 2006 - Geometric Numerical Integration
 
-- [[glimm_1987]] - Quantum Physics: A Functional Integral Point of View
+- glimm 1987 - Quantum Physics: A Functional Integral Point of View
 
-- [[pavliotis_2014]] - Stochastic Processes and Applications
+- pavliotis 2014 - Stochastic Processes and Applications
 
-- [[graham_2006]] - Computational Methods for Physics
+- graham 2006 - Computational Methods for Physics
 

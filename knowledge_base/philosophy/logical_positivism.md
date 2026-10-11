@@ -14,6 +14,8 @@ semantic_relations:
       - "[[verification_theory]]"
       - "[[operationalism]]"
       - "[[active_inference]]"
+aliases:
+  - logical_empiricism
 ---
 
 # Logical Positivism

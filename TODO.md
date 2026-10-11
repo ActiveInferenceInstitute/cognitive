@@ -12,10 +12,11 @@ history; this file is not a log. Remove an item when it is done.
 
 ## Knowledge base
 
-- **Unresolved concept links.** About 5,500 distinct `[[concept]]` names have no page, each
-  linked once. Most are single-use names from generated "Related" lists. Unlinking
-  them wholesale is an editorial call; the two-link names have been triaged. The checker
-  reports them as skipped concept links and does not fail on them.
+- **Concept pages to write.** About 1,300 distinct `[[concept]]` names have no page. Each is
+  linked once and was judged a specific, well-defined concept (for example
+  `planum_temporale`, `temporal_difference_learning`, `hermeneutic_phenomenology`,
+  `kolmogorov_equations`). Write them in batches by domain. The link checker reports
+  them as skipped concept links and does not fail on them.
 - **Scholarship.** Several hundred older cognitive-science pages carry broad claims
   with few citations. Review them page by page. Classic references that were not
   individually looked up (Shannon 1948, Pearl, Koller and Friedman, Broadbent, Baddeley and

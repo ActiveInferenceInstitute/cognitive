@@ -11,6 +11,7 @@ tags:
 aliases:
   - cross_modal
   - audio_visual
+  - crossmodal
 semantic_relations:
   - type: implements
     links:

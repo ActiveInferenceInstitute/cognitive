@@ -31,7 +31,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 ### Maturation Mechanisms
 
-- [[brain_maturation]] - Neural development
+- brain maturation - Neural development
 
   - structural development - Anatomical growth of neural structures
 
@@ -59,7 +59,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - [[sensitive_periods]] - Periods of heightened responsiveness to specific input
 
-    - [[window_closure]] - Decline in plasticity once a window ends
+    - window closure - Decline in plasticity once a window ends
 
 ### Adaptation Systems
 
@@ -81,7 +81,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 ### Early Development
 
-- [[infant_cognition]] - Cognitive abilities in infancy
+- infant cognition - Cognitive abilities in infancy
 
   - [[sensorimotor_development]] - Action/sense
 
@@ -89,7 +89,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - means ends - Using actions as means to reach goals
 
-  - [[perceptual_development]] - Maturation of perceptual abilities
+  - perceptual development - Maturation of perceptual abilities
 
     - [[pattern_recognition]] - Detecting regularities in sensory input
 
@@ -97,27 +97,27 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 ### Middle Childhood
 
-- [[child_cognition]] - Cognitive abilities in middle childhood
+- child cognition - Cognitive abilities in middle childhood
 
   - [[concrete_operations]] - Logical reasoning about concrete objects and events
 
     - [[conservation]] - Quantity persists despite changes in appearance
 
-    - [[classification]] - Sorting objects into categories by shared features
+    - classification - Sorting objects into categories by shared features
 
   - [[skill_development]] - Acquisition of practical and academic skills
 
-    - [[academic_skills]] - Reading, writing, and mathematics skills
+    - academic skills - Reading, writing, and mathematics skills
 
     - social skills - People skills
 
 ### Adolescence
 
-- [[adolescent_cognition]] - Cognitive changes during adolescence
+- adolescent cognition - Cognitive changes during adolescence
 
-  - [[abstract_reasoning]] - Reasoning about abstract ideas and relations
+  - abstract reasoning - Reasoning about abstract ideas and relations
 
-    - [[hypothetical_thinking]] - Reasoning about possibilities and counterfactuals
+    - hypothetical thinking - Reasoning about possibilities and counterfactuals
 
     - [[metacognition]] - Thinking about one's own thinking
 
@@ -129,15 +129,15 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 ### Adult Development
 
-- [[adult_cognition]] - Cognitive abilities across adulthood
+- adult cognition - Cognitive abilities across adulthood
 
-  - [[expertise_development]] - Building deep skill through extended practice
+  - expertise development - Building deep skill through extended practice
 
-    - [[professional_skills]] - Skills acquired for occupational performance
+    - professional skills - Skills acquired for occupational performance
 
-    - [[life_skills]] - Everyday skills for independent living
+    - life skills - Everyday skills for independent living
 
-  - [[cognitive_maintenance]] - Preserving cognitive function with age
+  - cognitive maintenance - Preserving cognitive function with age
 
     - [[plasticity]] - Capacity of the brain to change with experience
 
@@ -147,7 +147,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 ### Perceptual Development
 
-- [[sensory_development]] - Maturation of sensory systems
+- sensory development - Maturation of sensory systems
 
   - visual development - Maturation of visual function
 
@@ -155,11 +155,11 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - pattern vision - Detecting shapes and visual patterns
 
-  - [[auditory_development]] - Maturation of hearing and auditory processing
+  - auditory development - Maturation of hearing and auditory processing
 
     - [[speech_perception]] - Perceiving speech sounds
 
-    - [[sound_patterns]] - Detecting regularities in sound sequences
+    - sound patterns - Detecting regularities in sound sequences
 
 ### Attention Development
 
@@ -183,27 +183,27 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
   - [[working_memory]] - Temporarily holding and manipulating information
 
-    - [[capacity_increase]] - Growth in working memory capacity
+    - capacity increase - Growth in working memory capacity
 
     - [[processing_speed]] - Increasing speed of cognitive operations
 
   - [[long_term_memory]] - Durable storage of information
 
-    - [[strategy_use]] - Use of mnemonic strategies such as rehearsal
+    - strategy use - Use of mnemonic strategies such as rehearsal
 
     - [[knowledge_organization]] - Structuring knowledge to aid retrieval
 
 ### Language Development
 
-- [[language_development]] - Acquisition of language skills
+- language development - Acquisition of language skills
 
-  - [[early_language]] - Early speech sounds and first words
+  - early language - Early speech sounds and first words
 
     - [[phonology]] - Learning the sound system of a language
 
-    - [[vocabulary]] - Acquiring words and their meanings
+    - vocabulary - Acquiring words and their meanings
 
-  - [[complex_language]] - Multi-word and sentence-level language
+  - complex language - Multi-word and sentence-level language
 
     - [[grammar]] - Learning rules for combining words
 
@@ -215,13 +215,13 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 - [[neural_development]] - Growth and organization of the nervous system
 
-  - [[regional_development]] - Differing maturation rates across brain regions
+  - regional development - Differing maturation rates across brain regions
 
-    - [[cortical_development]] - Maturation of the cerebral cortex
+    - cortical development - Maturation of the cerebral cortex
 
-    - [[subcortical_development]] - Maturation of structures beneath the cortex
+    - subcortical development - Maturation of structures beneath the cortex
 
-  - [[network_development]] - Maturation of connections between brain regions
+  - network development - Maturation of connections between brain regions
 
     - [[local_circuits]] - Connections within a single region
 
@@ -237,7 +237,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - [[critical_periods]] - Windows of heightened plasticity
 
-  - [[injury_response]] - Reorganization and recovery after brain injury
+  - injury response - Reorganization and recovery after brain injury
 
     - reorganization - Functional remapping of neural circuits
 
@@ -245,17 +245,17 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 ### Neurotransmitter Systems
 
-- [[chemical_development]] - Maturation of neurochemical systems
+- chemical development - Maturation of neurochemical systems
 
-  - [[transmitter_systems]] - Neurotransmitter systems and their maturation
+  - transmitter systems - Neurotransmitter systems and their maturation
 
     - [[dopamine]] - Reward/learn
 
     - [[serotonin]] - Mood/regulate
 
-  - [[receptor_development]] - Maturation of neurotransmitter receptors
+  - receptor development - Maturation of neurotransmitter receptors
 
-    - [[receptor_expression]] - Changes in receptor abundance and type
+    - receptor expression - Changes in receptor abundance and type
 
     - sensitivity - Responsiveness of receptors to transmitters
 
@@ -265,7 +265,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 - environmental factors - External conditions influencing development
 
-  - [[sensory_input]] - Stimulation received through the senses
+  - sensory input - Stimulation received through the senses
 
     - enrichment - Stimulating environments that support development
 
@@ -281,17 +281,17 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 - social influences - Effects of other people on development
 
-  - [[family_effects]] - Influence of the family environment
+  - family effects - Influence of the family environment
 
     - parenting - Caregiving styles and practices
 
-    - [[sibling_effects]] - Brother/sister
+    - sibling effects - Brother/sister
 
-  - [[peer_effects]] - Influence of same-age peers
+  - peer effects - Influence of same-age peers
 
     - [[social_learning]] - Learning by observing others
 
-    - [[group_norms]] - Learning the shared expectations of a group
+    - group norms - Learning the shared expectations of a group
 
 ### Cultural Context
 
@@ -305,9 +305,9 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
   - cultural values - Culturally shared beliefs about what matters
 
-    - [[goals]] - Developmental goals set by a culture
+    - goals - Developmental goals set by a culture
 
-    - [[practices]] - Everyday cultural routines and customs
+    - practices - Everyday cultural routines and customs
 
 ## Applications
 
@@ -319,63 +319,63 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - sequence - Ordering material from simple to complex
 
-    - [[methods]] - Teaching methods matched to developmental level
+    - methods - Teaching methods matched to developmental level
 
   - assessment - Evaluating learning and progress
 
-    - [[progress_monitoring]] - Tracking learning progress over time
+    - progress monitoring - Tracking learning progress over time
 
-    - [[outcome_measurement]] - Measuring learning outcomes
+    - outcome measurement - Measuring learning outcomes
 
 ### Clinical Applications
 
 - [[developmental_disorders]] - Conditions affecting typical development
 
-  - [[diagnosis]] - Identifying developmental conditions
+  - diagnosis - Identifying developmental conditions
 
     - assessment methods - Tools for evaluating developmental status
 
-    - [[early_detection]] - Identifying conditions at young ages
+    - early detection - Identifying conditions at young ages
 
   - intervention - Treatment and support for developmental conditions
 
-    - [[therapy_approaches]] - Therapeutic methods for developmental conditions
+    - therapy approaches - Therapeutic methods for developmental conditions
 
-    - [[support_services]] - Educational and family support services
+    - support services - Educational and family support services
 
 ### Policy Implications
 
-- [[development_policy]] - Policies shaping developmental outcomes
+- development policy - Policies shaping developmental outcomes
 
-  - [[educational_policy]] - Policies governing schooling
+  - educational policy - Policies governing schooling
 
-    - [[standards]] - Expected benchmarks for learning
+    - standards - Expected benchmarks for learning
 
-    - [[resources]] - Funding and materials for education
+    - resources - Funding and materials for education
 
-  - [[health_policy]] - Policies governing child health services
+  - health policy - Policies governing child health services
 
-    - [[screening]] - Population-wide checks for developmental conditions
+    - screening - Population-wide checks for developmental conditions
 
-    - [[services]] - Delivery of health and support services
+    - services - Delivery of health and support services
 
 ## Research Methods
 
 ### Behavioral Methods
 
-- [[developmental_assessment]] - Methods for measuring developmental status
+- developmental assessment - Methods for measuring developmental status
 
-  - [[standardized_tests]] - Tests administered under uniform conditions
+  - standardized tests - Tests administered under uniform conditions
 
-    - [[ability_tests]] - Tests of cognitive capacity
+    - ability tests - Tests of cognitive capacity
 
-    - [[achievement_tests]] - Tests of acquired knowledge and skills
+    - achievement tests - Tests of acquired knowledge and skills
 
-  - [[observational_methods]] - Recording behavior as it occurs
+  - observational methods - Recording behavior as it occurs
 
     - naturalistic - Observation in everyday settings
 
-    - [[structured]] - Observation using prescribed tasks
+    - structured - Observation using prescribed tasks
 
 ### Neural Methods
 
@@ -395,7 +395,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 ### Longitudinal Methods
 
-- [[time_studies]] - Studies following change across time
+- time studies - Studies following change across time
 
   - longitudinal - Following the same individuals over time
 
@@ -405,7 +405,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
   - cross sectional - Comparing different age groups at one time
 
-    - [[age_differences]] - Differences between age groups
+    - age differences - Differences between age groups
 
     - cohort effects - Differences due to generation or birth cohort
 
@@ -421,11 +421,11 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
 ### Emerging Approaches
 
-- [[personalized_development]] - Tailoring support to the individual child
+- personalized development - Tailoring support to the individual child
 
 - technology enhanced - Technology-supported learning and assessment
 
-- [[prevention_focus]] - Preventing developmental problems early
+- prevention focus - Preventing developmental problems early
 
 ## References
 

@@ -53,7 +53,7 @@ where:
 
   - sensory prediction errors - Differences in sensory domain
 
-  - [[higher_order_prediction_errors]] - Differences in abstract features
+  - higher order prediction errors - Differences in abstract features
 
 ### Optimization Process
 
@@ -61,7 +61,7 @@ where:
 
   - [[natural_gradient]] - Information geometry-based optimization
 
-  - [[variational_updates]] - Belief updating schemes
+  - variational updates - Belief updating schemes
 
   - [[message_passing]] - Information propagation methods
 
@@ -73,9 +73,9 @@ where:
 
   - error units - Neurons encoding prediction errors
 
-  - [[prediction_units]] - Neurons encoding expectations
+  - prediction units - Neurons encoding expectations
 
-  - [[precision_units]] - Neurons encoding uncertainty
+  - precision units - Neurons encoding uncertainty
 
 ### Behavioral Implementation
 
@@ -183,9 +183,9 @@ where:
 
 - [[friston_free_energy]]
 
-- [[variational_inference_review]]
+- variational inference review
 
-- [[predictive_coding_applications]]
+- predictive coding applications
 
 - active inference tutorial
 

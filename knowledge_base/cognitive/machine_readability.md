@@ -11,8 +11,6 @@ semantic_relations:
   - type: relates
     links:
       - "[[plain_text_benefits]]"
-      - "[[automation_tools]]"
-      - "[[ci_cd_pipeline]]"
   - type: implements
     links:
       - "[[machine_readability]]"
@@ -56,11 +54,11 @@ def extract_parameters(markdown_file):
 
 - **Automated Link Analysis**
 
-  - [[link_extraction]]
+  - link extraction
 
   - graph construction
 
-  - [[relationship_inference]]
+  - relationship inference
 
 ### 3. Semantic Analysis
 
@@ -102,21 +100,21 @@ def validate_docs():
 
 - **Template-Based Generation**
 
-  - [[code_templates]]
+  - code templates
 
-  - [[boilerplate_generation]]
+  - boilerplate generation
 
-  - [[test_generation]]
+  - test generation
 
 ### 3. Quality Checks
 
 - **Automated Validation**
 
-  - [[style_checking]]
+  - style checking
 
-  - [[link_validation]]
+  - link validation
 
-  - [[consistency_checking]]
+  - consistency checking
 
 ## Machine Learning Integration
 
@@ -152,11 +150,11 @@ def prepare_training_data():
 
 - **Documentation-Based Training**
 
-  - [[code_completion]]
+  - code completion
 
   - documentation generation
 
-  - [[error_prediction]]
+  - error prediction
 
 ### 3. Automated Improvement
 
@@ -164,7 +162,7 @@ def prepare_training_data():
 
   - [[feedback_loops]]
 
-  - [[model_refinement]]
+  - model refinement
 
   - [[performance_optimization]]
 
@@ -204,11 +202,11 @@ jobs:
 
 - **Editor Integration**
 
-  - [[ide_plugins]]
+  - ide plugins
 
   - [[linting_tools]]
 
-  - [[autocomplete]]
+  - autocomplete
 
 ### 3. Analysis Tools
 
@@ -216,9 +214,9 @@ jobs:
 
   - [[complexity_analysis]]
 
-  - [[coverage_reporting]]
+  - coverage reporting
 
-  - [[dependency_tracking]]
+  - dependency tracking
 
 ## Knowledge Extraction
 
@@ -254,21 +252,21 @@ def mine_concepts():
 
 - **Automated Pattern Detection**
 
-  - [[code_patterns]]
+  - code patterns
 
-  - [[documentation_patterns]]
+  - documentation patterns
 
-  - [[usage_patterns]]
+  - usage patterns
 
 ### 3. Knowledge Base Construction
 
 - **Automated Organization**
 
-  - [[knowledge_extraction]]
+  - knowledge extraction
 
-  - [[taxonomy_building]]
+  - taxonomy building
 
-  - [[ontology_construction]]
+  - ontology construction
 
 ## Automation Examples
 
@@ -334,9 +332,9 @@ graph LR
 
 - **Machine-Friendly Format**
 
-  - [[consistent_formatting]]
+  - consistent formatting
 
-  - [[clear_structure]]
+  - clear structure
 
   - metadata standards
 
@@ -344,11 +342,11 @@ graph LR
 
 - **Tool Configuration**
 
-  - [[tool_settings]]
+  - tool settings
 
-  - [[automation_rules]]
+  - automation rules
 
-  - [[validation_criteria]]
+  - validation criteria
 
 ### 3. Integration Patterns
 
@@ -356,27 +354,27 @@ graph LR
 
   - workflow integration
 
-  - [[tool_chaining]]
+  - tool chaining
 
   - [[feedback_systems]]
 
 ## Related Tools
 
-- [[documentation_generators]]
+- documentation generators
 
-- [[static_analyzers]]
+- static analyzers
 
 - validation tools
 
-- [[automation_frameworks]]
+- automation frameworks
 
 ## References
 
-- [[automation_patterns]]
+- automation patterns
 
-- [[machine_learning_integration]]
+- machine learning integration
 
-- [[tooling_ecosystem]]
+- tooling ecosystem
 
-- [[ci_cd_practices]]
+- ci cd practices
 

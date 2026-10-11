@@ -5,7 +5,7 @@ id: renormalization_group_001
 created: 2024-02-05
 modified: 2025-12-03
 tags: [physics, statistical-mechanics, generative-models, scale-invariance, bayesian-inference]
-aliases: [renormalization-group, RG-theory, scale-transformations]
+aliases: [renormalization-group, RG-theory, scale-transformations, Renormalization Groups]
 semantic_relations:
   - type: foundation
     links:
@@ -104,7 +104,7 @@ Central to this correspondence is the [[information_geometry|Fisher information 
 
 - Coarse-graining in this context corresponds to reducing model complexity by integrating out parameters that cannot be distinguished beyond a certain precision threshold.
 
-This approach has significant implications for practical applications beyond physics. For instance, it provides a principled method for [[data_compression|data compression]] and efficient representation learning in machine learning contexts such as [[generative_models|generative modeling]] and [[diffusion_models|diffusion-based learning paradigms]].
+This approach has significant implications for practical applications beyond physics. For instance, it provides a principled method for data compression and efficient representation learning in machine learning contexts such as [[generative_models|generative modeling]] and [[diffusion_models|diffusion-based learning paradigms]].
 
 ```mermaid
 
@@ -512,13 +512,13 @@ graph TD
 
 The confluence of RG methods and generative modeling has led to several innovative applications:
 
-1. **[[renormalization_based_generative_models|Renormalization-Based Generative Models]]**: Generative models explicitly incorporating RG principles for multiscale generation.
+1. **Renormalization-Based Generative Models**: Generative models explicitly incorporating RG principles for multiscale generation.
 
 1. **[[variational_renormalization_group|Variational Renormalization Group]]**: Using [[variational_inference|variational inference]] methods to approximate RG transformations.
 
 1. **[[information_bottleneck|Information Bottleneck Methods]]**: Techniques explicitly optimizing the trade-off between compression and prediction.
 
-1. **[[feature_disentanglement|Feature Disentanglement]]**: Methods separating features by their characteristic scales.
+1. **Feature Disentanglement**: Methods separating features by their characteristic scales.
 
 ## Active Inference and Renormalization Group: Deep Connections
 

@@ -12,6 +12,8 @@ semantic_relations:
       - "[[adaptive_comanagement]]"
       - "[[resilience_thinking]]"
       - "[[environmental_applications]]"
+aliases:
+  - Bioregional_Stewardship
 ---
 
 

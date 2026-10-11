@@ -132,7 +132,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Bifurcation theory
 
-- [[dynamic_active_inference]] - Dynamic formulation
+- dynamic active inference - Dynamic formulation
 
   - Phase space analysis
 
@@ -150,7 +150,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Fluctuation theorems
 
-- [[thermodynamic_cognition]] - Thermodynamic perspective
+- thermodynamic cognition - Thermodynamic perspective
 
   - Cognitive thermodynamics
 
@@ -162,7 +162,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Computational Models
 
-- [[active_inference_models]] - Active inference implementations
+- active inference models - Active inference implementations
 
   - Generative models
 
@@ -214,7 +214,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### System Integration
 
-- [[system_architecture]] - Architecture design
+- system architecture - Architecture design
 
   - Component organization
 
@@ -260,7 +260,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Cognitive Architectures
 
-- [[architecture_principles]] - Design principles
+- architecture principles - Design principles
 
   - Modularity
 
@@ -268,7 +268,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Emergence
 
-- [[cognitive_organization]] - Organizational patterns
+- cognitive organization - Organizational patterns
 
   - Functional specialization
 
@@ -324,7 +324,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Clinical Applications
 
-- [[clinical_models]] - Clinical modeling
+- clinical models - Clinical modeling
 
   - Disorder models
 
@@ -358,7 +358,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Learning algorithms
 
-- [[ai_applications]] - AI systems
+- ai applications - AI systems
 
   - Decision making
 
@@ -442,7 +442,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Property validation
 
-- [[formal_specification]] - Specification methods
+- formal specification - Specification methods
 
   - Behavioral specification
 
@@ -478,7 +478,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Code sharing
 
-- [[replication_methods]] - Replication approaches
+- replication methods - Replication approaches
 
   - Direct replication
 
@@ -544,7 +544,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Emerging Areas
 
-- [[embodied_computation]] - Embodied approaches
+- embodied computation - Embodied approaches
 
   - Physical computation
 
@@ -552,7 +552,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Sensorimotor contingencies
 
-- [[social_cognition_theory]] - Social dimensions
+- social cognition theory - Social dimensions
 
   - Collective intelligence
 
@@ -580,7 +580,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Future Applications
 
-- [[future_directions]] - Future developments
+- future directions - Future developments
 
   - Emerging technologies
 
@@ -588,7 +588,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Theoretical advances
 
-- [[research_roadmap]] - Research planning
+- research roadmap - Research planning
 
   - Priority areas
 
@@ -634,7 +634,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Ergodic theory
 
-- [[geometric_structures]] - Geometric methods
+- geometric structures - Geometric methods
 
   - Manifold theory
 
@@ -642,7 +642,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Connection theory
 
-- [[algebraic_structures]] - Algebraic methods
+- algebraic structures - Algebraic methods
 
   - Group theory
 
@@ -680,7 +680,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Theory-Implementation Bridge
 
-- [[implementation_theory]] - Theory to code
+- implementation theory - Theory to code
 
   - Design patterns
 
@@ -688,7 +688,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Optimization patterns
 
-- [[verification_methods]] - Checking that implementations are correct
+- verification methods - Checking that implementations are correct
 
   - Program verification
 
@@ -696,7 +696,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Runtime verification
 
-- [[performance_theory]] - Theory of computational efficiency
+- performance theory - Theory of computational efficiency
 
   - Complexity analysis
 
@@ -714,7 +714,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Autonomous systems
 
-- [[deployment_strategies]] - System deployment
+- deployment strategies - System deployment
 
   - Scaling methods
 
@@ -722,7 +722,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Integration approaches
 
-- [[evaluation_frameworks]] - System evaluation
+- evaluation frameworks - System evaluation
 
   - Benchmarking methods
 
@@ -732,7 +732,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Research-Development Bridge
 
-- [[research_engineering]] - Engineering methods
+- research engineering - Engineering methods
 
   - System architecture
 
@@ -740,7 +740,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Interface specification
 
-- [[development_methodology]] - Development approaches
+- development methodology - Development approaches
 
   - Agile methods
 
@@ -760,7 +760,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Architectural Patterns
 
-- [[system_patterns]] - Design patterns
+- system patterns - Design patterns
 
   - Component patterns
 
@@ -794,7 +794,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Scalability
 
-- [[performance_attributes]] - Performance characteristics of the system
+- performance attributes - Performance characteristics of the system
 
   - Response time
 
@@ -802,7 +802,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Resource usage
 
-- [[security_aspects]] - Security properties and safeguards
+- security aspects - Security properties and safeguards
 
   - Access control
 
@@ -812,7 +812,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Operational Aspects
 
-- [[deployment_aspects]] - Considerations for deploying systems
+- deployment aspects - Considerations for deploying systems
 
   - Environment setup
 
@@ -828,7 +828,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Usage analytics
 
-- [[maintenance_aspects]] - Considerations for maintaining systems over time
+- maintenance aspects - Considerations for maintaining systems over time
 
   - Updates and patches
 
@@ -840,7 +840,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 ### Philosophy of Mind
 
-- [[mind_theory]] - Mind theories
+- mind theory - Mind theories
 
   - Functionalism
 
@@ -874,7 +874,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Practical knowledge
 
-- [[learning_epistemology]] - Learning theory
+- learning epistemology - Learning theory
 
   - Knowledge acquisition
 
@@ -882,7 +882,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Expertise formation
 
-- [[understanding_theory]] - Theories of comprehension and insight
+- understanding theory - Theories of comprehension and insight
 
   - Conceptual understanding
 
@@ -900,7 +900,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Development ethics
 
-- [[societal_implications]] - Effects on society
+- societal implications - Effects on society
 
   - Social impact
 
@@ -908,7 +908,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Economic implications
 
-- [[future_considerations]] - Issues for future work
+- future considerations - Issues for future work
 
   - Technological trends
 
@@ -922,7 +922,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
 - [[parr_friston_2019]] - Active Inference
 
-- [[clark_2015]] - Predictive Processing
+- clark 2015 - Predictive Processing
 
 - [[ramstead_2018]] - Cognitive Science
 

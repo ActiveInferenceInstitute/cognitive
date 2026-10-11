@@ -22,8 +22,6 @@ semantic_relations:
       - "[[knowledge_base/cognitive/active_inference]]"
   - type: implements
     links:
-      - "[[game_dynamics]]"
-      - "[[strategy_evolution]]"
       - "[[population_games]]"
       - "[[knowledge_base/agents/architectures_overview]]"
   - type: relates
@@ -547,9 +545,9 @@ class PopulationGame:
 
 ## References
 
-- [[smith_1982]] - "Evolution and the Theory of Games"
+- smith 1982 - "Evolution and the Theory of Games"
 
-- [[hofbauer_1998]] - "Evolutionary Games and Population Dynamics"
+- hofbauer 1998 - "Evolutionary Games and Population Dynamics"
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 

@@ -493,7 +493,7 @@ Adaptation mechanisms represent the processes by which cognitive systems modify 
 
 - [[cognitive_neuroscience]]
 
-- [[computational_adaptation]]
+- computational adaptation
 
 - [[clinical_applications]]
 

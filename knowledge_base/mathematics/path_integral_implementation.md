@@ -49,11 +49,11 @@ class PathDiscretizer:
 
 Links to:
 
-- [[numerical_discretization]]
+- numerical discretization
 
 - [[finite_elements]]
 
-- [[discrete_mechanics]]
+- discrete mechanics
 
 ### Stability Analysis
 
@@ -201,7 +201,7 @@ Links to:
 
 - [[variational_inference]]
 
-- [[elbo_optimization]]
+- elbo optimization
 
 - [[natural_gradients]]
 
@@ -247,7 +247,7 @@ Links to:
 
 - [[path_entropy]]
 
-- [[energy_functionals]]
+- energy functionals
 
 ### Policy Optimization
 
@@ -437,21 +437,21 @@ class PathBenchmarks:
 
 Links to:
 
-- [[performance_testing]]
+- performance testing
 
 - [[benchmarking]]
 
-- [[profiling]]
+- profiling
 
 ## References
 
-- [[neal_2011]] - MCMC Using Hamiltonian Dynamics
+- neal 2011 - MCMC Using Hamiltonian Dynamics
 
-- [[girolami_2011]] - Riemann Manifold Langevin and Hamiltonian Monte Carlo
+- girolami 2011 - Riemann Manifold Langevin and Hamiltonian Monte Carlo
 
-- [[hoffman_2014]] - The No-U-Turn Sampler
+- hoffman 2014 - The No-U-Turn Sampler
 
-- [[betancourt_2017]] - A Conceptual Introduction to Hamiltonian Monte Carlo
+- betancourt 2017 - A Conceptual Introduction to Hamiltonian Monte Carlo
 
 ## See also
 

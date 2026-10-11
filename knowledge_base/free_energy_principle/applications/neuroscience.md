@@ -22,6 +22,8 @@ semantic_relations:
       - "[[knowledge_base/free_energy_principle/cognitive/attention|Attention]]"
       - "[[knowledge_base/free_energy_principle/biology/neural_systems|Neural Systems]]"
       - "[[psychiatry|Psychiatric Applications]]"
+aliases:
+  - neuroscience_applications
 ---
 
 # Neuroscience Applications of the Free Energy Principle

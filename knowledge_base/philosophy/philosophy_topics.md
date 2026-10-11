@@ -19,7 +19,6 @@ semantic_relations:
   - type: relates
     links:
       - "[[cognitive_science]]"
-      - "[[mathematics]]"
 ---
 
 
@@ -93,29 +92,29 @@ graph TD
 
 ```
 
-- [[ontology]]
+- ontology
 
   - [[being_and_nothingness]]
 
-  - [[existence]]
+  - existence
 
   - [[identity_and_difference]]
 
 - [[causation]]
 
-  - [[necessity_and_contingency]]
+  - necessity and contingency
 
-  - [[possibility_and_actuality]]
+  - possibility and actuality
 
-  - [[determinism_and_free_will]]
+  - determinism and free will
 
-- [[time_and_space]]
+- time and space
 
   - continuity
 
   - [[infinity]]
 
-  - [[dimensionality]]
+  - dimensionality
 
 #### Epistemology
 
@@ -155,7 +154,7 @@ graph TD
 
   - [[belief_systems]]
 
-- [[epistemological_methods]]
+- epistemological methods
 
   - [[rationalism]]
 
@@ -163,7 +162,7 @@ graph TD
 
   - [[pragmaticism]]
 
-- [[epistemic_limits]]
+- epistemic limits
 
   - [[skepticism]]
 
@@ -319,7 +318,7 @@ graph TD
 
   - [[social_justice]]
 
-- [[government]]
+- government
 
   - democracy
 
@@ -327,13 +326,13 @@ graph TD
 
   - [[anarchism]]
 
-- [[rights]]
+- rights
 
   - [[human_rights]]
 
   - [[property_rights]]
 
-  - [[civil_rights]]
+  - civil rights
 
 #### Aesthetics
 
@@ -365,15 +364,15 @@ graph TD
 
 ```
 
-- [[art_theory]]
+- art theory
 
-  - [[beauty]]
+  - beauty
 
   - representation
 
   - expression
 
-- [[criticism]]
+- criticism
 
   - interpretation
 
@@ -387,7 +386,7 @@ graph TD
 
   - [[emotion]]
 
-  - [[judgment]]
+  - judgment
 
 ### 3. Applied Philosophy
 
@@ -429,7 +428,7 @@ graph TD
 
   - [[paradigm_shifts]]
 
-- [[scientific_theories]]
+- scientific theories
 
   - [[scientific_realism]]
 
@@ -437,7 +436,7 @@ graph TD
 
   - [[constructivism]]
 
-- [[scientific_values]]
+- scientific values
 
   - [[objectivity]]
 
@@ -493,11 +492,11 @@ graph TD
 
 - [[cognitive_processes]]
 
-  - [[perception_theory]]
+  - perception theory
 
-  - [[memory_theory]]
+  - memory theory
 
-  - [[reasoning_theory]]
+  - reasoning theory
 
 #### Philosophy of Language
 
@@ -529,15 +528,15 @@ graph TD
 
 ```
 
-- [[meaning]]
+- meaning
 
-  - [[reference]]
+  - reference
 
-  - [[truth_conditions]]
+  - truth conditions
 
-  - [[use_theory]]
+  - use theory
 
-- [[linguistic_structure]]
+- linguistic structure
 
   - [[syntax]]
 
@@ -551,7 +550,7 @@ graph TD
 
   - [[conversation_theory]]
 
-  - [[translation_theory]]
+  - translation theory
 
 ## Interdisciplinary Connections
 
@@ -569,7 +568,7 @@ graph TD
 
 ### Philosophy and Society
 
-- [[social_philosophy]]
+- social philosophy
 
 - [[philosophy_of_law]]
 
@@ -583,7 +582,7 @@ graph TD
 
 - [[computer_ethics]]
 
-- [[artificial_intelligence_ethics]]
+- artificial intelligence ethics
 
 - information ethics
 
@@ -591,13 +590,13 @@ graph TD
 
 ### Western Philosophy
 
-- [[ancient_philosophy]]
+- ancient philosophy
 
-- [[medieval_philosophy]]
+- medieval philosophy
 
-- [[modern_philosophy]]
+- modern philosophy
 
-- [[contemporary_philosophy]]
+- contemporary philosophy
 
 ### Eastern Philosophy
 
@@ -625,11 +624,11 @@ graph TD
 
 - [[conceptual_analysis]]
 
-- [[logical_analysis]]
+- logical analysis
 
 - linguistic analysis
 
-- [[phenomenological_analysis]]
+- phenomenological analysis
 
 ### Synthesis
 
@@ -689,19 +688,19 @@ graph TD
 
   - intention
 
-  - [[responsibility]]
+  - responsibility
 
-- [[motivation_theory]]
+- motivation theory
 
   - desire theory
 
   - [[practical_reason]]
 
-  - [[emotion_theory]]
+  - emotion theory
 
 - [[social_action]]
 
-  - [[cooperation_theory]]
+  - cooperation theory
 
   - [[game_theory]]
 
@@ -737,9 +736,9 @@ graph TD
 
 ```
 
-- [[information_philosophy]]
+- information philosophy
 
-  - [[information_nature]]
+  - information nature
 
   - [[information_dynamics]]
 
@@ -755,11 +754,11 @@ graph TD
 
 - [[semantic_information]]
 
-  - [[data_semantics]]
+  - data semantics
 
   - information content
 
-  - [[semantic_value]]
+  - semantic value
 
 ### Environmental Philosophy
 
@@ -799,17 +798,17 @@ graph TD
 
   - [[animal_ethics]]
 
-- [[environmental_systems]]
+- environmental systems
 
-  - [[ecosystem_theory]]
+  - ecosystem theory
 
-  - [[climate_ethics]]
+  - climate ethics
 
-  - [[biodiversity_value]]
+  - biodiversity value
 
-- [[environmental_values]]
+- environmental values
 
-  - [[nature_value]]
+  - nature value
 
   - future generations
 
@@ -847,29 +846,29 @@ graph TD
 
 ```
 
-- [[digital_metaphysics]]
+- digital metaphysics
 
   - [[virtual_reality]]
 
-  - [[digital_identity]]
+  - digital identity
 
-  - [[cyberspace]]
+  - cyberspace
 
-- [[digital_ethics]]
+- digital ethics
 
-  - [[privacy_theory]]
+  - privacy theory
 
-  - [[digital_rights]]
+  - digital rights
 
-  - [[algorithmic_ethics]]
+  - algorithmic ethics
 
-- [[digital_society]]
+- digital society
 
-  - [[virtual_communities]]
+  - virtual communities
 
   - [[digital_governance]]
 
-  - [[cyber_culture]]
+  - cyber culture
 
 ### Cognitive Philosophy
 
@@ -901,7 +900,7 @@ graph TD
 
 ```
 
-- [[cognitive_theory]]
+- cognitive theory
 
   - mental representation
 
@@ -915,7 +914,7 @@ graph TD
 
   - [[attention_mechanisms]]
 
-  - [[intelligence_theory]]
+  - intelligence theory
 
 - [[social_cognition]]
 
@@ -955,15 +954,15 @@ graph TD
 
 ```
 
-- [[quantum_metaphysics]]
+- quantum metaphysics
 
-  - [[quantum_reality]]
+  - quantum reality
 
-  - [[quantum_causation]]
+  - quantum causation
 
   - [[quantum_mind]]
 
-- [[quantum_epistemology]]
+- quantum epistemology
 
   - [[measurement_problem]]
 
@@ -977,7 +976,7 @@ graph TD
 
   - [[quantum_foundations]]
 
-  - [[quantum_semantics]]
+  - quantum semantics
 
 ## Philosophical Methods and Tools
 
@@ -1019,7 +1018,7 @@ graph TD
 
   - [[type_theory]]
 
-- [[mathematical_methods]]
+- mathematical methods
 
   - [[category_theory]]
 
@@ -1029,7 +1028,7 @@ graph TD
 
 - [[computational_methods]]
 
-  - [[algorithmic_analysis]]
+  - algorithmic analysis
 
   - [[complexity_analysis]]
 
@@ -1067,21 +1066,21 @@ graph TD
 
 - [[experimental_philosophy]]
 
-  - [[philosophical_experiments]]
+  - philosophical experiments
 
-  - [[empirical_methods]]
+  - empirical methods
 
   - data analysis
 
 - [[experimental_design]]
 
-  - [[variable_control]]
+  - variable control
 
   - [[statistical_analysis]]
 
   - [[validation_methods]]
 
-- [[experimental_domains]]
+- experimental domains
 
   - moral psychology
 
@@ -1121,9 +1120,9 @@ graph TD
 
 ```
 
-- [[systems_philosophy]]
+- systems philosophy
 
-  - [[system_structure]]
+  - system structure
 
   - [[system_dynamics]]
 
@@ -1137,7 +1136,7 @@ graph TD
 
   - [[information_flow]]
 
-- [[complexity_philosophy]]
+- complexity philosophy
 
   - [[complex_systems]]
 
@@ -1175,19 +1174,19 @@ graph TD
 
 ```
 
-- [[transdisciplinary_methods]]
+- transdisciplinary methods
 
   - integrative methods
 
-  - [[boundary_crossing]]
+  - boundary crossing
 
-  - [[synthesis_approaches]]
+  - synthesis approaches
 
 - knowledge integration
 
-  - [[interdisciplinary_synthesis]]
+  - interdisciplinary synthesis
 
-  - [[knowledge_translation]]
+  - knowledge translation
 
   - [[boundary_objects]]
 
@@ -1195,9 +1194,9 @@ graph TD
 
   - [[problem_solving]]
 
-  - [[innovation_theory]]
+  - innovation theory
 
-  - [[social_transformation]]
+  - social transformation
 
 ## Cultural Philosophical Traditions
 
@@ -1231,29 +1230,29 @@ graph TD
 
 ```
 
-- [[comparative_methodology]]
+- comparative methodology
 
-  - [[cross_cultural_hermeneutics]]
+  - cross cultural hermeneutics
 
-  - [[philosophical_translation]]
+  - philosophical translation
 
-  - [[cultural_interpretation]]
+  - cultural interpretation
 
-- [[tradition_bridging]]
+- tradition bridging
 
-  - [[east_west_dialogue]]
+  - east west dialogue
 
-  - [[african_philosophy_comparative]]
+  - african philosophy comparative
 
-  - [[latin_american_thought]]
+  - latin american thought
 
-- [[global_philosophy]]
+- global philosophy
 
-  - [[world_philosophies]]
+  - world philosophies
 
-  - [[intercultural_philosophy]]
+  - intercultural philosophy
 
-  - [[decolonial_philosophy]]
+  - decolonial philosophy
 
 ### African Philosophy
 
@@ -1289,25 +1288,25 @@ graph TD
 
   - [[african_communitarianism]]
 
-  - [[personhood_theory]]
+  - personhood theory
 
   - [[relational_ethics]]
 
 - [[african_epistemology]]
 
-  - [[sage_philosophy]]
+  - sage philosophy
 
-  - [[oral_tradition]]
+  - oral tradition
 
-  - [[liberation_epistemology]]
+  - liberation epistemology
 
-- [[african_traditions]]
+- african traditions
 
   - [[ethnophilosophy]]
 
-  - [[political_philosophy_africa]]
+  - political philosophy africa
 
-  - [[contemporary_african_thought]]
+  - contemporary african thought
 
 ### Latin American Philosophy
 
@@ -1347,21 +1346,21 @@ graph TD
 
   - [[ethics_of_liberation]]
 
-- [[latin_american_identity]]
+- latin american identity
 
   - [[mestizaje]]
 
   - [[coloniality_of_power]]
 
-  - [[philosophy_of_authenticity]]
+  - philosophy of authenticity
 
-- [[latin_american_traditions]]
+- latin american traditions
 
-  - [[indigenous_philosophies]]
+  - indigenous philosophies
 
   - [[hispanic_scholasticism]]
 
-  - [[positivism_latin_america]]
+  - positivism latin america
 
 ## Specialized Philosophical Fields
 
@@ -1395,9 +1394,9 @@ graph TD
 
 ```
 
-- [[economic_value]]
+- economic value
 
-  - [[labor_theory]]
+  - labor theory
 
   - [[utility_theory]]
 
@@ -1405,19 +1404,19 @@ graph TD
 
 - [[economic_systems]]
 
-  - [[capitalism_philosophy]]
+  - capitalism philosophy
 
-  - [[socialist_thought]]
+  - socialist thought
 
-  - [[market_theory]]
+  - market theory
 
-- [[economic_methodology]]
+- economic methodology
 
-  - [[economic_models]]
+  - economic models
 
-  - [[prediction_theory]]
+  - prediction theory
 
-  - [[economic_explanation]]
+  - economic explanation
 
 ### Philosophy of History
 
@@ -1451,27 +1450,27 @@ graph TD
 
 - [[philosophy_of_time]]
 
-  - [[linear_history]]
+  - linear history
 
-  - [[cyclical_theory]]
+  - cyclical theory
 
-  - [[progress_theory]]
+  - progress theory
 
-- [[historical_causation]]
+- historical causation
 
   - [[historical_determinism]]
 
   - [[contingency_theory]]
 
-  - [[historical_agency]]
+  - historical agency
 
-- [[historical_methodology]]
+- historical methodology
 
-  - [[historical_hermeneutics]]
+  - historical hermeneutics
 
-  - [[narrative_theory]]
+  - narrative theory
 
-  - [[historical_evidence]]
+  - historical evidence
 
 ### Philosophy of Religion
 
@@ -1503,13 +1502,13 @@ graph TD
 
 ```
 
-- [[divine_nature]]
+- divine nature
 
-  - [[arguments_for_god]]
+  - arguments for god
 
-  - [[arguments_against_god]]
+  - arguments against god
 
-  - [[divine_attributes]]
+  - divine attributes
 
 - [[religious_epistemology]]
 
@@ -1519,13 +1518,13 @@ graph TD
 
   - [[religious_experience]]
 
-- [[religious_diversity]]
+- religious diversity
 
   - [[religious_pluralism]]
 
   - [[religious_exclusivism]]
 
-  - [[comparative_theology]]
+  - comparative theology
 
 ## Contemporary Philosophical Innovations
 
@@ -1561,25 +1560,25 @@ graph TD
 
 - [[neuroscientific_ethics]]
 
-  - [[brain_intervention]]
+  - brain intervention
 
   - cognitive enhancement
 
-  - [[neuroimaging_ethics]]
+  - neuroimaging ethics
 
-- [[neuroidentity]]
+- neuroidentity
 
-  - [[personality_modification]]
+  - personality modification
 
-  - [[memory_manipulation]]
+  - memory manipulation
 
-  - [[neural_free_will]]
+  - neural free will
 
-- [[neurosociety]]
+- neurosociety
 
-  - [[neurotechnology_privacy]]
+  - neurotechnology privacy
 
-  - [[neurojustice]]
+  - neurojustice
 
   - [[neurolaw]]
 
@@ -1615,27 +1614,27 @@ graph TD
 
 - [[embodied_cognition]]
 
-  - [[body_phenomenology]]
+  - body phenomenology
 
-  - [[corporeal_experience]]
+  - corporeal experience
 
   - [[enactivism]]
 
-- [[embodied_experience]]
+- embodied experience
 
-  - [[embodied_perception]]
+  - embodied perception
 
-  - [[somatic_emotions]]
+  - somatic emotions
 
-  - [[embodied_action]]
+  - embodied action
 
-- [[body_politics]]
+- body politics
 
-  - [[gendered_embodiment]]
+  - gendered embodiment
 
   - [[disability_theory]]
 
-  - [[technological_embodiment]]
+  - technological embodiment
 
 ### Speculative Realism
 
@@ -1675,9 +1674,9 @@ graph TD
 
   - [[hyperobjects]]
 
-- [[ontological_critique]]
+- ontological critique
 
-  - [[anti_correlationism]]
+  - anti correlationism
 
   - [[non_anthropocentrism]]
 
@@ -1687,7 +1686,7 @@ graph TD
 
   - [[transcendental_realism]]
 
-  - [[speculative_method]]
+  - speculative method
 
   - [[weird_realism]]
 
@@ -1725,11 +1724,11 @@ graph TD
 
 - [[mathematical_foundations]]
 
-  - [[set_theoretical_foundations]]
+  - set theoretical foundations
 
-  - [[logical_foundations]]
+  - logical foundations
 
-  - [[categorical_foundations]]
+  - categorical foundations
 
 - [[mathematical_ontology]]
 
@@ -1739,13 +1738,13 @@ graph TD
 
   - [[mathematical_constructivism]]
 
-- [[mathematical_practice]]
+- mathematical practice
 
   - [[proof_theory]]
 
-  - [[mathematical_abstraction]]
+  - mathematical abstraction
 
-  - [[applied_mathematics_philosophy]]
+  - applied mathematics philosophy
 
 ### Philosophy of Art and Aesthetics
 
@@ -1779,27 +1778,27 @@ graph TD
 
 - aesthetic experience
 
-  - [[theories_of_beauty]]
+  - theories of beauty
 
-  - [[sublime_theory]]
+  - sublime theory
 
-  - [[aesthetic_taste]]
+  - aesthetic taste
 
-- [[artistic_creation]]
+- artistic creation
 
-  - [[artistic_expression]]
+  - artistic expression
 
   - [[imagination]]
 
-  - [[creative_process]]
+  - creative process
 
-- [[art_critique]]
+- art critique
 
-  - [[interpretation_theory]]
+  - interpretation theory
 
   - [[aesthetic_value]]
 
-  - [[aesthetic_standards]]
+  - aesthetic standards
 
 ### Philosophy of Education
 
@@ -1831,27 +1830,27 @@ graph TD
 
 ```
 
-- [[educational_aims]]
+- educational aims
 
-  - [[knowledge_acquisition]]
+  - knowledge acquisition
 
-  - [[virtue_development]]
+  - virtue development
 
-  - [[personal_growth]]
+  - personal growth
 
-- [[pedagogical_methods]]
+- pedagogical methods
 
   - [[critical_pedagogy]]
 
-  - [[dialogical_education]]
+  - dialogical education
 
   - [[experiential_learning]]
 
-- [[educational_contexts]]
+- educational contexts
 
   - [[social_reproduction]]
 
-  - [[political_education]]
+  - political education
 
   - [[cultural_transmission]]
 
@@ -1887,29 +1886,29 @@ graph TD
 
 ```
 
-- [[philosophical_methodology]]
+- philosophical methodology
 
-  - [[metaphilosophical_method]]
+  - metaphilosophical method
 
-  - [[philosophical_progress]]
+  - philosophical progress
 
-  - [[philosophical_purpose]]
+  - philosophical purpose
 
-- [[tradition_critique]]
+- tradition critique
 
-  - [[analytic_critique]]
+  - analytic critique
 
-  - [[continental_critique]]
+  - continental critique
 
-  - [[cross_cultural_critique]]
+  - cross cultural critique
 
-- [[future_philosophy]]
+- future philosophy
 
-  - [[philosophical_integration]]
+  - philosophical integration
 
-  - [[philosophical_specialization]]
+  - philosophical specialization
 
-  - [[applied_philosophy]]
+  - applied philosophy
 
 ### Philosophical Anthropology
 
@@ -1945,25 +1944,25 @@ graph TD
 
   - [[personal_identity]]
 
-  - [[human_agency]]
+  - human agency
 
-  - [[existential_finitude]]
+  - existential finitude
 
-- [[human_relations]]
+- human relations
 
-  - [[cultural_being]]
+  - cultural being
 
-  - [[natural_being]]
+  - natural being
 
-  - [[technological_being]]
+  - technological being
 
-- [[human_development]]
+- human development
 
   - [[evolutionary_anthropology]]
 
-  - [[historical_anthropology]]
+  - historical anthropology
 
-  - [[future_humanity]]
+  - future humanity
 
 ## Emerging Philosophical Topics
 
@@ -1999,23 +1998,23 @@ graph TD
 
 - future generations
 
-  - [[intergenerational_responsibility]]
+  - intergenerational responsibility
 
   - [[intergenerational_justice]]
 
-  - [[future_rights]]
+  - future rights
 
 - [[existential_risk]]
 
-  - [[existential_ethics]]
+  - existential ethics
 
-  - [[human_survival]]
+  - human survival
 
-  - [[collective_flourishing]]
+  - collective flourishing
 
-- [[emerging_technologies_ethics]]
+- emerging technologies ethics
 
-  - [[genetic_modification]]
+  - genetic modification
 
   - human enhancement
 
@@ -2055,19 +2054,19 @@ graph TD
 
   - [[emergence_theory]]
 
-  - [[self_organization_principles]]
+  - self organization principles
 
-  - [[network_ontology]]
+  - network ontology
 
-- [[complexity_epistemology]]
+- complexity epistemology
 
-  - [[uncertainty_principles]]
+  - uncertainty principles
 
-  - [[prediction_limitations]]
+  - prediction limitations
 
   - knowledge integration
 
-- [[complexity_methods]]
+- complexity methods
 
   - [[computational_modeling]]
 
@@ -2111,15 +2110,15 @@ graph TD
 
   - [[ritual_li]]
 
-  - [[harmony_he]]
+  - harmony he
 
-  - [[virtue_de]]
+  - virtue de
 
   - [[filial_piety]]
 
-- [[daoist_thought]]
+- daoist thought
 
-  - [[dao_way]]
+  - dao way
 
   - [[wuwei]]
 
@@ -2167,15 +2166,15 @@ graph TD
 
 ```
 
-- [[vedic_philosophy]]
+- vedic philosophy
 
-  - [[upanishadic_thought]]
+  - upanishadic thought
 
   - [[brahman_atman]]
 
   - [[karma_theory]]
 
-  - [[dharma_ethics]]
+  - dharma ethics
 
 - [[orthodox_darshanas]]
 
@@ -2185,15 +2184,15 @@ graph TD
 
   - [[samkhya_dualism]]
 
-  - [[yoga_discipline]]
+  - yoga discipline
 
-  - [[mimamsa_hermeneutics]]
+  - mimamsa hermeneutics
 
   - [[vedanta_metaphysics]]
 
-- [[heterodox_schools]]
+- heterodox schools
 
-  - [[buddhist_philosophy_india]]
+  - buddhist philosophy india
 
   - [[jain_philosophy]]
 
@@ -2231,17 +2230,17 @@ graph TD
 
 ```
 
-- [[japanese_buddhism]]
+- japanese buddhism
 
-  - [[zen_thought]]
+  - zen thought
 
-  - [[pure_land_thought]]
+  - pure land thought
 
   - [[nichiren_buddhism]]
 
   - [[shingon_esoteric]]
 
-- [[japanese_traditions]]
+- japanese traditions
 
   - [[shinto_philosophy]]
 
@@ -2251,15 +2250,15 @@ graph TD
 
   - [[mono_no_aware]]
 
-- [[modern_japanese_philosophy]]
+- modern japanese philosophy
 
   - [[kyoto_school]]
 
-  - [[japanese_phenomenology]]
+  - japanese phenomenology
 
-  - [[philosophy_of_nothingness]]
+  - philosophy of nothingness
 
-  - [[comparative_philosophy_east_west]]
+  - comparative philosophy east west
 
 ## Indigenous Philosophical Traditions
 
@@ -2293,35 +2292,35 @@ graph TD
 
 ```
 
-- [[native_american_thought]]
+- native american thought
 
-  - [[indigenous_cosmologies]]
+  - indigenous cosmologies
 
   - [[sacred_ecology]]
 
-  - [[cyclical_time]]
+  - cyclical time
 
-  - [[creation_stories]]
+  - creation stories
 
-- [[indigenous_ethics]]
+- indigenous ethics
 
-  - [[relational_ethics_indigenous]]
+  - relational ethics indigenous
 
-  - [[reciprocity_principle]]
+  - reciprocity principle
 
-  - [[harmony_with_nature]]
+  - harmony with nature
 
   - [[seven_generations]]
 
-- [[indigenous_epistemology]]
+- indigenous epistemology
 
-  - [[oral_knowledge_systems]]
+  - oral knowledge systems
 
-  - [[experiential_knowledge]]
+  - experiential knowledge
 
-  - [[ceremonial_knowledge]]
+  - ceremonial knowledge
 
-  - [[indigenous_science]]
+  - indigenous science
 
 ### Oceanic Philosophy
 
@@ -2353,35 +2352,35 @@ graph TD
 
 ```
 
-- [[oceanic_philosophy]]
+- oceanic philosophy
 
-  - [[polynesian_thought]]
+  - polynesian thought
 
-  - [[melanesian_philosophy]]
+  - melanesian philosophy
 
   - [[aboriginal_philosophy]]
 
-  - [[maori_thought]]
+  - maori thought
 
-- [[pacific_relationality]]
+- pacific relationality
 
-  - [[va_relationships]]
+  - va relationships
 
-  - [[moana_epistemology]]
+  - moana epistemology
 
-  - [[ancestral_knowledge]]
+  - ancestral knowledge
 
-  - [[land_sea_connection]]
+  - land sea connection
 
-- [[indigenous_pacific_values]]
+- indigenous pacific values
 
   - [[mana_concept]]
 
-  - [[tapu_sacred]]
+  - tapu sacred
 
   - reciprocity systems
 
-  - [[community_ethics]]
+  - community ethics
 
 ## Process Philosophy
 
@@ -2417,23 +2416,23 @@ graph TD
 
 - [[process_metaphysics]]
 
-  - [[becoming_ontology]]
+  - becoming ontology
 
-  - [[flux_theory]]
+  - flux theory
 
-  - [[creativity_principle]]
+  - creativity principle
 
   - [[actual_occasions]]
 
-- [[process_relations]]
+- process relations
 
   - [[internal_relations]]
 
   - [[prehension_theory]]
 
-  - [[causal_efficacy]]
+  - causal efficacy
 
-  - [[symbolic_reference]]
+  - symbolic reference
 
 - [[process_ontology]]
 
@@ -2443,7 +2442,7 @@ graph TD
 
   - [[concrescence]]
 
-  - [[nexus_theory]]
+  - nexus theory
 
 ### Temporality Studies
 
@@ -2475,29 +2474,29 @@ graph TD
 
 ```
 
-- [[philosophy_of_temporality]]
+- philosophy of temporality
 
-  - [[durational_time]]
+  - durational time
 
   - [[succession_theory]]
 
-  - [[simultaneity_concept]]
+  - simultaneity concept
 
   - [[temporal_parts]]
 
-- [[temporal_experience]]
+- temporal experience
 
-  - [[memory_theory_time]]
+  - memory theory time
 
-  - [[anticipation_phenomenology]]
+  - anticipation phenomenology
 
   - [[specious_present]]
 
   - [[time_consciousness]]
 
-- [[temporal_metaphysics]]
+- temporal metaphysics
 
-  - [[becoming_theory]]
+  - becoming theory
 
   - [[eternalism]]
 
@@ -2543,7 +2542,7 @@ graph TD
 
   - [[facticity]]
 
-  - [[transcendence]]
+  - transcendence
 
   - [[existence_precedence]]
 
@@ -2553,11 +2552,11 @@ graph TD
 
   - [[being_in_the_world]]
 
-  - [[being_with_others]]
+  - being with others
 
   - [[being_toward_death]]
 
-- [[existential_themes]]
+- existential themes
 
   - [[anxiety_angst]]
 
@@ -2599,7 +2598,7 @@ graph TD
 
 - [[hermeneutic_phenomenology]]
 
-  - [[pre_understanding]]
+  - pre understanding
 
   - [[hermeneutic_circle]]
 
@@ -2607,17 +2606,17 @@ graph TD
 
   - [[effective_historical_consciousness]]
 
-- [[linguistic_hermeneutics]]
+- linguistic hermeneutics
 
-  - [[dialogical_understanding]]
+  - dialogical understanding
 
-  - [[linguisticality_of_experience]]
+  - linguisticality of experience
 
-  - [[tradition_concept]]
+  - tradition concept
 
-  - [[language_as_medium]]
+  - language as medium
 
-- [[hermeneutic_truth]]
+- hermeneutic truth
 
   - [[truth_as_disclosure]]
 
@@ -2625,7 +2624,7 @@ graph TD
 
   - [[effective_history]]
 
-  - [[application_principle]]
+  - application principle
 
 ### Feminist Phenomenology
 
@@ -2663,27 +2662,27 @@ graph TD
 
   - [[sexual_difference]]
 
-  - [[situated_experience]]
+  - situated experience
 
-  - [[embodied_subjectivity]]
+  - embodied subjectivity
 
-- [[feminist_experience]]
+- feminist experience
 
-  - [[oppression_analysis]]
+  - oppression analysis
 
-  - [[agency_under_oppression]]
+  - agency under oppression
 
   - [[relational_autonomy]]
 
-  - [[gender_experience]]
+  - gender experience
 
-- [[feminist_methodology]]
+- feminist methodology
 
   - [[standpoint_theory]]
 
   - [[intersectionality]]
 
-  - [[phenomenological_critique]]
+  - phenomenological critique
 
   - [[feminist_epistemology]]
 
@@ -2725,29 +2724,29 @@ graph TD
 
   - [[cultural_imperialism]]
 
-  - [[hegemony_analysis]]
+  - hegemony analysis
 
-  - [[resistance_theory]]
+  - resistance theory
 
-- [[postcolonial_identity]]
+- postcolonial identity
 
   - [[cultural_hybridity]]
 
   - [[subaltern_studies]]
 
-  - [[authenticity_critique]]
+  - authenticity critique
 
   - [[diaspora_theory]]
 
-- [[postcolonial_epistemology]]
+- postcolonial epistemology
 
   - [[epistemic_violence]]
 
-  - [[dewesternizing_knowledge]]
+  - dewesternizing knowledge
 
-  - [[counter_discourse]]
+  - counter discourse
 
-  - [[border_thinking]]
+  - border thinking
 
 ### Critical Race Philosophy
 
@@ -2781,15 +2780,15 @@ graph TD
 
 - [[critical_race_theory]]
 
-  - [[race_as_construction]]
+  - race as construction
 
   - [[racial_formation]]
 
-  - [[racialization_process]]
+  - racialization process
 
-  - [[whiteness_studies]]
+  - whiteness studies
 
-- [[racial_justice]]
+- racial justice
 
   - [[recognition_theory]]
 
@@ -2799,7 +2798,7 @@ graph TD
 
   - [[epistemic_justice]]
 
-- [[critical_race_methodology]]
+- critical race methodology
 
   - [[counterstorytelling]]
 
@@ -2807,7 +2806,7 @@ graph TD
 
   - [[racial_realism]]
 
-  - [[critical_praxis]]
+  - critical praxis
 
 ### Queer Philosophy
 
@@ -2843,29 +2842,29 @@ graph TD
 
   - [[heteronormativity_critique]]
 
-  - [[performativity_theory]]
+  - performativity theory
 
   - desire theory
 
-  - [[sexual_subjectivity]]
+  - sexual subjectivity
 
-- [[gender_philosophy]]
+- gender philosophy
 
-  - [[gender_construction]]
+  - gender construction
 
-  - [[gender_fluidity]]
+  - gender fluidity
 
-  - [[embodiment_gender]]
+  - embodiment gender
 
-  - [[transgender_studies]]
+  - transgender studies
 
-- [[queer_politics]]
+- queer politics
 
-  - [[recognition_politics]]
+  - recognition politics
 
-  - [[subversion_strategies]]
+  - subversion strategies
 
-  - [[coalition_politics]]
+  - coalition politics
 
   - [[queer_futurity]]
 
@@ -2903,33 +2902,33 @@ graph TD
 
 - [[experimental_philosophy]]
 
-  - [[survey_methods]]
+  - survey methods
 
-  - [[psychological_experiments]]
+  - psychological experiments
 
-  - [[statistical_philosophy]]
+  - statistical philosophy
 
-  - [[empirical_evidence]]
+  - empirical evidence
 
-- [[x_phi_domains]]
+- x phi domains
 
-  - [[experimental_ethics]]
+  - experimental ethics
 
-  - [[experimental_epistemology]]
+  - experimental epistemology
 
-  - [[experimental_metaphysics]]
+  - experimental metaphysics
 
-  - [[folk_intuitions]]
+  - folk intuitions
 
-- [[philosophical_psychology]]
+- philosophical psychology
 
-  - [[intuition_critique]]
+  - intuition critique
 
-  - [[concept_empiricism]]
+  - concept empiricism
 
   - [[folk_psychology]]
 
-  - [[conceptual_analysis_experimental]]
+  - conceptual analysis experimental
 
 ### Analytic-Continental Bridge
 
@@ -2961,35 +2960,35 @@ graph TD
 
 ```
 
-- [[analytic_continental_bridges]]
+- analytic continental bridges
 
-  - [[post_analytic_philosophy]]
+  - post analytic philosophy
 
   - [[naturalized_phenomenology]]
 
-  - [[hermeneutic_analyticity]]
+  - hermeneutic analyticity
 
-  - [[methodological_pluralism]]
+  - methodological pluralism
 
-- [[bridging_topics]]
+- bridging topics
 
-  - [[meaning_theory_bridges]]
+  - meaning theory bridges
 
-  - [[subjectivity_analysis]]
+  - subjectivity analysis
 
-  - [[critical_theory_analytics]]
+  - critical theory analytics
 
   - [[consciousness_studies]]
 
-- [[bridging_figures]]
+- bridging figures
 
   - [[late_wittgenstein]]
 
   - [[ricoeur_hermeneutics]]
 
-  - [[habermas_theory]]
+  - habermas theory
 
-  - [[davidson_interpretation]]
+  - davidson interpretation
 
 ### New Materialisms
 
@@ -3023,7 +3022,7 @@ graph TD
 
 - [[new_materialisms]]
 
-  - [[material_agency]]
+  - material agency
 
   - [[vital_materialism]]
 
@@ -3031,23 +3030,23 @@ graph TD
 
   - [[material_feminism]]
 
-- [[materialist_critique]]
+- materialist critique
 
-  - [[anthropocentrism_critique]]
+  - anthropocentrism critique
 
-  - [[dualism_critique]]
+  - dualism critique
 
-  - [[representationalism_critique]]
+  - representationalism critique
 
-  - [[matter_discourse]]
+  - matter discourse
 
-- [[new_materialist_methods]]
+- new materialist methods
 
   - [[diffractive_methodology]]
 
-  - [[entanglement_theory]]
+  - entanglement theory
 
-  - [[posthumanist_performativity]]
+  - posthumanist performativity
 
   - [[agential_realism]]
 
@@ -3083,7 +3082,7 @@ graph TD
 
 ```
 
-- [[philosophy_cognitive_science]]
+- philosophy cognitive science
 
   - mental representation
 
@@ -3093,21 +3092,21 @@ graph TD
 
   - [[enactivism]]
 
-- [[cognitive_methods]]
+- cognitive methods
 
   - [[naturalized_epistemology]]
 
-  - [[reductionism_critique]]
+  - reductionism critique
 
-  - [[disciplinary_integration]]
+  - disciplinary integration
 
   - [[levels_of_analysis]]
 
-- [[cognitive_issues]]
+- cognitive issues
 
-  - [[consciousness_explanation]]
+  - consciousness explanation
 
-  - [[intentionality_theories]]
+  - intentionality theories
 
   - [[extended_mind]]
 
@@ -3145,33 +3144,33 @@ graph TD
 
 - [[philosophy_of_medicine]]
 
-  - [[health_concepts]]
+  - health concepts
 
-  - [[disease_theory]]
+  - disease theory
 
-  - [[normality_abnormality]]
+  - normality abnormality
 
-  - [[medical_well_being]]
+  - medical well being
 
-- [[medical_practice]]
+- medical practice
 
   - [[evidence_based_medicine]]
 
-  - [[care_ethics_medicine]]
+  - care ethics medicine
 
-  - [[clinical_judgment]]
+  - clinical judgment
 
-  - [[medical_decision_making]]
+  - medical decision making
 
 - [[biomedical_ethics]]
 
   - [[patient_autonomy]]
 
-  - [[healthcare_justice]]
+  - healthcare justice
 
   - human enhancement
 
-  - [[medical_paternalism]]
+  - medical paternalism
 
 ### Philosophy of Media
 
@@ -3203,33 +3202,33 @@ graph TD
 
 ```
 
-- [[philosophy_of_media]]
+- philosophy of media
 
-  - [[media_materiality]]
+  - media materiality
 
-  - [[media_technology]]
+  - media technology
 
-  - [[mediation_theory]]
+  - mediation theory
 
-  - [[medium_specificity]]
+  - medium specificity
 
-- [[media_content]]
+- media content
 
-  - [[representation_theory]]
+  - representation theory
 
   - [[simulation_theory]]
 
-  - [[virtuality_studies]]
+  - virtuality studies
 
   - [[hyperreality]]
 
-- [[media_effects]]
+- media effects
 
-  - [[media_perception]]
+  - media perception
 
-  - [[media_society]]
+  - media society
 
-  - [[technological_subjectivity]]
+  - technological subjectivity
 
   - [[attention_economy]]
 
@@ -3267,33 +3266,33 @@ graph TD
 
 - philosophy of biology
 
-  - [[life_definition]]
+  - life definition
 
   - [[biological_organization]]
 
-  - [[emergence_in_biology]]
+  - emergence in biology
 
-  - [[organism_concept]]
+  - organism concept
 
-- [[evolutionary_philosophy]]
+- evolutionary philosophy
 
-  - [[selection_theories]]
+  - selection theories
 
-  - [[biological_function]]
+  - biological function
 
   - [[teleology_in_biology]]
 
-  - [[evo_devo_philosophy]]
+  - evo devo philosophy
 
 - [[biosemiotics]]
 
-  - [[biological_codes]]
+  - biological codes
 
-  - [[interpretation_in_nature]]
+  - interpretation in nature
 
   - [[umwelt_theory]]
 
-  - [[organic_meaning]]
+  - organic meaning
 
 ### Philosophy of Artificial Intelligence
 
@@ -3331,25 +3330,25 @@ graph TD
 
   - [[embodied_ai]]
 
-  - [[emergent_intelligence]]
+  - emergent intelligence
 
-  - [[artificial_minds]]
+  - artificial minds
 
 - [[ai_ethics]]
 
   - value alignment
 
-  - [[ai_autonomy]]
+  - ai autonomy
 
-  - [[machine_rights]]
+  - machine rights
 
   - [[responsibility_gaps]]
 
-- [[ai_futures]]
+- ai futures
 
   - [[technological_singularity]]
 
-  - [[human_ai_coexistence]]
+  - human ai coexistence
 
   - [[intelligence_explosion]]
 
@@ -3385,33 +3384,33 @@ graph TD
 
 ```
 
-- [[interspecies_philosophy]]
+- interspecies philosophy
 
-  - [[interspecies_communication]]
+  - interspecies communication
 
-  - [[interspecies_ethics]]
+  - interspecies ethics
 
-  - [[multispecies_cooperation]]
+  - multispecies cooperation
 
-  - [[kinship_beyond_species]]
+  - kinship beyond species
 
-- [[nonhuman_minds]]
+- nonhuman minds
 
   - [[animal_cognition]]
 
   - [[plant_intelligence]]
 
-  - [[alien_cognition]]
+  - alien cognition
 
   - [[fungal_intelligence]]
 
-- [[multispecies_politics]]
+- multispecies politics
 
-  - [[multispecies_communities]]
+  - multispecies communities
 
   - [[animal_rights]]
 
-  - [[interspecies_justice]]
+  - interspecies justice
 
-  - [[ecological_democracy]]
+  - ecological democracy
 

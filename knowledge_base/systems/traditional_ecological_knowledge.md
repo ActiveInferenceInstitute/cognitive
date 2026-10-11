@@ -14,7 +14,6 @@ tags:
 semantic_relations:
   - type: foundation_for
     links:
-      - "[[ecological_management]]"
       - "[[adaptive_governance]]"
   - type: implements
     links:

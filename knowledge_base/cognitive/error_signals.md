@@ -10,6 +10,7 @@ tags:
   - precision
 aliases:
   - error_detection
+  - error_signaling
 semantic_relations:
   - type: relates
     links:

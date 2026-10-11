@@ -12,6 +12,7 @@ tags:
 aliases:
 - perception-action-cycle
 - active-inference-algorithm
+- active_inference_cycle
 semantic_relations:
   - type: implements
     links:
@@ -232,7 +233,7 @@ class ActiveInferenceLoop:
 
 The Active Inference loop is used for:
 
-- [[agent_behavior]] - Implementing agents
+- agent behavior - Implementing agents
 
 - [[control_systems]] - Feedback control
 
@@ -250,7 +251,7 @@ The Active Inference loop is used for:
 
 ### Computational Properties
 
-- [[online_processing]] - Real-time updates
+- online processing - Real-time updates
 
 - [[anytime_computation]] - Usable results available even when interrupted
 
@@ -280,13 +281,13 @@ The Active Inference loop is used for:
 
 - [[model_specification]]
 
-- [[parameter_initialization]]
+- parameter initialization
 
-- [[prior_selection]]
+- prior selection
 
 ### Monitoring
 
-- [[convergence_detection]]
+- convergence detection
 
 - [[performance_metrics]]
 

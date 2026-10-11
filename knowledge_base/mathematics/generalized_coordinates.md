@@ -21,7 +21,6 @@ semantic_relations:
   - type: relates
     links:
       - "[[advanced_taylor_series]]"
-      - "[[generalized_motion]]"
       - "[[temporal_dynamics]]"
 ---
 

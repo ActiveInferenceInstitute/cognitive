@@ -7,6 +7,7 @@ updated: 2026-02-07
 tags: [stability, dynamical_systems, lyapunov, convergence]
 aliases:
   - stability
+  - stability_theory
 semantic_relations:
   - type: relates
     links:

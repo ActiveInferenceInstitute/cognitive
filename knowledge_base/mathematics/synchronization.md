@@ -18,6 +18,8 @@ semantic_relations:
       - "[[neural_synchrony]]"
       - "[[phase_transitions]]"
       - "[[self_organization]]"
+aliases:
+  - synchronization_dynamics
 ---
 
 # Synchronization

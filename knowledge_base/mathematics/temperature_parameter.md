@@ -115,7 +115,7 @@ Links to:
 
    - Requires careful scaling
 
-   - Links to [[parameter_scaling]]
+   - Links to parameter scaling
 
 1. **Dynamic Behavior**
 
@@ -237,7 +237,7 @@ Links to:
 
 - [[friston_2017]] - Active Inference
 
-- [[kirkpatrick_1983]] - Simulated Annealing
+- kirkpatrick 1983 - Simulated Annealing
 
 - [[sutton_barto_2018]] - Reinforcement Learning
 
@@ -541,11 +541,11 @@ graph LR
 
 ### Analysis Tools
 
-- [[parameter_sensitivity]] - Effect of parameter changes on outcomes
+- parameter sensitivity - Effect of parameter changes on outcomes
 
-- [[convergence_metrics]] - Learning progress
+- convergence metrics - Learning progress
 
-- [[exploration_metrics]] - Search efficiency
+- exploration metrics - Search efficiency
 
 - [[performance_evaluation]] - System assessment
 

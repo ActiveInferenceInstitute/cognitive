@@ -16,6 +16,8 @@ semantic_relations:
       - "[[memory_consolidation]]"
       - "[[emotional_processing]]"
       - "[[hippocampus]]"
+aliases:
+  - emotion_memory
 ---
 
 # Emotional Memory

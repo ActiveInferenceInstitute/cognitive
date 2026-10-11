@@ -440,7 +440,7 @@ class SpectralFreeEnergyAnalysis:
 
 ## References
 
-- [[friston_2015]] - Active Inference Theory
+- friston 2015 - Active Inference Theory
 
 - [[parr_2019]] - Relationship Analysis
 

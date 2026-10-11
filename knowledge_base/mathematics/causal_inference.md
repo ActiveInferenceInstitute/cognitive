@@ -16,6 +16,8 @@ semantic_relations:
       - "[[d_separation]]"
       - "[[conditional_independence]]"
       - "[[graphical_models]]"
+aliases:
+  - causality_inference
 ---
 
 # Causal Inference

@@ -16,6 +16,8 @@ semantic_relations:
       - "[[hierarchical_inference]]"
       - "[[generative_model]]"
       - "[[prediction_error]]"
+aliases:
+  - scene_analysis
 ---
 
 # Scene Understanding

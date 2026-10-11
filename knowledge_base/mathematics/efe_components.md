@@ -444,7 +444,7 @@ Links to:
 
    - Temporal stability
 
-   - Links to [[optimization_metrics]]
+   - Links to optimization metrics
 
 ### Temporal Patterns
 

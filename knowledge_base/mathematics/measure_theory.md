@@ -506,11 +506,11 @@ class RandomVariable:
 
 ## References
 
-- [[halmos]] - Measure Theory
+- halmos - Measure Theory
 
-- [[rudin]] - Real and Complex Analysis
+- rudin - Real and Complex Analysis
 
-- [[bogachev]] - Measure Theory
+- bogachev - Measure Theory
 
-- [[evans_gariepy]] - Measure Theory and Fine Properties of Functions
+- evans gariepy - Measure Theory and Fine Properties of Functions
 

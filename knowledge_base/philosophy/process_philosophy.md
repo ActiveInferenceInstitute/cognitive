@@ -16,6 +16,9 @@ semantic_relations:
       - "[[enactivism]]"
       - "[[autopoiesis]]"
       - "[[free_energy_principle]]"
+aliases:
+  - process_metaphysics
+  - process_ontology
 ---
 
 # Process Philosophy

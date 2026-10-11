@@ -17,6 +17,8 @@ semantic_relations:
       - "[[system_definition]]"
       - "[[hierarchical_inference]]"
       - "[[model_architecture]]"
+aliases:
+  - state_abstraction
 ---
 
 # State Space Abstraction

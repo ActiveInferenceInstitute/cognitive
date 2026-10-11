@@ -74,7 +74,7 @@ Active Inference formulation of Partially Observable Markov Decision Processes (
 
 - Non-negative: $P(o|s) \geq 0$
 
-- Links to [[likelihood_mapping]] and sensory uncertainty
+- Links to likelihood mapping and sensory uncertainty
 
 ### Transition Model (B)
 
@@ -82,7 +82,7 @@ Active Inference formulation of Partially Observable Markov Decision Processes (
 
 - Non-negative: $P(s'|s,a) \geq 0$
 
-- Links to [[state_dynamics]] and [[action_effects]]
+- Links to state dynamics and action effects
 
 ### Preference Model (C)
 

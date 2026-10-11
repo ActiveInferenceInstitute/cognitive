@@ -423,7 +423,7 @@ class PathIntegrator:
 
   - Statistical mechanics
 
-- [[quantum_variational]]
+- quantum variational
 
   - Quantum algorithms
 
@@ -509,7 +509,7 @@ class PathIntegrator:
 
 ### 1. Theoretical Advances
 
-- [[geometric_methods]]
+- geometric methods
 
   - Symplectic geometry
 
@@ -517,7 +517,7 @@ class PathIntegrator:
 
   - Optimal transport
 
-- [[quantum_methods]]
+- quantum methods
 
   - Quantum algorithms
 
@@ -527,7 +527,7 @@ class PathIntegrator:
 
 ### 2. Computational Methods
 
-- [[numerical_schemes]]
+- numerical schemes
 
   - Adaptive methods
 
@@ -563,9 +563,9 @@ class PathIntegrator:
 
 ## References
 
-- [[gelfand_2000]] - "Calculus of Variations"
+- gelfand 2000 - "Calculus of Variations"
 
-- [[jordan_1998]] - "An Introduction to Variational Methods"
+- jordan 1998 - "An Introduction to Variational Methods"
 
 - [[amari_2000]] - "Methods of Information Geometry"
 
@@ -599,11 +599,11 @@ class PathIntegrator:
 
 ## References
 
-- [[gelfand_fomin]] - Calculus of Variations
+- gelfand fomin - Calculus of Variations
 
-- [[giaquinta_hildebrandt]] - Calculus of Variations I & II
+- giaquinta hildebrandt - Calculus of Variations I & II
 
-- [[kappen]] - Path Integral Control and Planning
+- kappen - Path Integral Control and Planning
 
 - friston - The Free-Energy Principle
 

@@ -21,6 +21,8 @@ semantic_relations:
       - "[[attentional_control]]"
       - "[[active_inference]]"
       - "[[free_energy_principle]]"
+aliases:
+  - attentional_selection
 ---
 
 

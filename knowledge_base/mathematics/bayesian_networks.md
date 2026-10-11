@@ -26,6 +26,8 @@ semantic_relations:
       - "[[probabilistic_models]]"
       - "[[causal_inference]]"
       - "[[belief_updating]]"
+aliases:
+  - belief_networks
 ---
 
 
@@ -135,7 +137,7 @@ p(X | Y, Z) = p(X | Z) \text{ if X ⊥ Y | Z}
 
 ```
 
-### 3. [[factor_graph_equivalence|Factor Graph Equivalence]]
+### 3. Factor Graph Equivalence
 
 Every Bayesian network can be converted to a [[factor_graphs|factor graph]]:
 
@@ -405,7 +407,7 @@ graph TB
 
 ```
 
-### 1. [[conversion_to_factor_graphs|Conversion to Factor Graphs]]
+### 1. Conversion to Factor Graphs
 
 ```julia
 
@@ -1231,7 +1233,7 @@ flowchart LR
 
 ```
 
-### 1. [[scalability_issues|Scalability Issues]]
+### 1. Scalability Issues
 
 - Exponential growth of CPTs
 

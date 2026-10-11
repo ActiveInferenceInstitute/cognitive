@@ -16,6 +16,8 @@ semantic_relations:
       - "[[visual_attention]]"
       - "[[feature_based_attention]]"
       - "[[object_based_attention]]"
+aliases:
+  - treisman_features
 ---
 
 # Feature Integration

@@ -555,19 +555,19 @@ Mathematical descriptions of diversity:
 ## References
 
 ### Foundational Texts
-- [[may_1976]] - "Theoretical Ecology: Principles and Applications"
-- [[begon_2005]] - "Ecology: From Individuals to Ecosystems"
-- [[odum_1971]] - "Fundamentals of Ecology"
+- may 1976 - "Theoretical Ecology: Principles and Applications"
+- begon 2005 - "Ecology: From Individuals to Ecosystems"
+- odum 1971 - "Fundamentals of Ecology"
 
 ### Advanced Topics
-- [[levin_1992]] - "The Problem of Pattern and Scale in Ecology"
-- [[hubbell_2001]] - "The Unified Neutral Theory of Biodiversity"
+- levin 1992 - "The Problem of Pattern and Scale in Ecology"
+- hubbell 2001 - "The Unified Neutral Theory of Biodiversity"
 - bascompte 2006 - "The Structure of Plant-Animal Mutualistic Networks"
 
 ### Modern Methods
-- [[grimm_2005]] - "Individual-Based Modeling and Ecology"
-- [[deangelis_2014]] - "Individual-Based Models and Approaches in Ecology"
-- [[railsback_2019]] - "Agent-Based and Individual-Based Modeling"
+- grimm 2005 - "Individual-Based Modeling and Ecology"
+- deangelis 2014 - "Individual-Based Models and Approaches in Ecology"
+- railsback 2019 - "Agent-Based and Individual-Based Modeling"
 
 ## See Also
 

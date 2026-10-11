@@ -17,6 +17,11 @@ semantic_relations:
       - "[[cholinergic_system]]"
       - "[[vigilance]]"
       - "[[attention_mechanisms]]"
+aliases:
+  - noradrenaline
+  - noradrenaline_system
+  - noradrenergic
+  - norepinephrine_system
 ---
 
 # Noradrenergic System

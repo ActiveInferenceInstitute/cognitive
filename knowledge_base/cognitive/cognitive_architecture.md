@@ -19,13 +19,11 @@ aliases:
 semantic_relations:
   - type: implements
     links:
-      - "[[cognitive_systems]]"
       - "[[information_processing]]"
       - "[[neural_computation]]"
   - type: foundation_for
     links:
       - "[[cognitive_modeling_concepts]]"
-      - "[[agent_architectures]]"
       - "[[artificial_intelligence]]"
   - type: related
     links:
@@ -571,11 +569,11 @@ class AdaptiveCognitiveArchitecture(HierarchicalCognitiveArchitecture):
 
 ## References
 
-- [[newell_unified]] - Unified Theory of Cognition
+- newell unified - Unified Theory of Cognition
 - [[anderson_act]] - Adaptive Control of Thought
-- [[rumelhart_pdp]] - Parallel Distributed Processing
-- [[brooks_behavior]] - Behavior-Based Robotics
-- [[sun_integrated]] - Integrated Cognitive Architectures
+- rumelhart pdp - Parallel Distributed Processing
+- brooks behavior - Behavior-Based Robotics
+- sun integrated - Integrated Cognitive Architectures
 
 ## Related Concepts
 

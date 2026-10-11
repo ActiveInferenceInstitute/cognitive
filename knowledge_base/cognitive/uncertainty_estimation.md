@@ -482,7 +482,7 @@ Uncertainty estimation represents the process by which cognitive systems assess 
 
 ## References
 
-- [[uncertainty_theory]]
+- uncertainty theory
 
 - [[probability_theory]]
 

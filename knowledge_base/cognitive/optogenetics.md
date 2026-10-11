@@ -17,6 +17,8 @@ semantic_relations:
       - "[[neural_coding]]"
       - "[[neuroscience]]"
       - "[[neural_plasticity]]"
+aliases:
+  - optogenetic_manipulation
 ---
 
 # Optogenetics

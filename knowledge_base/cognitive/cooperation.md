@@ -41,93 +41,93 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
     - gaze following - Looking where another person looks
 
-      - [[attention_sharing]] - Directing others' attention to the same target
+      - attention sharing - Directing others' attention to the same target
 
-      - [[intention_reading]] - Inferring what others intend to do
+      - intention reading - Inferring what others intend to do
 
-    - [[shared_reference]] - Pointing to a common referent
+    - shared reference - Pointing to a common referent
 
-      - [[spatial_coordination]] - Aligning positions and movements in space
+      - spatial coordination - Aligning positions and movements in space
 
       - temporal coordination - Aligning the timing of actions
 
-  - [[action_synchrony]] - Moving in time with others
+  - action synchrony - Moving in time with others
 
-    - [[behavioral_matching]] - Matching another person's behavior
+    - behavioral matching - Matching another person's behavior
 
-      - [[mimicry]] - Unconscious copying of others' movements
+      - mimicry - Unconscious copying of others' movements
 
       - [[synchronization]] - Coordinating actions in time
 
-    - [[role_complementarity]] - Partners taking roles that fit together
+    - role complementarity - Partners taking roles that fit together
 
-      - [[task_division]] - Dividing a task among partners
+      - task division - Dividing a task among partners
 
-      - [[skill_complementarity]] - Partners contributing different, fitting skills
+      - skill complementarity - Partners contributing different, fitting skills
 
 ### Decision Processes
 
-- [[cooperative_decisions]] - Decisions about whether and how to cooperate
+- cooperative decisions - Decisions about whether and how to cooperate
 
   - [[cost_benefit_analysis]] - Weighing costs of cooperating against gains
 
-    - [[immediate_costs]] - Costs paid at the time of cooperating
+    - immediate costs - Costs paid at the time of cooperating
 
-      - [[resource_investment]] - Resources contributed to a joint effort
+      - resource investment - Resources contributed to a joint effort
 
-      - [[effort_expenditure]] - Effort spent on a joint task
+      - effort expenditure - Effort spent on a joint task
 
-    - [[future_benefits]] - Gains that arrive after cooperating
+    - future benefits - Gains that arrive after cooperating
 
-      - [[shared_rewards]] - Rewards divided among cooperators
+      - shared rewards - Rewards divided among cooperators
 
-      - [[relationship_value]] - Long-term value of a relationship
+      - relationship value - Long-term value of a relationship
 
   - trust decisions - Choosing whether to trust a partner
 
-    - [[partner_evaluation]] - Judging which partners are trustworthy
+    - partner evaluation - Judging which partners are trustworthy
 
-      - [[reputation_assessment]] - Judging a partner by their reputation
+      - reputation assessment - Judging a partner by their reputation
 
-      - [[behavior_history]] - Reviewing a partner's past conduct
+      - behavior history - Reviewing a partner's past conduct
 
     - [[risk_assessment]] - Estimating the chance and cost of being let down
 
-      - [[betrayal_risk]] - Risk that a partner defects
+      - betrayal risk - Risk that a partner defects
 
-      - [[exploitation_risk]] - Risk of being taken advantage of
+      - exploitation risk - Risk of being taken advantage of
 
 ### Learning Mechanisms
 
-- [[cooperation_learning]] - Learning when and with whom to cooperate
+- cooperation learning - Learning when and with whom to cooperate
 
-  - [[social_reinforcement]] - Learning from social rewards and punishments
+  - social reinforcement - Learning from social rewards and punishments
 
-    - [[reward_sharing]] - Dividing rewards among partners
+    - reward sharing - Dividing rewards among partners
 
-      - [[mutual_benefits]] - Gains that accrue to all partners
+      - mutual benefits - Gains that accrue to all partners
 
       - reciprocity - Returning favors in kind
 
     - punishment avoidance - Learning to avoid social punishment
 
-      - [[social_sanctions]] - Penalties imposed by a group
+      - social sanctions - Penalties imposed by a group
 
-      - [[exclusion_threat]] - Risk of being excluded from the group
+      - exclusion threat - Risk of being excluded from the group
 
   - strategy learning - Learning which strategies work
 
     - cooperation patterns - Recurring patterns of cooperative behavior
 
-      - [[successful_strategies]] - Strategies that sustain cooperation
+      - successful strategies - Strategies that sustain cooperation
 
-      - [[failed_strategies]] - Strategies that lead to breakdown
+      - failed strategies - Strategies that lead to breakdown
 
-    - [[context_learning]] - Learning how context affects cooperation
+    - context learning - Learning how context affects cooperation
 
-      - [[partner_specificity]] - Strategies that depend on the partner
+      - partner specificity - Strategies that depend on the partner
 
-      - [[situation_specificity]] - Strategies that depend on the situation
+      - situation specificity - Strategies that depend on the situation
 
 ## Neural Implementation
 
@@ -135,15 +135,15 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
 - [[cooperation_networks]] - Brain networks supporting cooperation
 
-  - [[social_cognition_network]] - Brain network for understanding other people
+  - social cognition network - Brain network for understanding other people
 
-    - [[mentalizing_regions]] - Regions that infer others' mental states
+    - mentalizing regions - Regions that infer others' mental states
 
       - [[medial_prefrontal]] - Prefrontal region distinguishing self from others
 
       - [[temporoparietal]] - Region supporting perspective taking
 
-    - [[reward_regions]] - Regions that process reward
+    - reward regions - Regions that process reward
 
       - [[ventral_striatum]] - Reward region signaling value and anticipation
 
@@ -157,7 +157,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - [[anterior_cingulate]] - Region monitoring conflict and errors
 
-    - [[emotional_control]] - Regulating emotional responses
+    - emotional control - Regulating emotional responses
 
       - [[emotion_regulation]] - Adjusting one's emotional responses
 
@@ -165,75 +165,75 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
 ### Circuit Mechanisms
 
-- [[cooperation_circuits]] - Neural circuits supporting cooperation
+- cooperation circuits - Neural circuits supporting cooperation
 
   - reward circuits - Circuits processing reward
 
     - [[social_reward]] - Reward gained from social interaction
 
-      - [[affiliation_signals]] - Neural signals of social bonding
+      - affiliation signals - Neural signals of social bonding
 
-      - [[reciprocity_signals]] - Neural signals tracking returned favors
+      - reciprocity signals - Neural signals tracking returned favors
 
-    - [[shared_success]] - Reward from succeeding together
+    - shared success - Reward from succeeding together
 
-      - [[joint_achievement]] - Reward from reaching a shared goal
+      - joint achievement - Reward from reaching a shared goal
 
-      - [[group_benefit]] - Reward from benefiting the group
+      - group benefit - Reward from benefiting the group
 
-  - [[trust_circuits]] - Circuits supporting trust
+  - trust circuits - Circuits supporting trust
 
     - bond formation - Forming social attachments
 
-      - [[attachment_signals]] - Neural signals of closeness
+      - attachment signals - Neural signals of closeness
 
-      - [[safety_signals]] - Neural signals of social safety
+      - safety signals - Neural signals of social safety
 
-    - [[violation_detection]] - Detecting broken trust or norms
+    - violation detection - Detecting broken trust or norms
 
-      - [[betrayal_signals]] - Neural signals of being betrayed
+      - betrayal signals - Neural signals of being betrayed
 
-      - [[fairness_signals]] - Neural signals of fair treatment
+      - fairness signals - Neural signals of fair treatment
 
 ### Neuromodulation
 
-- [[cooperation_modulation]] - Chemical modulation of cooperation
+- cooperation modulation - Chemical modulation of cooperation
 
-  - [[prosocial_systems]] - Neurochemical systems promoting prosocial behavior
+  - prosocial systems - Neurochemical systems promoting prosocial behavior
 
     - [[oxytocin_system]] - Oxytocin signaling linked to bonding and trust
 
-      - [[bonding_effects]] - Increased feelings of closeness
+      - bonding effects - Increased feelings of closeness
 
-      - [[trust_enhancement]] - Increased willingness to trust
+      - trust enhancement - Increased willingness to trust
 
     - [[endogenous_opioids]] - Natural opioids linked to social reward
 
       - [[social_reward]] - Reward gained from social interaction
 
-      - [[pain_reduction]] - Reduced pain from social contact
+      - pain reduction - Reduced pain from social contact
 
-  - [[stress_systems]] - Neurochemical systems responding to stress
+  - stress systems - Neurochemical systems responding to stress
 
     - [[cortisol_system]] - Hormonal stress-response system
 
       - threat response - Defensive reaction to threat
 
-      - [[resource_conservation]] - Saving effort and resources under stress
+      - resource conservation - Saving effort and resources under stress
 
     - [[noradrenaline]] - Neuromodulator raising arousal and alertness
 
       - arousal control - Regulating level of arousal
 
-      - [[attention_focus]] - Sharpened attention under arousal
+      - attention focus - Sharpened attention under arousal
 
 ## Behavioral Patterns
 
 ### Cooperation Types
 
-- [[cooperation_forms]] - Kinds of cooperation
+- cooperation forms - Kinds of cooperation
 
-  - [[dyadic_cooperation]] - Cooperation between two individuals
+  - dyadic cooperation - Cooperation between two individuals
 
     - [[direct_reciprocity]] - Repeated returns of favors between two partners
 
@@ -245,83 +245,83 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - resource sharing - Pooling resources among partners
 
-      - [[skill_sharing]] - Teaching skills to partners
+      - skill sharing - Teaching skills to partners
 
-  - [[group_cooperation]] - Cooperation among many individuals
+  - group cooperation - Cooperation among many individuals
 
     - collective action - Joint action toward a shared goal
 
       - public goods - Shared resources that benefit everyone
 
-      - [[common_pool]] - Shared resource open to all members
+      - common pool - Shared resource open to all members
 
     - [[indirect_reciprocity]] - Helping those who have helped others
 
-      - [[reputation_based]] - Helping based on reputation
+      - reputation based - Helping based on reputation
 
-      - [[network_effects]] - Cooperation spreading through social networks
+      - network effects - Cooperation spreading through social networks
 
 ### Cooperation Dynamics
 
 - cooperation patterns - How cooperation develops and persists
 
-  - [[stability_factors]] - Factors that sustain cooperation
+  - stability factors - Factors that sustain cooperation
 
     - [[trust_building]] - Gradual growth of trust through reliable behavior
 
-      - [[reliability]] - Consistently doing what one promised
+      - reliability - Consistently doing what one promised
 
-      - [[transparency]] - Openness about intentions and actions
+      - transparency - Openness about intentions and actions
 
-    - [[commitment_mechanisms]] - Means of binding partners to cooperate
+    - commitment mechanisms - Means of binding partners to cooperate
 
-      - [[social_bonds]] - Lasting relationships between individuals
+      - social bonds - Lasting relationships between individuals
 
-      - [[institutional_rules]] - Formal rules that guide group behavior
+      - institutional rules - Formal rules that guide group behavior
 
-  - [[breakdown_factors]] - Factors that cause cooperation to fail
+  - breakdown factors - Factors that cause cooperation to fail
 
-    - [[trust_violation]] - Breaking a partner's trust
+    - trust violation - Breaking a partner's trust
 
-      - [[cheating]] - Gaining benefits without contributing
+      - cheating - Gaining benefits without contributing
 
       - [[exploitation]] - Taking advantage of cooperators
 
-    - [[coordination_failure]] - Partners failing to align their actions
+    - coordination failure - Partners failing to align their actions
 
-      - [[miscommunication]] - Messages misunderstood by partners
+      - miscommunication - Messages misunderstood by partners
 
-      - [[misalignment]] - Partners holding conflicting goals
+      - misalignment - Partners holding conflicting goals
 
 ### Cultural Influence
 
-- [[cooperation_culture]] - Cultural shaping of cooperation
+- cooperation culture - Cultural shaping of cooperation
 
   - [[social_norms]] - Shared expectations about behavior
 
-    - [[cooperation_norms]] - Norms that encourage cooperation
+    - cooperation norms - Norms that encourage cooperation
 
-      - [[fairness_norms]] - Norms demanding equitable treatment
+      - fairness norms - Norms demanding equitable treatment
 
-      - [[reciprocity_norms]] - Norms requiring returned favors
+      - reciprocity norms - Norms requiring returned favors
 
-    - [[punishment_norms]] - Norms about punishing violations
+    - punishment norms - Norms about punishing violations
 
-      - [[sanction_systems]] - Systems for penalizing norm violations
+      - sanction systems - Systems for penalizing norm violations
 
       - [[reputation_systems]] - Systems recording past behavior
 
   - [[cultural_variation]] - Differences in cooperation across cultures
 
-    - [[cooperation_styles]] - Culturally shaped ways of cooperating
+    - cooperation styles - Culturally shaped ways of cooperating
 
-      - [[individualistic]] - Prioritizing personal goals
+      - individualistic - Prioritizing personal goals
 
-      - [[collectivistic]] - Prioritizing group goals
+      - collectivistic - Prioritizing group goals
 
-    - [[trust_patterns]] - Cultural patterns of extending trust
+    - trust patterns - Cultural patterns of extending trust
 
-      - [[in_group]] - Trust directed at one's own group
+      - in group - Trust directed at one's own group
 
       - [[out_group]] - Trust directed at other groups
 
@@ -329,39 +329,39 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
 ### Social Applications
 
-- [[cooperation_society]] - Cooperation applied across society
+- cooperation society - Cooperation applied across society
 
-  - [[community_building]] - Creating cohesive communities
+  - community building - Creating cohesive communities
 
     - [[social_capital]] - Value of social relationships and trust
 
-      - [[trust_networks]] - Networks of trusting relationships
+      - trust networks - Networks of trusting relationships
 
       - reciprocity systems - Networks of exchanged favors
 
     - [[collective_efficacy]] - Shared belief that the group can succeed
 
-      - [[shared_goals]] - Goals held in common by group members
+      - shared goals - Goals held in common by group members
 
-      - [[coordinated_action]] - Group members acting in concert
+      - coordinated action - Group members acting in concert
 
   - [[conflict_resolution]] - Settling disputes between parties
 
     - [[negotiation]] - Reaching agreement through discussion
 
-      - [[interest_alignment]] - Aligning the interests of parties
+      - interest alignment - Aligning the interests of parties
 
-      - [[compromise_finding]] - Finding terms each party accepts
+      - compromise finding - Finding terms each party accepts
 
-    - [[reconciliation]] - Restoring relations after conflict
+    - reconciliation - Restoring relations after conflict
 
       - [[trust_repair]] - Rebuilding trust after a violation
 
-      - [[relationship_rebuild]] - Restoring a damaged relationship
+      - relationship rebuild - Restoring a damaged relationship
 
 ### Clinical Applications
 
-- [[cooperation_therapy]] - Clinical approaches to improving cooperation
+- cooperation therapy - Clinical approaches to improving cooperation
 
   - [[social_disorders]] - Conditions that impair social functioning
 
@@ -369,13 +369,13 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - [[joint_attention]] - Difficulty sharing attention with others
 
-      - [[social_reciprocity]] - Difficulty with back-and-forth social exchange
+      - social reciprocity - Difficulty with back-and-forth social exchange
 
     - [[personality_disorders]] - Enduring patterns that impair relationships
 
-      - [[trust_issues]] - Difficulty trusting others
+      - trust issues - Difficulty trusting others
 
-      - [[cooperation_deficits]] - Reduced capacity to cooperate
+      - cooperation deficits - Reduced capacity to cooperate
 
   - intervention approaches - Treatment approaches for cooperation problems
 
@@ -383,51 +383,51 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - social skills - Skills for interacting with others
 
-      - [[cooperation_skills]] - Skills for working with others
+      - cooperation skills - Skills for working with others
 
-    - [[relationship_therapy]] - Therapy aimed at improving relationships
+    - relationship therapy - Therapy aimed at improving relationships
 
       - [[trust_building]] - Rebuilding trust within therapy
 
-      - [[communication_training]] - Training in clear communication
+      - communication training - Training in clear communication
 
 ### Organizational Applications
 
-- [[cooperation_work]] - Cooperation in organizations
+- cooperation work - Cooperation in organizations
 
-  - [[team_dynamics]] - How team members interact
+  - team dynamics - How team members interact
 
-    - [[team_formation]] - Assembling and launching a team
+    - team formation - Assembling and launching a team
 
-      - [[role_definition]] - Clarifying each member's responsibilities
+      - role definition - Clarifying each member's responsibilities
 
-      - [[norm_setting]] - Establishing shared team norms
+      - norm setting - Establishing shared team norms
 
-    - [[team_development]] - Growth of a team over time
+    - team development - Growth of a team over time
 
       - [[trust_building]] - Gradual growth of trust through reliable behavior
 
-      - [[skill_integration]] - Combining members' skills
+      - skill integration - Combining members' skills
 
-  - [[leadership_practices]] - Leader actions that support cooperation
+  - leadership practices - Leader actions that support cooperation
 
-    - [[cooperation_promotion]] - Encouraging cooperation in a group
+    - cooperation promotion - Encouraging cooperation in a group
 
-      - [[incentive_systems]] - Rewards that encourage cooperative behavior
+      - incentive systems - Rewards that encourage cooperative behavior
 
-      - [[culture_building]] - Shaping shared values in an organization
+      - culture building - Shaping shared values in an organization
 
-    - [[conflict_management]] - Handling disputes within a group
+    - conflict management - Handling disputes within a group
 
-      - [[mediation]] - Resolving disputes with a neutral third party
+      - mediation - Resolving disputes with a neutral third party
 
-      - [[resolution_processes]] - Procedures for resolving conflicts
+      - resolution processes - Procedures for resolving conflicts
 
 ## Research Methods
 
 ### Behavioral Methods
 
-- [[cooperation_measures]] - Ways of measuring cooperation
+- cooperation measures - Ways of measuring cooperation
 
   - [[game_theory]] - Mathematics of strategic interaction
 
@@ -439,11 +439,11 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
     - social dilemmas - Situations where self-interest conflicts with group interest
 
-      - [[resource_dilemmas]] - Dilemmas over dividing limited resources
+      - resource dilemmas - Dilemmas over dividing limited resources
 
-      - [[commons_problems]] - Overuse of shared resources
+      - commons problems - Overuse of shared resources
 
-  - [[field_studies]] - Observing cooperation in natural settings
+  - field studies - Observing cooperation in natural settings
 
     - natural observation - Watching behavior as it naturally occurs
 
@@ -459,13 +459,13 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
 ### Neural Methods
 
-- [[cooperation_brain]] - Neural basis of cooperation
+- cooperation brain - Neural basis of cooperation
 
-  - [[imaging_studies]] - Brain imaging studies of cooperation
+  - imaging studies - Brain imaging studies of cooperation
 
-    - [[task_based]] - Imaging during cooperative tasks
+    - task based - Imaging during cooperative tasks
 
-      - [[cooperation_tasks]] - Tasks that require working together
+      - cooperation tasks - Tasks that require working together
 
       - [[trust_games]] - Games measuring willingness to trust
 
@@ -475,7 +475,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - dynamic patterns - Studying how brain activity changes over time
 
-  - [[interaction_methods]] - Methods for studying interacting people
+  - interaction methods - Methods for studying interacting people
 
     - [[hyperscanning]] - Recording brain activity from interacting people
 
@@ -485,13 +485,13 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
     - real time methods - Methods measuring interaction as it unfolds
 
-      - [[neural_markers]] - Brain signals indicating cooperative states
+      - neural markers - Brain signals indicating cooperative states
 
-      - [[behavior_links]] - Links between brain signals and behavior
+      - behavior links - Links between brain signals and behavior
 
 ### Computational Models
 
-- [[cooperation_models]] - Mathematical models of cooperation
+- cooperation models - Mathematical models of cooperation
 
   - agent models - Models of individual decision makers
 
@@ -499,13 +499,13 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - [[utility_functions]] - Functions assigning value to outcomes
 
-      - [[learning_rules]] - Rules for updating behavior from experience
+      - learning rules - Rules for updating behavior from experience
 
     - interaction models - Models of interactions between agents
 
       - [[game_theory]] - Mathematics of strategic interaction
 
-      - [[evolutionary_models]] - Models of how strategies change across generations
+      - evolutionary models - Models of how strategies change across generations
 
   - [[network_models]] - Models of cooperation on networks
 
@@ -517,7 +517,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
     - [[information_flow]] - Spread of information through a network
 
-      - [[diffusion]] - Models of spread through a network
+      - diffusion - Models of spread through a network
 
       - cascade effects - Chain reactions of behavioral change
 
@@ -529,15 +529,15 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
   - [[ecological_validity]] - Whether lab findings hold in real life
 
-    - [[lab_field_gap]] - Differences between lab and field results
+    - lab field gap - Differences between lab and field results
 
     - [[context_effects]] - Influence of setting on cooperation
 
   - [[individual_differences]] - Variation in cooperation between people
 
-    - [[trait_effects]] - Effects of stable personal traits
+    - trait effects - Effects of stable personal traits
 
-    - [[state_effects]] - Effects of momentary mood and situation
+    - state effects - Effects of momentary mood and situation
 
 ### Emerging Approaches
 
@@ -547,39 +547,39 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
     - mobile assessment - Measurement using portable devices
 
-      - [[sensor_data]] - Data from wearable and environmental sensors
+      - sensor data - Data from wearable and environmental sensors
 
-      - [[location_data]] - Data on where people are
+      - location data - Data on where people are
 
-    - [[longitudinal_tracking]] - Following people over extended periods
+    - longitudinal tracking - Following people over extended periods
 
       - development patterns - Tracking how cooperation develops
 
-      - [[change_processes]] - Tracking how behavior changes
+      - change processes - Tracking how behavior changes
 
-  - [[computational_social]] - Computational approaches to social behavior
+  - computational social - Computational approaches to social behavior
 
-    - [[agent_simulation]] - Simulating interacting agents
+    - agent simulation - Simulating interacting agents
 
-      - [[emergence_study]] - Studying group patterns that emerge
+      - emergence study - Studying group patterns that emerge
 
-      - [[pattern_prediction]] - Forecasting future behavior patterns
+      - pattern prediction - Forecasting future behavior patterns
 
     - [[network_dynamics]] - How networks change over time
 
-      - [[cooperation_spread]] - Spread of cooperation through a population
+      - cooperation spread - Spread of cooperation through a population
 
-      - [[norm_evolution]] - How norms change over time
+      - norm evolution - How norms change over time
 
 ## References
 
-- [[axelrod_evolution]]
+- axelrod evolution
 
-- [[fehr_gachter]]
+- fehr gachter
 
 - [[nowak_five_rules]]
 
-- [[tomasello_cooperation]]
+- tomasello cooperation
 
 ## Related Concepts
 

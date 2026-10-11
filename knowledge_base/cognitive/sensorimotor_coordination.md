@@ -456,7 +456,7 @@ Sensorimotor coordination refers to the integrated control of perception and act
 
 - [[motor_learning]]
 
-- [[perceptual_motor_integration]]
+- perceptual motor integration
 
 ## References
 
@@ -466,7 +466,7 @@ Sensorimotor coordination refers to the integrated control of perception and act
 
 - [[cognitive_neuroscience]]
 
-- [[motor_control_theory]]
+- motor control theory
 
 - computational motor control
 

@@ -15,6 +15,8 @@ semantic_relations:
       - "[[ant_communication_systems]]"
       - "[[stigmergic_coordination]]"
       - "[[ant_colony_optimization]]"
+aliases:
+  - trace_following
 ---
 
 # Trail Following

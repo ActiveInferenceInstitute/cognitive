@@ -197,14 +197,14 @@ Where self-evidencing drives conscious experience.
 - [[friston_2017]] - Active Inference extension
 
 ### Biological Applications
-- [[sterling_2012]] - Allostasis and homeostatic regulation
-- [[adams_2013]] - Active inference in physiology
-- [[schwartenbeck_2019]] - Computational phenotyping
+- sterling 2012 - Allostasis and homeostatic regulation
+- adams 2013 - Active inference in physiology
+- schwartenbeck 2019 - Computational phenotyping
 
 ### Philosophical Extensions
 - [[clark_2013]] - Predictive brains and situated agents
 - seth 2020 - Consciousness and self-modeling
-- [[pezzulo_2021]] - Geometry of knowledge
+- pezzulo 2021 - Geometry of knowledge
 
 ## Code and Implementations
 - **SPM**: Neuroimaging analysis implementing free energy

@@ -644,14 +644,14 @@ class BioinformaticsActiveInference:
 ## References
 
 ### Foundational Texts
-- [[durbin_1998]] - "Biological Sequence Analysis"
-- [[mount_2004]] - "Bioinformatics: Sequence and Genome Analysis"
-- [[baxevanis_2005]] - "Bioinformatics and Functional Genomics"
+- durbin 1998 - "Biological Sequence Analysis"
+- mount 2004 - "Bioinformatics: Sequence and Genome Analysis"
+- baxevanis 2005 - "Bioinformatics and Functional Genomics"
 
 ### Machine Learning Methods
-- [[bishop_2006]] - "Pattern Recognition and Machine Learning"
-- [[murphy_2012]] - "Machine Learning: A Probabilistic Perspective"
-- [[nielsen_2015]] - "Neural Networks and Deep Learning"
+- bishop 2006 - "Pattern Recognition and Machine Learning"
+- murphy 2012 - "Machine Learning: A Probabilistic Perspective"
+- nielsen 2015 - "Neural Networks and Deep Learning"
 
 ### Active Inference Applications
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"

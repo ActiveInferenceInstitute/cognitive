@@ -492,7 +492,7 @@ dispatcher = ActiveInferenceFactory.create(config, model)
 
 ```
 
-### 2. [[Advanced_Stewardship]]
+### 2. Advanced Stewardship
 
 ```python
 

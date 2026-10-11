@@ -86,7 +86,7 @@ ylabel: "Observations"
 
 - [[temporal_discounting]]
 
-- [[goal_hierarchy]]
+- goal hierarchy
 
 ### Value Encoding
 
@@ -108,7 +108,7 @@ ylabel: "Observations"
 
 - [[preference_learning]] - Learning from experience
 
-- [[goal_adaptation]] - Dynamic preference updating
+- goal adaptation - Dynamic preference updating
 
 - [[context_modulation]] - Context-dependent preferences
 
@@ -194,7 +194,7 @@ class PreferenceMatrix:
 
 - [[inverse_reinforcement]] - Learning from behavior
 
-- [[preference_inference]] - Inferring preferences
+- preference inference - Inferring preferences
 
 - [[value_learning]] - Learning values from experience
 
@@ -204,7 +204,7 @@ class PreferenceMatrix:
 
 - [[goal_setting]]
 
-- [[motivation_modeling]]
+- motivation modeling
 
 - [[reward_shaping]]
 
@@ -212,7 +212,7 @@ class PreferenceMatrix:
 
 - [[trajectory_optimization]]
 
-- [[hierarchical_planning]]
+- hierarchical planning
 
 - [[risk_sensitive_control]]
 

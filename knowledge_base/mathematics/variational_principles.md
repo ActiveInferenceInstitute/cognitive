@@ -16,6 +16,8 @@ semantic_relations:
       - "[[lagrangian_mechanics]]"
       - "[[hamiltonian_mechanics]]"
       - "[[free_energy_principle]]"
+aliases:
+  - variational_principle
 ---
 
 # Variational Principles

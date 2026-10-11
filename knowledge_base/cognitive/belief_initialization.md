@@ -23,7 +23,6 @@ semantic_relations:
     links:
       - "[[prior_beliefs]]"
       - "[[uncertainty_quantification]]"
-      - "[[learning_initialization]]"
   - type: mathematical_basis
     links:
       - "[[probability_theory]]"
@@ -280,7 +279,7 @@ class UncertaintyCalibrator:
 
 ### 1. Initialization Strategies
 
-- [[empirical_initialization]]
+- empirical initialization
 
   - Data-driven priors
 
@@ -288,7 +287,7 @@ class UncertaintyCalibrator:
 
   - Moment matching
 
-- [[hierarchical_initialization]]
+- hierarchical initialization
 
   - Level-wise priors
 
@@ -298,7 +297,7 @@ class UncertaintyCalibrator:
 
 ### 2. Uncertainty Types
 
-- [[aleatoric_uncertainty]]
+- aleatoric uncertainty
 
   - Inherent variability
 
@@ -446,13 +445,13 @@ class UncertaintyCalibrator:
 
 ## References
 
-- [[tenenbaum_2011]] - "How to Grow a Mind: Statistics, Structure, and Abstraction"
+- tenenbaum 2011 - "How to Grow a Mind: Statistics, Structure, and Abstraction"
 
-- [[gershman_2014]] - "Amortized Inference in Probabilistic Reasoning"
+- gershman 2014 - "Amortized Inference in Probabilistic Reasoning"
 
-- [[lake_2017]] - "Building Machines That Learn and Think Like People"
+- lake 2017 - "Building Machines That Learn and Think Like People"
 
-- [[griffiths_2010]] - "Probabilistic Models of Cognition"
+- griffiths 2010 - "Probabilistic Models of Cognition"
 
 ## See Also
 
@@ -466,7 +465,7 @@ class UncertaintyCalibrator:
 
 - [[prior_beliefs]]
 
-- [[initialization_methods]]
+- initialization methods
 
 - [[cognitive_development]]
 

@@ -22,7 +22,6 @@ semantic_relations:
   - type: implements
     links:
       - "[[metabolic_pathways]]"
-      - "[[metabolic_regulation]]"
   - type: relates
     links:
       - "[[cell_biology]]"
@@ -525,13 +524,13 @@ class MetabolicControl:
 
 ## References
 
-- [[palsson_2015]] - "Systems Biology: Constraint-based Reconstruction and Analysis"
+- palsson 2015 - "Systems Biology: Constraint-based Reconstruction and Analysis"
 
-- [[fell_1997]] - "Understanding the Control of Metabolism"
+- fell 1997 - "Understanding the Control of Metabolism"
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
-- [[nielsen_2017]] - "Systems Biology of Metabolism"
+- nielsen 2017 - "Systems Biology of Metabolism"
 
 ## See Also
 

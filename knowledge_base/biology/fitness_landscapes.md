@@ -15,6 +15,8 @@ semantic_relations:
       - "[[knowledge_base/biology/evolutionary_biology]]"
       - "[[knowledge_base/biology/evolutionary_dynamics]]"
       - "[[knowledge_base/mathematics/evolutionary_algorithms]]"
+aliases:
+  - adaptive_landscapes
 ---
 
 # Fitness Landscapes

@@ -11,6 +11,7 @@ tags:
 aliases:
   - executive_function
   - executive_processes
+  - executive_control
 semantic_relations:
   - type: implements
     links:
@@ -38,15 +39,15 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
   - maintenance - Keeping information active over short delays
 
-    - [[active_representation]] - Holding information in an active state
+    - active representation - Holding information in an active state
 
-    - [[interference_protection]] - Shielding memory from distraction
+    - interference protection - Shielding memory from distraction
 
   - manipulation - Transforming information held in mind
 
     - updating - Replacing working memory contents with new input
 
-    - [[reordering]] - Rearranging items held in working memory
+    - reordering - Rearranging items held in working memory
 
 ### Inhibitory Control
 
@@ -54,7 +55,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
   - [[behavioral_inhibition]] - Withholding overt actions
 
-    - [[motor_inhibition]] - Stopping or suppressing movement
+    - motor inhibition - Stopping or suppressing movement
 
     - [[impulse_control]] - Resisting immediate urges
 
@@ -84,19 +85,19 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 ### Goal Management
 
-- [[goal_processing]] - Representing and managing goals
+- goal processing - Representing and managing goals
 
   - [[goal_setting]] - Selecting and defining goals
 
-    - [[priority_setting]] - Deciding which goals come first
+    - priority setting - Deciding which goals come first
 
     - [[planning]] - Sequencing actions to reach goals
 
   - [[goal_maintenance]] - Keeping goals active over time
 
-    - [[active_goals]] - Goals currently guiding behavior
+    - active goals - Goals currently guiding behavior
 
-    - [[subgoal_coordination]] - Organizing intermediate steps toward a larger goal
+    - subgoal coordination - Organizing intermediate steps toward a larger goal
 
 ### Attention Control
 
@@ -116,11 +117,11 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 ### Performance Monitoring
 
-- [[monitoring_system]] - Tracking performance and detecting problems
+- monitoring system - Tracking performance and detecting problems
 
   - [[error_detection]] - Noticing that a mistake has occurred
 
-    - [[error_recognition]] - Identifying what kind of mistake occurred
+    - error recognition - Identifying what kind of mistake occurred
 
     - [[error_correction]] - Fixing mistakes once detected
 
@@ -128,13 +129,13 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
     - [[response_conflict]] - Competition between incompatible responses
 
-    - [[strategy_conflict]] - Competition between alternative strategies
+    - strategy conflict - Competition between alternative strategies
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[executive_networks]] - Brain networks supporting executive control
+- executive networks - Brain networks supporting executive control
 
   - [[prefrontal_cortex]] - Frontal brain region central to executive control
 
@@ -156,7 +157,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
     - [[recurrent_networks]] - Circuits whose feedback loops sustain activity
 
-    - [[inhibitory_circuits]] - Circuits that suppress competing activity
+    - inhibitory circuits - Circuits that suppress competing activity
 
   - long range - Connections linking distant brain regions
 
@@ -166,11 +167,11 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 ### Neuromodulation
 
-- [[control_modulation]] - Neurochemical adjustment of control processes
+- control modulation - Neurochemical adjustment of control processes
 
   - [[dopamine_system]] - Neuromodulator system for reward and motivation
 
-    - [[reward_signaling]] - Encoding reward and reward prediction
+    - reward signaling - Encoding reward and reward prediction
 
     - [[error_signaling]] - Encoding prediction errors and mistakes
 
@@ -188,7 +189,7 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
   - early development - Emergence of control abilities in early childhood
 
-    - [[basic_control]] - Early, simple forms of self-control
+    - basic control - Early, simple forms of self-control
 
     - [[emergence]] - First appearance of control abilities
 
@@ -200,41 +201,41 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 ### Individual Differences
 
-- [[control_variation]] - Differences in control between individuals
+- control variation - Differences in control between individuals
 
-  - [[capacity_differences]] - Differences in available processing resources
+  - capacity differences - Differences in available processing resources
 
-    - [[processing_capacity]] - Amount of information that can be handled at once
+    - processing capacity - Amount of information that can be handled at once
 
-    - [[control_strength]] - Degree of effective control exerted
+    - control strength - Degree of effective control exerted
 
-  - [[style_differences]] - Differences in preferred control approaches
+  - style differences - Differences in preferred control approaches
 
-    - [[strategy_preference]] - Preferred approach to a task
+    - strategy preference - Preferred approach to a task
 
-    - [[regulation_style]] - Characteristic way of regulating behavior
+    - regulation style - Characteristic way of regulating behavior
 
 ### Environmental Influences
 
-- [[control_environment]] - Environmental influences on executive control
+- control environment - Environmental influences on executive control
 
-  - [[experience_effects]] - Influence of life experience on control
+  - experience effects - Influence of life experience on control
 
     - [[practice_effects]] - Improvement through repeated training
 
-    - [[challenge_effects]] - Influence of demanding conditions on control
+    - challenge effects - Influence of demanding conditions on control
 
   - [[context_effects]] - Influence of situational factors on control
 
-    - [[social_influence]] - Influence of other people on control
+    - social influence - Influence of other people on control
 
-    - [[stress_effects]] - Impact of stress on control
+    - stress effects - Impact of stress on control
 
 ## Applications
 
 ### Educational Applications
 
-- [[academic_executive]] - Executive functions in schooling
+- academic executive - Executive functions in schooling
 
   - learning support - Aids that help students learn
 
@@ -242,11 +243,11 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
     - [[self_regulation]] - Managing one's own thoughts, emotions, and behavior
 
-  - [[classroom_management]] - Organizing classroom conditions for learning
+  - classroom management - Organizing classroom conditions for learning
 
     - attention support - Aids for sustaining attention in class
 
-    - [[behavior_management]] - Guiding and regulating student behavior
+    - behavior management - Guiding and regulating student behavior
 
 ### Clinical Applications
 
@@ -254,9 +255,9 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
   - assessment - Measuring executive abilities
 
-    - [[function_testing]] - Performance tests of executive abilities
+    - function testing - Performance tests of executive abilities
 
-    - [[behavior_rating]] - Questionnaire ratings of everyday behavior
+    - behavior rating - Questionnaire ratings of everyday behavior
 
   - intervention - Methods for improving executive function
 
@@ -266,17 +267,17 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 ### Workplace Applications
 
-- [[professional_executive]] - Executive functions in work settings
+- professional executive - Executive functions in work settings
 
-  - [[performance_enhancement]] - Improving work performance
+  - performance enhancement - Improving work performance
 
-    - [[efficiency_improvement]] - Getting more done with less effort
+    - efficiency improvement - Getting more done with less effort
 
     - error reduction - Lowering the rate of mistakes
 
   - stress management - Coping with work pressure
 
-    - [[load_management]] - Handling cognitive workload
+    - load management - Handling cognitive workload
 
     - adaptation support - Helping people adjust to change
 
@@ -284,19 +285,19 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 ### Behavioral Methods
 
-- [[executive_assessment]] - Methods for measuring executive function
+- executive assessment - Methods for measuring executive function
 
-  - [[performance_tasks]] - Tasks measuring executive performance
+  - performance tasks - Tasks measuring executive performance
 
     - [[switching_tasks]] - Tasks measuring shifting ability
 
-    - [[inhibition_tasks]] - Tasks measuring response suppression
+    - inhibition tasks - Tasks measuring response suppression
 
-  - [[rating_scales]] - Standardized questionnaires of behavior
+  - rating scales - Standardized questionnaires of behavior
 
-    - [[self_report]] - Ratings given by the individual
+    - self report - Ratings given by the individual
 
-    - [[observer_rating]] - Ratings given by others
+    - observer rating - Ratings given by others
 
 ### Neural Methods
 
@@ -310,17 +311,17 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
   - [[physiology]] - Bodily measures of control
 
-    - [[autonomic]] - Heart rate and other autonomic nervous system measures
+    - autonomic - Heart rate and other autonomic nervous system measures
 
     - [[neuroendocrine]] - Hormone-based measures
 
 ### Computational Methods
 
-- [[control_modeling]] - Computational models of control
+- control modeling - Computational models of control
 
   - process models - Models of underlying cognitive mechanisms
 
-    - [[control_mechanisms]] - Mechanisms through which control operates
+    - control mechanisms - Mechanisms through which control operates
 
     - [[optimization]] - Finding the best control strategy
 
@@ -350,13 +351,13 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 ## References
 
-- [[miyake_friedman]]
+- miyake friedman
 
-- [[diamond_executive]]
+- diamond executive
 
-- [[baddeley_working]]
+- baddeley working
 
-- [[miller_cohen]]
+- miller cohen
 
 ## Related Concepts
 
@@ -370,5 +371,5 @@ Executive Functions comprise a set of cognitive control processes that regulate 
 
 - [[self_regulation]]
 
-- [[prefrontal_function]]
+- prefrontal function
 

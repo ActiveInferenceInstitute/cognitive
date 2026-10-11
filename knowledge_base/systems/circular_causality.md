@@ -28,6 +28,8 @@ semantic_relations:
     links:
       - "[[philosophy/enactivism|Enactivism]]"
       - "[[mathematics/markov_blankets|Markov Blankets]]"
+aliases:
+  - circular_causation
 ---
 
 # Circular Causality

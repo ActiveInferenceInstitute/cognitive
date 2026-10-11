@@ -16,6 +16,8 @@ semantic_relations:
       - "[[knowledge_base/philosophy/enactivism]]"
       - "[[knowledge_base/cognitive/embodied_cognition]]"
       - "[[knowledge_base/cognitive/visual_perception]]"
+aliases:
+  - gibson_ecological
 ---
 
 # Ecological Psychology

@@ -470,13 +470,13 @@ The relativistic framework:
 
 ## References
 
-- [[friston_2021]] - "Deep Active Inference and Control"
+- friston 2021 - "Deep Active Inference and Control"
 
-- [[parr_2021]] - "Active Inference: The Free Energy Principle in Action"
+- parr 2021 - "Active Inference: The Free Energy Principle in Action"
 
-- [[millidge_2020]] - "Deep Active Inference as Variational Policy Gradients"
+- millidge 2020 - "Deep Active Inference as Variational Policy Gradients"
 
-- [[tschantz_2021]] - "Scaling Active Inference Actions"
+- tschantz 2021 - "Scaling Active Inference Actions"
 
 ## See Also
 
@@ -488,7 +488,7 @@ The relativistic framework:
 
 - [[quantum_control]]
 
-- [[relativistic_control]]
+- relativistic control
 
 ## See also
 

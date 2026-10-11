@@ -17,6 +17,8 @@ semantic_relations:
       - "[[language_processing]]"
       - "[[speech_perception]]"
       - "[[aphasia]]"
+aliases:
+  - lexical_retrieval
 ---
 
 # Lexical Access

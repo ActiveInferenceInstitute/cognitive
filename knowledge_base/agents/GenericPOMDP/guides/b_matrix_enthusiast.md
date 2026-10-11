@@ -304,13 +304,13 @@ If you want to explore more:
 
 ## Resources for the Curious
 
-- [[markov_chains_intro]] - The mathematical foundation
+- markov chains intro - The mathematical foundation
 
-- [[simulation_basics]] - How to implement transitions
+- simulation basics - How to implement transitions
 
-- [[game_ai_tutorial]] - Practical applications in games
+- game ai tutorial - Practical applications in games
 
-- [[robotics_fundamentals]] - Using B-matrices in robotics
+- robotics fundamentals - Using B-matrices in robotics
 
 Remember: The B-matrix isn't just math - it's a way of understanding how the world changes and how we can influence those changes!
 

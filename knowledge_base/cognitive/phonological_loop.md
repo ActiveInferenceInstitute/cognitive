@@ -16,6 +16,7 @@ semantic_relations:
       - "[[active_inference]]"
 aliases:
   - phonological_memory
+  - articulatory_rehearsal
 ---
 
 # Phonological Loop

@@ -37,13 +37,13 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[firing_rate]] - Spike frequency
 
-    - [[temporal_averaging]] - Time window analysis
+    - temporal averaging - Time window analysis
 
-    - [[population_averaging]] - Group activity
+    - population averaging - Group activity
 
-  - [[rate_modulation]] - Frequency changes
+  - rate modulation - Frequency changes
 
-    - [[stimulus_dependence]] - Input relationship
+    - stimulus dependence - Input relationship
 
     - context dependence - State effects
 
@@ -51,7 +51,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[spike_timing]] - Time-based representation
 
-  - [[precise_timing]] - Exact spike times
+  - precise timing - Exact spike times
 
     - [[first_spike_latency]] - Initial response
 
@@ -59,7 +59,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[phase_coding]] - Oscillation-based
 
-    - [[theta_phase]] - Hippocampal coding
+    - theta phase - Hippocampal coding
 
     - [[gamma_phase]] - Cortical coding
 
@@ -67,7 +67,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[distributed_representation]] - Group-based coding
 
-  - [[ensemble_coding]] - Neural populations
+  - ensemble coding - Neural populations
 
     - [[coarse_coding]] - Overlapping tuning
 
@@ -75,9 +75,9 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[population_vectors]] - Direction coding
 
-    - [[vector_averaging]] - Response integration
+    - vector averaging - Response integration
 
-    - [[optimal_pooling]] - Information combination
+    - optimal pooling - Information combination
 
 ## Neural Implementation
 
@@ -89,7 +89,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
     - [[orientation_tuning]] - Preference for particular stimulus orientations
 
-    - [[frequency_tuning]] - Spectral preference
+    - frequency tuning - Spectral preference
 
   - [[adaptation]] - Response changes
 
@@ -101,17 +101,17 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[neural_circuits]] - Local networks
 
-  - [[feedforward_circuits]] - Sequential processing
+  - feedforward circuits - Sequential processing
 
     - convergence - Input integration
 
-    - [[divergence]] - Output distribution
+    - divergence - Output distribution
 
-  - [[recurrent_circuits]] - Feedback processing
+  - recurrent circuits - Feedback processing
 
-    - [[local_feedback]] - Within-circuit
+    - local feedback - Within-circuit
 
-    - [[long_range_feedback]] - Between-region
+    - long range feedback - Between-region
 
 ### Network Properties
 
@@ -133,7 +133,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 ### Encoding
 
-- [[sensory_encoding]] - Input representation
+- sensory encoding - Input representation
 
   - [[feature_detection]] - Basic properties
 
@@ -151,13 +151,13 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[neural_computation]] - Information transformation
 
-  - [[linear_processing]] - Simple operations
+  - linear processing - Simple operations
 
-    - [[summation]] - Input addition
+    - summation - Input addition
 
     - [[scaling]] - Amplitude adjustment
 
-  - [[nonlinear_processing]] - Complex operations
+  - nonlinear processing - Complex operations
 
     - thresholding - Response gating
 
@@ -167,23 +167,23 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[neural_decoding]] - Information extraction
 
-  - [[readout_mechanisms]] - Activity interpretation
+  - readout mechanisms - Activity interpretation
 
     - [[maximum_likelihood]] - Optimal decoding
 
     - [[population_vector]] - Direction decoding
 
-  - [[decoder_implementation]] - Practical methods
+  - decoder implementation - Practical methods
 
-    - [[linear_decoders]] - Simple methods
+    - linear decoders - Simple methods
 
-    - [[nonlinear_decoders]] - Complex methods
+    - nonlinear decoders - Complex methods
 
 ## Theoretical Framework
 
 ### Information Theory
 
-- [[neural_information]] - Coding principles
+- neural information - Coding principles
 
   - information content - Message quantity
 
@@ -191,7 +191,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
     - [[mutual_information]] - Shared information
 
-  - [[coding_efficiency]] - Representation quality
+  - coding efficiency - Representation quality
 
     - [[redundancy]] - Information overlap
 
@@ -201,7 +201,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[neural_computation]] - Processing principles
 
-  - [[computational_primitives]] - Basic operations
+  - computational primitives - Basic operations
 
     - integration - Input combination
 
@@ -235,15 +235,15 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[neural_interfaces]] - Direct interaction
 
-  - [[neural_recording]] - Activity measurement
+  - neural recording - Activity measurement
 
     - [[electrode_arrays]] - Direct recording
 
-    - [[optical_imaging]] - Light-based recording
+    - optical imaging - Light-based recording
 
   - [[neural_stimulation]] - Activity modulation
 
-    - [[electrical_stimulation]] - Current injection
+    - electrical stimulation - Current injection
 
     - [[optogenetics]] - Light control
 
@@ -251,7 +251,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[neural_prosthetics]] - Replacement devices
 
-  - [[sensory_prosthetics]] - Input restoration
+  - sensory prosthetics - Input restoration
 
     - [[cochlear_implants]] - Hearing
 
@@ -259,9 +259,9 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[motor_prosthetics]] - Output restoration
 
-    - [[limb_prosthetics]] - Movement
+    - limb prosthetics - Movement
 
-    - [[communication_devices]] - Speech
+    - communication devices - Speech
 
 ### Artificial Intelligence
 
@@ -277,7 +277,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
     - [[stdp]] - Timing-based
 
-    - [[reward_modulated]] - Value-based
+    - reward modulated - Value-based
 
 ## Research Methods
 
@@ -293,7 +293,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 ### Analysis Methods
 
-- [[spike_analysis]] - Activity processing
+- spike analysis - Activity processing
 
   - [[spike_sorting]] - Unit separation
 
@@ -305,9 +305,9 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[computational_models]] - Theory testing
 
-  - [[biophysical_models]] - Detailed mechanics
+  - biophysical models - Detailed mechanics
 
-  - [[abstract_models]] - Simplified principles
+  - abstract models - Simplified principles
 
   - hybrid models - Combined approaches
 
@@ -325,19 +325,19 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[high_density_probes]] - Many channels
 
-- [[wireless_interfaces]] - Untethered recording
+- wireless interfaces - Untethered recording
 
 - [[closed_loop_systems]] - Real-time interaction
 
 ## References
 
-- [[adrian_coding]]
+- adrian coding
 
 - [[hubel_wiesel]]
 
-- [[georgopoulos_population]]
+- georgopoulos population
 
-- [[rieke_spikes]]
+- rieke spikes
 
 ## Related Concepts
 

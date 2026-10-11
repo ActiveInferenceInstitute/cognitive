@@ -74,7 +74,7 @@ The Free Energy Principle (FEP) proposes that all self-organizing systems that p
 
    - [[conditional_independence]]
 
-   - [[statistical_separation]]
+   - statistical separation
 
    - [[boundary_conditions]]
 
@@ -84,7 +84,7 @@ The Free Energy Principle (FEP) proposes that all self-organizing systems that p
 
    - [[predictive_processing]]
 
-   - [[model_inference]]
+   - model inference
 
 1. **Optimization**: Systems minimize variational free energy
 
@@ -92,7 +92,7 @@ The Free Energy Principle (FEP) proposes that all self-organizing systems that p
 
    - [[gradient_flows]]
 
-   - [[optimization_dynamics]]
+   - optimization dynamics
 
 ### Mathematical Framework
 
@@ -162,7 +162,7 @@ where:
 
 Additional properties:
 
-- [[flow_fields]]
+- flow fields
 
 - [[stochastic_differential_equations]]
 
@@ -254,7 +254,7 @@ Components:
 
 - stochastic integration
 
-- [[noise_processes]]
+- noise processes
 
 ### 3. Information Geometry
 
@@ -278,7 +278,7 @@ Properties:
 
 ### 1. Biological Systems
 
-- [[cellular_homeostasis]]
+- cellular homeostasis
 
   - membrane dynamics
 
@@ -304,7 +304,7 @@ Properties:
 
 - [[immune_system]]
 
-  - [[immune_recognition]]
+  - immune recognition
 
   - [[adaptive_immunity]]
 
@@ -330,11 +330,11 @@ Properties:
 
 - [[attention]]
 
-  - [[precision_control]]
+  - precision control
 
   - [[resource_allocation]]
 
-  - [[selective_processing]]
+  - selective processing
 
 - [[memory]]
 
@@ -356,7 +356,7 @@ Properties:
 
 - social networks
 
-  - [[information_diffusion]]
+  - information diffusion
 
   - [[social_learning]]
 
@@ -376,7 +376,7 @@ Properties:
 
   - [[resource_allocation]]
 
-  - [[economic_adaptation]]
+  - economic adaptation
 
 ## Mathematical Properties
 
@@ -402,7 +402,7 @@ Properties:
 
   - [[cramer_rao_bound]]
 
-  - [[efficient_estimation]]
+  - efficient estimation
 
   - [[information_geometry]]
 
@@ -420,11 +420,11 @@ Properties:
 
   - irreversible processes
 
-  - [[heat_dissipation]]
+  - heat dissipation
 
   - [[work_extraction]]
 
-- [[non_equilibrium_dynamics]]
+- non equilibrium dynamics
 
   - [[detailed_balance]]
 
@@ -438,7 +438,7 @@ Properties:
 
   - [[evans_searles_theorem]]
 
-  - [[gallavotti_cohen_symmetry]]
+  - gallavotti cohen symmetry
 
 - [[dissipative_structures]]
 
@@ -476,11 +476,11 @@ Properties:
 
 - [[ergodicity]]
 
-  - [[mixing_properties]]
+  - mixing properties
 
   - [[recurrence_times]]
 
-  - [[ergodic_decomposition]]
+  - ergodic decomposition
 
 ## Validation Framework
 
@@ -490,11 +490,11 @@ Properties:
 
 - Energy gradients
 
-  - [[potential_landscapes]]
+  - potential landscapes
 
-  - [[force_measurements]]
+  - force measurements
 
-  - [[energy_flow_tracking]]
+  - energy flow tracking
 
 - State transitions
 
@@ -506,7 +506,7 @@ Properties:
 
 - Fluctuation patterns
 
-  - [[noise_spectra]]
+  - noise spectra
 
   - correlation functions
 
@@ -516,9 +516,9 @@ Properties:
 
 - Homeostatic regulation
 
-  - [[metabolic_control]]
+  - metabolic control
 
-  - [[physiological_adaptation]]
+  - physiological adaptation
 
   - feedback mechanisms
 
@@ -534,21 +534,21 @@ Properties:
 
   - [[synaptic_modification]]
 
-  - [[behavioral_adaptation]]
+  - behavioral adaptation
 
   - [[skill_acquisition]]
 
 ### Mathematical Validation
 
-1. [[consistency_proofs]]
+1. consistency proofs
 
-   - [[existence_theorems]]
+   - existence theorems
 
-   - [[uniqueness_results]]
+   - uniqueness results
 
-   - [[convergence_guarantees]]
+   - convergence guarantees
 
-1. [[numerical_simulations]]
+1. numerical simulations
 
    - [[monte_carlo_methods]]
 
@@ -576,13 +576,13 @@ Properties:
 
   - [[information_processing]]
 
-- [[brain_organization]]
+- brain organization
 
   - [[hierarchical_processing]]
 
   - functional networks
 
-  - [[modular_organization]]
+  - modular organization
 
 - [[synaptic_plasticity]]
 
@@ -624,7 +624,7 @@ Properties:
 
   - [[value_learning]]
 
-  - [[model_based_learning]]
+  - model based learning
 
 - [[artificial_life]]
 
@@ -752,15 +752,15 @@ class DynamicsSolver:
 
    - [[conservation_laws]]
 
-   - [[numerical_precision]]
+   - numerical precision
 
 1. Validation Protocols
 
-   - [[convergence_testing]]
+   - convergence testing
 
    - [[stability_analysis]]
 
-   - [[robustness_checks]]
+   - robustness checks
 
    - [[error_propagation]]
 
@@ -772,15 +772,15 @@ class DynamicsSolver:
 
    - memory management
 
-   - [[algorithmic_efficiency]]
+   - algorithmic efficiency
 
 1. Analysis Tools
 
-   - [[phase_space_analysis]]
+   - phase space analysis
 
    - [[bifurcation_diagrams]]
 
-   - [[information_measures]]
+   - information measures
 
    - stability metrics
 
@@ -790,11 +790,11 @@ class DynamicsSolver:
 
 1. Scale separation
 
-   - [[multiscale_analysis]]
+   - multiscale analysis
 
    - [[renormalization_group]]
 
-   - [[effective_theories]]
+   - effective theories
 
 1. Non-equilibrium extensions
 
@@ -814,11 +814,11 @@ class DynamicsSolver:
 
 1. Discrete-time formulations
 
-   - [[discrete_dynamics]]
+   - discrete dynamics
 
    - [[cellular_automata]]
 
-   - [[discrete_inference]]
+   - discrete inference
 
 ### Future Research Directions
 
@@ -834,13 +834,13 @@ class DynamicsSolver:
 
    - [[glassy_dynamics]]
 
-   - [[aging_systems]]
+   - aging systems
 
    - [[broken_ergodicity]]
 
 1. [[collective_intelligence]]
 
-   - [[swarm_behavior]]
+   - swarm behavior
 
    - [[social_learning]]
 
@@ -850,7 +850,7 @@ class DynamicsSolver:
 
    - [[synthetic_biology]]
 
-   - [[artificial_evolution]]
+   - artificial evolution
 
    - [[digital_organisms]]
 
@@ -860,11 +860,11 @@ class DynamicsSolver:
 
 - [[scientific_realism]]
 
-  - [[model_realism]]
+  - model realism
 
   - [[causal_inference]]
 
-  - [[emergence_explanation]]
+  - emergence explanation
 
 ### 2. Metaphysical Questions
 
@@ -880,7 +880,7 @@ class DynamicsSolver:
 
 - [[reductionism]]
 
-  - [[levels_of_explanation]]
+  - levels of explanation
 
   - [[emergence]]
 
@@ -892,15 +892,15 @@ class DynamicsSolver:
 
 - parr friston 2020 - "Markov blankets, information geometry and stochastic thermodynamics"
 
-- [[ramstead_2019]] - "A tale of two densities"
+- ramstead 2019 - "A tale of two densities"
 
 - [[kirchhoff_2018]] - "Markov blankets and the free energy principle"
 
-- [[ao_2008]] - "Emerging of stochastic dynamical equalities and steady state thermodynamics"
+- ao 2008 - "Emerging of stochastic dynamical equalities and steady state thermodynamics"
 
 - seifert 2012 - "Stochastic thermodynamics, fluctuation theorems and molecular machines"
 
-- [[still_2012]] - "Thermodynamic cost of prediction"
+- still 2012 - "Thermodynamic cost of prediction"
 
 - [[friston_2019]] - "A free energy principle for a particular physics"
 
@@ -950,7 +950,7 @@ class DynamicsSolver:
 
     - alpha connections
 
-    - [[divergence_functions]]
+    - divergence functions
 
 ### 2. Statistical Physics Extensions
 
@@ -960,19 +960,19 @@ class DynamicsSolver:
 
     - [[least_action_principle]]
 
-    - [[stationary_phase]]
+    - stationary phase
 
-    - [[fluctuation_paths]]
+    - fluctuation paths
 
   - [[partition_functions]]
 
-    - [[free_energy_functionals]]
+    - free energy functionals
 
     - generating functionals
 
     - [[cumulant_expansion]]
 
-  - [[renormalization_theory]]
+  - renormalization theory
 
     - [[scale_invariance]]
 
@@ -986,7 +986,7 @@ class DynamicsSolver:
 
   - [[transfer_entropy]]
 
-    - [[causal_information]]
+    - causal information
 
     - directed information
 
@@ -1004,9 +1004,9 @@ class DynamicsSolver:
 
     - [[complexity_measures]]
 
-    - [[future_entropy]]
+    - future entropy
 
-    - [[past_mutual_information]]
+    - past mutual information
 
 ## Advanced Mathematical Framework
 
@@ -1446,7 +1446,7 @@ class PolicySelection:
 
   - [[maximum_likelihood]]
 
-  - [[bayesian_estimation]]
+  - bayesian estimation
 
   - [[moment_matching]]
 
@@ -1468,29 +1468,29 @@ class PolicySelection:
 
 ### 2. Perturbation Analysis
 
-- [[intervention_studies]]
+- intervention studies
 
-  - [[causal_manipulation]]
+  - causal manipulation
 
-  - [[controlled_perturbation]]
+  - controlled perturbation
 
   - response analysis
 
-- [[stability_testing]]
+- stability testing
 
-  - [[robustness_analysis]]
+  - robustness analysis
 
   - [[sensitivity_analysis]]
 
   - resilience measures
 
-- [[adaptation_experiments]]
+- adaptation experiments
 
   - [[learning_curves]]
 
   - recovery dynamics
 
-  - [[plasticity_measures]]
+  - plasticity measures
 
 ### 3. Comparative Studies
 
@@ -1504,19 +1504,19 @@ class PolicySelection:
 
 - system comparison
 
-  - [[behavioral_similarity]]
+  - behavioral similarity
 
-  - [[dynamical_equivalence]]
+  - dynamical equivalence
 
-  - [[functional_analogy]]
+  - functional analogy
 
-- [[evolutionary_analysis]]
+- evolutionary analysis
 
-  - [[phylogenetic_comparison]]
+  - phylogenetic comparison
 
   - [[adaptive_landscapes]]
 
-  - [[fitness_measures]]
+  - fitness measures
 
 ## Advanced Applications
 
@@ -1526,7 +1526,7 @@ class PolicySelection:
 
   - quantum measurement
 
-    - [[collapse_dynamics]]
+    - collapse dynamics
 
     - [[decoherence_theory]]
 
@@ -1550,43 +1550,43 @@ class PolicySelection:
 
 ### 2. Complex Networks
 
-- [[network_thermodynamics]]
+- network thermodynamics
 
   - [[information_flow]]
 
-    - [[network_entropy]]
+    - network entropy
 
-    - [[path_information]]
+    - path information
 
-    - [[network_complexity]]
+    - network complexity
 
-  - [[network_stability]]
+  - network stability
 
     - [[synchronization]]
 
     - network resilience
 
-    - [[perturbation_propagation]]
+    - perturbation propagation
 
   - network evolution
 
-    - [[adaptive_networks]]
+    - adaptive networks
 
-    - [[growth_models]]
+    - growth models
 
     - network plasticity
 
 ### 3. Biological Systems
 
-- [[molecular_systems]]
+- molecular systems
 
   - [[protein_folding]]
 
-    - [[energy_landscapes]]
+    - energy landscapes
 
-    - [[folding_dynamics]]
+    - folding dynamics
 
-    - [[misfolding_diseases]]
+    - misfolding diseases
 
   - [[molecular_motors]]
 
@@ -1600,7 +1600,7 @@ class PolicySelection:
 
     - [[metabolic_networks]]
 
-    - [[signaling_pathways]]
+    - signaling pathways
 
     - [[gene_regulation]]
 
@@ -1608,7 +1608,7 @@ class PolicySelection:
 
 ### 1. Physical Sciences
 
-- [[non_equilibrium_physics]]
+- non equilibrium physics
 
   - [[fluctuation_theorems]]
 
@@ -1640,7 +1640,7 @@ class PolicySelection:
 
   - [[autopoiesis]]
 
-    - [[self_maintenance]]
+    - self maintenance
 
     - [[organizational_closure]]
 
@@ -1658,9 +1658,9 @@ class PolicySelection:
 
     - [[fitness_landscapes]]
 
-    - [[adaptive_evolution]]
+    - adaptive evolution
 
-    - [[evolutionary_innovation]]
+    - evolutionary innovation
 
 ### 3. Cognitive Sciences
 
@@ -1668,7 +1668,7 @@ class PolicySelection:
 
   - [[predictive_processing]]
 
-    - [[hierarchical_prediction]]
+    - hierarchical prediction
 
     - error minimization
 
@@ -1942,15 +1942,15 @@ Structures:
 
 - [[lie_groups]]
 
-  - [[symmetry_transformations]]
+  - symmetry transformations
 
   - [[conservation_laws]]
 
-  - [[moment_maps]]
+  - moment maps
 
 - [[contact_geometry]]
 
-  - [[thermodynamic_phase_space]]
+  - thermodynamic phase space
 
   - [[contact_hamiltonians]]
 
@@ -2022,7 +2022,7 @@ Concepts:
 
   - [[fluctuation_theorems]]
 
-  - [[dissipation]]
+  - dissipation
 
 - [[information_flow]]
 
@@ -2153,9 +2153,9 @@ class PredictiveCodingNetwork:
 
     - [[center_manifold]]
 
-    - [[unfolding_theory]]
+    - unfolding theory
 
-    - [[codimension_analysis]]
+    - codimension analysis
 
   - [[stability_analysis]]
 
@@ -2163,7 +2163,7 @@ class PredictiveCodingNetwork:
 
     - [[structural_stability]]
 
-    - [[basin_boundaries]]
+    - basin boundaries
 
   - [[chaos_theory]]
 
@@ -2177,7 +2177,7 @@ class PredictiveCodingNetwork:
 
 - [[information_decomposition]]
 
-  - [[partial_information]]
+  - partial information
 
     - [[unique_information]]
 
@@ -2189,7 +2189,7 @@ class PredictiveCodingNetwork:
 
     - [[intervention_calculus]]
 
-    - [[counterfactual_analysis]]
+    - counterfactual analysis
 
     - [[do_calculus]]
 
@@ -2203,7 +2203,7 @@ class PredictiveCodingNetwork:
 
 ### 3. Geometric Analysis
 
-- [[differential_topology]]
+- differential topology
 
   - [[morse_theory]]
 
@@ -2227,13 +2227,13 @@ class PredictiveCodingNetwork:
 
 - quantum free energy principle
 
-  - [[quantum_markov_blankets]]
+  - quantum markov blankets
 
-    - [[quantum_conditional_independence]]
+    - quantum conditional independence
 
-    - [[quantum_causal_structure]]
+    - quantum causal structure
 
-    - [[entanglement_boundaries]]
+    - entanglement boundaries
 
   - quantum active inference
 
@@ -2249,29 +2249,29 @@ class PredictiveCodingNetwork:
 
     - [[quantum_relative_entropy]]
 
-    - [[quantum_statistical_manifolds]]
+    - quantum statistical manifolds
 
 ### 2. Relativistic Extensions
 
 - relativistic free energy
 
-  - [[spacetime_thermodynamics]]
+  - spacetime thermodynamics
 
     - [[covariant_entropy]]
 
-    - [[relativistic_heat]]
+    - relativistic heat
 
-    - [[proper_time_evolution]]
+    - proper time evolution
 
   - [[causal_structure]]
 
-    - [[light_cone_dynamics]]
+    - light cone dynamics
 
     - [[causal_diamonds]]
 
-    - [[conformal_boundaries]]
+    - conformal boundaries
 
-  - [[field_theoretic_extensions]]
+  - field theoretic extensions
 
     - [[quantum_field_theory]]
 
@@ -2281,25 +2281,25 @@ class PredictiveCodingNetwork:
 
 ### 3. Cosmological Applications
 
-- [[cosmological_free_energy]]
+- cosmological free energy
 
-  - [[universe_as_inference]]
+  - universe as inference
 
-    - [[cosmic_inference]]
+    - cosmic inference
 
     - [[universal_priors]]
 
     - [[anthropic_principles]]
 
-  - [[gravitational_thermodynamics]]
+  - gravitational thermodynamics
 
     - [[holographic_principle]]
 
     - [[black_hole_thermodynamics]]
 
-    - [[horizon_entropy]]
+    - horizon entropy
 
-  - [[cosmic_evolution]]
+  - cosmic evolution
 
     - structure formation
 
@@ -2315,15 +2315,15 @@ class PredictiveCodingNetwork:
 
   - [[knowledge_representation]]
 
-    - [[belief_hierarchies]]
+    - belief hierarchies
 
     - [[uncertainty_quantification]]
 
     - [[evidence_accumulation]]
 
-  - [[scientific_inference]]
+  - scientific inference
 
-    - [[theory_selection]]
+    - theory selection
 
     - [[model_comparison]]
 
@@ -2339,17 +2339,17 @@ class PredictiveCodingNetwork:
 
 ### 2. Metaphysical Considerations
 
-- [[mind_matter_relationship]]
+- mind matter relationship
 
   - [[dual_aspect_theory]]
 
-    - [[information_realism]]
+    - information realism
 
     - [[neutral_monism]]
 
     - [[panpsychism]]
 
-  - [[emergence_theories]]
+  - emergence theories
 
     - [[strong_emergence]]
 
@@ -2357,19 +2357,19 @@ class PredictiveCodingNetwork:
 
     - [[causal_emergence]]
 
-  - [[reality_models]]
+  - reality models
 
     - [[structural_realism]]
 
-    - [[information_ontology]]
+    - information ontology
 
     - [[process_philosophy]]
 
 ### 3. Ethical Implications
 
-- [[normative_frameworks]]
+- normative frameworks
 
-  - [[ethical_decision_making]]
+  - ethical decision making
 
     - value alignment
 
@@ -2377,21 +2377,21 @@ class PredictiveCodingNetwork:
 
     - [[preference_learning]]
 
-  - [[agency_and_responsibility]]
+  - agency and responsibility
 
     - [[free_will]]
 
     - [[determinism]]
 
-    - [[moral_agency]]
+    - moral agency
 
-  - [[existential_considerations]]
+  - existential considerations
 
-    - [[meaning_making]]
+    - meaning making
 
-    - [[purpose_inference]]
+    - purpose inference
 
-    - [[value_formation]]
+    - value formation
 
 ## Future Research Directions
 
@@ -2401,21 +2401,21 @@ class PredictiveCodingNetwork:
 
   - [[quantum_gravity]]
 
-    - [[holographic_universe]]
+    - holographic universe
 
     - [[loop_quantum_gravity]]
 
-    - [[string_theory_connections]]
+    - string theory connections
 
-  - [[unified_physics]]
+  - unified physics
 
     - [[emergence_of_spacetime]]
 
     - [[fundamental_forces]]
 
-    - [[unified_interactions]]
+    - unified interactions
 
-  - [[consciousness_theories]]
+  - consciousness theories
 
     - [[integrated_information_theory]]
 
@@ -2429,7 +2429,7 @@ class PredictiveCodingNetwork:
 
   - [[quantum_computing]]
 
-    - [[quantum_algorithms]]
+    - quantum algorithms
 
     - [[quantum_simulation]]
 
@@ -2437,15 +2437,15 @@ class PredictiveCodingNetwork:
 
   - [[neuromorphic_computing]]
 
-    - [[brain_inspired_computing]]
+    - brain inspired computing
 
-    - [[adaptive_hardware]]
+    - adaptive hardware
 
-    - [[energy_efficient_computation]]
+    - energy efficient computation
 
   - [[artificial_general_intelligence]]
 
-    - [[scalable_inference]]
+    - scalable inference
 
     - [[meta_learning]]
 
@@ -2453,31 +2453,31 @@ class PredictiveCodingNetwork:
 
 ### 3. Practical Applications
 
-- [[medical_applications]]
+- medical applications
 
   - personalized medicine
 
-    - [[disease_modeling]]
+    - disease modeling
 
     - treatment optimization
 
-    - [[health_prediction]]
+    - health prediction
 
-  - [[brain_disorders]]
+  - brain disorders
 
-    - [[psychiatric_treatment]]
+    - psychiatric treatment
 
-    - [[neurological_intervention]]
+    - neurological intervention
 
     - cognitive enhancement
 
-  - [[aging_research]]
+  - aging research
 
-    - [[longevity_studies]]
+    - longevity studies
 
-    - [[cognitive_decline]]
+    - cognitive decline
 
-    - [[rejuvenation_therapies]]
+    - rejuvenation therapies
 
 ## Synthesis and Integration
 
@@ -2501,29 +2501,29 @@ Frameworks:
 
 - unified theories
 
-- [[emergence_principles]]
+- emergence principles
 
 - [[complexity_measures]]
 
 ### 2. Cross-Disciplinary Connections
 
-- [[physics_biology_bridge]]
+- physics biology bridge
 
-  - [[life_as_physics]]
+  - life as physics
 
   - [[biological_physics]]
 
   - [[quantum_biology]]
 
-- [[mind_matter_interface]]
+- mind matter interface
 
   - [[consciousness_studies]]
 
-  - [[cognitive_physics]]
+  - cognitive physics
 
   - [[quantum_cognition]]
 
-- [[society_physics_link]]
+- society physics link
 
   - [[sociophysics]]
 
@@ -2533,35 +2533,35 @@ Frameworks:
 
 ### 3. Future Perspectives
 
-- [[technological_implications]]
+- technological implications
 
   - [[artificial_life]]
 
   - [[synthetic_biology]]
 
-  - [[quantum_technologies]]
+  - quantum technologies
 
-- [[societal_impact]]
+- societal impact
 
   - ethical considerations
 
-  - [[policy_implications]]
+  - policy implications
 
-  - [[educational_aspects]]
+  - educational aspects
 
-- [[research_frontiers]]
+- research frontiers
 
-  - [[open_questions]]
+  - open questions
 
-  - [[technical_challenges]]
+  - technical challenges
 
-  - [[philosophical_issues]]
+  - philosophical issues
 
 ## References and Resources
 
 ### 1. Key Publications
 
-- [[foundational_papers]]
+- foundational papers
 
   - Friston (2013) - "Life as we know it"
 
@@ -2573,39 +2573,39 @@ Frameworks:
 
 ### 2. Software Tools
 
-- [[computational_frameworks]]
+- computational frameworks
 
   - [[spm_software]] - Statistical Parametric Mapping
 
-  - [[active_inference_toolbox]]
+  - active inference toolbox
 
-  - [[predictive_processing_library]]
+  - predictive processing library
 
 ### 3. Educational Resources
 
-- [[online_courses]]
+- online courses
 
-  - [[video_lectures]]
+  - video lectures
 
-  - [[tutorial_papers]]
+  - tutorial papers
 
-  - [[interactive_demos]]
+  - interactive demos
 
-- [[textbooks]]
+- textbooks
 
   - [[mathematical_foundations]]
 
-  - [[physical_implementations]]
+  - physical implementations
 
-  - [[philosophical_perspectives]]
+  - philosophical perspectives
 
-- [[research_communities]]
+- research communities
 
-  - [[academic_groups]]
+  - academic groups
 
-  - [[online_forums]]
+  - online forums
 
-  - [[conferences]]
+  - conferences
 
 ## Related Documentation
 

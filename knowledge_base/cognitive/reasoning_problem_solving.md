@@ -34,7 +34,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 ### Reasoning Types
 
-- [[logical_reasoning]] - Drawing conclusions by formal rules of inference
+- logical reasoning - Drawing conclusions by formal rules of inference
 
   - [[deductive_reasoning]] - Deriving specific conclusions from general rules
 
@@ -54,31 +54,31 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
   - problem space - Set of all states and moves a problem allows
 
-    - [[initial_state]] - The situation at the start of a problem
+    - initial state - The situation at the start of a problem
 
     - goal state - The situation that counts as solved
 
   - solution strategies - General approaches to reaching a solution
 
-    - [[algorithm]] - Step-by-step procedure guaranteed to find a solution
+    - algorithm - Step-by-step procedure guaranteed to find a solution
 
     - [[heuristic]] - Fast rule of thumb that often works
 
 ### Decision Making
 
-- [[choice_processes]] - Mental steps for selecting among options
+- choice processes - Mental steps for selecting among options
 
   - [[option_evaluation]] - Assessing the merits of each option
 
-    - [[value_assessment]] - Judging how desirable an outcome is
+    - value assessment - Judging how desirable an outcome is
 
-    - [[probability_estimation]] - Judging how likely an outcome is
+    - probability estimation - Judging how likely an outcome is
 
   - strategy selection - Choosing which approach to use
 
     - [[risk_assessment]] - Judging the likelihood and cost of harm
 
-    - [[effort_evaluation]] - Judging the effort an approach would require
+    - effort evaluation - Judging the effort an approach would require
 
 ## Cognitive Processes
 
@@ -90,7 +90,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
     - mental models - Internal simulations of how a situation works
 
-    - [[problem_encoding]] - Translating problem information into internal form
+    - problem encoding - Translating problem information into internal form
 
   - transformation - Applying operations to change the current state
 
@@ -100,19 +100,19 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 ### Memory Systems
 
-- [[memory_use]] - Drawing on memory while solving problems
+- memory use - Drawing on memory while solving problems
 
   - [[working_memory]] - Holding and manipulating information in the moment
 
-    - [[active_maintenance]] - Keeping information active against decay
+    - active maintenance - Keeping information active against decay
 
     - manipulation - Operating on information held in mind
 
   - [[long_term_memory]] - Durable storage of knowledge and experience
 
-    - [[knowledge_retrieval]] - Recalling relevant knowledge from memory
+    - knowledge retrieval - Recalling relevant knowledge from memory
 
-    - [[experience_use]] - Applying earlier experience to the current problem
+    - experience use - Applying earlier experience to the current problem
 
 ### Executive Control
 
@@ -122,11 +122,11 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
     - [[goal_setting]] - Defining what the solution should achieve
 
-    - [[step_sequence]] - Ordering actions into a workable sequence
+    - step sequence - Ordering actions into a workable sequence
 
   - monitoring - Tracking progress and performance
 
-    - [[progress_check]] - Judging distance remaining to the goal
+    - progress check - Judging distance remaining to the goal
 
     - [[error_detection]] - Noticing mistakes in one's reasoning or actions
 
@@ -134,31 +134,31 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 ### Well-Defined Problems
 
-- [[structured_problems]] - Problems with clear goals, rules, and states
+- structured problems - Problems with clear goals, rules, and states
 
-  - [[puzzle_problems]] - Problems with explicit rules and a definite answer
+  - puzzle problems - Problems with explicit rules and a definite answer
 
     - transformation - Moving from one problem state to another
 
-    - [[arrangement]] - Placing elements into a required order
+    - arrangement - Placing elements into a required order
 
-  - [[calculation]] - Solving problems by numerical computation
+  - calculation - Solving problems by numerical computation
 
-    - [[arithmetic]] - Operations on numbers
+    - arithmetic - Operations on numbers
 
-    - [[algebra]] - Manipulating symbols and equations
+    - algebra - Manipulating symbols and equations
 
 ### Ill-Defined Problems
 
-- [[open_problems]] - Problems with vague goals or missing information
+- open problems - Problems with vague goals or missing information
 
   - design problems - Problems of creating a new artifact or plan
 
-    - [[creative_solutions]] - Novel answers that meet the problem's needs
+    - creative solutions - Novel answers that meet the problem's needs
 
     - [[constraint_satisfaction]] - Finding solutions that meet all stated constraints
 
-  - [[social_problems]] - Problems involving the needs of several people
+  - social problems - Problems involving the needs of several people
 
     - [[conflict_resolution]] - Settling disagreements between parties
 
@@ -166,7 +166,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 ### Complex Problems
 
-- [[complex_problems]] - Problems with many interacting parts
+- complex problems - Problems with many interacting parts
 
   - dynamic problems - Problems whose conditions change as you act
 
@@ -174,17 +174,17 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
     - [[feedback_loops]] - Outcomes that loop back to influence causes
 
-  - [[multi_goal]] - Problems with several goals at once
+  - multi goal - Problems with several goals at once
 
-    - [[trade_offs]] - Gaining on one goal at a cost to another
+    - trade offs - Gaining on one goal at a cost to another
 
-    - [[priority_management]] - Ordering goals by importance
+    - priority management - Ordering goals by importance
 
 ## Solution Strategies
 
 ### Algorithmic Approaches
 
-- [[systematic_methods]] - Methodical procedures that cover all possibilities
+- systematic methods - Methodical procedures that cover all possibilities
 
   - exhaustive search - Checking every possible solution
 
@@ -194,37 +194,37 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
   - [[divide_conquer]] - Splitting a problem into solvable parts
 
-    - [[subproblem]] - A smaller problem within the larger one
+    - subproblem - A smaller problem within the larger one
 
     - integration - Recombining partial solutions into a whole
 
 ### Heuristic Approaches
 
-- [[quick_methods]] - Shortcut methods that trade certainty for speed
+- quick methods - Shortcut methods that trade certainty for speed
 
   - means ends - Reducing the gap between current state and goal
 
-    - [[subgoal]] - Intermediate goal on the way to the main goal
+    - subgoal - Intermediate goal on the way to the main goal
 
     - [[difference_reduction]] - Choosing moves that shrink distance to the goal
 
-  - [[analogy_use]] - Solving new problems by borrowing past solutions
+  - analogy use - Solving new problems by borrowing past solutions
 
-    - [[case_based]] - Reasoning from similar past cases
+    - case based - Reasoning from similar past cases
 
-    - [[pattern_matching]] - Recognizing a familiar problem pattern
+    - pattern matching - Recognizing a familiar problem pattern
 
 ### Creative Approaches
 
-- [[creative_solving]] - Generating novel approaches to problems
+- creative solving - Generating novel approaches to problems
 
   - [[divergent_thinking]] - Generating many different possible ideas
 
-    - [[brainstorming]] - Producing many ideas without early judgment
+    - brainstorming - Producing many ideas without early judgment
 
     - [[lateral_thinking]] - Approaching problems from unconventional angles
 
-  - [[insight]] - Sudden realization of a solution
+  - insight - Sudden realization of a solution
 
     - restructuring - Reframing the problem in a new way
 
@@ -234,7 +234,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 ### Brain Networks
 
-- [[reasoning_networks]] - Brain regions supporting reasoning
+- reasoning networks - Brain regions supporting reasoning
 
   - [[prefrontal]] - Frontal cortex supporting planning and reasoning
 
@@ -254,9 +254,9 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
   - activation patterns - Patterns of brain activation during problem solving
 
-    - [[sequential]] - Activity unfolding one step after another
+    - sequential - Activity unfolding one step after another
 
-    - [[parallel]] - Several processes running at once
+    - parallel - Several processes running at once
 
   - integration - Combining activity across regions
 
@@ -276,7 +276,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
   - [[expertise]] - Highly organized knowledge from long experience
 
-    - [[knowledge_structures]] - Organized chunks and schemas in memory
+    - knowledge structures - Organized chunks and schemas in memory
 
     - [[automaticity]] - Performance requiring little conscious effort
 
@@ -292,7 +292,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
     - [[self_regulation]] - Managing one's own thoughts and effort
 
-  - [[problem_design]] - Designing tasks that promote learning
+  - problem design - Designing tasks that promote learning
 
     - scaffolding - Temporary support that is gradually withdrawn
 
@@ -302,21 +302,21 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 - [[cognitive_therapy]] - Therapy that corrects distorted thinking
 
-  - [[reasoning_disorders]] - Conditions impairing reasoning ability
+  - reasoning disorders - Conditions impairing reasoning ability
 
-    - [[logical_errors]] - Faulty inferences or reasoning fallacies
+    - logical errors - Faulty inferences or reasoning fallacies
 
-    - [[bias_correction]] - Methods for reducing systematic reasoning biases
+    - bias correction - Methods for reducing systematic reasoning biases
 
-  - [[problem_training]] - Training in solving problems
+  - problem training - Training in solving problems
 
-    - [[strategy_development]] - Building effective problem-solving approaches
+    - strategy development - Building effective problem-solving approaches
 
     - coping skills - Skills for managing stress and difficulty
 
 ### Professional Applications
 
-- [[work_applications]] - Uses of reasoning research in workplaces
+- work applications - Uses of reasoning research in workplaces
 
   - decision support - Tools that assist decision makers
 
@@ -326,7 +326,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
   - innovation - Developing new products or methods
 
-    - [[creative_methods]] - Techniques for generating original ideas
+    - creative methods - Techniques for generating original ideas
 
     - [[solution_finding]] - Developing a workable answer to a real problem
 
@@ -334,15 +334,15 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 ### Behavioral Methods
 
-- [[performance_measure]] - Measures of task performance
+- performance measure - Measures of task performance
 
-  - [[problem_tasks]] - Tasks used to study problem solving
+  - problem tasks - Tasks used to study problem solving
 
-    - [[solution_time]] - Time taken to reach a solution
+    - solution time - Time taken to reach a solution
 
     - accuracy - Proportion of correct answers
 
-  - [[strategy_analysis]] - Identifying which strategies people use
+  - strategy analysis - Identifying which strategies people use
 
     - [[protocol_analysis]] - Analyzing think-aloud verbal reports of solvers
 
@@ -350,7 +350,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 ### Neural Methods
 
-- [[brain_measure]] - Measuring brain activity during reasoning
+- brain measure - Measuring brain activity during reasoning
 
   - imaging - Mapping brain activity with scans
 
@@ -394,7 +394,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
 - new methods - Emerging approaches to studying reasoning
 
-  - [[real_world]] - Studying reasoning in everyday settings
+  - real world - Studying reasoning in everyday settings
 
     - naturalistic - Observing behavior in natural contexts
 
@@ -402,17 +402,17 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
   - technology use - Technology applied to reasoning research and support
 
-    - [[ai_augmented]] - Human reasoning supported by AI tools
+    - ai augmented - Human reasoning supported by AI tools
 
     - [[virtual_reality]] - Immersive simulated settings for testing reasoning
 
 ## References
 
-- [[newell_simon]]
+- newell simon
 
 - [[kahneman_tversky]]
 
-- [[sternberg_reasoning]]
+- sternberg reasoning
 
 - [[duncker_problem]]
 

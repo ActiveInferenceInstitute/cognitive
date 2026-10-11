@@ -183,7 +183,7 @@ Knowledge as temporal prediction:
 ### Foundational Papers
 - [[friston_2010]] - Free energy principle formulation
 - [[friston_2009]] - Predictive coding in neuroscience
-- [[suddendorf_2007]] - Mental time travel in animals
+- suddendorf 2007 - Mental time travel in animals
 
 ### Extensions
 - [[friston_2013]] - Life as we know it (biological applications)

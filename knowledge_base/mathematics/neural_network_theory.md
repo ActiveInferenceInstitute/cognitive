@@ -19,6 +19,8 @@ semantic_relations:
       - "[[adaptive_resonance_theory]]"
       - "[[predictive_coding]]"
       - "[[neural_computation]]"
+aliases:
+  - neural_nets
 ---
 
 # Neural Network Theory

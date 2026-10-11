@@ -12,6 +12,7 @@ aliases:
 - control-theory
 - dynamic-optimization
 - pontryagin_principle
+- optimal_control_theory
 semantic_relations:
   - type: implements
     links:
@@ -735,9 +736,9 @@ efficiency_methods = {
 
 - bertsekas - Dynamic Programming and Optimal Control
 
-- [[kirk]] - Optimal Control Theory
+- kirk - Optimal Control Theory
 
-- [[lewis]] - Optimal Control
+- lewis - Optimal Control
 
-- [[rawlings]] - Model Predictive Control
+- rawlings - Model Predictive Control
 

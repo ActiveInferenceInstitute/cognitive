@@ -15,6 +15,8 @@ aliases:
 - belief-update
 - state-estimation
 - posterior-update
+- bayesian_updating
+- belief_updates
 complexity: advanced
 processing_priority: 1
 semantic_relations:
@@ -724,7 +726,7 @@ graph TB
 
 ### 1. Perception
 
-- [[hierarchical_perception]]
+- hierarchical perception
 
   - Predictive processing
 
@@ -824,13 +826,13 @@ flowchart TB
 
 ### 1. Theoretical Extensions
 
-- [[quantum_belief_updating]]
+- quantum belief updating
 
   - Quantum probabilities
 
   - Interference effects
 
-- [[relativistic_belief_updating]]
+- relativistic belief updating
 
   - Causal structure
 
@@ -838,13 +840,13 @@ flowchart TB
 
 ### 2. Computational Methods
 
-- [[neural_belief_updating]]
+- neural belief updating
 
   - Deep architectures
 
   - End-to-end learning
 
-- [[symbolic_belief_updating]]
+- symbolic belief updating
 
   - Logic programming
 
@@ -852,13 +854,13 @@ flowchart TB
 
 ### 3. Applications
 
-- [[robotics_belief_updating]]
+- robotics belief updating
 
   - SLAM
 
   - Manipulation
 
-- [[neuroscience_belief_updating]]
+- neuroscience belief updating
 
   - Neural implementations
 

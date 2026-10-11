@@ -727,13 +727,13 @@ efficiency_methods = {
 
 ## References
 
-- [[do_carmo]] - Riemannian Geometry
+- do carmo - Riemannian Geometry
 
-- [[lee]] - Introduction to Smooth Manifolds
+- lee - Introduction to Smooth Manifolds
 
-- [[kobayashi_nomizu]] - Foundations of Differential Geometry
+- kobayashi nomizu - Foundations of Differential Geometry
 
-- [[marsden_ratiu]] - Introduction to Mechanics and Symmetry
+- marsden ratiu - Introduction to Mechanics and Symmetry
 
 ---
 
@@ -771,7 +771,7 @@ semantic_relations:
 
       - [[lie_groups]]
 
-      - [[tensor_analysis]]
+      - tensor analysis
 
 ---
 
@@ -1331,5 +1331,5 @@ class GeodesicIntegrator:
 
 1. [[algebraic_geometry|Algebraic Geometry]]
 
-1. [[geometric_analysis|Geometric Analysis]]
+1. Geometric Analysis
 

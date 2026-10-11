@@ -17,6 +17,8 @@ semantic_relations:
       - "[[empathy]]"
       - "[[anterior_cingulate]]"
       - "[[homeostasis]]"
+aliases:
+  - anterior_insula
 ---
 
 # Insula

@@ -15,6 +15,8 @@ semantic_relations:
       - "[[knowledge_base/mathematics/fisher_information]]"
       - "[[knowledge_base/mathematics/natural_gradients]]"
       - "[[knowledge_base/mathematics/exponential_family]]"
+aliases:
+  - statistical_manifold
 ---
 
 # Statistical Manifolds

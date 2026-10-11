@@ -492,5 +492,5 @@ Schema integration represents the process by which new information is incorporat
 
 - [[learning_theory]]
 
-- [[computational_cognition]]
+- computational cognition
 

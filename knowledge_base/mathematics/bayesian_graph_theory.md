@@ -233,7 +233,7 @@ where ne(x_i) denotes the neighbors of x_i
 
 ## Core Components
 
-### 1. [[graph_structures|Graph Structures]]
+### 1. Graph Structures
 
 ```mermaid
 
@@ -451,7 +451,7 @@ end
 
 ## Graph Operations
 
-### 1. [[graph_transformations|Graph Transformations]]
+### 1. Graph Transformations
 
 ```mermaid
 
@@ -643,7 +643,7 @@ end
 
 ```
 
-### 3. [[graph_algorithms|Graph Algorithms]]
+### 3. Graph Algorithms
 
 ```mermaid
 

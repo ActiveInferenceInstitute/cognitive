@@ -16,6 +16,8 @@ semantic_relations:
       - "[[model_complexity]]"
       - "[[structure_learning]]"
       - "[[statistical_learning]]"
+aliases:
+  - generalization_capacity
 ---
 
 # Generalization

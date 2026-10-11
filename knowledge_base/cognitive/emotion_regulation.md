@@ -18,6 +18,7 @@ semantic_relations:
 aliases:
   - gross_emotion_regulation
   - reappraisal
+  - emotional_regulation
 ---
 
 # Emotion Regulation

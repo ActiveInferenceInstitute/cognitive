@@ -376,5 +376,5 @@ Path integral information theory unifies path integrals with information-theoret
 
 - [[amari_2000]] - "Information Geometry and Its Applications"
 
-- [[crutchfield_2012]] - "Between Order and Chaos"
+- crutchfield 2012 - "Between Order and Chaos"
 

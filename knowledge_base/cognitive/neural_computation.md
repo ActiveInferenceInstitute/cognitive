@@ -39,23 +39,23 @@ Neural Computation describes how the brain processes information through its net
 
     - transformation - Mapping input representations onto new ones
 
-  - [[computation_types]] - Categories of neural computation
+  - computation types - Categories of neural computation
 
-    - [[local_computation]] - Processing within a small neural circuit
+    - local computation - Processing within a small neural circuit
 
-    - [[distributed_computation]] - Processing spread across many regions
+    - distributed computation - Processing spread across many regions
 
 ### Network Organization
 
-- [[neural_architecture]] - Large-scale organization of neural circuits
+- neural architecture - Large-scale organization of neural circuits
 
-  - [[circuit_organization]] - Wiring patterns among neurons
+  - circuit organization - Wiring patterns among neurons
 
     - [[feedforward]] - One-way flow from input to output
 
-    - [[recurrent]] - Connections that feed activity back into the circuit
+    - recurrent - Connections that feed activity back into the circuit
 
-  - [[hierarchy_levels]] - Successive tiers of processing
+  - hierarchy levels - Successive tiers of processing
 
     - processing stages - Sequential steps from input to output
 
@@ -71,23 +71,23 @@ Neural Computation describes how the brain processes information through its net
 
     - error driven - Learning that adjusts to reduce prediction error
 
-  - [[network_adaptation]] - Network-wide adjustment to new demands
+  - network adaptation - Network-wide adjustment to new demands
 
     - weight updates - Adjusting connection strengths during learning
 
-    - [[architecture_changes]] - Growth or pruning of connections and units
+    - architecture changes - Growth or pruning of connections and units
 
 ## Computational Elements
 
 ### Neural Units
 
-- [[processing_units]] - Neurons as basic computing elements
+- processing units - Neurons as basic computing elements
 
   - [[neuron_models]] - Mathematical descriptions of neuron behavior
 
     - [[activation_function]] - Function mapping a unit's input to its output
 
-    - [[threshold_logic]] - Firing only when input exceeds a threshold
+    - threshold logic - Firing only when input exceeds a threshold
 
   - [[population_coding]] - Information carried by groups of neurons
 
@@ -97,9 +97,9 @@ Neural Computation describes how the brain processes information through its net
 
 ### Synaptic Operations
 
-- [[connection_compute]] - Computation performed at synapses
+- connection compute - Computation performed at synapses
 
-  - [[weight_operations]] - Operations that scale signals by synaptic strength
+  - weight operations - Operations that scale signals by synaptic strength
 
     - multiplication - Scaling one signal by another
 
@@ -113,19 +113,19 @@ Neural Computation describes how the brain processes information through its net
 
 ### Network Operations
 
-- [[circuit_compute]] - Computation carried out by neural circuits
+- circuit compute - Computation carried out by neural circuits
 
-  - [[pattern_operations]] - Operations on patterns of activity
+  - pattern operations - Operations on patterns of activity
 
     - [[pattern_completion]] - Recovering a full pattern from partial input
 
     - [[pattern_separation]] - Making similar inputs more distinct
 
-  - [[sequence_operations]] - Operations on ordered series of events
+  - sequence operations - Operations on ordered series of events
 
     - [[temporal_integration]] - Combining inputs arriving over time
 
-    - [[prediction]] - Anticipating upcoming input
+    - prediction - Anticipating upcoming input
 
 ## Implementation Mechanisms
 
@@ -143,19 +143,19 @@ Neural Computation describes how the brain processes information through its net
 
     - [[attractor_dynamics]] - Activity settling into stable patterns
 
-    - [[trajectory_evolution]] - Path of network state through time
+    - trajectory evolution - Path of network state through time
 
 ### Information Flow
 
-- [[signal_flow]] - Movement of signals through the network
+- signal flow - Movement of signals through the network
 
-  - [[feedforward_flow]] - Signals passing from input toward output
+  - feedforward flow - Signals passing from input toward output
 
     - [[feature_extraction]] - Detecting informative features in the input
 
     - transformation - Reshaping features into new representations
 
-  - [[feedback_flow]] - Signals passing back to earlier stages
+  - feedback flow - Signals passing back to earlier stages
 
     - [[top_down]] - Higher-level signals modulating lower stages
 
@@ -163,7 +163,7 @@ Neural Computation describes how the brain processes information through its net
 
 ### Control Mechanisms
 
-- [[neural_control]] - Mechanisms that regulate neural activity
+- neural control - Mechanisms that regulate neural activity
 
   - [[gain_control]] - Adjusting response sensitivity
 
@@ -173,7 +173,7 @@ Neural Computation describes how the brain processes information through its net
 
   - gating - Controlling which signals pass through
 
-    - [[selective_routing]] - Directing signals along chosen pathways
+    - selective routing - Directing signals along chosen pathways
 
     - [[inhibitory_control]] - Using inhibition to block unwanted activity
 
@@ -183,9 +183,9 @@ Neural Computation describes how the brain processes information through its net
 
 - [[neural_coding]] - How neural activity represents information
 
-  - [[feature_representation]] - Neural encoding of stimulus features
+  - feature representation - Neural encoding of stimulus features
 
-    - [[selectivity]] - Preferential response to particular stimuli
+    - selectivity - Preferential response to particular stimuli
 
     - [[invariance]] - Stable response despite stimulus changes
 
@@ -197,15 +197,15 @@ Neural Computation describes how the brain processes information through its net
 
 ### Transformation
 
-- [[neural_transform]] - Operations that turn inputs into outputs
+- neural transform - Operations that turn inputs into outputs
 
-  - [[linear_operations]] - Transformations preserving scaling and addition
+  - linear operations - Transformations preserving scaling and addition
 
-    - [[projection]] - Mapping activity into a different space
+    - projection - Mapping activity into a different space
 
-    - [[combination]] - Merging multiple inputs into one output
+    - combination - Merging multiple inputs into one output
 
-  - [[nonlinear_operations]] - Transformations that break simple proportionality
+  - nonlinear operations - Transformations that break simple proportionality
 
     - thresholding - Passing only inputs above a cutoff
 
@@ -213,7 +213,7 @@ Neural Computation describes how the brain processes information through its net
 
 ### Learning
 
-- [[computation_learn]] - Improvement of computations through experience
+- computation learn - Improvement of computations through experience
 
   - [[supervised_learning]] - Learning from labeled targets or teaching signals
 
@@ -231,7 +231,7 @@ Neural Computation describes how the brain processes information through its net
 
 ### Cognitive Models
 
-- [[brain_models]] - Computational models of cognition
+- brain models - Computational models of cognition
 
   - [[perception_models]] - Models of sensory perception
 
@@ -241,19 +241,19 @@ Neural Computation describes how the brain processes information through its net
 
   - [[memory_models]] - Models of memory formation and recall
 
-    - [[storage]] - Encoding memories in synaptic changes
+    - storage - Encoding memories in synaptic changes
 
     - [[retrieval]] - Reactivating stored patterns from partial cues
 
 ### Neural Engineering
 
-- [[brain_engineering]] - Engineering that interfaces with or mimics the brain
+- brain engineering - Engineering that interfaces with or mimics the brain
 
   - [[neural_prosthetics]] - Devices that substitute for lost neural function
 
-    - [[sensory_devices]] - Prostheses that restore sensory input
+    - sensory devices - Prostheses that restore sensory input
 
-    - [[motor_devices]] - Prostheses that restore movement
+    - motor devices - Prostheses that restore movement
 
   - [[brain_interfaces]] - Links between brain activity and devices
 
@@ -263,11 +263,11 @@ Neural Computation describes how the brain processes information through its net
 
 ### Clinical Applications
 
-- [[disorder_models]] - Models of how neural computation fails in disease
+- disorder models - Models of how neural computation fails in disease
 
-  - [[dysfunction]] - Disrupted neural computation
+  - dysfunction - Disrupted neural computation
 
-    - [[circuit_problems]] - Faulty wiring or connectivity in circuits
+    - circuit problems - Faulty wiring or connectivity in circuits
 
     - dynamic problems - Abnormal activity dynamics, such as seizures
 
@@ -281,7 +281,7 @@ Neural Computation describes how the brain processes information through its net
 
 ### Experimental Methods
 
-- [[neural_experiments]] - Experiments probing neural function
+- neural experiments - Experiments probing neural function
 
   - recording - Measuring neural firing during tasks
 
@@ -293,13 +293,13 @@ Neural Computation describes how the brain processes information through its net
 
     - stimulation - Activating selected brain regions
 
-    - [[inactivation]] - Temporarily silencing selected brain regions
+    - inactivation - Temporarily silencing selected brain regions
 
 ### Computational Methods
 
-- [[simulation_methods]] - Computer simulation of neural systems
+- simulation methods - Computer simulation of neural systems
 
-  - [[network_simulation]] - Simulating networks of model neurons
+  - network simulation - Simulating networks of model neurons
 
     - [[dynamics]] - Mathematics of how activity evolves over time
 
@@ -313,7 +313,7 @@ Neural Computation describes how the brain processes information through its net
 
 ### Theory Development
 
-- [[neural_theory]] - Theoretical accounts of neural computation
+- neural theory - Theoretical accounts of neural computation
 
   - principles - Core organizing rules of neural computation
 
@@ -321,47 +321,47 @@ Neural Computation describes how the brain processes information through its net
 
     - organization - Rules describing how circuits are arranged
 
-  - [[predictions]] - Testable predictions derived from the theory
+  - predictions - Testable predictions derived from the theory
 
-    - [[behavior]] - Behavioral outcomes the theory predicts
+    - behavior - Behavioral outcomes the theory predicts
 
-    - [[mechanism]] - Neural mechanisms the theory proposes
+    - mechanism - Neural mechanisms the theory proposes
 
 ## Future Directions
 
 ### Current Challenges
 
-- [[scale_problems]] - Difficulty scaling models to whole brains
+- scale problems - Difficulty scaling models to whole brains
 
 - [[complexity]] - Difficulty of handling many interacting components
 
-- [[biological_realism]] - Fidelity of models to real neural biology
+- biological realism - Fidelity of models to real neural biology
 
 ### Emerging Approaches
 
 - new methods - Emerging techniques for studying and modeling circuits
 
-  - [[large_scale]] - Studying activity across large brain areas
+  - large scale - Studying activity across large brain areas
 
-    - [[whole_brain]] - Modeling or recording the entire brain
+    - whole brain - Modeling or recording the entire brain
 
-    - [[long_time]] - Tracking neural activity over long periods
+    - long time - Tracking neural activity over long periods
 
-  - [[new_theory]] - Emerging theoretical accounts
+  - new theory - Emerging theoretical accounts
 
     - principles - Emerging general principles of computation
 
-    - [[frameworks]] - Emerging conceptual frameworks
+    - frameworks - Emerging conceptual frameworks
 
 ## References
 
-- [[dayan_abbott]]
+- dayan abbott
 
 - [[hopfield_networks]]
 
-- [[rumelhart_parallel]]
+- rumelhart parallel
 
-- [[sejnowski_computational]]
+- sejnowski computational
 
 ## Related Concepts
 

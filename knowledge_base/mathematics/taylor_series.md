@@ -394,7 +394,7 @@ class TaylorErrorAnalyzer:
 
 - [[adaptive_step_size]]
 
-- [[error_control]]
+- error control
 
 - [[stability_analysis]]
 
@@ -428,15 +428,15 @@ class TaylorErrorAnalyzer:
 
 1. Parallel processing ([[parallel_computation]])
 
-1. GPU acceleration ([[gpu_optimization]])
+1. GPU acceleration (gpu optimization)
 
 ## References
 
-1. [[friston_2008]] - "Hierarchical models in the brain"
+1. friston 2008 - "Hierarchical models in the brain"
 
 1. [[buckley_2017]] - "The free energy principle for action and perception: A mathematical review"
 
-1. [[baltieri_2019]] - "PID control as a process of active inference"
+1. baltieri 2019 - "PID control as a process of active inference"
 
 1. [[parr_2019]] - "Generalised free energy and active inference"
 

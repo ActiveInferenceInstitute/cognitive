@@ -528,11 +528,11 @@ class TensegrityOptimizer:
 
 - fuller 1975 - "Synergetics: Explorations in the Geometry of Thinking"
 
-- [[motro_2003]] - "Tensegrity: Structural Systems for the Future"
+- motro 2003 - "Tensegrity: Structural Systems for the Future"
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
-- [[ingber_1998]] - "Architecture of Life"
+- ingber 1998 - "Architecture of Life"
 
 ## See Also
 

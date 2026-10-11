@@ -99,7 +99,7 @@ timeline
 
 ```
 
-Operationalism as a formal doctrine was introduced by Percy W. Bridgman in his 1927 book "The Logic of Modern Physics," though similar ideas appeared earlier in [[albert_einstein|Einstein's]] work on [[theory_of_relativity|relativity]]. Bridgman, a Nobel Prize-winning physicist, sought to clarify physical concepts by defining them in terms of measurement operations after Einstein's revolution in physics showed how concepts like "simultaneity" required operational specification.
+Operationalism as a formal doctrine was introduced by Percy W. Bridgman in his 1927 book "The Logic of Modern Physics," though similar ideas appeared earlier in Einstein's work on [[theory_of_relativity|relativity]]. Bridgman, a Nobel Prize-winning physicist, sought to clarify physical concepts by defining them in terms of measurement operations after Einstein's revolution in physics showed how concepts like "simultaneity" required operational specification.
 
 ### Influence and Evolution
 
@@ -111,7 +111,7 @@ Operationalism spread beyond physics to influence:
 
 1. **Social Sciences**: Operational definitions became standard methodological practice
 
-1. **Behavioral Sciences**: [[b_f_skinner|B.F. Skinner's]] [[behaviorism]] embraced operational definitions
+1. **Behavioral Sciences**: B.F. Skinner's [[behaviorism]] embraced operational definitions
 
 Over time, strict operationalism was modified to address criticisms, leading to:
 
@@ -177,7 +177,7 @@ Classic examples include:
 
 1. **Length**: The number of standard measuring units that can be placed end-to-end alongside an object
 
-1. **Intelligence**: The score obtained on a specific [[intelligence_testing|intelligence test]]
+1. **Intelligence**: The score obtained on a specific intelligence test
 
 1. **Temperature**: The height of mercury in a standardized thermometer
 
@@ -233,7 +233,7 @@ graph TD
 
 Bridgman, a Nobel Prize-winning physicist, contributed:
 
-- **Physical Measurements**: Pioneered high-pressure [[experimental_physics|physics techniques]]
+- **Physical Measurements**: Pioneered high-pressure physics techniques
 
 - **Operational Analysis**: Applied operational thinking to fundamental physical concepts
 
@@ -389,9 +389,9 @@ Operational approaches in behavioral sciences include:
 
 1. **[[psychometrics|Psychometric Tests]]**: Standardized instruments with specific administration procedures
 
-1. **[[behavioral_observation|Behavioral Observation]]**: Codified protocols for recording and categorizing behavior
+1. **Behavioral Observation**: Codified protocols for recording and categorizing behavior
 
-1. **[[experimental_manipulation|Experimental Manipulations]]**: Precise procedures for manipulating independent variables
+1. **Experimental Manipulations**: Precise procedures for manipulating independent variables
 
 1. **[[statistical_analysis|Statistical Operations]]**: Explicit computational procedures for analyzing data
 
@@ -683,7 +683,7 @@ Operationalism finds significant extension in modern machine learning practices:
 
 1. **Algorithm Specification**: Precise operational definitions of algorithms
 
-1. **[[reproducible_ml|Reproducible Pipelines]]**: End-to-end operational specifications of ML workflows
+1. **Reproducible Pipelines**: End-to-end operational specifications of ML workflows
 
 1. **Performance Metrics**: Operational definitions of model quality
 
@@ -859,11 +859,11 @@ Major criticisms include:
 
 1. **Concept Unity**: Same concept can have multiple, incompatible operational definitions
 
-1. **[[theoretical_entities|Theoretical Entities]]**: Many important scientific entities cannot be directly observed
+1. **Theoretical Entities**: Many important scientific entities cannot be directly observed
 
 1. **Scientific Progress**: Scientific advancement often outruns operational definitions
 
-These critiques were particularly developed by philosophers such as [[willard_van_orman_quine|W.V.O. Quine]], [[thomas_kuhn|Thomas Kuhn]], and [[wilfrid_sellars|Wilfrid Sellars]], who challenged the sharp distinction between theoretical terms and observational terms assumed by operationalism.
+These critiques were particularly developed by philosophers such as W.V.O. Quine, Thomas Kuhn, and Wilfrid Sellars, who challenged the sharp distinction between theoretical terms and observational terms assumed by operationalism.
 
 ### Scientific Practice Issues
 
@@ -1105,15 +1105,15 @@ Contemporary philosophical discussions include:
 
 1. **[[new_experimentalism|New Experimentalism]]**: Focus on experimental practices beyond theory
 
-1. **[[model_based_science|Model-Based Science]]**: How operational procedures relate to theoretical models
+1. **Model-Based Science**: How operational procedures relate to theoretical models
 
 1. **[[scientific_realism|Scientific Realism Debate]]**: Status of operationally-defined entities
 
-1. **[[data_intensive_science|Data-Intensive Science]]**: Operational definitions in big data contexts
+1. **Data-Intensive Science**: Operational definitions in big data contexts
 
 1. **[[post-positivism|Post-positivist Philosophy]]**: Integration of operational approaches with broader philosophical perspectives
 
-1. **[[science_and_values|Science and Values]]**: How values influence operational definitions
+1. **Science and Values**: How values influence operational definitions
 
 These discussions reflect the continued relevance of operationalist themes in philosophy of science, though often in modified forms that address classical operationalism's limitations.
 
@@ -1155,13 +1155,13 @@ In these emerging fields, operational approaches must balance precise measuremen
 
 - [[experimental_design]]
 
-- [[methodology]]
+- methodology
 
 - [[philosophy_of_science]]
 
 - [[reproducible_research]]
 
-- [[data_science]]
+- data science
 
 - machine learning operations
 
@@ -1171,23 +1171,23 @@ In these emerging fields, operational approaches must balance precise measuremen
 
 ## References
 
-- [[bridgman_1927]] - "The Logic of Modern Physics"
+- bridgman 1927 - "The Logic of Modern Physics"
 
-- [[stevens_1935]] - "The Operational Definition of Psychological Concepts"
+- stevens 1935 - "The Operational Definition of Psychological Concepts"
 
-- [[hempel_1965]] - "Aspects of Scientific Explanation"
+- hempel 1965 - "Aspects of Scientific Explanation"
 
-- [[chang_2009]] - "Operationalism"
+- chang 2009 - "Operationalism"
 
-- [[feest_2005]] - "Operationism in psychology: What the debate is about, what the debate should be about"
+- feest 2005 - "Operationism in psychology: What the debate is about, what the debate should be about"
 
-- [[hood_2008]] - "Measurement in Science"
+- hood 2008 - "Measurement in Science"
 
-- [[kuhn_1962]] - "The Structure of Scientific Revolutions"
+- kuhn 1962 - "The Structure of Scientific Revolutions"
 
-- [[quine_1951]] - "Two Dogmas of Empiricism"
+- quine 1951 - "Two Dogmas of Empiricism"
 
-- [[longino_1990]] - "Science as Social Knowledge"
+- longino 1990 - "Science as Social Knowledge"
 
-- [[wimsatt_2007]] - "Re-Engineering Philosophy for Limited Beings"
+- wimsatt 2007 - "Re-Engineering Philosophy for Limited Beings"
 

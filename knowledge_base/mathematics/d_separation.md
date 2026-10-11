@@ -378,7 +378,7 @@ end
 
 ```
 
-### 2. [[completeness|Completeness]]
+### 2. Completeness
 
 ```julia
 
@@ -410,7 +410,7 @@ end
 
 ```
 
-### 3. [[minimality|Minimality]]
+### 3. Minimality
 
 ```julia
 

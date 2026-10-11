@@ -16,6 +16,8 @@ semantic_relations:
       - "[[self_awareness]]"
       - "[[medial_prefrontal]]"
       - "[[predictive_processing]]"
+aliases:
+  - default_network
 ---
 
 # Default Mode Network

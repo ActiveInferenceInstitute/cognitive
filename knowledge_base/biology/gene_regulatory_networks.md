@@ -577,18 +577,18 @@ class ExpressionController:
 ## References
 
 ### Foundational Texts
-- [[alon_2019]] - "An Introduction to Systems Biology, 2nd Edition"
+- alon 2019 - "An Introduction to Systems Biology, 2nd Edition"
 - davidson 2006 - "The Regulatory Genome: Gene Regulatory Networks in Development and Evolution"
-- [[karlebach_2008]] - "Modelling and Analysis of Gene Regulatory Networks"
+- karlebach 2008 - "Modelling and Analysis of Gene Regulatory Networks"
 
 ### Advanced Topics
-- [[de_jong_2002]] - "Modeling and Simulation of Genetic Regulatory Systems"
-- [[smolen_2000]] - "Genetic Control of Cell Division Patterns"
-- [[levchenko_2003]] - "Dynamics of Cell Signaling"
+- de jong 2002 - "Modeling and Simulation of Genetic Regulatory Systems"
+- smolen 2000 - "Genetic Control of Cell Division Patterns"
+- levchenko 2003 - "Dynamics of Cell Signaling"
 
 ### Computational Methods
-- [[markowetz_2007]] - "Inferring Cellular Networks"
-- [[prill_2010]] - "Towards a Rigorous Assessment of Systems Biology Models"
+- markowetz 2007 - "Inferring Cellular Networks"
+- prill 2010 - "Towards a Rigorous Assessment of Systems Biology Models"
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
 ## See Also

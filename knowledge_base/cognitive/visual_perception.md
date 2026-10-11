@@ -225,13 +225,13 @@ Visual perception is the ability to interpret and organize visual information fr
 
 - [[iconic_memory]]
 
-- [[visual_long_term_memory]]
+- visual long term memory
 
 ### Action
 
-- [[visuomotor_integration]]
+- visuomotor integration
 
-- [[eye_movement_control]]
+- eye movement control
 
 - [[action_planning]]
 
@@ -640,5 +640,5 @@ class CognitiveComputerVision:
 
 - [[visual_attention]]
 
-- [[visual_consciousness]]
+- visual consciousness
 

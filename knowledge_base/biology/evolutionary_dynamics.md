@@ -535,18 +535,18 @@ class EvolutionaryGame:
 
 ### Foundational Texts
 - nowak 2006 - "Evolutionary Dynamics: Exploring the Equations of Life"
-- [[rice_2004]] - "Evolutionary Theory: Mathematical and Conceptual Foundations"
+- rice 2004 - "Evolutionary Theory: Mathematical and Conceptual Foundations"
 - hartl 2006 - "Essential Genetics: From Genes to Genome"
 
 ### Advanced Topics
-- [[page_2002]] - "The Structure and Dynamics of Evolutionary Systems"
-- [[dieckmann_2000]] - "The Geometry of Ecological Interactions"
-- [[geritz_1998]] - "Evolutionary Branching and Sympatric Speciation"
+- page 2002 - "The Structure and Dynamics of Evolutionary Systems"
+- dieckmann 2000 - "The Geometry of Ecological Interactions"
+- geritz 1998 - "Evolutionary Branching and Sympatric Speciation"
 
 ### Modern Methods
-- [[back_1996]] - "Evolutionary Computation: Toward a New Philosophy of Machine Intelligence"
-- [[floreano_2008]] - "Bio-Inspired Artificial Intelligence"
-- [[stanley_2019]] - "Designing Artificial Neural Networks through Neuroevolution"
+- back 1996 - "Evolutionary Computation: Toward a New Philosophy of Machine Intelligence"
+- floreano 2008 - "Bio-Inspired Artificial Intelligence"
+- stanley 2019 - "Designing Artificial Neural Networks through Neuroevolution"
 
 ## See Also
 

@@ -377,7 +377,7 @@ Links to:
 
    - Order matters (posterior vs prior)
 
-   - Links to [[divergence_measures]]
+   - Links to divergence measures
 
 1. **Additivity**
 
@@ -401,7 +401,7 @@ Links to:
 
 ## References
 
-- [[cover_thomas_2006]] - Information Theory
+- cover thomas 2006 - Information Theory
 
 - [[mackay_2003]] - Information Theory
 

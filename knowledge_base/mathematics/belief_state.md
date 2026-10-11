@@ -16,6 +16,8 @@ semantic_relations:
       - "[[belief_updating]]"
       - "[[state_space]]"
       - "[[bayes_theorem]]"
+aliases:
+  - belief_states
 ---
 
 # Belief State

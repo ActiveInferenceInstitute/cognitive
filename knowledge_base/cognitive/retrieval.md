@@ -16,6 +16,8 @@ semantic_relations:
       - "[[episodic_memory]]"
       - "[[pattern_completion]]"
       - "[[active_inference]]"
+aliases:
+  - memory_retrieval
 ---
 
 # Retrieval

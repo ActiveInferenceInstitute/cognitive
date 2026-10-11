@@ -66,11 +66,11 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
     - spine dynamics - Growth, shrinkage, and turnover of dendritic spines
 
-    - [[branch_remodeling]] - Reshaping of dendritic branches
+    - branch remodeling - Reshaping of dendritic branches
 
-  - [[axonal_plasticity]] - Remodeling of output-carrying axons
+  - axonal plasticity - Remodeling of output-carrying axons
 
-    - [[terminal_remodeling]] - Structural changes at axon terminals
+    - terminal remodeling - Structural changes at axon terminals
 
     - [[myelination]] - Insulation that speeds axonal conduction
 
@@ -94,7 +94,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 ### Signaling Cascades
 
-- [[molecular_pathways]] - Intracellular signaling routes driving plasticity
+- molecular pathways - Intracellular signaling routes driving plasticity
 
   - [[calcium_signaling]] - Calcium influx that triggers plasticity
 
@@ -118,7 +118,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
     - [[arc]] - Activity-regulated gene supporting synaptic plasticity
 
-  - [[late_response_genes]] - Genes expressed hours after stimulation
+  - late response genes - Genes expressed hours after stimulation
 
     - [[bdnf]] - Growth factor
 
@@ -126,15 +126,15 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 ### Protein Synthesis
 
-- [[translation_regulation]] - Control of protein synthesis
+- translation regulation - Control of protein synthesis
 
-  - [[local_translation]] - Protein synthesis at individual synapses
+  - local translation - Protein synthesis at individual synapses
 
     - [[mrna_transport]] - Delivery of mRNA to dendrites and synapses
 
-    - [[translation_control]] - Regulation of when mRNAs are translated
+    - translation control - Regulation of when mRNAs are translated
 
-  - [[cellular_translation]] - Protein synthesis in the cell body
+  - cellular translation - Protein synthesis in the cell body
 
     - [[protein_trafficking]] - Transport of proteins to their destinations
 
@@ -144,23 +144,23 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 ### Immediate Changes
 
-- [[rapid_plasticity]] - Changes within seconds to minutes
+- rapid plasticity - Changes within seconds to minutes
 
   - [[ion_channel]] - Changes in channel properties altering excitability
 
     - [[receptor_phosphorylation]] - Phosphorylation altering receptor function
 
-    - [[channel_insertion]] - Adding or removing receptors at the membrane
+    - channel insertion - Adding or removing receptors at the membrane
 
   - [[transmitter_release]] - Presynaptic release of neurotransmitter
 
-    - [[probability]] - Chance that a vesicle is released per spike
+    - probability - Chance that a vesicle is released per spike
 
     - [[quantal_content]] - Number of vesicles released per spike
 
 ### Short-term Changes
 
-- [[temporary_plasticity]] - Minutes/hours
+- temporary plasticity - Minutes/hours
 
   - facilitation - Transient increase in synaptic response
 
@@ -170,13 +170,13 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
   - [[depression]] - Transient decrease in synaptic response
 
-    - [[depletion]] - Exhaustion of releasable vesicles
+    - depletion - Exhaustion of releasable vesicles
 
     - [[receptor_desensitization]] - Reduced receptor response under sustained stimulation
 
 ### Long-term Changes
 
-- [[persistent_plasticity]] - Days/longer
+- persistent plasticity - Days/longer
 
   - [[consolidation]] - Stabilizing changes into lasting form
 
@@ -186,7 +186,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
   - maintenance - Keeping changes stable over time
 
-    - [[molecular_switches]] - Self-sustaining molecular states preserving changes
+    - molecular switches - Self-sustaining molecular states preserving changes
 
     - [[structural_changes]] - Lasting anatomical changes at synapses
 
@@ -200,7 +200,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
     - [[critical_periods]] - Developmental windows of heightened plasticity
 
-    - [[adult_plasticity]] - Plasticity retained in the mature brain
+    - adult plasticity - Plasticity retained in the mature brain
 
   - [[cross_modal]] - Between senses
 
@@ -222,13 +222,13 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
     - compensation - Using alternative strategies after injury
 
-    - [[restitution]] - Restoring original function of damaged circuits
+    - restitution - Restoring original function of damaged circuits
 
 ### Cognitive Plasticity
 
-- [[cognitive_adaptation]] - Adjusting cognitive function to demands
+- cognitive adaptation - Adjusting cognitive function to demands
 
-  - [[learning_related]] - Plasticity driven by learning
+  - learning related - Plasticity driven by learning
 
     - [[memory_formation]] - Encoding new memories
 
@@ -236,15 +236,15 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
   - compensation - Using alternative cognitive routes after impairment
 
-    - [[strategy_change]] - Switching to different cognitive strategies
+    - strategy change - Switching to different cognitive strategies
 
-    - [[network_recruitment]] - Enlisting additional brain regions for a task
+    - network recruitment - Enlisting additional brain regions for a task
 
 ## Applications
 
 ### Clinical Applications
 
-- [[therapeutic_plasticity]] - Harnessing plasticity for treatment
+- therapeutic plasticity - Harnessing plasticity for treatment
 
   - rehabilitation - Restoring function after injury or disease
 
@@ -256,7 +256,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
     - [[brain_stimulation]] - Electrical or magnetic modulation of neural activity
 
-    - [[drug_treatment]] - Pharmacological modulation of plasticity
+    - drug treatment - Pharmacological modulation of plasticity
 
 ### Educational Applications
 
@@ -264,19 +264,19 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
   - [[critical_periods]] - Windows of heightened learning capacity
 
-    - [[window_identification]] - Determining when plasticity peaks
+    - window identification - Determining when plasticity peaks
 
-    - [[intervention_timing]] - Scheduling interventions within sensitive windows
+    - intervention timing - Scheduling interventions within sensitive windows
 
-  - [[training_programs]] - Structured practice regimens
+  - training programs - Structured practice regimens
 
-    - [[intensity]] - Amount of training per session
+    - intensity - Amount of training per session
 
     - specificity - Match of training to the target skill
 
 ### Technology Applications
 
-- [[plasticity_technology]] - Technologies that engage plasticity
+- plasticity technology - Technologies that engage plasticity
 
   - [[neural_interfaces]] - Devices linking the brain to external systems
 
@@ -284,17 +284,17 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
     - [[brain_machine]] - Direct communication between brain and device
 
-  - [[stimulation_devices]] - Devices that stimulate neural tissue
+  - stimulation devices - Devices that stimulate neural tissue
 
-    - [[electrical]] - Stimulation with electrical current
+    - electrical - Stimulation with electrical current
 
-    - [[magnetic]] - Stimulation with magnetic fields
+    - magnetic - Stimulation with magnetic fields
 
 ## Research Methods
 
 ### Cellular Methods
 
-- [[molecular_techniques]] - Methods for studying cellular mechanisms
+- molecular techniques - Methods for studying cellular mechanisms
 
   - imaging - Visualizing cellular activity and structure
 
@@ -326,15 +326,15 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 ### Behavioral Methods
 
-- [[plasticity_assessment]] - Measuring plasticity-related change
+- plasticity assessment - Measuring plasticity-related change
 
   - performance - Behavioral task outcomes
 
     - [[learning_curves]] - Performance improvement across practice
 
-    - [[retention]] - Persistence of learning over time
+    - retention - Persistence of learning over time
 
-  - [[transfer]] - Application of learning to new contexts
+  - transfer - Application of learning to new contexts
 
     - [[generalization]] - Applying learning to untrained situations
 
@@ -348,25 +348,25 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
 - [[individual_differences]] - Variation between people
 
-- [[therapeutic_targeting]] - Matching treatment to plasticity mechanisms
+- therapeutic targeting - Matching treatment to plasticity mechanisms
 
 ### Emerging Approaches
 
 - [[closed_loop_systems]] - Stimulation adjusted by ongoing neural feedback
 
-- [[multimodal_intervention]] - Combining several interventions
+- multimodal intervention - Combining several interventions
 
-- [[personalized_plasticity]] - Interventions tailored to individual brains
+- personalized plasticity - Interventions tailored to individual brains
 
 ## References
 
-- [[buonomano_plasticity]]
+- buonomano plasticity
 
-- [[citri_malenka]]
+- citri malenka
 
-- [[merzenich_plasticity]]
+- merzenich plasticity
 
-- [[pascual_leone_plasticity]]
+- pascual leone plasticity
 
 ## Related Concepts
 

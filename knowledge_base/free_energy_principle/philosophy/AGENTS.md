@@ -12,7 +12,6 @@ semantic_relations:
       - "[[consciousness_phil|Consciousness and the Free Energy Principle]]"
       - "[[epistemology|The FEP as Formal Epistemology]]"
       - "[[free_will|Agency]]"
-      - "[[and Free Will Under the FEP]]"
       - "[[metaphysics|Metaphysics of the Free Energy Principle]]"
       - "[[mind_body_problem|The Free Energy Principle and the Mind-Body Problem]]"
     parent: [[[../AGENTS|Free Energy Principle]]]

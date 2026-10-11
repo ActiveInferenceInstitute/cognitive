@@ -2,6 +2,8 @@
 title: "Softmax Function"
 type: "mathematical_concept"
 status: stable
+aliases:
+  - softmax_distribution
 ---
 
 # Softmax Function

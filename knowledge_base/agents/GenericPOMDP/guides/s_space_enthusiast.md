@@ -500,11 +500,11 @@ def interpolate_states(start_state, end_state, progress):
 
 Want to explore more? Check out:
 
-- [[state_management]] - Managing complex states
+- state management - Managing complex states
 
 - [[state_prediction]] - Predicting future states
 
-- [[state_visualization]] - Visualizing state spaces
+- state visualization - Visualizing state spaces
 
 - state optimization - Optimizing state representations
 

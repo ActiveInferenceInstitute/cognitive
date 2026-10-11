@@ -101,7 +101,7 @@ timeline
 
 ```
 
-Classical pragmatism emerged from the "Metaphysical Club" discussions in Cambridge, Massachusetts, where [[Charles Sanders Peirce]], [[William James]], and others developed alternatives to Cartesian approaches to knowledge. This period established pragmatism as America's distinctive philosophical contribution, challenging European philosophical traditions by emphasizing the practical, experiential basis of knowledge and truth.
+Classical pragmatism emerged from the "Metaphysical Club" discussions in Cambridge, Massachusetts, where Charles Sanders Peirce, William James, and others developed alternatives to Cartesian approaches to knowledge. This period established pragmatism as America's distinctive philosophical contribution, challenging European philosophical traditions by emphasizing the practical, experiential basis of knowledge and truth.
 
 ### Neo-Pragmatism (1970s-Present)
 
@@ -267,7 +267,7 @@ Pragmatism has significant social and political implications:
 
 - **Social Reform**: Commitment to addressing concrete social problems
 
-These aspects of pragmatism connect it to [[social_epistemology]], [[deliberative_democracy]], and various forms of [[progressivism]] in social and political thought.
+These aspects of pragmatism connect it to [[social_epistemology]], [[deliberative_democracy]], and various forms of progressivism in social and political thought.
 
 ## Key Figures
 
@@ -329,7 +329,7 @@ James popularized pragmatism and applied it to:
 
 - **Stream of Consciousness**: Described the continuous flow of mental life
 
-James's psychological insights anticipated developments in cognitive psychology, [[phenomenology_of_consciousness]], and [[4e_cognition|4E cognition]].
+James's psychological insights anticipated developments in cognitive psychology, phenomenology of consciousness, and [[4e_cognition|4E cognition]].
 
 ### John Dewey (1859-1952)
 
@@ -373,21 +373,21 @@ Dewey extended pragmatism into:
 
 - **Naturalism**: Reconstructed traditional philosophical problems within a [[naturalism|naturalistic]] framework
 
-Dewey's work continues to influence [[educational_philosophy]], democratic theory, and approaches to [[social_inquiry]].
+Dewey's work continues to influence [[educational_philosophy]], democratic theory, and approaches to social inquiry.
 
 ### Jane Addams (1860-1935)
 
 Though often overlooked in philosophical histories, Addams developed pragmatism in directions that emphasized:
 
-- **Social Ethics**: Extended pragmatism into [[social_ethics]] and [[feminist_theory]]
+- **Social Ethics**: Extended pragmatism into social ethics and [[feminist_theory]]
 
 - **Democratic Experimentalism**: Practical social reform through settlement houses
 
 - **Sympathetic Understanding**: Knowledge through engaged participation
 
-- **Peace Activism**: Applied pragmatism to [[international_relations]]
+- **Peace Activism**: Applied pragmatism to international relations
 
-Addams's work represents an important bridge between pragmatism and feminist philosophy, [[care_ethics]], and [[social_work]] theory.
+Addams's work represents an important bridge between pragmatism and feminist philosophy, [[care_ethics]], and social work theory.
 
 ## Applications and Methodology
 
@@ -577,7 +577,7 @@ Contemporary pragmatism has diversified into several strands:
 
 1. **Global Pragmatism**: Explores connections with non-Western philosophical traditions (Shusterman, Koopman)
 
-These diverse strands have extended pragmatism's influence across philosophical subdisciplines and into interdisciplinary dialogues with [[cognitive_science]], [[cultural_studies]], and [[political_theory]].
+These diverse strands have extended pragmatism's influence across philosophical subdisciplines and into interdisciplinary dialogues with [[cognitive_science]], [[cultural_studies]], and political theory.
 
 ### Pragmatism and Cognitive Science
 
@@ -1031,27 +1031,27 @@ class PragmaticCommunication:
 
 ## References
 
-- [[peirce_1878]] - "How to Make Our Ideas Clear"
+- peirce 1878 - "How to Make Our Ideas Clear"
 
-- [[james_1907]] - "Pragmatism: A New Name for Some Old Ways of Thinking"
+- james 1907 - "Pragmatism: A New Name for Some Old Ways of Thinking"
 
-- [[dewey_1938]] - "Logic: The Theory of Inquiry"
+- dewey 1938 - "Logic: The Theory of Inquiry"
 
-- [[addams_1902]] - "Democracy and Social Ethics"
+- addams 1902 - "Democracy and Social Ethics"
 
-- [[rorty_1979]] - "Philosophy and the Mirror of Nature"
+- rorty 1979 - "Philosophy and the Mirror of Nature"
 
-- [[putnam_1995]] - "Pragmatism: An Open Question"
+- putnam 1995 - "Pragmatism: An Open Question"
 
-- [[brandom_1994]] - "Making It Explicit"
+- brandom 1994 - "Making It Explicit"
 
-- [[misak_2013]] - "The American Pragmatists"
+- misak 2013 - "The American Pragmatists"
 
-- [[menand_2001]] - "The Metaphysical Club"
+- menand 2001 - "The Metaphysical Club"
 
-- [[bernstein_2010]] - "The Pragmatic Turn"
+- bernstein 2010 - "The Pragmatic Turn"
 
-- [[sullivan_2001]] - "Living Across and Through Skins: Transactional Bodies, Pragmatism, and Feminism"
+- sullivan 2001 - "Living Across and Through Skins: Transactional Bodies, Pragmatism, and Feminism"
 
-- [[clark_2016]] - "Surfing Uncertainty: Prediction, Action, and the Embodied Mind"
+- clark 2016 - "Surfing Uncertainty: Prediction, Action, and the Embodied Mind"
 

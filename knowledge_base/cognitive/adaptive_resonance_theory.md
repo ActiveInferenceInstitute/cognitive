@@ -21,6 +21,8 @@ semantic_relations:
     links:
       - "[[knowledge_base/mathematics/neural_network_theory]]"
       - "[[memory_systems]]"
+aliases:
+  - adaptive_resonance
 ---
 
 # Adaptive Resonance Theory
@@ -43,11 +45,11 @@ semantic_relations:
 
 - **Core Mechanisms**:
 
-  - [[resonance|Resonant States]] formation
+  - Resonant States formation
 
-  - [[mismatch_reset|Mismatch Reset]] mechanism
+  - Mismatch Reset mechanism
 
-  - [[adaptive_weights|Adaptive Weights]] modification
+  - Adaptive Weights modification
 
 ### 2. [[complementary_computing|Complementary Computing]]
 
@@ -63,11 +65,11 @@ semantic_relations:
 
   - [[where_stream|Where Stream]] (spatial processing)
 
-  - [[when_stream|When Stream]] (temporal processing)
+  - When Stream (temporal processing)
 
 ## Theoretical Framework
 
-### 1. [[art_subsystems|ART Subsystems]]
+### 1. ART Subsystems
 
 ```python
 
@@ -217,7 +219,7 @@ where:
 
 - f(): Signal function
 
-### 2. [[resonance_conditions|Resonance Conditions]]
+### 2. Resonance Conditions
 
 Extended resonance condition incorporating multiple factors:
 
@@ -231,7 +233,7 @@ where:
 
 - H(x,w): [[knowledge_base/mathematics/entropy|Information entropy]]
 
-- σ^2: [[noise_variance|Noise variance]]
+- σ^2: Noise variance
 
 - Φ(c): [[context_modulation|Context modulation]]
 
@@ -265,7 +267,7 @@ where:
 
 ## Advanced Implementation
 
-### 1. [[art_implementation|Complete ART Implementation]]
+### 1. Complete ART Implementation
 
 ```python
 
@@ -365,31 +367,31 @@ class CompleteARTSystem:
 
 ```
 
-### 2. [[advanced_variants|Advanced ART Variants]]
+### 2. Advanced ART Variants
 
 - **Temporal Processing**:
 
-  - [[temporal_art|Temporal ART]]
+  - Temporal ART
 
-  - [[predictive_art|Predictive ART]]
+  - Predictive ART
 
-  - [[recurrent_art|Recurrent ART]]
+  - Recurrent ART
 
 - **Multimodal Integration**:
 
   - [[fusion_art|Fusion ART]]
 
-  - [[multimodal_art|Multimodal ART]]
+  - Multimodal ART
 
-  - [[cross_modal_art|Cross-modal ART]]
+  - Cross-modal ART
 
 - **Hierarchical Processing**:
 
   - [[hierarchical_art|Hierarchical ART]]
 
-  - [[deep_art|Deep ART]]
+  - Deep ART
 
-  - [[compositional_art|Compositional ART]]
+  - Compositional ART
 
 ### 3. [[optimization_techniques|Optimization Techniques]]
 
@@ -455,7 +457,7 @@ class ARTOptimization:
 
 ## Theoretical Extensions
 
-### 1. [[information_theoretic_art|Information Theoretic Framework]]
+### 1. Information Theoretic Framework
 
 - **Information Dynamics**:
 
@@ -467,51 +469,51 @@ class ARTOptimization:
 
 - **Uncertainty Processing**:
 
-  - [[bayesian_art|Bayesian ART]]
+  - Bayesian ART
 
-  - [[probabilistic_art|Probabilistic ART]]
+  - Probabilistic ART
 
   - [[knowledge_base/mathematics/information_gain|Information Gain]] optimization
 
-### 2. [[neuromorphic_art|Neuromorphic Implementation]]
+### 2. Neuromorphic Implementation
 
 - **Hardware Acceleration**:
 
-  - [[spiking_art|Spiking ART]]
+  - Spiking ART
 
-  - [[analog_art|Analog ART]]
+  - Analog ART
 
-  - [[quantum_art|Quantum ART]]
+  - Quantum ART
 
 - **Efficiency Optimization**:
 
   - [[sparse_coding|Sparse Coding]]
 
-  - [[energy_efficient_art|Energy-efficient ART]]
+  - Energy-efficient ART
 
-  - [[minimal_art|Minimal ART]]
+  - Minimal ART
 
 ## Future Research Directions
 
-### 1. [[theoretical_frontiers|Theoretical Frontiers]]
+### 1. Theoretical Frontiers
 
 - **Advanced Learning**:
 
-  - [[meta_art|Meta-ART]]
+  - Meta-ART
 
-  - [[transfer_art|Transfer ART]]
+  - Transfer ART
 
-  - [[lifelong_art|Lifelong ART]]
+  - Lifelong ART
 
 - **Integration Frameworks**:
 
-  - [[unified_art|Unified ART]]
+  - Unified ART
 
   - Hybrid Architectures
 
-  - [[cognitive_synthesis|Cognitive Synthesis]]
+  - Cognitive Synthesis
 
-### 2. [[application_domains|Emerging Applications]]
+### 2. Emerging Applications
 
 - **Complex Systems**:
 
@@ -519,7 +521,7 @@ class ARTOptimization:
 
   - [[adaptive_control|Adaptive Control]]
 
-  - [[intelligent_agents|Intelligent Agents]]
+  - Intelligent Agents
 
 - **Cognitive Computing**:
 

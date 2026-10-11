@@ -34,7 +34,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 ### Basic Learning Types
 
-- [[learning_forms]] - Major forms of learning
+- learning forms - Major forms of learning
 
   - [[associative_learning]] - Learning relationships between stimuli or events
 
@@ -42,7 +42,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
     - [[operant_conditioning]] - Learning from the consequences of actions
 
-  - [[non_associative]] - Learning from a single repeated stimulus
+  - non associative - Learning from a single repeated stimulus
 
     - [[habituation]] - Declining response to a repeated harmless stimulus
 
@@ -58,7 +58,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
     - [[feedback_learning]] - Learning guided by information about performance
 
-  - [[reward_based]] - Learning guided by rewards and punishments
+  - reward based - Learning guided by rewards and punishments
 
     - [[reinforcement]] - Consequence that increases a behavior
 
@@ -76,9 +76,9 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
   - [[hierarchical_learning]] - Learning organized in levels of increasing complexity
 
-    - [[simple_complex]] - Progression from simple to complex material
+    - simple complex - Progression from simple to complex material
 
-    - [[part_whole]] - Relation between components and the whole
+    - part whole - Relation between components and the whole
 
 ## Learning Systems
 
@@ -94,9 +94,9 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
   - long term - Durable storage of information
 
-    - [[declarative]] - Memory for facts and events
+    - declarative - Memory for facts and events
 
-    - [[procedural]] - Memory for skills and routines
+    - procedural - Memory for skills and routines
 
 ### Skill Development
 
@@ -118,15 +118,15 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 - [[social_learning]] - Learning from other individuals
 
-  - [[observation]] - Learning by watching others
+  - observation - Learning by watching others
 
     - [[imitation]] - Reproducing another's actions
 
-    - [[modeling]] - Learning from demonstrations by a model
+    - modeling - Learning from demonstrations by a model
 
   - instruction - Learning through explicit teaching
 
-    - [[guided_learning]] - Learning with support from a teacher
+    - guided learning - Learning with support from a teacher
 
     - [[feedback]] - Information about the correctness of performance
 
@@ -134,7 +134,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 ### Synaptic Plasticity
 
-- [[synapse_change]] - Changes in synaptic strength
+- synapse change - Changes in synaptic strength
 
   - [[hebbian_learning]] - Connections strengthen when neurons fire together
 
@@ -150,29 +150,29 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 ### Network Adaptation
 
-- [[circuit_change]] - Changes in neural circuit organization
+- circuit change - Changes in neural circuit organization
 
   - [[local_circuits]] - Plasticity within local neural circuits
 
-    - [[connection_strength]] - Strength of connections between neurons
+    - connection strength - Strength of connections between neurons
 
     - [[pattern_formation]] - Emergence of structured activity patterns
 
-  - [[distributed_circuits]] - Plasticity across widely distributed circuits
+  - distributed circuits - Plasticity across widely distributed circuits
 
-    - [[network_efficiency]] - How efficiently a network transmits information
+    - network efficiency - How efficiently a network transmits information
 
     - specialization - Regions tuning to particular functions
 
 ### System Integration
 
-- [[brain_systems]] - Brain systems involved in learning
+- brain systems - Brain systems involved in learning
 
   - [[memory_networks]] - Networks that store memories
 
     - [[hippocampal]] - Hippocampus-dependent memory processes
 
-    - [[cortical]] - Cortical storage of consolidated knowledge
+    - cortical - Cortical storage of consolidated knowledge
 
   - reward networks - Networks that process reward
 
@@ -210,25 +210,25 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
   - variability - Varying conditions during practice
 
-    - [[context_variation]] - Varying the setting of practice
+    - context variation - Varying the setting of practice
 
-    - [[task_variation]] - Varying the task during practice
+    - task variation - Varying the task during practice
 
 ### Transfer Effects
 
-- [[knowledge_transfer]] - Applying learning in new situations
+- knowledge transfer - Applying learning in new situations
 
   - [[near_transfer]] - Transfer to similar situations
 
-    - [[similar_tasks]] - Tasks that closely resemble the trained task
+    - similar tasks - Tasks that closely resemble the trained task
 
-    - [[same_domain]] - Transfer within the same field
+    - same domain - Transfer within the same field
 
   - [[far_transfer]] - Transfer to dissimilar situations
 
-    - [[different_tasks]] - Tasks unlike the trained task
+    - different tasks - Tasks unlike the trained task
 
-    - [[new_domains]] - Transfer to a different field
+    - new domains - Transfer to a different field
 
 ## Applications
 
@@ -236,7 +236,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 - teaching methods - Approaches to instruction
 
-  - [[instruction_design]] - Planning instruction to achieve learning goals
+  - instruction design - Planning instruction to achieve learning goals
 
     - sequence - Ordering of material for instruction
 
@@ -254,21 +254,21 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
   - [[cognitive_training]] - Exercises aimed at improving cognitive function
 
-    - [[memory_training]] - Exercises aimed at improving memory
+    - memory training - Exercises aimed at improving memory
 
     - [[attention_training]] - Exercises aimed at improving attention
 
   - [[behavioral_therapy]] - Therapy that changes behavior through learning principles
 
-    - [[skill_retraining]] - Relearning skills lost to injury or disease
+    - skill retraining - Relearning skills lost to injury or disease
 
     - habit formation - Establishing automatic behaviors through repetition
 
 ### Technology Applications
 
-- [[learning_technology]] - Technology that supports learning
+- learning technology - Technology that supports learning
 
-  - [[adaptive_learning]] - Instruction that adjusts to the learner
+  - adaptive learning - Instruction that adjusts to the learner
 
     - personalization - Tailoring content to the individual learner
 
@@ -276,7 +276,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
   - [[feedback_systems]] - Systems that deliver feedback to learners
 
-    - [[immediate_feedback]] - Feedback delivered right after a response
+    - immediate feedback - Feedback delivered right after a response
 
     - progress tracking - Monitoring a learner's advancement
 
@@ -284,7 +284,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 ### Behavioral Methods
 
-- [[learning_measures]] - Ways of measuring learning
+- learning measures - Ways of measuring learning
 
   - performance tests - Tests of task performance
 
@@ -296,7 +296,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
     - rate - Speed of improvement with practice
 
-    - [[asymptote]] - Performance level reached after extended practice
+    - asymptote - Performance level reached after extended practice
 
 ### Neural Methods
 
@@ -310,7 +310,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
   - structure measures - Measures of brain structure
 
-    - [[anatomy]] - Structural changes in brain tissue
+    - anatomy - Structural changes in brain tissue
 
     - [[plasticity]] - Measures of experience-dependent brain change
 
@@ -336,7 +336,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
 - [[individual_differences]] - Variation in learning between people
 
-- [[optimal_methods]] - Most effective methods for learning
+- optimal methods - Most effective methods for learning
 
 - measurement issues - Difficulties measuring learning accurately
 
@@ -348,23 +348,23 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
     - real time - Adjustment during learning as it happens
 
-    - [[predictive]] - Anticipating learner needs from data
+    - predictive - Anticipating learner needs from data
 
   - technology enhanced - Learning supported by technology
 
-    - [[ai_assisted]] - Learning supported by artificial intelligence
+    - ai assisted - Learning supported by artificial intelligence
 
     - [[virtual_reality]] - Immersive simulated environments for learning
 
 ## References
 
-- [[thorndike_learning]]
+- thorndike learning
 
-- [[skinner_behavior]]
+- skinner behavior
 
-- [[bandura_social]]
+- bandura social
 
-- [[anderson_learning]]
+- anderson learning
 
 ## Related Concepts
 

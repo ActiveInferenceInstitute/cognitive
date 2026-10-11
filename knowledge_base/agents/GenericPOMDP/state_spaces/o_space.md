@@ -16,15 +16,12 @@ semantic_relations:
   - type: part_of
     links:
       - "[[pomdp_framework]]"
-      - "[[state_representation]]"
   - type: relates_to
     links:
       - "[[s_space]]"
-      - "[[a_space]]"
   - type: influences
     links:
       - "[[belief_updating]]"
-      - "[[perception_model]]"
       - "[[active_inference]]"
 ---
 
@@ -40,7 +37,7 @@ The Observation Space (O-Space) represents the set of all possible observations 
 
 ### Definition
 
-- [[observation_definition]] - Mathematical formalization
+- observation definition - Mathematical formalization
 
   - Set of possible observations O
 
@@ -50,7 +47,7 @@ The Observation Space (O-Space) represents the set of all possible observations 
 
 ### Properties
 
-- [[observation_properties]] - Key characteristics
+- observation properties - Key characteristics
 
   - Partial observability
 
@@ -62,7 +59,7 @@ The Observation Space (O-Space) represents the set of all possible observations 
 
 ### Structure
 
-- [[observation_structure]] - Organization
+- observation structure - Organization
 
   - Discrete vs. continuous
 
@@ -100,7 +97,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Transformations
 
-- [[observation_transformations]] - Space mappings
+- observation transformations - Space mappings
 
   - Feature extraction
 
@@ -114,7 +111,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Data Structures
 
-- [[observation_representation]] - Storage
+- observation representation - Storage
 
   - Vector representation
 
@@ -126,7 +123,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Algorithms
 
-- [[observation_processing]] - Computation
+- observation processing - Computation
 
   - Filtering methods
 
@@ -164,7 +161,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Learning Systems
 
-- [[observation_learning]] - Knowledge acquisition
+- observation learning - Knowledge acquisition
 
   - State estimation
 
@@ -176,7 +173,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Control Systems
 
-- [[observation_control]] - Action selection
+- observation control - Action selection
 
   - Feedback control
 
@@ -190,7 +187,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### With State Space
 
-- [[state_observation_mapping]] - Relationships
+- state observation mapping - Relationships
 
   - State-observation correspondence
 
@@ -202,7 +199,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### With Action Space
 
-- [[action_observation_dynamics]] - Interactions
+- action observation dynamics - Interactions
 
   - Action effects
 
@@ -214,7 +211,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### With Belief Space
 
-- [[belief_observation_updating]] - Updates
+- belief observation updating - Updates
 
   - Belief revision
 
@@ -228,7 +225,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Technical Challenges
 
-- [[observation_challenges]] - Implementation issues
+- observation challenges - Implementation issues
 
   - Scalability
 
@@ -240,7 +237,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Practical Challenges
 
-- [[observation_limitations]] - Real-world issues
+- observation limitations - Real-world issues
 
   - Sensor limitations
 
@@ -252,7 +249,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Solutions
 
-- [[observation_solutions]] - Mitigation strategies
+- observation solutions - Mitigation strategies
 
   - Approximation methods
 
@@ -266,7 +263,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Information Theory
 
-- [[observation_information]] - Information aspects
+- observation information - Information aspects
 
   - Entropy measures
 
@@ -278,7 +275,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Active Inference
 
-- [[active_observation]] - Strategic perception
+- active observation - Strategic perception
 
   - Information seeking
 
@@ -290,7 +287,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Learning Theory
 
-- [[observation_learning_theory]] - Theoretical aspects
+- observation learning theory - Theoretical aspects
 
   - Sample complexity
 
@@ -304,7 +301,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Design Principles
 
-- [[observation_design]] - Architecture
+- observation design - Architecture
 
   - Space definition
 
@@ -316,7 +313,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ### Implementation Guidelines
 
-- [[observation_implementation]] - Development
+- observation implementation - Development
 
   - Code organization
 
@@ -340,7 +337,7 @@ P(o|s,a) : S × A × O → [0,1]
 
 ## References
 
-- [[pomdp_theory]]
+- pomdp theory
 
 - [[perception_models]]
 

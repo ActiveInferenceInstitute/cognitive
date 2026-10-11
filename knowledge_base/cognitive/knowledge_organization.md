@@ -479,7 +479,7 @@ quality_requirements = {
 
 - Maintain [[changelog]]
 
-- Update [[version_tags]]
+- Update version tags
 
 - Document migrations
 

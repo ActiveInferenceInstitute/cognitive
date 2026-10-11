@@ -14,6 +14,9 @@ semantic_relations:
       - "[[precision_weighting]]"
       - "[[attention_mechanisms]]"
       - "[[neural_computation]]"
+aliases:
+  - gain_modulation
+  - neural_gain
 ---
 
 # Gain Control

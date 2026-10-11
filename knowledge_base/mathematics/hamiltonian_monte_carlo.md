@@ -17,6 +17,9 @@ semantic_relations:
       - "[[langevin_dynamics]]"
       - "[[symplectic_geometry]]"
       - "[[bayesian_inference]]"
+aliases:
+  - hamiltonian_mc
+  - hybrid_monte_carlo
 ---
 
 # Hamiltonian Monte Carlo

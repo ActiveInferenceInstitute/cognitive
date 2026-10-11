@@ -16,6 +16,8 @@ semantic_relations:
       - "[[knowledge_base/cognitive/stigmergic_coordination]]"
       - "[[knowledge_base/biology/foraging_optimization]]"
       - "[[knowledge_base/systems/swarm_intelligence_implementation]]"
+aliases:
+  - ant_algorithms
 ---
 
 # Ant Colony Optimization

@@ -26,6 +26,8 @@ semantic_relations:
     links:
       - "[[precision_weighting]]"
       - "[[hierarchical_inference]]"
+aliases:
+  - switching_tasks
 ---
 
 

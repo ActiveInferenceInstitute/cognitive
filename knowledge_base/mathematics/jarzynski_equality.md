@@ -17,6 +17,8 @@ semantic_relations:
       - "[[fluctuation_dissipation]]"
       - "[[thermodynamics]]"
       - "[[free_energy_principle]]"
+aliases:
+  - jarzynski
 ---
 
 # Jarzynski Equality

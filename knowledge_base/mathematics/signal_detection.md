@@ -10,6 +10,7 @@ tags:
   - psychophysics
 aliases:
   - detection
+  - signal_detection_theory
 semantic_relations:
   - type: relates
     links:

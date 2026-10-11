@@ -19,6 +19,7 @@ semantic_relations:
       - "[[epistemic_value]]"
 aliases:
   - kullback_leibler_divergence
+  - relative_entropy
 ---
 
 

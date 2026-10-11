@@ -363,7 +363,7 @@ def compute_uncertainty_resolution(
 
 - [[lindley_1956]] - Information Measures
 
-- [[chaloner_1995]] - Optimal Design
+- chaloner 1995 - Optimal Design
 
 ## Visualization Methods
 
@@ -591,7 +591,7 @@ Links to:
 
 - plotting utilities - Plotting tools
 
-- [[interactive_visualization]] - Interactive features
+- interactive visualization - Interactive features
 
 ## Visualization Types
 
@@ -603,7 +603,7 @@ Links to:
 
    - Information gain fields
 
-   - Links to [[spatial_visualization]]
+   - Links to spatial visualization
 
 1. **Temporal Evolution**
 
@@ -613,7 +613,7 @@ Links to:
 
    - Learning curves
 
-   - Links to [[temporal_visualization]]
+   - Links to temporal visualization
 
 1. **State Space Views**
 
@@ -623,7 +623,7 @@ Links to:
 
    - Action trajectories
 
-   - Links to [[state_space_visualization]]
+   - Links to state space visualization
 
 1. **Interactive Elements**
 
@@ -633,7 +633,7 @@ Links to:
 
    - Dynamic updates
 
-   - Links to [[interactive_tools]]
+   - Links to interactive tools
 
 ## Learning Dynamics
 

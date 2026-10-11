@@ -15,6 +15,10 @@ semantic_relations:
       - "[[knowledge_base/mathematics/non_equilibrium_steady_state]]"
       - "[[knowledge_base/mathematics/partition_function]]"
       - "[[knowledge_base/mathematics/entropy_production]]"
+aliases:
+  - crooks
+  - crooks_fluctuation_theorem
+  - crooks_relation
 ---
 
 # Fluctuation Theorems

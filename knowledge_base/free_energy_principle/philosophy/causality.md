@@ -27,6 +27,8 @@ semantic_relations:
       - "[[knowledge_base/free_energy_principle/cognitive/decision_making|Decision Making]]"
       - "[[knowledge_base/free_energy_principle/cognitive/perception|Perception]]"
       - "[[knowledge_base/free_energy_principle/systems/emergence|Emergence]]"
+aliases:
+  - causation
 ---
 
 # Causality and the Free Energy Principle

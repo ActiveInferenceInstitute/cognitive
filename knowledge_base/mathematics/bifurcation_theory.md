@@ -18,6 +18,9 @@ semantic_relations:
       - "[[phase_transitions]]"
       - "[[symmetry_breaking]]"
       - "[[free_energy_principle]]"
+aliases:
+  - bifurcation
+  - bifurcations
 ---
 
 # Bifurcation Theory

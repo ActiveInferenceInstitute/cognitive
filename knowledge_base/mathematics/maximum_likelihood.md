@@ -16,6 +16,8 @@ semantic_relations:
       - "[[kl_divergence]]"
       - "[[variational_free_energy]]"
       - "[[statistical_foundations]]"
+aliases:
+  - maximum_likelihood_estimation
 ---
 
 # Maximum Likelihood

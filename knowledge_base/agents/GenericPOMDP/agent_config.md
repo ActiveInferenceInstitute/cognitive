@@ -58,7 +58,7 @@ dimensions:
 
 - [[generative_model]] - Full model specification
 
-- [[inference_scheme]] - Belief updating mechanism
+- inference scheme - Belief updating mechanism
 
 - [[policy_selection]] - Action selection method
 
@@ -66,17 +66,17 @@ dimensions:
 
 - [[matrix_plots]] - Matrix visualizations
 
-- [[state_evolution]] - State trajectory plots
+- state evolution - State trajectory plots
 
 - [[free_energy_landscape]] - Free energy surface plots
 
 ## Integration
 
-- [[simulation_config]] - Simulation parameters
+- simulation config - Simulation parameters
 
-- [[environment_interface]] - Environment coupling
+- environment interface - Environment coupling
 
-- [[logging_config]] - Data logging setup
+- logging config - Data logging setup
 
 ## References
 

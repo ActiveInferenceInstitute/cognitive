@@ -17,6 +17,7 @@ aliases:
 - FEP-path-formulation
 - action-principle
 - hamiltonian-FEP
+- path_space_free_energy
 complexity: advanced
 processing_priority: 1
 semantic_relations:
@@ -114,7 +115,7 @@ where:
 
 - $p$ is the conjugate momentum ([[canonical_coordinates]])
 
-- $\mathcal{H}$ is the Hamiltonian ([[energy_functions]])
+- $\mathcal{H}$ is the Hamiltonian (energy functions)
 
 ### Variational Structure
 
@@ -1072,7 +1073,7 @@ class PrecisionDynamics:
 
 ### 2. Statistical Physics
 
-- [[thermodynamic_formulation]] links to [[free_energy_principle]]
+- thermodynamic formulation links to [[free_energy_principle]]
 
   - Free energy landscapes and barriers
 
@@ -1158,7 +1159,7 @@ class PrecisionDynamics:
 
 ### 3. Optimization
 
-- [[variational_optimization]]
+- variational optimization
 
   - Natural gradient descent
 
@@ -1270,7 +1271,7 @@ class PrecisionDynamics:
 
 ### 1. Theoretical Extensions
 
-- [[relativistic_path_integral]]
+- relativistic path integral
 
   - Spacetime formulation
 
@@ -1356,7 +1357,7 @@ class PrecisionDynamics:
 
 ### 3. Software Design
 
-- [[software_architecture]]
+- software architecture
 
   - Modular design
 
@@ -1368,7 +1369,7 @@ class PrecisionDynamics:
 
 ### 4. Testing Framework
 
-- [[testing_methodology]]
+- testing methodology
 
   - Unit tests
 
@@ -1380,7 +1381,7 @@ class PrecisionDynamics:
 
 ### 5. Deployment Strategies
 
-- [[deployment_patterns]]
+- deployment patterns
 
   - Containerization
 
@@ -1520,7 +1521,7 @@ def advanced_path_integral_example():
 
 - [[amari_2000]] - "Information Geometry and Its Applications"
 
-- [[marsden_2001]] - "Discrete Mechanics and Variational Integrators"
+- marsden 2001 - "Discrete Mechanics and Variational Integrators"
 
 ## See Also
 

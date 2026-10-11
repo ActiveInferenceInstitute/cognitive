@@ -31,6 +31,8 @@ semantic_relations:
       - "[[hohwy_2013]]"
       - "[[bruineberg_2018]]"
       - "[[seth_2021]]"
+aliases:
+  - clark_whatever_next
 ---
 
 # Whatever Next? Predictive Brains, Situated Agents, and the Future of Cognitive Science

@@ -119,7 +119,7 @@ s[i] >= 0      # Non-negative probabilities
 
 - Current state contains all relevant information
 
-- [[markov_assumptions]]
+- markov assumptions
 
 - [[temporal_dependencies]]
 
@@ -133,9 +133,9 @@ s[i] >= 0      # Non-negative probabilities
 
 ## State Dynamics
 
-- [[transition_rules]]
+- transition rules
 
-- [[state_constraints]]
+- state constraints
 
 - [[boundary_conditions]]
 
@@ -157,19 +157,19 @@ visualization:
 
 ## Analysis Tools
 
-- [[state_entropy]] - Uncertainty measure
+- state entropy - Uncertainty measure
 
-- [[state_distance]] - Metric between states
+- state distance - Metric between states
 
-- [[state_clustering]] - State space structure
+- state clustering - State space structure
 
 ## Learning
 
-- [[state_discovery]] - Identifying new states
+- state discovery - Identifying new states
 
-- [[state_pruning]] - Removing redundant states
+- state pruning - Removing redundant states
 
-- [[state_refinement]] - Improving state representations
+- state refinement - Improving state representations
 
 ## Computational Interface
 
@@ -217,7 +217,7 @@ class StateSpace:
 
 - [[state_space_theory]]
 
-- [[belief_representations]]
+- belief representations
 
 - [[information_theory]]
 

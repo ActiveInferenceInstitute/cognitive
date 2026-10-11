@@ -15,6 +15,8 @@ semantic_relations:
       - "[[inferior_parietal]]"
       - "[[posterior_parietal]]"
       - "[[spatial_attention]]"
+aliases:
+  - parietal_areas
 ---
 
 # Parietal Cortex

@@ -20,7 +20,6 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - "[[rl active inference]]"
       - "[[knowledge_base/cognitive/decision_making]]"
   - type: extends
     links:

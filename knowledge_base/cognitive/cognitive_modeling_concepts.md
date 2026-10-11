@@ -184,7 +184,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
   - Release cycles
 
-- [[collaboration_patterns]] - Team collaboration
+- collaboration patterns - Team collaboration
 
   - Communication protocols
 
@@ -192,7 +192,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
   - Review guidelines
 
-- [[change_management]] - Managing system changes
+- change management - Managing system changes
 
   - Impact assessment
 
@@ -218,7 +218,7 @@ This directory contains foundational concepts and theoretical documentation for 
 
   - Fine-tuning strategies
 
-- [[model_evaluation]] - Evaluation methods
+- model evaluation - Evaluation methods
 
   - Performance metrics
 

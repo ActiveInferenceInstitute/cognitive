@@ -17,6 +17,7 @@ semantic_relations:
       - "[[procedural_memory]]"
 aliases:
   - automatic_processing
+  - automatization
 ---
 
 # Automaticity

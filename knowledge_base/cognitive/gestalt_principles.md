@@ -16,6 +16,8 @@ semantic_relations:
       - "[[illusory_contours]]"
       - "[[form_perception]]"
       - "[[perceptual_binding]]"
+aliases:
+  - grouping_laws
 ---
 
 # Gestalt Principles

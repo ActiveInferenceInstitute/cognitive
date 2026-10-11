@@ -295,7 +295,7 @@ p(\theta|\mathbf{x}) = \frac{p(\mathbf{x}|\theta)p(\theta)}{p(\mathbf{x})} \prop
 
 ```
 
-Related: [[bayesian_inference]], [[posterior_computation]], [[model_selection]]
+Related: [[bayesian_inference]], posterior computation, [[model_selection]]
 
 ### Hypothesis Testing
 
@@ -571,9 +571,9 @@ Related: [[information_gain]], [[minimum_description_length]], [[channel_capacit
 
 - bootstrapping - Bootstrap techniques
 
-- [[model_diagnostics]] - Diagnostic tools
+- model diagnostics - Diagnostic tools
 
-- [[residual_analysis]] - Residual checks
+- residual analysis - Residual checks
 
 ### Performance Analysis
 
@@ -597,11 +597,11 @@ Related: [[information_gain]], [[minimum_description_length]], [[channel_capacit
 
 ## References
 
-- [[casella_berger]] - Statistical Inference
+- casella berger - Statistical Inference
 
-- [[mackay]] - Information Theory
+- mackay - Information Theory
 
-- [[robert_casella]] - Monte Carlo Methods
+- robert casella - Monte Carlo Methods
 
-- [[bishop]] - Pattern Recognition
+- bishop - Pattern Recognition
 

@@ -233,11 +233,11 @@ plt.show()
 
 ### Code References
 
-- [[source_file1|Source File 1]]
+- Source File 1
 
-- [[source_file2|Source File 2]]
+- Source File 2
 
-- [[source_file3|Source File 3]]
+- Source File 3
 
 ### Documentation
 
@@ -249,8 +249,8 @@ plt.show()
 
 ## See Also
 
-- [[related_example1|Related Example 1]]
+- Related Example 1
 
-- [[related_example2|Related Example 2]]
+- Related Example 2
 
-- [[related_example3|Related Example 3]]
+- Related Example 3

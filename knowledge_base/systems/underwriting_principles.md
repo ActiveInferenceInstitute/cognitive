@@ -2,6 +2,8 @@
 title: Underwriting Principles
 type: concept
 status: stable
+aliases:
+  - underwriting
 ---
 
 # Underwriting Principles
@@ -26,7 +28,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 - Legal right to insure
 
-- Connection to risk appetite and [[coverage_limits]]
+- Connection to risk appetite and coverage limits
 
 ### 3. Indemnity
 
@@ -42,7 +44,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 - Causation chain analysis
 
-- Connects to risk factors and [[severity_assessment]]
+- Connects to risk factors and severity assessment
 
 ### 5. Risk Pooling
 
@@ -50,7 +52,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 - Risk distribution
 
-- Related to [[portfolio_management]] and [[risk_aggregation]]
+- Related to [[portfolio_management]] and risk aggregation
 
 ## Implementation Framework
 
@@ -76,9 +78,9 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
    - Risk classification (risk classification)
 
-   - Premium determination ([[premium_rating]])
+   - Premium determination (premium rating)
 
-   - Policy terms ([[policy_terms]])
+   - Policy terms (policy terms)
 
 ### Modern Applications
 
@@ -122,7 +124,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
    - Experience incorporation (experience integration)
 
-   - Model refinement ([[model_learning]])
+   - Model refinement (model learning)
 
    - Continuous improvement
 
@@ -252,7 +254,7 @@ Underwriting principles form the foundational framework for [[risk_assessment]] 
 
 - academic papers
 
-- [[industry_reports]]
+- industry reports
 
 - [[best_practices]]
 

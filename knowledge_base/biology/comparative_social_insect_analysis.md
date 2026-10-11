@@ -23,7 +23,6 @@ semantic_relations:
       - "[[social_insect_cognition]]"
   - type: implements
     links:
-      - "[[comparative_evolution]]"
       - "[[swarm_intelligence_implementation]]"
   - type: relates
     links:

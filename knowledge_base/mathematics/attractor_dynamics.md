@@ -20,6 +20,7 @@ semantic_relations:
       - "[[nonlinear_dynamics]]"
 aliases:
   - strange_attractors
+  - attractors
 ---
 
 # Attractor Dynamics

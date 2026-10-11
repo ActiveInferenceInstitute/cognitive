@@ -868,7 +868,7 @@ class ValueIterator:
 
 - [[amari]] - Information Geometry and Its Applications
 
-- [[boyd]] - Convex Optimization
+- boyd - Convex Optimization
 
-- [[sutton]] - Reinforcement Learning
+- sutton - Reinforcement Learning
 

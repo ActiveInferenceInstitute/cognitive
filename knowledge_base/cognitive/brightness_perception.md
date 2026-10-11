@@ -437,7 +437,7 @@ Brightness perception is the visual system's ability to process and interpret th
 
 - [[visual_processing]]
 
-- [[retinal_function]]
+- retinal function
 
 ## References
 
@@ -449,5 +449,5 @@ Brightness perception is the visual system's ability to process and interpret th
 
 - clinical vision
 
-- [[lighting_science]]
+- lighting science
 

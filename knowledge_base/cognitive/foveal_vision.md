@@ -437,7 +437,7 @@ Foveal vision refers to the high-acuity central vision mediated by the fovea, a 
 
 - [[pattern_recognition]]
 
-- [[reading_processes]]
+- reading processes
 
 ## References
 

@@ -20,11 +20,6 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[free_energy_principle]]"
       - "[[cell_biology]]"
-  - type: implements
-    links:
-      - "[[bacterial_dynamics]]"
-      - "[[viral_dynamics]]"
-      - "[[microbial_networks]]"
   - type: relates
     links:
       - "[[molecular_biology]]"
@@ -549,13 +544,13 @@ class MicrobialCommunity:
 
 ## References
 
-- [[madigan_2018]] - "Brock Biology of Microorganisms"
+- madigan 2018 - "Brock Biology of Microorganisms"
 
-- [[murray_2002]] - "Mathematical Biology"
+- murray 2002 - "Mathematical Biology"
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
-- [[levin_2014]] - "Quantitative and Systems Biology"
+- levin 2014 - "Quantitative and Systems Biology"
 
 ## See Also
 

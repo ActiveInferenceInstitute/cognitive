@@ -16,6 +16,8 @@ semantic_relations:
       - "[[evidence_accumulation]]"
       - "[[neural_computation]]"
       - "[[belief_updating]]"
+aliases:
+  - time_integration
 ---
 
 # Temporal Integration

@@ -42,7 +42,7 @@ A factor graph G = (V, F, E) consists of:
 
 - F: Factor nodes encoding [[probability_distributions|probability distributions]]
 
-- E: Edges representing [[probabilistic_dependencies|probabilistic dependencies]]
+- E: Edges representing probabilistic dependencies
 
 ### 2. Factorization
 
@@ -56,11 +56,11 @@ p(x_1, ..., x_n) = \prod_{a \in F} f_a(x_{\partial a})
 
 where:
 
-- f_a are [[factor_functions|factor functions]]
+- f_a are factor functions
 
 - ∂a denotes variables connected to factor a
 
-### 3. [[bayesian_factorization|Bayesian Factorization]]
+### 3. Bayesian Factorization
 
 In Bayesian terms:
 
@@ -80,7 +80,7 @@ where:
 
 ## Components and Structure
 
-### 1. [[variable_nodes|Variable Nodes]]
+### 1. Variable Nodes
 
 #### Types and Properties
 
@@ -124,11 +124,11 @@ end
 
   - [[hyperparameters|Hyperparameters]]
 
-  - [[model_parameters|Model parameters]]
+  - Model parameters
 
   - [[sufficient_statistics|Sufficient statistics]]
 
-### 2. [[factor_nodes|Factor Nodes]]
+### 2. Factor Nodes
 
 #### Base Implementation
 
@@ -198,7 +198,7 @@ end
 
 ```
 
-### 3. [[edges|Edges]]
+### 3. Edges
 
 #### Properties
 
@@ -410,7 +410,7 @@ end
 
 ## Advanced Topics
 
-### 1. [[structured_factor_graphs|Structured Factor Graphs]]
+### 1. Structured Factor Graphs
 
 #### Temporal Structure
 
@@ -466,7 +466,7 @@ end
 
 ```
 
-### 2. [[continuous_variables|Continuous Variables]]
+### 2. Continuous Variables
 
 #### Gaussian Messages
 
@@ -500,7 +500,7 @@ end
 
 ```
 
-### 3. [[convergence_properties|Convergence Properties]]
+### 3. Convergence Properties
 
 #### Fixed Point Conditions
 
@@ -696,7 +696,7 @@ end
 
 ## Integration with Bayesian Networks
 
-### 1. [[bayesian_network_conversion|Bayesian Network Conversion]]
+### 1. Bayesian Network Conversion
 
 ```julia
 
@@ -728,7 +728,7 @@ end
 
 ```
 
-### 2. [[inference_equivalence|Inference Equivalence]]
+### 2. Inference Equivalence
 
 - Message passing in trees
 

@@ -326,7 +326,7 @@ class AmortizedInference:
 
   - Structured approximations
 
-- [[copula_inference]] (see also [[multivariate_statistics]])
+- [[copula_inference]] (see also multivariate statistics)
 
   - Dependency modeling
 
@@ -418,7 +418,7 @@ class AmortizedInference:
 
   - Hybrid systems
 
-- [[time_series_models]]
+- time series models
 
   - State estimation
 
@@ -448,7 +448,7 @@ class AmortizedInference:
 
 ### 2. Scalable Methods
 
-- [[distributed_inference]]
+- distributed inference
 
   - Parallel algorithms
 
@@ -486,11 +486,11 @@ class AmortizedInference:
 
 - blei 2017 - "Variational Inference: A Review for Statisticians"
 
-- [[kingma_2014]] - "Auto-Encoding Variational Bayes"
+- kingma 2014 - "Auto-Encoding Variational Bayes"
 
-- [[rezende_2015]] - "Variational Inference with Normalizing Flows"
+- rezende 2015 - "Variational Inference with Normalizing Flows"
 
-- [[hoffman_2013]] - "Stochastic Variational Inference"
+- hoffman 2013 - "Stochastic Variational Inference"
 
 ## See Also
 
@@ -528,13 +528,13 @@ class AmortizedInference:
 
 - [[sequential_mc]] - SMC methods
 
-- [[variational_sampling]] - Variational approaches
+- variational sampling - Variational approaches
 
 ### Implementation Considerations
 
 - [[numerical_stability]] - Stability issues
 
-- [[convergence_criteria]] - Convergence checks
+- convergence criteria - Convergence checks
 
 - [[hyperparameter_tuning]] - Parameter selection
 
@@ -553,9 +553,9 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[complexity_analysis]] - Computational complexity
 
-- [[accuracy_metrics]] - Approximation quality
+- accuracy metrics - Approximation quality
 
-- [[robustness_tests]] - Stability testing
+- robustness tests - Stability testing
 
 ## Integration Points
 
@@ -575,9 +575,9 @@ See `docs/examples/README.md` for runnable examples.
 
 - [[inference_algorithms]] - Inference methods (see also [[monte_carlo_methods]])
 
-- [[sampling_approaches]] - Sampling strategies (see also [[mcmc_methods]])
+- sampling approaches - Sampling strategies (see also [[mcmc_methods]])
 
-- [[numerical_implementations]] - Numerical methods (see also [[numerical_optimization]])
+- numerical implementations - Numerical methods (see also [[numerical_optimization]])
 
 ## Documentation Links
 
@@ -595,7 +595,7 @@ See `docs/examples/README.md` for runnable examples.
 
 - wainwright 2008 - Graphical Models
 
-- [[zhang_2018]] - Natural Gradient Methods
+- zhang 2018 - Natural Gradient Methods
 
 ---
 

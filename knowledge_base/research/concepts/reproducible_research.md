@@ -14,6 +14,8 @@ semantic_relations:
       - "[[operationalism]]"
       - "[[scientific_method]]"
       - "[[active_inference]]"
+aliases:
+  - reproducibility
 ---
 
 # Reproducible Research

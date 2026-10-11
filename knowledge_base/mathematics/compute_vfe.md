@@ -112,7 +112,7 @@ def compute_variational_free_energy(
 
 - Penalizes complex explanations
 
-- Links to [[bayesian_complexity]]
+- Links to bayesian complexity
 
 ## Usage
 
@@ -222,9 +222,9 @@ def monitor_inference(model, observation: int):
 
 - [[vfe_landscape]]: VFE surface over beliefs
 
-- [[accuracy_complexity]]: Trade-off visualization
+- accuracy complexity: Trade-off visualization
 
-- [[convergence_plot]]: VFE during inference
+- convergence plot: VFE during inference
 
 ## Related Implementations
 
@@ -232,7 +232,7 @@ def monitor_inference(model, observation: int):
 
 - [[update_beliefs]]: Belief updating
 
-- [[monitor_inference]]: Inference quality
+- monitor inference: Inference quality
 
 ## References
 

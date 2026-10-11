@@ -16,6 +16,10 @@ semantic_relations:
       - "[[motor_control]]"
 aliases:
   - neural_interfaces
+  - brain_computer_interface
+  - brain_computer_interfaces
+  - brain_interfaces
+  - brain_machine
 ---
 
 # Brain-Machine Interfaces

@@ -34,13 +34,13 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
 ### Metacognitive Knowledge
 
-- [[knowledge_types]] - Kinds of knowledge about one's own thinking
+- knowledge types - Kinds of knowledge about one's own thinking
 
   - task knowledge - Knowing what a task demands
 
-    - [[difficulty_awareness]] - Knowing how hard a task is
+    - difficulty awareness - Knowing how hard a task is
 
-    - [[strategy_awareness]] - Knowing which strategies suit a task
+    - strategy awareness - Knowing which strategies suit a task
 
   - [[self_knowledge]] - Knowing one's own abilities and limits
 
@@ -50,19 +50,19 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
 ### Metacognitive Monitoring
 
-- [[monitoring_processes]] - Tracking one's own mental states and performance
+- monitoring processes - Tracking one's own mental states and performance
 
   - state monitoring - Checking one's current mental state
 
-    - [[comprehension]] - Checking whether one understands
+    - comprehension - Checking whether one understands
 
-    - [[progress]] - Checking how far one has come
+    - progress - Checking how far one has come
 
   - performance monitoring - Checking how well one is doing
 
     - [[error_detection]] - Noticing that a mistake has occurred
 
-    - [[success_evaluation]] - Judging whether a goal was reached
+    - success evaluation - Judging whether a goal was reached
 
 ### Metacognitive Control
 
@@ -70,15 +70,15 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
   - strategy selection - Choosing how to approach a task
 
-    - [[approach_choice]] - Picking a method for the task
+    - approach choice - Picking a method for the task
 
-    - [[method_change]] - Switching to a different method
+    - method change - Switching to a different method
 
   - [[resource_allocation]] - Deciding where to spend effort and time
 
     - effort regulation - Adjusting how hard one tries
 
-    - [[time_management]] - Deciding how to spend available time
+    - time management - Deciding how to spend available time
 
 ## Cognitive Functions
 
@@ -86,63 +86,63 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
 - learning control - Directing one's own learning
 
-  - [[study_planning]] - Planning how to study
+  - study planning - Planning how to study
 
     - [[goal_setting]] - Deciding what to learn
 
-    - [[strategy_planning]] - Deciding how to reach learning goals
+    - strategy planning - Deciding how to reach learning goals
 
-  - [[learning_evaluation]] - Judging how well learning went
+  - learning evaluation - Judging how well learning went
 
-    - [[knowledge_assessment]] - Judging what one already knows
+    - knowledge assessment - Judging what one already knows
 
     - progress tracking - Judging how far one has advanced
 
 ### Memory Control
 
-- [[memory_regulation]] - Directing one's own remembering
+- memory regulation - Directing one's own remembering
 
-  - [[encoding_control]] - Controlling how information is stored
+  - encoding control - Controlling how information is stored
 
     - [[elaboration]] - Linking new material to existing knowledge
 
     - organization - Structuring material into groups
 
-  - [[retrieval_control]] - Controlling how memories are recalled
+  - retrieval control - Controlling how memories are recalled
 
     - [[search_strategies]] - Methods for searching memory
 
-    - [[memory_monitoring]] - Judging whether a memory is accurate
+    - memory monitoring - Judging whether a memory is accurate
 
 ### Problem Solving
 
-- [[problem_regulation]] - Directing one's own problem solving
+- problem regulation - Directing one's own problem solving
 
-  - [[problem_analysis]] - Examining the structure of a problem
+  - problem analysis - Examining the structure of a problem
 
     - difficulty assessment - Judging how hard a problem is
 
-    - [[resource_needs]] - Working out what resources are required
+    - resource needs - Working out what resources are required
 
-  - [[solution_monitoring]] - Checking progress toward a solution
+  - solution monitoring - Checking progress toward a solution
 
-    - [[progress_evaluation]] - Judging how close one is to the goal
+    - progress evaluation - Judging how close one is to the goal
 
-    - [[strategy_effectiveness]] - Judging whether a strategy is working
+    - strategy effectiveness - Judging whether a strategy is working
 
 ## Neural Implementation
 
 ### Brain Networks
 
-- [[metacognitive_networks]] - Brain networks supporting metacognition
+- metacognitive networks - Brain networks supporting metacognition
 
-  - [[prefrontal_systems]] - Prefrontal regions supporting metacognition
+  - prefrontal systems - Prefrontal regions supporting metacognition
 
     - [[medial_prefrontal]] - Midline prefrontal region
 
     - [[lateral_prefrontal]] - Side prefrontal region
 
-  - [[parietal_systems]] - Parietal regions supporting metacognition
+  - parietal systems - Parietal regions supporting metacognition
 
     - [[precuneus]] - Medial parietal region
 
@@ -152,7 +152,7 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
 - [[neural_dynamics]] - Brain activity underlying metacognition
 
-  - [[monitoring_circuits]] - Circuits that track performance
+  - monitoring circuits - Circuits that track performance
 
     - [[error_detection]] - Neural signaling of mistakes
 
@@ -162,55 +162,55 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
     - top down control - Higher regions steering lower ones
 
-    - [[regulatory_signals]] - Signals that adjust ongoing processing
+    - regulatory signals - Signals that adjust ongoing processing
 
 ### Integration Systems
 
-- [[integration_networks]] - Networks combining information across regions
+- integration networks - Networks combining information across regions
 
   - [[default_mode]] - Network active during rest and self-reflection
 
     - [[self_reflection]] - Thinking about one's own states and traits
 
-    - [[mental_simulation]] - Imagining possible situations and outcomes
+    - mental simulation - Imagining possible situations and outcomes
 
   - [[salience_network]] - Network detecting important events
 
     - [[error_detection]] - Salience-based detection of errors
 
-    - [[control_switching]] - Switching between control states
+    - control switching - Switching between control states
 
 ## Development
 
 ### Developmental Trajectory
 
-- [[metacognitive_development]] - How metacognition grows with age
+- metacognitive development - How metacognition grows with age
 
   - early development - Metacognition in young children
 
-    - [[basic_awareness]] - Simple awareness of one's own thinking
+    - basic awareness - Simple awareness of one's own thinking
 
-    - [[simple_strategies]] - Basic strategies such as repeating items
+    - simple strategies - Basic strategies such as repeating items
 
-  - [[advanced_development]] - Metacognition in older children and adults
+  - advanced development - Metacognition in older children and adults
 
-    - [[complex_monitoring]] - Tracking several aspects of performance at once
+    - complex monitoring - Tracking several aspects of performance at once
 
-    - [[flexible_control]] - Adapting strategies to changing demands
+    - flexible control - Adapting strategies to changing demands
 
 ### Individual Differences
 
-- [[person_variation]] - Differences between individuals
+- person variation - Differences between individuals
 
-  - [[ability_differences]] - Differences in metacognitive skill
+  - ability differences - Differences in metacognitive skill
 
-    - [[monitoring_accuracy]] - How well judgments match performance
+    - monitoring accuracy - How well judgments match performance
 
-    - [[control_effectiveness]] - How well adjustments improve performance
+    - control effectiveness - How well adjustments improve performance
 
-  - [[strategy_differences]] - Differences in strategies used
+  - strategy differences - Differences in strategies used
 
-    - [[preference_patterns]] - Which strategies people tend to favor
+    - preference patterns - Which strategies people tend to favor
 
     - [[flexibility]] - Willingness to change strategies
 
@@ -218,13 +218,13 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
 - [[context_effects]] - Influences of the situation
 
-  - [[task_demands]] - What the task requires
+  - task demands - What the task requires
 
     - [[complexity]] - How complicated the task is
 
-    - [[time_pressure]] - Effect of limited time
+    - time pressure - Effect of limited time
 
-  - [[social_factors]] - Influence of other people
+  - social factors - Influence of other people
 
     - instruction - Teaching that supports metacognition
 
@@ -234,25 +234,25 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
 ### Educational Applications
 
-- [[learning_enhancement]] - Improving learning through metacognition
+- learning enhancement - Improving learning through metacognition
 
   - strategy training - Teaching learning strategies
 
-    - [[monitoring_skills]] - Skills for checking one's own understanding
+    - monitoring skills - Skills for checking one's own understanding
 
-    - [[control_skills]] - Skills for adjusting one's strategies
+    - control skills - Skills for adjusting one's strategies
 
   - [[self_regulated_learning]] - Learners managing their own learning
 
     - planning skills - Skills for planning learning
 
-    - [[evaluation_skills]] - Skills for judging learning outcomes
+    - evaluation skills - Skills for judging learning outcomes
 
 ### Clinical Applications
 
 - [[metacognitive_therapy]] - Treating disorders through metacognition
 
-  - [[disorder_treatment]] - Treating specific disorders
+  - disorder treatment - Treating specific disorders
 
     - awareness training - Teaching people to notice their thinking
 
@@ -260,23 +260,23 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
   - rehabilitation - Restoring function after impairment
 
-    - [[strategy_retraining]] - Relearning effective strategies
+    - strategy retraining - Relearning effective strategies
 
-    - [[monitoring_recovery]] - Restoring the ability to self-monitor
+    - monitoring recovery - Restoring the ability to self-monitor
 
 ### Performance Enhancement
 
-- [[skill_improvement]] - Improving metacognitive skill
+- skill improvement - Improving metacognitive skill
 
-  - [[expert_performance]] - Skilled performance in experts
+  - expert performance - Skilled performance in experts
 
-    - [[advanced_monitoring]] - Fine-grained tracking of performance
+    - advanced monitoring - Fine-grained tracking of performance
 
-    - [[efficient_control]] - Quick, low-effort adjustment of behavior
+    - efficient control - Quick, low-effort adjustment of behavior
 
   - [[adaptive_expertise]] - Expertise that transfers to new problems
 
-    - [[flexible_strategies]] - Switching strategies to suit the situation
+    - flexible strategies - Switching strategies to suit the situation
 
     - [[situation_awareness]] - Understanding what is happening in the situation
 
@@ -284,19 +284,19 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
 ### Behavioral Methods
 
-- [[metacognitive_assessment]] - Ways of measuring metacognitive ability
+- metacognitive assessment - Ways of measuring metacognitive ability
 
-  - [[judgment_tasks]] - Tasks asking people to judge their performance
+  - judgment tasks - Tasks asking people to judge their performance
 
     - [[confidence_ratings]] - Rating how sure one is of an answer
 
-    - [[accuracy_estimates]] - Estimating how many answers were right
+    - accuracy estimates - Estimating how many answers were right
 
-  - [[monitoring_measures]] - Measures of self-monitoring
+  - monitoring measures - Measures of self-monitoring
 
     - [[error_detection]] - Measuring whether people notice errors
 
-    - [[strategy_reports]] - Self-reports of strategies used
+    - strategy reports - Self-reports of strategies used
 
 ### Neural Methods
 
@@ -308,7 +308,7 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
     - [[connectivity]] - How regions interact
 
-  - [[temporal]] - Measures of timing
+  - temporal - Measures of timing
 
     - [[erp]] - Electrical brain responses to events
 
@@ -316,17 +316,17 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
 ### Computational Models
 
-- [[metacognitive_models]] - Formal models of metacognition
+- metacognitive models - Formal models of metacognition
 
-  - [[monitoring_models]] - Models of self-monitoring
+  - monitoring models - Models of self-monitoring
 
-    - [[confidence_compute]] - Computing confidence from evidence
+    - confidence compute - Computing confidence from evidence
 
-    - [[error_compute]] - Computing the probability of an error
+    - error compute - Computing the probability of an error
 
   - control models - Models of control processes
 
-    - [[strategy_select]] - Computing which strategy to choose
+    - strategy select - Computing which strategy to choose
 
     - [[resource_allocate]] - Computing how to distribute effort
 
@@ -346,25 +346,25 @@ Metacognition refers to the ability to monitor, evaluate, and control one's own 
 
   - real time measures - Measures taken during the task
 
-    - [[online_monitoring]] - Tracking metacognition as it unfolds
+    - online monitoring - Tracking metacognition as it unfolds
 
-    - [[adaptive_assessment]] - Assessment that adjusts to the person
+    - adaptive assessment - Assessment that adjusts to the person
 
   - intervention design - Designing ways to improve metacognition
 
-    - [[personalized]] - Tailoring support to the individual
+    - personalized - Tailoring support to the individual
 
     - technology enhanced - Using technology to support metacognition
 
 ## References
 
-- [[flavell_metacognition]]
+- flavell metacognition
 
 - [[nelson_narens]]
 
-- [[dunlosky_metacomprehension]]
+- dunlosky metacomprehension
 
-- [[fleming_metacognition]]
+- fleming metacognition
 
 ## Related Concepts
 

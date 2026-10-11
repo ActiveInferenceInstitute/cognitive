@@ -18,6 +18,7 @@ semantic_relations:
       - "[[schema_integration]]"
 aliases:
   - elaborative_rehearsal
+  - elaborative_encoding
 ---
 
 # Elaboration

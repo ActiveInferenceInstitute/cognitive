@@ -16,6 +16,8 @@ semantic_relations:
       - "[[knowledge_base/mathematics/statistical_physics]]"
       - "[[knowledge_base/biology/biochemistry]]"
       - "[[knowledge_base/biology/neuroscience]]"
+aliases:
+  - biological_physics
 ---
 
 # Biophysics

@@ -63,7 +63,7 @@ where:
 
     - [[contextual_modulation]] - Context effects
 
-    - [[semantic_prediction]] - Meaning-based predictions
+    - semantic prediction - Meaning-based predictions
 
 ### Inference Mechanisms
 
@@ -79,15 +79,15 @@ where:
 
 ### Circuit Architecture
 
-- [[perceptual_circuits]] - Neural organization
+- perceptual circuits - Neural organization
 
-  - [[sensory_hierarchies]] - Processing levels
+  - sensory hierarchies - Processing levels
 
-    - [[primary_sensory_areas]] - Initial processing
+    - primary sensory areas - Initial processing
 
     - [[association_areas]] - Higher processing
 
-  - [[recurrent_connections]] - Feedback loops
+  - recurrent connections - Feedback loops
 
     - [[lateral_connections]] - Within-level
 
@@ -99,7 +99,7 @@ where:
 
   - [[population_coding]] - Neural representation
 
-  - [[probabilistic_coding]] - Uncertainty encoding
+  - probabilistic coding - Uncertainty encoding
 
   - [[temporal_integration]] - Time-based processing
 
@@ -121,7 +121,7 @@ where:
 
   - visual illusions - Visual effects
 
-  - [[auditory_illusions]] - Auditory effects
+  - auditory illusions - Auditory effects
 
   - [[multisensory_illusions]] - Cross-modal effects
 
@@ -143,7 +143,7 @@ where:
 
   - [[ambiguous_figures]] - Multiple interpretations
 
-  - [[perceptual_switching]] - Alternation dynamics
+  - perceptual switching - Alternation dynamics
 
 ## Applications
 
@@ -159,17 +159,17 @@ where:
 
 ### Artificial Intelligence
 
-- [[machine_perception]] - Computational systems
+- machine perception - Computational systems
 
   - [[computer_vision]] - Visual processing
 
   - [[speech_recognition]] - Auditory processing
 
-  - [[multimodal_learning]] - Cross-modal processing
+  - multimodal learning - Cross-modal processing
 
 ### Human-Computer Interaction
 
-- [[perceptual_interfaces]] - Interface design
+- perceptual interfaces - Interface design
 
   - [[augmented_reality]] - Enhanced perception
 
@@ -187,7 +187,7 @@ where:
 
   - [[signal_detection]] - Response analysis
 
-  - [[adaptation_paradigms]] - Plasticity testing
+  - adaptation paradigms - Plasticity testing
 
 ### Neural Recording
 
@@ -201,7 +201,7 @@ where:
 
 ### Computational Modeling
 
-- [[perceptual_models]] - Theoretical frameworks
+- perceptual models - Theoretical frameworks
 
   - [[bayesian_models]] - Probabilistic approaches
 
@@ -215,7 +215,7 @@ where:
 
 - [[binding_problem]] - Feature integration
 
-- [[consciousness_relation]] - Awareness link
+- consciousness relation - Awareness link
 
 - [[individual_differences]] - Personal variation
 
@@ -223,19 +223,19 @@ where:
 
 - [[brain_machine_interfaces]] - Neural interfaces
 
-- [[perceptual_enhancement]] - Improved perception
+- perceptual enhancement - Improved perception
 
 - therapeutic applications - Clinical use
 
 ## References
 
-- [[helmholtz_perception]]
+- helmholtz perception
 
 - [[friston_free_energy]]
 
 - knill pouget bayesian
 
-- [[rao_ballard_predictive]]
+- rao ballard predictive
 
 ## Related Concepts
 

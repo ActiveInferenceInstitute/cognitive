@@ -18,6 +18,8 @@ semantic_relations:
       - "[[expected_free_energy]]"
       - "[[action_distribution]]"
       - "[[exploration_exploitation]]"
+aliases:
+  - shannon_entropy
 ---
 
 

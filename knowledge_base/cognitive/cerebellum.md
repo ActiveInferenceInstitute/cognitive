@@ -17,6 +17,8 @@ semantic_relations:
       - "[[forward_models]]"
       - "[[skill_acquisition]]"
       - "[[sensorimotor_coordination]]"
+aliases:
+  - cerebellar
 ---
 
 # Cerebellum

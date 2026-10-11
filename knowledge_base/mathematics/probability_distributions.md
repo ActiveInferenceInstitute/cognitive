@@ -9,6 +9,7 @@ tags:
 - mathematics
 aliases:
   - categorical_distribution
+  - probability_distribution
 semantic_relations:
   - type: relates_to
     links:

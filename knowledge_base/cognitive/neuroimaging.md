@@ -15,6 +15,8 @@ semantic_relations:
       - "[[cognitive_neuroscience]]"
       - "[[computational_neuroscience]]"
       - "[[neural_synchrony]]"
+aliases:
+  - brain_imaging
 ---
 
 # Neuroimaging

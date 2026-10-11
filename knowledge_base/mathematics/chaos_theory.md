@@ -16,6 +16,8 @@ semantic_relations:
       - "[[attractor_dynamics]]"
       - "[[complex_systems]]"
       - "[[phase_transitions]]"
+aliases:
+  - chaos
 ---
 
 # Chaos Theory

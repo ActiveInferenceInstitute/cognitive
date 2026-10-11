@@ -16,6 +16,8 @@ semantic_relations:
       - "[[dopamine_system]]"
       - "[[decision_making]]"
       - "[[value_learning]]"
+aliases:
+  - nucleus_accumbens
 ---
 
 # Ventral Striatum

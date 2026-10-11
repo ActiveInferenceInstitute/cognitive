@@ -24,7 +24,6 @@ semantic_relations:
     links:
       - "[[gene_regulatory_networks]]"
       - "[[morphogenetic_fields]]"
-      - "[[cell_fate_dynamics]]"
       - "[[knowledge_base/agents/architectures_overview]]"
   - type: relates
     links:
@@ -567,7 +566,7 @@ class CellFateAnalyzer:
 
 - [[friston_2019]] - "A Free Energy Principle for a Particular Physics"
 
-- [[newman_2020]] - "Dynamical Patterning Modules"
+- newman 2020 - "Dynamical Patterning Modules"
 
 ## See Also
 

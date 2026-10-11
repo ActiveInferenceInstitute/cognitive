@@ -24,7 +24,6 @@ semantic_relations:
   - type: foundational_for
     links:
       - "[[knowledge_base/biology/morphogenesis]]"
-      - "[[pattern regulation]]"
   - type: extends
     links:
       - "[[friston_2013]]"

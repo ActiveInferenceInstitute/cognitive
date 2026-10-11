@@ -16,6 +16,8 @@ semantic_relations:
       - "[[social_insect_cognition]]"
       - "[[distributed_control]]"
       - "[[multi_agent_active_inference]]"
+aliases:
+  - robotic_swarms
 ---
 
 # Swarm Robotics

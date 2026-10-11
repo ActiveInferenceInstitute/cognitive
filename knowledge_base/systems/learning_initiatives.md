@@ -17,9 +17,6 @@ semantic_relations:
   - type: prerequisite_for
     links:
       - "[[docs/guides/learning_paths/active_inference_educational_programs_path|Active Inference in Educational Programs]]"
-  - type: builds_on
-    links:
-      - "[[Innovation]]"
 ---
 
 

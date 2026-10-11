@@ -11,6 +11,7 @@ tags:
 aliases:
   - flexibility
   - behavioral_flexibility
+  - mental_flexibility
 semantic_relations:
   - type: relates
     links:

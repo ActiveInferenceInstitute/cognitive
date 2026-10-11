@@ -16,6 +16,8 @@ semantic_relations:
       - "[[reasoning_problem_solving]]"
       - "[[cognitive_phenomena]]"
       - "[[bayesian_inference]]"
+aliases:
+  - heuristic
 ---
 
 # Heuristics

@@ -18,6 +18,9 @@ semantic_relations:
 aliases:
   - expression_recognition
   - facial_expression
+  - affect_recognition
+  - emotion_detection
+  - emotion_perception
 ---
 
 # Emotion Recognition

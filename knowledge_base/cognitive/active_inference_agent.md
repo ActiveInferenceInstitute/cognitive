@@ -24,6 +24,9 @@ semantic_relations:
       - "[[knowledge_base/active_inference_implementation]]"
       - "[[knowledge_base/agents/GenericPOMDP/README]]"
       - "[[knowledge_base/agents/Continuous_Time/README]]"
+aliases:
+  - active inference agents
+  - active_inference_agents
 ---
 
 # Implementing Active Inference Agents

@@ -15,6 +15,8 @@ semantic_relations:
       - "[[knowledge_base/research/superintelligence]]"
       - "[[knowledge_base/free_energy_principle/applications/ai_safety]]"
       - "[[knowledge_base/cognitive/hierarchical_models]]"
+aliases:
+  - artificial_general_intelligence
 ---
 
 # AGI Development

@@ -79,11 +79,11 @@ ylabel: "Observations"
 
 ## Update Rules
 
-- [[gradient_A]] - Gradient updates for learning
+- gradient A - Gradient updates for learning
 
-- [[dirichlet_A]] - Dirichlet prior updates
+- dirichlet A - Dirichlet prior updates
 
-- [[empirical_A]] - Learning from data
+- empirical A - Learning from data
 
 ## Properties
 
@@ -93,7 +93,7 @@ ylabel: "Observations"
 
 - Sparse for efficient perception
 
-- [[precision_A]] defines confidence
+- precision A defines confidence
 
 ## Integration
 
@@ -127,9 +127,9 @@ A = [
 
 - [[s_space]] - State space definition
 
-- [[precision_parameters]] - Precision hyperparameters
+- precision parameters - Precision hyperparameters
 
-- [[likelihood_learning]] - Learning algorithms
+- likelihood learning - Learning algorithms
 
 ## References
 

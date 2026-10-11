@@ -16,6 +16,8 @@ semantic_relations:
       - "[[attention_networks]]"
       - "[[inferior_parietal]]"
       - "[[perspective_taking]]"
+aliases:
+  - temporal_parietal
 ---
 
 # Temporoparietal Junction

@@ -15,6 +15,8 @@ semantic_relations:
       - "[[neural_computation]]"
       - "[[predictive_coding]]"
       - "[[lateral_connections]]"
+aliases:
+  - microcircuits
 ---
 
 # Local Circuits

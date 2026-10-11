@@ -16,6 +16,8 @@ semantic_relations:
       - "[[knowledge_base/cognitive/predictive_coding]]"
       - "[[knowledge_base/cognitive/variational_free_energy]]"
       - "[[knowledge_base/free_energy_principle/implementations/neural_networks]]"
+aliases:
+  - deep_neural_networks
 ---
 
 # Deep Learning

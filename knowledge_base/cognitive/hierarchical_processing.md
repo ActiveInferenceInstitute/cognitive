@@ -35,7 +35,7 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
 - processing levels - Layered architecture
 
-  - [[primary_processing]] - Basic feature extraction
+  - primary processing - Basic feature extraction
 
   - intermediate processing - Feature combination
 
@@ -49,7 +49,7 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
   - [[information_integration]] - Data combination
 
-  - [[abstraction_formation]] - Concept creation
+  - abstraction formation - Concept creation
 
 ### Feedback Mechanisms
 
@@ -57,7 +57,7 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
   - [[contextual_modulation]] - Context effects
 
-  - [[expectation_generation]] - Prediction creation
+  - expectation generation - Prediction creation
 
   - [[attention_control]] - Resource allocation
 
@@ -71,7 +71,7 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
   - [[association_areas]] - Integration
 
-  - [[higher_order_areas]] - Abstract processing
+  - higher order areas - Abstract processing
 
 ### Circuit Mechanisms
 
@@ -81,15 +81,15 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
   - [[canonical_circuits]] - Repeated motifs
 
-  - [[large_scale_networks]] - Brain networks
+  - large scale networks - Brain networks
 
 ### Connectivity Patterns
 
 - [[neural_connectivity]] - Connection types
 
-  - [[forward_connections]] - Ascending pathways
+  - forward connections - Ascending pathways
 
-  - [[backward_connections]] - Descending pathways
+  - backward connections - Descending pathways
 
   - [[lateral_connections]] - Within-level links
 
@@ -99,21 +99,21 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
 - [[information_processing]] - Data handling
 
-  - [[entropy_reduction]] - Uncertainty decrease
+  - entropy reduction - Uncertainty decrease
 
-  - [[information_compression]] - Efficient coding
+  - information compression - Efficient coding
 
   - feature selection - Relevant extraction
 
 ### Representation Learning
 
-- [[hierarchical_representations]] - Level encoding
+- hierarchical representations - Level encoding
 
-  - [[feature_hierarchies]] - Pattern structure
+  - feature hierarchies - Pattern structure
 
   - [[abstraction_levels]] - Concept layers
 
-  - [[semantic_hierarchies]] - Meaning structure
+  - semantic hierarchies - Meaning structure
 
 ### Processing Dynamics
 
@@ -135,7 +135,7 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
   - [[auditory_processing]] - Sound hierarchy
 
-  - [[somatosensory_processing]] - Touch hierarchy
+  - somatosensory processing - Touch hierarchy
 
 ### Learning Systems
 
@@ -151,7 +151,7 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
 - [[motor_control]] - Movement generation
 
-  - [[action_hierarchies]] - Movement organization
+  - action hierarchies - Movement organization
 
   - [[skill_learning]] - Ability acquisition
 
@@ -187,7 +187,7 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
   - [[semantic_networks]] - Concept-based
 
-  - [[schema_models]] - Knowledge structure
+  - schema models - Knowledge structure
 
 ## Research Directions
 
@@ -197,37 +197,37 @@ Hierarchical Processing is a fundamental organizational principle in neural and 
 
 - [[information_bottleneck]] - Compression retaining task-relevant information
 
-- [[integration_problem]] - Combining information across hierarchy levels
+- integration problem - Combining information across hierarchy levels
 
 ### Emerging Applications
 
 - [[artificial_intelligence]] - Machine-based intelligent behavior
 
-  - [[hierarchical_ai]] - Level-based AI
+  - hierarchical ai - Level-based AI
 
-  - [[cognitive_computing]] - Brain-inspired
+  - cognitive computing - Brain-inspired
 
   - [[neuromorphic_computing]] - Brain-inspired computing hardware
 
 ### Future Developments
 
-- [[adaptive_hierarchies]] - Dynamic structure
+- adaptive hierarchies - Dynamic structure
 
-  - [[flexible_processing]] - Adaptable systems
+  - flexible processing - Adaptable systems
 
   - [[meta_learning]] - Learning to learn
 
-  - [[autonomous_organization]] - Self-structuring
+  - autonomous organization - Self-structuring
 
 ## References
 
-- [[felleman_van_essen]]
+- felleman van essen
 
-- [[hinton_deep_learning]]
+- hinton deep learning
 
-- [[friston_hierarchical_models]]
+- friston hierarchical models
 
-- [[hawkins_intelligence]]
+- hawkins intelligence
 
 ## Related Concepts
 

@@ -402,11 +402,11 @@ class AdaptiveAgent:
 
 Want to learn more? Check out:
 
-- [[action_combination]] - Combining actions creatively
+- action combination - Combining actions creatively
 
 - movement control - Making smooth movements
 
-- [[game_mechanics]] - Designing fun actions
+- game mechanics - Designing fun actions
 
 - [[robot_control]] - Programming robot actions
 

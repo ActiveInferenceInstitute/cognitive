@@ -25,7 +25,9 @@ semantic_relations:
     links:
       - "[[ant_colonies]]"
       - "[[termite_mounds]]"
-      - "[[human_trail_systems]]"
+aliases:
+  - stigmergy
+  - trace_based_communication
 ---
 
 

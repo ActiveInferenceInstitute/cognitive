@@ -15,6 +15,9 @@ semantic_relations:
       - "[[reasoning_problem_solving]]"
       - "[[bayesian_inference]]"
       - "[[structure_learning]]"
+aliases:
+  - induction
+  - inductive_inference
 ---
 
 # Inductive Reasoning

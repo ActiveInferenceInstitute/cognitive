@@ -491,7 +491,7 @@ Texture perception is the visual system's ability to process and interpret surfa
 
 - [[computational_vision]]
 
-- [[material_science]]
+- material science
 
 - [[cognitive_neuroscience]]
 

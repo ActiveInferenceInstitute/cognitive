@@ -117,13 +117,13 @@ semantic_relations:
 
 - Dependent Concept 1
 
-- [[concept4|Dependent Concept 2]]
+- Dependent Concept 2
 
 ### Extensions
 
-- [[concept5|Extension 1]]
+- Extension 1
 
-- [[concept6|Extension 2]]
+- Extension 2
 
 ## References
 
@@ -145,8 +145,8 @@ semantic_relations:
 
 ## See Also
 
-- [[related_concept1|Related Concept 1]]
+- Related Concept 1
 
-- [[related_concept2|Related Concept 2]]
+- Related Concept 2
 
-- [[related_concept3|Related Concept 3]]
+- Related Concept 3

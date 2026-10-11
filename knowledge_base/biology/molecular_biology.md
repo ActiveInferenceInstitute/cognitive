@@ -23,7 +23,6 @@ semantic_relations:
     links:
       - "[[gene_expression]]"
       - "[[protein_structure]]"
-      - "[[molecular_networks]]"
   - type: relates
     links:
       - "[[population_genetics]]"
@@ -558,9 +557,9 @@ class MolecularNetworkAnalyzer:
 
 - phillips 2012 - "Physical Biology of the Cell"
 
-- [[alon_2006]] - "An Introduction to Systems Biology"
+- alon 2006 - "An Introduction to Systems Biology"
 
-- [[karplus_2002]] - "Molecular Dynamics Simulations"
+- karplus 2002 - "Molecular Dynamics Simulations"
 
 ## See Also
 

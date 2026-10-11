@@ -20,6 +20,8 @@ semantic_relations:
       - "[[pattern_recognition]]"
       - "[[object_recognition]]"
       - "[[visual_attention]]"
+aliases:
+  - color_vision
 ---
 
 
@@ -435,13 +437,13 @@ Color processing is the neural and cognitive mechanism by which the visual syste
 
 - [[perceptual_constancy]]
 
-- [[visual_memory]]
+- visual memory
 
 ## References
 
 - [[visual_neuroscience]]
 
-- [[color_science]]
+- color science
 
 - [[perceptual_psychology]]
 

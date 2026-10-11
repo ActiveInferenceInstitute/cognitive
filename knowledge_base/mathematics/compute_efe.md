@@ -274,7 +274,7 @@ def plot_efe_components(model, action: int):
 
 - [[efe_components]]: Epistemic vs Pragmatic
 
-- [[efe_landscape]]: EFE surface over beliefs
+- efe landscape: EFE surface over beliefs
 
 - [[policy_evaluation]]: EFE for each action
 

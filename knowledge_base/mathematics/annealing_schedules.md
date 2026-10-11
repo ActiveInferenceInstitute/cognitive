@@ -2,6 +2,9 @@
 title: "Annealing Schedules"
 type: "mathematical_concept"
 status: stable
+aliases:
+  - annealing_schedule
+  - temperature_annealing
 ---
 
 # Annealing Schedules

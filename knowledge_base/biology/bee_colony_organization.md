@@ -12,7 +12,7 @@ tags:
   - reproductive_division
   - task_specialization
   - collective_behavior
-aliases: [bee-social-structure, bee-colony-dynamics, bee-reproductive-organization]
+aliases: [bee-social-structure, bee-colony-dynamics, bee-reproductive-organization, bee_colonies]
 complexity: advanced
 processing_priority: 1
 semantic_relations:

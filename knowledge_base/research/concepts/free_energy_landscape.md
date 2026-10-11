@@ -2,6 +2,8 @@
 title: "Free Energy Landscape"
 type: "concept"
 status: stable
+aliases:
+  - vfe_landscape
 ---
 
 # Free Energy Landscape

@@ -619,13 +619,13 @@ class GlobalConservationNetworks:
 ### Conservation Biology Foundations
 - [[conservation_biology]] - General conservation principles
 - [[biodiversity_assessment]] - Biodiversity evaluation methods
-- [[threatened_species]] - Species protection strategies
+- threatened species - Species protection strategies
 - [[habitat_restoration]] - Ecosystem restoration techniques
 
 ### Threat-Specific References
 - [[invasive_species]] - Biological invasion ecology
 - [[climate_change_ecology]] - Climate change impacts
-- [[pesticide_ecology]] - Chemical pollution effects
+- pesticide ecology - Chemical pollution effects
 - [[habitat_fragmentation]] - Landscape ecology principles
 
 ### Policy and Implementation

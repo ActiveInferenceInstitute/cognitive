@@ -73,7 +73,7 @@ P(X,Y|Z) = P(X|Z)P(Y|Z)
 
 ```
 
-### 3. [[information_theoretic|Information Theoretic]] Perspective
+### 3. Information Theoretic Perspective
 
 ```math
 
@@ -93,7 +93,7 @@ X \perp Y | Z \iff Y \perp X | Z
 
 ```
 
-### 2. [[decomposition|Decomposition]]
+### 2. Decomposition
 
 ```math
 

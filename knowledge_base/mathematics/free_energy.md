@@ -422,13 +422,13 @@ class FreeEnergyGradients:
 
 ### 3. Stochastic Methods
 
-- [[monte_carlo_free_energy]]
+- monte carlo free energy
 
   - Importance sampling
 
   - MCMC methods
 
-- [[path_integral_methods]]
+- path integral methods
 
   - Trajectory sampling
 
@@ -496,13 +496,13 @@ class FreeEnergyGradients:
 
 ### 2. Computational Methods
 
-- [[neural_free_energy]]
+- neural free energy
 
   - Deep architectures
 
   - End-to-end learning
 
-- [[symbolic_free_energy]]
+- symbolic free energy
 
   - Logical inference
 
@@ -2154,17 +2154,17 @@ class StochasticFreeEnergyAnalysis:
 
 - wainwright 2008 - "Graphical Models, Exponential Families, and Variational Inference"
 
-- [[amari_2016]] - "Information Geometry and Its Applications"
+- amari 2016 - "Information Geometry and Its Applications"
 
 - parr 2020 - "Markov blankets, information geometry and stochastic thermodynamics"
 
-- [[rockafellar_1970]] - "Convex Analysis"
+- rockafellar 1970 - "Convex Analysis"
 
-- [[evans_2010]] - "Partial Differential Equations"
+- evans 2010 - "Partial Differential Equations"
 
-- [[oksendal_2003]] - "Stochastic Differential Equations"
+- oksendal 2003 - "Stochastic Differential Equations"
 
-- [[ambrosio_2008]] - "Gradient Flows in Metric Spaces"
+- ambrosio 2008 - "Gradient Flows in Metric Spaces"
 
 ## See Also
 

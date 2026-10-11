@@ -276,7 +276,7 @@ def plot_vfe_components_detailed(
 
 - Color: Time progression
 
-- Links to [[learning_trajectory]]
+- Links to learning trajectory
 
 ### 5. Running Averages
 
@@ -316,7 +316,7 @@ def plot_vfe_components_detailed(
 
 - Convergence rate
 
-- Links to [[performance_analysis]]
+- Links to performance analysis
 
 ## Related Visualizations
 

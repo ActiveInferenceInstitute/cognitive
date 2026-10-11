@@ -17,6 +17,8 @@ semantic_relations:
       - "[[reasoning_problem_solving]]"
       - "[[working_memory]]"
       - "[[abductive_reasoning]]"
+aliases:
+  - analogy
 ---
 
 # Analogical Reasoning

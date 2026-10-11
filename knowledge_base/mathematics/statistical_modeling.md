@@ -15,6 +15,8 @@ semantic_relations:
       - "[[knowledge_base/mathematics/probabilistic_models]]"
       - "[[knowledge_base/mathematics/generative_models]]"
       - "[[knowledge_base/research/concepts/model_comparison]]"
+aliases:
+  - statistical_models
 ---
 
 # Statistical Modeling

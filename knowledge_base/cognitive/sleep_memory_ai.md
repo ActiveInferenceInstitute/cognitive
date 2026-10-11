@@ -675,7 +675,7 @@ class SleepDisorderModeling:
 
 ### Active Inference Integration
 - [[active_inference]] - Core framework
-- [[offline_learning]] - Learning without new input
+- offline learning - Learning without new input
 - [[precision_weighting]] - Precision changes during sleep
 
 ### Memory Systems

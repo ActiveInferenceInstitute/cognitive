@@ -14,9 +14,6 @@ semantic_relations:
   - type: implements
     links:
       - "[[visual_perception]]"
-  - type: extends
-    links:
-      - "[[cognitive_processing]]"
   - type: related
     links:
       - "[[object_recognition]]"

@@ -18,6 +18,8 @@ semantic_relations:
       - "[[active_inference_for_control]]"
       - "[[knowledge_base/mathematics/control_theory]]"
       - "[[adaptation_strategies]]"
+aliases:
+  - homeostatic_control
 ---
 
 # Homeostatic Control Theory

@@ -484,7 +484,7 @@ Explicit memory represents the conscious, intentional recollection of previous e
 
 - [[semantic_memory]]
 
-- [[memory_control]]
+- memory control
 
 ## References
 
@@ -496,5 +496,5 @@ Explicit memory represents the conscious, intentional recollection of previous e
 
 - [[clinical_psychology]]
 
-- [[computational_memory]]
+- computational memory
 

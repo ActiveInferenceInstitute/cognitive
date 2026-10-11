@@ -13,6 +13,8 @@ semantic_relations:
       - "[[softmax_function]]"
       - "[[kl_divergence]]"
       - "[[entropy]]"
+aliases:
+  - numerical_analysis
 ---
 
 

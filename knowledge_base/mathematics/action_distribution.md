@@ -95,7 +95,7 @@ Links to:
 
    - [[measure_theory]]
 
-   - [[normalization_constraints]]
+   - normalization constraints
 
 1. **Entropy**
 
@@ -175,9 +175,9 @@ Links to:
 
 - [[policy_selection]]
 
-- [[action_sampling]]
+- action sampling
 
-- [[stochastic_choice]]
+- stochastic choice
 
 ## Temporal Aspects
 
@@ -205,9 +205,9 @@ Links to:
 
 - [[sequential_decision_making]]
 
-- [[policy_composition]]
+- policy composition
 
-- [[temporal_planning]]
+- temporal planning
 
 ## Optimization
 
@@ -279,7 +279,7 @@ Links to:
 
 ### Analysis
 
-- [[behavioral_analysis]]
+- behavioral analysis
 
 - [[decision_theory]]
 

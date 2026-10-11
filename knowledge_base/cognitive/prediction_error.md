@@ -35,21 +35,21 @@ Prediction Error represents the discrepancy between predicted and actual outcome
 
 - sensory prediction errors - Discrepancies in sensory input
 
-  - [[visual_prediction_errors]] - Visual domain mismatches
+  - visual prediction errors - Visual domain mismatches
 
-  - [[auditory_prediction_errors]] - Auditory domain mismatches
+  - auditory prediction errors - Auditory domain mismatches
 
-  - [[tactile_prediction_errors]] - Tactile domain mismatches
+  - tactile prediction errors - Tactile domain mismatches
 
 ### Higher-Order Prediction Errors
 
-- [[cognitive_prediction_errors]] - Abstract feature mismatches
+- cognitive prediction errors - Abstract feature mismatches
 
-  - [[semantic_prediction_errors]] - Meaning-level discrepancies
+  - semantic prediction errors - Meaning-level discrepancies
 
-  - [[contextual_prediction_errors]] - Context-level mismatches
+  - contextual prediction errors - Context-level mismatches
 
-  - [[temporal_prediction_errors]] - Timing-related differences
+  - temporal prediction errors - Timing-related differences
 
 ### Reward Prediction Errors
 
@@ -57,9 +57,9 @@ Prediction Error represents the discrepancy between predicted and actual outcome
 
   - [[temporal_difference_errors]] - Time-based reward differences
 
-  - [[expected_value_errors]] - Value expectation mismatches
+  - expected value errors - Value expectation mismatches
 
-  - [[uncertainty_prediction_errors]] - Precision-related errors
+  - uncertainty prediction errors - Precision-related errors
 
 ## Neural Implementation
 
@@ -77,9 +77,9 @@ Prediction Error represents the discrepancy between predicted and actual outcome
 
 - [[error_propagation]] - Error signal transmission
 
-  - [[feedforward_signals]] - Bottom-up error flow
+  - feedforward signals - Bottom-up error flow
 
-  - [[feedback_signals]] - Top-down prediction flow
+  - feedback signals - Top-down prediction flow
 
   - [[lateral_interactions]] - Within-level processing
 
@@ -89,9 +89,9 @@ Prediction Error represents the discrepancy between predicted and actual outcome
 
   - [[attention_mechanisms]] - Selective error amplification
 
-  - [[learning_rate_modulation]] - Plasticity control
+  - learning rate modulation - Plasticity control
 
-  - [[uncertainty_encoding]] - Confidence representation
+  - uncertainty encoding - Confidence representation
 
 ## Computational Mechanisms
 
@@ -115,7 +115,7 @@ where:
 
 - [[gradient_descent]] - Optimization process
 
-  - [[error_backpropagation]] - Error-driven learning
+  - error backpropagation - Error-driven learning
 
   - [[predictive_coding]] - Hierarchical error processing
 
@@ -181,15 +181,15 @@ where:
 
   - [[deep_learning]] - Learning with multi-layer neural networks
 
-  - [[predictive_coding_networks]] - Error-based architectures
+  - predictive coding networks - Error-based architectures
 
   - [[active_inference_agents]] - Agents that minimize expected free energy
 
 ### Cognitive Enhancement
 
-- [[brain_training]] - Training aimed at improving cognitive function
+- brain training - Training aimed at improving cognitive function
 
-  - [[error_awareness]] - Error detection skills
+  - error awareness - Error detection skills
 
   - learning optimization - Tuning conditions to improve learning
 
@@ -199,7 +199,7 @@ where:
 
 ### Current Challenges
 
-- [[measurement_methods]] - Error signal detection
+- measurement methods - Error signal detection
 
 - [[temporal_dynamics]] - Time-course understanding
 
@@ -209,17 +209,17 @@ where:
 
 - [[neuroprosthetics]] - Neural interfaces
 
-- [[educational_applications]] - Learning enhancement
+- educational applications - Learning enhancement
 
-- [[clinical_interventions]] - Therapeutic use
+- clinical interventions - Therapeutic use
 
 ## References
 
-- [[predictive_coding_review]]
+- predictive coding review
 
-- [[error_processing_neuroscience]]
+- error processing neuroscience
 
-- [[learning_theory_applications]]
+- learning theory applications
 
-- [[clinical_error_processing]]
+- clinical error processing
 

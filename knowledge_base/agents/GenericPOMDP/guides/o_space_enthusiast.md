@@ -434,13 +434,13 @@ class AdaptiveObserver:
 
 Want to dive deeper? Check out:
 
-- [[sensor_fusion_basics]] - Combining different observations
+- sensor fusion basics - Combining different observations
 
 - noise filtering - Cleaning up sensor data
 
-- [[perception_systems]] - How robots perceive the world
+- perception systems - How robots perceive the world
 
-- [[game_observation_tutorial]] - Implementing fog of war
+- game observation tutorial - Implementing fog of war
 
 Remember: O-Space is like your senses - it's how you experience and understand the world around you. The better you understand it, the better you can work with it!
 

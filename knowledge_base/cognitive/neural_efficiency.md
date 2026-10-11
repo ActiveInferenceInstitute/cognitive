@@ -496,7 +496,7 @@ Neural efficiency represents the optimization of computational resources in neur
 
 - [[neural_networks]]
 
-- [[efficiency_theory]]
+- efficiency theory
 
 - [[performance_optimization]]
 

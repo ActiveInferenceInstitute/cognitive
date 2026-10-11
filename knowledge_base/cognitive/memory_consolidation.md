@@ -10,6 +10,7 @@ tags:
 - plasticity
 aliases:
   - consolidation
+  - consolidation_processes
 semantic_relations:
   - type: implements
     links:
@@ -492,7 +493,7 @@ Memory consolidation represents the processes by which initially labile memories
 
 - [[neuroscience]]
 
-- [[sleep_science]]
+- sleep science
 
 - [[computational_neuroscience]]
 
