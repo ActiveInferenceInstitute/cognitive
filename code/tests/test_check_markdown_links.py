@@ -82,18 +82,6 @@ def test_code_fences_and_latex_are_not_scanned(tmp_path):
     assert report.broken_links == []
 
 
-def test_vendored_rxinfer_docs_subtree_is_skipped(tmp_path):
-    vendored = tmp_path / "docs" / "implementation" / "rxinfer" / "docs"
-    write_markdown(vendored / "index.md", "[ref](@ref some-page) [id](@id anchor)")
-    write_markdown(tmp_path / "docs" / "README.md", "# Docs")
-
-    report = verify_markdown_link_report(tmp_path)
-
-    assert report.indexed_markdown_files == 1
-    assert report.checked_links == 0
-    assert report.broken_links == []
-
-
 def test_manuscript_figure_references_are_allowed(tmp_path):
     write_markdown(
         tmp_path / "docs" / "manuscript" / "03_results.md",

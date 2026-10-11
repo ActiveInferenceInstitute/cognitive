@@ -31,8 +31,8 @@ and holds notes on the external Julia library RxInfer.
 
 `rxinfer/` describes RxInfer.jl, a Julia library for reactive message-passing
 inference. It is an external project: the Python package does not call it. The
-folder holds local explanatory notes and a copy of the RxInfer documentation tree
-(`rxinfer/docs/`), which is read-only. See [[rxinfer/README]].
+folder holds local explanatory notes that link to the official documentation. See
+[[rxinfer/README]].
 
 ## Sources of truth
 

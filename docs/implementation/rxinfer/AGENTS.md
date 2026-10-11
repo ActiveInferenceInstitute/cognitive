@@ -25,13 +25,13 @@ This subtree describes RxInfer.jl, an external Julia library. It is not used by 
 
 ## Structure
 
-- The top-level `rxinfer/*.md` pages are local summaries of the official documentation.
-- The `docs/` subfolder is a copy of the RxInfer documentation source (`make.jl`, `Project.toml`, `src/`). Treat it as a read-only third-party snapshot; change it only when refreshing the copy.
+- The `rxinfer/*.md` pages are local summaries of the official documentation.
+- The folder does not hold a copy of the RxInfer documentation source: it goes out of date with each release (RxInfer.jl is at 5.x), so the pages link to <https://docs.rxinfer.com/stable/>.
 
 ## Rules
 
 - Every local page begins with a note that it describes an external project and links to <https://docs.rxinfer.com/stable/>.
-- State only what the official documentation or the vendored copy supports. Do not invent API names, keyword arguments, or internals.
+- State only what the official documentation supports. Do not invent API names, keyword arguments, or internals.
 - Do not present Python classes for RxInfer components; there are none.
 - Julia snippets are not run here; take them from the official documentation.
 - Use only URLs that resolve; the verified ones are listed in each page's "Official documentation" section.

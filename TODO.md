@@ -28,15 +28,6 @@ history; this file is not a log. Remove an item when it is done.
   The framing notes and the authoring rules in `knowledge_base/AGENTS.md` say so;
   consider replacing the largest examples with runs of the real package.
 
-## Documentation
-
-- `docs/implementation/rxinfer/docs/` (about 50 files) is a vendored snapshot of the
-  official RxInfer documentation. It has not been audited, and some pages are out of
-  date against the live site.
-- `code/Things/ActiveInferenceInstitute/active_inference_institute.md` lost a dated
-  2020-2029 history and roadmap because nothing in the repository supports it. Restore
-  it from sources if it is wanted.
-
 ## Code
 
 - **Aggregation default.** Decide whether `policy_aggregation` should default to

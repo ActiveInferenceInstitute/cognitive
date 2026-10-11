@@ -46,8 +46,7 @@ python code/scripts/check_markdown_links.py . --json
 It checks `[text](target)` and `![alt](target)` links. File targets must exist
 relative to the page or the repository root; `#anchor` fragments are matched
 against heading slugs and reported as warnings. External URLs are not fetched.
-It skips the vendored RxInfer snapshot (`docs/implementation/rxinfer/docs/`) and
-the manuscript's generated `figures/` references. The report has
+It skips the manuscript's generated `figures/` references. The report has
 `checked_links`, `broken_links`, `anchor_warnings`, and `indexed_markdown_files`,
 and the exit status is 1 when a link is broken.
 

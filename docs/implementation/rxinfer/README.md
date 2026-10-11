@@ -31,9 +31,11 @@ RxInfer is a Julia package for Bayesian inference on factor graphs by reactive m
 - Ecosystem and workflow: [[rxinfer_stack]], [[systems_engineering_guidebook]].
 - Reduced to pointers (candidates for merging): [[ast_processing]], [[compiler_pipeline]], [[advanced_systems_engineering_guidebook]].
 
-## Vendored documentation
+## Official documentation
 
-`docs/` is a copy of the RxInfer documentation source (a Documenter.jl site) and is read-only. It is a snapshot and can lag the live site; for example, the live site has a v4 to v5 migration page and a different page layout. Use the live site for current behaviour.
+These pages summarise the RxInfer.jl documentation and do not copy it. The current site is
+<https://docs.rxinfer.com/stable/>; it changes with each release, so check it for current
+behaviour and API names.
 
 ## Python runtime
 

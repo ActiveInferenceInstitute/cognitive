@@ -10,9 +10,6 @@ Rules
   root.
 - ``#anchor`` fragments are validated against GitHub-flavored heading slugs of
   the target file (reported as warnings: slug rules are renderer-dependent).
-- The vendored RxInfer documentation tree
-  (``docs/implementation/rxinfer/docs/``) is a Documenter.jl snapshot and is
-  skipped; its ``@ref``/``@id`` directives are not Markdown links.
 - Figure references under ``docs/manuscript/`` (``figures/*``) are generated
   by ``code/scripts/build_manuscript.py`` at build time and are skipped.
 
@@ -54,8 +51,6 @@ IGNORED_DIRECTORIES = {
     "venv",
 }
 
-# Documenter.jl snapshot: not scanned for standard Markdown links.
-VENDORED_DOCS = ("docs", "implementation", "rxinfer", "docs")
 # Manuscript figure references are produced by the build script.
 MANUSCRIPT_DIR = Path("docs") / "manuscript"
 
@@ -75,9 +70,6 @@ def _iter_markdown_files(root_dir: Path):
     for dirpath, dirnames, filenames in os.walk(root_dir):
         dirnames[:] = [name for name in dirnames if name not in IGNORED_DIRECTORIES]
         current_dir = Path(dirpath)
-        if tuple(current_dir.relative_to(root_dir).parts) == VENDORED_DOCS:
-            dirnames[:] = []
-            continue
         for filename in filenames:
             if filename.lower().endswith(".md"):
                 yield current_dir / filename

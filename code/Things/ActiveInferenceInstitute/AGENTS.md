@@ -18,7 +18,8 @@ semantic_relations:
 
 # Active Inference Institute Thing Documentation
 
-This folder holds a short description of the Active Inference Institute. It
+This folder holds a sourced summary of the Active Inference Institute, drawn from its
+public website. It
 contains `README.md`, `AGENTS.md`, and `active_inference_institute.md`; it has no
 code and defines no agent.
 

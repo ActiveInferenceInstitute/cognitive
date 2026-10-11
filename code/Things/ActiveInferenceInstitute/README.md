@@ -18,7 +18,7 @@ semantic_relations:
 
 This folder holds documentation only: `README.md`, `AGENTS.md`, and
 [[code/Things/ActiveInferenceInstitute/active_inference_institute|active_inference_institute.md]],
-a short description of the Institute. It has no code, tutorials, examples,
+a summary of the Institute's history, governance, programs and licensing, taken from its public website. It has no code, tutorials, examples,
 templates, benchmarks, tools, or tests. Earlier descriptions of an
 `educational/`, `research/`, and `community/` tree, of tutorial sequences,
 benchmark datasets, forums, and certification paths did not match any file in
@@ -34,4 +34,4 @@ the repository and have been removed.
   [[code/Things/Generic_POMDP/README|Generic POMDP]].
 
 For the Institute's programs and livestreams, use the Institute website,
-https://www.activeinference.institute/.
+https://activeinference.institute/.

@@ -37,6 +37,6 @@ and holds notes on the external Julia library RxInfer.
 - Do not present architecture sketches as available classes; mark proposals with
   `status: proposal`.
 - Python snippets that use the package must run with the project's interpreter.
-- Keep the `rxinfer/docs/` copy unchanged; record local notes in the top-level
-  `rxinfer/*.md` pages, and say on each that it describes an external project.
+- Record local notes in the `rxinfer/*.md` pages, and say on each that it describes an
+  external project. Link to the official documentation instead of copying it.
 - Update `docs/implementation/README.md` when the pages here change.

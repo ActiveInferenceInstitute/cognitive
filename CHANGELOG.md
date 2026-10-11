@@ -216,6 +216,10 @@ produced a wrong or arbitrary result now raise `ValueError`.
   names remain without a page: each is a specific, well-defined concept (mostly advanced
   mathematics, physics and regional philosophical traditions) kept as a marker for a
   page worth writing.
+- `code/Things/ActiveInferenceInstitute/active_inference_institute.md` is a sourced summary of
+  the Institute's history, governance, programs, activities and licensing, taken from the
+  Institute's public website repository (content through August 2026), with links to the
+  authoritative pages.
 - `knowledge_base/mathematics/expected_free_energy.md` states the canonical
   decomposition the package uses. It previously equated epistemic value plus risk
   with ambiguity plus risk.
@@ -242,6 +246,10 @@ produced a wrong or arbitrary result now raise `ValueError`.
 
 ### Removed
 
+- The vendored RxInfer documentation snapshot (`docs/implementation/rxinfer/docs/`, 56
+  files from early 2025). Upstream is at 5.x, so the copy lagged by two major versions;
+  the local notes now link to <https://docs.rxinfer.com/stable/> instead. The link
+  checker no longer special-cases that directory.
 - `.cursorrules` and `docs/tools/cursor_integration.md`: Cursor-specific guidance that
   `AGENTS.md` and `CLAUDE.md` already carry. The `.aii/config.yaml` description now
   describes the repository.
