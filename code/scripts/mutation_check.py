@@ -305,7 +305,7 @@ MUTATIONS: tuple[Mutation, ...] = (
             "The variational and sampling policies applied ln(prior) / T while "
             "the mean-field policy applied ln(prior); they agree only at T = 1."
         ),
-        tests=("code/tests/test_suspect_defects.py",),
+        tests=("code/tests/test_behaviour_changes.py",),
     ),
     Mutation(
         name="adaptive_prior_ignores_prediction_error",
@@ -319,7 +319,7 @@ MUTATIONS: tuple[Mutation, ...] = (
             "The exploration term was constant across entries, so the max-shift "
             "removed it and prediction_error had no effect on the prior."
         ),
-        tests=("code/tests/test_suspect_defects.py",),
+        tests=("code/tests/test_behaviour_changes.py",),
     ),
     Mutation(
         name="learned_precision_target_is_unbounded",
@@ -333,7 +333,7 @@ MUTATIONS: tuple[Mutation, ...] = (
             "An unclipped 1 / residual**2 target sent the precision to 1e12 after "
             "one zero-residual step and threw the beliefs far from the data."
         ),
-        tests=("code/tests/test_suspect_defects.py",),
+        tests=("code/tests/test_behaviour_changes.py",),
     ),
     Mutation(
         name="pomdp_inference_seed_is_ignored",
@@ -341,7 +341,7 @@ MUTATIONS: tuple[Mutation, ...] = (
         original='            for label, value in (("seed", root), ("inference.seed", nested))\n',
         mutated='            for label, value in (("seed", root), ("inference.seed", None))\n',
         rationale="inference.seed was accepted by the schema and read by nothing.",
-        tests=("code/tests/test_suspect_defects.py",),
+        tests=("code/tests/test_behaviour_changes.py",),
     ),
     Mutation(
         name="pomdp_temperature_is_ignored",
@@ -349,7 +349,7 @@ MUTATIONS: tuple[Mutation, ...] = (
         original="        if temperature is None:\n",
         mutated="        if True:\n",
         rationale="inference.temperature was accepted by the schema and read by nothing.",
-        tests=("code/tests/test_suspect_defects.py",),
+        tests=("code/tests/test_behaviour_changes.py",),
     ),
     Mutation(
         name="fence_closes_on_any_three_backticks",

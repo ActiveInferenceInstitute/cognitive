@@ -29,8 +29,7 @@ concept (see [[docs/repo_docs/obsidian_linking|Obsidian linking]]).
 - Markdown pages are lowercase `snake_case`, such as `active_inference.md` or
   `free_energy_principle.md`. Use singular nouns for concept pages.
 - `README.md` and `AGENTS.md` are the capitalized exceptions, one pair per
-  folder. `CHANGELOG.md`, `CLAUDE.md`, `LICENSE`, and `REVIEW_LOG_YYYY-MM-DD.md`
-  sit at the root.
+  folder. `CHANGELOG.md`, `CLAUDE.md`, and `LICENSE` sit at the root.
 - A handful of older pages keep capitals or spaces (for example
   `knowledge_base/systems/Social-Ecological Systems.md`, `SWR_Swarm.md`, and the
   `Simple_POMDP_README.md` pages under `code/Things/`). Do not add new ones; if

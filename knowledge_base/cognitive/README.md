@@ -294,8 +294,6 @@ The cognitive science knowledge base provides theoretical foundations and empiri
 
 ---
 
-> **Note**: This knowledge base is continuously updated with new research findings and theoretical developments. Check the [[quality_assessment]] for current coverage metrics and development priorities.
-
 ## Related pages
 
 - [[overview|Core Concepts Overview]]

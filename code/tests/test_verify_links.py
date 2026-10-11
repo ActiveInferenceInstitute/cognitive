@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from scripts.verify_links import main, verify_link_report, verify_links
+from scripts.verify_links import main, verify_link_report
 
 
 def write_markdown(path: Path, content: str) -> None:
@@ -44,7 +44,7 @@ def test_existing_wiki_targets_resolve_by_path_directory_and_alias(tmp_path):
 def test_missing_explicit_markdown_file_is_broken(tmp_path):
     write_markdown(tmp_path / "index.md", "See [[missing.md]].")
 
-    broken = verify_links(tmp_path)
+    broken = verify_link_report(tmp_path).broken_links
 
     assert broken == [
         {
@@ -59,7 +59,7 @@ def test_missing_explicit_non_markdown_file_is_broken(tmp_path):
     write_markdown(tmp_path / "simulation.md", "# Simulation")
     write_markdown(tmp_path / "index.md", "See [[simulation.py]].")
 
-    broken = verify_links(tmp_path)
+    broken = verify_link_report(tmp_path).broken_links
 
     assert broken == [
         {
@@ -201,14 +201,6 @@ def test_cli_json_mode_exit_zero_without_broken_links(tmp_path, capsys):
     assert exit_code == 0
     assert payload["broken_links"] == []
     assert payload["skipped_concept_links"] == 1
-
-
-def test_legacy_wrapper_returns_broken_link_list(tmp_path):
-    from scripts.verify_links import verify_links
-
-    write_markdown(tmp_path / "index.md", "See [[missing.md]].")
-    broken = verify_links(tmp_path)
-    assert broken == [{"source": "index.md", "link": "missing.md", "target": "missing.md"}]
 
 
 def test_heading_slugs_return_empty_on_unreadable_file(tmp_path):

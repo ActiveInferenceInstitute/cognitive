@@ -17,21 +17,26 @@ semantic_relations:
 # CI tools
 
 The only CI workflow is `.github/workflows/quality.yml` (name `quality`). It
-runs on every push and pull request and has three jobs.
+runs on every push and pull request and has four independent jobs.
 
-## `test-and-validate`
+## `tests`
 
 Runs on Python 3.10 and 3.12:
+`python -m pytest -q -p pytest_cov --cov` (branch coverage against the
+`fail_under` floor in `pyproject.toml`). The 3.10 leg needs the `tomli` backport,
+which the `dev` extra declares.
 
-- `python -m pip install -e ".[dev]"`
-- installs `pandoc` and `pandoc-crossref` from pinned release binaries so the
-  manuscript HTML render runs (the PDF render skips: the runner has no XeLaTeX)
-- `python -m pytest -q -p pytest_cov --cov` (branch coverage against the
-  `fail_under` floor in `pyproject.toml`)
-- `ruff check .`, `mypy code/tools/src code/Things code/scripts`,
+## `checks`
+
+Runs once, on Python 3.12, everything that does not depend on the interpreter:
+
+- `ruff check .`, `ruff format --check code`,
+  `mypy code/tools/src code/Things code/scripts`,
   `python -m compileall -q code`
-- `python code/scripts/validate_docs.py --json`
-- `python code/scripts/verify_links.py . --json`
+- `python code/scripts/validate_docs.py --json`, which also runs the wiki-link
+  and Markdown-link checks, the catalog check and the frontmatter check
+- a pinned `pandoc` and `pandoc-crossref` install, so the manuscript HTML render
+  runs (the PDF render skips: the runner has no XeLaTeX)
 - `python -m scripts.build_manuscript --no-render` and `--no-pdf`, followed by
   assertions that the rendered HTML has no unresolved markers
 - `cognitive-benchmark --repetitions 1 --output <temp>/benchmarks.json`

@@ -25,7 +25,6 @@ semantic_relations:
       - "[[citations]]"
 ---
 
-
 # Cognitive Modeling Knowledge Base
 
 Every page, by domain, with a one-line description: [[knowledge_base/catalog|catalog]].
@@ -105,8 +104,6 @@ Every page, by domain, with a one-line description: [[knowledge_base/catalog|cat
 - [[systems/systems_theory]]
 
 - [[systems/systems_theory]]
-
-
 
 ### Agent Architectures (`agents/`)
 
@@ -354,8 +351,6 @@ The Free Energy Principle provides a unified mathematical framework for understa
 
 - [[linking_standards]] - Obsidian linking conventions
 
-- [[quality_assessment]] - Comprehensive quality framework
-
 - Content organization principles
 
 ### Validation Tools
@@ -387,8 +382,6 @@ The Free Energy Principle provides a unified mathematical framework for understa
 ✅ **Agent Architectures**: Detailed [[agents/architectures_overview]]
 
 ✅ **Cognitive Ontology**: Structured [[ontology/cognitive_ontology]]
-
-✅ **Quality Framework**: Systematic [[quality_assessment]]
 
 ✅ **Linking Standards**: Consistent [[linking_standards]]
 
@@ -453,8 +446,6 @@ The Free Energy Principle provides a unified mathematical framework for understa
 ### Maintenance
 
 - Regular link validation using [[linking_standards]]
-
-- Content quality monitoring via [[quality_assessment]]
 
 - Ontology evolution via [[ontology/cognitive_ontology]]
 

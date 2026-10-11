@@ -30,15 +30,12 @@ python -m pytest -q                                   # whole suite
 python -m pytest code/tests/test_matrix_ops.py -v     # one file
 python -m pytest -k matrix                            # name filter
 python -m pytest -q --cov                             # branch coverage against the floor
-python code/tests/run_tests.py                        # verbose run plus a JSON report
 ```
 
 Do not pass `--cov=<path>`: it narrows what is measured. The `[tool.coverage.*]`
 tables in `pyproject.toml` list the measured source trees (`code/tools/src`,
 `code/Things`, `code/scripts`), turn on branch coverage, and set the
-`fail_under` floor. `code/tests/run_tests.py` writes
-`code/tests/test_report.json` (timestamp, duration, test files, coverage
-total) and a JUnit file in the system temp directory.
+`fail_under` floor.
 
 Pytest runs with `--strict-markers`; the one registered marker is
 `visualization` (tests that generate figures). `conftest.py` selects the
@@ -57,7 +54,7 @@ non-interactive `Agg` Matplotlib backend and registers an opt-in
 | `test_simple_pomdp.py`, `test_pomdp_edge_paths.py`, `test_config_validation.py` | `Things.Simple_POMDP` |
 | `visualization/test_continuous_generic.py` | `Things.Continuous_Generic` |
 | `test_visualization.py` | `MatrixPlotter`, `StateSpacePlotter`, `NetworkPlotter` |
-| `test_boundary_validation.py`, `test_validation_branches.py`, `test_remaining_guards.py` | Rejected inputs and numerical edge cases |
+| `test_boundary_validation.py`, `test_validation_branches.py`, `test_guards_and_cli.py` | Rejected inputs and numerical edge cases |
 | `test_verify_links.py`, `test_check_markdown_links.py` | The two link gates in `code/scripts/` |
 | `test_validate_docs.py`, `test_normalize_frontmatter.py`, `test_kb_index.py` | Documentation tooling |
 | `test_build_pipeline.py` | `build_manuscript.py` and the documentation gates end to end |
@@ -66,7 +63,6 @@ non-interactive `Agg` Matplotlib backend and registers an opt-in
 | `test_tooling_coverage.py` | Plot, graph, and CLI entry points |
 | `test_utils.py` | Shared data-generation and logging helpers (not a test module) |
 
-`test_config.yaml` is the `SimplePOMDP` configuration used by the tests.
 Shared fixtures in `conftest.py` include `output_dir` (session-scoped
 temporary directory), `temp_dir`, `sample_matrix_2d`, `sample_matrix_3d`,
 `sample_belief_vector`, `sample_matrix_spec`, `sample_markdown_spec`, and
@@ -75,11 +71,11 @@ temporary directory), `temp_dir`, `sample_matrix_2d`, `sample_matrix_3d`,
 ## Continuous integration
 
 `.github/workflows/quality.yml` is the only workflow. On every push and pull
-request it runs the suite with coverage on Python 3.10 and 3.12, then ruff,
-mypy, `compileall`, `validate_docs.py`, `verify_links.py`, the manuscript
-build, and `cognitive-benchmark`. A separate job runs
-`python -m scripts.mutation_check --json`, and another builds and installs
-the wheel.
+request, four jobs run in parallel: `tests` (the suite with coverage on Python 3.10
+and 3.12), `checks` (ruff, mypy, `compileall`, `validate_docs.py`, the manuscript
+build and `cognitive-benchmark`, once on 3.12), `mutation-gate`
+(`python -m scripts.mutation_check --json`) and `build-package` (build and
+install the wheel). Details: [[docs/tools/ci_tools|CI tools]].
 
 ## Related
 

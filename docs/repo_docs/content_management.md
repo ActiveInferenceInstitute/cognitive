@@ -67,8 +67,8 @@ forbidden terms, and catalog freshness. See
 Changes are reviewed as ordinary pull requests, with the `quality` workflow
 (`.github/workflows/quality.yml`) as the automated reviewer. Reviewers check
 what the scripts cannot: whether a claim is true and whether a link points at the
-right page. Periodic audits are written up as `REVIEW_LOG_YYYY-MM-DD.md` files
-at the repository root.
+right page. Findings from an audit become fixes in the
+same change or entries in the backlog file; they are not kept as separate report files.
 
 ## Rename, move, and retire
 

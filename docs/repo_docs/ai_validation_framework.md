@@ -68,8 +68,8 @@ Anchor mismatches in either link checker are warnings and do not fail the gate.
 ## Where the gates run
 
 CI (`.github/workflows/quality.yml`, the only workflow) runs
-`validate_docs.py --json` and `verify_links.py . --json` on every push and pull
-request, after the tests and static checks. Locally, run the same commands from
+`validate_docs.py --json` (which includes the link checks) on every push and pull
+request, in the `checks` job. Locally, run the same commands from
 the repository root; the full development loop is in
 [`docs/development/README.md`](../development/README.md). The repository has no
 pre-commit hook configuration.

@@ -323,13 +323,6 @@ def verify_link_report(
     return report
 
 
-def verify_links(root_dir: str | Path, strict_wiki_links: bool = False):
-    return verify_link_report(
-        root_dir,
-        strict_wiki_links=strict_wiki_links,
-    ).broken_links
-
-
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Validate Obsidian wiki links in Markdown files.",

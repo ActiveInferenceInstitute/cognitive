@@ -58,8 +58,8 @@ knowledge-base catalog check (`kb_index.py`, which regenerates each domain's
 `catalog.md` with `--write`). The standalone `check_markdown_links.py` and
 `verify_links.py` scripts report heading-anchor mismatches for standard links
 and for wiki links with a `#fragment`; anchor mismatches are advisory and do not
-fail the gate. The gates are mapped in
-[`../DOCUMENTATION_ROADMAP.md`](../DOCUMENTATION_ROADMAP.md).
+fail the gate. The gates are listed in
+[`../../README.md`](../../README.md#quality-gates).
 
 The documentation term policy those gates enforce lives in
 [`../policy/documentation_terms.yaml`](../policy/documentation_terms.yaml)

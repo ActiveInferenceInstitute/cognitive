@@ -26,7 +26,6 @@ semantic_relations:
       - "[[manuscript/README|Manuscript]]"
       - "[[agents/README|Agent documentation]]"
       - "[[policy/README|Documentation term policy]]"
-      - "[[DOCUMENTATION_ROADMAP|Documentation roadmap]]"
 ---
 
 # Documentation instructions
@@ -41,7 +40,7 @@ conceptual and educational material. Keep the two clearly separated.
 - `docs/manuscript/README.md` — the executable end-to-end example.
 - `docs/api/README.md` — API documentation policy and reference.
 - `docs/repo_docs/getting_started.md` — fresh-checkout setup.
-- `docs/DOCUMENTATION_ROADMAP.md` — folder map, gates, open documentation work.
+- `project_structure.md` (repository root) — folder map of the package and the vault.
 
 ## Authoring rules
 

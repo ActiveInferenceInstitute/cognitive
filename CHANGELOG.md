@@ -143,10 +143,6 @@ produced a wrong or arbitrary result now raise `ValueError`.
 
 ### Fixed
 
-- CI has been red since 2026-08-19: the document-toolchain step asked apt for
-  `pandoc-crossref`, which Ubuntu does not package, so the test job stopped before
-  pytest. It now installs Pandoc 3.12.1 and pandoc-crossref 0.3.26, built against
-  that Pandoc, from their release pages.
 - `StateSpacePlotter.plot_free_energy_landscape` failed with a shape mismatch for
   any non-square array: `np.meshgrid` defaulted to `xy` indexing and transposed
   the grid. It now uses `ij` indexing.
@@ -183,69 +179,59 @@ produced a wrong or arbitrary result now raise `ValueError`.
 
 ### Documentation
 
-- Restored the `[[link]]` syntax inside markdown and yaml fences that the
-  2026-08-02 pass had flattened to plain text. The link checkers already ignore
-  fenced code, so the conversion gained nothing and left the linking-standards
-  and template pages teaching the wrong syntax.
-- `knowledge_base/mathematics/expected_free_energy.md` equated epistemic value
-  plus risk with ambiguity plus risk. It now states the canonical decomposition
-  used by the package.
-- Rewrote `project_structure.md` (it described directories that do not exist)
-  and `knowledge_base/quality_assessment.md` (stale counts, subjective ratings),
-  cut `docs/DOCUMENTATION_ROADMAP.md` from 809 to 145 lines, and replaced the
-  fictional content of the `docs/api/` and `docs/agents/` pages with what the
-  package actually exports.
-- Verified the bibliographic details of every page written or expanded on
-  2026-10-09 and 2026-10-10 against PubMed, Crossref and publisher records:
-  about 900 cited works, 41 corrections (wrong or truncated titles, an author
-  list, page ranges, three findings credited to the wrong paper, a missing
-  co-author) and no invented papers. 36 in-text citations that had no reference
-  entry gained one.
-- Removed generated filler from `docs/`: about 120 false claims in
-  `docs/implementation/` and `docs/research/` (invented RxInfer API names,
-  fictional results, a PyTorch integration), about 8,500 lines of invented
-  scaffolding in `docs/guides/` (learner analytics, certificates, 1,700 lines of
-  class skeletons, paths into another machine's home directory), and the
-  fictional "Active Implementations" in `code/Things/README.md`. The RxInfer notes
-  are rewritten from the official documentation and say that they describe an
-  external project.
-- Replaced 4,987 garbled glosses in link lists across 47 knowledge-base pages
-  ("Warn ways", "Brain think") with accurate descriptions, and dropped 2 whose
-  meaning was unclear; 1,170 accurate glosses were kept. Every changed line was
-  checked to differ from its predecessor only after the ` - `.
-- Unlinked 493 references to generic labels that no page should exist for
-  (`new_methods`, `version_control`) and aliased the rest; 6,533 names with one
-  or two links each remain unresolved by design.
-- Closed four code fences that never ended in `dynamical_systems.md`,
-  `expected_free_energy.md`, `factor_graphs.md` and `free_energy_principle.md`:
-  CommonMark rendered the rest of each page as code. The generator had written
-  the closing fence as a fence with an info string, which cannot close a block.
+- The knowledge base gained 358 concept pages and 72 one-paragraph pages were
+  rewritten into articles. Worked examples are computed with the package and quote
+  the numbers it returns. The references on these pages were checked against
+  PubMed, Crossref and publisher records.
+- Link lists now carry accurate glosses (4,987 rewritten); 493 references to
+  generic labels that no page should exist for (`new_methods`, `version_control`)
+  were unlinked, and 124 pages gained `aliases:` so a synonym opens the page that
+  covers it.
+- `knowledge_base/mathematics/expected_free_energy.md` states the canonical
+  decomposition the package uses. It previously equated epistemic value plus risk
+  with ambiguity plus risk.
+- Four pages (`dynamical_systems`, `expected_free_energy`, `factor_graphs`,
+  `free_energy_principle`) closed a code fence with a fence that carried an info
+  string, so CommonMark rendered the rest of each page as code. They are fixed, and
+  `validate_docs` now fails on an unterminated fence.
+- `project_structure.md` describes only directories that exist. The `docs/api/` and
+  `docs/agents/` pages describe what the package exports. Generated filler was
+  removed from `docs/`: invented RxInfer API names and results, a PyTorch
+  integration, learner-analytics scaffolding, and the fictional "Active
+  Implementations" in `code/Things/README.md`. The RxInfer notes are rewritten from
+  the official documentation.
+- Removed the dated review logs, the knowledge-base quality report, the
+  documentation roadmap, the stream notes, and the separate test runner
+  (`code/tests/run_tests.py`); `pytest` is the one way to run the suite.
+- `README.md` is rewritten around diagrams and deep links into the knowledge base.
+
+### Removed
+
+- `scripts.verify_links.verify_links()`, a thin wrapper that returned only the
+  broken-link list. Use `verify_link_report(root).broken_links`.
 
 ### Tests
 
-- `test_boundary_validation.py` pins each item above with an independently
-  derived expectation, and fails against the previous code.
-- `test_validation_branches.py` covers the validation and fallback branches of
-  the generative model, homeostatic components and configuration, dispatcher
-  factory, base-state checks, matrix helpers, node creation, knowledge-network
-  visualizer, and plotters.
-- Five mutations were added to `mutation_check.py` (22 total), one per defect
-  fixed above that a test pins: the posterior threshold, the entropy floor,
-  index truncation, non-finite constraint input, and the transposed landscape
-  grid. All are killed.
-- `test_suspect_defects.py` (the `AdaptiveControl` prior, `SimplePOMDP`
-  `seed`/`temperature`/horizon keys, precision bounds, `goal_prior` scaling at
-  several temperatures against an independently computed `E exp(-G/T)`),
-  `test_scale_invariant_normalization.py` (every normalizer at scales from 1 to
-  `1e-300`, plus the unchanged all-zero and non-finite handling) and
-  `test_markdown_fences.py` (the tracker, nested and unterminated fences in both
-  link checkers, and the silent-failure paths above) were written against the
-  previous code first; 93 of their 133 cases fail there, the rest pin unchanged
-  behaviour.
-- Nine more mutations (31 total): the normalizer floor, the `goal_prior`
-  temperature scale, the `AdaptiveControl` error scale, the precision target
-  clip, the two `SimplePOMDP` settings, two fence-tracker rules, and the
-  falsy-`links` default. All are killed.
+- `test_boundary_validation.py`, `test_behaviour_changes.py`,
+  `test_scale_invariant_normalization.py`, `test_markdown_fences.py` and
+  `test_validation_branches.py` pin each behaviour change and fix above with an
+  independently derived expectation.
+- `mutation_check.py` declares 31 mutations (the normalizer floor, the `goal_prior`
+  temperature scale, the `AdaptiveControl` error scale, the precision clip, the
+  `SimplePOMDP` settings, the posterior threshold, the entropy floor, index
+  truncation, non-finite constraint input, the landscape grid, two fence-tracker
+  rules, and the falsy-`links` default). All are killed.
+
+### CI
+
+- The workflow runs the suite on Python 3.10 and 3.12 in one job and every
+  version-independent check (ruff, mypy, documentation gate, manuscript build,
+  benchmarks) once in another. The document-toolchain step, which asked apt for
+  `pandoc-crossref` (Ubuntu does not package it) and so stopped every run before
+  pytest from 2026-08-19, now installs a pinned Pandoc and pandoc-crossref pair
+  from their release pages.
+- The 3.10 leg needs the `tomli` backport (declared in the `dev` extra) because
+  `tomllib` is new in 3.11.
 
 ## [1.1.0]
 

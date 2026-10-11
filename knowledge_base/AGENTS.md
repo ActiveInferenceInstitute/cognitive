@@ -38,7 +38,7 @@ interconnected Markdown pages, not an executable package.
 - Concept pages may illustrate ideas with pseudocode, but those snippets are
   not package API.
 - Root reference pages: `glossary.md`, `learning_roadmap.md`,
-  `linking_standards.md`, `quality_assessment.md`,
+  `linking_standards.md`,
   `swarm_intelligence_implementation.md`.
 
 ## Authoring rules

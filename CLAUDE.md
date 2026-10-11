@@ -56,14 +56,11 @@ python -m pytest code/tests/test_simple_pomdp.py -v
 # silently narrows what is measured)
 python -m pytest -q --cov
 
-# Run using the test runner script
-python code/tests/run_tests.py
-
 # Run benchmarks
 cognitive-benchmark --repetitions 1
 ```
 
-Test configuration is in `code/tests/test_config.yaml`. Shared fixtures (sample matrices, belief vectors, output directories) are in `code/tests/conftest.py`. Matplotlib is set to `Agg` backend in conftest for non-interactive test runs.
+Test configuration is in `pytest.ini` and `pyproject.toml`. Shared fixtures (sample matrices, belief vectors, output directories) are in `code/tests/conftest.py`. Matplotlib is set to `Agg` backend in conftest for non-interactive test runs.
 
 ## Dependencies
 

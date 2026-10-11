@@ -20,7 +20,6 @@ semantic_relations:
       - "[[manuscript/README|Manuscript]]"
       - "[[policy/README|Documentation term policy]]"
       - "[[repo_docs/README|Repository documentation]]"
-      - "[[DOCUMENTATION_ROADMAP|Documentation roadmap]]"
 ---
 
 # Documentation hub
@@ -66,8 +65,8 @@ Its source files use Obsidian wiki links and may contain theoretical or
 illustrative material beyond the implemented runtime. For code behavior, prefer
 the installed package, its tests, and the manuscript's reproducibility section.
 
-The [documentation roadmap](DOCUMENTATION_ROADMAP.md) maps these folders and
-lists the open documentation work.
+The [project structure](../project_structure.md) maps these folders; open work is
+in the backlog file at the repository root.
 
 ## Validation
 

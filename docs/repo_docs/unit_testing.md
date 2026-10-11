@@ -30,7 +30,6 @@ python -m pytest -q                  # whole suite
 python -m pytest code/tests/test_simple_pomdp.py -v
 python -m pytest -q --cov            # branch coverage against the configured floor
 python -m scripts.mutation_check     # does the suite notice a wrong line?
-python code/tests/run_tests.py       # wrapper that also writes a JSON report
 ```
 
 Configuration is in `pytest.ini` and `[tool.pytest.ini_options]` in

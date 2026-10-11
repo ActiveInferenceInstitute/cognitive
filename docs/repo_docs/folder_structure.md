@@ -47,7 +47,7 @@ cognitive/
 ├── .obsidian/            # vault settings
 ├── config.yaml           # defaults read by cognitive-create-node
 ├── pyproject.toml        # package, entry points, ruff, mypy, pytest, coverage
-└── README.md, AGENTS.md, CLAUDE.md, CHANGELOG.md, REVIEW_LOG_*.md, LICENSE
+└── README.md, AGENTS.md, CLAUDE.md, CHANGELOG.md, LICENSE
 ```
 
 `code/Things/` holds two executable agent packages, `Simple_POMDP` and

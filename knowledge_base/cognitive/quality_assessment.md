@@ -496,4 +496,3 @@ class QualityMonitoringDashboard:
 
 ## See also
 
-- [[knowledge_base/quality_assessment|Knowledge Base Quality Assessment]]

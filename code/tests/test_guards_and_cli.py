@@ -1,8 +1,7 @@
 """Constructor guards, reset paths, precision learning, and the link-check CLI.
 
-These are the branches left uncovered after the main pass: parameter validation
-in the continuous agent, its optional precision learning, and the command-line
-surfaces of the Markdown link checker.
+Parameter validation in the continuous agent, its optional precision learning,
+and the command-line surfaces of the Markdown link checker.
 """
 
 from __future__ import annotations

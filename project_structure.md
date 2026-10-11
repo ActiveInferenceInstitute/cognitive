@@ -24,7 +24,6 @@ resolving.
 | `pyproject.toml` | Package metadata, entry points, ruff, mypy, pytest, and coverage configuration |
 | `CHANGELOG.md` | Release notes; entries that change a computed result are marked **behaviour change** |
 | tracked backlog file | Open work only; the documentation policy forbids work markers elsewhere |
-| `REVIEW_LOG_*.md` | Dated review records |
 | `AGENTS.md`, `CLAUDE.md` | Operating guidance for AI agents working in the repository |
 | `.github/workflows/quality.yml` | CI: tests, static checks, documentation gates, manuscript build, mutation gate, packaging |
 | `.obsidian/` | Vault settings so the Markdown opens as a graph |
@@ -70,7 +69,7 @@ lists the domains. Start there to find a page, or at
 | `BioFirm/` | Biological firm theory and its Active Inference formulation |
 
 Cross-cutting pages at the top of the folder: `glossary.md`,
-`learning_roadmap.md`, `linking_standards.md`, `quality_assessment.md`.
+`learning_roadmap.md`, `linking_standards.md`.
 
 Conventions are in [`linking_standards.md`](knowledge_base/linking_standards.md):
 YAML frontmatter on every page, `semantic_relations` links written as quoted

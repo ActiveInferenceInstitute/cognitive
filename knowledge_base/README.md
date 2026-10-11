@@ -99,7 +99,7 @@ Author-date reference notes for the primary literature on active inference and t
 - Access [[mathematics|Mathematical Foundations]]
 - Study [[cognitive/neural_active_inference|Neural Implementations]]
 - Review [[research|Research Directions]]
-- Consult [[quality_assessment|Knowledge Base Quality Assessment]]
+- Check claims against [[linking_standards|Linking Standards]] and the page's own references
 
 ### For Implementers
 - Follow [[active_inference_implementation|Implementation Guides]]

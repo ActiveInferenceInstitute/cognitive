@@ -1,4 +1,4 @@
-"""Regression tests for four suspected defects, each reproduced before it was fixed.
+"""Regression tests for four behaviour changes, each reproduced before it was fixed.
 
 * ``AdaptiveControl.compute_policy_prior`` ignored ``prediction_error``: the
   exploration term was the same constant for every entry, so the max-shift that
