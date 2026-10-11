@@ -237,6 +237,9 @@ produced a wrong or arbitrary result now raise `ValueError`.
 
 ### Removed
 
+- `.cursorrules` and `docs/tools/cursor_integration.md`: Cursor-specific guidance that
+  `AGENTS.md` and `CLAUDE.md` already carry. The `.aii/config.yaml` description now
+  describes the repository.
 - The `--mutation` pytest option and `test_declared_mutations_all_die`, which ran only
   under that option and so was skipped on every run; the `mutation-gate` CI job runs
   the same check.

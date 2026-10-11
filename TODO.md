@@ -39,11 +39,3 @@ history; this file is not a log. Remove an item when it is done.
 - **Aggregation default.** Decide whether `policy_aggregation` should default to
   `marginal` (the standard Bayesian model average) rather than `min` in a future major
   version. Change it in a release of its own, apart from the 1.1.0 objective change.
-
-## Repository
-
-- The remote branch `origin/forked` is fully merged into `main` and can be deleted.
-- `.aii/config.yaml` carries an InstituteOS description copied from an old frontmatter
-  block. Correct it with the owners of that manifest.
-- `.cursorrules` is Cursor-specific guidance that `CLAUDE.md` largely supersedes. Remove
-  it if Cursor is no longer used with this repository.

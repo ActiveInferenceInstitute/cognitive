@@ -1,12 +1,12 @@
 # AII sidecar — InstituteOS metadata. Schema: instituteos.platform.aii_sidecar
 meta:
-  updated: '2026-06-30'
+  updated: '2026-10-11'
 repo:
   name: cognitive
   slug: cognitive
   full_name: ActiveInferenceInstitute/cognitive
-  description: 'title: Cognitive Modeling Framework type: overview status: stable
-    created: 2024-01-01 updated: 2026-01-03 tags: semantic_relations: links:'
+  description: Tested Python package for Active Inference agents and an Obsidian knowledge base of
+    linked pages on the mathematics, biology, cognitive science and philosophy behind it.
 institute:
   category: research-software
   maturity: released

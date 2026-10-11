@@ -55,8 +55,7 @@ Helper scripts for documentation maintenance live in
 - Topic pages (for example `link_checker.md`, `benchmark_tools.md`,
   `mutation_testing.md`, `plotting_tools.md`) document the tooling for each
   topic. `dependency_analyzer.md`, `static_analyzer.md`, `graph_generator.md`,
-  `test_generators.md`, `cursor_integration.md`, and
-  `model_context_protocol.md` are short pages stating what the repository
+  `test_generators.md`, and `model_context_protocol.md` are short pages stating what the repository
   uses in place of a dedicated tool of that name (or that it has none).
 - `git_tools.md` and `git_workflow.md` describe plain Git use here.
 - See `AGENTS.md` for the accuracy rules.

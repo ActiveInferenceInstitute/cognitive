@@ -26,8 +26,7 @@ integration standard, not a repository component.
 This repository does not ship an MCP server or MCP client code. Its
 AI-assistant integration surface is:
 
-- `.cursorrules`, `AGENTS.md`, `CLAUDE.md` — guidance for AI-assisted
-  editors.
+- `AGENTS.md`, `CLAUDE.md` — guidance for AI-assisted editors.
 - The installed CLI entry points (`cognitive-*`) — scriptable interfaces.
 - The documentation validators — machine-readable JSON reports
   (`--json` flags on `cognitive-validate-docs`, `cognitive-verify-links`).

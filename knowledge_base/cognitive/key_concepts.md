@@ -110,16 +110,6 @@ Fundamental units of knowledge representation:
 
 ## Tool Integration
 
-### Development Environment
-
-- [[cursor_integration]]
-
-  - AI-augmented development
-
-  - Code generation
-
-  - Documentation assistance
-
 ### Knowledge Management
 
 - [[obsidian_usage]]
@@ -203,8 +193,6 @@ Fundamental units of knowledge representation:
 ## Development Workflow
 
 ### Code Development
-
-1. Use [[cursor_integration]]
 
 1. Follow code style
 

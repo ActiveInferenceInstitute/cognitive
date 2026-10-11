@@ -27,7 +27,6 @@ knowledge-base catalogs.
 | `.obsidian/` | Obsidian vault settings (core plugins, graph view settings, one community plugin entry, `3d-graph`) | yes |
 | `.github/workflows/quality.yml` | The CI workflow: tests, static checks, documentation gates, manuscript build, mutation gate, packaging | yes |
 | `.aii/config.yaml` | InstituteOS sidecar metadata (repository name, category, ecosystem relations) | yes |
-| `.cursorrules` | Editor rules for AI assistants, mirroring the folder-level documentation requirements | yes |
 | `output/` | Generated run output | no (git-ignored) |
 | `graft/` | Local code-graph cache, regenerable | no (git-ignored) |
 | `.venv/`, `.pytest_cache/`, `.ruff_cache/`, `.mypy_cache/`, `.coverage` | Local environment and tool caches | no |
