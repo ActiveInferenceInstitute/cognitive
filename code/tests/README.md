@@ -39,8 +39,7 @@ tables in `pyproject.toml` list the measured source trees (`code/tools/src`,
 
 Pytest runs with `--strict-markers`; the one registered marker is
 `visualization` (tests that generate figures). `conftest.py` selects the
-non-interactive `Agg` Matplotlib backend and registers an opt-in
-`--mutation` flag for the full mutation gate.
+non-interactive `Agg` Matplotlib backend.
 
 ## Test files
 

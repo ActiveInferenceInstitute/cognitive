@@ -87,13 +87,3 @@ def sample_matrix_data(tmp_path):
     matrix = np.array([[0.7, 0.2, 0.1], [0.2, 0.7, 0.1], [0.1, 0.1, 0.8]])
     np.save(data_file, matrix)
     return data_file
-
-
-def pytest_addoption(parser):
-    """Register the opt-in flag for the full mutation gate."""
-    parser.addoption(
-        "--mutation",
-        action="store_true",
-        default=False,
-        help="Run the full mutation gate (slow: one pytest subprocess per mutation)",
-    )

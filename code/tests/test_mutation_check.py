@@ -114,19 +114,6 @@ def test_an_unmatched_filter_is_an_error() -> None:
         check(REPO_ROOT, name_filter="no-such-mutation")
 
 
-def test_declared_mutations_all_die(request: pytest.FixtureRequest) -> None:
-    """The full gate, run only when explicitly requested.
-
-    Each mutation spawns a pytest subprocess, so the whole set costs far more
-    than the rest of the suite. Run it with ``--mutation`` locally, or through
-    ``python -m scripts.mutation_check`` in CI.
-    """
-    if not request.config.getoption("--mutation"):
-        pytest.skip("pass --mutation to run the full mutation gate")
-    report = check(REPO_ROOT)
-    assert report["ok"], report["survivors"]
-
-
 def test_mutation_cli_reports_both_outcomes(capsys: pytest.CaptureFixture[str]) -> None:
     """Text and JSON output, and the exit code, follow the survivor list."""
     import scripts.mutation_check as harness

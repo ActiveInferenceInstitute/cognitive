@@ -9,7 +9,7 @@ semantic_relations:
       - "[[AGENTS|Application guide instructions]]"
       - "[[active_inference_spatial_applications|Spatial applications]]"
       - "[[guide_for_cognitive_modeling|Cognitive modeling guide]]"
-      - "[[parr_2022_chapter_6|Parr 2022 chapter 6]]"
+      - "[[parr_2022_chapter_6|Parr 2022 chapter 6 study guide]]"
       - "[[../README|Guides index]]"
 ---
 
@@ -23,8 +23,8 @@ repository's models.
 - `active_inference_spatial_applications.md` — spatial and geographic
   applications.
 - `guide_for_cognitive_modeling.md` — general cognitive modeling guide.
-- `parr_2022_chapter_6.md` — notes on Parr, Pezzulo, and Friston (2022),
-  Chapter 6.
+- `parr_2022_chapter_6.md` — a study guide to the design workflow in Chapter 6 of
+  Parr, Pezzulo, and Friston (2022).
 
 ## Rules
 

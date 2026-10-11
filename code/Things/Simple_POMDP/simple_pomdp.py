@@ -98,6 +98,7 @@ class SimplePOMDP:
       learned, so nothing would read them.
     """
 
+    PLOT_FORMATS = frozenset({"png", "pdf", "svg"})
     REQUIRED_SECTIONS = {
         "model",
         "state_space",
@@ -170,6 +171,7 @@ class SimplePOMDP:
         )
         self._validate_inference()
         self._validate_section("visualization", {"output_dir", "formats", "dpi", "style"})
+        self._validate_visualization()
         matrices = self.config.get("matrices")
         if not isinstance(matrices, dict):
             raise ValueError("matrices must be a mapping")
@@ -187,11 +189,46 @@ class SimplePOMDP:
                 "initialization_params",
                 "constraints",
                 "description",
-                "learning_rate",
             }
+            if "learning_rate" in spec:
+                raise ValueError(
+                    f"{name}.learning_rate is not used by SimplePOMDP: the matrices are "
+                    "fixed after initialization; remove it"
+                )
             unknown = set(spec).difference(allowed)
             if unknown:
                 raise ValueError(f"Unknown {name} fields: {sorted(unknown)}")
+
+    def _validate_visualization(self) -> None:
+        """Check the plot settings that ``_SimplePOMDPPlotter`` applies."""
+        visualization = self.config["visualization"]
+        formats = visualization.get("formats", ["png"])
+        if (
+            not isinstance(formats, (list, tuple))
+            or not formats
+            or not set(formats) <= self.PLOT_FORMATS
+        ):
+            raise ValueError(
+                f"visualization.formats must be a non-empty list drawn from "
+                f"{sorted(self.PLOT_FORMATS)}"
+            )
+        if "dpi" in visualization:
+            dpi = visualization["dpi"]
+            if isinstance(dpi, bool) or not isinstance(dpi, (int, float)) or not 0 < dpi < 10_000:
+                raise ValueError("visualization.dpi must be a positive number below 10000")
+        style = visualization.get("style", {})
+        if not isinstance(style, dict) or not set(style) <= {"colormap", "font_size"}:
+            raise ValueError(
+                "visualization.style must be a mapping with only colormap and font_size"
+            )
+        if "colormap" in style and style["colormap"] not in plt.colormaps():
+            raise ValueError(
+                f"visualization.style.colormap {style['colormap']!r} is not a colormap"
+            )
+        if "font_size" in style:
+            size = style["font_size"]
+            if isinstance(size, bool) or not isinstance(size, (int, float)) or size <= 0:
+                raise ValueError("visualization.style.font_size must be a positive number")
 
     def _validate_inference(self) -> None:
         """Reject inference fields that this agent would otherwise ignore."""
@@ -309,9 +346,11 @@ class SimplePOMDP:
                 raise ValueError("B_matrix uses column_stochastic, not row_stochastic")
             return self._row_normalize(matrix)
         if constraint == "sum_to_one":
-            if float(matrix.sum()) <= 0.0:
+            with np.errstate(over="ignore"):  # an overflowing total is rescaled below
+                total = float(matrix.sum())
+            if not total > 0.0:
                 raise ValueError("sum_to_one cannot normalize an all-zero matrix")
-            return matrix / float(matrix.sum())
+            return normalize_mass(matrix.reshape(-1)).reshape(matrix.shape)
         raise ValueError(f"Unsupported matrix constraint: {constraint}")
 
     @staticmethod
@@ -507,8 +546,14 @@ class SimplePOMDP:
 class _SimplePOMDPPlotter:
     def __init__(self, model: SimplePOMDP):
         self.model = model
-        self.output_dir = Path(model.config["visualization"]["output_dir"])
+        visualization = model.config["visualization"]
+        self.output_dir = Path(visualization["output_dir"])
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.formats = list(visualization.get("formats", ["png"]))
+        self.dpi = visualization.get("dpi")
+        style = visualization.get("style", {})
+        self.cmap = style.get("colormap", "viridis")
+        self.font_size = style.get("font_size")
 
     def visualize(self, plot_type: str, **_: Any) -> plt.Figure:
         handlers = {
@@ -521,8 +566,15 @@ class _SimplePOMDPPlotter:
         }
         if plot_type not in handlers:
             raise ValueError(f"Unsupported plot type: {plot_type}")
-        fig = handlers[plot_type]()
-        fig.savefig(self.output_dir / f"{plot_type}.png", bbox_inches="tight")
+        font = {"font.size": self.font_size} if self.font_size else {}
+        with plt.rc_context(font):
+            fig = handlers[plot_type]()
+            for extension in self.formats:
+                fig.savefig(
+                    self.output_dir / f"{plot_type}.{extension}",
+                    bbox_inches="tight",
+                    dpi=self.dpi if self.dpi else "figure",
+                )
         plt.close(fig)
         return fig
 
@@ -550,7 +602,7 @@ class _SimplePOMDPPlotter:
         values = self._belief_grid_values()
         for idx, title in enumerate(titles):
             ax = fig.add_subplot(1, 3, idx + 1, projection="3d")
-            surface = ax.plot_surface(values["x"], values["y"], values[title], cmap="viridis")
+            surface = ax.plot_surface(values["x"], values["y"], values[title], cmap=self.cmap)
             ax.set_title(title)
             ax.set_xlabel("Belief in State 0")
             ax.set_ylabel("Belief in State 1")
@@ -611,7 +663,7 @@ class _SimplePOMDPPlotter:
         fig, axes = plt.subplots(1, n_actions, figsize=(5 * n_actions, 4), squeeze=False)
         for action in range(n_actions):
             ax = axes[0, action]
-            im = ax.imshow(self.model.B[:, :, action], cmap="viridis", vmin=0, vmax=1)
+            im = ax.imshow(self.model.B[:, :, action], cmap=self.cmap, vmin=0, vmax=1)
             ax.set_title(f"State Transitions - Action {action}")
             ax.set_xlabel("Previous State")
             ax.set_ylabel("Next State")
@@ -621,7 +673,7 @@ class _SimplePOMDPPlotter:
 
     def _plot_observation_likelihood(self) -> plt.Figure:
         fig, ax = plt.subplots(figsize=(6, 4))
-        im = ax.imshow(self.model.A, cmap="viridis", vmin=0, vmax=1)
+        im = ax.imshow(self.model.A, cmap=self.cmap, vmin=0, vmax=1)
         ax.set_title("Observation Likelihood")
         ax.set_xlabel("State")
         ax.set_ylabel("Observation")
@@ -668,7 +720,7 @@ class _SimplePOMDPPlotter:
         axes[2].set_xlabel("Time Step")
         axes[2].set_ylabel("Ratio")
 
-        scatter = axes[3].scatter(selected_epistemic, selected_pragmatic, c=time, cmap="viridis")
+        scatter = axes[3].scatter(selected_epistemic, selected_pragmatic, c=time, cmap=self.cmap)
         axes[3].set_title("Epistemic vs Pragmatic Value")
         axes[3].set_xlabel("Epistemic Value")
         axes[3].set_ylabel("Pragmatic Value")

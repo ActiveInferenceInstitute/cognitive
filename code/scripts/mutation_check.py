@@ -374,6 +374,56 @@ MUTATIONS: tuple[Mutation, ...] = (
         tests=("code/tests/test_markdown_fences.py",),
     ),
     Mutation(
+        name="markdown_link_to_a_missing_file_is_not_reported",
+        path="code/scripts/check_markdown_links.py",
+        original="            if resolved is None:\n",
+        mutated="            if resolved is None and False:\n",
+        rationale=("A [text](path) link whose target does not exist must be reported as broken."),
+        tests=("code/tests/test_check_markdown_links.py",),
+    ),
+    Mutation(
+        name="explicit_missing_wiki_file_is_a_concept_link",
+        path="code/scripts/verify_links.py",
+        original=(
+            "            if not strict_wiki_links and not _is_explicit_file_reference(target):\n"
+        ),
+        mutated="            if not strict_wiki_links:\n",
+        rationale=(
+            "A wiki link that names a file (missing.md) is broken, "
+            "not an unwritten concept to skip."
+        ),
+        tests=("code/tests/test_verify_links.py",),
+    ),
+    Mutation(
+        name="external_markdown_links_are_resolved_as_files",
+        path="code/scripts/check_markdown_links.py",
+        original="            if _is_external(target):\n",
+        mutated="            if False:\n",
+        rationale=(
+            "An http(s) link is not a file path; resolving it "
+            "reports every external link as missing."
+        ),
+        tests=("code/tests/test_check_markdown_links.py",),
+    ),
+    Mutation(
+        name="wiki_link_anchor_is_not_checked",
+        path="code/scripts/verify_links.py",
+        original="                    if _slugify(fragment) not in slugs:\n",
+        mutated="                    if False:\n",
+        rationale=(
+            "A [[page#heading]] link whose heading does not exist must produce an anchor warning."
+        ),
+        tests=("code/tests/test_markdown_fences.py",),
+    ),
+    Mutation(
+        name="same_file_anchor_is_not_checked",
+        path="code/scripts/check_markdown_links.py",
+        original="                    if slug not in own_slugs:\n",
+        mutated="                    if False:\n",
+        rationale=("A (#heading) link to a heading the page lacks must produce an anchor warning."),
+        tests=("code/tests/test_check_markdown_links.py",),
+    ),
+    Mutation(
         name="falsy_relation_links_are_read_as_empty",
         path="code/scripts/normalize_frontmatter.py",
         original='        links = [] if entry.get("links") is None else entry["links"]\n',

@@ -344,3 +344,8 @@ def test_the_shipped_preamble_has_a_latex_fence() -> None:
     root = Path(__file__).resolve().parents[2]
     source = (root / "docs" / "manuscript" / "preamble.md").read_text(encoding="utf-8")
     assert _latex_preamble(source).strip()
+
+
+def test_a_crlf_preamble_uses_one_line_ending() -> None:
+    source = "x\r\n```latex\r\n\\a\r\n\\b\r\n```\r\n\r\n```latex\r\n\\c\r\n```\r\n"
+    assert _latex_preamble(source) == "\\a\n\\b\n\n\\c\n"

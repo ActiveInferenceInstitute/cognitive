@@ -16,7 +16,7 @@ def _as_probability_vector(values: np.ndarray, *, name: str) -> np.ndarray:
     array = np.asarray(values, dtype=float).reshape(-1)
     if array.size == 0 or not np.all(np.isfinite(array)) or np.any(array < 0):
         raise ValueError(f"{name} must be a finite, non-negative, non-empty vector")
-    if float(array.sum()) <= 0.0:
+    if not np.any(array > 0.0):
         raise ValueError(f"{name} must contain positive mass")
     return normalize_mass(array)
 

@@ -63,7 +63,9 @@ def _probability(values: np.ndarray, name: str, axis: int = 0) -> np.ndarray:
     array = np.asarray(values, dtype=float)
     if array.size == 0 or not np.all(np.isfinite(array)) or np.any(array < 0):
         raise ValueError(f"{name} must be finite and non-negative")
-    if np.any(array.sum(axis=axis, keepdims=True) <= 0.0):
+    # For non-negative input a slice has positive mass exactly when some entry is
+    # positive; summing instead would overflow for entries near the float maximum.
+    if not np.all(np.any(array > 0.0, axis=axis)):
         raise ValueError(f"{name} must contain positive mass")
     return normalize_mass(array, axis)
 

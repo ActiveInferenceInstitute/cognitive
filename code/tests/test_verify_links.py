@@ -220,3 +220,41 @@ def test_target_exists_mirror_of_resolve(tmp_path):
     assert _target_exists(tmp_path, source, "missing.md", index) is False
     assert _resolve_target_path(tmp_path, source, "concept", index) == tmp_path / "concept.md"
     assert _resolve_target_path(tmp_path, source, "missing.md", index) is None
+
+
+def test_a_frontmatter_alias_resolves_a_concept_link(tmp_path):
+    """Obsidian opens the page that lists a name under ``aliases:``; so must the checker."""
+    write_markdown(
+        tmp_path / "plasticity_page.md",
+        "---\ntitle: Plasticity\naliases:\n  - plasticity\n  - Synaptic Change\n---\n\n# B\n",
+    )
+    write_markdown(
+        tmp_path / "index.md", "See [[plasticity]], [[synaptic_change]] and [[unrelated]]."
+    )
+
+    report = verify_link_report(tmp_path)
+
+    assert report.resolved_links == 2
+    assert report.skipped_concept_links == 1
+    assert report.broken_links == []
+
+
+def test_alias_anchors_are_checked_against_the_aliased_page(tmp_path):
+    write_markdown(tmp_path / "page.md", "---\naliases: [short]\n---\n\n# Real heading\n")
+    write_markdown(tmp_path / "index.md", "[[short#real-heading]] [[short#missing]]")
+
+    report = verify_link_report(tmp_path)
+
+    assert [w["fragment"] for w in report.anchor_warnings] == ["missing"]
+
+
+def test_malformed_or_odd_aliases_are_ignored(tmp_path):
+    write_markdown(tmp_path / "bad.md", "---\naliases: [unclosed\n---\n\n# Bad\n")
+    write_markdown(tmp_path / "odd.md", "---\naliases: 7\n---\n\n# Odd\n")
+    write_markdown(tmp_path / "text.md", "---\naliases: single\n---\n\n# Text\n")
+    write_markdown(tmp_path / "index.md", "[[single]] [[nothing]]")
+
+    report = verify_link_report(tmp_path)
+
+    assert report.resolved_links == 1  # the string form is accepted, nothing else
+    assert report.skipped_concept_links == 1

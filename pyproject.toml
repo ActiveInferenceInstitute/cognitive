@@ -23,12 +23,18 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+# networkx lays out graphs of 500 or more nodes with scipy, so NetworkVisualizer
+# needs it for the whole knowledge base.
+network = ["scipy>=1.10"]
+# Used by the helper scripts in docs/repo_docs/repo_scripts.
+maintenance = ["tqdm>=4.66"]
 dev = [
   "coverage>=7.0",
   "mypy>=1.8",
   "pytest>=8.0",
   "pytest-cov>=4.1",
   "ruff>=0.6",
+  "scipy>=1.10",
   "tomli>=2.0; python_version < '3.11'",
   "types-PyYAML>=6.0",
 ]

@@ -231,3 +231,60 @@ def test_identity_based_partial_strength_column_forms() -> None:
     # Action 1 shifts the target cell by one state.
     assert tensor[1, 0, 1] == pytest.approx(0.6)
     assert tensor[0, 0, 1] == pytest.approx(0.2)
+
+
+# --- settings that used to be accepted and ignored ----------------------------
+
+
+def test_a_per_matrix_learning_rate_is_rejected(tmp_path: Path) -> None:
+    def mutate(config):
+        config["matrices"]["E_matrix"]["learning_rate"] = 0.2
+
+    with pytest.raises(ValueError, match="E_matrix.learning_rate is not used"):
+        _model_with(tmp_path, mutate)
+
+
+def test_plot_formats_dpi_and_style_are_applied(tmp_path: Path) -> None:
+    def mutate(config):
+        config["visualization"] = {
+            "output_dir": "output",
+            "formats": ["png", "svg"],
+            "dpi": 50,
+            "style": {"colormap": "magma", "font_size": 14},
+        }
+
+    model = _model_with(tmp_path, mutate)
+    figure = model.visualize("observation_likelihood")
+    output = tmp_path / "output"
+    assert sorted(path.name for path in output.iterdir()) == [
+        "observation_likelihood.png",
+        "observation_likelihood.svg",
+    ]
+    # 6 x 4 inches at 50 dpi, plus the tight bounding box, is far below the
+    # 600 x 400 pixels of the default.
+    from matplotlib.image import imread
+
+    assert imread(output / "observation_likelihood.png").shape[1] < 400
+    assert figure is not None
+
+
+@pytest.mark.parametrize(
+    ("visualization", "message"),
+    [
+        ({"formats": []}, "formats must be a non-empty list"),
+        ({"formats": ["gif"]}, "formats must be a non-empty list"),
+        ({"formats": "png"}, "formats must be a non-empty list"),
+        ({"dpi": 0}, "dpi must be a positive number"),
+        ({"dpi": True}, "dpi must be a positive number"),
+        ({"style": {"figure_size": [10, 8]}}, "only colormap and font_size"),
+        ({"style": {"colormap": "not-a-colormap"}}, "is not a colormap"),
+        ({"style": {"font_size": -1}}, "font_size must be a positive number"),
+        ({"style": "dark"}, "only colormap and font_size"),
+    ],
+)
+def test_invalid_plot_settings_are_rejected(tmp_path: Path, visualization, message) -> None:
+    def mutate(config):
+        config["visualization"] = {"output_dir": "output", **visualization}
+
+    with pytest.raises(ValueError, match=message):
+        _model_with(tmp_path, mutate)

@@ -26,7 +26,6 @@ cognitive-mutation-check                  # installed entry point, same as:
 python -m scripts.mutation_check          # human-readable
 python -m scripts.mutation_check --json   # machine-readable
 python -m scripts.mutation_check --filter gradient
-python -m pytest --mutation code/tests/test_mutation_check.py
 ```
 
 ## How it works

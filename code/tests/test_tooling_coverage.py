@@ -107,6 +107,16 @@ def test_network_visualizer_builds_and_renders_a_graph(tmp_path: Path) -> None:
         visualizer.visualize(None, width=0)
 
 
+def test_network_layout_handles_a_graph_past_the_dense_solver_limit(tmp_path: Path) -> None:
+    """networkx needs scipy from 500 nodes; the whole vault is far larger."""
+    import networkx as nx
+
+    visualizer = network_viz.NetworkVisualizer(_vault(tmp_path))
+    positions = visualizer._get_node_positions(nx.path_graph(600))
+    assert len(positions) == 600
+    assert all(np.isfinite(np.asarray(p)).all() for p in positions.values())
+
+
 def test_network_visualizer_rejects_invalid_configuration(tmp_path: Path) -> None:
     bad = tmp_path / "bad.yaml"
     bad.write_text(yaml.safe_dump({"paths": {}}), encoding="utf-8")

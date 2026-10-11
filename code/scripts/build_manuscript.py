@@ -394,7 +394,8 @@ def _latex_preamble(source: str) -> str:
     the first symptom was an undefined control sequence deep in the LaTeX log.
     """
     blocks = [
-        block.body
+        # One line ending throughout, whatever the source file used.
+        block.body.replace("\r\n", "\n").replace("\r", "\n")
         for block in iter_fenced_blocks(source)
         if block.terminated and block.info.lower() == "latex"
     ]

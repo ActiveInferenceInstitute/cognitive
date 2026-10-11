@@ -196,3 +196,24 @@ def test_base_model_normalizers(scale: float) -> None:
     model.state.beliefs = SHAPE * scale
     model.state.prediction_error = 0.0
     assert model.calculate_free_energy() == pytest.approx(0.0, abs=1e-9)
+
+
+def test_a_total_that_overflows_raises_no_warning_anywhere() -> None:
+    """The result was right but a warnings-as-errors run failed on the ``sum``."""
+    import warnings
+
+    huge = np.full(2, 1e308)  # finite entries whose total is infinite
+    even = np.full(2, 0.5)
+    matrix = np.full((2, 2), 1e308)
+    with warnings.catch_warnings():
+        warnings.simplefilter("error")
+        assert normalize_mass(huge) == pytest.approx(even)
+        assert _dispatcher()._normalize(huge, 2) == pytest.approx(even)
+        assert HomeostaticInference._normalize(huge, 2) == pytest.approx(even)
+        assert _normalize(huge) == pytest.approx(even)
+        assert _as_probability_vector(huge, name="v") == pytest.approx(even)
+        assert pomdp_normalize(huge) == pytest.approx(even)
+        assert MatrixOps.normalize_columns(matrix)[:, 1] == pytest.approx(even)
+        assert ensure_matrix_properties(matrix, "column_stochastic")[:, 0] == pytest.approx(even)
+        assert compute_entropy(huge) == pytest.approx(np.log(2))
+        assert kl_divergence(huge, huge) == 0.0

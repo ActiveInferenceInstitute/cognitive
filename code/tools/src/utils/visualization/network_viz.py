@@ -100,6 +100,8 @@ class NetworkVisualizer:
             return {}
         if len(graph) == 1:
             return {next(iter(graph.nodes)): (0.0, 0.0)}
+        # networkx switches to a scipy sparse solver at 500 nodes; the "network"
+        # extra supplies it.
         return nx.spring_layout(graph, seed=self.seed)
 
     def _get_node_colors(self, graph: nx.Graph) -> list[str]:

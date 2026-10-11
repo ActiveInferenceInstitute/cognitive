@@ -80,6 +80,14 @@ produced a wrong or arbitrary result now raise `ValueError`.
   `G - T ln(prior)`. Results change for variational and sampling only when
   `temperature != 1`. When `goal_prior` is omitted, mean-field still uses the
   model's `E` and the other two methods still apply no action prior.
+- **`SimplePOMDP` applies its `visualization` settings and rejects a per-matrix
+  `learning_rate`.** `formats` (a non-empty list from `png`, `pdf`, `svg`) and `dpi`
+  were accepted and ignored: every plot was written as a 100-dpi PNG. They now
+  decide which files are written and at what resolution, and `style` accepts
+  `colormap` and `font_size`. Any other `style` key (`figure_size`,
+  `colormap_2d`, `file_format`, ...) now raises `ValueError`, as does a matrix
+  `learning_rate`, which nothing read because the matrices are fixed after
+  initialization. Remove them from existing configurations.
 - **`matrix_utils.compute_entropy`** of a deterministic distribution is exactly
   zero. A `log(p + EPS)` floor applied to every entry gave about `-1e-12`; other
   distributions move by about `n * 1e-12` for `n` outcomes.
@@ -125,6 +133,12 @@ produced a wrong or arbitrary result now raise `ValueError`.
   them as nested YAML lists, the residue of unquoted `[[links]]`, so the
   relations were data but invisible to Obsidian's graph and backlinks.
   `validate_docs` now rejects the damaged form.
+- `verify_links.py` resolves a wiki link through the `aliases:` of a page's
+  frontmatter, as Obsidian does, so `[[plasticity]]` no longer counts as an
+  unwritten concept when a page lists it.
+- Optional dependency groups: `network` (`scipy`, which networkx needs to lay out
+  graphs of 500 or more nodes) and `maintenance` (`tqdm`, imported by the helper
+  scripts in `docs/repo_docs/repo_scripts`). `dev` includes `scipy`.
 - `code/scripts/kb_index.py` (`cognitive-kb-index`) generates a `catalog.md` in
   every `knowledge_base/` domain and at its root: each page with its title and
   opening line. `validate_docs` fails when a catalog is missing or stale.
@@ -174,6 +188,14 @@ produced a wrong or arbitrary result now raise `ValueError`.
   `false` as an empty list (`or []`); only an absent or null `links` means none.
   `build_manuscript` wrote an empty `preamble.tex` when `preamble.md` had no
   `latex` fence and rendered a PDF without its macros; it now raises.
+- `verify_links.py` reported an anchor warning for every `[[page#heading]]` link that
+  resolved by file name or alias unless it ran from the repository root, because the
+  index held paths relative to the root.
+- The normalizers emitted a `RuntimeWarning` ("overflow encountered in reduce") when
+  the total mass overflowed, as for entries near `1e308`. The result was right, but a
+  warnings-as-errors run failed. The positive-mass checks no longer sum.
+- `build_manuscript` wrote a preamble with mixed `\r\n` and `\n` line endings for a
+  CRLF source; it now uses `\n` throughout.
 - Removed an unreachable duplicate `non_negative` branch in
   `SimplePOMDP._apply_constraint`.
 
@@ -200,6 +222,12 @@ produced a wrong or arbitrary result now raise `ValueError`.
   integration, learner-analytics scaffolding, and the fictional "Active
   Implementations" in `code/Things/README.md`. The RxInfer notes are rewritten from
   the official documentation.
+- `docs/guides/application/parr_2022_chapter_6.md` is a short study guide that
+  restates the chapter's four-step workflow in our own words and links to the pages
+  that explain each step; it replaces notes that followed the book chapter closely.
+  `docs/templates/learning_path_template.md` is a 90-line skeleton instead of 1,373
+  lines, and `knowledge_base/swarm_intelligence_implementation.md` states that its
+  classes are illustrative sketches.
 - Removed the dated review logs, the knowledge-base quality report, the
   documentation roadmap, the stream notes, and the separate test runner
   (`code/tests/run_tests.py`); `pytest` is the one way to run the suite.
@@ -207,6 +235,9 @@ produced a wrong or arbitrary result now raise `ValueError`.
 
 ### Removed
 
+- The `--mutation` pytest option and `test_declared_mutations_all_die`, which ran only
+  under that option and so was skipped on every run; the `mutation-gate` CI job runs
+  the same check.
 - `scripts.verify_links.verify_links()`, a thin wrapper that returned only the
   broken-link list. Use `verify_link_report(root).broken_links`.
 
@@ -216,11 +247,13 @@ produced a wrong or arbitrary result now raise `ValueError`.
   `test_scale_invariant_normalization.py`, `test_markdown_fences.py` and
   `test_validation_branches.py` pin each behaviour change and fix above with an
   independently derived expectation.
-- `mutation_check.py` declares 31 mutations (the normalizer floor, the `goal_prior`
+- `mutation_check.py` declares 36 mutations (the normalizer floor, the `goal_prior`
   temperature scale, the `AdaptiveControl` error scale, the precision clip, the
   `SimplePOMDP` settings, the posterior threshold, the entropy floor, index
   truncation, non-finite constraint input, the landscape grid, two fence-tracker
-  rules, and the falsy-`links` default). All are killed.
+  rules, the falsy-`links` default, and five in the two link checkers: a missing
+  file, an explicit missing wiki file, an external link, and the two anchor
+  checks). All are killed.
 
 ### CI
 

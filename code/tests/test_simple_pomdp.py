@@ -44,7 +44,6 @@ def config_path(tmp_path):
                 "shape": [2],  # [num_actions] - initial action prior
                 "initialization": "uniform",
                 "description": "Initial uniform prior over actions",
-                "learning_rate": 0.2,  # Rate at which policy prior is updated
             },
         },
         "inference": {
@@ -56,7 +55,7 @@ def config_path(tmp_path):
             "output_dir": str(tmp_path / "viz_output"),
             "formats": ["png"],
             "dpi": 300,
-            "style": {"colormap_2d": "YlOrRd", "colormap_3d": "viridis", "figure_size": [10, 8]},
+            "style": {"colormap": "YlOrRd"},
         },
     }
 
@@ -120,7 +119,6 @@ def model(output_dir):
                 "shape": [2],  # [num_actions] - initial action prior
                 "initialization": "uniform",
                 "description": "Initial uniform prior over actions",
-                "learning_rate": 0.2,  # Rate at which policy prior is updated
             },
         },
         "inference": {
@@ -130,14 +128,8 @@ def model(output_dir):
         },
         "visualization": {
             "output_dir": str(output_dir),
-            "style": {
-                "figure_size": (10, 8),
-                "dpi": 100,
-                "colormap": "viridis",
-                "colormap_3d": "viridis",
-                "font_size": 12,
-                "file_format": "png",
-            },
+            "dpi": 100,
+            "style": {"colormap": "viridis", "font_size": 12},
         },
     }
     return SimplePOMDP(config)

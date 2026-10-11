@@ -20,6 +20,11 @@ semantic_relations:
 
 # Swarm Intelligence Implementation Guide
 
+> **Scope.** The classes on this page are illustrative sketches of the algorithms, with the
+> method bodies mostly left as outlines; they are not part of the `cognitive` package and are not
+> exercised by its tests. The repository's own agents are described in
+> [[code/Things/README|Things]], and `Ant_Colony` there is a design note without code.
+
 This document provides practical implementations of swarm intelligence algorithms, focusing on ant colony optimization, particle swarm optimization, and other collective intelligence methods. The implementations demonstrate how simple agent rules can produce complex emergent behavior for optimization and problem-solving.
 
 ## 🐜 Ant Colony Optimization (ACO) - Ant-Inspired Algorithms

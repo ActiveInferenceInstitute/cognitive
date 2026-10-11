@@ -50,7 +50,7 @@ those scripts really check.
 
 `repo_scripts/` holds four helper scripts: `list_file_directory.py` and
 `fix_links.py` (both write reports to `repo_scripts/output/`; both import
-`tqdm`, which is not a declared dependency), and `markdown_autofix.py` and
+`tqdm`, declared in the `maintenance` extra), and `markdown_autofix.py` and
 `markdown_autofix_low_risk.py` (whitespace and blank-line normalizers with
 `--path` and `--dry-run`). They are excluded from ruff. The enforceable checks
 are the validators in `code/scripts/`.

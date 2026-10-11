@@ -7,6 +7,8 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
+import yaml
+
 try:
     from scripts.markdown_fences import strip_fenced_blocks
 except ImportError:  # run as a file: the script directory is on sys.path
@@ -84,6 +86,9 @@ class LinkIndex:
     markdown_by_stem: dict[str, list[Path]]
     markdown_by_rel_no_suffix: dict[str, Path]
     all_files_by_rel: set[str]
+    # Frontmatter ``aliases:`` of each page, so ``[[plasticity]]`` opens the page
+    # that lists "plasticity" as an alias, as Obsidian does.
+    markdown_by_alias: dict[str, Path] = field(default_factory=dict)
 
 
 def _iter_files(root_dir: Path):
@@ -102,10 +107,39 @@ def _normalise_key(value: str) -> str:
     return value.replace("\\", "/").strip().lower()
 
 
+def _alias_key(value: str) -> str:
+    """Normalise an alias or link name so ``Free Energy`` matches ``free_energy``."""
+    return " ".join(_normalise_key(value).replace("_", " ").split())
+
+
+def _frontmatter_aliases(path: Path) -> list[str]:
+    """Return the ``aliases:`` listed in a page's frontmatter, or an empty list."""
+    try:
+        text = path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError):
+        return []  # the link scan reports an unreadable file
+    if not text.startswith("---"):
+        return []
+    parts = text.split("---", 2)
+    if len(parts) < 3 or "aliases" not in parts[1]:
+        return []
+    try:
+        data = yaml.safe_load(parts[1])
+    except yaml.YAMLError:
+        return []  # validate_docs reports malformed frontmatter
+    aliases = data.get("aliases") if isinstance(data, dict) else None
+    if isinstance(aliases, str):
+        aliases = [aliases]
+    if not isinstance(aliases, list):
+        return []
+    return [alias for alias in aliases if isinstance(alias, str)]
+
+
 def _build_index(root_dir: Path) -> LinkIndex:
     markdown_by_stem: dict[str, list[Path]] = {}
     markdown_by_rel_no_suffix: dict[str, Path] = {}
     all_files_by_rel: set[str] = set()
+    markdown_by_alias: dict[str, Path] = {}
 
     for path in _iter_files(root_dir):
         rel_path = path.relative_to(root_dir)
@@ -118,11 +152,14 @@ def _build_index(root_dir: Path) -> LinkIndex:
         stem_key = _normalise_key(path.stem)
         markdown_by_stem.setdefault(stem_key, []).append(rel_path)
         markdown_by_rel_no_suffix[_normalise_key(rel_path.with_suffix("").as_posix())] = rel_path
+        for alias in _frontmatter_aliases(path):
+            markdown_by_alias.setdefault(_alias_key(alias), rel_path)
 
     return LinkIndex(
         markdown_by_stem=markdown_by_stem,
         markdown_by_rel_no_suffix=markdown_by_rel_no_suffix,
         all_files_by_rel=all_files_by_rel,
+        markdown_by_alias=markdown_by_alias,
     )
 
 
@@ -220,7 +257,7 @@ def _target_exists(
         return True
 
     basename_key = _normalise_key(Path(target).stem)
-    return basename_key in index.markdown_by_stem
+    return basename_key in index.markdown_by_stem or _alias_key(target) in index.markdown_by_alias
 
 
 def _resolve_target_path(
@@ -247,8 +284,10 @@ def _resolve_target_path(
     if rel_key in index.all_files_by_rel:
         return root_dir / target
 
+    # The index holds paths relative to the root; callers read the file, so join
+    # them to the root rather than depend on the working directory.
     if rel_key in index.markdown_by_rel_no_suffix:
-        return index.markdown_by_rel_no_suffix[rel_key]
+        return root_dir / index.markdown_by_rel_no_suffix[rel_key]
 
     if _has_file_suffix(target):
         return None
@@ -256,8 +295,9 @@ def _resolve_target_path(
     basename_key = _normalise_key(Path(target).stem)
     matches = index.markdown_by_stem.get(basename_key, [])
     if matches:
-        return matches[0]
-    return None
+        return root_dir / matches[0]
+    aliased = index.markdown_by_alias.get(_alias_key(target))
+    return root_dir / aliased if aliased is not None else None
 
 
 def verify_link_report(

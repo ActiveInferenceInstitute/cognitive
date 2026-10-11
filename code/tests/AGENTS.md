@@ -42,7 +42,7 @@ commands, and CI behaviour are in [[code/tests/README|the overview]].
   some test. Run `python -m scripts.mutation_check --json` (or
   `--filter <text>` for one mutation) after changing the code it targets.
 - `test_utils.py` holds helpers, not tests; `conftest.py` holds shared
-  fixtures and the `--mutation` option.
+  fixtures.
 
 ## Before submitting
 
