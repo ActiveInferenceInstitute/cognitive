@@ -201,18 +201,21 @@ produced a wrong or arbitrary result now raise `ValueError`.
 
 ### Documentation
 
-- The knowledge base gained 441 concept pages and 72 one-paragraph pages were rewritten
-  into articles. The last 83 pages cover names that two pages already linked: named brain
-  regions and clinical conditions, probability and geometry topics, philosophical
-  positions and molecular biology. Worked examples are computed with the package and
-  quote the numbers it returns. The references on these pages were checked against
-  PubMed, Crossref and publisher records.
+- The knowledge base gained 753 concept pages and 72 one-paragraph pages were rewritten
+  into articles. The latest 395 pages cover names that existing pages already linked:
+  named brain regions, clinical conditions and cognitive effects; probability, information
+  theory, dynamics and control; network science; philosophical positions and ethics; and
+  ecology, colony biology and molecular biology. Worked examples are computed with the
+  package and quote the numbers it returns. Every reference was checked against
+  PubMed, Crossref and publisher records, and the checks corrected titles, authors, page
+  ranges, attributions and a number of over-stated claims.
 - Link lists now carry accurate glosses (4,987 rewritten). About 6,000 links to generic
   labels that no page should exist for (`new_methods`, `version_control`,
   `adaptive_strategies`) were unlinked, and existing pages gained `aliases:` so a
-  synonym or variant name opens the page that covers it. About 1,300 `[[concept]]`
-  names remain without a page: each is a specific, well-defined concept (a named
-  region, effect, method or theory) kept as a marker for a page worth writing.
+  synonym or variant name opens the page that covers it. About 980 `[[concept]]`
+  names remain without a page: each is a specific, well-defined concept (mostly advanced
+  mathematics, physics and regional philosophical traditions) kept as a marker for a
+  page worth writing.
 - `knowledge_base/mathematics/expected_free_energy.md` states the canonical
   decomposition the package uses. It previously equated epistemic value plus risk
   with ambiguity plus risk.
