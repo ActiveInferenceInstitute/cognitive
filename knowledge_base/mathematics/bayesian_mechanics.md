@@ -5,6 +5,8 @@ type: mathematical_concept
 status: stable
 created: 2026-10-12
 updated: 2026-10-12
+aliases:
+  - Bayesian mechanics
 tags:
   - free_energy_principle
   - statistical_physics
@@ -41,7 +43,7 @@ The partition is a Markov blanket: external and internal states are conditionall
 
 $$F(b,\mu)=D_{\mathrm{KL}}\big[q_\mu(\eta)\,\|\,p^*(\eta\mid b)\big]-\ln p^*(b)$$
 
-is then a function of blanket and internal states, and the expected flow of the internal states at steady state can be written as a gradient flow on $F$. Da Costa et al. (2021) obtain this for stationary processes, and further split the blanket so that active states behave like the actions of a controller that keeps the system near its characteristic states.
+is then a function of blanket and internal states, and the expected flow of the internal states at steady state can be written as a gradient flow on $F$. Da Costa et al. (2021) obtain this for stationary processes, and further split the blanket into sensory and active states, after which the active states can be read as performing active inference and well-known forms of stochastic control such as PID control.
 
 ## Variants
 Ramstead et al. (2023) review three ways in which the free energy principle has been applied to particular systems, which they call path-tracking, mode-tracking and mode-matching. They also examine a duality between the free energy principle and the constrained maximum entropy principle.

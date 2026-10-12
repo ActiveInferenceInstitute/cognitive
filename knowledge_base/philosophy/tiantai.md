@@ -40,10 +40,10 @@ The connection is an analogy. The Tiantai thesis that each thing contains the ch
 
 ## Related concepts
 - [[buddhist_philosophy]] — the wider tradition and the doctrine of emptiness
-- [[pure_land]] — a devotional tradition whose practices overlap with Tiantai's
+- [[pure_land]] — another Chinese Buddhist tradition, here a neighbouring topic
 - [[internal_relations]] — the thesis that relations are partly constitutive of what they relate
 - [[nothingness]] — a comparative topic across Buddhist and Western thought
 
 ## References
 - Ziporyn, B. (2014). Tiantai Buddhism. In E. N. Zalta & U. Nodelman (Eds.), The Stanford Encyclopedia of Philosophy (first published 19 November 2014, substantive revision 13 November 2022). https://plato.stanford.edu/entries/buddhism-tiantai/
-- Ziporyn, B. (2000). Evil and/or/as the Good. Harvard University Asia Center for the Harvard-Yenching Institute (distributed by Harvard University Press).
+- Ziporyn, B. (2000). Evil and/or/as the Good: Omnicentrism, Intersubjectivity, and Value Paradox in Tiantai Buddhist Thought. Harvard University Asia Center for the Harvard-Yenching Institute (distributed by Harvard University Press).

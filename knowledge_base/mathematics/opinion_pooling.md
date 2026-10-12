@@ -23,7 +23,7 @@ semantic_relations:
 # Opinion Pooling
 
 ## Overview
-Opinion pooling asks how to combine the probability distributions $P_1,\dots,P_n$ that $n$ individuals, experts or sensors hold over the same set of outcomes into a single collective distribution $P=F(P_1,\dots,P_n)$. The function $F$ is called a pooling operator. The problem arises in forecasting, risk analysis, group decision making and in models of collective cognition in animals. Stone (1961) is an early mathematical treatment, Genest and Zidek (1986) give a critical review of the literature, and Dietrich and List (2017) survey the axiomatic approach.
+Opinion pooling asks how to combine the probability distributions $P_1,\dots,P_n$ that $n$ individuals, experts or sensors hold over the same set of outcomes into a single collective distribution $P=F(P_1,\dots,P_n)$. The function $F$ is called a pooling operator. The problem arises in forecasting, risk analysis and group decision making. Stone (1961) is an early mathematical treatment, Genest and Zidek (1986) give a critical review of the literature, and Dietrich and List (2017) survey the axiomatic approach.
 
 ## The two main pools
 **Linear pool.** With non-negative weights $w_i$ summing to one,
@@ -46,7 +46,7 @@ If $P_i=\mathcal{N}(\mu_i,\sigma_i^2)$, the logarithmic pool is Gaussian with pr
 No pooling operator satisfies every desirable property at once. Dietrich and List (2017) review characterisation and impossibility theorems that show, for example, how requirements that the collective opinion depend only on the individuals' opinions about each event, or that it preserve unanimous judgments, restrict the choice of operator. The choice of pool is therefore a modelling decision, and Clemen and Winkler (1999) compare methods used in risk analysis.
 
 ## Relation to Active Inference
-The link is a structural resemblance. Precision-weighted combination of estimates, central to Active Inference, is what a logarithmic pool of Gaussian beliefs does. In multi-agent settings, agents that share or exchange beliefs face a pooling problem, and the choice between pooling rules changes the collective behaviour. However, nothing in the Active Inference framework prescribes one pooling rule, and the use of a particular pool in a model is a design choice.
+The link is a structural resemblance. Precision-weighted combination of estimates, central to Active Inference, is what a logarithmic pool of Gaussian beliefs does. In multi-agent settings, agents that share or exchange beliefs face a pooling problem. However, nothing in the Active Inference framework prescribes one pooling rule, and the use of a particular pool in a model is a design choice.
 
 ## Related concepts
 - [[probability_theory]] — the distributions being combined

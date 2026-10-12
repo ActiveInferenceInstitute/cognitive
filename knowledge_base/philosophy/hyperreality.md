@@ -45,4 +45,4 @@ The connection is an analogy and should not be overstated. In predictive-process
 
 ## References
 - Kellner, D. (2019). Jean Baudrillard. In E. N. Zalta (Ed.), The Stanford Encyclopedia of Philosophy (first published 22 April 2005, substantive revision 18 December 2019). https://plato.stanford.edu/entries/baudrillard/
-- Baudrillard, J. (1994). Simulacra and Simulation University of Michigan Press. (English translation of the work first published in 1981)
+- Baudrillard, J. (1994). Simulacra and Simulation. University of Michigan Press. (English translation of the work first published in 1981)

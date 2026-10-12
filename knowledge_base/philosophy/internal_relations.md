@@ -33,10 +33,10 @@ The Stanford Encyclopedia of Philosophy entry on relations distinguishes three v
 These definitions classify many ordinary cases alike, but they diverge on others, so the label should always be tied to a definition.
 
 ## Bradley and the idealist doctrine
-F. H. Bradley argued in *Appearance and Reality* (1893) that external relations are unintelligible, by a dilemma leading to an infinite regress: if a relation is nothing to the things it relates it cannot relate them, and if it is something to them it must itself be related to them by a further relation, and so on. Bradley drew the conclusion that external relations should be eliminated from ontology. The standard response, associated with Russell, is that the argument is not compelling and that ordinary and scientific thought commit us to external relations. The regress remains a live topic in current work on relations.
+F. H. Bradley argued in *Appearance and Reality* (1893) that external relations are unintelligible, by a dilemma leading to an infinite regress: if a relation is nothing to the things it relates it cannot relate them, and if it is something to them it must itself be related to them by a further relation, and so on. Bradley drew the conclusion that external relations should be eliminated from ontology. The standard response, associated with Russell, is that the argument is not compelling and that ordinary and scientific thought commit us to external relations. The SEP adds that even if the argument is judged mistaken, it remains to be determined where exactly it goes wrong.
 
 ## Process philosophy
-Alfred North Whitehead's mature ontology is one of internally related organism-like processes, the [[actual_occasions]]. Each occasion is constituted by how it takes account of, or feels, the antecedent world, so its relations to earlier occasions are part of what it is. The inward process by which this happens is [[concrescence]]. See [[process_philosophy]].
+The Stanford Encyclopedia of Philosophy describes Alfred North Whitehead's ultimate ontology as one of internally related organism-like elementary processes, the [[actual_occasions]]. Each is a process of [[concrescence]], the growing together of many feelings into one. See [[process_philosophy]].
 
 ## Relation to Active Inference
 The connection is interpretive. A Markov blanket separates a system's internal states from its external states while coupling them through blanket states, so a system's identity in the free-energy framework is defined partly by its statistical relations to its environment. That is loosely in the spirit of relational ontologies. Active Inference does not itself decide between internal and external relations, and the formalism is compatible with either metaphysical reading, as in discussions of [[structural_realism]].
@@ -50,6 +50,6 @@ The connection is interpretive. A Markov blanket separates a system's internal s
 
 ## References
 - MacBride, F. (2025). Relations. In E. N. Zalta & U. Nodelman (Eds.), The Stanford Encyclopedia of Philosophy (first published 9 February 2016, substantive revision 5 September 2025). https://plato.stanford.edu/entries/relations/
-- Moore, G. E. (1919-20). External and internal relations. Proceedings of the Aristotelian Society, 20(1), 40-62. https://doi.org/10.1093/aristotelian/20.1.40
+- Moore, G. E. (1920). External and internal relations. Proceedings of the Aristotelian Society, 20(1), 40-62. https://doi.org/10.1093/aristotelian/20.1.40
 - Bradley, F. H. (1893). Appearance and Reality. Swan Sonnenschein.
 - Desmet, R., & Irvine, A. D. (2022). Alfred North Whitehead. In E. N. Zalta & U. Nodelman (Eds.), The Stanford Encyclopedia of Philosophy (first published 1996, substantive revision 10 November 2022). https://plato.stanford.edu/entries/whitehead/

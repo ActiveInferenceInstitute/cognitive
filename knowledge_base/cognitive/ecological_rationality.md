@@ -5,6 +5,8 @@ type: concept
 status: stable
 created: 2026-10-12
 updated: 2026-10-12
+aliases:
+  - adaptive toolbox
 tags:
   - decision_making
   - heuristics

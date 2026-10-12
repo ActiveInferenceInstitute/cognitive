@@ -46,6 +46,6 @@ The connection is loose. In a model of communication, a speaker's testimony is e
 - [[critical_theory]] — traditions of social critique
 
 ## References
-- Spivak, G. C. (1988). Can the subaltern speak? In C. Nelson & L. Grossberg (Eds.), Marxism and the Interpretation of Culture. Macmillan Education.
+- Spivak, G. C. (1988). Can the subaltern speak? In C. Nelson & L. Grossberg (Eds.), Marxism and the Interpretation of Culture (pp. 271-313). Macmillan Education.
 - Dotson, K. (2011). Tracking epistemic violence, tracking practices of silencing. Hypatia, 26(2), 236-257. https://doi.org/10.1111/j.1527-2001.2011.01177.x
 - Fricker, M. (2007). Epistemic Injustice: Power and the Ethics of Knowing. Oxford University Press. https://doi.org/10.1093/acprof:oso/9780198237907.001.0001

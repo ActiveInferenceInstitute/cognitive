@@ -39,7 +39,7 @@ At each event the null vectors form a double cone, the light cone, separating th
 For a timelike worldline, the proper time is $\tau=\int\sqrt{-\eta(\dot x,\dot x)}\,d\lambda$, the time recorded by a clock moving along it. Among timelike curves joining two events, a straight inertial path has the longest proper time, which is the geometric content of the twin effect.
 
 ## Role in later theories
-Gravity is described by letting the metric vary from event to event, with Minkowski spacetime as the local approximation at each point (see [[lorentzian_manifolds]]). Approaches that start from the causal order, such as [[causal_sets]], treat the cone structure as primary and ask how the metric emerges from it. Standard textbooks include Naber (1992) for the mathematics and the Stanford Encyclopedia entry on inertial frames for the conceptual background.
+Gravity is described by letting the metric vary from event to event, with Minkowski spacetime as the local approximation at each point (see [[lorentzian_manifolds]]). Approaches that start from the causal order, such as [[causal_sets]], treat the cone structure as primary and ask how the metric emerges from it. Naber (1992) is a textbook treatment of the mathematics, and the Stanford Encyclopedia entry on inertial frames gives the conceptual background.
 
 ## Relation to Active Inference
 There is no established connection. Standard Active Inference models treat time as a parameter indexing a sequence of states, not as part of a Lorentzian geometry, and the framework makes no relativistic assumptions. The page matters here mainly as the background for geometric and ontological discussions of space and time (see [[philosophy_of_time]]).

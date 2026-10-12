@@ -26,10 +26,10 @@ semantic_relations:
 The ethics of liberation is the ethical theory worked out by the Argentine-Mexican philosopher Enrique Dussel (1934-2023), a leading figure in the Latin American philosophy of liberation. Its main statement is *Ética de la liberación en la edad de la globalización y de la exclusión* (1998), translated into English in 2013 as *Ethics of Liberation: In the Age of Globalization and Exclusion*. According to the publisher of the English edition, the work offers a world history of ethics, arguing that fundamental moral traditions did not arise only in ancient Greece and later European and North American thought and that the origins of Modernity lie outside the Western tradition. It reorients ethical theory around the experience of those excluded from Western Modernity and neoliberal rationalism.
 
 ## Main ideas
-- **Starting from the victim.** Dussel's project proceeds from ethical critique, in which the negated dignity of the life of the victim, whether oppressed or excluded, is the point of departure. The system that produces victims is judged from the position of those it excludes.
+- **Starting from the victim.** Dussel's ethics takes the standpoint of the victims of the dominant system, the oppressed and excluded, as its point of departure. The system that produces victims is judged from the position of those it excludes.
 - **Material principle.** Against purely formal moral theories such as those of Kant, Rawls, Apel and Habermas, Dussel argues for a principle with content: the duty to produce, reproduce and develop human life in community.
-- **Formal principle.** A formal criterion of moral validity, that takes its model from the ideal dialogue situation developed by Apel and Habermas.
-- **Feasibility principle.** Ethical norms must be realisable. The mediations through which human life is reproduced, such as agriculture, education and the state, are systems whose complexity can lead them to become autonomous and to stop serving that end.
+- **Formal principle.** A principle of validity: norms are legitimate only if reached through democratic, symmetrical deliberation that includes everyone affected, the victims above all. It is in dialogue with discourse ethics (Apel, Habermas), but formal procedures taken alone risk negating human life unless the material principle is also respected.
+- **Feasibility principle.** Ethical actions, norms and institutions must be achievable under the actual conditions in which people live.
 
 The three principles are meant to be held together, so that formal validity, material content and practical feasibility are each examined in judging an action or institution.
 
@@ -46,4 +46,5 @@ The connection is distant. The ethics of liberation is a normative and historica
 
 ## References
 - Dussel, E. (2013). Ethics of Liberation: In the Age of Globalization and Exclusion (A. A. Vallega, Ed.; N. Maldonado-Torres, E. Mendieta, Y. Angulo, & C. Pérez-Bustillo, Trans.). Duke University Press. https://dukeupress.edu/ethics-of-liberation
-- Dussel, E. (1998). Ética de la liberación en la edad de la globalización y de la exclusión. Editorial Trotta.
+- Dussel, E. (1998). Ética de la liberación en la edad de la globalización y de la exclusión. Madrid: Editorial Trotta.
+- Mendieta, E. (1999). Ethics for an age of globalization and exclusion. Philosophy and Social Criticism, 25(2), 115-121. https://doi.org/10.1177/019145379902500206

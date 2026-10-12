@@ -26,7 +26,7 @@ semantic_relations:
 # Robert Brandom
 
 ## Overview
-Robert Brandom (born 1950) is an American philosopher at the University of Pittsburgh, working in the philosophy of language, philosophy of mind and philosophical logic. He took his doctorate at Princeton, where Richard Rorty was among his advisors. His system is set out in *Making It Explicit: Reasoning, Representing, and Discursive Commitment* (1994) and presented more briefly in *Articulating Reasons: An Introduction to Inferentialism* (2000). He is often grouped with Rorty and Putnam as a leading late twentieth-century heir of pragmatism (see [[pragmatism]]), with a more systematic and rationalist temperament than either.
+Robert Brandom (born 1950) is an American philosopher at the University of Pittsburgh, working in the philosophy of language, philosophy of mind and philosophical logic. He took his doctorate at Princeton in 1977, with Richard Rorty and David Lewis as advisors. His system is set out in *Making It Explicit: Reasoning, Representing, and Discursive Commitment* (1994) and presented more briefly in *Articulating Reasons: An Introduction to Inferentialism* (2000). He is usually placed in the Pittsburgh school and among the neopragmatists, and is broadly considered part of the American pragmatist tradition (see [[pragmatism]]).
 
 ## Main ideas
 - **Semantic inferentialism.** The meaning of an expression is explained by the inferential role it plays, that is, by what follows from it and what it follows from, not by a relation of reference to objects. This is offered as an alternative to the representationalist paradigm, and it draws on Wilfrid Sellars.
@@ -35,8 +35,6 @@ Robert Brandom (born 1950) is an American philosopher at the University of Pitts
 - **Logical expressivism.** Logical vocabulary, such as the conditional, does not describe special logical facts. Its function is to make explicit the inferential relations that were already implicit in practice, which is the sense of "making it explicit".
 - **Anaphoric account of reference and truth.** Reference and truth talk is explained through anaphoric dependence of one expression on another, in place of a substantive relation between words and world.
 - **Analytic pragmatism.** *Between Saying and Doing* (2008) asks how the vocabularies in which we say things relate to the practices and abilities needed to use them.
-
-Critics argue that the representationalism Brandom opposes is partly a straw man, and that his normative statuses leave open how they connect to the causal facts of perception and action.
 
 ## Relation to Active Inference
 The connection is an analogy and it is not drawn by Brandom. Scorekeeping, in which agents track each other's commitments and update on what follows, has a structural resemblance to the way social models of Active Inference give each agent beliefs about the beliefs of others (see [[social_epistemology]]). Active Inference, however, is a theory of probabilistic belief updating, and it does not itself provide a normative notion of entitlement or a theory of inferential role. Any use of Brandom's framework to interpret communicating agents is a proposal for interpretation, not a result of the framework.

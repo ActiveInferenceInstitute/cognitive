@@ -34,8 +34,7 @@ Said analysed Western scholarship and writing about the Arab Islamic world and a
 Bhabha, in the essay "Of Mimicry and Man: The Ambivalence of Colonial Discourse" (1984) and in *The Location of Culture* (1994), examined how colonialism produces complex and often contradictory relations between colonisers and colonised. He drew on Foucault, Derrida and Lacan and departed from what he saw as Said's binary opposition of coloniser and colonised.
 - **Ambivalence.** The stereotyping of colonised peoples reveals as much about the anxieties of the colonisers as about those described, so colonial authority is never fully secure.
 - **Mimicry.** Colonial discourse seeks to have the colonised adopt the colonisers' manners and language, yet the resulting imitation unsettles the authority it was meant to confirm.
-- **Hybridity.** Cultures and identities that arise at the point of colonial contact are mixed and cannot be reduced to either side. The success of the argument is disputed: some critics hold that the hybridity produced by mimicry may serve to reinforce difference.
-
+- **Hybridity.** Cultures and identities that arise at the point of colonial contact are mixed and cannot be reduced to either side.
 ## Limits and debate
 Bhabha's emphasis on ambivalence and internal division contrasts with the more binary picture he attributed to Said, and the wider field contains further disagreements that this page does not survey. The concept is one of several in postcolonial theory and is complemented by materialist and structural accounts such as [[coloniality_of_power]] and by Spivak's analysis of [[epistemic_violence]].
 

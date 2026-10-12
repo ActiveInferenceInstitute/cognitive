@@ -34,7 +34,7 @@ Quantum biology asks whether non-trivial quantum effects contribute to the funct
 - **Other proposals,** such as a role for molecular vibrations in olfaction, are more contested.
 
 ## Assessment
-Marais et al. (2018) review the state of the field and the experimental advances needed, and the field is best described as having suggestive cases and open arguments. Where an effect is claimed, the useful test is a functional one: does removing or disrupting the quantum feature change the biological performance, and does a classical model with the same parameters fail to account for the data?
+Marais et al. (2018) outline the current state of the field and directions for its future, and the field is best described as having suggestive cases and open arguments. Where an effect is claimed, the useful test is a functional one: does removing or disrupting the quantum feature change the biological performance, and does a classical model with the same parameters fail to account for the data?
 
 ## Relation to Active Inference
 No established connection exists. Active Inference describes organisms with classical probabilistic models of states and observations, and the free energy principle does not require quantum effects in biological tissue. The quantum formulation of the principle by Fields, Friston, Glazebrook and Levin (2022) concerns the formal generality of the framework and not a claim that cells exploit coherence. Quantum biology is also separate from quantum cognition, which uses quantum probability as a modelling language for judgement without positing quantum states in the brain (see [[quantum_cognition]]).

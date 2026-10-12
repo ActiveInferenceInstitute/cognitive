@@ -38,7 +38,7 @@ $$C=S\,\Phi(d_1)-Ke^{-rT}\Phi(d_2),\quad d_{1,2}=\frac{\ln(S/K)+(r\pm\tfrac12\si
 where $\Phi$ is the standard normal distribution function.
 
 ## Risk-neutral pricing
-Harrison and Pliska (1981) put the theory on a martingale footing. In the fundamental theorem of asset pricing, a market without arbitrage admits an equivalent probability measure $\mathbb{Q}$ under which discounted asset prices are martingales, and the price of a payoff $X$ at time $T$ is
+Harrison and Pliska (1981) put the theory on a martingale footing. In the fundamental theorem of asset pricing, which holds in precise form under technical conditions, absence of arbitrage corresponds to the existence of an equivalent probability measure $\mathbb{Q}$ under which discounted asset prices are martingales, and the price of a payoff $X$ at time $T$ is
 $$V_0=e^{-rT}\,\mathbb{E}_{\mathbb{Q}}[X].$$
 This converts a pricing problem into an expectation, which can be computed analytically, by solving a PDE, or by Monte Carlo simulation.
 

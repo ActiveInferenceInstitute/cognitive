@@ -31,7 +31,7 @@ Let $E$ be oriented of rank $n$. The orientation determines a Thom class $U\in H
 - **Naturality.** $e(f^*E)=f^*e(E)$ for any map $f$.
 - **Whitney product formula.** $e(E\oplus F)=e(E)\smile e(F)$.
 - **Orientation.** Reversing the orientation of $E$ changes the sign of $e(E)$. Consequently, if $n$ is odd then $2e(E)=0$.
-- **Sections.** If $E$ has a nowhere-vanishing section then $e(E)=0$. The converse holds in general only under extra hypotheses, for example when the rank equals the dimension of the base.
+- **Sections.** If $E$ has a nowhere-vanishing section then $e(E)=0$. The converse holds in general only under extra hypotheses, for example for a bundle whose rank equals the dimension of a closed, connected, oriented base manifold.
 - **Relation to Chern classes.** For a complex vector bundle of complex rank $k$, regarded as an oriented real bundle of rank $2k$, the Euler class equals the top Chern class $c_k$ (see [[chern_classes]]).
 
 ## Euler characteristic and curvature

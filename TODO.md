@@ -25,11 +25,14 @@ history; this file is not a log. Remove an item when it is done.
   `speculative_materialism`, `new_materialisms`, `queer_theory`, `postcolonial_theory`,
   `racial_formation` and `nichiren_buddhism`. Write them, and link them again where the text
   now reads plainly, only with such a reviewer.
-- **Review of the newly written pages.** The pages written in this pass state what their sources
-  say and cite only records that were looked up, but no subject expert has read them. Have the
-  mathematics and physics pages (`quantum_error_correction`, `topological_quantum_field_theory`,
-  `lorentzian_manifolds`, `gauge_theories`, `causal_sets`) and the tradition pages
-  (`philosophy/` Indian, Chinese, Japanese, African, Islamic) read by someone who can check them.
+- **Review of the newly written pages.** The 109 pages written in this pass were each checked a
+  second time against their sources: every reference was looked up again, about 30 pages had
+  claims softened or removed where the source did not support them, and a few references were
+  corrected. No subject expert has read them, and books were confirmed by author, title, year and
+  publisher, not by page. Have the mathematics and physics pages (`quantum_error_correction`,
+  `topological_quantum_field_theory`, `lorentzian_manifolds`, `gauge_theories`, `causal_sets`) and
+  the tradition pages (`philosophy/` Indian, Chinese, Japanese, African, Islamic) read by someone
+  who can check them.
 - **Scholarship.** About 1,100 of roughly 1,350 older content pages list two or more
   references, and every classic work cited on them (Shannon, Pearl, Koller and Friedman,
   Broadbent, Baddeley and Hitch, Rescorla and Wagner, Wertheimer, Watson, Ryle, Miller, Tolman,

@@ -28,7 +28,7 @@ semantic_relations:
 # Richard Rorty
 
 ## Overview
-Richard Rorty (1931-2007) trained in the analytic tradition and became its best-known internal critic. His book *Philosophy and the Mirror of Nature* (1979) argued that modern philosophy had been organised around a picture of knowledge as an accurate mental mirroring of a mind-independent world. He drew on Sellars, Quine and Davidson to attack that picture, and later turned toward Dewey, Hegel and Darwin for an alternative. Rorty is the most prominent figure of the pragmatist revival described in [[pragmatism]], although philosophers such as Susan Haack and Cheryl Misak dispute whether his view is faithful to the classical pragmatists.
+Richard Rorty (1931-2007) trained in the analytic tradition and became its best-known internal critic. His book *Philosophy and the Mirror of Nature* (1979) argued that modern philosophy had been organised around a picture of knowledge as an accurate mental mirroring of a mind-independent world. He drew on Sellars, Quine and Davidson to attack that picture, and later turned toward Dewey, Hegel and Darwin for an alternative. Rorty is the most prominent figure of the pragmatist revival described in [[pragmatism]], although pragmatists such as Susan Haack and Cheryl Misak criticise his version, Haack arguing that it abandons the attempt to understand inquiry and Misak that dropping objectivity removes the capacity for normative critique.
 
 ## Main positions
 - **Anti-representationalism.** Rorty calls his view of knowledge "epistemological behaviorism": to know something is to be able to justify a claim to one's peers, not to mirror reality. Truth, on his view, has no deep substantive nature beyond what is warranted.

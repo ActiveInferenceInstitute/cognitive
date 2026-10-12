@@ -33,7 +33,7 @@ Vedanta is nominally a school of Indian philosophy, but in reality it is a label
 "Advaita" is often translated "non-dualism", though it literally means "non-secondness". Shankara (thought by many scholars to have lived in the eighth century) is regarded as its main promoter. Its essential philosophy is an idealist monism.
 - **Brahman.** Brahman is the fundamental reality underlying all objects and experiences: pure existence, pure consciousness, pure bliss. Consciousness is Brahman's very nature and not merely a property of it.
 - **Maya and ignorance.** The world appears because of Brahman's creative energy (*maya*), and individuality is attributed to ignorance (*avidya*). The entry distinguishes three planes of existence: absolute (*paramarthika*), worldly (*vyavaharika*) and illusory (*pratibhasika*), such as a mirage.
-- **Epistemology.** The tradition offers correspondence, coherence and practical efficacy as lesser tests of truth. Its highest test is non-sublatability: a judgment is true if it is not later contradicted, as the snake seen where there is a rope is contradicted on closer inspection. Illusion is explained as superimposition (*adhyasa*) on a real substratum.
+- **Epistemology.** The tradition offers correspondence, coherence and practical efficacy as lesser tests of truth. The entry also gives non-sublatability as a criterion for valid knowledge: a judgment holds if it is not later contradicted, as the snake seen where there is a rope is contradicted on closer inspection. Illusion is explained as superimposition (*adhyasa*) on a real substratum.
 - **Liberation.** Knowledge of Brahman, "I am pure consciousness", ends the self-ignorance that "I am limited".
 
 ## Bhedabheda Vedanta
@@ -47,7 +47,7 @@ The connection is interpretive. Advaita's analysis of error as superimposition o
 - [[philosophy_of_mind]] — questions about consciousness and the self
 - [[neutral_monism]] — a Western monist alternative to dualism
 - [[panpsychism]] — a view in which consciousness is fundamental
-- [[samkhya_dualism]] — a dualist school, later influenced by Advaita according to the Internet Encyclopedia of Philosophy
+- [[samkhya_dualism]] — a dualist school, whose later authors engaged with Advaita ideas such as superimposition
 
 ## References
 - Menon, S. Advaita Vedanta. Internet Encyclopedia of Philosophy. https://iep.utm.edu/advaita-vedanta/

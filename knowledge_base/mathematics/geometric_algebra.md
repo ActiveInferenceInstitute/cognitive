@@ -32,7 +32,7 @@ In an $n$-dimensional space the algebra has dimension $2^n$ and splits into **gr
 ## Rotations through rotors
 A unit bivector $B$ with $B^2=-1$ generates a rotation in its plane. For an angle $\theta$ the **rotor** is
 $$R=\exp(-\tfrac12\theta B)=\cos\tfrac{\theta}{2}-B\sin\tfrac{\theta}{2},$$
-and a vector $v$ is rotated by $v\mapsto R\,v\,\tilde R$, where $\tilde R$ is the reverse of $R$. The even subalgebra of the three-dimensional algebra is isomorphic to the quaternions, so rotors reproduce quaternion rotations. The same formula works in any dimension and signature, and the rotors form the spin group, a double cover of the rotation group (see [[lie_groups]]).
+and a vector $v$ is rotated by $v\mapsto R\,v\,\tilde R$, where $\tilde R$ is the reverse of $R$. The even subalgebra of the three-dimensional algebra is isomorphic to the quaternions, so rotors reproduce quaternion rotations. The rotor construction extends to any dimension and signature (for a bivector squaring to $+1$ the exponential gives hyperbolic functions and a boost), and the rotors form the spin group, a double cover of the rotation group (see [[lie_groups]]).
 
 ## Geometric calculus and physics
 Extending the algebra with a vector derivative $\nabla$ gives geometric calculus, in which divergence and curl are combined as the two parts of $\nabla F=\nabla\cdot F+\nabla\wedge F$, and the fundamental theorem of geometric calculus generalises Stokes' theorem (Hestenes and Sobczyk, 1984). Applied to Minkowski spacetime, the spacetime algebra rewrites the four Maxwell equations as a single equation in the field bivector. Hestenes (2003) argued for reforming the mathematical language of physics in this direction.

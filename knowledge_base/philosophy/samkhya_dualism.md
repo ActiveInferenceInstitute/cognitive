@@ -26,7 +26,7 @@ semantic_relations:
 # Samkhya Dualism
 
 ## Overview
-Samkhya (also spelled Sankhya or Samkhya) is one of the major "orthodox" Indian philosophies (see [[hindu_philosophy]]). In the Internet Encyclopedia of Philosophy entry by Ferenc Ruzsa it is described as having been, two millennia ago, the representative Hindu philosophy. Its classical formulation is Ishvarakrishna's *Samkhya-Karika* (c. 350 CE), a condensed account in seventy-two verses. It is a strong Indian example of metaphysical dualism (compare [[dualism]]) but, unlike many Western counterparts, it is atheistic.
+Samkhya (also spelled Sankhya or Sāṅkhya) is one of the major "orthodox" Indian philosophies (see [[hindu_philosophy]]). In the Internet Encyclopedia of Philosophy entry by Ferenc Ruzsa it is described as having been, two millennia ago, the representative Hindu philosophy. Its classical formulation is Ishvarakrishna's *Samkhya-Karika* (c. 350 CE), a condensed account in seventy-two verses. It is a strong Indian example of metaphysical dualism (compare [[dualism]]) but, unlike many Western counterparts, it is atheistic.
 
 ## The two principles
 - **Prakriti.** Nature is single, eternal, unconscious, productive and purposeful, and it works for the purposes of persons. It is made of three *gunas*, which are not ordinary qualities but complex aspects of anything material: *sattva* (light, intelligence), *rajas* (change, energy) and *tamas* (inertia, heaviness). In every phenomenon all three are present and they interact. The entry suggests a modern paraphrase as coherence or information, energy, and inertia.

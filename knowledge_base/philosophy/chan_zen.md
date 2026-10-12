@@ -35,7 +35,7 @@ The founding legend of Chan is that the Buddha transmitted a private esoteric te
 
 ## Philosophical themes
 - **Theory of knowledge.** In the IEP's account, Chan's theory of knowledge concerns one's own mind and gives importance to what is known by direct, immediate acquaintance. The mind in question is the "original mind", before it was clouded over by experience and by the distinctions made in language, and it is in this original mind that one has awareness of certain truth. The IEP quotes D. T. Suzuki's description of this knowledge as direct and immediate, not inferential or rationalistic.
-- **Debt to other schools.** The SEP notes that the doctrines, metaphors and vocabulary of [[huayan]] influenced Chan, which outlasted Huayan's institutional decline in China after the persecution of 842-846.
+- **Debt to other schools.** The SEP notes that the doctrines, metaphors and vocabulary of [[huayan]] influenced Chan. The same entry reports that Huayan largely died out as a distinct religious movement, while its texts continued to be studied and were particularly influential on Chan, after the persecution of Buddhism in 842-846.
 
 ## Relation to Active Inference
 The connection is interpretive and tentative. Meditative practice, including the attempt to attend to experience without the overlay of conceptual distinctions, is a topic in research that uses predictive-processing and Active Inference vocabulary to discuss attention and the self-model (see [[altered_consciousness]]). The Chan notion of an original mind before conceptual distinction is not a claim of those theories, and the correspondence is at most a suggestive parallel.

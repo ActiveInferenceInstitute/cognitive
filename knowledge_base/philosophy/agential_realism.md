@@ -39,10 +39,10 @@ Agential realism is the position developed by the physicist and feminist theoris
 Diffractive methodology, a term associated with Barad and with Donna Haraway, takes its image from the pattern that forms when waves meet an obstacle. In contrast to reflection, which suggests mirroring and sameness, diffraction directs attention to differences and to the effects that research practices themselves produce. Readings of different texts or disciplines, such as physics and feminist theory, are read through one another instead of one being applied to the other.
 
 ## Debate
-Agential realism has been received more favourably in feminist technoscience than in mainstream science and technology studies. Critics argue that it is hard to apply to concrete ethical problems and that it projects a human notion of agency onto all matter. These points are open questions, and the framework is best treated as a philosophical position instead of a result of physics (see [[measurement_problem]] and [[philosophy_of_physics]]).
+Agential realism is a philosophical position that draws on quantum physics, not a result of physics. Its influence has been largest in cultural studies and social theory, and how well it fits the physics and the interpretive literature on quantum theory is contested (see [[measurement_problem]] and [[philosophy_of_physics]]).
 
 ## Relation to Active Inference
-The connection is interpretive and slight. The Markov blanket formalism also separates a system from its environment by a statistical boundary that is a modelling choice, which can be compared to the agential cut as a boundary enacted within a larger whole. Active Inference, however, presupposes a classical statistical description and makes no claims drawn from quantum theory in Barad's sense, and Barad does not rely on the free-energy formalism. Treat the comparison as a prompt for discussion.
+The connection is interpretive and slight. The Markov blanket formalism also separates a system from its environment by a statistical boundary that is a modelling choice, which can be compared to the agential cut as a boundary enacted within a larger whole. Active Inference, however, is standardly formulated with classical probability and makes no claims drawn from quantum theory in Barad's sense, and Barad does not rely on the free-energy formalism. Treat the comparison as a prompt for discussion.
 
 ## Related concepts
 - [[philosophy_of_physics]] — the interpretation of quantum theory on which Barad draws

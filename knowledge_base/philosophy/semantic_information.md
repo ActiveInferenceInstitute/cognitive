@@ -28,10 +28,10 @@ Shannon's mathematical theory of communication quantifies the statistical struct
 ## Bar-Hillel and Carnap
 Yehoshua Bar-Hillel and Rudolf Carnap's "An Outline of a Theory of Semantic Information" (1952) is the natural starting point. It is a quantitative theory designed to calculate the amount of semantic information carried by a sentence in a given language (monadic predicate logic). It rests on the inverse range principle: the amount of information carried by a sentence is inversely proportional to the likelihood that it is true. With $p(s)$ the a priori probability of a sentence $s$, the entry gives two measures,
 $$\mathrm{cont}(s)=1-p(s),\qquad \mathrm{inf}(s)=\log_2\frac{1}{1-\mathrm{cont}(s)}=\log_2\frac{1}{p(s)}.$$
-The theory has two famous problems. The *Bar-Hillel-Carnap paradox* is that a contradiction, false in all possible worlds, is assigned maximal information. The *scandal of deduction* is that the theory assigns minimal information to logical truths and valid deductions, although accounts of information still owe an explanation of why these seem informative.
+The theory has two famous consequences. The *Bar-Hillel-Carnap paradox* is that a contradiction, false in all possible worlds, is assigned maximal information, $\mathrm{cont}=1$ and $\mathrm{inf}=\infty$; Bar-Hillel and Carnap themselves accepted this, since a self-contradictory sentence "asserts too much", but it conflicts with the requirement that information be true. The *scandal of deduction* is that the theory assigns zero information to logical truths ($\mathrm{cont}=0$), which conflicts with the sense that valid deductions can be informative.
 
 ## Floridi's strongly semantic information
-Floridi's response to the paradox is the veridicality thesis: semantic information is well-formed, meaningful and truthful data. A proposition's quantity of information is measured by its distance from the situation it is meant to model, not by probability, so that contradictions and tautologies both carry none. Other authors use truthlikeness (verisimilitude) instead, which allows false statements to carry some information.
+Floridi's response to the paradox is the veridicality thesis: semantic information is well-formed, meaningful and truthful data. A proposition's informativeness is measured by its distance from the situation it is meant to model, not by probability, and the measure gives necessarily false and necessarily true propositions the same minimal value. Other authors use truthlikeness (verisimilitude) instead, which allows false statements to carry some information.
 
 ## Further approaches
 The entry also discusses the relation of information to meaning and modes of presentation (the "Frege puzzle" for information), and the theory of information channels, where information flow is modelled by relations among situation types, and which is used to model epistemic phenomena such as knowledge.
@@ -48,5 +48,6 @@ The relation is moderate. Active Inference rests on Shannon-style and Bayesian q
 
 ## References
 - Sequoiah-Grayson, S., & Floridi, L. (2005). Semantic Conceptions of Information. In E. N. Zalta & U. Nodelman (Eds.), The Stanford Encyclopedia of Philosophy (first published 5 October 2005, substantive revision 14 January 2022). https://plato.stanford.edu/entries/information-semantic/
+- Bar-Hillel, Y., & Carnap, R. (1952). An Outline of a Theory of Semantic Information (Technical Report No. 247). Research Laboratory of Electronics, Massachusetts Institute of Technology.
 - Bar-Hillel, Y., & Carnap, R. (1953). Semantic information. The British Journal for the Philosophy of Science, 4(14), 147-157.
 - Floridi, L. (2011). The Philosophy of Information. Oxford University Press.

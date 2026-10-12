@@ -1,6 +1,6 @@
 ---
 title: Flat Ontology
-description: A family of ontological positions, named by Manuel DeLanda and developed by Levi Bryant and object-oriented philosophers, that give all entities, whatever their scale or kind, the same ontological status and reject privileged or transcendent levels of being.
+description: A family of ontological positions, brought into wide use by Manuel DeLanda and developed by Levi Bryant and other object-oriented philosophers, that give all entities, whatever their scale or kind, the same ontological status and reject privileged or transcendent levels of being.
 type: concept
 status: stable
 created: 2026-10-12
@@ -23,7 +23,7 @@ semantic_relations:
 # Flat Ontology
 
 ## Overview
-A flat ontology is an ontology that refuses to arrange what exists into levels of greater or lesser reality. The phrase is used in current speculative realism and object-oriented philosophy, and in assemblage theory. Its two best-known formulations are Manuel DeLanda's proposal of an ontology made exclusively of unique, singular individuals that differ in spatiotemporal scale but not in ontological status, and Levi Bryant's broader use of the term in *The Democracy of Objects* (2011). In both, a person, a city and a nation are all individuals of the same ontological standing, although they differ in size and in the other entities they are composed of.
+A flat ontology is an ontology that refuses to arrange what exists into levels of greater or lesser reality. The phrase gained wide currency through DeLanda's *Intensive Science and Virtual Philosophy* (2002) and is now used in speculative realism, object-oriented philosophy and assemblage theory. Its two best-known formulations are Manuel DeLanda's proposal of an ontology made exclusively of unique, singular individuals that differ in spatiotemporal scale but not in ontological status, and Levi Bryant's broader use of the term in *The Democracy of Objects* (2011). In both, a person, a city and a nation are all individuals of the same ontological standing, although they differ in size and in the other entities they are composed of.
 
 ## Bryant's four theses
 Bryant describes flat ontology as a complex concept that bundles together several theses.

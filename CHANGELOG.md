@@ -50,7 +50,8 @@ a computed result are marked **behaviour change** and say what moved and why.
   written from sources that were looked up (Stanford and Internet Encyclopedia of Philosophy,
   nLab, Crossref, Open Library, arXiv), 40 were pointed at the existing page that covers them,
   and about 200 that named generic words or concepts needing a subject expert were turned into
-  plain text. The expert-only names are listed in the backlog.
+  plain text. The expert-only names are listed in the backlog. A second pass re-checked every reference on the new pages against Crossref, SEP,
+  IEP, nLab or catalogue records and corrected or softened about 30 pages' claims.
 - **Wikidata alignment.** A concept page may carry `wikidata: Q…`, which the RDF export writes as
   `skos:closeMatch`. 720 pages have one, found by label search and screened by a language model;
   see `docs/okn/vocabulary.md`.

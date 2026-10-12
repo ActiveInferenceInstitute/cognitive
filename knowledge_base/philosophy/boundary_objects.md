@@ -38,7 +38,7 @@ In the Berkeley case the authors distinguished four types of boundary object:
 Star later reflected on how the concept had been used. In her 2010 article she described three components in the original paper: interpretive flexibility, the structure of informatic and work-process needs and arrangements, and the dynamic between ill-structured and more tailored uses of the objects. She argued that much subsequent use had concentrated on interpretive flexibility alone and had conflated it with the movement back and forth between ill-structured and well-structured uses. The concept has since been applied well beyond science studies, for example in studies of organisational knowledge and product development (Carlile, 2002).
 
 ## Relation to Active Inference
-The connection is an interpretive analogy. In work on shared generative models, communities need compatible enough models of a common situation to coordinate, and a boundary object can be read as a shared artefact that each party fits into its own model while preserving a common reference. Boundary objects were developed in the sociology of science and carry no commitment to the free-energy formalism, and no formal result is known to link them.
+The connection is an interpretive analogy proposed on this page, not a finding from the cited sources. One could read a boundary object as a shared artefact that each community fits into its own model of a common situation while keeping a common reference, but boundary objects were developed in the sociology of science and carry no commitment to the free-energy formalism, and no formal result links them to Active Inference.
 
 ## Related concepts
 - [[social_epistemology]] — knowledge as a social achievement

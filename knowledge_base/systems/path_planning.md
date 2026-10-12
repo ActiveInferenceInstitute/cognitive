@@ -54,6 +54,6 @@ Active Inference frames planning as inference over policies: candidate sequences
 - Hart, P. E., Nilsson, N. J., & Raphael, B. (1968). A formal basis for the heuristic determination of minimum cost paths. IEEE Transactions on Systems Science and Cybernetics, 4(2), 100-107. https://doi.org/10.1109/TSSC.1968.300136
 - Lozano-Perez, T. (1983). Spatial planning: A configuration space approach. IEEE Transactions on Computers, C-32(2), 108-120. https://doi.org/10.1109/TC.1983.1676196
 - Khatib, O. (1986). Real-time obstacle avoidance for manipulators and mobile robots. The International Journal of Robotics Research, 5(1), 90-98. https://doi.org/10.1177/027836498600500106
-- Kavraki, L. E., Svestka, P., Latombe, J.-C., & Overmars, M. H. (1996). Probabilistic roadmaps for path planning in high-dimensional configuration spaces. IEEE Transactions on Robotics and Automation, 12(4), 566-580.
+- Kavraki, L. E., Svestka, P., Latombe, J.-C., & Overmars, M. H. (1996). Probabilistic roadmaps for path planning in high-dimensional configuration spaces. IEEE Transactions on Robotics and Automation, 12(4), 566-580. https://doi.org/10.1109/70.508439
 - LaValle, S. M., & Kuffner, J. J. (2001). Randomized kinodynamic planning. The International Journal of Robotics Research, 20(5), 378-400. https://doi.org/10.1177/02783640122067453
 - LaValle, S. M. (2006). Planning Algorithms. Cambridge University Press.

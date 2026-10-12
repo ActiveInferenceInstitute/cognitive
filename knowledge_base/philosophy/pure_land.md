@@ -38,7 +38,7 @@ There is no direct relation. The tradition concerns salvation and the nature of 
 
 ## Related concepts
 - [[buddhist_philosophy]] — the wider Mahayana background, including emptiness
-- [[tiantai]] — a Chinese tradition with its own constant-nembutsu practice
+- [[tiantai]] — the Chinese school whose Japanese branch, Tendai, was where Honen trained
 - [[kyoto_school]] — modern Japanese philosophy in dialogue with Pure Land and Zen thought
 - [[religious_experience]] — philosophical treatments of faith and awakening experience
 - [[faith_and_reason]] — the relation of devotion to philosophical argument

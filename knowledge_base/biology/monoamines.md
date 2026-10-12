@@ -5,6 +5,9 @@ type: concept
 status: stable
 created: 2026-10-12
 updated: 2026-10-12
+aliases:
+  - monoamine neurotransmitters
+  - biogenic amines
 tags:
   - neurochemistry
   - neuromodulation

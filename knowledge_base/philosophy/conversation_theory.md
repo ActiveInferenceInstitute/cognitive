@@ -27,9 +27,9 @@ Conversation theory is a framework developed by the cybernetician Gordon Pask, m
 
 ## Main elements
 - **Conversation as the unit of analysis.** Pask's summary of the approach is that mental activity can be described in terms of dialogue and behaviour. Understanding is something that has to be demonstrated within a conversation, under defined conditions, and not assumed from a learner's report.
-- **Levels of discourse.** Descriptions distinguish talk in an object language about the subject matter from talk in a metalanguage about learning, that is, about how the subject matter is being understood, in addition to general natural-language discussion.
-- **Teachback.** A learner shows understanding by explaining or reconstructing a topic back to the other participant. Agreement is reached when each party can confirm that the other's concepts reproduce their own.
-- **Entailment meshes.** Subject matter is represented as a network of topics that entail one another. Pask first spoke of entailment structures and later treated them as a restricted case of meshes. A path through the mesh corresponds to a teaching or learning strategy.
+- **Levels of discourse.** Descriptions distinguish several levels of language: an object language for the subject matter, a metalanguage for talk about the object language and how it is understood, and ordinary natural-language discussion.
+- **Teachback.** A learner shows understanding by explaining or reconstructing a topic back to the other participant. Pask treats an agreement over an understanding as an event that can be detected within the conversation.
+- **Entailment meshes.** Subject matter is represented as a network of topics that entail one another. Entailment structures are described as a restricted case of entailment meshes. A path through the mesh corresponds to a teaching or learning strategy.
 - **Learning styles.** In experiments reported in 1976, Pask found variations in learning strategies and effects of matching or mismatching a teaching strategy to an individual's learning strategy. He is associated with the contrast between serialist learners, who proceed step by step, and holist learners, who look for higher-order relations.
 
 ## Significance

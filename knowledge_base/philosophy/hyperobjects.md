@@ -22,7 +22,7 @@ semantic_relations:
 # Hyperobjects
 
 ## Overview
-"Hyperobject" is the term proposed by the philosopher Timothy Morton in *Hyperobjects: Philosophy and Ecology after the End of the World* (2013) for entities that are massively distributed in time and space relative to human beings. Global warming is the central example; others commonly discussed include the climate, oil reserves, radioactive materials and the biosphere. Morton's claim is that such things are real, can be thought and measured, and yet cannot be perceived or grasped as a whole from any single position, and that this undermines familiar ideas of what a thing is. The notion draws on object-oriented and speculative realist philosophy (see [[flat_ontology]]).
+"Hyperobject" is the term proposed by the philosopher Timothy Morton in *Hyperobjects: Philosophy and Ecology after the End of the World* (2013) for entities that are massively distributed in time and space relative to human beings. Global warming is the central example; others discussed include the climate, oil reserves and nuclear weapons. Morton's claim is that such things are real, can be thought and measured, and yet cannot be perceived or grasped as a whole from any single position, and that this undermines familiar ideas of what a thing is. The notion draws on object-oriented and speculative realist philosophy (see [[flat_ontology]]).
 
 ## Five properties
 Part I of the book characterises hyperobjects by five features.
@@ -33,7 +33,7 @@ Part I of the book characterises hyperobjects by five features.
 - **Interobjectivity.** A hyperobject is encountered only through its relations to and traces in other objects, and is formed by relations among many objects.
 
 ## Implications and criticism
-Morton argues that the recognition of hyperobjects ends the idea of "nature" or "world" as a stable background against which human affairs play out, and that it unsettles human mastery over the future. Commentators have noted that the same features make hyperobjects resist classification as matters of science or of art. The book's use of physics concepts is dense, and some readers find the arguments hard to assess, so the concept is often used as a heuristic for thinking about scale in environmental problems and less as a precise ontological claim. See [[environmental_ethics]] for the moral side of such problems and [[climate_change_ecology]] for the scientific side.
+Morton argues that the recognition of hyperobjects ends the idea of "nature" or "world" as a stable background against which human affairs play out, and that it unsettles human mastery over the future. The reviewer Stephen Muecke (2014) found the book bold and stimulating, but its use of physics concepts dense and its arguments hard to assess. See [[environmental_ethics]] for the moral side of such problems and [[climate_change_ecology]] for the scientific side.
 
 ## Relation to Active Inference
 The connection is an analogy. A hyperobject is something an agent can only infer from partial, local evidence, and a generative model of such a process must integrate many time scales, which is a theme in hierarchical models of dynamics. Active Inference supplies a formal vocabulary for inferring hidden causes from local data, but it makes no commitment to Morton's ontology, and Morton does not rely on it.
@@ -46,5 +46,5 @@ The connection is an analogy. A hyperobject is something an agent can only infer
 - [[philosophy_of_technology]] — the role of technological systems in producing such phenomena
 
 ## References
-- Morton, T. (2013). Hyperobjects: Philosophy and Ecology after the End of the World. University of Minnesota Press.
+- Morton, T. (2013). Hyperobjects: Philosophy and Ecology after the End of the World. Minneapolis: University of Minnesota Press (Posthumanities series). https://www.upress.umn.edu/9780816689231/hyperobjects/
 - Muecke, S. (2014, 20 February). Global warming and other hyperobjects. Los Angeles Review of Books. https://lareviewofbooks.org/article/hyperobjects/

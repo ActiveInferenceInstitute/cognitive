@@ -5,6 +5,9 @@ type: mathematical_concept
 status: stable
 created: 2026-10-12
 updated: 2026-10-12
+aliases:
+  - enriched category
+  - V-enriched category
 tags:
   - category_theory
   - enrichment
