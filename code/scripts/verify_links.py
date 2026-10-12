@@ -93,9 +93,11 @@ class LinkIndex:
 
 def _iter_files(root_dir: Path):
     for dirpath, dirnames, filenames in os.walk(root_dir):
-        dirnames[:] = [name for name in dirnames if name not in IGNORED_DIRECTORIES]
+        dirnames[:] = sorted(name for name in dirnames if name not in IGNORED_DIRECTORIES)
         current_dir = Path(dirpath)
-        for filename in filenames:
+        # Sorted, so a link whose name matches several pages resolves to the same
+        # page on every filesystem instead of whichever one the OS lists first.
+        for filename in sorted(filenames):
             yield current_dir / filename
 
 

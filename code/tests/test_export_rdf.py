@@ -1,4 +1,5 @@
 import json
+import os
 import re
 from datetime import date, datetime
 from pathlib import Path
@@ -286,6 +287,30 @@ def test_export_is_deterministic(tmp_path):
     first = rdf.to_nquads(rdf.build_graph(root)[0])
     second = rdf.to_nquads(rdf.build_graph(root)[0])
     assert first == second
+
+
+def test_repeated_names_resolve_the_same_way_whatever_order_the_filesystem_lists(
+    tmp_path, monkeypatch
+):
+    root = _vault(tmp_path)
+    kb = root / "knowledge_base"
+    _page(kb / "b_dir" / "twin.md", {"title": "Twin B", "aliases": ["shared alias"]})
+    _page(kb / "a_dir" / "twin.md", {"title": "Twin A", "aliases": ["shared alias"]})
+    _page(kb / "z.md", {"title": "Z"}, "\n[[twin]] [[shared alias]]\n")
+
+    real_walk = os.walk
+
+    def reversed_walk(top, *args, **kwargs):
+        for directory, dirs, files in real_walk(top, *args, **kwargs):
+            dirs.reverse()
+            files.reverse()
+            yield directory, dirs, files
+
+    forward = rdf.to_nquads(rdf.build_graph(root)[0])
+    monkeypatch.setattr("scripts.verify_links.os.walk", reversed_walk)
+    assert rdf.to_nquads(rdf.build_graph(root)[0]) == forward
+    twin_a = rdf.iri(rdf.page_iri("a_dir/twin"))
+    assert f"{rdf.iri(rdf.page_iri('z'))} <{DCT}references> {twin_a}" in forward
 
 
 def test_statistics_come_from_the_report(tmp_path):

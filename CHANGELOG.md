@@ -25,6 +25,10 @@ a computed result are marked **behaviour change** and say what moved and why.
   The output is deterministic and uses the link resolver of `verify_links`. `docs/okn/` holds the
   prose description, vocabulary mapping, registry entry, a Turtle sample and generated statistics;
   `validate_docs` fails when the sample or statistics are stale.
+- `verify_links` walks directories in sorted order. A link whose name matches several pages
+  (a repeated file name or alias) resolved to whichever page the filesystem listed first, so the
+  same checkout could resolve differently on macOS and Linux; it now resolves identically
+  everywhere. The RDF export additionally resolves a repeated name to the alphabetically first path.
 
 ### Behaviour change
 

@@ -54,8 +54,10 @@ try:
         MATRIX_LITERAL_PATTERN,
         WIKI_LINK_PATTERN,
         LinkIndex,
+        _alias_key,
         _build_index,
         _extract_wiki_target,
+        _frontmatter_aliases,
         _resolve_target_path,
         _strip_markdown_code,
     )
@@ -65,8 +67,10 @@ except ImportError:  # run as a file: the script directory is on sys.path
         MATRIX_LITERAL_PATTERN,
         WIKI_LINK_PATTERN,
         LinkIndex,
+        _alias_key,
         _build_index,
         _extract_wiki_target,
+        _frontmatter_aliases,
         _resolve_target_path,
         _strip_markdown_code,
     )
@@ -372,21 +376,29 @@ def _is_shipped(relative: Path) -> bool:
 
 
 def _shipped_index(root: Path) -> LinkIndex:
-    """The link index restricted to files the repository ships."""
+    """The link index restricted to files the repository ships, in a fixed order.
+
+    ``verify_links`` keeps the first page it meets for a repeated name or alias,
+    which depends on the order the filesystem lists directories. The graph must
+    not, so repeated names resolve to the alphabetically first path.
+    """
     full = _build_index(root)
+    by_rel = {
+        key: path
+        for key, path in sorted(full.markdown_by_rel_no_suffix.items())
+        if _is_shipped(path)
+    }
+    by_stem: dict[str, list[Path]] = {}
+    by_alias: dict[str, Path] = {}
+    for path in sorted(by_rel.values(), key=lambda item: item.as_posix().lower()):
+        by_stem.setdefault(path.stem.lower(), []).append(path)
+        for alias in _frontmatter_aliases(root / path):
+            by_alias.setdefault(_alias_key(alias), path)
     return LinkIndex(
-        markdown_by_stem={
-            stem: kept
-            for stem, paths in full.markdown_by_stem.items()
-            if (kept := [path for path in paths if _is_shipped(path)])
-        },
-        markdown_by_rel_no_suffix={
-            key: path for key, path in full.markdown_by_rel_no_suffix.items() if _is_shipped(path)
-        },
+        markdown_by_stem=by_stem,
+        markdown_by_rel_no_suffix=by_rel,
         all_files_by_rel={key for key in full.all_files_by_rel if _is_shipped(Path(key))},
-        markdown_by_alias={
-            key: path for key, path in full.markdown_by_alias.items() if _is_shipped(path)
-        },
+        markdown_by_alias=by_alias,
     )
 
 

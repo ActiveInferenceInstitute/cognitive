@@ -18,7 +18,7 @@ pages, then regenerate; never edit this file.
 | Redirect pages | 2 |
 | Typed edges from `semantic_relations` | 10129 |
 | Untyped edges from body links (`dcterms:references`) | 22813 |
-| Triples | 60779 |
+| Triples | 60782 |
 | Links to concepts that have no page yet (not exported) | 362 |
 | Links to files outside the knowledge base (not exported) | 719 |
 | Self-links dropped | 71 |
