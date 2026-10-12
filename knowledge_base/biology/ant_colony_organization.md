@@ -42,296 +42,25 @@ semantic_relations:
 
 Ant colony organization is a prominent example of biological self-organization and distributed control. Through sophisticated caste systems, dynamic task allocation, and adaptive division of labor, ant colonies achieve complex collective outcomes from simple individual behaviors. This organizational structure enables colonies to scale from dozens to millions of individuals while maintaining efficiency, resilience, and adaptive capacity.
 
-## Caste System Architecture
-
-### Primary Caste Categories
-
-#### Reproductive Castes
-```python
-class ReproductiveCastes:
-    """Reproductive caste organization and regulation"""
-
-    def __init__(self):
-        self.queen_caste = {
-            'reproductive_role': 'primary_egg_layer',
-            'pheromone_production': 'colony_cohesion_signals',
-            'lifespan': 'decades',
-            'behavioral_traits': ['low_mobility', 'high_egg_production']
-        }
-
-        self.male_caste = {
-            'reproductive_role': 'sperm_production',
-            'behavioral_traits': ['short_lifespan', 'nuptial_flight_only'],
-            'function': 'genetic_diversity'
-        }
-
-    def regulate_colony_reproduction(self, colony_state: dict) -> dict:
-        """Regulate colony reproductive dynamics"""
-        # Assess colony resource availability
-        # Determine optimal reproductive investment
-        # Coordinate queen and male production
-        # Manage reproductive timing
-        pass
-```
-
-#### Worker Caste Polymorphism
-```python
-class WorkerPolymorphism:
-    """Worker caste size variation and specialization"""
-
-    def __init__(self):
-        self.minor_workers = {
-            'size_range': 'small',
-            'tasks': ['nursing', 'maintenance', 'food_processing'],
-            'proportion': 0.7  # illustrative value
-        }
-
-        self.media_workers = {
-            'size_range': 'medium',
-            'tasks': ['foraging', 'nest_defense', 'construction'],
-            'proportion': 0.2  # illustrative value
-        }
-
-        self.major_workers = {
-            'size_range': 'large',
-            'tasks': ['defense', 'prey_transport', 'seed_milling'],
-            'proportion': 0.1  # illustrative value
-        }
-
-    def allocate_workers_by_size(self, task_requirements: dict) -> dict:
-        """Allocate workers to tasks based on size polymorphism"""
-        # Match worker morphology to task requirements
-        # Optimize task performance through size specialization
-        # Maintain caste proportions for colony stability
-        pass
-```
-
-### Caste Determination Mechanisms
-
-#### Environmental Caste Determination
-```python
-class EnvironmentalCasteDetermination:
-    """Caste determination through environmental factors"""
-
-    def __init__(self):
-        self.nutritional_cues = {}
-        self.temperature_effects = {}
-        self.social_cues = {}
-
-    def determine_caste_fate(self, larval_conditions: dict) -> str:
-        """Determine caste based on larval environment"""
-        # Assess nutritional quality and quantity
-        # Evaluate temperature during development
-        # Consider social context and colony needs
-        # Predict caste outcome probabilistically
-        pass
-```
-
-#### Genetic Caste Determination
-```python
-class GeneticCasteDetermination:
-    """Genetic mechanisms of caste determination"""
-
-    def __init__(self):
-        self.genetic_markers = {}
-        self.epigenetic_modifications = {}
-        self.gene_expression_patterns = {}
-
-    def regulate_caste_differentiation(self, genetic_profile: dict) -> str:
-        """Regulate caste through genetic mechanisms"""
-        # Analyze genetic markers for caste
-        # Assess epigenetic modifications
-        # Predict developmental trajectory
-        pass
-```
-
 ## Division of Labor Dynamics
 
 ### Task Allocation Systems
 
-#### Age Polyethism
-```python
-class AgePolyethism:
-    """Age-based task specialization"""
-
-    def __init__(self):
-        self.age_task_progression = {
-            'newly_eclosed': ['brood_care', 'cell_cleaning'],
-            'young_adults': ['nursing', 'food_processing'],
-            'mature_workers': ['foraging', 'nest_maintenance'],
-            'old_workers': ['defense', 'outside_tasks']
-        }
-
-    def assign_tasks_by_age(self, worker_age: float, colony_needs: dict) -> str:
-        """Assign tasks based on worker age and experience"""
-        # Determine appropriate age class
-        # Match to age-specific task repertoire
-        # Consider colony demand for different tasks
-        pass
-```
-
 #### Response Threshold Model
 ```python
-class ResponseThresholdModel:
-    """Task allocation through response thresholds"""
+import numpy as np
 
-    def __init__(self):
-        self.task_thresholds = {
-            'foraging': {'low_threshold': 0.2, 'high_threshold': 0.8},
-            'nursing': {'low_threshold': 0.1, 'high_threshold': 0.9},
-            'defense': {'low_threshold': 0.05, 'high_threshold': 0.95}
-        }
+# Fixed response-threshold model with stimulus feedback (Bonabeau, Theraulaz & Deneubourg form)
+rng = np.random.default_rng(0)
+n_workers, n = 50, 2
+theta = rng.uniform(1.0, 10.0, n_workers)      # individual thresholds (illustrative)
+s, delta, alpha = 0.0, 1.0, 0.1                # stimulus, growth per step, work effect per active worker
 
-        self.individual_thresholds = {}  # Worker-specific thresholds
-
-    def calculate_response_probability(self, worker_id: str, task: str, stimulus_intensity: float) -> float:
-        """Calculate probability of responding to task stimulus"""
-        worker_threshold = self.individual_thresholds[worker_id][task]
-        task_range = self.task_thresholds[task]
-
-        if stimulus_intensity <= worker_threshold:
-            return 0.0
-        else:
-            # Sigmoid response function
-            response = 1 / (1 + math.exp(-(stimulus_intensity - worker_threshold)))
-            return min(response, 1.0)
-
-    def allocate_tasks_dynamically(self, task_demands: dict) -> dict:
-        """Dynamically allocate workers to tasks based on thresholds"""
-        allocations = {}
-
-        for task, demand in task_demands.items():
-            responding_workers = []
-            for worker_id in self.individual_thresholds.keys():
-                response_prob = self.calculate_response_probability(worker_id, task, demand)
-                if random.random() < response_prob:
-                    responding_workers.append(worker_id)
-
-            allocations[task] = responding_workers
-
-        return allocations
-```
-
-### Task Switching and Flexibility
-
-#### Behavioral Flexibility
-```python
-class BehavioralFlexibility:
-    """Dynamic task switching and behavioral adaptation"""
-
-    def __init__(self):
-        self.task_repertoires = {}
-        self.switching_costs = {}
-        self.learning_rates = {}
-
-    def optimize_task_switching(self, current_task: str, new_task: str, context: dict) -> bool:
-        """Determine optimal task switching decisions"""
-        # Calculate switching costs
-        switching_cost = self.switching_costs.get((current_task, new_task), 0)
-
-        # Assess benefits of switching
-        switching_benefit = self.assess_switching_benefit(current_task, new_task, context)
-
-        # Apply decision threshold
-        return switching_benefit > switching_cost
-
-    def adapt_task_repertoires(self, experience_history: List[dict]):
-        """Adapt worker task repertoires through experience"""
-        # Update task proficiency through learning
-        # Modify response thresholds based on success
-        # Expand behavioral flexibility
-        pass
-```
-
-## Colony-Level Organization
-
-### Spatial Organization
-
-#### Nest Architecture and Spatial Division
-```python
-class NestSpatialOrganization:
-    """Spatial organization within the nest"""
-
-    def __init__(self):
-        self.spatial_zones = {
-            'queen_chamber': 'central_protected_area',
-            'brood_chamber': 'temperature_controlled_zone',
-            'food_storage': 'peripheral_storage_areas',
-            'waste_areas': 'isolated_disposal_zones'
-        }
-
-        self.traffic_patterns = {}
-        self.maintenance_zones = {}
-
-    def organize_nest_spatially(self, colony_size: int, environmental_conditions: dict) -> dict:
-        """Organize nest architecture for optimal colony function"""
-        # Allocate space for different functions
-        # Optimize traffic flow patterns
-        # Maintain environmental conditions
-        pass
-```
-
-#### Foraging Territories
-```python
-class ForagingTerritoryOrganization:
-    """Organization of foraging territories"""
-
-    def __init__(self):
-        self.territory_boundaries = {}
-        self.resource_partitions = {}
-        self.overlap_zones = {}
-
-    def partition_foraging_territory(self, colony_network: dict) -> dict:
-        """Partition foraging territories among colony members"""
-        # Define territory boundaries
-        # Allocate resource patches
-        # Manage territory overlaps
-        pass
-```
-
-### Temporal Organization
-
-#### Daily Activity Cycles
-```python
-class DailyActivityCycles:
-    """Temporal organization of colony activities"""
-
-    def __init__(self):
-        self.activity_phases = {
-            'dawn': ['foraging_preparation', 'scouting'],
-            'morning': ['peak_foraging', 'brood_care'],
-            'afternoon': ['sustained_foraging', 'nest_maintenance'],
-            'dusk': ['foraging_wrap_up', 'nest_security'],
-            'night': ['rest', 'brood_tending', 'defense']
-        }
-
-    def coordinate_daily_rhythms(self, environmental_cues: dict, colony_needs: dict) -> dict:
-        """Coordinate daily activity patterns"""
-        # Respond to light/dark cycles
-        # Adjust for temperature variations
-        # Meet colony nutritional requirements
-        pass
-```
-
-#### Seasonal Colony Cycles
-```python
-class SeasonalColonyCycles:
-    """Seasonal organization and colony cycles"""
-
-    def __init__(self):
-        self.seasonal_phases = {
-            'spring': 'colony_growth',
-            'summer': 'peak_productivity',
-            'fall': 'resource_storage',
-            'winter': 'survival_mode'
-        }
-
-    def manage_seasonal_transitions(self, seasonal_cues: dict) -> dict:
-        """Manage colony organization through seasonal changes"""
-        # Adjust caste ratios for seasonal needs
-        # Modify task allocations seasonally
-        # Prepare for environmental challenges
-        pass
+for t in range(300):
+    p = s ** n / (s ** n + theta ** n) if s > 0 else np.zeros(n_workers)
+    active = rng.random(n_workers) < p          # each worker responds with probability p_i
+    s = max(0.0, s + delta - alpha * active.sum())
+print("stimulus:", round(s, 2), "active workers:", int(active.sum()))
 ```
 
 ## Communication and Coordination
@@ -340,89 +69,14 @@ class SeasonalColonyCycles:
 
 #### Task-Specific Pheromones
 ```python
-class TaskPheromoneCoordination:
-    """Coordination through task-specific pheromones"""
+import numpy as np
 
-    def __init__(self):
-        self.task_pheromones = {
-            'foraging_recruitment': 'trail_pheromones',
-            'emergency_response': 'alarm_pheromones',
-            'queen_attendance': 'queen_pheromones',
-            'brood_tending': 'brood_pheromones'
-        }
-
-    def coordinate_through_chemical_signals(self, colony_state: dict) -> dict:
-        """Coordinate colony activities through pheromone networks"""
-        # Assess current colony needs
-        # Deploy appropriate pheromone signals
-        # Monitor response effectiveness
-        pass
-```
-
-### Direct Interaction Networks
-
-#### Worker Interaction Patterns
-```python
-class WorkerInteractionNetworks:
-    """Networks of direct worker interactions"""
-
-    def __init__(self):
-        self.interaction_networks = {}
-        self.information_flow = {}
-        self.social_bonds = {}
-
-    def maintain_social_networks(self, colony_size: int) -> dict:
-        """Maintain functional social networks within colonies"""
-        # Track interaction frequencies
-        # Identify key communication hubs
-        # Maintain network connectivity
-        pass
-```
-
-## Adaptive Organization
-
-### Environmental Response
-
-#### Colony Plasticity
-```python
-class ColonyPlasticity:
-    """Adaptive colony organization in response to environment"""
-
-    def __init__(self):
-        self.environmental_sensors = {}
-        self.organizational_adaptations = {}
-        self.plasticity_limits = {}
-
-    def adapt_organization_to_environment(self, environmental_pressures: dict) -> dict:
-        """Adapt colony organization to environmental conditions"""
-        # Assess environmental challenges
-        # Modify caste ratios as needed
-        # Adjust task allocation strategies
-        # Optimize resource use patterns
-        pass
-```
-
-### Colony Size Effects
-
-#### Scaling Relationships
-```python
-class ColonyScalingRelationships:
-    """How colony organization scales with size"""
-
-    def __init__(self):
-        # Illustrative scaling forms, not empirically established relationships
-        self.scaling_laws = {
-            'caste_ratios': 'logarithmic_scaling',
-            'communication_complexity': 'power_law_scaling',
-            'task_specialization': 'linear_scaling'
-        }
-
-    def predict_organization_at_scale(self, colony_size: int) -> dict:
-        """Predict organizational structure at different colony sizes"""
-        # Apply scaling relationships
-        # Estimate caste proportions
-        # Predict communication requirements
-        pass
+# Pheromone on one trail: evaporation plus deposition by the workers currently on it
+rho, deposit = 0.1, 0.05                        # illustrative rates
+tau, workers = 0.0, 10
+for t in range(100):
+    tau = (1 - rho) * tau + deposit * workers
+print(tau, deposit * workers / rho)             # approaches the fixed point deposit * workers / rho
 ```
 
 ## Mathematical Models of Organization
@@ -442,121 +96,28 @@ where:
 
 This logistic form is a variant of the fixed response-threshold model of Bonabeau, Theraulaz and Deneubourg (1996), whose canonical form is $s^n / (s^n + \theta^n)$.
 
+```python
+import numpy as np
+
+beta = 2.0                                      # steepness (illustrative)
+theta = np.array([[0.5, 2.0], [1.5, 0.5], [1.0, 1.0]])   # thresholds of 3 workers for 2 tasks
+s = np.array([1.2, 0.8])                        # stimulus intensity for each task
+P = 1 / (1 + np.exp(-beta * (s[None, :] - theta)))       # P[i, j] = response probability
+print(P.round(2))
+```
+
 #### Optimal Task Allocation
 ```python
-class OptimalTaskAllocation:
-    """Mathematical optimization of task allocation"""
+import numpy as np
+from itertools import permutations
 
-    def __init__(self):
-        self.task_requirements = {}
-        self.worker_capabilities = {}
-        self.allocation_constraints = {}
-
-    def optimize_task_distribution(self, colony_state: dict) -> dict:
-        """Optimize task allocation for colony efficiency"""
-        # Formulate as optimization problem
-        # Apply constraints (worker limitations, task requirements)
-        # Find optimal allocation matrix
-        pass
-```
-
-### Network Models
-
-#### Colony Interaction Networks
-```python
-class ColonyNetworkModels:
-    """Network models of colony organization"""
-
-    def __init__(self):
-        self.interaction_networks = {}
-        self.information_networks = {}
-        self.task_networks = {}
-
-    def model_colony_as_network(self, colony_data: dict) -> dict:
-        """Model colony organization as interconnected networks"""
-        # Construct interaction networks
-        # Analyze network properties (centrality, clustering)
-        # Identify critical nodes and pathways
-        pass
-```
-
-### Self-Organization Models
-
-#### Emergent Organization
-```python
-class EmergentOrganization:
-    """Self-organization of colony structure"""
-
-    def __init__(self):
-        self.self_organization_rules = {}
-        self.feedback_loops = {}
-        self.emergence_patterns = {}
-
-    def simulate_emergent_organization(self, initial_conditions: dict) -> dict:
-        """Simulate emergence of colony organization"""
-        # Apply local interaction rules
-        # Allow global patterns to emerge
-        # Analyze emergent properties
-        pass
-```
-
-## Species-Specific Organizations
-
-### Army Ant Organization
-*Dorylus* and *Eciton* species:
-```python
-class ArmyAntOrganization:
-    """Nomadic army ant colony organization"""
-
-    def __init__(self):
-        self.nomadic_lifestyle = True
-        self.mass_raiding = True
-        self.bivouac_structure = {}
-
-    def coordinate_nomadic_raids(self, prey_availability: dict) -> dict:
-        """Coordinate massive nomadic raiding behavior"""
-        # Organize emigration events
-        # Coordinate mass raids
-        # Manage bivouac formation
-        pass
-```
-
-### Leafcutter Ant Organization
-*Atta* species agricultural organization:
-```python
-class LeafcutterAntOrganization:
-    """Agricultural leafcutter ant organization"""
-
-    def __init__(self):
-        self.fungus_farming = True
-        self.leaf_harvesting = True
-        self.garden_maintenance = {}
-
-    def coordinate_agricultural_activities(self, garden_status: dict) -> dict:
-        """Coordinate fungus gardening and leaf harvesting"""
-        # Organize harvesting expeditions
-        # Maintain fungus gardens
-        # Process leaf material
-        pass
-```
-
-### Weaver Ant Organization
-*Oecophylla* species arboreal organization:
-```python
-class WeaverAntOrganization:
-    """Arboreal weaver ant organization"""
-
-    def __init__(self):
-        self.arboreal_nests = True
-        self.larval_silk_weaving = True
-        self.tree_territory = {}
-
-    def coordinate_arboreal_colony(self, tree_resources: dict) -> dict:
-        """Coordinate arboreal nesting and territory defense"""
-        # Construct living nests
-        # Defend tree territories
-        # Harvest tree resources
-        pass
+# Assign each of 4 workers to a distinct task so that total cost is minimal (cost[i, j]: illustrative)
+cost = np.array([[4.0, 2.0, 8.0, 5.0],
+                 [4.0, 3.0, 7.0, 6.0],
+                 [3.0, 1.0, 6.0, 7.0],
+                 [5.0, 4.0, 9.0, 3.0]])
+best = min(permutations(range(4)), key=lambda perm: sum(cost[i, j] for i, j in enumerate(perm)))
+print("task of each worker:", best, "total cost:", sum(cost[i, j] for i, j in enumerate(best)))
 ```
 
 ## Evolutionary Dynamics
@@ -573,46 +134,6 @@ class WeaverAntOrganization:
 - **Worker-Queen Coevolution**: Balance reproductive and worker interests
 - **Colony-Environment Coevolution**: Adapt to local ecological conditions
 - **Inter-Colony Competition**: Evolve competitive organizational strategies
-
-## Applications to Organizational Theory
-
-### Biological Inspiration for Human Organizations
-
-#### Decentralized Decision Making
-```python
-class DecentralizedOrganization:
-    """Organization inspired by ant colony decentralization"""
-
-    def __init__(self):
-        self.local_decision_making = {}
-        self.information_sharing = {}
-        self.emergent_coordination = {}
-
-    def implement_ant_inspired_organization(self, organizational_goals: dict) -> dict:
-        """Implement ant-inspired organizational principles"""
-        # Enable local decision making
-        # Facilitate information sharing
-        # Allow emergent coordination
-        pass
-```
-
-#### Swarm-Based Task Allocation
-```python
-class SwarmTaskAllocation:
-    """Task allocation inspired by ant task allocation"""
-
-    def __init__(self):
-        self.task_pheromones = {}
-        self.worker_response_thresholds = {}
-        self.task_recruitment = {}
-
-    def allocate_tasks_swarm_style(self, task_requirements: dict) -> dict:
-        """Allocate tasks using swarm intelligence principles"""
-        # Mark tasks with virtual pheromones
-        # Allow workers to self-select tasks
-        # Update task markers based on performance
-        pass
-```
 
 ## Future Research Directions
 

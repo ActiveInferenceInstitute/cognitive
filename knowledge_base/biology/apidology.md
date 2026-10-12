@@ -87,115 +87,20 @@ Major bee families:
 ### 3. Pollination Systems
 
 ```python
+import numpy as np
 
-class PollinationBiology:
+rng = np.random.default_rng(0)
+n_visits = 200
+pollen_load = rng.gamma(shape=2.0, scale=5.0, size=n_visits)   # grains carried, illustrative
+contact = rng.uniform(size=n_visits) < 0.6                     # stigma contacted?
+deposited = np.where(contact, rng.binomial(pollen_load.astype(int), 0.3), 0)
 
-    def __init__(self):
-
-        self.flower_visits = {}
-
-        self.pollen_transfer = {}
-
-    def record_visit(self,
-
-                    bee_species: str,
-
-                    plant_species: str,
-
-                    visit_duration: float,
-
-                    pollen_collected: bool) -> None:
-
-        """Record flower visitation data"""
-
-        if bee_species not in self.flower_visits:
-
-            self.flower_visits[bee_species] = {}
-
-        if plant_species not in self.flower_visits[bee_species]:
-
-            self.flower_visits[bee_species][plant_species] = []
-
-        self.flower_visits[bee_species][plant_species].append({
-
-            'duration': visit_duration,
-
-            'pollen_collected': pollen_collected,
-
-            'timestamp': datetime.now()
-
-        })
-
-    def calculate_efficiency(self,
-
-                           bee_species: str,
-
-                           plant_species: str) -> float:
-
-        """Calculate pollination efficiency"""
-
-        visits = self.flower_visits[bee_species][plant_species]
-
-        successful_visits = sum(
-
-            1 for v in visits if v['pollen_collected']
-
-        )
-
-        return successful_visits / len(visits)
-
+threshold = 3                                # grains needed to count as a successful visit
+efficiency = np.mean(deposited >= threshold)
+print(efficiency, deposited.mean())
 ```
 
 ### 4. Bee Species Diversity and Evolution
-```python
-class BeeTaxonomy:
-    """Bee species classification and diversity"""
-
-    def __init__(self):
-        # Bee families within Apoidea
-        self.families = {
-            'Apidae': {
-                'subfamilies': ['Apinae', 'Xylocopinae', 'Nomadinae'],
-                'species': ['Honey bees', 'Bumble bees', 'Stingless bees', 'Carpenter bees'],
-                'social_organization': 'Highly social to solitary'
-            },
-            'Halictidae': {
-                'species': ['Sweat bees', 'Mining bees'],
-                'social_organization': 'Solitary to primitively eusocial'
-            },
-            'Andrenidae': {
-                'species': ['Mining bees'],
-                'social_organization': 'Solitary'
-            },
-            'Megachilidae': {
-                'species': ['Leafcutter bees', 'Mason bees', 'Carder bees'],
-                'social_organization': 'Solitary to communal'
-            },
-            'Colletidae': {
-                'species': ['Plasterer bees', 'Masked bees'],
-                'social_organization': 'Solitary to social'
-            },
-            'Melittidae': {
-                'species': ['Oil-collecting bees'],
-                'social_organization': 'Solitary'
-            }
-        }
-
-        # Notable species examples
-        self.species_examples = {
-            'honey_bees': ['Apis mellifera', 'Apis cerana', 'Apis dorsata'],
-            'bumble_bees': ['Bombus terrestris', 'Bombus impatiens', 'Bombus vosnesenskii'],
-            'stingless_bees': ['Melipona beecheii', 'Tetragonisca angustula'],
-            'carpenter_bees': ['Xylocopa virginica', 'Xylocopa californica'],
-            'mason_bees': ['Osmia lignaria', 'Osmia cornifrons'],
-            'leafcutter_bees': ['Megachile rotundata', 'Megachile sculpturalis']
-        }
-
-    def get_species_characteristics(self, species_name: str) -> dict:
-        """Get behavioral and ecological characteristics of bee species"""
-        # Implementation would return species-specific traits
-        pass
-```
 
 #### Major Bee Groups
 
@@ -217,55 +122,12 @@ class BeeTaxonomy:
 
 ### 5. Bee Behavior Patterns and Ecology
 
-#### Foraging and Pollination Strategies
-```python
-class BeeForagingBehavior:
-    """Bee foraging and pollination strategies"""
-
-    def __init__(self):
-        self.foraging_strategies = {
-            'traplining': 'Regular routes between flowers (solitary bees)',
-            'social_recruitment': 'Dance communication and pheromone trails (social bees)',
-            'scent_marking': 'Chemical markers on depleted flowers',
-            'optimal_foraging': 'Energy maximization strategies'
-        }
-
-        self.pollination_mechanisms = {
-            'buzz_pollination': 'Vibrational pollen release (bumble bees, solitary bees)',
-            'mess_and_sop': 'Pollen collection on body hairs',
-            'brush_mechanism': 'Specialized body parts for pollen transfer'
-        }
-
-    def optimize_foraging_efficiency(self, bee_type: str, floral_resources: dict) -> dict:
-        """Optimize foraging patterns based on bee morphology and floral availability"""
-        # Mathematical optimization of foraging strategies
-        pass
-```
-
 #### Nest Architecture and Construction
 - **Cavity Nesters**: Holes in wood, stems, or soil (carpenter bees, mason bees)
 - **Burrow Nesters**: Underground tunnels (mining bees, sweat bees)
 - **Aerial Nesters**: Exposed comb structures (honey bees, stingless bees)
 - **Leaf Nests**: Cut leaves formed into pouches (leafcutter bees)
 - **Mud Nests**: Mud structures (mason bees)
-
-#### Seasonal Biology
-```python
-class BeePhenology:
-    """Seasonal biology and life cycle patterns"""
-
-    def __init__(self):
-        self.life_cycles = {
-            'annual_species': ['Most bumble bees', 'Many solitary bees'],
-            'perennial_species': ['Honey bees', 'Some stingless bees'],
-            'overwintering_strategies': ['Queen hibernation', 'Worker clustering']
-        }
-
-    def predict_seasonal_activity(self, species: str, climate_data: dict) -> dict:
-        """Predict seasonal foraging and nesting activity based on climate"""
-        # Phenological modeling
-        pass
-```
 
 #### Ecological Roles and Services
 - **Pollination Services**: Essential for crop production and wild plant reproduction
@@ -278,245 +140,18 @@ class BeePhenology:
 ### 1. Behavioral Studies
 
 ```python
+import numpy as np
 
-class BeeEthology:
+def decode_waggle_dance(duration_s, angle_deg, sun_azimuth_deg, metres_per_second=750.0):
+    """Distance from waggle-run duration (linear calibration, illustrative);
+    bearing from the angle to vertical, offset by the sun's azimuth."""
+    distance = metres_per_second * duration_s
+    bearing = (sun_azimuth_deg + angle_deg) % 360
+    return distance, bearing
 
-    def __init__(self):
-
-        self.behavioral_data = {}
-
-        self.dance_patterns = {}
-
-    def analyze_waggle_dance(self,
-
-                            duration: float,
-
-                            angle: float,
-
-                            intensity: float) -> dict:
-
-        """Decode waggle dance information"""
-
-        # Distance calculation (von Frisch's formula)
-
-        distance = 0.95 * duration
-
-        # Direction calculation
-
-        direction = (angle + self.get_sun_azimuth()) % 360
-
-        return {
-
-            'distance_m': distance,
-
-            'direction_deg': direction,
-
-            'quality_indicator': intensity
-
-        }
-
-    def record_foraging(self,
-
-                       bee_id: str,
-
-                       resource_type: str,
-
-                       location: tuple) -> None:
-
-        """Track foraging behavior"""
-
-        if bee_id not in self.behavioral_data:
-
-            self.behavioral_data[bee_id] = []
-
-        self.behavioral_data[bee_id].append({
-
-            'activity': 'foraging',
-
-            'resource': resource_type,
-
-            'location': location,
-
-            'time': datetime.now()
-
-        })
-
+print(decode_waggle_dance(duration_s=1.2, angle_deg=40.0, sun_azimuth_deg=180.0))
 ```
 
-### 2. Colony Health Assessment
-
-```python
-
-class ColonyHealth:
-
-    def __init__(self):
-
-        self.health_metrics = {}
-
-        self.disease_monitoring = {}
-
-    def assess_colony(self,
-
-                     colony_id: str,
-
-                     population: int,
-
-                     brood_pattern: float,
-
-                     food_stores: float) -> str:
-
-        """Evaluate colony health status"""
-
-        health_score = (
-
-            0.4 * (population / 50000) +
-
-            0.3 * brood_pattern +
-
-            0.3 * (food_stores / 20)
-
-        )
-
-        if health_score > 0.8:
-
-            return "Excellent"
-
-        elif health_score > 0.6:
-
-            return "Good"
-
-        elif health_score > 0.4:
-
-            return "Fair"
-
-        else:
-
-            return "Poor"
-
-    def monitor_diseases(self,
-
-                        colony_id: str,
-
-                        symptoms: list) -> list:
-
-        """Identify potential health issues"""
-
-        disease_indicators = {
-
-            'varroa': ['deformed wings', 'crawling bees'],
-
-            'nosema': ['dysentery', 'poor buildup'],
-
-            'foulbrood': ['sunken caps', 'foul odor']
-
-        }
-
-        potential_diseases = []
-
-        for disease, indicators in disease_indicators.items():
-
-            if any(s in symptoms for s in indicators):
-
-                potential_diseases.append(disease)
-
-        return potential_diseases
-
-```
-
-## Applications
-
-### 1. Agricultural Pollination
-
-```python
-
-class PollinationService:
-
-    def __init__(self):
-
-        self.crop_requirements = {}
-
-        self.colony_assignments = {}
-
-    def calculate_colonies_needed(self,
-
-                                crop_type: str,
-
-                                area_hectares: float) -> int:
-
-        """Determine colony requirements"""
-
-        # Illustrative values; recommended stocking rates vary by crop, cultivar and region
-        colonies_per_hectare = {
-
-            'almonds': 2.5,
-
-            'apples': 1.5,
-
-            'blueberries': 4.0,
-
-            'cranberries': 3.0,
-
-            'cucumbers': 2.0
-
-        }
-
-        return math.ceil(
-
-            area_hectares * colonies_per_hectare.get(crop_type, 2.0)
-
-        )
-
-```
-
-### 2. Conservation
-
-```python
-
-class BeeConservation:
-
-    def __init__(self):
-
-        self.population_trends = {}
-
-        self.habitat_quality = {}
-
-    def assess_habitat(self,
-
-                      location: tuple,
-
-                      floral_diversity: float,
-
-                      pesticide_exposure: float,
-
-                      nesting_sites: int) -> float:
-
-        """Evaluate habitat suitability"""
-
-        weights = {
-
-            'floral_diversity': 0.4,
-
-            'pesticide_safety': 0.3,
-
-            'nesting_availability': 0.3
-
-        }
-
-        pesticide_safety = 1 - pesticide_exposure
-
-        nesting_score = min(1.0, nesting_sites / 10)
-
-        return (
-
-            weights['floral_diversity'] * floral_diversity +
-
-            weights['pesticide_safety'] * pesticide_safety +
-
-            weights['nesting_availability'] * nesting_score
-
-        )
-
-```
 
 ## Current Challenges
 
@@ -530,76 +165,32 @@ class BeeConservation:
 
 - Habitat loss
 
-### 2. Climate Change Effects
-
-```python
-
-class ClimateImpacts:
-
-    def __init__(self):
-
-        self.phenology_data = {}
-
-        self.range_shifts = {}
-
-    def analyze_phenology_mismatch(self,
-
-                                  bee_activity: list,
-
-                                  flower_bloom: list) -> float:
-
-        """Calculate temporal mismatch"""
-
-        bee_peak = np.mean(bee_activity)
-
-        bloom_peak = np.mean(flower_bloom)
-
-        return abs(bee_peak - bloom_peak)
-
-```
 
 ## Active Inference in Bee Cognition
 
 ### Predictive Processing in Hive Behavior
 
 ```python
-class PredictiveBeeColony:
-    """Active Inference model of bee colony decision-making"""
+import numpy as np
 
-    def __init__(self, colony_size: int):
-        self.colony_size = colony_size
-        self.internal_model = ColonyInternalModel()
-        self.foraging_policy = ForagingPolicy()
-        self.dance_communication = WaggleDanceCommunication()
+def softmax(x):
+    e = np.exp(x - x.max())
+    return e / e.sum()
 
-    def predict_foraging_success(self, environmental_signals: Dict) -> float:
-        """Predict foraging success using internal model"""
-        # Update beliefs about food availability
-        posterior = self.internal_model.update_beliefs(
-            environmental_signals,
-            self.foraging_policy.current_beliefs
-        )
+rng = np.random.default_rng(0)
+true_quality = np.array([0.2, 0.5, 0.8])     # three patches, illustrative
+mean, precision = np.zeros(3), np.full(3, 0.1)   # colony belief N(mean, 1/precision)
+obs_precision = 4.0
 
-        # Compute expected free energy
-        G = self.compute_expected_free_energy(posterior)
+for day in range(30):
+    patch = rng.integers(3, size=10)         # 10 foragers sample patches
+    reward = true_quality[patch] + rng.normal(size=10) / np.sqrt(obs_precision)
+    for p, y in zip(patch, reward):          # dances report outcomes; precision-weighted update
+        precision[p] += obs_precision
+        mean[p] += obs_precision * (y - mean[p]) / precision[p]
 
-        # Select optimal foraging policy
-        optimal_policy = self.foraging_policy.select_policy(G)
-
-        return optimal_policy.expected_reward
-
-    def update_colony_knowledge(self, foraging_outcomes: List[Dict]) -> None:
-        """Update colony knowledge through dance communication"""
-        # Process foraging information
-        information_gain = self.dance_communication.process_dances(
-            foraging_outcomes
-        )
-
-        # Update internal model
-        self.internal_model.update_model(information_gain)
-
-        # Refine foraging policy
-        self.foraging_policy.refine_policy(information_gain)
+print(mean.round(2))
+print(softmax(5.0 * mean).round(2))          # recruitment probabilities from dance weights
 ```
 
 ### Swarm Intelligence as Collective Inference

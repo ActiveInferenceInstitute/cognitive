@@ -31,6 +31,7 @@ where none does. Prefixes: `skos` = `http://www.w3.org/2004/02/skos/core#`, `dct
 | `status`, `complexity` | `ckb:status`, `ckb:complexity` |
 | `authors`, `year`, `doi` (citation pages) | `schema:author`, `schema:datePublished`, `schema:sameAs` |
 | `journal` (citation pages) | `ckb:journal` |
+| `wikidata` (a `Q` identifier, set only when a person has checked that the Wikidata item is the same concept) | `skos:exactMatch` to `http://www.wikidata.org/entity/Q…` |
 | Top-level folder | a `skos:Collection` that has the page as `skos:member` |
 | Address in the repository | `dcterms:source` |
 | `redirect` | `dcterms:isReplacedBy` |

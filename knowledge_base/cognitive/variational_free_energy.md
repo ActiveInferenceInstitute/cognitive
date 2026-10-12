@@ -46,57 +46,19 @@ Where:
 - H[q(θ)] is the entropy of the variational distribution
 
 ```python
-class VariationalFreeEnergy:
-    """Implementation of variational free energy calculations."""
+import numpy as np
 
-    def __init__(self, generative_model):
-        self.model = generative_model
+# Illustrative model: theta ~ N(0, 1), y | theta ~ N(theta, 1); variational q(theta) = N(m, s2)
+def vfe(y, m, s2):
+    """F = E_q[-ln p(y, theta)] - H[q], in closed form for this Gaussian model."""
+    energy = np.log(2 * np.pi) + 0.5 * ((y - m) ** 2 + s2) + 0.5 * (m ** 2 + s2)
+    entropy = 0.5 * np.log(2 * np.pi * np.e * s2)
+    return energy - entropy
 
-    def calculate_vfe(self, observations, variational_params):
-        """Calculate variational free energy for given observations."""
-
-        # Energy term: E_q[-ln p(y,θ)]
-        energy = self.calculate_energy_term(observations, variational_params)
-
-        # Entropy term: -H[q(θ)]
-        entropy = self.calculate_entropy_term(variational_params)
-
-        # Variational free energy
-        vfe = energy - entropy
-
-        return vfe
-
-    def calculate_energy_term(self, observations, variational_params):
-        """Calculate the energy term of VFE."""
-
-        energy = 0.0
-
-        # Sample from variational distribution
-        n_samples = 100
-        for _ in range(n_samples):
-            # Sample latent variables
-            latent_sample = self.sample_from_variational(variational_params)
-
-            # Evaluate joint log-likelihood
-            log_joint = self.model.log_joint_probability(observations, latent_sample)
-
-            # Evaluate variational log-probability
-            log_variational = self.variational_log_probability(latent_sample, variational_params)
-
-            energy += -log_joint
-
-        return energy / n_samples
-
-    def calculate_entropy_term(self, variational_params):
-        """Calculate the entropy term of VFE."""
-
-        # For common distributions, entropy has analytical form
-        if variational_params['distribution'] == 'gaussian':
-            entropy = self.gaussian_entropy(variational_params)
-        elif variational_params['distribution'] == 'categorical':
-            entropy = self.categorical_entropy(variational_params)
-
-        return entropy
+y = 1.0
+log_evidence = -0.5 * np.log(2 * np.pi * 2.0) - y ** 2 / (2 * 2.0)   # p(y) = N(0, 2)
+print("F at the exact posterior (y/2, 1/2):", vfe(y, y / 2, 0.5), " -ln p(y):", -log_evidence)
+print("F at a poorer q:", vfe(y, 0.0, 1.0))                          # F >= -ln p(y) for every q
 ```
 
 ### Relationship to Evidence Lower Bound
@@ -114,71 +76,19 @@ Because the bound is tractable, minimizing F gives an approximation to maximum-l
 Variational free energy minimization through predictive coding:
 
 ```python
-class PredictiveCodingNetwork:
-    """Neural network implementing predictive coding."""
-
-    def __init__(self, layers, learning_rate=0.01):
-        self.layers = layers
-        self.learning_rate = learning_rate
-        self.predictions = {}
-        self.errors = {}
-
-    def predict(self, input_data):
-        """Generate predictions through hierarchical network."""
-
-        # Forward pass - generate predictions
-        current_input = input_data
-        for layer in self.layers:
-            prediction = layer.predict(current_input)
-            self.predictions[layer.level] = prediction
-
-            # Prediction error
-            if layer.level > 0:
-                error = current_input - prediction
-                self.errors[layer.level] = error
-
-            current_input = prediction
-
-        return self.predictions[self.layers[-1].level]
-
-    def update_beliefs(self, observation):
-        """Update beliefs by minimizing variational free energy."""
-
-        # Initialize with observation
-        self.errors[0] = observation
-
-        # Backward pass - update predictions
-        for layer_idx in reversed(range(len(self.layers))):
-            layer = self.layers[layer_idx]
-
-            # Calculate precision-weighted prediction error
-            precision = layer.get_precision()
-            error = self.errors[layer.level]
-
-            # Update layer parameters
-            layer.update_parameters(error, precision, self.learning_rate)
-
-            # Propagate error upward
-            if layer_idx > 0:
-                prediction_error = layer.backward_error(error)
-                self.errors[layer.level - 1] += prediction_error
-
-    def minimize_vfe(self, observation, max_iterations=100):
-        """Minimize variational free energy through iteration."""
-
-        for iteration in range(max_iterations):
-            # Generate predictions
-            self.predict(observation)
-
-            # Update beliefs to reduce prediction errors
-            self.update_beliefs(observation)
-
-            # Check convergence
-            total_error = sum(np.sum(error**2) for error in self.errors.values())
-            if total_error < 1e-6:
-                break
-
-        return self.predictions
+# Predictive coding: gradient descent on F for y = W mu + noise with a Gaussian prior on mu
+W = np.array([[1.0, 0.5], [0.0, 1.0], [0.5, 0.5]])                   # illustrative generative weights
+y_obs = np.array([1.0, 0.5, 0.8])
+pi_y, pi_mu = 4.0, 1.0                                              # sensory and prior precisions
+mu = np.zeros(2)
+for step in range(200):
+    eps_y = y_obs - W @ mu                                          # sensory prediction error
+    eps_mu = mu                                                     # prior prediction error (prior mean 0)
+    F = 0.5 * (pi_y * eps_y @ eps_y + pi_mu * eps_mu @ eps_mu)
+    mu = mu + 0.05 * (pi_y * W.T @ eps_y - pi_mu * eps_mu)          # mu <- mu - lr * dF/dmu
+    if step % 50 == 0:
+        print(step, round(F, 4))
+print("mu:", mu, "exact MAP:", np.linalg.solve(pi_y * W.T @ W + pi_mu * np.eye(2), pi_y * W.T @ y_obs))
 ```
 
 ## Action as Inference
@@ -188,68 +98,22 @@ class PredictiveCodingNetwork:
 Action selection through expected free energy minimization:
 
 ```python
-class ActiveInferenceAgent:
-    """Agent that selects actions by minimizing expected free energy."""
+def policy_posterior(G, gamma=2.0):
+    """pi ~ softmax(-gamma * G) over policies with expected free energies G."""
+    p = np.exp(-gamma * (G - G.min()))
+    return p / p.sum()
 
-    def __init__(self, generative_model, action_space):
-        self.model = generative_model
-        self.actions = action_space
-        self.policy_prior = self.initialize_policy_prior()
-
-    def select_action(self, current_beliefs):
-        """Select action that minimizes expected free energy."""
-
-        action_values = {}
-
-        for action in self.actions:
-            # Calculate expected free energy for this action
-            efe = self.calculate_expected_free_energy(action, current_beliefs)
-            action_values[action] = efe
-
-        # Select action with minimum EFE
-        optimal_action = min(action_values, key=action_values.get)
-
-        return optimal_action, action_values
-
-    def calculate_expected_free_energy(self, action, beliefs):
-        """Calculate expected free energy for an action."""
-
-        efe = 0.0
-
-        # Epistemic affordance (information gain)
-        epistemic_efe = self.calculate_epistemic_affordance(action, beliefs)
-
-        # Extrinsic value (goal achievement)
-        extrinsic_efe = self.calculate_extrinsic_value(action, beliefs)
-
-        # Intrinsic value (homeostatic regulation)
-        intrinsic_efe = self.calculate_intrinsic_value(action, beliefs)
-
-        efe = epistemic_efe + extrinsic_efe + intrinsic_efe
-
-        return efe
-
-    def calculate_epistemic_affordance(self, action, beliefs):
-        """Calculate information gain from action."""
-
-        # Predict posterior beliefs after action
-        predicted_beliefs = self.model.predict_posterior(action, beliefs)
-
-        # KL divergence between prior and posterior
-        epistemic_value = kl_divergence(beliefs, predicted_beliefs)
-
-        return epistemic_value
-
-    def calculate_extrinsic_value(self, action, beliefs):
-        """Calculate goal-directed value."""
-
-        # Predict sensory consequences
-        predicted_observations = self.model.predict_observations(action, beliefs)
-
-        # Compare to goal prior
-        extrinsic_value = kl_divergence(predicted_observations, self.goal_prior)
-
-        return extrinsic_value
+# G = risk + ambiguity for each policy in a small model (A[o, s], B[a][s', s], log-preferences)
+A = np.array([[0.9, 0.1], [0.1, 0.9]])
+B = [np.eye(2), np.array([[0.1, 0.1], [0.9, 0.9]])]
+log_C = np.log(np.array([0.2, 0.8]))
+q = np.array([0.7, 0.3])
+G = []
+for Ba in B:
+    qo = A @ (Ba @ q)
+    ambiguity = (Ba @ q) @ (-np.sum(A * np.log(A), axis=0))
+    G.append(np.sum(qo * (np.log(qo) - log_C)) + ambiguity)
+print(np.round(G, 3), np.round(policy_posterior(np.array(G)), 3))
 ```
 
 ## Learning and Adaptation
@@ -259,68 +123,16 @@ class ActiveInferenceAgent:
 Model parameter learning through variational free energy minimization:
 
 ```python
-class VariationalLearner:
-    """Learn generative model parameters using variational methods."""
-
-    def __init__(self, model, variational_family):
-        self.model = model
-        self.variational_family = variational_family
-        self.learning_rate = 0.01
-
-    def learn_from_data(self, dataset, max_epochs=100):
-        """Learn model parameters from data."""
-
-        for epoch in range(max_epochs):
-            epoch_loss = 0.0
-
-            for batch in dataset:
-                # Calculate variational free energy
-                vfe = self.calculate_batch_vfe(batch)
-
-                # Compute gradients
-                gradients = self.compute_vfe_gradients(batch)
-
-                # Update model parameters
-                self.update_parameters(gradients)
-
-                epoch_loss += vfe
-
-            # Check convergence
-            if epoch_loss < 1e-6:
-                break
-
-        return self.model
-
-    def calculate_batch_vfe(self, batch):
-        """Calculate variational free energy for a batch."""
-
-        total_vfe = 0.0
-
-        for observation in batch:
-            # Optimize variational parameters for this observation
-            variational_params = self.optimize_variational_params(observation)
-
-            # Calculate VFE
-            vfe = self.vfe_calculator.calculate_vfe(observation, variational_params)
-            total_vfe += vfe
-
-        return total_vfe / len(batch)
-
-    def optimize_variational_params(self, observation):
-        """Optimize variational parameters for single observation."""
-
-        # Initialize variational parameters
-        params = self.variational_family.initialize_params()
-
-        # Gradient-based optimization
-        for _ in range(50):  # Limited iterations for efficiency
-            vfe = self.vfe_calculator.calculate_vfe(observation, params)
-            gradients = self.compute_variational_gradients(observation, params)
-
-            # Update parameters
-            params = self.update_variational_params(params, gradients)
-
-        return params
+# Variational EM for y = w * theta + noise, theta ~ N(0, 1), noise variance sigma2 (known)
+rng = np.random.default_rng(0)
+w_true, sigma2 = 2.0, 0.25
+y = w_true * rng.standard_normal(2000) + np.sqrt(sigma2) * rng.standard_normal(2000)
+w = 0.5
+for _ in range(100):
+    s2 = 1.0 / (1.0 + w ** 2 / sigma2)                  # E-step: q(theta_i) = N(m_i, s2)
+    m = s2 * w * y / sigma2
+    w = np.sum(m * y) / np.sum(m ** 2 + s2)             # M-step: minimise F with respect to w
+print("estimated |w|:", abs(w), "moment estimate:", np.sqrt(y.var() - sigma2))
 ```
 
 ## Information Geometry
@@ -330,68 +142,16 @@ class VariationalLearner:
 Using the Fisher information matrix for efficient optimization:
 
 ```python
-class NaturalGradientOptimizer:
-    """Optimize using natural gradients based on Fisher information."""
+# Natural gradient on the Gaussian family q = N(m, s2): the Fisher information for m is 1 / s2
+def grad_m(y, m, s2, eps=1e-6):
+    return (vfe(y, m + eps, s2) - vfe(y, m - eps, s2)) / (2 * eps)
 
-    def __init__(self, model, learning_rate=0.01):
-        self.model = model
-        self.learning_rate = learning_rate
-
-    def natural_gradient_update(self, observation, variational_params):
-        """Update parameters using natural gradient."""
-
-        # Calculate standard gradient
-        gradient = self.calculate_vfe_gradient(observation, variational_params)
-
-        # Calculate Fisher information matrix
-        fisher_matrix = self.calculate_fisher_information(variational_params)
-
-        # Compute natural gradient
-        natural_gradient = np.linalg.solve(fisher_matrix, gradient)
-
-        # Update parameters
-        self.model.update_parameters(
-            -self.learning_rate * natural_gradient
-        )
-
-        return natural_gradient
-
-    def calculate_fisher_information(self, variational_params):
-        """Calculate Fisher information matrix."""
-
-        # Monte Carlo estimation of Fisher information
-        n_samples = 100
-        fisher_matrix = np.zeros((len(variational_params), len(variational_params)))
-
-        for _ in range(n_samples):
-            # Sample from variational distribution
-            sample = self.sample_from_variational(variational_params)
-
-            # Score function
-            score = self.score_function(sample, variational_params)
-
-            # Outer product
-            fisher_matrix += np.outer(score, score)
-
-        fisher_matrix /= n_samples
-
-        return fisher_matrix
-
-    def score_function(self, sample, params):
-        """Calculate score function for variational distribution."""
-
-        if params['distribution'] == 'gaussian':
-            # For Gaussian: (x - μ) / σ²
-            mean = params['mean']
-            variance = params['variance']
-            score = (sample - mean) / variance
-        elif params['distribution'] == 'categorical':
-            # For categorical: score for selected category
-            category_idx = np.argmax(sample)
-            score = np.zeros(len(params['probabilities']))
-            score[category_idx] = 1.0 / params['probabilities'][category_idx]
-
-        return score
+y, s2 = 1.0, 0.5
+m_plain, m_nat = -3.0, -3.0
+for _ in range(5):
+    m_plain -= 0.1 * grad_m(y, m_plain, s2)                       # plain gradient step
+    m_nat -= 1.0 * s2 * grad_m(y, m_nat, s2)                      # natural step: Fisher^{-1} * gradient
+print("after 5 steps (optimum m = 0.5):", m_plain, m_nat)         # here the natural step lands on the optimum
 ```
 
 ## Neural Implementation
@@ -401,44 +161,17 @@ class NaturalGradientOptimizer:
 Synaptic changes that implement variational free energy minimization:
 
 ```python
-class SynapticPlasticity:
-    """Synaptic plasticity implementing variational learning."""
-
-    def __init__(self, neurons, connections):
-        self.neurons = neurons
-        self.connections = connections
-
-    def hebbian_learning(self, pre_activity, post_activity, dopamine_signal):
-        """Hebbian learning modulated by dopamine."""
-
-        for connection in self.connections:
-            # Pre- and post-synaptic activity
-            pre = pre_activity[connection.pre_neuron]
-            post = post_activity[connection.post_neuron]
-
-            # Prediction error signal (dopamine)
-            pe = dopamine_signal
-
-            # Weight update
-            delta_w = self.learning_rate * pre * post * pe
-            connection.weight += delta_w
-
-            # Maintain weight bounds
-            connection.weight = np.clip(connection.weight, -1.0, 1.0)
-
-    def precision_weighted_learning(self, prediction_error, precision):
-        """Learning weighted by precision (confidence)."""
-
-        # Precision-modulated learning rate
-        effective_lr = self.learning_rate * precision
-
-        # Update weights based on precision-weighted error
-        for connection in self.connections:
-            pre = self.neurons[connection.pre_neuron].activity
-            error_contribution = prediction_error * connection.weight
-
-            delta_w = effective_lr * pre * error_contribution
-            connection.weight += delta_w
+# Synaptic plasticity as a local gradient: dF/dW = -pi * outer(error, pre)
+rng = np.random.default_rng(1)
+W_true = rng.standard_normal((2, 3))
+W = np.zeros((2, 3))
+lr, pi_y = 0.05, 1.0
+for _ in range(2000):
+    pre = rng.standard_normal(3)                                  # presynaptic activity
+    post = W_true @ pre + 0.1 * rng.standard_normal(2)                                          # noisy postsynaptic target
+    error = post - W @ pre                                        # prediction error
+    W += lr * pi_y * np.outer(error, pre)                         # delta = lr * pi * error * pre
+print("max |W - W_true|:", round(np.abs(W - W_true).max(), 3))
 ```
 
 ## Applications
@@ -474,67 +207,18 @@ Value-based choices under uncertainty:
 Making variational inference tractable for large models:
 
 ```python
-class ScalableVariationalInference:
-    """Scalable variational inference methods."""
-
-    def __init__(self, model):
-        self.model = model
-
-    def stochastic_variational_inference(self, data, batch_size=100):
-        """Stochastic variational inference for large datasets."""
-
-        # Initialize variational parameters
-        variational_params = self.initialize_variational_params()
-
-        for epoch in range(self.max_epochs):
-            # Shuffle data
-            np.random.shuffle(data)
-
-            for batch_start in range(0, len(data), batch_size):
-                batch_end = min(batch_start + batch_size, len(data))
-                batch = data[batch_start:batch_end]
-
-                # Calculate stochastic gradients
-                gradients = self.calculate_stochastic_gradients(batch, variational_params)
-
-                # Update variational parameters
-                variational_params = self.update_variational_params(
-                    variational_params, gradients
-                )
-
-        return variational_params
-
-    def amortized_variational_inference(self, data):
-        """Amortized inference using neural networks."""
-
-        # Train inference network
-        inference_network = self.train_inference_network(data)
-
-        # Use network for fast inference
-        variational_params = inference_network.encode(data)
-
-        return variational_params
-
-    def train_inference_network(self, data):
-        """Train neural network for amortized inference."""
-
-        # Encoder network architecture
-        encoder = self.build_encoder_network()
-
-        # Training loop
-        for batch in self.create_batches(data):
-            # Encode data to variational parameters
-            params = encoder(batch)
-
-            # Calculate VFE
-            vfe = self.calculate_vfe_batch(batch, params)
-
-            # Backpropagation
-            self.optimizer.zero_grad()
-            vfe.backward()
-            self.optimizer.step()
-
-        return encoder
+# Scalable inference: stochastic natural-gradient VI with minibatches (Gaussian-mean model)
+rng = np.random.default_rng(2)
+data = 3.0 + rng.standard_normal(100_000)                         # y_i ~ N(mu, 1), prior mu ~ N(0, 10)
+N, B = len(data), 256
+eta0 = np.array([0.0, 1 / 10])                                    # prior natural parameters (prec * mean, prec)
+lam = eta0.copy()                                                 # q(mu) natural parameters
+for t in range(1, 2001):
+    y = rng.choice(data, B)
+    lam_hat = eta0 + (N / B) * np.array([y.sum(), B])             # estimate as if the batch were the full data
+    rho = (t + 1) ** -0.7                                         # decaying step size
+    lam = (1 - rho) * lam + rho * lam_hat
+print("posterior mean:", lam[0] / lam[1], "full-data mean:", data.mean())
 ```
 
 ---

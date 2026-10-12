@@ -87,275 +87,41 @@ g_i(x^*) &\leq 0 \\
 ### Gradient-Based Optimizer
 
 ```python
+import numpy as np
 
-class GradientOptimizer:
+H = np.array([[3.0, 0.5], [0.5, 1.0]])       # illustrative quadratic f(x) = 0.5 x^T H x - b^T x
+b = np.array([1.0, 1.0])
+grad = lambda x: H @ x - b
 
-    def __init__(self,
-
-                 learning_rate: float = 0.01,
-
-                 momentum: float = 0.9,
-
-                 nesterov: bool = False):
-
-        """Initialize gradient optimizer.
-
-        Args:
-
-            learning_rate: Learning rate
-
-            momentum: Momentum coefficient
-
-            nesterov: Whether to use Nesterov momentum
-
-        """
-
-        self.lr = learning_rate
-
-        self.momentum = momentum
-
-        self.nesterov = nesterov
-
-        self.velocity = None
-
-    def step(self,
-
-            params: np.ndarray,
-
-            grads: np.ndarray) -> np.ndarray:
-
-        """Perform optimization step.
-
-        Args:
-
-            params: Current parameters
-
-            grads: Parameter gradients
-
-        Returns:
-
-            new_params: Updated parameters
-
-        """
-
-        if self.velocity is None:
-
-            self.velocity = np.zeros_like(params)
-
-        # Update velocity
-
-        self.velocity = (self.momentum * self.velocity +
-
-                        self.lr * grads)
-
-        if self.nesterov:
-
-            # Nesterov update
-
-            update = (self.momentum * self.velocity +
-
-                     self.lr * grads)
-
-        else:
-
-            # Standard update
-
-            update = self.velocity
-
-        return params - update
-
+x = np.zeros(2)
+for _ in range(200):
+    x = x - 0.2 * grad(x)                     # x_{k+1} = x_k - alpha grad f(x_k)
+print(np.allclose(x, np.linalg.solve(H, b)))
 ```
 
 ### Second-Order Optimizer
 
 ```python
-
-class NewtonOptimizer:
-
-    def __init__(self,
-
-                 damping: float = 1e-4,
-
-                 max_iter: int = 100):
-
-        """Initialize Newton optimizer.
-
-        Args:
-
-            damping: Hessian damping factor
-
-            max_iter: Maximum iterations
-
-        """
-
-        self.damping = damping
-
-        self.max_iter = max_iter
-
-    def step(self,
-
-            params: np.ndarray,
-
-            grad_fn: Callable,
-
-            hess_fn: Callable) -> np.ndarray:
-
-        """Perform Newton optimization step.
-
-        Args:
-
-            params: Current parameters
-
-            grad_fn: Gradient function
-
-            hess_fn: Hessian function
-
-        Returns:
-
-            new_params: Updated parameters
-
-        """
-
-        grad = grad_fn(params)
-
-        hess = hess_fn(params)
-
-        # Add damping
-
-        hess += self.damping * np.eye(len(params))
-
-        # Compute Newton direction
-
-        try:
-
-            direction = np.linalg.solve(hess, -grad)
-
-        except np.linalg.LinAlgError:
-
-            # Fallback to gradient descent
-
-            direction = -grad
-
-        return params + direction
-
+x = np.zeros(2)
+x = x - np.linalg.solve(H, grad(x))           # Newton step: x - H^{-1} grad f(x)
+print(np.allclose(x, np.linalg.solve(H, b)))  # exact in one step for a quadratic
 ```
 
 ### Constrained Optimizer
 
 ```python
+import numpy as np
 
-class ConstrainedOptimizer:
-
-    def __init__(self,
-
-                 constraints: List[Callable],
-
-                 penalty_weight: float = 1.0,
-
-                 weight_growth: float = 2.0):
-
-        """Initialize constrained optimizer.
-
-        Args:
-
-            constraints: List of constraint functions
-
-            penalty_weight: Initial penalty weight
-
-            weight_growth: Penalty weight growth factor
-
-        """
-
-        self.constraints = constraints
-
-        self.weight = penalty_weight
-
-        self.growth = weight_growth
-
-        # Initialize base optimizer
-
-        self.base_optimizer = GradientOptimizer()
-
-    def augmented_lagrangian(self,
-
-                           x: np.ndarray,
-
-                           lambda_: np.ndarray) -> float:
-
-        """Compute augmented Lagrangian.
-
-        Args:
-
-            x: Current point
-
-            lambda_: Lagrange multipliers
-
-        Returns:
-
-            L: Augmented Lagrangian value
-
-        """
-
-        # Objective
-
-        L = self.objective(x)
-
-        # Constraint terms
-
-        for i, g in enumerate(self.constraints):
-
-            c = g(x)
-
-            L += lambda_[i] * c + 0.5 * self.weight * c**2
-
-        return L
-
-    def step(self,
-
-            x: np.ndarray,
-
-            lambda_: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
-
-        """Perform optimization step.
-
-        Args:
-
-            x: Current point
-
-            lambda_: Current multipliers
-
-        Returns:
-
-            new_x: Updated point
-
-            new_lambda: Updated multipliers
-
-        """
-
-        # Minimize augmented Lagrangian
-
-        def grad_L(x):
-
-            return self.grad_augmented_lagrangian(x, lambda_)
-
-        x_new = self.base_optimizer.step(x, grad_L(x))
-
-        # Update multipliers
-
-        lambda_new = np.array([
-
-            max(0, lambda_[i] + self.weight * g(x_new))
-
-            for i, g in enumerate(self.constraints)
-
-        ])
-
-        # Update penalty weight
-
-        self.weight *= self.growth
-
-        return x_new, lambda_new
-
+# minimise f(x) = x1^2 + x2^2  subject to  g(x) = 1 - x1 - x2 <= 0
+# With g active, grad f + lambda grad g = 0 and g = 0 form a linear system.
+K = np.array([[2.0, 0.0, -1.0],
+              [0.0, 2.0, -1.0],
+              [-1.0, -1.0, 0.0]])
+rhs = np.array([0.0, 0.0, -1.0])
+x1, x2, lam = np.linalg.solve(K, rhs)
+g = 1 - x1 - x2
+print(round(x1, 3), round(x2, 3), round(lam, 3))
+print(np.isclose(g, 0.0), lam >= 0, np.isclose(lam * g, 0.0))   # KKT conditions hold
 ```
 
 ## Applications
@@ -531,137 +297,23 @@ class ConstrainedOptimizer:
 ### Free Energy Optimization
 
 ```python
-
-class FreeEnergyOptimizer:
-
-    """
-
-    Optimize variational free energy.
-
-    Theory:
-
-        - variational_methods
-
-        - free_energy_principle
-
-    Mathematics:
-
-        - information_theory
-
-        - natural_gradients
-
-    """
-
-    def __init__(self,
-
-                 model: GenerativeModel,
-
-                 learning_rate: float = 0.01):
-
-        self.model = model
-
-        self.lr = learning_rate
-
-        self.history = []
-
-    def minimize_free_energy(self,
-
-                           observation: np.ndarray,
-
-                           initial_belief: np.ndarray,
-
-                           n_iterations: int = 100) -> np.ndarray:
-
-        """Minimize variational free energy."""
-
-        belief = initial_belief.copy()
-
-        for i in range(n_iterations):
-
-            # Compute free energy and gradient
-
-            F, grad = self.compute_free_energy_gradient(
-
-                observation, belief
-
-            )
-
-            # Natural gradient update
-
-            belief = self.natural_gradient_update(belief, grad)
-
-            # Track progress
-
-            self.history.append(F)
-
-            # Check convergence
-
-            if self._check_convergence():
-
-                break
-
-        return belief
-
-```
-
-### Policy Optimization
-
-```python
-
-class PolicyOptimizer:
-
-    """
-
-    Optimize policies using expected free energy.
-
-    Theory:
-
-        - active_inference_pomdp
-
-        - expected_free_energy
-
-    Mathematics:
-
-        - path_integral
-
-        - information_theory
-
-    """
-
-    def __init__(self,
-
-                 model: ActiveInferenceModel,
-
-                 temperature: float = 1.0):
-
-        self.model = model
-
-        self.temperature = temperature
-
-    def optimize_policy(self,
-
-                       belief_state: np.ndarray,
-
-                       policies: List[np.ndarray]) -> np.ndarray:
-
-        """Optimize policy selection."""
-
-        # Compute expected free energy for each policy
-
-        G = np.array([
-
-            self.compute_expected_free_energy(belief_state, pi)
-
-            for pi in policies
-
-        ])
-
-        # Softmax policy selection
-
-        p = self.softmax_policy_selection(G)
-
-        return p
-
+import numpy as np
+
+A = np.array([[0.9, 0.2], [0.1, 0.8]])       # p(o | s), illustrative
+prior, o = np.array([0.5, 0.5]), 0
+softmax = lambda v: np.exp(v - v.max()) / np.exp(v - v.max()).sum()
+
+def free_energy(q):
+    return np.sum(q * (np.log(q) - np.log(A[o] * prior)))
+
+theta = np.zeros(2)                            # logits of q(s)
+for _ in range(500):
+    q = softmax(theta)
+    dF_dq = np.log(q) - np.log(A[o] * prior) + 1.0
+    theta -= 0.5 * q * (dF_dq - np.sum(q * dF_dq))   # chain rule through the softmax
+posterior = A[o] * prior / np.sum(A[o] * prior)
+print(np.round(softmax(theta), 3), np.round(posterior, 3))
+print(np.isclose(free_energy(softmax(theta)), -np.log(np.sum(A[o] * prior))))   # F reaches -ln p(o)
 ```
 
 ## Gradient Methods
@@ -669,191 +321,37 @@ class PolicyOptimizer:
 ### Natural Gradient Descent
 
 ```python
+import numpy as np
 
-class NaturalGradientOptimizer:
+# Bernoulli q with logit theta, fitted to target p by minimising KL(q || p)
+sigmoid = lambda t: 1 / (1 + np.exp(-t))
+logit = lambda p: np.log(p / (1 - p))
+p_target, theta = 0.8, 0.0                      # illustrative
 
-    """
-
-    Natural gradient optimization.
-
-    Theory:
-
-        - natural_gradients
-
-        - information_geometry
-
-    Mathematics:
-
-        - fisher_information
-
-        - riemannian_geometry
-
-    """
-
-    def __init__(self,
-
-                 learning_rate: float = 0.1,
-
-                 damping: float = 1e-4):
-
-        self.lr = learning_rate
-
-        self.damping = damping
-
-    def compute_natural_gradient(self,
-
-                               params: np.ndarray,
-
-                               grad: np.ndarray,
-
-                               fisher: np.ndarray) -> np.ndarray:
-
-        """Compute natural gradient direction."""
-
-        # Add damping to Fisher matrix
-
-        fisher_damped = fisher + self.damping * np.eye(fisher.shape[0])
-
-        # Solve linear system for natural gradient
-
-        natural_grad = np.linalg.solve(fisher_damped, grad)
-
-        return natural_grad
-
+q = sigmoid(theta)
+fisher = q * (1 - q)                            # Fisher information of Bernoulli in logit form
+euclid_grad = fisher * (theta - logit(p_target))    # gradient of KL(q || p) w.r.t. theta
+natural_grad = euclid_grad / fisher                 # F^{-1} grad
+theta_new = theta - natural_grad
+print(round(float(sigmoid(theta_new)), 3))      # one natural step reaches the target
 ```
 
 ### Stochastic Optimization
 
 ```python
-
-class StochasticOptimizer:
-
-    """
-
-    Stochastic optimization methods.
-
-    Theory:
-
-        - stochastic_optimization
-
-        - monte_carlo_methods
-
-    Mathematics:
-
-        - stochastic_approximation
-
-        - variance_reduction
-
-    """
-
-    def __init__(self,
-
-                 learning_rate: float = 0.01,
-
-                 batch_size: int = 32):
-
-        self.lr = learning_rate
-
-        self.batch_size = batch_size
-
-    def optimize_batch(self,
-
-                      params: np.ndarray,
-
-                      data_batch: np.ndarray) -> np.ndarray:
-
-        """Perform stochastic optimization step."""
-
-        # Compute batch gradient
-
-        grad = self.compute_batch_gradient(params, data_batch)
-
-        # Apply variance reduction
-
-        grad = self.reduce_variance(grad)
-
-        # Update parameters
-
-        params = self.update_parameters(params, grad)
-
-        return params
-
-```
-
-## Dynamic Programming
-
-### Value Iteration for POMDPs
-
-```python
-
-class ValueIterator:
-
-    """
-
-    Value iteration for POMDPs.
-
-    Theory:
-
-        - dynamic_programming
-
-        - bellman_equation
-
-    Mathematics:
-
-        - markov_decision_process
-
-        - value_functions
-
-    """
-
-    def __init__(self,
-
-                 discount: float = 0.95,
-
-                 tolerance: float = 1e-6):
-
-        self.gamma = discount
-
-        self.tol = tolerance
-
-    def iterate_values(self,
-
-                      belief_states: np.ndarray,
-
-                      transition_model: np.ndarray,
-
-                      reward_model: np.ndarray) -> np.ndarray:
-
-        """Perform value iteration."""
-
-        # Initialize value function
-
-        V = np.zeros(len(belief_states))
-
-        while True:
-
-            # Backup old values
-
-            V_old = V.copy()
-
-            # Update values
-
-            for i, b in enumerate(belief_states):
-
-                V[i] = self._compute_optimal_value(
-
-                    b, transition_model, reward_model, V_old
-
-                )
-
-            # Check convergence
-
-            if np.max(np.abs(V - V_old)) < self.tol:
-
-                break
-
-        return V
-
+import numpy as np
+rng = np.random.default_rng(0)
+
+X = rng.normal(size=(500, 2))
+w_true = np.array([2.0, -1.0])
+y = X @ w_true + 0.1 * rng.standard_normal(500)
+
+w = np.zeros(2)
+for step in range(2000):
+    idx = rng.integers(0, 500, size=16)                 # minibatch
+    grad = X[idx].T @ (X[idx] @ w - y[idx]) / 16        # stochastic gradient of the squared error
+    w -= 0.02 * grad
+print(np.round(w, 2))
 ```
 
 ## Documentation Links

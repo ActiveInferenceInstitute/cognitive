@@ -121,133 +121,50 @@ where $\mathcal{L}_\pi$ is the policy-specific Lagrangian.
 ### 1. Variational Free Energy Computer
 
 ```python
+import numpy as np
 
-class VFEComputer:
+D = np.array([0.6, 0.4])                      # prior p(s), illustrative
+A = np.array([[0.8, 0.3],                     # p(o | s)
+              [0.2, 0.7]])
+o = 1
+q = np.array([0.3, 0.7])                      # any variational density
 
-    """Computes Variational Free Energy in both discrete and continuous time"""
-
-    def __init__(self):
-
-        self.components = {
-
-            'discrete': DiscreteVFE(),
-
-            'continuous': ContinuousVFE(),
-
-            'policy': PolicyVFE()
-
-        }
-
-    def compute_vfe(self, 
-
-                   beliefs: Distribution,
-
-                   observations: np.ndarray,
-
-                   time_mode: str = 'discrete') -> float:
-
-        """Compute VFE based on time mode"""
-
-        if time_mode == 'discrete':
-
-            return self.components['discrete'].compute(
-
-                beliefs, observations)
-
-        else:
-
-            return self.components['continuous'].compute(
-
-                beliefs, observations)
-
-    def compute_policy_vfe(self,
-
-                          policy: Policy,
-
-                          horizon: int,
-
-                          time_mode: str = 'discrete') -> float:
-
-        """Compute policy-specific VFE"""
-
-        return self.components['policy'].compute(
-
-            policy, horizon, time_mode)
-
+definition = np.sum(q * (np.log(q) - np.log(A[o] * D)))        # E_q[ln q - ln p(o, s)]
+accuracy = -np.sum(q * np.log(A[o]))
+complexity = np.sum(q * (np.log(q) - np.log(D)))               # KL[q || p(s)]
+print(definition, accuracy + complexity)      # the two forms agree
 ```
 
 ### 2. Belief Updating
 
 ```python
+import numpy as np
 
-class BeliefUpdater:
+A = np.array([[0.8, 0.3],
+              [0.2, 0.7]])                    # p(o | s), illustrative
+B = np.array([[0.9, 0.2],
+              [0.1, 0.8]])                    # p(s' | s), one action
 
-    """Updates beliefs using VFE minimization"""
-
-    def __init__(self):
-
-        self.vfe = VFEComputer()
-
-        self.optimizer = VariationalOptimizer()
-
-    def update_beliefs(self,
-
-                      current_beliefs: Distribution,
-
-                      observation: np.ndarray,
-
-                      time_mode: str = 'discrete') -> Distribution:
-
-        """Update beliefs by minimizing VFE"""
-
-        def objective(params):
-
-            proposed_beliefs = self.construct_beliefs(params)
-
-            return self.vfe.compute_vfe(
-
-                proposed_beliefs, observation, time_mode)
-
-        optimal_params = self.optimizer.minimize(objective)
-
-        return self.construct_beliefs(optimal_params)
-
+q = np.array([0.5, 0.5])
+for o in [0, 0, 1, 0]:                        # observation sequence
+    prior = B @ q                             # predict
+    q = prior * A[o]                          # correct: minimiser of F is the posterior
+    q /= q.sum()
+    print(o, q.round(3))
 ```
 
 ### 3. Policy Selection
 
 ```python
+import numpy as np
 
-class PolicySelector:
+def softmax(x):
+    e = np.exp(x - x.max())
+    return e / e.sum()
 
-    """Selects policies using VFE-based evaluation"""
-
-    def __init__(self):
-
-        self.vfe = VFEComputer()
-
-    def select_policy(self,
-
-                     policies: List[Policy],
-
-                     horizon: int,
-
-                     time_mode: str = 'discrete') -> Policy:
-
-        """Select policy by minimizing expected VFE"""
-
-        policy_vfes = []
-
-        for policy in policies:
-
-            vfe = self.vfe.compute_policy_vfe(
-
-                policy, horizon, time_mode)
-
-            policy_vfes.append(vfe)
-
-        return policies[np.argmin(policy_vfes)]
-
+G = np.array([2.0, 1.2, 1.5])                 # expected free energy per policy, illustrative
+for gamma in (0.5, 2.0, 8.0):
+    print(gamma, softmax(-gamma * G).round(3))   # larger gamma concentrates on the lowest G
 ```
 
 ## Advanced Concepts
@@ -264,28 +181,21 @@ F_{\text{hierarchical}} = \sum_{l=1}^L F_l + \text{KL}[q_l(s_l)||p_l(s_l|s_{l+1}
 
 ### 2. Amortized VFE
 
-Using neural networks for efficient VFE computation:
+Amortized inference learns a map from observations to variational parameters, so that minimizing VFE becomes a single forward pass (a linear map stands in for a neural network below):
 
 ```python
+import numpy as np
 
-class AmortizedVFE:
+rng = np.random.default_rng(0)
 
-    def __init__(self):
+# Conjugate model (illustrative): z ~ N(0, 1), x | z ~ N(z, sigma^2)
+sigma = 0.8
+z = rng.normal(size=5000)
+x = z + sigma * rng.normal(size=5000)
 
-        self.encoder = ProbabilisticEncoder()
-
-        self.decoder = ProbabilisticDecoder()
-
-    def compute_amortized_vfe(self, x):
-
-        """Compute VFE using amortized inference"""
-
-        q_params = self.encoder(x)
-
-        p_params = self.decoder(q_params)
-
-        return self.compute_elbo(x, q_params, p_params)
-
+# Exact posterior mean per datapoint: x / (1 + sigma^2). Amortise it with a learned map.
+w = np.linalg.lstsq(np.c_[x, np.ones_like(x)], z, rcond=None)[0]
+print(w[0], 1 / (1 + sigma**2))               # learned slope vs exact posterior slope
 ```
 
 ### 3. Stochastic VFE
@@ -298,77 +208,6 @@ F_{\text{stochastic}} = F + \mathbb{E}_q[\frac{1}{2}\text{tr}(D\nabla^2\ln q)]
 
 ```
 
-## Planning with VFE
-
-### 1. VFE-based Planning
-
-```python
-
-class VFEPlanner:
-
-    """Plans actions using VFE minimization"""
-
-    def __init__(self):
-
-        self.vfe = VFEComputer()
-
-        self.trajectory_optimizer = TrajectoryOptimizer()
-
-    def plan_trajectory(self,
-
-                       initial_state: np.ndarray,
-
-                       goal_state: np.ndarray,
-
-                       horizon: int) -> Trajectory:
-
-        """Plan trajectory by minimizing VFE"""
-
-        def objective(trajectory):
-
-            return self.vfe.compute_trajectory_vfe(
-
-                trajectory, goal_state)
-
-        return self.trajectory_optimizer.optimize(
-
-            objective, initial_state, horizon)
-
-```
-
-### 2. Active Inference Planning
-
-```python
-
-class ActiveInferencePlanner:
-
-    """Implements active inference planning using VFE"""
-
-    def __init__(self):
-
-        self.vfe = VFEComputer()
-
-        self.policy_selector = PolicySelector()
-
-    def plan_actions(self,
-
-                    beliefs: Distribution,
-
-                    policies: List[Policy],
-
-                    horizon: int) -> List[Action]:
-
-        """Plan actions using active inference"""
-
-        selected_policy = self.policy_selector.select_policy(
-
-            policies, horizon)
-
-        return self.extract_action_sequence(
-
-            selected_policy, beliefs)
-
-```
 
 ## Applications
 
@@ -486,209 +325,6 @@ The thermodynamic interpretation:
 
 ```
 
-## Advanced Implementation Frameworks
-
-### 1. Hierarchical VFE Computer
-
-```python
-
-class HierarchicalVFE:
-
-    """Computes hierarchical VFE across multiple scales"""
-
-    def __init__(self, n_levels: int):
-
-        self.n_levels = n_levels
-
-        self.level_computers = [
-
-            VFEComputer() for _ in range(n_levels)
-
-        ]
-
-        self.level_couplings = [
-
-            LevelCoupling() for _ in range(n_levels-1)
-
-        ]
-
-    def compute_hierarchical_vfe(
-
-        self,
-
-        beliefs: List[Distribution],
-
-        observations: List[np.ndarray]
-
-    ) -> Tuple[float, dict]:
-
-        """Compute VFE across hierarchy"""
-
-        # Level-wise computation
-
-        level_vfes = []
-
-        for l in range(self.n_levels):
-
-            vfe = self.level_computers[l].compute(
-
-                beliefs[l], observations[l])
-
-            level_vfes.append(vfe)
-
-        # Coupling computation
-
-        coupling_terms = []
-
-        for l in range(self.n_levels-1):
-
-            coupling = self.level_couplings[l].compute(
-
-                beliefs[l], beliefs[l+1])
-
-            coupling_terms.append(coupling)
-
-        # Total VFE
-
-        total_vfe = sum(level_vfes) + sum(coupling_terms)
-
-        metrics = {
-
-            'level_vfes': level_vfes,
-
-            'coupling_terms': coupling_terms
-
-        }
-
-        return total_vfe, metrics
-
-```
-
-### 2. Information Geometric Optimizer
-
-```python
-
-class InfoGeometricVFE:
-
-    """Optimizes VFE using information geometry"""
-
-    def __init__(self):
-
-        self.metric_computer = FisherMetric()
-
-        self.connection_computer = LeviCivitaConnection()
-
-        self.geodesic_solver = GeodesicFlow()
-
-    def optimize_vfe(
-
-        self,
-
-        initial_beliefs: Distribution,
-
-        observations: np.ndarray,
-
-        n_steps: int
-
-    ) -> Distribution:
-
-        """Optimize VFE using natural gradient"""
-
-        current_beliefs = initial_beliefs
-
-        for _ in range(n_steps):
-
-            # Compute Fisher metric
-
-            metric = self.metric_computer.compute(
-
-                current_beliefs)
-
-            # Compute connection coefficients
-
-            connection = self.connection_computer.compute(
-
-                current_beliefs, metric)
-
-            # Compute VFE gradient
-
-            grad_vfe = self.compute_vfe_gradient(
-
-                current_beliefs, observations)
-
-            # Natural gradient step
-
-            natural_grad = solve(metric, grad_vfe)
-
-            # Geodesic update
-
-            current_beliefs = self.geodesic_solver.step(
-
-                current_beliefs,
-
-                natural_grad,
-
-                connection)
-
-        return current_beliefs
-
-```
-
-### 3. Stochastic VFE Dynamics
-
-```python
-
-class StochasticVFE:
-
-    """Implements stochastic VFE dynamics"""
-
-    def __init__(self):
-
-        self.sde_solver = StochasticDifferential()
-
-        self.noise_generator = NoiseProcess()
-
-        self.drift_computer = DriftField()
-
-    def simulate_vfe_dynamics(
-
-        self,
-
-        initial_state: np.ndarray,
-
-        time_span: float,
-
-        dt: float,
-
-        temperature: float
-
-    ) -> np.ndarray:
-
-        """Simulate stochastic VFE dynamics"""
-
-        def drift(x, t):
-
-            return -self.drift_computer.compute_field(x)
-
-        def diffusion(x, t):
-
-            return np.sqrt(2 * temperature)
-
-        trajectory = self.sde_solver.solve(
-
-            drift,
-
-            diffusion,
-
-            initial_state,
-
-            time_span,
-
-            dt)
-
-        return trajectory
-
-```
 
 ## Advanced Mathematical Bridges
 
@@ -760,199 +396,6 @@ The connection between path integral formulation and VFE:
 
 ```
 
-## Advanced Implementation Frameworks
-
-### 1. Multi-Scale Integration Engine
-
-```python
-
-class MultiScaleIntegrationEngine:
-
-    """Integrates VFE computation across scales"""
-
-    def __init__(self):
-
-        self.quantum_computer = QuantumVFEComputer()
-
-        self.classical_computer = ClassicalVFEComputer()
-
-        self.path_integral_computer = PathIntegralComputer()
-
-        self.scale_bridge = ScaleBridgeComputer()
-
-    def compute_multi_scale_vfe(self,
-
-                               quantum_state: QuantumState,
-
-                               classical_state: ClassicalState,
-
-                               path_config: PathConfiguration,
-
-                               scale_params: ScaleParameters) -> Dict[str, float]:
-
-        """Compute VFE across multiple scales"""
-
-        # Quantum scale computation
-
-        quantum_vfe = self.quantum_computer.compute(
-
-            quantum_state)
-
-        # Classical scale computation
-
-        classical_vfe = self.classical_computer.compute(
-
-            classical_state)
-
-        # Path integral computation
-
-        path_vfe = self.path_integral_computer.compute(
-
-            path_config)
-
-        # Bridge computations
-
-        quantum_classical_bridge = self.scale_bridge.bridge_quantum_classical(
-
-            quantum_vfe, classical_vfe)
-
-        classical_path_bridge = self.scale_bridge.bridge_classical_path(
-
-            classical_vfe, path_vfe)
-
-        return {
-
-            'quantum': quantum_vfe,
-
-            'classical': classical_vfe,
-
-            'path': path_vfe,
-
-            'q_c_bridge': quantum_classical_bridge,
-
-            'c_p_bridge': classical_path_bridge
-
-        }
-
-```
-
-### 2. Advanced Geometric Optimizer
-
-```python
-
-class GeometricOptimizer:
-
-    """Geometric optimization for VFE"""
-
-    def __init__(self):
-
-        self.metric_computer = FisherRaoMetric()
-
-        self.connection_computer = LeviCivitaConnection()
-
-        self.parallel_transport = ParallelTransport()
-
-    def optimize_geometric(self,
-
-                         initial_state: Distribution,
-
-                         target_state: Distribution,
-
-                         n_steps: int = 100) -> Distribution:
-
-        """Optimize using geometric methods"""
-
-        current_state = initial_state
-
-        for _ in range(n_steps):
-
-            # Compute metric
-
-            metric = self.metric_computer.compute(
-
-                current_state)
-
-            # Compute connection
-
-            connection = self.connection_computer.compute(
-
-                current_state, metric)
-
-            # Compute geodesic
-
-            geodesic = self.compute_geodesic(
-
-                current_state, target_state, metric)
-
-            # Parallel transport update
-
-            current_state = self.parallel_transport.transport(
-
-                current_state, geodesic, connection)
-
-        return current_state
-
-```
-
-### 3. Stochastic Path Integral Computer
-
-```python
-
-class StochasticPathIntegralComputer:
-
-    """Computes path integrals with stochastic dynamics"""
-
-    def __init__(self):
-
-        self.sde_solver = StochasticDifferential()
-
-        self.path_sampler = PathSampler()
-
-        self.action_computer = ActionComputer()
-
-    def compute_stochastic_path_integral(self,
-
-                                       initial_state: np.ndarray,
-
-                                       final_state: np.ndarray,
-
-                                       beta: float,
-
-                                       n_samples: int = 1000) -> float:
-
-        """Compute path integral using stochastic sampling"""
-
-        paths = []
-
-        actions = []
-
-        for _ in range(n_samples):
-
-            # Sample path
-
-            path = self.path_sampler.sample(
-
-                initial_state, final_state)
-
-            # Compute stochastic action
-
-            action = self.action_computer.compute_stochastic(
-
-                path, beta)
-
-            paths.append(path)
-
-            actions.append(action)
-
-        # Compute path integral
-
-        Z = np.mean(np.exp(-np.array(actions)))
-
-        F = -np.log(Z) / beta
-
-        return F
-
-```
 
 ## Advanced Theoretical Extensions
 

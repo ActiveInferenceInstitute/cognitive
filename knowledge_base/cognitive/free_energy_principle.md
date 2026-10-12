@@ -194,39 +194,24 @@ where:
 ### 1. Hierarchical Organization
 
 ```python
+import numpy as np
 
-class FreeEnergySystem:
+def hierarchical_free_energy(y, mu1, mu2, g1, g2, var_y, var_1, var_2, prior2):
+    """Two-level Gaussian model: y ~ N(g1(mu1), var_y), mu1 ~ N(g2(mu2), var_1), mu2 ~ N(prior2, var_2)."""
+    e0, e1, e2 = y - g1(mu1), mu1 - g2(mu2), mu2 - prior2
+    return 0.5 * (e0**2 / var_y + e1**2 / var_1 + e2**2 / var_2)
 
-    def __init__(self):
+def infer(y, g1, g2, var_y=1.0, var_1=1.0, var_2=1.0, prior2=0.0, lr=0.05, steps=500, eps=1e-5):
+    """Gradient descent on F with numerical gradients (finite differences)."""
+    mu = np.zeros(2)
+    F = lambda m: hierarchical_free_energy(y, m[0], m[1], g1, g2, var_y, var_1, var_2, prior2)
+    for _ in range(steps):
+        grad = np.array([(F(mu + eps * e) - F(mu - eps * e)) / (2 * eps) for e in np.eye(2)])
+        mu = mu - lr * grad
+    return mu, F(mu)
 
-        # State variables
-
-        self.internal_states = None  # μ
-
-        self.blanket_states = {
-
-            'sensory': None,  # s
-
-            'active': None    # a
-
-        }
-
-        self.external_states = None  # η
-
-        # Probabilistic components
-
-        self.recognition_density = None  # q(ψ)
-
-        self.generative_model = None    # p(s,ψ)
-
-        # Dynamic parameters
-
-        self.flow_parameters = None
-
-        self.noise_parameters = None
-
-        self.precision_parameters = None
-
+identity = lambda m: m
+print(infer(y=2.0, g1=identity, g2=identity))   # beliefs settle between the datum and the prior
 ```
 
 ### 2. Dynamic Evolution
@@ -673,78 +658,6 @@ Properties:
 
 ## Advanced Implementation Guidelines
 
-### Software Architecture
-
-```python
-
-# Extended FEP implementation framework
-
-class FreeEnergyFramework:
-
-    def __init__(self):
-
-        # Core systems
-
-        self.physical_system = PhysicalSystem()
-
-        self.inference_engine = InferenceEngine()
-
-        self.dynamics_solver = DynamicsSolver()
-
-        # Analysis tools
-
-        self.stability_analyzer = StabilityAnalyzer()
-
-        self.bifurcation_analyzer = BifurcationAnalyzer()
-
-        self.information_analyzer = InformationAnalyzer()
-
-        # Validation components
-
-        self.empirical_validator = EmpiricalValidator()
-
-        self.theoretical_validator = TheoreticalValidator()
-
-        self.numerical_validator = NumericalValidator()
-
-class PhysicalSystem:
-
-    def __init__(self):
-
-        self.state_space = StateSpace()
-
-        self.dynamics = SystemDynamics()
-
-        self.constraints = PhysicalConstraints()
-
-        self.boundary_conditions = BoundaryConditions()
-
-class InferenceEngine:
-
-    def __init__(self):
-
-        self.variational_solver = VariationalSolver()
-
-        self.mcmc_sampler = MCMCSampler()
-
-        self.belief_propagator = BeliefPropagator()
-
-        self.gradient_optimizer = GradientOptimizer()
-
-class DynamicsSolver:
-
-    def __init__(self):
-
-        self.integrator = NumericalIntegrator()
-
-        self.noise_generator = NoiseGenerator()
-
-        self.path_sampler = PathSampler()
-
-        self.stability_checker = StabilityChecker()
-
-```
-
 ### Advanced Best Practices
 
 1. Numerical Implementation
@@ -1104,341 +1017,56 @@ Components:
 ### Free Energy Computation
 
 ```python
-
-import numpy as np
-
-from typing import Callable, Tuple, List, Optional
-
-from scipy.special import softmax
-
-class FreeEnergyModel:
-
-    def __init__(self,
-
-                 state_dim: int,
-
-                 obs_dim: int):
-
-        """Initialize free energy model.
-
-        Args:
-
-            state_dim: State dimension
-
-            obs_dim: Observation dimension
-
-        """
-
-        self.state_dim = state_dim
-
-        self.obs_dim = obs_dim
-
-        # Initialize distributions
-
-        self.init_distributions()
-
-    def init_distributions(self):
-
-        """Initialize model distributions."""
-
-        # Prior beliefs
-
-        self.prior_mean = np.zeros(self.state_dim)
-
-        self.prior_precision = np.eye(self.state_dim)
-
-        # Likelihood mapping
-
-        self.likelihood_matrix = np.random.randn(
-
-            self.obs_dim, self.state_dim
-
-        )
-
-        self.likelihood_precision = np.eye(self.obs_dim)
-
-    def compute_free_energy(self,
-
-                          q_mean: np.ndarray,
-
-                          q_precision: np.ndarray,
-
-                          observation: np.ndarray) -> float:
-
-        """Compute variational free energy.
-
-        Args:
-
-            q_mean: Approximate posterior mean
-
-            q_precision: Approximate posterior precision
-
-            observation: Observed data
-
-        Returns:
-
-            fe: Free energy value
-
-        """
-
-        # Compute expected likelihood
-
-        pred_obs = self.likelihood_matrix @ q_mean
-
-        obs_error = observation - pred_obs
-
-        expected_likelihood = -0.5 * (
-
-            obs_error.T @ self.likelihood_precision @ obs_error +
-
-            np.trace(
-
-                self.likelihood_precision @
-
-                self.likelihood_matrix @
-
-                np.linalg.inv(q_precision) @
-
-                self.likelihood_matrix.T
-
-            )
-
-        )
-
-        # Compute KL divergence
-
-        kl_div = 0.5 * (
-
-            np.trace(
-
-                self.prior_precision @
-
-                np.linalg.inv(q_precision)
-
-            ) +
-
-            (q_mean - self.prior_mean).T @
-
-            self.prior_precision @
-
-            (q_mean - self.prior_mean) -
-
-            self.state_dim +
-
-            np.log(
-
-                np.linalg.det(q_precision) /
-
-                np.linalg.det(self.prior_precision)
-
-            )
-
-        )
-
-        return kl_div - expected_likelihood
-
+def free_energy(q, A, prior, o):
+    """F = sum_s q(s) [ln q(s) - ln p(o|s) - ln p(s)] for a discrete model, A[o, s] = p(o|s)."""
+    return np.sum(q * (np.log(q) - np.log(A[o]) - np.log(prior)))
+
+A = np.array([[0.8, 0.3], [0.2, 0.7]])          # illustrative likelihood
+prior = np.array([0.5, 0.5])
+o = 0
+posterior = A[o] * prior / np.sum(A[o] * prior)
+# F is minimised by the exact posterior, where it equals -ln p(o)
+print(free_energy(posterior, A, prior, o), -np.log(np.sum(A[o] * prior)))
+print(free_energy(np.array([0.5, 0.5]), A, prior, o))   # any other q gives a larger F
 ```
 
 ### Perception and Learning
 
 ```python
-
-class ActiveInference:
-
-    def __init__(self,
-
-                 model: FreeEnergyModel,
-
-                 n_actions: int):
-
-        """Initialize active inference agent.
-
-        Args:
-
-            model: Free energy model
-
-            n_actions: Number of actions
-
-        """
-
-        self.model = model
-
-        self.n_actions = n_actions
-
-        # Initialize policy prior
-
-        self.policy_prior = np.ones(n_actions) / n_actions
-
-    def infer_state(self,
-
-                   observation: np.ndarray,
-
-                   n_iterations: int = 10) -> Tuple[np.ndarray, np.ndarray]:
-
-        """Perform perceptual inference.
-
-        Args:
-
-            observation: Observed data
-
-            n_iterations: Number of iterations
-
-        Returns:
-
-            q_mean: Inferred state mean
-
-            q_precision: Inferred state precision
-
-        """
-
-        # Initialize posterior
-
-        q_mean = self.model.prior_mean.copy()
-
-        q_precision = self.model.prior_precision.copy()
-
-        for _ in range(n_iterations):
-
-            # Compute gradients
-
-            dF_dm = self.compute_mean_gradient(
-
-                q_mean, q_precision, observation
-
-            )
-
-            dF_dP = self.compute_precision_gradient(
-
-                q_mean, q_precision, observation
-
-            )
-
-            # Update posterior
-
-            q_mean -= 0.1 * dF_dm
-
-            q_precision += 0.1 * dF_dP
-
-            # Ensure positive definite
-
-            q_precision = 0.5 * (
-
-                q_precision + q_precision.T
-
-            )
-
-        return q_mean, q_precision
-
-    def compute_expected_free_energy(self,
-
-                                   policy: np.ndarray) -> float:
-
-        """Compute expected free energy for policy.
-
-        Args:
-
-            policy: Action policy
-
-        Returns:
-
-            G: Expected free energy
-
-        """
-
-        # Compute predicted observations
-
-        pred_obs = self.model.likelihood_matrix @ policy
-
-        # Compute expected surprise
-
-        expected_surprise = -np.sum(
-
-            softmax(pred_obs) * np.log(softmax(pred_obs))
-
-        )
-
-        # Compute risk
-
-        risk = 0.5 * np.log(
-
-            2 * np.pi * np.linalg.det(
-
-                np.linalg.inv(self.model.likelihood_precision)
-
-            )
-
-        )
-
-        return expected_surprise + risk
-
+def update_beliefs(A, prior, o, lr=0.5, steps=200):
+    """Gradient descent on F over softmax logits: perception as free energy minimisation."""
+    logits = np.log(prior)
+    for _ in range(steps):
+        q = np.exp(logits) / np.exp(logits).sum()
+        dF_dq = np.log(q) + 1 - np.log(A[o]) - np.log(prior)
+        dF_dlogits = q * (dF_dq - q @ dF_dq)    # chain rule through the softmax
+        logits = logits - lr * dF_dlogits
+    return np.exp(logits) / np.exp(logits).sum()
+
+print(update_beliefs(A, prior, o), posterior)   # gradient descent recovers the Bayes posterior
 ```
 
 ### Action Selection
 
 ```python
+def policy_posterior(A, B, C, q, gamma=4.0):
+    """Softmax over policies of -gamma * G, with G = risk + ambiguity for one-step policies.
 
-class PolicySelection:
+    B[a] is the transition matrix for action a (columns: current state); C = ln p(o)."""
+    G = []
+    for Ba in B:
+        qs = Ba @ q                              # predicted states
+        qo = A @ qs                              # predicted observations
+        risk = np.sum(qo * (np.log(qo) - C))     # KL[q(o) || preferred p(o)]
+        ambiguity = -np.sum(qs * np.sum(A * np.log(A), axis=0))   # E_q(s) H[p(o|s)]
+        G.append(risk + ambiguity)
+    G = np.array(G)
+    p = np.exp(-gamma * (G - G.min()))
+    return p / p.sum(), G
 
-    def __init__(self,
-
-                 agent: ActiveInference,
-
-                 temperature: float = 1.0):
-
-        """Initialize policy selection.
-
-        Args:
-
-            agent: Active inference agent
-
-            temperature: Selection temperature
-
-        """
-
-        self.agent = agent
-
-        self.temperature = temperature
-
-    def select_action(self,
-
-                     policies: List[np.ndarray]) -> int:
-
-        """Select action using active inference.
-
-        Args:
-
-            policies: List of possible policies
-
-        Returns:
-
-            action: Selected action index
-
-        """
-
-        # Compute expected free energy
-
-        G = np.array([
-
-            self.agent.compute_expected_free_energy(pi)
-
-            for pi in policies
-
-        ])
-
-        # Compute policy probabilities
-
-        p_pi = softmax(-self.temperature * G)
-
-        # Sample action
-
-        return np.random.choice(
-
-            len(policies),
-
-            p=p_pi
-
-        )
-
+B = [np.eye(2), np.array([[0.1, 0.1], [0.9, 0.9]])]   # action 0: stay; action 1: move to state 1
+C = np.log(np.array([0.1, 0.9]))                      # prefers observation 1
+print(policy_posterior(A, B, C, np.array([0.8, 0.2])))
 ```
 
 ## Experimental Protocols
@@ -1767,154 +1395,6 @@ Structures:
 
 - [[adjunctions]]
 
-## Computational Methods
-
-### 1. Numerical Integration
-
-```python
-
-class DifferentialGeometryToolkit:
-
-    def __init__(self):
-
-        self.manifold = RiemannianManifold()
-
-        self.connection = LeviCivitaConnection()
-
-        self.metric = FisherInformationMetric()
-
-    def parallel_transport(self, vector, path):
-
-        # Compute Christoffel symbols
-
-        gamma = self.connection.christoffel_symbols()
-
-        # Solve parallel transport equation
-
-        def transport_equation(t, y):
-
-            return -sum(gamma[i,j,k] * y[j] * path.tangent(t)[k] 
-
-                       for i,j,k in product(range(self.dim), repeat=3))
-
-        return solve_ivp(transport_equation, path.interval, vector)
-
-    def geodesic_flow(self, initial_point, initial_velocity):
-
-        # Compute geodesic equation
-
-        def geodesic_equation(t, y):
-
-            pos, vel = y[:self.dim], y[self.dim:]
-
-            gamma = self.connection.christoffel_symbols(pos)
-
-            acc = -sum(gamma[i,j,k] * vel[j] * vel[k]
-
-                      for i,j,k in product(range(self.dim), repeat=3))
-
-            return np.concatenate([vel, acc])
-
-        y0 = np.concatenate([initial_point, initial_velocity])
-
-        return solve_ivp(geodesic_equation, [0, 1], y0)
-
-```
-
-### 2. Information Geometry
-
-```python
-
-class InformationGeometricOptimizer:
-
-    def __init__(self):
-
-        self.metric = FisherInformationMetric()
-
-        self.connection = ExponentialConnection()
-
-        self.manifold = StatisticalManifold()
-
-    def natural_gradient(self, loss, parameters):
-
-        # Compute Fisher information matrix
-
-        fisher = self.metric.compute_fisher(parameters)
-
-        # Compute Euclidean gradient
-
-        grad = autograd.grad(loss)(parameters)
-
-        # Transform to natural gradient
-
-        return solve(fisher, grad)
-
-    def geodesic_update(self, parameters, direction, step_size):
-
-        # Compute exponential map
-
-        def exp_map_equation(t, y):
-
-            pos, vel = y[:self.dim], y[self.dim:]
-
-            gamma = self.connection.christoffel_symbols(pos)
-
-            acc = -sum(gamma[i,j,k] * vel[j] * vel[k]
-
-                      for i,j,k in product(range(self.dim), repeat=3))
-
-            return np.concatenate([vel, acc])
-
-        y0 = np.concatenate([parameters, step_size * direction])
-
-        solution = solve_ivp(exp_map_equation, [0, 1], y0)
-
-        return solution.y[:self.dim, -1]
-
-```
-
-### 3. Stochastic Processes
-
-```python
-
-class StochasticDynamicsSimulator:
-
-    def __init__(self):
-
-        self.sde_solver = StochasticDifferentialEquation()
-
-        self.noise_generator = NoiseProcess()
-
-        self.path_sampler = PathSampling()
-
-    def simulate_langevin_dynamics(self, potential, friction, temperature, initial_state, time_span):
-
-        def drift(t, x):
-
-            return -friction * grad(potential)(x)
-
-        def diffusion(t, x):
-
-            return np.sqrt(2 * friction * temperature)
-
-        return self.sde_solver.solve(drift, diffusion, initial_state, time_span)
-
-    def sample_paths(self, n_paths, dynamics):
-
-        paths = []
-
-        for _ in range(n_paths):
-
-            noise = self.noise_generator.generate(dynamics.time_points)
-
-            path = self.path_sampler.sample(dynamics, noise)
-
-            paths.append(path)
-
-        return paths
-
-```
-
 ## Advanced Theoretical Concepts
 
 ### 1. Geometric Mechanics
@@ -2049,102 +1529,6 @@ Concepts:
 
 See `docs/examples/README.md` for runnable examples.
 
-
-### 2. Statistical Learning Methods
-
-```python
-
-class BayesianLearner:
-
-    def __init__(self):
-
-        self.prior = HierarchicalPrior()
-
-        self.likelihood = ExponentialFamily()
-
-        self.posterior = VariationalPosterior()
-
-    def variational_inference(self, data, model):
-
-        def elbo(q_params):
-
-            q = self.posterior.distribution(q_params)
-
-            expected_log_likelihood = self.likelihood.expected_log_prob(data, q)
-
-            kl_divergence = self.posterior.kl_divergence(q, self.prior)
-
-            return expected_log_likelihood - kl_divergence
-
-        return self.optimize_elbo(elbo)
-
-    def sample_posterior(self, n_samples):
-
-        def hamiltonian_monte_carlo(current_state):
-
-            momentum = np.random.randn(self.dim)
-
-            proposed_state = self.leapfrog_integrate(current_state, momentum)
-
-            return self.metropolis_accept(current_state, proposed_state)
-
-        return self.generate_mcmc_samples(hamiltonian_monte_carlo, n_samples)
-
-```
-
-### 3. Neural Implementation
-
-```python
-
-class PredictiveCodingNetwork:
-
-    def __init__(self):
-
-        self.layers = nn.ModuleList([
-
-            PredictiveLayer(
-
-                belief_states=BeliefState(),
-
-                prediction_error=PredictionError(),
-
-                precision=PrecisionMatrix()
-
-            ) for _ in range(self.n_layers)
-
-        ])
-
-    def forward(self, input_data):
-
-        # Bottom-up pass
-
-        prediction_errors = []
-
-        for layer in self.layers:
-
-            predictions = layer.generate_predictions()
-
-            errors = layer.compute_prediction_error(input_data)
-
-            prediction_errors.append(errors)
-
-            input_data = layer.belief_states
-
-        # Top-down pass
-
-        for layer, error in zip(reversed(self.layers), reversed(prediction_errors)):
-
-            layer.update_beliefs(error)
-
-            layer.update_precisions(error)
-
-        return self.layers[-1].belief_states
-
-    def compute_free_energy(self):
-
-        return sum(layer.compute_local_free_energy() for layer in self.layers)
-
-```
 
 ## Advanced Analysis Methods
 

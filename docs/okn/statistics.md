@@ -16,6 +16,7 @@ pages, then regenerate; never edit this file.
 | Concepts (`skos:Concept`) | 1988 |
 | Navigation pages (`schema:CollectionPage`) | 68 |
 | Redirect pages | 2 |
+| Pages aligned to Wikidata (`skos:exactMatch`) | 0 |
 | Typed edges from `semantic_relations` | 10129 |
 | Untyped edges from body links (`dcterms:references`) | 22813 |
 | Triples | 60782 |

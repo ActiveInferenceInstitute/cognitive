@@ -163,283 +163,60 @@ where:
 ### Variational Distribution
 
 ```python
-
 import numpy as np
 
-import torch
+# Conjugate Gaussian model (illustrative): p(z) = N(0, 1), p(x | z) = N(z, sigma^2)
+x, sigma = 1.5, 0.8
 
-import torch.nn as nn
+def elbo(m, s):
+    """Analytic ELBO for q(z) = N(m, s^2)."""
+    expected_loglik = -0.5 * np.log(2 * np.pi * sigma**2) - ((x - m) ** 2 + s**2) / (2 * sigma**2)
+    kl = 0.5 * (m**2 + s**2 - 1 - 2 * np.log(s))
+    return expected_loglik - kl
 
-from typing import List, Tuple, Optional
+m, log_s = 0.0, 0.0
+for _ in range(2000):                        # gradient ascent with finite differences
+    g_m = (elbo(m + 1e-5, np.exp(log_s)) - elbo(m - 1e-5, np.exp(log_s))) / 2e-5
+    g_s = (elbo(m, np.exp(log_s + 1e-5)) - elbo(m, np.exp(log_s - 1e-5))) / 2e-5
+    m, log_s = m + 0.05 * g_m, log_s + 0.05 * g_s
 
-from torch.distributions import Normal, kl_divergence
-
-class VariationalDistribution(nn.Module):
-
-    def __init__(self,
-
-                 input_size: int,
-
-                 hidden_size: int,
-
-                 latent_size: int):
-
-        """Initialize variational distribution.
-
-        Args:
-
-            input_size: Input dimension
-
-            hidden_size: Hidden dimension
-
-            latent_size: Latent dimension
-
-        """
-
-        super().__init__()
-
-        # Encoder network
-
-        self.encoder = nn.Sequential(
-
-            nn.Linear(input_size, hidden_size),
-
-            nn.ReLU(),
-
-            nn.Linear(hidden_size, hidden_size),
-
-            nn.ReLU()
-
-        )
-
-        # Distribution parameters
-
-        self.mean = nn.Linear(hidden_size, latent_size)
-
-        self.log_var = nn.Linear(hidden_size, latent_size)
-
-    def forward(self,
-
-               x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-
-        """Forward pass through distribution.
-
-        Args:
-
-            x: Input tensor
-
-        Returns:
-
-            z: Sampled latent
-
-            mean: Distribution mean
-
-            log_var: Log variance
-
-        """
-
-        # Encode input
-
-        h = self.encoder(x)
-
-        # Get distribution parameters
-
-        mean = self.mean(h)
-
-        log_var = self.log_var(h)
-
-        # Sample using reparameterization
-
-        std = torch.exp(0.5 * log_var)
-
-        eps = torch.randn_like(std)
-
-        z = mean + eps * std
-
-        return z, mean, log_var
-
+print(m, np.exp(log_s) ** 2)                 # variational mean and variance
+print(x / (1 + sigma**2), sigma**2 / (1 + sigma**2))   # exact posterior
 ```
 
 ### Active Inference Implementation
 
 > [!note] Illustrative pseudocode
-> The class below is a conceptual neural-network sketch; it is not the
+> The snippet below is a plain-numpy sketch; it is not the
 > installed API. The real `cognitive.ActiveInferenceModel` is an abstract
 > base whose constructor takes a `config_path`.
 
 ```python
+import numpy as np
 
-class VariationalAIModel(nn.Module):
+def softmax(x):
+    e = np.exp(x - x.max())
+    return e / e.sum()
 
-    def __init__(self,
+D = np.array([0.5, 0.3, 0.2])                # prior over states, illustrative
+A = np.array([[0.7, 0.2, 0.1],               # p(o | s)
+              [0.2, 0.6, 0.3],
+              [0.1, 0.2, 0.6]])
+o = 1                                        # observed outcome
 
-                 state_dim: int,
+def free_energy(q):
+    return np.sum(q * (np.log(q) - np.log(D) - np.log(A[o])))
 
-                 obs_dim: int,
+logits = np.zeros(3)                         # q = softmax(logits)
+for _ in range(500):                         # gradient descent on F
+    q = softmax(logits)
+    dF_dq = np.log(q) - np.log(D) - np.log(A[o]) + 1
+    logits -= 0.5 * q * (dF_dq - q @ dF_dq)  # chain rule through the softmax
 
-                 hidden_dim: int):
-
-        """Initialize active inference model.
-
-        Args:
-
-            state_dim: State dimension
-
-            obs_dim: Observation dimension
-
-            hidden_dim: Hidden dimension
-
-        """
-
-        super().__init__()
-
-        # Recognition model (encoder)
-
-        self.recognition = VariationalDistribution(
-
-            obs_dim, hidden_dim, state_dim
-
-        )
-
-        # Generative model (decoder)
-
-        self.generative = nn.Sequential(
-
-            nn.Linear(state_dim, hidden_dim),
-
-            nn.ReLU(),
-
-            nn.Linear(hidden_dim, obs_dim)
-
-        )
-
-        # Policy network
-
-        self.policy = nn.Sequential(
-
-            nn.Linear(state_dim, hidden_dim),
-
-            nn.ReLU(),
-
-            nn.Linear(hidden_dim, 1)
-
-        )
-
-    def infer_state(self,
-
-                   obs: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-
-        """Infer hidden state from observation."""
-
-        return self.recognition(obs)
-
-    def generate_obs(self,
-
-                    state: torch.Tensor) -> torch.Tensor:
-
-        """Generate observation from state."""
-
-        return self.generative(state)
-
-    def compute_free_energy(self,
-
-                          obs: torch.Tensor,
-
-                          state: torch.Tensor,
-
-                          mean: torch.Tensor,
-
-                          log_var: torch.Tensor) -> torch.Tensor:
-
-        """Compute variational free energy."""
-
-        # Reconstruction error
-
-        pred_obs = self.generate_obs(state)
-
-        recon_error = torch.sum((obs - pred_obs)**2, dim=1)
-
-        # KL divergence
-
-        kl_div = -0.5 * torch.sum(
-
-            1 + log_var - mean**2 - torch.exp(log_var),
-
-            dim=1
-
-        )
-
-        return torch.mean(recon_error + kl_div)
-
-    def compute_expected_free_energy(self,
-
-                                   state: torch.Tensor) -> torch.Tensor:
-
-        """Compute expected free energy for policy selection."""
-
-        return self.policy(state)
-
+posterior = D * A[o] / (D @ A[o])
+print(softmax(logits), posterior, free_energy(softmax(logits)))
 ```
 
-### Hierarchical Active Inference
-
-```python
-
-class HierarchicalActiveInference(nn.Module):
-
-    def __init__(self,
-
-                 dims: List[int],
-
-                 hidden_dim: int):
-
-        """Initialize hierarchical model.
-
-        Args:
-
-            dims: Dimensions at each level
-
-            hidden_dim: Hidden dimension
-
-        """
-
-        super().__init__()
-
-        # Create hierarchy
-
-        self.levels = nn.ModuleList([
-
-            ActiveInferenceModel(
-
-                dims[i], dims[i-1], hidden_dim
-
-            ) for i in range(1, len(dims))
-
-        ])
-
-    def update_beliefs(self,
-
-                      obs: torch.Tensor) -> List[Tuple[torch.Tensor, ...]]:
-
-        """Update beliefs across hierarchy."""
-
-        states = []
-
-        current = obs
-
-        # Bottom-up pass
-
-        for level in self.levels:
-
-            state, mean, log_var = level.infer_state(current)
-
-            states.append((state, mean, log_var))
-
-            current = state
-
-        return states
-
-```
 
 ## Advanced Topics
 
@@ -556,468 +333,22 @@ class HierarchicalActiveInference(nn.Module):
 #### Advanced Normalizing Flows
 
 ```python
+import numpy as np
 
-class NormalizingFlow(nn.Module):
+rng = np.random.default_rng(0)
+a, b = 0.5, 0.2                              # affine layer parameters, illustrative
+z0 = rng.normal(size=100000)
+z1 = a * z0 + b                              # layer 1: log|det| = log a
+z2 = np.exp(z1)                              # layer 2: log|det| = z1
 
-    def __init__(self,
+log_q0 = -0.5 * z0**2 - 0.5 * np.log(2 * np.pi)
+log_q2 = log_q0 - np.log(a) - z1             # change of variables
 
-                 dim: int,
-
-                 flow_length: int):
-
-        """Initialize normalizing flow.
-
-        Args:
-
-            dim: Dimension of space
-
-            flow_length: Number of flow steps
-
-        """
-
-        super().__init__()
-
-        self.flows = nn.ModuleList([
-
-            InvertibleFlow(dim) for _ in range(flow_length)
-
-        ])
-
-    def forward(self,
-
-               z0: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
-
-        """Apply flow transformation.
-
-        Args:
-
-            z0: Initial points
-
-        Returns:
-
-            zk,log_det: Transformed points and log determinant
-
-        """
-
-        zk = z0
-
-        log_det = torch.zeros(z0.size(0))
-
-        for flow in self.flows:
-
-            zk, ldj = flow(zk)
-
-            log_det += ldj
-
-        return zk, log_det
-
-    def inverse(self,
-
-               zk: torch.Tensor) -> torch.Tensor:
-
-        """Apply inverse flow transformation.
-
-        Args:
-
-            zk: Final points
-
-        Returns:
-
-            z0: Initial points
-
-        """
-
-        z0 = zk
-
-        for flow in reversed(self.flows):
-
-            z0 = flow.inverse(z0)
-
-        return z0
-
+# Exact log-normal density at the same points
+exact = -0.5 * ((np.log(z2) - b) / a) ** 2 - np.log(z2 * a * np.sqrt(2 * np.pi))
+print(np.max(np.abs(log_q2 - exact)))        # ~ 0
 ```
 
-#### Geometric Optimization
-
-```python
-
-class GeometricOptimizer:
-
-    def __init__(self,
-
-                 manifold: RiemannianManifold,
-
-                 learning_rate: float = 0.1):
-
-        """Initialize geometric optimizer.
-
-        Args:
-
-            manifold: Riemannian manifold
-
-            learning_rate: Learning rate
-
-        """
-
-        self.M = manifold
-
-        self.lr = learning_rate
-
-    def natural_gradient_step(self,
-
-                            params: torch.Tensor,
-
-                            grad: torch.Tensor) -> torch.Tensor:
-
-        """Perform natural gradient step.
-
-        Args:
-
-            params: Current parameters
-
-            grad: Euclidean gradient
-
-        Returns:
-
-            new_params: Updated parameters
-
-        """
-
-        # Compute metric tensor
-
-        G = self.M.metric_tensor(params)
-
-        # Solve for natural gradient
-
-        nat_grad = torch.linalg.solve(G, grad)
-
-        # Retract along geodesic
-
-        new_params = self.M.exp_map(
-
-            params, -self.lr * nat_grad
-
-        )
-
-        return new_params
-
-    def parallel_transport(self,
-
-                         vector: torch.Tensor,
-
-                         curve: Geodesic) -> torch.Tensor:
-
-        """Parallel transport vector along curve.
-
-        Args:
-
-            vector: Tangent vector
-
-            curve: Geodesic curve
-
-        Returns:
-
-            transported: Transported vector
-
-        """
-
-        # Get connection coefficients
-
-        Gamma = self.M.christoffel_symbols(curve.point)
-
-        # Transport equation
-
-        return self._solve_transport_equation(
-
-            vector, curve, Gamma
-
-        )
-
-```
-
-### Advanced Applications
-
-#### Hierarchical Variational Models
-
-```python
-
-class HierarchicalVariationalModel(nn.Module):
-
-    def __init__(self,
-
-                 dims: List[int],
-
-                 flow_length: int = 4):
-
-        """Initialize hierarchical model.
-
-        Args:
-
-            dims: Dimensions at each level
-
-            flow_length: Flow length per level
-
-        """
-
-        super().__init__()
-
-        # Create hierarchy
-
-        self.levels = nn.ModuleList([
-
-            VariationalLevel(
-
-                dims[i], dims[i-1], flow_length
-
-            ) for i in range(1, len(dims))
-
-        ])
-
-        # Create flows between levels
-
-        self.flows = nn.ModuleList([
-
-            NormalizingFlow(dims[i], flow_length)
-
-            for i in range(len(dims)-1)
-
-        ])
-
-    def forward(self,
-
-               x: torch.Tensor) -> Tuple[List[torch.Tensor], torch.Tensor]:
-
-        """Forward pass through hierarchy.
-
-        Args:
-
-            x: Input tensor
-
-        Returns:
-
-            states,kl: Hierarchical states and KL
-
-        """
-
-        states = []
-
-        kl = 0
-
-        # Bottom-up pass
-
-        current = x
-
-        for level, flow in zip(self.levels, self.flows):
-
-            # Infer state
-
-            state, level_kl = level(current)
-
-            states.append(state)
-
-            kl += level_kl
-
-            # Transform to next level
-
-            current, ldj = flow(state)
-
-            kl -= ldj.mean()
-
-        return states, kl
-
-```
-
-#### Variational Message Passing
-
-```python
-
-class VariationalMessagePassing:
-
-    def __init__(self,
-
-                 graph: FactorGraph,
-
-                 max_iter: int = 100):
-
-        """Initialize message passing.
-
-        Args:
-
-            graph: Factor graph
-
-            max_iter: Maximum iterations
-
-        """
-
-        self.graph = graph
-
-        self.max_iter = max_iter
-
-    def update_beliefs(self) -> Dict[str, Distribution]:
-
-        """Update beliefs using message passing.
-
-        Returns:
-
-            beliefs: Updated beliefs
-
-        """
-
-        messages = self._initialize_messages()
-
-        for _ in range(self.max_iter):
-
-            # Variable to factor messages
-
-            v2f = self._compute_v2f_messages(messages)
-
-            # Factor to variable messages
-
-            f2v = self._compute_f2v_messages(messages)
-
-            # Update messages
-
-            messages = self._update_messages(v2f, f2v)
-
-            # Check convergence
-
-            if self._check_convergence(messages):
-
-                break
-
-        return self._compute_beliefs(messages)
-
-```
-
-### Advanced Visualization
-
-#### Manifold Visualization
-
-```python
-
-def plot_statistical_manifold(
-
-    manifold: RiemannianManifold,
-
-    points: torch.Tensor,
-
-    geodesics: List[Geodesic]
-
-) -> plt.Figure:
-
-    """Plot statistical manifold.
-
-    Args:
-
-        manifold: Riemannian manifold
-
-        points: Points on manifold
-
-        geodesics: Geodesic curves
-
-    Returns:
-
-        fig: Plot figure
-
-    """
-
-    fig = plt.figure(figsize=(10, 10))
-
-    ax = fig.add_subplot(111, projection='3d')
-
-    # Plot points
-
-    ax.scatter(
-
-        points[:,0], points[:,1], points[:,2],
-
-        c='b', alpha=0.5
-
-    )
-
-    # Plot geodesics
-
-    for geo in geodesics:
-
-        path = geo.compute_path(100)
-
-        ax.plot3D(
-
-            path[:,0], path[:,1], path[:,2],
-
-            'r-', alpha=0.3
-
-        )
-
-    # Plot metric tensor
-
-    for p in points[::10]:
-
-        G = manifold.metric_tensor(p)
-
-        plot_ellipsoid(ax, p, G)
-
-    return fig
-
-```
-
-#### Flow Visualization
-
-```python
-
-def visualize_flow_transformation(
-
-    flow: NormalizingFlow,
-
-    samples: torch.Tensor,
-
-    n_steps: int = 10
-
-) -> plt.Figure:
-
-    """Visualize flow transformation.
-
-    Args:
-
-        flow: Normalizing flow
-
-        samples: Initial samples
-
-        n_steps: Number of steps
-
-    Returns:
-
-        fig: Plot figure
-
-    """
-
-    fig, axes = plt.subplots(2, n_steps//2, figsize=(15, 6))
-
-    z = samples
-
-    for i in range(n_steps):
-
-        # Transform samples
-
-        z, _ = flow.flows[[z|i]]
-
-        # Plot distribution
-
-        row, col = i//5, i%5
-
-        axes[row,col].hist2d(
-
-            z[:,0].numpy(), z[:,1].numpy(),
-
-            bins=50, density=True
-
-        )
-
-        axes[row,col].set_title(f'Step {i+1}')
-
-    return fig
-
-```
 
 ## Best Practices
 

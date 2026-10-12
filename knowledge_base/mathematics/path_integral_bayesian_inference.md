@@ -243,49 +243,38 @@ graph TB
 ### 1. Monte Carlo Path Sampling
 
 ```python
+import numpy as np
 
-def path_integral_mcmc(prior_dynamics, likelihood_model, observations, 
+rng = np.random.default_rng(0)
 
-                      num_samples, step_size):
+def action(path, y, f, dt, sigma, sigma_y):
+    """S[x] = prior (SDE residual) term + observation term."""
+    resid = path[1:] - path[:-1] - f(path[:-1]) * dt
+    return np.sum(resid ** 2) / (2 * sigma ** 2 * dt) + np.sum((y - path) ** 2) / (2 * sigma_y ** 2)
 
-    """
+def path_mcmc(y, f, dt, sigma, sigma_y, n_samples=4000, step=0.3):
+    """Metropolis-Hastings over paths with single-time-point proposals; target P ~ exp(-S)."""
+    path = y.copy()
+    S = action(path, y, f, dt, sigma, sigma_y)
+    samples = []
+    for i in range(n_samples):
+        t = rng.integers(len(path))
+        proposal = path.copy()
+        proposal[t] += step * rng.standard_normal()
+        S_new = action(proposal, y, f, dt, sigma, sigma_y)
+        if np.log(rng.random()) < S - S_new:            # accept with prob min(1, exp(-dS))
+            path, S = proposal, S_new
+        if i >= n_samples // 2 and i % 10 == 0:         # discard burn-in, thin
+            samples.append(path.copy())
+    return np.array(samples)
 
-    Perform Monte Carlo sampling over paths using Metropolis-Hastings
-
-    """
-
-    current_path = initialize_path()
-
-    accepted_paths = []
-
-    for i in range(num_samples):
-
-        # Propose a new path with a small perturbation
-
-        proposed_path = perturb_path(current_path, step_size)
-
-        # Calculate acceptance probability
-
-        current_action = calculate_action(current_path, prior_dynamics, 
-
-                                         likelihood_model, observations)
-
-        proposed_action = calculate_action(proposed_path, prior_dynamics,
-
-                                          likelihood_model, observations)
-
-        acceptance_prob = min(1, exp(-(proposed_action - current_action)))
-
-        # Accept or reject the proposed path
-
-        if random() < acceptance_prob:
-
-            current_path = proposed_path
-
-        accepted_paths.append(current_path)
-
-    return accepted_paths
-
+# Illustrative data: noisy observations of dx/dt = -x
+dt, T = 0.1, 30
+truth = np.exp(-dt * np.arange(T))
+y = truth + 0.1 * rng.standard_normal(T)
+post = path_mcmc(y, lambda x: -x, dt, sigma=0.2, sigma_y=0.1)
+print("RMSE of raw observations:", np.sqrt(np.mean((y - truth) ** 2)))
+print("RMSE of posterior mean:", np.sqrt(np.mean((post.mean(0) - truth) ** 2)))
 ```
 
 ### 2. Variational Path Approximation
@@ -535,75 +524,21 @@ end
 ### 2. Advanced Sampling Methods
 
 ```python
+def path_particle_filter(y, f, dt, sigma, sigma_y, n_particles=500):
+    """Sequential importance sampling over paths with resampling."""
+    x = np.zeros(n_particles) + y[0]
+    estimates = []
+    for obs in y:
+        x = x + f(x) * dt + sigma * np.sqrt(dt) * rng.standard_normal(n_particles)
+        logw = -0.5 * ((obs - x) / sigma_y) ** 2         # observation likelihood
+        w = np.exp(logw - logw.max())
+        w /= w.sum()
+        estimates.append(w @ x)
+        x = x[rng.choice(n_particles, n_particles, p=w)]  # multinomial resampling
+    return np.array(estimates)
 
-def hamiltonian_monte_carlo(initial_path, num_leapfrog, step_size, num_samples,
-
-                           action_function, grad_action_function):
-
-    """
-
-    Hamiltonian Monte Carlo for path sampling
-
-    """
-
-    current_path = initial_path
-
-    accepted_paths = []
-
-    for i in range(num_samples):
-
-        # Sample momentum
-
-        p = np.random.normal(size=len(current_path))
-
-        # Initial Hamiltonian
-
-        current_action = action_function(current_path)
-
-        initial_hamiltonian = current_action + 0.5 * np.sum(p**2)
-
-        # Leapfrog integration
-
-        q = current_path.copy()
-
-        grad_q = grad_action_function(q)
-
-        for j in range(num_leapfrog):
-
-            # Half step for momentum
-
-            p -= 0.5 * step_size * grad_q
-
-            # Full step for position
-
-            q += step_size * p
-
-            # Update gradient
-
-            grad_q = grad_action_function(q)
-
-            # Half step for momentum
-
-            p -= 0.5 * step_size * grad_q
-
-        # Calculate new Hamiltonian
-
-        proposed_action = action_function(q)
-
-        final_hamiltonian = proposed_action + 0.5 * np.sum(p**2)
-
-        # Metropolis acceptance
-
-        acceptance_prob = min(1, np.exp(initial_hamiltonian - final_hamiltonian))
-
-        if np.random.random() < acceptance_prob:
-
-            current_path = q
-
-        accepted_paths.append(current_path)
-
-    return accepted_paths
-
+est = path_particle_filter(y, lambda x: -x, dt, sigma=0.2, sigma_y=0.1)
+print("RMSE of filtered estimate:", np.sqrt(np.mean((est - truth) ** 2)))
 ```
 
 ### 3. GPU Acceleration
@@ -637,296 +572,6 @@ The connection to SDEs is made explicit through the Fokker-Planck equation:
 ```math
 
 \frac{\partial P}{\partial t} = -\nabla \cdot (f P) + \frac{1}{2}\nabla \cdot (D \nabla P)
-
-```
-
-## Enhanced Computational Methods
-
-### Adaptive Path Sampling
-
-```python
-
-class AdaptivePathSampler:
-
-    def __init__(self, prior_dynamics, likelihood_model, noise_model):
-
-        self.prior_dynamics = prior_dynamics
-
-        self.likelihood_model = likelihood_model
-
-        self.noise_model = noise_model
-
-        self.adaptation_params = {'step_size': 0.1, 'target_acceptance': 0.65}
-
-    def sample_paths(self, initial_path, n_samples, adaptation_interval=100):
-
-        """
-
-        Adaptive path sampling with automatic step size tuning
-
-        """
-
-        current_path = initial_path
-
-        accepted_paths = []
-
-        acceptance_history = []
-
-        for i in range(n_samples):
-
-            # Propose path using current step size
-
-            proposed_path = self._propose_path(current_path)
-
-            # Compute acceptance probability
-
-            log_accept_ratio = (
-
-                self._compute_log_posterior(proposed_path) -
-
-                self._compute_log_posterior(current_path)
-
-            )
-
-            # Accept/reject
-
-            accepted = log(random()) < log_accept_ratio
-
-            if accepted:
-
-                current_path = proposed_path
-
-            accepted_paths.append(current_path)
-
-            acceptance_history.append(accepted)
-
-            # Adapt step size
-
-            if (i + 1) % adaptation_interval == 0:
-
-                self._adapt_step_size(acceptance_history[-adaptation_interval:])
-
-        return accepted_paths
-
-    def _compute_log_posterior(self, path):
-
-        """
-
-        Compute log posterior probability of a path
-
-        """
-
-        prior_term = self._compute_prior_action(path)
-
-        likelihood_term = self._compute_likelihood_action(path)
-
-        return -(prior_term + likelihood_term)
-
-    def _adapt_step_size(self, recent_acceptances):
-
-        """
-
-        Adapt step size based on acceptance rate
-
-        """
-
-        current_acceptance = mean(recent_acceptances)
-
-        target = self.adaptation_params['target_acceptance']
-
-        # Adjust step size logarithmically
-
-        log_step = log(self.adaptation_params['step_size'])
-
-        log_step += 0.1 * (current_acceptance - target)
-
-        self.adaptation_params['step_size'] = exp(log_step)
-
-```
-
-### Hamiltonian Path Dynamics
-
-```python
-
-class HamiltonianPathSampler:
-
-    def __init__(self, action_functional, mass_matrix=None):
-
-        self.action_functional = action_functional
-
-        self.mass_matrix = mass_matrix or np.eye(dim)
-
-    def sample_trajectory(self, initial_path, n_steps, step_size):
-
-        """
-
-        Sample paths using Hamiltonian dynamics
-
-        """
-
-        current_path = initial_path
-
-        current_momentum = self._sample_momentum()
-
-        # Initial half step for momentum
-
-        current_momentum -= step_size/2 * self._compute_force(current_path)
-
-        for _ in range(n_steps):
-
-            # Full step for position
-
-            current_path += step_size * self._compute_velocity(current_momentum)
-
-            # Full step for momentum (except at end)
-
-            if _ < n_steps - 1:
-
-                current_momentum -= step_size * self._compute_force(current_path)
-
-        # Final half step for momentum
-
-        current_momentum -= step_size/2 * self._compute_force(current_path)
-
-        return current_path
-
-    def _compute_force(self, path):
-
-        """
-
-        Compute force as negative gradient of action
-
-        """
-
-        return -self._compute_action_gradient(path)
-
-    def _compute_velocity(self, momentum):
-
-        """
-
-        Compute velocity from momentum using mass matrix
-
-        """
-
-        return np.linalg.solve(self.mass_matrix, momentum)
-
-```
-
-## Advanced Applications
-
-### Quantum Field Theory Integration
-
-```python
-
-class QuantumPathIntegral:
-
-    def __init__(self, hamiltonian, beta, n_time_slices):
-
-        self.hamiltonian = hamiltonian
-
-        self.beta = beta  # inverse temperature
-
-        self.n_slices = n_time_slices
-
-    def compute_partition_function(self, grid_points):
-
-        """
-
-        Compute quantum partition function using path integral
-
-        """
-
-        # Initialize paths
-
-        paths = self._initialize_paths(grid_points)
-
-        # Compute action
-
-        action = self._compute_quantum_action(paths)
-
-        # Monte Carlo integration
-
-        Z = self._monte_carlo_integrate(action)
-
-        return Z
-
-    def _compute_quantum_action(self, paths):
-
-        """
-
-        Compute quantum action including kinetic and potential terms
-
-        """
-
-        dt = self.beta / self.n_slices
-
-        # Kinetic term
-
-        kinetic = sum((paths[:, 1:] - paths[:, :-1])**2) / (2 * dt)
-
-        # Potential term
-
-        potential = dt * sum(self.hamiltonian(paths))
-
-        return kinetic + potential
-
-```
-
-### Stochastic Control Theory
-
-```python
-
-class OptimalPathController:
-
-    def __init__(self, dynamics, cost_function, noise_model):
-
-        self.dynamics = dynamics
-
-        self.cost_function = cost_function
-
-        self.noise_model = noise_model
-
-    def compute_optimal_control(self, initial_state, target_state, time_horizon):
-
-        """
-
-        Compute optimal control using path integral formulation
-
-        """
-
-        # Setup path integral
-
-        def action(path, control):
-
-            running_cost = self._compute_running_cost(path, control)
-
-            terminal_cost = self._compute_terminal_cost(path[-1], target_state)
-
-            return running_cost + terminal_cost
-
-        # Sample optimal paths
-
-        paths = self._sample_optimal_paths(initial_state, action)
-
-        # Extract control policy
-
-        control_policy = self._extract_control_policy(paths)
-
-        return control_policy
-
-    def _sample_optimal_paths(self, initial_state, action):
-
-        """
-
-        Sample paths weighted by exp(-action)
-
-        """
-
-        sampler = HamiltonianPathSampler(action)
-
-        paths = sampler.sample_multiple_trajectories()
-
-        return paths
 
 ```
 
@@ -1001,79 +646,24 @@ dy = g(x,\theta)dt + \sigma_y dW_y
 ### Implementation of Continuous-Time Active Inference
 
 ```python
+n = 3                                            # orders of motion: x, x', x''
+D = np.diag(np.ones(n - 1), k=1)                 # shift operator, (D mu)_i = mu_{i+1}
+A = -np.eye(n)                                   # illustrative linear flow, f(mu) = -mu per order
+C = np.zeros((1, n)); C[0, 0] = 1.0              # only the zeroth order is observed
+Pi_x, Pi_y = np.eye(n), 10.0 * np.eye(1)
 
-class ContinuousActiveInference:
+def filter_step(mu, y_t, dt):
+    """One Euler step of d mu/dt = D mu - dF/dmu in generalised coordinates."""
+    eps_y = y_t - C @ mu
+    eps_x = D @ mu - A @ mu
+    dF = -C.T @ Pi_y @ eps_y + (D - A).T @ Pi_x @ eps_x
+    return mu + dt * (D @ mu - dF)
 
-    """Continuous-time active inference using generalized coordinates."""
-
-    def __init__(self, n_states, n_obs, n_orders=3, dt=0.01):
-
-        self.n_states = n_states
-
-        self.n_obs = n_obs
-
-        self.n_orders = n_orders
-
-        self.dt = dt
-
-        # Initialize state in generalized coordinates
-
-        self.state = ContinuousState(
-
-            belief_means=np.zeros((n_states, n_orders)),
-
-            belief_precisions=np.ones((n_states, n_orders)),
-
-            dt=dt
-
-        )
-
-        # Create shift operator for generalized coordinates
-
-        self.D = self._create_shift_operator()
-
-    def _compute_free_energy(self, obs, states, action=None):
-
-        """Compute variational free energy with path integral terms.
-
-        F = Accuracy + Complexity + Expected Flow + Entropy
-
-        """
-
-        # Accuracy term (prediction error)
-
-        pred_obs = self._sensory_mapping(states)
-
-        sensory_pe = 0.5 * np.sum((obs - pred_obs)**2)
-
-        # Complexity term (KL divergence from prior)
-
-        complexity = 0.5 * np.sum(states[:, 0]**2)
-
-        # Expected flow term
-
-        if action is not None:
-
-            pred_flow = self._flow_mapping(states, action)
-
-            flow_pe = 0.0
-
-            for i in range(self.n_orders-1):
-
-                flow_error = states[:, i+1] - pred_flow[:, i]
-
-                flow_pe += 0.5 * np.sum(flow_error**2)
-
-        else:
-
-            flow_pe = 0.0
-
-        # Entropy term
-
-        entropy = -0.5 * np.sum(np.log(self.state.belief_precisions + 1e-8))
-
-        return sensory_pe + complexity + flow_pe - entropy
-
+mu = np.zeros(n)
+for y_t in y:
+    for _ in range(10):                          # sub-steps keep the Euler scheme stable
+        mu = filter_step(mu, y_t, dt / 10)
+print("belief about x:", mu[0], "last observation:", y[-1], "truth:", truth[-1])
 ```
 
 ### Path Integral Policy for Active Inference
@@ -1081,55 +671,22 @@ class ContinuousActiveInference:
 The optimal policy in active inference can be derived through path integral control:
 
 ```python
+def path_integral_policy(x0, f, cost, horizon=10, n_samples=200, sigma=1.0, temperature=0.05, dt=0.1):
+    """First action of the exp(-S/lambda)-weighted average of sampled action sequences."""
+    actions = sigma * rng.standard_normal((n_samples, horizon))
+    S = np.zeros(n_samples)
+    for k in range(n_samples):
+        x = x0
+        for t in range(horizon):
+            x = x + (f(x) + actions[k, t]) * dt
+            S[k] += cost(x, actions[k, t]) * dt
+    w = np.exp(-(S - S.min()) / temperature)
+    w /= w.sum()
+    return w @ actions[:, 0]
 
-class PathIntegralPolicy:
-
-    def __init__(self, n_samples=100, horizon=10, temperature=1.0):
-
-        self.n_samples = n_samples
-
-        self.horizon = horizon
-
-        self.temperature = temperature
-
-    def compute_optimal_action(self, initial_state, dynamics, free_energy):
-
-        """Compute optimal action using path integral control."""
-
-        trajectories = []
-
-        costs = []
-
-        # Sample trajectories
-
-        for _ in range(self.n_samples):
-
-            trajectory = self.sample_trajectory(initial_state, dynamics)
-
-            cost = self.compute_path_cost(trajectory, free_energy)
-
-            trajectories.append(trajectory)
-
-            costs.append(cost)
-
-        # Compute weights using soft-max
-
-        weights = self.softmax(-np.array(costs) / self.temperature)
-
-        # Compute weighted average of initial actions
-
-        optimal_action = np.sum([w * t[0] for w, t in zip(weights, trajectories)], axis=0)
-
-        return optimal_action
-
-    def softmax(self, x):
-
-        """Compute softmax with temperature scaling."""
-
-        exp_x = np.exp(x - np.max(x))
-
-        return exp_x / exp_x.sum()
-
+# Illustrative: preferred state 1, small penalty on action magnitude
+cost = lambda x, a: (x - 1.0) ** 2 + 0.01 * a ** 2
+print("first action from x = 0:", path_integral_policy(0.0, lambda x: -x, cost))
 ```
 
 ### Hierarchical Active Inference
@@ -1176,60 +733,6 @@ graph TB
 
 ```
 
-Implementation of hierarchical active inference:
-
-```python
-
-class HierarchicalActiveInference:
-
-    def __init__(self, layer_sizes, n_orders=3):
-
-        self.layers = []
-
-        for i in range(len(layer_sizes)-1):
-
-            layer = ContinuousActiveInference(
-
-                n_states=layer_sizes[i],
-
-                n_obs=layer_sizes[i+1],
-
-                n_orders=n_orders
-
-            )
-
-            self.layers.append(layer)
-
-    def update_beliefs(self, observation):
-
-        """Update beliefs across hierarchy."""
-
-        # Bottom-up pass
-
-        prediction_errors = []
-
-        current_input = observation
-
-        for layer in self.layers:
-
-            # Update layer beliefs
-
-            states, pe = layer.update_beliefs(current_input)
-
-            prediction_errors.append(pe)
-
-            # Generate predictions for next layer
-
-            current_input = layer._sensory_mapping(states)
-
-        # Top-down pass
-
-        for layer, pe in zip(reversed(self.layers), reversed(prediction_errors)):
-
-            layer.update_precisions(pe)
-
-```
-
 ### Free Energy and Path Integral Control
 
 The connection between free energy minimization and path integral control becomes explicit through the relationship:
@@ -1251,153 +754,12 @@ where:
 This leads to an optimal control law:
 
 ```python
-
-def compute_optimal_control(self, initial_state, target_state, n_samples=100):
-
-    """Compute optimal control using path integral formulation."""
-
-    def action_cost(path, control):
-
-        # Free energy along path
-
-        F = self._compute_path_free_energy(path)
-
-        # Control cost
-
-        U = 0.5 * np.sum(control**2)
-
-        # Terminal cost
-
-        terminal_cost = np.sum((path[-1] - target_state)**2)
-
-        return F + U + terminal_cost
-
-    paths = self._sample_paths(initial_state, n_samples)
-
-    costs = [action_cost(p, self._extract_control(p)) for p in paths]
-
-    # Path integral control
-
-    weights = np.exp(-np.array(costs) / self.temperature)
-
-    weights /= weights.sum()
-
-    # Compute optimal control
-
-    optimal_control = np.sum([w * self._extract_control(p) 
-
-                            for w, p in zip(weights, paths)], axis=0)
-
-    return optimal_control
-
-```
-
-### Advanced Applications in Active Inference
-
-#### 1. Neural Implementation
-
-```python
-
-class NeuralActiveInference:
-
-    def __init__(self, network_architecture):
-
-        self.layers = []
-
-        for size_in, size_out in zip(network_architecture[:-1], 
-
-                                    network_architecture[1:]):
-
-            layer = {
-
-                'weights': np.random.randn(size_out, size_in) * 0.1,
-
-                'prediction_error': np.zeros(size_out),
-
-                'state': np.zeros(size_out)
-
-            }
-
-            self.layers.append(layer)
-
-    def update(self, input_data):
-
-        """Update neural network using prediction error minimization."""
-
-        # Forward pass (predictions)
-
-        current_input = input_data
-
-        for layer in self.layers:
-
-            predicted = np.tanh(layer['weights'] @ current_input)
-
-            layer['prediction_error'] = current_input - predicted
-
-            layer['state'] = predicted
-
-            current_input = predicted
-
-        # Backward pass (error propagation)
-
-        for i in reversed(range(len(self.layers))):
-
-            if i > 0:  # Not first layer
-
-                self.layers[i-1]['prediction_error'] = (
-
-                    self.layers[i]['weights'].T @ 
-
-                    self.layers[i]['prediction_error']
-
-                )
-
-```
-
-#### 2. Robotics Control
-
-```python
-
-class ActiveInferenceController:
-
-    def __init__(self, plant_model, sensor_model):
-
-        self.plant_model = plant_model
-
-        self.sensor_model = sensor_model
-
-        self.belief_state = None
-
-    def compute_control(self, observation):
-
-        """Compute control signal using active inference."""
-
-        # Update beliefs about state
-
-        self.belief_state = self._update_beliefs(observation)
-
-        # Compute expected free energy for different actions
-
-        action_space = self._discretize_action_space()
-
-        G = np.zeros(len(action_space))
-
-        for i, action in enumerate(action_space):
-
-            # Predict next state
-
-            next_state = self.plant_model.predict(self.belief_state, action)
-
-            # Compute expected free energy
-
-            G[i] = self._expected_free_energy(next_state)
-
-        # Select action that minimizes expected free energy
-
-        optimal_action = action_space[np.argmin(G)]
-
-        return optimal_action
-
+def compute_optimal_control(initial_state, target_state, n_samples=100):
+    """Weights P(tau|a) ~ exp(-S[tau]/lambda) applied to a one-dimensional reach task."""
+    cost = lambda x, a: (x - target_state) ** 2 + 0.01 * a ** 2
+    return path_integral_policy(initial_state, lambda x: -x, cost, n_samples=n_samples)
+
+print(compute_optimal_control(0.0, 1.0), compute_optimal_control(2.0, 1.0))
 ```
 
 ## References

@@ -221,6 +221,24 @@ def test_navigation_citation_and_redirect_pages_are_modelled_distinctly(tmp_path
     assert report.pages == 8
 
 
+def test_wikidata_identifier_becomes_an_exact_match(tmp_path):
+    root = _vault(tmp_path)
+    _page(
+        root / "knowledge_base" / "math" / "markov.md", {"title": "Markov", "wikidata": "Q3001792"}
+    )
+    graph, report = rdf.build_graph(root)
+    assert _has(
+        graph,
+        rdf.page_iri("math/markov"),
+        SKOS + "exactMatch",
+        rdf.iri("http://www.wikidata.org/entity/Q3001792"),
+    )
+    assert report.aligned_pages == 1
+    _page(root / "knowledge_base" / "math" / "bad.md", {"title": "Bad", "wikidata": "entropy"})
+    with pytest.raises(ValueError, match="wikidata must look like"):
+        rdf.build_graph(root)
+
+
 def test_pages_without_frontmatter_or_title_still_get_a_label(tmp_path):
     graph, _ = rdf.build_graph(_vault(tmp_path))
     assert _has(graph, rdf.page_iri("bare"), DCT + "title", '"bare"@en')

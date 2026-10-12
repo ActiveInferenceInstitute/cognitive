@@ -138,6 +138,8 @@ STANDARD_RELATIONS = {
 }
 WIKILINK_PREDICATE = PREFIXES["dcterms"] + "references"
 REDIRECT_PREDICATE = PREFIXES["dcterms"] + "isReplacedBy"
+WIKIDATA_ENTITY = "http://www.wikidata.org/entity/"
+WIKIDATA_ID = re.compile(r"Q[1-9][0-9]*")
 NAVIGATION_STEMS = {"readme", "agents", "catalog", "index"}
 # Links are resolved only against what the repository ships. A checkout also holds
 # local tool folders (editor, index and agent directories); letting a link land in
@@ -282,6 +284,7 @@ class Report:
     concepts: int = 0
     navigation_pages: int = 0
     redirects: int = 0
+    aligned_pages: int = 0
     typed_edges: int = 0
     link_edges: int = 0
     unresolved_links: int = 0
@@ -366,6 +369,12 @@ def _describe_page(
         )
     if frontmatter.get("journal"):
         graph.add(subject, iri(VOCAB + "journal"), literal(str(frontmatter["journal"])))
+    if frontmatter.get("wikidata") is not None:
+        qid = str(frontmatter["wikidata"]).strip()
+        if not WIKIDATA_ID.fullmatch(qid):
+            raise ValueError(f"{node_id}: wikidata must look like Q123, got {qid!r}")
+        graph.add(subject, iri(PREFIXES["skos"] + "exactMatch"), iri(WIKIDATA_ENTITY + qid))
+        report.aligned_pages += 1
     if frontmatter.get("doi"):
         doi = quote(str(frontmatter["doi"]).strip(), safe="/:;()-._~")
         graph.add(subject, iri(PREFIXES["schema"] + "sameAs"), iri(f"https://doi.org/{doi}"))
@@ -690,6 +699,7 @@ def statistics_markdown(report: Report) -> str:
         f"| Concepts (`skos:Concept`) | {report.concepts} |",
         f"| Navigation pages (`schema:CollectionPage`) | {report.navigation_pages} |",
         f"| Redirect pages | {report.redirects} |",
+        f"| Pages aligned to Wikidata (`skos:exactMatch`) | {report.aligned_pages} |",
         f"| Typed edges from `semantic_relations` | {report.typed_edges} |",
         f"| Untyped edges from body links (`dcterms:references`) | {report.link_edges} |",
         f"| Triples | {report.triples} |",

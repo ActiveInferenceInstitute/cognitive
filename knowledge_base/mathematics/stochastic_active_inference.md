@@ -209,183 +209,41 @@ See `docs/examples/README.md` for runnable examples.
 ### 2. Path Integral Methods
 
 ```python
+import numpy as np
 
-class PathIntegralSampler:
+rng = np.random.default_rng(0)
+dt, T, n_paths = 0.01, 1.0, 20000
+n_steps = int(T / dt)
+sigma = 0.5                                  # diffusion coefficient, illustrative
 
-    def __init__(self,
+# Euler-Maruyama paths of dX = -X dt + sigma dW, started at x = 1
+x = np.ones(n_paths)
+action = np.zeros(n_paths)                   # accumulated running cost along each path
+for _ in range(n_steps):
+    x += -x * dt + sigma * np.sqrt(dt) * rng.normal(size=n_paths)
+    action += 0.5 * x**2 * dt
 
-                 action: Callable,
-
-                 n_particles: int = 1000):
-
-        """Initialize path integral sampler.
-
-        Args:
-
-            action: Action functional
-
-            n_particles: Number of particles
-
-        """
-
-        self.S = action
-
-        self.n = n_particles
-
-    def sample_paths(self,
-
-                    x0: np.ndarray,
-
-                    dt: float,
-
-                    n_steps: int) -> np.ndarray:
-
-        """Sample paths using path integral.
-
-        Args:
-
-            x0: Initial state
-
-            dt: Time step
-
-            n_steps: Number of steps
-
-        Returns:
-
-            paths: Sampled paths
-
-        """
-
-        # Initialize particles
-
-        paths = np.zeros((self.n, n_steps + 1, *x0.shape))
-
-        paths[:,0] = x0
-
-        # Sample paths
-
-        for i in range(n_steps):
-
-            # Propose moves
-
-            proposals = self.propose_moves(paths[:,i])
-
-            # Compute weights
-
-            weights = self.compute_weights(paths[:,i], proposals)
-
-            # Resample
-
-            indices = self.resample(weights)
-
-            paths[:,i+1] = proposals[indices]
-
-        return paths
-
-    def compute_weights(self,
-
-                       current: np.ndarray,
-
-                       proposed: np.ndarray) -> np.ndarray:
-
-        """Compute importance weights.
-
-        Args:
-
-            current: Current states
-
-            proposed: Proposed states
-
-        Returns:
-
-            weights: Importance weights
-
-        """
-
-        # Compute action difference
-
-        dS = self.S(proposed) - self.S(current)
-
-        # Return weights
-
-        return np.exp(-dS)
-
+weights = np.exp(-action)                    # path weights exp(-S)
+weights /= weights.sum()
+print(x.mean(), np.exp(-1.0))                # unweighted mean vs analytic e^{-T}
+print(weights @ x)                           # mean after weighting by exp(-S)
 ```
 
 ### 3. Stochastic Optimization
 
 ```python
+import numpy as np
 
-class StochasticOptimizer:
+rng = np.random.default_rng(1)
+temperature, step = 0.5, 0.01                # illustrative
 
-    def __init__(self,
-
-                 objective: Callable,
-
-                 learning_rate: float = 0.1,
-
-                 noise_scale: float = 0.1):
-
-        """Initialize stochastic optimizer.
-
-        Args:
-
-            objective: Objective function
-
-            learning_rate: Learning rate
-
-            noise_scale: Noise scale
-
-        """
-
-        self.f = objective
-
-        self.lr = learning_rate
-
-        self.scale = noise_scale
-
-    def optimize(self,
-
-                x0: np.ndarray,
-
-                n_steps: int = 1000) -> np.ndarray:
-
-        """Perform stochastic optimization.
-
-        Args:
-
-            x0: Initial point
-
-            n_steps: Number of steps
-
-        Returns:
-
-            x_opt: Optimized point
-
-        """
-
-        x = x0.copy()
-
-        for _ in range(n_steps):
-
-            # Compute gradient
-
-            grad = self.compute_gradient(x)
-
-            # Add noise
-
-            noise = np.random.randn(*x.shape) * self.scale
-
-            # Update parameters
-
-            x = x - self.lr * grad + noise
-
-            # Anneal noise
-
-            self.scale *= 0.995
-
-        return x
-
+grad_F = lambda x: x                         # F(x) = x^2 / 2
+x, samples = 3.0, []
+for t in range(200000):                      # Langevin dynamics targets exp(-F / T)
+    x += -step * grad_F(x) + np.sqrt(2 * step * temperature) * rng.normal()
+    if t > 20000:
+        samples.append(x)
+print(np.var(samples), temperature)          # stationary variance is the temperature
 ```
 
 ## Applications
@@ -611,360 +469,20 @@ graph LR
 ### Risk-Sensitive Control
 
 ```python
+import numpy as np
 
-class RiskSensitiveController:
+rng = np.random.default_rng(2)
+cost = rng.normal(loc=1.0, scale=1.0, size=100000)   # cost samples, illustrative
 
-    def __init__(self,
+def entropic_risk(cost, theta):
+    """(1 / theta) ln E[exp(theta * cost)]; theta > 0 is risk-averse."""
+    return np.log(np.mean(np.exp(theta * cost))) / theta
 
-                 dynamics: StochasticDynamics,
-
-                 cost: Callable,
-
-                 risk_factor: float = 1.0):
-
-        """Initialize risk-sensitive controller.
-
-        Args:
-
-            dynamics: System dynamics
-
-            cost: Cost function
-
-            risk_factor: Risk sensitivity
-
-        """
-
-        self.dynamics = dynamics
-
-        self.cost = cost
-
-        self.theta = risk_factor
-
-    def compute_optimal_control(self,
-
-                              state: np.ndarray,
-
-                              time_horizon: float,
-
-                              n_samples: int = 1000) -> np.ndarray:
-
-        """Compute risk-sensitive optimal control.
-
-        Args:
-
-            state: Current state
-
-            time_horizon: Planning horizon
-
-            n_samples: Number of trajectory samples
-
-        Returns:
-
-            u_opt: Optimal control
-
-        """
-
-        # Sample trajectories
-
-        trajectories = self.dynamics.sample_trajectories(
-
-            state, time_horizon, n_samples)
-
-        # Compute exponential cost
-
-        costs = np.array([self.cost(traj) for traj in trajectories])
-
-        exp_costs = np.exp(self.theta * costs)
-
-        # Risk-sensitive expectation
-
-        risk_value = -1/self.theta * np.log(np.mean(exp_costs))
-
-        # Compute optimal control
-
-        u_opt = self._minimize_risk_value(risk_value)
-
-        return u_opt
-
+print(cost.mean())
+for theta in (0.1, 1.0):
+    print(theta, entropic_risk(cost, theta), 1.0 + theta / 2)   # Gaussian: mean + theta var / 2
 ```
 
-## Advanced Numerical Methods
-
-### Adaptive Integration
-
-```python
-
-class AdaptiveIntegrator:
-
-    def __init__(self,
-
-                 dynamics: StochasticDynamics,
-
-                 tolerance: float = 1e-6):
-
-        """Initialize adaptive integrator.
-
-        Args:
-
-            dynamics: Stochastic dynamics
-
-            tolerance: Error tolerance
-
-        """
-
-        self.dynamics = dynamics
-
-        self.tol = tolerance
-
-    def integrate(self,
-
-                 initial_state: np.ndarray,
-
-                 time_span: Tuple[float, float]) -> Tuple[np.ndarray, np.ndarray]:
-
-        """Perform adaptive integration.
-
-        Args:
-
-            initial_state: Initial condition
-
-            time_span: Integration interval
-
-        Returns:
-
-            times,states: Integration results
-
-        """
-
-        times = [time_span[0]]
-
-        states = [initial_state]
-
-        while times[-1] < time_span[1]:
-
-            # Estimate local error
-
-            dt = self._estimate_step_size(states[-1], times[-1])
-
-            # Take step
-
-            next_state = self._step(states[-1], dt)
-
-            # Update solution
-
-            times.append(times[-1] + dt)
-
-            states.append(next_state)
-
-        return np.array(times), np.array(states)
-
-```
-
-### Particle Methods
-
-```python
-
-class StochasticParticleFilter:
-
-    def __init__(self,
-
-                 n_particles: int,
-
-                 dynamics: StochasticDynamics,
-
-                 observation_model: Callable):
-
-        """Initialize particle filter.
-
-        Args:
-
-            n_particles: Number of particles
-
-            dynamics: System dynamics
-
-            observation_model: Observation likelihood
-
-        """
-
-        self.n = n_particles
-
-        self.dynamics = dynamics
-
-        self.observe = observation_model
-
-    def update(self,
-
-              particles: np.ndarray,
-
-              weights: np.ndarray,
-
-              observation: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
-
-        """Update particle filter.
-
-        Args:
-
-            particles: Current particles
-
-            weights: Current weights
-
-            observation: New observation
-
-        Returns:
-
-            new_particles,new_weights: Updated filter
-
-        """
-
-        # Predict
-
-        predicted = self.dynamics.evolve(particles)
-
-        # Update weights
-
-        likelihoods = self.observe(predicted, observation)
-
-        new_weights = weights * likelihoods
-
-        new_weights /= np.sum(new_weights)
-
-        # Resample if needed
-
-        if self._effective_particles(new_weights) < self.n/2:
-
-            predicted, new_weights = self._resample(predicted, new_weights)
-
-        return predicted, new_weights
-
-```
-
-## Advanced Visualization Tools
-
-### Phase Space Analysis
-
-```python
-
-def plot_stochastic_flow(
-
-    dynamics: StochasticDynamics,
-
-    domain: Tuple[np.ndarray, np.ndarray],
-
-    n_trajectories: int = 100
-
-) -> plt.Figure:
-
-    """Plot stochastic flow in phase space.
-
-    Args:
-
-        dynamics: System dynamics
-
-        domain: Phase space domain
-
-        n_trajectories: Number of trajectories
-
-    Returns:
-
-        fig: Flow visualization
-
-    """
-
-    fig = plt.figure(figsize=(12, 8))
-
-    ax = fig.add_subplot(111)
-
-    # Plot mean flow
-
-    X, Y = np.meshgrid(*[np.linspace(d[0], d[1], 20) for d in domain])
-
-    U, V = dynamics.drift([X, Y])
-
-    ax.streamplot(X, Y, U, V, color='k', alpha=0.3)
-
-    # Plot sample trajectories
-
-    for _ in range(n_trajectories):
-
-        traj = dynamics.sample_trajectory(
-
-            np.random.uniform(*domain[0], size=2),
-
-            n_steps=100
-
-        )
-
-        ax.plot(traj[:,0], traj[:,1], 'r-', alpha=0.1)
-
-    return fig
-
-```
-
-### Information Geometry Visualization
-
-```python
-
-def plot_information_geometry(
-
-    manifold: StochasticManifold,
-
-    param_range: Dict[str, Tuple[float, float]]
-
-) -> plt.Figure:
-
-    """Visualize information geometry.
-
-    Args:
-
-        manifold: Statistical manifold
-
-        param_range: Parameter ranges
-
-    Returns:
-
-        fig: Geometry visualization
-
-    """
-
-    fig = plt.figure(figsize=(15, 5))
-
-    # Plot metric tensor
-
-    ax1 = fig.add_subplot(131)
-
-    theta = np.linspace(*param_range['theta'], 100)
-
-    g = [manifold.metric_tensor([t]) for t in theta]
-
-    ax1.plot(theta, g)
-
-    ax1.set_title('Metric Tensor')
-
-    # Plot geodesics
-
-    ax2 = fig.add_subplot(132)
-
-    for t0 in np.linspace(*param_range['theta'], 5):
-
-        geo = manifold.geodesic(t0)
-
-        ax2.plot(geo[:,0], geo[:,1])
-
-    ax2.set_title('Geodesics')
-
-    # Plot free energy
-
-    ax3 = fig.add_subplot(133)
-
-    F = [manifold.free_energy([t]) for t in theta]
-
-    ax3.plot(theta, F)
-
-    ax3.set_title('Free Energy')
-
-    return fig
-
-```
 
 ## Advanced Topics
 

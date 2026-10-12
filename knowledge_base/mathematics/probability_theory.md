@@ -181,49 +181,18 @@ graph TD
 #### Distribution Plots
 
 ```python
+import numpy as np
 
-def plot_distributions():
+x = np.linspace(-12, 12, 6001)
+dx = x[1] - x[0]
 
-    """Plot common probability distributions."""
+def normal_pdf(x, mu, sigma):
+    return np.exp(-0.5 * ((x - mu) / sigma) ** 2) / (sigma * np.sqrt(2 * np.pi))
 
-    fig, axes = plt.subplots(2, 2, figsize=(12, 8))
-
-    # Normal distribution
-
-    x = np.linspace(-4, 4, 100)
-
-    axes[0,0].plot(x, norm.pdf(x, 0, 1))
-
-    axes[0,0].set_title('Normal Distribution')
-
-    # Exponential distribution
-
-    x = np.linspace(0, 4, 100)
-
-    axes[0,1].plot(x, expon.pdf(x))
-
-    axes[0,1].set_title('Exponential Distribution')
-
-    # Beta distribution
-
-    x = np.linspace(0, 1, 100)
-
-    axes[1,0].plot(x, beta.pdf(x, 2, 5))
-
-    axes[1,0].set_title('Beta Distribution')
-
-    # Gamma distribution
-
-    x = np.linspace(0, 10, 100)
-
-    axes[1,1].plot(x, gamma.pdf(x, 2))
-
-    axes[1,1].set_title('Gamma Distribution')
-
-    plt.tight_layout()
-
-    return fig
-
+for mu, sigma in [(0.0, 1.0), (1.0, 0.5), (-1.0, 2.0)]:   # illustrative parameters
+    pdf = normal_pdf(x, mu, sigma)
+    mean = np.sum(x * pdf) * dx
+    print(f"mu={mu}, sigma={sigma}: mass={pdf.sum() * dx:.4f}, mean={mean:.4f}")
 ```
 
 ## Probability Structures
@@ -603,196 +572,25 @@ graph TD
 ### Sampling Efficiency
 
 ```python
+import numpy as np
 
-class MCMCDiagnostics:
+rng = np.random.default_rng(0)
+phi = 0.9                                    # AR(1) coefficient, illustrative
+chain = np.zeros(20000)
+for t in range(1, len(chain)):
+    chain[t] = phi * chain[t - 1] + rng.normal()
 
-    def __init__(self,
+def effective_sample_size(x, max_lag=200):
+    x = x - x.mean()
+    acf = np.correlate(x, x, mode="full")[len(x) - 1:][:max_lag] / (x @ x)
+    return len(x) / (1 + 2 * acf[1:][acf[1:] > 0.05].sum())
 
-                 chains: np.ndarray):
-
-        """Initialize MCMC diagnostics.
-
-        Args:
-
-            chains: MCMC chains [n_chains, n_samples, n_params]
-
-        """
-
-        self.chains = chains
-
-    def plot_diagnostics(self) -> Dict[str, plt.Figure]:
-
-        """Plot comprehensive diagnostics."""
-
-        figs = {}
-
-        # Trace plots
-
-        fig_trace = self._plot_traces()
-
-        figs['trace'] = fig_trace
-
-        # Autocorrelation
-
-        fig_acf = self._plot_autocorr()
-
-        figs['acf'] = fig_acf
-
-        # Rank plots
-
-        fig_rank = self._plot_rank()
-
-        figs['rank'] = fig_rank
-
-        return figs
-
+print(effective_sample_size(chain))          # well below 20000 for a sticky chain
 ```
 
-## Advanced Visualizations
-
-#### Phase Space Plots
-
-```python
-
-def plot_phase_space(
-
-    process: StochasticProcess,
-
-    n_trajectories: int = 100
-
-) -> plt.Figure:
-
-    """Plot phase space of stochastic process."""
-
-    fig = plt.figure(figsize=(10, 10))
-
-    ax = fig.add_subplot(111, projection='3d')
-
-    for _ in range(n_trajectories):
-
-        path = process.simulate_path(1000, 0.01)
-
-        ax.plot3D(path[:,0], path[:,1], path[:,2], 
-
-                 alpha=0.1, lw=0.5)
-
-    return fig
-
-```
-
-#### Distribution Evolution
-
-```python
-
-def plot_distribution_evolution(
-
-    initial: ProbabilityDistribution,
-
-    transition: Callable,
-
-    n_steps: int = 10
-
-) -> plt.Figure:
-
-    """Plot evolution of probability distribution."""
-
-    fig, axes = plt.subplots(2, n_steps//2, figsize=(15, 6))
-
-    dist = initial
-
-    for i in range(n_steps):
-
-        row, col = i//5, i%5
-
-        dist = transition(dist)
-
-        x = np.linspace(dist.support[0], dist.support[1], 100)
-
-        axes[row,col].plot(x, dist.pdf(x))
-
-        axes[row,col].set_title(f't = {i}')
-
-    return fig
-
-```
 
 ## Advanced Probability Models
 
-### Lévy Processes
-
-```python
-
-class LevyProcess:
-
-    def __init__(self,
-
-                 characteristic_exponent: Callable,
-
-                 drift: float = 0.0,
-
-                 diffusion: float = 0.0):
-
-        """Initialize Lévy process.
-
-        Args:
-
-            characteristic_exponent: Jump measure
-
-            drift: Drift parameter
-
-            diffusion: Diffusion parameter
-
-        """
-
-        self.psi = characteristic_exponent
-
-        self.mu = drift
-
-        self.sigma = diffusion
-
-    def simulate_path(self,
-
-                     n_steps: int,
-
-                     dt: float,
-
-                     method: str = 'euler') -> np.ndarray:
-
-        """Simulate Lévy process path.
-
-        Args:
-
-            n_steps: Number of steps
-
-            dt: Time step
-
-            method: Integration method
-
-        Returns:
-
-            path: Simulated path
-
-        """
-
-        path = np.zeros(n_steps)
-
-        time = np.arange(n_steps) * dt
-
-        # Continuous part
-
-        W = np.random.normal(0, np.sqrt(dt), n_steps)
-
-        path += self.mu * time + self.sigma * np.cumsum(W)
-
-        # Jump part
-
-        N = self.simulate_jumps(n_steps, dt)
-
-        path += N
-
-        return path
-
-```
 
 ### Diffusion Processes
 
@@ -802,452 +600,73 @@ See `docs/examples/README.md` for runnable examples.
 ### Markov Chain Monte Carlo
 
 ```python
+import numpy as np
 
-class MCMCSampler:
+rng = np.random.default_rng(1)
 
-    def __init__(self,
+def metropolis(log_p, x0, n, step=1.0):
+    x, out = x0, []
+    for _ in range(n):
+        prop = x + step * rng.normal()
+        if np.log(rng.uniform()) < log_p(prop) - log_p(x):
+            x = prop
+        out.append(x)
+    return np.array(out)
 
-                 target: Callable,
-
-                 proposal: Callable,
-
-                 n_chains: int = 4):
-
-        """Initialize MCMC sampler.
-
-        Args:
-
-            target: Target distribution
-
-            proposal: Proposal distribution
-
-            n_chains: Number of parallel chains
-
-        """
-
-        self.target = target
-
-        self.proposal = proposal
-
-        self.n_chains = n_chains
-
-    def hamiltonian_monte_carlo(self,
-
-                              n_samples: int,
-
-                              initial_state: np.ndarray,
-
-                              step_size: float = 0.1,
-
-                              n_steps: int = 10) -> np.ndarray:
-
-        """Run Hamiltonian Monte Carlo.
-
-        Args:
-
-            n_samples: Number of samples
-
-            initial_state: Initial state
-
-            step_size: Leapfrog step size
-
-            n_steps: Number of leapfrog steps
-
-        Returns:
-
-            samples: HMC samples
-
-        """
-
-        def hamiltonian(q: np.ndarray, p: np.ndarray) -> float:
-
-            """Compute Hamiltonian."""
-
-            return -self.target(q) + 0.5 * np.sum(p**2)
-
-        samples = np.zeros((n_samples, *initial_state.shape))
-
-        current_q = initial_state
-
-        for i in range(n_samples):
-
-            # Sample momentum
-
-            current_p = np.random.normal(0, 1, size=initial_state.shape)
-
-            # Leapfrog integration
-
-            q = current_q
-
-            p = current_p
-
-            # Half step for momentum
-
-            p -= step_size * grad(lambda x: -self.target(x))(q) / 2
-
-            # Alternate full steps for position and momentum
-
-            for _ in range(n_steps):
-
-                q += step_size * p
-
-                if _ != n_steps - 1:
-
-                    p -= step_size * grad(lambda x: -self.target(x))(q)
-
-            # Half step for momentum
-
-            p -= step_size * grad(lambda x: -self.target(x))(q) / 2
-
-            # Metropolis acceptance
-
-            current_H = hamiltonian(current_q, current_p)
-
-            proposed_H = hamiltonian(q, p)
-
-            if np.random.random() < np.exp(current_H - proposed_H):
-
-                current_q = q
-
-            samples[i] = current_q
-
-        return samples
-
+# Target: mixture of two unit Gaussians at -2 and +2 (illustrative)
+log_p = lambda x: np.logaddexp(-0.5 * (x + 2) ** 2, -0.5 * (x - 2) ** 2)
+samples = metropolis(log_p, 0.0, 50000, step=2.0)[5000:]
+print(samples.mean(), samples.std())        # about 0 and sqrt(1 + 4) ~ 2.24
 ```
 
 ### Sequential Monte Carlo
 
 ```python
-
-class ParticleFilter:
-
-    def __init__(self,
-
-                 transition_model: Callable,
-
-                 observation_model: Callable,
-
-                 n_particles: int = 1000):
-
-        """Initialize particle filter.
-
-        Args:
-
-            transition_model: State transition p(x_t|x_{t-1})
-
-            observation_model: Observation likelihood p(y_t|x_t)
-
-            n_particles: Number of particles
-
-        """
-
-        self.f = transition_model
-
-        self.g = observation_model
-
-        self.n = n_particles
-
-    def filter(self,
-
-              observations: np.ndarray,
-
-              initial_distribution: Callable) -> Tuple[np.ndarray, np.ndarray]:
-
-        """Run particle filter.
-
-        Args:
-
-            observations: Observation sequence
-
-            initial_distribution: Initial state distribution
-
-        Returns:
-
-            particles,weights: Filtered particles and weights
-
-        """
-
-        T = len(observations)
-
-        d = observations.shape[1]
-
-        # Initialize particles
-
-        particles = np.zeros((T, self.n, d))
-
-        weights = np.zeros((T, self.n))
-
-        # Initial state
-
-        particles[0] = initial_distribution(self.n)
-
-        weights[0] = 1.0 / self.n
-
-        for t in range(1, T):
-
-            # Predict
-
-            particles[t] = self.f(particles[t-1])
-
-            # Update
-
-            weights[t] = self.g(observations[t], particles[t])
-
-            weights[t] /= np.sum(weights[t])
-
-            # Resample if needed
-
-            if self.effective_sample_size(weights[t]) < self.n/2:
-
-                indices = self.systematic_resample(weights[t])
-
-                particles[t] = particles[t][indices]
-
-                weights[t] = 1.0 / self.n
-
-        return particles, weights
-
-    @staticmethod
-
-    def effective_sample_size(weights: np.ndarray) -> float:
-
-        """Compute effective sample size."""
-
-        return 1.0 / np.sum(weights**2)
-
-    @staticmethod
-
-    def systematic_resample(weights: np.ndarray) -> np.ndarray:
-
-        """Perform systematic resampling."""
-
-        N = len(weights)
-
-        positions = (np.random.random() + np.arange(N)) / N
-
-        indices = np.zeros(N, dtype=int)
-
-        cumsum = np.cumsum(weights)
-
-        i, j = 0, 0
-
-        while i < N:
-
-            if positions[i] < cumsum[j]:
-
-                indices[i] = j
-
-                i += 1
-
-            else:
-
-                j += 1
-
-        return indices
-
+import numpy as np
+
+rng = np.random.default_rng(2)
+
+def effective_sample_size(w):
+    return 1.0 / np.sum(w ** 2)
+
+def systematic_resample(w):
+    positions = (rng.uniform() + np.arange(len(w))) / len(w)
+    return np.searchsorted(np.cumsum(w), positions)
+
+# Bootstrap filter for x_t = 0.9 x_{t-1} + N(0, 1), y_t = x_t + N(0, 0.5^2) (illustrative)
+T, N = 50, 1000
+x_true = np.zeros(T)
+for t in range(1, T):
+    x_true[t] = 0.9 * x_true[t - 1] + rng.normal()
+y = x_true + 0.5 * rng.normal(size=T)
+
+particles, estimates = rng.normal(size=N), []
+for t in range(T):
+    particles = 0.9 * particles + rng.normal(size=N)
+    w = np.exp(-0.5 * ((y[t] - particles) / 0.5) ** 2)
+    w /= w.sum()
+    estimates.append(w @ particles)
+    if effective_sample_size(w) < N / 2:
+        particles = particles[systematic_resample(w)]
+print(np.sqrt(np.mean((np.array(estimates) - x_true) ** 2)))   # below the 0.5 observation noise
 ```
 
 ### Advanced Probability Metrics
 
 ```python
+import numpy as np
 
-class ProbabilityMetrics:
+p = np.array([0.5, 0.3, 0.2])               # illustrative discrete distributions
+q = np.array([0.4, 0.4, 0.2])
 
-    @staticmethod
+total_variation = 0.5 * np.abs(p - q).sum()
+hellinger = np.sqrt(0.5 * np.sum((np.sqrt(p) - np.sqrt(q)) ** 2))
+kl_pq = np.sum(p * np.log(p / q))
 
-    def total_variation(p: np.ndarray,
-
-                       q: np.ndarray) -> float:
-
-        """Compute total variation distance.
-
-        Args:
-
-            p,q: Probability distributions
-
-        Returns:
-
-            tv: Total variation distance
-
-        """
-
-        return 0.5 * np.sum(np.abs(p - q))
-
-    @staticmethod
-
-    def hellinger(p: np.ndarray,
-
-                 q: np.ndarray) -> float:
-
-        """Compute Hellinger distance.
-
-        Args:
-
-            p,q: Probability distributions
-
-        Returns:
-
-            h: Hellinger distance
-
-        """
-
-        return np.sqrt(0.5 * np.sum((np.sqrt(p) - np.sqrt(q))**2))
-
-    @staticmethod
-
-    def wasserstein(x: np.ndarray,
-
-                   y: np.ndarray,
-
-                   p: int = 1) -> float:
-
-        """Compute Wasserstein distance.
-
-        Args:
-
-            x,y: Sample points
-
-            p: Order of distance
-
-        Returns:
-
-            w: Wasserstein distance
-
-        """
-
-        # Sort samples
-
-        x_sorted = np.sort(x)
-
-        y_sorted = np.sort(y)
-
-        # Compute distance
-
-        return np.power(
-
-            np.mean(np.abs(x_sorted - y_sorted)**p),
-
-            1/p
-
-        )
-
+print(total_variation, hellinger, kl_pq)
+print(total_variation <= np.sqrt(0.5 * kl_pq))   # Pinsker's inequality
 ```
 
-### Advanced Visualization
-
-```python
-
-class ProbabilityVisualizer:
-
-    @staticmethod
-
-    def plot_process_paths(paths: np.ndarray,
-
-                          time: np.ndarray,
-
-                          confidence: float = 0.95) -> plt.Figure:
-
-        """Plot stochastic process paths.
-
-        Args:
-
-            paths: Sample paths
-
-            time: Time points
-
-            confidence: Confidence level
-
-        Returns:
-
-            fig: Plot figure
-
-        """
-
-        fig, ax = plt.subplots(figsize=(10, 6))
-
-        # Plot mean path
-
-        mean_path = np.mean(paths, axis=0)
-
-        ax.plot(time, mean_path, 'b-', label='Mean')
-
-        # Plot confidence bands
-
-        alpha = (1 - confidence) / 2
-
-        lower = np.quantile(paths, alpha, axis=0)
-
-        upper = np.quantile(paths, 1-alpha, axis=0)
-
-        ax.fill_between(time, lower, upper, alpha=0.2,
-
-                       label=f'{confidence*100}% CI')
-
-        # Plot sample paths
-
-        for path in paths[::10]:  # Plot every 10th path
-
-            ax.plot(time, path, 'k-', alpha=0.1)
-
-        ax.grid(True)
-
-        ax.legend()
-
-        return fig
-
-    @staticmethod
-
-    def plot_copula(samples: np.ndarray,
-
-                   marginals: List[str] = None) -> plt.Figure:
-
-        """Plot copula structure.
-
-        Args:
-
-            samples: Multivariate samples
-
-            marginals: Marginal distribution names
-
-        Returns:
-
-            fig: Plot figure
-
-        """
-
-        d = samples.shape[1]
-
-        fig, axes = plt.subplots(d, d, figsize=(3*d, 3*d))
-
-        for i in range(d):
-
-            for j in range(d):
-
-                if i != j:
-
-                    axes[i,j].scatter(samples[:,j], samples[:,i],
-
-                                    alpha=0.1, s=1)
-
-                else:
-
-                    axes[i,j].hist(samples[:,i], bins=50)
-
-                if marginals:
-
-                    if i == d-1:
-
-                        axes[i,j].set_xlabel(marginals[j])
-
-                    if j == 0:
-
-                        axes[i,j].set_ylabel(marginals[i])
-
-        plt.tight_layout()
-
-        return fig
-
-```
 
 ## Advanced Topics
 
@@ -1325,237 +744,23 @@ class ProbabilityVisualizer:
 
 ## Implementation Framework
 
-### Probability Distributions
-
-```python
-
-class ProbabilityDistribution:
-
-    def __init__(self,
-
-                 name: str,
-
-                 params: Dict[str, float]):
-
-        """Initialize probability distribution.
-
-        Args:
-
-            name: Distribution name
-
-            params: Distribution parameters
-
-        """
-
-        self.name = name
-
-        self.params = params
-
-        self._validate_parameters()
-
-    def pdf(self,
-
-           x: np.ndarray) -> np.ndarray:
-
-        """Compute probability density.
-
-        Args:
-
-            x: Input values
-
-        Returns:
-
-            density: PDF values
-
-        """
-
-        raise NotImplementedError
-
-    def cdf(self,
-
-           x: np.ndarray) -> np.ndarray:
-
-        """Compute cumulative distribution.
-
-        Args:
-
-            x: Input values
-
-        Returns:
-
-            cumulative: CDF values
-
-        """
-
-        raise NotImplementedError
-
-    def sample(self,
-
-              n: int,
-
-              seed: Optional[int] = None) -> np.ndarray:
-
-        """Generate random samples.
-
-        Args:
-
-            n: Number of samples
-
-            seed: Random seed
-
-        Returns:
-
-            samples: Random samples
-
-        """
-
-        raise NotImplementedError
-
-```
 
 ### Statistical Inference
 
 ```python
+import numpy as np
 
-class StatisticalInference:
+rng = np.random.default_rng(3)
+x = rng.normal(2.0, 1.5, size=5000)         # data from an illustrative Gaussian
 
-    def __init__(self,
-
-                 distribution: ProbabilityDistribution):
-
-        """Initialize statistical inference.
-
-        Args:
-
-            distribution: Probability distribution
-
-        """
-
-        self.dist = distribution
-
-    def maximum_likelihood(self,
-
-                         data: np.ndarray) -> Dict[str, float]:
-
-        """Compute MLE estimates.
-
-        Args:
-
-            data: Observed data
-
-        Returns:
-
-            params: ML parameter estimates
-
-        """
-
-        def neg_log_likelihood(params):
-
-            self.dist.params = params
-
-            return -np.sum(np.log(self.dist.pdf(data)))
-
-        result = minimize(neg_log_likelihood, x0=self.dist.params)
-
-        return dict(zip(self.dist.params.keys(), result.x))
-
-    def bayesian_inference(self,
-
-                         data: np.ndarray,
-
-                         prior: ProbabilityDistribution) -> ProbabilityDistribution:
-
-        """Perform Bayesian inference.
-
-        Args:
-
-            data: Observed data
-
-            prior: Prior distribution
-
-        Returns:
-
-            posterior: Posterior distribution
-
-        """
-
-        # Implement MCMC or variational inference
-
-        raise NotImplementedError
-
+# Maximum likelihood for a Gaussian has a closed form
+mu_hat = x.mean()
+sigma_hat = np.sqrt(np.mean((x - mu_hat) ** 2))
+log_lik = np.sum(-0.5 * np.log(2 * np.pi * sigma_hat**2)
+                 - 0.5 * ((x - mu_hat) / sigma_hat) ** 2)
+print(mu_hat, sigma_hat, log_lik)
 ```
 
-### Monte Carlo Methods
-
-```python
-
-class MonteCarloSampler:
-
-    def __init__(self,
-
-                 target: Callable,
-
-                 proposal: ProbabilityDistribution):
-
-        """Initialize Monte Carlo sampler.
-
-        Args:
-
-            target: Target distribution
-
-            proposal: Proposal distribution
-
-        """
-
-        self.target = target
-
-        self.proposal = proposal
-
-    def metropolis_hastings(self,
-
-                          n_samples: int,
-
-                          initial: np.ndarray) -> np.ndarray:
-
-        """Run Metropolis-Hastings algorithm.
-
-        Args:
-
-            n_samples: Number of samples
-
-            initial: Initial state
-
-        Returns:
-
-            samples: MCMC samples
-
-        """
-
-        samples = [initial]
-
-        current = initial
-
-        for _ in range(n_samples - 1):
-
-            # Propose new state
-
-            proposal = self.proposal.sample(1)
-
-            # Compute acceptance ratio
-
-            ratio = min(1, self.target(proposal) / self.target(current))
-
-            # Accept/reject
-
-            if np.random.random() < ratio:
-
-                current = proposal
-
-            samples.append(current)
-
-        return np.array(samples)
-
-```
 
 ## Advanced Applications
 
@@ -1567,150 +772,17 @@ See `docs/examples/README.md` for runnable examples.
 ### Stochastic Processes
 
 ```python
+import numpy as np
 
-class StochasticProcess:
+rng = np.random.default_rng(4)
+theta, sigma, dt = 1.0, 0.5, 0.01           # Ornstein-Uhlenbeck parameters, illustrative
+x = np.zeros((2000, 1000))                  # 2000 paths, 1000 Euler-Maruyama steps
+for t in range(1, x.shape[1]):
+    x[:, t] = x[:, t - 1] - theta * x[:, t - 1] * dt + sigma * np.sqrt(dt) * rng.normal(size=x.shape[0])
 
-    def __init__(self,
-
-                 transition: Callable,
-
-                 initial: ProbabilityDistribution):
-
-        """Initialize stochastic process.
-
-        Args:
-
-            transition: Transition kernel
-
-            initial: Initial distribution
-
-        """
-
-        self.transition = transition
-
-        self.initial = initial
-
-    def simulate_path(self,
-
-                     n_steps: int,
-
-                     dt: float) -> np.ndarray:
-
-        """Simulate process path.
-
-        Args:
-
-            n_steps: Number of steps
-
-            dt: Time step
-
-        Returns:
-
-            path: Simulated path
-
-        """
-
-        path = [self.initial.sample(1)]
-
-        for _ in range(n_steps - 1):
-
-            next_state = self.transition(path[-1], dt)
-
-            path.append(next_state)
-
-        return np.array(path)
-
+print(x[:, -1].var(), sigma**2 / (2 * theta))   # stationary variance
 ```
 
-## Visualization Tools
-
-### Distribution Plots
-
-```python
-
-def plot_distribution_family(
-
-    dist_class: Type[ProbabilityDistribution],
-
-    param_range: Dict[str, np.ndarray]
-
-) -> plt.Figure:
-
-    """Plot family of distributions.
-
-    Args:
-
-        dist_class: Distribution class
-
-        param_range: Parameter ranges
-
-    Returns:
-
-        fig: Plot figure
-
-    """
-
-    fig, ax = plt.subplots(figsize=(10, 6))
-
-    x = np.linspace(-4, 4, 100)
-
-    for params in product(*param_range.values()):
-
-        dist = dist_class(dict(zip(param_range.keys(), params)))
-
-        ax.plot(x, dist.pdf(x), label=str(params))
-
-    ax.legend()
-
-    ax.grid(True)
-
-    return fig
-
-```
-
-### Probability Maps
-
-```python
-
-def plot_probability_map(
-
-    joint_dist: np.ndarray,
-
-    x_label: str = 'X',
-
-    y_label: str = 'Y'
-
-) -> plt.Figure:
-
-    """Plot joint probability map.
-
-    Args:
-
-        joint_dist: Joint distribution
-
-        x_label: X-axis label
-
-        y_label: Y-axis label
-
-    Returns:
-
-        fig: Plot figure
-
-    """
-
-    fig, ax = plt.subplots(figsize=(8, 8))
-
-    im = ax.imshow(joint_dist, cmap='viridis')
-
-    plt.colorbar(im)
-
-    ax.set_xlabel(x_label)
-
-    ax.set_ylabel(y_label)
-
-    return fig
-
-```
 
 ## Best Practices
 

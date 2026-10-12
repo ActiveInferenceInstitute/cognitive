@@ -43,140 +43,25 @@ Differential geometry provides the mathematical foundation for understanding the
 
 ## Manifold Theory
 
-### Differentiable Manifolds
-
-```python
-
-class DifferentiableManifold:
-
-    """
-
-    Differentiable manifold implementation.
-
-    Theory:
-
-        - manifold_theory
-
-        - differential_topology
-
-        - smooth_structures
-
-    Mathematics:
-
-        - topology
-
-        - calculus_on_manifolds
-
-    """
-
-    def __init__(self,
-
-                 dimension: int,
-
-                 atlas: Dict[str, Chart]):
-
-        self.dim = dimension
-
-        self.atlas = atlas
-
-        self._validate_smooth_structure()
-
-    def coordinate_change(self,
-
-                        chart1: str,
-
-                        chart2: str,
-
-                        point: np.ndarray) -> np.ndarray:
-
-        """Change coordinates between charts."""
-
-        if not self._charts_overlap(chart1, chart2):
-
-            raise ValueError("Charts do not overlap")
-
-        return self._compute_transition(chart1, chart2, point)
-
-    def tangent_space(self,
-
-                     point: np.ndarray,
-
-                     chart: str) -> TangentSpace:
-
-        """Get tangent space at point."""
-
-        return self._construct_tangent_space(point, chart)
-
-```
-
 ### Riemannian Metrics
 
 ```python
+import numpy as np
 
-class RiemannianMetric:
+# Round sphere in coordinates (theta, phi): ds^2 = dtheta^2 + sin^2(theta) dphi^2
+def metric(x):
+    return np.array([[1.0, 0.0], [0.0, np.sin(x[0]) ** 2]])
 
-    """
+def curve_length(curve, ts):
+    """Length of a curve x(t) as the sum of sqrt(g(dx, dx)) over small steps."""
+    xs = np.array([curve(t) for t in ts])
+    dx = np.diff(xs, axis=0)
+    mid = 0.5 * (xs[1:] + xs[:-1])
+    return sum(np.sqrt(d @ metric(m) @ d) for d, m in zip(dx, mid))
 
-    Riemannian metric implementation.
-
-    Theory:
-
-        - riemannian_geometry
-
-        - metric_tensor
-
-        - inner_product
-
-    Mathematics:
-
-        - differential_geometry
-
-        - tensor_calculus
-
-    """
-
-    def __init__(self,
-
-                 manifold: DifferentiableManifold):
-
-        self.manifold = manifold
-
-    def metric_tensor(self,
-
-                     point: np.ndarray,
-
-                     chart: str) -> np.ndarray:
-
-        """Compute metric tensor at point."""
-
-        # Get coordinate basis
-
-        basis = self._coordinate_basis(point, chart)
-
-        # Compute components
-
-        g = self._compute_metric_components(basis)
-
-        return g
-
-    def distance(self,
-
-                p: np.ndarray,
-
-                q: np.ndarray,
-
-                chart: str) -> float:
-
-        """Compute Riemannian distance."""
-
-        # Find geodesic
-
-        gamma = self._solve_geodesic_equation(p, q)
-
-        # Compute length
-
-        return self._compute_curve_length(gamma)
-
+ts = np.linspace(0, 1, 2001)
+equator = lambda t: np.array([np.pi / 2, 2 * np.pi * t])
+print(curve_length(equator, ts), 2 * np.pi)           # great circle
 ```
 
 ## Connections and Transport
@@ -184,133 +69,47 @@ class RiemannianMetric:
 ### Levi-Civita Connection
 
 ```python
+import numpy as np
 
-class LeviCivitaConnection:
+def metric(x):
+    return np.array([[1.0, 0.0], [0.0, np.sin(x[0]) ** 2]])
 
-    """
+def christoffel(x, h=1e-5):
+    """Gamma^k_ij = 1/2 g^{kl} (d_i g_lj + d_j g_li - d_l g_ij), by central differences."""
+    dg = np.array([(metric(x + h * e) - metric(x - h * e)) / (2 * h) for e in np.eye(2)])  # dg[i, l, j]
+    ginv = np.linalg.inv(metric(x))
+    return 0.5 * np.einsum("kl,ilj->kij", ginv, dg) \
+         + 0.5 * np.einsum("kl,jli->kij", ginv, dg) \
+         - 0.5 * np.einsum("kl,lij->kij", ginv, dg)
 
-    Levi-Civita connection implementation.
-
-    Theory:
-
-        - riemannian_connection
-
-        - parallel_transport
-
-        - geodesics
-
-    Mathematics:
-
-        - differential_geometry
-
-        - tensor_calculus
-
-    """
-
-    def __init__(self,
-
-                 metric: RiemannianMetric):
-
-        self.metric = metric
-
-    def christoffel_symbols(self,
-
-                          point: np.ndarray,
-
-                          chart: str) -> np.ndarray:
-
-        """Compute Christoffel symbols."""
-
-        # Metric and derivatives
-
-        g = self.metric.metric_tensor(point, chart)
-
-        dg = self._metric_derivatives(point, chart)
-
-        # Compute symbols
-
-        gamma = self._compute_christoffel(g, dg)
-
-        return gamma
-
-    def parallel_transport(self,
-
-                         vector: np.ndarray,
-
-                         curve: Curve) -> np.ndarray:
-
-        """Parallel transport vector along curve."""
-
-        return self._solve_parallel_transport(vector, curve)
-
+x = np.array([1.0, 0.3])                      # illustrative point
+G = christoffel(x)
+print(G[0, 1, 1], -np.sin(x[0]) * np.cos(x[0]))   # Gamma^theta_{phi phi}
+print(G[1, 0, 1], 1 / np.tan(x[0]))               # Gamma^phi_{theta phi}
 ```
 
 ### Geodesic Flow
 
 ```python
+import numpy as np
 
-class GeodesicFlow:
+def geodesic_rhs(state):
+    """x'' = -Gamma^k_ij x'^i x'^j on the round sphere, state = (theta, phi, theta', phi')."""
+    th, ph, dth, dph = state
+    return np.array([dth, dph,
+                     np.sin(th) * np.cos(th) * dph ** 2,
+                     -2.0 * dth * dph / np.tan(th)])
 
-    """
+def rk4(f, y, h, n):
+    for _ in range(n):
+        k1 = f(y); k2 = f(y + 0.5 * h * k1); k3 = f(y + 0.5 * h * k2); k4 = f(y + h * k3)
+        y = y + h * (k1 + 2 * k2 + 2 * k3 + k4) / 6
+    return y
 
-    Geodesic flow implementation.
-
-    Theory:
-
-        - geodesic_equation
-
-        - exponential_map
-
-        - hamiltonian_flow
-
-    Mathematics:
-
-        - differential_geometry
-
-        - symplectic_geometry
-
-    """
-
-    def __init__(self,
-
-                 connection: LeviCivitaConnection):
-
-        self.connection = connection
-
-    def geodesic(self,
-
-                initial_point: np.ndarray,
-
-                initial_velocity: np.ndarray,
-
-                time: float) -> np.ndarray:
-
-        """Compute geodesic flow."""
-
-        # Geodesic equation
-
-        def geodesic_equation(t, state):
-
-            x, v = state[:self.dim], state[self.dim:]
-
-            gamma = self.connection.christoffel_symbols(x)
-
-            return np.concatenate([v, -gamma.dot(v).dot(v)])
-
-        # Solve ODE
-
-        solution = solve_ivp(
-
-            geodesic_equation,
-
-            (0, time),
-
-            np.concatenate([initial_point, initial_velocity])
-
-        )
-
-        return solution.y[:self.dim, -1]
-
+y0 = np.array([1.0, 0.0, 0.3, 0.8])           # illustrative initial point and velocity
+y1 = rk4(geodesic_rhs, y0, 1e-3, 5000)
+speed2 = lambda y: y[2] ** 2 + np.sin(y[0]) ** 2 * y[3] ** 2
+print("speed^2 conserved:", speed2(y0), speed2(y1))
 ```
 
 ## Curvature Theory
@@ -318,73 +117,26 @@ class GeodesicFlow:
 ### Riemann Curvature
 
 ```python
+import numpy as np
 
-class RiemannCurvature:
+def gamma(x):
+    """Christoffel symbols of the round sphere, indexed [k, i, j]."""
+    G = np.zeros((2, 2, 2))
+    G[0, 1, 1] = -np.sin(x[0]) * np.cos(x[0])
+    G[1, 0, 1] = G[1, 1, 0] = 1 / np.tan(x[0])
+    return G
 
-    """
+def riemann(x, h=1e-5):
+    """R^r_{s m n} = d_m Gamma^r_{ns} - d_n Gamma^r_{ms} + Gamma^r_{ml} Gamma^l_{ns} - Gamma^r_{nl} Gamma^l_{ms}."""
+    dG = np.array([(gamma(x + h * e) - gamma(x - h * e)) / (2 * h) for e in np.eye(2)])   # dG[m, r, n, s]
+    G = gamma(x)
+    return (np.einsum("mrns->rsmn", dG) - np.einsum("nrms->rsmn", dG)
+            + np.einsum("rml,lns->rsmn", G, G) - np.einsum("rnl,lms->rsmn", G, G))
 
-    Riemann curvature implementation.
-
-    Theory:
-
-        - curvature_tensor
-
-        - sectional_curvature
-
-        - ricci_curvature
-
-    Mathematics:
-
-        - differential_geometry
-
-        - tensor_calculus
-
-    """
-
-    def __init__(self,
-
-                 connection: LeviCivitaConnection):
-
-        self.connection = connection
-
-    def curvature_tensor(self,
-
-                        point: np.ndarray,
-
-                        chart: str) -> np.ndarray:
-
-        """Compute Riemann curvature tensor."""
-
-        # Connection coefficients
-
-        gamma = self.connection.christoffel_symbols(point, chart)
-
-        # Compute components
-
-        R = self._compute_riemann_components(gamma)
-
-        return R
-
-    def sectional_curvature(self,
-
-                           point: np.ndarray,
-
-                           plane: np.ndarray,
-
-                           chart: str) -> float:
-
-        """Compute sectional curvature."""
-
-        # Curvature tensor
-
-        R = self.curvature_tensor(point, chart)
-
-        # Project onto plane
-
-        K = self._compute_sectional(R, plane)
-
-        return K
-
+x = np.array([1.0, 0.3])                      # illustrative point
+R = riemann(x)
+K = R[0, 1, 0, 1] / np.sin(x[0]) ** 2         # sectional curvature = R^theta_{phi theta phi} / g_phiphi
+print("Gaussian curvature of the unit sphere:", K)
 ```
 
 ## Lie Theory
@@ -392,121 +144,21 @@ class RiemannCurvature:
 ### Lie Groups
 
 ```python
+import numpy as np
 
-class LieGroup:
+def hat(w):
+    return np.array([[0, -w[2], w[1]], [w[2], 0, -w[0]], [-w[1], w[0], 0]])
 
-    """
+def exp_so3(w):
+    """Rodrigues' formula: exponential map from the Lie algebra so(3) to the group SO(3)."""
+    th = np.linalg.norm(w)
+    if th < 1e-12:
+        return np.eye(3)
+    K = hat(w / th)
+    return np.eye(3) + np.sin(th) * K + (1 - np.cos(th)) * K @ K
 
-    Lie group implementation.
-
-    Theory:
-
-        - lie_groups
-
-        - lie_algebras
-
-        - exponential_map
-
-    Mathematics:
-
-        - differential_geometry
-
-        - group_theory
-
-    """
-
-    def __init__(self,
-
-                 dimension: int,
-
-                 multiplication: Callable):
-
-        self.dim = dimension
-
-        self.multiply = multiplication
-
-    def lie_algebra_basis(self) -> List[np.ndarray]:
-
-        """Get Lie algebra basis."""
-
-        return self._compute_basis()
-
-    def exponential(self,
-
-                   X: np.ndarray) -> np.ndarray:
-
-        """Compute Lie group exponential."""
-
-        return self._compute_exponential(X)
-
-    def adjoint(self,
-
-               g: np.ndarray,
-
-               X: np.ndarray) -> np.ndarray:
-
-        """Compute adjoint action."""
-
-        return self._compute_adjoint(g, X)
-
-```
-
-### Principal Bundles
-
-```python
-
-class PrincipalBundle:
-
-    """
-
-    Principal bundle implementation.
-
-    Theory:
-
-        - fiber_bundles
-
-        - principal_connections
-
-        - gauge_theory
-
-    Mathematics:
-
-        - differential_geometry
-
-        - lie_theory
-
-    """
-
-    def __init__(self,
-
-                 base: DifferentiableManifold,
-
-                 structure_group: LieGroup):
-
-        self.base = base
-
-        self.group = structure_group
-
-    def local_trivialization(self,
-
-                           point: np.ndarray,
-
-                           chart: str) -> Tuple[np.ndarray, np.ndarray]:
-
-        """Get local trivialization."""
-
-        return self._compute_trivialization(point, chart)
-
-    def connection_form(self,
-
-                       point: np.ndarray,
-
-                       chart: str) -> np.ndarray:
-
-        """Get connection 1-form."""
-
-        return self._compute_connection_form(point, chart)
-
+R = exp_so3(np.array([0.3, -0.5, 0.8]))       # illustrative algebra element
+print(np.allclose(R.T @ R, np.eye(3)), np.isclose(np.linalg.det(R), 1.0))
 ```
 
 ## Applications to Active Inference
@@ -514,209 +166,15 @@ class PrincipalBundle:
 ### Belief Manifolds
 
 ```python
-
-class BeliefManifold:
-
-    """
-
-    Belief manifold implementation.
-
-    Theory:
-
-        - statistical_manifolds
-
-        - information_geometry
-
-        - belief_space
-
-    Mathematics:
-
-        - differential_geometry
-
-        - probability_theory
-
-    """
-
-    def __init__(self,
-
-                 dimension: int,
-
-                 probability_model: ProbabilityModel):
-
-        self.dim = dimension
-
-        self.model = probability_model
-
-    def fisher_metric(self,
-
-                     belief: np.ndarray) -> np.ndarray:
-
-        """Compute Fisher information metric."""
-
-        return self._compute_fisher_metric(belief)
-
-    def natural_gradient(self,
-
-                        belief: np.ndarray,
-
-                        gradient: np.ndarray) -> np.ndarray:
-
-        """Compute natural gradient."""
-
-        G = self.fisher_metric(belief)
-
-        return np.linalg.solve(G, gradient)
-
-```
-
-### Free Energy Geometry
-
-```python
-
-class FreeEnergyGeometry:
-
-    """
-
-    Free energy geometric structure.
-
-    Theory:
-
-        - free_energy_principle
-
-        - information_geometry
-
-        - optimal_control
-
-    Mathematics:
-
-        - differential_geometry
-
-        - symplectic_geometry
-
-    """
-
-    def __init__(self,
-
-                 belief_manifold: BeliefManifold,
-
-                 free_energy: Callable):
-
-        self.manifold = belief_manifold
-
-        self.F = free_energy
-
-    def free_energy_metric(self,
-
-                         belief: np.ndarray) -> np.ndarray:
-
-        """Compute metric induced by free energy."""
-
-        # Fisher metric
-
-        G_fisher = self.manifold.fisher_metric(belief)
-
-        # Free energy Hessian
-
-        H = self._free_energy_hessian(belief)
-
-        return G_fisher + H
-
-    def hamiltonian_flow(self,
-
-                        initial_belief: np.ndarray,
-
-                        time: float) -> np.ndarray:
-
-        """Compute Hamiltonian flow of free energy."""
-
-        return self._solve_hamilton_equations(initial_belief, time)
-
-```
-
-## Implementation Considerations
-
-### Numerical Methods
-
-```python
-
-# @numerical_methods
-
-numerical_implementations = {
-
-    "geodesics": {
-
-        "runge_kutta": "4th order RK method",
-
-        "symplectic": "Symplectic integrators",
-
-        "variational": "Variational integrators"
-
-    },
-
-    "curvature": {
-
-        "finite_differences": "Numerical derivatives",
-
-        "automatic_differentiation": "AD for tensors",
-
-        "symbolic": "Symbolic computation"
-
-    },
-
-    "parallel_transport": {
-
-        "schild": "Schild's ladder method",
-
-        "pole": "Pole ladder method",
-
-        "numerical": "Direct integration"
-
-    }
-
-}
-
-```
-
-### Computational Efficiency
-
-```python
-
-# @efficiency_considerations
-
-efficiency_methods = {
-
-    "metric_computation": {
-
-        "caching": "Cache metric tensors",
-
-        "approximation": "Low-rank approximations",
-
-        "sparsity": "Exploit sparsity patterns"
-
-    },
-
-    "geodesic_computation": {
-
-        "adaptive": "Adaptive step size",
-
-        "local": "Local coordinate systems",
-
-        "parallel": "Parallel transport methods"
-
-    },
-
-    "curvature_computation": {
-
-        "lazy": "Lazy tensor evaluation",
-
-        "symmetry": "Exploit symmetries",
-
-        "distributed": "Parallel computation"
-
-    }
-
-}
-
+import numpy as np
+
+def fisher_rao_distance(p, q):
+    """Geodesic distance on the probability simplex: x -> 2 sqrt(x) maps it to a sphere of radius 2."""
+    return 2.0 * np.arccos(np.clip(np.sum(np.sqrt(p * q)), -1.0, 1.0))
+
+p = np.array([0.7, 0.2, 0.1])                 # illustrative beliefs
+q = np.array([0.1, 0.3, 0.6])
+print(fisher_rao_distance(p, q))
 ```
 
 ## Documentation Links
@@ -1054,178 +512,6 @@ semantic_relations:
    - g is metric
 
    - dV_g is volume form
-
-## Implementation
-
-### Differential Geometry Tools
-
-```python
-
-class DifferentialGeometry:
-
-    def __init__(self,
-
-                 manifold: Manifold,
-
-                 metric: Metric):
-
-        """Initialize differential geometry tools.
-
-        Args:
-
-            manifold: Manifold structure
-
-            metric: Riemannian metric
-
-        """
-
-        self.manifold = manifold
-
-        self.metric = metric
-
-    def christoffel_symbols(self,
-
-                           point: np.ndarray) -> np.ndarray:
-
-        """Compute Christoffel symbols.
-
-        Args:
-
-            point: Point on manifold
-
-        Returns:
-
-            gamma: Christoffel symbols
-
-        """
-
-        # Get metric and derivatives
-
-        g = self.metric.evaluate(point)
-
-        dg = self.metric.derivative(point)
-
-        # Compute inverse metric
-
-        g_inv = np.linalg.inv(g)
-
-        # Compute Christoffel symbols
-
-        gamma = np.zeros((g.shape[0], g.shape[0], g.shape[0]))
-
-        for i in range(g.shape[0]):
-
-            for j in range(g.shape[0]):
-
-                for k in range(g.shape[0]):
-
-                    gamma[i,j,k] = 0.5 * np.sum(
-
-                        g_inv[i,:] * (
-
-                            dg[j,:,k] + dg[k,:,j] - dg[:,j,k]
-
-                        )
-
-                    )
-
-        return gamma
-
-```
-
-### Geodesic Integration
-
-```python
-
-class GeodesicIntegrator:
-
-    def __init__(self,
-
-                 geometry: DifferentialGeometry,
-
-                 step_size: float = 0.01):
-
-        """Initialize geodesic integrator.
-
-        Args:
-
-            geometry: Differential geometry tools
-
-            step_size: Integration step size
-
-        """
-
-        self.geometry = geometry
-
-        self.step_size = step_size
-
-    def integrate(self,
-
-                 initial_point: np.ndarray,
-
-                 initial_velocity: np.ndarray,
-
-                 n_steps: int) -> Tuple[np.ndarray, np.ndarray]:
-
-        """Integrate geodesic equation.
-
-        Args:
-
-            initial_point: Starting point
-
-            initial_velocity: Initial velocity
-
-            n_steps: Number of integration steps
-
-        Returns:
-
-            points: Geodesic points
-
-            velocities: Geodesic velocities
-
-        """
-
-        points = [initial_point]
-
-        velocities = [initial_velocity]
-
-        for _ in range(n_steps):
-
-            # Get current state
-
-            point = points[-1]
-
-            velocity = velocities[-1]
-
-            # Compute Christoffel symbols
-
-            gamma = self.geometry.christoffel_symbols(point)
-
-            # Update velocity
-
-            acceleration = -np.sum(
-
-                gamma * velocity[None,:] * velocity[:,None],
-
-                axis=(0,1)
-
-            )
-
-            new_velocity = velocity + self.step_size * acceleration
-
-            # Update position
-
-            new_point = point + self.step_size * velocity
-
-            # Store results
-
-            points.append(new_point)
-
-            velocities.append(new_velocity)
-
-        return np.array(points), np.array(velocities)
-
-```
 
 ## Advanced Topics
 
