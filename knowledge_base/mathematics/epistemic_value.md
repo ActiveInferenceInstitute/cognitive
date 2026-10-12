@@ -302,312 +302,26 @@ Links to:
 
 ## Enhanced Implementation
 
+The snippet below computes epistemic value as the mutual information between hidden states and observations for a small discrete likelihood matrix. The matrix and the state distribution are illustrative.
+
 ```python
+import numpy as np
+from cognitive.utils.matrix_utils import compute_entropy
 
-class EpistemicValueCalculator:
+# Illustrative likelihood P(o|s): rows are observations, columns are hidden states.
+A = np.array([[0.9, 0.1, 0.5],
+              [0.1, 0.9, 0.5]])
+q_s = np.array([1 / 3, 1 / 3, 1 / 3])  # illustrative predicted states Q(s | pi)
 
-    """Compute epistemic value components with advanced features."""
 
-    def __init__(self, 
+def epistemic_value(A: np.ndarray, q_s: np.ndarray) -> tuple[float, float]:
+    """Return (I(s; o), ambiguity) in nats, with I = H[Q(o)] - E_Q(s) H[P(o|s)]."""
+    ambiguity = float(q_s @ compute_entropy(A, axis=0))
+    return float(compute_entropy(A @ q_s)) - ambiguity, ambiguity
 
-                 A: np.ndarray,           # Observation model
 
-                 temperature: float = 1.0, # Exploration control
-
-                 normalize: bool = True,   # Normalize outputs
-
-                 stability_threshold: float = 1e-10):  # Numerical stability
-
-        """Initialize calculator with model parameters.
-
-        Args:
-
-            A: Observation likelihood matrix P(o|s)
-
-            temperature: Exploration control parameter
-
-            normalize: Whether to normalize component values
-
-            stability_threshold: Minimum value for numerical stability
-
-        """
-
-        self.A = A
-
-        self.temperature = temperature
-
-        self.normalize = normalize
-
-        self.stability_threshold = stability_threshold
-
-    def compute_information_gain(self,
-
-                               prior: np.ndarray,
-
-                               posterior: np.ndarray,
-
-                               observation_prob: np.ndarray) -> float:
-
-        """Compute expected information gain.
-
-        Args:
-
-            prior: Prior state distribution Q(s|π)
-
-            posterior: Posterior state distribution Q(s|o,π)
-
-            observation_prob: Observation probability Q(o|π)
-
-        Returns:
-
-            Expected information gain value
-
-        """
-
-        # Ensure numerical stability
-
-        prior = np.maximum(prior, self.stability_threshold)
-
-        posterior = np.maximum(posterior, self.stability_threshold)
-
-        observation_prob = np.maximum(observation_prob, self.stability_threshold)
-
-        # Normalize distributions
-
-        prior /= prior.sum()
-
-        posterior /= posterior.sum()
-
-        observation_prob /= observation_prob.sum()
-
-        # Compute KL divergence
-
-        kl_div = np.sum(posterior * (np.log(posterior) - np.log(prior)))
-
-        # Weight by observation probability
-
-        return np.sum(observation_prob * kl_div)
-
-    def compute_uncertainty_reduction(self,
-
-                                   prior: np.ndarray,
-
-                                   posterior: np.ndarray,
-
-                                   observation_prob: np.ndarray) -> float:
-
-        """Compute expected uncertainty reduction.
-
-        Args:
-
-            prior: Prior state distribution Q(s|π)
-
-            posterior: Posterior state distribution Q(s|o,π)
-
-            observation_prob: Observation probability Q(o|π)
-
-        Returns:
-
-            Expected entropy reduction
-
-        """
-
-        # Compute entropies with numerical stability
-
-        prior_entropy = -np.sum(prior * np.log(prior + self.stability_threshold))
-
-        posterior_entropy = -np.sum(posterior * 
-
-                                  np.log(posterior + self.stability_threshold))
-
-        # Weight posterior entropy by observation probability
-
-        expected_posterior_entropy = np.sum(observation_prob * posterior_entropy)
-
-        return prior_entropy - expected_posterior_entropy
-
-    def compute_exploration_drive(self,
-
-                                expected_free_energy: np.ndarray) -> float:
-
-        """Compute exploration drive component.
-
-        Args:
-
-            expected_free_energy: EFE values for each action
-
-        Returns:
-
-            Exploration drive value
-
-        """
-
-        return -self.temperature * expected_free_energy
-
-    def compute_total_epistemic_value(self,
-
-                                    prior: np.ndarray,
-
-                                    posterior: np.ndarray,
-
-                                    observation_prob: np.ndarray,
-
-                                    expected_free_energy: np.ndarray,
-
-                                    weights: Optional[Dict[str, float]] = None
-
-                                    ) -> Dict[str, float]:
-
-        """Compute all epistemic value components with optional weighting.
-
-        Args:
-
-            prior: Prior state distribution Q(s|π)
-
-            posterior: Posterior state distribution Q(s|o,π)
-
-            observation_prob: Observation probability Q(o|π)
-
-            expected_free_energy: EFE values for each action
-
-            weights: Optional component weights (default: equal weights)
-
-        Returns:
-
-            Dictionary containing all component values and total
-
-        """
-
-        # Default to equal weights if not provided
-
-        if weights is None:
-
-            weights = {
-
-                'information_gain': 1.0,
-
-                'uncertainty_reduction': 1.0,
-
-                'exploration_drive': 1.0
-
-            }
-
-        # Compute components
-
-        info_gain = self.compute_information_gain(
-
-            prior, posterior, observation_prob)
-
-        uncertainty_red = self.compute_uncertainty_reduction(
-
-            prior, posterior, observation_prob)
-
-        exploration = self.compute_exploration_drive(
-
-            expected_free_energy)
-
-        # Normalize if requested
-
-        if self.normalize:
-
-            max_val = max(abs(info_gain), abs(uncertainty_red), abs(exploration))
-
-            info_gain /= max_val
-
-            uncertainty_red /= max_val
-
-            exploration /= max_val
-
-        # Compute weighted total
-
-        total_value = (
-
-            weights['information_gain'] * info_gain +
-
-            weights['uncertainty_reduction'] * uncertainty_red +
-
-            weights['exploration_drive'] * exploration
-
-        )
-
-        return {
-
-            'information_gain': info_gain,
-
-            'uncertainty_reduction': uncertainty_red,
-
-            'exploration_drive': exploration,
-
-            'total_value': total_value,
-
-            'weights': weights
-
-        }
-
-    def analyze_components(self,
-
-                         results: Dict[str, float]
-
-                         ) -> Dict[str, float]:
-
-        """Analyze relative contributions of components.
-
-        Args:
-
-            results: Results from compute_total_epistemic_value
-
-        Returns:
-
-            Dictionary with component analysis metrics
-
-        """
-
-        total = results['total_value']
-
-        weights = results['weights']
-
-        # Compute relative contributions
-
-        contributions = {
-
-            'info_gain_contribution': (
-
-                weights['information_gain'] * 
-
-                results['information_gain'] / total
-
-            ),
-
-            'uncertainty_contribution': (
-
-                weights['uncertainty_reduction'] * 
-
-                results['uncertainty_reduction'] / total
-
-            ),
-
-            'exploration_contribution': (
-
-                weights['exploration_drive'] * 
-
-                results['exploration_drive'] / total
-
-            )
-
-        }
-
-        # Add balance metrics
-
-        contributions['exploration_exploitation_ratio'] = (
-
-            results['exploration_drive'] / 
-
-            (results['information_gain'] + results['uncertainty_reduction'])
-
-        )
-
-        return contributions
-
+gain, ambiguity = epistemic_value(A, q_s)
+print(f"epistemic value {gain:.4f} nats, ambiguity {ambiguity:.4f} nats")
 ```
 
 ## Properties
@@ -1563,53 +1277,31 @@ graph TD
 ### Numerical Stability
 
 ```python
+import numpy as np
+
 
 def stabilized_computation(x: np.ndarray, epsilon: float = 1e-10) -> np.ndarray:
-
-    """Compute with numerical stability."""
-
+    """Floor values at epsilon so that logarithms stay finite."""
     return np.maximum(x, epsilon)
-
 ```
 
 ### Gradient Methods
 
 ```python
+import numpy as np
 
-def natural_gradient(
 
-    fisher: np.ndarray,
-
-    gradient: np.ndarray,
-
-    learning_rate: float
-
-) -> np.ndarray:
-
+def natural_gradient(fisher: np.ndarray, gradient: np.ndarray, learning_rate: float) -> np.ndarray:
     """Update using natural gradient."""
-
     return learning_rate * np.linalg.solve(fisher, gradient)
-
 ```
 
 ### Adaptive Temperature
 
 ```python
-
-def adapt_temperature(
-
-    uncertainty: float,
-
-    min_temp: float = 0.1,
-
-    max_temp: float = 10.0
-
-) -> float:
-
-    """Adapt temperature based on uncertainty."""
-
+def adapt_temperature(uncertainty: float, min_temp: float = 0.1, max_temp: float = 10.0) -> float:
+    """Adapt temperature based on uncertainty in [0, 1]."""
     return min_temp + (max_temp - min_temp) * uncertainty
-
 ```
 
 ## Future Directions
@@ -1644,45 +1336,15 @@ def adapt_temperature(
 
 1. **Parallelization**
 
-   ```python
-
-   @parallel_computation
-
-   def batch_epistemic_value(states: List[np.ndarray]) -> np.ndarray:
-
-       """Compute epistemic value in parallel."""
-
-       return np.array([compute_epistemic(s) for s in states])
-
-   ```
+   Each policy's epistemic value depends only on its own predicted state distribution, so policies can be evaluated independently.
 
 1. **GPU Acceleration**
 
-   ```python
-
-   @cuda_optimized
-
-   def gpu_information_gain(prior: torch.Tensor,
-
-                          posterior: torch.Tensor) -> torch.Tensor:
-
-       """Compute information gain on GPU."""
-
-       return torch.sum(posterior * torch.log(posterior / prior))
-
-   ```
+   The computation reduces to matrix products and elementwise logarithms.
 
 1. **Vectorization**
 
-   ```python
-
-   def vectorized_entropy(distributions: np.ndarray) -> np.ndarray:
-
-       """Compute entropy for multiple distributions."""
-
-       return -np.sum(distributions * np.log(distributions + 1e-10), axis=1)
-
-   ```
+   The function `compute_entropy` in `cognitive.utils.matrix_utils` computes the entropy of every row or column of a matrix of distributions in one call.
 
 ## Active Inference and Free Energy Connections
 
@@ -1760,277 +1422,32 @@ graph TD
 
    $G = \underbrace{D_{KL}[Q(s|\pi)\|P(s|\pi)]}_{\text{epistemic value}} - \underbrace{\mathbb{E}_{Q(o|\pi)}[\ln P(o)]}_{\text{pragmatic value}}$
 
-   Implementation:
+   Numerically, the one-step expected free energy from the package equals the cross-entropy between predicted observations and preferences minus the epistemic value (illustrative values):
 
    ```python
-
-   class FreeEnergyUnification:
-
-       """Unified implementation of free energy principles."""
-
-       def __init__(self,
-
-                    A: np.ndarray,  # Observation model
-
-                    B: np.ndarray,  # Transition model
-
-                    C: np.ndarray,  # Preference matrix
-
-                    D: np.ndarray): # Prior beliefs
-
-           self.A = A
-
-           self.B = B
-
-           self.C = C
-
-           self.D = D
-
-       def compute_variational_free_energy(self,
-
-                                         beliefs: np.ndarray,
-
-                                         observation: int) -> Dict[str, float]:
-
-           """Compute VFE components.
-
-           Args:
-
-               beliefs: Current belief distribution Q(s)
-
-               observation: Observed state index
-
-           Returns:
-
-               Dictionary of VFE components
-
-           """
-
-           # Accuracy term
-
-           accuracy = -np.sum(beliefs * np.log(self.A[observation, :] + 1e-10))
-
-           # Complexity term
-
-           complexity = kl_divergence(beliefs, self.D)
-
-           return {
-
-               'accuracy': accuracy,
-
-               'complexity': complexity,
-
-               'total': accuracy + complexity
-
-           }
-
-       def compute_expected_free_energy(self,
-
-                                      beliefs: np.ndarray,
-
-                                      policy: int) -> Dict[str, float]:
-
-           """Compute EFE components.
-
-           Args:
-
-               beliefs: Current belief distribution Q(s)
-
-               policy: Policy index
-
-           Returns:
-
-               Dictionary of EFE components
-
-           """
-
-           # Predict next state
-
-           Qs_pi = self.B[:, :, policy] @ beliefs
-
-           # Predict observations
-
-           Qo_pi = self.A @ Qs_pi
-
-           # Epistemic value (information gain)
-
-           epistemic = compute_entropy(Qs_pi)
-
-           # Pragmatic value (preference satisfaction)
-
-           pragmatic = -np.sum(Qo_pi * self.C)
-
-           return {
-
-               'epistemic': epistemic,
-
-               'pragmatic': pragmatic,
-
-               'total': epistemic + pragmatic
-
-           }
-
+   import numpy as np
+   from cognitive.utils.matrix_utils import compute_entropy, expected_free_energy, softmax
+   
+   A = np.array([[0.9, 0.1, 0.5],
+                 [0.1, 0.9, 0.5]])   # illustrative P(o|s)
+   B = np.eye(3)[:, :, None]          # one action that leaves the state unchanged
+   C = np.array([1.0, 0.0])           # illustrative preferences over observations
+   q_s = np.array([0.5, 0.25, 0.25])  # illustrative beliefs
+   
+   q_o = A @ q_s
+   gain = compute_entropy(q_o) - q_s @ compute_entropy(A, axis=0)  # epistemic value I(s; o)
+   G = expected_free_energy(A, B, C, q_s, action=0)                # risk + ambiguity
+   cross_entropy = -q_o @ np.log(softmax(C))                       # risk + H[Q(o)]
+   assert np.isclose(G, cross_entropy - gain)
    ```
 
 1. **Markov Blanket Structure**
 
-   ```python
-
-   class MarkovBlanketStructure:
-
-       """Implementation of Markov blanket separation principle."""
-
-       def __init__(self,
-
-                    internal_states: np.ndarray,
-
-                    blanket_states: np.ndarray,
-
-                    external_states: np.ndarray):
-
-           self.internal = internal_states
-
-           self.blanket = blanket_states
-
-           self.external = external_states
-
-       def verify_conditional_independence(self) -> bool:
-
-           """Verify conditional independence structure."""
-
-           # Compute mutual information between internal and external
-
-           # conditioned on blanket states
-
-           mi = self.conditional_mutual_information(
-
-               self.internal, self.external, self.blanket)
-
-           # Should be approximately zero for valid Markov blanket
-
-           return np.abs(mi) < 1e-6
-
-       def compute_blanket_dynamics(self,
-
-                                  dt: float = 0.01) -> np.ndarray:
-
-           """Compute dynamics of blanket states."""
-
-           # Implement coupled differential equations
-
-           def dynamics(state: np.ndarray) -> np.ndarray:
-
-               # Blanket state evolution considering both internal
-
-               # and external influences
-
-               internal_influence = self.internal_coupling(state)
-
-               external_influence = self.external_coupling(state)
-
-               return internal_influence + external_influence
-
-           return integrate_dynamics(dynamics, self.blanket, dt)
-
-   ```
+   In a Markov blanket, internal and external states are conditionally independent given the blanket states.
 
 1. **Perception-Action Coupling**
 
-   ```python
-
-   class PerceptionActionCoupling:
-
-       """Implementation of perception-action cycle."""
-
-       def __init__(self,
-
-                    perception_model: Callable,
-
-                    action_model: Callable,
-
-                    learning_rate: float = 0.1):
-
-           self.perception = perception_model
-
-           self.action = action_model
-
-           self.lr = learning_rate
-
-       def perception_step(self,
-
-                          observation: np.ndarray,
-
-                          prior_beliefs: np.ndarray) -> np.ndarray:
-
-           """Update beliefs through perception."""
-
-           # Compute posterior using perception model
-
-           likelihood = self.perception(observation)
-
-           posterior = self.update_beliefs(likelihood, prior_beliefs)
-
-           return posterior
-
-       def action_step(self,
-
-                      beliefs: np.ndarray,
-
-                      goal_state: np.ndarray) -> np.ndarray:
-
-           """Select action based on beliefs."""
-
-           # Compute policy using action model
-
-           policy = self.action(beliefs, goal_state)
-
-           return self.execute_policy(policy)
-
-       def active_inference_cycle(self,
-
-                                initial_beliefs: np.ndarray,
-
-                                goal_state: np.ndarray,
-
-                                num_steps: int) -> Dict[str, List]:
-
-           """Run complete active inference cycle."""
-
-           beliefs = initial_beliefs
-
-           history = {
-
-               'beliefs': [beliefs],
-
-               'actions': [],
-
-               'observations': []
-
-           }
-
-           for _ in range(num_steps):
-
-               # Perception phase
-
-               observation = self.get_observation()
-
-               beliefs = self.perception_step(observation, beliefs)
-
-               # Action phase
-
-               action = self.action_step(beliefs, goal_state)
-
-               # Update history
-
-               history['beliefs'].append(beliefs)
-
-               history['actions'].append(action)
-
-               history['observations'].append(observation)
-
-           return history
-
-   ```
+   Perception updates beliefs from observations, and action selects a policy from beliefs.
 
 ### Theoretical Implications
 
@@ -2050,159 +1467,25 @@ graph TD
 
 1. **Homeostatic Regulation**
 
-   ```python
-
-   class HomeostaticRegulation:
-
-       """Implementation of homeostatic regulation."""
-
-       def __init__(self,
-
-                    target_state: np.ndarray,
-
-                    tolerance: float = 0.1):
-
-           self.target = target_state
-
-           self.tolerance = tolerance
-
-       def compute_regulation_signal(self,
-
-                                   current_state: np.ndarray) -> np.ndarray:
-
-           """Compute regulatory signal to maintain homeostasis."""
-
-           error = self.target - current_state
-
-           return self.generate_control_signal(error)
-
-       def is_homeostatic(self,
-
-                         state_history: np.ndarray) -> bool:
-
-           """Check if system maintains homeostasis."""
-
-           deviations = np.abs(state_history - self.target)
-
-           return np.all(deviations < self.tolerance)
-
-   ```
+   Homeostasis keeps states within a tolerance of a target state.
 
 1. **Information Geometry Connection**
 
-   ```python
-
-   class InformationGeometricStructure:
-
-       """Implementation of information geometric aspects."""
-
-       def __init__(self,
-
-                    manifold_dim: int,
-
-                    metric_type: str = 'fisher'):
-
-           self.dim = manifold_dim
-
-           self.metric = self.initialize_metric(metric_type)
-
-       def parallel_transport(self,
-
-                            vector: np.ndarray,
-
-                            path: np.ndarray) -> np.ndarray:
-
-           """Parallel transport vector along path."""
-
-           # Implement parallel transport using Christoffel symbols
-
-           gamma = self.compute_christoffel_symbols()
-
-           return self.integrate_parallel_transport(vector, path, gamma)
-
-       def compute_geodesic(self,
-
-                          start: np.ndarray,
-
-                          end: np.ndarray) -> np.ndarray:
-
-           """Compute geodesic between points."""
-
-           # Solve geodesic equation
-
-           def geodesic_equation(t: float, state: np.ndarray) -> np.ndarray:
-
-               x, v = state[:self.dim], state[self.dim:]
-
-               gamma = self.compute_christoffel_symbols(x)
-
-               a = -np.einsum('ijk,i,j->k', gamma, v, v)
-
-               return np.concatenate([v, a])
-
-           return self.integrate_geodesic(geodesic_equation, start, end)
-
-   ```
+   Epistemic value can be studied on a statistical manifold equipped with the Fisher information metric.
 
 ### Implementation Considerations
 
 1. **Numerical Stability**
 
-   ```python
-
-   def stabilized_free_energy(
-
-       x: np.ndarray,
-
-       epsilon: float = 1e-10
-
-   ) -> np.ndarray:
-
-       """Compute free energy with numerical stability."""
-
-       return np.maximum(x, epsilon)
-
-   ```
+   Floor probabilities at a small epsilon before taking logarithms.
 
 1. **Gradient Methods**
 
-   ```python
-
-   def natural_gradient_update(
-
-       fisher: np.ndarray,
-
-       gradient: np.ndarray,
-
-       learning_rate: float
-
-   ) -> np.ndarray:
-
-       """Update using natural gradient."""
-
-       return learning_rate * np.linalg.solve(fisher, gradient)
-
-   ```
+   Precondition the gradient with the inverse Fisher information matrix (natural gradient).
 
 1. **Adaptive Temperature**
 
-   ```python
-
-   def adapt_temperature(
-
-       uncertainty: float,
-
-       min_temp: float = 0.1,
-
-       max_temp: float = 10.0
-
-   ) -> float:
-
-       """Adapt temperature based on uncertainty."""
-
-       return min_temp + (max_temp - min_temp) * uncertainty
-
-   ```
+   Scale the temperature between a minimum and a maximum according to uncertainty.
 
 ### Related Concepts
 
@@ -2230,662 +1513,61 @@ graph TD
 
 ### Enhanced Matrix Operations
 
+Columns of the likelihood matrix are normalised with the package utility, and the column entropies give the ambiguity of each state.
+
 ```python
-
-class EpistemicMatrixOps:
-
-    """Enhanced matrix operations for epistemic value computation."""
-
-    def __init__(self,
-
-                 stability_threshold: float = 1e-10,
-
-                 max_condition_number: float = 1e6):
-
-        """Initialize with numerical stability parameters.
-
-        Args:
-
-            stability_threshold: Minimum value for numerical stability
-
-            max_condition_number: Maximum allowed condition number
-
-        """
-
-        self.stability_threshold = stability_threshold
-
-        self.max_condition_number = max_condition_number
-
-    def validate_probability_matrix(self,
-
-                                  matrix: np.ndarray,
-
-                                  axis: int = -1) -> bool:
-
-        """Validate probability matrix properties.
-
-        Links to:
-
-        - probability_axioms
-
-        - matrix_properties
-
-        - numerical_validation
-
-        Args:
-
-            matrix: Matrix to validate
-
-            axis: Axis along which probabilities sum to 1
-
-        Returns:
-
-            True if matrix satisfies probability properties
-
-        """
-
-        # Check non-negativity
-
-        if not np.all(matrix >= 0):
-
-            return False
-
-        # Check normalization
-
-        if not np.allclose(matrix.sum(axis=axis), 1.0):
-
-            return False
-
-        # Check condition number
-
-        if len(matrix.shape) == 2:
-
-            if np.linalg.cond(matrix) > self.max_condition_number:
-
-                return False
-
-        return True
-
-    def stabilize_matrix(self,
-
-                        matrix: np.ndarray,
-
-                        axis: int = -1) -> np.ndarray:
-
-        """Ensure numerical stability of probability matrix.
-
-        Links to:
-
-        - numerical_stability
-
-        - probability_constraints
-
-        - matrix_normalization
-
-        Args:
-
-            matrix: Matrix to stabilize
-
-            axis: Axis along which to normalize
-
-        Returns:
-
-            Stabilized probability matrix
-
-        """
-
-        # Add small constant for stability
-
-        matrix = np.maximum(matrix, self.stability_threshold)
-
-        # Normalize
-
-        return matrix / matrix.sum(axis=axis, keepdims=True)
-
-    def compute_information_metrics(self,
-
-                                  prior: np.ndarray,
-
-                                  posterior: np.ndarray) -> Dict[str, float]:
-
-        """Compute comprehensive information metrics.
-
-        Links to:
-
-        - information_theory
-
-        - entropy_measures
-
-        - divergence_metrics
-
-        Args:
-
-            prior: Prior distribution
-
-            posterior: Posterior distribution
-
-        Returns:
-
-            Dictionary of information metrics
-
-        """
-
-        # Stabilize inputs
-
-        prior = self.stabilize_matrix(prior)
-
-        posterior = self.stabilize_matrix(posterior)
-
-        # Compute KL divergence
-
-        kl = np.sum(posterior * (np.log(posterior) - np.log(prior)))
-
-        # Compute Jensen-Shannon divergence
-
-        m = 0.5 * (prior + posterior)
-
-        js = 0.5 * (
-
-            np.sum(prior * (np.log(prior) - np.log(m))) +
-
-            np.sum(posterior * (np.log(posterior) - np.log(m)))
-
-        )
-
-        # Compute entropies
-
-        prior_entropy = -np.sum(prior * np.log(prior))
-
-        post_entropy = -np.sum(posterior * np.log(posterior))
-
-        # Compute mutual information
-
-        mutual_info = prior_entropy - post_entropy
-
-        return {
-
-            'kl_divergence': kl,
-
-            'js_divergence': js,
-
-            'mutual_information': mutual_info,
-
-            'prior_entropy': prior_entropy,
-
-            'posterior_entropy': post_entropy,
-
-            'entropy_reduction': prior_entropy - post_entropy
-
-        }
-
+import numpy as np
+from cognitive.utils.matrix_utils import compute_entropy, ensure_matrix_properties
+
+A_raw = np.array([[9.0, 1.0, 5.0],
+                  [1.0, 9.0, 5.0]])  # illustrative unnormalised counts
+A = ensure_matrix_properties(A_raw, ["non_negative", "column_stochastic"])
+print(A.sum(axis=0))               # each column is a distribution over observations
+print(compute_entropy(A, axis=0))  # per-state entropy H[P(o|s)], the ambiguity of each state
 ```
 
 ### Improved Epistemic Value Computation
 
+The information gain, the uncertainty resolution, and the mutual information between hidden states and observations coincide; the check below confirms this numerically for the illustrative matrix.
+
 ```python
+import numpy as np
+from cognitive.utils.matrix_utils import compute_entropy
 
-class EnhancedEpistemicValue:
+A = np.array([[0.9, 0.1, 0.5],
+              [0.1, 0.9, 0.5]])      # illustrative P(o|s)
+q_s = np.array([1 / 3, 1 / 3, 1 / 3])  # illustrative Q(s | pi)
 
-    """Enhanced epistemic value computation with proper validation.
+joint = A * q_s                       # Q(o, s) = P(o|s) Q(s)
+q_o = joint.sum(axis=1)               # Q(o)
+posterior = joint / q_o[:, None]      # Q(s|o), one row per observation
 
-    Links to:
+info_gain = q_o @ (posterior * np.log(posterior / q_s)).sum(axis=1)   # E_Q(o) KL[Q(s|o) || Q(s)]
+delta_h = compute_entropy(q_s) - q_o @ compute_entropy(posterior, axis=1)  # H[Q(s)] - E H[Q(s|o)]
+mutual_info = compute_entropy(q_o) - q_s @ compute_entropy(A, axis=0)      # H[Q(o)] - E H[P(o|s)]
 
-    - epistemic_value
-
-    - information_theory
-
-    - active_inference
-
-    """
-
-    def __init__(self,
-
-                 A: np.ndarray,           # Observation model
-
-                 temperature: float = 1.0, # Exploration control
-
-                 matrix_ops: Optional[EpistemicMatrixOps] = None):
-
-        """Initialize with model parameters and validation.
-
-        Args:
-
-            A: Observation likelihood matrix P(o|s)
-
-            temperature: Exploration control parameter
-
-            matrix_ops: Optional matrix operations handler
-
-        """
-
-        self.matrix_ops = matrix_ops or EpistemicMatrixOps()
-
-        # Validate and store observation model
-
-        if not self.matrix_ops.validate_probability_matrix(A):
-
-            raise ValueError("Invalid observation model matrix")
-
-        self.A = self.matrix_ops.stabilize_matrix(A)
-
-        self.temperature = temperature
-
-    def compute_epistemic_value(self,
-
-                              prior: np.ndarray,
-
-                              posterior: np.ndarray,
-
-                              observation_prob: np.ndarray) -> Dict[str, float]:
-
-        """Compute epistemic value with comprehensive metrics.
-
-        Links to:
-
-        - information_gain
-
-        - uncertainty_resolution
-
-        - exploration_exploitation
-
-        Args:
-
-            prior: Prior state distribution Q(s|π)
-
-            posterior: Posterior state distribution Q(s|o,π)
-
-            observation_prob: Observation probability Q(o|π)
-
-        Returns:
-
-            Dictionary containing epistemic value components
-
-        """
-
-        # Validate inputs
-
-        for dist in [prior, posterior, observation_prob]:
-
-            if not self.matrix_ops.validate_probability_matrix(dist):
-
-                raise ValueError("Invalid probability distribution")
-
-        # Compute information metrics
-
-        info_metrics = self.matrix_ops.compute_information_metrics(
-
-            prior, posterior)
-
-        # Weight by observation probability
-
-        weighted_info_gain = np.sum(
-
-            observation_prob * info_metrics['kl_divergence'])
-
-        # Compute exploration drive
-
-        exploration_drive = self.temperature * info_metrics['entropy_reduction']
-
-        # Total epistemic value
-
-        total_value = weighted_info_gain + exploration_drive
-
-        return {
-
-            'total_value': total_value,
-
-            'weighted_info_gain': weighted_info_gain,
-
-            'exploration_drive': exploration_drive,
-
-            'information_metrics': info_metrics
-
-        }
-
+assert np.allclose([info_gain, delta_h], mutual_info)
+print(f"{mutual_info:.4f} nats")
 ```
 
 ### Enhanced Active Inference Integration
 
+A policy that stays in a state whose observations are uninformative has maximal ambiguity and zero epistemic value, while a policy visiting informative states has positive epistemic value (illustrative values).
+
 ```python
-
-class ActiveInferenceValidator:
-
-    """Validation utilities for Active Inference components.
-
-    Links to:
-
-    - active_inference
-
-    - free_energy_principle
-
-    - matrix_validation
-
-    """
-
-    def __init__(self,
-
-                 matrix_ops: Optional[EpistemicMatrixOps] = None):
-
-        """Initialize validator with matrix operations.
-
-        Args:
-
-            matrix_ops: Optional matrix operations handler
-
-        """
-
-        self.matrix_ops = matrix_ops or EpistemicMatrixOps()
-
-    def validate_model_matrices(self,
-
-                              A: np.ndarray,  # Observation model
-
-                              B: np.ndarray,  # Transition model
-
-                              C: np.ndarray,  # Preference matrix
-
-                              D: np.ndarray   # Prior beliefs
-
-                              ) -> Dict[str, bool]:
-
-        """Validate all model matrices.
-
-        Links to:
-
-        - A_matrix - Observation model
-
-        - B_matrix - Transition dynamics
-
-        - C_matrix - Preferences
-
-        - D_matrix - Prior beliefs
-
-        Args:
-
-            A: Observation likelihood matrix P(o|s)
-
-            B: State transition tensor P(s'|s,a)
-
-            C: Preference matrix ln P(o)
-
-            D: Prior belief vector P(s)
-
-        Returns:
-
-            Dictionary of validation results
-
-        """
-
-        results = {}
-
-        # Validate A matrix (observation model)
-
-        results['A_valid'] = (
-
-            self.matrix_ops.validate_probability_matrix(A, axis=0)
-
-        )
-
-        # Validate B matrix (transition model)
-
-        results['B_valid'] = all(
-
-            self.matrix_ops.validate_probability_matrix(
-
-                B[:,:,a], axis=0
-
-            ) for a in range(B.shape[2])
-
-        )
-
-        # Validate C matrix (preferences - can be any real values)
-
-        results['C_valid'] = np.all(np.isfinite(C))
-
-        # Validate D matrix (prior beliefs)
-
-        results['D_valid'] = (
-
-            self.matrix_ops.validate_probability_matrix(D)
-
-        )
-
-        return results
-
-class EnhancedActiveInference:
-
-    """Enhanced Active Inference implementation with validation.
-
-    Links to:
-
-    - active_inference
-
-    - epistemic_value
-
-    - free_energy_principle
-
-    """
-
-    def __init__(self,
-
-                 A: np.ndarray,  # Observation model
-
-                 B: np.ndarray,  # Transition model
-
-                 C: np.ndarray,  # Preference matrix
-
-                 D: np.ndarray,  # Prior beliefs
-
-                 temperature: float = 1.0,
-
-                 matrix_ops: Optional[EpistemicMatrixOps] = None):
-
-        """Initialize with model components and validation.
-
-        Args:
-
-            A: Observation likelihood matrix P(o|s)
-
-            B: State transition tensor P(s'|s,a)
-
-            C: Preference matrix ln P(o)
-
-            D: Prior belief vector P(s)
-
-            temperature: Exploration control parameter
-
-            matrix_ops: Optional matrix operations handler
-
-        """
-
-        self.matrix_ops = matrix_ops or EpistemicMatrixOps()
-
-        self.validator = ActiveInferenceValidator(self.matrix_ops)
-
-        # Validate all matrices
-
-        validation = self.validator.validate_model_matrices(A, B, C, D)
-
-        if not all(validation.values()):
-
-            raise ValueError(
-
-                f"Invalid model matrices: {validation}"
-
-            )
-
-        # Store stabilized matrices
-
-        self.A = self.matrix_ops.stabilize_matrix(A, axis=0)
-
-        self.B = np.stack([
-
-            self.matrix_ops.stabilize_matrix(B[:,:,a], axis=0)
-
-            for a in range(B.shape[2])
-
-        ], axis=2)
-
-        self.C = C  # Preferences can be any real values
-
-        self.D = self.matrix_ops.stabilize_matrix(D)
-
-        self.temperature = temperature
-
-        # Initialize epistemic value calculator
-
-        self.epistemic = EnhancedEpistemicValue(
-
-            A=self.A,
-
-            temperature=self.temperature,
-
-            matrix_ops=self.matrix_ops
-
-        )
-
-    def compute_expected_free_energy(self,
-
-                                   beliefs: np.ndarray,
-
-                                   action: int
-
-                                   ) -> Dict[str, float]:
-
-        """Compute Expected Free Energy components.
-
-        Links to:
-
-        - expected_free_energy
-
-        - epistemic_value
-
-        - pragmatic_value
-
-        Args:
-
-            beliefs: Current belief distribution Q(s)
-
-            action: Action to evaluate
-
-        Returns:
-
-            Dictionary of EFE components
-
-        """
-
-        # Validate beliefs
-
-        if not self.matrix_ops.validate_probability_matrix(beliefs):
-
-            raise ValueError("Invalid belief distribution")
-
-        # Predict next state
-
-        next_state = self.B[:,:,action] @ beliefs
-
-        # Predict observations
-
-        obs_prob = self.A @ next_state
-
-        # Compute epistemic value
-
-        epistemic = self.epistemic.compute_epistemic_value(
-
-            prior=beliefs,
-
-            posterior=next_state,
-
-            observation_prob=obs_prob
-
-        )
-
-        # Compute pragmatic value (preference satisfaction)
-
-        pragmatic = -np.sum(obs_prob * self.C)
-
-        # Total EFE
-
-        total_efe = epistemic['total_value'] + pragmatic
-
-        return {
-
-            'total_efe': total_efe,
-
-            'epistemic_components': epistemic,
-
-            'pragmatic_value': pragmatic
-
-        }
-
-    def update_beliefs(self,
-
-                      beliefs: np.ndarray,
-
-                      observation: int,
-
-                      action: int
-
-                      ) -> Dict[str, np.ndarray]:
-
-        """Update beliefs using Active Inference.
-
-        Links to:
-
-        - belief_updating
-
-        - free_energy_minimization
-
-        - variational_inference
-
-        Args:
-
-            beliefs: Current belief distribution Q(s)
-
-            observation: Observed state index
-
-            action: Taken action index
-
-        Returns:
-
-            Dictionary with updated beliefs and metrics
-
-        """
-
-        # Predict next state
-
-        predicted = self.B[:,:,action] @ beliefs
-
-        # Compute likelihood
-
-        likelihood = self.A[observation,:]
-
-        # Bayesian update
-
-        posterior = likelihood * predicted
-
-        posterior = self.matrix_ops.stabilize_matrix(posterior)
-
-        # Compute metrics
-
-        metrics = self.matrix_ops.compute_information_metrics(
-
-            prior=predicted,
-
-            posterior=posterior
-
-        )
-
-        return {
-
-            'beliefs': posterior,
-
-            'predicted': predicted,
-
-            'metrics': metrics
-
-        }
-
+import numpy as np
+from cognitive.utils.matrix_utils import compute_entropy
+
+A = np.array([[0.9, 0.1, 0.5],
+              [0.1, 0.9, 0.5]])  # state 2 is uninformative: P(o|s) = [0.5, 0.5]
+policies = {  # illustrative predicted state distributions Q(s | pi)
+    "visit informative states": np.array([0.5, 0.5, 0.0]),
+    "stay in ambiguous state": np.array([0.0, 0.0, 1.0]),
+}
+for name, q_s in policies.items():
+    ambiguity = q_s @ compute_entropy(A, axis=0)
+    gain = compute_entropy(A @ q_s) - ambiguity
+    print(f"{name}: epistemic value {gain:.3f}, ambiguity {ambiguity:.3f}")
 ```
 
 ### Enhanced Information Geometric Components

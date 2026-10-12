@@ -27,10 +27,11 @@ history; this file is not a log. Remove an item when it is done.
   mostly navigation, index and software-usage pages. Parameter values and "illustrative"
   numbers in the colony-biology pseudocode remain unsourced and are labelled as illustrative.
 - **Illustrative code.** Every page with a substantial Python listing says that it is
-  illustrative. The largest are very long (`mathematics/calculus`, `dynamical_systems`,
-  `free_energy`, `exploration_exploitation`, `epistemic_value`, each over 1,000 lines of
-  code). Trim them to the few snippets that carry the idea, or replace them with runs of the
-  real package, and keep the parameter values labelled as illustrative until then.
+  illustrative. About 50 pages still carry 400 or more lines of it; the longest are
+  `mathematics/free_energy_theory`, `free_energy_principle`, `path_integral_implementations`,
+  `geometric_mechanics` and `geometric_active_inference`, each over 1,000 lines. Trim them to
+  the few snippets that carry the idea, or replace them with runs of the real package, and
+  keep the parameter values labelled as illustrative until then.
 
 - **Identifier alignment for the RDF graph.** Concept pages are not yet linked to external
   identifiers (Wikidata, MeSH, a mathematics or physics ontology); only citation pages link

@@ -25,6 +25,12 @@ a computed result are marked **behaviour change** and say what moved and why.
   The output is deterministic and uses the link resolver of `verify_links`. `docs/okn/` holds the
   prose description, vocabulary mapping, registry entry, a Turtle sample and generated statistics;
   `validate_docs` fails when the sample or statistics are stale.
+- **The five longest code listings in the knowledge base are trimmed.** `calculus`,
+  `dynamical_systems`, `free_energy`, `exploration_exploitation` and `epistemic_value` held about
+  9,700 lines of illustrative Python, much of it class listings that the package does not contain
+  and several with errors (the `calculus` Jacobian listing was wrong). Each now keeps a handful of
+  short snippets that were run and checked against closed forms or the package, and the prose,
+  equations and links are unchanged. Headings left with nothing under them were removed.
 - `verify_links` walks directories in sorted order. A link whose name matches several pages
   (a repeated file name or alias) resolved to whichever page the filesystem listed first, so the
   same checkout could resolve differently on macOS and Linux; it now resolves identically
