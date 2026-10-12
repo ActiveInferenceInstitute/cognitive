@@ -16,11 +16,11 @@ pages, then regenerate; never edit this file.
 | Concepts (`skos:Concept`) | 1988 |
 | Navigation pages (`schema:CollectionPage`) | 68 |
 | Redirect pages | 2 |
-| Typed edges from `semantic_relations` | 10124 |
-| Untyped edges from body links (`dcterms:references`) | 22804 |
-| Triples | 60766 |
-| Links to concepts that have no page yet (not exported) | 355 |
-| Links to files outside the knowledge base (not exported) | 740 |
+| Typed edges from `semantic_relations` | 10129 |
+| Untyped edges from body links (`dcterms:references`) | 22813 |
+| Triples | 60779 |
+| Links to concepts that have no page yet (not exported) | 362 |
+| Links to files outside the knowledge base (not exported) | 719 |
 | Self-links dropped | 71 |
 | Latest page update | 2026-10-11 |
 
@@ -87,7 +87,7 @@ pages, then regenerate; never edit this file.
 
 | Relation | Edges |
 |---|---|
-| `relates` | 7434 |
+| `relates` | 7439 |
 | `foundation` | 494 |
 | `implements` | 459 |
 | `related` | 441 |

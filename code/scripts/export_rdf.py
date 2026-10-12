@@ -135,6 +135,10 @@ STANDARD_RELATIONS = {
 WIKILINK_PREDICATE = PREFIXES["dcterms"] + "references"
 REDIRECT_PREDICATE = PREFIXES["dcterms"] + "isReplacedBy"
 NAVIGATION_STEMS = {"readme", "agents", "catalog", "index"}
+# Links are resolved only against what the repository ships. A checkout also holds
+# local tool folders (editor, index and agent directories); letting a link land in
+# one would make the graph differ between machines.
+SHIPPED_DIRECTORIES = {KB_NAME, "docs", "code"}
 
 
 # --------------------------------------------------------------------------- terms
@@ -363,12 +367,40 @@ def _describe_page(
         graph.add(subject, iri(PREFIXES["schema"] + "sameAs"), iri(f"https://doi.org/{doi}"))
 
 
+def _is_shipped(relative: Path) -> bool:
+    return len(relative.parts) == 1 or relative.parts[0] in SHIPPED_DIRECTORIES
+
+
+def _shipped_index(root: Path) -> LinkIndex:
+    """The link index restricted to files the repository ships."""
+    full = _build_index(root)
+    return LinkIndex(
+        markdown_by_stem={
+            stem: kept
+            for stem, paths in full.markdown_by_stem.items()
+            if (kept := [path for path in paths if _is_shipped(path)])
+        },
+        markdown_by_rel_no_suffix={
+            key: path for key, path in full.markdown_by_rel_no_suffix.items() if _is_shipped(path)
+        },
+        all_files_by_rel={key for key in full.all_files_by_rel if _is_shipped(Path(key))},
+        markdown_by_alias={
+            key: path for key, path in full.markdown_by_alias.items() if _is_shipped(path)
+        },
+    )
+
+
 def _resolve(root: Path, source: Path, target: str, index: LinkIndex) -> str | None:
     """Return the node id a link points to, ``""`` if it leaves the vault, ``None`` if broken."""
     resolved = _resolve_target_path(root, source, target, index)
     if resolved is None:
         return None
     resolved = Path(os.path.normpath(resolved))  # may carry ".." segments
+    try:
+        if not _is_shipped(resolved.relative_to(root)):
+            return None
+    except ValueError:
+        return None
     if resolved.suffix.lower() != ".md":
         return None
     try:
@@ -478,7 +510,7 @@ def build_graph(repo_root: Path) -> tuple[Graph, Report]:
     kb_root = root / KB_NAME
     if not kb_root.is_dir():
         raise FileNotFoundError(f"knowledge base not found: {kb_root}")
-    index = _build_index(root)
+    index = _shipped_index(root)
     graph, report = Graph(), Report()
     used_relations: set[str] = set()
     updated_dates: list[str] = []

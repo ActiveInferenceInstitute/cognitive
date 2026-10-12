@@ -238,6 +238,19 @@ def test_dataset_description_carries_license_provenance_and_modified_date(tmp_pa
     assert _has(graph, rdf.SCHEME, rdf.RDF_TYPE, rdf.iri(SKOS + "ConceptScheme"))
 
 
+def test_links_into_local_tool_folders_stay_unresolved(tmp_path):
+    root = _vault(tmp_path)
+    _page(root / "knowledge_base" / "ghost.md", {"title": "Ghost"}, "\n[[tool_card]] [[entropy]]\n")
+    _page(root / "graft" / "tool_card.md", {"title": "Card"})
+    _page(root / "graft" / "entropy.md", {"title": "Shadow of entropy"})
+    graph, report = rdf.build_graph(root)
+    # The card is not shipped, so the link stays broken; the shadow does not win the stem.
+    assert report.unresolved_links == 2 and report.links_outside_graph == 1
+    assert _has(
+        graph, rdf.page_iri("ghost"), DCT + "references", rdf.iri(rdf.page_iri("math/entropy"))
+    )
+
+
 def test_missing_knowledge_base_is_an_error(tmp_path):
     with pytest.raises(FileNotFoundError, match="knowledge base not found"):
         rdf.build_graph(tmp_path)
