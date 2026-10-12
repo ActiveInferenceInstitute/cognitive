@@ -198,3 +198,15 @@ def test_goal_prior_enters_the_policy_posterior_exactly_once() -> None:
     )
     with pytest.raises(ValueError, match="goal_prior must have shape"):
         engine.calculate_expected_free_energy(current, np.array([0.5, 0.3, 0.2]))
+
+
+def test_the_default_aggregation_is_the_bayesian_model_average() -> None:
+    """Version 2.0.0 made ``marginal`` the default; ``min`` stays selectable."""
+    current = state(model())
+    default = dispatcher().calculate_expected_free_energy(current.copy())
+    marginal = dispatcher(policy_aggregation="marginal").calculate_expected_free_energy(
+        current.copy()
+    )
+    minimum = dispatcher(policy_aggregation="min").calculate_expected_free_energy(current.copy())
+    assert default == pytest.approx(marginal, abs=1e-12)
+    assert not np.allclose(default, minimum)

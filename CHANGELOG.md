@@ -12,6 +12,20 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-10-12
+
+### Behaviour change
+
+- **`policy_aggregation` now defaults to `marginal`.** `InferenceConfig` scored each first
+  action by the minimum expected free energy over the policies that start with it (`min`), an
+  optimistic assumption that judges an action as if the best continuation will be followed.
+  The default is now the Bayesian model average of the standard formulation, `P(a)` proportional
+  to the sum of `exp(-G / temperature)` over the policies starting with `a`, so an action that
+  many adequate policies lead to is preferred over one that a single excellent policy leads to.
+  Agents that relied on the old default get different action probabilities; pass
+  `policy_aggregation="min"` to keep the previous behaviour. This is the only change made for
+  the sake of this decision; the other behaviour changes below accumulated since 1.1.0.
+
 ### Added
 
 - **The knowledge base as RDF for the Open Knowledge Network.** `scripts.export_rdf`
@@ -25,12 +39,13 @@ a computed result are marked **behaviour change** and say what moved and why.
   The output is deterministic and uses the link resolver of `verify_links`. `docs/okn/` holds the
   prose description, vocabulary mapping, registry entry, a Turtle sample and generated statistics;
   `validate_docs` fails when the sample or statistics are stale.
-- **The five longest code listings in the knowledge base are trimmed.** `calculus`,
-  `dynamical_systems`, `free_energy`, `exploration_exploitation` and `epistemic_value` held about
-  9,700 lines of illustrative Python, much of it class listings that the package does not contain
-  and several with errors (the `calculus` Jacobian listing was wrong). Each now keeps a handful of
-  short snippets that were run and checked against closed forms or the package, and the prose,
-  equations and links are unchanged. Headings left with nothing under them were removed.
+- **The long code listings in the knowledge base are trimmed.** 57 pages, led by `calculus`,
+  `dynamical_systems`, `free_energy`, `exploration_exploitation` and `epistemic_value`, held about
+  44,000 lines of illustrative Python, much of it class listings that the package does not contain
+  and several with errors (the `calculus` Jacobian listing was wrong). No page now carries 400 or
+  more lines; each keeps a handful of short snippets that were run and checked against closed
+  forms or the package. Prose, equations and links are unchanged except where a sentence only
+  introduced a removed listing, and headings left with nothing under them were removed.
 - `verify_links` walks directories in sorted order. A link whose name matches several pages
   (a repeated file name or alias) resolved to whichever page the filesystem listed first, so the
   same checkout could resolve differently on macOS and Linux; it now resolves identically

@@ -402,7 +402,7 @@ def test_dispatcher_normalization_checks_size_and_falls_back_to_uniform() -> Non
     with pytest.raises(ValueError, match="Expected 2 finite values"):
         normalize(np.array([1.0, np.nan]), 2)
     config = InferenceConfig("variational", "discrete", 1, 0.5, 1.0)
-    assert config.policy_aggregation.value == "min"
+    assert config.policy_aggregation.value == "marginal"
 
 
 # --- matrix_utils / matrix_ops ----------------------------------------------

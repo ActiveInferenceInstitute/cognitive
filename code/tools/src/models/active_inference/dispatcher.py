@@ -32,14 +32,16 @@ class PolicyType(str, Enum):
 class PolicyAggregation(str, Enum):
     """How the energies of policies sharing a first action are combined.
 
+    ``MARGINAL`` (the default) is the Bayesian model average used in the
+    standard formulation, ``P(a) proportional to sum over policies starting
+    with a of exp(-G(policy) / temperature)``. An action reachable by many
+    adequate policies is preferred over one reachable by a single excellent
+    policy.
+
     ``MIN`` scores each first action by its best continuation, which is an
     optimistic planning assumption: the action is judged as if the agent will
-    follow the most favourable policy available after it.
-
-    ``MARGINAL`` is the Bayesian model average used in the standard
-    formulation, ``P(a) proportional to sum over policies starting with a of
-    exp(-G(policy) / temperature)``. An action reachable by many adequate
-    policies is preferred over one reachable by a single excellent policy.
+    follow the most favourable policy available after it. It was the default
+    before version 2.0.0.
     """
 
     MIN = "min"
@@ -65,7 +67,7 @@ class InferenceConfig:
     # If policy_limit truncates enumeration below one policy per first action,
     # dispatch_policy_inference raises instead of silently zeroing that action.
     policy_limit: int = 4096
-    policy_aggregation: PolicyAggregation = PolicyAggregation.MIN
+    policy_aggregation: PolicyAggregation = PolicyAggregation.MARGINAL
     seed: int | None = 0
     custom_params: dict[str, Any] = field(default_factory=dict)
 

@@ -14,7 +14,7 @@ semantic_relations:
 
 The three inference methods, policy aggregation, and a goal prior all go through
 the same dispatcher. `InferenceConfig` accepts `variational`, `sampling`, and
-`mean_field`, and `policy_aggregation` accepts `min` (default) or `marginal`.
+`mean_field`, and `policy_aggregation` accepts `marginal` (default) or `min`.
 Only discrete policies are implemented; hierarchical or user-defined inference
 methods are not part of the package.
 
