@@ -37,6 +37,10 @@ semantic_relations:
 
 # Ecological Dynamics
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Ecological dynamics describes the mathematical principles governing the interactions, structure, and function of ecological systems across scales. It integrates population biology, community ecology, and ecosystem science through dynamical systems theory.

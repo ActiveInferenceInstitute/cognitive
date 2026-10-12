@@ -26,6 +26,10 @@ semantic_relations:
 
 # Path Integral Information Theory
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Path integral information theory unifies path integrals with information-theoretic principles to describe information processing in dynamical systems. This framework is particularly relevant for understanding cognitive systems through the lens of active inference and the free energy principle.
 
 ## Mathematical Foundations

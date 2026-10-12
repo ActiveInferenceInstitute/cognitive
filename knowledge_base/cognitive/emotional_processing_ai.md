@@ -29,6 +29,10 @@ semantic_relations:
 
 # Emotional Processing Through Active Inference
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 This document explores emotional processing as an Active Inference mechanism, examining how emotions emerge from the minimization of variational free energy in affective prediction and regulation. It integrates computational neuroscience with affective science to understand the functional role of emotions in cognition.
 
 ## 🧠 Emotional Active Inference

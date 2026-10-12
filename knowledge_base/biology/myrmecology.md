@@ -34,6 +34,10 @@ semantic_relations:
 
 # Myrmecology
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Myrmecology is the scientific study of ants (family Formicidae), focusing on their biology, behavior, ecology, evolution, and taxonomy. This field examines the complex social structures, communication systems, and ecological roles of ants.

@@ -31,6 +31,10 @@ semantic_relations:
 
 # Network Dynamics under the Free Energy Principle
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 The Free Energy Principle (FEP) describes how individual agents minimize variational free energy to maintain their structural and functional integrity. When multiple FEP agents are coupled -- through shared sensory channels, common environments, or direct interaction -- the resulting **network dynamics** exhibit collective behaviors that transcend individual agent properties. This document formalizes FEP networks using graph-theoretic tools, coupled dynamical systems, and spectral methods, showing how multi-agent free energy minimization gives rise to synchronization, modularity, and emergent information flow.

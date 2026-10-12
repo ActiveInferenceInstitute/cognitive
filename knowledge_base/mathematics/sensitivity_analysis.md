@@ -19,6 +19,10 @@ semantic_relations:
 
 # Sensitivity Analysis
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Quantifies how outputs change with parameters (e.g., $\gamma$, precisions). Includes local derivatives and global variance-based indices. In an Active Inference agent the outputs of interest are usually the policy distribution or the chosen action, and the inputs are the temperature or precision, the preference vector $C$, the likelihood $A$ and the current belief. Run a sensitivity analysis before tuning ([[parameter_tuning]]) to learn which inputs deserve attention, and before trusting a result to learn how fragile it is.
 
 ## Local sensitivity

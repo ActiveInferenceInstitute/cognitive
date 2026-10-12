@@ -34,6 +34,10 @@ semantic_relations:
 
 # Bee Communication Systems
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Bee communication systems represent the pinnacle of insect social signaling, featuring the famous waggle dance language that encodes spatial information about food sources. Unlike ants' primarily chemical communication, bees employ a rich multimodal system combining visual displays, chemical signals, tactile interactions, and vibrational cues. These systems enable sophisticated collective decision-making, resource allocation, and coordinated foraging across vast landscapes.

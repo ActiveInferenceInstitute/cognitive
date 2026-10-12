@@ -35,6 +35,10 @@ semantic_relations:
 
 # Free Energy Principle and Perception
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 The Free Energy Principle (FEP) provides a unified theoretical framework for understanding perception as variational inference. Perception is recast as the minimization of variational free energy, where the brain actively predicts sensory inputs and updates internal models to reduce prediction errors. This framework explains how organisms construct coherent perceptual experiences from noisy, ambiguous sensory data.
 
 ## 🎯 Perception as Inference

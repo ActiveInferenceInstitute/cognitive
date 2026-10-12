@@ -54,6 +54,10 @@ aliases:
 
 # Active Inference
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Active Inference is a framework for understanding perception, learning, and decision-making based on the  Free Energy Principle. It proposes that agents minimize expected free energy through both perception (inferring hidden states) and action (selecting policies that minimize expected surprise). Active inference unifies perception, learning, and decision-making under a single imperative: the minimization of variational free energy.

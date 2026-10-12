@@ -6,6 +6,10 @@ status: stable
 
 # The Action Space (A-Space): Your Agent's Superpowers!
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## What's the Deal with Actions?
 
 Think of the Action Space as your agent's repertoire of superpowers - everything it can possibly do to affect the world! Whether it's a robot arm picking up objects, a game character jumping between platforms, or a trading bot buying and selling stocks, the A-Space defines all possible moves.

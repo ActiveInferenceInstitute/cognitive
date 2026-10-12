@@ -24,6 +24,10 @@ semantic_relations:
 
 # Hierarchical Inference
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Hierarchical inference in active inference refers to the nested structure of belief updating across multiple levels of abstraction. Each level in the hierarchy makes predictions about the level below and receives prediction errors from it, enabling both top-down and bottom-up information flow.

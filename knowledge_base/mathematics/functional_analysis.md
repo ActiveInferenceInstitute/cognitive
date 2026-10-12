@@ -6,6 +6,10 @@ status: stable
 
 # Functional Analysis
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Functional analysis studies vector spaces equipped with topologies and linear operators between them. It provides the mathematical foundation for infinite-dimensional analysis, essential for understanding continuous systems, probability theory, and quantum mechanics in cognitive modeling and active inference.

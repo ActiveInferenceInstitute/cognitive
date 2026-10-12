@@ -30,6 +30,10 @@ semantic_relations:
 
 # Consciousness Theory and Active Inference
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 This document explores consciousness through the lens of Active Inference, examining how self-aware experience can be modeled as arising from the minimization of variational free energy. It integrates phenomenological approaches with computational neuroscience to understand the nature of conscious experience.
 
 ## 🧠 Consciousness as Active Inference

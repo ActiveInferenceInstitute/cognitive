@@ -6,6 +6,10 @@ status: stable
 
 # Optimization Theory
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Optimization Theory provides the mathematical foundation for finding the best solutions to problems under given constraints. It forms a crucial bridge between theoretical principles and practical implementations in control theory, machine learning, and cognitive systems, particularly in understanding how systems minimize free energy and maximize performance.

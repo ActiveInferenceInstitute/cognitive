@@ -29,6 +29,10 @@ semantic_relations:
 
 # Temporal Models
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Temporal models in [[active_inference|Active Inference]] represent how states and observations evolve over time. They are crucial for planning, prediction, and temporal inference across different timescales, from rapid sensorimotor processing to extended cognitive tasks.

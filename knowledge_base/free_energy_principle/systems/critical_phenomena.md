@@ -34,6 +34,10 @@ semantic_relations:
 
 # Critical Phenomena and the Free Energy Principle
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 **Critical phenomena** occur at the boundary between distinct phases of matter or dynamical regimes, where systems exhibit long-range correlations, power-law distributions, and maximal susceptibility to perturbation. The **critical brain hypothesis** proposes that biological neural systems self-tune to operate near a critical point, gaining computational advantages such as maximal dynamic range, optimal information transmission, and sensitivity to inputs.

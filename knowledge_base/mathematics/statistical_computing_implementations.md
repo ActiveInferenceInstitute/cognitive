@@ -32,6 +32,10 @@ aliases:
 
 # Statistical Computing Implementations
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 This document provides comprehensive implementations of core statistical methods essential for active inference, cognitive modeling, and probabilistic reasoning. The implementations bridge theoretical concepts with practical computational tools, emphasizing numerical stability and efficiency.

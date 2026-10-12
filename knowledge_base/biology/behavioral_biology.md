@@ -37,6 +37,10 @@ semantic_relations:
 
 # Behavioral Biology
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Behavioral biology investigates animal behavior through the lens of active inference and the free energy principle, revealing how organisms actively minimize uncertainty about their environment while maintaining adaptive behavioral patterns through perception, action, and learning.

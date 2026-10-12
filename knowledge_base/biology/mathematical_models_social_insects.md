@@ -34,6 +34,10 @@ semantic_relations:
 
 # Mathematical Models of Social Insect Optimization
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Mathematical models of social insect optimization provide rigorous frameworks for understanding how ants and bees solve complex optimization problems through collective behavior. These models bridge biological observations with computational algorithms, revealing fundamental principles of distributed intelligence, self-organization, and adaptive optimization. The mathematical formulations capture the essence of biological systems while enabling computational implementation and theoretical analysis.

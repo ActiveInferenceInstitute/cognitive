@@ -47,6 +47,10 @@ semantic_relations:
 
 # Path Integral Formulation of the Free Energy Principle
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 The path integral formulation provides a powerful mathematical framework for understanding the [[free_energy_principle]] through the lens of trajectories in state space. This approach unifies concepts from [[statistical_mechanics]], [[quantum_mechanics]], and [[control_theory]] to describe how systems minimize free energy over time. The formulation directly connects to [[continuous_time_active_inference]] and provides a natural extension of the [[free_energy]] functional to trajectory spaces.

@@ -33,6 +33,10 @@ semantic_relations:
 
 # Stochastic Processes
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Stochastic Processes provide a mathematical framework for analyzing systems with random dynamics. They form the foundation for understanding uncertainty and variability in complex systems, from molecular dynamics to ecological populations and neural activity.

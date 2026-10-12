@@ -27,6 +27,10 @@ aliases:
 
 # Adaptive Resonance Theory
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 [[cognitive/adaptive_resonance_theory|Adaptive Resonance Theory]] (ART) is a [[knowledge_base/free_energy_principle/implementations/neural_networks|neural network]] architecture and [[cognitive/learning_theory|learning theory]] that explains how biological and artificial neural systems can autonomously learn to categorize, recognize, and predict patterns in a changing environment while maintaining [[cognitive/stability_plasticity|stability-plasticity balance]]. Developed by Stephen Grossberg and Gail Carpenter, ART addresses fundamental questions in [[cognitive/pattern_recognition|pattern recognition]], [[memory|memory]], and [[cognitive/learning|learning]].

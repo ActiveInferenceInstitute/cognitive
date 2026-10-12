@@ -32,6 +32,10 @@ semantic_relations:
 
 # Metabolic Networks
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Metabolic networks represent the complex web of biochemical reactions that sustain cellular life, increasingly understood through the lens of active inference and the free energy principle. This framework reveals how cells minimize uncertainty and maintain homeostasis through the coordinated regulation of metabolic pathways.

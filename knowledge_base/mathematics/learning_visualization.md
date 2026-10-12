@@ -18,6 +18,10 @@ semantic_relations:
 
 # Learning Visualization
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Displays for VFE/EFE histories, component balances, and convergence trends. The goal is to see, from a run, whether belief updating is working: whether free energy falls when evidence agrees with the beliefs, spikes when it does not, and whether the optimiser has converged.
 
 ## What a free-energy history means

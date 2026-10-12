@@ -18,6 +18,10 @@ semantic_relations:
 
 # Exploration Visualization
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Visual tools for epistemic value, uncertainty maps, and exploration paths. Exploration in Active Inference is driven by the expected information gain $I(s;o)$ inside expected free energy ([[exploration_strategies]]), so the useful plots are those that show where that gain is large, how it changes with belief, and how it compares with the pragmatic term.
 
 ## What to plot

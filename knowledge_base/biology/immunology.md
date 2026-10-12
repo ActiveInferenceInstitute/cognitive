@@ -32,6 +32,10 @@ semantic_relations:
 
 # Immunology
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Immunology studies the immune system's complex network of cells, molecules, and organs that protect organisms from pathogens and maintain homeostasis. It integrates principles from cell biology, molecular biology, and systems biology to understand immune responses and regulation.

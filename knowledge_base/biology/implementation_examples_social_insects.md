@@ -34,6 +34,10 @@ semantic_relations:
 
 # Implementation Examples Using Social Insect Code
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 > [!note] Scope
 > The ant-colony runtime is not shipped in this repository:
 > `code/Things/Ant_Colony/` contains documentation only. The Python examples

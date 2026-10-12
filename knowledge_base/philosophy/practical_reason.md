@@ -27,7 +27,7 @@ Practical reason is reasoning about what to do, in contrast to theoretical reaso
 
 ## Main positions
 - **Humean instrumentalism.** Reason is the servant of the passions: it can identify means to ends and point out inconsistency, but it cannot itself supply ends. Williams (1981) defended a related view that reasons for action are tied to an agent's existing motivations, the "internal reasons" thesis.
-- **Kantian constructivism.** Korsgaard (1996) argues that practical reason contains substantive constraints that arise from the structure of rational agency, so that agents are committed to norms they cannot coherently reject. Kant's categorical imperative is the paradigm (see [[deontological_ethics]]).
+- **Kantian constructivism.** Korsgaard (1996) argues that the authority of moral norms derives from the structure of reflective self-consciousness: agents act under practical identities, and she argues that this commits them to the norms those identities carry and ultimately to valuing humanity. Kant's categorical imperative is the paradigm (see [[deontological_ethics]]).
 - **Aristotelian accounts.** Good practical judgement is a skill of perceiving what a situation requires, developed through habituation and tied to virtue ([[virtue_ethics]]).
 - **Reasons-first views.** Raz (1999) takes reasons as primitive and examines the place of rules and exclusionary reasons in guiding action.
 

@@ -22,7 +22,7 @@ semantic_relations:
 # Objectivity
 
 ## Overview
-Objectivity is a property attributed to claims, methods, observers and results when they are held to be independent of some kind of subjective influence. The word carries several distinct senses, and much disagreement arises from running them together. Reiss and Sprenger (2020) distinguish objectivity as faithfulness to facts, as freedom from personal bias, as a feature of processes, and as the outcome of social and value-related practices.
+Objectivity is a property attributed to claims, methods, observers and results when they are held to be independent of some kind of subjective influence. The word carries several distinct senses, and much disagreement arises from running them together. Reiss and Sprenger (2020) distinguish objectivity as faithfulness to facts, as absence of normative commitments (the value-free ideal), as freedom from personal bias, and as a feature of scientific communities and their practices.
 
 ## Senses
 - **Metaphysical.** Objects and facts exist independently of any mind. This is the sense at stake in [[scientific_realism]].

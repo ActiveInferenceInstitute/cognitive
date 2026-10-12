@@ -20,6 +20,10 @@ semantic_relations:
 
 # Research and Educational Applications
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Plain text documentation serves as a powerful foundation for research and education in cognitive modeling. This document explores how our text-based approach enhances scientific research, knowledge transfer, and educational outcomes.

@@ -20,6 +20,10 @@ semantic_relations:
 
 # Psychophysics
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Psychophysics is the scientific study of the quantitative relationship between physical stimuli and perceptual experiences. It provides empirical foundations for understanding how sensory systems encode, process, and interpret environmental information. Modern psychophysics integrates signal detection theory with Bayesian inference, providing normative accounts of perception under uncertainty.
 
 ## Classical Psychophysics

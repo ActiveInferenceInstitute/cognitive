@@ -34,6 +34,10 @@ semantic_relations:
 
 # Foraging Optimization in Social Insects
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Foraging optimization in ants and bees represents the pinnacle of collective decision-making and resource allocation in biological systems. Through sophisticated algorithms evolved over millions of years, these insects solve complex optimization problems including route optimization, resource allocation, risk assessment, and collective learning. Their strategies have inspired numerous computational algorithms and continue to inform modern optimization theory.

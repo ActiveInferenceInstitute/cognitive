@@ -32,6 +32,10 @@ semantic_relations:
 
 # Path Integral Bayesian Inference
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Path Integral Bayesian Inference combines [[path_integral|path integration]] techniques from statistical physics with [[bayesian_inference|Bayesian inference]] methods to provide a powerful framework for solving complex inference problems. This approach allows for traversing probability distributions over continuous trajectories in state space, enabling more expressive and powerful inference in both deterministic and stochastic systems.

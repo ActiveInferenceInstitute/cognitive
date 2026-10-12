@@ -8,6 +8,10 @@ aliases:
 
 # [[BioFirm_Active_Inference_Integration]]
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 The BioFirm framework implements a specialized application of the [[cognitive/free_energy_principle|Free Energy Principle]] and [[cognitive/active_inference|Active Inference]] for bioregional stewardship. This document outlines the key theoretical and practical connections between these frameworks.

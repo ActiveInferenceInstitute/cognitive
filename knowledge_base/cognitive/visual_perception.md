@@ -29,6 +29,10 @@ semantic_relations:
 
 # Visual Perception
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Visual perception is the ability to interpret and organize visual information from the environment. It is a complex process that involves multiple stages of processing, from basic feature detection to high-level object recognition and scene understanding.
 
 ## Core Components

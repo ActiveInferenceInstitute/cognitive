@@ -35,6 +35,10 @@ semantic_relations:
 
 # Core Free Energy Principle
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 The Free Energy Principle (FEP) provides a unified mathematical framework for understanding adaptive behavior in biological and artificial systems. It states that all self-organizing systems that resist the natural tendency toward disorder must minimize their variational free energy, a statistical quantity that bounds the surprise associated with sensory signals.
 
 ## 🎯 Fundamental Statement

@@ -32,6 +32,10 @@ semantic_relations:
 
 # Resilience and Robustness under the Free Energy Principle
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 **Resilience** is the capacity of a system to absorb disturbance, reorganize, and continue functioning in essentially the same way. **Robustness** is the ability to maintain performance despite perturbations to components or parameters. Under the Free Energy Principle (FEP), both properties emerge from the geometry of the free energy landscape: a resilient system occupies a deep, wide basin of attraction such that perturbations displace the system within the basin but do not push it into a qualitatively different regime.

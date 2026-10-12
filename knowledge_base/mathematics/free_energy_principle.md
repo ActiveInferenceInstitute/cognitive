@@ -39,6 +39,10 @@ semantic_relations:
 
 # Free Energy Principle
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 The Free Energy Principle (FEP) is a unifying theory that explains how biological systems maintain their organization in the face of environmental fluctuations. It proposes that all self-organizing adaptive systems minimize "variational free energy"—a statistical quantity that bounds the surprise (or self-information) associated with sensory signals. Through this minimization, organisms implicitly resist the natural tendency toward disorder described by the second law of thermodynamics.

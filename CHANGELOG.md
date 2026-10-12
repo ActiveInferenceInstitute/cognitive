@@ -234,6 +234,12 @@ produced a wrong or arbitrary result now raise `ValueError`.
     journals), and unsupported claims (invented patent and licensing tiers on a
     BioFirm page) that were corrected, softened or removed.
   Pages that had both an older `Key References` list and a verified list now have one.
+- A second pass looked up all 117 references on 31 philosophy and logic pages against live
+  records; one edition year was wrong (Canguilhem 1989, not 1991) and three body sentences were
+  tightened.
+- The 216 knowledge-base pages that carry 40 or more lines of Python now say, under their
+  title, that the snippets are illustrative and are not part of the package unless they import
+  it, and point to the API reference for the tested implementations.
 - Link lists now carry accurate glosses (4,987 rewritten). About 6,000 links to generic
   labels that no page should exist for (`new_methods`, `version_control`,
   `adaptive_strategies`) were unlinked, and existing pages gained `aliases:` so a

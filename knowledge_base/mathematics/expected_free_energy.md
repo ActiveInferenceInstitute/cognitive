@@ -33,6 +33,10 @@ semantic_relations:
 
 # Expected Free Energy
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Expected Free Energy (EFE) is a fundamental quantity in active inference that guides action selection by balancing exploration (information gain) and exploitation (goal-seeking). It extends the [[free_energy_principle|Free Energy Principle]] to future states and actions.

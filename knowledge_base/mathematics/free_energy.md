@@ -36,6 +36,10 @@ semantic_relations:
 
 # Free Energy Computation
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## What Makes Something a Free Energy?
 
 At its core, a free energy is a functional (a function of functions) that measures the "energetic cost" of the mismatch between two probability distributions - typically between an approximate posterior distribution and the true distribution we're trying to model. The term "free energy" draws inspiration from statistical physics, where it represents the energy available to do useful work in a system.

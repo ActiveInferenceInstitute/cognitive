@@ -35,6 +35,10 @@ semantic_relations:
 
 # Bioinformatics
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Bioinformatics applies computational and statistical methods to biological data analysis, increasingly incorporating principles from active inference and the free energy principle to understand biological information processing and organization.

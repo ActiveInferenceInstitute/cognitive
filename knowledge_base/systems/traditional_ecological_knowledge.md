@@ -30,6 +30,10 @@ semantic_relations:
 
 # Traditional Ecological Knowledge
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Traditional Ecological Knowledge (TEK) represents complex, culturally-transmitted understanding of ecological systems and their dynamics, developed through generations of direct interaction with local environments. It integrates social, cognitive, and ecological dimensions into holistic frameworks for understanding and managing environmental relationships.

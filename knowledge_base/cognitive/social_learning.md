@@ -25,6 +25,10 @@ semantic_relations:
 
 # Social Learning
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Social learning encompasses the cognitive processes by which individuals acquire knowledge, skills, and behaviors through observation, imitation, and interaction with others. It enables efficient cultural transmission and adaptation beyond individual trial-and-error learning.
 
 ## Core Mechanisms

@@ -34,6 +34,10 @@ semantic_relations:
 
 # Ant Communication Systems
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Ant communication systems represent sophisticated chemical, tactile, and vibrational signaling mechanisms that enable complex social coordination. Unlike many vertebrates, ants rely primarily on indirect communication through environmental modification (stigmergy) and chemical signals, supplemented by direct physical interactions. These systems enable colony-level decision-making, resource allocation, and coordinated defense without central control.

@@ -37,6 +37,10 @@ semantic_relations:
 
 # Gene Regulatory Networks
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Gene regulatory networks (GRNs) represent the complex web of interactions between genes and their regulators, increasingly understood through the lens of active inference and the free energy principle. This framework reveals how cells minimize uncertainty in gene expression while maintaining robust regulatory control.

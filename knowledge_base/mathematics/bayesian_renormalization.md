@@ -32,6 +32,10 @@ semantic_relations:
 
 # Bayesian Renormalization
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Bayesian Renormalization applies techniques from the [[renormalization_group|renormalization group theory]] in physics to [[bayesian_inference|Bayesian inference]], providing a powerful framework for handling multi-scale phenomena, model complexity reduction, and efficient inference in complex systems. This approach enables the systematic coarse-graining of probabilistic models while preserving their essential statistical properties.

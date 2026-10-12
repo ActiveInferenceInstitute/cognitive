@@ -6,6 +6,10 @@ status: stable
 
 # Neural Dynamics
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Neural dynamics studies the temporal evolution of neural activity and collective behavior in nervous systems. In cognitive modeling, neural dynamics provides mathematical frameworks for understanding brain function, from single neurons to large-scale brain networks, forming the foundation for biologically plausible active inference implementations.

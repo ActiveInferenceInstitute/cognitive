@@ -33,6 +33,10 @@ semantic_relations:
 
 # Action Probability Distribution
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Definition
 
 At each time point, the action distribution represents the probability of selecting each available action (affordance), forming a proper probability distribution:

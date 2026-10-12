@@ -31,6 +31,10 @@ aliases:
 
 # Implementing Active Inference Agents
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 This guide provides a comprehensive approach to implementing active inference agents, from basic principles to advanced features. We'll cover the theoretical foundations, mathematical implementations, and practical considerations.

@@ -27,6 +27,10 @@ semantic_relations:
 
 # Motion Perception
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Motion perception is the process by which the visual system detects and interprets movement in the environment. It is a fundamental aspect of visual processing that is crucial for survival, navigation, and interaction with the world.
 
 ## Core Components

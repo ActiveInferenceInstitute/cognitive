@@ -33,6 +33,10 @@ semantic_relations:
 
 # Control Theory
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Control Theory provides a mathematical framework for analyzing and designing systems that regulate their behavior through feedback mechanisms. It forms a crucial bridge between dynamical systems theory and cognitive science, particularly in understanding how biological systems maintain homeostasis and how agents perform active inference.

@@ -36,6 +36,10 @@ semantic_relations:
 
 # Variational Free Energy
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Variational Free Energy (VFE) is a fundamental quantity in active inference that provides a measure of the discrepancy between an agent's beliefs and reality. It serves as a unified objective function for perception, learning, and action selection in both discrete and continuous time formulations.

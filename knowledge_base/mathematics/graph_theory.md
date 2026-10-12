@@ -26,6 +26,10 @@ semantic_relations:
 
 # Graph Theory
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Graph Theory is a branch of mathematics that studies the relationships between pairs of objects. It provides the mathematical foundation for analyzing networks, connections, and structural properties in various domains, from social networks to neural architectures.

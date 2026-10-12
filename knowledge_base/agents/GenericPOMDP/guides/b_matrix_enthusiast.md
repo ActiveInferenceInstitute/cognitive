@@ -6,6 +6,10 @@ status: stable
 
 # The B-Matrix: An Enthusiast's Guide to Understanding State Transitions
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## The Big Idea
 
 If you've ever been fascinated by how things change over time - whether it's weather patterns, stock markets, or even your favorite video game character's movements - you're already thinking about state transitions. The B-matrix is a powerful tool that helps us understand and predict these changes.

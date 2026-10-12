@@ -8,6 +8,10 @@ aliases:
 
 # Dynamical Systems
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Dynamical Systems theory provides a mathematical framework for understanding how systems evolve over time. It forms the foundation for analyzing complex behaviors in physical, biological, and cognitive systems, from neural dynamics to ecological interactions.

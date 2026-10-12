@@ -28,6 +28,10 @@ semantic_relations:
 
 # Learning Mechanisms
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Learning mechanisms represent the processes by which cognitive systems acquire and refine knowledge and skills. Within the active inference framework, learning implements the optimization of generative models through prediction error minimization and precision-weighted updating of model parameters.
 
 ## Mathematical Foundations

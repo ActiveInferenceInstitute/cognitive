@@ -9,6 +9,10 @@ aliases:
 
 # Annealing Schedules
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Annealing schedules control the temperature or precision parameters in optimization and inference algorithms, enabling smooth transitions from exploration to exploitation. These schedules are inspired by simulated annealing in statistical physics and play a crucial role in active inference for balancing epistemic and pragmatic value.

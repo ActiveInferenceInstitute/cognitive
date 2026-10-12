@@ -6,6 +6,10 @@ status: stable
 
 # The Observation Space (O-Space): A Window to the World
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## What's This All About?
 
 Imagine you're playing a game with a blindfold on, trying to figure out what's happening by only touching objects and hearing sounds. That's basically what the Observation Space (O-Space) is all about - it's all the different ways an agent can perceive its world!

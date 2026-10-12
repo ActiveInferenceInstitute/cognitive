@@ -26,6 +26,10 @@ semantic_relations:
 
 # Generalized Coordinates in Active Inference
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Generalized coordinates provide a fundamental mathematical framework for representing continuous-time dynamics in active inference by explicitly incorporating higher-order temporal derivatives into the state space. This approach enables rich temporal modeling and prediction across multiple time scales.

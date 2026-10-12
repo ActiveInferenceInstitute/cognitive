@@ -25,6 +25,10 @@ semantic_relations:
 
 # Operationalism
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Operationalism (also known as operationism or operational definition) is a philosophical and methodological approach that defines theoretical concepts solely in terms of the operations or procedures used to measure or observe them. Emerging from physics in the 1920s and subsequently influencing [[philosophy_of_science]], psychology, and social sciences, operationalism represents a significant attempt to ground scientific concepts in empirically verifiable operations rather than abstract metaphysical properties.

@@ -38,6 +38,10 @@ semantic_relations:
 
 # Apidology
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Apidology is the scientific study of bees (clade Anthophila, within the superfamily Apoidea), encompassing their biology, behavior, ecology, and crucial role in pollination. This field is particularly important due to the essential ecosystem services bees provide and their significance in agriculture.

@@ -35,6 +35,10 @@ semantic_relations:
 
 # Free Energy Principle and Homeostasis
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 The Free Energy Principle (FEP) provides a unified theoretical framework for understanding physiological homeostasis and adaptation. Homeostasis emerges as the natural consequence of free energy minimization, where biological systems maintain their organization by resisting thermodynamic dissipation. This framework explains how organisms regulate internal states, adapt to environmental challenges, and exhibit self-organizing behavior across multiple biological scales.
 
 ## 🏥 Homeostasis as Free Energy Minimization

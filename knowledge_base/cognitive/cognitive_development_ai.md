@@ -29,6 +29,10 @@ semantic_relations:
 
 # Cognitive Development Through Active Inference
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 This document explores cognitive development through the lens of Active Inference, examining how children acquire knowledge, skills, and cognitive capabilities through the minimization of variational free energy in increasingly complex environments.
 
 ## 🧠 Developmental Active Inference Framework

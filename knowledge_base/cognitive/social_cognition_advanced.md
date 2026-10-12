@@ -30,6 +30,10 @@ semantic_relations:
 
 # Advanced Social Cognition and Theory of Mind
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 This document explores advanced aspects of social cognition through Active Inference, focusing on theory of mind, mentalizing, social prediction, and the neural mechanisms supporting sophisticated social understanding and interaction.
 
 ## 🧠 Theory of Mind as Active Inference

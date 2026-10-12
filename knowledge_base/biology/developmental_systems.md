@@ -36,6 +36,10 @@ semantic_relations:
 
 # Developmental Systems
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Developmental systems theory provides a mathematical framework for understanding the processes of biological development, from molecular to organismal scales. It integrates genetics, cell biology, and morphogenesis through dynamical systems approaches.

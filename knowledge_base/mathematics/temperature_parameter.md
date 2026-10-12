@@ -17,6 +17,10 @@ aliases:
 
 # Temperature Parameter
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 The temperature parameter (often denoted as $\gamma$ or $\beta=1/T$) controls the balance between exploration and exploitation in decision making. In active inference, it acts as a precision parameter that modulates the relative weighting of different policies.

@@ -32,6 +32,10 @@ semantic_relations:
 
 # Bee Colony Organization
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Bee colony organization represents a sophisticated eusocial system characterized by reproductive division of labor, complex communication networks, and adaptive task allocation. Unlike the morphologically diverse castes of ants, bee colonies achieve functional specialization through age-based division of labor, behavioral flexibility, and sophisticated queen-worker chemical communication. This organizational structure enables colonies to function as superorganisms capable of complex collective decision-making and environmental adaptation.

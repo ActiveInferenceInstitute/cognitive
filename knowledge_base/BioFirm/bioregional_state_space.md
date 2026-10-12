@@ -6,6 +6,10 @@ status: stable
 
 # [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]]
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 The [[knowledge_base/BioFirm/bioregional_state_space|Bioregional State Space]] represents a comprehensive framework for modeling complex [[knowledge_base/systems/Social-Ecological Systems|social-ecological systems]] through [[knowledge_base/cognitive/free_energy_principle|active inference]]. It proposes a [[knowledge_base/cognitive/active_inference/Hierarchical_Models|heterarchical]] nested structure of federated [[knowledge_base/mathematics/markov_blankets|Markov Blankets]], enabling multi-scale representation and inference across interconnected ecological, climatic, social, and economic domains.

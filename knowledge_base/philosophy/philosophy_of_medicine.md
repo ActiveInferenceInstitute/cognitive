@@ -44,4 +44,4 @@ Computational psychiatry is an active research programme in which disorders are 
 - Boorse, C. (1977). Health as a theoretical concept. Philosophy of Science, 44, 542-573.
 - Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine. Science, 196, 129-136.
 - Sackett, D. L., Rosenberg, W. M. C., Gray, J. A. M., Haynes, R. B., & Richardson, W. S. (1996). Evidence based medicine: What it is and what it isn't. BMJ, 312, 71-72.
-- Canguilhem, G. (1991). The Normal and the Pathological. Zone Books.
+- Canguilhem, G. (1989). The Normal and the Pathological. Zone Books.

@@ -6,6 +6,10 @@ status: stable
 
 # The State Space (S-Space): The Universe of Possibilities!
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## What's State All About?
 
 Think of State Space as a snapshot of everything that matters in your world at any moment. It's like taking a picture that captures all the important details - where things are, what's happening, and what could happen next. In games, it might be your character's position, health, and inventory; in a robot, it might be joint angles and sensor readings.

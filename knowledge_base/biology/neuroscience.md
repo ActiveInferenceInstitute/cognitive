@@ -34,6 +34,10 @@ semantic_relations:
 
 # Neuroscience
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Neuroscience investigates the structure, function, and development of the nervous system from molecular to behavioral scales. It integrates principles from cell biology, molecular biology, and biophysics to understand how neural systems process information and generate behavior.

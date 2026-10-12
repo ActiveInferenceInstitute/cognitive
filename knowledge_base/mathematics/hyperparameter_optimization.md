@@ -21,6 +21,10 @@ aliases:
 
 # Hyperparameter Optimization
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Model-based tuning (Bayesian optimization, bandits) for parameters like $\gamma$, learning rates, and precisions. The task is to choose settings such as the policy temperature, belief learning rate, discount factor and horizon so that an agent performs well, when each evaluation means running whole episodes and returns a noisy score.
 
 ## What makes the problem hard

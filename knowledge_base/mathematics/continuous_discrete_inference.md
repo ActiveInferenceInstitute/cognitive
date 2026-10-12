@@ -32,6 +32,10 @@ semantic_relations:
 
 # Continuous and Discrete Bayesian Inference
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 This article explores the interplay between continuous and discrete state spaces in [[bayesian_inference|Bayesian inference]], addressing methods for handling inference across different representations of uncertainty. It covers the mathematical foundations, practical implementation challenges, and techniques for bridging between continuous and discrete domains in probabilistic modeling.

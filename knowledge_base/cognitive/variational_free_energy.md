@@ -23,6 +23,10 @@ semantic_relations:
 
 # Variational Free Energy
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Variational free energy is a key quantity in active inference and the free energy principle, serving as both a measure of model evidence and an objective function for perception and action. It provides a unified framework for understanding Bayesian inference in biological systems.
 
 ## Mathematical Foundations

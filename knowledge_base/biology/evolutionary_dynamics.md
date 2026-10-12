@@ -38,6 +38,10 @@ semantic_relations:
 
 # Evolutionary Dynamics
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Evolutionary dynamics describes the mathematical principles governing evolutionary processes across scales, from molecular to ecological systems. This framework integrates concepts from population genetics, game theory, and complex systems theory.

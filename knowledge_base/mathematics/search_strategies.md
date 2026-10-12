@@ -18,6 +18,10 @@ semantic_relations:
 
 # Search Strategies
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Planning in discrete Active Inference means finding action sequences with low expected free energy. With $N_a$ actions and a horizon of $H$ steps there are $N_a^{H}$ sequences, so the question is how much of that tree to visit and in what order.
 
 ## The search space

@@ -26,9 +26,11 @@ history; this file is not a log. Remove an item when it is done.
   Hebb, Jaynes, Friston 2010) has been checked against its record. The rest of the pages are
   mostly navigation, index and software-usage pages. Parameter values and "illustrative"
   numbers in the colony-biology pseudocode remain unsourced and are labelled as illustrative.
-- **Illustrative code.** Some concept pages contain pseudocode that is not package API.
-  The framing notes and the authoring rules in `knowledge_base/AGENTS.md` say so;
-  consider replacing the largest examples with runs of the real package.
+- **Illustrative code.** Every page with a substantial Python listing says that it is
+  illustrative. The largest are very long (`mathematics/calculus`, `dynamical_systems`,
+  `free_energy`, `exploration_exploitation`, `epistemic_value`, each over 1,000 lines of
+  code). Trim them to the few snippets that carry the idea, or replace them with runs of the
+  real package, and keep the parameter values labelled as illustrative until then.
 
 ## Code
 

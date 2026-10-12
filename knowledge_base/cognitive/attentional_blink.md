@@ -26,6 +26,10 @@ semantic_relations:
 
 # Attentional Blink
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 Attentional blink refers to the temporary inability to detect a second target stimulus when it appears shortly after a first target in a rapid stream of stimuli. Within the active inference framework, it represents a temporary reduction in precision-weighting during the processing and model updating triggered by the first target.
 
 ## Core Mechanisms

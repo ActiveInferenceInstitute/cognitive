@@ -34,6 +34,10 @@ semantic_relations:
 
 # Active Inference in Social Insect Systems
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Active Inference provides a powerful framework for understanding social insect behavior, suggesting how ants and bees might implement predictive processing at both individual and collective levels. The free energy principle, as instantiated through active inference, offers a candidate account of how complex social behaviors could emerge from simple individual inference processes. This connection bridges neuroscience, behavioral ecology, and collective intelligence.

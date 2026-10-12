@@ -20,6 +20,10 @@ semantic_relations:
 
 # Error Propagation Implementation
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 This guide details the implementation of error propagation mechanisms in predictive processing networks, focusing on both forward and backward message passing.

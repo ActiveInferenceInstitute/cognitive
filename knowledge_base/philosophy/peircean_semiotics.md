@@ -26,6 +26,10 @@ semantic_relations:
 
 # Peircean Semiotics
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Peircean Semiotics, developed by Charles Sanders Peirce, provides a comprehensive theory of signs, meaning, and representation. It forms a foundational framework for understanding how meaning emerges through triadic sign relations and has been related to modern theories of [[active_inference|active inference]] and [[information_theory|information processing]].

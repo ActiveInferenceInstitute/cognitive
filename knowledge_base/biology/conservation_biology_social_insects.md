@@ -35,6 +35,10 @@ semantic_relations:
 
 # Conservation Biology of Social Insects
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 The conservation of social insects, particularly ants and bees, is critical for maintaining biodiversity, ecosystem services, and ecological stability. These species face multiple anthropogenic threats that have led to significant population declines and local extinctions. Effective conservation requires understanding species-specific vulnerabilities, implementing targeted protection strategies, and integrating conservation with sustainable land management practices.

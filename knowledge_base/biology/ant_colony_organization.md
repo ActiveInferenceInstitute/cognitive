@@ -34,6 +34,10 @@ semantic_relations:
 
 # Ant Colony Organization
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Ant colony organization is a prominent example of biological self-organization and distributed control. Through sophisticated caste systems, dynamic task allocation, and adaptive division of labor, ant colonies achieve complex collective outcomes from simple individual behaviors. This organizational structure enables colonies to scale from dozens to millions of individuals while maintaining efficiency, resilience, and adaptive capacity.

@@ -27,6 +27,10 @@ semantic_relations:
 
 # Pragmatism
 
+> **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
+> `cognitive` package, it is not part of the package and is not run by its tests, so treat it as a
+> sketch. The tested implementations are listed in [[docs/api/api_reference|the API reference]].
+
 ## Overview
 
 Pragmatism is a philosophical tradition that emerged in the United States in the late 19th century, emphasizing the practical consequences of ideas as the criterion for meaning, truth, and value. By focusing on the effects of beliefs in guiding action, pragmatism offers a distinctive approach to [[epistemology]], ethics, and [[metaphysics]] that mediates between [[rationalism]] and [[empiricism]] while emphasizing the contextual, practical, and evolutionary character of knowledge.
