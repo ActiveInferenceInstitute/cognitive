@@ -17,6 +17,7 @@ semantic_relations:
       - "[[saddle_node_bifurcation]]"
       - "[[oscillations]]"
       - "[[stability_analysis]]"
+wikidata: Q531126
 ---
 
 # Hopf Bifurcation

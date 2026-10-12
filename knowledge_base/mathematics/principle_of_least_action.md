@@ -17,6 +17,7 @@ semantic_relations:
       - "[[euler_lagrange_equations]]"
       - "[[variational_calculus]]"
       - "[[least_action_principle]]"
+wikidata: Q722799
 ---
 
 # Principle of Least Action

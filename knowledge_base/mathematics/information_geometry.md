@@ -24,6 +24,7 @@ semantic_relations:
       - "[[variational_inference]]"
       - "[[exponential_families]]"
       - "[[optimal_transport]]"
+wikidata: Q3798604
 ---
 
 
@@ -351,7 +352,7 @@ end
 
 ## Theoretical Results
 
-### 1. [[dually_flat|Dually Flat Structure]]
+### 1. [[statistical_manifolds|Dually Flat Structure]]
 
 ```julia
 

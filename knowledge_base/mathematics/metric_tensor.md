@@ -17,6 +17,7 @@ semantic_relations:
       - "[[geodesic_equations]]"
       - "[[inner_products]]"
       - "[[fisher_rao_metric]]"
+wikidata: Q757269
 ---
 
 # Metric Tensor

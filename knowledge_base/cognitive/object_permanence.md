@@ -17,6 +17,7 @@ semantic_relations:
       - "[[concrete_operations]]"
       - "[[hidden_states]]"
       - "[[perceptual_constancy]]"
+wikidata: Q1417978
 ---
 
 # Object Permanence

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[metropolis_hastings]]"
       - "[[conditional_probability]]"
       - "[[variational_inference]]"
+wikidata: Q1191905
 ---
 
 # Gibbs Sampling

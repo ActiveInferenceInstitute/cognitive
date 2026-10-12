@@ -23,6 +23,7 @@ semantic_relations:
       - "[[bayesian_graph_theory]]"
       - "[[belief_updating]]"
       - "[[maximum_likelihood_estimation]]"
+wikidata: Q182505
 ---
 
 

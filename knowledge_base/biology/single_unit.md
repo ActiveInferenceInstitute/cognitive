@@ -17,6 +17,7 @@ semantic_relations:
       - "[[population_coding]]"
 aliases:
   - single_unit_recording
+wikidata: Q4392016
 ---
 
 # Single-Unit Recording

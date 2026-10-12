@@ -17,6 +17,7 @@ semantic_relations:
       - "[[reasoning_problem_solving]]"
       - "[[duncker_problem]]"
       - "[[heuristics]]"
+wikidata: Q944461
 ---
 
 # Lateral Thinking

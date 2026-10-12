@@ -18,6 +18,7 @@ semantic_relations:
       - "[[ltp]]"
       - "[[ltd]]"
       - "[[ion_channels]]"
+wikidata: Q5018840
 ---
 
 # Calcium Signaling

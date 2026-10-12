@@ -17,6 +17,7 @@ semantic_relations:
       - "[[justification]]"
       - "[[skepticism]]"
       - "[[social_epistemology]]"
+wikidata: Q7311355
 ---
 
 # Religious Epistemology

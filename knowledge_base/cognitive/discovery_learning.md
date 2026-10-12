@@ -17,6 +17,7 @@ semantic_relations:
       - "[[experiential_learning]]"
       - "[[project_based_learning]]"
       - "[[incidental_learning]]"
+wikidata: Q1393166
 ---
 
 # Discovery Learning

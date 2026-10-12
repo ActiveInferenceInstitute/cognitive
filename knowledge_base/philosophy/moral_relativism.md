@@ -17,6 +17,7 @@ semantic_relations:
       - "[[relativism]]"
       - "[[social_norms]]"
       - "[[cultural_evolution]]"
+wikidata: Q1778848
 ---
 
 # Moral Relativism

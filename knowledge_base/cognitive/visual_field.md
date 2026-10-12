@@ -17,6 +17,7 @@ semantic_relations:
       - "[[visual_cortex]]"
       - "[[visual_attention]]"
       - "[[retinal_implants]]"
+wikidata: Q2364768
 ---
 
 # Visual Field

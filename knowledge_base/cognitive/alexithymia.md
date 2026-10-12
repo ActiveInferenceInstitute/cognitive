@@ -17,6 +17,7 @@ semantic_relations:
       - "[[emotional_awareness]]"
       - "[[emotion_regulation]]"
       - "[[insula]]"
+wikidata: Q1129046
 ---
 
 # Alexithymia

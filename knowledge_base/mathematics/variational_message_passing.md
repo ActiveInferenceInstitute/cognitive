@@ -16,6 +16,7 @@ semantic_relations:
       - "[[factor_graphs]]"
       - "[[variational_inference]]"
       - "[[exponential_family]]"
+wikidata: Q7915799
 ---
 
 # Variational Message Passing

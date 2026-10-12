@@ -17,6 +17,7 @@ semantic_relations:
       - "[[conditional_independence]]"
       - "[[information_gain]]"
       - "[[information_flow]]"
+wikidata: Q5159269
 ---
 
 # Conditional Mutual Information

@@ -14,6 +14,7 @@ semantic_relations:
       - "[[memory_systems]]"
       - "[[pattern_recognition]]"
       - "[[generative_model]]"
+wikidata: Q7148375
 ---
 
 # Pattern Completion

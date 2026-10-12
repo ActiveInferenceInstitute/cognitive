@@ -17,6 +17,7 @@ semantic_relations:
       - "[[social_norms]]"
       - "[[perspective_taking]]"
       - "[[cooperation]]"
+wikidata: Q628939
 ---
 
 # Guilt

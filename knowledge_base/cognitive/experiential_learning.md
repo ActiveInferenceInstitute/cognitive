@@ -17,6 +17,7 @@ semantic_relations:
       - "[[discovery_learning]]"
       - "[[project_based_learning]]"
       - "[[embodied_cognition]]"
+wikidata: Q1307600
 ---
 
 # Experiential Learning

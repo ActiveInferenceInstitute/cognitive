@@ -17,6 +17,7 @@ semantic_relations:
       - "[[visual_perception]]"
       - "[[capacity_limits]]"
       - "[[iconic_memory]]"
+wikidata: Q97700035
 ---
 
 # Visual Working Memory

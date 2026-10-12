@@ -98,7 +98,7 @@ graph TD
 
   - existence
 
-  - [[identity_and_difference]]
+  - identity and difference
 
 - [[causation]]
 
@@ -112,7 +112,7 @@ graph TD
 
   - continuity
 
-  - [[infinity]]
+  - infinity
 
   - dimensionality
 
@@ -210,11 +210,11 @@ graph TD
 
 - [[informal_logic]]
 
-  - [[argumentation_theory]]
+  - [[informal_logic|argumentation theory]]
 
   - [[fallacies]]
 
-  - [[rhetoric]]
+  - rhetoric
 
 - [[mathematical_logic]]
 
@@ -322,7 +322,7 @@ graph TD
 
   - democracy
 
-  - [[authoritarianism]]
+  - authoritarianism
 
   - [[anarchism]]
 
@@ -378,7 +378,7 @@ graph TD
 
   - evaluation
 
-  - [[genre_theory]]
+  - genre theory
 
 - aesthetic experience
 
@@ -792,7 +792,7 @@ graph TD
 
 - [[environmental_ethics]]
 
-  - [[deep_ecology]]
+  - [[environmental_ethics|deep ecology]]
 
   - [[ecofeminism]]
 
@@ -966,7 +966,7 @@ graph TD
 
   - [[measurement_problem]]
 
-  - [[quantum_probability]]
+  - [[quantum_logic|quantum probability]]
 
   - [[quantum_information]]
 
@@ -974,7 +974,7 @@ graph TD
 
   - [[quantum_computation]]
 
-  - [[quantum_foundations]]
+  - [[philosophy_of_physics|quantum foundations]]
 
   - quantum semantics
 
@@ -1290,9 +1290,9 @@ graph TD
 
   - personhood theory
 
-  - [[relational_ethics]]
+  - [[ubuntu_philosophy|relational ethics]]
 
-- [[african_epistemology]]
+- african epistemology
 
   - sage philosophy
 
@@ -1340,7 +1340,7 @@ graph TD
 
 - [[liberation_philosophy]]
 
-  - [[liberation_theology]]
+  - liberation theology
 
   - [[pedagogy_of_oppressed]]
 
@@ -1348,7 +1348,7 @@ graph TD
 
 - latin american identity
 
-  - [[mestizaje]]
+  - mestizaje
 
   - [[coloniality_of_power]]
 
@@ -1458,9 +1458,9 @@ graph TD
 
 - historical causation
 
-  - [[historical_determinism]]
+  - historical determinism
 
-  - [[contingency_theory]]
+  - contingency theory
 
   - historical agency
 
@@ -1512,7 +1512,7 @@ graph TD
 
 - [[religious_epistemology]]
 
-  - [[revelation]]
+  - [[faith_and_reason|revelation]]
 
   - [[faith_and_reason]]
 
@@ -1666,11 +1666,11 @@ graph TD
 
 ```
 
-- [[object_oriented_ontology]]
+- object oriented ontology
 
   - [[flat_ontology]]
 
-  - [[withdrawn_objects]]
+  - withdrawn objects
 
   - [[hyperobjects]]
 
@@ -1678,17 +1678,17 @@ graph TD
 
   - anti correlationism
 
-  - [[non_anthropocentrism]]
+  - [[environmental_ethics|non-anthropocentrism]]
 
-  - [[speculative_materialism]]
+  - speculative materialism
 
-- [[new_realisms]]
+- new realisms
 
   - [[transcendental_realism]]
 
   - speculative method
 
-  - [[weird_realism]]
+  - weird realism
 
 ## Cross-Disciplinary Philosophical Topics
 
@@ -1848,7 +1848,7 @@ graph TD
 
 - educational contexts
 
-  - [[social_reproduction]]
+  - social reproduction
 
   - political education
 
@@ -1958,7 +1958,7 @@ graph TD
 
 - human development
 
-  - [[evolutionary_anthropology]]
+  - evolutionary anthropology
 
   - historical anthropology
 
@@ -2114,7 +2114,7 @@ graph TD
 
   - virtue de
 
-  - [[filial_piety]]
+  - [[confucian_philosophy|filial piety]]
 
 - daoist thought
 
@@ -2170,17 +2170,17 @@ graph TD
 
   - upanishadic thought
 
-  - [[brahman_atman]]
+  - [[hindu_philosophy|Brahman and Atman]]
 
-  - [[karma_theory]]
+  - [[hindu_philosophy|karma theory]]
 
   - dharma ethics
 
-- [[orthodox_darshanas]]
+- [[hindu_philosophy|orthodox darshanas]]
 
   - [[nyaya_logic]]
 
-  - [[vaisheshika_ontology]]
+  - [[nyaya_logic|Vaisheshika ontology]]
 
   - [[samkhya_dualism]]
 
@@ -2236,7 +2236,7 @@ graph TD
 
   - pure land thought
 
-  - [[nichiren_buddhism]]
+  - nichiren buddhism
 
   - [[shingon_esoteric]]
 
@@ -2296,7 +2296,7 @@ graph TD
 
   - indigenous cosmologies
 
-  - [[sacred_ecology]]
+  - [[traditional_ecological_knowledge|sacred ecology]]
 
   - cyclical time
 
@@ -2310,7 +2310,7 @@ graph TD
 
   - harmony with nature
 
-  - [[seven_generations]]
+  - seven generations
 
 - indigenous epistemology
 
@@ -2358,7 +2358,7 @@ graph TD
 
   - melanesian philosophy
 
-  - [[aboriginal_philosophy]]
+  - aboriginal philosophy
 
   - maori thought
 
@@ -2374,7 +2374,7 @@ graph TD
 
 - indigenous pacific values
 
-  - [[mana_concept]]
+  - mana concept
 
   - tapu sacred
 
@@ -2428,7 +2428,7 @@ graph TD
 
   - [[internal_relations]]
 
-  - [[prehension_theory]]
+  - [[concrescence|prehension theory]]
 
   - causal efficacy
 
@@ -2544,7 +2544,7 @@ graph TD
 
   - transcendence
 
-  - [[existence_precedence]]
+  - [[existentialism|existence precedes essence]]
 
 - [[heideggerian_ontology]]
 
@@ -2558,9 +2558,9 @@ graph TD
 
 - existential themes
 
-  - [[anxiety_angst]]
+  - [[being_toward_death|anxiety (angst)]]
 
-  - [[radical_freedom]]
+  - [[being_and_nothingness|radical freedom]]
 
   - [[nothingness]]
 
@@ -2602,7 +2602,7 @@ graph TD
 
   - [[hermeneutic_circle]]
 
-  - [[fusion_of_horizons]]
+  - [[hermeneutic_phenomenology|fusion of horizons]]
 
   - [[effective_historical_consciousness]]
 
@@ -2660,7 +2660,7 @@ graph TD
 
   - [[lived_body]]
 
-  - [[sexual_difference]]
+  - sexual difference
 
   - situated experience
 
@@ -2678,7 +2678,7 @@ graph TD
 
 - feminist methodology
 
-  - [[standpoint_theory]]
+  - [[feminist_epistemology|standpoint theory]]
 
   - [[intersectionality]]
 
@@ -2718,11 +2718,11 @@ graph TD
 
 ```
 
-- [[postcolonial_theory]]
+- postcolonial theory
 
   - [[colonial_discourse]]
 
-  - [[cultural_imperialism]]
+  - cultural imperialism
 
   - hegemony analysis
 
@@ -2732,11 +2732,11 @@ graph TD
 
   - [[cultural_hybridity]]
 
-  - [[subaltern_studies]]
+  - subaltern studies
 
   - authenticity critique
 
-  - [[diaspora_theory]]
+  - diaspora theory
 
 - postcolonial epistemology
 
@@ -2782,7 +2782,7 @@ graph TD
 
   - race as construction
 
-  - [[racial_formation]]
+  - racial formation
 
   - racialization process
 
@@ -2792,9 +2792,9 @@ graph TD
 
   - [[recognition_theory]]
 
-  - [[reparative_justice]]
+  - reparative justice
 
-  - [[transformative_justice]]
+  - transformative justice
 
   - [[epistemic_justice]]
 
@@ -2804,7 +2804,7 @@ graph TD
 
   - [[interest_convergence]]
 
-  - [[racial_realism]]
+  - racial realism
 
   - critical praxis
 
@@ -2838,9 +2838,9 @@ graph TD
 
 ```
 
-- [[queer_theory]]
+- queer theory
 
-  - [[heteronormativity_critique]]
+  - heteronormativity critique
 
   - performativity theory
 
@@ -2866,7 +2866,7 @@ graph TD
 
   - coalition politics
 
-  - [[queer_futurity]]
+  - queer futurity
 
 ## Contemporary Philosophical Methodologies
 
@@ -2964,7 +2964,7 @@ graph TD
 
   - post analytic philosophy
 
-  - [[naturalized_phenomenology]]
+  - [[phenomenology|naturalized phenomenology]]
 
   - hermeneutic analyticity
 
@@ -2984,7 +2984,7 @@ graph TD
 
   - [[late_wittgenstein]]
 
-  - [[ricoeur_hermeneutics]]
+  - [[hermeneutic_phenomenology|Ricoeur hermeneutics]]
 
   - habermas theory
 
@@ -3020,15 +3020,15 @@ graph TD
 
 ```
 
-- [[new_materialisms]]
+- new materialisms
 
   - material agency
 
-  - [[vital_materialism]]
+  - vital materialism
 
-  - [[immanent_materialism]]
+  - immanent materialism
 
-  - [[material_feminism]]
+  - material feminism
 
 - materialist critique
 
@@ -3326,9 +3326,9 @@ graph TD
 
 - [[philosophy_of_ai]]
 
-  - [[computational_intelligence]]
+  - computational intelligence
 
-  - [[embodied_ai]]
+  - [[embodied_cognition|embodied AI]]
 
   - emergent intelligence
 

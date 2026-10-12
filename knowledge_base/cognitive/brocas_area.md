@@ -17,6 +17,7 @@ semantic_relations:
       - "[[aphasia]]"
       - "[[motor_cortex]]"
       - "[[forward_models]]"
+wikidata: Q728285
 ---
 
 # Broca's Area

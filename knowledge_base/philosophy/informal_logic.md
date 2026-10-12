@@ -18,6 +18,7 @@ semantic_relations:
       - "[[inductive_reasoning]]"
       - "[[abductive_reasoning]]"
       - "[[conceptual_analysis]]"
+wikidata: Q1506807
 ---
 
 # Informal Logic

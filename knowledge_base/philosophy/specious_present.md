@@ -18,6 +18,7 @@ semantic_relations:
       - "[[philosophy_of_time]]"
       - "[[temporal_integration]]"
       - "[[temporal_models]]"
+wikidata: Q7575034
 ---
 
 # Specious Present

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[homological_algebra]]"
       - "[[dimension_reduction]]"
       - "[[network_analysis]]"
+wikidata: Q4460773
 ---
 
 # Topological Data Analysis

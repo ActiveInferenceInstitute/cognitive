@@ -2,6 +2,7 @@
 title: "Information Theory"
 type: "mathematical_concept"
 status: stable
+wikidata: Q131222
 ---
 
 # Information Theory

@@ -34,6 +34,7 @@ semantic_relations:
       - "[[variational_inference]]"
       - "[[self_organization]]"
       - "[[autopoiesis]]"
+wikidata: Q17014702
 ---
 
 

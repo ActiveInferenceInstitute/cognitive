@@ -17,6 +17,7 @@ semantic_relations:
       - "[[hypothesis_testing]]"
       - "[[free_energy_principle]]"
       - "[[pragmatism]]"
+wikidata: Q308495
 ---
 
 # Abductive Reasoning

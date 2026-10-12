@@ -119,7 +119,7 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
 - emotion modulation - Neurochemical modulation of emotion
 
-  - [[monoamine_systems]] - Serotonin, dopamine, and noradrenaline systems shaping mood
+  - [[neuromodulation|monoamine systems]] - Serotonin, dopamine, and noradrenaline systems shaping mood
 
     - [[dopamine]] - Reward/motivation
 
@@ -163,7 +163,7 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
     - vicarious learning - Others' experience
 
-    - [[emotional_contagion]] - Affect sharing
+    - [[emotion_contagion|emotional contagion]] - Affect sharing
 
 ### Information Processing
 

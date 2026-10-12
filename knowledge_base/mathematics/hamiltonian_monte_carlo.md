@@ -20,6 +20,7 @@ semantic_relations:
 aliases:
   - hamiltonian_mc
   - hybrid_monte_carlo
+wikidata: Q1639846
 ---
 
 # Hamiltonian Monte Carlo

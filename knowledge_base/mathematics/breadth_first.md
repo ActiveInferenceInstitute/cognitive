@@ -17,6 +17,7 @@ semantic_relations:
       - "[[graph_theory]]"
       - "[[shortest_path]]"
       - "[[reasoning_problem_solving]]"
+wikidata: Q325904
 ---
 
 # Breadth-First Search

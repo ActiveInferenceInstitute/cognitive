@@ -17,6 +17,7 @@ semantic_relations:
       - "[[consciousness]]"
 aliases:
   - priming
+wikidata: Q18619
 ---
 
 # Priming Effects

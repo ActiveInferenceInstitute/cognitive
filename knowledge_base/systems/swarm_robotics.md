@@ -18,6 +18,7 @@ semantic_relations:
       - "[[multi_agent_active_inference]]"
 aliases:
   - robotic_swarms
+wikidata: Q2446723
 ---
 
 # Swarm Robotics

@@ -15,6 +15,7 @@ semantic_relations:
       - "[[developmental_psychology]]"
       - "[[communication]]"
       - "[[active_inference]]"
+wikidata: Q9636076
 ---
 
 # Joint Attention

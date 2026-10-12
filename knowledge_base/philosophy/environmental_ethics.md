@@ -16,6 +16,7 @@ semantic_relations:
       - "[[philosophy_topics]]"
       - "[[ecosystem_management]]"
       - "[[resilience_thinking]]"
+wikidata: Q875686
 ---
 
 # Environmental Ethics

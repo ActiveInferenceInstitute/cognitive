@@ -17,6 +17,7 @@ semantic_relations:
       - "[[memory_systems]]"
       - "[[learning_theory]]"
       - "[[metacognition]]"
+wikidata: Q4677578
 ---
 
 # Active Recall

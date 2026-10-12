@@ -18,6 +18,7 @@ semantic_relations:
 aliases:
   - concept_learning
   - category_formation
+wikidata: Q4491893
 ---
 
 # Category Learning

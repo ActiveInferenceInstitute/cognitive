@@ -25,6 +25,7 @@ semantic_relations:
       - "[[motor_learning]]"
       - "[[cognitive_skill]]"
       - "[[expertise]]"
+wikidata: Q97999543
 ---
 
 
@@ -113,7 +114,7 @@ Skill Acquisition refers to the process by which individuals learn and master ne
 
 - feedback use - Use of information about performance
 
-  - [[intrinsic_feedback]] - Feedback arising from the performer's own senses
+  - intrinsic feedback - Feedback arising from the performer's own senses
 
     - [[proprioception]] - Sensing body position and movement
 

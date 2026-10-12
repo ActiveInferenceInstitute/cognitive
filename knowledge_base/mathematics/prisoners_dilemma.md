@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cooperation]]"
       - "[[direct_reciprocity]]"
       - "[[nowak_five_rules]]"
+wikidata: Q41693
 ---
 
 # Prisoner's Dilemma

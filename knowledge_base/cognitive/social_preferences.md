@@ -17,6 +17,7 @@ semantic_relations:
       - "[[social_reward]]"
       - "[[trust_games]]"
       - "[[social_punishment]]"
+wikidata: Q7551312
 ---
 
 # Social Preferences

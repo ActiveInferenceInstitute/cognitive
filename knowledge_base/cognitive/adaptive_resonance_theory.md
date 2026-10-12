@@ -391,7 +391,7 @@ class CompleteARTSystem:
 
 - **Hierarchical Processing**:
 
-  - [[hierarchical_art|Hierarchical ART]]
+  - Hierarchical ART
 
   - Deep ART
 

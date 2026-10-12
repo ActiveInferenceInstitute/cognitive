@@ -18,6 +18,7 @@ semantic_relations:
       - "[[genetic_diversity]]"
       - "[[speciation]]"
       - "[[stochastic_processes]]"
+wikidata: Q486420
 ---
 
 # Genetic Drift

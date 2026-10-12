@@ -17,6 +17,7 @@ semantic_relations:
       - "[[knowledge_base/biology/ecological_networks]]"
 aliases:
   - pollination
+wikidata: Q134624
 ---
 
 # Pollination Biology

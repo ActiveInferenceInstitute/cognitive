@@ -26,6 +26,7 @@ semantic_relations:
     links:
       - "[[cognitive/sensorimotor_coordination|Sensorimotor Coordination]]"
       - "[[systems/circular_causality|Circular Causality]]"
+wikidata: Q431627
 ---
 
 # Enactivism

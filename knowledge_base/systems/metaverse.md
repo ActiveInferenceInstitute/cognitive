@@ -33,6 +33,7 @@ semantic_relations:
       - "[[distributed_systems|Distributed Systems]]"
       - "[[computer_graphics|Computer Graphics]]"
       - "[[knowledge_base/cognitive/embodied_cognition|Embodied Cognition]]"
+wikidata: Q2632041
 ---
 
 

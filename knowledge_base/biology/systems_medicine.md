@@ -17,6 +17,7 @@ semantic_relations:
       - "[[network_theory]]"
       - "[[philosophy_of_medicine]]"
       - "[[computational_psychiatry]]"
+wikidata: Q7663871
 ---
 
 # Systems Medicine

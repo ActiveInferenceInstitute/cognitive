@@ -16,6 +16,7 @@ semantic_relations:
 aliases:
   - hyperparameters
   - hyperparameter_tuning
+wikidata: Q48996162
 ---
 
 

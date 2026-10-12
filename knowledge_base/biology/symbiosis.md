@@ -18,6 +18,7 @@ semantic_relations:
       - "[[microbiology]]"
       - "[[biodiversity]]"
       - "[[cellular_intelligence]]"
+wikidata: Q121610
 ---
 
 # Symbiosis

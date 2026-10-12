@@ -17,6 +17,7 @@ semantic_relations:
       - "[[proof_theory]]"
       - "[[set_theory]]"
       - "[[symbolic_logic]]"
+wikidata: Q1166618
 ---
 
 # Mathematical Logic

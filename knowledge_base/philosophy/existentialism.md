@@ -17,6 +17,7 @@ semantic_relations:
       - "[[embodied_cognition]]"
       - "[[enactivism]]"
       - "[[hermeneutics]]"
+wikidata: Q38066
 ---
 
 # Existentialism

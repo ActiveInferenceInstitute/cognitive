@@ -17,6 +17,7 @@ semantic_relations:
       - "[[homeostasis]]"
       - "[[circular_causality]]"
       - "[[systems_theory]]"
+wikidata: Q123637
 ---
 
 # Cybernetics

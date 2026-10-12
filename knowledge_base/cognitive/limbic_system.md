@@ -17,6 +17,7 @@ semantic_relations:
       - "[[emotion_circuits]]"
       - "[[emotional_processing]]"
       - "[[anterior_cingulate]]"
+wikidata: Q192560
 ---
 
 # Limbic System

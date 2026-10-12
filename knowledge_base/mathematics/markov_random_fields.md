@@ -485,7 +485,7 @@ end
 
 ```
 
-### 2. [[spatial_statistics|Spatial Statistics]]
+### 2. Spatial Statistics
 
 ```julia
 

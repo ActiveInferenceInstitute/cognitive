@@ -17,6 +17,7 @@ semantic_relations:
       - "[[symbolic_logic]]"
       - "[[set_theory]]"
       - "[[knowledge_representation]]"
+wikidata: Q35148
 ---
 
 # Predicate Logic

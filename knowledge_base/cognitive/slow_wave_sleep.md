@@ -18,6 +18,7 @@ semantic_relations:
       - "[[systems_consolidation]]"
       - "[[oscillations]]"
       - "[[hippocampus]]"
+wikidata: Q3964845
 ---
 
 # Slow Wave Sleep

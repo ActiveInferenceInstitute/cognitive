@@ -18,6 +18,7 @@ semantic_relations:
       - "[[being_and_nothingness]]"
       - "[[facticity]]"
       - "[[personal_identity]]"
+wikidata: Q2360032
 ---
 
 # Authenticity

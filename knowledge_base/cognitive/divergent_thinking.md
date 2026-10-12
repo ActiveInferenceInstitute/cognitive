@@ -17,6 +17,7 @@ semantic_relations:
       - "[[insight_problem_solving]]"
       - "[[cognitive_flexibility]]"
       - "[[executive_functions]]"
+wikidata: Q1993172
 ---
 
 # Divergent Thinking

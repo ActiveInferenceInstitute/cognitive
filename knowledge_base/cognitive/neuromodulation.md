@@ -17,6 +17,7 @@ semantic_relations:
       - "[[noradrenergic_system]]"
       - "[[serotonin]]"
       - "[[precision_weighting]]"
+wikidata: Q905905
 ---
 
 # Neuromodulation

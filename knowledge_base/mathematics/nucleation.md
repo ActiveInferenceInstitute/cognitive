@@ -17,6 +17,7 @@ semantic_relations:
       - "[[statistical_physics]]"
       - "[[pattern_formation]]"
       - "[[order_parameters]]"
+wikidata: Q909022
 ---
 
 # Nucleation

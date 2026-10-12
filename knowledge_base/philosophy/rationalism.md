@@ -17,6 +17,7 @@ semantic_relations:
       - "[[metaphysics]]"
       - "[[logic]]"
       - "[[bayesian_brain]]"
+wikidata: Q483024
 ---
 
 # Rationalism

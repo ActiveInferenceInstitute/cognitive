@@ -15,6 +15,7 @@ semantic_relations:
       - "[[emotional_processing]]"
       - "[[interoception]]"
       - "[[precision_weighting]]"
+wikidata: Q338924
 ---
 
 # Amygdala

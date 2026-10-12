@@ -18,6 +18,7 @@ semantic_relations:
       - "[[population_genetics]]"
       - "[[evolutionary_biology]]"
       - "[[phenotypic_plasticity]]"
+wikidata: Q43478
 ---
 
 # Natural Selection

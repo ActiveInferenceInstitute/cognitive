@@ -28,6 +28,7 @@ semantic_relations:
       - "[[collective_intelligence]]"
       - "[[cultural_evolution]]"
       - "[[ecological_networks]]"
+wikidata: Q2434424
 ---
 
 

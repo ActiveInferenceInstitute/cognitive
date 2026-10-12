@@ -14,6 +14,7 @@ semantic_relations:
       - "[[knowledge_base/systems/spatial_computing]]"
       - "[[knowledge_base/cognitive/user_modeling]]"
       - "[[knowledge_base/cognitive/attention_mechanisms]]"
+wikidata: Q207434
 ---
 
 # Human-Computer Interaction

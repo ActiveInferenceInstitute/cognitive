@@ -17,6 +17,7 @@ semantic_relations:
       - "[[predictive_coding]]"
       - "[[hierarchical_processing]]"
       - "[[edge_detection]]"
+wikidata: Q75785
 ---
 
 # Visual Cortex

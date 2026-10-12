@@ -15,6 +15,7 @@ semantic_relations:
       - "[[artificial_intelligence]]"
       - "[[global_workspace]]"
       - "[[active_inference]]"
+wikidata: Q2993663
 ---
 
 # Artificial Consciousness

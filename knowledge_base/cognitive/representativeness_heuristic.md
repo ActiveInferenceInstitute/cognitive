@@ -17,6 +17,7 @@ semantic_relations:
       - "[[availability_heuristic]]"
       - "[[bayes_theorem]]"
       - "[[prior_distribution]]"
+wikidata: Q20203288
 ---
 
 # Representativeness Heuristic

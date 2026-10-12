@@ -16,6 +16,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/swarm_intelligence]]"
       - "[[knowledge_base/mathematics/evolutionary_algorithms]]"
       - "[[knowledge_base/free_energy_principle/systems/self_organization]]"
+wikidata: Q263847
 ---
 
 # Artificial Life

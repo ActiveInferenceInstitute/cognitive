@@ -19,6 +19,7 @@ semantic_relations:
       - "[[perspective_taking]]"
       - "[[medial_prefrontal]]"
       - "[[active_inference]]"
+wikidata: Q639219
 ---
 
 # Theory of Mind

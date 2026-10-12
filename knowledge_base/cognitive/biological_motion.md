@@ -21,6 +21,7 @@ semantic_relations:
       - "[[action_recognition]]"
       - "[[social_cognition]]"
       - "[[motion_processing]]"
+wikidata: Q667800
 ---
 
 

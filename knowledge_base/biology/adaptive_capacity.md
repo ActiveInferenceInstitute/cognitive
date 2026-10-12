@@ -17,6 +17,7 @@ semantic_relations:
       - "[[complex_adaptive_systems]]"
       - "[[adaptive_management]]"
       - "[[bioregional_state_space]]"
+wikidata: Q3738275
 ---
 
 # Adaptive Capacity

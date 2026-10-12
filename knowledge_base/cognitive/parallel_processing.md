@@ -14,6 +14,7 @@ semantic_relations:
       - "[[attention_mechanisms]]"
       - "[[resource_management]]"
       - "[[computational_efficiency]]"
+wikidata: Q4116106
 ---
 
 

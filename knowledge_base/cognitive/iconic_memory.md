@@ -17,6 +17,7 @@ semantic_relations:
       - "[[working_memory]]"
       - "[[sensory_processing]]"
       - "[[attention_mechanisms]]"
+wikidata: Q18652
 ---
 
 # Iconic Memory

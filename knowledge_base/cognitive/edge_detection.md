@@ -17,6 +17,7 @@ semantic_relations:
       - "[[perceptual_organization]]"
       - "[[form_perception]]"
       - "[[predictive_coding]]"
+wikidata: Q1513153
 ---
 
 # Edge Detection

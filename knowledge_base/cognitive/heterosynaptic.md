@@ -17,6 +17,7 @@ semantic_relations:
       - "[[hebbian_learning]]"
       - "[[synaptic_tagging]]"
       - "[[homeostatic_plasticity]]"
+wikidata: Q17038680
 ---
 
 # Heterosynaptic Plasticity

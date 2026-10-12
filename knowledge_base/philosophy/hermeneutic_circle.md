@@ -18,6 +18,7 @@ semantic_relations:
       - "[[prior_beliefs]]"
       - "[[top_down]]"
       - "[[bottom_up]]"
+wikidata: Q1570095
 ---
 
 # Hermeneutic Circle

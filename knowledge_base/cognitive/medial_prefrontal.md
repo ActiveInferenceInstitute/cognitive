@@ -15,6 +15,7 @@ semantic_relations:
       - "[[theory_of_mind]]"
       - "[[self_awareness]]"
       - "[[active_inference]]"
+wikidata: Q111451689
 ---
 
 # Medial Prefrontal Cortex

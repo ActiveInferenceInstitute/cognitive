@@ -17,6 +17,7 @@ semantic_relations:
       - "[[attention]]"
       - "[[self_awareness]]"
       - "[[perception]]"
+wikidata: Q7087
 ---
 
 
@@ -125,7 +126,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
     - [[cholinergic]] - Attention/arousal
 
-    - [[monoaminergic]] - Dopamine, serotonin, and norepinephrine systems
+    - monoaminergic - Dopamine, serotonin, and norepinephrine systems
 
 ## Theoretical Frameworks
 
@@ -139,7 +140,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
     - information structure - Structure of cause-effect relations in a system
 
-  - [[exclusion_principle]] - Only one maximally integrated boundary is conscious
+  - [[integrated_information|exclusion principle]] - Only one maximally integrated boundary is conscious
 
     - spatiotemporal grain - Spatial and temporal resolution of conscious elements
 
@@ -199,7 +200,7 @@ Consciousness encompasses the subjective experience of awareness, both of the ex
 
 - consciousness imaging - Imaging brain activity during awareness tasks
 
-  - [[contrastive_analysis]] - Comparing conscious and unconscious conditions
+  - contrastive analysis - Comparing conscious and unconscious conditions
 
     - seen unseen - Contrast between seen and unseen stimuli
 

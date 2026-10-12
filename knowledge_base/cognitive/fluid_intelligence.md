@@ -17,6 +17,7 @@ semantic_relations:
       - "[[working_memory]]"
       - "[[reasoning_problem_solving]]"
       - "[[executive_functions]]"
+wikidata: Q24841632
 ---
 
 # Fluid Intelligence

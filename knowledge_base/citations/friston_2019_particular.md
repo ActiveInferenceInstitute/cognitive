@@ -18,7 +18,7 @@ tags:
 semantic_relations:
   - type: foundational_for
     links:
-      - "[[particular partition]]"
+      - "[[knowledge_base/mathematics/markov_blankets]]"
   - type: extends
     links:
       - "[[friston_2013]]"

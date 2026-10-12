@@ -17,6 +17,7 @@ semantic_relations:
       - "[[factor_graphs]]"
       - "[[probabilistic_graphical_models]]"
       - "[[markov_random_fields]]"
+wikidata: Q7625208
 ---
 
 # Structured Prediction

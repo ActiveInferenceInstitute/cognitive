@@ -21,6 +21,7 @@ semantic_relations:
 aliases:
   - bifurcation
   - bifurcations
+wikidata: Q1154357
 ---
 
 # Bifurcation Theory

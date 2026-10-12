@@ -17,6 +17,7 @@ semantic_relations:
       - "[[schemas]]"
       - "[[generalization]]"
       - "[[structure_learning]]"
+wikidata: Q69906796
 ---
 
 # Concept Formation

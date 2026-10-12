@@ -17,6 +17,7 @@ semantic_relations:
       - "[[mutual_information]]"
       - "[[cross_entropy]]"
       - "[[information_theory]]"
+wikidata: Q1364826
 ---
 
 # Joint Entropy

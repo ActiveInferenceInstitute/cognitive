@@ -11,6 +11,7 @@ semantic_relations:
       - "[[policy_visualization]]"
       - "[[knowledge_base/cognitive/visualization_suite]]"
       - "[[knowledge_base/cognitive/graph_visualization]]"
+wikidata: Q6504956
 ---
 
 # Data Visualization

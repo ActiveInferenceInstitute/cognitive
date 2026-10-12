@@ -19,6 +19,7 @@ semantic_relations:
 aliases:
   - default_network
   - default_mode_network
+wikidata: Q1182555
 ---
 
 # Default Mode Network

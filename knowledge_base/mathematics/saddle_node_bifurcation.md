@@ -17,6 +17,7 @@ semantic_relations:
       - "[[critical_transitions]]"
       - "[[hopf_bifurcation]]"
       - "[[basin_of_attraction]]"
+wikidata: Q740190
 ---
 
 # Saddle-Node Bifurcation

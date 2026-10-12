@@ -17,6 +17,7 @@ semantic_relations:
       - "[[recognition_memory]]"
       - "[[hippocampus]]"
       - "[[source_memory]]"
+wikidata: Q3267244
 ---
 
 # Recollection

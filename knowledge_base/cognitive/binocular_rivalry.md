@@ -17,6 +17,7 @@ semantic_relations:
       - "[[binocular_vision]]"
       - "[[predictive_coding]]"
       - "[[visual_perception]]"
+wikidata: Q864009
 ---
 
 # Binocular Rivalry

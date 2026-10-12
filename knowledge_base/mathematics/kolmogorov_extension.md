@@ -17,6 +17,7 @@ semantic_relations:
       - "[[stochastic_processes]]"
       - "[[wiener_process]]"
       - "[[path_integral_theory]]"
+wikidata: Q3526996
 ---
 
 # Kolmogorov Extension Theorem

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[neuromodulation]]"
       - "[[neural_plasticity]]"
       - "[[ion_channels]]"
+wikidata: Q17050710
 ---
 
 # Chemogenetics

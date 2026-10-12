@@ -17,6 +17,7 @@ semantic_relations:
       - "[[executive_functions]]"
       - "[[goal_maintenance]]"
       - "[[action_planning]]"
+wikidata: Q916150
 ---
 
 # Prospective Memory

@@ -22,6 +22,7 @@ semantic_relations:
       - "[[depth_perception]]"
       - "[[spatial_attention]]"
       - "[[action_planning]]"
+wikidata: Q852504
 ---
 
 

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[quantal_content]]"
       - "[[calcium_signaling]]"
       - "[[neuromuscular_junction]]"
+wikidata: Q7233588
 ---
 
 # Post-Tetanic Potentiation

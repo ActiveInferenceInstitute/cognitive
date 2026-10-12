@@ -17,6 +17,7 @@ semantic_relations:
       - "[[care_ethics]]"
       - "[[normative_ethics]]"
       - "[[buddhist_philosophy]]"
+wikidata: Q113786856
 ---
 
 # Confucian Philosophy

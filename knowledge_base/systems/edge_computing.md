@@ -14,6 +14,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/active_inference]]"
       - "[[knowledge_base/cognitive/neuromorphic_computing]]"
       - "[[knowledge_base/systems/fault_tolerance]]"
+wikidata: Q5337692
 ---
 
 # Edge Computing

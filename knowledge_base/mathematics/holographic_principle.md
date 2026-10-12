@@ -17,6 +17,7 @@ semantic_relations:
       - "[[entropy]]"
       - "[[markov_blanket]]"
       - "[[quantum_free_energy]]"
+wikidata: Q911473
 ---
 
 # Holographic Principle

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[conservation_biology]]"
       - "[[ecology]]"
       - "[[bioregional_state_space]]"
+wikidata: Q17146659
 ---
 
 # Species Richness

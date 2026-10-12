@@ -17,6 +17,7 @@ semantic_relations:
       - "[[implicit_memory]]"
       - "[[spaced_retrieval]]"
       - "[[prediction_error]]"
+wikidata: Q5395727
 ---
 
 # Errorless Learning

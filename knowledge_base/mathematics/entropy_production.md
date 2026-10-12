@@ -15,6 +15,7 @@ semantic_relations:
       - "[[knowledge_base/mathematics/non_equilibrium_thermodynamics]]"
       - "[[knowledge_base/mathematics/kl_divergence]]"
       - "[[knowledge_base/mathematics/stochastic_processes]]"
+wikidata: Q5380811
 ---
 
 # Entropy Production

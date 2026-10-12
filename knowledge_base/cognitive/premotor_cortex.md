@@ -21,6 +21,7 @@ semantic_relations:
 aliases:
   - premotor
   - premotor_areas
+wikidata: Q2998090
 ---
 
 # Premotor Cortex

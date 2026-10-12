@@ -33,6 +33,7 @@ semantic_relations:
       - "[[expected_free_energy]]"
       - "[[path_integral_control]]"
       - "[[optimization_theory]]"
+wikidata: Q4677422
 ---
 
 > **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
@@ -65,7 +66,7 @@ Components:
 
 - [[policy_evaluation]]
 
-- [[temporal_horizon]]
+- temporal horizon
 
 ### Policy Selection
 
@@ -281,7 +282,7 @@ class ExecutionController:
 
   - Goal decomposition
 
-- [[option_frameworks]]
+- [[option_framework|option frameworks]]
 
   - Skill learning
 

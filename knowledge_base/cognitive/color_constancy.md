@@ -17,6 +17,7 @@ semantic_relations:
       - "[[perceptual_inference]]"
       - "[[visual_cortex]]"
       - "[[light_adaptation]]"
+wikidata: Q2563885
 ---
 
 # Color Constancy

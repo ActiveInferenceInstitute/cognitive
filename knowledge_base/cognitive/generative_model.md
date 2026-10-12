@@ -17,6 +17,7 @@ semantic_relations:
       - "[[model_architecture]]"
       - "[[probabilistic_inference]]"
       - "[[bayesian_inference]]"
+wikidata: Q5532625
 ---
 
 

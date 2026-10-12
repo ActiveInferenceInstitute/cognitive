@@ -20,6 +20,7 @@ semantic_relations:
       - "[[motion_perception]]"
       - "[[binocular_vision]]"
       - "[[spatial_attention]]"
+wikidata: Q1749840
 ---
 
 

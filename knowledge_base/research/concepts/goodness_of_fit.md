@@ -13,6 +13,7 @@ semantic_relations:
       - "[[validation_methods]]"
       - "[[knowledge_base/mathematics/variational_free_energy]]"
       - "[[statistical_analysis]]"
+wikidata: Q2034239
 ---
 
 # Goodness of Fit

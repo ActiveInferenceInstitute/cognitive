@@ -17,6 +17,7 @@ semantic_relations:
       - "[[geometric_phase]]"
       - "[[differential_geometry]]"
       - "[[lie_groups]]"
+wikidata: Q907926
 ---
 
 # Holonomy

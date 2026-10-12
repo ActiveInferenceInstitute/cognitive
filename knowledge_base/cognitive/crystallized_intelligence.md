@@ -17,6 +17,7 @@ semantic_relations:
       - "[[semantic_memory]]"
       - "[[learning]]"
       - "[[knowledge_representation]]"
+wikidata: Q112719940
 ---
 
 # Crystallized Intelligence

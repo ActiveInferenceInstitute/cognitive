@@ -17,6 +17,7 @@ semantic_relations:
       - "[[working_memory]]"
       - "[[memory_systems]]"
       - "[[attention]]"
+wikidata: Q1080996
 ---
 
 # Sensory Memory

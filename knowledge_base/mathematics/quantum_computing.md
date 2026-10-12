@@ -19,6 +19,7 @@ semantic_relations:
       - "[[quantum_computation]]"
       - "[[computational_complexity]]"
       - "[[optimization_algorithms]]"
+wikidata: Q17995793
 ---
 
 # Quantum Computing

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[variational_inference]]"
       - "[[exponential_family]]"
       - "[[maximum_entropy_principle]]"
+wikidata: Q6031173
 ---
 
 # Information Projection

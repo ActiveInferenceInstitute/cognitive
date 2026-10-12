@@ -17,6 +17,7 @@ semantic_relations:
       - "[[neuroimaging]]"
       - "[[mutual_information]]"
       - "[[stochastic_processes]]"
+wikidata: Q2630107
 ---
 
 # Granger Causality

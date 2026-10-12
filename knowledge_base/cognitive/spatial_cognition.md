@@ -17,6 +17,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/enactive_cognition]]"
       - "[[knowledge_base/cognitive/spatial_attention]]"
       - "[[knowledge_base/cognitive/epistemic_foraging]]"
+wikidata: Q2178611
 ---
 
 # Spatial Cognition

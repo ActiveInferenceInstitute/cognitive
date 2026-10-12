@@ -18,6 +18,7 @@ semantic_relations:
 aliases:
   - induction
   - inductive_inference
+wikidata: Q484511
 ---
 
 # Inductive Reasoning

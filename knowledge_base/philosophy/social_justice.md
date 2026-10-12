@@ -17,6 +17,7 @@ semantic_relations:
       - "[[social_norms]]"
       - "[[ai_ethics]]"
       - "[[socioeconomic_active_inference]]"
+wikidata: Q264892
 ---
 
 # Social Justice

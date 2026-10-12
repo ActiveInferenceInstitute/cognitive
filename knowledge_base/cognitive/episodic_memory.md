@@ -23,6 +23,7 @@ semantic_relations:
       - "[[temporal_integration]]"
 aliases:
   - episodic_recall
+wikidata: Q18646
 ---
 
 

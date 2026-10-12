@@ -17,6 +17,7 @@ semantic_relations:
       - "[[memory_organization]]"
       - "[[lexical_access]]"
       - "[[knowledge_representation]]"
+wikidata: Q423068
 ---
 
 # Spreading Activation

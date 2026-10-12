@@ -18,6 +18,7 @@ semantic_relations:
       - "[[active_inference_pomdp]]"
       - "[[transition_model]]"
       - "[[action_space]]"
+wikidata: Q176789
 ---
 
 # Markov Decision Process

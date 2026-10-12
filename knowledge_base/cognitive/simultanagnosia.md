@@ -17,6 +17,7 @@ semantic_relations:
       - "[[spatial_attention]]"
       - "[[posterior_parietal]]"
       - "[[object_based_attention]]"
+wikidata: Q2046811
 ---
 
 # Simultanagnosia

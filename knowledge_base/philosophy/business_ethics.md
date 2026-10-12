@@ -18,6 +18,7 @@ semantic_relations:
       - "[[cooperation]]"
       - "[[trust_building]]"
       - "[[philosophy_of_economics]]"
+wikidata: Q873451
 ---
 
 # Business Ethics

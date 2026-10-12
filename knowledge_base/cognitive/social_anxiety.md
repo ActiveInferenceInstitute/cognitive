@@ -16,6 +16,7 @@ semantic_relations:
       - "[[social_cognition]]"
       - "[[computational_psychiatry]]"
       - "[[prior_beliefs]]"
+wikidata: Q3557657
 ---
 
 # Social Anxiety

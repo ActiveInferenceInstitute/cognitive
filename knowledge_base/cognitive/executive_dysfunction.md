@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cognitive_control]]"
       - "[[inhibitory_control]]"
       - "[[computational_psychiatry]]"
+wikidata: Q5419936
 ---
 
 # Executive Dysfunction

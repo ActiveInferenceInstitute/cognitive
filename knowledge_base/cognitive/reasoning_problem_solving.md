@@ -40,7 +40,7 @@ Reasoning and Problem Solving encompass the cognitive processes involved in logi
 
     - [[syllogistic_logic]] - Conclusions drawn from two linked premises
 
-    - [[categorical_logic]] - Reasoning about category membership and class relations
+    - [[syllogistic_logic|categorical logic]] - Reasoning about category membership and class relations
 
   - [[inductive_reasoning]] - Inferring general rules from specific cases
 

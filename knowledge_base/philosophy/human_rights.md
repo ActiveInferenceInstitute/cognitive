@@ -18,6 +18,7 @@ semantic_relations:
       - "[[moral_realism]]"
       - "[[moral_relativism]]"
       - "[[philosophy_of_law]]"
+wikidata: Q8458
 ---
 
 # Human Rights

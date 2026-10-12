@@ -17,6 +17,7 @@ semantic_relations:
       - "[[spatial_cognition]]"
       - "[[theory_of_mind]]"
       - "[[evolution]]"
+wikidata: Q499210
 ---
 
 # Animal Cognition

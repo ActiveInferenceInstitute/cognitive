@@ -16,6 +16,7 @@ semantic_relations:
       - "[[underwriting_principles]]"
       - "[[resource_allocation]]"
       - "[[active_inference]]"
+wikidata: Q16167513
 ---
 
 # Portfolio Management

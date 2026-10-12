@@ -14,6 +14,7 @@ semantic_relations:
       - "[[embodied_cognition]]"
       - "[[proprioception]]"
       - "[[self_awareness]]"
+wikidata: Q907574
 ---
 
 # Body Schema

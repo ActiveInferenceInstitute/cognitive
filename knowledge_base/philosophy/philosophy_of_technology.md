@@ -17,6 +17,7 @@ semantic_relations:
       - "[[extended_mind]]"
       - "[[ai_ethics]]"
       - "[[assistive_technology]]"
+wikidata: Q279438
 ---
 
 # Philosophy of Technology

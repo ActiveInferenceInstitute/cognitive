@@ -12,18 +12,18 @@ pages, then regenerate; never edit this file.
 
 | Quantity | Count |
 |---|---|
-| Pages (all described as `schema:CreativeWork`) | 2058 |
-| Concepts (`skos:Concept`) | 1988 |
+| Pages (all described as `schema:CreativeWork`) | 2167 |
+| Concepts (`skos:Concept`) | 2097 |
 | Navigation pages (`schema:CollectionPage`) | 68 |
 | Redirect pages | 2 |
-| Pages aligned to Wikidata (`skos:exactMatch`) | 0 |
-| Typed edges from `semantic_relations` | 10129 |
-| Untyped edges from body links (`dcterms:references`) | 22813 |
-| Triples | 60782 |
-| Links to concepts that have no page yet (not exported) | 362 |
-| Links to files outside the knowledge base (not exported) | 719 |
+| Pages aligned to Wikidata (`skos:closeMatch`) | 720 |
+| Typed edges from `semantic_relations` | 10762 |
+| Untyped edges from body links (`dcterms:references`) | 23908 |
+| Triples | 64728 |
+| Links to concepts that have no page yet (not exported) | 0 |
+| Links to files outside the knowledge base (not exported) | 725 |
 | Self-links dropped | 71 |
-| Latest page update | 2026-10-11 |
+| Latest page update | 2026-10-12 |
 
 ## Pages by domain
 
@@ -31,22 +31,22 @@ pages, then regenerate; never edit this file.
 |---|---|
 | `BioFirm` | 10 |
 | `agents` | 29 |
-| `biology` | 189 |
+| `biology` | 193 |
 | `citations` | 39 |
-| `cognitive` | 843 |
+| `cognitive` | 851 |
 | `free_energy_principle` | 58 |
-| `mathematics` | 526 |
+| `mathematics` | 552 |
 | `ontology` | 12 |
-| `philosophy` | 175 |
+| `philosophy` | 239 |
 | `research` | 79 |
-| `systems` | 90 |
+| `systems` | 97 |
 
 ## Pages by `type`
 
 | Type | Pages |
 |---|---|
-| `concept` | 1251 |
-| `mathematical_concept` | 496 |
+| `concept` | 1334 |
+| `mathematical_concept` | 522 |
 | `knowledge_base` | 56 |
 | `citation` | 34 |
 | `agents` | 26 |
@@ -88,23 +88,23 @@ pages, then regenerate; never edit this file.
 
 | Relation | Edges |
 |---|---|
-| `relates` | 7439 |
-| `foundation` | 494 |
-| `implements` | 459 |
-| `related` | 441 |
+| `relates` | 8043 |
+| `foundation` | 509 |
+| `implements` | 461 |
+| `related` | 442 |
 | `relates_to` | 372 |
-| `documents` | 162 |
+| `documents` | 169 |
 | `extends` | 154 |
 | `organizes` | 147 |
 | `foundation_for` | 58 |
 | `cited_by` | 57 |
-| `foundational_for` | 47 |
+| `foundational_for` | 49 |
 | `uses` | 45 |
 | `mathematical_basis` | 40 |
 | `related_to` | 35 |
 | `integrates` | 25 |
+| `builds_on` | 20 |
 | `used_by` | 20 |
-| `builds_on` | 19 |
 | `has_parent` | 14 |
 | `supports` | 14 |
 | `documented_by` | 13 |
@@ -134,6 +134,7 @@ pages, then regenerate; never edit this file.
 | `contrasts_with` | 1 |
 | `emerges_from` | 1 |
 | `explains` | 1 |
+| `generalizes` | 1 |
 | `implemented_by` | 1 |
 | `part_of` | 1 |
 | `specializes` | 1 |

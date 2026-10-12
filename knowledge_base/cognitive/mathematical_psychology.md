@@ -15,6 +15,7 @@ semantic_relations:
       - "[[psychophysics]]"
       - "[[signal_detection]]"
       - "[[computational_modeling]]"
+wikidata: Q1908389
 ---
 
 # Mathematical Psychology

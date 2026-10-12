@@ -18,6 +18,7 @@ semantic_relations:
       - "[[fear]]"
       - "[[interoception]]"
       - "[[stress_response]]"
+wikidata: Q1243765
 ---
 
 # Periaqueductal Gray

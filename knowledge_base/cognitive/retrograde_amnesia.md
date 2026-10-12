@@ -17,6 +17,7 @@ semantic_relations:
       - "[[systems_consolidation]]"
       - "[[autobiographical_memory]]"
       - "[[semantic_memory]]"
+wikidata: Q1193891
 ---
 
 # Retrograde Amnesia

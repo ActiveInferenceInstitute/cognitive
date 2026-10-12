@@ -14,6 +14,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/learning_theory]]"
       - "[[knowledge_base/cognitive/cognitive_development]]"
       - "[[knowledge_base/cognitive/epistemic_foraging]]"
+wikidata: Q175002
 ---
 
 # Developmental Psychology

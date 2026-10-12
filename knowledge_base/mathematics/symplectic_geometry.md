@@ -21,6 +21,7 @@ semantic_relations:
       - "[[contact_geometry]]"
 aliases:
   - symplectic_manifolds
+wikidata: Q2190991
 ---
 
 

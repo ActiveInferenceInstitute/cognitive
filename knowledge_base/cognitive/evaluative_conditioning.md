@@ -17,6 +17,7 @@ semantic_relations:
       - "[[fear_conditioning]]"
       - "[[operant_conditioning]]"
       - "[[priming_effects]]"
+wikidata: Q30693059
 ---
 
 # Evaluative Conditioning

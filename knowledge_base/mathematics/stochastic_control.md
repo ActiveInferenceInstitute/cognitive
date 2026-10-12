@@ -17,6 +17,7 @@ semantic_relations:
       - "[[stochastic_differential_equations]]"
       - "[[path_integral_control]]"
       - "[[action_selection]]"
+wikidata: Q7617811
 ---
 
 # Stochastic Control

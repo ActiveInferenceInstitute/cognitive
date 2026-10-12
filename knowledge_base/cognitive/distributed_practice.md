@@ -17,6 +17,7 @@ semantic_relations:
       - "[[massed_practice]]"
       - "[[memory_consolidation]]"
       - "[[deliberate_practice]]"
+wikidata: Q5283125
 ---
 
 # Distributed Practice

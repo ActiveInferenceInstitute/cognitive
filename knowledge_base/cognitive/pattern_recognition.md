@@ -19,6 +19,7 @@ semantic_relations:
       - "[[object_recognition]]"
       - "[[feature_detection]]"
       - "[[perceptual_organization]]"
+wikidata: Q378859
 ---
 
 

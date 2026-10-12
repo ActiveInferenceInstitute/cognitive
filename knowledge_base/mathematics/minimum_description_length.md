@@ -18,6 +18,7 @@ semantic_relations:
       - "[[algorithmic_information]]"
       - "[[information_theory]]"
       - "[[free_energy]]"
+wikidata: Q1417790
 ---
 
 # Minimum Description Length

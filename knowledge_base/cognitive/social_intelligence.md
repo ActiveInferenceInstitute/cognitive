@@ -17,6 +17,7 @@ semantic_relations:
       - "[[empathy]]"
       - "[[emotional_intelligence]]"
       - "[[social_learning]]"
+wikidata: Q2273844
 ---
 
 # Social Intelligence

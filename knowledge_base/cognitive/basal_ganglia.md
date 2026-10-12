@@ -17,6 +17,7 @@ semantic_relations:
       - "[[motor_control]]"
       - "[[procedural_memory]]"
       - "[[reinforcement_learning]]"
+wikidata: Q464210
 ---
 
 # Basal Ganglia

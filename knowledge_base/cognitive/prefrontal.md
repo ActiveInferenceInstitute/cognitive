@@ -17,6 +17,7 @@ semantic_relations:
       - "[[executive_functions]]"
 aliases:
   - prefrontal_cortex
+wikidata: Q18680
 ---
 
 # Prefrontal Cortex

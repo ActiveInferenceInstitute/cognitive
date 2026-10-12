@@ -18,6 +18,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/embodied_cognition]]"
       - "[[knowledge_base/cognitive/swarm_intelligence]]"
       - "[[knowledge_base/cognitive/stigmergic_coordination]]"
+wikidata: Q7551870
 ---
 
 # Distributed Cognition

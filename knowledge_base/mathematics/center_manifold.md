@@ -18,6 +18,7 @@ semantic_relations:
       - "[[timescale_separation]]"
       - "[[dynamical_systems]]"
       - "[[synergetics]]"
+wikidata: Q4504202
 ---
 
 # Center Manifold

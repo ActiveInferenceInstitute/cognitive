@@ -18,6 +18,7 @@ semantic_relations:
       - "[[scientific_realism]]"
       - "[[social_epistemology]]"
       - "[[epistemology]]"
+wikidata: Q83188
 ---
 
 # Relativism

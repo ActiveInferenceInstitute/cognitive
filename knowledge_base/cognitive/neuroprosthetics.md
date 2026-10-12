@@ -16,6 +16,7 @@ semantic_relations:
       - "[[sensory_processing]]"
 aliases:
   - neural_prosthetics
+wikidata: Q1431093
 ---
 
 # Neuroprosthetics

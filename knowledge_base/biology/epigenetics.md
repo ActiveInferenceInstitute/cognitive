@@ -17,6 +17,7 @@ semantic_relations:
       - "[[phenotypic_plasticity]]"
       - "[[cognitive_development]]"
       - "[[genetics]]"
+wikidata: Q26939
 ---
 
 # Epigenetics

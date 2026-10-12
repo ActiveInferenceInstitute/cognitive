@@ -20,6 +20,7 @@ aliases:
   - effective_connectivity
   - functional_connectivity
   - neural_connectivity
+wikidata: Q66812725
 ---
 
 # Brain Connectivity

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[consciousness]]"
       - "[[philosophy_of_mind]]"
       - "[[mind_body_problem]]"
+wikidata: Q631794
 ---
 
 # Explanatory Gap

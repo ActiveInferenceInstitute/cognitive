@@ -17,6 +17,7 @@ semantic_relations:
       - "[[situated_cognition]]"
       - "[[working_memory]]"
       - "[[prospective_memory]]"
+wikidata: Q135067344
 ---
 
 # Cognitive Offloading

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cognitive_development]]"
       - "[[synaptic_plasticity]]"
       - "[[structural_plasticity]]"
+wikidata: Q1456827
 ---
 
 # Neurogenesis

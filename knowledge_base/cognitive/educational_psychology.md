@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cognitive_development_expanded]]"
       - "[[constructivist_learning_theory]]"
       - "[[self_regulated_learning]]"
+wikidata: Q59157
 ---
 
 # Educational Psychology

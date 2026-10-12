@@ -16,6 +16,7 @@ semantic_relations:
       - "[[attractor_dynamics]]"
       - "[[phase_transitions]]"
       - "[[non_equilibrium_steady_state]]"
+wikidata: Q1648886
 ---
 
 # Structural Stability

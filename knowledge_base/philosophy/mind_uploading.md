@@ -17,6 +17,7 @@ semantic_relations:
       - "[[consciousness]]"
       - "[[technological_singularity]]"
       - "[[computational_theory_mind]]"
+wikidata: Q2267982
 ---
 
 # Mind Uploading

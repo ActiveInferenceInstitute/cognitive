@@ -17,6 +17,7 @@ semantic_relations:
       - "[[thought_suppression]]"
       - "[[inhibitory_control]]"
       - "[[emotional_processing]]"
+wikidata: Q17012938
 ---
 
 # Expressive Suppression

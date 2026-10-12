@@ -19,6 +19,7 @@ semantic_relations:
       - "[[sensorimotor_coordination]]"
 aliases:
   - cerebellar
+wikidata: Q130983
 ---
 
 # Cerebellum

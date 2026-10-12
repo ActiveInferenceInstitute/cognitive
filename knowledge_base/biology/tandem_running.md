@@ -17,6 +17,7 @@ semantic_relations:
       - "[[antennation]]"
       - "[[chemical_communication]]"
       - "[[social_learning]]"
+wikidata: Q5370382
 ---
 
 # Tandem Running

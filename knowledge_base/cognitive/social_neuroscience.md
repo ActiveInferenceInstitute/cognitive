@@ -15,6 +15,7 @@ semantic_relations:
       - "[[cognitive_neuroscience]]"
       - "[[neuroscience]]"
       - "[[active_inference]]"
+wikidata: Q3111072
 ---
 
 # Social Neuroscience

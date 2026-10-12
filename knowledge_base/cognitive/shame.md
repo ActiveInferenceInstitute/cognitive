@@ -17,6 +17,7 @@ semantic_relations:
       - "[[self_awareness]]"
       - "[[social_anxiety]]"
       - "[[emotion_regulation]]"
+wikidata: Q152282
 ---
 
 # Shame

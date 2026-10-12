@@ -17,6 +17,7 @@ semantic_relations:
       - "[[theory_of_mind]]"
       - "[[emotional_processing]]"
       - "[[social_neuroscience]]"
+wikidata: Q1432778
 ---
 
 
@@ -153,7 +154,7 @@ Social Cognition encompasses the neural and cognitive processes involved in unde
 
     - action matching - Reproducing observed movements
 
-    - [[goal_emulation]] - Reproducing the goal by one's own means
+    - [[imitation|goal emulation]] - Reproducing the goal by one's own means
 
   - [[reinforcement_learning]] - Learning from rewards and penalties
 

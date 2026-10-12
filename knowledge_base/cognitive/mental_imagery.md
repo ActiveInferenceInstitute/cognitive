@@ -17,6 +17,7 @@ semantic_relations:
       - "[[visual_cortex]]"
       - "[[consciousness_and_awareness]]"
       - "[[generative_model]]"
+wikidata: Q104696070
 ---
 
 # Mental Imagery

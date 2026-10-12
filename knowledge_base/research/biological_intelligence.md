@@ -20,6 +20,7 @@ semantic_relations:
       - "[[knowledge_base/biology/developmental_systems]]"
       - "[[knowledge_base/free_energy_principle/biology/homeostasis]]"
       - "[[knowledge_base/research/natural_computation]]"
+wikidata: Q136695254
 ---
 
 # Biological Intelligence

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[bandit_problems]]"
       - "[[martingale_theory]]"
       - "[[stopping_rules]]"
+wikidata: Q7098950
 ---
 
 # Optimal Stopping

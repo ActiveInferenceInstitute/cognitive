@@ -17,6 +17,7 @@ semantic_relations:
       - "[[language_processing]]"
       - "[[mirror_system]]"
       - "[[joint_attention]]"
+wikidata: Q371174
 ---
 
 # Gesture

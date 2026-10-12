@@ -20,6 +20,7 @@ semantic_relations:
       - "[[self_organization]]"
       - "[[distributed_cognition]]"
       - "[[optimization]]"
+wikidata: Q863960
 ---
 
 
@@ -104,7 +105,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
     - [[positive_feedback]] - Feedback that amplifies change
 
-      - [[recruitment]] - Drawing more agents into an activity
+      - [[mass_recruitment|recruitment]] - Drawing more agents into an activity
 
       - amplification - Growth of a signal or behavior
 
@@ -178,7 +179,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
       - [[confusion_effect]] - Predator difficulty targeting individuals in a group
 
-      - [[flash_expansion]] - Rapid outward burst of a group under attack
+      - flash expansion - Rapid outward burst of a group under attack
 
   - [[bird_flocks]] - Coordinated groups of flying birds
 
@@ -248,7 +249,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
   - field models - Models using continuous spatial fields
 
-    - [[potential_fields]] - Force landscapes guiding agent motion
+    - potential fields - Force landscapes guiding agent motion
 
       - attraction potentials - Potentials drawing agents toward targets
 
@@ -368,7 +369,7 @@ Swarm Intelligence describes the collective behavior and emergent intelligence a
 
       - [[traveling_salesman]] - Finding the shortest route visiting every city
 
-      - [[vehicle_routing]] - Planning efficient routes for vehicle fleets
+      - vehicle routing - Planning efficient routes for vehicle fleets
 
     - scheduling problems - Assigning tasks to time slots
 

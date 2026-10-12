@@ -16,6 +16,7 @@ semantic_relations:
       - "[[knowledge_base/mathematics/control_theory]]"
       - "[[knowledge_base/systems/fault_tolerance]]"
       - "[[knowledge_base/systems/risk_assessment]]"
+wikidata: Q682496
 ---
 
 # Systems Engineering

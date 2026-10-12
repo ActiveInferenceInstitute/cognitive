@@ -17,6 +17,7 @@ semantic_relations:
       - "[[biomechanics]]"
       - "[[lagrangian_mechanics]]"
       - "[[optimal_control]]"
+wikidata: Q1108792
 ---
 
 # Kinetics

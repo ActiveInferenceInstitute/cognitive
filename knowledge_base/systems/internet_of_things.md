@@ -23,6 +23,7 @@ semantic_relations:
   - type: builds_on
     links:
       - "[[Embedded Systems]]"
+wikidata: Q251212
 ---
 
 

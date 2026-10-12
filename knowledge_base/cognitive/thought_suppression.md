@@ -17,6 +17,7 @@ semantic_relations:
       - "[[expressive_suppression]]"
       - "[[emotion_regulation]]"
       - "[[working_memory]]"
+wikidata: Q3495864
 ---
 
 # Thought Suppression

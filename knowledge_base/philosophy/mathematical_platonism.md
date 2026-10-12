@@ -17,6 +17,7 @@ semantic_relations:
       - "[[mathematical_constructivism]]"
       - "[[set_theory]]"
       - "[[philosophical_ontology]]"
+wikidata: Q3392001
 ---
 
 # Mathematical Platonism

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[situated_cognition]]"
       - "[[ecological_psychology]]"
       - "[[existential_phenomenology]]"
+wikidata: Q24862384
 ---
 
 # Being-in-the-World

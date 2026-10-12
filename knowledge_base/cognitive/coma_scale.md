@@ -17,6 +17,7 @@ semantic_relations:
       - "[[vegetative_state]]"
       - "[[minimal_consciousness]]"
       - "[[consciousness]]"
+wikidata: Q5150471
 ---
 
 # Coma Scale

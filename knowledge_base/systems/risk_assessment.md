@@ -2,6 +2,7 @@
 title: Risk Assessment
 type: concept
 status: stable
+wikidata: Q1058438
 ---
 
 # Risk Assessment

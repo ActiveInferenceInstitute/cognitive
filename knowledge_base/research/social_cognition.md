@@ -18,6 +18,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/communication]]"
       - "[[knowledge_base/cognitive/social_insect_cognition]]"
       - "[[knowledge_base/research/cultural_dynamics]]"
+wikidata: Q1432778
 ---
 
 # Social Cognition

@@ -23,6 +23,7 @@ semantic_relations:
       - "[[knowledge_representation]]"
 aliases:
   - semantic_knowledge
+wikidata: Q18650
 ---
 
 
@@ -486,7 +487,7 @@ Semantic memory represents the system for storing, organizing, and retrieving co
 
 - [[cognitive_neuroscience]]
 
-- [[computational_semantics]]
+- computational semantics
 
 - knowledge systems
 

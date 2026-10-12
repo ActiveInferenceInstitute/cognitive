@@ -18,6 +18,7 @@ semantic_relations:
       - "[[cognitive_development]]"
       - "[[embodied_cognition]]"
       - "[[active_learning]]"
+wikidata: Q5266817
 ---
 
 # Developmental Robotics

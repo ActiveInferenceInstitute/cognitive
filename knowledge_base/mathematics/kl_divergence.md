@@ -20,6 +20,7 @@ semantic_relations:
 aliases:
   - kullback_leibler_divergence
   - relative_entropy
+wikidata: Q255166
 ---
 
 

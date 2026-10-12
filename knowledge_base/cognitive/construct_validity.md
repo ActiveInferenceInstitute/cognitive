@@ -17,6 +17,7 @@ semantic_relations:
       - "[[scientific_method]]"
       - "[[measurement_theory]]"
       - "[[hypothesis_testing]]"
+wikidata: Q1592163
 ---
 
 # Construct Validity

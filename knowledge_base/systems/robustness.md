@@ -16,6 +16,7 @@ semantic_relations:
       - "[[fault_tolerance]]"
       - "[[complex_systems]]"
       - "[[swarm_intelligence]]"
+wikidata: Q403605
 ---
 
 # Robustness

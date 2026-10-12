@@ -21,6 +21,7 @@ semantic_relations:
       - "[[self_organization]]"
       - "[[synergetics]]"
       - "[[emergence]]"
+wikidata: Q1955627
 ---
 
 # Pattern Formation

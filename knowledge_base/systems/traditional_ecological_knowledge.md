@@ -25,6 +25,7 @@ semantic_relations:
       - "[[knowledge_base/systems/Social-Ecological Systems]]"
       - "[[collective_intelligence]]"
       - "[[cultural_evolution]]"
+wikidata: Q7832334
 ---
 
 

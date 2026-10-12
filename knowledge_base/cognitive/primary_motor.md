@@ -18,6 +18,7 @@ semantic_relations:
       - "[[motor_units]]"
       - "[[population_vector]]"
       - "[[proprioception]]"
+wikidata: Q18707
 ---
 
 # Primary Motor Cortex

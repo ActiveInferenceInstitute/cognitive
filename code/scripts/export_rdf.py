@@ -373,7 +373,7 @@ def _describe_page(
         qid = str(frontmatter["wikidata"]).strip()
         if not WIKIDATA_ID.fullmatch(qid):
             raise ValueError(f"{node_id}: wikidata must look like Q123, got {qid!r}")
-        graph.add(subject, iri(PREFIXES["skos"] + "exactMatch"), iri(WIKIDATA_ENTITY + qid))
+        graph.add(subject, iri(PREFIXES["skos"] + "closeMatch"), iri(WIKIDATA_ENTITY + qid))
         report.aligned_pages += 1
     if frontmatter.get("doi"):
         doi = quote(str(frontmatter["doi"]).strip(), safe="/:;()-._~")
@@ -699,7 +699,7 @@ def statistics_markdown(report: Report) -> str:
         f"| Concepts (`skos:Concept`) | {report.concepts} |",
         f"| Navigation pages (`schema:CollectionPage`) | {report.navigation_pages} |",
         f"| Redirect pages | {report.redirects} |",
-        f"| Pages aligned to Wikidata (`skos:exactMatch`) | {report.aligned_pages} |",
+        f"| Pages aligned to Wikidata (`skos:closeMatch`) | {report.aligned_pages} |",
         f"| Typed edges from `semantic_relations` | {report.typed_edges} |",
         f"| Untyped edges from body links (`dcterms:references`) | {report.link_edges} |",
         f"| Triples | {report.triples} |",

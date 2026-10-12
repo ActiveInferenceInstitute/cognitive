@@ -15,6 +15,7 @@ semantic_relations:
       - "[[transfer_learning]]"
       - "[[executive_functions]]"
       - "[[working_memory]]"
+wikidata: Q4955822
 ---
 
 # Cognitive Training

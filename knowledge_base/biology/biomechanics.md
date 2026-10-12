@@ -17,6 +17,7 @@ semantic_relations:
       - "[[motor_control]]"
       - "[[embodied_cognition]]"
       - "[[proprioception]]"
+wikidata: Q193378
 ---
 
 # Biomechanics

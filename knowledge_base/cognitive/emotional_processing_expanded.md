@@ -59,7 +59,7 @@ Emotional Processing encompasses the neural and cognitive mechanisms involved in
 
     - [[secondary_appraisal]] - Assessing resources for responding
 
-      - [[coping_potential]] - Perceived ability to handle the situation
+      - [[secondary_appraisal|coping potential]] - Perceived ability to handle the situation
 
       - future implications - Expected later consequences of an event
 

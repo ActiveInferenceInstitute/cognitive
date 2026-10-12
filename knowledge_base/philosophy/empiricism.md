@@ -16,6 +16,7 @@ semantic_relations:
       - "[[logical_positivism]]"
       - "[[scientific_method]]"
       - "[[verification_theory]]"
+wikidata: Q83368
 ---
 
 # Empiricism

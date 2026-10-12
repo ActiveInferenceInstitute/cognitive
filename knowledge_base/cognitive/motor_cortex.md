@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cerebellum]]"
       - "[[action_selection]]"
       - "[[sensorimotor_coordination]]"
+wikidata: Q18696
 ---
 
 # Motor Cortex

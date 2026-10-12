@@ -18,6 +18,7 @@ semantic_relations:
       - "[[mathematical_psychology]]"
       - "[[fluid_intelligence]]"
       - "[[educational_psychology]]"
+wikidata: Q506132
 ---
 
 # Psychometrics

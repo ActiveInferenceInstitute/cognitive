@@ -14,6 +14,7 @@ semantic_relations:
       - "[[perception]]"
       - "[[perceptual_inference]]"
       - "[[bayesian_inference]]"
+wikidata: Q362682
 ---
 
 # Perceptual Psychology

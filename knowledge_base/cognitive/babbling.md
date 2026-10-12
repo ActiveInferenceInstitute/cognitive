@@ -17,6 +17,7 @@ semantic_relations:
       - "[[phonology]]"
       - "[[sensorimotor_development]]"
       - "[[language_processing_expanded]]"
+wikidata: Q1723890
 ---
 
 # Babbling

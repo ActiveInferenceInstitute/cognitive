@@ -16,6 +16,7 @@ semantic_relations:
       - "[[pattern_recognition]]"
       - "[[sensory_processing]]"
       - "[[hierarchical_processing]]"
+wikidata: Q1026626
 ---
 
 # Feature Extraction

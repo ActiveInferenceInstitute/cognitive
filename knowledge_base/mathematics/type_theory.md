@@ -16,6 +16,7 @@ semantic_relations:
       - "[[probabilistic_programming]]"
 aliases:
   - dependent_types
+wikidata: Q1056428
 ---
 
 # Type Theory

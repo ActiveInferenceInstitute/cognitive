@@ -20,6 +20,7 @@ aliases:
   - broadcast
   - broadcast_mechanisms
   - global_workspace_theory
+wikidata: Q5570791
 ---
 
 # Global Workspace Theory

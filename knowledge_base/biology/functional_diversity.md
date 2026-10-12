@@ -18,6 +18,7 @@ semantic_relations:
       - "[[ecosystem_processes]]"
       - "[[ecosystem_stability]]"
       - "[[community_ecology]]"
+wikidata: Q113242927
 ---
 
 # Functional Diversity

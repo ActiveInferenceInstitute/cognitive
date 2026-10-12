@@ -114,7 +114,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Categorical inference
 
-- [[categorical_active_inference]] - Categorical formulation
+- [[category_theory|categorical active inference]] - Categorical formulation
 
   - Free energy functors
 
@@ -314,7 +314,7 @@ This knowledge base contains the comprehensive theoretical foundations of cognit
 
   - Parameter estimation
 
-- [[visualization]] - Data visualization
+- [[visualization_tools|visualization]] - Data visualization
 
   - Belief trajectories
 

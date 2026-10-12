@@ -21,6 +21,7 @@ semantic_relations:
 aliases:
   - synaptic_changes
   - synaptic_modification
+wikidata: Q1551556
 ---
 
 

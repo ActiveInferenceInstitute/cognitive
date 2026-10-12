@@ -19,6 +19,7 @@ semantic_relations:
       - "[[pragmatism]]"
 aliases:
   - post-modernism
+wikidata: Q47783
 ---
 
 # Postmodernism

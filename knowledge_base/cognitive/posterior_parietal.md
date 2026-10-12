@@ -15,6 +15,7 @@ semantic_relations:
       - "[[parietal]]"
       - "[[attention_mechanisms]]"
       - "[[sensorimotor_coordination]]"
+wikidata: Q3486606
 ---
 
 # Posterior Parietal Cortex

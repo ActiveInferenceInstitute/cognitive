@@ -15,6 +15,7 @@ semantic_relations:
       - "[[prefrontal]]"
       - "[[decision_making]]"
       - "[[reward_processing]]"
+wikidata: Q18717
 ---
 
 # Orbitofrontal Cortex

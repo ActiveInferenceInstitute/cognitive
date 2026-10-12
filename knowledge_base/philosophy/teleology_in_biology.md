@@ -17,6 +17,7 @@ semantic_relations:
       - "[[autopoiesis]]"
       - "[[organizational_closure]]"
       - "[[homeostasis]]"
+wikidata: Q28453786
 ---
 
 # Teleology in Biology

@@ -16,6 +16,7 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[prior_beliefs]]"
       - "[[preference_learning]]"
+wikidata: Q199027
 ---
 
 # Goal Setting

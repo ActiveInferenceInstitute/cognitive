@@ -14,6 +14,7 @@ semantic_relations:
       - "[[motor_learning]]"
       - "[[sensorimotor_integration]]"
       - "[[action_planning]]"
+wikidata: Q2996165
 ---
 
 
@@ -140,7 +141,7 @@ Motor Control encompasses the neural and cognitive processes involved in plannin
 
     - [[forward_models]] - Predicting sensory consequences of motor commands
 
-    - [[inverse_models]] - Computing commands needed for a desired movement
+    - [[forward_models|inverse models]] - Computing commands needed for a desired movement
 
 ### Learning Mechanisms
 

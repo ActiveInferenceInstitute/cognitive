@@ -20,6 +20,7 @@ semantic_relations:
       - "[[knowledge_base/research/cognitive_robotics]]"
 aliases:
   - robotics_control
+wikidata: Q7353385
 ---
 
 # Robot Control

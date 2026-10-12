@@ -16,6 +16,7 @@ semantic_relations:
       - "[[stigmergic_coordination]]"
       - "[[collective_learning]]"
       - "[[multi_agent_active_inference]]"
+wikidata: Q432197
 ---
 
 # Collective Intelligence

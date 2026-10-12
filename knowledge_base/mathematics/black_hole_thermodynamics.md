@@ -18,6 +18,7 @@ semantic_relations:
       - "[[information_thermodynamics]]"
       - "[[quantum_free_energy]]"
       - "[[free_energy_principle]]"
+wikidata: Q911284
 ---
 
 # Black Hole Thermodynamics

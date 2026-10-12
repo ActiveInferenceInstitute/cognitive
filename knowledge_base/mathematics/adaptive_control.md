@@ -18,6 +18,7 @@ semantic_relations:
       - "[[stability_analysis]]"
       - "[[active_inference_for_control]]"
       - "[[allostatic_control]]"
+wikidata: Q235781
 ---
 
 # Adaptive Control

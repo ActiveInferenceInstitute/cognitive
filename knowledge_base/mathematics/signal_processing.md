@@ -16,6 +16,7 @@ semantic_relations:
       - "[[calculus]]"
       - "[[stochastic_processes]]"
       - "[[neural_computation]]"
+wikidata: Q208163
 ---
 
 # Signal Processing

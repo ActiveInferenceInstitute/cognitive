@@ -17,6 +17,7 @@ semantic_relations:
     links:
       - "[[differential_geometry]]"
       - "[[complex_geometry]]"
+wikidata: Q180969
 ---
 
 

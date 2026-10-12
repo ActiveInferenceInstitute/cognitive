@@ -17,6 +17,7 @@ semantic_relations:
       - "[[taylor_series]]"
       - "[[numerical_stability]]"
       - "[[finite_elements]]"
+wikidata: Q2068418
 ---
 
 # Finite Difference

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[dyslexia]]"
       - "[[aphasia]]"
       - "[[developmental_disorders]]"
+wikidata: Q775593
 ---
 
 # Specific Language Impairment

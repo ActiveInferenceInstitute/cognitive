@@ -16,6 +16,7 @@ semantic_relations:
       - "[[homological_algebra]]"
       - "[[category_theory]]"
       - "[[factor_graphs]]"
+wikidata: Q77827144
 ---
 
 # Sheaf Theory

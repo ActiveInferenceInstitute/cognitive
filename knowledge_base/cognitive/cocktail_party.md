@@ -17,6 +17,7 @@ semantic_relations:
       - "[[speech_perception]]"
       - "[[attention_mechanisms]]"
       - "[[precision_weighting]]"
+wikidata: Q673205
 ---
 
 # Cocktail Party Effect

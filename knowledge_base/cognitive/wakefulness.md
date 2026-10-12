@@ -16,6 +16,7 @@ semantic_relations:
       - "[[vigilance]]"
       - "[[sleep_memory_ai]]"
       - "[[memory_consolidation]]"
+wikidata: Q246710
 ---
 
 # Wakefulness

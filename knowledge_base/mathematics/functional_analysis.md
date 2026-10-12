@@ -2,6 +2,7 @@
 title: "Functional Analysis"
 type: "mathematical_concept"
 status: stable
+wikidata: Q190549
 ---
 
 # Functional Analysis

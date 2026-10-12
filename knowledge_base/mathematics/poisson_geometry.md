@@ -20,6 +20,7 @@ semantic_relations:
       - "[[integrable_systems]]"
 aliases:
   - poisson_brackets
+wikidata: Q126597694
 ---
 
 

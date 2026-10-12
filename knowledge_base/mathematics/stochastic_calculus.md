@@ -18,6 +18,7 @@ semantic_relations:
       - "[[fokker_planck]]"
       - "[[langevin_dynamics]]"
       - "[[martingale_theory]]"
+wikidata: Q1308570
 ---
 
 # Stochastic Calculus

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[basin_of_attraction]]"
       - "[[bistable_perception]]"
       - "[[swarm_intelligence]]"
+wikidata: Q190837
 ---
 
 # Hysteresis

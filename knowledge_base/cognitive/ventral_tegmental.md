@@ -17,6 +17,7 @@ semantic_relations:
       - "[[ventral_striatum]]"
       - "[[reward_processing]]"
       - "[[neuromodulation]]"
+wikidata: Q640562
 ---
 
 # Ventral Tegmental Area

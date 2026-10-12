@@ -17,6 +17,7 @@ semantic_relations:
       - "[[scientific_method]]"
       - "[[logical_positivism]]"
       - "[[scientific_progress]]"
+wikidata: Q81244
 ---
 
 # Karl Popper

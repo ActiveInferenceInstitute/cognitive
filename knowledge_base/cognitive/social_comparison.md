@@ -17,6 +17,7 @@ semantic_relations:
       - "[[self_awareness]]"
       - "[[social_norms]]"
       - "[[social_reward]]"
+wikidata: Q112787468
 ---
 
 # Social Comparison

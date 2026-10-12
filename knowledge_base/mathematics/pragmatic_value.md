@@ -264,7 +264,7 @@ Links to:
 
    - Links to:
 
-     - [[cost_function]] - Objective definition
+     - cost function - Objective definition
 
      - [[optimal_control]] - Control theory
 

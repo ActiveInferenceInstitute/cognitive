@@ -18,6 +18,7 @@ semantic_relations:
       - "[[philosophy_of_ai]]"
       - "[[applied_ethics]]"
       - "[[artificial_intelligence]]"
+wikidata: Q1122446
 ---
 
 # Computer Ethics

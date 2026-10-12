@@ -14,6 +14,7 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[decision_making]]"
       - "[[reinforcement_learning]]"
+wikidata: Q7698911
 ---
 
 # Temporal Discounting

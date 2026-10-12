@@ -17,6 +17,7 @@ semantic_relations:
       - "[[biomechanics]]"
       - "[[robotics]]"
       - "[[trajectory_optimization]]"
+wikidata: Q11476
 ---
 
 # Kinematics

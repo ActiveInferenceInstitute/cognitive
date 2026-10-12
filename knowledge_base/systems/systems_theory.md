@@ -17,6 +17,7 @@ semantic_relations:
     links:
       - "[[mathematics/information_theory]]"
       - "[[cognitive/collective_behavior]]"
+wikidata: Q269699
 ---
 
 

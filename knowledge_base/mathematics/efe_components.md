@@ -243,7 +243,7 @@ Links to:
 
 - plotting utilities - Plotting tools
 
-- [[matrix_plots]] - Matrix visualization
+- [[code/tools/src/visualization/README|matrix_plots]] - Matrix visualization
 
 ## Analysis Methods
 

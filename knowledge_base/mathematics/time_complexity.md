@@ -17,6 +17,7 @@ semantic_relations:
       - "[[dynamic_programming]]"
       - "[[sample_complexity]]"
       - "[[complexity_measures]]"
+wikidata: Q2393193
 ---
 
 # Time Complexity

@@ -13,6 +13,7 @@ semantic_relations:
       - "[[evolutionary_dynamics]]"
       - "[[knowledge_base/free_energy_principle/biology/evolution]]"
       - "[[levels_of_organization]]"
+wikidata: Q840400
 ---
 
 # Evolutionary Biology

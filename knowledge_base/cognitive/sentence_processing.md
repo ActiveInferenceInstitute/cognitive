@@ -17,6 +17,7 @@ semantic_relations:
       - "[[psycholinguistics]]"
       - "[[working_memory]]"
       - "[[predictive_processing]]"
+wikidata: Q7451195
 ---
 
 # Sentence Processing

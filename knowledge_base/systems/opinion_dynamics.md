@@ -17,6 +17,7 @@ semantic_relations:
       - "[[wisdom_of_crowds]]"
       - "[[social_learning]]"
       - "[[agent_based_modeling]]"
+wikidata: Q101247857
 ---
 
 # Opinion Dynamics

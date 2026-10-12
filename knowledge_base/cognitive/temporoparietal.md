@@ -18,6 +18,7 @@ semantic_relations:
       - "[[perspective_taking]]"
 aliases:
   - temporal_parietal
+wikidata: Q2940216
 ---
 
 # Temporoparietal Junction

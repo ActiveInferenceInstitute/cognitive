@@ -17,6 +17,7 @@ semantic_relations:
       - "[[adaptive_resonance_theory]]"
       - "[[sparse_coding]]"
       - "[[expectation_maximization]]"
+wikidata: Q5156355
 ---
 
 # Competitive Learning

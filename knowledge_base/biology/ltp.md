@@ -15,6 +15,7 @@ semantic_relations:
       - "[[synaptic_plasticity]]"
       - "[[hebbian_learning]]"
       - "[[memory_consolidation]]"
+wikidata: Q1805481
 ---
 
 # Long-Term Potentiation

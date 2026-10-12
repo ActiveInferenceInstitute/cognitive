@@ -17,6 +17,7 @@ semantic_relations:
       - "[[complex_adaptive_systems]]"
       - "[[uncertainty_quantification]]"
       - "[[resilience_thinking]]"
+wikidata: Q1931373
 ---
 
 # Scenario Planning

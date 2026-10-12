@@ -15,6 +15,7 @@ semantic_relations:
       - "[[knowledge_base/free_energy_principle/applications/psychiatry]]"
       - "[[knowledge_base/cognitive/precision_weighting]]"
       - "[[knowledge_base/cognitive/clinical_psychology]]"
+wikidata: Q5133838
 ---
 
 # Clinical Neuroscience

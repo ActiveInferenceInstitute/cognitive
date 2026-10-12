@@ -21,6 +21,7 @@ semantic_relations:
       - "[[attention]]"
       - "[[working_memory]]"
       - "[[decision_making]]"
+wikidata: Q783092
 ---
 
 

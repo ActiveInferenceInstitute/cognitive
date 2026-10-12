@@ -17,6 +17,7 @@ semantic_relations:
       - "[[measure_theory]]"
       - "[[functional_analysis]]"
       - "[[topology]]"
+wikidata: Q854531
 ---
 
 # Real Analysis

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[rationalism]]"
       - "[[empiricism]]"
       - "[[pragmatism]]"
+wikidata: Q1355086
 ---
 
 # Foundationalism

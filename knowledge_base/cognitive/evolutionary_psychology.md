@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cultural_evolution]]"
       - "[[evolutionary_game_theory]]"
       - "[[cognitive_neuroscience]]"
+wikidata: Q219695
 ---
 
 # Evolutionary Psychology

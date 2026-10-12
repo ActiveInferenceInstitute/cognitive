@@ -17,6 +17,7 @@ semantic_relations:
       - "[[maximum_likelihood]]"
       - "[[information_theory]]"
       - "[[variational_free_energy]]"
+wikidata: Q1685498
 ---
 
 # Cross Entropy

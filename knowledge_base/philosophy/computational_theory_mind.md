@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cognitive_science]]"
       - "[[predictive_processing]]"
       - "[[embodied_cognition]]"
+wikidata: Q2573697
 ---
 
 # Computational Theory of Mind

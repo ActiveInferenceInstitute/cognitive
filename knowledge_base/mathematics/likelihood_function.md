@@ -17,6 +17,7 @@ semantic_relations:
       - "[[maximum_likelihood]]"
       - "[[fisher_information]]"
       - "[[observation_model]]"
+wikidata: Q45284
 ---
 
 # Likelihood Function

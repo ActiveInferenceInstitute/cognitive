@@ -17,6 +17,7 @@ semantic_relations:
       - "[[phase_transitions]]"
       - "[[non_equilibrium_thermodynamics]]"
       - "[[markov_blanket]]"
+wikidata: Q7448180
 ---
 
 # Self-Propelled Particles

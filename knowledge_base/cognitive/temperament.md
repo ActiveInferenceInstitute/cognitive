@@ -17,6 +17,7 @@ semantic_relations:
       - "[[emotion_regulation]]"
       - "[[developmental_psychology]]"
       - "[[personality_disorders]]"
+wikidata: Q80157
 ---
 
 # Temperament

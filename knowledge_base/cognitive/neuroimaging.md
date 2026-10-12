@@ -17,6 +17,7 @@ semantic_relations:
       - "[[neural_synchrony]]"
 aliases:
   - brain_imaging
+wikidata: Q551875
 ---
 
 # Neuroimaging

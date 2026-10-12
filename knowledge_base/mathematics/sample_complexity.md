@@ -18,6 +18,7 @@ semantic_relations:
       - "[[optimal_experiment_design]]"
       - "[[epistemic_value]]"
       - "[[generalization]]"
+wikidata: Q18354077
 ---
 
 # Sample Complexity

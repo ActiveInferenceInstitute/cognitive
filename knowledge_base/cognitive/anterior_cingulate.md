@@ -15,6 +15,7 @@ semantic_relations:
       - "[[cognitive_control]]"
       - "[[prediction_error]]"
       - "[[active_inference]]"
+wikidata: Q2121931
 ---
 
 # Anterior Cingulate Cortex

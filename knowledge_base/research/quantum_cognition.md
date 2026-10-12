@@ -15,6 +15,7 @@ semantic_relations:
       - "[[knowledge_base/mathematics/probability_theory]]"
       - "[[knowledge_base/mathematics/bayes_theorem]]"
       - "[[knowledge_base/cognitive/decision_making]]"
+wikidata: Q7269019
 ---
 
 # Quantum Cognition

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[value_function]]"
       - "[[hamilton_jacobi_bellman]]"
       - "[[policy_selection]]"
+wikidata: Q380679
 ---
 
 # Dynamic Programming

@@ -21,6 +21,7 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[free_energy_principle]]"
       - "[[visual_attention]]"
+wikidata: Q465122
 ---
 
 

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[variational_inference]]"
       - "[[kl_divergence]]"
       - "[[jensen_inequality]]"
+wikidata: Q463359
 ---
 
 # Convex Optimization

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[motor_control]]"
       - "[[prediction_error]]"
       - "[[sensorimotor_coordination]]"
+wikidata: Q1430868
 ---
 
 # Efference Copy

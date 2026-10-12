@@ -17,6 +17,7 @@ semantic_relations:
       - "[[operationalism]]"
       - "[[scientific_method]]"
       - "[[social_epistemology]]"
+wikidata: Q309823
 ---
 
 # Open Science

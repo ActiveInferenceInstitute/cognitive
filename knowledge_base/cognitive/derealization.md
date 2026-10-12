@@ -17,6 +17,7 @@ semantic_relations:
       - "[[consciousness_and_awareness]]"
       - "[[anxiety]]"
       - "[[interoception]]"
+wikidata: Q1199997
 ---
 
 # Derealization

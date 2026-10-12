@@ -18,6 +18,7 @@ semantic_relations:
       - "[[attention]]"
       - "[[social_cognition]]"
       - "[[executive_functions]]"
+wikidata: Q6486792
 ---
 
 
@@ -122,7 +123,7 @@ Language Processing encompasses the cognitive and neural mechanisms involved in 
 
     - agreement processing - Matching grammatical features between words
 
-      - [[feature_checking]] - Verifying features such as number and gender
+      - feature checking - Verifying features such as number and gender
 
       - [[constraint_satisfaction]] - Meeting multiple grammatical constraints at once
 
@@ -138,7 +139,7 @@ Language Processing encompasses the cognitive and neural mechanisms involved in 
 
       - polysemy resolution - Resolving words with multiple related meanings
 
-    - [[conceptual_semantics]] - Concept-based meaning representations
+    - conceptual semantics - Concept-based meaning representations
 
       - category knowledge - Knowledge of category membership
 

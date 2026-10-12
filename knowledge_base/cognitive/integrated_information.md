@@ -21,6 +21,7 @@ semantic_relations:
       - "[[consciousness_studies]]"
       - "[[global_workspace]]"
       - "[[active_inference]]"
+wikidata: Q6042884
 ---
 
 # Integrated Information Theory

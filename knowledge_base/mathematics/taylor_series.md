@@ -356,7 +356,7 @@ class TaylorErrorAnalyzer:
 
 - temporal abstraction
 
-- [[scale_space_theory]]
+- scale-space theory
 
 - [[renormalization_group]]
 

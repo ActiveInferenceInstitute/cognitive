@@ -17,6 +17,7 @@ semantic_relations:
       - "[[social_norms]]"
       - "[[social_systems]]"
       - "[[social_cognition]]"
+wikidata: Q214693
 ---
 
 # Social Capital

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[emotional_awareness]]"
       - "[[social_cognition]]"
       - "[[alexithymia]]"
+wikidata: Q191591
 ---
 
 # Emotional Intelligence

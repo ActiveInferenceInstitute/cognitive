@@ -17,6 +17,7 @@ semantic_relations:
       - "[[primary_motor]]"
       - "[[basal_ganglia]]"
       - "[[voluntary_action]]"
+wikidata: Q2467403
 ---
 
 # Supplementary Motor Area

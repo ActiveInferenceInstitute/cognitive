@@ -17,6 +17,7 @@ semantic_relations:
       - "[[episodic_memory]]"
       - "[[medial_temporal_lobe]]"
       - "[[memory_systems]]"
+wikidata: Q11072
 ---
 
 # Amnesia

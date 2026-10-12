@@ -23,6 +23,7 @@ semantic_relations:
       - "[[skill_acquisition]]"
 aliases:
   - procedural_learning
+wikidata: Q18606
 ---
 
 

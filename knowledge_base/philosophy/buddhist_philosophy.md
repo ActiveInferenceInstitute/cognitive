@@ -18,6 +18,7 @@ semantic_relations:
       - "[[consciousness]]"
       - "[[hindu_philosophy]]"
       - "[[philosophy_of_mind]]"
+wikidata: Q1001079
 ---
 
 # Buddhist Philosophy

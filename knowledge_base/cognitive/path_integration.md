@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cognitive_maps]]"
       - "[[social_insect_cognition]]"
       - "[[proprioception]]"
+wikidata: Q17148345
 ---
 
 # Path Integration

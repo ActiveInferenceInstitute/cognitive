@@ -17,6 +17,7 @@ semantic_relations:
       - "[[symbolic_logic]]"
       - "[[deductive_reasoning]]"
       - "[[syllogistic_logic]]"
+wikidata: Q16705128
 ---
 
 # Propositional Logic

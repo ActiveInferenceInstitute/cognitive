@@ -16,6 +16,7 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[temporal_models]]"
       - "[[procedural_memory]]"
+wikidata: Q7452469
 ---
 
 # Sequence Learning

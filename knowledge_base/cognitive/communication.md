@@ -15,6 +15,7 @@ semantic_relations:
       - "[[information_processing]]"
       - "[[bayesian_brain]]"
       - "[[active_inference]]"
+wikidata: Q11024
 ---
 
 

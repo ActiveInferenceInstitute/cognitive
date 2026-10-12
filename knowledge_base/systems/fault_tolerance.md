@@ -19,6 +19,7 @@ semantic_relations:
   - type: builds_on
     links:
       - "[[knowledge_base/systems/systems_theory|Systems Theory]]"
+wikidata: Q3140932
 ---
 
 

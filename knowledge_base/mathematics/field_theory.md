@@ -18,6 +18,7 @@ semantic_relations:
       - "[[path_integral]]"
 aliases:
   - classical_field_theory
+wikidata: Q1262328
 ---
 
 # Field Theory

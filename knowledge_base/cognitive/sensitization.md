@@ -17,6 +17,7 @@ semantic_relations:
       - "[[synaptic_plasticity]]"
       - "[[associative_learning]]"
       - "[[heterosynaptic]]"
+wikidata: Q944828
 ---
 
 # Sensitization

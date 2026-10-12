@@ -17,6 +17,7 @@ semantic_relations:
       - "[[supervised_learning]]"
       - "[[importance_sampling]]"
       - "[[continual_learning]]"
+wikidata: Q19246213
 ---
 
 # Domain Adaptation

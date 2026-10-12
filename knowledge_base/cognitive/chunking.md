@@ -17,6 +17,7 @@ semantic_relations:
       - "[[motor_control]]"
       - "[[hierarchical_models]]"
       - "[[skill_acquisition]]"
+wikidata: Q1089605
 ---
 
 # Chunking

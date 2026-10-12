@@ -14,6 +14,7 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[synaptic_plasticity]]"
       - "[[stability_plasticity]]"
+wikidata: Q1420291
 ---
 
 # Metaplasticity

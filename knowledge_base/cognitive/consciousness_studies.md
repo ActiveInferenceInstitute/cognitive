@@ -15,6 +15,7 @@ semantic_relations:
       - "[[consciousness_theory]]"
       - "[[cognitive_neuroscience]]"
       - "[[active_inference]]"
+wikidata: Q19367549
 ---
 
 # Consciousness Studies

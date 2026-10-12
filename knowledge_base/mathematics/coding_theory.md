@@ -16,6 +16,7 @@ semantic_relations:
       - "[[channel_capacity]]"
       - "[[message_passing]]"
       - "[[entropy]]"
+wikidata: Q602136
 ---
 
 # Coding Theory

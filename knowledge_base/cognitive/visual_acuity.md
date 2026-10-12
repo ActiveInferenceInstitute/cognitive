@@ -16,6 +16,7 @@ semantic_relations:
       - "[[contrast_sensitivity]]"
       - "[[peripheral_vision]]"
       - "[[psychophysics]]"
+wikidata: Q555066
 ---
 
 # Visual Acuity

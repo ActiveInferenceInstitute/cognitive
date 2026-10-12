@@ -18,6 +18,7 @@ semantic_relations:
       - "[[knowledge_base/systems/resilience_thinking]]"
       - "[[knowledge_base/mathematics/synergetic_information_geometry]]"
       - "[[knowledge_base/mathematics/tensegrity_information_geometry]]"
+wikidata: Q5264375
 ---
 
 # Design Science

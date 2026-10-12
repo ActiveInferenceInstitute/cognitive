@@ -17,6 +17,7 @@ semantic_relations:
       - "[[nowak_five_rules]]"
       - "[[cooperation]]"
       - "[[evolutionary_game_theory]]"
+wikidata: Q1367487
 ---
 
 # Tit for Tat

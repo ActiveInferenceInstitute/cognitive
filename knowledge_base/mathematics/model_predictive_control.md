@@ -18,6 +18,7 @@ semantic_relations:
       - "[[dynamic_programming]]"
       - "[[policy_selection]]"
       - "[[pragmatic_value]]"
+wikidata: Q1782962
 ---
 
 # Model Predictive Control

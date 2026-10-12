@@ -18,6 +18,7 @@ semantic_relations:
       - "[[predictive_coding]]"
       - "[[neural_computation]]"
       - "[[neural_coding]]"
+wikidata: Q8037925
 ---
 
 # Computational Neuroscience

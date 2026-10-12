@@ -18,6 +18,7 @@ semantic_relations:
       - "[[pomdp_framework]]"
       - "[[policy_selection]]"
       - "[[decision_making]]"
+wikidata: Q55643366
 ---
 
 # Sequential Decision Making

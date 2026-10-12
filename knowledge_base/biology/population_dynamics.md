@@ -14,6 +14,7 @@ semantic_relations:
       - "[[knowledge_base/biology/ecological_dynamics]]"
       - "[[knowledge_base/mathematics/dynamical_systems]]"
       - "[[knowledge_base/biology/population_genetics]]"
+wikidata: Q904564
 ---
 
 # Population Dynamics

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[selective_attention]]"
       - "[[schizophrenia]]"
       - "[[precision_weighting]]"
+wikidata: Q2271368
 ---
 
 # Sensory Gating

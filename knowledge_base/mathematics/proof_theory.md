@@ -14,6 +14,7 @@ semantic_relations:
       - "[[type_theory]]"
       - "[[category_theory]]"
       - "[[computational_complexity]]"
+wikidata: Q852732
 ---
 
 # Proof Theory

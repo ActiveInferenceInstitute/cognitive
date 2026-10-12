@@ -17,6 +17,7 @@ semantic_relations:
       - "[[lemma_retrieval]]"
       - "[[language_processing]]"
       - "[[wernickes_area]]"
+wikidata: Q5407200
 ---
 
 # Middle Temporal Gyrus

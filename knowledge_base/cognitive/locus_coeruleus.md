@@ -17,6 +17,7 @@ semantic_relations:
       - "[[vigilance]]"
       - "[[precision_mechanisms]]"
       - "[[dopamine_system]]"
+wikidata: Q1470452
 ---
 
 # Locus Coeruleus

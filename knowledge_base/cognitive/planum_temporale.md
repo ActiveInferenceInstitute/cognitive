@@ -17,6 +17,7 @@ semantic_relations:
       - "[[speech_perception]]"
       - "[[language_processing]]"
       - "[[auditory_processing]]"
+wikidata: Q1568920
 ---
 
 # Planum Temporale

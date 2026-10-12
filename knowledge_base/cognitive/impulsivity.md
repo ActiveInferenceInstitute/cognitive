@@ -16,6 +16,7 @@ semantic_relations:
       - "[[inhibitory_control]]"
       - "[[decision_making]]"
       - "[[dopamine_system]]"
+wikidata: Q1549918
 ---
 
 # Impulsivity

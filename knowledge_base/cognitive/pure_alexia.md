@@ -18,6 +18,7 @@ semantic_relations:
       - "[[dyslexia]]"
       - "[[angular_gyrus]]"
       - "[[visual_agnosia]]"
+wikidata: Q7261142
 ---
 
 # Pure Alexia

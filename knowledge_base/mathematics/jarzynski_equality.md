@@ -19,6 +19,7 @@ semantic_relations:
       - "[[free_energy_principle]]"
 aliases:
   - jarzynski
+wikidata: Q864883
 ---
 
 # Jarzynski Equality

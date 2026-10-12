@@ -25,6 +25,7 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[attentional_control]]"
       - "[[working_memory]]"
+wikidata: Q30892147
 ---
 
 

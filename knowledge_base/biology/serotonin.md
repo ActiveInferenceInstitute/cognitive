@@ -18,6 +18,7 @@ semantic_relations:
 aliases:
   - serotonergic
   - serotonin_system
+wikidata: Q167934
 ---
 
 # Serotonin

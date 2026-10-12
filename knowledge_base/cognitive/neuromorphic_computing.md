@@ -14,6 +14,7 @@ semantic_relations:
       - "[[knowledge_base/systems/edge_computing]]"
       - "[[knowledge_base/cognitive/neural_efficiency]]"
       - "[[knowledge_base/cognitive/energy_optimization]]"
+wikidata: Q137425629
 ---
 
 # Neuromorphic Computing

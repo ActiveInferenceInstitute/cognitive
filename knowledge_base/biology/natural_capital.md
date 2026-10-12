@@ -18,6 +18,7 @@ semantic_relations:
       - "[[biodiversity]]"
       - "[[sustainable_systems]]"
       - "[[bioregional_state_space]]"
+wikidata: Q1540268
 ---
 
 # Natural Capital

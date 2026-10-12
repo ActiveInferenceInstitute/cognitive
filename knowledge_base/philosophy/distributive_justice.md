@@ -18,6 +18,7 @@ semantic_relations:
       - "[[economic_games]]"
       - "[[philosophy_of_economics]]"
       - "[[human_rights]]"
+wikidata: Q552284
 ---
 
 # Distributive Justice

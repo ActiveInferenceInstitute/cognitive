@@ -21,6 +21,7 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[probabilistic_inference]]"
       - "[[belief_updating]]"
+wikidata: Q812535
 ---
 
 

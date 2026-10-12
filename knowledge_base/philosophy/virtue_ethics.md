@@ -17,6 +17,7 @@ semantic_relations:
       - "[[automaticity]]"
       - "[[environmental_ethics]]"
       - "[[technology_ethics]]"
+wikidata: Q1086395
 ---
 
 # Virtue Ethics

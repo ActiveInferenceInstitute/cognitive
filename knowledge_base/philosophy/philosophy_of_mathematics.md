@@ -11,6 +11,7 @@ semantic_relations:
       - "[[probability_theory]]"
       - "[[category_theory]]"
       - "[[information_theory]]"
+wikidata: Q180536
 ---
 
 

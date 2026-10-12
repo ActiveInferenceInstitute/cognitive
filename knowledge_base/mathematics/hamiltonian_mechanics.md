@@ -19,6 +19,7 @@ semantic_relations:
       - "[[lagrangian_mechanics]]"
       - "[[quantum_mechanics]]"
       - "[[integrable_systems]]"
+wikidata: Q477921
 ---
 
 

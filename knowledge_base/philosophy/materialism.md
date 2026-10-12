@@ -17,6 +17,7 @@ semantic_relations:
       - "[[philosophy_of_mind]]"
       - "[[reductionism]]"
       - "[[naturalism]]"
+wikidata: Q7081
 ---
 
 # Materialism

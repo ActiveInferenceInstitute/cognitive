@@ -17,6 +17,7 @@ semantic_relations:
       - "[[ion_channels]]"
       - "[[cholinergic_system]]"
       - "[[synaptic_plasticity]]"
+wikidata: Q776995
 ---
 
 # Neuromuscular Junction

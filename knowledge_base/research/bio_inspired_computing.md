@@ -18,6 +18,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/stigmergic_coordination]]"
       - "[[knowledge_base/cognitive/collective_behavior_ants]]"
       - "[[knowledge_base/research/natural_computation]]"
+wikidata: Q176934
 ---
 
 # Bio-Inspired Computing

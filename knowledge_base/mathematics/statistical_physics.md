@@ -33,6 +33,7 @@ semantic_relations:
       - "[[non_equilibrium_thermodynamics]]"
       - "[[optimization_theory]]"
       - "[[variational_inference]]"
+wikidata: Q677916
 ---
 
 

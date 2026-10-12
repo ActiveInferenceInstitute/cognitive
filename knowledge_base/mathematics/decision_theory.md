@@ -18,6 +18,7 @@ semantic_relations:
       - "[[expected_free_energy]]"
       - "[[policy_selection]]"
       - "[[game_theory]]"
+wikidata: Q177571
 ---
 
 # Decision Theory

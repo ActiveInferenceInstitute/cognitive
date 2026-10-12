@@ -18,6 +18,7 @@ semantic_relations:
       - "[[mental_causation]]"
       - "[[practical_reason]]"
       - "[[action_selection]]"
+wikidata: Q175661
 ---
 
 # Action Theory

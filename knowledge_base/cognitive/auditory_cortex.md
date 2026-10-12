@@ -17,6 +17,7 @@ semantic_relations:
       - "[[language_processing]]"
       - "[[predictive_coding]]"
       - "[[prediction_error]]"
+wikidata: Q18676
 ---
 
 # Auditory Cortex

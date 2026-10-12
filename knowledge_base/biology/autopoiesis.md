@@ -16,6 +16,7 @@ semantic_relations:
       - "[[knowledge_base/free_energy_principle/biology/homeostasis]]"
       - "[[knowledge_base/philosophy/enactivism]]"
       - "[[knowledge_base/mathematics/markov_blanket]]"
+wikidata: Q599967
 ---
 
 # Autopoiesis

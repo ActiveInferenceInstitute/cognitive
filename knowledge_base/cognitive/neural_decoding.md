@@ -14,6 +14,7 @@ semantic_relations:
       - "[[neural_coding]]"
       - "[[bayesian_inference]]"
       - "[[information_theory]]"
+wikidata: Q7002049
 ---
 
 # Neural Decoding

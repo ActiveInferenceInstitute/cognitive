@@ -17,6 +17,7 @@ semantic_relations:
       - "[[reinforcement_learning]]"
       - "[[reward_processing]]"
       - "[[operationalism]]"
+wikidata: Q847079
 ---
 
 # Operant Conditioning

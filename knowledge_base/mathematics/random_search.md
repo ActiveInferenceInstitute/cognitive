@@ -17,6 +17,7 @@ semantic_relations:
       - "[[hyperparameter_optimization]]"
       - "[[random_walk]]"
       - "[[exploration_exploitation]]"
+wikidata: Q4925641
 ---
 
 # Random Search

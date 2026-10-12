@@ -17,6 +17,7 @@ semantic_relations:
       - "[[decision_making]]"
       - "[[psychophysics]]"
       - "[[language_processing]]"
+wikidata: Q667379
 ---
 
 # Reaction Time

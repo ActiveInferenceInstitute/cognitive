@@ -24,7 +24,6 @@ semantic_relations:
   - type: foundational_for
     links:
       - "[[knowledge_base/cognitive/active_inference]]"
-      - "[[comparison]]"
   - type: extends
     links:
       - "[[da_costa_2020]]"

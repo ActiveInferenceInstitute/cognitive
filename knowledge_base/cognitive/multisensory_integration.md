@@ -27,6 +27,7 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[cross_modal_perception]]"
       - "[[sensorimotor_integration]]"
+wikidata: Q17166073
 ---
 
 

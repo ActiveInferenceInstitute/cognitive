@@ -11,7 +11,7 @@ semantic_relations:
     links:
       - "[[implementation_patterns]]"
       - "[[validation]]"
-      - "[[benchmarks]]"
+      - "[[free_energy_principle/implementations/benchmarking]]"
       - "[[model_validation]]"
       - "[[sensitivity_analysis]]"
       - "[[model_comparison]]"

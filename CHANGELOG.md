@@ -46,6 +46,14 @@ a computed result are marked **behaviour change** and say what moved and why.
   more lines; each keeps a handful of short snippets that were run and checked against closed
   forms or the package. Prose, equations and links are unchanged except where a sentence only
   introduced a removed listing, and headings left with nothing under them were removed.
+- **Every `[[concept]]` link resolves.** 355 links pointed at no page. About 110 now have a page,
+  written from sources that were looked up (Stanford and Internet Encyclopedia of Philosophy,
+  nLab, Crossref, Open Library, arXiv), 40 were pointed at the existing page that covers them,
+  and about 200 that named generic words or concepts needing a subject expert were turned into
+  plain text. The expert-only names are listed in the backlog.
+- **Wikidata alignment.** A concept page may carry `wikidata: Q…`, which the RDF export writes as
+  `skos:closeMatch`. 720 pages have one, found by label search and screened by a language model;
+  see `docs/okn/vocabulary.md`.
 - `verify_links` walks directories in sorted order. A link whose name matches several pages
   (a repeated file name or alias) resolved to whichever page the filesystem listed first, so the
   same checkout could resolve differently on macOS and Linux; it now resolves identically

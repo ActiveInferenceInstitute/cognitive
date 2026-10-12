@@ -17,6 +17,7 @@ semantic_relations:
       - "[[fiber_bundles]]"
       - "[[quantum_mechanics]]"
       - "[[geometric_mechanics]]"
+wikidata: Q3283
 ---
 
 # Geometric Phase

@@ -26,6 +26,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/active_inference]]"
 aliases:
   - probabilistic_programming_languages
+wikidata: Q7246865
 ---
 
 # Probabilistic Programming

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[entropy]]"
       - "[[kl_divergence]]"
       - "[[quantum_computing]]"
+wikidata: Q2122243
 ---
 
 # Quantum Information

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[temporal_logic]]"
       - "[[symbolic_logic]]"
       - "[[metaphysics]]"
+wikidata: Q210841
 ---
 
 # Modal Logic

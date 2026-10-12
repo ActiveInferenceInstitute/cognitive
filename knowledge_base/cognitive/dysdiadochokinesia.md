@@ -17,6 +17,7 @@ semantic_relations:
       - "[[dysmetria]]"
       - "[[motor_control]]"
       - "[[forward_models]]"
+wikidata: Q1280963
 ---
 
 # Dysdiadochokinesia

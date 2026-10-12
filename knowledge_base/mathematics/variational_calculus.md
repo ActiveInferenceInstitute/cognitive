@@ -357,7 +357,7 @@ class PathIntegrator:
 
   - Quantum fields (see [[quantum_mechanics]])
 
-  - Statistical fields (see [[statistical_field_theory]])
+  - Statistical fields (see statistical field theory)
 
   - Gauge theories (see gauge theory)
 

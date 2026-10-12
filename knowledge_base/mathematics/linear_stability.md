@@ -17,6 +17,7 @@ semantic_relations:
       - "[[bifurcation_theory]]"
       - "[[dynamical_systems]]"
       - "[[linear_algebra]]"
+wikidata: Q17098945
 ---
 
 # Linear Stability

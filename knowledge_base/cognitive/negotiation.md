@@ -15,6 +15,7 @@ semantic_relations:
       - "[[cooperation]]"
       - "[[game_theory]]"
       - "[[theory_of_mind]]"
+wikidata: Q202875
 ---
 
 # Negotiation

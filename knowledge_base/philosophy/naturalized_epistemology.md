@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cognitive_science]]"
       - "[[neurophilosophy]]"
       - "[[social_epistemology]]"
+wikidata: Q15081058
 ---
 
 # Naturalized Epistemology

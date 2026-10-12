@@ -18,6 +18,7 @@ semantic_relations:
 aliases:
   - synapse_elimination
   - synaptic_pruning
+wikidata: Q2124069
 ---
 
 # Pruning

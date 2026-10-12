@@ -17,6 +17,7 @@ semantic_relations:
       - "[[sentence_processing]]"
       - "[[neurolinguistics]]"
       - "[[lexical_access]]"
+wikidata: Q179488
 ---
 
 # Psycholinguistics

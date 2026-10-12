@@ -28,6 +28,7 @@ semantic_relations:
 aliases:
   - stigmergy
   - trace_based_communication
+wikidata: Q2141158
 ---
 
 

@@ -14,6 +14,7 @@ semantic_relations:
       - "[[neural_plasticity]]"
       - "[[learning_mechanisms]]"
       - "[[perceptual_inference]]"
+wikidata: Q7167036
 ---
 
 # Perceptual Learning

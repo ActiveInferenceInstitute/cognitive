@@ -17,6 +17,7 @@ semantic_relations:
       - "[[naturalism]]"
       - "[[philosophy_of_mind]]"
       - "[[scientific_method]]"
+wikidata: Q1384451
 ---
 
 # Experimental Philosophy

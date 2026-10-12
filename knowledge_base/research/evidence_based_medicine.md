@@ -17,6 +17,7 @@ semantic_relations:
       - "[[scientific_method]]"
       - "[[epistemology]]"
       - "[[bayesian_inference]]"
+wikidata: Q691640
 ---
 
 # Evidence-Based Medicine

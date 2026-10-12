@@ -17,6 +17,7 @@ semantic_relations:
       - "[[thermodynamics]]"
       - "[[neuromorphic_computing]]"
       - "[[entropy_production]]"
+wikidata: Q107065377
 ---
 
 # Thermodynamic Computing

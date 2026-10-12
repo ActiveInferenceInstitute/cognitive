@@ -18,6 +18,7 @@ semantic_relations:
       - "[[deontological_ethics]]"
       - "[[virtue_ethics]]"
       - "[[planning_as_inference]]"
+wikidata: Q3376512
 ---
 
 # Practical Reason

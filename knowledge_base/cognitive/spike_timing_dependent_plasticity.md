@@ -20,6 +20,7 @@ semantic_relations:
 aliases:
   - spike_timing_plasticity
   - stdp
+wikidata: Q7577157
 ---
 
 # Spike-Timing-Dependent Plasticity

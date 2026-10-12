@@ -15,6 +15,7 @@ semantic_relations:
       - "[[decision_making]]"
       - "[[reward_processing]]"
       - "[[dopamine_system]]"
+wikidata: Q644302
 ---
 
 # Motivation

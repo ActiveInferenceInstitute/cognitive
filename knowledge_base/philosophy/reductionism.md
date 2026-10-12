@@ -17,6 +17,7 @@ semantic_relations:
       - "[[strong_emergence]]"
       - "[[philosophy_of_mind]]"
       - "[[complex_systems]]"
+wikidata: Q206829
 ---
 
 # Reductionism

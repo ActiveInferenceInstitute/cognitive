@@ -18,6 +18,7 @@ semantic_relations:
 aliases:
   - automatic_processing
   - automatization
+wikidata: Q4826617
 ---
 
 # Automaticity

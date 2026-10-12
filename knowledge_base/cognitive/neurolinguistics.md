@@ -17,6 +17,7 @@ semantic_relations:
       - "[[brocas_area]]"
       - "[[wernickes_area]]"
       - "[[aphasia]]"
+wikidata: Q215948
 ---
 
 # Neurolinguistics

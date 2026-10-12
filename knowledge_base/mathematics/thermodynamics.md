@@ -25,6 +25,7 @@ semantic_relations:
       - "[[information_theory]]"
       - "[[stochastic_processes]]"
       - "[[dynamical_systems]]"
+wikidata: Q11473
 ---
 
 

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[axon_growth]]"
       - "[[collective_migration]]"
       - "[[morphogenesis]]"
+wikidata: Q189092
 ---
 
 # Cell Migration

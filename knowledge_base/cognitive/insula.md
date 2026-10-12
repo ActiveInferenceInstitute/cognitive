@@ -19,6 +19,7 @@ semantic_relations:
       - "[[homeostasis]]"
 aliases:
   - anterior_insula
+wikidata: Q1422654
 ---
 
 # Insula

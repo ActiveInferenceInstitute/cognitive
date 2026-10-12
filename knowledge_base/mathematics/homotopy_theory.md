@@ -17,6 +17,7 @@ semantic_relations:
       - "[[topological_spaces]]"
       - "[[fiber_bundles]]"
       - "[[category_theory]]"
+wikidata: Q9357062
 ---
 
 # Homotopy Theory

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[language_processing]]"
       - "[[social_cognition]]"
       - "[[communication]]"
+wikidata: Q181839
 ---
 
 # Pragmatics

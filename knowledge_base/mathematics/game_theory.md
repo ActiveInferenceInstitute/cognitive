@@ -24,6 +24,7 @@ semantic_relations:
     links:
       - "[[code/Things/Baseball_Game/AGENTS]]"
       - "[[knowledge_base/cognitive/collective_behavior]]"
+wikidata: Q44455
 ---
 
 # Game Theory

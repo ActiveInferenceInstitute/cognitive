@@ -31,7 +31,7 @@ where none does. Prefixes: `skos` = `http://www.w3.org/2004/02/skos/core#`, `dct
 | `status`, `complexity` | `ckb:status`, `ckb:complexity` |
 | `authors`, `year`, `doi` (citation pages) | `schema:author`, `schema:datePublished`, `schema:sameAs` |
 | `journal` (citation pages) | `ckb:journal` |
-| `wikidata` (a `Q` identifier, set only when a person has checked that the Wikidata item is the same concept) | `skos:exactMatch` to `http://www.wikidata.org/entity/Q…` |
+| `wikidata` (a `Q` identifier of the Wikidata item with the same meaning; see [Alignment to Wikidata](#alignment-to-wikidata)) | `skos:closeMatch` to `http://www.wikidata.org/entity/Q…` |
 | Top-level folder | a `skos:Collection` that has the page as `skos:member` |
 | Address in the repository | `dcterms:source` |
 | `redirect` | `dcterms:isReplacedBy` |
@@ -65,3 +65,13 @@ The dataset is a `dcat:Dataset` and `void:Dataset` with `dcterms:title`, `dcterm
 `dcterms:license`, `dcterms:creator`, `dcterms:publisher`, `dcterms:source`, `dcterms:modified`,
 `dcat:landingPage` and `void:vocabulary` for each standard vocabulary above. Provenance uses
 `prov:wasDerivedFrom`, `prov:wasGeneratedBy`, `prov:used` and `prov:wasAssociatedWith`.
+
+## Alignment to Wikidata
+
+Concept pages carry an optional `wikidata: Q…` key that the export writes as `skos:closeMatch`.
+The identifiers were proposed by searching Wikidata for each page title and alias, keeping only
+items whose label matches, and then screened by a language model that compared the item's
+description with the page's. A person has not checked them one by one, so they are published as
+`skos:closeMatch`, not `skos:exactMatch`: the items agree in meaning with the page, but a wrong
+one may remain. Pages without a confident match have no key, and a missing link is preferred to a
+wrong one. To report or fix a match, edit the page's `wikidata` value.

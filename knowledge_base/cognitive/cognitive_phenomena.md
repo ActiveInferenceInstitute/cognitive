@@ -475,7 +475,7 @@ semantic_relations:
 
 - [[autopoiesis]] - Self-maintaining systems
 
-- [[sense_making]] - Active interpretation
+- [[participatory_sense_making|sense making]] - Active interpretation
 
 - [[participatory_sense_making]] - Social co-creation of meaning
 
@@ -497,7 +497,7 @@ semantic_relations:
 
 - cognitive niche - Mental environment creation
 
-- [[cultural_niche]] - Social environment shaping
+- [[niche_construction|cultural niche]] - Social environment shaping
 
 - technological niche - Tool-based environment
 
@@ -1047,7 +1047,7 @@ semantic_relations:
 
     - [[deductive_reasoning]] - Rule application
 
-      - [[syllogistic_reasoning]] - Logical deduction
+      - [[syllogistic_logic|syllogistic reasoning]] - Logical deduction
 
       - [[conditional_reasoning]] - If-then logic
 

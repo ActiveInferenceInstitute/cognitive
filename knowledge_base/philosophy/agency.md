@@ -18,6 +18,7 @@ semantic_relations:
       - "[[efference_copy]]"
       - "[[corollary_discharge]]"
       - "[[free_will]]"
+wikidata: Q4691992
 ---
 
 # Agency

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[learning_mechanisms]]"
       - "[[neural_plasticity]]"
       - "[[brain_development]]"
+wikidata: Q2910672
 ---
 
 
@@ -101,7 +102,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
   - [[concrete_operations]] - Logical reasoning about concrete objects and events
 
-    - [[conservation]] - Quantity persists despite changes in appearance
+    - conservation - Quantity persists despite changes in appearance
 
     - classification - Sorting objects into categories by shared features
 
@@ -121,7 +122,7 @@ Cognitive Development encompasses the emergence and maturation of mental abiliti
 
     - [[metacognition]] - Thinking about one's own thinking
 
-  - [[identity_formation]] - Development of a stable sense of self
+  - [[socioemotional_development|identity formation]] - Development of a stable sense of self
 
     - [[personal_identity]] - Sense of self as an individual
 

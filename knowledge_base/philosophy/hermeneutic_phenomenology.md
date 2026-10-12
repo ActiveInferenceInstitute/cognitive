@@ -17,6 +17,7 @@ semantic_relations:
       - "[[phenomenology]]"
       - "[[heideggerian_ontology]]"
       - "[[existential_phenomenology]]"
+wikidata: Q119853693
 ---
 
 # Hermeneutic Phenomenology

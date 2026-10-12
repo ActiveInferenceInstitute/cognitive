@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cooperation]]"
       - "[[opportunity_cost]]"
       - "[[evolutionary_game_theory]]"
+wikidata: Q942582
 ---
 
 # Cost-Benefit Analysis

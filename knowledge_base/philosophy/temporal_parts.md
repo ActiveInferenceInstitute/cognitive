@@ -17,6 +17,7 @@ semantic_relations:
       - "[[philosophical_ontology]]"
       - "[[personal_identity]]"
       - "[[process_philosophy]]"
+wikidata: Q7698931
 ---
 
 # Temporal Parts

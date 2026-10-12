@@ -9,11 +9,11 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - "[[{'a_space_enthusiast|The Action Space (A-Space)': \"Your Agent's Superpowers!\"}]]"
-      - "[[{'b_matrix_basics|Understanding the B-Matrix': \"A Beginner's Guide\"}]]"
-      - "[[{'b_matrix_enthusiast|The B-Matrix': \"An Enthusiast's Guide to Understanding State Transitions\"}]]"
-      - "[[{'o_space_enthusiast|The Observation Space (O-Space)': 'A Window to the World'}]]"
-      - "[[{'s_space_enthusiast|The State Space (S-Space)': 'The Universe of Possibilities!'}]]"
+      - "[[a_space_enthusiast|The Action Space (A-Space)]]"
+      - "[[b_matrix_basics|Understanding the B-Matrix]]"
+      - "[[b_matrix_enthusiast|The B-Matrix]]"
+      - "[[o_space_enthusiast|The Observation Space (O-Space)]]"
+      - "[[s_space_enthusiast|The State Space (S-Space)]]"
     parent: [[[../AGENTS|Generic POMDP]]]
 ---
 

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[climate_change_ecology]]"
       - "[[ecosystem_management]]"
       - "[[bioregional_state_space]]"
+wikidata: Q7554898
 ---
 
 # Soil Carbon

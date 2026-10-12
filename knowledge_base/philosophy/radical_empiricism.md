@@ -17,6 +17,7 @@ semantic_relations:
       - "[[metaphysics]]"
       - "[[consciousness]]"
       - "[[mind_body_problem]]"
+wikidata: Q2843067
 ---
 
 # Radical Empiricism

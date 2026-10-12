@@ -17,6 +17,7 @@ semantic_relations:
       - "[[fluctuation_dissipation]]"
       - "[[detailed_balance]]"
       - "[[thermodynamics]]"
+wikidata: Q901483
 ---
 
 # Onsager Reciprocal Relations

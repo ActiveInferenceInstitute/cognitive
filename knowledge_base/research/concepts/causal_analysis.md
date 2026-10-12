@@ -3,6 +3,7 @@ title: "Causal Analysis"
 type: "concept"
 status: stable
 aliases:
+wikidata: Q19710240
 ---
 
 # Causal Analysis

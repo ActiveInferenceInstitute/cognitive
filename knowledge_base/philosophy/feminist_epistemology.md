@@ -18,6 +18,7 @@ semantic_relations:
       - "[[scientific_method]]"
       - "[[relativism]]"
       - "[[constructivism]]"
+wikidata: Q5442873
 ---
 
 # Feminist Epistemology

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[anxiety]]"
       - "[[depression]]"
       - "[[attention_training]]"
+wikidata: Q21011288
 ---
 
 # Metacognitive Therapy

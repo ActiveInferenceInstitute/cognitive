@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cortisol]]"
       - "[[social_cognition]]"
       - "[[social_reward]]"
+wikidata: Q1318776
 ---
 
 # Testosterone

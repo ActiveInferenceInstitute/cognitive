@@ -17,6 +17,7 @@ semantic_relations:
       - "[[specific_language_impairment]]"
       - "[[dyslexia]]"
       - "[[superior_temporal]]"
+wikidata: Q2836
 ---
 
 # Aphasia

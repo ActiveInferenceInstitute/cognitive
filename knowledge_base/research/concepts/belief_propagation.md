@@ -2,6 +2,7 @@
 title: "Belief Propagation"
 type: "concept"
 status: stable
+wikidata: Q4060686
 ---
 
 # Belief Propagation

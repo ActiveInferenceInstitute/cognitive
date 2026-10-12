@@ -18,6 +18,7 @@ semantic_relations:
       - "[[being_in_the_world]]"
       - "[[embodied_cognition]]"
       - "[[enactive_cognition]]"
+wikidata: Q5357573
 ---
 
 # Existential Phenomenology

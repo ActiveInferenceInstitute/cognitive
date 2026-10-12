@@ -17,6 +17,7 @@ semantic_relations:
       - "[[systems_biology]]"
       - "[[enzyme_kinetics]]"
       - "[[gene_regulatory_networks]]"
+wikidata: Q6822347
 ---
 
 # Metabolic Engineering

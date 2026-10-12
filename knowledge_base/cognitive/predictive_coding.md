@@ -17,6 +17,7 @@ semantic_relations:
       - "[[hierarchical_inference]]"
       - "[[generative_model]]"
       - "[[perceptual_inference]]"
+wikidata: Q1315146
 ---
 
 

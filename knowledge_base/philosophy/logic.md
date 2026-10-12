@@ -18,6 +18,7 @@ semantic_relations:
       - "[[active_inference]]"
 aliases:
   - formal_logic
+wikidata: Q8078
 ---
 
 # Logic

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[motor_cortex]]"
       - "[[neural_plasticity]]"
       - "[[consciousness_studies]]"
+wikidata: Q263962
 ---
 
 # Transcranial Magnetic Stimulation

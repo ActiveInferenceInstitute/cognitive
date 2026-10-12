@@ -145,7 +145,7 @@ See `docs/examples/README.md` for runnable examples.
 
 1. [[hierarchical_organization|Define Hierarchy]]
 
-1. [[temporal_depth|Specify Temporal Depth]]
+1. [[temporal_models|Specify Temporal Depth]]
 
 1. [[message_passing|Design Message Passing]]
 

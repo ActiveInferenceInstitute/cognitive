@@ -17,6 +17,7 @@ semantic_relations:
       - "[[interoception]]"
       - "[[minimal_self]]"
       - "[[consciousness_and_awareness]]"
+wikidata: Q83177
 ---
 
 # Depersonalization

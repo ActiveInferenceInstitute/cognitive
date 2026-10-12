@@ -16,6 +16,7 @@ semantic_relations:
       - "[[game_theory]]"
       - "[[adaptive_comanagement]]"
       - "[[theory_of_mind]]"
+wikidata: Q1194317
 ---
 
 # Conflict Resolution

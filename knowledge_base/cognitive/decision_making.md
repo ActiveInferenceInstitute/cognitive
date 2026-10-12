@@ -19,6 +19,7 @@ semantic_relations:
       - "[[value_computation]]"
       - "[[reinforcement_learning]]"
       - "[[action_selection]]"
+wikidata: Q1331926
 ---
 
 
@@ -137,11 +138,11 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[drift_diffusion]] - Evidence accumulation
 
-    - [[drift_rate]] - Speed of evidence accumulation toward a bound
+    - [[sequential_sampling|drift rate]] - Speed of evidence accumulation toward a bound
 
     - [[decision_threshold]] - Choice criterion
 
-  - [[race_models]] - Independent accumulators racing to a bound
+  - [[sequential_sampling|race models]] - Independent accumulators racing to a bound
 
     - accumulator race - Parallel build-up
 
@@ -237,9 +238,9 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
   - [[addiction]] - Maladaptive choice
 
-    - [[substance_addiction]] - Drug-related
+    - [[addiction|substance addiction]] - Drug-related
 
-    - [[behavioral_addiction]] - Action-related
+    - [[addiction|behavioral addiction]] - Action-related
 
   - [[impulsivity]] - Acting without adequate forethought or restraint
 
@@ -445,7 +446,7 @@ Decision Making encompasses the cognitive and neural processes involved in choos
 
       - relative value - Value judged against alternatives
 
-      - [[reference_points]] - Baselines against which outcomes are judged
+      - [[risk_preference|reference points]] - Baselines against which outcomes are judged
 
     - [[probability_weighting]] - Subjective weighting of outcome probabilities
 

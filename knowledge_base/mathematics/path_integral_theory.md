@@ -31,11 +31,11 @@ $\int \mathcal{D}[x(\tau)] \exp(-S[x(\tau)])$
 
 where:
 
-- $\mathcal{D}[x(\tau)]$ is the [[functional_measure]]
+- $\mathcal{D}[x(\tau)]$ is the functional measure
 
 - $S[x(\tau)]$ is the action functional
 
-- Links to [[wiener_measure]] and [[feynman_kac]]
+- Links to [[wiener_measure]], including its Feynman-Kac formula
 
 ### Functional Analysis
 
@@ -138,7 +138,7 @@ Links to:
 
 - [[legendre_transform]]
 
-- [[effective_field_theory]]
+- effective field theory
 
 - renormalization flow
 
@@ -202,9 +202,9 @@ $dx = f(x)dt + \sqrt{2D}dW$
 
 where:
 
-- $f(x)$ is the [[drift_field]]
+- $f(x)$ is the [[diffusion_processes|drift field]]
 
-- $D$ is the [[diffusion_tensor]]
+- $D$ is the [[diffusion_processes|diffusion tensor]]
 
 - $dW$ is [[wiener_process]]
 
@@ -338,7 +338,7 @@ Links to:
 
 - [[quantum_field_theory]]
 
-- [[quantum_statistics]]
+- quantum statistics
 
 ### Statistical Systems
 

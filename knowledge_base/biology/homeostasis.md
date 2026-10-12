@@ -13,6 +13,7 @@ semantic_relations:
       - "[[allostatic_regulation]]"
       - "[[levels_of_organization]]"
       - "[[knowledge_base/free_energy_principle/biology/homeostasis]]"
+wikidata: Q103191
 ---
 
 # Homeostasis

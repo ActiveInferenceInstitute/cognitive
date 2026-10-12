@@ -13,6 +13,7 @@ semantic_relations:
       - "[[dynamical_systems]]"
       - "[[complex_systems]]"
       - "[[emergence]]"
+wikidata: Q1985198
 ---
 
 # Nonlinear Dynamics

@@ -31,6 +31,7 @@ semantic_relations:
       - "[[attention_mechanisms]]"
       - "[[learning_theory]]"
       - "[[neural_networks]]"
+wikidata: Q4386060
 ---
 
 
@@ -574,7 +575,7 @@ class AdaptiveCognitiveArchitecture(HierarchicalCognitiveArchitecture):
 ## References
 
 - newell unified - Unified Theory of Cognition
-- [[anderson_act]] - Adaptive Control of Thought
+- [[production_systems|Anderson ACT]] - Adaptive Control of Thought
 - rumelhart pdp - Parallel Distributed Processing
 - brooks behavior - Behavior-Based Robotics
 - sun integrated - Integrated Cognitive Architectures

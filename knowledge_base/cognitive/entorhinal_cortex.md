@@ -17,6 +17,7 @@ semantic_relations:
       - "[[dentate_gyrus]]"
       - "[[medial_temporal_lobe]]"
       - "[[spatial_memory]]"
+wikidata: Q2603645
 ---
 
 # Entorhinal Cortex

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[face_processing]]"
       - "[[ventral_stream]]"
       - "[[perceptual_organization]]"
+wikidata: Q220322
 ---
 
 # Agnosia

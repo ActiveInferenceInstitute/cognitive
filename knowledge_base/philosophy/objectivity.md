@@ -17,6 +17,7 @@ semantic_relations:
       - "[[feminist_epistemology]]"
       - "[[epistemology]]"
       - "[[scientific_method]]"
+wikidata: Q206330
 ---
 
 # Objectivity

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[neural_plasticity]]"
       - "[[synaptic_tagging]]"
       - "[[late_ltp]]"
+wikidata: Q14882333
 ---
 
 # mRNA Transport

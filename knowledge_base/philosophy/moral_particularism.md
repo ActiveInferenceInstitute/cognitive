@@ -17,6 +17,7 @@ semantic_relations:
       - "[[deontological_ethics]]"
       - "[[normative_ethics]]"
       - "[[pragmatism]]"
+wikidata: Q3296948
 ---
 
 # Moral Particularism

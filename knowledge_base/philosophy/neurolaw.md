@@ -17,6 +17,7 @@ semantic_relations:
       - "[[determinism]]"
       - "[[neuroscientific_ethics]]"
       - "[[cognitive_neuroscience]]"
+wikidata: Q7002313
 ---
 
 # Neurolaw

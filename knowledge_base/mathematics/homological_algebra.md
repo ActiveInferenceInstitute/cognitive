@@ -21,6 +21,7 @@ semantic_relations:
       - "[[sheaf_theory]]"
 aliases:
   - spectral_sequences
+wikidata: Q579978
 ---
 
 

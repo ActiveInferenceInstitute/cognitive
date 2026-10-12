@@ -17,6 +17,7 @@ semantic_relations:
       - "[[preference_learning]]"
       - "[[markov_decision_process]]"
       - "[[C_matrix]]"
+wikidata: Q123916004
 ---
 
 # Inverse Reinforcement Learning

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[punishment]]"
       - "[[normative_ethics]]"
       - "[[social_justice]]"
+wikidata: Q126842
 ---
 
 # Philosophy of Law

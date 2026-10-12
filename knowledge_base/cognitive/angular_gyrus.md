@@ -17,6 +17,7 @@ semantic_relations:
       - "[[multisensory_integration]]"
       - "[[temporal_pole]]"
       - "[[dyslexia]]"
+wikidata: Q1038781
 ---
 
 # Angular Gyrus

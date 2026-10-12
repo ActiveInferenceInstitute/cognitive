@@ -116,7 +116,7 @@ Neural Plasticity refers to the brain's ability to modify its structure and func
 
     - [[cfos]] - Activity marker
 
-    - [[arc]] - Activity-regulated gene supporting synaptic plasticity
+    - Arc - Activity-regulated gene supporting synaptic plasticity
 
   - late response genes - Genes expressed hours after stimulation
 

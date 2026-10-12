@@ -18,6 +18,7 @@ semantic_relations:
 aliases:
   - food_webs
   - metacommunity_theory
+wikidata: Q8771652
 ---
 
 # Community Ecology

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[working_memory]]"
       - "[[cognitive_control]]"
       - "[[metacognition]]"
+wikidata: Q65088747
 ---
 
 # Lateral Prefrontal Cortex

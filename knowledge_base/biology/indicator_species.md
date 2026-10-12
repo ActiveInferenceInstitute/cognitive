@@ -18,6 +18,7 @@ semantic_relations:
       - "[[conservation_biology]]"
       - "[[bioregional_state_space]]"
       - "[[community_ecology]]"
+wikidata: Q2217739
 ---
 
 # Indicator Species

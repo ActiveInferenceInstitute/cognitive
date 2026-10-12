@@ -17,6 +17,7 @@ semantic_relations:
       - "[[resilience]]"
       - "[[exploration_exploitation]]"
       - "[[feedback_loops]]"
+wikidata: Q4680750
 ---
 
 # Adaptive Management

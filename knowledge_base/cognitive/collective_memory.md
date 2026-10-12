@@ -17,6 +17,7 @@ semantic_relations:
       - "[[autobiographical_memory]]"
       - "[[cultural_evolution]]"
       - "[[social_epistemology]]"
+wikidata: Q254217
 ---
 
 # Collective Memory

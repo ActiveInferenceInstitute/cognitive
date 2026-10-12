@@ -17,6 +17,7 @@ semantic_relations:
       - "[[electrophysiology]]"
       - "[[inter_spike_intervals]]"
       - "[[firing_rate]]"
+wikidata: Q2003571
 ---
 
 # Spike Sorting

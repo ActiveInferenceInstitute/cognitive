@@ -17,6 +17,7 @@ semantic_relations:
       - "[[ltp]]"
       - "[[ltd]]"
       - "[[hebbian_learning]]"
+wikidata: Q17030659
 ---
 
 # Homosynaptic Plasticity

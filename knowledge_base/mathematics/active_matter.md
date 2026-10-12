@@ -17,6 +17,7 @@ semantic_relations:
       - "[[self_organization]]"
       - "[[entropy_production]]"
       - "[[free_energy_principle]]"
+wikidata: Q4677565
 ---
 
 # Active Matter

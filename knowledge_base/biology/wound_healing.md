@@ -17,6 +17,7 @@ semantic_relations:
       - "[[swarm_intelligence]]"
       - "[[morphogenesis]]"
       - "[[cell_proliferation]]"
+wikidata: Q1509074
 ---
 
 # Wound Healing

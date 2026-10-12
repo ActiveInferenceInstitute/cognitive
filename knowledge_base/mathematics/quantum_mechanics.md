@@ -18,6 +18,7 @@ semantic_relations:
       - "[[quantum_information]]"
       - "[[quantum_cognition]]"
       - "[[langevin_dynamics]]"
+wikidata: Q944
 ---
 
 # Quantum Mechanics

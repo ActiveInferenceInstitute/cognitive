@@ -17,6 +17,7 @@ semantic_relations:
       - "[[scientific_method]]"
       - "[[philosophy_of_mind]]"
       - "[[scientific_realism]]"
+wikidata: Q56000
 ---
 
 # Naturalism

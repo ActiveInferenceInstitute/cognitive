@@ -17,6 +17,7 @@ semantic_relations:
       - "[[pragmatism]]"
       - "[[scientific_method]]"
       - "[[cultural_evolution]]"
+wikidata: Q3589301
 ---
 
 # Social Epistemology

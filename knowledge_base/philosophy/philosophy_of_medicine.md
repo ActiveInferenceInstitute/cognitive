@@ -17,6 +17,7 @@ semantic_relations:
       - "[[computational_psychiatry]]"
       - "[[causal_inference]]"
       - "[[philosophy_of_mind]]"
+wikidata: Q1427574
 ---
 
 # Philosophy of Medicine

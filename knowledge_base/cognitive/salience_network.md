@@ -17,6 +17,7 @@ semantic_relations:
       - "[[default_mode]]"
       - "[[frontoparietal]]"
       - "[[salience]]"
+wikidata: Q48997354
 ---
 
 # Salience Network

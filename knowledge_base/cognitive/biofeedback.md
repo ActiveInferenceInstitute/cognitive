@@ -17,6 +17,7 @@ semantic_relations:
       - "[[self_regulation]]"
       - "[[emotion_regulation]]"
       - "[[stress_response]]"
+wikidata: Q864329
 ---
 
 # Biofeedback

@@ -16,6 +16,7 @@ semantic_relations:
       - "[[philosophy_of_mind]]"
       - "[[logical_positivism]]"
       - "[[instrumentalism]]"
+wikidata: Q168338
 ---
 
 # Behaviorism

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[bayesian_inference]]"
 aliases:
   - heuristic
+wikidata: Q201413
 ---
 
 # Heuristics

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[differential_equations]]"
       - "[[optimization_theory]]"
       - "[[numerical_methods]]"
+wikidata: Q149972
 ---
 
 # Calculus

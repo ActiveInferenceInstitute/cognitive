@@ -17,6 +17,7 @@ semantic_relations:
       - "[[graph_theory]]"
       - "[[constraint_satisfaction]]"
       - "[[reasoning_problem_solving]]"
+wikidata: Q816319
 ---
 
 # Depth-First Search

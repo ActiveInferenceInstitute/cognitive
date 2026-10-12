@@ -17,6 +17,7 @@ semantic_relations:
       - "[[consciousness]]"
       - "[[cognitive_neuroscience]]"
       - "[[reductionism]]"
+wikidata: Q1807987
 ---
 
 # Neurophilosophy

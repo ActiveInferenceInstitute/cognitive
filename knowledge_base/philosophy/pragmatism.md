@@ -22,6 +22,7 @@ semantic_relations:
       - "[[empiricism]]"
       - "[[active_inference]]"
       - "[[process_philosophy]]"
+wikidata: Q126692
 ---
 
 
@@ -109,7 +110,7 @@ Classical pragmatism emerged from the "Metaphysical Club" discussions in Cambrid
 
 ### Neo-Pragmatism (1970s-Present)
 
-The revival of pragmatist themes in late 20th century philosophy, especially in the works of [[Richard Rorty]], [[Hilary Putnam]], and [[Robert Brandom]], brought pragmatism into dialogue with [[analytic philosophy]], [[continental philosophy]], and [[post-modernism]].
+The revival of pragmatist themes in late 20th century philosophy, especially in the works of [[Richard Rorty]], [[Hilary Putnam]], and [[Robert Brandom]], brought pragmatism into dialogue with [[analytic philosophy]], continental philosophy, and [[post-modernism]].
 
 ```mermaid
 
@@ -313,7 +314,7 @@ Peirce, the founder of pragmatism, made substantial contributions to:
 
 - **Scientific Method**: Articulated the logic of scientific discovery and emphasized [[abductive_reasoning|abduction]]
 
-- **Categories**: Developed a system of universal categories ([[firstness]], [[secondness]], [[thirdness]])
+- **Categories**: Developed a system of universal categories ([[peircean_semiotics|firstness]], [[peircean_semiotics|secondness]], [[peircean_semiotics|thirdness]])
 
 - **Metaphysics**: Advocated evolutionary cosmology and synechism (continuity)
 
@@ -377,13 +378,13 @@ Dewey extended pragmatism into:
 
 - **Naturalism**: Reconstructed traditional philosophical problems within a [[naturalism|naturalistic]] framework
 
-Dewey's work continues to influence [[educational_philosophy]], democratic theory, and approaches to social inquiry.
+Dewey's work continues to influence [[philosophy_of_education|educational philosophy]], democratic theory, and approaches to social inquiry.
 
 ### Jane Addams (1860-1935)
 
 Though often overlooked in philosophical histories, Addams developed pragmatism in directions that emphasized:
 
-- **Social Ethics**: Extended pragmatism into social ethics and [[feminist_theory]]
+- **Social Ethics**: Extended pragmatism into social ethics and feminist theory
 
 - **Democratic Experimentalism**: Practical social reform through settlement houses
 
@@ -561,7 +562,7 @@ Dewey's educational philosophy emphasizes:
 
 1. Scientific method as educational paradigm
 
-These ideas continue to influence [[constructivist_learning_theory]], [[project_based_learning]], and [[democratic_education]] approaches.
+These ideas continue to influence [[constructivist_learning_theory]], [[project_based_learning]], and democratic education approaches.
 
 ## Contemporary Relevance
 
@@ -581,7 +582,7 @@ Contemporary pragmatism has diversified into several strands:
 
 1. **Global Pragmatism**: Explores connections with non-Western philosophical traditions (Shusterman, Koopman)
 
-These diverse strands have extended pragmatism's influence across philosophical subdisciplines and into interdisciplinary dialogues with [[cognitive_science]], [[cultural_studies]], and political theory.
+These diverse strands have extended pragmatism's influence across philosophical subdisciplines and into interdisciplinary dialogues with [[cognitive_science]], cultural studies, and political theory.
 
 ### Pragmatism and Cognitive Science
 

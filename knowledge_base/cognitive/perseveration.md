@@ -17,6 +17,7 @@ semantic_relations:
       - "[[set_shifting]]"
       - "[[decision_making]]"
       - "[[prefrontal]]"
+wikidata: Q1499171
 ---
 
 # Perseveration

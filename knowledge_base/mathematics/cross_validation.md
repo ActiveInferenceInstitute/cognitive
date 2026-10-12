@@ -15,6 +15,7 @@ semantic_relations:
       - "[[knowledge_base/research/concepts/model_comparison]]"
       - "[[knowledge_base/mathematics/information_criteria]]"
       - "[[knowledge_base/mathematics/statistical_foundations]]"
+wikidata: Q541014
 ---
 
 # Cross-Validation

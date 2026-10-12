@@ -4,6 +4,7 @@ type: "mathematical_concept"
 status: stable
 aliases:
   - softmax_distribution
+wikidata: Q7554146
 ---
 
 # Softmax Function

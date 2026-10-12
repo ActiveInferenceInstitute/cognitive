@@ -18,6 +18,7 @@ semantic_relations:
       - "[[authenticity]]"
       - "[[phenomenology]]"
       - "[[consciousness]]"
+wikidata: Q119709
 ---
 
 # Being and Nothingness

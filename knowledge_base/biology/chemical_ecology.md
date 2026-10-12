@@ -15,6 +15,7 @@ semantic_relations:
       - "[[knowledge_base/biology/ant_communication_systems]]"
       - "[[knowledge_base/biology/bee_communication_systems]]"
       - "[[knowledge_base/cognitive/stigmergic_coordination]]"
+wikidata: Q700919
 ---
 
 # Chemical Ecology

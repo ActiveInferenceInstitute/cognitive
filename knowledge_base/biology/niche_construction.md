@@ -28,6 +28,7 @@ semantic_relations:
       - "[[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]"
 aliases:
   - niche construction
+wikidata: Q1139192
 ---
 
 # Niche Construction

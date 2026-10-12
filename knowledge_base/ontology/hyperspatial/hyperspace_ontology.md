@@ -134,9 +134,9 @@ graph TD
 
 1. **Related Functors and Constructions**
 
-   - [[forgetful_functors]]
+   - [[functors|forgetful functors]]
 
-   - [[inclusion_functors]]
+   - inclusion functors
 
    - realization functors
 
@@ -256,9 +256,9 @@ graph TD
 
 1. **Associated Bundles**
 
-   - [[frame_bundles]]
+   - [[fiber_bundles|frame bundles]]
 
-   - [[spinor_bundles]]
+   - spinor bundles
 
    - reality bundles
 
@@ -390,11 +390,11 @@ graph TD
 
 1. **Quantum Operations**
 
-   - [[quantum_gates]]
+   - [[quantum_computing|quantum gates]]
 
    - quantum measurements
 
-   - [[quantum_channels]]
+   - [[quantum_information|quantum channels]]
 
 ### Neural Architectures
 
@@ -626,11 +626,11 @@ graph TD
 
 1. **Spatial Transformations**
 
-   - [[rigid_body_transformations]]
+   - [[lie_groups|rigid body transformations]]
 
-   - [[projective_transformations]]
+   - projective transformations
 
-   - [[conformal_mappings]]
+   - conformal mappings
 
    - coordinate changes
 
@@ -686,7 +686,7 @@ graph LR
 
    - Base: Physical space
 
-   - Fiber: [[transformation_group]]
+   - Fiber: [[lie_groups|transformation group]]
 
    - Structure: gauge theory
 
@@ -756,7 +756,7 @@ graph TD
 
    - spatial web topology
 
-   - [[mixed_reality_continuum]]
+   - [[mixed_reality|mixed reality continuum]]
 
 ## Applications
 
@@ -800,7 +800,7 @@ graph TD
 
 1. **Virtual Reality**
 
-   - [[scene_graphs]]
+   - scene graphs
 
    - physics simulation
 
@@ -1078,9 +1078,9 @@ graph LR
 
 1. **Causal Structures**
 
-   - [[causal_cones]]
+   - [[minkowski_spacetime|causal cones]]
 
-   - [[event_horizons]]
+   - [[black_hole_thermodynamics|event horizons]]
 
    - temporal boundaries
 
@@ -1452,11 +1452,11 @@ graph TD
 
 1. **Higher Structures**
 
-   - [[infinity_groupoids]]
+   - infinity groupoids
 
    - [[derived_categories]]
 
-   - [[stable_homotopy]]
+   - stable homotopy
 
 ## Advanced Computational Frameworks
 
@@ -1690,13 +1690,13 @@ graph TD
 
    - Quantum Time
 
-   - [[thermodynamic_time|Arrow of Time]]
+   - [[philosophy_of_time|Arrow of Time]]
 
    - Dynamical Systems
 
    - Geometric Time
 
-   - [[emergent_time|Emergent Time]]
+   - Emergent Time
 
 1. **Logical Time Structures**
 
@@ -1762,35 +1762,35 @@ graph LR
 
    - [[enriched_categories|Enriched Categories]]
 
-   - [[higher_categories|Higher Categories]]
+   - [[category_theory|Higher Categories]]
 
-   - [[model_categories|Model Categories]]
+   - Model Categories
 
    - [[derived_categories|Derived Categories]]
 
-   - [[dg_categories|DG Categories]]
+   - DG Categories
 
 1. **Topos Theoretic Structures**
 
-   - [[elementary_topoi|Elementary Topoi]]
+   - [[category_theory|Elementary Topoi]]
 
-   - [[grothendieck_topoi|Grothendieck Topoi]]
+   - [[category_theory|Grothendieck Topoi]]
 
-   - [[higher_topoi|Higher Topoi]]
+   - [[category_theory|Higher Topoi]]
 
    - [[sheaf_theory|Sheaf Theory]]
 
    - Stack Theory
 
-   - [[derived_stacks|Derived Stacks]]
+   - [[algebraic_geometry|Derived Stacks]]
 
 1. **Type Theoretic Structures**
 
    - [[dependent_types|Dependent Types]]
 
-   - [[homotopy_types|Homotopy Types]]
+   - [[type_theory|Homotopy Types]]
 
-   - [[linear_types|Linear Types]]
+   - Linear Types
 
    - Modal Types
 
@@ -1846,11 +1846,11 @@ graph TD
 
    - [[homology_theory|Homology Theory]]
 
-   - [[cohomology_theory|Cohomology Theory]]
+   - [[algebraic_topology|Cohomology Theory]]
 
-   - [[k_theory|K-Theory]]
+   - K-Theory
 
-   - [[motivic_integration|Motivic Integration]]
+   - Motivic Integration
 
    - Derived Integration
 

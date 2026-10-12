@@ -17,6 +17,7 @@ semantic_relations:
       - "[[artificial_intelligence]]"
       - "[[existential_risk]]"
       - "[[mind_uploading]]"
+wikidata: Q237525
 ---
 
 # Technological Singularity

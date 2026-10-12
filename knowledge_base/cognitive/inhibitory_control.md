@@ -21,6 +21,7 @@ semantic_relations:
       - "[[cognitive_control]]"
       - "[[action_selection]]"
       - "[[active_inference]]"
+wikidata: Q6033829
 ---
 
 # Inhibitory Control

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[memory_consolidation]]"
       - "[[online_learning]]"
       - "[[belief_initialization]]"
+wikidata: Q114958157
 ---
 
 # Continual Learning

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[evidence_accumulation]]"
       - "[[reaction_time]]"
       - "[[bayesian_inference]]"
+wikidata: Q7256433
 ---
 
 # Psychometric Function

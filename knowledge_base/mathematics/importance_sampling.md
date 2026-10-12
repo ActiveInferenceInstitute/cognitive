@@ -16,6 +16,7 @@ semantic_relations:
       - "[[knowledge_base/research/concepts/sampling_strategies]]"
       - "[[knowledge_base/mathematics/variational_inference]]"
       - "[[knowledge_base/mathematics/kl_divergence]]"
+wikidata: Q1539564
 ---
 
 # Importance Sampling

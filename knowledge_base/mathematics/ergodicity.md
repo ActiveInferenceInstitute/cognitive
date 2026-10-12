@@ -17,6 +17,7 @@ semantic_relations:
       - "[[non_equilibrium_steady_state]]"
       - "[[markov_chain_monte_carlo]]"
       - "[[free_energy_principle]]"
+wikidata: Q5426803
 ---
 
 # Ergodicity

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[graphical_models]]"
 aliases:
   - causality_inference
+wikidata: Q5054566
 ---
 
 # Causal Inference

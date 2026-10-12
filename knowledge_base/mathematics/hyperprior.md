@@ -17,6 +17,7 @@ semantic_relations:
       - "[[empirical_prior]]"
       - "[[precision_parameter]]"
       - "[[conjugate_priors]]"
+wikidata: Q5958522
 ---
 
 # Hyperprior

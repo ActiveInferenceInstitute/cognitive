@@ -51,6 +51,7 @@ semantic_relations:
   - type: extends
     links:
       - "[[knowledge_base/mathematics/variational_inference]]"
+wikidata: Q17014702
 ---
 
 > **Code on this page.** The Python snippets illustrate the ideas. Unless a snippet imports the
@@ -466,7 +467,7 @@ Properties:
 
   - mixing properties
 
-  - [[recurrence_times]]
+  - recurrence times
 
   - ergodic decomposition
 
@@ -542,7 +543,7 @@ Properties:
 
    - molecular dynamics
 
-   - [[agent_based_models]]
+   - [[agent_based_modeling|agent based models]]
 
 1. [[stability_analysis]]
 
@@ -618,7 +619,7 @@ Properties:
 
   - [[evolutionary_computation]]
 
-  - [[morphogenetic_engineering]]
+  - morphogenetic engineering
 
   - [[synthetic_biology]]
 
@@ -726,7 +727,7 @@ Properties:
 
    - [[quantum_information]]
 
-   - [[quantum_thermodynamics]]
+   - quantum thermodynamics
 
 1. Discrete-time formulations
 
@@ -982,7 +983,7 @@ Related concepts:
 
 Properties:
 
-- [[functional_derivatives]]
+- [[variational_calculus|functional derivatives]]
 
 - [[wasserstein_metrics]]
 
@@ -1169,13 +1170,13 @@ print(policy_posterior(A, B, C, np.array([0.8, 0.2])))
 
     - [[optimal_control]]
 
-    - [[quantum_filtering]]
+    - quantum filtering
 
   - quantum inference
 
-    - [[quantum_state_estimation]]
+    - quantum state estimation
 
-    - [[quantum_tomography]]
+    - quantum tomography
 
     - quantum learning
 
@@ -1345,7 +1346,7 @@ Components:
 
 - [[sigma_algebras]]
 
-- [[radon_nikodym_derivatives]]
+- [[radon_nikodym_theorem|radon nikodym derivatives]]
 
 ### 2. Functional Analysis
 
@@ -1435,9 +1436,9 @@ Structures:
 
   - thermodynamic phase space
 
-  - [[contact_hamiltonians]]
+  - [[contact_geometry|contact hamiltonians]]
 
-  - [[legendre_transformations]]
+  - [[legendre_transform|legendre transformations]]
 
 ### 2. Statistical Field Theory
 
@@ -1461,13 +1462,13 @@ Components:
 
   - functional integration
 
-  - [[stationary_phase_approximation]]
+  - stationary phase approximation
 
   - steepest descent
 
-- [[effective_action]]
+- [[generating_functional|effective action]]
 
-  - [[one_particle_irreducible]]
+  - one particle irreducible
 
   - generating functionals
 
@@ -1477,7 +1478,7 @@ Components:
 
   - [[scale_transformations]]
 
-  - [[beta_functions]]
+  - [[bayesian_renormalization|beta functions]]
 
   - fixed points
 
@@ -1596,11 +1597,11 @@ See `docs/examples/README.md` for runnable examples.
 
     - [[critical_points]]
 
-    - [[index_theory]]
+    - index theory
 
-    - [[handle_decomposition]]
+    - handle decomposition
 
-  - [[characteristic_classes]]
+  - [[chern_classes|characteristic classes]]
 
     - [[euler_characteristic]]
 
@@ -1630,11 +1631,11 @@ See `docs/examples/README.md` for runnable examples.
 
     - quantum decision making
 
-  - [[quantum_information_geometry]]
+  - quantum information geometry
 
     - [[quantum_fisher_information]]
 
-    - [[quantum_relative_entropy]]
+    - [[quantum_information|quantum relative entropy]]
 
     - quantum statistical manifolds
 
@@ -1644,7 +1645,7 @@ See `docs/examples/README.md` for runnable examples.
 
   - spacetime thermodynamics
 
-    - [[covariant_entropy]]
+    - [[holographic_principle|covariant entropy]]
 
     - relativistic heat
 
@@ -1654,7 +1655,7 @@ See `docs/examples/README.md` for runnable examples.
 
     - light cone dynamics
 
-    - [[causal_diamonds]]
+    - causal diamonds
 
     - conformal boundaries
 
@@ -1674,7 +1675,7 @@ See `docs/examples/README.md` for runnable examples.
 
     - cosmic inference
 
-    - [[universal_priors]]
+    - [[algorithmic_information|universal priors]]
 
     - [[anthropic_principles]]
 
@@ -1690,9 +1691,9 @@ See `docs/examples/README.md` for runnable examples.
 
     - structure formation
 
-    - [[dark_energy]]
+    - dark energy
 
-    - [[cosmic_inflation]]
+    - cosmic inflation
 
 ## Philosophical and Conceptual Implications
 
@@ -1784,21 +1785,21 @@ See `docs/examples/README.md` for runnable examples.
 
 ### 1. Theoretical Developments
 
-- [[unified_field_theories]]
+- unified field theories
 
   - [[quantum_gravity]]
 
     - holographic universe
 
-    - [[loop_quantum_gravity]]
+    - [[quantum_gravity|loop quantum gravity]]
 
     - string theory connections
 
   - unified physics
 
-    - [[emergence_of_spacetime]]
+    - emergence of spacetime
 
-    - [[fundamental_forces]]
+    - fundamental forces
 
     - unified interactions
 
@@ -1808,7 +1809,7 @@ See `docs/examples/README.md` for runnable examples.
 
     - [[global_workspace_theory]]
 
-    - [[orchestrated_reduction]]
+    - orchestrated reduction
 
 ### 2. Methodological Advances
 
@@ -1818,9 +1819,9 @@ See `docs/examples/README.md` for runnable examples.
 
     - quantum algorithms
 
-    - [[quantum_simulation]]
+    - quantum simulation
 
-    - [[quantum_machine_learning]]
+    - quantum machine learning
 
   - [[neuromorphic_computing]]
 

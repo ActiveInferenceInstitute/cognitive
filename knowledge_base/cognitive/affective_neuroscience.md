@@ -17,6 +17,7 @@ semantic_relations:
       - "[[limbic_system]]"
       - "[[interoception]]"
       - "[[emotional_processing]]"
+wikidata: Q3625500
 ---
 
 # Affective Neuroscience

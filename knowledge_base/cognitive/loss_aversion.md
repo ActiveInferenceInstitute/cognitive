@@ -17,6 +17,7 @@ semantic_relations:
       - "[[utility_theory]]"
       - "[[probability_weighting]]"
       - "[[heuristics]]"
+wikidata: Q2874240
 ---
 
 # Loss Aversion

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[epigenetics]]"
       - "[[insect_population_genetics]]"
       - "[[evolutionary_biology]]"
+wikidata: Q222046
 ---
 
 # Genomics

@@ -23,6 +23,7 @@ semantic_relations:
     links:
       - "[[Computer Vision]]"
       - "[[knowledge_base/systems/human_computer_interaction|Human-Computer Interaction]]"
+wikidata: Q254183
 ---
 
 

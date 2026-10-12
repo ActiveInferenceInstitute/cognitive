@@ -28,6 +28,7 @@ semantic_relations:
       - "[[hierarchical_inference]]"
 aliases:
   - switching_tasks
+wikidata: Q7687352
 ---
 
 

@@ -16,6 +16,7 @@ semantic_relations:
       - "[[bayes_theorem]]"
       - "[[conditional_independence]]"
       - "[[random_variables]]"
+wikidata: Q327069
 ---
 
 # Conditional Probability

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[chaos_theory]]"
       - "[[stochastic_processes]]"
       - "[[langevin_dynamics]]"
+wikidata: Q131133
 ---
 
 # Determinism

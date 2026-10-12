@@ -16,6 +16,7 @@ semantic_relations:
       - "[[episodic_memory]]"
       - "[[social_insect_cognition]]"
       - "[[epistemic_foraging]]"
+wikidata: Q3560550
 ---
 
 # Spatial Memory

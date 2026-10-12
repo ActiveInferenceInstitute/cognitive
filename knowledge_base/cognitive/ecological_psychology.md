@@ -19,6 +19,7 @@ semantic_relations:
 aliases:
   - gibson_ecological
   - ecological psychology
+wikidata: Q3410107
 ---
 
 # Ecological Psychology

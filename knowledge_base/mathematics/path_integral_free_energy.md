@@ -101,7 +101,7 @@ where:
 
 - $\Gamma$ is the precision matrix ([[information_geometry]])
 
-- $V(s)$ is the potential function ([[potential_theory]])
+- $V(s)$ is the potential function (potential theory)
 
 ### Action Principle
 
@@ -195,7 +195,7 @@ where:
 
   ```
 
-- [[quantum_propagator]]:
+- Quantum propagator:
 
   ```math
 
@@ -205,7 +205,7 @@ where:
 
 ### 4. Dynamical Systems Theory
 
-- [[lyapunov_theory]]:
+- [[lyapunov_stability|Lyapunov theory]]:
 
   ```math
 
@@ -292,7 +292,7 @@ print(abs(H(s1, p1) - H(s0, p0)) < 1e-3)    # energy error stays bounded
 
 ### 1. Quantum Extensions
 
-- [[quantum_path_integral]] connects to quantum free energy principle
+- [[path_integral|Quantum path integral]] connects to quantum free energy principle
 
   - Feynman path integral formulation
 
@@ -366,7 +366,7 @@ print(abs(H(s1, p1) - H(s0, p0)) < 1e-3)    # energy error stays bounded
 
 ### 1. Numerical Integration
 
-- [[symplectic_integration]]
+- [[symplectic_integrators|Symplectic integration]]
 
   - Structure-preserving methods
 
@@ -514,7 +514,7 @@ print(abs(H(s1, p1) - H(s0, p0)) < 1e-3)    # energy error stays bounded
 
 ### 2. Computational Methods
 
-- [[tensor_networks]]
+- Tensor networks
 
   - Quantum simulation
 

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[language_processing]]"
       - "[[language_learning]]"
       - "[[lexical_access]]"
+wikidata: Q207857
 ---
 
 # Inflection

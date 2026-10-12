@@ -20,6 +20,7 @@ semantic_relations:
       - "[[spatial_vision]]"
       - "[[visual_acuity]]"
       - "[[pattern_recognition]]"
+wikidata: Q1670176
 ---
 
 

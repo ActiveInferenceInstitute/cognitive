@@ -17,6 +17,7 @@ semantic_relations:
       - "[[utility_theory]]"
       - "[[pragmatism]]"
       - "[[technology_ethics]]"
+wikidata: Q646102
 ---
 
 # Consequentialism

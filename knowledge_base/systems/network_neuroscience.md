@@ -17,6 +17,7 @@ semantic_relations:
       - "[[graph_theory]]"
       - "[[attention_networks]]"
       - "[[default_mode]]"
+wikidata: Q96395242
 ---
 
 # Network Neuroscience

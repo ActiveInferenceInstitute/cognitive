@@ -17,6 +17,7 @@ semantic_relations:
       - "[[parietal]]"
       - "[[self_awareness]]"
       - "[[episodic_memory]]"
+wikidata: Q1632835
 ---
 
 # Precuneus

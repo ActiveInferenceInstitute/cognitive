@@ -17,6 +17,7 @@ semantic_relations:
       - "[[auditory_processing]]"
       - "[[working_memory]]"
       - "[[phonological_loop]]"
+wikidata: Q18651
 ---
 
 # Echoic Memory

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[statistical_learning]]"
       - "[[cognitive_development]]"
       - "[[phonology]]"
+wikidata: Q8091
 ---
 
 # Grammar

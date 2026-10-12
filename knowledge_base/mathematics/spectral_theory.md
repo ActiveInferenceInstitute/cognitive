@@ -17,6 +17,7 @@ semantic_relations:
       - "[[linear_algebra]]"
       - "[[fokker_planck]]"
       - "[[stochastic_processes]]"
+wikidata: Q2409122
 ---
 
 # Spectral Theory

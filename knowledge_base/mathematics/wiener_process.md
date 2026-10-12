@@ -17,6 +17,7 @@ semantic_relations:
       - "[[stochastic_processes]]"
       - "[[langevin_dynamics]]"
       - "[[gaussian_distributions]]"
+wikidata: Q1056809
 ---
 
 # Wiener Process

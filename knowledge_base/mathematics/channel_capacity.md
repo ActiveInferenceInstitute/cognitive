@@ -15,6 +15,7 @@ semantic_relations:
       - "[[knowledge_base/mathematics/mutual_information]]"
       - "[[knowledge_base/mathematics/entropy]]"
       - "[[knowledge_base/mathematics/epistemic_value]]"
+wikidata: Q870845
 ---
 
 # Channel Capacity

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[empiricism]]"
       - "[[justification]]"
       - "[[hohwy_2013]]"
+wikidata: Q1395219
 ---
 
 # Skepticism

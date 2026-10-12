@@ -17,6 +17,7 @@ semantic_relations:
       - "[[associative_learning]]"
       - "[[operant_conditioning]]"
       - "[[epistemic_value]]"
+wikidata: Q6495497
 ---
 
 # Latent Learning

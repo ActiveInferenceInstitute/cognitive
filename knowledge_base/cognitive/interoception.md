@@ -14,6 +14,7 @@ semantic_relations:
       - "[[homeostasis]]"
       - "[[emotional_processing]]"
       - "[[active_inference]]"
+wikidata: Q1668091
 ---
 
 # Interoception

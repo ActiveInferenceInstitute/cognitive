@@ -17,6 +17,7 @@ semantic_relations:
       - "[[clinical_neuroscience]]"
       - "[[cholinergic_system]]"
       - "[[alzheimers_disease]]"
+wikidata: Q160796
 ---
 
 # Delirium

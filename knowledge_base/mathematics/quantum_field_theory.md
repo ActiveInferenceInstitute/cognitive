@@ -18,6 +18,7 @@ semantic_relations:
       - "[[renormalization_group]]"
       - "[[statistical_physics]]"
       - "[[bayesian_renormalization]]"
+wikidata: Q54505
 ---
 
 # Quantum Field Theory

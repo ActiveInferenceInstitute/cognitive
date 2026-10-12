@@ -162,7 +162,7 @@ See educational resources for examples.
 
 - **Transfer Learning**
 
-  - [[cross_domain_mapping]]
+  - cross domain mapping
 
   - abstraction layers
 

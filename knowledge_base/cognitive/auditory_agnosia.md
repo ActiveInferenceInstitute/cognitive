@@ -17,6 +17,7 @@ semantic_relations:
       - "[[auditory_processing]]"
       - "[[speech_perception]]"
       - "[[visual_agnosia]]"
+wikidata: Q1511436
 ---
 
 # Auditory Agnosia

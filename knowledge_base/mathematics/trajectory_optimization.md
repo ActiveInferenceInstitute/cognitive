@@ -18,6 +18,7 @@ semantic_relations:
       - "[[planning_as_inference]]"
       - "[[path_integral]]"
       - "[[expected_free_energy]]"
+wikidata: Q7833062
 ---
 
 # Trajectory Optimization

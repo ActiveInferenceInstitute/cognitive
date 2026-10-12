@@ -15,6 +15,7 @@ semantic_relations:
       - "[[knowledge_base/biology/ecological_impacts_social_insects]]"
       - "[[knowledge_base/biology/conservation_biology_social_insects]]"
       - "[[knowledge_base/biology/ecological_dynamics]]"
+wikidata: Q183368
 ---
 
 # Invasive Species

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[scientific_method]]"
       - "[[scientific_realism]]"
       - "[[model_comparison]]"
+wikidata: Q3107378
 ---
 
 # Scientific Progress

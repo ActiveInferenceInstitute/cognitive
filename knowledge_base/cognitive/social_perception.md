@@ -18,6 +18,7 @@ semantic_relations:
       - "[[theory_of_mind]]"
 aliases:
   - person_perception
+wikidata: Q177603
 ---
 
 # Social Perception

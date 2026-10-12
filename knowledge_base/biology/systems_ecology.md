@@ -17,6 +17,7 @@ semantic_relations:
       - "[[ecosystem_processes]]"
       - "[[complex_systems_biology]]"
       - "[[ecological_networks]]"
+wikidata: Q3076438
 ---
 
 # Systems Ecology

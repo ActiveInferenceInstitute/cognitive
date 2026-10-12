@@ -14,6 +14,7 @@ semantic_relations:
       - "[[visual_perception]]"
       - "[[predictive_coding]]"
       - "[[neuroscience]]"
+wikidata: Q55637174
 ---
 
 # Visual Neuroscience

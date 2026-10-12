@@ -119,7 +119,7 @@ Complex Systems in Biology studies how biological processes emerge from interact
 
       - [[morphogenesis]] - Development of tissue and organ shape
 
-      - [[differentiation]] - Specialization of cells into distinct types
+      - differentiation - Specialization of cells into distinct types
 
     - growth control - Regulation of tissue and organism growth
 

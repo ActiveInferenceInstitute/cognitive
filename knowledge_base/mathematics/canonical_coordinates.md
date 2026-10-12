@@ -17,6 +17,7 @@ semantic_relations:
       - "[[canonical_transformations]]"
       - "[[symplectic_geometry]]"
       - "[[path_integral_free_energy]]"
+wikidata: Q1501876
 ---
 
 # Canonical Coordinates

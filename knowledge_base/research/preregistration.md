@@ -17,6 +17,7 @@ semantic_relations:
       - "[[hypothesis_testing]]"
       - "[[reproducible_research]]"
       - "[[falsification]]"
+wikidata: Q60752967
 ---
 
 # Preregistration

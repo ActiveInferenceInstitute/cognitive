@@ -14,6 +14,7 @@ semantic_relations:
       - "[[knowledge_base/biology/gene_regulatory_networks]]"
       - "[[knowledge_base/biology/molecular_biology]]"
       - "[[knowledge_base/biology/systems_biology]]"
+wikidata: Q862838
 ---
 
 # Synthetic Biology

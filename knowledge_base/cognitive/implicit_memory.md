@@ -23,6 +23,7 @@ semantic_relations:
       - "[[priming_effects]]"
 aliases:
   - non_declarative_memory
+wikidata: Q18614
 ---
 
 

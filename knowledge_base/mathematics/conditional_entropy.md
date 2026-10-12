@@ -17,6 +17,7 @@ semantic_relations:
       - "[[mutual_information]]"
       - "[[cross_entropy]]"
       - "[[expected_free_energy]]"
+wikidata: Q813908
 ---
 
 # Conditional Entropy

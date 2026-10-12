@@ -18,6 +18,7 @@ semantic_relations:
       - "[[enactivism]]"
       - "[[predictive_processing]]"
       - "[[pragmatism]]"
+wikidata: Q7532125
 ---
 
 # Situated Cognition

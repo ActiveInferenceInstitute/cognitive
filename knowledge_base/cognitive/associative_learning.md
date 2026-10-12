@@ -16,6 +16,7 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[reinforcement_learning]]"
       - "[[prediction_error]]"
+wikidata: Q14330970
 ---
 
 # Associative Learning

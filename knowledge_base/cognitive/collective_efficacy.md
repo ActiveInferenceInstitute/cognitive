@@ -17,6 +17,7 @@ semantic_relations:
       - "[[collective_intelligence]]"
       - "[[agency]]"
       - "[[social_coordination]]"
+wikidata: Q24963044
 ---
 
 # Collective Efficacy

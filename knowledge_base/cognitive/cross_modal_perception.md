@@ -25,6 +25,7 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[neural_synchrony]]"
       - "[[perceptual_binding]]"
+wikidata: Q5188732
 ---
 
 

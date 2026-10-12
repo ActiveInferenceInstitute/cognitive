@@ -25,6 +25,7 @@ semantic_relations:
       - "[[graphical_models]]"
       - "[[markov_random_fields]]"
       - "[[probabilistic_models]]"
+wikidata: Q4060686
 ---
 
 # Belief Propagation

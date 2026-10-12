@@ -18,6 +18,7 @@ semantic_relations:
       - "[[value_learning]]"
 aliases:
   - nucleus_accumbens
+wikidata: Q7920296
 ---
 
 # Ventral Striatum

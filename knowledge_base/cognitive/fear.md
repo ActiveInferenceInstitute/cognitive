@@ -18,6 +18,7 @@ semantic_relations:
       - "[[anxiety]]"
       - "[[phobias]]"
       - "[[stress_response]]"
+wikidata: Q44619
 ---
 
 # Fear

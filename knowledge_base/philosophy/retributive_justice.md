@@ -18,6 +18,7 @@ semantic_relations:
       - "[[consequentialism]]"
       - "[[free_will]]"
       - "[[moral_emotions]]"
+wikidata: Q1519270
 ---
 
 # Retributive Justice

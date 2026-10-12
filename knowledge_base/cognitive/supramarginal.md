@@ -17,6 +17,7 @@ semantic_relations:
       - "[[wernickes_area]]"
       - "[[phonology]]"
       - "[[planum_temporale]]"
+wikidata: Q1528202
 ---
 
 # Supramarginal Gyrus

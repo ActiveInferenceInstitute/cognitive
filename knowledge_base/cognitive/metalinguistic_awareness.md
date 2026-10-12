@@ -17,6 +17,7 @@ semantic_relations:
       - "[[grammar]]"
       - "[[dyslexia]]"
       - "[[metacognition]]"
+wikidata: Q13419941
 ---
 
 # Metalinguistic Awareness

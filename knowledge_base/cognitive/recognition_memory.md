@@ -18,6 +18,7 @@ semantic_relations:
       - "[[hippocampus]]"
       - "[[signal_detection]]"
       - "[[memory_systems]]"
+wikidata: Q7302606
 ---
 
 # Recognition Memory

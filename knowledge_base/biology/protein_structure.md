@@ -17,6 +17,7 @@ semantic_relations:
       - "[[enzyme_kinetics]]"
       - "[[molecular_biology]]"
       - "[[cell_biology]]"
+wikidata: Q735188
 ---
 
 # Protein Structure

@@ -26,6 +26,7 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[feature_integration]]"
       - "[[temporal_binding]]"
+wikidata: Q863678
 ---
 
 

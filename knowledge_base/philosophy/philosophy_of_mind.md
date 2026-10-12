@@ -14,6 +14,7 @@ semantic_relations:
       - "[[4e_cognition]]"
       - "[[dark_room_problem]]"
       - "[[knowledge_base/free_energy_principle/philosophy/mind_body_problem]]"
+wikidata: Q23407
 ---
 
 # Philosophy of Mind

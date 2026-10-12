@@ -2,6 +2,7 @@
 title: "Linear Algebra"
 type: "mathematical_concept"
 status: stable
+wikidata: Q82571
 ---
 
 # Linear Algebra

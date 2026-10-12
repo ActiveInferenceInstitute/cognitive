@@ -17,6 +17,7 @@ semantic_relations:
       - "[[emotional_processing]]"
       - "[[cooperation]]"
       - "[[insula]]"
+wikidata: Q182263
 ---
 
 # Empathy

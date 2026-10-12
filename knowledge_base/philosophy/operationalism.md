@@ -20,6 +20,7 @@ semantic_relations:
       - "[[instrumentalism]]"
       - "[[scientific_method]]"
       - "[[measurement_theory]]"
+wikidata: Q20826077
 ---
 
 
@@ -103,7 +104,7 @@ timeline
 
 ```
 
-Operationalism as a formal doctrine was introduced by Percy W. Bridgman in his 1927 book "The Logic of Modern Physics," though similar ideas appeared earlier in Einstein's work on [[theory_of_relativity|relativity]]. Bridgman, a Nobel Prize-winning physicist, sought to clarify physical concepts by defining them in terms of measurement operations after Einstein's revolution in physics showed how concepts like "simultaneity" required operational specification.
+Operationalism as a formal doctrine was introduced by Percy W. Bridgman in his 1927 book "The Logic of Modern Physics," though similar ideas appeared earlier in Einstein's work on relativity. Bridgman, a Nobel Prize-winning physicist, sought to clarify physical concepts by defining them in terms of measurement operations after Einstein's revolution in physics showed how concepts like "simultaneity" required operational specification.
 
 ### Influence and Evolution
 
@@ -251,7 +252,7 @@ Bridgman's approach emerged from his practical work as an experimental physicist
 
 Stevens extended operationalism to psychology by:
 
-- **[[measurement_scales|Measurement Scales]]**: Developing the theory of measurement scales (nominal, ordinal, interval, ratio)
+- **[[measurement_theory|Measurement Scales]]**: Developing the theory of measurement scales (nominal, ordinal, interval, ratio)
 
 - **[[psychophysics|Psychophysics]]**: Operationalizing the relationship between physical stimuli and psychological sensations
 
@@ -459,7 +460,7 @@ Modern extensions include:
 
 1. **[[reproducible_research|Reproducible Research]]**: Computational notebooks as operational definitions
 
-1. **[[digital_phenotyping|Digital Phenotyping]]**: Behavioral concepts operationalized through digital measurements
+1. **Digital Phenotyping**: Behavioral concepts operationalized through digital measurements
 
 These applications extend operationalism's existing into digital domains, where precise operational specifications are essential for reliable computing systems and data science.
 
@@ -513,7 +514,7 @@ Operationalism and [[pragmatism]] share important philosophical affinities:
 
 1. **[[verification_theory|Verificationism]]**: Both emphasize verification through action or measurement
 
-1. **[[anti-foundationalism|Anti-foundationalism]]**: Both reject appeals to abstract essences or foundations
+1. **[[pragmatism#Fallibilism and Anti-foundationalism|Anti-foundationalism]]**: Both reject appeals to abstract essences or foundations
 
 1. **[[scientific_method|Scientific Method]]**: Both valorize scientific methodology as exemplary
 
@@ -893,7 +894,7 @@ In response to critiques, operationalism evolved:
 
 1. **Multiple Operations**: Acceptance of multiple operational definitions for the same concept
 
-1. **[[convergent_validity|Convergent Validity]]**: Focus on convergence across different operations
+1. **[[construct_validity|Convergent Validity]]**: Focus on convergence across different operations
 
 1. **Theoretical Context**: Recognition of the theory-laden nature of operations
 
@@ -1107,7 +1108,7 @@ These practices institutionalize operationalism's emphasis on explicit measureme
 
 Contemporary philosophical discussions include:
 
-1. **[[new_experimentalism|New Experimentalism]]**: Focus on experimental practices beyond theory
+1. **New Experimentalism**: Focus on experimental practices beyond theory
 
 1. **Model-Based Science**: How operational procedures relate to theoretical models
 
@@ -1127,7 +1128,7 @@ Operationalization remains central in:
 
 1. **Precision Medicine**: Operationalizing personalized treatment protocols
 
-1. **[[computational_social_science|Computational Social Science]]**: Digital operational definitions of social phenomena
+1. **Computational Social Science**: Digital operational definitions of social phenomena
 
 1. **[[robotics]]**: Operationalizing sensor data for autonomous systems
 
@@ -1137,7 +1138,7 @@ Operationalization remains central in:
 
 1. **[[synthetic_biology]]**: Operational specifications for biological engineering
 
-1. **[[digital_humanities]]**: Computational operationalization of humanistic concepts
+1. **Digital Humanities**: Computational operationalization of humanistic concepts
 
 In these emerging fields, operational approaches must balance precise measurement specifications with theoretical sophistication, often incorporating insights from both operationalism and pragmatism.
 

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[learning_theory]]"
       - "[[judgment_of_learning]]"
       - "[[spaced_retrieval]]"
+wikidata: Q1424497
 ---
 
 # Self-Regulated Learning

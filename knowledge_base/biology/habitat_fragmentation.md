@@ -15,6 +15,7 @@ semantic_relations:
       - "[[conservation_biology]]"
       - "[[spatial_ecology]]"
       - "[[biodiversity]]"
+wikidata: Q913302
 ---
 
 # Habitat Fragmentation

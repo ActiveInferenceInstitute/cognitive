@@ -17,6 +17,7 @@ semantic_relations:
       - "[[kl_divergence]]"
       - "[[mutual_information]]"
       - "[[free_energy_principle]]"
+wikidata: Q3055345
 ---
 
 # Differential Entropy

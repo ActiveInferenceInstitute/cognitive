@@ -17,6 +17,7 @@ semantic_relations:
       - "[[parkinsons]]"
       - "[[cerebellar_ataxia]]"
       - "[[dopamine_system]]"
+wikidata: Q2608695
 ---
 
 # Movement Disorders

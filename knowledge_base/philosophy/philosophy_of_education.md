@@ -17,6 +17,7 @@ semantic_relations:
       - "[[constructivist_learning_theory]]"
       - "[[pragmatism]]"
       - "[[learning_theory]]"
+wikidata: Q564371
 ---
 
 # Philosophy of Education

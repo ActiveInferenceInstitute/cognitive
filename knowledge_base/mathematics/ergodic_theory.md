@@ -17,6 +17,7 @@ semantic_relations:
       - "[[measure_theory]]"
       - "[[non_equilibrium_steady_state]]"
       - "[[free_energy_principle]]"
+wikidata: Q5498822
 ---
 
 # Ergodic Theory

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[knowledge_base/systems/digital_governance]]"
       - "[[knowledge_base/systems/risk_assessment]]"
       - "[[knowledge_base/research/financial_systems]]"
+wikidata: Q582577
 ---
 
 # Economic Policy

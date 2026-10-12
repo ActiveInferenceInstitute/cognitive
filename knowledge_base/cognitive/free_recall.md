@@ -17,6 +17,7 @@ semantic_relations:
       - "[[episodic_memory]]"
       - "[[working_memory]]"
       - "[[retrieval]]"
+wikidata: Q5500279
 ---
 
 # Free Recall

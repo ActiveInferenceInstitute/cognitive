@@ -17,6 +17,7 @@ semantic_relations:
       - "[[optimization_algorithms]]"
       - "[[gradient_descent]]"
       - "[[numerical_methods]]"
+wikidata: Q787371
 ---
 
 # Automatic Differentiation

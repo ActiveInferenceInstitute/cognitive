@@ -149,7 +149,7 @@ Links to:
 
 - [[hamiltonian_monte_carlo]]
 
-- [[leapfrog_integration]]
+- [[symplectic_integrators|leapfrog integration]]
 
 - [[metropolis_hastings]]
 

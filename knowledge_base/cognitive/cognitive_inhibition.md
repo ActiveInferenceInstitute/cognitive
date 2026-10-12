@@ -17,6 +17,7 @@ semantic_relations:
       - "[[working_memory]]"
       - "[[selective_attention]]"
       - "[[thought_suppression]]"
+wikidata: Q12403816
 ---
 
 # Cognitive Inhibition

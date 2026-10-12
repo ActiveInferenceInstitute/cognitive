@@ -15,6 +15,7 @@ semantic_relations:
       - "[[neural_coding]]"
       - "[[single_unit]]"
       - "[[oscillations]]"
+wikidata: Q1154774
 ---
 
 # Electrophysiology

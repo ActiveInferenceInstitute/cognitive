@@ -59,7 +59,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[redundancy]] - Duplicate components providing backup
 
-      - [[degeneracy]] - Different structures performing the same function
+      - [[robustness|degeneracy]] - Different structures performing the same function
 
     - [[resilience]] - Recovery of function after disturbance
 
@@ -119,7 +119,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
   - cross scale coupling - Interaction between processes at different scales
 
-    - [[upward_causation]] - Micro-level causes producing macro-level effects
+    - upward causation - Micro-level causes producing macro-level effects
 
       - aggregation effects - Macro effects from summing component contributions
 
@@ -127,7 +127,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
     - [[downward_causation]] - Macro-level structure influencing component behavior
 
-      - [[selection_pressures]] - Forces favoring some variants over others
+      - [[selection_pressure|selection pressures]] - Forces favoring some variants over others
 
       - organization constraints - Constraints that shape component behavior
 
@@ -273,7 +273,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - structure prediction - Computing structure from sequence
 
-      - [[energy_landscape]] - Free energy as a function of conformation
+      - [[protein_folding|energy landscape]] - Free energy as a function of conformation
 
     - cellular assembly - Assembly of cellular structures from components
 
@@ -501,7 +501,7 @@ Emergence and Self-Organization describe fundamental principles by which complex
 
       - [[differential_equations]] - Equations relating rates of change
 
-      - [[discrete_maps]] - Iterated maps in discrete time steps
+      - [[chaos_theory|discrete maps]] - Iterated maps in discrete time steps
 
     - [[statistical_physics]] - Statistical description of many-particle systems
 

@@ -16,6 +16,7 @@ semantic_relations:
       - "[[type_theory]]"
       - "[[philosophy_of_mathematics]]"
       - "[[measure_theory]]"
+wikidata: Q12482
 ---
 
 # Set Theory

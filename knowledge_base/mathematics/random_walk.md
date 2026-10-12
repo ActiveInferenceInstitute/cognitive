@@ -18,6 +18,7 @@ semantic_relations:
       - "[[foraging_optimization]]"
       - "[[collective_behavior_ants]]"
       - "[[markov_chain_monte_carlo]]"
+wikidata: Q856741
 ---
 
 # Random Walk

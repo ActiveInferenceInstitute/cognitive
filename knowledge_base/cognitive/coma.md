@@ -17,6 +17,7 @@ semantic_relations:
       - "[[minimal_consciousness]]"
       - "[[wakefulness]]"
       - "[[reticular_activation]]"
+wikidata: Q159557
 ---
 
 # Coma

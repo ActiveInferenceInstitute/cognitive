@@ -17,6 +17,7 @@ semantic_relations:
       - "[[perceptual_inference]]"
       - "[[face_processing]]"
       - "[[semantic_memory]]"
+wikidata: Q18742
 ---
 
 # Visual Agnosia

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[d_separation]]"
       - "[[bayesian_networks]]"
       - "[[conditional_independence]]"
+wikidata: Q136286540
 ---
 
 # Do-Calculus

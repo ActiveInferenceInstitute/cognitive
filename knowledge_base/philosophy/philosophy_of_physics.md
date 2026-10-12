@@ -17,6 +17,7 @@ semantic_relations:
       - "[[philosophy_of_time]]"
       - "[[free_energy_principle]]"
       - "[[scientific_realism]]"
+wikidata: Q1165883
 ---
 
 # Philosophy of Physics

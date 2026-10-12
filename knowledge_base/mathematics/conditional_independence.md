@@ -26,6 +26,7 @@ semantic_relations:
       - "[[markov_properties]]"
       - "[[d_separation]]"
       - "[[independence_testing]]"
+wikidata: Q5159264
 ---
 
 
@@ -85,7 +86,7 @@ where I(X;Y|Z) is the conditional mutual information.
 
 ## Properties
 
-### 1. [[symmetry|Symmetry]]
+### 1. Symmetry
 
 ```math
 
@@ -101,7 +102,7 @@ X \perp (Y,W) | Z \implies X \perp Y | Z \text{ and } X \perp W | Z
 
 ```
 
-### 3. [[weak_union|Weak Union]]
+### 3. Weak Union
 
 ```math
 

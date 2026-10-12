@@ -17,6 +17,7 @@ semantic_relations:
       - "[[conflict_monitoring]]"
       - "[[error_monitoring]]"
       - "[[executive_functions]]"
+wikidata: Q19772725
 ---
 
 # Cingulate Cortex

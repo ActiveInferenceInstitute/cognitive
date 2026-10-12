@@ -16,6 +16,7 @@ semantic_relations:
       - "[[entropy]]"
       - "[[kl_divergence]]"
       - "[[exponential_family]]"
+wikidata: Q200726
 ---
 
 

@@ -18,6 +18,7 @@ semantic_relations:
       - "[[existentialism]]"
       - "[[free_will]]"
       - "[[determinism]]"
+wikidata: Q3356259
 ---
 
 # Facticity

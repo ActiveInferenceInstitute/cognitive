@@ -17,6 +17,7 @@ semantic_relations:
       - "[[spatial_attention]]"
       - "[[dorsal_stream]]"
       - "[[frontoparietal]]"
+wikidata: Q1332793
 ---
 
 # Superior Parietal Lobule

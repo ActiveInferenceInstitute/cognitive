@@ -18,6 +18,7 @@ semantic_relations:
       - "[[statistical_foundations]]"
 aliases:
   - maximum_likelihood_estimation
+wikidata: Q1045555
 ---
 
 # Maximum Likelihood

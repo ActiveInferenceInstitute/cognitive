@@ -18,6 +18,7 @@ semantic_relations:
       - "[[evolutionary_biology]]"
       - "[[genetic_diversity]]"
       - "[[insect_population_genetics]]"
+wikidata: Q39350
 ---
 
 # Speciation

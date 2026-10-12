@@ -359,7 +359,7 @@ print(log_evidence(obs, A, sticky, D) > log_evidence(obs, A, shuffled, D))
 
 - Error Accumulation
 
-- [[state_explosion|State Explosion]]
+- State Explosion
 
 - [[computational_complexity|Computational Complexity]]
 

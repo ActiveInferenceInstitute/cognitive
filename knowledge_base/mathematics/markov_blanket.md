@@ -24,6 +24,7 @@ semantic_relations:
       - "[[information_theory]]"
       - "[[bayesian_networks]]"
       - "[[statistical_physics]]"
+wikidata: Q3001792
 ---
 
 

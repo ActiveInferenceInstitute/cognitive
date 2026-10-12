@@ -18,6 +18,7 @@ semantic_relations:
       - "[[thematic_roles]]"
       - "[[sentence_processing]]"
       - "[[wh_movement]]"
+wikidata: Q257885
 ---
 
 # Word Order

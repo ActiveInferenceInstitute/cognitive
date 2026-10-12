@@ -17,6 +17,7 @@ semantic_relations:
       - "[[prediction_error]]"
       - "[[predictive_coding]]"
       - "[[emotional_processing]]"
+wikidata: Q1136816
 ---
 
 # Habituation

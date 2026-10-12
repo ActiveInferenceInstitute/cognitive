@@ -19,6 +19,7 @@ semantic_relations:
     links:
       - "[[cognitive_ontology]]"
       - "[[mathematical_ontology]]"
+wikidata: Q104843592
 ---
 
 

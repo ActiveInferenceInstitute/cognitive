@@ -17,6 +17,7 @@ semantic_relations:
       - "[[scientific_method]]"
       - "[[emergence]]"
       - "[[free_energy_principle]]"
+wikidata: Q7893840
 ---
 
 # Unity of Science

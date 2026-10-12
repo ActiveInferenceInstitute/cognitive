@@ -17,6 +17,7 @@ semantic_relations:
       - "[[philosophy_of_time]]"
       - "[[temporal_models]]"
       - "[[planning_as_inference]]"
+wikidata: Q781833
 ---
 
 # Temporal Logic

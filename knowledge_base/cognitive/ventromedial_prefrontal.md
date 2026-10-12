@@ -18,6 +18,7 @@ semantic_relations:
       - "[[emotion_regulation]]"
       - "[[amygdala]]"
       - "[[interoception]]"
+wikidata: Q2694853
 ---
 
 # Ventromedial Prefrontal Cortex

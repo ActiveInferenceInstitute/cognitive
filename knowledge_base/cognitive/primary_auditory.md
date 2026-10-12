@@ -17,6 +17,7 @@ semantic_relations:
       - "[[speech_perception]]"
       - "[[wernickes_area]]"
       - "[[hierarchical_processing]]"
+wikidata: Q112790289
 ---
 
 # Primary Auditory Cortex

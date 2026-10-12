@@ -17,6 +17,7 @@ semantic_relations:
       - "[[neural_computation]]"
       - "[[gradient_descent]]"
       - "[[deep_learning]]"
+wikidata: Q4677469
 ---
 
 # Activation Function

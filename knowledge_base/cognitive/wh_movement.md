@@ -17,6 +17,7 @@ semantic_relations:
       - "[[sentence_processing]]"
       - "[[working_memory]]"
       - "[[thematic_roles]]"
+wikidata: Q2658424
 ---
 
 # Wh-Movement

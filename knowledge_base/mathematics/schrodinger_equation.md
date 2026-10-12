@@ -18,6 +18,7 @@ semantic_relations:
       - "[[fokker_planck]]"
       - "[[hamiltonian_mechanics]]"
       - "[[quantum_free_energy]]"
+wikidata: Q165498
 ---
 
 # Schrödinger Equation

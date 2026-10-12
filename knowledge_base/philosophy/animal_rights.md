@@ -17,6 +17,7 @@ semantic_relations:
       - "[[human_rights]]"
       - "[[deontological_ethics]]"
       - "[[consequentialism]]"
+wikidata: Q426
 ---
 
 # Animal Rights

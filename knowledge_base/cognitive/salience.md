@@ -17,6 +17,7 @@ semantic_relations:
       - "[[salience_network]]"
       - "[[epistemic_value]]"
       - "[[dopamine_system]]"
+wikidata: Q1469792
 ---
 
 # Salience

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[emotion_regulation]]"
       - "[[emotional_intelligence]]"
       - "[[interoception]]"
+wikidata: Q5373790
 ---
 
 # Emotional Granularity

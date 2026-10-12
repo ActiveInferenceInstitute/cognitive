@@ -17,6 +17,7 @@ semantic_relations:
       - "[[memory_formation]]"
       - "[[memory_consolidation]]"
       - "[[hippocampus]]"
+wikidata: Q572111
 ---
 
 # Anterograde Amnesia

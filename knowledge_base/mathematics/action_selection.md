@@ -26,6 +26,7 @@ semantic_relations:
       - "[[reinforcement_learning]]"
       - "[[decision_theory]]"
       - "[[optimal_control]]"
+wikidata: Q4677422
 ---
 
 # Action Selection

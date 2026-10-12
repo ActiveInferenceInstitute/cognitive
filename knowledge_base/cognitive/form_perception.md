@@ -20,6 +20,7 @@ semantic_relations:
       - "[[object_recognition]]"
       - "[[spatial_processing]]"
       - "[[perceptual_organization]]"
+wikidata: Q5469937
 ---
 
 

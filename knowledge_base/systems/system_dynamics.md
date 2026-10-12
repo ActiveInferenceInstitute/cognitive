@@ -17,6 +17,7 @@ semantic_relations:
       - "[[dynamical_systems]]"
       - "[[differential_equations]]"
       - "[[cybernetics]]"
+wikidata: Q598451
 ---
 
 # System Dynamics

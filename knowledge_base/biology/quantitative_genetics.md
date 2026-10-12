@@ -17,6 +17,7 @@ semantic_relations:
       - "[[evolutionary_biology]]"
       - "[[fitness_landscapes]]"
       - "[[bayesian_inference]]"
+wikidata: Q550479
 ---
 
 # Quantitative Genetics

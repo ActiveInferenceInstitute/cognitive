@@ -17,6 +17,7 @@ semantic_relations:
       - "[[resilience]]"
 aliases:
   - habitat_restoration
+wikidata: Q2428433
 ---
 
 # Restoration Ecology

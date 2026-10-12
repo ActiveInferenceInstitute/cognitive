@@ -64,7 +64,7 @@ dimensions:
 
 ## Visualization
 
-- [[matrix_plots]] - Matrix visualizations
+- [[code/tools/src/visualization/README|matrix_plots]] - Matrix visualizations
 
 - state evolution - State trajectory plots
 

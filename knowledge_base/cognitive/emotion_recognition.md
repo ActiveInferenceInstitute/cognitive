@@ -21,6 +21,7 @@ aliases:
   - affect_recognition
   - emotion_detection
   - emotion_perception
+wikidata: Q1339090
 ---
 
 # Emotion Recognition

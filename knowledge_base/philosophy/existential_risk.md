@@ -17,6 +17,7 @@ semantic_relations:
       - "[[risk_assessment]]"
       - "[[climate_change_ecology]]"
       - "[[technology_ethics]]"
+wikidata: Q16830153
 ---
 
 # Existential Risk

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[justice]]"
       - "[[philosophy_of_law]]"
       - "[[epistemic_justice]]"
+wikidata: Q284289
 ---
 
 # Deliberative Democracy

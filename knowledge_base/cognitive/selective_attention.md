@@ -23,6 +23,7 @@ semantic_relations:
       - "[[free_energy_principle]]"
 aliases:
   - attentional_selection
+wikidata: Q18434924
 ---
 
 

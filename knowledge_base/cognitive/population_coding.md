@@ -16,6 +16,7 @@ semantic_relations:
       - "[[neural_computation]]"
 aliases:
   - tuning_curves
+wikidata: Q140520941
 ---
 
 # Population Coding

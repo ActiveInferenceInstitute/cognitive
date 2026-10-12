@@ -18,6 +18,7 @@ semantic_relations:
       - "[[dendritic_computation]]"
       - "[[spike_timing_dependent_plasticity]]"
       - "[[hebbian_learning]]"
+wikidata: Q15205473
 ---
 
 # Dendritic Plasticity

@@ -20,6 +20,7 @@ semantic_relations:
       - "[[mutual_information_estimators]]"
       - "[[information_gain]]"
       - "[[worked_example_efe]]"
+wikidata: Q252973
 ---
 
 

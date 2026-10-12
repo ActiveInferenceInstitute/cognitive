@@ -17,6 +17,7 @@ semantic_relations:
       - "[[retrieval]]"
       - "[[machine_readability]]"
       - "[[knowledge_graphs]]"
+wikidata: Q1891170
 ---
 
 # Semantic Search

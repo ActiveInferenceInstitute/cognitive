@@ -17,6 +17,7 @@ semantic_relations:
       - "[[representativeness_heuristic]]"
       - "[[retrieval]]"
       - "[[decision_making]]"
+wikidata: Q1462985
 ---
 
 # Availability Heuristic

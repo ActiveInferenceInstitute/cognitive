@@ -17,6 +17,7 @@ semantic_relations:
       - "[[topological_spaces]]"
       - "[[topological_data_analysis]]"
       - "[[differential_geometry]]"
+wikidata: Q852973
 ---
 
 # Euler Characteristic

@@ -20,6 +20,7 @@ semantic_relations:
       - "[[foveal_vision]]"
       - "[[visual_attention]]"
       - "[[motion_perception]]"
+wikidata: Q1431287
 ---
 
 

@@ -15,6 +15,7 @@ semantic_relations:
       - "[[motor_control]]"
       - "[[proprioception]]"
       - "[[sensorimotor_coordination]]"
+wikidata: Q2633862
 ---
 
 # Locomotion

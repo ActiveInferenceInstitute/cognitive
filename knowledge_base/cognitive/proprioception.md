@@ -14,6 +14,7 @@ semantic_relations:
       - "[[motor_control]]"
       - "[[sensorimotor_coordination]]"
       - "[[active_inference]]"
+wikidata: Q1129066
 ---
 
 # Proprioception

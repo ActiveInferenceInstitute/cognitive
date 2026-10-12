@@ -14,6 +14,7 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[enactivism]]"
       - "[[philosophy_of_mind]]"
+wikidata: Q179235
 ---
 
 # Phenomenology

@@ -16,6 +16,7 @@ semantic_relations:
       - "[[self_organization]]"
       - "[[emergence]]"
       - "[[dissipative_structures]]"
+wikidata: Q903282
 ---
 
 # Symmetry Breaking

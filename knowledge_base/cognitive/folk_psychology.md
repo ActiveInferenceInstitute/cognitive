@@ -17,6 +17,7 @@ semantic_relations:
       - "[[philosophy_of_mind]]"
       - "[[mental_causation]]"
       - "[[functionalism]]"
+wikidata: Q1429140
 ---
 
 # Folk Psychology

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[maximum_likelihood]]"
       - "[[statistical_modeling]]"
       - "[[bayes_factors]]"
+wikidata: Q12483
 ---
 
 # Statistics

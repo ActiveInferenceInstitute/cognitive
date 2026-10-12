@@ -16,6 +16,7 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[social_learning]]"
       - "[[social_cognition]]"
+wikidata: Q1143725
 ---
 
 # Observational Learning

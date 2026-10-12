@@ -17,6 +17,7 @@ semantic_relations:
       - "[[ventral_stream]]"
       - "[[dyslexia]]"
       - "[[object_recognition]]"
+wikidata: Q7936628
 ---
 
 # Visual Word Form Area

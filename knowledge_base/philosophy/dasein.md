@@ -18,6 +18,7 @@ semantic_relations:
       - "[[authenticity]]"
       - "[[existential_phenomenology]]"
       - "[[hermeneutics]]"
+wikidata: Q404130
 ---
 
 # Dasein

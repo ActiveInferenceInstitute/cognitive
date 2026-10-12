@@ -17,6 +17,7 @@ semantic_relations:
       - "[[normative_ethics]]"
       - "[[naturalism]]"
       - "[[evolutionary_biology]]"
+wikidata: Q3100314
 ---
 
 # Moral Realism

@@ -15,6 +15,7 @@ semantic_relations:
       - "[[reasoning_problem_solving]]"
       - "[[probabilistic_inference]]"
       - "[[bayesian_inference]]"
+wikidata: Q484284
 ---
 
 # Deductive Reasoning

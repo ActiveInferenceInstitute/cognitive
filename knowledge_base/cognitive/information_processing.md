@@ -21,6 +21,7 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[information_theory]]"
       - "[[computational_complexity]]"
+wikidata: Q750843
 ---
 
 

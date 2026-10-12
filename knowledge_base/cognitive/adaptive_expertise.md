@@ -17,6 +17,7 @@ semantic_relations:
       - "[[skill_acquisition]]"
       - "[[far_transfer]]"
       - "[[structure_learning]]"
+wikidata: Q19298266
 ---
 
 # Adaptive Expertise

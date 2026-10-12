@@ -17,6 +17,7 @@ semantic_relations:
       - "[[statistical_learning]]"
       - "[[latent_learning]]"
       - "[[deep_processing]]"
+wikidata: Q122955997
 ---
 
 # Incidental Learning

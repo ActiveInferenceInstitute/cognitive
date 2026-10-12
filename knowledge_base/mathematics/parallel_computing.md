@@ -17,6 +17,7 @@ semantic_relations:
       - "[[markov_chain_monte_carlo]]"
       - "[[particle_filtering]]"
       - "[[scientific_computing]]"
+wikidata: Q232661
 ---
 
 # Parallel Computing

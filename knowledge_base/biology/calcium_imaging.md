@@ -17,6 +17,7 @@ semantic_relations:
       - "[[optogenetics]]"
       - "[[neuroimaging]]"
       - "[[computational_neuroscience]]"
+wikidata: Q5018833
 ---
 
 # Calcium Imaging

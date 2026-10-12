@@ -18,6 +18,7 @@ semantic_relations:
       - "[[hyperparameter_optimization]]"
       - "[[information_gain]]"
       - "[[annealing_schedules]]"
+wikidata: Q17002908
 ---
 
 # Bayesian Optimization

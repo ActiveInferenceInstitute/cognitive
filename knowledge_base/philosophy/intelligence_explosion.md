@@ -17,6 +17,7 @@ semantic_relations:
       - "[[artificial_intelligence]]"
       - "[[existential_risk]]"
       - "[[ai_ethics]]"
+wikidata: Q23808075
 ---
 
 # Intelligence Explosion

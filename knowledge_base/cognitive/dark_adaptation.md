@@ -17,6 +17,7 @@ semantic_relations:
       - "[[sensory_adaptation]]"
       - "[[contrast_sensitivity]]"
       - "[[gain_control]]"
+wikidata: Q22273766
 ---
 
 # Dark Adaptation

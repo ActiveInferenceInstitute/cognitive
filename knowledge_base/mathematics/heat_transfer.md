@@ -17,6 +17,7 @@ semantic_relations:
       - "[[non_equilibrium_thermodynamics]]"
       - "[[diffusion_processes]]"
       - "[[differential_equations]]"
+wikidata: Q179635
 ---
 
 # Heat Transfer

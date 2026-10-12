@@ -189,7 +189,7 @@ Neural Computation describes how the brain processes information through its net
 
     - selectivity - Preferential response to particular stimuli
 
-    - [[invariance]] - Stable response despite stimulus changes
+    - [[view_invariance|invariance]] - Stable response despite stimulus changes
 
   - [[distributed_representation]] - Information spread over many units
 
@@ -211,7 +211,7 @@ Neural Computation describes how the brain processes information through its net
 
     - thresholding - Passing only inputs above a cutoff
 
-    - [[normalization]] - Dividing responses by overall activity level
+    - [[gain_control|normalization]] - Dividing responses by overall activity level
 
 ### Learning
 

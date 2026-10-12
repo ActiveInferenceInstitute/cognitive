@@ -17,6 +17,7 @@ semantic_relations:
       - "[[perceptual_inference]]"
       - "[[phonology]]"
       - "[[psychophysics]]"
+wikidata: Q2459671
 ---
 
 # Categorical Perception

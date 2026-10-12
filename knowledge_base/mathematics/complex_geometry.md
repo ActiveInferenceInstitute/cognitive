@@ -17,6 +17,7 @@ semantic_relations:
     links:
       - "[[algebraic_geometry]]"
       - "[[symplectic_geometry]]"
+wikidata: Q2137810
 ---
 
 

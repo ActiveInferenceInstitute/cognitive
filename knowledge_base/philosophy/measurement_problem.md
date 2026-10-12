@@ -16,6 +16,7 @@ semantic_relations:
       - "[[quantum_information]]"
       - "[[consciousness]]"
       - "[[free_energy_principle]]"
+wikidata: Q2590381
 ---
 
 # Measurement Problem

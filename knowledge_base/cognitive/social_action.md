@@ -17,6 +17,7 @@ semantic_relations:
       - "[[social_coordination]]"
       - "[[joint_action]]"
       - "[[cooperation]]"
+wikidata: Q769620
 ---
 
 # Social Action

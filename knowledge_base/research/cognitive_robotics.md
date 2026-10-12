@@ -18,6 +18,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/enactive_cognition]]"
       - "[[knowledge_base/cognitive/sensorimotor_coordination]]"
       - "[[knowledge_base/cognitive/epistemic_foraging]]"
+wikidata: Q1038799
 ---
 
 # Cognitive Robotics

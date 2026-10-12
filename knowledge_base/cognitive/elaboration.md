@@ -19,6 +19,7 @@ semantic_relations:
 aliases:
   - elaborative_rehearsal
   - elaborative_encoding
+wikidata: Q937594
 ---
 
 # Elaboration

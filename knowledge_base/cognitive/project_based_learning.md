@@ -17,6 +17,7 @@ semantic_relations:
       - "[[progressive_education]]"
       - "[[active_learning]]"
       - "[[educational_psychology]]"
+wikidata: Q1753447
 ---
 
 # Project-Based Learning

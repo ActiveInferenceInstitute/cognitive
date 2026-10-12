@@ -17,6 +17,7 @@ semantic_relations:
       - "[[educational_psychology]]"
       - "[[cooperation]]"
       - "[[multi_agent_learning]]"
+wikidata: Q2349659
 ---
 
 # Collaborative Learning

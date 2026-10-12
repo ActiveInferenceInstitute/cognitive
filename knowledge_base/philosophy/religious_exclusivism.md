@@ -17,6 +17,7 @@ semantic_relations:
       - "[[religious_experience]]"
       - "[[faith_and_reason]]"
       - "[[epistemology]]"
+wikidata: Q7311357
 ---
 
 # Religious Exclusivism

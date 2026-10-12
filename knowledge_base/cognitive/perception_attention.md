@@ -51,7 +51,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
   - [[grouping_laws]] - Rules for grouping elements together
 
-    - [[proximity]] - Grouping elements that are near each other
+    - [[gestalt_principles|proximity]] - Grouping elements that are near each other
 
     - similarity - Grouping elements that look alike
 
@@ -317,7 +317,7 @@ Perception and Attention comprise the fundamental cognitive processes through wh
 
   - feature models - Models built on feature processing
 
-    - [[filter_theory]] - Models where filters select inputs
+    - [[selective_attention|filter theory]] - Models where filters select inputs
 
     - [[template_matching]] - Models matching input to stored patterns
 

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[riemannian_metric]]"
       - "[[geodesic_equations]]"
       - "[[linear_algebra]]"
+wikidata: Q4454681
 ---
 
 # Tensor Calculus

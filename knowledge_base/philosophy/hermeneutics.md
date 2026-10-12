@@ -17,6 +17,7 @@ semantic_relations:
       - "[[theory_ladenness]]"
       - "[[prior_beliefs]]"
       - "[[bayesian_brain]]"
+wikidata: Q102686
 ---
 
 # Hermeneutics

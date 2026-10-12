@@ -17,6 +17,7 @@ semantic_relations:
       - "[[organizational_closure]]"
       - "[[feedback_loops]]"
       - "[[reaction_diffusion]]"
+wikidata: Q786897
 ---
 
 # Autocatalysis

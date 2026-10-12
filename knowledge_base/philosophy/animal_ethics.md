@@ -18,6 +18,7 @@ semantic_relations:
       - "[[virtue_ethics]]"
       - "[[care_ethics]]"
       - "[[environmental_ethics]]"
+wikidata: Q455118
 ---
 
 # Animal Ethics

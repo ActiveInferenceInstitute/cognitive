@@ -17,6 +17,7 @@ semantic_relations:
       - "[[protein_structure]]"
       - "[[molecular_biology]]"
       - "[[cellular_intelligence]]"
+wikidata: Q154626
 ---
 
 # Cytoskeleton

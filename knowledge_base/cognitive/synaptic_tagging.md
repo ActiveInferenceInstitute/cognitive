@@ -17,6 +17,7 @@ semantic_relations:
       - "[[synaptic_consolidation]]"
       - "[[memory_formation]]"
       - "[[hippocampus]]"
+wikidata: Q7662042
 ---
 
 # Synaptic Tagging

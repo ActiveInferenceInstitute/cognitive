@@ -14,6 +14,7 @@ semantic_relations:
       - "[[knowledge_base/systems/internet_of_things]]"
       - "[[knowledge_base/systems/digital_twins]]"
       - "[[knowledge_base/BioFirm/ecological_active_inference]]"
+wikidata: Q1749732
 ---
 
 # Environmental Monitoring

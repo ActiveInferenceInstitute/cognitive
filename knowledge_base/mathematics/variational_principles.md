@@ -18,6 +18,7 @@ semantic_relations:
       - "[[free_energy_principle]]"
 aliases:
   - variational_principle
+wikidata: Q745215
 ---
 
 # Variational Principles

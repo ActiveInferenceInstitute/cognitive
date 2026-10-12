@@ -21,6 +21,7 @@ semantic_relations:
       - "[[control_theory]]"
 aliases:
   - contact_manifolds
+wikidata: Q1783105
 ---
 
 

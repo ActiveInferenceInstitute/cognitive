@@ -15,6 +15,7 @@ semantic_relations:
       - "[[motor_control]]"
       - "[[social_cognition]]"
       - "[[active_inference]]"
+wikidata: Q1131737
 ---
 
 # Imitation

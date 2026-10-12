@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cerebellar_ataxia]]"
       - "[[basal_ganglia]]"
       - "[[cerebellum]]"
+wikidata: Q223907
 ---
 
 # Tremor

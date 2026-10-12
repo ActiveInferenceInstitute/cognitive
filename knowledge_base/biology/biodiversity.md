@@ -18,6 +18,7 @@ semantic_relations:
 aliases:
   - biodiversity_assessment
   - Species_Diversity
+wikidata: Q47041
 ---
 
 # Biodiversity

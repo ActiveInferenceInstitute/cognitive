@@ -16,6 +16,7 @@ semantic_relations:
       - "[[probability_theory]]"
       - "[[statistical_modeling]]"
       - "[[bayesian_models]]"
+wikidata: Q4874481
 ---
 
 # Bayesian Statistics

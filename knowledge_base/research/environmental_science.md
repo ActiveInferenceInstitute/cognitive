@@ -18,6 +18,7 @@ semantic_relations:
       - "[[knowledge_base/systems/spatial_ecology]]"
       - "[[knowledge_base/free_energy_principle/biology/ecology]]"
       - "[[knowledge_base/systems/Social-Ecological Systems]]"
+wikidata: Q188847
 ---
 
 # Environmental Science

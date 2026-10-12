@@ -17,6 +17,7 @@ semantic_relations:
       - "[[philosophy_of_mind]]"
       - "[[meditation]]"
       - "[[dualism]]"
+wikidata: Q1079293
 ---
 
 # Hindu Philosophy

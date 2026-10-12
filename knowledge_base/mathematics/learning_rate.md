@@ -17,6 +17,7 @@ semantic_relations:
       - "[[temperature_parameter]]"
       - "[[parameter_learning]]"
       - "[[precision_parameter]]"
+wikidata: Q65121812
 ---
 
 # Learning Rate

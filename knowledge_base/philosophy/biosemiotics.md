@@ -17,6 +17,7 @@ semantic_relations:
       - "[[cellular_intelligence]]"
       - "[[markov_blankets]]"
       - "[[free_energy_principle]]"
+wikidata: Q864714
 ---
 
 # Biosemiotics

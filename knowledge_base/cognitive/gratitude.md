@@ -16,6 +16,7 @@ semantic_relations:
       - "[[emotion_regulation]]"
       - "[[empathy]]"
       - "[[social_reward]]"
+wikidata: Q2728730
 ---
 
 # Gratitude

@@ -213,7 +213,7 @@ Memory Systems comprise the neural mechanisms and cognitive processes that enabl
 
     - mental models - Internal representations of how things work
 
-    - [[scripts]] - Event sequences
+    - scripts - Event sequences
 
 ### Dynamics
 

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[homeostasis]]"
 aliases:
   - cortisol_system
+wikidata: Q190875
 ---
 
 # Cortisol

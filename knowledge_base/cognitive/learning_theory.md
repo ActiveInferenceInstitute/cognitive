@@ -142,7 +142,7 @@ Learning Theory encompasses the principles and mechanisms by which cognitive sys
 
     - [[ltd]] - Long-term depression, lasting synaptic weakening
 
-  - [[homeostatic]] - Plasticity that keeps activity stable
+  - [[homeostatic_plasticity]] - Plasticity that keeps activity stable
 
     - [[scaling]] - Adjusting all synaptic strengths to hold activity steady
 

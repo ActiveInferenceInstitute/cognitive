@@ -16,6 +16,7 @@ semantic_relations:
       - "[[stability_plasticity]]"
 aliases:
   - synaptic_scaling
+wikidata: Q5889850
 ---
 
 # Homeostatic Plasticity

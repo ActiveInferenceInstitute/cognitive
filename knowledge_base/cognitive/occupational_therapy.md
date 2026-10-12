@@ -18,6 +18,7 @@ semantic_relations:
       - "[[orthoses]]"
       - "[[executive_functions]]"
       - "[[neural_plasticity]]"
+wikidata: Q380141
 ---
 
 # Occupational Therapy

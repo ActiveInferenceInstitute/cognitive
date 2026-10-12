@@ -17,6 +17,7 @@ semantic_relations:
       - "[[plant_biology]]"
       - "[[spatial_ecology]]"
       - "[[ecological_networks]]"
+wikidata: Q943313
 ---
 
 # Seed Dispersal

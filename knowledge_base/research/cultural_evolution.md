@@ -20,6 +20,7 @@ semantic_relations:
       - "[[knowledge_base/biology/evolutionary_biology]]"
 aliases:
   - cultural evolution
+wikidata: Q12031891
 ---
 
 # Cultural Evolution

@@ -401,7 +401,7 @@ Social Cognition encompasses the cognitive processes involved in understanding, 
 
     - [[virtual_reality]] - Simulated environments for controlled experiments
 
-    - [[social_computing]] - Computational systems supporting social interaction
+    - social computing - Computational systems supporting social interaction
 
 ## References
 

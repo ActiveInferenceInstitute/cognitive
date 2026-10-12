@@ -23,6 +23,7 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[multisensory_integration]]"
       - "[[motor_learning]]"
+wikidata: Q1298583
 ---
 
 

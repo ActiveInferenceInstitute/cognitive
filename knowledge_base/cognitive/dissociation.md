@@ -17,6 +17,7 @@ semantic_relations:
       - "[[consciousness_and_awareness]]"
       - "[[amnesia]]"
       - "[[psychiatric_disorders]]"
+wikidata: Q18663
 ---
 
 # Dissociation

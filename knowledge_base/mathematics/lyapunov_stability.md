@@ -18,6 +18,7 @@ semantic_relations:
       - "[[structural_stability]]"
       - "[[gradient_flows]]"
       - "[[free_energy_principle]]"
+wikidata: Q1341651
 ---
 
 # Lyapunov Stability

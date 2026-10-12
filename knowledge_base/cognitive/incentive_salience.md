@@ -17,6 +17,7 @@ semantic_relations:
       - "[[addiction]]"
       - "[[motivation]]"
       - "[[ventral_striatum]]"
+wikidata: Q6014281
 ---
 
 # Incentive Salience

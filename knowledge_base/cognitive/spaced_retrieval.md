@@ -17,6 +17,7 @@ semantic_relations:
       - "[[active_recall]]"
       - "[[retrieval]]"
       - "[[memory_consolidation]]"
+wikidata: Q7572674
 ---
 
 # Spaced Retrieval

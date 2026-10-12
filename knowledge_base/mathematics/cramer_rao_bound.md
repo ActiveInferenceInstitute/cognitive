@@ -19,6 +19,7 @@ semantic_relations:
       - "[[statistical_foundations]]"
 aliases:
   - cramer_rao
+wikidata: Q1138810
 ---
 
 # Cramér-Rao Bound

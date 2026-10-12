@@ -18,6 +18,7 @@ semantic_relations:
     links:
       - "[[homology_theory]]"
       - "[[homotopy_theory]]"
+wikidata: Q42989
 ---
 
 

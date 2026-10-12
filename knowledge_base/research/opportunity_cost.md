@@ -19,6 +19,7 @@ semantic_relations:
       - "[[resource_allocation]]"
 aliases:
   - opportunity_costs
+wikidata: Q185715
 ---
 
 # Opportunity Cost

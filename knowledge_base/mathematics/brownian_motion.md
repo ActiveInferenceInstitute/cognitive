@@ -18,6 +18,7 @@ semantic_relations:
       - "[[diffusion_processes]]"
       - "[[random_walk]]"
       - "[[stochastic_calculus]]"
+wikidata: Q178036
 ---
 
 # Brownian Motion

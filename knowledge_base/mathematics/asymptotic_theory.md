@@ -18,6 +18,7 @@ semantic_relations:
       - "[[likelihood_function]]"
       - "[[laplace_approximation]]"
       - "[[bayesian_statistics]]"
+wikidata: Q4812187
 ---
 
 # Asymptotic Theory

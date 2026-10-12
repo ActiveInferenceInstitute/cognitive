@@ -19,6 +19,7 @@ semantic_relations:
       - "[[temporal_coding]]"
 aliases:
   - rate_coding
+wikidata: Q7002051
 ---
 
 
@@ -69,7 +70,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - ensemble coding - Neural populations
 
-    - [[coarse_coding]] - Overlapping tuning
+    - coarse coding - Overlapping tuning
 
     - [[sparse_coding]] - Efficient representation
 
@@ -121,7 +122,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
     - [[small_world]] - Efficient organization
 
-    - [[scale_free]] - Hub organization
+    - [[scale_free_networks|scale free]] - Hub organization
 
   - dynamic patterns - Activity structure
 
@@ -209,7 +210,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
   - [[computational_complexity]] - Processing demands
 
-    - [[space_complexity]] - Memory needed as input grows
+    - [[computational_complexity|space complexity]] - Memory needed as input grows
 
     - [[time_complexity]] - Computation time as input grows
 
@@ -267,7 +268,7 @@ Neural Coding refers to how information is represented and transformed by neuron
 
 - [[neuromorphic_computing]] - Brain-inspired
 
-  - [[spiking_networks]] - Pulse-based
+  - spiking networks - Pulse-based
 
     - event driven - Spike processing
 

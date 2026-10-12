@@ -18,6 +18,7 @@ semantic_relations:
       - "[[detailed_balance]]"
       - "[[variational_inference]]"
       - "[[neural_sampling]]"
+wikidata: Q1191869
 ---
 
 # Markov Chain Monte Carlo

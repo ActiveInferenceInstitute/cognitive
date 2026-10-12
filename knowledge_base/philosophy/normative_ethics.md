@@ -17,6 +17,7 @@ semantic_relations:
       - "[[virtue_ethics]]"
       - "[[meta_ethics]]"
       - "[[applied_ethics]]"
+wikidata: Q1321845
 ---
 
 # Normative Ethics

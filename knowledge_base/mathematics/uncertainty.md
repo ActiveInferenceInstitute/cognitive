@@ -18,6 +18,7 @@ semantic_relations:
       - "[[precision_parameter]]"
       - "[[epistemic_value]]"
       - "[[expected_free_energy]]"
+wikidata: Q13649246
 ---
 
 # Uncertainty

@@ -19,6 +19,7 @@ semantic_relations:
       - "[[algebraic_geometry]]"
       - "[[topology]]"
       - "[[logic]]"
+wikidata: Q217413
 ---
 
 

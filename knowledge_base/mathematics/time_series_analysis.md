@@ -17,6 +17,7 @@ semantic_relations:
       - "[[signal_processing]]"
       - "[[granger_causality]]"
       - "[[dynamical_systems]]"
+wikidata: Q11850042
 ---
 
 # Time Series Analysis

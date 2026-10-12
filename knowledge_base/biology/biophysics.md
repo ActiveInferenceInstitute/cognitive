@@ -18,6 +18,7 @@ semantic_relations:
       - "[[knowledge_base/biology/neuroscience]]"
 aliases:
   - biological_physics
+wikidata: Q7100
 ---
 
 # Biophysics

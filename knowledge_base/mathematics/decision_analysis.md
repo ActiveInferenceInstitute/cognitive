@@ -17,6 +17,7 @@ semantic_relations:
       - "[[decision_making]]"
       - "[[sensitivity_analysis]]"
       - "[[utility_theory]]"
+wikidata: Q5249226
 ---
 
 # Decision Analysis

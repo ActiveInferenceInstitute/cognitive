@@ -16,6 +16,7 @@ semantic_relations:
       - "[[knowledge_base/biology/evolutionary_biology]]"
       - "[[knowledge_base/biology/evolutionary_game_theory]]"
       - "[[knowledge_base/biology/myrmecology]]"
+wikidata: Q5418647
 ---
 
 # Evolution of Eusociality

@@ -122,7 +122,7 @@ The framework proposes federated learning and inference through:
 
   - Carbon fluxes
 
-- [[Albedo|Albedo measurements]]
+- Albedo measurements
 
   - Surface reflectivity
 

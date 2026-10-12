@@ -16,6 +16,7 @@ semantic_relations:
       - "[[scientific_method]]"
       - "[[bayesian_inference]]"
       - "[[active_inference]]"
+wikidata: Q192600
 ---
 
 # Fallibilism

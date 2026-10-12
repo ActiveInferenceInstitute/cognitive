@@ -18,6 +18,7 @@ semantic_relations:
       - "[[mathematical_psychology]]"
       - "[[experiment_design]]"
       - "[[reaction_time]]"
+wikidata: Q475042
 ---
 
 # Experimental Psychology

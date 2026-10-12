@@ -17,6 +17,7 @@ semantic_relations:
       - "[[response_conflict]]"
       - "[[emotional_processing]]"
       - "[[prior_beliefs]]"
+wikidata: Q5928045
 ---
 
 # Ambivalence

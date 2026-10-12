@@ -16,6 +16,7 @@ semantic_relations:
       - "[[neural_plasticity]]"
       - "[[brain_development]]"
       - "[[cognitive_architecture]]"
+wikidata: Q2910672
 ---
 
 

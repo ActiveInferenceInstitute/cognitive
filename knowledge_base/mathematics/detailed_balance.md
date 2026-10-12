@@ -17,6 +17,7 @@ semantic_relations:
       - "[[metropolis_hastings]]"
       - "[[markov_chain_monte_carlo]]"
       - "[[free_energy_principle]]"
+wikidata: Q1201087
 ---
 
 # Detailed Balance

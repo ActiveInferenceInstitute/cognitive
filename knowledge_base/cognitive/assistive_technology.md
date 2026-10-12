@@ -17,6 +17,7 @@ semantic_relations:
       - "[[sensory_substitution]]"
       - "[[occupational_therapy]]"
       - "[[human_computer_interaction]]"
+wikidata: Q688498
 ---
 
 # Assistive Technology

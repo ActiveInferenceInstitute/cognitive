@@ -23,6 +23,7 @@ semantic_relations:
       - "[[perceptual_binding]]"
 aliases:
   - gamma_synchrony
+wikidata: Q110095685
 ---
 
 

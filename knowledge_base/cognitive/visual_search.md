@@ -17,6 +17,7 @@ semantic_relations:
       - "[[eye_movements]]"
       - "[[spatial_attention]]"
       - "[[epistemic_foraging]]"
+wikidata: Q2369151
 ---
 
 # Visual Search

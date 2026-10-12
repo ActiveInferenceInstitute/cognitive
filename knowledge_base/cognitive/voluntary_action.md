@@ -18,6 +18,7 @@ semantic_relations:
       - "[[motor_control]]"
       - "[[action_selection]]"
       - "[[consciousness]]"
+wikidata: Q4374347
 ---
 
 # Voluntary Action

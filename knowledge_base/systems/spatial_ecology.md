@@ -14,6 +14,7 @@ semantic_relations:
       - "[[knowledge_base/systems/environmental_applications]]"
       - "[[knowledge_base/biology/ecological_networks]]"
       - "[[knowledge_base/BioFirm/bioregional_state_space]]"
+wikidata: Q3578586
 ---
 
 # Spatial Ecology

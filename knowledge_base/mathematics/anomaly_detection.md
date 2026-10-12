@@ -17,6 +17,7 @@ semantic_relations:
       - "[[variational_free_energy]]"
       - "[[gaussian_distributions]]"
       - "[[time_series_analysis]]"
+wikidata: Q3560506
 ---
 
 # Anomaly Detection

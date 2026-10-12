@@ -17,6 +17,7 @@ semantic_relations:
       - "[[generative_model]]"
       - "[[knowledge_base/mathematics/probability_distributions]]"
       - "[[computational_neuroscience]]"
+wikidata: Q7246865
 ---
 
 # Probabilistic Programming

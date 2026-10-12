@@ -17,6 +17,7 @@ semantic_relations:
       - "[[selective_attention]]"
       - "[[cognitive_security]]"
       - "[[precision_weighting]]"
+wikidata: Q295287
 ---
 
 # Attention Economy

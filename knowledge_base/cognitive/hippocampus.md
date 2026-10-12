@@ -18,6 +18,7 @@ semantic_relations:
       - "[[pattern_completion]]"
 aliases:
   - hippocampal
+wikidata: Q48360
 ---
 
 # Hippocampus

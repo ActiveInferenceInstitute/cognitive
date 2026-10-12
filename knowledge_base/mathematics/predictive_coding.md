@@ -24,6 +24,7 @@ semantic_relations:
       - "[[error_propagation]]"
       - "[[hierarchical_models]]"
       - "[[precision_weighting]]"
+wikidata: Q1315146
 ---
 
 

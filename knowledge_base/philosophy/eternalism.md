@@ -17,6 +17,7 @@ semantic_relations:
       - "[[determinism]]"
       - "[[free_will]]"
       - "[[path_integral]]"
+wikidata: Q796204
 ---
 
 # Eternalism

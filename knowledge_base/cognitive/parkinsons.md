@@ -18,6 +18,7 @@ semantic_relations:
       - "[[motor_learning]]"
       - "[[ventral_striatum]]"
       - "[[precision_weighting]]"
+wikidata: Q11085
 ---
 
 # Parkinson's Disease

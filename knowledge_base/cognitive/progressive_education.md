@@ -18,6 +18,7 @@ semantic_relations:
       - "[[experiential_learning]]"
       - "[[project_based_learning]]"
       - "[[education]]"
+wikidata: Q834933
 ---
 
 # Progressive Education

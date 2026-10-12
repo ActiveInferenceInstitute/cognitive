@@ -28,6 +28,7 @@ semantic_relations:
       - "[[information_theory]]"
       - "[[free_energy_principle]]"
       - "[[stochastic_processes]]"
+wikidata: Q6501221
 ---
 
 

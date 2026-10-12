@@ -18,6 +18,7 @@ semantic_relations:
       - "[[computational_neuroscience]]"
       - "[[attention_mechanisms]]"
       - "[[decision_making]]"
+wikidata: Q1138951
 ---
 
 # Cognitive Neuroscience

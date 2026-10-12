@@ -17,6 +17,7 @@ semantic_relations:
       - "[[speech_perception]]"
       - "[[pragmatics]]"
       - "[[language_processing_expanded]]"
+wikidata: Q5576720
 ---
 
 # Intonation

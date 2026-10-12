@@ -18,6 +18,7 @@ semantic_relations:
       - "[[differential_geometry]]"
 aliases:
   - homology_theory
+wikidata: Q212803
 ---
 
 # Algebraic Topology

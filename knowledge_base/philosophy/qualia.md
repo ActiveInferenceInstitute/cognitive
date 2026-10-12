@@ -18,6 +18,7 @@ semantic_relations:
       - "[[predictive_processing]]"
 aliases:
   - phenomenal_experience
+wikidata: Q282250
 ---
 
 # Qualia

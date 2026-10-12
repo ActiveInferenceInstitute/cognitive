@@ -16,6 +16,7 @@ semantic_relations:
       - "[[self_awareness]]"
       - "[[consciousness]]"
       - "[[active_inference]]"
+wikidata: Q2254571
 ---
 
 # Personal Identity

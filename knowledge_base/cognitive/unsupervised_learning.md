@@ -14,6 +14,7 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[predictive_coding]]"
       - "[[generative_model]]"
+wikidata: Q1152135
 ---
 
 # Unsupervised Learning

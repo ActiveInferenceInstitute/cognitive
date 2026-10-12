@@ -14,6 +14,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/predictive_processing]]"
       - "[[knowledge_base/linking_standards]]"
       - "[[knowledge_base/cognitive/knowledge_organization]]"
+wikidata: Q845921
 ---
 
 # Information Architecture

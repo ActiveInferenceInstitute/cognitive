@@ -16,6 +16,7 @@ semantic_relations:
       - "[[dorsolateral_prefrontal]]"
       - "[[inferior_parietal]]"
       - "[[global_workspace]]"
+wikidata: Q97193794
 ---
 
 # Frontoparietal Network

@@ -20,6 +20,7 @@ semantic_relations:
       - "[[optimal_transport]]"
 aliases:
   - metric_spaces
+wikidata: Q122488935
 ---
 
 

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[movement_disorders]]"
       - "[[dopamine_system]]"
       - "[[motor_control]]"
+wikidata: Q897134
 ---
 
 # Bradykinesia

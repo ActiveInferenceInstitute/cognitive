@@ -17,6 +17,7 @@ semantic_relations:
       - "[[network_neuroscience]]"
       - "[[scale_free_networks]]"
       - "[[spectral_theory]]"
+wikidata: Q5062194
 ---
 
 # Centrality

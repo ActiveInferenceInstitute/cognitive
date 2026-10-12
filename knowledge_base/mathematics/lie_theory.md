@@ -16,6 +16,7 @@ semantic_relations:
       - "[[differential_geometry]]"
       - "[[geometric_mechanics]]"
       - "[[poisson_geometry]]"
+wikidata: Q357300
 ---
 
 # Lie Theory

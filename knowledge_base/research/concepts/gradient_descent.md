@@ -4,6 +4,7 @@ type: "concept"
 status: stable
 aliases:
   - gradient_methods
+wikidata: Q1199743
 ---
 
 # Gradient Descent

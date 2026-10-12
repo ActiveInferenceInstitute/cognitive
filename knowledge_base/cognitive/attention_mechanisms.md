@@ -195,7 +195,7 @@ Attention Mechanisms comprise the neural and cognitive processes that enable sel
 
   - [[channel_capacity]] - Maximum information throughput
 
-    - [[bottleneck_theory]] - Limited-capacity stage in processing
+    - [[serial_bottleneck|bottleneck theory]] - Limited-capacity stage in processing
 
     - resource theory - Attention as a limited, divisible resource
 

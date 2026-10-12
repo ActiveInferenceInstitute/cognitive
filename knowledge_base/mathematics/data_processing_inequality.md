@@ -17,6 +17,7 @@ semantic_relations:
       - "[[markov_blanket]]"
       - "[[information_bottleneck]]"
       - "[[f_divergences]]"
+wikidata: Q20707568
 ---
 
 # Data Processing Inequality

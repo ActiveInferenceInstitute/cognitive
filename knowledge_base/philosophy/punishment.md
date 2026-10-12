@@ -17,6 +17,7 @@ semantic_relations:
       - "[[behaviorism]]"
       - "[[learning_theory]]"
       - "[[reward_prediction_error]]"
+wikidata: Q3544090
 ---
 
 # Punishment

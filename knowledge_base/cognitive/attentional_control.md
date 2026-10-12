@@ -24,6 +24,7 @@ semantic_relations:
       - "[[divided_attention]]"
       - "[[active_inference]]"
       - "[[free_energy_principle]]"
+wikidata: Q4818236
 ---
 
 

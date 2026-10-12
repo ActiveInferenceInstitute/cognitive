@@ -17,6 +17,7 @@ semantic_relations:
       - "[[default_mode]]"
       - "[[emotion_regulation]]"
       - "[[metacognition]]"
+wikidata: Q108458
 ---
 
 # Meditation

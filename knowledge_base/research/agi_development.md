@@ -17,6 +17,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/hierarchical_models]]"
 aliases:
   - artificial_general_intelligence
+wikidata: Q2264109
 ---
 
 # AGI Development

@@ -15,6 +15,7 @@ semantic_relations:
       - "[[social_cognition]]"
       - "[[inferior_parietal]]"
       - "[[active_inference]]"
+wikidata: Q18387795
 ---
 
 # Perspective Taking

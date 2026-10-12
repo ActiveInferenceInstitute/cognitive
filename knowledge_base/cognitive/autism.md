@@ -17,6 +17,7 @@ semantic_relations:
       - "[[predictive_processing]]"
       - "[[precision_weighting]]"
       - "[[social_cognition]]"
+wikidata: Q38404
 ---
 
 # Autism

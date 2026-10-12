@@ -18,6 +18,7 @@ semantic_relations:
       - "[[stigmergic_coordination]]"
       - "[[justice]]"
       - "[[collective_behavior]]"
+wikidata: Q6199
 ---
 
 # Anarchism

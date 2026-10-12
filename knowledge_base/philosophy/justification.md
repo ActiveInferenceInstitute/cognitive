@@ -17,6 +17,7 @@ semantic_relations:
       - "[[coherence_theory]]"
       - "[[bayesian_inference]]"
       - "[[skepticism]]"
+wikidata: Q145874
 ---
 
 # Justification

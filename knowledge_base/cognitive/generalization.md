@@ -18,6 +18,7 @@ semantic_relations:
       - "[[statistical_learning]]"
 aliases:
   - generalization_capacity
+wikidata: Q6963735
 ---
 
 # Generalization

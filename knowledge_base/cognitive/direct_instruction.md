@@ -17,6 +17,7 @@ semantic_relations:
       - "[[working_memory]]"
       - "[[constructivist_learning_theory]]"
       - "[[deliberate_practice]]"
+wikidata: Q5280349
 ---
 
 # Direct Instruction

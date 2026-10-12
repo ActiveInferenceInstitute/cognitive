@@ -17,6 +17,7 @@ semantic_relations:
       - "[[taylor_series]]"
       - "[[laplace_approximation]]"
       - "[[bifurcation_theory]]"
+wikidata: Q10886678
 ---
 
 # Perturbation Theory

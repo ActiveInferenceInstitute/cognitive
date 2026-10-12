@@ -17,6 +17,7 @@ semantic_relations:
       - "[[differential_geometry]]"
       - "[[geodesics]]"
       - "[[statistical_manifolds]]"
+wikidata: Q7888899
 ---
 
 # Riemannian Metric

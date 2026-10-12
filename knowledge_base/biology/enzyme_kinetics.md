@@ -17,6 +17,7 @@ semantic_relations:
       - "[[thermodynamics]]"
       - "[[protein_folding]]"
       - "[[cell_biology]]"
+wikidata: Q883112
 ---
 
 # Enzyme Kinetics

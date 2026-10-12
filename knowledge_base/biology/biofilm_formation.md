@@ -17,6 +17,7 @@ semantic_relations:
       - "[[swarm_intelligence]]"
       - "[[collective_behavior]]"
       - "[[cellular_intelligence]]"
+wikidata: Q21759980
 ---
 
 # Biofilm Formation

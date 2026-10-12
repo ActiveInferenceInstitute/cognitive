@@ -19,6 +19,7 @@ semantic_relations:
       - "[[information_theory]]"
       - "[[optimization_theory]]"
       - "[[stochastic_processes]]"
+wikidata: Q15614122
 ---
 
 

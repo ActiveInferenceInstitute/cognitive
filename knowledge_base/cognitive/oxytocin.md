@@ -17,6 +17,7 @@ semantic_relations:
       - "[[social_neuroscience]]"
       - "[[precision_weighting]]"
       - "[[active_inference]]"
+wikidata: Q169960
 ---
 
 # Oxytocin

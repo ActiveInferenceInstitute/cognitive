@@ -17,6 +17,7 @@ semantic_relations:
       - "[[real_analysis]]"
       - "[[probability_theory]]"
       - "[[functional_analysis]]"
+wikidata: Q853831
 ---
 
 # Lebesgue Integration

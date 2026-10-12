@@ -17,6 +17,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/social_cognition]]"
       - "[[knowledge_base/cognitive/social_learning]]"
       - "[[knowledge_base/biology/niche_construction]]"
+wikidata: Q5193266
 ---
 
 # Cultural Cognition

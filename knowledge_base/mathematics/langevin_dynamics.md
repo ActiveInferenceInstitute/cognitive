@@ -26,6 +26,7 @@ semantic_relations:
     links:
       - "[[mathematics/variational_free_energy|Variational Free Energy]]"
       - "[[cognitive/active_inference|Active Inference]]"
+wikidata: Q6485978
 ---
 
 # Langevin Dynamics

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[grammar]]"
       - "[[prosody_processing]]"
       - "[[phonological_loop]]"
+wikidata: Q40998
 ---
 
 # Phonology

@@ -26,6 +26,7 @@ semantic_relations:
       - "[[hammersley_clifford_theorem]]"
       - "[[gibbs_distributions]]"
       - "[[graphical_separation]]"
+wikidata: Q176695
 ---
 
 
@@ -241,7 +242,7 @@ end
 
 ```
 
-### 3. [[pairwise_markov|Pairwise Markov]] Verification
+### 3. Pairwise Markov Verification
 
 ```julia
 

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[knowledge_base/mathematics/exponential_family]]"
 aliases:
   - statistical_manifold
+wikidata: Q7604402
 ---
 
 # Statistical Manifolds

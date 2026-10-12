@@ -18,6 +18,7 @@ semantic_relations:
 aliases:
   - anxiety_disorders
   - generalized_anxiety
+wikidata: Q154430
 ---
 
 # Anxiety

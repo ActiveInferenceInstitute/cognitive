@@ -17,6 +17,7 @@ semantic_relations:
       - "[[thermodynamics]]"
       - "[[entropy]]"
       - "[[work_extraction]]"
+wikidata: Q212397
 ---
 
 # Maxwell's Demon

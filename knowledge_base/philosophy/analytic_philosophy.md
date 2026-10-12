@@ -20,6 +20,7 @@ semantic_relations:
       - "[[philosophy_topics]]"
 aliases:
   - analytic philosophy
+wikidata: Q183216
 ---
 
 # Analytic Philosophy

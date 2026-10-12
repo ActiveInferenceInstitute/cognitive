@@ -19,6 +19,7 @@ semantic_relations:
       - "[[neural_plasticity]]"
 aliases:
   - optogenetic_manipulation
+wikidata: Q781492
 ---
 
 # Optogenetics

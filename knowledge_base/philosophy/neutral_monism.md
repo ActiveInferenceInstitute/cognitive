@@ -17,6 +17,7 @@ semantic_relations:
       - "[[materialism]]"
       - "[[panpsychism]]"
       - "[[free_energy_principle]]"
+wikidata: Q241657
 ---
 
 # Neutral Monism

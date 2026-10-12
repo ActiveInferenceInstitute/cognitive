@@ -17,6 +17,7 @@ semantic_relations:
       - "[[neutral_monism]]"
       - "[[integrated_information]]"
       - "[[dualism]]"
+wikidata: Q661384
 ---
 
 # Panpsychism

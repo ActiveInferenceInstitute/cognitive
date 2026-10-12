@@ -17,6 +17,7 @@ semantic_relations:
       - "[[memory_consolidation]]"
       - "[[wakefulness]]"
       - "[[sleep_memory_ai]]"
+wikidata: Q35831
 ---
 
 # Sleep

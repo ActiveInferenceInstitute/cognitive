@@ -16,6 +16,7 @@ semantic_relations:
       - "[[phonological_loop]]"
       - "[[spatial_memory]]"
       - "[[visual_perception]]"
+wikidata: Q1326761
 ---
 
 # Visuospatial Sketchpad

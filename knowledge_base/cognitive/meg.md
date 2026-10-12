@@ -17,6 +17,7 @@ semantic_relations:
       - "[[neuroimaging]]"
       - "[[electrophysiology]]"
       - "[[neural_synchrony]]"
+wikidata: Q384188
 ---
 
 # Magnetoencephalography

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[working_memory]]"
       - "[[cognitive_control]]"
       - "[[active_inference]]"
+wikidata: Q72788
 ---
 
 # Dorsolateral Prefrontal Cortex

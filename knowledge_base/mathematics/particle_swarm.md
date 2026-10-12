@@ -17,6 +17,7 @@ semantic_relations:
       - "[[evolutionary_algorithms]]"
       - "[[stochastic_optimization]]"
       - "[[random_search]]"
+wikidata: Q2072794
 ---
 
 # Particle Swarm Optimization

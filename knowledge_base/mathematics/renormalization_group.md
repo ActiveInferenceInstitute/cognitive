@@ -22,6 +22,7 @@ semantic_relations:
       - "[[information_theory]]"
       - "[[bayesian_renormalization]]"
       - "[[critical_phenomena]]"
+wikidata: Q1203669
 ---
 
 # Renormalization Group and Generative Models
@@ -30,7 +31,7 @@ semantic_relations:
 
 ## Renormalization Groups: Overview and Principles
 
-Renormalization groups constitute a central theoretical framework in physics, particularly in [[quantum_field_theory|quantum field theory]] and [[statistical_physics|statistical mechanics]]. The fundamental idea behind RG is to systematically study how physical systems behave when observed at different scales. The RG approach involves "coarse-graining," a procedure where microscopic degrees of freedom are integrated out or averaged over, resulting in effective theories at larger scales. This method allows physicists to understand how physical parameters evolve as the scale of observation changes, identifying [[fixed points]] and [[critical_phenomena|critical phenomena]].
+Renormalization groups constitute a central theoretical framework in physics, particularly in [[quantum_field_theory|quantum field theory]] and [[statistical_physics|statistical mechanics]]. The fundamental idea behind RG is to systematically study how physical systems behave when observed at different scales. The RG approach involves "coarse-graining," a procedure where microscopic degrees of freedom are integrated out or averaged over, resulting in effective theories at larger scales. This method allows physicists to understand how physical parameters evolve as the scale of observation changes, identifying [[scale_invariance|fixed points]] and [[critical_phenomena|critical phenomena]].
 
 ```mermaid
 
@@ -84,7 +85,7 @@ $$P(\theta|D) = \frac{P(D|\theta)P(\theta)}{P(D)}$$
 
 Here, the posterior distribution updates prior beliefs about parameters based on observed data.
 
-Bayesian Renormalization reframes RG as a form of inverse Bayesian inference. Specifically, it leverages the [[Dynamical Bayesian Inference]] scheme, where Bayesian updating is represented by a one-parameter family of probability distributions evolving according to an integro-differential equation derived from Bayes' law. In this framework:
+Bayesian Renormalization reframes RG as a form of inverse Bayesian inference. Specifically, it leverages the [[bayesian_renormalization|Dynamical Bayesian Inference]] scheme, where Bayesian updating is represented by a one-parameter family of probability distributions evolving according to an integro-differential equation derived from Bayes' law. In this framework:
 
 - ERG flow is interpreted as a functional diffusion process in probability distribution space.
 
@@ -514,7 +515,7 @@ The confluence of RG methods and generative modeling has led to several innovati
 
 1. **Renormalization-Based Generative Models**: Generative models explicitly incorporating RG principles for multiscale generation.
 
-1. **[[variational_renormalization_group|Variational Renormalization Group]]**: Using [[variational_inference|variational inference]] methods to approximate RG transformations.
+1. **[[bayesian_renormalization|Variational Renormalization Group]]**: Using [[variational_inference|variational inference]] methods to approximate RG transformations.
 
 1. **[[information_bottleneck|Information Bottleneck Methods]]**: Techniques explicitly optimizing the trade-off between compression and prediction.
 

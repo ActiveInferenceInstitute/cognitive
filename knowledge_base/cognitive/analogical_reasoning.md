@@ -19,6 +19,7 @@ semantic_relations:
       - "[[abductive_reasoning]]"
 aliases:
   - analogy
+wikidata: Q113505016
 ---
 
 # Analogical Reasoning

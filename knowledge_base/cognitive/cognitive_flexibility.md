@@ -19,6 +19,7 @@ semantic_relations:
       - "[[task_switching]]"
       - "[[cognitive_control]]"
       - "[[active_inference]]"
+wikidata: Q5141208
 ---
 
 # Cognitive Flexibility

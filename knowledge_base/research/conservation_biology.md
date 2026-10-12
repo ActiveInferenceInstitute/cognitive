@@ -17,6 +17,7 @@ semantic_relations:
       - "[[knowledge_base/systems/traditional_ecological_knowledge]]"
       - "[[knowledge_base/biology/ecological_dynamics]]"
       - "[[knowledge_base/biology/population_genetics]]"
+wikidata: Q641498
 ---
 
 # Conservation Biology

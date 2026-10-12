@@ -20,6 +20,7 @@ semantic_relations:
       - "[[cognitive_neuroscience]]"
       - "[[bayesian_brain_hypothesis]]"
       - "[[emotional_processing]]"
+wikidata: Q199906
 ---
 
 # Clinical Psychology

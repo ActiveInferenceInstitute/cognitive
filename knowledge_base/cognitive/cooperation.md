@@ -21,6 +21,7 @@ semantic_relations:
       - "[[social_learning]]"
       - "[[theory_of_mind]]"
       - "[[collective_behavior]]"
+wikidata: Q380962
 ---
 
 
@@ -239,7 +240,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - [[tit_for_tat]] - Repeating the partner's previous move
 
-      - [[generous_tit_for_tat]] - Tit for tat that sometimes forgives defection
+      - [[tit_for_tat|generous tit for tat]] - Tit for tat that sometimes forgives defection
 
     - [[mutual_aid]] - Partners helping each other
 
@@ -323,7 +324,7 @@ Cooperation encompasses the cognitive, social, and neural mechanisms that enable
 
       - in group - Trust directed at one's own group
 
-      - [[out_group]] - Trust directed at other groups
+      - [[social_identity|out group]] - Trust directed at other groups
 
 ## Applications
 

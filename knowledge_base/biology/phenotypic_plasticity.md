@@ -17,6 +17,7 @@ semantic_relations:
       - "[[neural_plasticity]]"
       - "[[gene_expression]]"
       - "[[adaptation_mechanisms]]"
+wikidata: Q295130
 ---
 
 # Phenotypic Plasticity

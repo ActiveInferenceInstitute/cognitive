@@ -17,6 +17,7 @@ semantic_relations:
       - "[[expected_utility]]"
       - "[[meta_ethics]]"
       - "[[epistemic_uncertainty]]"
+wikidata: Q133570192
 ---
 
 # Moral Uncertainty

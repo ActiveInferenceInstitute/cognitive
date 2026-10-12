@@ -16,6 +16,7 @@ semantic_relations:
       - "[[active_inference]]"
 aliases:
   - logical_empiricism
+wikidata: Q193627
 ---
 
 # Logical Positivism

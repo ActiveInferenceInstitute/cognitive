@@ -23,6 +23,7 @@ semantic_relations:
       - "[[bayesian_inference]]"
 aliases:
   - bayesian_model_selection
+wikidata: Q6888345
 ---
 
 

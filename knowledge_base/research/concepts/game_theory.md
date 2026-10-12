@@ -2,6 +2,7 @@
 title: "Game Theory"
 type: "concept"
 status: stable
+wikidata: Q44455
 ---
 
 # Game Theory

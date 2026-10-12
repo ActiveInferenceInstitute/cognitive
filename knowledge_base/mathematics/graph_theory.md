@@ -21,6 +21,7 @@ semantic_relations:
       - "[[optimization_theory]]"
       - "[[information_theory]]"
       - "[[complexity_theory]]"
+wikidata: Q131476
 ---
 
 

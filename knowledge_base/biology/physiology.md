@@ -13,6 +13,7 @@ semantic_relations:
       - "[[homeostasis]]"
       - "[[allostatic_regulation]]"
       - "[[levels_of_organization]]"
+wikidata: Q521
 ---
 
 # Physiology

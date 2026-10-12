@@ -17,6 +17,7 @@ semantic_relations:
       - "[[pattern_completion]]"
       - "[[entorhinal_cortex]]"
       - "[[neurogenesis]]"
+wikidata: Q545787
 ---
 
 # Dentate Gyrus

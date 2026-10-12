@@ -18,6 +18,7 @@ semantic_relations:
       - "[[knowledge_base/mathematics/variational_free_energy]]"
 aliases:
   - partition_functions
+wikidata: Q230963
 ---
 
 # Partition Function

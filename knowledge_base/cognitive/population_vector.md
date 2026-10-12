@@ -20,6 +20,7 @@ semantic_relations:
       - "[[neural_coding]]"
 aliases:
   - population_vectors
+wikidata: Q7229826
 ---
 
 # Population Vector

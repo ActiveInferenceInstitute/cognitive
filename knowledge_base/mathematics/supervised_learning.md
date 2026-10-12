@@ -18,6 +18,7 @@ semantic_relations:
       - "[[prediction_error]]"
       - "[[neural_computation]]"
       - "[[deep_learning]]"
+wikidata: Q334384
 ---
 
 # Supervised Learning

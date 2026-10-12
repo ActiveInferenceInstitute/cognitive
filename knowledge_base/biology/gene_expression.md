@@ -15,6 +15,7 @@ semantic_relations:
       - "[[gene_regulatory_networks]]"
       - "[[molecular_biology]]"
       - "[[genetics]]"
+wikidata: Q26972
 ---
 
 # Gene Expression

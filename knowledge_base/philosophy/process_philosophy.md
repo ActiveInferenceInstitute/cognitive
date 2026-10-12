@@ -19,6 +19,7 @@ semantic_relations:
 aliases:
   - process_metaphysics
   - process_ontology
+wikidata: Q2114360
 ---
 
 # Process Philosophy

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[random_variables]]"
       - "[[kolmogorov_extension]]"
       - "[[integration_theory]]"
+wikidata: Q3058212
 ---
 
 # Measure Space

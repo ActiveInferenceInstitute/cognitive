@@ -17,6 +17,7 @@ semantic_relations:
       - "[[working_memory]]"
       - "[[decision_making]]"
       - "[[predictive_processing]]"
+wikidata: Q478123
 ---
 
 # Situation Awareness

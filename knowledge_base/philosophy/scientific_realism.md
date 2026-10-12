@@ -14,6 +14,7 @@ semantic_relations:
       - "[[active_inference]]"
       - "[[knowledge_base/cognitive/free_energy_principle]]"
       - "[[instrumentalism]]"
+wikidata: Q431354
 ---
 
 # Scientific Realism

@@ -30,7 +30,7 @@ kg:dataset
     dcterms:creator <https://activeinference.institute/> ;
     dcterms:description "Concept pages on Active Inference and the sciences around it, linked by typed and untyped relations, with citation records and navigation pages."@en ;
     dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
-    dcterms:modified "2026-10-11"^^xsd:date ;
+    dcterms:modified "2026-10-12"^^xsd:date ;
     dcterms:publisher <https://activeinference.institute/> ;
     dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive> ;
     dcterms:title "Cognitive Active Inference knowledge base"@en ;
@@ -84,6 +84,7 @@ page:mathematics\/markov_blanket
     dcterms:references page:cognitive\/active_inference, page:mathematics\/conditional_independence, page:mathematics\/free_energy_principle, page:mathematics\/probabilistic_graphical_models ;
     dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/mathematics/markov_blanket.md> ;
     dcterms:title "Markov Blanket"@en ;
+    skos:closeMatch <http://www.wikidata.org/entity/Q3001792> ;
     skos:inScheme kg:scheme ;
     skos:prefLabel "Markov Blanket"@en ;
     skos:related page:mathematics\/bayesian_networks, page:mathematics\/information_theory, page:mathematics\/statistical_physics ;

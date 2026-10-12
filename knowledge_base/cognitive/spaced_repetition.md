@@ -17,6 +17,7 @@ semantic_relations:
       - "[[memory_formation]]"
       - "[[learning]]"
       - "[[encoding]]"
+wikidata: Q1095869
 ---
 
 # Spaced Repetition

@@ -28,6 +28,7 @@ semantic_relations:
       - "[[complex_systems]]"
 aliases:
   - stochastic_thermodynamics
+wikidata: Q2466686
 ---
 
 

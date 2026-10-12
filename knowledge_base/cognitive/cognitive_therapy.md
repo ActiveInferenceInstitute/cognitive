@@ -17,6 +17,7 @@ semantic_relations:
       - "[[computational_psychiatry]]"
 aliases:
   - cognitive_restructuring
+wikidata: Q13693745
 ---
 
 # Cognitive Therapy

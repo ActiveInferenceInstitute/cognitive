@@ -17,6 +17,7 @@ semantic_relations:
       - "[[aphasia]]"
       - "[[planum_temporale]]"
       - "[[speech_perception]]"
+wikidata: Q824214
 ---
 
 # Wernicke's Area

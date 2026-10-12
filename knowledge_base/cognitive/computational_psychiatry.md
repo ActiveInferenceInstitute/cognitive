@@ -15,6 +15,7 @@ semantic_relations:
       - "[[psychiatry]]"
       - "[[psychiatric_disorders]]"
       - "[[precision_weighting]]"
+wikidata: Q63457393
 ---
 
 # Computational Psychiatry

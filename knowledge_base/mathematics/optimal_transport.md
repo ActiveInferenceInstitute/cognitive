@@ -20,6 +20,7 @@ semantic_relations:
       - "[[knowledge_base/mathematics/information_geometry]]"
       - "[[knowledge_base/mathematics/measure_theory]]"
       - "[[knowledge_base/mathematics/probability_theory]]"
+wikidata: Q1280998
 ---
 
 # Optimal Transport

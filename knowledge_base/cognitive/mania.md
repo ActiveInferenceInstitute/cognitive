@@ -17,6 +17,7 @@ semantic_relations:
       - "[[dopamine_system]]"
       - "[[impulsivity]]"
       - "[[motivation]]"
+wikidata: Q185935
 ---
 
 # Mania

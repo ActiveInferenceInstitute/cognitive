@@ -19,6 +19,7 @@ semantic_relations:
       - "[[hamiltonian_mechanics]]"
       - "[[lagrangian_mechanics]]"
       - "[[control_theory]]"
+wikidata: Q17086162
 ---
 
 

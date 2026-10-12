@@ -17,6 +17,7 @@ semantic_relations:
       - "[[ai_ethics]]"
       - "[[environmental_ethics]]"
       - "[[technology_ethics]]"
+wikidata: Q538733
 ---
 
 # Applied Ethics

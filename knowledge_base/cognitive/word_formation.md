@@ -17,6 +17,7 @@ semantic_relations:
       - "[[grammar]]"
       - "[[language_learning]]"
       - "[[compositional_semantics]]"
+wikidata: Q327358
 ---
 
 # Word Formation

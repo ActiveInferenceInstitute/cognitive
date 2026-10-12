@@ -16,6 +16,7 @@ semantic_relations:
       - "[[object_recognition]]"
       - "[[feature_extraction]]"
       - "[[predictive_coding]]"
+wikidata: Q3983303
 ---
 
 # Template Matching

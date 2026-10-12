@@ -19,6 +19,7 @@ semantic_relations:
     links:
       - "[[policy_selection]]"
       - "[[action_distribution]]"
+wikidata: Q1420659
 ---
 
 

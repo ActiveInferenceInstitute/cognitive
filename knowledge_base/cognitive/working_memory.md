@@ -24,6 +24,7 @@ semantic_relations:
 aliases:
   - baddeley_working_memory
   - working_memory_control
+wikidata: Q11337567
 ---
 
 

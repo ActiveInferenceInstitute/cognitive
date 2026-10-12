@@ -17,6 +17,7 @@ semantic_relations:
       - "[[emotion_circuits]]"
       - "[[extinction]]"
       - "[[phobias]]"
+wikidata: Q2079841
 ---
 
 # Fear Conditioning

@@ -17,6 +17,7 @@ semantic_relations:
       - "[[behaviorism]]"
       - "[[qualia]]"
       - "[[cognitive_science]]"
+wikidata: Q1377166
 ---
 
 # Functionalism

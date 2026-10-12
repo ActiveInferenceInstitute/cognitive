@@ -18,6 +18,7 @@ semantic_relations:
       - "[[neural_coding]]"
 aliases:
   - memory_encoding
+wikidata: Q18653
 ---
 
 # Encoding

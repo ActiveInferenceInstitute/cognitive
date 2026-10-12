@@ -23,6 +23,7 @@ semantic_relations:
       - "[[free_energy_principle]]"
       - "[[episodic_memory]]"
       - "[[semantic_memory]]"
+wikidata: Q18608
 ---
 
 

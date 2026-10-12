@@ -19,6 +19,7 @@ aliases:
   - cholinergic
   - nucleus_basalis
   - acetylcholine_system
+wikidata: Q4862743
 ---
 
 # Cholinergic System

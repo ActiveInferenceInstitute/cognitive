@@ -26,6 +26,7 @@ semantic_relations:
     links:
       - "[[cognitive/sensorimotor_coordination|Sensorimotor Coordination]]"
       - "[[cognitive/social_cognition|Social Cognition]]"
+wikidata: Q137048885
 ---
 
 # 4E Cognition

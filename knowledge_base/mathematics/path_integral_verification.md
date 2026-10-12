@@ -31,7 +31,7 @@ aliases:
 
    - Verify [[lebesgue_integration]] connection to path measures
 
-   - Include [[cylinder_measure]] construction for path spaces
+   - Include cylinder measure construction for path spaces
 
 1. **Probability Measures**
 
@@ -67,19 +67,19 @@ aliases:
 
    Links to:
 
-   - [[topological_vector_spaces]]
+   - topological vector spaces
 
-   - [[frechet_spaces]]
+   - Fréchet spaces
 
-   - [[nuclear_spaces]]
+   - nuclear spaces
 
 1. **Operators**
 
-   - Add [[unbounded_operators]] treatment
+   - Add unbounded operators treatment
 
    - Include [[spectral_theory]] for path operators
 
-   - Link to [[fredholm_theory]] for integral operators
+   - Link to Fredholm theory for integral operators
 
 ## Statistical Physics Connections
 
@@ -119,7 +119,7 @@ aliases:
 
    - thermodynamic consistency
 
-   - [[gibbs_measures]]
+   - [[gibbs_distributions|Gibbs measures]]
 
 1. **Physical Properties**
 
@@ -345,7 +345,7 @@ aliases:
 
    - Include [[numerical_analysis]]
 
-   - Link to [[computational_physics]]
+   - Link to computational physics
 
 1. **Validation Methods**
 

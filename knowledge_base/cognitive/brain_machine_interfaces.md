@@ -20,6 +20,7 @@ aliases:
   - brain_computer_interfaces
   - brain_interfaces
   - brain_machine
+wikidata: Q897410
 ---
 
 # Brain-Machine Interfaces

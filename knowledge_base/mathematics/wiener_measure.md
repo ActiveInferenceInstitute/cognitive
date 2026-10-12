@@ -18,6 +18,7 @@ semantic_relations:
       - "[[measure_theory]]"
       - "[[stochastic_calculus]]"
       - "[[fokker_planck]]"
+wikidata: Q124251629
 ---
 
 # Wiener Measure
