@@ -26,6 +26,8 @@ semantic_relations:
     links:
       - "[[mathematics/markov_blankets|Markov Blankets]]"
       - "[[mathematics/non_equilibrium_steady_state|Non-Equilibrium Steady State]]"
+aliases:
+  - niche construction
 ---
 
 # Niche Construction

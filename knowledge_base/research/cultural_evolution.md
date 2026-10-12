@@ -18,6 +18,8 @@ semantic_relations:
       - "[[knowledge_base/biology/niche_construction]]"
       - "[[knowledge_base/research/evolutionary_systems]]"
       - "[[knowledge_base/biology/evolutionary_biology]]"
+aliases:
+  - cultural evolution
 ---
 
 # Cultural Evolution

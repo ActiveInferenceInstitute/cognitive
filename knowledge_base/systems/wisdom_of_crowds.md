@@ -17,6 +17,8 @@ semantic_relations:
       - "[[swarm_intelligence]]"
       - "[[social_learning]]"
       - "[[probability_theory]]"
+aliases:
+  - wisdom_crowds
 ---
 
 # Wisdom of Crowds

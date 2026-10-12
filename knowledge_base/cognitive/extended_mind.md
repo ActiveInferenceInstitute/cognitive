@@ -17,6 +17,8 @@ semantic_relations:
       - "[[distributed_cognition]]"
       - "[[markov_blanket]]"
       - "[[philosophy_of_mind]]"
+aliases:
+  - extended_mind_theory
 ---
 
 # Extended Mind

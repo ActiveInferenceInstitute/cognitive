@@ -17,6 +17,8 @@ semantic_relations:
       - "[[wernicke_aphasia]]"
       - "[[neurolinguistics]]"
       - "[[language_processing_expanded]]"
+aliases:
+  - brocas_aphasia
 ---
 
 # Broca Aphasia

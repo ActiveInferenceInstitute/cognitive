@@ -18,6 +18,8 @@ semantic_relations:
       - "[[pragmatism]]"
       - "[[philosophy_of_mind]]"
       - "[[philosophy_topics]]"
+aliases:
+  - analytic philosophy
 ---
 
 # Analytic Philosophy

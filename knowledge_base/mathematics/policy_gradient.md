@@ -18,6 +18,8 @@ semantic_relations:
       - "[[policy_selection]]"
       - "[[reward_function]]"
       - "[[gradient_descent]]"
+aliases:
+  - policy_gradients
 ---
 
 # Policy Gradient

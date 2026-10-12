@@ -15,6 +15,8 @@ semantic_relations:
       - "[[bayesian_inference]]"
       - "[[bayesian_brain]]"
       - "[[active_inference]]"
+aliases:
+  - bayesian learning
 ---
 
 # Bayesian Learning

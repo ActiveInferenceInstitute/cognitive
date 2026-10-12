@@ -16,6 +16,8 @@ semantic_relations:
       - "[[hierarchical_processing]]"
       - "[[predictive_coding]]"
       - "[[neural_computation]]"
+aliases:
+  - feedforward_processing
 ---
 
 # Feedforward Processing

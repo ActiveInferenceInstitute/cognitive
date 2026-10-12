@@ -18,6 +18,7 @@ semantic_relations:
       - "[[knowledge_base/cognitive/visual_perception]]"
 aliases:
   - gibson_ecological
+  - ecological psychology
 ---
 
 # Ecological Psychology

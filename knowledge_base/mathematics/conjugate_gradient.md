@@ -18,6 +18,8 @@ semantic_relations:
       - "[[linear_algebra]]"
       - "[[optimization_methods]]"
       - "[[natural_gradients]]"
+aliases:
+  - conjugate_gradients
 ---
 
 # Conjugate Gradient

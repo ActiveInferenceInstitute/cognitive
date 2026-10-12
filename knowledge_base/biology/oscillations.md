@@ -17,6 +17,7 @@ semantic_relations:
       - "[[electrophysiology]]"
 aliases:
   - brain_rhythms
+  - oscillation
 ---
 
 # Neural Oscillations

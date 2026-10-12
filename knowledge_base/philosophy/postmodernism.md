@@ -17,6 +17,8 @@ semantic_relations:
       - "[[constructivism]]"
       - "[[social_epistemology]]"
       - "[[pragmatism]]"
+aliases:
+  - post-modernism
 ---
 
 # Postmodernism

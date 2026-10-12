@@ -9,7 +9,7 @@ status: stable
 [![quality](https://github.com/ActiveInferenceInstitute/cognitive/actions/workflows/quality.yml/badge.svg)](https://github.com/ActiveInferenceInstitute/cognitive/actions/workflows/quality.yml)
 
 A tested Python package for **Active Inference** agents, and an Obsidian vault of
-more than 1,000 linked pages that explain the mathematics, biology, cognitive
+about 1,800 linked pages that explain the mathematics, biology, cognitive
 science and philosophy behind it. The package is the executable reference; the
 vault is the explanation. Each side points at the other.
 

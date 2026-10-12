@@ -18,6 +18,8 @@ semantic_relations:
       - "[[hyperprior]]"
       - "[[empirical_prior]]"
       - "[[prior_beliefs]]"
+aliases:
+  - prior_distributions
 ---
 
 # Prior Distribution

@@ -15,6 +15,8 @@ semantic_relations:
       - "[[dorsolateral_prefrontal]]"
       - "[[medial_prefrontal]]"
       - "[[executive_functions]]"
+aliases:
+  - prefrontal_cortex
 ---
 
 # Prefrontal Cortex

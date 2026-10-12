@@ -17,6 +17,8 @@ semantic_relations:
       - "[[decision_making]]"
       - "[[exploration_exploitation]]"
       - "[[resource_allocation]]"
+aliases:
+  - opportunity_costs
 ---
 
 # Opportunity Cost

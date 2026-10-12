@@ -23,6 +23,8 @@ semantic_relations:
     links:
       - "[[belief_updating]]"
       - "[[active_inference]]"
+aliases:
+  - observation_space
 ---
 
 

@@ -18,6 +18,9 @@ semantic_relations:
       - "[[mirror_system]]"
       - "[[action_planning]]"
       - "[[posterior_parietal]]"
+aliases:
+  - premotor
+  - premotor_areas
 ---
 
 # Premotor Cortex

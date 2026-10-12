@@ -19,6 +19,7 @@ aliases:
   - access_consciousness
   - broadcast
   - broadcast_mechanisms
+  - global_workspace_theory
 ---
 
 # Global Workspace Theory

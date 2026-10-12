@@ -18,6 +18,8 @@ semantic_relations:
       - "[[amygdala]]"
       - "[[limbic_system]]"
       - "[[decision_making]]"
+aliases:
+  - stress_responses
 ---
 
 # Stress Response

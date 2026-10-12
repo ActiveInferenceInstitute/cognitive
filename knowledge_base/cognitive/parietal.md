@@ -17,6 +17,7 @@ semantic_relations:
       - "[[spatial_attention]]"
 aliases:
   - parietal_areas
+  - parietal_cortex
 ---
 
 # Parietal Cortex

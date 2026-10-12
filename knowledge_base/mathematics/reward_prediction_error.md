@@ -18,6 +18,8 @@ semantic_relations:
       - "[[prediction_error]]"
       - "[[precision_weighting]]"
       - "[[reinforcement_learning]]"
+aliases:
+  - reward_prediction_errors
 ---
 
 # Reward Prediction Error

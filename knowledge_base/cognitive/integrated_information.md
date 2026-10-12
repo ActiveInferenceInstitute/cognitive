@@ -13,6 +13,7 @@ aliases:
   - phi_measure
   - phi_measures
   - tononi_phi
+  - integrated_information_theory
 semantic_relations:
   - type: relates
     links:

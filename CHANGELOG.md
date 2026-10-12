@@ -201,17 +201,21 @@ produced a wrong or arbitrary result now raise `ValueError`.
 
 ### Documentation
 
-- The knowledge base gained 1,160 concept pages and 72 one-paragraph pages were rewritten
-  into articles. The latest 802 cover names that existing pages already linked: named brain
-  regions, clinical conditions and cognitive effects; perception, memory, attention, motor
-  control and language; probability, information theory, dynamics, control, optimisation and
-  game theory; network science; philosophy of mind, ethics, logic and the philosophy of the
-  special sciences; and ecology, colony biology, cell signalling and research methods.
+- The knowledge base gained 1,348 concept pages and 72 one-paragraph pages were rewritten
+  into articles. The latest 990 cover names that existing pages already linked: named brain
+  regions, cortical layers and microcircuits, clinical conditions and cognitive effects;
+  perception, memory, attention, motor control, language and social cognition; probability,
+  information theory, dynamics, control, optimisation, machine learning, textbook algorithms
+  and category theory; philosophy of mind, ethics, logic, phenomenology and the philosophy of
+  the special sciences; and ecology, colony biology, cell signalling and research methods.
   Worked examples are computed with the package and quote the numbers it returns. Every
   reference was checked against PubMed, Crossref and publisher records, and the checks
   corrected titles, authors, page ranges, attributions, current Stanford Encyclopedia of
   Philosophy authors, missing hypotheses in theorem statements, a sign error in the Onsager
-  flow decomposition, and a number of over-stated claims.
+  flow decomposition, a false claim about non-Lipschitz activations, and a number of
+  over-stated claims. A pass over the classic works the vault cites (Shannon, Pearl, Koller
+  and Friedman, Broadbent, Baddeley and Hitch, Rescorla and Wagner, Watson, Ryle, Miller,
+  Tolman, Hebb, Jaynes, Friston 2010) found one wrong entry, a Helmholtz citation.
 - About 165 existing pages that cited nothing now carry a verified `## References` list
   (about 850 entries, each checked against Crossref, PubMed, arXiv, publisher or
   encyclopedia records). Reviewing those pages found and fixed real errors:
@@ -233,7 +237,7 @@ produced a wrong or arbitrary result now raise `ValueError`.
 - Link lists now carry accurate glosses (4,987 rewritten). About 6,000 links to generic
   labels that no page should exist for (`new_methods`, `version_control`,
   `adaptive_strategies`) were unlinked, and existing pages gained `aliases:` so a
-  synonym or variant name opens the page that covers it. About 570 `[[concept]]`
+  synonym or variant name opens the page that covers it. About 355 `[[concept]]`
   names remain without a page: each is a specific, well-defined concept (mostly advanced
   mathematics, physics and regional philosophical traditions) kept as a marker for a
   page worth writing.

@@ -144,7 +144,7 @@ This yields prediction error minimization in neural circuits.
 ## Related Work
 
 ### Precursors
-- Helmholtz (1867) - Free energy in thermodynamics
+- Helmholtz (1867) - Handbuch der physiologischen Optik, perception as unconscious inference
 - Dayan et al. (1995) - Helmholtz machine
 - Rao & Ballard (1999) - Predictive coding
 

@@ -17,6 +17,9 @@ semantic_relations:
       - "[[ltp]]"
       - "[[ltd]]"
       - "[[free_energy_principle]]"
+aliases:
+  - spike_timing_plasticity
+  - stdp
 ---
 
 # Spike-Timing-Dependent Plasticity

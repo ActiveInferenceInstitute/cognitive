@@ -17,6 +17,8 @@ semantic_relations:
       - "[[broca_aphasia]]"
       - "[[superior_temporal]]"
       - "[[language_comprehension]]"
+aliases:
+  - wernickes_aphasia
 ---
 
 # Wernicke Aphasia

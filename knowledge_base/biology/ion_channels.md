@@ -18,6 +18,8 @@ semantic_relations:
       - "[[synaptic_plasticity]]"
       - "[[cell_biology]]"
       - "[[protein_structure]]"
+aliases:
+  - ion_channel
 ---
 
 # Ion Channels

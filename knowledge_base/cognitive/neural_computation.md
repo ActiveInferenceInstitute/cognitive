@@ -17,6 +17,8 @@ semantic_relations:
       - "[[information_processing]]"
       - "[[neural_networks]]"
       - "[[cognitive_architecture]]"
+aliases:
+  - neural computation
 ---
 
 

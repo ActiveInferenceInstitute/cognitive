@@ -18,6 +18,8 @@ semantic_relations:
       - "[[motor_cortex]]"
       - "[[primary_motor]]"
       - "[[neural_coding]]"
+aliases:
+  - population_vectors
 ---
 
 # Population Vector

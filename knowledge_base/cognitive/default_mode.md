@@ -18,6 +18,7 @@ semantic_relations:
       - "[[predictive_processing]]"
 aliases:
   - default_network
+  - default_mode_network
 ---
 
 # Default Mode Network
