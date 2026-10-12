@@ -12,6 +12,20 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ## [Unreleased]
 
+### Added
+
+- **The knowledge base as RDF for the Open Knowledge Network.** `scripts.export_rdf`
+  (`cognitive-export-rdf`) writes every knowledge-base page and link as N-Quads and Turtle in the
+  graph `https://purl.org/okn/frink/kg/cognitive-kb`, with entity IRIs under
+  `https://purl.org/okn/frink/kg/cognitive-kb/`. Pages are `skos:Concept`s (navigation pages are
+  `schema:CollectionPage`s) with Dublin Core and schema.org properties; `relates`, `part_of` and
+  `organizes` map to `skos:related`, `dcterms:isPartOf` and `dcterms:hasPart`, body links to
+  `dcterms:references`, and every other relation name to a term declared a sub-property of
+  `skos:semanticRelation`. Provenance is PROV-O, the dataset is described with DCAT and VoID.
+  The output is deterministic and uses the link resolver of `verify_links`. `docs/okn/` holds the
+  prose description, vocabulary mapping, registry entry, a Turtle sample and generated statistics;
+  `validate_docs` fails when the sample or statistics are stale.
+
 ### Behaviour change
 
 Each item names what moved and why. Inputs that were previously accepted and

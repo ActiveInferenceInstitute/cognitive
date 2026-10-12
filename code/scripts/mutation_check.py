@@ -50,6 +50,17 @@ class Mutation:
 
 MUTATIONS: tuple[Mutation, ...] = (
     Mutation(
+        name="rdf_export_normalises_parent_directory_links",
+        path="code/scripts/export_rdf.py",
+        original=('    resolved = Path(os.path.normpath(resolved))  # may carry ".." segments\n'),
+        mutated='    resolved = Path(resolved)  # may carry ".." segments\n',
+        rationale=(
+            "A link such as [[../mathematics/x]] resolved to a path that still held "
+            "'..', so the exported edge pointed at an IRI no page has."
+        ),
+        tests=("code/tests/test_export_rdf.py",),
+    ),
+    Mutation(
         name="efe_subtracts_epistemic",
         path="code/tools/src/models/active_inference/generative_model.py",
         original="        total = risk + ambiguity\n",

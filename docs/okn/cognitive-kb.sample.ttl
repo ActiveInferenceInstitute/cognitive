@@ -1,0 +1,151 @@
+# Sample of the cognitive-kb graph: the dataset description, three pages described
+# in full, and the terms those pages use. The complete graph is produced by
+# `python -m scripts.export_rdf`. Regenerate this file with `--write-docs`.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix ckb: <https://purl.org/okn/frink/kg/cognitive-kb/vocab/> .
+@prefix rel: <https://purl.org/okn/frink/kg/cognitive-kb/relation/> .
+@prefix page: <https://purl.org/okn/frink/kg/cognitive-kb/page/> .
+@prefix domain: <https://purl.org/okn/frink/kg/cognitive-kb/domain/> .
+@prefix kg: <https://purl.org/okn/frink/kg/cognitive-kb/> .
+
+<https://github.com/ActiveInferenceInstitute/cognitive/blob/main/code/scripts/export_rdf.py>
+    a prov:SoftwareAgent, schema:SoftwareSourceCode .
+
+kg:activity\/export
+    a prov:Activity ;
+    prov:used <https://github.com/ActiveInferenceInstitute/cognitive> ;
+    prov:wasAssociatedWith <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/code/scripts/export_rdf.py> .
+
+kg:dataset
+    a void:Dataset, dcat:Dataset ;
+    dcterms:creator <https://activeinference.institute/> ;
+    dcterms:description "Concept pages on Active Inference and the sciences around it, linked by typed and untyped relations, with citation records and navigation pages."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+    dcterms:modified "2026-10-11"^^xsd:date ;
+    dcterms:publisher <https://activeinference.institute/> ;
+    dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive> ;
+    dcterms:title "Cognitive Active Inference knowledge base"@en ;
+    void:vocabulary <http://purl.org/dc/terms/>, <http://www.w3.org/2004/02/skos/core#>, <http://www.w3.org/ns/prov#>, <https://schema.org/> ;
+    dcat:landingPage <https://github.com/ActiveInferenceInstitute/cognitive> ;
+    prov:wasDerivedFrom <https://github.com/ActiveInferenceInstitute/cognitive> ;
+    prov:wasGeneratedBy kg:activity\/export .
+
+domain:citations
+    a skos:Collection ;
+    void:inDataset kg:dataset ;
+    skos:member page:citations\/README, page:citations\/smith_2022 ;
+    skos:prefLabel "Citations"@en .
+
+domain:mathematics
+    a skos:Collection ;
+    void:inDataset kg:dataset ;
+    skos:member page:mathematics\/markov_blanket ;
+    skos:prefLabel "Mathematics"@en .
+
+page:citations\/README
+    a schema:CollectionPage, schema:CreativeWork ;
+    dcterms:references page:citations\/amari_2000, page:citations\/andrews_2021, page:citations\/bogacz_2017, page:citations\/bruineberg_2018, page:citations\/buckley_2017, page:citations\/clark_2013, page:citations\/constant_2018, page:citations\/da_costa_2020, page:citations\/da_costa_2021_bayesian, page:citations\/friston_2006, page:citations\/friston_2009, page:citations\/friston_2010, page:citations\/friston_2012, page:citations\/friston_2013, page:citations\/friston_2015_knowing, page:citations\/friston_2016_active_inference_process, page:citations\/friston_2017_curiosity, page:citations\/friston_2019, page:citations\/friston_2019_particular, page:citations\/hesp_2021, page:citations\/hohwy_2013, page:citations\/kirchhoff_2018, page:citations\/lindley_1956, page:citations\/mackay_2003, page:citations\/millidge_2021, page:citations\/parr_2022, page:citations\/parr_friston_2017, page:citations\/parr_friston_2019, page:citations\/parr_pezzulo_friston_2022, page:citations\/pezzulo_2015, page:citations\/ramstead_2018, page:citations\/sajid_2021, page:citations\/seth_2021, page:citations\/smith_2022, page:citations\/sutton_2018, page:citations\/tschantz_2020 ;
+    dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/citations/README.md> ;
+    dcterms:title "Citations Reference Notes"@en ;
+    ckb:pageType "overview" ;
+    ckb:status "stable" .
+
+page:citations\/smith_2022
+    a skos:Concept, schema:CreativeWork ;
+    dcterms:created "2025-01-01"^^xsd:date ;
+    dcterms:references page:citations\/buckley_2017, page:citations\/da_costa_2020, page:citations\/friston_2017_curiosity, page:citations\/hesp_2021, page:citations\/parr_pezzulo_friston_2022, page:citations\/sajid_2021 ;
+    dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/citations/smith_2022.md> ;
+    dcterms:title "A Step-by-Step Tutorial on Active Inference and Its Application to Empirical Data"@en ;
+    skos:inScheme kg:scheme ;
+    skos:prefLabel "A Step-by-Step Tutorial on Active Inference and Its Application to Empirical Data"@en ;
+    rel:cited_by page:citations\/parr_pezzulo_friston_2022 ;
+    rel:extends page:citations\/da_costa_2020, page:citations\/friston_2017_curiosity ;
+    rel:foundational_for page:mathematics\/active_inference_pomdp ;
+    ckb:journal "Journal of Mathematical Psychology" ;
+    ckb:pageType "citation" ;
+    ckb:status "verified" ;
+    schema:author "Christopher J. Whyte", "Karl J. Friston", "Ryan Smith" ;
+    schema:datePublished "2022"^^xsd:gYear ;
+    schema:keywords "active_inference", "computational_modeling", "empirical", "model_fitting", "tutorial" ;
+    schema:sameAs <https://doi.org/10.1016/j.jmp.2021.102632> .
+
+page:mathematics\/markov_blanket
+    a skos:Concept, schema:CreativeWork ;
+    dcterms:created "2024-03-15"^^xsd:date ;
+    dcterms:references page:cognitive\/active_inference, page:mathematics\/conditional_independence, page:mathematics\/free_energy_principle, page:mathematics\/probabilistic_graphical_models ;
+    dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/mathematics/markov_blanket.md> ;
+    dcterms:title "Markov Blanket"@en ;
+    skos:inScheme kg:scheme ;
+    skos:prefLabel "Markov Blanket"@en ;
+    skos:related page:mathematics\/bayesian_networks, page:mathematics\/information_theory, page:mathematics\/statistical_physics ;
+    rel:foundation_for page:cognitive\/active_inference, page:mathematics\/free_energy_principle ;
+    rel:implements page:mathematics\/conditional_independence, page:mathematics\/probabilistic_graphical_models ;
+    ckb:complexity "intermediate" ;
+    ckb:pageType "mathematical_concept" ;
+    ckb:status "stable" ;
+    schema:keywords "graphical_models", "mathematics", "probability", "statistical_independence" .
+
+rel:cited_by
+    a rdf:Property ;
+    rdfs:comment "Relation 'cited_by' as written in a page's semantic_relations; read it from the page that declares it to the page it names."@en ;
+    rdfs:label "cited by"@en ;
+    rdfs:subPropertyOf skos:semanticRelation .
+
+rel:extends
+    a rdf:Property ;
+    rdfs:comment "Relation 'extends' as written in a page's semantic_relations; read it from the page that declares it to the page it names."@en ;
+    rdfs:label "extends"@en ;
+    rdfs:subPropertyOf skos:semanticRelation .
+
+rel:foundation_for
+    a rdf:Property ;
+    rdfs:comment "Relation 'foundation_for' as written in a page's semantic_relations; read it from the page that declares it to the page it names."@en ;
+    rdfs:label "foundation for"@en ;
+    rdfs:subPropertyOf skos:semanticRelation .
+
+rel:foundational_for
+    a rdf:Property ;
+    rdfs:comment "Relation 'foundational_for' as written in a page's semantic_relations; read it from the page that declares it to the page it names."@en ;
+    rdfs:label "foundational for"@en ;
+    rdfs:subPropertyOf skos:semanticRelation .
+
+rel:implements
+    a rdf:Property ;
+    rdfs:comment "Relation 'implements' as written in a page's semantic_relations; read it from the page that declares it to the page it names."@en ;
+    rdfs:label "implements"@en ;
+    rdfs:subPropertyOf skos:semanticRelation .
+
+kg:scheme
+    a skos:ConceptScheme ;
+    dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+    dcterms:title "Cognitive Active Inference concepts"@en ;
+    void:inDataset kg:dataset .
+
+ckb:complexity
+    a rdf:Property ;
+    rdfs:comment "The page's declared difficulty level."@en ;
+    rdfs:label "complexity"@en .
+
+ckb:journal
+    a rdf:Property ;
+    rdfs:comment "Journal named by a citation page."@en ;
+    rdfs:label "journal"@en .
+
+ckb:pageType
+    a rdf:Property ;
+    rdfs:comment "The page's `type` frontmatter value, for example mathematical_concept."@en ;
+    rdfs:label "pageType"@en .
+
+ckb:status
+    a rdf:Property ;
+    rdfs:comment "The page's editorial status, for example stable or verified."@en ;
+    rdfs:label "status"@en .

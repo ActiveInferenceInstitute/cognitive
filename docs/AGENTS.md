@@ -26,6 +26,7 @@ semantic_relations:
       - "[[manuscript/README|Manuscript]]"
       - "[[agents/README|Agent documentation]]"
       - "[[policy/README|Documentation term policy]]"
+      - "[[okn/README|Open Knowledge Network export]]"
 ---
 
 # Documentation instructions

@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from scripts.check_markdown_links import verify_markdown_link_report
+from scripts.export_rdf import stale_docs as stale_rdf_docs
 from scripts.kb_index import stale_catalogs
 from scripts.markdown_fences import iter_fenced_blocks
 from scripts.normalize_frontmatter import unquoted_links
@@ -241,6 +242,12 @@ def validate(root: str | Path = ".") -> dict[str, Any]:
         errors.append(
             f"{len(stale)} knowledge-base catalog(s) are missing or stale "
             f"(run kb_index.py --write): {', '.join(stale[:3])}"
+        )
+    stale_rdf = stale_rdf_docs(root_path)
+    if stale_rdf:
+        errors.append(
+            f"{len(stale_rdf)} OKN export file(s) are missing or stale "
+            f"(run export_rdf.py --write-docs): {', '.join(stale_rdf)}"
         )
     errors.extend(_validate_exports())
     manuscript = _validate_manuscript(root_path)

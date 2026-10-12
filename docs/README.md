@@ -19,6 +19,7 @@ semantic_relations:
       - "[[agents/README|Agent documentation]]"
       - "[[manuscript/README|Manuscript]]"
       - "[[policy/README|Documentation term policy]]"
+      - "[[okn/README|Open Knowledge Network export]]"
       - "[[repo_docs/README|Repository documentation]]"
 ---
 
@@ -48,6 +49,7 @@ working entry points.
 - [`agents/`](agents/README.md): navigation for agent documentation.
 - [`manuscript/`](manuscript/README.md): the executable manuscript.
 - [`policy/`](policy/README.md): the term policy the documentation gate enforces.
+- [`okn/`](okn/README.md): the knowledge base as RDF for the Open Knowledge Network.
 - [`examples/`](examples/README.md): validated example entry points.
 - [`guides/`](guides/README.md): application notes and learning paths.
 - [`implementation/`](implementation/README.md): implementation patterns and the

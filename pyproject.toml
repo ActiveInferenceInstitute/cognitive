@@ -46,6 +46,7 @@ cognitive-benchmark = "cognitive.benchmarks:main"
 cognitive-validate-docs = "scripts.validate_docs:main"
 cognitive-normalize-frontmatter = "scripts.normalize_frontmatter:main"
 cognitive-kb-index = "scripts.kb_index:main"
+cognitive-export-rdf = "scripts.export_rdf:main"
 cognitive-build-manuscript = "scripts.build_manuscript:main"
 cognitive-mutation-check = "scripts.mutation_check:main"
 

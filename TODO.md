@@ -32,6 +32,11 @@ history; this file is not a log. Remove an item when it is done.
   code). Trim them to the few snippets that carry the idea, or replace them with runs of the
   real package, and keep the parameter values labelled as illustrative until then.
 
+- **Identifier alignment for the RDF graph.** Concept pages are not yet linked to external
+  identifiers (Wikidata, MeSH, a mathematics or physics ontology); only citation pages link
+  out, through their DOIs. Align them with a reviewer who can check each match, and add the
+  links as `skos:exactMatch` or `skos:closeMatch` in `scripts/export_rdf.py`.
+
 ## Code
 
 - **Aggregation default.** Decide whether `policy_aggregation` should default to

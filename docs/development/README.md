@@ -27,6 +27,7 @@ python code/scripts/verify_links.py . --json
 python code/scripts/check_markdown_links.py . --json
 python code/scripts/normalize_frontmatter.py --check .
 python code/scripts/kb_index.py --check .
+python code/scripts/export_rdf.py --check .
 python -m scripts.build_manuscript --no-render --output "${TMPDIR:-/tmp}/manuscript"
 cognitive-benchmark --repetitions 1 --output "${TMPDIR:-/tmp}/benchmarks.json"
 python -m scripts.mutation_check
@@ -55,7 +56,9 @@ only).
 standard Markdown link check, the `semantic_relations` quoting check
 (`normalize_frontmatter.py`, which fixes drift with `--write`), and the
 knowledge-base catalog check (`kb_index.py`, which regenerates each domain's
-`catalog.md` with `--write`). The standalone `check_markdown_links.py` and
+`catalog.md` with `--write`) and the check that the committed RDF sample and statistics in
+[`docs/okn`](../okn/README.md) match the pages (`export_rdf.py --write-docs` refreshes
+them). The standalone `check_markdown_links.py` and
 `verify_links.py` scripts report heading-anchor mismatches for standard links
 and for wiki links with a `#fragment`; anchor mismatches are advisory and do not
 fail the gate. The gates are listed in
