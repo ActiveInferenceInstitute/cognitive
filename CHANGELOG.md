@@ -201,14 +201,17 @@ produced a wrong or arbitrary result now raise `ValueError`.
 
 ### Documentation
 
-- The knowledge base gained 753 concept pages and 72 one-paragraph pages were rewritten
-  into articles. The latest 395 pages cover names that existing pages already linked:
-  named brain regions, clinical conditions and cognitive effects; probability, information
-  theory, dynamics and control; network science; philosophical positions and ethics; and
-  ecology, colony biology and molecular biology. Worked examples are computed with the
-  package and quote the numbers it returns. Every reference was checked against
-  PubMed, Crossref and publisher records, and the checks corrected titles, authors, page
-  ranges, attributions and a number of over-stated claims.
+- The knowledge base gained 1,160 concept pages and 72 one-paragraph pages were rewritten
+  into articles. The latest 802 cover names that existing pages already linked: named brain
+  regions, clinical conditions and cognitive effects; perception, memory, attention, motor
+  control and language; probability, information theory, dynamics, control, optimisation and
+  game theory; network science; philosophy of mind, ethics, logic and the philosophy of the
+  special sciences; and ecology, colony biology, cell signalling and research methods.
+  Worked examples are computed with the package and quote the numbers it returns. Every
+  reference was checked against PubMed, Crossref and publisher records, and the checks
+  corrected titles, authors, page ranges, attributions, current Stanford Encyclopedia of
+  Philosophy authors, missing hypotheses in theorem statements, a sign error in the Onsager
+  flow decomposition, and a number of over-stated claims.
 - About 165 existing pages that cited nothing now carry a verified `## References` list
   (about 850 entries, each checked against Crossref, PubMed, arXiv, publisher or
   encyclopedia records). Reviewing those pages found and fixed real errors:
@@ -230,7 +233,7 @@ produced a wrong or arbitrary result now raise `ValueError`.
 - Link lists now carry accurate glosses (4,987 rewritten). About 6,000 links to generic
   labels that no page should exist for (`new_methods`, `version_control`,
   `adaptive_strategies`) were unlinked, and existing pages gained `aliases:` so a
-  synonym or variant name opens the page that covers it. About 980 `[[concept]]`
+  synonym or variant name opens the page that covers it. About 570 `[[concept]]`
   names remain without a page: each is a specific, well-defined concept (mostly advanced
   mathematics, physics and regional philosophical traditions) kept as a marker for a
   page worth writing.
