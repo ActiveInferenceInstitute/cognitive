@@ -71,7 +71,8 @@ The dataset is a `dcat:Dataset` and `void:Dataset` with `dcterms:title`, `dcterm
 Concept pages carry an optional `wikidata: Q…` key that the export writes as `skos:closeMatch`.
 The identifiers were proposed by searching Wikidata for each page title and alias, keeping only
 items whose label matches, and then screened by a language model that compared the item's
-description with the page's. A person has not checked them one by one, so they are published as
+description with the page's. A second, independent pass re-judged every match and dropped the
+ones it doubted. A person has not checked them one by one, so they are published as
 `skos:closeMatch`, not `skos:exactMatch`: the items agree in meaning with the page, but a wrong
 one may remain. Pages without a confident match have no key, and a missing link is preferred to a
 wrong one. To report or fix a match, edit the page's `wikidata` value.

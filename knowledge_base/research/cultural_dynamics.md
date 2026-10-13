@@ -19,7 +19,6 @@ semantic_relations:
       - "[[knowledge_base/systems/network_theory]]"
       - "[[knowledge_base/systems/social_systems]]"
       - "[[knowledge_base/research/cognitive_security]]"
-wikidata: Q119269283
 ---
 
 # Cultural Dynamics

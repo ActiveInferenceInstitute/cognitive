@@ -20,7 +20,6 @@ semantic_relations:
       - "[[active_inference_pomdp]]"
 aliases:
   - state_space_theory
-wikidata: Q230930
 ---
 
 # State Space

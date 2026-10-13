@@ -11,7 +11,8 @@ updated: 2026-10-12
 The FRINK registry takes a graph as a pull request that adds one Markdown file to
 `docs/registry/kgs/` of [`frink-okn/okn-registry`](https://github.com/frink-okn/okn-registry),
 following its [contribution guide](https://registry.okn.us/registry/contribute/). Save the
-block below as `docs/registry/kgs/cognitive-kb.md`.
+block below as `docs/registry/kgs/cognitive-kb.md`. It was submitted as
+[pull request 535](https://github.com/frink-okn/okn-registry/pull/535).
 
 The `sparql` and `tpf` fields are left out on purpose. The registry asks contributors to omit
 them until the graph has been uploaded and converted, and RENCI adds them once the graph's own
@@ -42,7 +43,7 @@ philosophy, systems, ontology, citations). Edges are typed relations from each p
 `semantic_relations` (`skos:related`, `dcterms:isPartOf`, `dcterms:hasPart` or a term under
 `https://purl.org/okn/frink/kg/cognitive-kb/relation/` that is a sub-property of
 `skos:semanticRelation`) and untyped body links (`dcterms:references`). Citation pages carry
-authors, year and DOI (`schema:sameAs`). Provenance is `prov:wasDerivedFrom` the public
+authors, year and DOI (`schema:sameAs`), and many concept pages link to the matching Wikidata item with `skos:closeMatch`. Provenance is `prov:wasDerivedFrom` the public
 repository; the licence is CC BY-NC-SA 4.0.
 
 Entity IRIs are under `https://purl.org/okn/frink/kg/cognitive-kb/`; the named graph is

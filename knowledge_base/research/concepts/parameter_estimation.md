@@ -11,7 +11,6 @@ semantic_relations:
       - "[[bayesian_analysis]]"
       - "[[knowledge_base/mathematics/bayesian_generative_models]]"
       - "[[knowledge_base/cognitive/learning_mechanisms]]"
-wikidata: Q131147154
 ---
 
 # Parameter Estimation

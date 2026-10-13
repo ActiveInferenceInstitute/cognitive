@@ -17,7 +17,6 @@ semantic_relations:
       - "[[variational_free_energy]]"
       - "[[information_gain]]"
       - "[[expectation_maximization]]"
-wikidata: Q107203920
 ---
 
 # Jensen Inequality

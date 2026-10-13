@@ -53,7 +53,7 @@ a computed result are marked **behaviour change** and say what moved and why.
   plain text. The expert-only names are listed in the backlog. A second pass re-checked every reference on the new pages against Crossref, SEP,
   IEP, nLab or catalogue records and corrected or softened about 30 pages' claims.
 - **Wikidata alignment.** A concept page may carry `wikidata: Q…`, which the RDF export writes as
-  `skos:closeMatch`. 720 pages have one, found by label search and screened by a language model;
+  `skos:closeMatch`. 697 pages have one, found by label search and screened twice by a language model;
   see `docs/okn/vocabulary.md`.
 - `verify_links` walks directories in sorted order. A link whose name matches several pages
   (a repeated file name or alias) resolved to whichever page the filesystem listed first, so the

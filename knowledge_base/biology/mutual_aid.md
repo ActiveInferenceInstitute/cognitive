@@ -17,7 +17,6 @@ semantic_relations:
       - "[[evolutionary_game_theory]]"
       - "[[evolution_of_eusociality]]"
       - "[[natural_selection]]"
-wikidata: Q766238
 ---
 
 # Mutual Aid

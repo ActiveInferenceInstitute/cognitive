@@ -17,7 +17,6 @@ semantic_relations:
       - "[[social_justice]]"
       - "[[trust_building]]"
       - "[[social_cognition]]"
-wikidata: Q130382265
 ---
 
 # Epistemic Justice

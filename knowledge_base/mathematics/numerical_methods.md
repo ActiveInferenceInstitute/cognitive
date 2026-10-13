@@ -15,7 +15,6 @@ semantic_relations:
       - "[[entropy]]"
 aliases:
   - numerical_analysis
-wikidata: Q11216
 ---
 
 

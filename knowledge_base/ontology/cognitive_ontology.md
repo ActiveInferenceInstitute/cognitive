@@ -21,7 +21,6 @@ semantic_relations:
       - "[[knowledge_base/systems/systems_theory]]"
       - "[[knowledge_base/mathematics/category_theory]]"
       - "[[knowledge_base/systems/complex_systems]]"
-wikidata: Q5141227
 ---
 
 ---

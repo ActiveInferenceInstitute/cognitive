@@ -18,7 +18,6 @@ semantic_relations:
       - "[[peircean_semiotics]]"
       - "[[pragmatism]]"
       - "[[knowledge_representation]]"
-wikidata: Q2672965
 ---
 
 # Symbolic Logic

@@ -16,10 +16,10 @@ pages, then regenerate; never edit this file.
 | Concepts (`skos:Concept`) | 2097 |
 | Navigation pages (`schema:CollectionPage`) | 68 |
 | Redirect pages | 2 |
-| Pages aligned to Wikidata (`skos:closeMatch`) | 720 |
+| Pages aligned to Wikidata (`skos:closeMatch`) | 697 |
 | Typed edges from `semantic_relations` | 10762 |
 | Untyped edges from body links (`dcterms:references`) | 23908 |
-| Triples | 64734 |
+| Triples | 64711 |
 | Links to concepts that have no page yet (not exported) | 0 |
 | Links to files outside the knowledge base (not exported) | 725 |
 | Self-links dropped | 71 |

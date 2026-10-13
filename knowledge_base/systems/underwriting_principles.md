@@ -4,7 +4,6 @@ type: concept
 status: stable
 aliases:
   - underwriting
-wikidata: Q1898080
 ---
 
 # Underwriting Principles

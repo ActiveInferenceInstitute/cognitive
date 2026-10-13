@@ -17,7 +17,6 @@ semantic_relations:
       - "[[religious_epistemology]]"
       - "[[moral_relativism]]"
       - "[[faith_and_reason]]"
-wikidata: Q2002426
 ---
 
 # Religious Pluralism
