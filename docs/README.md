@@ -103,5 +103,6 @@ they report.
 
 ## Licensing
 
-Code is MIT licensed under [`../LICENSE`](../LICENSE). Documentation and
-knowledge-base pages carry CC BY-NC-SA 4.0 notices where applicable.
+Code is MIT licensed under [`../LICENSE`](../LICENSE). Repository-owned knowledge-base
+content and graph exports are CC BY 4.0 under [`../LICENSE-KNOWLEDGE-BASE.md`](../LICENSE-KNOWLEDGE-BASE.md).
+Other documentation remains CC BY-NC-SA 4.0.

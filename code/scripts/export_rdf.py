@@ -37,6 +37,7 @@ Usage::
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -90,7 +91,7 @@ RELATION = BASE + "relation/"
 SOURCE_REPOSITORY = "https://github.com/ActiveInferenceInstitute/cognitive"
 EXPORTER_URL = SOURCE_REPOSITORY + "/blob/main/code/scripts/export_rdf.py"
 ORGANISATION = "https://activeinference.institute/"
-LICENSE = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+LICENSE = "https://creativecommons.org/licenses/by/4.0/"
 
 DOCS_DIR = Path("docs/okn")
 SAMPLE_NAME = "cognitive-kb.sample.ttl"
@@ -352,6 +353,8 @@ def _describe_page(
         report.page_types[page_type] += 1
     source = f"{SOURCE_REPOSITORY}/blob/main/{KB_NAME}/{node_id}.md"
     graph.add(subject, iri(PREFIXES["dcterms"] + "source"), iri(quote(source, safe=":/-_.~")))
+    if frontmatter.get("license"):
+        graph.add(subject, iri(PREFIXES["dcterms"] + "license"), iri(str(frontmatter["license"])))
 
     parts = node_id.split("/")
     if len(parts) > 1:
@@ -500,6 +503,12 @@ def _describe_dataset(graph: Graph, modified: str) -> None:
     graph.add(dataset, iri(dcterms + "publisher"), iri(ORGANISATION))
     graph.add(dataset, iri(dcterms + "source"), iri(SOURCE_REPOSITORY))
     graph.add(dataset, iri(PREFIXES["dcat"] + "landingPage"), iri(SOURCE_REPOSITORY))
+    for target in ("wikidata", "identifier-mappings", "ubergraph"):
+        graph.add(
+            dataset,
+            iri(PREFIXES["rdfs"] + "seeAlso"),
+            iri("https://registry.okn.us/registry/kgs/" + target + "/"),
+        )
     graph.add(dataset, iri(PREFIXES["void"] + "vocabulary"), iri(PREFIXES["skos"]))
     graph.add(dataset, iri(PREFIXES["void"] + "vocabulary"), iri(dcterms))
     graph.add(dataset, iri(PREFIXES["void"] + "vocabulary"), iri(PREFIXES["schema"]))
@@ -751,6 +760,41 @@ def stale_docs(root: Path) -> list[str]:
     return sorted(stale)
 
 
+def submission_errors(graph: Graph) -> list[str]:
+    """Check machine-observable OKN criteria; acceptance remains a curator decision."""
+    errors: list[str] = []
+    license_predicate = iri(PREFIXES["dcterms"] + "license")
+    allowed = {
+        iri("https://creativecommons.org/licenses/by/4.0/"),
+        iri("https://creativecommons.org/publicdomain/zero/1.0/"),
+    }
+    for subject in (DATASET, SCHEME):
+        licenses = {o for s, p, o in graph.triples if s == iri(subject) and p == license_predicate}
+        if len(licenses) != 1 or not licenses <= allowed:
+            errors.append(f"{subject}: requires one CC-BY 4.0 or CC0 1.0 license")
+    for subject, predicate, obj in graph.triples:
+        if predicate == license_predicate and obj not in allowed:
+            errors.append(f"{subject}: incompatible license {obj}")
+    pages = {
+        s
+        for s, p, o in graph.triples
+        if p == iri(RDF_TYPE) and o == iri(PREFIXES["schema"] + "CreativeWork")
+    }
+    if not pages:
+        errors.append("graph contains no pages")
+    dangling = {o for _, _, o in graph.triples if o.startswith(iri(PAGE)[:-1]) and o not in pages}
+    if dangling:
+        errors.append(f"dangling page objects: {len(dangling)}")
+    if not any(
+        p == iri(PREFIXES["skos"] + "closeMatch") and s in pages for s, p, _ in graph.triples
+    ):
+        errors.append("no external concept mappings; document an interoperability review")
+    provenance = (iri(DATASET), iri(PREFIXES["prov"] + "wasDerivedFrom"), iri(SOURCE_REPOSITORY))
+    if provenance not in graph.triples:
+        errors.append("dataset source provenance is missing")
+    return sorted(set(errors))
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("root", nargs="?", default=".", help="repository root")
@@ -759,6 +803,9 @@ def main(argv: list[str] | None = None) -> int:
     )
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--check", action="store_true", help="exit 1 if docs/okn is stale")
+    mode.add_argument(
+        "--check-submission", action="store_true", help="exit 1 if machine OKN criteria fail"
+    )
     mode.add_argument(
         "--write-docs", action="store_true", help="refresh docs/okn sample and statistics"
     )
@@ -784,10 +831,41 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     graph, report = build_graph(root)
+    if args.check_submission:
+        errors = submission_errors(graph)
+        result = {
+            "machine_checks_passed": not errors,
+            "errors": errors,
+            "aligned_pages": report.aligned_pages,
+            "unresolved_links": report.unresolved_links,
+        }
+        print(json.dumps(result, indent=2))
+        return 1 if errors else 0
     out = (root / args.output) if not Path(args.output).is_absolute() else Path(args.output)
     out.mkdir(parents=True, exist_ok=True)
-    (out / "cognitive-kb.nq").write_text(to_nquads(graph), encoding="utf-8")
-    (out / "cognitive-kb.ttl").write_text(to_turtle(graph), encoding="utf-8")
+    artifacts = {"cognitive-kb.nq": to_nquads(graph), "cognitive-kb.ttl": to_turtle(graph)}
+    for name, content in artifacts.items():
+        (out / name).write_text(content, encoding="utf-8")
+    sources = sorted((root / KB_NAME).rglob("*.md"))
+    sources += [Path(__file__).resolve()]
+    if (root / "LICENSE-KNOWLEDGE-BASE.md").is_file():
+        sources.append(root / "LICENSE-KNOWLEDGE-BASE.md")
+    manifest = {
+        "graph": GRAPH,
+        "license": LICENSE,
+        "artifacts": {
+            name: hashlib.sha256(content.encode()).hexdigest()
+            for name, content in artifacts.items()
+        },
+        "sources": {
+            path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in sources
+            if path.is_relative_to(root)
+        },
+    }
+    (out / "manifest.json").write_text(
+        json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
     summary = {
         "pages": report.pages,
         "concepts": report.concepts,

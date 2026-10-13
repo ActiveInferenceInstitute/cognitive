@@ -129,7 +129,8 @@ Biofirm, Active Blockference, GeneralizedNotationNotation and materials for the
 Parr et al. 2022 textbook group. The Institute's default license for public materials is
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0), and
 individual repositories may use other terms. This repository releases its code under the
-MIT license and its documentation under CC BY-NC-SA 4.0; see
+MIT license, its repository-owned knowledge-base content and graph exports under
+CC BY 4.0, and its other documentation under CC BY-NC-SA 4.0; see
 [`LICENSE`](../../../LICENSE) and the [open-source page](https://activeinference.institute/open-source/).
 
 ## Getting involved

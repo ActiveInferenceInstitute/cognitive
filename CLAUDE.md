@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Cognitive Modeling Framework built on Active Inference principles. The repository is both a Python codebase and an Obsidian knowledge vault, with extensive markdown documentation interconnected via `[[wiki-style links]]`.
 
-**Dual license**: Code is MIT, documentation/knowledge base is CC BY-NC-SA 4.0.
+**Licenses**: Code is MIT; repository-owned knowledge-base content and graph exports are CC BY 4.0 (see LICENSE-KNOWLEDGE-BASE.md); other documentation is CC BY-NC-SA 4.0.
 
 ## Repository Architecture
 

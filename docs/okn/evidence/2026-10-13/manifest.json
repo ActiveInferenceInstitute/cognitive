@@ -1,0 +1,66 @@
+{
+  "observed_at": "2026-10-13T22:32:42.376166+00:00",
+  "endpoint": "https://apps.okn.us/federation/sparql",
+  "local_sha256": "1a489e6b726c9a038708b94ca49adbab25303c77f72ba515c6a9795d6f5f2a84",
+  "join_query_sha256": "27e2a1a31b80e76e96cac140dc70f425ec4fab1a6bb818549076344802152004",
+  "captures": [
+    {
+      "graph": "https://purl.org/okn/frink/kg/identifier-mappings",
+      "query_file": "identifier-mappings-0000.rq",
+      "response_file": "identifier-mappings-0000.json",
+      "query_sha256": "52d0ad777cb9a3d6e88e0902eb6d7fae2b71c586e176f04172fe3b39d4ed56dc",
+      "response_sha256": "f9a3f6792a7e729440869b6aaaf75eb65695c0bbdca9f96b1adc497817359ff4"
+    },
+    {
+      "graph": "https://purl.org/okn/frink/kg/identifier-mappings",
+      "query_file": "identifier-mappings-0100.rq",
+      "response_file": "identifier-mappings-0100.json",
+      "query_sha256": "9239ce1257eed13b1b0d7fcfc52423e543fee07ebb0dd89eb9f5416ee7761192",
+      "response_sha256": "f5a0f58ca094696c91ee77d74517b951f1b47bdd64860a82a099d7fe064bcae6"
+    },
+    {
+      "graph": "https://purl.org/okn/frink/kg/identifier-mappings",
+      "query_file": "identifier-mappings-0200.rq",
+      "response_file": "identifier-mappings-0200.json",
+      "query_sha256": "e048d610236912294d59675124665be8f08382feed13a913acb62e0c9635389e",
+      "response_sha256": "2982f69cc8f628f7a7199d4587bae7f2b66ef0a1a1be5925f0204f92ae700ebf"
+    },
+    {
+      "graph": "https://purl.org/okn/frink/kg/identifier-mappings",
+      "query_file": "identifier-mappings-0300.rq",
+      "response_file": "identifier-mappings-0300.json",
+      "query_sha256": "4391172a260a556202f89e58f03a506cdf96ba4ead5d0eff587b9947492ea846",
+      "response_sha256": "fbc78fbeaf1e062c7c17128fcd8b257ec58120f464d0ea9dde35ba04d0ae58d9"
+    },
+    {
+      "graph": "https://purl.org/okn/frink/kg/identifier-mappings",
+      "query_file": "identifier-mappings-0400.rq",
+      "response_file": "identifier-mappings-0400.json",
+      "query_sha256": "e2a73084f0319da0b90b6874a98280cbfceb2ee6b0fda25aadd9e366ba8c7a92",
+      "response_sha256": "06e629bc9e9858085388676f2d641290b3fa337c5508e36fd4bf8798dff78ef7"
+    },
+    {
+      "graph": "https://purl.org/okn/frink/kg/identifier-mappings",
+      "query_file": "identifier-mappings-0500.rq",
+      "response_file": "identifier-mappings-0500.json",
+      "query_sha256": "3f90c3d390db5011fa80f83b6319f50cc9ac450006c3fe8204b2706c8ca20b57",
+      "response_sha256": "c2b1cc0c71710bbe14555e1b29370500bb14b32daae68784857814c716b244fa"
+    },
+    {
+      "graph": "https://purl.org/okn/frink/kg/identifier-mappings",
+      "query_file": "identifier-mappings-0600.rq",
+      "response_file": "identifier-mappings-0600.json",
+      "query_sha256": "91951d0d4ad0ebe0241a8e9bf6a1d3a66b43ca1942979e511f5b573a7720e86d",
+      "response_sha256": "f8f7559e1a56240684917e441b480d8c1054ac56438014d7bb8201361f50c48d"
+    },
+    {
+      "graph": "https://purl.org/okn/frink/kg/ubergraph",
+      "query_file": "ubergraph-0000.rq",
+      "response_file": "ubergraph-0000.json",
+      "query_sha256": "b1b90e99c9a5f8c1b8f9cab1101d60afc1db8896245960fe9a248de36e9d32d6",
+      "response_sha256": "75ca04e4140c57ba569299d9120a02068908e8498080ed1bee326827d13c3bc5"
+    }
+  ],
+  "requested_wikidata_keys": 689,
+  "requested_obo_terms": 62
+}

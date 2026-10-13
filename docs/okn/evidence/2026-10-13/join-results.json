@@ -1,0 +1,351 @@
+{
+  "joined_rows": 43,
+  "matched_pages": 39,
+  "external_terms": 43,
+  "rows": [
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/axon_guidance",
+      "label": "Axon Guidance",
+      "wikidata": "http://www.wikidata.org/entity/Q2034716",
+      "external": "http://purl.obolibrary.org/obo/GO_0007411",
+      "externalLabel": "axon guidance",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/axon_guidance.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/biofilm_formation",
+      "label": "Biofilm Formation",
+      "wikidata": "http://www.wikidata.org/entity/Q21759980",
+      "external": "http://purl.obolibrary.org/obo/GO_0042710",
+      "externalLabel": "biofilm formation",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/biofilm_formation.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/cell_migration",
+      "label": "Cell Migration",
+      "wikidata": "http://www.wikidata.org/entity/Q189092",
+      "external": "http://purl.obolibrary.org/obo/GO_0016477",
+      "externalLabel": "cell migration",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/cell_migration.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/cortisol",
+      "label": "Cortisol",
+      "wikidata": "http://www.wikidata.org/entity/Q190875",
+      "external": "http://purl.obolibrary.org/obo/CHEBI_17650",
+      "externalLabel": "cortisol",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/cortisol.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/cytoskeleton",
+      "label": "Cytoskeleton",
+      "wikidata": "http://www.wikidata.org/entity/Q154626",
+      "external": "http://purl.obolibrary.org/obo/GO_0005856",
+      "externalLabel": "cytoskeleton",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/cytoskeleton.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/gene_expression",
+      "label": "Gene Expression",
+      "wikidata": "http://www.wikidata.org/entity/Q26972",
+      "external": "http://purl.obolibrary.org/obo/GO_0010467",
+      "externalLabel": "gene expression",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/gene_expression.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/locomotion",
+      "label": "Locomotion",
+      "wikidata": "http://www.wikidata.org/entity/Q2633862",
+      "external": "http://purl.obolibrary.org/obo/GO_0040011",
+      "externalLabel": "locomotion",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/locomotion.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/ltp",
+      "label": "Long-Term Potentiation",
+      "wikidata": "http://www.wikidata.org/entity/Q1805481",
+      "external": "http://purl.obolibrary.org/obo/GO_0060291",
+      "externalLabel": "long-term synaptic potentiation",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/ltp.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/myelination",
+      "label": "Myelination",
+      "wikidata": "http://www.wikidata.org/entity/Q14876135",
+      "external": "http://purl.obolibrary.org/obo/GO_0042552",
+      "externalLabel": "myelination",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/myelination.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/neuromuscular_junction",
+      "label": "Neuromuscular Junction",
+      "wikidata": "http://www.wikidata.org/entity/Q776995",
+      "external": "http://purl.obolibrary.org/obo/GO_0031594",
+      "externalLabel": "neuromuscular junction",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/neuromuscular_junction.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/pollination_biology",
+      "label": "Pollination Biology",
+      "wikidata": "http://www.wikidata.org/entity/Q134624",
+      "external": "http://purl.obolibrary.org/obo/GO_0009856",
+      "externalLabel": "pollination",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/pollination_biology.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/serotonin",
+      "label": "Serotonin",
+      "wikidata": "http://www.wikidata.org/entity/Q167934",
+      "external": "http://purl.obolibrary.org/obo/CHEBI_28790",
+      "externalLabel": "serotonin",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/serotonin.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/symbiosis",
+      "label": "Symbiosis",
+      "wikidata": "http://www.wikidata.org/entity/Q121610",
+      "external": "http://purl.obolibrary.org/obo/GO_0044403",
+      "externalLabel": "biological process involved in symbiotic interaction",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/symbiosis.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/testosterone",
+      "label": "Testosterone",
+      "wikidata": "http://www.wikidata.org/entity/Q1318776",
+      "external": "http://purl.obolibrary.org/obo/CHEBI_17347",
+      "externalLabel": "testosterone",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/testosterone.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/wound_healing",
+      "label": "Wound Healing",
+      "wikidata": "http://www.wikidata.org/entity/Q1509074",
+      "external": "http://purl.obolibrary.org/obo/GO_0042060",
+      "externalLabel": "wound healing",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/wound_healing.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/agnosia",
+      "label": "Agnosia",
+      "wikidata": "http://www.wikidata.org/entity/Q220322",
+      "external": "http://purl.obolibrary.org/obo/HP_0010524",
+      "externalLabel": "Disturbed sensory perception",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/agnosia.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/agnosia",
+      "label": "Agnosia",
+      "wikidata": "http://www.wikidata.org/entity/Q220322",
+      "external": "http://purl.obolibrary.org/obo/MONDO_0005638",
+      "externalLabel": "agnosia",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/agnosia.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/anterograde_amnesia",
+      "label": "Anterograde Amnesia",
+      "wikidata": "http://www.wikidata.org/entity/Q572111",
+      "external": "http://purl.obolibrary.org/obo/MONDO_0003398",
+      "externalLabel": "anterograde amnesia",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/anterograde_amnesia.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/anxiety",
+      "label": "Anxiety",
+      "wikidata": "http://www.wikidata.org/entity/Q154430",
+      "external": "http://purl.obolibrary.org/obo/HP_0000739",
+      "externalLabel": "Anxiety",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/anxiety.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/aphasia",
+      "label": "Aphasia",
+      "wikidata": "http://www.wikidata.org/entity/Q2836",
+      "external": "http://purl.obolibrary.org/obo/HP_0002357",
+      "externalLabel": "obsolete Dysphasia",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/aphasia.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/aphasia",
+      "label": "Aphasia",
+      "wikidata": "http://www.wikidata.org/entity/Q2836",
+      "external": "http://purl.obolibrary.org/obo/MONDO_0000598",
+      "externalLabel": "aphasia",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/aphasia.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/associative_learning",
+      "label": "Associative Learning",
+      "wikidata": "http://www.wikidata.org/entity/Q14330970",
+      "external": "http://purl.obolibrary.org/obo/GO_0008306",
+      "externalLabel": "associative learning",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/associative_learning.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/autism",
+      "label": "Autism",
+      "wikidata": "http://www.wikidata.org/entity/Q38404",
+      "external": "http://purl.obolibrary.org/obo/HP_0000717",
+      "externalLabel": "Autism",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/autism.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/coma",
+      "label": "Coma",
+      "wikidata": "http://www.wikidata.org/entity/Q159557",
+      "external": "http://purl.obolibrary.org/obo/HP_0001259",
+      "externalLabel": "Coma",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/coma.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/dark_adaptation",
+      "label": "Dark Adaptation",
+      "wikidata": "http://www.wikidata.org/entity/Q22273766",
+      "external": "http://purl.obolibrary.org/obo/GO_1990603",
+      "externalLabel": "dark adaptation",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/dark_adaptation.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/habituation",
+      "label": "Habituation",
+      "wikidata": "http://www.wikidata.org/entity/Q1136816",
+      "external": "http://purl.obolibrary.org/obo/GO_0046959",
+      "externalLabel": "habituation",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/habituation.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/impulsivity",
+      "label": "Impulsivity",
+      "wikidata": "http://www.wikidata.org/entity/Q1549918",
+      "external": "http://purl.obolibrary.org/obo/HP_0100710",
+      "externalLabel": "Impulsivity",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/impulsivity.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/interoception",
+      "label": "Interoception",
+      "wikidata": "http://www.wikidata.org/entity/Q1668091",
+      "external": "http://purl.obolibrary.org/obo/UBERON_0036255",
+      "externalLabel": "interoceptive system",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/interoception.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/movement_disorders",
+      "label": "Movement Disorders",
+      "wikidata": "http://www.wikidata.org/entity/Q2608695",
+      "external": "http://purl.obolibrary.org/obo/MONDO_0015143",
+      "externalLabel": "obsolete rare movement disorder",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/movement_disorders.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/neurogenesis",
+      "label": "Neurogenesis",
+      "wikidata": "http://www.wikidata.org/entity/Q1456827",
+      "external": "http://purl.obolibrary.org/obo/GO_0022008",
+      "externalLabel": "neurogenesis",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/neurogenesis.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/observational_learning",
+      "label": "Observational Learning",
+      "wikidata": "http://www.wikidata.org/entity/Q1143725",
+      "external": "http://purl.obolibrary.org/obo/GO_0098597",
+      "externalLabel": "observational learning",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/observational_learning.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/operant_conditioning",
+      "label": "Operant Conditioning",
+      "wikidata": "http://www.wikidata.org/entity/Q847079",
+      "external": "http://purl.obolibrary.org/obo/GO_0035106",
+      "externalLabel": "operant conditioning",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/operant_conditioning.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/oxytocin",
+      "label": "Oxytocin",
+      "wikidata": "http://www.wikidata.org/entity/Q169960",
+      "external": "http://purl.obolibrary.org/obo/CHEBI_7872",
+      "externalLabel": "oxytocin",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/oxytocin.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/proprioception",
+      "label": "Proprioception",
+      "wikidata": "http://www.wikidata.org/entity/Q1129066",
+      "external": "http://purl.obolibrary.org/obo/GO_0019230",
+      "externalLabel": "proprioception",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/proprioception.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/simultanagnosia",
+      "label": "Simultanagnosia",
+      "wikidata": "http://www.wikidata.org/entity/Q2046811",
+      "external": "http://purl.obolibrary.org/obo/MONDO_0000678",
+      "externalLabel": "simultanagnosia",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/simultanagnosia.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/sleep",
+      "label": "Sleep",
+      "wikidata": "http://www.wikidata.org/entity/Q35831",
+      "external": "http://purl.obolibrary.org/obo/GO_0030431",
+      "externalLabel": "sleep",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/sleep.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/sleep",
+      "label": "Sleep",
+      "wikidata": "http://www.wikidata.org/entity/Q35831",
+      "external": "http://purl.obolibrary.org/obo/HP_0002329",
+      "externalLabel": "Drowsiness",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/sleep.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/specific_language_impairment",
+      "label": "Specific Language Impairment",
+      "wikidata": "http://www.wikidata.org/entity/Q775593",
+      "external": "http://purl.obolibrary.org/obo/MONDO_0000724",
+      "externalLabel": "specific language impairment",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/specific_language_impairment.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/tremor",
+      "label": "Tremor",
+      "wikidata": "http://www.wikidata.org/entity/Q223907",
+      "external": "http://purl.obolibrary.org/obo/HP_0001337",
+      "externalLabel": "Tremor",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/tremor.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/tremor",
+      "label": "Tremor",
+      "wikidata": "http://www.wikidata.org/entity/Q223907",
+      "external": "http://purl.obolibrary.org/obo/MONDO_0017644",
+      "externalLabel": "obsolete rare tremor disorder",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/tremor.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/visual_agnosia",
+      "label": "Visual Agnosia",
+      "wikidata": "http://www.wikidata.org/entity/Q18742",
+      "external": "http://purl.obolibrary.org/obo/MONDO_0000685",
+      "externalLabel": "visual agnosia",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/visual_agnosia.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/cognitive/visual_perception",
+      "label": "Visual Perception",
+      "wikidata": "http://www.wikidata.org/entity/Q162668",
+      "external": "http://purl.obolibrary.org/obo/GO_0007601",
+      "externalLabel": "visual perception",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/cognitive/visual_perception.md"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/systems/environmental_monitoring",
+      "label": "Environmental Monitoring",
+      "wikidata": "http://www.wikidata.org/entity/Q1749732",
+      "external": "http://purl.obolibrary.org/obo/ENVO_02500041",
+      "externalLabel": "environmental monitoring",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/systems/environmental_monitoring.md"
+    }
+  ]
+}

@@ -71,12 +71,23 @@ pages, so the output carries no timestamp and is identical on every run over the
 Each page's content was written by Active Inference Institute contributors; the references on
 each page name the published works it summarises.
 
+## Public research and education use case
+
+The graph supports finding concepts across Active Inference, cognitive science,
+mathematics and biology, following their explanatory links, and locating the
+literature they cite. Educators can build reading paths; researchers can join
+concept pages to other datasets through shared identifiers and inspect the
+original pages before interpreting a relation. These are public research and
+education uses; the graph is not a source of clinical recommendations.
+
 ## Licence
 
 The knowledge-base content, and so the graph, is released under
-[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (`dcterms:license`
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (`dcterms:license`
 on the dataset and the concept scheme). The repository's code, including the exporter, is MIT.
-The non-commercial and share-alike terms apply to anyone who reuses the graph.
+Attribution and an indication of changes are required. The scope and suggested
+attribution are in [the knowledge-base license](../../LICENSE-KNOWLEDGE-BASE.md).
+References and links do not change the licenses of the external works they identify.
 
 ## Funding
 
@@ -92,7 +103,9 @@ Delaware nonprofit. The registry entry therefore leaves its `funding` field out.
 - Concepts that pages mention but that have no page yet are not nodes; those links are counted
   in [`statistics.md`](statistics.md) and left out. So are links to files outside
   `knowledge_base/`, such as code and guides.
-- Entities are not yet aligned to external identifiers. Only citation pages link out (to their
-  DOIs). Aligning concept pages to Wikidata, MeSH or a physics/mathematics ontology is a
-  curation task for a reviewer who can check each match.
+- Concept pages with a `wikidata` field are linked with `skos:closeMatch`; citation
+  pages with a DOI use `schema:sameAs`. The existing Wikidata matches were screened
+  by models and have not each been checked by a person. They express candidate
+  concept correspondence, not identity or clinical equivalence. See
+  [interoperability evidence and review rules](interoperability.md).
 - Self-links are dropped, and a page that appears under two names (an alias) is one node.

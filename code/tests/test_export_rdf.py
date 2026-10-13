@@ -1,12 +1,16 @@
+import hashlib
 import json
 import os
 import re
 from datetime import date, datetime
 from pathlib import Path
+from typing import Literal
 
 import pytest
+import rdflib
 import yaml
 from scripts import export_rdf as rdf
+from typing_extensions import assert_never
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SKOS = rdf.PREFIXES["skos"]
@@ -250,11 +254,20 @@ def test_dataset_description_carries_license_provenance_and_modified_date(tmp_pa
     graph, _ = rdf.build_graph(_vault(tmp_path))
     assert _has(graph, rdf.DATASET, DCT + "license", rdf.iri(rdf.LICENSE))
     assert _has(
+        graph, rdf.SCHEME, DCT + "license", rdf.iri("https://creativecommons.org/licenses/by/4.0/")
+    )
+    assert _has(
         graph, rdf.DATASET, rdf.PREFIXES["prov"] + "wasDerivedFrom", rdf.iri(rdf.SOURCE_REPOSITORY)
     )
     assert _has(graph, rdf.DATASET, rdf.PREFIXES["prov"] + "wasGeneratedBy", rdf.iri(rdf.ACTIVITY))
     assert _has(graph, rdf.DATASET, DCT + "modified", rdf.typed_date("2026-01-02"))
     assert _has(graph, rdf.SCHEME, rdf.RDF_TYPE, rdf.iri(SKOS + "ConceptScheme"))
+    assert _has(
+        graph,
+        rdf.DATASET,
+        rdf.PREFIXES["rdfs"] + "seeAlso",
+        rdf.iri("https://registry.okn.us/registry/kgs/identifier-mappings/"),
+    )
 
 
 def test_links_into_local_tool_folders_stay_unresolved(tmp_path):
@@ -381,3 +394,98 @@ def test_real_graph_has_no_dangling_page_objects():
     dangling = {o for _, _, o in graph.triples if o.startswith(page_prefix) and o not in pages}
     assert dangling == set()
     assert report.typed_edges > 1000
+
+
+@pytest.mark.parametrize("format_name", ["turtle", "nquads"])
+def test_serializations_parse_to_the_same_real_triples(tmp_path, format_name):
+    graph, _ = rdf.build_graph(_vault(tmp_path))
+    expected = rdflib.Graph().parse(data=rdf.to_turtle(graph), format="turtle")
+    text = rdf.to_turtle(graph) if format_name == "turtle" else rdf.to_nquads(graph)
+    parsed = rdflib.Dataset().parse(data=text, format=format_name)
+    assert {(s, p, o) for s, p, o, _ in parsed.quads()} == set(expected)
+    if format_name == "nquads":
+        assert {str(g) for _, _, _, g in parsed.quads()} == {rdf.GRAPH}
+
+
+@pytest.mark.parametrize(
+    "failure", ["license", "extra_license", "mapping", "empty", "dangling", "provenance"]
+)
+def test_submission_check_rejects_incompatible_graphs(
+    tmp_path,
+    failure: Literal["license", "extra_license", "mapping", "empty", "dangling", "provenance"],
+):
+    root = _vault(tmp_path)
+    _page(root / "knowledge_base/math/entropy.md", {"title": "Entropy", "wikidata": "Q45003"})
+    graph, _ = rdf.build_graph(root)
+    assert rdf.submission_errors(graph) == []
+    match failure:
+        case "license":
+            graph.triples = {t for t in graph.triples if t[1] != rdf.iri(DCT + "license")}
+        case "extra_license":
+            graph.add(
+                rdf.iri(rdf.DATASET),
+                rdf.iri(DCT + "license"),
+                rdf.iri("https://example.org/restricted"),
+            )
+        case "mapping":
+            graph.triples = {t for t in graph.triples if t[1] != rdf.iri(SKOS + "closeMatch")}
+        case "empty":
+            graph.triples.clear()
+        case "dangling":
+            graph.add(
+                rdf.iri(rdf.page_iri("math/entropy")),
+                rdf.iri(SKOS + "related"),
+                rdf.iri(rdf.page_iri("absent")),
+            )
+        case "provenance":
+            graph.triples = {
+                t for t in graph.triples if t[1] != rdf.iri(rdf.PREFIXES["prov"] + "wasDerivedFrom")
+            }
+        case unreachable:
+            assert_never(unreachable)
+    assert rdf.submission_errors(graph)
+
+
+def test_submission_cli_checks_real_pages_and_reports_failure(tmp_path, capsys):
+    root = _vault(tmp_path)
+    assert rdf.main([str(root), "--check-submission"]) == 1
+    assert json.loads(capsys.readouterr().out)["machine_checks_passed"] is False
+    _page(root / "knowledge_base/math/entropy.md", {"wikidata": "Q45003"})
+    assert rdf.main([str(root), "--check-submission"]) == 0
+    assert json.loads(capsys.readouterr().out)["aligned_pages"] == 1
+
+
+def test_page_license_exception_is_visible_and_blocks_submission(tmp_path):
+    root = _vault(tmp_path)
+    _page(
+        root / "knowledge_base/math/entropy.md",
+        {"wikidata": "Q45003", "license": "https://example.org/restricted"},
+    )
+    graph, _ = rdf.build_graph(root)
+    assert any("incompatible license" in error for error in rdf.submission_errors(graph))
+
+
+def test_manifest_hashes_actual_exports_and_source_pages(tmp_path):
+    root = _vault(tmp_path)
+    assert rdf.main([str(root)]) == 0
+    out = root / "output/okn"
+    manifest = json.loads((out / "manifest.json").read_text())
+    for name, digest in manifest["artifacts"].items():
+        assert hashlib.sha256((out / name).read_bytes()).hexdigest() == digest
+    for name, digest in manifest["sources"].items():
+        assert hashlib.sha256((root / name).read_bytes()).hexdigest() == digest
+    first = (out / "manifest.json").read_bytes()
+    assert rdf.main([str(root)]) == 0
+    assert (out / "manifest.json").read_bytes() == first
+
+
+def test_real_graph_queries_have_results():
+    graph, _ = rdf.build_graph(REPO_ROOT)
+    parsed = rdflib.Dataset().parse(data=rdf.to_nquads(graph), format="nquads")
+    queries = [
+        REPO_ROOT / "docs/okn/queries" / name
+        for name in ("concept_mappings.rq", "citation_identifiers.rq")
+    ]
+    for path in queries:
+        assert list(parsed.query(path.read_text(encoding="utf-8"))), path.name
+    assert rdf.submission_errors(graph) == []

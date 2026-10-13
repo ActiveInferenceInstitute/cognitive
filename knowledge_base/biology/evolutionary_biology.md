@@ -51,5 +51,5 @@ Evolutionary biology studies the processes that produced the diversity of life â
 
 > [!note] Open Source and Licensing
 > Repository: [ActiveInferenceInstitute/cognitive](https://github.com/ActiveInferenceInstitute/cognitive)
-> - Documentation and knowledge base content: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+> - Knowledge-base content: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 > - Code and examples: MIT License (see `LICENSE`)

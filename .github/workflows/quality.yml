@@ -58,6 +58,10 @@ jobs:
       - name: Documentation and links
         run: python code/scripts/validate_docs.py --json
 
+      - name: OKN submission machine criteria
+        run: python -m scripts.export_rdf --check-submission
+
+
       # Ubuntu's archive does not carry pandoc-crossref, and a crossref binary
       # only loads under the Pandoc it was built against, so both come from
       # their release pages as a pinned pair (crossref v0.3.26 is built with

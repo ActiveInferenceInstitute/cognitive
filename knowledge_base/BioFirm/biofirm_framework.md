@@ -309,7 +309,7 @@ framework:
 
 ## Licensing
 
-This repository's code is released under the MIT License and its documentation, including this page, under CC BY-NC-SA 4.0. BioFirm is documented here as a conceptual framework; this page makes no patent claims and describes no separate commercial, academic, or partner licensing tiers.
+This repository's code is released under the MIT License and its knowledge-base content, including this page, under CC BY 4.0. BioFirm is documented here as a conceptual framework; this page makes no patent claims and describes no separate commercial, academic, or partner licensing tiers.
 
 ## Future Development
 

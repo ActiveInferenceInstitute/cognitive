@@ -388,5 +388,7 @@ excluded from version control. The term policy is in
 
 ## License
 
-Code is MIT ([`LICENSE`](LICENSE)). Documentation and the knowledge base are
-CC BY-NC-SA 4.0.
+Code is MIT ([`LICENSE`](LICENSE)). Repository-owned knowledge-base content and
+RDF graph exports are [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
+under [`LICENSE-KNOWLEDGE-BASE.md`](LICENSE-KNOWLEDGE-BASE.md).
+Documentation outside the knowledge base remains CC BY-NC-SA 4.0.

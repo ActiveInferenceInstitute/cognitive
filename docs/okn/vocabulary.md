@@ -32,6 +32,7 @@ where none does. Prefixes: `skos` = `http://www.w3.org/2004/02/skos/core#`, `dct
 | `authors`, `year`, `doi` (citation pages) | `schema:author`, `schema:datePublished`, `schema:sameAs` |
 | `journal` (citation pages) | `ckb:journal` |
 | `wikidata` (a `Q` identifier of the Wikidata item with the same meaning; see [Alignment to Wikidata](#alignment-to-wikidata)) | `skos:closeMatch` to `http://www.wikidata.org/entity/Q…` |
+| Explicit `license` URI | `dcterms:license` on the page; incompatible licenses fail `--check-submission` |
 | Top-level folder | a `skos:Collection` that has the page as `skos:member` |
 | Address in the repository | `dcterms:source` |
 | `redirect` | `dcterms:isReplacedBy` |
@@ -65,6 +66,9 @@ The dataset is a `dcat:Dataset` and `void:Dataset` with `dcterms:title`, `dcterm
 `dcterms:license`, `dcterms:creator`, `dcterms:publisher`, `dcterms:source`, `dcterms:modified`,
 `dcat:landingPage` and `void:vocabulary` for each standard vocabulary above. Provenance uses
 `prov:wasDerivedFrom`, `prov:wasGeneratedBy`, `prov:used` and `prov:wasAssociatedWith`.
+`rdfs:seeAlso` on the dataset signposts the Wikidata, identifier-mappings and
+Ubergraph registry entries. These links describe discovery paths, not additional
+equivalence assertions or a claim that cognitive-kb is already deployed.
 
 ## Alignment to Wikidata
 
