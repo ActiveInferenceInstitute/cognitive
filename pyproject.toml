@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cognitive-active-inference"
-version = "2.0.0"
+version = "2.1.0"
 description = "Configurable, validated Active Inference models and knowledge tools"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -40,6 +40,7 @@ dev = [
 ]
 
 [project.scripts]
+cognitive = "cognitive.cli:main"
 cognitive-create-node = "cognitive.utils.create_node:main"
 cognitive-verify-links = "scripts.verify_links:main"
 cognitive-benchmark = "cognitive.benchmarks:main"
@@ -47,6 +48,7 @@ cognitive-validate-docs = "scripts.validate_docs:main"
 cognitive-normalize-frontmatter = "scripts.normalize_frontmatter:main"
 cognitive-kb-index = "scripts.kb_index:main"
 cognitive-export-rdf = "scripts.export_rdf:main"
+cognitive-kb-report = "scripts.kb_report:main"
 cognitive-build-manuscript = "scripts.build_manuscript:main"
 cognitive-mutation-check = "scripts.mutation_check:main"
 

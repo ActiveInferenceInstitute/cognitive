@@ -23,8 +23,10 @@ The root [`config.yaml`](../../config.yaml) has these top-level sections:
 
 - `paths`: template, knowledge-base, model, utility, and data locations.
 - `active_inference`: default precision, temporal horizon, learning rate,
-  exploration factor, discount factor, inference iterations, and convergence
-  threshold.
+  exploration factor, and discount factor.
+- `simulation`: inference method, policy aggregation, temperature, policy limit,
+  sample count, episode length, and seed.
+- `output`: result directory, figure format, and figure resolution.
 - `knowledge_base`: linking and relationship settings.
 - `templates`: template defaults and required metadata fields.
 - `visualization`: layout, seed, sizing, colors, and interactivity settings.
@@ -35,15 +37,19 @@ The root [`config.yaml`](../../config.yaml) has these top-level sections:
 
 Only these keys are read by code in this repository:
 
+- `active_inference.*`, `simulation.*` and `output.*`, by
+  `cognitive.settings.load_settings`, which the `cognitive` command and the
+  [`examples/`](../../examples/README.md) use. [`settings.md`](settings.md)
+  documents every key, its default, the layering order and the validation rules.
 - `paths.templates` and `paths.knowledge_base`, by `NodeCreator`
   (`cognitive-create-node`); relative paths resolve against the directory that
   holds the YAML file.
 - `paths.knowledge_base` and `visualization.seed`, by `NetworkVisualizer`.
 
-Every other key in `config.yaml` (including `active_inference`, `analysis`,
-`obsidian`, `logging`, and `development`) is descriptive: no loader consumes it.
-The dispatcher does not read `active_inference.*`; pass those values to
-`InferenceConfig` explicitly.
+Every other key in `config.yaml` (including `analysis`, `obsidian`, `logging`,
+and `development`) is descriptive: no loader consumes it. The dispatcher itself
+does not read `config.yaml`; it takes an `InferenceConfig`, which
+`Settings.inference_config()` builds from the settings.
 
 ## Simulation example
 

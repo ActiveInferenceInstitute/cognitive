@@ -8,15 +8,30 @@ paths:
   models: code/tools/src/models
   utils: code/tools/src/utils
 
-# Active Inference Parameters
+# Active Inference parameters. Read by cognitive.settings.load_settings and
+# turned into an InferenceConfig; see docs/config/settings.md.
 active_inference:
   default_precision: 1.0
-  temporal_horizon: 5
-  learning_rate: 0.01
-  exploration_factor: 0.1
+  temporal_horizon: 3
+  learning_rate: 0.5 # weight of the new posterior in each belief update, in (0, 1]
+  exploration_factor: 0.0 # extra weight on information gain; 0 is the canonical objective
   discount_factor: 0.95
-  inference_iterations: 10
-  convergence_threshold: 0.001
+
+# How `cognitive simulate` and `cognitive sweep` run an episode.
+simulation:
+  method: variational # variational, sampling or mean_field
+  policy_aggregation: marginal # marginal or min
+  temperature: 1.0
+  policy_limit: 4096
+  num_samples: 256
+  steps: 20
+  seed: 0
+
+# Where results go and how figures are written.
+output:
+  directory: output
+  figure_format: png # png, svg or pdf
+  dpi: 150
 
 # Knowledge Base Settings
 knowledge_base:

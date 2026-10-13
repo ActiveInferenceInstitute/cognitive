@@ -50,6 +50,42 @@ class Mutation:
 
 MUTATIONS: tuple[Mutation, ...] = (
     Mutation(
+        name="simulation_complexity_reverses_the_divergence",
+        path="code/tools/src/simulation.py",
+        original="        complexity[step] = kl_divergence(updated, predicted)\n",
+        mutated="        complexity[step] = kl_divergence(predicted, updated)\n",
+        rationale=(
+            "Complexity is KL[q(s) || p(s | previous beliefs, action)]; the reverse direction "
+            "is a different, larger quantity and silently changes every reported free energy."
+        ),
+        tests=("code/tests/test_simulation.py",),
+    ),
+    Mutation(
+        name="simulation_agent_shares_the_worlds_random_stream",
+        path="code/tools/src/simulation.py",
+        original=(
+            "    world_rng, agent_rng = np.random.default_rng(world_seq), "
+            "np.random.default_rng(agent_seq)\n"
+        ),
+        mutated="    world_rng = agent_rng = np.random.default_rng(world_seq)\n",
+        rationale=(
+            "With one shared stream, an agent that samples differently changes the world's "
+            "noise, so two agents are no longer compared on the same world."
+        ),
+        tests=("code/tests/test_simulation.py",),
+    ),
+    Mutation(
+        name="settings_exploration_factor_sets_the_wrong_field",
+        path="code/tools/src/settings.py",
+        original='    "exploration_factor": "exploration_weight",\n',
+        mutated='    "exploration_factor": "temperature",\n',
+        rationale=(
+            "Each active_inference key names the InferenceConfig field it sets; a crossed "
+            "mapping would make a documented setting change an unrelated parameter."
+        ),
+        tests=("code/tests/test_settings.py",),
+    ),
+    Mutation(
         name="rdf_export_normalises_parent_directory_links",
         path="code/scripts/export_rdf.py",
         original=('    resolved = Path(os.path.normpath(resolved))  # may carry ".." segments\n'),

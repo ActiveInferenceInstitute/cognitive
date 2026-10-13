@@ -302,7 +302,12 @@ and the process around it.
 |---|---|
 | [`docs/api/`](docs/api/README.md) | Exports, signatures, executed examples, version policy |
 | [`docs/guides/`](docs/guides/README.md) | Application notes and learning paths |
-| [`docs/examples/`](docs/examples/README.md) | Example entry points |
+| [`docs/cli/`](docs/cli/README.md) | The `cognitive` command: settings, simulate, sweep, benchmark |
+| [`docs/visualization/`](docs/visualization/README.md) | Figure gallery for simulations and the knowledge base |
+| [`docs/architecture/`](docs/architecture/README.md) | How settings, simulation, plots and the command fit together |
+| [`docs/config/settings.md`](docs/config/settings.md) | Every setting, its default and its layering |
+| [`examples/`](examples/README.md) | Six runnable scripts |
+| [`docs/examples/`](docs/examples/README.md) | Example pages |
 | [`docs/tools/`](docs/tools/README.md) | One page per shipped tool or gate |
 | [`docs/development/`](docs/development/contribution_guide.md) | Development loop and contribution rules |
 | [`docs/repo_docs/`](docs/repo_docs/getting_started.md) | Setup, documentation standards, linking, naming, testing |

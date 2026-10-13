@@ -12,6 +12,48 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-10-13
+
+### Added
+
+- **Layered, validated settings.** `cognitive.settings.load_settings` reads the `active_inference`,
+  `simulation` and `output` sections of `config.yaml`, then `COGNITIVE_<SECTION>__<KEY>` environment
+  variables, then explicit overrides, and builds an `InferenceConfig` with
+  `Settings.inference_config()`. Unknown keys, values that would be converted lossily, and values out
+  of range raise `ValueError` when the settings are built. `docs/config/settings.md` documents every
+  key and default, and a test fails when the page and the code disagree.
+- **Reproducible simulation.** `cognitive.simulation` runs episodes (`run_episode`) and parameter
+  sweeps (`sweep`, `sweep_model`) and records them as a `Trajectory` with free energy split into
+  complexity and accuracy, policy posteriors and expected free energy. The world and the agent draw
+  from separate random streams spawned from one seed, so an episode is reproducible from
+  `(model, config, steps, seed)`. `example_model` (two states) and `corridor_model` (asymmetric
+  actions, a goal cell) are provided, and `load_model` reads a model from YAML.
+- **Trajectory plots.** `cognitive.visualization.trajectory_plots` draws an episode
+  (`plot_trajectory`), the expected-free-energy parts of each action (`plot_efe_components`), a sweep
+  (`plot_sweep`) and a model's matrices (`plot_model`); `save_figure` writes and closes a figure.
+- **The `cognitive` command** (also `python -m cognitive`) with `settings`, `simulate`, `sweep` and
+  `benchmark`. Rejected settings, files and arguments exit with status 2 and an `error:` message.
+  `docs/cli/reference.md` lists every option and output file.
+- **Knowledge-base report.** `scripts.kb_report` (`cognitive-kb-report`) reads the RDF export back
+  into a graph and reports pages, links, components, hubs, links within and between domains, the
+  incoming-link distribution and edges by relation, with four figures. On the current knowledge base
+  the graph is one connected component with no isolated page.
+- **Six runnable examples** in `examples/` with their configurations, each run by
+  `code/tests/test_examples.py`, and a figure gallery in `docs/visualization/` with seven committed
+  figures. New documentation sections: `docs/cli/`, `docs/visualization/`, `docs/architecture/`.
+- Three more mutation checks cover the simulation's complexity direction, its random-stream
+  separation and the settings key mapping.
+
+### Changed
+
+- The `active_inference` section of `config.yaml` is now read by `cognitive.settings`, so its values
+  are the defaults the command uses: `temporal_horizon` 3 (was 5), `learning_rate` 0.5 (was 0.01)
+  and `exploration_factor` 0.0 (was 0.1). No code read the old values. `inference_iterations` and
+  `convergence_threshold` were removed because no inference method has such a setting and the loader
+  rejects unknown keys. New `simulation` and `output` sections hold the episode and figure settings.
+  `docs/config/README.md` no longer calls `active_inference.*` descriptive.
+- The CI package smoke test also runs `cognitive --help` and `cognitive-kb-report --help`.
+
 ## [2.0.0] - 2026-10-12
 
 ### Behaviour change

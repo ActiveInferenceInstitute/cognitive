@@ -1,0 +1,17 @@
+# A two-state, two-action generative model for `cognitive simulate --model`.
+# A[o][s] = P(o | s); B_by_action[a][s_next][s_prev] = P(s_next | s_prev, a);
+# C = log preferences over observations; D = prior over states; E = prior over actions.
+description: A light that is either dark or light, a sensor that is right 85% of the time, and an agent that prefers to see "bright".
+A:
+  - [0.85, 0.15]
+  - [0.15, 0.85]
+B_by_action:
+  - [[0.9, 0.1], [0.1, 0.9]]   # stay: the state usually keeps
+  - [[0.1, 0.9], [0.9, 0.1]]   # flip: the state usually changes
+C: [0.0, 1.0]
+D: [0.5, 0.5]
+E: [0.5, 0.5]
+labels:
+  states: [dark, light]
+  actions: [stay, flip]
+  observations: [dim, bright]

@@ -1,0 +1,11 @@
+# Settings for the examples: a longer episode with a shorter planning horizon.
+# Sections not listed here keep the built-in defaults (see docs/config/settings.md).
+active_inference:
+  temporal_horizon: 2
+  learning_rate: 0.6
+simulation:
+  steps: 40
+  seed: 7
+output:
+  figure_format: png
+  dpi: 120

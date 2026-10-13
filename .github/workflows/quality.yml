@@ -128,7 +128,7 @@ jobs:
           python -m build
           python -m twine check dist/*
           python -m pip install dist/*.whl
-          for command in cognitive-verify-links cognitive-validate-docs cognitive-normalize-frontmatter \
-                         cognitive-kb-index cognitive-export-rdf cognitive-benchmark cognitive-create-node cognitive-build-manuscript; do
+          for command in cognitive cognitive-verify-links cognitive-validate-docs cognitive-normalize-frontmatter \
+                         cognitive-kb-index cognitive-export-rdf cognitive-kb-report cognitive-benchmark cognitive-create-node cognitive-build-manuscript; do
             "$command" --help > /dev/null
           done

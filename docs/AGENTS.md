@@ -3,7 +3,7 @@ title: Documentation instructions
 type: agents
 status: stable
 created: 2024-01-01
-updated: 2026-10-09
+updated: 2026-10-13
 tags:
   - documentation
   - agents
@@ -14,7 +14,11 @@ semantic_relations:
     links:
       - "[[README|Documentation hub]]"
       - "[[api/README|API]]"
+      - "[[cli/README|Command line]]"
+      - "[[visualization/README|Visualization]]"
+      - "[[architecture/README|Architecture]]"
       - "[[config/README|Configuration]]"
+      - "[[config/settings|Settings reference]]"
       - "[[development/README|Development]]"
       - "[[examples/README|Examples]]"
       - "[[guides/README|Guides]]"
@@ -40,6 +44,17 @@ conceptual and educational material. Keep the two clearly separated.
 - `docs/README.md` — navigation spine for the whole tree.
 - `docs/manuscript/README.md` — the executable end-to-end example.
 - `docs/api/README.md` — API documentation policy and reference.
+- `docs/cli/README.md` — the `cognitive` command (`settings`, `simulate`, `sweep`,
+  `benchmark`) and the report and export commands.
+- `docs/visualization/README.md` — the figure gallery; its images are generated
+  by the code, so regenerate them rather than editing them.
+- `docs/architecture/README.md` — how the settings, simulation, plotting and
+  command-line modules fit together.
+- `docs/config/settings.md` — the reference for every key code reads from
+  `config.yaml`; the tests in `code/tests/test_docs_sync.py` require each key and
+  its default to appear there.
+- `examples/README.md` (repository root) — the runnable example scripts; the
+  Markdown pages in `docs/examples/` explain, the scripts run.
 - `docs/repo_docs/getting_started.md` — fresh-checkout setup.
 - `project_structure.md` (repository root) — folder map of the package and the vault.
 

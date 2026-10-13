@@ -2,13 +2,17 @@
 title: Documentation hub
 type: documentation
 status: stable
-updated: 2026-10-09
+updated: 2026-10-13
 semantic_relations:
   - type: organizes
     links:
       - "[[../README|Repository README]]"
       - "[[api/README|API]]"
+      - "[[cli/README|Command line]]"
+      - "[[visualization/README|Visualization]]"
+      - "[[architecture/README|Architecture]]"
       - "[[config/README|Configuration]]"
+      - "[[config/settings|Settings reference]]"
       - "[[development/README|Development]]"
       - "[[examples/README|Examples]]"
       - "[[guides/README|Guides]]"
@@ -39,12 +43,18 @@ working entry points.
 3. [`manuscript/README.md`](manuscript/README.md): end-to-end build and
    reproducibility contract.
 4. [`api/README.md`](api/README.md): API documentation policy.
-5. [`examples/README.md`](examples/README.md): executable examples.
+5. [`examples/README.md`](examples/README.md): example pages, with a pointer to
+   the runnable scripts in [`../examples/README.md`](../examples/README.md).
+6. [`cli/README.md`](cli/README.md): run a simulation or a sweep from the shell.
 
 ## Documentation domains
 
 - [`api/`](api/README.md): public API reference, executed examples, versioning.
-- [`config/`](config/README.md): the root `config.yaml` and which keys code reads.
+- [`cli/`](cli/README.md): the `cognitive` command and the report and export commands.
+- [`visualization/`](visualization/README.md): the figure gallery and what each plot shows.
+- [`architecture/`](architecture/README.md): how settings, simulation, plots and the command line fit together.
+- [`config/`](config/README.md): the root `config.yaml` and which keys code reads;
+  [`config/settings.md`](config/settings.md) is the reference for every setting.
 - [`development/`](development/README.md): development loop and CI.
 - [`agents/`](agents/README.md): navigation for agent documentation.
 - [`manuscript/`](manuscript/README.md): the executable manuscript.
