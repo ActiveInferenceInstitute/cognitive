@@ -20,7 +20,7 @@ semantic_relations:
    be listed in [`README.md`](README.md); `code/tests/test_docs_sync.py` checks.
 3. Write only under `output/` by default and take `--output` to change it.
 4. Pass `environ={}` to `load_settings` so results do not depend on the machine.
-5. Use real computation. No stubs, fake data or placeholder results.
+5. Use real computation and measured results.
 
 ## Verification
 
