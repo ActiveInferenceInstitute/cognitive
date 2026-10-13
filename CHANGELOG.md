@@ -12,6 +12,34 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ## [Unreleased]
 
+### Added
+
+- CLI access to the asymmetric corridor with `--builtin corridor` for episodes and sweeps.
+- Validated `Trajectory.from_dict` and `load_json`, plus `cognitive plot` for saved records.
+- Continuous controlled-world episodes and hierarchical goal selection with recorded data,
+  figures, CLI commands, examples and closed-form regression tests.
+- A complete regenerable gallery, including relation counts, with measured captions and
+  source/output hash receipts from `scripts.regenerate_gallery`.
+
+### Removed
+
+- Unused `InferenceConfig.custom_params` and the dispatcher YAML `model` alias.
+  Supply `generative_model` and declared configuration fields; unknown fields are errors.
+
+### Fixed
+
+- The examples instructions contained a term rejected by the documentation gate on CI.
+- Replaced the superseded license table with an SPDX expression and explicit license files,
+  and moved CI checkout and Python setup to their current Node 24 actions.
+- Repaired a lock entry whose declared version disagreed with its artifacts and synchronized
+  the declared optional dependencies. Gallery source hashes also work from installed wheels.
+- Mutation qualification requires a failing test body; collection and runner errors cannot
+  count as killed mutations. Real subprocess controls verify rejection and restoration.
+- **Behaviour change:** saved observation indices reject integer overflow and preserve exact
+  integer values instead of rounding them through a floating-point intermediate.
+- Saved plots preserve observation names in short episodes, label unobserved preferred outcomes,
+  and render sparse indices with bounded categorical ticks.
+
 ## [2.1.0] - 2026-10-13
 
 ### Added

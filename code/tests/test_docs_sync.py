@@ -47,7 +47,9 @@ def test_settings_reference_states_the_environment_prefix_and_the_default_file()
     assert settings.ENV_PREFIX in page and settings.DEFAULT_CONFIG_NAME in page
 
 
-@pytest.mark.parametrize("command", ["settings", "simulate", "sweep"])
+@pytest.mark.parametrize(
+    "command", ["settings", "simulate", "sweep", "plot", "continuous", "hierarchical"]
+)
 def test_cli_reference_lists_every_subcommand_option(command: str) -> None:
     page = read("docs/cli/reference.md")
     assert f"cognitive {command}" in page

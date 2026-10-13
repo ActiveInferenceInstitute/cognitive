@@ -17,13 +17,14 @@ semantic_relations:
 # Architecture
 
 The inference engine (`ActiveInferenceDispatcher`, `DiscreteGenerativeModel`)
-computes beliefs and expected free energy for one step. Four modules around it
+computes beliefs and expected free energy for one step. Modules around it
 turn that into a runnable, reproducible experiment:
 
 | Module | Path | Responsibility |
 |---|---|---|
 | `cognitive.settings` | `code/tools/src/settings.py` | Layered, validated settings; builds an `InferenceConfig`. |
 | `cognitive.simulation` | `code/tools/src/simulation.py` | The perception-action loop, the `Trajectory` it records, sweeps, and two example models. |
+| `cognitive.episodes` | `code/tools/src/episodes.py` | Continuous episodes and two-level discrete control; see [episode API](episodes.md). |
 | `cognitive.visualization.trajectory_plots` | `code/tools/src/visualization/trajectory_plots.py` | Figures from recorded data. |
 | `cognitive.cli` | `code/tools/src/cli.py` | The `cognitive` command (also `python -m cognitive`). |
 
@@ -40,6 +41,8 @@ flowchart LR
     IC --> E
     E --> T["Trajectory"]
     T --> J["trajectory.json / .csv"]
+    J --> LOAD["Trajectory.load_json"]
+    LOAD --> P
     T --> P["trajectory_plots.plot_*"]
     E --> SW["simulation.sweep"]
     SW --> ST["sweep_*.csv"]
@@ -48,10 +51,17 @@ flowchart LR
     CLI["cognitive simulate / sweep"] -.drives.-> S
     CLI -.drives.-> E
     CLI -.drives.-> P
+    HC["cognitive hierarchical"] --> H["run_hierarchical_episode"]
+    H --> E
+    H --> HT["HierarchicalTrajectory"]
+    HT --> P
+    CC["cognitive continuous"] --> CE["run_continuous_episode"]
+    CE --> CT["ContinuousTrajectory"]
+    CT --> P
 ```
 
 Each arrow carries plain data (a settings object, a config, a trajectory, a list
-of rows). No module reaches into another's state, so each can be used alone: the
+of rows). The continuous runner explicitly advances the passed agent. The
 plots accept any `Trajectory`, and a script can build an `InferenceConfig`
 without the command line.
 
@@ -79,7 +89,7 @@ studies an agent whose model is wrong (see
 - A sweep runs seeds `simulation.seed`, `simulation.seed + 1`, ... at each value
   and reports the mean and spread.
 - A `Trajectory` saves with a `schema_version`, its configuration and its
-  labels, so a saved file says what produced it.
+  labels. `from_dict` and `load_json` validate a saved record before plotting it.
 - The examples ignore the environment (`load_settings(environ={})`) so that they
   give the same result on every machine.
 
@@ -99,6 +109,9 @@ rules are in the [settings reference](../config/settings.md).
 | A setting | the dataclass in `settings.py` | [`settings.md`](../config/settings.md) and `config.yaml` |
 | A figure | a `plot_*` function in `trajectory_plots.py` | the [gallery](../visualization/gallery.md) |
 | A subcommand | `build_parser` and `main` in `cli.py` | the CLI reference and the CI help loop |
+
+`uv run python -m scripts.regenerate_gallery --publish` regenerates all gallery
+figures, data, captions and hash receipts from one set of parameters.
 
 `code/tests/test_docs_sync.py` fails when a setting, a subcommand option, a public
 plot or an example script is missing from its page.

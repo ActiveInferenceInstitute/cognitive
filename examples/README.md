@@ -1,6 +1,6 @@
 ---
 title: Examples
-description: Six runnable scripts that run an episode, compare settings, sweep a parameter, study a wrong model, report on the knowledge base and export RDF.
+description: Runnable discrete, continuous and hierarchical episodes, sweeps and knowledge-base reports.
 type: documentation
 status: stable
 updated: 2026-10-13
@@ -16,7 +16,7 @@ semantic_relations:
 
 # Examples
 
-Six short scripts, each a complete run. Every script is a thin layer over the
+Eight short scripts, each a complete run. Every script is a thin layer over the
 package: it loads settings, calls the library and writes its results to
 `output/examples/<name>/` (change that with `--output`). Run them from the
 repository root after `pip install -e .`:
@@ -33,6 +33,8 @@ python examples/01_run_episode.py
 | [`04_model_mismatch.py`](04_model_mismatch.py) | An agent whose model is wrong: believed dynamics against real dynamics. | `correct_model.png`, `wrong_model.png` |
 | [`05_knowledge_base_report.py`](05_knowledge_base_report.py) | How the knowledge base is connected: domain sizes, links, hubs. | `report.json`, `report.md` and four figures |
 | [`06_export_rdf.py`](06_export_rdf.py) | The knowledge base as RDF (N-Quads and Turtle) for the Open Knowledge Network. | `cognitive-kb.nq`, `cognitive-kb.ttl` |
+| [`07_continuous_episode.py`](07_continuous_episode.py) | A finite generalized-coordinate agent controlling an Euler world with a noisy sensor. | `trajectory.json`, `trajectory.csv`, `episode.png` |
+| [`08_hierarchical_episode.py`](08_hierarchical_episode.py) | An upper goal selector and a lower corridor controller operating at different timescales. | `hierarchy.json`, `trajectory.json`, `episode.png` |
 
 Scripts 05 and 06 take `--root` (default: this repository) and run on the real
 knowledge base.
@@ -56,8 +58,8 @@ Scripts 02 to 04 use the built-in defaults with `environ={}`, so that
 - Sweep another parameter: `cognitive sweep --parameter temperature
   --values 0.3,1,3`. On the built-in two-state model the planning horizon
   (`temporal_horizon`) gives identical results, because its two actions are
-  symmetric; use the corridor model, as `02_compare_aggregation.py` does, to
-  study planning.
+  symmetric; use `cognitive sweep --builtin corridor --parameter temporal_horizon
+  --values 1,2,3` to study planning.
 
 The scripts are tested: `code/tests/test_examples.py` runs every one and checks
 the files it writes. For the command-line equivalents see

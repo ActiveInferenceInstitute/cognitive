@@ -2,10 +2,9 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
-from typing import Any
 
 import numpy as np
 import yaml
@@ -40,8 +39,7 @@ class PolicyAggregation(str, Enum):
 
     ``MIN`` scores each first action by its best continuation, which is an
     optimistic planning assumption: the action is judged as if the agent will
-    follow the most favourable policy available after it. It was the default
-    before version 2.0.0.
+    follow the most favourable policy available after it.
     """
 
     MIN = "min"
@@ -61,15 +59,13 @@ class InferenceConfig:
     temperature: float = 1.0
     discount_factor: float = 0.95
     # Additional weight on expected information gain, subtracted from the
-    # canonical expected free energy of every policy step. 0.0 is the canonical
-    # objective; 1.0 reproduces the objective used before version 1.1.0.
+    # canonical expected free energy of every policy step. 0.0 is the canonical objective.
     exploration_weight: float = 0.0
     # If policy_limit truncates enumeration below one policy per first action,
     # dispatch_policy_inference raises instead of silently zeroing that action.
     policy_limit: int = 4096
     policy_aggregation: PolicyAggregation = PolicyAggregation.MARGINAL
     seed: int | None = 0
-    custom_params: dict[str, Any] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         self.method = InferenceMethod(self.method)
@@ -93,7 +89,6 @@ class InferenceConfig:
             raise ValueError("exploration_weight must be in [0, 1]")
         if self.policy_limit < 1:
             raise ValueError("policy_limit must be positive")
-        self.custom_params = dict(self.custom_params)
 
 
 class ActiveInferenceDispatcher:
@@ -312,7 +307,7 @@ class ActiveInferenceFactory:
             raw = yaml.safe_load(config_file) or {}
         if not isinstance(raw, dict):
             raise ValueError("Dispatcher configuration must be a mapping")
-        model_config = raw.get("generative_model", raw.get("model"))
+        model_config = raw.get("generative_model")
         if not isinstance(model_config, dict):
             raise ValueError("Configuration must contain a generative_model mapping")
         model = DiscreteGenerativeModel.from_config(model_config)
@@ -329,7 +324,6 @@ class ActiveInferenceFactory:
             "policy_limit",
             "policy_aggregation",
             "seed",
-            "custom_params",
         }
         config_values = {key: value for key, value in raw.items() if key in config_fields}
         missing = config_fields.difference(config_values).difference(
@@ -341,12 +335,11 @@ class ActiveInferenceFactory:
                 "policy_limit",
                 "policy_aggregation",
                 "seed",
-                "custom_params",
             }
         )
         if missing:
             raise ValueError(f"Missing dispatcher configuration fields: {sorted(missing)}")
-        unknown = set(raw).difference(config_fields | {"generative_model", "model"})
+        unknown = set(raw).difference(config_fields | {"generative_model"})
         if unknown:
             raise ValueError(f"Unknown dispatcher configuration fields: {sorted(unknown)}")
         return ActiveInferenceFactory.create(InferenceConfig(**config_values), model)

@@ -8,7 +8,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pytest
 from cognitive.settings import Settings
-from cognitive.simulation import corridor_model, example_model, run_episode, summarize_sweep, sweep
+from cognitive.simulation import (
+    Trajectory,
+    corridor_model,
+    example_model,
+    run_episode,
+    summarize_sweep,
+    sweep,
+)
 from cognitive.visualization.trajectory_plots import (
     plot_efe_components,
     plot_model,
@@ -49,6 +56,37 @@ def test_unlabelled_episodes_get_generated_labels() -> None:
         assert [t.get_text() for t in fig.axes[0].get_yticklabels()] == ["s0", "s1", "s2", "s3"]
     finally:
         plt.close(fig)
+
+
+def test_saved_observation_names_and_unseen_preferred_cell_are_preserved() -> None:
+    recorded = run_episode(
+        corridor_model(slip=0, sensor_noise=0),
+        Settings().inference_config(),
+        1,
+        labels={
+            "actions": ["left", "stay", "right"],
+            "observations": ["cell0", "cell1", "cell2", "cell3"],
+        },
+    )
+    fig = plot_trajectory(recorded)
+    try:
+        labels = [tick.get_text() for tick in fig.axes[1].get_yticklabels()]
+        assert labels == ["left | cell0", "stay | cell1", "right | cell2", " | cell3"]
+        assert fig.axes[1].lines[1].get_ydata()[0] == 3
+    finally:
+        plt.close(fig)
+
+
+def test_sparse_saved_indices_render_as_bounded_categorical_ticks(tmp_path: Path) -> None:
+    payload = run_episode(example_model(), Settings().inference_config(), 1).to_dict()
+    payload["observations"] = [2**53 + 1]
+    recorded = Trajectory.from_dict(payload)
+    fig = plot_trajectory(recorded)
+    labels = [tick.get_text() for tick in fig.axes[1].get_yticklabels()]
+    assert len(labels) == 3 and labels[-1] == f" | o{2**53 + 1}"
+    assert list(fig.axes[1].lines[0].get_ydata()) == [2]
+    path = save_figure(fig, tmp_path / "sparse.png")
+    assert path.stat().st_size > 0
 
 
 def test_efe_figure_marks_the_chosen_action_and_plots_each_component(trajectory) -> None:

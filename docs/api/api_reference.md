@@ -67,7 +67,7 @@ ambiguity), `enumerate_policies(horizon, limit=None)`, and
 `InferenceConfig` takes `method`, `policy_type`, `temporal_horizon`,
 `learning_rate`, `precision_init` and the optional `num_samples`, `temperature`,
 `discount_factor`, `exploration_weight`, `policy_limit`, `policy_aggregation`,
-`seed`, and `custom_params`. Only `policy_type="discrete"` is implemented; other
+`seed`. Only `policy_type="discrete"` is implemented; other
 values raise `ValueError`, as do out-of-range horizons, learning rates,
 precisions, temperatures, sample counts, discount factors, and exploration
 weights.
@@ -77,7 +77,7 @@ weights.
 `dispatch_policy_inference(state, goal_prior=None)`,
 `calculate_expected_free_energy`, and `update_precision(prediction_error)`.
 `ActiveInferenceFactory.create` and `create_from_yaml` build a dispatcher from
-objects or from a YAML mapping with a `generative_model` (or `model`) section;
+objects or from a YAML mapping with a `generative_model` section;
 unknown or missing keys raise `ValueError`.
 
 `ActiveInferenceModel` is the abstract base for stateful models. It supplies

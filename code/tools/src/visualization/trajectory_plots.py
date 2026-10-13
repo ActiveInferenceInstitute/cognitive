@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.figure import Figure
 
+from ..episodes import ContinuousTrajectory, HierarchicalTrajectory
 from ..models.active_inference.generative_model import DiscreteGenerativeModel
 from ..simulation import Trajectory
 
@@ -40,9 +41,14 @@ def plot_trajectory(trajectory: Trajectory) -> Figure:
     steps = trajectory.steps
     states = _labels(trajectory.state_labels, trajectory.beliefs.shape[1], "s")
     actions = _labels(trajectory.action_labels, trajectory.policy_posteriors.shape[1], "a")
-    observations = _labels(
-        trajectory.observation_labels, int(trajectory.observations.max(initial=0)) + 1, "o"
+    observations = trajectory.observation_labels
+    levels = sorted(
+        set(range(len(actions)))
+        | {int(value) for value in trajectory.observations}
+        | {trajectory.preferred_observation}
     )
+    positions = {level: index for index, level in enumerate(levels)}
+    observed_positions = [positions[int(value)] for value in trajectory.observations]
     fig, axes = plt.subplots(2, 2, figsize=(11, 7), constrained_layout=True)
 
     belief_ax, choice_ax, energy_ax, policy_ax = axes.ravel()
@@ -72,15 +78,17 @@ def plot_trajectory(trajectory: Trajectory) -> Figure:
     choice_ax.scatter(
         time, trajectory.actions, marker="s", color=CHOICE, label="action chosen", zorder=3
     )
-    choice_ax.step(time, trajectory.observations, where="mid", color="#6b7280", alpha=0.6)
-    choice_ax.scatter(time, trajectory.observations, color="#6b7280", label="observation", zorder=2)
+    choice_ax.step(time, observed_positions, where="mid", color="#6b7280", alpha=0.6)
+    choice_ax.scatter(time, observed_positions, color="#6b7280", label="observation", zorder=2)
     choice_ax.axhline(
-        trajectory.preferred_observation, color=GAIN, linestyle=":", label="preferred observation"
+        positions[trajectory.preferred_observation],
+        color=GAIN,
+        linestyle=":",
+        label="preferred observation",
     )
-    levels = max(len(actions), len(observations))
-    choice_ax.set(title="Choices and observations", xlabel="step", yticks=range(levels))
+    choice_ax.set(title="Choices and observations", xlabel="step", yticks=range(len(levels)))
     choice_ax.set_yticklabels(
-        [f"{_at(actions, level)} | {_at(observations, level)}" for level in range(levels)]
+        [f"{_at(actions, level)} | {_at(observations, level) or f'o{level}'}" for level in levels]
     )
     choice_ax.legend(loc="best", fontsize=8)
 
@@ -215,3 +223,38 @@ def save_figure(fig: Figure, path: str | Path, dpi: int = 150) -> Path:
     finally:
         plt.close(fig)
     return destination
+
+
+def plot_continuous_trajectory(trajectory: ContinuousTrajectory) -> Figure:
+    """Draw continuous states, latent beliefs, actions and measured free energy."""
+    fig, axes = plt.subplots(1, 3, figsize=(12, 3.8), constrained_layout=True)
+    for i in range(trajectory.states.shape[1]):
+        axes[0].plot(trajectory.time, trajectory.states[:, i], label=f"state {i}")
+        axes[0].plot(trajectory.time, trajectory.belief_means[:, i, 0], "--", label=f"belief {i}")
+    axes[0].set(title="States and belief means", xlabel="time")
+    axes[0].legend(fontsize=8)
+    axes[1].plot(trajectory.time[1:], trajectory.actions)
+    axes[1].set(title="Residual actions", xlabel="time")
+    axes[2].plot(trajectory.time[1:], trajectory.free_energy, color=TOTAL)
+    axes[2].set(title="Precision-weighted free energy", xlabel="time")
+    return fig
+
+
+def plot_hierarchical_trajectory(trajectory: HierarchicalTrajectory) -> Figure:
+    """Draw upper beliefs and goals against lower physical states and actions."""
+    fig, axes = plt.subplots(1, 3, figsize=(12, 3.8), constrained_layout=True)
+    boundaries = np.append(trajectory.decision_steps, trajectory.lower.steps)
+    axes[0].step(boundaries, trajectory.upper_beliefs, where="post")
+    axes[0].set(title="Upper state beliefs", xlabel="world step", ylabel="probability")
+    axes[1].step(boundaries, np.append(trajectory.goals, trajectory.goals[-1]), where="post")
+    axes[1].set(title="Selected upper goal", xlabel="world step")
+    axes[2].plot(np.arange(trajectory.lower.steps + 1), trajectory.lower.states, label="state")
+    axes[2].step(
+        np.arange(1, trajectory.lower.steps + 1),
+        trajectory.lower.actions,
+        where="mid",
+        label="action",
+    )
+    axes[2].set(title="Lower corridor episode", xlabel="world step")
+    axes[2].legend()
+    return fig

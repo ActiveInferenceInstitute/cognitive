@@ -17,7 +17,7 @@ semantic_relations:
 # Command line
 
 The `cognitive` command runs the package's simulation without writing any
-Python. It has four subcommands:
+Python. It provides these subcommands:
 
 | Command | What it does |
 |---|---|
@@ -25,6 +25,9 @@ Python. It has four subcommands:
 | `cognitive simulate` | Run one episode and write its trajectory and figures. |
 | `cognitive sweep` | Vary one inference parameter over several values and seeds. |
 | `cognitive benchmark` | Time the runtime components. |
+| `cognitive plot` | Redraw a saved discrete trajectory. |
+| `cognitive continuous` | Run a continuous agent in a controlled Euler world. |
+| `cognitive hierarchical` | Run upper goal selection and lower corridor control. |
 
 ## A first run
 

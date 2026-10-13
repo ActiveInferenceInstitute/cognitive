@@ -19,7 +19,7 @@ Two sources of figures, one catalogue:
 
 - `cognitive.visualization.trajectory_plots` draws what happens in a
   simulation: one episode, the expected free energy of each action, a sweep of
-  a parameter, and the matrices of a model.
+  a parameter, the matrices of a model, and continuous and hierarchical episodes.
 - `scripts/kb_report.py` (`cognitive-kb-report`) draws how the knowledge base is
   connected: domain sizes, links between domains, incoming links per page and
   edge counts by relation.
@@ -51,6 +51,7 @@ same call works in a notebook and in a script.
 cognitive simulate --steps 30 --seed 7     # episode, efe_step0 and model figures
 cognitive sweep --parameter temperature --values 0.1,0.3,1,3
 cognitive-kb-report                         # knowledge-base figures
+uv run python -m scripts.regenerate_gallery --publish  # all figures and captions
 ```
 
 `output.figure_format` (`png`, `svg` or `pdf`) and `output.dpi` choose the file

@@ -30,6 +30,8 @@ from typing import Any
 from .settings import Settings, load_settings
 from .simulation import (
     SWEEPABLE,
+    Trajectory,
+    corridor_model,
     example_model,
     load_model,
     run_episode,
@@ -52,7 +54,14 @@ def _common(parser: argparse.ArgumentParser) -> None:
 
 def _simulation_arguments(parser: argparse.ArgumentParser) -> None:
     _common(parser)
-    parser.add_argument("--model", type=Path, help="YAML generative model (default: built-in)")
+    models = parser.add_mutually_exclusive_group()
+    models.add_argument("--model", type=Path, help="YAML generative model")
+    models.add_argument(
+        "--builtin",
+        choices=("two_state", "corridor"),
+        default="two_state",
+        help="built-in generative model (default: two_state)",
+    )
     parser.add_argument("--output", type=Path, help="output directory (default: output.directory)")
     parser.add_argument("--no-figures", action="store_true", help="write tables and JSON only")
     parser.add_argument("--json", action="store_true", help="print the result as JSON")
@@ -77,6 +86,35 @@ def build_parser() -> argparse.ArgumentParser:
     sweeping.add_argument("--values", required=True, help="comma-separated values to try")
     sweeping.add_argument("--seeds", type=int, default=5, help="episodes per value (default 5)")
     sweeping.add_argument("--steps", type=int, help="override simulation.steps")
+
+    plotting = commands.add_parser("plot", help="redraw a saved discrete trajectory")
+    _common(plotting)
+    plotting.add_argument("trajectory", type=Path, help="saved trajectory.json")
+    plotting.add_argument("--output", type=Path, help="output directory")
+    plotting.add_argument("--step", type=int, default=0, help="step for expected free energy bars")
+    plotting.add_argument("--json", action="store_true", help="print written files as JSON")
+
+    for name in ("continuous", "hierarchical"):
+        episode = commands.add_parser(name, help=f"run a {name} episode")
+        _common(episode)
+        episode.add_argument("--steps", type=int, help="number of world steps")
+        episode.add_argument("--seed", type=int, help="random seed")
+        episode.add_argument("--output", type=Path, help="output directory")
+        episode.add_argument("--no-figures", action="store_true", help="write data only")
+        episode.add_argument("--json", action="store_true", help="print output files as JSON")
+        if name == "continuous":
+            episode.add_argument("--dt", type=float, default=0.01, help="world time step")
+            episode.add_argument("--alpha", type=float, default=0.1, help="belief update rate")
+            episode.add_argument(
+                "--sensor-noise",
+                type=float,
+                default=0.0,
+                help="observation noise standard deviation",
+            )
+        else:
+            episode.add_argument(
+                "--decision-interval", type=int, default=5, help="world steps per upper decision"
+            )
 
     commands.add_parser(
         "benchmark",
@@ -108,6 +146,12 @@ def _resolve(args: argparse.Namespace) -> Settings:
 def _model(args: argparse.Namespace) -> tuple[Any, dict[str, list[str]]]:
     if args.model:
         return load_model(args.model)
+    if args.builtin == "corridor":
+        return corridor_model(), {
+            "states": [f"cell {i}" for i in range(4)],
+            "observations": [f"cell {i}" for i in range(4)],
+            "actions": ["left", "stay", "right"],
+        }
     return example_model(), {
         "states": ["dark", "light"],
         "actions": ["stay", "flip"],
@@ -223,6 +267,88 @@ def _sweep_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def _plot_command(args: argparse.Namespace) -> int:
+    """Load recorded data and render it without running inference again."""
+    settings = _resolve(args)
+    trajectory = Trajectory.load_json(args.trajectory)
+    if not 0 <= args.step < trajectory.steps:
+        raise ValueError(f"step must be in [0, {trajectory.steps - 1}]")
+    _use_agg()
+    from .visualization.trajectory_plots import plot_efe_components, plot_trajectory, save_figure
+
+    out = _output(args, settings)
+    suffix, dpi = settings.output.figure_format, settings.output.dpi
+    files = [
+        save_figure(plot_trajectory(trajectory), out / f"episode.{suffix}", dpi),
+        save_figure(
+            plot_efe_components(trajectory, args.step), out / f"efe_step{args.step}.{suffix}", dpi
+        ),
+    ]
+    paths = [str(path) for path in files]
+    print(json.dumps({"files": paths}, indent=2) if args.json else "\n".join(paths))
+    return 0
+
+
+def _episode_command(args: argparse.Namespace) -> int:
+    """Run the configured continuous or two-level corridor example."""
+    from Things.Continuous_Generic import ContinuousActiveInference
+
+    from .episodes import corridor_hierarchy, run_continuous_episode, run_hierarchical_episode
+
+    settings = _resolve(args)
+    out = _output(args, settings)
+    if args.command == "continuous":
+        continuous = run_continuous_episode(
+            ContinuousActiveInference(dt=args.dt, alpha=args.alpha),
+            settings.simulation.steps,
+            seed=settings.simulation.seed,
+            sensor_noise=args.sensor_noise,
+        )
+        written = [
+            continuous.save_json(out / "trajectory.json"),
+            continuous.save_csv(out / "trajectory.csv"),
+        ]
+        if not args.no_figures:
+            _use_agg()
+            from .visualization.trajectory_plots import plot_continuous_trajectory, save_figure
+
+            written.append(
+                save_figure(
+                    plot_continuous_trajectory(continuous),
+                    out / f"episode.{settings.output.figure_format}",
+                    settings.output.dpi,
+                )
+            )
+    else:
+        hierarchical = run_hierarchical_episode(
+            corridor_hierarchy(),
+            settings.inference_config(),
+            settings.inference_config(),
+            settings.simulation.steps,
+            seed=settings.simulation.seed,
+            decision_interval=args.decision_interval,
+        )
+        written = [
+            hierarchical.save_json(out / "hierarchy.json"),
+            hierarchical.lower.save_json(out / "trajectory.json"),
+            hierarchical.lower.save_csv(out / "trajectory.csv"),
+        ]
+        if not args.no_figures:
+            _use_agg()
+            from .visualization.trajectory_plots import plot_hierarchical_trajectory, save_figure
+
+            written.append(
+                save_figure(
+                    plot_hierarchical_trajectory(hierarchical),
+                    out / f"episode.{settings.output.figure_format}",
+                    settings.output.dpi,
+                )
+            )
+    paths = [str(path) for path in written]
+    print(json.dumps({"files": paths}, indent=2) if args.json else "\n".join(paths))
+    return 0
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     arguments = list(sys.argv[1:] if argv is None else argv)
     if arguments[:1] == ["benchmark"]:
@@ -234,6 +360,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         "settings": _settings_command,
         "simulate": _simulate_command,
         "sweep": _sweep_command,
+        "plot": _plot_command,
+        "continuous": _episode_command,
+        "hierarchical": _episode_command,
     }
     try:
         return handlers[args.command](args)

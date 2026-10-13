@@ -45,7 +45,7 @@ conceptual and educational material. Keep the two clearly separated.
 - `docs/manuscript/README.md` — the executable end-to-end example.
 - `docs/api/README.md` — API documentation policy and reference.
 - `docs/cli/README.md` — the `cognitive` command (`settings`, `simulate`, `sweep`,
-  `benchmark`) and the report and export commands.
+  `plot`, `continuous`, `hierarchical`, `benchmark`) and the report and export commands.
 - `docs/visualization/README.md` — the figure gallery; its images are generated
   by the code, so regenerate them rather than editing them.
 - `docs/architecture/README.md` — how the settings, simulation, plotting and

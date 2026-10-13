@@ -232,8 +232,7 @@ class DiscreteGenerativeModel:
         information gain from every step, on top of the epistemic drive that the
         canonical objective already contains through ``ambiguity``.  The default
         ``0.0`` is the canonical objective; positive values bias the agent toward
-        information seeking, and ``1.0`` reproduces the objective this package
-        used before version 1.1.0.
+        information seeking.
         """
         if not np.isfinite(epistemic_weight) or epistemic_weight < 0:
             raise ValueError("epistemic_weight must be finite and non-negative")

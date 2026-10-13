@@ -114,6 +114,62 @@ def test_an_unmatched_filter_is_an_error() -> None:
         check(REPO_ROOT, name_filter="no-such-mutation")
 
 
+def test_collection_failure_is_rejected_and_the_source_is_restored(tmp_path: Path) -> None:
+    import scripts.mutation_check as harness
+
+    source = tmp_path / "probe.py"
+    original = "VALUE = 1\n"
+    source.write_text(original)
+    (tmp_path / "test_probe.py").write_text(
+        "import probe\n\ndef test_value():\n    assert probe.VALUE == 1\n"
+    )
+    declared = harness.MUTATIONS
+    harness.MUTATIONS = (
+        Mutation(
+            name="collection_failure_probe",
+            path="probe.py",
+            original="VALUE = 1",
+            mutated="VALUE = (",
+            rationale="A syntax error prevents the test body from executing.",
+            tests=("test_probe.py",),
+        ),
+    )
+    try:
+        with pytest.raises(ValueError, match="exit code 2"):
+            harness.check(tmp_path)
+    finally:
+        harness.MUTATIONS = declared
+    assert source.read_text() == original
+
+
+def test_wrong_answer_is_a_kill_when_a_real_test_body_fails(tmp_path: Path) -> None:
+    import scripts.mutation_check as harness
+
+    source = tmp_path / "probe.py"
+    original = "VALUE = 1\n"
+    source.write_text(original)
+    (tmp_path / "test_probe.py").write_text(
+        "import probe\n\ndef test_value():\n    assert probe.VALUE == 1\n"
+    )
+    declared = harness.MUTATIONS
+    harness.MUTATIONS = (
+        Mutation(
+            name="wrong_answer_probe",
+            path="probe.py",
+            original="VALUE = 1",
+            mutated="VALUE = 2",
+            rationale="The body must notice a changed numeric answer.",
+            tests=("test_probe.py",),
+        ),
+    )
+    try:
+        report = harness.check(tmp_path)
+    finally:
+        harness.MUTATIONS = declared
+    assert report["ok"] is True and report["killed"] == 1
+    assert source.read_text() == original
+
+
 def test_mutation_cli_reports_both_outcomes(capsys: pytest.CaptureFixture[str]) -> None:
     """Text and JSON output, and the exit code, follow the survivor list."""
     import scripts.mutation_check as harness

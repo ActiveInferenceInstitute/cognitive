@@ -50,6 +50,30 @@ class Mutation:
 
 MUTATIONS: tuple[Mutation, ...] = (
     Mutation(
+        name="continuous_control_uses_the_wrong_sign",
+        path="code/tools/src/episodes.py",
+        original="            dynamics @ states[t] - control_gain * previous_action\n",
+        mutated="            dynamics @ states[t] + control_gain * previous_action\n",
+        rationale="Residual control must counter prediction error in the world equation.",
+        tests=("code/tests/test_episode_extensions.py",),
+    ),
+    Mutation(
+        name="hierarchical_lower_beliefs_reset_at_every_interval",
+        path="code/tools/src/episodes.py",
+        original="        prior = chunks[-1].beliefs[-1] if chunks else hierarchy.lower.D\n",
+        mutated="        prior = hierarchy.lower.D\n",
+        rationale="Lower posteriors must persist across upper decision boundaries.",
+        tests=("code/tests/test_episode_extensions.py",),
+    ),
+    Mutation(
+        name="trajectory_parser_accepts_an_unknown_schema",
+        path="code/tools/src/simulation.py",
+        original='        if raw.get("schema_version") != TRAJECTORY_SCHEMA_VERSION:\n',
+        mutated='        if raw.get("schema_version") == -1:\n',
+        rationale="A saved record with an unsupported schema must fail before plotting.",
+        tests=("code/tests/test_episode_extensions.py",),
+    ),
+    Mutation(
         name="simulation_complexity_reverses_the_divergence",
         path="code/tools/src/simulation.py",
         original="        complexity[step] = kl_divergence(updated, predicted)\n",
@@ -542,7 +566,7 @@ def _run(tests: tuple[str, ...], root: Path, cache_prefix: Path) -> bool:
     # answer would be noticed. Requiring a reported failure keeps the gate
     # measuring what it claims to measure.
     output = result.stdout + result.stderr
-    if "FAILED" in output or "ERROR" in output:
+    if result.returncode == 1 and "FAILED" in output:
         return False
     raise ValueError(
         "A mutation made pytest exit without reporting a test failure, which "

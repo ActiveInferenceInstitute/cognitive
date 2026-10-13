@@ -20,6 +20,8 @@ EXPECTED = {
     "04_model_mismatch.py": ["correct_model.png", "wrong_model.png"],
     "05_knowledge_base_report.py": ["report.json", "report.md", "domain_sizes.png"],
     "06_export_rdf.py": ["cognitive-kb.nq", "cognitive-kb.ttl"],
+    "07_continuous_episode.py": ["trajectory.json", "trajectory.csv", "episode.png"],
+    "08_hierarchical_episode.py": ["hierarchy.json", "trajectory.json", "episode.png"],
 }
 
 

@@ -139,8 +139,7 @@ G = D_KL(q(o) || p*(o))  +  E_q(s)[H(P(o | s))]
 Ambiguity equals `H[q(o)] - I(s; o)`, so the expected information gain is already
 inside it. The package returns the gain as a fourth value for inspection and does
 not subtract it from the total a second time. `InferenceConfig.exploration_weight`
-adds an explicit information-seeking bias; it defaults to `0.0`, and `1.0`
-reproduces the objective used before 1.1.0 (see [`CHANGELOG.md`](CHANGELOG.md)).
+adds an explicit information-seeking bias; it defaults to `0.0`.
 Derivation and intuition:
 [expected free energy](knowledge_base/mathematics/expected_free_energy.md),
 [in the free energy principle](knowledge_base/free_energy_principle/mathematics/expected_free_energy.md),
@@ -306,7 +305,7 @@ and the process around it.
 | [`docs/visualization/`](docs/visualization/README.md) | Figure gallery for simulations and the knowledge base |
 | [`docs/architecture/`](docs/architecture/README.md) | How settings, simulation, plots and the command fit together |
 | [`docs/config/settings.md`](docs/config/settings.md) | Every setting, its default and its layering |
-| [`examples/`](examples/README.md) | Six runnable scripts |
+| [`examples/`](examples/README.md) | Discrete, continuous and hierarchical episodes, sweeps and graph reports |
 | [`docs/examples/`](docs/examples/README.md) | Example pages |
 | [`docs/tools/`](docs/tools/README.md) | One page per shipped tool or gate |
 | [`docs/development/`](docs/development/contribution_guide.md) | Development loop and contribution rules |

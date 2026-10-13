@@ -134,6 +134,8 @@ def load_model(path: str | Path) -> tuple[DiscreteGenerativeModel, dict[str, lis
         raise ValueError(f"{source} is not valid YAML: {error}") from error
     if not isinstance(raw, dict):
         raise ValueError(f"{source} must contain a mapping")
+    if not all(isinstance(key, str) for key in raw):
+        raise ValueError(f"{source}: model keys must be strings")
     allowed = {"A", "B", "B_by_action", "C", "D", "E", "labels", "description"}
     unknown = sorted(set(raw).difference(allowed))
     if unknown:
@@ -142,16 +144,29 @@ def load_model(path: str | Path) -> tuple[DiscreteGenerativeModel, dict[str, lis
         raise ValueError(f"{source} must define exactly one of B and B_by_action")
     matrices = dict(raw)
     if "B_by_action" in matrices:
+        if not isinstance(matrices["B_by_action"], list) or not matrices["B_by_action"]:
+            raise ValueError(f"{source}: B_by_action must be a non-empty list of matrices")
         matrices["B"] = np.stack(
             [np.asarray(matrix, dtype=float) for matrix in matrices.pop("B_by_action")], axis=2
         )
-    labels = raw.get("labels") or {}
+    labels = raw.get("labels", {})
     if not isinstance(labels, dict) or set(labels).difference(
         {"states", "actions", "observations"}
     ):
         raise ValueError(f"{source}: labels must map states, actions, observations to lists")
     model = DiscreteGenerativeModel.from_config({k: matrices[k] for k in "ABCDE" if k in matrices})
-    return model, {key: [str(item) for item in value] for key, value in labels.items()}
+    for key, count in (
+        ("states", model.num_states),
+        ("actions", model.num_actions),
+        ("observations", model.num_observations),
+    ):
+        if key in labels and (
+            not isinstance(labels[key], list)
+            or len(labels[key]) != count
+            or not all(isinstance(item, str) for item in labels[key])
+        ):
+            raise ValueError(f"{source}: {key} labels must contain {count} strings")
+    return model, labels
 
 
 @dataclass(frozen=True)
@@ -251,6 +266,135 @@ class Trajectory:
             json.dumps(self.to_dict(), indent=2, sort_keys=True) + "\n", encoding="utf-8"
         )
         return destination
+
+    @classmethod
+    def from_dict(cls, raw: Mapping[str, Any]) -> Trajectory:
+        """Parse schema 1 data, rejecting malformed arrays and inconsistent records.
+
+        The saved summary is derived data; it is recomputed from the arrays.
+        """
+        if raw.get("schema_version") != TRAJECTORY_SCHEMA_VERSION:
+            raise ValueError("Unsupported trajectory schema_version")
+        if type(raw["schema_version"]) is not int:
+            raise ValueError("schema_version must be an integer")
+        required = {
+            "seed",
+            "config",
+            "labels",
+            "preferred_observation",
+            "beliefs",
+            "states",
+            "observations",
+            "actions",
+            "policy_posteriors",
+            "efe",
+            "risk",
+            "ambiguity",
+            "epistemic",
+            "free_energy",
+            "complexity",
+            "accuracy",
+        }
+        if required.difference(raw):
+            raise ValueError(f"Missing trajectory fields: {sorted(required.difference(raw))}")
+        if set(raw).difference(required | {"schema_version", "summary"}):
+            raise ValueError("Unknown trajectory fields")
+        for key in ("seed", "preferred_observation"):
+            if type(raw[key]) is not int or raw[key] < 0:
+                raise ValueError(f"{key} must be a non-negative integer")
+        if not isinstance(raw["config"], dict) or not isinstance(raw["labels"], dict):
+            raise ValueError("config and labels must be mappings")
+        try:
+            json.dumps(raw["config"], allow_nan=False)
+        except (TypeError, ValueError) as error:
+            raise ValueError("config must contain finite JSON values") from error
+        arrays = {}
+        for name in required.difference({"seed", "config", "labels", "preferred_observation"}):
+            try:
+                entries = np.asarray(raw[name], dtype=object)
+                if any(isinstance(item, bool) for item in entries.flat):
+                    raise ValueError(f"{name} must not contain booleans")
+                candidate = np.asarray(raw[name])
+                if candidate.dtype.kind not in "iuf":
+                    raise ValueError(f"{name} must be a numeric array")
+                arrays[name] = candidate.astype(float)
+            except (TypeError, ValueError) as error:
+                raise ValueError(f"{name} must be a numeric array") from error
+            if not np.all(np.isfinite(arrays[name])):
+                raise ValueError(f"{name} must contain finite values")
+        beliefs, policies = arrays["beliefs"], arrays["policy_posteriors"]
+        if policies.ndim != 2 or min(policies.shape) < 1:
+            raise ValueError("policy_posteriors must have shape (steps, actions)")
+        steps, actions = policies.shape
+        if beliefs.ndim != 2 or beliefs.shape[0] != steps + 1 or beliefs.shape[1] < 1:
+            raise ValueError("beliefs must have shape (steps + 1, states)")
+        for name in ("beliefs", "policy_posteriors"):
+            if np.any(arrays[name] < 0) or not np.allclose(arrays[name].sum(axis=1), 1):
+                raise ValueError(f"{name} must contain probability rows")
+        for name in ("efe", "risk", "ambiguity", "epistemic"):
+            if arrays[name].shape != (steps, actions):
+                raise ValueError(f"{name} must have shape (steps, actions)")
+        for name in ("free_energy", "complexity", "accuracy", "observations", "actions", "states"):
+            if arrays[name].shape != (steps + (name == "states"),):
+                raise ValueError(f"{name} has inconsistent length")
+        for name, limit in (
+            ("states", beliefs.shape[1]),
+            ("actions", actions),
+            ("observations", None),
+        ):
+            array = np.asarray(raw[name])
+            if np.any(array < 0) or np.any(array != np.floor(array)):
+                raise ValueError(f"{name} must contain non-negative integers")
+            if int(array.max()) > np.iinfo(np.int64).max:
+                raise ValueError(f"{name} index exceeds the supported integer range")
+            if limit is not None and np.any(array >= limit):
+                raise ValueError(f"{name} index out of range")
+            arrays[name] = array.astype(np.int64)
+        if not np.allclose(arrays["free_energy"], arrays["complexity"] - arrays["accuracy"]):
+            raise ValueError("free_energy must equal complexity - accuracy")
+        if not np.allclose(arrays["efe"], arrays["risk"] + arrays["ambiguity"]):
+            raise ValueError("efe must equal risk + ambiguity")
+        if np.any(arrays["complexity"] < -1e-8) or np.any(arrays["epistemic"] < -1e-8):
+            raise ValueError("complexity and epistemic must be non-negative")
+        labels = raw["labels"]
+        if set(labels).difference({"states", "actions", "observations"}):
+            raise ValueError("Unknown trajectory labels")
+        for name, count in (
+            ("states", beliefs.shape[1]),
+            ("actions", actions),
+            ("observations", None),
+        ):
+            given = labels.get(name, [])
+            if not isinstance(given, list) or not all(isinstance(item, str) for item in given):
+                raise ValueError(f"{name} labels must be a list of strings")
+            if given and count is not None and len(given) != count:
+                raise ValueError(f"{name} labels do not match dimensions")
+        obs_labels = labels.get("observations", [])
+        if obs_labels and (
+            arrays["observations"].max() >= len(obs_labels)
+            or raw["preferred_observation"] >= len(obs_labels)
+        ):
+            raise ValueError("observation index out of range")
+        return cls(
+            seed=raw["seed"],
+            config=dict(raw["config"]),
+            **arrays,
+            preferred_observation=raw["preferred_observation"],
+            state_labels=tuple(labels.get("states", [])),
+            action_labels=tuple(labels.get("actions", [])),
+            observation_labels=tuple(obs_labels),
+        )
+
+    @classmethod
+    def load_json(cls, path: str | Path) -> Trajectory:
+        """Load a validated discrete trajectory from UTF-8 JSON."""
+        try:
+            raw = json.loads(Path(path).read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, UnicodeError) as error:
+            raise ValueError(f"Invalid trajectory JSON: {error}") from error
+        if not isinstance(raw, dict):
+            raise ValueError("Trajectory JSON must contain a mapping")
+        return cls.from_dict(raw)
 
     def save_csv(self, path: str | Path) -> Path:
         """One row per step: what happened and the agent's free energy."""
