@@ -29,12 +29,13 @@ kg:dataset
     a void:Dataset, dcat:Dataset ;
     dcterms:creator <https://activeinference.institute/> ;
     dcterms:description "Concept pages on Active Inference and the sciences around it, linked by typed and untyped relations, with citation records and navigation pages."@en ;
-    dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:modified "2026-10-12"^^xsd:date ;
     dcterms:publisher <https://activeinference.institute/> ;
     dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive> ;
     dcterms:title "Cognitive Active Inference knowledge base"@en ;
     void:vocabulary <http://purl.org/dc/terms/>, <http://www.w3.org/2004/02/skos/core#>, <http://www.w3.org/ns/prov#>, <https://schema.org/> ;
+    rdfs:seeAlso <https://registry.okn.us/registry/kgs/identifier-mappings/>, <https://registry.okn.us/registry/kgs/ubergraph/>, <https://registry.okn.us/registry/kgs/wikidata/> ;
     dcat:landingPage <https://github.com/ActiveInferenceInstitute/cognitive> ;
     prov:wasDerivedFrom <https://github.com/ActiveInferenceInstitute/cognitive> ;
     prov:wasGeneratedBy kg:activity\/export .
@@ -127,7 +128,7 @@ rel:implements
 
 kg:scheme
     a skos:ConceptScheme ;
-    dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:title "Cognitive Active Inference concepts"@en ;
     void:inDataset kg:dataset .
 

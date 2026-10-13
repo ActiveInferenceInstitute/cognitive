@@ -1,0 +1,10 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT ?concept ?label ?external ?source
+WHERE {
+  GRAPH <https://purl.org/okn/frink/kg/cognitive-kb> {
+    ?concept a skos:Concept ; skos:prefLabel ?label ;
+             skos:closeMatch ?external ; dcterms:source ?source .
+  }
+}
+ORDER BY ?concept

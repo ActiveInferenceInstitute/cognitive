@@ -19,7 +19,7 @@ pages, then regenerate; never edit this file.
 | Pages aligned to Wikidata (`skos:closeMatch`) | 697 |
 | Typed edges from `semantic_relations` | 10762 |
 | Untyped edges from body links (`dcterms:references`) | 23908 |
-| Triples | 64711 |
+| Triples | 64714 |
 | Links to concepts that have no page yet (not exported) | 0 |
 | Links to files outside the knowledge base (not exported) | 725 |
 | Self-links dropped | 71 |

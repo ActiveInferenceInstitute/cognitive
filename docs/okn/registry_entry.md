@@ -44,7 +44,18 @@ philosophy, systems, ontology, citations). Edges are typed relations from each p
 `https://purl.org/okn/frink/kg/cognitive-kb/relation/` that is a sub-property of
 `skos:semanticRelation`) and untyped body links (`dcterms:references`). Citation pages carry
 authors, year and DOI (`schema:sameAs`), and many concept pages link to the matching Wikidata item with `skos:closeMatch`. Provenance is `prov:wasDerivedFrom` the public
-repository; the licence is CC BY-NC-SA 4.0.
+repository; repository-owned graph content is licensed under CC BY 4.0.
+The graph serves public research and education by connecting explanatory concepts
+and their literature across Active Inference, cognitive science, mathematics and
+biology. Wikidata mappings are candidate correspondences requiring review before
+using them as identity assertions. No external grant funding is claimed.
+
+A cross-graph query follows the existing Wikidata mappings through the OKN
+identifier-mappings graph to labeled OBO identifiers in Ubergraph. Captured live
+responses, the query and replayable join evidence are in the source repository's
+`docs/okn/evidence/2026-10-13/`. This demonstrates identifier-based discovery;
+it does not promote candidate page mappings to identity assertions. The reusable
+capture and submission methods are maintained in `docxology/daf-okn`.
 
 Entity IRIs are under `https://purl.org/okn/frink/kg/cognitive-kb/`; the named graph is
 `https://purl.org/okn/frink/kg/cognitive-kb`. A prose description, vocabulary mapping, sample
@@ -54,9 +65,11 @@ The exporter, `code/scripts/export_rdf.py`, is in the same repository.
 
 ## Steps
 
-1. `python -m scripts.export_rdf` writes `output/okn/cognitive-kb.nq`.
-2. Open the registry pull request with the entry above.
-3. When it is merged, upload `cognitive-kb.nq` to the `cognitive-kb` lakeFS repository as the
+1. `uv run --extra dev python -m scripts.export_rdf --check-submission` checks machine criteria.
+2. `uv run --extra dev python -m scripts.export_rdf` writes `output/okn/cognitive-kb.nq`,
+   `cognitive-kb.ttl` and `manifest.json`. Review [submission criteria](submission_criteria.md).
+3. Update the registry entry through its contribution workflow using the block above.
+4. When it is accepted, upload `cognitive-kb.nq` to the `cognitive-kb` lakeFS repository as the
    registry's [setup guide](https://registry.okn.us/help/setup/) describes.
-4. Nothing else is needed from the contributor; RENCI adds the `sparql` and `tpf` fields when
-   the endpoints are up.
+5. Verify processing with RENCI; RENCI adds the `sparql` and `tpf` fields when
+   the endpoints are up. Keep the source revision and manifest with the upload receipt.

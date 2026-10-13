@@ -104,5 +104,6 @@ section map and build contract.
 
 ## Licensing
 
-Code is MIT-licensed ([`LICENSE`](../../LICENSE)). Documentation and
-knowledge-base content are CC BY-NC-SA 4.0 (see the notice in `knowledge_base/index.md`).
+Code is MIT-licensed ([`LICENSE`](../../LICENSE)). Repository-owned knowledge-base
+content and graph exports are CC BY 4.0 ([license notice](../../LICENSE-KNOWLEDGE-BASE.md)).
+Other documentation remains CC BY-NC-SA 4.0.

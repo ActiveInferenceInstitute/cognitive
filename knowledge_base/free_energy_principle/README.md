@@ -316,4 +316,4 @@ This knowledge base serves as a comprehensive resource for researchers, develope
 **Last Updated**: December 18, 2025
 **Version**: 1.0
 **Contributors**: Active Inference Institute
-**License**: CC BY-NC-SA 4.0
+**License**: CC BY 4.0

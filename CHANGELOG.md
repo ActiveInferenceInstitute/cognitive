@@ -14,6 +14,11 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ### Added
 
+- CC BY 4.0 licensing for repository-owned knowledge-base content and RDF exports,
+  with attribution guidance and explicit separation from the software and other documentation.
+- OKN submission criteria and interoperability evidence, executable mapping queries,
+  a machine submission check in CI, independent RDF parsing tests and export hash manifests.
+
 - CLI access to the asymmetric corridor with `--builtin corridor` for episodes and sweeps.
 - Validated `Trajectory.from_dict` and `load_json`, plus `cognitive plot` for saved records.
 - Continuous controlled-world episodes and hierarchical goal selection with recorded data,

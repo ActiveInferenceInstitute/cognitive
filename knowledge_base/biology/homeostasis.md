@@ -58,7 +58,7 @@ Homeostasis is the biological process by which living systems maintain internal 
 
 > [!note] Open Source and Licensing
 > Repository: [ActiveInferenceInstitute/cognitive](https://github.com/ActiveInferenceInstitute/cognitive)
-> - Documentation and knowledge base content: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+> - Knowledge-base content: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 > - Code and examples: MIT License (see `LICENSE`)
 
 ## See also

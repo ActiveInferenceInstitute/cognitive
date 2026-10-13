@@ -58,6 +58,10 @@ jobs:
       - name: Documentation and links
         run: python code/scripts/validate_docs.py --json
 
+      - name: OKN submission machine criteria
+        run: python -m scripts.export_rdf --check-submission
+
+
       # Ubuntu's archive does not carry pandoc-crossref, and a crossref binary
       # only loads under the Pandoc it was built against, so both come from
       # their release pages as a pinned pair (crossref v0.3.26 is built with
@@ -98,6 +102,25 @@ jobs:
 
       - name: Benchmarks
         run: cognitive-benchmark --repetitions 1 --output "${RUNNER_TEMP}/benchmarks.json"
+
+  okn-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install graph and pinned OKN methods
+        run: |
+          python -m pip install -e ".[dev]"
+          python -m pip install "daf-okn @ git+https://github.com/docxology/daf-okn.git@4b79a4b5d37896677d547a5a1a1edfc2d7a4c828"
+      - name: Export and replay captured cross-graph evidence
+        run: |
+          python -m scripts.export_rdf
+          daf-okn join --source output/okn/cognitive-kb.nq \
+            --query docs/okn/queries/cross_graph_obo.rq \
+            --replay docs/okn/evidence/2026-10-13 \
+            --output "${RUNNER_TEMP}/cognitive-okn-replay"
 
   # Coverage proves a line ran. This job proves the suite would notice if a
   # line were wrong: each declared mutation is written to disk, its tests run,

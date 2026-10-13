@@ -38,7 +38,7 @@ An agent's goals live in explicit objects, the preference vector $C$ and the pri
 
 ## In This Repository
 
-This page connects to [[knowledge_base/systems/technology_ethics]], [[knowledge_base/systems/social_systems]], [[knowledge_base/systems/risk_assessment]], [[knowledge_base/research/cognitive_security]], [[knowledge_base/research/infohazard_management]] and [[knowledge_base/free_energy_principle/applications/ai_safety]]. The repository applies lightweight governance to itself: code is MIT-licensed and documentation is CC BY-NC-SA 4.0, and link and frontmatter checks (`cognitive-verify-links`, `cognitive-validate-docs`) run over the knowledge base. It ships no governance tooling for deployed agents, such as audit logging or policy enforcement.
+This page connects to [[knowledge_base/systems/technology_ethics]], [[knowledge_base/systems/social_systems]], [[knowledge_base/systems/risk_assessment]], [[knowledge_base/research/cognitive_security]], [[knowledge_base/research/infohazard_management]] and [[knowledge_base/free_energy_principle/applications/ai_safety]]. The repository applies lightweight governance to itself: code is MIT-licensed and knowledge-base content is CC BY 4.0, and link and frontmatter checks (`cognitive-verify-links`, `cognitive-validate-docs`) run over the knowledge base. It ships no governance tooling for deployed agents, such as audit logging or policy enforcement.
 
 ## References
 

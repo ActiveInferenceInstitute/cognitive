@@ -231,6 +231,12 @@ knowledge base rather than on a simulation.
 | `cognitive-export-rdf` | Exports the knowledge base as RDF (N-Quads and Turtle) for the Open Knowledge Network. |
 | `cognitive-kb-index`, `cognitive-verify-links`, `cognitive-validate-docs`, `cognitive-normalize-frontmatter`, `cognitive-create-node` | Knowledge-base maintenance; see [`../tools/README.md`](../tools/README.md). |
 
+`cognitive-export-rdf --check-submission` prints JSON and exits 1 when the graph
+fails the machine submission criteria. `--check` detects stale generated graph
+documentation; `--write-docs` refreshes it. A normal export writes N-Quads, Turtle
+and a SHA-256 manifest. See [OKN export](../okn/README.md) for the criteria and
+the distinction between technical checks and registry acceptance.
+
 The figures `cognitive-kb-report` writes are described in the
 [figure gallery](../visualization/gallery.md). The scripts in
 [`examples/`](../../examples/README.md) call both commands.
