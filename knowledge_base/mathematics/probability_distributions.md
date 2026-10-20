@@ -1,4 +1,16 @@
 ---
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/STATO_0000225
+    relation: exactMatch
+    evidence: https://www.ebi.ac.uk/ols4/api/ontologies/stato/terms?obo_id=STATO:0000225
+    rationale: >-
+      The source describes categorical, Dirichlet and Gaussian families by their
+      probability mass or density functions for random variables. STATO defines a
+      probability distribution as information specifying a random variable's
+      probabilities, including discrete formulas and continuous densities. Both
+      denote the distribution concept, not a particular numerical distribution
+      instance.
+    reviewed_on: "2026-10-20"
 title: Probability Distributions
 type: mathematical_concept
 status: stable

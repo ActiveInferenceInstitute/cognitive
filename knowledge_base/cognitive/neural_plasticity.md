@@ -1,4 +1,14 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q849491
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q849491
+    rationale: >-
+      The source defines the brain's capacity to alter structure and function with
+      experience, learning and injury. The target defines the brain's ability to
+      change throughout life. Both denote neuroplasticity as a capacity, including
+      functional and structural change rather than just synaptic regulation.
+    reviewed_on: "2026-10-20"
 title: Neural Plasticity
 type: concept
 status: stable

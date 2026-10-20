@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q849491
+    relation: broadMatch
+    evidence: https://www.wikidata.org/wiki/Q849491
+    rationale: >-
+      The source restricts structural plasticity to changes in neural physical
+      architecture, including synapse turnover, neurite change and limited
+      neurogenesis. The target denotes the brain's general ability to change across
+      life, including functional change. Neuroplasticity is the broader target; a
+      synapse-remodelling regulation process is not an equivalent.
+    reviewed_on: "2026-10-20"
 title: Structural Plasticity
 description: "Experience-dependent changes in the physical structure of neurons and circuits, including spine turnover, axonal remodelling and adult neurogenesis, and its relation to functional plasticity and structure learning."
 type: biology

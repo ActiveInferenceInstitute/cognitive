@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q492
+    relation: relatedMatch
+    evidence: https://www.wikidata.org/wiki/Q492
+    rationale: >-
+      The source organizes neural mechanisms and interacting cognitive systems
+      supporting encoding, storage and retrieval. The target denotes mental
+      faculties and processes of storing and retrieving information. The systems
+      realize memory, supporting an associative mapping rather than identity with
+      the general faculty.
+    reviewed_on: "2026-10-20"
 title: Memory Systems
 type: concept
 status: stable

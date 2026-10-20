@@ -42,6 +42,12 @@ kg:dataset
     prov:wasDerivedFrom <https://github.com/ActiveInferenceInstitute/cognitive> ;
     prov:wasGeneratedBy kg:activity\/export .
 
+domain:biology
+    a skos:Collection ;
+    void:inDataset kg:dataset ;
+    skos:member page:biology\/cortisol, page:biology\/gene_expression, page:biology\/serotonin ;
+    skos:prefLabel "Biology"@en .
+
 domain:citations
     a skos:Collection ;
     void:inDataset kg:dataset ;
@@ -51,7 +57,7 @@ domain:citations
 domain:mathematics
     a skos:Collection ;
     void:inDataset kg:dataset ;
-    skos:member page:mathematics\/markov_blanket ;
+    skos:member page:mathematics\/entropy, page:mathematics\/markov_blanket, page:mathematics\/probability_distributions ;
     skos:prefLabel "Mathematics"@en .
 
 kg:keyword\/active_inference
@@ -59,6 +65,12 @@ kg:keyword\/active_inference
     skos:inScheme kg:scheme ;
     skos:notation "active_inference" ;
     skos:prefLabel "active inference"@en .
+
+kg:keyword\/emotion
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "emotion" ;
+    skos:prefLabel "emotion"@en .
 
 kg:keyword\/empirical
     a skos:Concept, schema:DefinedTerm ;
@@ -72,6 +84,12 @@ kg:keyword\/endocrine
     skos:notation "endocrine" ;
     skos:prefLabel "endocrine"@en .
 
+kg:keyword\/genetics
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "genetics" ;
+    skos:prefLabel "genetics"@en .
+
 kg:keyword\/graphical_models
     a skos:Concept, schema:DefinedTerm ;
     skos:inScheme kg:scheme ;
@@ -84,17 +102,47 @@ kg:keyword\/hormone
     skos:notation "hormone" ;
     skos:prefLabel "hormone"@en .
 
+kg:keyword\/information-theory
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "information-theory" ;
+    skos:prefLabel "information-theory"@en .
+
 kg:keyword\/mathematics
     a skos:Concept, schema:DefinedTerm ;
     skos:inScheme kg:scheme ;
     skos:notation "mathematics" ;
     skos:prefLabel "mathematics"@en .
 
+kg:keyword\/molecular-biology
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "molecular-biology" ;
+    skos:prefLabel "molecular-biology"@en .
+
+kg:keyword\/neuromodulation
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "neuromodulation" ;
+    skos:prefLabel "neuromodulation"@en .
+
+kg:keyword\/neurotransmitter
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "neurotransmitter" ;
+    skos:prefLabel "neurotransmitter"@en .
+
 kg:keyword\/probability
     a skos:Concept, schema:DefinedTerm ;
     skos:inScheme kg:scheme ;
     skos:notation "probability" ;
     skos:prefLabel "probability"@en .
+
+kg:keyword\/regulation
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "regulation" ;
+    skos:prefLabel "regulation"@en .
 
 kg:keyword\/statistical_independence
     a skos:Concept, schema:DefinedTerm ;
@@ -114,6 +162,30 @@ kg:keyword\/tutorial
     skos:notation "tutorial" ;
     skos:prefLabel "tutorial"@en .
 
+kg:keyword\/uncertainty
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "uncertainty" ;
+    skos:prefLabel "uncertainty"@en .
+
+kg:mapping\/0d128dbe25b593182e20596aec6b220fd90e2284591c37802062fb598b121a8e
+    a rdf:Statement ;
+    dcterms:date "2026-10-20"^^xsd:date ;
+    dcterms:description "The source describes categorical, Dirichlet and Gaussian families by their probability mass or density functions for random variables. STATO defines a probability distribution as information specifying a random variable's probabilities, including discrete formulas and continuous densities. Both denote the distribution concept, not a particular numerical distribution instance."@en ;
+    dcterms:source <https://www.ebi.ac.uk/ols4/api/ontologies/stato/terms?obo_id=STATO:0000225> ;
+    rdf:object <http://purl.obolibrary.org/obo/STATO_0000225> ;
+    rdf:predicate skos:exactMatch ;
+    rdf:subject page:mathematics\/probability_distributions .
+
+kg:mapping\/6317025996f8ad508fde0857d9cca2f0d00fe158e67154a238a36e4722990207
+    a rdf:Statement ;
+    dcterms:date "2026-10-20"^^xsd:date ;
+    dcterms:description "The source names serotonin as 5-hydroxytryptamine, a monoamine neurotransmitter and neuromodulator. ChEBI defines the same primary amine as the 5-hydroxy derivative of tryptamine. The source's CNS focus concerns this chemical; it does not denote the whole serotonergic system or a drug preparation."@en ;
+    dcterms:source <https://www.ebi.ac.uk/chebi/CHEBI:28790> ;
+    rdf:object <http://purl.obolibrary.org/obo/CHEBI_28790> ;
+    rdf:predicate skos:exactMatch ;
+    rdf:subject page:biology\/serotonin .
+
 kg:mapping\/7f134b7453978a2bf82cf679172216d3f560fa84df52567039897551f121f876
     a rdf:Statement ;
     dcterms:date "2026-10-20"^^xsd:date ;
@@ -122,6 +194,15 @@ kg:mapping\/7f134b7453978a2bf82cf679172216d3f560fa84df52567039897551f121f876
     rdf:object <http://purl.obolibrary.org/obo/NCIT_C2290> ;
     rdf:predicate skos:exactMatch ;
     rdf:subject page:biology\/cortisol .
+
+kg:mapping\/b983d0d0cba6521152d865a354ec00e324a25a7329e1fecd196bbf8157312215
+    a rdf:Statement ;
+    dcterms:date "2026-10-20"^^xsd:date ;
+    dcterms:description "The source gives discrete Shannon entropy as the expected negative log probability, with conditional and joint forms. The target defines information entropy as expected information delivered by a message. Both denote Shannon information entropy, not thermodynamic entropy or a general notion of disorder."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q204570> ;
+    rdf:object <http://www.wikidata.org/entity/Q204570> ;
+    rdf:predicate skos:exactMatch ;
+    rdf:subject page:mathematics\/entropy .
 
 kg:mapping\/beb9989e3a319fe84b4168dc6b6614895a16d7edbb1f6eee146b90bfb3342ad1
     a rdf:Statement ;
@@ -140,6 +221,24 @@ kg:mapping\/c9e4fe519016c9c6bd653a40a966ee28df28d846d2324b18b1d80ecc3e9734b4
     rdf:object <http://www.wikidata.org/entity/Q190875> ;
     rdf:predicate skos:exactMatch ;
     rdf:subject page:biology\/cortisol .
+
+kg:mapping\/d3d3c59c30dbcb87db65407474cb59d3af2e1bc4d4d6526f15c5f621c34319c9
+    a rdf:Statement ;
+    dcterms:date "2026-10-20"^^xsd:date ;
+    dcterms:description "The source defines using gene information to make a functional product, protein or non-coding RNA, and covers transcription, processing and translation. GO defines conversion of gene sequence into a mature protein or RNA product, including processing and maturation. Both denote gene expression, rather than transcription alone."@en ;
+    dcterms:source <https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0010467> ;
+    rdf:object <http://purl.obolibrary.org/obo/GO_0010467> ;
+    rdf:predicate skos:exactMatch ;
+    rdf:subject page:biology\/gene_expression .
+
+kg:mapping\/e24718a5b56897a1b84942411fbf4f289259cb6a3d322b7afc0c37c31aac5368
+    a rdf:Statement ;
+    dcterms:date "2026-10-20"^^xsd:date ;
+    dcterms:description "The source denotes serotonin, or 5-hydroxytryptamine, as a monoamine chemical messenger with central and peripheral roles. NCI's serotonin concept identifies 5-hydroxytryptamine as a neurotransmitter and hormone found in brain and peripheral tissues. The chemical denotation agrees; the mapping does not endorse every physiological statement in either description."@en ;
+    dcterms:source <https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C828?include=full> ;
+    rdf:object <http://purl.obolibrary.org/obo/NCIT_C828> ;
+    rdf:predicate skos:exactMatch ;
+    rdf:subject page:biology\/serotonin .
 
 page:biology\/cortisol
     a skos:Concept, schema:CreativeWork ;
@@ -160,6 +259,43 @@ page:biology\/cortisol
     ckb:pageType "biology" ;
     ckb:status "stable" ;
     schema:keywords kg:keyword\/endocrine, kg:keyword\/hormone, kg:keyword\/stress .
+
+page:biology\/gene_expression
+    a skos:Concept, schema:CreativeWork ;
+    dcterms:created "2026-10-10"^^xsd:date ;
+    dcterms:description "How genetic information is transcribed and translated into RNA and protein, how that process is regulated, and its links to development, plasticity, and regulatory-network models."@en ;
+    dcterms:modified "2026-10-10"^^xsd:date ;
+    dcterms:references page:biology\/cell_biology, page:biology\/division_of_labor, page:biology\/gene_regulatory_networks, page:biology\/ltp, page:biology\/morphogenesis, page:biology\/neural_development, page:biology\/protein_synthesis, page:biology\/structural_proteins, page:biology\/systems_biology, page:citations\/friston_2015_knowing, page:cognitive\/memory_consolidation ;
+    dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/gene_expression.md> ;
+    dcterms:title "Gene Expression"@en ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q26972> ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/GO_0010467> ;
+    skos:inScheme kg:scheme ;
+    skos:prefLabel "Gene Expression"@en ;
+    skos:related page:biology\/gene_regulatory_networks, page:biology\/genetics, page:biology\/molecular_biology ;
+    ckb:pageType "biology" ;
+    ckb:status "stable" ;
+    schema:keywords kg:keyword\/genetics, kg:keyword\/molecular-biology, kg:keyword\/regulation .
+
+page:biology\/serotonin
+    a skos:Concept, schema:CreativeWork ;
+    dcterms:created "2026-10-10"^^xsd:date ;
+    dcterms:description "Serotonin (5-HT) as a monoamine neuromodulator with widespread projections from the raphe nuclei, its receptor diversity, proposed roles in mood and patience, and hypotheses linking it to precision and priors."@en ;
+    dcterms:modified "2026-10-10"^^xsd:date ;
+    dcterms:references page:biology\/amygdala, page:biology\/cortisol, page:cognitive\/decision_making, page:cognitive\/dopamine_system, page:cognitive\/emotion_regulation, page:cognitive\/oxytocin, page:cognitive\/precision_weighting, page:cognitive\/prior_beliefs, page:cognitive\/temporal_discounting ;
+    dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/serotonin.md> ;
+    dcterms:title "Serotonin"@en ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q167934> ;
+    skos:altLabel "serotonergic"@en, "serotonin_system"@en ;
+    skos:definition "Serotonin (5-hydroxytryptamine, 5-HT), a monoamine chemical messenger whose tryptamine structure has a 5-hydroxy substituent."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/CHEBI_28790>, <http://purl.obolibrary.org/obo/NCIT_C828> ;
+    skos:inScheme kg:scheme ;
+    skos:prefLabel "Serotonin"@en ;
+    skos:related page:cognitive\/computational_psychiatry, page:cognitive\/dopamine_system, page:cognitive\/emotional_processing ;
+    skos:scopeNote "The subject is the named serotonin chemical substance, with an emphasis on its central nervous system roles. The mappings do not denote the whole serotonergic system, a particular physiological protonation state, an assay or a drug preparation."@en ;
+    ckb:pageType "biology" ;
+    ckb:status "stable" ;
+    schema:keywords kg:keyword\/emotion, kg:keyword\/neuromodulation, kg:keyword\/neurotransmitter .
 
 page:citations\/README
     a schema:CollectionPage, schema:CreativeWork ;
@@ -188,6 +324,25 @@ page:citations\/smith_2022
     schema:keywords <http://purl.obolibrary.org/obo/NCIT_C16461>, <http://purl.obolibrary.org/obo/STATO_0000218>, kg:keyword\/active_inference, kg:keyword\/empirical, kg:keyword\/tutorial ;
     schema:sameAs <https://doi.org/10.1016/j.jmp.2021.102632> .
 
+page:mathematics\/entropy
+    a skos:Concept, schema:CreativeWork ;
+    dcterms:created "2025-08-08"^^xsd:date ;
+    dcterms:description "Short reference on Shannon, conditional and joint entropy, and its role as the uncertainty measure behind exploration and the ambiguity term of expected free energy."@en ;
+    dcterms:references page:mathematics\/information_theory, page:mathematics\/kl_divergence, page:mathematics\/mutual_information ;
+    dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/mathematics/entropy.md> ;
+    dcterms:title "Entropy"@en ;
+    skos:altLabel "shannon_entropy"@en ;
+    skos:definition "Shannon information entropy, the expected negative logarithm of the probability of a discrete outcome."@en ;
+    skos:exactMatch <http://www.wikidata.org/entity/Q204570> ;
+    skos:inScheme kg:scheme ;
+    skos:prefLabel "Entropy"@en ;
+    skos:related page:mathematics\/information_theory, page:mathematics\/kl_divergence, page:mathematics\/mutual_information ;
+    skos:scopeNote "This page treats Shannon entropy and its conditional and joint forms for discrete random variables. The correspondences do not identify it with thermodynamic entropy, differential entropy or generic disorder."@en ;
+    rel:used_by page:mathematics\/action_distribution, page:mathematics\/expected_free_energy, page:mathematics\/exploration_exploitation ;
+    ckb:pageType "mathematical_concept" ;
+    ckb:status "stable" ;
+    schema:keywords kg:keyword\/information-theory, kg:keyword\/uncertainty .
+
 page:mathematics\/markov_blanket
     a skos:Concept, schema:CreativeWork ;
     dcterms:created "2024-03-15"^^xsd:date ;
@@ -204,6 +359,23 @@ page:mathematics\/markov_blanket
     ckb:pageType "mathematical_concept" ;
     ckb:status "stable" ;
     schema:keywords kg:keyword\/graphical_models, kg:keyword\/mathematics, kg:keyword\/probability, kg:keyword\/statistical_independence .
+
+page:mathematics\/probability_distributions
+    a skos:Concept, schema:CreativeWork ;
+    dcterms:created "2025-03-03"^^xsd:date ;
+    dcterms:modified "2026-10-09"^^xsd:date ;
+    dcterms:references page:mathematics\/entropy, page:mathematics\/exponential_family, page:mathematics\/kl_divergence, page:mathematics\/probability_theory, page:mathematics\/softmax_function, page:mathematics\/statistical_foundations, page:mathematics\/temperature_parameter ;
+    dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/mathematics/probability_distributions.md> ;
+    dcterms:title "Probability Distributions"@en ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q200726> ;
+    skos:altLabel "categorical_distribution"@en, "probability_distribution"@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/STATO_0000225> ;
+    skos:inScheme kg:scheme ;
+    skos:prefLabel "Probability Distributions"@en ;
+    skos:related page:mathematics\/entropy, page:mathematics\/exponential_family, page:mathematics\/kl_divergence ;
+    ckb:pageType "mathematical_concept" ;
+    ckb:status "stable" ;
+    schema:keywords kg:keyword\/mathematics, kg:keyword\/probability .
 
 rel:extends
     a rdf:Property ;
@@ -227,6 +399,12 @@ rel:implements
     a rdf:Property ;
     rdfs:comment "Relation 'implements' as written in a page's semantic_relations; read it from the page that declares it to the page it names."@en ;
     rdfs:label "implements"@en ;
+    rdfs:subPropertyOf skos:semanticRelation .
+
+rel:used_by
+    a rdf:Property ;
+    rdfs:comment "Relation 'used_by' as written in a page's semantic_relations; read it from the page that declares it to the page it names."@en ;
+    rdfs:label "used by"@en ;
     rdfs:subPropertyOf skos:semanticRelation .
 
 kg:scheme

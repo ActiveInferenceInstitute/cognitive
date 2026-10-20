@@ -54,28 +54,32 @@ from urllib.parse import quote
 try:
     from scripts.kb_index import _split
     from scripts.rdf_alignment import RELATIONS, checked_iri, reviewed_mappings
+    from scripts.rdf_quality import GraphIndex, semantic_quality
     from scripts.verify_links import (
         MATRIX_LITERAL_PATTERN,
         WIKI_LINK_PATTERN,
         LinkIndex,
         _alias_key,
-        _build_index,
         _extract_wiki_target,
         _frontmatter_aliases,
+        _iter_files,
+        _normalise_key,
         _resolve_target_path,
         _strip_markdown_code,
     )
 except ImportError:  # run as a file: the script directory is on sys.path
     from kb_index import _split  # type: ignore[no-redef]
     from rdf_alignment import RELATIONS, checked_iri, reviewed_mappings  # type: ignore[no-redef]
+    from rdf_quality import GraphIndex, semantic_quality  # type: ignore[no-redef]
     from verify_links import (  # type: ignore[no-redef]
         MATRIX_LITERAL_PATTERN,
         WIKI_LINK_PATTERN,
         LinkIndex,
         _alias_key,
-        _build_index,
         _extract_wiki_target,
         _frontmatter_aliases,
+        _iter_files,
+        _normalise_key,
         _resolve_target_path,
         _strip_markdown_code,
     )
@@ -101,13 +105,24 @@ DOCS_DIR = Path("docs/okn")
 SAMPLE_NAME = "cognitive-kb.sample.ttl"
 STATISTICS_NAME = "statistics.md"
 ALIGNMENT_NAME = "alignment-review.md"
-# Pages whose full description goes in the committed sample: one mathematical
-# concept with typed relations, one citation, one navigation page.
+RUNTIME_SOURCE_NAMES = (
+    "__init__.py",
+    "export_rdf.py",
+    "rdf_alignment.py",
+    "rdf_quality.py",
+    "kb_index.py",
+    "verify_links.py",
+    "markdown_fences.py",
+)
 SAMPLE_PAGES = (
     "mathematics/markov_blanket",
     "citations/smith_2022",
     "citations/README",
     "biology/cortisol",
+    "biology/serotonin",
+    "biology/gene_expression",
+    "mathematics/probability_distributions",
+    "mathematics/entropy",
 )
 
 PREFIXES = {
@@ -368,7 +383,8 @@ def _describe_page(
                 literal(str(frontmatter[key]), lang="en"),
             )
     for alias in _strings(frontmatter.get("aliases")):
-        graph.add(subject, iri(PREFIXES["skos"] + "altLabel"), literal(alias, lang="en"))
+        if alias != title or navigation or redirect:
+            graph.add(subject, iri(PREFIXES["skos"] + "altLabel"), literal(alias, lang="en"))
     if frontmatter.get("created") is not None:
         graph.add(subject, iri(PREFIXES["dcterms"] + "created"), typed_date(frontmatter["created"]))
     updated = frontmatter.get("updated") or frontmatter.get("modified")
@@ -459,22 +475,25 @@ def _shipped_index(root: Path) -> LinkIndex:
     which depends on the order the filesystem lists directories. The graph must
     not, so repeated names resolve to the alphabetically first path.
     """
-    full = _build_index(root)
+    files = [
+        path.relative_to(root) for path in _iter_files(root) if _is_shipped(path.relative_to(root))
+    ]
     by_rel = {
-        key: path
-        for key, path in sorted(full.markdown_by_rel_no_suffix.items())
-        if _is_shipped(path)
+        _normalise_key(path.with_suffix("").as_posix()): path
+        for path in sorted(files)
+        if path.suffix.casefold() == ".md"
     }
     by_stem: dict[str, list[Path]] = {}
     by_alias: dict[str, Path] = {}
     for path in sorted(by_rel.values(), key=lambda item: item.as_posix().lower()):
+        _require_regular_source(root / path, root)
         by_stem.setdefault(path.stem.lower(), []).append(path)
         for alias in _frontmatter_aliases(root / path):
             by_alias.setdefault(_alias_key(alias), path)
     return LinkIndex(
         markdown_by_stem=by_stem,
         markdown_by_rel_no_suffix=by_rel,
-        all_files_by_rel={key for key in full.all_files_by_rel if _is_shipped(Path(key))},
+        all_files_by_rel={_normalise_key(path.as_posix()) for path in files},
         markdown_by_alias=by_alias,
     )
 
@@ -612,7 +631,8 @@ def build_graph(repo_root: Path) -> tuple[Graph, Report]:
     updated_dates: list[str] = []
     domain_names: set[str] = set()
 
-    for path in sorted(kb_root.rglob("*.md")):
+    for path in _markdown_paths(kb_root):
+        _require_regular_source(path, root)
         node_id = path.relative_to(kb_root).with_suffix("").as_posix()
         frontmatter, body = _split(path.read_text(encoding="utf-8"))
         report.pages += 1
@@ -743,7 +763,7 @@ def sample_turtle(graph: Graph) -> str:
         o for s, p, o in graph.triples if s in pages and p == iri(PREFIXES["schema"] + "keywords")
     }
     fixed = {iri(DATASET), iri(SCHEME), iri(ACTIVITY), iri(EXPORTER_URL)}
-    fixed |= {iri(DOMAIN + "mathematics"), iri(DOMAIN + "citations")}
+    fixed |= {iri(DOMAIN + page.split("/", 1)[0]) for page in SAMPLE_PAGES if "/" in page}
     member = iri(PREFIXES["skos"] + "member")
     terms = {p for s, p, _ in graph.triples if s in pages and p.startswith(f"<{VOCAB}")}
     terms |= {p for s, p, _ in graph.triples if s in pages and p.startswith(f"<{RELATION}")}
@@ -903,6 +923,13 @@ def stale_docs(root: Path) -> list[str]:
 
 def submission_errors(graph: Graph) -> list[str]:
     """Check machine-observable OKN criteria; acceptance remains a curator decision."""
+    return submission_diagnostics(graph)["errors"]
+
+
+def submission_diagnostics(graph: Graph) -> dict[str, Any]:
+    """Combine submission metadata checks and semantic quality using one index."""
+    index = GraphIndex.build(graph.triples)
+    quality = semantic_quality(graph, index=index)
     errors: list[str] = []
     license_predicate = iri(PREFIXES["dcterms"] + "license")
     allowed = {
@@ -910,103 +937,95 @@ def submission_errors(graph: Graph) -> list[str]:
         iri("https://creativecommons.org/publicdomain/zero/1.0/"),
     }
     for subject in (DATASET, SCHEME):
-        licenses = {o for s, p, o in graph.triples if s == iri(subject) and p == license_predicate}
+        licenses = index.objects(iri(subject), PREFIXES["dcterms"] + "license")
         if len(licenses) != 1 or not licenses <= allowed:
             errors.append(f"{subject}: requires one CC-BY 4.0 or CC0 1.0 license")
-    for subject, predicate, obj in graph.triples:
-        if predicate == license_predicate and obj not in allowed:
+    for subject, obj in index.by_predicate.get(license_predicate, set()):
+        if obj not in allowed:
             errors.append(f"{subject}: incompatible license {obj}")
-    pages = {
-        s
-        for s, p, o in graph.triples
-        if p == iri(RDF_TYPE) and o == iri(PREFIXES["schema"] + "CreativeWork")
-    }
+    pages = {s for s, o in index.pairs(RDF_TYPE) if o == iri(PREFIXES["schema"] + "CreativeWork")}
     if not pages:
         errors.append("graph contains no pages")
-    dangling = {o for _, _, o in graph.triples if o.startswith(iri(PAGE)[:-1]) and o not in pages}
+    dangling = {
+        o
+        for pairs in index.by_predicate.values()
+        for _, o in pairs
+        if o.startswith(iri(PAGE)[:-1]) and o not in pages
+    }
     if dangling:
         errors.append(f"dangling page objects: {len(dangling)}")
-    if not any(
-        p
-        in {
-            iri(PREFIXES["skos"] + r)
-            for r in ("exactMatch", "closeMatch", "broadMatch", "narrowMatch", "relatedMatch")
-        }
-        and s in pages
-        for s, p, _ in graph.triples
-    ):
+    if not any(s in pages for r in RELATIONS for s, _ in index.pairs(PREFIXES["skos"] + r)):
         errors.append("no external concept mappings; document an interoperability review")
-    keywords = iri(PREFIXES["schema"] + "keywords")
-    if any(not o.startswith("<") for _, p, o in graph.triples if p == keywords):
-        errors.append("schema:keywords objects must be concept IRIs")
-    for _, predicate, target in graph.triples:
-        if (
-            predicate == keywords
-            and target.startswith("<" + BASE + "keyword/")
-            and (target, iri(RDF_TYPE), iri(PREFIXES["skos"] + "Concept")) not in graph.triples
-        ):
-            errors.append(f"local keyword lacks concept declaration: {target}")
-    mapping_predicates = {iri(PREFIXES["skos"] + r) for r in RELATIONS}
-    for subject, predicate, target in graph.triples:
-        if predicate not in mapping_predicates:
-            continue
-        statements = {
-            s for s, p, o in graph.triples if p == iri(PREFIXES["rdf"] + "subject") and o == subject
-        }
-        evidenced = False
-        for statement in statements:
-            if (
-                (statement, iri(RDF_TYPE), iri(PREFIXES["rdf"] + "Statement")) not in graph.triples
-                or (statement, iri(PREFIXES["rdf"] + "predicate"), predicate) not in graph.triples
-                or (statement, iri(PREFIXES["rdf"] + "object"), target) not in graph.triples
-            ):
-                continue
-            sources = [
-                o
-                for s, p, o in graph.triples
-                if s == statement and p == iri(PREFIXES["dcterms"] + "source")
-            ]
-            rationales = [
-                o
-                for s, p, o in graph.triples
-                if s == statement and p == iri(PREFIXES["dcterms"] + "description")
-            ]
-            dates = [
-                o
-                for s, p, o in graph.triples
-                if s == statement and p == iri(PREFIXES["dcterms"] + "date")
-            ]
-            if len(sources) != 1 or len(rationales) != 1 or len(dates) != 1:
-                continue
-            if (
-                not sources[0].startswith("<")
-                or not rationales[0].endswith('"@en')
-                or not rationales[0].startswith('"')
-                or dates[0] != literal(dates[0][1:11], datatype=XSD_DATE)
-            ):
-                continue
-            try:
-                checked_iri(sources[0][1:-1])
-                checked_iri(target[1:-1])
-                date.fromisoformat(dates[0][1:11])
-                if not json.loads(rationales[0][:-3]).strip():
-                    continue
-            except ValueError:
-                continue
-            evidenced = True
-        if (
-            not target.startswith("<")
-            or not evidenced
-            or (subject, iri(RDF_TYPE), iri(PREFIXES["skos"] + "Concept")) not in graph.triples
-        ):
-            errors.append(f"mapping lacks review evidence: {subject} {predicate} {target}")
-    for name in ("cited_by", "cites"):
-        if any(p == iri(RELATION + name) for _, p, _ in graph.triples):
-            errors.append(f"use BIBO rather than custom citation predicate: {name}")
+    errors.extend(
+        f"{finding['code']}: {finding['message']} {' '.join(finding['terms'])}"
+        for finding in quality["errors"]
+    )
     provenance = (iri(DATASET), iri(PREFIXES["prov"] + "wasDerivedFrom"), iri(SOURCE_REPOSITORY))
     if provenance not in graph.triples:
         errors.append("dataset source provenance is missing")
-    return sorted(set(errors))
+    return {"machine_checks_passed": not errors, "errors": sorted(set(errors)), "quality": quality}
+
+
+def _markdown_paths(directory: Path) -> list[Path]:
+    return sorted(path for path in directory.rglob("*") if path.suffix.casefold() == ".md")
+
+
+def _require_regular_source(path: Path, root: Path) -> None:
+    if (
+        not path.is_file()
+        or path.is_symlink()
+        or any(parent.is_symlink() for parent in path.parents if parent.is_relative_to(root))
+    ):
+        raise ValueError(f"export source must be a regular file without symlinks: {path}")
+
+
+def _source_hashes(root: Path) -> dict[str, str]:
+    paths = {path for path in root.iterdir() if path.suffix.casefold() == ".md"}
+    for directory in SHIPPED_DIRECTORIES:
+        paths.update(_markdown_paths(root / directory))
+    paths.update(
+        path
+        for name in RUNTIME_SOURCE_NAMES
+        if (path := Path(__file__).resolve().with_name(name)).is_relative_to(root)
+    )
+    for name in ("pyproject.toml", "uv.lock", ".python-version"):
+        path = root / name
+        if path.exists() or path.is_symlink():
+            paths.add(path)
+    hashes = {}
+    for path in sorted(paths):
+        _require_regular_source(path, root)
+        hashes[path.relative_to(root).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashes
+
+
+def _require_stable_sources(root: Path, expected: dict[str, str]) -> None:
+    if _source_hashes(root) != expected:
+        raise ValueError("source inputs changed during export; retry after source writers finish")
+
+
+def _resolution_files(root: Path) -> list[str]:
+    names: set[str] = set()
+
+    def fail(error: OSError) -> None:
+        raise error
+
+    for path in root.iterdir():
+        if path.name in SHIPPED_DIRECTORIES:
+            if path.is_symlink() or not path.is_dir():
+                raise ValueError(f"resolution input must be a real directory: {path}")
+            for parent, directories, files in os.walk(path, followlinks=False, onerror=fail):
+                for name in directories:
+                    if (Path(parent) / name).is_symlink():
+                        raise ValueError(f"resolution directory cannot be a symlink: {name}")
+                for name in files:
+                    source = Path(parent) / name
+                    _require_regular_source(source, root)
+                    names.add(source.relative_to(root).as_posix())
+        elif path.name in {"pyproject.toml", "uv.lock", ".python-version"} or not path.is_dir():
+            _require_regular_source(path, root)
+            names.add(path.name)
+    return sorted(names)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -1022,6 +1041,11 @@ def main(argv: list[str] | None = None) -> int:
     )
     mode.add_argument(
         "--write-docs", action="store_true", help="refresh docs/okn sample and statistics"
+    )
+    mode.add_argument(
+        "--quality-report",
+        action="store_true",
+        help="print deterministic semantic JSON; exit 1 on fatal findings",
     )
     parser.add_argument("--json", action="store_true", help="print the report as JSON")
     args = parser.parse_args(argv)
@@ -1044,28 +1068,34 @@ def main(argv: list[str] | None = None) -> int:
             print(f"wrote {path.relative_to(root)}")
         return 0
 
+    source_hashes = {} if args.quality_report or args.check_submission else _source_hashes(root)
+    resolution_files = (
+        [] if args.quality_report or args.check_submission else _resolution_files(root)
+    )
     graph, report = build_graph(root)
+    if args.quality_report:
+        quality = semantic_quality(graph)
+        print(json.dumps(quality, indent=2, sort_keys=True))
+        return 0 if quality["machine_checks_passed"] else 1
     if args.check_submission:
-        errors = submission_errors(graph)
+        diagnostics = submission_diagnostics(graph)
         result = {
-            "machine_checks_passed": not errors,
-            "errors": errors,
+            **diagnostics,
             "aligned_pages": report.aligned_pages,
             "reviewed_mapping_relations": dict(sorted(report.mapping_relations.items())),
             "discovery_pages": report.discovery_pages,
             "unresolved_links": report.unresolved_links,
         }
         print(json.dumps(result, indent=2))
-        return 1 if errors else 0
+        return 0 if diagnostics["machine_checks_passed"] else 1
+    _require_stable_sources(root, source_hashes)
+    if _resolution_files(root) != resolution_files:
+        raise ValueError("resolution file-name inventory changed during export; retry when stable")
     out = (root / args.output) if not Path(args.output).is_absolute() else Path(args.output)
     out.mkdir(parents=True, exist_ok=True)
     artifacts = {"cognitive-kb.nq": to_nquads(graph), "cognitive-kb.ttl": to_turtle(graph)}
     for name, content in artifacts.items():
         (out / name).write_text(content, encoding="utf-8")
-    sources = sorted((root / KB_NAME).rglob("*.md"))
-    sources += [Path(__file__).resolve(), Path(__file__).with_name("rdf_alignment.py")]
-    if (root / "LICENSE-KNOWLEDGE-BASE.md").is_file():
-        sources.append(root / "LICENSE-KNOWLEDGE-BASE.md")
     manifest = {
         "graph": GRAPH,
         "license": LICENSE,
@@ -1073,11 +1103,8 @@ def main(argv: list[str] | None = None) -> int:
             name: hashlib.sha256(content.encode()).hexdigest()
             for name, content in artifacts.items()
         },
-        "sources": {
-            path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
-            for path in sources
-            if path.is_relative_to(root)
-        },
+        "sources": source_hashes,
+        "resolution_files": resolution_files,
     }
     (out / "manifest.json").write_text(
         json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"

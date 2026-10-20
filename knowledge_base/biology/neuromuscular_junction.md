@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/GO_0031594
+    relation: broadMatch
+    evidence: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0031594
+    rationale: >-
+      The source defines the specialized synapse between a motor neuron and skeletal
+      muscle fibre and describes cholinergic excitation. GO includes
+      motor-axon/muscle-fibre junctions generally and explicitly includes inhibitory
+      and non-cholinergic invertebrate junctions. GO therefore supplies a broader
+      concept, not an exact match to this page's scope.
+    reviewed_on: "2026-10-20"
 title: Neuromuscular Junction
 description: The chemical synapse between a motor neuron and a skeletal muscle fibre, how acetylcholine release produces contraction, its clinical disorders, and its place in motor control.
 type: concept

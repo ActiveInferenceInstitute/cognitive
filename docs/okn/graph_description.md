@@ -16,7 +16,14 @@ Active Inference and the fields it draws on, linked to one another. Figures are 
 ## What the nodes are
 
 Every Markdown page under `knowledge_base/` is one node, identified by its path. A node is
-always a `schema:CreativeWork`, and one of three things more:
+always a `schema:CreativeWork` with the additional role shown below.
+
+For compatibility, a concept page uses the same IRI for the document record and
+its SKOS subject concept. SKOS mapping predicates describe that conceptual role;
+the `schema:CreativeWork` role retains document metadata and citations. This is
+an explicit application convention, not a claim of OWL identity with an external
+class or an assertion that the page is an instance of its subject. Consumers
+requiring separate document and concept resources must account for this convention.
 
 | Node | RDF type | What it is |
 |---|---|---|
@@ -117,3 +124,7 @@ Delaware nonprofit. The registry entry therefore leaves its `funding` field out.
   independent human review or clinical equivalence. See
   [interoperability evidence and review rules](interoperability.md).
 - Self-links are dropped, and a page that appears under two names (an alias) is one node.
+- [Semantic diagnostics](graph-quality.md) check labels, standard hierarchy and
+  mapping conflicts, complete review statements, local keyword descriptions,
+  identifiers, dates and citation endpoints across the export. Coverage metrics
+  expose editorial gaps without making a missing definition or mapping fatal.

@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q23407
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q23407
+    rationale: >-
+      The source defines philosophy of mind through mental phenomena, consciousness,
+      intentionality and the relation of mind to the physical world. The target is
+      the branch of philosophy studying the nature of mind. Both denote the field;
+      the mapping does not attribute the source's Free Energy Principle position to
+      the target.
+    reviewed_on: "2026-10-20"
 title: Philosophy of Mind
 type: concept
 status: stable

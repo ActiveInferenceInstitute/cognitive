@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/GO_0042592
+    relation: exactMatch
+    evidence: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0042592
+    rationale: >-
+      The source defines homeostasis as biological maintenance of internal stability
+      despite external perturbations. GO defines biological processes maintaining an
+      internal steady state despite varying external conditions. Both denote
+      homeostatic maintenance; the source's Free Energy Principle interpretation is
+      explanatory context, not part of the equivalence assertion.
+    reviewed_on: "2026-10-20"
 title: Homeostasis
 type: concept
 status: stable

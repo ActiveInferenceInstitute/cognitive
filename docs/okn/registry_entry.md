@@ -56,7 +56,7 @@ identity or clinical equivalence. No external grant funding is claimed.
 A cross-graph query follows the existing Wikidata mappings through the OKN
 identifier-mappings graph to labeled OBO identifiers in Ubergraph. Captured live
 responses, the query and replayable join evidence are in the source repository's
-`docs/okn/evidence/2026-10-20/`. This demonstrates identifier-based discovery;
+`docs/okn/evidence/2026-10-20-graph-methods/`. This demonstrates identifier-based discovery;
 it does not add equivalence assertions. The reusable
 capture and submission methods are maintained in `docxology/daf-okn`.
 

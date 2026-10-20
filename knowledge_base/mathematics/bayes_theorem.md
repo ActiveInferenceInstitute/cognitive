@@ -1,4 +1,14 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q182505
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q182505
+    rationale: >-
+      The source states the conditional-probability identity P(A|B)=P(B|A)P(A)/P(B)
+      and its posterior-update interpretation. The target denotes Bayes' theorem
+      relating an event's probability to prior knowledge of relevant conditions.
+      Both denote the theorem, rather than Bayesian inference as a whole.
+    reviewed_on: "2026-10-20"
 title: Bayes' Theorem
 type: mathematical_concept
 status: stable

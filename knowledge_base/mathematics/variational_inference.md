@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q7915794
+    relation: narrowMatch
+    evidence: https://arxiv.org/abs/1601.00670v9
+    rationale: >-
+      The source defines optimization-based approximation of probability
+      distributions, including KL and ELBO formulations. The target specifically
+      denotes variational Bayesian methods. The author review distinguishes general
+      density approximation from its Bayesian posterior application, so the Bayesian
+      target is a narrower correspondence rather than an exact synonym.
+    reviewed_on: "2026-10-20"
 title: Variational Inference
 type: mathematical_concept
 id: variational_inference_001

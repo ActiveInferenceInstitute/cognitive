@@ -1,0 +1,34 @@
+{
+  "observed_at": "2026-10-20T20:57:00.713268+00:00",
+  "endpoint": "https://apps.okn.us/federation/sparql",
+  "local_sha256": "6fbd4043276e8192b16a05a4b8a35cf582e95db05a3031993946da276e16660a",
+  "join_query_sha256": "b6d64ad320ca43f2cb5c8cbf75dfc16e8b66867647c2d631953b5dc3cd1ecdb6",
+  "captures": [
+    {
+      "graph": "https://purl.org/okn/frink/kg/identifier-mappings",
+      "query_file": "identifier-mappings-0000.rq",
+      "response_file": "identifier-mappings-0000.json",
+      "query_sha256": "59b5476822c5ffbc27b588aa7fb5bcda53b776853f06d31d66ac9756b4ef11d6",
+      "response_sha256": "9367516ae65c1d5c9c31a7c16136df237648b3696247e0adfc8f673cd3e0c109"
+    },
+    {
+      "graph": "https://purl.org/okn/frink/kg/ubergraph",
+      "query_file": "ubergraph-0000.rq",
+      "response_file": "ubergraph-0000.json",
+      "query_sha256": "4152aa8c03db362b2e13d0c61dec7efcbbc1e26d9e391d3a10f10dbe7bb2bc70",
+      "response_sha256": "346a9ffffa37a0b05ed7724588f2796a9b99a3f4625d9b06398b5fbbac757289"
+    }
+  ],
+  "requested_wikidata_keys": 28,
+  "requested_obo_terms": 2,
+  "schema_version": 2,
+  "files": {
+    "identifier-mappings-0000.json": "9367516ae65c1d5c9c31a7c16136df237648b3696247e0adfc8f673cd3e0c109",
+    "identifier-mappings-0000.rq": "59b5476822c5ffbc27b588aa7fb5bcda53b776853f06d31d66ac9756b4ef11d6",
+    "join-query.rq": "b6d64ad320ca43f2cb5c8cbf75dfc16e8b66867647c2d631953b5dc3cd1ecdb6",
+    "join-results.json": "70323cc5cde9496aa555250e38796e0200daafa28af1cb7c77409a1a7274d521",
+    "join-results.md": "97b51138656744f87f8fd37e4cb95c232581c9eb93dc220805b3dff56574951a",
+    "ubergraph-0000.json": "346a9ffffa37a0b05ed7724588f2796a9b99a3f4625d9b06398b5fbbac757289",
+    "ubergraph-0000.rq": "4152aa8c03db362b2e13d0c61dec7efcbbc1e26d9e391d3a10f10dbe7bb2bc70"
+  }
+}

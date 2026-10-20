@@ -1,4 +1,14 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q5862903
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q5862903
+    rationale: >-
+      The source introduces the mathematical foundations of probability,
+      measure-based reasoning and stochastic processes. The target denotes the
+      branch of mathematics concerning probability. Both are the general
+      mathematical field, not a probability value or individual distribution.
+    reviewed_on: "2026-10-20"
 title: "Probability Theory"
 type: "mathematical_concept"
 status: stable

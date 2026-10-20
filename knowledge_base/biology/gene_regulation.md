@@ -1,4 +1,16 @@
 ---
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/GO_0010468
+    relation: exactMatch
+    evidence: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0010468
+    rationale: >-
+      The source defines processes controlling whether, when and to what extent
+      genes are expressed and includes transcriptional, chromatin and
+      post-transcriptional mechanisms. GO defines modulation of gene-expression
+      frequency, rate or extent, including availability and stability of
+      intermediates. Both cover gene-expression regulation beyond transcription
+      alone.
+    reviewed_on: "2026-10-20"
 title: Gene Regulation
 description: The mechanisms that control when and how much of each gene product is made, from transcription and chromatin to translation, and their treatment as networks and in free-energy accounts of cells.
 type: concept

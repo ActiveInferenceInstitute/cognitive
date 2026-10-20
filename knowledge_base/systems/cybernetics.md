@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q123637
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q123637
+    rationale: >-
+      The source defines cybernetics as the transdisciplinary study of regulation
+      and purposeful behavior and develops feedback, information and communication.
+      The target defines the theory of communication and control based on regulatory
+      feedback. Both denote cybernetics as a field, not an individual controller or
+      feedback mechanism.
+    reviewed_on: "2026-10-20"
 title: Cybernetics
 description: The study of regulation, communication and control in animals and machines through feedback, covering requisite variety, the good regulator theorem, second-order cybernetics and its lineage to Active Inference.
 type: concept

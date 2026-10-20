@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q431627
+    relation: closeMatch
+    evidence: https://www.wikidata.org/wiki/Q431627
+    rationale: >-
+      The source treats cognition as enacted through embodied organism-environment
+      interaction, adding autopoiesis and sense-making commitments. The target
+      defines the theory that cognition arises through organism-environment
+      interaction. This shared constitutive account supports a close mapping, while
+      the source's additional philosophical commitments prevent an exact assertion.
+    reviewed_on: "2026-10-20"
 title: Enactivism
 type: concept
 status: active

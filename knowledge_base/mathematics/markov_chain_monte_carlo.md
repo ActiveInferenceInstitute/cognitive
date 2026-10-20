@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q1191869
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q1191869
+    rationale: >-
+      The source approximates expectations by averaging a Markov chain with the
+      desired stationary distribution. The target is a class of sampling and Monte
+      Carlo algorithms explicitly using Markov chains. These combined target
+      statements identify the same algorithm family, not all Monte Carlo methods or
+      any arbitrary Markov chain.
+    reviewed_on: "2026-10-20"
 title: Markov Chain Monte Carlo
 description: Sampling methods that build a Markov chain whose stationary distribution is a target density, their convergence conditions, main algorithms and diagnostics, and their contrast with variational inference.
 type: mathematical_concept

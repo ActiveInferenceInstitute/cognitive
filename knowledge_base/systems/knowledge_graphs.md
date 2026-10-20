@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q33002955
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q33002955
+    rationale: >-
+      The source defines knowledge graphs as structured information about entities,
+      properties and relationships represented by a graph. The target defines a
+      repository structured as a graph of entities and relationships. Both denote
+      the general knowledge-graph concept, not Google's particular Knowledge Graph
+      service.
+    reviewed_on: "2026-10-20"
 title: Knowledge Graphs
 type: concept
 status: stable

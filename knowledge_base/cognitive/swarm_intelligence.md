@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q863960
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q863960
+    rationale: >-
+      The source defines emergent collective behavior in decentralized
+      self-organized groups, including natural swarms and computational
+      optimization. The target defines collective behavior of decentralized
+      self-organized systems. Both denote swarm intelligence, rather than any
+      particular swarm algorithm.
+    reviewed_on: "2026-10-20"
 title: Swarm Intelligence
 type: concept
 status: stable

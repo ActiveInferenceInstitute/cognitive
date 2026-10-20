@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q609408
+    relation: relatedMatch
+    evidence: https://www.wikidata.org/wiki/Q609408
+    rationale: >-
+      The source concerns an engineering approach that guides self-organizing local
+      interactions through constraints or objectives. The target denotes the process
+      of creating order through local interactions. The approach steers that
+      process, supporting an associative mapping rather than identity or an
+      unqualified process subtype.
+    reviewed_on: "2026-10-20"
 title: Guided Self-Organization
 description: Design approach that steers self-organising systems toward useful behaviour by shaping constraints or objectives rather than prescribing outcomes, with its relation to emergence and Active Inference.
 type: concept

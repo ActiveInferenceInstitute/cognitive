@@ -2,7 +2,7 @@
 title: OKN submission criteria and evidence
 type: reference
 status: stable
-updated: 2026-10-13
+updated: 2026-10-20
 ---
 
 # OKN submission criteria and evidence
@@ -19,7 +19,7 @@ RENCI decides whether to accept the graph. The
 | Clear public research, education or public-good innovation use case | [Graph description](graph_description.md): concept discovery, reading paths and literature links | RENCI assesses thematic fit |
 | CC-BY or CC0 graph license | [CC BY 4.0 notice](../../LICENSE-KNOWLEDGE-BASE.md); `dcterms:license` on dataset and concept scheme | Maintainer approved the change and reported no known third-party content exceptions; checks cannot establish ownership |
 | Recommended domain standards and identifiers | SKOS, Dublin Core, schema.org, PROV-O, DCAT, VoID; existing Wikidata and DOI links | Apply domain identifiers only when a page denotes the appropriate entity |
-| Good-faith evidence of mapping and meshing with OKN graphs | [Interoperability](interoperability.md), [captured join results](evidence/2026-10-20/join-results.md), runnable cross-graph query | Local export joined with live identifier-mappings and Ubergraph responses; hosting cognitive-kb and server-side execution remain separate steps |
+| Good-faith evidence of mapping and meshing with OKN graphs | [Interoperability](interoperability.md), [captured join results](evidence/2026-10-20-graph-methods/join-results.md), runnable cross-graph query | Local export joined with live identifier-mappings and Ubergraph responses; hosting cognitive-kb and server-side execution remain separate steps |
 | Federal-program alignment is encouraged, not required | Existing description reports volunteer maintenance without external grant support | Do not claim an NSF or NIH award for this graph |
 
 ## Before upload
@@ -46,6 +46,16 @@ concept-valued keywords, standard citation predicates, discovery-only unreviewed
 links and explicit evidence for each SKOS correspondence. Submission checks reject
 literal keywords and mapping assertions without complete review records. A passing
 check verifies that evidence is recorded; it does not verify the scientific judgment.
+
+The combined check now includes the [graph-wide semantic quality profile](graph-quality.md).
+Run `uv run --extra dev python -m scripts.export_rdf --quality-report` to inspect
+its deterministic JSON separately. Fatal findings include SKOS label and relation
+disjointness, malformed identifiers or typed dates, incomplete or orphan mapping
+review statements, incomplete local keyword descriptions and invalid citation
+endpoints. Missing editorial fields and SKOS-permitted hierarchy cycles remain
+nonfatal; inspect coverage and warnings before upload. `--check-submission` embeds
+the same semantic report under `quality` and returns status one for any fatal
+metadata or semantic finding.
 
 The repository's automated check is a necessary technical check, not a full
 submission certification. Generated exports, registry acceptance, upload,

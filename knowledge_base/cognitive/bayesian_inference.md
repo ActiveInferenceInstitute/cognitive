@@ -1,5 +1,15 @@
 ---
 external_mappings:
+  - target: http://purl.obolibrary.org/obo/STATO_0000706
+    relation: closeMatch
+    evidence: https://www.ebi.ac.uk/ols4/api/ontologies/stato/terms?obo_id=STATO:0000706
+    rationale: >-
+      The source defines updating beliefs from evidence with Bayes' rule and gives
+      posterior-update equations. STATO defines learning from data by updating prior
+      distributions over random parameters with Bayes' rule. The shared operation
+      supports a close mapping; the source also discusses cognitive hierarchies
+      beyond STATO's parameter-inference framing.
+    reviewed_on: "2026-10-20"
   - target: http://www.wikidata.org/entity/Q812535
     relation: exactMatch
     evidence: https://www.wikidata.org/wiki/Q812535

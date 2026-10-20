@@ -1,4 +1,32 @@
 ---
+definition: >-
+  Oxytocin, the mature cyclic nonapeptide hormone and brain neuromodulator produced
+  by hypothalamic neurons and released from the posterior pituitary.
+scope_note: >-
+  The subject is the mature nine-residue oxytocin peptide. The mappings do not
+  identify it with the OXT gene, a peptide precursor, the oxytocin receptor, the
+  entire oxytocinergic system or a recombinant drug preparation.
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/CHEBI_7872
+    relation: exactMatch
+    evidence: https://www.ebi.ac.uk/chebi/CHEBI:7872
+    rationale: >-
+      The source defines oxytocin as a nine-amino-acid hormone and brain
+      neuromodulator associated with uterine contraction and milk ejection. ChEBI
+      defines the cyclic nonapeptide CYIQNCPLG with the same endocrine and neural
+      roles. Both denote the mature peptide, not its receptor, gene or a drug
+      product.
+    reviewed_on: "2026-10-20"
+  - target: http://purl.obolibrary.org/obo/NCIT_C2283
+    relation: exactMatch
+    evidence: https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C2283?include=full
+    rationale: >-
+      The source concerns the mature nine-amino-acid oxytocin peptide with mammary,
+      uterine and social-cognition context. NCI defines the nine-residue OXT gene
+      product with mammary and uterine smooth-muscle roles and possible
+      bonding/cognition roles. Both denote the mature peptide; NCI's Recombinant
+      Oxytocin C724 is a separate therapeutic concept.
+    reviewed_on: "2026-10-20"
 title: Oxytocin
 type: concept
 status: stable

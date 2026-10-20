@@ -1,4 +1,14 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q3174497
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q3174497
+    rationale: >-
+      The source treats the mathematical theory of time evolution through continuous
+      vector fields, discrete maps and stability analysis. The target denotes
+      dynamical systems theory using differential or difference equations. Both
+      denote the theory rather than a particular evolving system.
+    reviewed_on: "2026-10-20"
 title: "Dynamical Systems"
 type: "mathematical_concept"
 status: stable

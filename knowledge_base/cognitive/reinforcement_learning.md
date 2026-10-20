@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q830687
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q830687
+    rationale: >-
+      The source explicitly defines reinforcement learning as optimizing expected
+      cumulative reward through value functions and policy improvement. The target
+      defines action-and-reward learning that maximizes cumulative reward. The page
+      compares this same method with Active Inference; it does not equate their
+      objectives.
+    reviewed_on: "2026-10-20"
 title: Reinforcement Learning (Comparison)
 type: concept
 status: stable

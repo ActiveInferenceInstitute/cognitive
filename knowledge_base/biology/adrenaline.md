@@ -1,4 +1,32 @@
 ---
+definition: >-
+  Adrenaline (epinephrine), the endogenous (R)-catecholamine hormone secreted by the
+  adrenal medulla.
+scope_note: >-
+  The subject is naturally occurring adrenaline as an endogenous chemical messenger.
+  The mappings exclude noradrenaline, racemic adrenaline preparations and
+  therapeutic epinephrine products.
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/CHEBI_28918
+    relation: exactMatch
+    evidence: https://www.ebi.ac.uk/chebi/CHEBI:28918
+    rationale: >-
+      The source concerns endogenous epinephrine secreted by adrenal-medullary cells
+      in the fight-or-flight response. ChEBI defines (R)-adrenaline as the
+      adrenaline enantiomer secreted by adrenal glands in that response. Both denote
+      the natural hormone, not noradrenaline, a racemate or a therapeutic
+      preparation.
+    reviewed_on: "2026-10-20"
+  - target: http://purl.obolibrary.org/obo/NCIT_C2292
+    relation: exactMatch
+    evidence: https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C2292?include=full
+    rationale: >-
+      The source denotes endogenous adrenaline, also named epinephrine, as an
+      adrenal hormone. NCI's Epinephrine concept denotes the hormone and
+      neurotransmitter and is distinct from its Therapeutic Epinephrine concept
+      C473. This mapping concerns the endogenous chemical, not a manufactured
+      medicine.
+    reviewed_on: "2026-10-20"
 title: Adrenaline
 description: The hormone epinephrine released by the adrenal medulla during acute stress, its adrenergic receptor actions, the fight-or-flight response and its effects on memory and arousal.
 type: concept

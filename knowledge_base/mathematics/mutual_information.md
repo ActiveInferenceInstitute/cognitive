@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q252973
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q252973
+    rationale: >-
+      The source defines mutual information through uncertainty reduction and KL
+      divergence between a joint distribution and the product of its marginals. The
+      target denotes mutual information as a measure of dependence between two
+      variables. Both concern this information-theoretic quantity, not a generic
+      association or correlation coefficient.
+    reviewed_on: "2026-10-20"
 title: Mutual Information
 type: mathematical_concept
 status: stable

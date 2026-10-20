@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/GO_0009653
+    relation: exactMatch
+    evidence: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0009653
+    rationale: >-
+      The source introduces morphogenesis as the emergence of biological form and
+      pattern during development, with examples of organized anatomical structures.
+      GO defines the process generating and organizing anatomical structures to
+      create form. Both denote anatomical morphogenesis; GO is not being cited for
+      the source's Free Energy Principle interpretation.
+    reviewed_on: "2026-10-20"
 title: Morphogenesis Through the Free Energy Principle
 type: concept
 status: active

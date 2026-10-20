@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/GO_0010467
+    relation: exactMatch
+    evidence: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0010467
+    rationale: >-
+      The source defines using gene information to make a functional product,
+      protein or non-coding RNA, and covers transcription, processing and
+      translation. GO defines conversion of gene sequence into a mature protein or
+      RNA product, including processing and maturation. Both denote gene expression,
+      rather than transcription alone.
+    reviewed_on: "2026-10-20"
 title: Gene Expression
 description: "How genetic information is transcribed and translated into RNA and protein, how that process is regulated, and its links to development, plasticity, and regulatory-network models."
 type: biology

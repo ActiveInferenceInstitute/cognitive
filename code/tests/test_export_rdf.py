@@ -2,6 +2,9 @@ import hashlib
 import json
 import os
 import re
+import shutil
+import subprocess
+import sys
 from datetime import date, datetime
 from pathlib import Path
 from typing import Literal
@@ -501,6 +504,147 @@ def test_manifest_hashes_actual_exports_and_source_pages(tmp_path):
     assert (out / "manifest.json").read_bytes() == first
 
 
+def test_manifest_binds_link_resolution_markdown_and_environment_inputs(tmp_path):
+    root = _vault(tmp_path)
+    names = (
+        "README.md",
+        "docs/aliases.md",
+        "code/reference.md",
+        "pyproject.toml",
+        "uv.lock",
+        ".python-version",
+    )
+    for name in names:
+        path = root / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("input\n", encoding="utf-8")
+    assert rdf.main([str(root)]) == 0
+    manifest = json.loads((root / "output/okn/manifest.json").read_text())
+    assert set(names) <= manifest["sources"].keys()
+    assert manifest["resolution_files"] == rdf._resolution_files(root)
+    assert manifest["sources"].keys() <= set(manifest["resolution_files"])
+    first = manifest["sources"]["docs/aliases.md"]
+    (root / "docs/aliases.md").write_text("changed alias input\n", encoding="utf-8")
+    assert rdf.main([str(root)]) == 0
+    refreshed = json.loads((root / "output/okn/manifest.json").read_text())
+    assert refreshed["sources"]["docs/aliases.md"] != first
+
+
+@pytest.mark.parametrize("kind", ["symlink", "directory", "fifo"])
+def test_nonregular_source_inputs_fail_before_export_files_are_written(tmp_path, kind):
+    root = _vault(tmp_path / "vault")
+    unsafe = root / "docs/unsafe.md"
+    if kind == "symlink":
+        outside = tmp_path / "external.md"
+        outside.write_text("external source\n", encoding="utf-8")
+        unsafe.symlink_to(outside)
+    elif kind == "directory":
+        unsafe.mkdir()
+    else:
+        os.mkfifo(unsafe)
+    with pytest.raises(ValueError, match="regular file"):
+        rdf.main([str(root)])
+    assert not (root / "output/okn").exists()
+
+
+@pytest.mark.parametrize("change", ["contents", "inventory"])
+def test_source_snapshot_rejects_changed_and_added_resolution_inputs(tmp_path, change):
+    root = _vault(tmp_path)
+    snapshot = rdf._source_hashes(root)
+    rdf._require_stable_sources(root, snapshot)
+    path = root / ("docs/guide.md" if change == "contents" else "docs/new-alias.md")
+    path.write_text("changed resolution input\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="changed during export"):
+        rdf._require_stable_sources(root, snapshot)
+
+
+def test_markdown_case_matching_agrees_with_link_resolution_and_manifest(tmp_path):
+    root = _vault(tmp_path)
+    upper = root / "knowledge_base/math/UPPER.MD"
+    _page(upper, {"title": "Upper", "type": "concept"})
+    graph, report = rdf.build_graph(root)
+    assert report.pages == 9
+    assert (
+        rdf.iri(rdf.page_iri("math/UPPER")),
+        rdf.iri(DCT + "title"),
+        rdf.literal("Upper", lang="en"),
+    ) in graph.triples
+    assert "knowledge_base/math/UPPER.MD" in rdf._source_hashes(root)
+
+
+@pytest.mark.parametrize("mode", ["--quality-report", "--check-submission"])
+def test_read_only_checks_reject_knowledge_base_fifos_without_reading_them(tmp_path, mode):
+    root = _vault(tmp_path)
+    os.mkfifo(root / "knowledge_base/unsafe.md")
+    with pytest.raises(ValueError, match="regular file"):
+        rdf.main([str(root), mode])
+
+
+def test_link_index_does_not_read_unshipped_markdown_pipes(tmp_path):
+    root = _vault(tmp_path)
+    local = root / "unshipped-local"
+    local.mkdir()
+    os.mkfifo(local / "not-a-source.md")
+    _, report = rdf.build_graph(root)
+    assert report.pages == 8
+    assert "unshipped-local/not-a-source.md" not in rdf._source_hashes(root)
+
+
+def test_extensionless_resolution_shadow_changes_inventory_without_markdown_changes(tmp_path):
+    root = tmp_path
+    _page(root / "knowledge_base/source.md", {"title": "Source"}, "[[target]]\n")
+    _page(root / "knowledge_base/target.md", {"title": "Target"})
+    assert rdf.main([str(root)]) == 0
+    first = json.loads((root / "output/okn/manifest.json").read_text())
+    _, report = rdf.build_graph(root)
+    assert report.link_edges == 1
+    (root / "knowledge_base/target").write_text("shadow\n", encoding="utf-8")
+    assert rdf.main([str(root)]) == 0
+    second = json.loads((root / "output/okn/manifest.json").read_text())
+    _, report = rdf.build_graph(root)
+    assert report.link_edges == 0
+    assert second["sources"] == first["sources"]
+    assert set(second["resolution_files"]) - set(first["resolution_files"]) == {
+        "knowledge_base/target"
+    }
+
+
+@pytest.mark.parametrize("kind", ["root_fifo", "scoped_directory_symlink", "nested_symlink"])
+def test_resolution_inventory_rejects_unsafe_files_and_directories(tmp_path, kind):
+    root = _vault(tmp_path / "vault")
+    if kind == "root_fifo":
+        os.mkfifo(root / "unsafe")
+    elif kind == "scoped_directory_symlink":
+        outside = tmp_path / "outside"
+        outside.mkdir()
+        (root / "code").symlink_to(outside, target_is_directory=True)
+    else:
+        (root / "knowledge_base/linked").symlink_to(tmp_path, target_is_directory=True)
+    with pytest.raises(ValueError):
+        rdf._resolution_files(root)
+
+
+def test_export_subprocess_manifest_covers_every_exporter_runtime_source(tmp_path):
+    root = _vault(tmp_path)
+    scripts = root / "code/scripts"
+    scripts.mkdir(parents=True)
+    for name in rdf.RUNTIME_SOURCE_NAMES:
+        shutil.copy2(REPO_ROOT / "code/scripts" / name, scripts / name)
+    subprocess.run(
+        [sys.executable, "-m", "scripts.export_rdf", str(root)],
+        cwd=root,
+        env={**os.environ, "PYTHONPATH": str(root / "code")},
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    manifest = json.loads((root / "output/okn/manifest.json").read_text())
+    expected = {f"code/scripts/{name}" for name in rdf.RUNTIME_SOURCE_NAMES}
+    assert expected <= set(manifest["sources"])
+    for name in expected:
+        assert manifest["sources"][name] == hashlib.sha256((root / name).read_bytes()).hexdigest()
+
+
 def test_real_graph_queries_have_results():
     graph, _ = rdf.build_graph(REPO_ROOT)
     parsed = rdflib.Dataset().parse(data=rdf.to_nquads(graph), format="nquads")
@@ -600,3 +744,19 @@ def test_navigation_and_redirect_mappings_are_rejected(tmp_path, name):
     )
     with pytest.raises(ValueError, match="non-concept"):
         rdf.build_graph(root)
+
+
+def test_redundant_alias_is_not_exported_as_disjoint_preferred_and_alternative_label(tmp_path):
+    root = _vault(tmp_path)
+    _page(
+        root / "knowledge_base/math/entropy.md",
+        {"title": "Entropy", "aliases": ["Entropy", "entropy"]},
+    )
+    graph, _ = rdf.build_graph(root)
+    subject = rdf.iri(rdf.page_iri("math/entropy"))
+    assert (
+        subject,
+        rdf.iri(SKOS + "altLabel"),
+        rdf.literal("Entropy", lang="en"),
+    ) not in graph.triples
+    assert (subject, rdf.iri(SKOS + "altLabel"), rdf.literal("entropy", lang="en")) in graph.triples

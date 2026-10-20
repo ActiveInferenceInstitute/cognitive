@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q121610
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q121610
+    rationale: >-
+      The source defines symbiosis broadly as a close prolonged association between
+      unlike organisms, including beneficial, neutral and harmful cases. The target
+      defines close long-term biological interaction between different organisms.
+      Both denote the association, not mutualism alone or the gene-product processes
+      that enable it.
+    reviewed_on: "2026-10-20"
 title: Symbiosis
 description: Close and long-term associations between organisms of different species, including mutualism, commensalism, and parasitism, with endosymbiotic origins of organelles, examples, and loose analogies to nested systems in Active Inference.
 type: concept

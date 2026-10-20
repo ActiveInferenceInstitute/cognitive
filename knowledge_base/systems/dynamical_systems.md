@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q3174497
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q3174497
+    rationale: >-
+      The source explicitly presents dynamical systems theory as the foundation for
+      temporal evolution, stability, chaos and pattern formation in complex systems.
+      The target defines that mathematical theory using differential or difference
+      equations. Both concern the theory, with complex-systems examples rather than
+      an individual dynamical system.
+    reviewed_on: "2026-10-20"
 title: Dynamical Systems in Complex Systems
 type: systems
 status: active

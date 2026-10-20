@@ -23,7 +23,7 @@ where none does. Prefixes: `skos` = `http://www.w3.org/2004/02/skos/core#`, `dct
 | Concept page | `a skos:Concept`; `skos:inScheme <…/scheme>` |
 | `README`, `AGENTS`, `index`, `catalog` | `a schema:CollectionPage` |
 | `title` | `dcterms:title`; for a concept also `skos:prefLabel` |
-| `aliases` | `skos:altLabel` |
+| `aliases` | `skos:altLabel`; aliases identical to the concept's preferred title are omitted to respect SKOS label disjointness |
 | `description` | `dcterms:description` |
 | `created`, `updated` or `modified` | `dcterms:created`, `dcterms:modified` (`xsd:date`) |
 | `tags` | `schema:keywords` to concept IRIs, never strings; reviewed terms are reused directly, other tags get named local concepts |
@@ -137,3 +137,9 @@ Active inference is only related to the free-energy-principle target.
 See the generated [mapping review and priority queue](alignment-review.md) for
 current correspondences and frequently referenced pages. No mapping is inferred
 from a successful remote join, a similar label or a missing review record.
+
+The [graph-wide quality method](graph-quality.md) specifies fatal SKOS integrity
+checks, the local mapping-evidence and keyword profile, and nonfatal editorial
+coverage. Use `--quality-report` for deterministic JSON and `--check-submission`
+for the combined metadata and semantic gate. Neither interprets `exactMatch`
+as identity substitution or treats hierarchy cycles alone as invalid.

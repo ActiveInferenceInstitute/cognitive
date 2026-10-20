@@ -1,4 +1,33 @@
 ---
+definition: >-
+  Serotonin (5-hydroxytryptamine, 5-HT), a monoamine chemical messenger whose
+  tryptamine structure has a 5-hydroxy substituent.
+scope_note: >-
+  The subject is the named serotonin chemical substance, with an emphasis on its
+  central nervous system roles. The mappings do not denote the whole serotonergic
+  system, a particular physiological protonation state, an assay or a drug
+  preparation.
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/CHEBI_28790
+    relation: exactMatch
+    evidence: https://www.ebi.ac.uk/chebi/CHEBI:28790
+    rationale: >-
+      The source names serotonin as 5-hydroxytryptamine, a monoamine
+      neurotransmitter and neuromodulator. ChEBI defines the same primary amine as
+      the 5-hydroxy derivative of tryptamine. The source's CNS focus concerns this
+      chemical; it does not denote the whole serotonergic system or a drug
+      preparation.
+    reviewed_on: "2026-10-20"
+  - target: http://purl.obolibrary.org/obo/NCIT_C828
+    relation: exactMatch
+    evidence: https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C828?include=full
+    rationale: >-
+      The source denotes serotonin, or 5-hydroxytryptamine, as a monoamine chemical
+      messenger with central and peripheral roles. NCI's serotonin concept
+      identifies 5-hydroxytryptamine as a neurotransmitter and hormone found in
+      brain and peripheral tissues. The chemical denotation agrees; the mapping does
+      not endorse every physiological statement in either description.
+    reviewed_on: "2026-10-20"
 title: Serotonin
 description: "Serotonin (5-HT) as a monoamine neuromodulator with widespread projections from the raphe nuclei, its receptor diversity, proposed roles in mood and patience, and hypotheses linking it to precision and priors."
 type: biology

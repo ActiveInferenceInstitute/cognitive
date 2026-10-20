@@ -1,4 +1,16 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q2995634
+    relation: closeMatch
+    evidence: https://www.wikidata.org/wiki/Q2995634
+    rationale: >-
+      The source presents complex systems theory through interacting parts,
+      emergence and nonlinear collective behavior across disciplines. The target
+      identifies the study of interconnected systems using statistical physics,
+      information theory and nonlinear dynamics. Their central subject agrees, while
+      the source's emergent-properties framework and target's wider study
+      description support a close rather than exact mapping.
+    reviewed_on: "2026-10-20"
 title: Complex Systems Theory
 type: systems
 status: active

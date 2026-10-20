@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/GO_0042060
+    relation: exactMatch
+    evidence: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0042060
+    rationale: >-
+      The source defines repair after injury restoring tissue barrier function and
+      structure, with haemostasis, inflammation, proliferation and remodelling. GO
+      defines the series of events restoring integrity to damaged tissue following
+      injury. Both denote wound healing as a process, not just cell migration or
+      epithelial closure.
+    reviewed_on: "2026-10-20"
 title: Wound Healing
 description: The coordinated sequence of haemostasis, inflammation, proliferation and remodelling by which tissue repairs an injury, with attention to collective cell migration in wound closure.
 type: concept

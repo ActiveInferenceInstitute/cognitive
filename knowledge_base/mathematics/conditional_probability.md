@@ -1,4 +1,14 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q327069
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q327069
+    rationale: >-
+      The source defines P(A|B)=P(A intersect B)/P(B) for positive P(B), the
+      likelihood of A once B is known. The target defines event likelihood when
+      another event has occurred. Both denote conditional probability itself, not a
+      table representation or conditional expectation.
+    reviewed_on: "2026-10-20"
 title: Conditional Probability
 description: The probability of an event given that another has occurred, with its definition, chain rule, total probability, link to Bayes' theorem, and its role in the likelihood and transition arrays of Active Inference.
 type: mathematical_concept

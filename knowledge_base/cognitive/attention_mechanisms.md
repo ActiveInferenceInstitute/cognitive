@@ -1,4 +1,14 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q6501338
+    relation: relatedMatch
+    evidence: https://www.wikidata.org/wiki/Q6501338
+    rationale: >-
+      The source surveys neural and cognitive mechanisms enabling selective
+      processing and suppression. The target denotes the behavioral and cognitive
+      process of selective concentration while ignoring other information. This is a
+      mechanism-to-function association, not equivalence.
+    reviewed_on: "2026-10-20"
 title: Attention Mechanisms
 type: concept
 status: stable

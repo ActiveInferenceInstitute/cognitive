@@ -18,14 +18,14 @@ pages, then regenerate; never edit this file.
 | Concept-valued keyword links | 7207 |
 | Navigation pages (`schema:CollectionPage`) | 68 |
 | Redirect pages | 2 |
-| Pages with reviewed external mappings | 13 |
+| Pages with reviewed external mappings | 47 |
 | Wikidata discovery links (`rdfs:seeAlso`, not mappings) | 697 |
-| Reviewed exact matches | 12 |
-| Reviewed close matches | 2 |
-| Reviewed associative matches | 1 |
+| Reviewed exact matches | 40 |
+| Reviewed close matches | 6 |
+| Reviewed associative matches | 4 |
 | Typed edges from `semantic_relations` | 10762 |
 | Untyped edges from body links (`dcterms:references`) | 23908 |
-| Triples | 75183 |
+| Triples | 75488 |
 | Links to concepts that have no page yet (not exported) | 0 |
 | Links to files outside the knowledge base (not exported) | 725 |
 | Self-links dropped | 71 |

@@ -42,7 +42,7 @@ uv run --extra dev python -m pytest code/tests/test_export_rdf.py -q
 
 The [captured cross-graph query](queries/cross_graph_obo.rq) joins those keys to
 the OKN identifier-mappings graph and then to OBO labels in Ubergraph.
-[Generated results and linked source pages](evidence/2026-10-20/join-results.md)
+[Generated results and linked source pages](evidence/2026-10-20-graph-methods/join-results.md)
 record the actual live-response join. Raw responses, queries and hashes are
 preserved beside that report. The join was executed locally against cognitive's
 export and live OKN responses; cognitive-kb is not yet hosted in the federation.
@@ -54,7 +54,7 @@ With the methods installed, replay the captured response files offline:
 ```bash
 daf-okn join --source output/okn/cognitive-kb.nq \
   --query docs/okn/queries/cross_graph_obo.rq \
-  --replay docs/okn/evidence/2026-10-20 --output output/okn-replay
+  --replay docs/okn/evidence/2026-10-20-graph-methods --output output/okn-replay
 ```
 
 The cross-graph query is ready for the server-side federation after cognitive-kb
@@ -66,6 +66,11 @@ earlier discovery experiment, including obsolete labels. Its manifest binds the
 old export and query hashes and cannot replay against the revised export. It is
 not current mapping evidence. Fresh response labels likewise do not justify
 copying a discovered term into the reviewed mapping set.
+
+The [earlier October 20 capture](evidence/2026-10-20/join-results.md) is also
+preserved with its original export/query hashes. The current capture uses the
+version-2 manifest, which additionally binds the stored join query, result bytes
+and structured provenance. Replay checks the complete stage and file inventory.
 
 ## Cross-graph signposts
 

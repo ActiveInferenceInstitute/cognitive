@@ -1,4 +1,16 @@
 ---
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/GO_0042710
+    relation: closeMatch
+    evidence: https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0042710
+    rationale: >-
+      The source covers microbial attachment, extracellular polymer matrix formation
+      and community maturation, extending through dispersal. GO defines growth from
+      planktonic organisms into polymer-matrix communities at liquid-air interfaces
+      or solid substrates under liquid flow. Formation mechanisms agree, but GO's
+      environmental wording and the source's full-life-cycle coverage prevent an
+      exact assertion.
+    reviewed_on: "2026-10-20"
 title: Biofilm Formation
 description: How microbial cells attach to surfaces and build structured communities in a self-produced matrix, a standard example of decentralised collective construction regulated by cell signalling.
 type: concept

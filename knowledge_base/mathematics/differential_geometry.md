@@ -1,4 +1,15 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q188444
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q188444
+    rationale: >-
+      The source covers manifolds, metrics, connections, curvature and differential
+      forms, then applies them to cognitive models. The target is the mathematical
+      field studying functions and geometric structures on differentiable manifolds.
+      Both denote differential geometry, not only one application or its Riemannian
+      subfield.
+    reviewed_on: "2026-10-20"
 type: mathematical_concept
 id: differential_geometry_001
 created: 2024-02-06
