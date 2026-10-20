@@ -1,0 +1,11 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+SELECT ?page ?keyword ?label
+WHERE {
+  GRAPH <https://purl.org/okn/frink/kg/cognitive-kb> {
+    ?page schema:keywords ?keyword .
+    OPTIONAL { ?keyword skos:prefLabel ?label }
+    FILTER(isIRI(?keyword))
+  }
+}
+ORDER BY ?page ?keyword

@@ -5,7 +5,8 @@ SELECT DISTINCT ?concept ?label ?wikidata ?external ?externalLabel ?source
 WHERE {
   GRAPH <https://purl.org/okn/frink/kg/cognitive-kb> {
     ?concept a skos:Concept ; skos:prefLabel ?label ;
-             skos:closeMatch ?wikidata ; dcterms:source ?source .
+             (skos:exactMatch|skos:closeMatch) ?wikidata ; dcterms:source ?source .
+    FILTER(STRSTARTS(STR(?wikidata), "http://www.wikidata.org/entity/"))
   }
   GRAPH <https://purl.org/okn/frink/kg/identifier-mappings> {
     ?wikidata skos:exactMatch ?external .

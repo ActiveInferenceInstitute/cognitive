@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q11337567
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q11337567
+    rationale: "The page describes temporary maintenance and manipulation of information for cognitive processing, matching the target cognitive system rather than long-term memory."
+    reviewed_on: "2026-10-20"
 title: Working Memory
 type: concept
 status: stable

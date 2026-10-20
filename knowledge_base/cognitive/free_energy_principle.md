@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q17014702
+    relation: closeMatch
+    evidence: https://www.wikidata.org/wiki/Q17014702
+    rationale: "The page extends the free-energy principle to self-organizing systems generally, while the target describes Friston's neuroscience hypothesis. The common principle supports a close correspondence; the differing stated scope prevents an exact assertion."
+    reviewed_on: "2026-10-20"
 title: Free Energy Principle
 type: concept
 status: stable

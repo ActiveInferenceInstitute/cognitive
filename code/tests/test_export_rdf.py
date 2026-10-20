@@ -30,6 +30,16 @@ def _page(path: Path, front: dict | None, body: str = "\nBody.\n") -> None:
     path.write_text(header + body, encoding="utf-8")
 
 
+def _mapping():
+    return {
+        "target": "http://www.wikidata.org/entity/Q45003",
+        "relation": "exactMatch",
+        "evidence": "https://www.wikidata.org/wiki/Q45003",
+        "rationale": "Source and target describe the same mathematical concept.",
+        "reviewed_on": "2026-10-20",
+    }
+
+
 def _vault(tmp_path: Path) -> Path:
     kb = tmp_path / "knowledge_base"
     _page(
@@ -146,7 +156,12 @@ def test_graph_describes_pages_with_standard_vocabularies(tmp_path):
     assert _has(graph, entropy, DCT + "description", '"Uncertainty of a \\"distribution\\"."@en')
     assert _has(graph, entropy, DCT + "created", rdf.typed_date("2024-03-15"))
     assert _has(graph, entropy, DCT + "modified", rdf.typed_date("2026-01-02"))
-    assert _has(graph, entropy, rdf.PREFIXES["schema"] + "keywords", '"probability"')
+    assert _has(
+        graph,
+        entropy,
+        rdf.PREFIXES["schema"] + "keywords",
+        rdf.iri(rdf.BASE + "keyword/probability"),
+    )
     assert _has(graph, entropy, rdf.VOCAB + "pageType", '"mathematical_concept"')
     assert _has(graph, entropy, rdf.VOCAB + "complexity", '"basic"')
     assert _has(
@@ -225,7 +240,7 @@ def test_navigation_citation_and_redirect_pages_are_modelled_distinctly(tmp_path
     assert report.pages == 8
 
 
-def test_wikidata_identifier_becomes_an_exact_match(tmp_path):
+def test_unreviewed_wikidata_identifier_is_only_a_discovery_link(tmp_path):
     root = _vault(tmp_path)
     _page(
         root / "knowledge_base" / "math" / "markov.md", {"title": "Markov", "wikidata": "Q3001792"}
@@ -234,10 +249,11 @@ def test_wikidata_identifier_becomes_an_exact_match(tmp_path):
     assert _has(
         graph,
         rdf.page_iri("math/markov"),
-        SKOS + "closeMatch",
+        rdf.PREFIXES["rdfs"] + "seeAlso",
         rdf.iri("http://www.wikidata.org/entity/Q3001792"),
     )
-    assert report.aligned_pages == 1
+    assert report.discovery_pages == 1
+    assert report.aligned_pages == 0
     _page(root / "knowledge_base" / "math" / "bad.md", {"title": "Bad", "wikidata": "entropy"})
     with pytest.raises(ValueError, match="wikidata must look like"):
         rdf.build_graph(root)
@@ -350,6 +366,9 @@ def test_statistics_come_from_the_report(tmp_path):
     assert f"| Pages (all described as `schema:CreativeWork`) | {report.pages} |" in text
     assert f"| Triples | {report.triples} |" in text
     assert "| `math` | 5 |" in text and "| `foundation_for` | 1 |" in text
+    assert report.keyword_concepts == 2
+    assert report.keyword_links == 2
+    assert f"| Additional local keyword concepts | {report.keyword_concepts} |" in text
     assert text.startswith("---\ntitle: cognitive-kb graph statistics")
 
 
@@ -415,7 +434,10 @@ def test_submission_check_rejects_incompatible_graphs(
     failure: Literal["license", "extra_license", "mapping", "empty", "dangling", "provenance"],
 ):
     root = _vault(tmp_path)
-    _page(root / "knowledge_base/math/entropy.md", {"title": "Entropy", "wikidata": "Q45003"})
+    _page(
+        root / "knowledge_base/math/entropy.md",
+        {"title": "Entropy", "external_mappings": [_mapping()]},
+    )
     graph, _ = rdf.build_graph(root)
     assert rdf.submission_errors(graph) == []
     match failure:
@@ -428,7 +450,7 @@ def test_submission_check_rejects_incompatible_graphs(
                 rdf.iri("https://example.org/restricted"),
             )
         case "mapping":
-            graph.triples = {t for t in graph.triples if t[1] != rdf.iri(SKOS + "closeMatch")}
+            graph.triples = {t for t in graph.triples if t[1] != rdf.iri(SKOS + "exactMatch")}
         case "empty":
             graph.triples.clear()
         case "dangling":
@@ -450,7 +472,7 @@ def test_submission_cli_checks_real_pages_and_reports_failure(tmp_path, capsys):
     root = _vault(tmp_path)
     assert rdf.main([str(root), "--check-submission"]) == 1
     assert json.loads(capsys.readouterr().out)["machine_checks_passed"] is False
-    _page(root / "knowledge_base/math/entropy.md", {"wikidata": "Q45003"})
+    _page(root / "knowledge_base/math/entropy.md", {"external_mappings": [_mapping()]})
     assert rdf.main([str(root), "--check-submission"]) == 0
     assert json.loads(capsys.readouterr().out)["aligned_pages"] == 1
 
@@ -484,8 +506,97 @@ def test_real_graph_queries_have_results():
     parsed = rdflib.Dataset().parse(data=rdf.to_nquads(graph), format="nquads")
     queries = [
         REPO_ROOT / "docs/okn/queries" / name
-        for name in ("concept_mappings.rq", "citation_identifiers.rq")
+        for name in (
+            "concept_mappings.rq",
+            "citation_identifiers.rq",
+            "mapping_evidence.rq",
+            "keyword_concepts.rq",
+        )
     ]
     for path in queries:
         assert list(parsed.query(path.read_text(encoding="utf-8"))), path.name
     assert rdf.submission_errors(graph) == []
+
+
+def test_reviewed_mapping_and_standard_keywords_have_real_rdf_objects(tmp_path):
+    root = _vault(tmp_path)
+    _page(
+        root / "knowledge_base/math/reviewed.md",
+        {
+            "external_mappings": [_mapping()],
+            "tags": ["model_fitting", "computational_modeling", "café/tag"],
+        },
+    )
+    graph, report = rdf.build_graph(root)
+    parsed = rdflib.Graph().parse(data=rdf.to_turtle(graph), format="turtle")
+    subject = rdflib.URIRef(rdf.page_iri("math/reviewed"))
+    skos, schema = rdflib.Namespace(SKOS), rdflib.Namespace(rdf.PREFIXES["schema"])
+    assert (subject, skos.exactMatch, rdflib.URIRef(_mapping()["target"])) in parsed
+    assert report.aligned_pages == 1
+    assert report.mapping_relations["exactMatch"] == 1
+    assert set(parsed.objects(subject, schema.keywords)) == {
+        rdflib.URIRef(rdf.KEYWORD_TERMS["model_fitting"]),
+        rdflib.URIRef(rdf.KEYWORD_TERMS["computational_modeling"]),
+        rdflib.URIRef(rdf.BASE + "keyword/caf%C3%A9%2Ftag"),
+    }
+    assert rdf.submission_errors(graph) == []
+    assert "math/reviewed" in rdf.alignment_markdown(graph)
+    assert rdf.relation_predicate("cited by") == rdf.PREFIXES["bibo"] + "citedBy"
+    assert rdf.relation_predicate("sio:SIO_000233") == rdf.PREFIXES["sio"] + "SIO_000233"
+    assert rdf.relation_predicate("https://example.org/relation") == "https://example.org/relation"
+
+
+@pytest.mark.parametrize(
+    "failure",
+    [
+        "evidence",
+        "date",
+        "rationale",
+        "statement",
+        "mapping_type",
+        "literal_keyword",
+        "custom_citation",
+    ],
+)
+def test_submission_rejects_semantic_regressions(tmp_path, failure):
+    root = _vault(tmp_path)
+    _page(root / "knowledge_base/math/reviewed.md", {"external_mappings": [_mapping()]})
+    graph, _ = rdf.build_graph(root)
+    assert rdf.submission_errors(graph) == []
+    if failure in {"evidence", "date", "rationale"}:
+        name = {"evidence": "source", "date": "date", "rationale": "description"}[failure]
+        graph.triples = {
+            t
+            for t in graph.triples
+            if not (t[0].startswith("<" + rdf.BASE + "mapping/") and t[1] == rdf.iri(DCT + name))
+        }
+    elif failure == "statement":
+        graph.triples = {
+            t for t in graph.triples if t[2] != rdf.iri(rdf.PREFIXES["rdf"] + "Statement")
+        }
+    elif failure == "mapping_type":
+        graph.triples = {t for t in graph.triples if t[2] != rdf.iri(SKOS + "Concept")}
+    elif failure == "literal_keyword":
+        graph.add(
+            rdf.iri(rdf.page_iri("math/reviewed")),
+            rdf.iri(rdf.PREFIXES["schema"] + "keywords"),
+            rdf.literal("model_fitting"),
+        )
+    elif failure == "custom_citation":
+        graph.add(
+            rdf.iri(rdf.page_iri("math/reviewed")),
+            rdf.iri(rdf.RELATION + "cited_by"),
+            rdf.iri(rdf.page_iri("math/entropy")),
+        )
+    assert rdf.submission_errors(graph)
+
+
+@pytest.mark.parametrize("name", ["README", "old"])
+def test_navigation_and_redirect_mappings_are_rejected(tmp_path, name):
+    root = _vault(tmp_path)
+    _page(
+        root / f"knowledge_base/{name}.md",
+        {"type": "redirect" if name == "old" else "index", "external_mappings": [_mapping()]},
+    )
+    with pytest.raises(ValueError, match="non-concept"):
+        rdf.build_graph(root)

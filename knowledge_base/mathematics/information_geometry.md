@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q3798604
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q3798604
+    rationale: "The overview studies probability distributions and statistical models with differential geometry, matching the target field rather than information theory generally."
+    reviewed_on: "2026-10-20"
 title: Information Geometry
 type: mathematical_concept
 status: stable

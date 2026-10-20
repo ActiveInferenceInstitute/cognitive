@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q1551556
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q1551556
+    rationale: "The opening defines activity-dependent changes in synaptic strength, matching the target ability of synapses to strengthen or weaken over time."
+    reviewed_on: "2026-10-20"
 title: Synaptic Plasticity
 type: concept
 status: stable

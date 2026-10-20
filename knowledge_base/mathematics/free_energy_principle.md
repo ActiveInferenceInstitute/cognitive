@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q17014702
+    relation: closeMatch
+    evidence: https://www.wikidata.org/wiki/Q17014702
+    rationale: "The page gives the general variational free-energy formalism for biological self-organization; the target frames the same principle as a neuroscience hypothesis. This scope difference is retained explicitly rather than asserting exact interchangeability."
+    reviewed_on: "2026-10-20"
 title: Free Energy Principle
 type: mathematical_concept
 id: free_energy_principle_001

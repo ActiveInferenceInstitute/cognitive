@@ -1,4 +1,4 @@
-# Sample of the cognitive-kb graph: the dataset description, three pages described
+# Sample of the cognitive-kb graph: the dataset description, selected pages described
 # in full, and the terms those pages use. The complete graph is produced by
 # `python -m scripts.export_rdf`. Regenerate this file with `--write-docs`.
 
@@ -11,6 +11,8 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix void: <http://rdfs.org/ns/void#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
 @prefix ckb: <https://purl.org/okn/frink/kg/cognitive-kb/vocab/> .
 @prefix rel: <https://purl.org/okn/frink/kg/cognitive-kb/relation/> .
 @prefix page: <https://purl.org/okn/frink/kg/cognitive-kb/page/> .
@@ -34,7 +36,7 @@ kg:dataset
     dcterms:publisher <https://activeinference.institute/> ;
     dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive> ;
     dcterms:title "Cognitive Active Inference knowledge base"@en ;
-    void:vocabulary <http://purl.org/dc/terms/>, <http://www.w3.org/2004/02/skos/core#>, <http://www.w3.org/ns/prov#>, <https://schema.org/> ;
+    void:vocabulary <http://purl.org/dc/terms/>, <http://purl.org/ontology/bibo/>, <http://www.w3.org/2004/02/skos/core#>, <http://www.w3.org/ns/prov#>, <https://schema.org/> ;
     rdfs:seeAlso <https://registry.okn.us/registry/kgs/identifier-mappings/>, <https://registry.okn.us/registry/kgs/ubergraph/>, <https://registry.okn.us/registry/kgs/wikidata/> ;
     dcat:landingPage <https://github.com/ActiveInferenceInstitute/cognitive> ;
     prov:wasDerivedFrom <https://github.com/ActiveInferenceInstitute/cognitive> ;
@@ -52,6 +54,113 @@ domain:mathematics
     skos:member page:mathematics\/markov_blanket ;
     skos:prefLabel "Mathematics"@en .
 
+kg:keyword\/active_inference
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "active_inference" ;
+    skos:prefLabel "active inference"@en .
+
+kg:keyword\/empirical
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "empirical" ;
+    skos:prefLabel "empirical"@en .
+
+kg:keyword\/endocrine
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "endocrine" ;
+    skos:prefLabel "endocrine"@en .
+
+kg:keyword\/graphical_models
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "graphical_models" ;
+    skos:prefLabel "graphical models"@en .
+
+kg:keyword\/hormone
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "hormone" ;
+    skos:prefLabel "hormone"@en .
+
+kg:keyword\/mathematics
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "mathematics" ;
+    skos:prefLabel "mathematics"@en .
+
+kg:keyword\/probability
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "probability" ;
+    skos:prefLabel "probability"@en .
+
+kg:keyword\/statistical_independence
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "statistical_independence" ;
+    skos:prefLabel "statistical independence"@en .
+
+kg:keyword\/stress
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "stress" ;
+    skos:prefLabel "stress"@en .
+
+kg:keyword\/tutorial
+    a skos:Concept, schema:DefinedTerm ;
+    skos:inScheme kg:scheme ;
+    skos:notation "tutorial" ;
+    skos:prefLabel "tutorial"@en .
+
+kg:mapping\/7f134b7453978a2bf82cf679172216d3f560fa84df52567039897551f121f876
+    a rdf:Statement ;
+    dcterms:date "2026-10-20"^^xsd:date ;
+    dcterms:description "NCI defines cortisol as the glucocorticoid hormone produced by the adrenal cortex; this is the substance denoted by the source page, not a particular molecule or administered dose."@en ;
+    dcterms:source <https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C2290> ;
+    rdf:object <http://purl.obolibrary.org/obo/NCIT_C2290> ;
+    rdf:predicate skos:exactMatch ;
+    rdf:subject page:biology\/cortisol .
+
+kg:mapping\/beb9989e3a319fe84b4168dc6b6614895a16d7edbb1f6eee146b90bfb3342ad1
+    a rdf:Statement ;
+    dcterms:date "2026-10-20"^^xsd:date ;
+    dcterms:description "The page's opening identifies the steroid hormone cortisol produced by the adrenal cortex. ChEBI identifies that same chemical substance, rather than a cortisol assay, secretion process, or signaling pathway."@en ;
+    dcterms:source <https://www.ebi.ac.uk/chebi/CHEBI:17650> ;
+    rdf:object <http://purl.obolibrary.org/obo/CHEBI_17650> ;
+    rdf:predicate skos:exactMatch ;
+    rdf:subject page:biology\/cortisol .
+
+kg:mapping\/c9e4fe519016c9c6bd653a40a966ee28df28d846d2324b18b1d80ecc3e9734b4
+    a rdf:Statement ;
+    dcterms:date "2026-10-20"^^xsd:date ;
+    dcterms:description "The page identifies the glucocorticoid steroid hormone cortisol, the same substance denoted by the target. The assertion concerns the concept, not identity of the Markdown document with a molecule."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q190875> ;
+    rdf:object <http://www.wikidata.org/entity/Q190875> ;
+    rdf:predicate skos:exactMatch ;
+    rdf:subject page:biology\/cortisol .
+
+page:biology\/cortisol
+    a skos:Concept, schema:CreativeWork ;
+    dcterms:created "2026-10-10"^^xsd:date ;
+    dcterms:description "Cortisol as the main human glucocorticoid, released through the HPA axis in response to stress and circadian cues, with its physiological effects and an allostatic Active Inference interpretation."@en ;
+    dcterms:modified "2026-10-10"^^xsd:date ;
+    dcterms:references page:biology\/allostatic_regulation, page:biology\/amygdala, page:biology\/homeostasis, page:biology\/serotonin, page:cognitive\/allostatic_control, page:cognitive\/anxiety, page:cognitive\/emotional_processing, page:cognitive\/interoception, page:cognitive\/oxytocin ;
+    dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/cortisol.md> ;
+    dcterms:title "Cortisol"@en ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q190875> ;
+    skos:altLabel "cortisol_system"@en ;
+    skos:definition "The chemical substance cortisol (hydrocortisone), the glucocorticoid steroid hormone produced by the adrenal cortex."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/CHEBI_17650>, <http://purl.obolibrary.org/obo/NCIT_C2290>, <http://www.wikidata.org/entity/Q190875> ;
+    skos:inScheme kg:scheme ;
+    skos:prefLabel "Cortisol"@en ;
+    skos:related page:biology\/allostatic_regulation, page:biology\/homeostasis, page:cognitive\/emotional_processing ;
+    skos:scopeNote "The mapped concept is the chemical substance, not the HPA axis, cortisol secretion, an assay, a drug product, or a particular molecule. Physiological mechanisms and Active Inference interpretations below provide context for this substance."@en ;
+    ckb:pageType "biology" ;
+    ckb:status "stable" ;
+    schema:keywords kg:keyword\/endocrine, kg:keyword\/hormone, kg:keyword\/stress .
+
 page:citations\/README
     a schema:CollectionPage, schema:CreativeWork ;
     dcterms:references page:citations\/amari_2000, page:citations\/andrews_2021, page:citations\/bogacz_2017, page:citations\/bruineberg_2018, page:citations\/buckley_2017, page:citations\/clark_2013, page:citations\/constant_2018, page:citations\/da_costa_2020, page:citations\/da_costa_2021_bayesian, page:citations\/friston_2006, page:citations\/friston_2009, page:citations\/friston_2010, page:citations\/friston_2012, page:citations\/friston_2013, page:citations\/friston_2015_knowing, page:citations\/friston_2016_active_inference_process, page:citations\/friston_2017_curiosity, page:citations\/friston_2019, page:citations\/friston_2019_particular, page:citations\/hesp_2021, page:citations\/hohwy_2013, page:citations\/kirchhoff_2018, page:citations\/lindley_1956, page:citations\/mackay_2003, page:citations\/millidge_2021, page:citations\/parr_2022, page:citations\/parr_friston_2017, page:citations\/parr_friston_2019, page:citations\/parr_pezzulo_friston_2022, page:citations\/pezzulo_2015, page:citations\/ramstead_2018, page:citations\/sajid_2021, page:citations\/seth_2021, page:citations\/smith_2022, page:citations\/sutton_2018, page:citations\/tschantz_2020 ;
@@ -66,9 +175,9 @@ page:citations\/smith_2022
     dcterms:references page:citations\/buckley_2017, page:citations\/da_costa_2020, page:citations\/friston_2017_curiosity, page:citations\/hesp_2021, page:citations\/parr_pezzulo_friston_2022, page:citations\/sajid_2021 ;
     dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/citations/smith_2022.md> ;
     dcterms:title "A Step-by-Step Tutorial on Active Inference and Its Application to Empirical Data"@en ;
+    bibo:citedBy page:citations\/parr_pezzulo_friston_2022 ;
     skos:inScheme kg:scheme ;
     skos:prefLabel "A Step-by-Step Tutorial on Active Inference and Its Application to Empirical Data"@en ;
-    rel:cited_by page:citations\/parr_pezzulo_friston_2022 ;
     rel:extends page:citations\/da_costa_2020, page:citations\/friston_2017_curiosity ;
     rel:foundational_for page:mathematics\/active_inference_pomdp ;
     ckb:journal "Journal of Mathematical Psychology" ;
@@ -76,7 +185,7 @@ page:citations\/smith_2022
     ckb:status "verified" ;
     schema:author "Christopher J. Whyte", "Karl J. Friston", "Ryan Smith" ;
     schema:datePublished "2022"^^xsd:gYear ;
-    schema:keywords "active_inference", "computational_modeling", "empirical", "model_fitting", "tutorial" ;
+    schema:keywords <http://purl.obolibrary.org/obo/NCIT_C16461>, <http://purl.obolibrary.org/obo/STATO_0000218>, kg:keyword\/active_inference, kg:keyword\/empirical, kg:keyword\/tutorial ;
     schema:sameAs <https://doi.org/10.1016/j.jmp.2021.102632> .
 
 page:mathematics\/markov_blanket
@@ -85,7 +194,7 @@ page:mathematics\/markov_blanket
     dcterms:references page:cognitive\/active_inference, page:mathematics\/conditional_independence, page:mathematics\/free_energy_principle, page:mathematics\/probabilistic_graphical_models ;
     dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/mathematics/markov_blanket.md> ;
     dcterms:title "Markov Blanket"@en ;
-    skos:closeMatch <http://www.wikidata.org/entity/Q3001792> ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q3001792> ;
     skos:inScheme kg:scheme ;
     skos:prefLabel "Markov Blanket"@en ;
     skos:related page:mathematics\/bayesian_networks, page:mathematics\/information_theory, page:mathematics\/statistical_physics ;
@@ -94,13 +203,7 @@ page:mathematics\/markov_blanket
     ckb:complexity "intermediate" ;
     ckb:pageType "mathematical_concept" ;
     ckb:status "stable" ;
-    schema:keywords "graphical_models", "mathematics", "probability", "statistical_independence" .
-
-rel:cited_by
-    a rdf:Property ;
-    rdfs:comment "Relation 'cited_by' as written in a page's semantic_relations; read it from the page that declares it to the page it names."@en ;
-    rdfs:label "cited by"@en ;
-    rdfs:subPropertyOf skos:semanticRelation .
+    schema:keywords kg:keyword\/graphical_models, kg:keyword\/mathematics, kg:keyword\/probability, kg:keyword\/statistical_independence .
 
 rel:extends
     a rdf:Property ;

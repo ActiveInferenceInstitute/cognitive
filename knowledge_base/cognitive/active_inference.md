@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q17014702
+    relation: relatedMatch
+    evidence: https://www.wikidata.org/wiki/Q17014702
+    rationale: "The overview states that active inference is based on the free-energy principle. The target denotes the principle, not active inference itself, so this is an associative mapping only."
+    reviewed_on: "2026-10-20"
 title: Active Inference
 type: concept
 status: stable

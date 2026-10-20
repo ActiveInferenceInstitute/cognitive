@@ -1,0 +1,15 @@
+{
+  "joined_rows": 1,
+  "matched_pages": 1,
+  "external_terms": 1,
+  "rows": [
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/cortisol",
+      "label": "Cortisol",
+      "wikidata": "http://www.wikidata.org/entity/Q190875",
+      "external": "http://purl.obolibrary.org/obo/CHEBI_17650",
+      "externalLabel": "cortisol",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/cortisol.md"
+    }
+  ]
+}

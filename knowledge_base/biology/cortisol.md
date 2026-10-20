@@ -18,6 +18,24 @@ semantic_relations:
 aliases:
   - cortisol_system
 wikidata: Q190875
+definition: "The chemical substance cortisol (hydrocortisone), the glucocorticoid steroid hormone produced by the adrenal cortex."
+scope_note: "The mapped concept is the chemical substance, not the HPA axis, cortisol secretion, an assay, a drug product, or a particular molecule. Physiological mechanisms and Active Inference interpretations below provide context for this substance."
+external_mappings:
+  - target: http://purl.obolibrary.org/obo/CHEBI_17650
+    relation: exactMatch
+    evidence: https://www.ebi.ac.uk/chebi/CHEBI:17650
+    rationale: "The page's opening identifies the steroid hormone cortisol produced by the adrenal cortex. ChEBI identifies that same chemical substance, rather than a cortisol assay, secretion process, or signaling pathway."
+    reviewed_on: "2026-10-20"
+  - target: http://purl.obolibrary.org/obo/NCIT_C2290
+    relation: exactMatch
+    evidence: https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C2290
+    rationale: "NCI defines cortisol as the glucocorticoid hormone produced by the adrenal cortex; this is the substance denoted by the source page, not a particular molecule or administered dose."
+    reviewed_on: "2026-10-20"
+  - target: http://www.wikidata.org/entity/Q190875
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q190875
+    rationale: "The page identifies the glucocorticoid steroid hormone cortisol, the same substance denoted by the target. The assertion concerns the concept, not identity of the Markdown document with a molecule."
+    reviewed_on: "2026-10-20"
 ---
 
 # Cortisol

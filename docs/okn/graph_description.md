@@ -34,7 +34,7 @@ A concept node carries:
   alias the page lists;
 - `dcterms:description` (the page's one-line summary, where it has one), `dcterms:created` and
   `dcterms:modified` as `xsd:date`;
-- `schema:keywords` for its tags;
+- `schema:keywords` concept IRIs for its tags, with reviewed external terms reused directly;
 - `dcterms:source`, the page's address in the public repository;
 - `ckb:pageType`, `ckb:status` and, where the page gives it, `ckb:complexity`.
 
@@ -50,7 +50,8 @@ page they name.
 1. **Typed edges** from the page's `semantic_relations` frontmatter, each a named relation
    such as `relates`, `implements`, `extends`, `foundation_for` or `cited_by`. The relations a
    standard vocabulary already covers use it (`relates` becomes `skos:related`, `part_of`
-   becomes `dcterms:isPartOf`, `organizes` becomes `dcterms:hasPart`). The rest become terms
+   becomes `dcterms:isPartOf`, `organizes` becomes `dcterms:hasPart`, and `cited_by`
+   becomes `bibo:citedBy`). The rest become terms
    under `…/relation/`, each declared a sub-property of `skos:semanticRelation` and labelled in
    the graph, so a query for any semantic relation finds them all.
 2. **Untyped edges** from `[[wiki links]]` in the body, as `dcterms:references`. Links inside
@@ -59,6 +60,13 @@ page they name.
 Relation names are the authors' own and are not normalised: `foundation_for` and
 `foundational_for` are separate terms, and the direction is as written in the source page.
 [`vocabulary.md`](vocabulary.md) lists the mapping.
+
+Source-reviewed external correspondences use explicit SKOS predicates with
+reified evidence, rationale and review date. Unreviewed Wikidata identifiers
+are `rdfs:seeAlso` discovery links. The generated [review queue](alignment-review.md)
+records current mappings and prioritizes heavily referenced concepts. Concept
+alignment does not assert that a Markdown document is a molecule or that two
+ontology classes are OWL-equivalent.
 
 ## Provenance
 
@@ -103,9 +111,9 @@ Delaware nonprofit. The registry entry therefore leaves its `funding` field out.
 - Concepts that pages mention but that have no page yet are not nodes; those links are counted
   in [`statistics.md`](statistics.md) and left out. So are links to files outside
   `knowledge_base/`, such as code and guides.
-- Concept pages with a `wikidata` field are linked with `skos:closeMatch`; citation
-  pages with a DOI use `schema:sameAs`. The existing Wikidata matches were screened
-  by models and have not each been checked by a person. They express candidate
-  concept correspondence, not identity or clinical equivalence. See
+- Concept pages with an unreviewed `wikidata` field use discovery-only `rdfs:seeAlso`;
+  explicit reviewed records use their stated SKOS mapping predicate. Citation
+  pages with a DOI use `schema:sameAs`. Recorded comparisons do not constitute
+  independent human review or clinical equivalence. See
   [interoperability evidence and review rules](interoperability.md).
 - Self-links are dropped, and a page that appears under two names (an alias) is one node.

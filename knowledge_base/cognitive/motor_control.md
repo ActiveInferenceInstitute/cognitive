@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q2996165
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q2996165
+    rationale: "The overview describes neural planning, execution and regulation of movement, matching the target regulation of movement in organisms with a nervous system."
+    reviewed_on: "2026-10-20"
 title: Motor Control
 type: concept
 status: stable

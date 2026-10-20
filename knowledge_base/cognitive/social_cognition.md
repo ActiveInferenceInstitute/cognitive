@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q1432778
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q1432778
+    rationale: "The overview describes processing information about other people and social situations, matching the target's social information-processing concept."
+    reviewed_on: "2026-10-20"
 title: Social Cognition
 type: concept
 status: stable

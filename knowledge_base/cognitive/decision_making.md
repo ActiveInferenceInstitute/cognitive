@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q1331926
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q1331926
+    rationale: "The overview defines choosing between alternative courses of action; the target defines the cognitive process of choosing an action or belief."
+    reviewed_on: "2026-10-20"
 title: Decision Making
 type: concept
 status: stable

@@ -19,7 +19,7 @@ RENCI decides whether to accept the graph. The
 | Clear public research, education or public-good innovation use case | [Graph description](graph_description.md): concept discovery, reading paths and literature links | RENCI assesses thematic fit |
 | CC-BY or CC0 graph license | [CC BY 4.0 notice](../../LICENSE-KNOWLEDGE-BASE.md); `dcterms:license` on dataset and concept scheme | Maintainer approved the change and reported no known third-party content exceptions; checks cannot establish ownership |
 | Recommended domain standards and identifiers | SKOS, Dublin Core, schema.org, PROV-O, DCAT, VoID; existing Wikidata and DOI links | Apply domain identifiers only when a page denotes the appropriate entity |
-| Good-faith evidence of mapping and meshing with OKN graphs | [Interoperability](interoperability.md), [captured join results](evidence/2026-10-13/join-results.md), runnable cross-graph query | Local export joined with live identifier-mappings and Ubergraph responses; hosting cognitive-kb and server-side execution remain separate steps |
+| Good-faith evidence of mapping and meshing with OKN graphs | [Interoperability](interoperability.md), [captured join results](evidence/2026-10-20/join-results.md), runnable cross-graph query | Local export joined with live identifier-mappings and Ubergraph responses; hosting cognitive-kb and server-side execution remain separate steps |
 | Federal-program alignment is encouraged, not required | Existing description reports volunteer maintenance without external grant support | Do not claim an NSF or NIH award for this graph |
 
 ## Before upload
@@ -28,7 +28,8 @@ RENCI decides whether to accept the graph. The
    explicit `license` frontmatter field is retained in RDF; an incompatible
    license fails the submission check. This check reads exported metadata and
    cannot detect undeclared restrictions in prose or external sources.
-2. Run the repository quality gates and `uv run --extra dev python -m
+2. Regenerate the sample, statistics and alignment review with `uv run --extra dev
+   python -m scripts.export_rdf --write-docs`. Run the repository quality gates and `uv run --extra dev python -m
    scripts.export_rdf --check-submission`. Examine unresolved link counts; these
    links are omitted from the graph and must not be described as exported edges.
 3. Export the graph and retain `manifest.json`, the source commit, and the
@@ -39,6 +40,12 @@ RENCI decides whether to accept the graph. The
 5. Update the registry description and obtain the landing-zone access specified
    by the public workflow. Use [the landing-zone handoff](landing_zone.md) and
    record the actual upload and processing receipts.
+
+Mahir's subsequent semantic review is implemented in the [vocabulary contract](vocabulary.md):
+concept-valued keywords, standard citation predicates, discovery-only unreviewed
+links and explicit evidence for each SKOS correspondence. Submission checks reject
+literal keywords and mapping assertions without complete review records. A passing
+check verifies that evidence is recorded; it does not verify the scientific judgment.
 
 The repository's automated check is a necessary technical check, not a full
 submission certification. Generated exports, registry acceptance, upload,

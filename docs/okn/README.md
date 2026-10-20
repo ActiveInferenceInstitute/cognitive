@@ -33,12 +33,13 @@ flowchart LR
 |---|---|
 | [`graph_description.md`](graph_description.md) | The graph in prose: the kinds of nodes and edges, provenance, licence, funding, limits. |
 | [`vocabulary.md`](vocabulary.md) | Which standard vocabulary term each part of a page becomes, and the few terms the graph defines itself. |
-| [`cognitive-kb.sample.ttl`](cognitive-kb.sample.ttl) | A Turtle sample: the dataset description and three pages described in full. Generated. |
+| [`cognitive-kb.sample.ttl`](cognitive-kb.sample.ttl) | A generated Turtle sample including the cortisol chemical concept, mapping evidence and concept keywords. |
 | [`statistics.md`](statistics.md) | Counts of pages, edges, triples and what was left out. Generated. |
+| [`alignment-review.md`](alignment-review.md) | Generated reviewed correspondences and a queue ranked by incoming references. |
 | [`registry_entry.md`](registry_entry.md) | The registry entry file to submit, and the upload steps. |
 | [`submission_criteria.md`](submission_criteria.md) | Jim Balhoff's supplied requirements, evidence, and acceptance boundaries. |
 | [`interoperability.md`](interoperability.md) | Existing identifier mappings, local query examples, and mapping review rules. |
-| [`evidence/2026-10-13/join-results.md`](evidence/2026-10-13/join-results.md) | Generated signposts from an actual join with live OKN graph responses. |
+| [`evidence/2026-10-20/join-results.md`](evidence/2026-10-20/join-results.md) | Fresh join/replay evidence for the reviewed export; October 13 evidence is preserved separately. |
 | [`landing_zone.md`](landing_zone.md) | Review package, access-request draft, and upload/processing acceptance steps. |
 
 ## Generate the graph

@@ -1,0 +1,24 @@
+{
+  "observed_at": "2026-10-20T19:19:54.995793+00:00",
+  "endpoint": "https://apps.okn.us/federation/sparql",
+  "local_sha256": "6b3e53784cc7e485e7183826605ac24045ec99975de097acac6ba99ebb2e6067",
+  "join_query_sha256": "b6d64ad320ca43f2cb5c8cbf75dfc16e8b66867647c2d631953b5dc3cd1ecdb6",
+  "captures": [
+    {
+      "graph": "https://purl.org/okn/frink/kg/identifier-mappings",
+      "query_file": "identifier-mappings-0000.rq",
+      "response_file": "identifier-mappings-0000.json",
+      "query_sha256": "98f713a59d676687a58c131497dd85187ab60fead93a6bfa8f27eb8a65ba6ce4",
+      "response_sha256": "214d66098580d368d344bb00ed046a2a8e2e5772307d918db9b3cb24c6656bbd"
+    },
+    {
+      "graph": "https://purl.org/okn/frink/kg/ubergraph",
+      "query_file": "ubergraph-0000.rq",
+      "response_file": "ubergraph-0000.json",
+      "query_sha256": "b10a4a9b10600ba92646ffcd01b6944c1f1673194d506d1726d0443d0853e416",
+      "response_sha256": "75856c55a061567eb2426482b273170ef42f7bdef841383220a7784369866a2b"
+    }
+  ],
+  "requested_wikidata_keys": 11,
+  "requested_obo_terms": 1
+}

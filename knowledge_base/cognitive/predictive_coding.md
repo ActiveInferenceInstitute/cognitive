@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q1315146
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q1315146
+    rationale: "The overview describes hierarchical brain prediction and error correction, matching the psychological predictive-coding concept; it is not the signal-compression algorithm."
+    reviewed_on: "2026-10-20"
 title: Predictive Coding
 type: concept
 status: stable

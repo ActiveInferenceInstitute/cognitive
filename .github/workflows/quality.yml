@@ -113,13 +113,13 @@ jobs:
       - name: Install graph and pinned OKN methods
         run: |
           python -m pip install -e ".[dev]"
-          python -m pip install "daf-okn @ git+https://github.com/docxology/daf-okn.git@4b79a4b5d37896677d547a5a1a1edfc2d7a4c828"
+          python -m pip install "daf-okn @ git+https://github.com/docxology/daf-okn.git@845cc693cc6ffe4cd434976022e2bc3624d92ff6"
       - name: Export and replay captured cross-graph evidence
         run: |
           python -m scripts.export_rdf
           daf-okn join --source output/okn/cognitive-kb.nq \
             --query docs/okn/queries/cross_graph_obo.rq \
-            --replay docs/okn/evidence/2026-10-13 \
+            --replay docs/okn/evidence/2026-10-20 \
             --output "${RUNNER_TEMP}/cognitive-okn-replay"
 
   # Coverage proves a line ran. This job proves the suite would notice if a

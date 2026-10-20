@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q131222
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q131222
+    rationale: "The overview defines the mathematical framework for quantifying, storing and communicating information; the target denotes that same theory in probability and statistics."
+    reviewed_on: "2026-10-20"
 title: "Information Theory"
 type: "mathematical_concept"
 status: stable

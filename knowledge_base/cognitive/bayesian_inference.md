@@ -1,4 +1,10 @@
 ---
+external_mappings:
+  - target: http://www.wikidata.org/entity/Q812535
+    relation: exactMatch
+    evidence: https://www.wikidata.org/wiki/Q812535
+    rationale: "The page explicitly gives Bayes' rule for posterior belief updating from evidence; the target denotes this same method of statistical inference."
+    reviewed_on: "2026-10-20"
 title: Bayesian Inference
 type: concept
 status: stable
