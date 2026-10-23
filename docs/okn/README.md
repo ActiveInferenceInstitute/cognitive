@@ -38,6 +38,9 @@ flowchart LR
 | [`cognitive-kb.sample.ttl`](cognitive-kb.sample.ttl) | A generated Turtle sample spanning chemical, biological-process, statistical and citation concepts with mapping evidence and concept keywords. |
 | [`statistics.md`](statistics.md) | Counts of pages, edges, triples and what was left out. Generated. |
 | [`alignment-review.md`](alignment-review.md) | Generated reviewed correspondences and a queue ranked by incoming references. |
+| [`curation-workflow.md`](curation-workflow.md) | How to inspect ambiguous source assertions grouped by document-only endpoint. |
+| [`semantic-review.md`](semantic-review.md) | Generated endpoint roles, source context and distinct review coverage. |
+| [`join-support.md`](join-support.md) | Offline per-path inspection of mapping reviews and captured remote bindings. |
 | [`graph-quality.md`](graph-quality.md) | Graph-wide semantic integrity rules, deterministic diagnostics, coverage and provenance inputs. |
 | [`mapping-curation-2026-10-20.md`](mapping-curation-2026-10-20.md) | Source-reviewed candidate decisions across the priority concepts and multiple domains, including justified deferrals. |
 | [`registry_entry.md`](registry_entry.md) | The registry entry file to submit, and the upload steps. |

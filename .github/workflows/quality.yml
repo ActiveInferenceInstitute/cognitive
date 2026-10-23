@@ -64,6 +64,8 @@ jobs:
       - name: Graph-wide semantic diagnostics
         run: python -m scripts.export_rdf --quality-report
 
+      - name: Semantic review queue freshness
+        run: python -m scripts.semantic_review --root . --output docs/okn --check
 
       # Ubuntu's archive does not carry pandoc-crossref, and a crossref binary
       # only loads under the Pandoc it was built against, so both come from
@@ -116,7 +118,8 @@ jobs:
       - name: Install graph and pinned OKN methods
         run: |
           python -m pip install -e ".[dev]"
-          python -m pip install "daf-okn @ git+https://github.com/docxology/daf-okn.git@5f36cdbc073212e8b0abe880eb188ff68af48e7e"
+          # The support profile binds the RDFLib materializer version as well as source bytes.
+          python -m pip install "rdflib==7.6.0" "daf-okn @ git+https://github.com/docxology/daf-okn.git@7fa42efec2b060ef066c2685d4c27ade0ae91a1a"
       - name: Export and replay captured cross-graph evidence
         run: |
           python -m scripts.export_rdf
@@ -124,6 +127,12 @@ jobs:
             --query docs/okn/queries/cross_graph_obo.rq \
             --replay docs/okn/evidence/2026-10-23-entity-model \
             --output "${RUNNER_TEMP}/cognitive-okn-replay"
+      - name: Verify separate assertion-path explanations
+        run: |
+          daf-okn explain-join --source output/okn/cognitive-kb.nq \
+            --query docs/okn/queries/cross_graph_obo.rq \
+            --capture docs/okn/evidence/2026-10-23-entity-model \
+            --output docs/okn/explanations/2026-10-23-entity-model --check
 
   # Coverage proves a line ran. This job proves the suite would notice if a
   # line were wrong: each declared mutation is written to disk, its tests run,

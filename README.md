@@ -220,6 +220,9 @@ from the concepts they describe. Document metadata and citations stay on page
 resources; concept relationships and reviewed mappings use separate topic resources.
 The [keyword review](docs/okn/keyword-curation-2026-10-23.md) records reuse of
 established subject terms and the tags retained locally because their scope is uncertain.
+The [endpoint curation workflow](docs/okn/curation-workflow.md) groups ambiguous
+source assertions for review. [Join support](docs/okn/join-support.md) makes local
+mapping reviews and captured remote assertion origins inspectable offline.
 
 ```mermaid
 flowchart TB

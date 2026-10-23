@@ -1,0 +1,97 @@
+---
+title: Semantic relation review workflow
+type: reference
+status: stable
+---
+
+# Semantic relation review workflow
+
+The optional `scripts.semantic_review` view groups unresolved conceptual
+interpretations by their incident document-only endpoints. It reads the
+authoritative RDF (Resource Description Framework) graph and
+`Report.document_relation_routes` from `scripts.export_rdf.build_graph`.
+Topic presence comes from emitted `schema:about` links; this tool does not
+reimplement topic eligibility or change relation routing.
+
+```bash
+uv run --no-sync python -m scripts.semantic_review --root . --json
+uv run --no-sync python -m scripts.semantic_review --root . --output output/review --write
+uv run --no-sync python -m scripts.semantic_review --root . --output output/review --check
+```
+
+Reporting without `--write` does not create artifacts. Explicit generation
+writes `semantic-review.json` and `semantic-review.md` into a directory
+contained within the selected root. Checking returns exit status 1 for
+missing or stale bytes and never rewrites them. Invalid inputs and unsafe
+destinations return status 2. Output directories must be real directories,
+outside `knowledge_base/`, `code/` and hidden directories. Symlinks,
+hardlinks, directory/file collisions and existing unrelated content at the
+two generated filenames are rejected before either file is written. Other
+files in the directory are preserved. Existing generated files are recognized
+by their generator/schema marker; malformed or unrelated files require human
+inspection before replacement. Replacements are atomic per file; serialize
+concurrent writers of the pair.
+
+For integration, import `build_review_queue(root)`,
+`render_markdown(queue)`, `expected_outputs(queue)`,
+`stale_outputs(root, output, queue)` or `write_outputs(root, output, queue)`.
+These functions require no console entry point. The builder verifies source
+hashes and resolution-file inventory before and after its read.
+
+## Reading the queue
+
+Schema 1 retains three different quantities:
+
+- A **declaration occurrence** is one routed frontmatter declaration use.
+  Repeated links and declarations remain explicit, each with an occurrence ID.
+- A **unique source assertion** has an exact source path, relation label,
+  resolved target, predicate and routing reason. Its stable assertion ID
+  identifies one rendered row. Repeated declarations collect beneath it.
+- A **unique effective assertion** is a source/predicate/target RDF triple.
+  Distinct labels that normalize to the same predicate retain separate source
+  assertion rows and share an effective ID.
+
+Groups rank by incident unique source assertion count, descending, then
+endpoint path. Rows sort by source, exact relation label and resolved target,
+then predicate/reason. An assertion involving two document-only endpoints
+belongs to both groups. Distinct coverage unions and cumulative unions count
+its assertion ID once; summing group sizes overstates coverage. Each group
+also reports effective-triple and declaration counts. Unknown labels between
+two topic-bearing endpoints remain unresolved in the separate
+**relation-policy review** list. The grouped union plus that list covers
+every unresolved source assertion. Ordinary document relations retain their
+router meanings in a separate section; they do not require conceptual
+curation.
+
+Endpoint context includes source title, type, RDF roles and metadata, topic
+presence, source URL and file SHA-256. YAML dates retain explicit type tags
+in JSON; editorial priority is source metadata, not semantic confidence.
+Declaration context includes the raw wiki value, parsed target, resolved
+target on the assertion, frontmatter entry/leaf indices and, where available,
+the actual scalar-origin line range and fragment. YAML aliases may reuse a
+scalar definition's location; the queue labels it as an origin and does not
+guess the alias-use line. Multiple declarations retain separate occurrence
+IDs even when their origins coincide. Missing location marks retain the
+source URL without an invented fragment.
+
+## Scope and limits
+
+Citation records, guides, implementations and navigation pages have
+deliberate document roles. Their unresolved relations do not imply that a
+concept is missing or that a document should acquire a topic. The view
+retains the exporter's reasons and source evidence for human interpretation;
+it creates no mappings, definitions, confidence values or scientific claims.
+It does not mutate the graph or curate sources.
+
+The inventory covers `Report.document_relation_routes`, not every
+document-valued edge. Standard citations, references, containment and
+conceptual relations have their own routes. Exporter omission counters remain
+visible and distinct from conceptual ambiguity. Source links use the stable
+repository URLs emitted by the graph, which currently follow `main`; file
+hashes bind the inspected source bytes without claiming that remote `main`
+is immutable or synchronized. Generated bytes include no workstation root,
+generation time or Git revision.
+
+See [[docs/okn/entity-model|Document and topic concept model]] and
+[[docs/okn/vocabulary|Export vocabulary]] for the authoritative role and
+relation policies.

@@ -82,6 +82,14 @@ page/concept model. They cannot replay against this revised export and query.
 The current capture binds the stored join query, result bytes and structured
 provenance. Replay checks the complete stage and file inventory.
 
+The optional [join-support workflow](join-support.md) exposes the precise local
+mapping predicate and review records beside each captured remote assertion.
+Typed solutions and raw response origins remain visible, including alternatives
+that share an old string-valued row. Its separate report preserves all existing
+capture bytes and leaves the submitted RDF unchanged. The
+[endpoint review queue](semantic-review.md) serves a separate source-role
+curation task; ordinary document relations retain their existing interpretation.
+
 ## Cross-graph signposts
 
 | Target | Role and identifier path | Evidence |
