@@ -116,7 +116,7 @@ jobs:
       - name: Install graph and pinned OKN methods
         run: |
           python -m pip install -e ".[dev]"
-          python -m pip install "daf-okn @ git+https://github.com/docxology/daf-okn.git@33044f0ce23cf6ba8be4cdf291429bca565e7231"
+          python -m pip install "daf-okn @ git+https://github.com/docxology/daf-okn.git@6acc79980caa5526e95fa0664ac607642ab4addb"
       - name: Export and replay captured cross-graph evidence
         run: |
           python -m scripts.export_rdf

@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 from scripts import export_rdf as rdf
 from scripts.rdf_quality import GraphIndex, semantic_quality
+from scripts.rdf_relations import DOCUMENT_PAGE_TYPES
 
 SKOS = rdf.PREFIXES["skos"]
 RDF = rdf.PREFIXES["rdf"]
@@ -70,6 +71,90 @@ def test_document_topic_links_reject_wrong_topic_or_document_targets(predicate):
         graph.triples = {t for t in graph.triples if t[:2] != (PA, rdf.iri(predicate))}
         graph.add(PA, rdf.iri(predicate), target)
         assert {"document_topic_endpoint", "topic_document_link"} <= error_codes(graph)
+
+
+def test_simultaneous_paired_document_topic_swap_is_rejected():
+    """Equal incoming about/subject sets cannot establish the wrong page owner."""
+    graph = concept_graph()
+    assert error_codes(graph) == set()
+    original = set(graph.triples)
+    predicates = {rdf.iri(SCHEMA + "about"), rdf.iri(DCT + "subject")}
+    graph.triples = {
+        triple for triple in original if not (triple[0] in {PA, PB} and triple[1] in predicates)
+    }
+    for page, topic in ((PA, B), (PB, A)):
+        for predicate in predicates:
+            graph.add(page, predicate, topic)
+    assert graph.triples - original == {
+        (p, pred, t) for p, t in ((PA, B), (PB, A)) for pred in predicates
+    }
+    assert {"document_topic_endpoint", "topic_document_link"} <= error_codes(graph)
+
+
+@pytest.mark.parametrize(
+    "path,page_type,collection",
+    [
+        ("citations/smith_2022", "concept", False),
+        ("biology/AGENTS", "concept", False),
+        ("biology/navigation", "concept", True),
+    ]
+    + [("biology/manual", kind, False) for kind in sorted(DOCUMENT_PAGE_TYPES)],
+)
+def test_fully_declared_forged_topics_cannot_override_document_only_roles(
+    path, page_type, collection
+):
+    """Canonical parity control: declarations do not promote an ineligible document."""
+    graph = concept_graph()
+    page, topic = rdf.iri(rdf.page_iri(path)), rdf.iri(rdf.concept_iri(path))
+    graph.add(page, rdf.iri(RDF + "type"), rdf.iri(SCHEMA + "CreativeWork"))
+    graph.add(page, rdf.iri(rdf.VOCAB + "pageType"), rdf.literal(page_type))
+    if collection:
+        graph.add(page, rdf.iri(RDF + "type"), rdf.iri(SCHEMA + "CollectionPage"))
+    assert error_codes(graph) == set()
+    graph.add(topic, rdf.iri(RDF + "type"), rdf.iri(SKOS + "Concept"))
+    graph.add(topic, rdf.iri(SKOS + "prefLabel"), rdf.literal("Forged topic", lang="en"))
+    graph.add(topic, rdf.iri(SKOS + "inScheme"), rdf.iri(rdf.SCHEME))
+    graph.add(page, rdf.iri(SCHEMA + "about"), topic)
+    graph.add(page, rdf.iri(DCT + "subject"), topic)
+    assert "document_topic_endpoint" in error_codes(graph)
+
+
+@pytest.mark.parametrize(
+    "source_types",
+    [
+        [rdf.literal("unrecognized_category")],
+        [rdf.literal("concept"), rdf.literal("unrecognized_category")],
+        [rdf.iri("https://example.org/concept")],
+    ],
+)
+def test_declared_unknown_or_nonliteral_source_categories_cannot_acquire_topics(source_types):
+    """Unknown metadata cannot override the explicit source-topic category registry."""
+    graph = concept_graph()
+    assert error_codes(graph) == set()
+    for source_type in source_types:
+        graph.add(PA, rdf.iri(rdf.VOCAB + "pageType"), source_type)
+    assert "document_topic_endpoint" in error_codes(graph)
+
+
+@pytest.mark.parametrize(
+    "suffix,allowed",
+    [("biology/%41GENTS", False), ("biology/%2541GENTS", True), ("biology/real%20topic", True)],
+)
+def test_encoded_source_roles_are_checked_without_merging_distinct_iris(suffix, allowed):
+    """One role-decoding pass distinguishes navigation aliases from literal percent names."""
+    graph = concept_graph()
+    page, topic = rdf.iri(rdf.PAGE + suffix), rdf.iri(rdf.CONCEPT + suffix)
+    graph.add(page, rdf.iri(RDF + "type"), rdf.iri(SCHEMA + "CreativeWork"))
+    graph.add(page, rdf.iri(rdf.VOCAB + "pageType"), rdf.literal("concept"))
+    graph.add(topic, rdf.iri(RDF + "type"), rdf.iri(SKOS + "Concept"))
+    graph.add(topic, rdf.iri(SKOS + "prefLabel"), rdf.literal("Encoded source", lang="en"))
+    graph.add(topic, rdf.iri(SKOS + "inScheme"), rdf.iri(rdf.SCHEME))
+    for predicate in (SCHEMA + "about", DCT + "subject"):
+        graph.add(page, rdf.iri(predicate), topic)
+    if allowed:
+        assert error_codes(graph) == set()
+    else:
+        assert "document_topic_endpoint" in error_codes(graph)
 
 
 @pytest.mark.parametrize(

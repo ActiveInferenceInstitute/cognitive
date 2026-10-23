@@ -13,13 +13,14 @@ from collections.abc import Callable, Iterable
 from dataclasses import dataclass, field
 from datetime import date
 from typing import Any, Protocol
+from urllib.parse import unquote
 
 try:
     from scripts.rdf_alignment import RELATIONS, checked_iri
-    from scripts.rdf_relations import CONCEPT_RELATIONS, DOCUMENT_PAGE_TYPES
+    from scripts.rdf_relations import CONCEPT_RELATIONS, TOPIC_PAGE_TYPES
 except ImportError:
     from rdf_alignment import RELATIONS, checked_iri  # type: ignore[no-redef]
-    from rdf_relations import CONCEPT_RELATIONS, DOCUMENT_PAGE_TYPES  # type: ignore[no-redef]
+    from rdf_relations import CONCEPT_RELATIONS, TOPIC_PAGE_TYPES  # type: ignore[no-redef]
 
 BASE = "https://purl.org/okn/frink/kg/cognitive-kb/"
 SKOS = "http://www.w3.org/2004/02/skos/core#"
@@ -207,18 +208,16 @@ def _entity_model_findings(
     for predicate in (SCHEMA + "about", DCT + "subject"):
         for page, topic in sorted(idx.pairs(predicate)):
             expected = _iri(BASE + "concept/" + page[len("<" + BASE + "page/") : -1])
-            page_types = {
-                parsed[0]
-                for t in idx.objects(page, BASE + "vocab/pageType")
-                if (parsed := _literal(t))
-            }
-            node_id = page[len("<" + BASE + "page/") : -1]
+            raw_page_types = idx.objects(page, BASE + "vocab/pageType")
+            page_types = {parsed[0] for t in raw_page_types if (parsed := _literal(t))}
+            node_id = unquote(page[len("<" + BASE + "page/") : -1])
             if (
                 page not in pages
                 or page not in page_iris
                 or topic not in concepts
                 or topic != expected
-                or page_types & DOCUMENT_PAGE_TYPES
+                or page_types - TOPIC_PAGE_TYPES
+                or any(_literal(t) is None for t in raw_page_types)
                 or node_id.rsplit("/", 1)[-1].lower() in {"readme", "agents", "index", "catalog"}
                 or node_id.startswith("citations/")
                 or _iri(SCHEMA + "CollectionPage") in idx.objects(page, RDF + "type")
