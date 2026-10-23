@@ -588,6 +588,69 @@ def test_real_vault_quality_and_submission_share_semantic_findings():
     assert any("preferred_label_cardinality" in error for error in rdf.submission_errors(graph))
 
 
+def add_paired_topic(graph, page, topic):
+    """Forge a fully declared topic without changing its source document's role."""
+    graph.add(topic, rdf.iri(RDF + "type"), rdf.iri(SKOS + "Concept"))
+    graph.add(topic, rdf.iri(SKOS + "prefLabel"), rdf.literal("Role boundary", lang="en"))
+    graph.add(topic, rdf.iri(SKOS + "inScheme"), rdf.iri(rdf.SCHEME))
+    for predicate in (SCHEMA + "about", DCT + "subject"):
+        graph.add(page, rdf.iri(predicate), topic)
+
+
+@pytest.mark.parametrize(
+    "path,eligible",
+    [
+        ("citations/paper", False),
+        ("biology/citations/paper", False),
+        ("biology/citation_notes/paper", True),
+        ("biology/%63itations/paper", True),
+        ("biology/stress response", True),
+        ("biology/β cells", True),
+        ("biology/citations", True),
+        ("citations", True),
+    ],
+)
+def test_real_small_vault_citation_directory_roles_survive_topic_forgery(tmp_path, path, eligible):
+    source = tmp_path / "knowledge_base" / (path + ".md")
+    source.parent.mkdir(parents=True)
+    body = "---\ntype: concept\ntitle: Role boundary\n---\n\nSource bytes.\n"
+    source.write_text(body, encoding="utf-8")
+    graph, _ = rdf.build_graph(tmp_path)
+    page, topic = rdf.iri(rdf.page_iri(path)), rdf.iri(rdf.concept_iri(path))
+    assert ((page, rdf.iri(SCHEMA + "about"), topic) in graph.triples) is eligible
+    assert error_codes(graph) == set()
+    add_paired_topic(graph, page, topic)
+    assert ("document_topic_endpoint" not in error_codes(graph)) is eligible
+    assert source.read_text(encoding="utf-8") == body
+
+
+@pytest.mark.parametrize(
+    "suffix,eligible",
+    [
+        ("%63itations/paper", False),
+        ("biology/citations/paper", False),
+        ("biology/%63itations/paper", False),
+        ("biology%2Fcitations/paper", False),
+        ("biology/%2563itations/paper", True),
+        ("biology/citation_notes/paper", True),
+        ("biology/citations", True),
+    ],
+)
+def test_actual_corpus_citation_roles_share_semantic_and_submission_verdicts(suffix, eligible):
+    """Existing real mappings ensure rejection is a role failure, not missing mappings."""
+    graph, _ = rdf.build_graph(Path(__file__).resolve().parents[2])
+    assert rdf.submission_diagnostics(graph)["errors"] == []
+    page, topic = rdf.iri(rdf.PAGE + suffix), rdf.iri(rdf.CONCEPT + suffix)
+    graph.add(page, rdf.iri(RDF + "type"), rdf.iri(SCHEMA + "CreativeWork"))
+    graph.add(page, rdf.iri(rdf.VOCAB + "pageType"), rdf.literal("concept"))
+    add_paired_topic(graph, page, topic)
+    report = rdf.submission_diagnostics(graph)
+    assert ("document_topic_endpoint" not in error_codes(graph)) is eligible
+    assert (report["errors"] == []) is eligible
+    if not eligible:
+        assert all(error.startswith("document_topic_endpoint:") for error in report["errors"])
+
+
 def test_quality_cli_warnings_are_nonfatal_errors_fail_and_no_export_written(tmp_path, capsys):
     kb = tmp_path / "knowledge_base"
     kb.mkdir()

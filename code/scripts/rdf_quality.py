@@ -210,6 +210,7 @@ def _entity_model_findings(
             expected = _iri(BASE + "concept/" + page[len("<" + BASE + "page/") : -1])
             raw_page_types = idx.objects(page, BASE + "vocab/pageType")
             page_types = {parsed[0] for t in raw_page_types if (parsed := _literal(t))}
+            # WHY: decode once for source roles; ownership above uses exact RDF terms.
             node_id = unquote(page[len("<" + BASE + "page/") : -1])
             if (
                 page not in pages
@@ -219,7 +220,7 @@ def _entity_model_findings(
                 or page_types - TOPIC_PAGE_TYPES
                 or any(_literal(t) is None for t in raw_page_types)
                 or node_id.rsplit("/", 1)[-1].lower() in {"readme", "agents", "index", "catalog"}
-                or node_id.startswith("citations/")
+                or "citations" in node_id.split("/")[:-1]
                 or _iri(SCHEMA + "CollectionPage") in idx.objects(page, RDF + "type")
             ):
                 emit(
