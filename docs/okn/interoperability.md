@@ -2,7 +2,7 @@
 title: Cognitive graph interoperability
 type: reference
 status: stable
-updated: 2026-10-20
+updated: 2026-10-23
 ---
 
 # Cognitive graph interoperability
@@ -14,11 +14,12 @@ provide two concrete join paths; current coverage is generated in
 
 | Source | Exported identifier and predicate | Intended join |
 |---|---|---|
-| Source-reviewed `external_mappings` | Explicit SKOS predicate to the reviewed target IRI | Direct correspondence to Wikidata or domain ontology terms |
+| Source-reviewed `external_mappings` | Explicit SKOS predicate from a topic concept to the reviewed target IRI | Concept correspondence to Wikidata or domain ontology terms |
 | Unreviewed `wikidata: Q…` | `rdfs:seeAlso` | Discovery only; excluded from semantic joins |
 | Page tags | `schema:keywords` to external terms or declared local keyword concepts | Shared subject identifiers without typing a publication as its subject |
 | Citation page `doi` | `schema:sameAs` to `https://doi.org/…` | Join publication records using the same normalized DOI IRI |
-| Local concept/page | Stable path-based FRINK IRI | Reference a page within this graph; not an external identifier alignment |
+| Markdown document | Stable `…/page/<path>` CreativeWork IRI | Source metadata, citations and document references |
+| Topic concept | Separate `…/concept/<path>` SKOS Concept IRI | Subject of the page, connected through `schema:about` and `dcterms:subject`; conceptual relations and reviewed mappings |
 
 The [vocabulary mapping](vocabulary.md) documents the source-review contract and
 its concept-level interpretation. The [generated priority queue](alignment-review.md)
@@ -26,13 +27,20 @@ ranks incoming references and lists current reviewed assertions. Unreviewed
 Wikidata proposals are preserved as discovery links, rather than published as
 close matches. Exact matches require compatible definitions and scope.
 
+The [entity model](entity-model.md) separates documents from what they describe.
+Mapping queries retrieve a concept's source through its describing page, rather
+than treating that page as the concept. Keywords also describe document subjects;
+the [keyword review](keyword-curation-2026-10-23.md) records external term reuse
+and scope-based deferrals. Neither a subject link nor a keyword makes the document
+an instance of its subject.
+
 ## Runnable query evidence
 
 [Concept mappings](queries/concept_mappings.rq) lists concept IRIs, labels,
 external IRIs, predicates and source pages. [Mapping evidence](queries/mapping_evidence.rq)
 retrieves sources, rationales and review dates; [keyword concepts](queries/keyword_concepts.rq)
 retrieves concept-valued tags. [Citation identifiers](queries/citation_identifiers.rq)
-lists DOI join keys and source pages. Both queries use the actual named graph.
+lists DOI join keys and source pages. These queries use the actual named graph.
 The regression suite parses the exported N-Quads with RDFLib and executes these
 queries against the repository graph, requiring nonempty results.
 
@@ -42,7 +50,7 @@ uv run --extra dev python -m pytest code/tests/test_export_rdf.py -q
 
 The [captured cross-graph query](queries/cross_graph_obo.rq) joins those keys to
 the OKN identifier-mappings graph and then to OBO labels in Ubergraph.
-[Generated results and linked source pages](evidence/2026-10-20-graph-methods/join-results.md)
+[Generated results and linked source pages](evidence/2026-10-23-entity-model/join-results.md)
 record the actual live-response join. Raw responses, queries and hashes are
 preserved beside that report. The join was executed locally against cognitive's
 export and live OKN responses; cognitive-kb is not yet hosted in the federation.
@@ -54,7 +62,7 @@ With the methods installed, replay the captured response files offline:
 ```bash
 daf-okn join --source output/okn/cognitive-kb.nq \
   --query docs/okn/queries/cross_graph_obo.rq \
-  --replay docs/okn/evidence/2026-10-20-graph-methods --output output/okn-replay
+  --replay docs/okn/evidence/2026-10-23-entity-model --output output/okn-replay
 ```
 
 The cross-graph query is ready for the server-side federation after cognitive-kb
@@ -67,10 +75,12 @@ old export and query hashes and cannot replay against the revised export. It is
 not current mapping evidence. Fresh response labels likewise do not justify
 copying a discovered term into the reviewed mapping set.
 
-The [earlier October 20 capture](evidence/2026-10-20/join-results.md) is also
-preserved with its original export/query hashes. The current capture uses the
-version-2 manifest, which additionally binds the stored join query, result bytes
-and structured provenance. Replay checks the complete stage and file inventory.
+The [earlier October 20 capture](evidence/2026-10-20/join-results.md) and
+[October 20 graph-methods capture](evidence/2026-10-20-graph-methods/join-results.md)
+are preserved with their original export/query hashes and original combined
+page/concept model. They cannot replay against this revised export and query.
+The current capture binds the stored join query, result bytes and structured
+provenance. Replay checks the complete stage and file inventory.
 
 ## Cross-graph signposts
 

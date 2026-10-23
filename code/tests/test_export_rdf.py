@@ -107,6 +107,58 @@ def test_literal_escapes_quotes_newlines_and_control_characters():
     assert rdf.literal("2022", datatype=rdf.XSD_GYEAR).endswith("#gYear>")
 
 
+def test_document_and_topic_are_distinct_and_citations_have_no_topic(tmp_path):
+    graph, _ = rdf.build_graph(_vault(tmp_path))
+    page = rdf.page_iri("math/entropy")
+    topic = rdf.BASE + "concept/math/entropy"
+    assert not _has(graph, page, rdf.RDF_TYPE, rdf.iri(SKOS + "Concept"))
+    assert _has(graph, topic, rdf.RDF_TYPE, rdf.iri(SKOS + "Concept"))
+    assert _has(graph, page, rdf.PREFIXES["schema"] + "about", rdf.iri(topic))
+    assert _has(graph, page, DCT + "subject", rdf.iri(topic))
+    assert not _has(graph, topic, DCT + "created")
+    assert not _has(
+        graph, rdf.page_iri("citations/smith_2022"), rdf.RDF_TYPE, rdf.iri(SKOS + "Concept")
+    )
+    assert not _has(graph, rdf.page_iri("citations/smith_2022"), rdf.PREFIXES["schema"] + "about")
+
+
+def test_citation_redirects_and_editorial_priority_keep_document_roles(tmp_path):
+    root = _vault(tmp_path)
+    _page(
+        root / "knowledge_base/citations/old.md",
+        {"type": "citation_redirect", "redirect": "[[smith_2022]]"},
+    )
+    _page(root / "knowledge_base/math/topic.md", {"type": "concept", "processing_priority": 1})
+    graph, report = rdf.build_graph(root)
+    assert _has(
+        graph,
+        rdf.page_iri("citations/old"),
+        rdf.REDIRECT_PREDICATE,
+        rdf.iri(rdf.page_iri("citations/smith_2022")),
+    )
+    assert not _has(graph, rdf.page_iri("citations/old"), rdf.PREFIXES["schema"] + "about")
+    assert report.redirects == 2
+    assert _has(graph, rdf.page_iri("math/topic"), rdf.VOCAB + "processingPriority", '"1"')
+    assert not _has(graph, rdf.concept_iri("math/topic"), rdf.VOCAB + "processingPriority")
+
+
+def test_export_preserves_tag_spelling_before_reviewed_keyword_lookup(tmp_path):
+    root = _vault(tmp_path)
+    _page(root / "knowledge_base/tagged.md", {"tags": ["model_fitting", "model_fitting "]})
+    graph, _ = rdf.build_graph(root)
+    page = rdf.page_iri("tagged")
+    keyword = rdf.BASE + "keyword/model_fitting%20"
+    assert _has(
+        graph,
+        page,
+        rdf.PREFIXES["schema"] + "keywords",
+        rdf.iri(rdf.KEYWORD_TERMS["model_fitting"]),
+    )
+    assert _has(graph, page, rdf.PREFIXES["schema"] + "keywords", rdf.iri(keyword))
+    assert _has(graph, keyword, SKOS + "notation", rdf.literal("model_fitting "))
+    assert rdf.semantic_quality(graph)["errors"] == []
+
+
 def test_dates_are_typed_only_when_they_are_dates():
     assert (
         rdf.typed_date(date(2026, 1, 2)) == '"2026-01-02"^^<http://www.w3.org/2001/XMLSchema#date>'
@@ -153,9 +205,10 @@ def test_body_links_skip_code_matrices_and_empty_targets():
 def test_graph_describes_pages_with_standard_vocabularies(tmp_path):
     graph, report = rdf.build_graph(_vault(tmp_path))
     entropy = rdf.page_iri("math/entropy")
-    assert _has(graph, entropy, rdf.RDF_TYPE, rdf.iri(SKOS + "Concept"))
-    assert _has(graph, entropy, SKOS + "prefLabel", '"Entropy"@en')
-    assert _has(graph, entropy, SKOS + "altLabel", '"Shannon entropy"@en')
+    topic = rdf.concept_iri("math/entropy")
+    assert _has(graph, topic, rdf.RDF_TYPE, rdf.iri(SKOS + "Concept"))
+    assert _has(graph, topic, SKOS + "prefLabel", '"Entropy"@en')
+    assert _has(graph, topic, SKOS + "altLabel", '"Shannon entropy"@en')
     assert _has(graph, entropy, DCT + "description", '"Uncertainty of a \\"distribution\\"."@en')
     assert _has(graph, entropy, DCT + "created", rdf.typed_date("2024-03-15"))
     assert _has(graph, entropy, DCT + "modified", rdf.typed_date("2026-01-02"))
@@ -163,7 +216,7 @@ def test_graph_describes_pages_with_standard_vocabularies(tmp_path):
         graph,
         entropy,
         rdf.PREFIXES["schema"] + "keywords",
-        rdf.iri(rdf.BASE + "keyword/probability"),
+        rdf.iri(rdf.keyword_iri("probability") or rdf.BASE + "keyword/probability"),
     )
     assert _has(graph, entropy, rdf.VOCAB + "pageType", '"mathematical_concept"')
     assert _has(graph, entropy, rdf.VOCAB + "complexity", '"basic"')
@@ -173,8 +226,8 @@ def test_graph_describes_pages_with_standard_vocabularies(tmp_path):
         DCT + "source",
         rdf.iri(f"{rdf.SOURCE_REPOSITORY}/blob/main/knowledge_base/math/entropy.md"),
     )
-    assert _has(graph, entropy, SKOS + "inScheme", rdf.iri(rdf.SCHEME))
-    assert _has(graph, rdf.DOMAIN + "math", SKOS + "member", rdf.iri(entropy))
+    assert _has(graph, topic, SKOS + "inScheme", rdf.iri(rdf.SCHEME))
+    assert _has(graph, rdf.DOMAIN + "math", SKOS + "member", rdf.iri(topic))
     assert report.modified == "2026-01-02"
 
 
@@ -184,8 +237,18 @@ def test_typed_and_untyped_edges_use_the_declared_predicates(tmp_path):
     kl, bayes, readme = (
         rdf.iri(rdf.page_iri(f"math/{n}")) for n in ("kl_divergence", "bayes", "README")
     )
-    assert _has(graph, entropy, SKOS + "related", kl)
-    assert _has(graph, entropy, rdf.RELATION + "foundation_for", bayes)
+    assert _has(
+        graph,
+        rdf.concept_iri("math/entropy"),
+        SKOS + "related",
+        rdf.iri(rdf.concept_iri("math/kl_divergence")),
+    )
+    assert _has(
+        graph,
+        rdf.concept_iri("math/entropy"),
+        rdf.RELATION + "foundation_for",
+        rdf.iri(rdf.concept_iri("math/bayes")),
+    )
     assert _has(graph, entropy, DCT + "isPartOf", readme)
     assert _has(graph, entropy, DCT + "references", kl)
     assert _has(graph, entropy, DCT + "references", bayes)
@@ -239,7 +302,7 @@ def test_navigation_citation_and_redirect_pages_are_modelled_distinctly(tmp_path
     assert not _has(graph, moved, rdf.RDF_TYPE, rdf.iri(SKOS + "Concept"))
     assert report.redirects == 1
     assert report.navigation_pages == 1
-    assert report.concepts == 6
+    assert report.concepts == 4
     assert report.pages == 8
 
 
@@ -369,7 +432,9 @@ def test_statistics_come_from_the_report(tmp_path):
     assert f"| Pages (all described as `schema:CreativeWork`) | {report.pages} |" in text
     assert f"| Triples | {report.triples} |" in text
     assert "| `math` | 5 |" in text and "| `foundation_for` | 1 |" in text
-    assert report.keyword_concepts == 2
+    assert report.keyword_concepts == sum(
+        rdf.keyword_iri(t) is None for t in ("information", "probability")
+    )
     assert report.keyword_links == 2
     assert f"| Additional local keyword concepts | {report.keyword_concepts} |" in text
     assert text.startswith("---\ntitle: cognitive-kb graph statistics")
@@ -655,11 +720,170 @@ def test_real_graph_queries_have_results():
             "citation_identifiers.rq",
             "mapping_evidence.rq",
             "keyword_concepts.rq",
+            "document_topics.rq",
+            "relation_scopes.rq",
         )
     ]
     for path in queries:
         assert list(parsed.query(path.read_text(encoding="utf-8"))), path.name
     assert rdf.submission_errors(graph) == []
+
+    # Exercise the actual cross-graph query with explicit synthetic named-graph
+    # data. This verifies the join syntax, not a claim about remote mappings.
+    mapping_graph = parsed.graph(rdflib.URIRef("https://purl.org/okn/frink/kg/identifier-mappings"))
+    ontology_graph = parsed.graph(rdflib.URIRef("https://purl.org/okn/frink/kg/ubergraph"))
+    target = rdflib.URIRef("http://purl.obolibrary.org/obo/TEST_0001")
+    wikidata = sorted(
+        o[1:-1]
+        for _, p, o in graph.triples
+        if p in {rdf.iri(SKOS + r) for r in ("exactMatch", "closeMatch")}
+        and o.startswith("<http://www.wikidata.org/entity/")
+    )[0]
+    mapping_graph.add((rdflib.URIRef(wikidata), rdflib.URIRef(SKOS + "exactMatch"), target))
+    ontology_graph.add((target, rdflib.RDFS.label, rdflib.Literal("Synthetic test term")))
+    rows = list(parsed.query((REPO_ROOT / "docs/okn/queries/cross_graph_obo.rq").read_text()))
+    assert rows
+    assert all(
+        str(row.concept).startswith(rdf.CONCEPT) and str(row.page).startswith(rdf.PAGE)
+        for row in rows
+    )
+    mapping_graph.remove((None, None, None))
+    assert not list(parsed.query((REPO_ROOT / "docs/okn/queries/cross_graph_obo.rq").read_text()))
+
+
+def test_real_reviewed_mapping_meanings_and_evidence_move_intact_to_topics():
+    graph, report = rdf.build_graph(REPO_ROOT)
+    idx = rdf.GraphIndex.build(graph.triples)
+    expected = set()
+    for path in (REPO_ROOT / rdf.KB_NAME).rglob("*.md"):
+        front, _ = rdf._split(path.read_text())
+        node = path.relative_to(REPO_ROOT / rdf.KB_NAME).with_suffix("").as_posix()
+        for mapping in front.get("external_mappings", []):
+            expected.add(
+                (
+                    rdf.iri(rdf.concept_iri(node)),
+                    rdf.iri(SKOS + mapping["relation"]),
+                    rdf.iri(mapping["target"]),
+                    rdf.iri(mapping["evidence"]),
+                    rdf.literal(mapping["rationale"], lang="en"),
+                    rdf.literal(str(mapping["reviewed_on"]), datatype=rdf.XSD_DATE),
+                )
+            )
+    actual = set()
+    for statement, _ in idx.pairs(rdf.RDF_TYPE):
+        if not statement.startswith("<" + rdf.BASE + "mapping/"):
+            continue
+        actual.add(
+            tuple(
+                next(iter(idx.objects(statement, p)))
+                for p in (
+                    rdf.PREFIXES["rdf"] + "subject",
+                    rdf.PREFIXES["rdf"] + "predicate",
+                    rdf.PREFIXES["rdf"] + "object",
+                    DCT + "source",
+                    DCT + "description",
+                    DCT + "date",
+                )
+            )
+        )
+    assert actual == expected
+    assert sum(report.mapping_relations.values()) == len(expected)
+    assert expected  # an empty corpus cannot satisfy preservation
+    assert not any(
+        s.startswith("<" + rdf.PAGE) or o.startswith("<" + rdf.PAGE)
+        for s, p, o in graph.triples
+        if p in {rdf.iri(SKOS + r) for r in rdf.RELATIONS}
+    )
+
+
+def test_real_sample_includes_topic_document_scopes_and_mapping_evidence():
+    graph, _ = rdf.build_graph(REPO_ROOT)
+    sample = rdflib.Graph().parse(data=rdf.sample_turtle(graph), format="turtle")
+    page = rdflib.URIRef(rdf.page_iri("mathematics/markov_blanket"))
+    topic = rdflib.URIRef(rdf.concept_iri("mathematics/markov_blanket"))
+    assert (page, rdflib.URIRef(rdf.PREFIXES["schema"] + "about"), topic) in sample
+    assert (topic, rdflib.RDF.type, rdflib.URIRef(SKOS + "Concept")) in sample
+    assert (page, rdflib.RDF.type, rdflib.URIRef(SKOS + "Concept")) not in sample
+    for name, scope in (
+        ("foundation_for", SKOS + "Concept"),
+        ("document/implements", rdf.PREFIXES["schema"] + "CreativeWork"),
+    ):
+        assert (
+            rdflib.URIRef(rdf.RELATION + name),
+            rdflib.RDFS.domain,
+            rdflib.URIRef(scope),
+        ) in sample
+    for node in ("biology/cortisol", "biology/serotonin"):
+        assert list(
+            sample.objects(rdflib.URIRef(rdf.concept_iri(node)), rdflib.URIRef(SKOS + "exactMatch"))
+        )
+    citation = rdflib.URIRef(rdf.page_iri("citations/smith_2022"))
+    assert list(sample.objects(citation, rdflib.URIRef(rdf.PREFIXES["schema"] + "sameAs")))
+    for node, tag in (
+        ("mathematics/markov_blanket", "mathematics"),
+        ("biology/gene_expression", "genetics"),
+        ("cognitive/emotion_regulation", "emotion"),
+    ):
+        keyword = rdf.keyword_iri(tag) or rdf.BASE + "keyword/" + tag
+        assert (
+            rdflib.URIRef(rdf.page_iri(node)),
+            rdflib.URIRef(rdf.PREFIXES["schema"] + "keywords"),
+            rdflib.URIRef(keyword),
+        ) in sample
+
+
+def test_mixed_role_and_unknown_source_assertions_are_preserved_without_skos_typing(tmp_path):
+    root = _vault(tmp_path)
+    _page(
+        root / "knowledge_base/math/model.md",
+        {
+            "type": "concept",
+            "semantic_relations": [
+                {"type": "implements", "links": ["[[README]]", "[[citations/smith_2022]]"]},
+                {"type": "Novel Relationship", "links": ["[[entropy]]"]},
+                {"type": "documents", "links": ["[[entropy]]"]},
+            ],
+        },
+    )
+    graph, report = rdf.build_graph(root)
+    assert rdf.semantic_quality(graph)["errors"] == []
+    for name, target in (
+        ("implements", "math/README"),
+        ("implements", "citations/smith_2022"),
+        ("novel_relationship", "math/entropy"),
+        ("documents", "math/entropy"),
+    ):
+        predicate = rdf.DOCUMENT_RELATION + name
+        assert _has(graph, rdf.page_iri("math/model"), predicate, rdf.iri(rdf.page_iri(target)))
+        assert not _has(graph, predicate, rdf.PREFIXES["rdfs"] + "subPropertyOf")
+        assert _has(
+            graph,
+            predicate,
+            rdf.PREFIXES["rdfs"] + "domain",
+            rdf.iri(rdf.PREFIXES["schema"] + "CreativeWork"),
+        )
+    assert report.document_relation_assertions == 4
+    assert any(r["relation"] == "Novel Relationship" for r in report.document_relation_routes)
+
+
+def test_document_only_definitions_and_aliases_are_preserved_without_topic_inference(tmp_path):
+    root = _vault(tmp_path)
+    _page(
+        root / "knowledge_base/guide.md",
+        {
+            "type": "guide",
+            "definition": "Source definition",
+            "scope_note": "Source scope",
+            "aliases": ["Guide alias"],
+        },
+    )
+    graph, _ = rdf.build_graph(root)
+    page = rdf.page_iri("guide")
+    assert _has(graph, page, rdf.VOCAB + "sourceDefinition", '"Source definition"@en')
+    assert _has(graph, page, rdf.VOCAB + "sourceScopeNote", '"Source scope"@en')
+    assert _has(graph, page, rdf.PREFIXES["schema"] + "alternateName", '"Guide alias"@en')
+    assert not _has(graph, page, rdf.PREFIXES["schema"] + "about")
+    assert rdf.semantic_quality(graph)["errors"] == []
 
 
 def test_reviewed_mapping_and_standard_keywords_have_real_rdf_objects(tmp_path):
@@ -674,8 +898,9 @@ def test_reviewed_mapping_and_standard_keywords_have_real_rdf_objects(tmp_path):
     graph, report = rdf.build_graph(root)
     parsed = rdflib.Graph().parse(data=rdf.to_turtle(graph), format="turtle")
     subject = rdflib.URIRef(rdf.page_iri("math/reviewed"))
+    topic = rdflib.URIRef(rdf.concept_iri("math/reviewed"))
     skos, schema = rdflib.Namespace(SKOS), rdflib.Namespace(rdf.PREFIXES["schema"])
-    assert (subject, skos.exactMatch, rdflib.URIRef(_mapping()["target"])) in parsed
+    assert (topic, skos.exactMatch, rdflib.URIRef(_mapping()["target"])) in parsed
     assert report.aligned_pages == 1
     assert report.mapping_relations["exactMatch"] == 1
     assert set(parsed.objects(subject, schema.keywords)) == {
@@ -735,12 +960,15 @@ def test_submission_rejects_semantic_regressions(tmp_path, failure):
     assert rdf.submission_errors(graph)
 
 
-@pytest.mark.parametrize("name", ["README", "old"])
+@pytest.mark.parametrize("name", ["README", "old", "citation", "guide"])
 def test_navigation_and_redirect_mappings_are_rejected(tmp_path, name):
     root = _vault(tmp_path)
     _page(
         root / f"knowledge_base/{name}.md",
-        {"type": "redirect" if name == "old" else "index", "external_mappings": [_mapping()]},
+        {
+            "type": {"old": "redirect", "README": "index"}.get(name, name),
+            "external_mappings": [_mapping()],
+        },
     )
     with pytest.raises(ValueError, match="non-concept"):
         rdf.build_graph(root)
@@ -750,10 +978,10 @@ def test_redundant_alias_is_not_exported_as_disjoint_preferred_and_alternative_l
     root = _vault(tmp_path)
     _page(
         root / "knowledge_base/math/entropy.md",
-        {"title": "Entropy", "aliases": ["Entropy", "entropy"]},
+        {"title": "Entropy", "type": "concept", "aliases": ["Entropy", "entropy"]},
     )
     graph, _ = rdf.build_graph(root)
-    subject = rdf.iri(rdf.page_iri("math/entropy"))
+    subject = rdf.iri(rdf.concept_iri("math/entropy"))
     assert (
         subject,
         rdf.iri(SKOS + "altLabel"),

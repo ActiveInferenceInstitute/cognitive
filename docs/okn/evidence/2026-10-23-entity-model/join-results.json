@@ -1,0 +1,51 @@
+{
+  "joined_rows": 2,
+  "matched_pages": 2,
+  "external_terms": 2,
+  "rows": [
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/cortisol",
+      "label": "Cortisol",
+      "wikidata": "http://www.wikidata.org/entity/Q190875",
+      "external": "http://purl.obolibrary.org/obo/CHEBI_17650",
+      "externalLabel": "cortisol",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/cortisol.md",
+      "page": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/cortisol"
+    },
+    {
+      "concept": "https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/symbiosis",
+      "label": "Symbiosis",
+      "wikidata": "http://www.wikidata.org/entity/Q121610",
+      "external": "http://purl.obolibrary.org/obo/GO_0044403",
+      "externalLabel": "biological process involved in symbiotic interaction",
+      "source": "https://github.com/ActiveInferenceInstitute/cognitive/blob/main/knowledge_base/biology/symbiosis.md",
+      "page": "https://purl.org/okn/frink/kg/cognitive-kb/page/biology/symbiosis"
+    }
+  ],
+  "schema_version": 3,
+  "matched_concepts": 2,
+  "provenance": {
+    "observed_at": "2026-10-23T17:31:45.038105+00:00",
+    "endpoint": "https://apps.okn.us/federation/sparql",
+    "local_sha256": "eb49ccbb6f729f61807912170c30f9a258d700c40c1a81f8f341361f6683049e",
+    "join_query_sha256": "9433fa8deac49b575bfbdbb8f0635348a429bd09678c28baa3575cc43d32f35e",
+    "captures": [
+      {
+        "graph": "https://purl.org/okn/frink/kg/identifier-mappings",
+        "query_file": "identifier-mappings-0000.rq",
+        "response_file": "identifier-mappings-0000.json",
+        "query_sha256": "59b5476822c5ffbc27b588aa7fb5bcda53b776853f06d31d66ac9756b4ef11d6",
+        "response_sha256": "9367516ae65c1d5c9c31a7c16136df237648b3696247e0adfc8f673cd3e0c109"
+      },
+      {
+        "graph": "https://purl.org/okn/frink/kg/ubergraph",
+        "query_file": "ubergraph-0000.rq",
+        "response_file": "ubergraph-0000.json",
+        "query_sha256": "4152aa8c03db362b2e13d0c61dec7efcbbc1e26d9e391d3a10f10dbe7bb2bc70",
+        "response_sha256": "346a9ffffa37a0b05ed7724588f2796a9b99a3f4625d9b06398b5fbbac757289"
+      }
+    ],
+    "requested_wikidata_keys": 28,
+    "requested_obo_terms": 2
+  }
+}

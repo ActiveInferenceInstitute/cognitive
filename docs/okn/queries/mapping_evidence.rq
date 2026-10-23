@@ -1,13 +1,16 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-SELECT ?concept ?mapping ?target ?evidence ?rationale ?reviewed
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+SELECT ?page ?concept ?mapping ?target ?evidence ?rationale ?reviewed
 WHERE {
   GRAPH <https://purl.org/okn/frink/kg/cognitive-kb> {
     ?statement a rdf:Statement ; rdf:subject ?concept ;
                rdf:predicate ?mapping ; rdf:object ?target ;
                dcterms:source ?evidence ; dcterms:description ?rationale ;
                dcterms:date ?reviewed .
-    ?concept ?mapping ?target .
+    ?page schema:about ?concept .
+    FILTER EXISTS { ?concept a skos:Concept ; ?mapping ?target }
   }
 }
 ORDER BY ?concept ?target

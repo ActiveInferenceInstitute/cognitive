@@ -1,6 +1,6 @@
 """Export the knowledge base as an RDF graph for the Open Knowledge Network.
 
-The knowledge base is an Obsidian vault: each page is a node, the
+The knowledge base is an Obsidian vault: each page is a document, the
 ``semantic_relations`` in its frontmatter are typed edges, and every
 ``[[wiki link]]`` in its body is an untyped edge. This module turns that
 structure into RDF using vocabularies other graphs already use, so that the
@@ -12,11 +12,11 @@ graph joins with them instead of standing apart:
 * PROV-O for where the graph came from and what generated it,
 * DCAT and VoID for the dataset description.
 
-Relation names without a safe standard interpretation (conceptual ``implements``,
-``foundation_for`` and the like) get terms of their own under the
-graph's namespace, and each of those is declared a sub-property of
-``skos:semanticRelation`` so a query that asks for "anything related" still
-finds them. Explicit citations use BIBO. Tags point to concepts; reviewed SKOS
+Topic-bearing documents describe separate ``/concept/`` resources through
+``schema:about`` and ``dcterms:subject``. Reviewed conceptual relations such as
+``implements`` and ``foundation_for`` have explicit Concept scope. Documentary
+and ambiguous assertions use document-scoped predicates without SKOS entailment.
+Explicit citations use BIBO. Tags point to concepts; reviewed SKOS
 mappings carry statement evidence, while unreviewed Wikidata identifiers are
 discovery links only.
 
@@ -54,7 +54,10 @@ from urllib.parse import quote
 try:
     from scripts.kb_index import _split
     from scripts.rdf_alignment import RELATIONS, checked_iri, reviewed_mappings
+    from scripts.rdf_keywords import KEYWORD_TERMS as KEYWORD_TERMS
+    from scripts.rdf_keywords import keyword_iri
     from scripts.rdf_quality import GraphIndex, semantic_quality
+    from scripts.rdf_relations import CONCEPT_RELATIONS, DOCUMENT_RELATIONS, TOPIC_PAGE_TYPES
     from scripts.verify_links import (
         MATRIX_LITERAL_PATTERN,
         WIKI_LINK_PATTERN,
@@ -70,7 +73,14 @@ try:
 except ImportError:  # run as a file: the script directory is on sys.path
     from kb_index import _split  # type: ignore[no-redef]
     from rdf_alignment import RELATIONS, checked_iri, reviewed_mappings  # type: ignore[no-redef]
+    from rdf_keywords import KEYWORD_TERMS as KEYWORD_TERMS  # type: ignore[no-redef]
+    from rdf_keywords import keyword_iri  # type: ignore[no-redef]
     from rdf_quality import GraphIndex, semantic_quality  # type: ignore[no-redef]
+    from rdf_relations import (  # type: ignore[no-redef]
+        CONCEPT_RELATIONS,
+        DOCUMENT_RELATIONS,
+        TOPIC_PAGE_TYPES,
+    )
     from verify_links import (  # type: ignore[no-redef]
         MATRIX_LITERAL_PATTERN,
         WIKI_LINK_PATTERN,
@@ -93,8 +103,10 @@ SCHEME = BASE + "scheme"
 ACTIVITY = BASE + "activity/export"
 VOCAB = BASE + "vocab/"
 PAGE = BASE + "page/"
+CONCEPT = BASE + "concept/"
 DOMAIN = BASE + "domain/"
 RELATION = BASE + "relation/"
+DOCUMENT_RELATION = RELATION + "document/"
 
 SOURCE_REPOSITORY = "https://github.com/ActiveInferenceInstitute/cognitive"
 EXPORTER_URL = SOURCE_REPOSITORY + "/blob/main/code/scripts/export_rdf.py"
@@ -110,6 +122,8 @@ RUNTIME_SOURCE_NAMES = (
     "export_rdf.py",
     "rdf_alignment.py",
     "rdf_quality.py",
+    "rdf_keywords.py",
+    "rdf_relations.py",
     "kb_index.py",
     "verify_links.py",
     "markdown_fences.py",
@@ -123,6 +137,8 @@ SAMPLE_PAGES = (
     "biology/gene_expression",
     "mathematics/probability_distributions",
     "mathematics/entropy",
+    "cognitive/emotion_regulation",
+    "cognitive/active_inference_agent",
 )
 
 PREFIXES = {
@@ -140,6 +156,7 @@ PREFIXES = {
     "ckb": VOCAB,
     "rel": RELATION,
     "page": PAGE,
+    "concept": CONCEPT,
     "domain": DOMAIN,
     "kg": BASE,
 }
@@ -148,8 +165,7 @@ RDF_TYPE = PREFIXES["rdf"] + "type"
 XSD_DATE = PREFIXES["xsd"] + "date"
 XSD_GYEAR = PREFIXES["xsd"] + "gYear"
 
-# Relation names a standard vocabulary already covers. Everything else becomes
-# a term under ``rel:`` declared a sub-property of ``skos:semanticRelation``.
+# Candidate predicate spellings; _route_relation additionally checks role/scope.
 STANDARD_RELATIONS = {
     "relates": PREFIXES["skos"] + "related",
     "related": PREFIXES["skos"] + "related",
@@ -166,10 +182,6 @@ WIKILINK_PREDICATE = PREFIXES["dcterms"] + "references"
 REDIRECT_PREDICATE = PREFIXES["dcterms"] + "isReplacedBy"
 WIKIDATA_ENTITY = "http://www.wikidata.org/entity/"
 WIKIDATA_ID = re.compile(r"Q[1-9][0-9]*")
-KEYWORD_TERMS = {
-    "model_fitting": "http://purl.obolibrary.org/obo/STATO_0000218",
-    "computational_modeling": "http://purl.obolibrary.org/obo/NCIT_C16461",
-}
 NAVIGATION_STEMS = {"readme", "agents", "catalog", "index"}
 # Links are resolved only against what the repository ships. A checkout also holds
 # local tool folders (editor, index and agent directories); letting a link land in
@@ -224,6 +236,11 @@ def typed_date(value: Any) -> str:
 def page_iri(node_id: str) -> str:
     """IRI of the page whose vault-relative path (no ``.md``) is ``node_id``."""
     return PAGE + quote(node_id, safe="/-_.~")
+
+
+def concept_iri(node_id: str) -> str:
+    """Stable topic IRI, distinct from the source document's existing page IRI."""
+    return CONCEPT + quote(node_id, safe="/-_.~")
 
 
 def relation_slug(name: str) -> str:
@@ -318,6 +335,8 @@ class Report:
 
     pages: int = 0
     concepts: int = 0
+    document_relation_assertions: int = 0
+    document_relation_routes: list[dict[str, str]] = field(default_factory=list)
     navigation_pages: int = 0
     redirects: int = 0
     aligned_pages: int = 0
@@ -341,6 +360,19 @@ def _is_navigation(path: Path) -> bool:
     return path.stem.lower() in NAVIGATION_STEMS
 
 
+def _has_topic(path: Path, frontmatter: dict[str, Any]) -> bool:
+    """Only declared topic types (or untyped explicitly mapped topics) mint topics."""
+    page_type = str(frontmatter.get("type") or "").strip()
+    return (
+        not _is_navigation(path)
+        and "citations" not in path.parts
+        and (
+            page_type in TOPIC_PAGE_TYPES
+            or (not page_type and bool(frontmatter.get("external_mappings")))
+        )
+    )
+
+
 def _title(frontmatter: dict[str, Any], node_id: str) -> str:
     raw = str(frontmatter.get("title") or "").strip()
     match = WIKI_LINK_PATTERN.fullmatch(raw)
@@ -356,17 +388,19 @@ def _describe_page(
     subject = iri(page_iri(node_id))
     title = _title(frontmatter, node_id)
     page_type = str(frontmatter.get("type") or "").strip()
-    navigation = _is_navigation(path)
-    redirect = page_type == "redirect"
+    navigation = _is_navigation(path) or page_type in {"index", "catalog", "agents"}
+    topic = iri(concept_iri(node_id)) if _has_topic(path, frontmatter) else None
 
     graph.add(subject, iri(RDF_TYPE), iri(PREFIXES["schema"] + "CreativeWork"))
     if navigation:
         graph.add(subject, iri(RDF_TYPE), iri(PREFIXES["schema"] + "CollectionPage"))
         report.navigation_pages += 1
-    elif not redirect:
-        graph.add(subject, iri(RDF_TYPE), iri(PREFIXES["skos"] + "Concept"))
-        graph.add(subject, iri(PREFIXES["skos"] + "inScheme"), iri(SCHEME))
-        graph.add(subject, iri(PREFIXES["skos"] + "prefLabel"), literal(title, lang="en"))
+    if topic:
+        graph.add(topic, iri(RDF_TYPE), iri(PREFIXES["skos"] + "Concept"))
+        graph.add(topic, iri(PREFIXES["skos"] + "inScheme"), iri(SCHEME))
+        graph.add(topic, iri(PREFIXES["skos"] + "prefLabel"), literal(title, lang="en"))
+        graph.add(subject, iri(PREFIXES["schema"] + "about"), topic)
+        graph.add(subject, iri(PREFIXES["dcterms"] + "subject"), topic)
         report.concepts += 1
     graph.add(subject, iri(PREFIXES["dcterms"] + "title"), literal(title, lang="en"))
 
@@ -378,21 +412,30 @@ def _describe_page(
     for key, predicate in (("definition", "definition"), ("scope_note", "scopeNote")):
         if frontmatter.get(key):
             graph.add(
-                subject,
-                iri(PREFIXES["skos"] + predicate),
+                topic or subject,
+                iri(
+                    PREFIXES["skos"] + predicate
+                    if topic
+                    else VOCAB + "source" + key.title().replace("_", "")
+                ),
                 literal(str(frontmatter[key]), lang="en"),
             )
     for alias in _strings(frontmatter.get("aliases")):
-        if alias != title or navigation or redirect:
-            graph.add(subject, iri(PREFIXES["skos"] + "altLabel"), literal(alias, lang="en"))
+        graph.add(subject, iri(PREFIXES["schema"] + "alternateName"), literal(alias, lang="en"))
+        if topic and alias != title:
+            graph.add(topic, iri(PREFIXES["skos"] + "altLabel"), literal(alias, lang="en"))
     if frontmatter.get("created") is not None:
         graph.add(subject, iri(PREFIXES["dcterms"] + "created"), typed_date(frontmatter["created"]))
     updated = frontmatter.get("updated") or frontmatter.get("modified")
     if updated is not None:
         graph.add(subject, iri(PREFIXES["dcterms"] + "modified"), typed_date(updated))
-    for tag in _strings(frontmatter.get("tags")):
-        if tag in KEYWORD_TERMS:
-            graph.add(subject, iri(PREFIXES["schema"] + "keywords"), iri(KEYWORD_TERMS[tag]))
+    for raw_tag in _flatten(frontmatter.get("tags", [])):
+        if raw_tag is None or not str(raw_tag).strip():
+            continue
+        # WHY: reviewed keyword reuse is exact; whitespace is not an alias.
+        tag = str(raw_tag)
+        if external_keyword := keyword_iri(tag):
+            graph.add(subject, iri(PREFIXES["schema"] + "keywords"), iri(external_keyword))
             continue
         keyword = iri(BASE + "keyword/" + quote(tag, safe="-._~"))
         graph.add(subject, iri(PREFIXES["schema"] + "keywords"), keyword)
@@ -403,9 +446,10 @@ def _describe_page(
         )
         graph.add(keyword, iri(PREFIXES["skos"] + "notation"), literal(tag))
         graph.add(keyword, iri(PREFIXES["skos"] + "inScheme"), iri(SCHEME))
-    for key in ("status", "complexity"):
+    for key in ("status", "complexity", "processing_priority"):
         if frontmatter.get(key) is not None:
-            graph.add(subject, iri(VOCAB + key), literal(str(frontmatter[key])))
+            name = "processingPriority" if key == "processing_priority" else key
+            graph.add(subject, iri(VOCAB + name), literal(str(frontmatter[key])))
     if page_type:
         graph.add(subject, iri(VOCAB + "pageType"), literal(page_type))
         report.page_types[page_type] += 1
@@ -417,7 +461,8 @@ def _describe_page(
     parts = node_id.split("/")
     if len(parts) > 1:
         domain = DOMAIN + quote(parts[0], safe="-_.~")
-        graph.add(iri(domain), iri(PREFIXES["skos"] + "member"), subject)
+        if topic:
+            graph.add(iri(domain), iri(PREFIXES["skos"] + "member"), topic)
         report.domains[parts[0]] += 1
 
     for author in _strings(frontmatter.get("authors")):
@@ -437,20 +482,21 @@ def _describe_page(
         graph.add(subject, iri(PREFIXES["rdfs"] + "seeAlso"), iri(WIKIDATA_ENTITY + qid))
         report.discovery_pages += 1
     mappings = reviewed_mappings(frontmatter.get("external_mappings"))
-    if mappings and (navigation or redirect):
+    if mappings and not topic:
         raise ValueError(f"non-concept page {node_id!r} cannot carry SKOS mappings")
     if mappings:
         report.aligned_pages += 1
     for mapping in mappings:
         predicate, target = iri(PREFIXES["skos"] + mapping.relation), iri(mapping.target)
-        graph.add(subject, predicate, target)
+        assert topic is not None  # mappings on a document-only role were rejected above
+        graph.add(topic, predicate, target)
         key = hashlib.sha256(
-            f"{subject[1:-1]}\n{predicate[1:-1]}\n{target[1:-1]}".encode()
+            f"{topic[1:-1]}\n{predicate[1:-1]}\n{target[1:-1]}".encode()
         ).hexdigest()
         statement = iri(BASE + "mapping/" + key)
         for p, o in (
             (RDF_TYPE, iri(PREFIXES["rdf"] + "Statement")),
-            (PREFIXES["rdf"] + "subject", subject),
+            (PREFIXES["rdf"] + "subject", topic),
             (PREFIXES["rdf"] + "predicate", predicate),
             (PREFIXES["rdf"] + "object", target),
             (PREFIXES["dcterms"] + "source", iri(mapping.evidence)),
@@ -519,35 +565,96 @@ def _resolve(root: Path, source: Path, target: str, index: LinkIndex) -> str | N
 
 
 def _add_edge(
-    graph: Graph, report: Report, source_id: str, target_id: str, predicate: str, typed: bool
+    graph: Graph,
+    report: Report,
+    source_id: str,
+    target_id: str,
+    predicate: str,
+    typed: bool,
+    *,
+    conceptual: bool = False,
 ) -> None:
     if source_id == target_id:
         report.self_loops_dropped += 1
         return
-    graph.add(iri(page_iri(source_id)), iri(predicate), iri(page_iri(target_id)))
+    resource = concept_iri if conceptual else page_iri
+    graph.add(iri(resource(source_id)), iri(predicate), iri(resource(target_id)))
     if typed:
         report.typed_edges += 1
     else:
         report.link_edges += 1
 
 
-def _describe_vocabulary(graph: Graph, relations: set[str]) -> None:
+def _route_relation(name: str, both_topics: bool) -> tuple[str, bool, str]:
+    """Return predicate, conceptual scope and reason without inventing topic roles."""
+    slug = relation_slug(name)
+    predicate = relation_predicate(name)
+    if (
+        slug in {"organizes", "has_parent", "cites", "cited_by"}
+        or predicate
+        in {
+            PREFIXES["bibo"] + "cites",
+            PREFIXES["bibo"] + "citedBy",
+            PREFIXES["dcterms"] + "references",
+            PREFIXES["dcterms"] + "hasPart",
+            PREFIXES["dcterms"] + "isPartOf",
+        }
+        and slug not in {"part_of", "component_of"}
+    ):
+        return predicate, False, "document relation"
+    if slug in {"part_of", "component_of"} and not both_topics:
+        return PREFIXES["dcterms"] + "isPartOf", False, "document containment"
+    if slug in DOCUMENT_RELATIONS:
+        return DOCUMENT_RELATION + slug, False, DOCUMENT_RELATIONS[slug]
+    if both_topics:
+        if slug in CONCEPT_RELATIONS:
+            return RELATION + slug, True, CONCEPT_RELATIONS[slug]
+        if predicate in {
+            PREFIXES["skos"] + r
+            for r in (
+                "related",
+                "broader",
+                "narrower",
+                "broaderTransitive",
+                "narrowerTransitive",
+            )
+        }:
+            return predicate, True, "standard SKOS concept relation"
+    # WHY: a typed source assertion to a guide, citation or navigation page is
+    # evidence of the written cross-reference, not evidence of another concept.
+    return (
+        DOCUMENT_RELATION + slug,
+        False,
+        (
+            f"Source document lists target document under semantic_relations type '{name}'. "
+            "Conceptual interpretation is unresolved; no relation between topics is asserted."
+        ),
+    )
+
+
+def _describe_vocabulary(graph: Graph, relations: dict[str, tuple[str, bool, str]]) -> None:
     """Declare the graph's own terms so a consumer can interpret them."""
     skos_related = iri(PREFIXES["skos"] + "semanticRelation")
     label, comment = iri(PREFIXES["rdfs"] + "label"), iri(PREFIXES["rdfs"] + "comment")
     sub_property = iri(PREFIXES["rdfs"] + "subPropertyOf")
     prop = iri(PREFIXES["rdf"] + "Property")
-    for slug in sorted(relations):
-        term = iri(RELATION + slug)
+    for predicate, (name, conceptual, meaning) in sorted(relations.items()):
+        term = iri(predicate)
         graph.add(term, iri(RDF_TYPE), prop)
-        graph.add(term, sub_property, skos_related)
-        graph.add(term, label, literal(slug.replace("_", " "), lang="en"))
+        if conceptual:
+            graph.add(term, sub_property, skos_related)
+        scope = PREFIXES["skos"] + "Concept" if conceptual else PREFIXES["schema"] + "CreativeWork"
+        graph.add(term, iri(PREFIXES["rdfs"] + "domain"), iri(scope))
+        graph.add(term, iri(PREFIXES["rdfs"] + "range"), iri(scope))
+        graph.add(term, iri(VOCAB + "sourceRelation"), literal(name))
+        graph.add(term, label, literal(relation_slug(name).replace("_", " "), lang="en"))
         graph.add(
             term,
             comment,
             literal(
-                f"Relation '{slug}' as written in a page's semantic_relations; "
-                "read it from the page that declares it to the page it names.",
+                meaning
+                + " Direction: declaring source to named target. "
+                + ("Scope: topic concepts." if conceptual else "Scope: document records."),
                 lang="en",
             ),
         )
@@ -555,7 +662,20 @@ def _describe_vocabulary(graph: Graph, relations: set[str]) -> None:
         ("pageType", "The page's `type` frontmatter value, for example mathematical_concept."),
         ("status", "The page's editorial status, for example stable or verified."),
         ("complexity", "The page's declared difficulty level."),
+        ("processingPriority", "The page's source-declared editorial processing priority."),
         ("journal", "Journal named by a citation page."),
+        (
+            "sourceDefinition",
+            "Definition frontmatter retained on a document without a declared topic.",
+        ),
+        (
+            "sourceScopeNote",
+            "Scope note frontmatter retained on a document without a declared topic.",
+        ),
+        (
+            "sourceRelation",
+            "Exact source semantic_relations name whose routing defines this predicate.",
+        ),
     ):
         term = iri(VOCAB + name)
         graph.add(term, iri(RDF_TYPE), prop)
@@ -627,14 +747,18 @@ def build_graph(repo_root: Path) -> tuple[Graph, Report]:
         raise FileNotFoundError(f"knowledge base not found: {kb_root}")
     index = _shipped_index(root)
     graph, report = Graph(), Report()
-    used_relations: set[str] = set()
+    used_relations: dict[str, tuple[str, bool, str]] = {}
     updated_dates: list[str] = []
     domain_names: set[str] = set()
 
+    records: dict[str, tuple[Path, dict[str, Any], str]] = {}
     for path in _markdown_paths(kb_root):
         _require_regular_source(path, root)
         node_id = path.relative_to(kb_root).with_suffix("").as_posix()
         frontmatter, body = _split(path.read_text(encoding="utf-8"))
+        records[node_id] = path, frontmatter, body
+    topics = {node_id for node_id, (path, fm, _) in records.items() if _has_topic(path, fm)}
+    for node_id, (path, frontmatter, body) in records.items():
         report.pages += 1
         _describe_page(graph, node_id, path, frontmatter, report)
         for key in ("updated", "modified"):
@@ -644,7 +768,7 @@ def build_graph(repo_root: Path) -> tuple[Graph, Report]:
             domain_names.add(node_id.split("/", 1)[0])
 
         redirect_target = ""
-        if str(frontmatter.get("type")) == "redirect":
+        if str(frontmatter.get("type")) in {"redirect", "citation_redirect"}:
             report.redirects += 1
             redirect_target = _link_target(frontmatter.get("redirect"))
 
@@ -663,16 +787,33 @@ def build_graph(repo_root: Path) -> tuple[Graph, Report]:
             if resolved == "":
                 report.links_outside_graph += 1
                 continue
+            conceptual = False
             if kind == "redirect":
                 predicate = REDIRECT_PREDICATE
             elif kind == "typed":
-                predicate = relation_predicate(relation)
+                predicate, conceptual, reason = _route_relation(
+                    relation, node_id in topics and resolved in topics
+                )
                 if predicate.startswith(RELATION):
-                    used_relations.add(predicate[len(RELATION) :])
+                    used_relations[predicate] = (relation, conceptual, reason)
+                    graph.add(iri(predicate), iri(VOCAB + "sourceRelation"), literal(relation))
+                if predicate.startswith(DOCUMENT_RELATION) and node_id != resolved:
+                    report.document_relation_assertions += 1
+                    report.document_relation_routes.append(
+                        {
+                            "source": node_id,
+                            "relation": relation,
+                            "target": resolved,
+                            "predicate": predicate,
+                            "reason": reason,
+                        }
+                    )
                 report.relations[relation_slug(relation)] += 1
             else:
                 predicate = WIKILINK_PREDICATE
-            _add_edge(graph, report, node_id, resolved, predicate, kind != "link")
+            _add_edge(
+                graph, report, node_id, resolved, predicate, kind != "link", conceptual=conceptual
+            )
 
     for name in sorted(domain_names):
         domain = iri(DOMAIN + quote(name, safe="-_.~"))
@@ -757,6 +898,9 @@ def sample_turtle(graph: Graph) -> str:
     """The committed sample: the dataset description plus a few pages in full."""
     pages = {iri(page_iri(page)) for page in SAMPLE_PAGES}
     pages |= {
+        o for s, p, o in graph.triples if s in pages and p == iri(PREFIXES["schema"] + "about")
+    }
+    pages |= {
         s for s, p, o in graph.triples if p == iri(PREFIXES["rdf"] + "subject") and o in pages
     }
     pages |= {
@@ -802,12 +946,13 @@ def statistics_markdown(report: Report) -> str:
         "| Quantity | Count |",
         "|---|---|",
         f"| Pages (all described as `schema:CreativeWork`) | {report.pages} |",
-        f"| Concept pages (`skos:Concept`) | {report.concepts} |",
+        f"| Separate page-topic concepts (`skos:Concept`) | {report.concepts} |",
+        f"| Document-scoped source relation assertions | {report.document_relation_assertions} |",
         f"| Additional local keyword concepts | {report.keyword_concepts} |",
         f"| Concept-valued keyword links | {report.keyword_links} |",
         f"| Navigation pages (`schema:CollectionPage`) | {report.navigation_pages} |",
         f"| Redirect pages | {report.redirects} |",
-        f"| Pages with reviewed external mappings | {report.aligned_pages} |",
+        f"| Documents whose topics have reviewed external mappings | {report.aligned_pages} |",
         f"| Wikidata discovery links (`rdfs:seeAlso`, not mappings) | {report.discovery_pages} |",
         f"| Reviewed exact matches | {report.mapping_relations['exactMatch']} |",
         f"| Reviewed close matches | {report.mapping_relations['closeMatch']} |",
@@ -837,6 +982,21 @@ def statistics_markdown(report: Report) -> str:
         f"| `{name}` | {count} |"
         for name, count in sorted(report.relations.items(), key=lambda i: (-i[1], i[0]))
     ]
+    lines += [
+        "",
+        "## Document-scoped source assertions",
+        "",
+        "These preserve source labels and directions without asserting relations between topics.",
+        "",
+        "| Source document | Source relation | Target document | Routing reason |",
+        "|---|---|---|---|",
+    ]
+    lines += [
+        f"| `{r['source']}` | `{r['relation']}` | `{r['target']}` | {r['reason']} |"
+        for r in sorted(
+            report.document_relation_routes, key=lambda r: (r["source"], r["relation"], r["target"])
+        )
+    ]
     return "\n".join(lines) + "\n"
 
 
@@ -844,6 +1004,7 @@ def alignment_markdown(graph: Graph) -> str:
     """Generate mapping coverage and an incoming-link review queue from RDF."""
     title = iri(PREFIXES["dcterms"] + "title")
     labels = {s: o for s, p, o in graph.triples if p == title and s.startswith("<" + PAGE)}
+    topic_pages = {o: s for s, p, o in graph.triples if p == iri(PREFIXES["schema"] + "about")}
     predicates = {
         iri(PREFIXES["skos"] + r)
         for r in ("exactMatch", "closeMatch", "broadMatch", "narrowMatch", "relatedMatch")
@@ -851,10 +1012,12 @@ def alignment_markdown(graph: Graph) -> str:
     mappings: dict[str, list[tuple[str, str]]] = {}
     incoming: Counter = Counter()
     for subject, predicate, target in graph.triples:
-        if subject in labels and target in labels and subject != target:
-            incoming[target] += 1
+        source_page = topic_pages.get(subject, subject)
+        target_page = topic_pages.get(target, target)
+        if source_page in labels and target_page in labels and source_page != target_page:
+            incoming[target_page] += 1
         if predicate in predicates:
-            mappings.setdefault(subject, []).append((predicate, target))
+            mappings.setdefault(topic_pages.get(subject, subject), []).append((predicate, target))
     lines = [
         "---",
         "title: Mapping review and priority queue",
@@ -865,8 +1028,8 @@ def alignment_markdown(graph: Graph) -> str:
         "# Mapping review and priority queue",
         "",
         "Generated from the current export; regenerate with `--write-docs`.",
-        "Incoming links count distinct exported page-to-page triples, including "
-        "typed relations and body references.",
+        "Incoming links count exported document references and topic relations projected "
+        "to their source documents. Mapping dispositions describe the separate topic concepts.",
         "Only explicit source-reviewed records become SKOS mappings. "
         "Wikidata discovery links are not equivalence evidence.",
         "",
@@ -885,13 +1048,14 @@ def alignment_markdown(graph: Graph) -> str:
         "",
         "## Reviewed correspondences",
         "",
-        "| Page | Predicate | Target |",
-        "|---|---|---|",
+        "| Document path | Separate topic IRI | Predicate | Target |",
+        "|---|---|---|---|",
     ]
     for subject in sorted(mappings):
         for predicate, target in sorted(mappings[subject]):
             lines.append(
                 f"| `{subject[len(PAGE) + 1 : -1]}` | "
+                f"{iri(CONCEPT + subject[len(PAGE) + 1 : -1])} | "
                 f"`{predicate.rsplit('#', 1)[-1][:-1]}` | {target} |"
             )
     return "\n".join(lines) + "\n"
@@ -954,7 +1118,8 @@ def submission_diagnostics(graph: Graph) -> dict[str, Any]:
     }
     if dangling:
         errors.append(f"dangling page objects: {len(dangling)}")
-    if not any(s in pages for r in RELATIONS for s, _ in index.pairs(PREFIXES["skos"] + r)):
+    topics = {o for _, o in index.pairs(PREFIXES["schema"] + "about")}
+    if not any(s in topics for r in RELATIONS for s, _ in index.pairs(PREFIXES["skos"] + r)):
         errors.append("no external concept mappings; document an interoperability review")
     errors.extend(
         f"{finding['code']}: {finding['message']} {' '.join(finding['terms'])}"

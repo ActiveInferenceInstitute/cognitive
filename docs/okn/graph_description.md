@@ -15,35 +15,34 @@ Active Inference and the fields it draws on, linked to one another. Figures are 
 
 ## What the nodes are
 
-Every Markdown page under `knowledge_base/` is one node, identified by its path. A node is
-always a `schema:CreativeWork` with the additional role shown below.
-
-For compatibility, a concept page uses the same IRI for the document record and
-its SKOS subject concept. SKOS mapping predicates describe that conceptual role;
-the `schema:CreativeWork` role retains document metadata and citations. This is
-an explicit application convention, not a claim of OWL identity with an external
-class or an assertion that the page is an instance of its subject. Consumers
-requiring separate document and concept resources must account for this convention.
+Every Markdown page under `knowledge_base/` has a document node at its existing
+`…/page/<path>` IRI, always a `schema:CreativeWork`. Topic-bearing documents link
+to separate `…/concept/<path>` SKOS concepts with `schema:about` and
+`dcterms:subject`. See the [entity model and migration](entity-model.md).
 
 | Node | RDF type | What it is |
 |---|---|---|
-| Concept page | `skos:Concept` in the `…/scheme` concept scheme | An article on one idea, such as a Markov blanket, expected free energy or stigmergy. The large majority of nodes. |
+| Topic concept | `skos:Concept` in the `…/scheme` concept scheme | Subject of a topic-bearing document, such as Markov blanket, expected free energy or stigmergy. |
 | Navigation page | `schema:CollectionPage` | A folder's `README`, `AGENTS`, `index` or `catalog` page. It lists other pages and defines nothing. |
 | Redirect page | none beyond `schema:CreativeWork` | A retired name; `dcterms:isReplacedBy` points to the page that replaced it. |
+| Citation record and other documentation | `schema:CreativeWork` | Published-work metadata, guides and editorial material; these do not become topic concepts. |
 
 Pages are grouped into domains by top-level folder (`mathematics`, `biology`, `cognitive`,
 `philosophy`, `systems`, `ontology`, `citations` and others). Each domain is a `skos:Collection`
-that has its pages as `skos:member`.
+that has its topic concepts as `skos:member`.
 
-A concept node carries:
+A document node carries:
 
-- labels: `skos:prefLabel` and `dcterms:title` from the page title, and `skos:altLabel` for each
-  alias the page lists;
+- `dcterms:title` from the page title and `schema:alternateName` for aliases;
 - `dcterms:description` (the page's one-line summary, where it has one), `dcterms:created` and
   `dcterms:modified` as `xsd:date`;
 - `schema:keywords` concept IRIs for its tags, with reviewed external terms reused directly;
 - `dcterms:source`, the page's address in the public repository;
 - `ckb:pageType`, `ckb:status` and, where the page gives it, `ckb:complexity`.
+
+Its topic carries `skos:prefLabel`, distinct aliases as `skos:altLabel`,
+`skos:definition`, `skos:scopeNote`, scheme/domain membership and reviewed
+external mappings. Page descriptions and source/license metadata stay on documents.
 
 Citation pages, which record one published paper, also carry `schema:author`,
 `schema:datePublished` (an `xsd:gYear`), `ckb:journal` and, when the page has a DOI,
@@ -51,16 +50,18 @@ Citation pages, which record one published paper, also carry `schema:author`,
 
 ## What the edges are
 
-Edges come from two places in a page, and both run from the page that contains them to the
-page they name.
+Edges come from two places in a page; direction follows the source declaration.
 
 1. **Typed edges** from the page's `semantic_relations` frontmatter, each a named relation
    such as `relates`, `implements`, `extends`, `foundation_for` or `cited_by`. The relations a
-   standard vocabulary already covers use it (`relates` becomes `skos:related`, `part_of`
-   becomes `dcterms:isPartOf`, `organizes` becomes `dcterms:hasPart`, and `cited_by`
-   becomes `bibo:citedBy`). The rest become terms
-   under `…/relation/`, each declared a sub-property of `skos:semanticRelation` and labelled in
-   the graph, so a query for any semantic relation finds them all.
+   standard vocabulary safely covers use it: `relates` becomes `skos:related`
+   between topics, `organizes` becomes document `dcterms:hasPart`, and `cited_by`
+   becomes document `bibo:citedBy`. Reviewed conceptual custom relations use
+   `…/relation/` with Concept domain/range and a SKOS semantic super-property.
+   Documentation and ambiguous mixed-role assertions use document-scoped
+   predicates under `…/relation/document/` without SKOS entailment. Definitions,
+   directions and endpoint scopes are emitted as RDF; unresolved conceptual
+   interpretations are listed in the generated statistics.
 2. **Untyped edges** from `[[wiki links]]` in the body, as `dcterms:references`. Links inside
    code and numeric matrix literals are ignored.
 

@@ -3,7 +3,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?page ?title ?doi ?source
 WHERE {
   GRAPH <https://purl.org/okn/frink/kg/cognitive-kb> {
-    ?page schema:sameAs ?doi ; dcterms:title ?title ; dcterms:source ?source .
+    ?page a schema:CreativeWork ; schema:sameAs ?doi ; dcterms:title ?title ; dcterms:source ?source .
     FILTER(STRSTARTS(STR(?doi), "https://doi.org/"))
   }
 }

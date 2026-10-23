@@ -18,8 +18,8 @@ has `schema_version`, `profile`, `machine_checks_passed`, `errors`, `warnings`,
 `finding_counts`, `coverage` and `work`. Findings carry a stable `code`, severity,
 message and identifying terms. Terms are serialized RDF terms, except decoded
 label text and language in label conflicts. Arrays and counts have a fixed order;
-there is no timestamp, duration or network-dependent result. The initial profile
-identifier is `cognitive-kb-semantic-1` and the initial schema version is `1`.
+there is no timestamp, duration or network-dependent result. The separated entity
+model uses profile `cognitive-kb-semantic-2` and schema version `2`.
 
 `scripts.export_rdf.submission_diagnostics(graph)` adds the existing license,
 nonempty-page, page-reference, interoperability-presence and provenance criteria.
@@ -27,7 +27,7 @@ Its `quality` field contains the semantic report. `submission_errors(graph)`
 preserves the list-of-strings interface. `--check-submission` returns the combined
 diagnostics and blocks on either metadata or semantic errors. The semantic-only
 command can pass a graph without mappings; the submission command still requires
-a page mapping as evidence of an interoperability review.
+a mapping on a document's topic as evidence of an interoperability review.
 
 ## Standards and fatal errors
 
@@ -62,6 +62,21 @@ scope note, description, or mapping is not by itself a SKOS integrity violation.
 
 These additional constraints are repository policy, not new ontology axioms:
 
+- Every local `/page/` resource is a CreativeWork document, never a Concept or
+  SKOS mapping endpoint. Each `/concept/` topic is a Concept in the local scheme
+  linked from its matching document through both `schema:about` and
+  `dcterms:subject`. Navigation, citations, redirects and other document-only
+  types cannot acquire topics from typed links. Document metadata and citation
+  predicates cannot be placed on topics; SKOS concept metadata cannot be placed
+  on documents. Domain memberships require concepts.
+- Local conceptual predicates require an explicit reviewed meaning, source name,
+  Concept domain/range and SKOS semantic super-property. Document-scoped source
+  predicates require CreativeWork domain/range and no SKOS super-property,
+  including indirectly inherited super-properties. Both endpoint types are
+  checked directly. Standard SKOS relation/mapping endpoints cannot be pages even
+  if their explicit Concept types were removed. Unknown source relation names
+  are preserved as documentary assertions rather than assigned a conceptual meaning.
+
 - Every asserted SKOS mapping needs an asserted `rdf:Statement` with exactly one
   `rdf:subject`, `rdf:predicate`, `rdf:object`, HTTP(S) evidence source, nonempty
   `@en` rationale, and valid review date. A local resource used as a mapping
@@ -90,19 +105,24 @@ These additional constraints are repository policy, not new ontology axioms:
   or identify an accidentally reversed source statement from labels alone.
   Custom `rel:cites` and `rel:cited_by` fail the profile.
 
-The exporter omits an alias identical to a concept's preferred title rather
-than emitting an S13 violation. Alias spelling and capitalization otherwise
-remain unchanged. No page/concept IRI migration is performed; see the
-[vocabulary contract](vocabulary.md) for the combined document/concept convention.
+The exporter omits a concept alias identical to its preferred title rather than
+emitting an S13 violation. Document aliases retain their source spelling through
+`schema:alternateName`. See the [entity model](entity-model.md) and
+[vocabulary contract](vocabulary.md) for field routing and migration.
 
 ## Editorial coverage and cost
 
 Coverage records local concept and page counts, preferred labels, definitions,
 descriptions and scope notes, keyword descriptions, mapping assertions and
 evidenced assertions, citation records and identifiers, normalized citation
-pairs and hierarchy cycle components. Page-concept coverage is reported
+pairs and hierarchy cycle components. Page-topic concept coverage is reported
 separately from keyword concepts so a large keyword vocabulary does not inflate
-page definition coverage. Missing labels and language-neutral labels have
+topic definition coverage. `page_concepts` retains its report key and now counts
+separate `/concept/` resources. `page_concepts_with_description` counts their
+documents' descriptions, while `concepts_with_description` counts literal concept
+descriptions (normally absent). `pages_with_reviewed_mapping` counts documents
+whose topics are mapped. `document_topic_links` and
+`document_relation_assertions` make the routes observable. Missing labels and language-neutral labels have
 locatable warnings. Low definition or mapping coverage is an editorial review
 signal, not a requirement to invent definitions or correspondences.
 
@@ -137,10 +157,13 @@ documentation and the knowledge-base license. `RUNTIME_SOURCE_NAMES` in
 - `code/scripts/export_rdf.py`
 - `code/scripts/rdf_alignment.py`
 - `code/scripts/rdf_quality.py`
+- `code/scripts/rdf_keywords.py`
+- `code/scripts/rdf_relations.py`
 - `code/scripts/kb_index.py`
 - `code/scripts/verify_links.py`
 - `code/scripts/markdown_fences.py`
 
+The keyword registry and relation policy affect subject reuse and entity routing.
 The last three implement frontmatter parsing, link resolution and Markdown code
 exclusion; they affect graph construction even though they predate diagnostics.
 The exporter adds no runtime dependency. A normal export hashes the source set

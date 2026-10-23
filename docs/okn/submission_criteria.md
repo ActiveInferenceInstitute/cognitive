@@ -57,6 +57,15 @@ nonfatal; inspect coverage and warnings before upload. `--check-submission` embe
 the same semantic report under `quality` and returns status one for any fatal
 metadata or semantic finding.
 
+The [document/topic model](entity-model.md) also makes role separation fatal:
+page IRIs cannot be Concepts or mapping endpoints; document-topic links must
+connect the matching declared resources; metadata/citations remain on documents;
+domain collections and conceptual relations have concept endpoints. Reviewed
+mapping evidence must describe the migrated concept subject. Inspect the generated
+document-scoped assertion table for ambiguous source labels and mixed-role links.
+Earlier capture receipts describe the earlier model; regenerate and replay fresh
+evidence after this migration before relying on a submission packet.
+
 The repository's automated check is a necessary technical check, not a full
 submission certification. Generated exports, registry acceptance, upload,
 processing and federation availability are separate events.

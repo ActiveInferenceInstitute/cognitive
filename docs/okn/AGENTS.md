@@ -2,7 +2,7 @@
 title: Open Knowledge Network export instructions
 type: instructions
 status: stable
-updated: 2026-10-12
+updated: 2026-10-23
 ---
 
 # Working with the OKN export
@@ -27,6 +27,14 @@ Documentation for the RDF export of the knowledge base and its generated evidenc
   `external_mappings` with source, rationale and review date; keep unreviewed
   Wikidata identifiers as discovery links. Regenerate the priority queue and
   capture fresh cross-graph evidence after graph/query bytes change.
+- Before changing entity roles or relation routing, read `entity-model.md`.
+  Keep `page/` resources as CreativeWork documents and their described topics as
+  distinct `concept/` resources linked through `schema:about` and `dcterms:subject`.
+  Do not give a document SKOS Concept typing or concept-mapping predicates.
+  Citation records, navigation pages and redirects retain their documented roles.
+- Reuse keyword terms only through the reviewed keyword registry in
+  `code/scripts/rdf_keywords.py`. Record evidence and scope in
+  `keyword-curation-2026-10-23.md`; retain local terms when equivalence is uncertain.
 - Export artifacts include `manifest.json` with source and artifact hashes. Keep
   the source revision and upload receipt separately.
 
@@ -35,11 +43,13 @@ Documentation for the RDF export of the knowledge base and its generated evidenc
   `python -m scripts.export_rdf --write-docs` and commit the result.
 - Keep every figure out of the prose pages. Counts live in `statistics.md` and are linked,
   never copied, so they cannot go out of date.
-- A new relation name in a page's `semantic_relations` needs no code change: it becomes a term
-  under `…/relation/` declared a sub-property of `skos:semanticRelation`. Map it to a standard
-  term only by adding it to `STANDARD_RELATIONS`, and record the reason in `vocabulary.md`.
+- For a new `semantic_relations` predicate, establish its meaning, direction and
+  document/concept endpoints under the routing policy in `entity-model.md`.
+  Only conceptual predicates may be sub-properties of `skos:semanticRelation`.
+  Document predicates must not imply SKOS Concept typing. Add accepting and
+  rejecting endpoint tests and document standard-vocabulary reuse in `vocabulary.md`.
 - The named graph is `https://purl.org/okn/frink/kg/cognitive-kb`, the FRINK convention.
   Entity IRIs stay under `https://purl.org/okn/frink/kg/cognitive-kb/`; do not mint IRIs under
-  any other namespace.
+  any other local namespace. Reusing reviewed external vocabulary IRIs is allowed.
 - Tests are in `code/tests/test_export_rdf.py`. They build small vaults from real files and
   parse the real knowledge base; do not replace them with fixtures that return canned graphs.

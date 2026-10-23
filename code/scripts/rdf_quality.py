@@ -9,15 +9,17 @@ from __future__ import annotations
 
 import re
 from collections import Counter, defaultdict
-from collections.abc import Iterable
+from collections.abc import Callable, Iterable
 from dataclasses import dataclass, field
 from datetime import date
 from typing import Any, Protocol
 
 try:
     from scripts.rdf_alignment import RELATIONS, checked_iri
+    from scripts.rdf_relations import CONCEPT_RELATIONS, DOCUMENT_PAGE_TYPES
 except ImportError:
     from rdf_alignment import RELATIONS, checked_iri  # type: ignore[no-redef]
+    from rdf_relations import CONCEPT_RELATIONS, DOCUMENT_PAGE_TYPES  # type: ignore[no-redef]
 
 BASE = "https://purl.org/okn/frink/kg/cognitive-kb/"
 SKOS = "http://www.w3.org/2004/02/skos/core#"
@@ -26,6 +28,7 @@ DCT = "http://purl.org/dc/terms/"
 SCHEMA = "https://schema.org/"
 BIBO = "http://purl.org/ontology/bibo/"
 XSD = "http://www.w3.org/2001/XMLSchema#"
+RDFS = "http://www.w3.org/2000/01/rdf-schema#"
 Triple = tuple[str, str, str]
 
 
@@ -166,6 +169,197 @@ def _components(adjacency: dict[str, set[str]]) -> list[list[str]]:
     return sorted(components)
 
 
+def _entity_model_findings(
+    idx: GraphIndex,
+    concepts: set[str],
+    pages: set[str],
+    emit: Callable[[str, str, Iterable[str], str], None],
+) -> None:
+    """Reject role contamination even when a corrupt graph omits its type triples."""
+    resources = set(idx.by_subject) | {
+        o for pairs in idx.by_predicate.values() for _, o in pairs if o.startswith("<")
+    }
+    page_iris = {s for s in resources if s.startswith("<" + BASE + "page/")}
+    topics = {s for s in resources if s.startswith("<" + BASE + "concept/")}
+    for subject in sorted((concepts & pages) | (concepts & page_iris) | (topics & pages)):
+        emit(
+            "error",
+            "document_concept_overlap",
+            [subject],
+            "Document and topic concept identities must be distinct.",
+        )
+    for page in sorted(page_iris - pages):
+        emit("error", "page_declaration", [page], "Local page requires CreativeWork declaration.")
+    for topic in sorted(topics):
+        page = _iri(BASE + "page/" + topic[len("<" + BASE + "concept/") : -1])
+        if (
+            topic not in concepts
+            or page not in pages
+            or any(idx.objects(page, p) != {topic} for p in (SCHEMA + "about", DCT + "subject"))
+            or _iri(BASE + "scheme") not in idx.objects(topic, SKOS + "inScheme")
+        ):
+            emit(
+                "error",
+                "topic_document_link",
+                [page, topic],
+                "Local topic requires Concept, scheme and matching document about/subject links.",
+            )
+    for predicate in (SCHEMA + "about", DCT + "subject"):
+        for page, topic in sorted(idx.pairs(predicate)):
+            expected = _iri(BASE + "concept/" + page[len("<" + BASE + "page/") : -1])
+            page_types = {
+                parsed[0]
+                for t in idx.objects(page, BASE + "vocab/pageType")
+                if (parsed := _literal(t))
+            }
+            node_id = page[len("<" + BASE + "page/") : -1]
+            if (
+                page not in pages
+                or page not in page_iris
+                or topic not in concepts
+                or topic != expected
+                or page_types & DOCUMENT_PAGE_TYPES
+                or node_id.rsplit("/", 1)[-1].lower() in {"readme", "agents", "index", "catalog"}
+                or node_id.startswith("citations/")
+                or _iri(SCHEMA + "CollectionPage") in idx.objects(page, RDF + "type")
+            ):
+                emit(
+                    "error",
+                    "document_topic_endpoint",
+                    [page, _iri(predicate), topic],
+                    "Document-topic links require the matching declared topic "
+                    "of a topic-bearing page.",
+                )
+    document_metadata = {
+        DCT + p for p in ("title", "description", "created", "modified", "source", "license")
+    } | {SCHEMA + p for p in ("author", "datePublished", "sameAs", "keywords", "alternateName")}
+    document_metadata |= {
+        BASE + "vocab/" + p
+        for p in (
+            "status",
+            "pageType",
+            "complexity",
+            "processingPriority",
+            "journal",
+            "sourceDefinition",
+            "sourceScopeNote",
+        )
+    }
+    for predicate in sorted(document_metadata):
+        for subject, obj in sorted(idx.pairs(predicate)):
+            if subject in concepts or subject in topics:
+                emit(
+                    "error",
+                    "concept_document_metadata",
+                    [subject, _iri(predicate), obj],
+                    "Source-document metadata belongs on the document record.",
+                )
+    for predicate in (
+        "prefLabel",
+        "altLabel",
+        "hiddenLabel",
+        "definition",
+        "scopeNote",
+        "inScheme",
+    ):
+        for subject, obj in sorted(idx.pairs(SKOS + predicate)):
+            if subject in pages or subject in page_iris:
+                emit(
+                    "error",
+                    "document_skos_metadata",
+                    [subject, _iri(SKOS + predicate), obj],
+                    "SKOS concept metadata must not be attached to a document.",
+                )
+    for collection, member in sorted(idx.pairs(SKOS + "member")):
+        if collection.startswith("<" + BASE + "domain/") and (
+            member not in concepts or member not in topics
+        ):
+            emit(
+                "error",
+                "domain_member_endpoint",
+                [collection, member],
+                "Domain collections contain topic concepts, not documents.",
+            )
+    document_predicates = {DCT + p for p in ("references", "isReplacedBy", "isPartOf", "hasPart")}
+    document_predicates |= {BIBO + "cites", BIBO + "citedBy"}
+    for predicate in sorted(document_predicates):
+        for subject, obj in sorted(idx.pairs(predicate)):
+            if any(
+                t in concepts or t in topics or (t.startswith("<" + BASE) and t not in pages)
+                for t in (subject, obj)
+            ):
+                emit(
+                    "error",
+                    "document_relation_endpoint",
+                    [subject, _iri(predicate), obj],
+                    "Document references, citations, redirects and containment require documents.",
+                )
+    semantic = {
+        _iri(SKOS + r)
+        for r in RELATIONS
+        | {
+            "semanticRelation",
+            "related",
+            "broader",
+            "narrower",
+            "broaderTransitive",
+            "narrowerTransitive",
+        }
+    }
+    # Follow declared sub-properties as well: removing an explicit Concept type
+    # must not let an indirect SKOS domain/range implication pass unnoticed.
+    changed = True
+    while changed:
+        parents = {s for s, o in idx.pairs(RDFS + "subPropertyOf") if o in semantic}
+        changed = not parents <= semantic
+        semantic |= parents
+    for predicate in sorted(semantic):
+        for subject, obj in sorted(idx.by_predicate.get(predicate, set())):
+            if any(
+                t in pages or t in page_iris or (t.startswith("<" + BASE) and t not in concepts)
+                for t in (subject, obj)
+            ):
+                emit(
+                    "error",
+                    "concept_relation_endpoint",
+                    [subject, predicate, obj],
+                    "Conceptual relations and mapping endpoints require concepts, never documents.",
+                )
+    local_properties = {p for p in idx.by_predicate if p.startswith("<" + BASE + "relation/")}
+    for predicate in sorted(local_properties):
+        document = predicate.startswith("<" + BASE + "relation/document/")
+        name = predicate[len("<" + BASE + "relation/") : -1]
+        scope = _iri(SCHEMA + "CreativeWork" if document else SKOS + "Concept")
+        meanings = [_literal(t) for t in idx.objects(predicate, RDFS + "comment")]
+        source_names = [_literal(t) for t in idx.objects(predicate, BASE + "vocab/sourceRelation")]
+        if (
+            not document
+            and name not in CONCEPT_RELATIONS
+            or idx.objects(predicate, RDFS + "domain") != {scope}
+            or idx.objects(predicate, RDFS + "range") != {scope}
+            or not any(v and v[0].strip() and v[1:] == ("en", "") for v in meanings)
+            or not any(v and v[0].strip() and not v[2] for v in source_names)
+            or (predicate in semantic) == document
+            or _iri(RDF + "Property") not in idx.objects(predicate, RDF + "type")
+        ):
+            emit(
+                "error",
+                "relation_scope_declaration",
+                [predicate],
+                "Local relation requires documented meaning, source name "
+                "and correct document/concept scope.",
+            )
+        expected_resources = pages if document else concepts
+        for subject, obj in sorted(idx.by_predicate[predicate]):
+            if subject not in expected_resources or obj not in expected_resources:
+                emit(
+                    "error",
+                    "relation_scope_endpoint",
+                    [subject, predicate, obj],
+                    "Local relation endpoints must match its declared scope.",
+                )
+
+
 def semantic_quality(graph: TripleGraph, *, index: GraphIndex | None = None) -> dict[str, Any]:
     """Return versioned findings and coverage; only ``errors`` block submission.
 
@@ -184,6 +378,7 @@ def semantic_quality(graph: TripleGraph, *, index: GraphIndex | None = None) -> 
     types = idx.pairs(RDF + "type")
     concepts = {s for s, o in types if o == _iri(SKOS + "Concept")}
     pages = {s for s, o in types if o == _iri(SCHEMA + "CreativeWork")}
+    _entity_model_findings(idx, concepts, pages, emit)
     mappings = {(s, _iri(SKOS + r), o) for r in RELATIONS for s, o in idx.pairs(SKOS + r)}
     semantic_relations = RELATIONS | {
         "semanticRelation",
@@ -297,7 +492,12 @@ def semantic_quality(graph: TripleGraph, *, index: GraphIndex | None = None) -> 
                 )
 
     for subject, target in sorted(idx.pairs(SCHEMA + "keywords")):
-        if not _http_term(target):
+        if (
+            not _http_term(target)
+            or target in pages
+            or target.startswith("<" + BASE + "page/")
+            or (target.startswith("<" + BASE) and target not in concepts)
+        ):
             emit(
                 "error",
                 "keyword_iri",
@@ -428,7 +628,7 @@ def semantic_quality(graph: TripleGraph, *, index: GraphIndex | None = None) -> 
     citation_pairs |= {(target, source) for source, target in idx.pairs(BIBO + "citedBy")}
     for citing, cited in sorted(citation_pairs):
         if any(
-            not _http_term(t) or (t.startswith("<" + BASE + "page/") and t not in pages)
+            not _http_term(t) or t in concepts or (t.startswith("<" + BASE) and t not in pages)
             for t in (citing, cited)
         ):
             emit(
@@ -448,8 +648,9 @@ def semantic_quality(graph: TripleGraph, *, index: GraphIndex | None = None) -> 
             )
 
     local_concepts = {s for s in concepts if s.startswith("<" + BASE)}
-    page_concepts = local_concepts & pages
-    mapped_pages = {s for s, _, _ in evidenced if s in pages}
+    page_concepts = {s for s in local_concepts if s.startswith("<" + BASE + "concept/")}
+    mapped_concepts = {s for s, _, _ in evidenced}
+    mapped_pages = {s for s, o in idx.pairs(SCHEMA + "about") if o in mapped_concepts}
     citation_records = {s for s, o in idx.pairs(BASE + "vocab/pageType") if o == '"citation"'}
     coverage = {
         "pages": len(pages),
@@ -462,7 +663,15 @@ def semantic_quality(graph: TripleGraph, *, index: GraphIndex | None = None) -> 
             bool(idx.objects(s, SKOS + "scopeNote")) for s in page_concepts
         ),
         "page_concepts_with_description": sum(
-            bool(idx.objects(s, DCT + "description")) for s in page_concepts
+            bool(idx.objects(s, DCT + "description"))
+            for s, o in idx.pairs(SCHEMA + "about")
+            if o in page_concepts
+        ),
+        "document_topic_links": len(idx.pairs(SCHEMA + "about")),
+        "document_relation_assertions": sum(
+            len(pairs)
+            for p, pairs in idx.by_predicate.items()
+            if p.startswith("<" + BASE + "relation/document/")
         ),
         "concepts_with_preferred_label": sum(
             bool(idx.objects(s, SKOS + "prefLabel")) for s in local_concepts
@@ -499,8 +708,8 @@ def semantic_quality(graph: TripleGraph, *, index: GraphIndex | None = None) -> 
     counts = Counter(f["code"] for f in findings)
     findings.sort(key=lambda f: (f["severity"], f["code"], f["terms"], f["message"]))
     return {
-        "schema_version": 1,
-        "profile": "cognitive-kb-semantic-1",
+        "schema_version": 2,
+        "profile": "cognitive-kb-semantic-2",
         "machine_checks_passed": not any(f["severity"] == "error" for f in findings),
         "errors": [f for f in findings if f["severity"] == "error"],
         "warnings": [f for f in findings if f["severity"] == "warning"],

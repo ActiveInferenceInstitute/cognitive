@@ -1,0 +1,10 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ckb: <https://purl.org/okn/frink/kg/cognitive-kb/vocab/>
+SELECT DISTINCT ?relation ?sourceName ?domain ?range ?meaning
+WHERE {
+  GRAPH <https://purl.org/okn/frink/kg/cognitive-kb> {
+    ?relation ckb:sourceRelation ?sourceName ; rdfs:domain ?domain ;
+              rdfs:range ?range ; rdfs:comment ?meaning .
+  }
+}
+ORDER BY ?relation

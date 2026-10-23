@@ -7,7 +7,7 @@ status: stable
 # Mapping review and priority queue
 
 Generated from the current export; regenerate with `--write-docs`.
-Incoming links count distinct exported page-to-page triples, including typed relations and body references.
+Incoming links count exported document references and topic relations projected to their source documents. Mapping dispositions describe the separate topic concepts.
 Only explicit source-reviewed records become SKOS mappings. Wikidata discovery links are not equivalence evidence.
 
 ## Most frequently referenced pages
@@ -42,58 +42,58 @@ Only explicit source-reviewed records become SKOS mappings. Wikidata discovery l
 
 ## Reviewed correspondences
 
-| Page | Predicate | Target |
-|---|---|---|
-| `biology/adrenaline` | `exactMatch` | <http://purl.obolibrary.org/obo/CHEBI_28918> |
-| `biology/adrenaline` | `exactMatch` | <http://purl.obolibrary.org/obo/NCIT_C2292> |
-| `biology/biofilm_formation` | `closeMatch` | <http://purl.obolibrary.org/obo/GO_0042710> |
-| `biology/cortisol` | `exactMatch` | <http://purl.obolibrary.org/obo/CHEBI_17650> |
-| `biology/cortisol` | `exactMatch` | <http://purl.obolibrary.org/obo/NCIT_C2290> |
-| `biology/cortisol` | `exactMatch` | <http://www.wikidata.org/entity/Q190875> |
-| `biology/gene_expression` | `exactMatch` | <http://purl.obolibrary.org/obo/GO_0010467> |
-| `biology/gene_regulation` | `exactMatch` | <http://purl.obolibrary.org/obo/GO_0010468> |
-| `biology/homeostasis` | `exactMatch` | <http://purl.obolibrary.org/obo/GO_0042592> |
-| `biology/morphogenesis` | `exactMatch` | <http://purl.obolibrary.org/obo/GO_0009653> |
-| `biology/neuromuscular_junction` | `broadMatch` | <http://purl.obolibrary.org/obo/GO_0031594> |
-| `biology/serotonin` | `exactMatch` | <http://purl.obolibrary.org/obo/CHEBI_28790> |
-| `biology/serotonin` | `exactMatch` | <http://purl.obolibrary.org/obo/NCIT_C828> |
-| `biology/structural_plasticity` | `broadMatch` | <http://www.wikidata.org/entity/Q849491> |
-| `biology/symbiosis` | `exactMatch` | <http://www.wikidata.org/entity/Q121610> |
-| `biology/wound_healing` | `exactMatch` | <http://purl.obolibrary.org/obo/GO_0042060> |
-| `cognitive/active_inference` | `relatedMatch` | <http://www.wikidata.org/entity/Q17014702> |
-| `cognitive/attention_mechanisms` | `relatedMatch` | <http://www.wikidata.org/entity/Q6501338> |
-| `cognitive/bayesian_inference` | `closeMatch` | <http://purl.obolibrary.org/obo/STATO_0000706> |
-| `cognitive/bayesian_inference` | `exactMatch` | <http://www.wikidata.org/entity/Q812535> |
-| `cognitive/decision_making` | `exactMatch` | <http://www.wikidata.org/entity/Q1331926> |
-| `cognitive/free_energy_principle` | `closeMatch` | <http://www.wikidata.org/entity/Q17014702> |
-| `cognitive/memory_systems` | `relatedMatch` | <http://www.wikidata.org/entity/Q492> |
-| `cognitive/motor_control` | `exactMatch` | <http://www.wikidata.org/entity/Q2996165> |
-| `cognitive/neural_plasticity` | `exactMatch` | <http://www.wikidata.org/entity/Q849491> |
-| `cognitive/oxytocin` | `exactMatch` | <http://purl.obolibrary.org/obo/CHEBI_7872> |
-| `cognitive/oxytocin` | `exactMatch` | <http://purl.obolibrary.org/obo/NCIT_C2283> |
-| `cognitive/predictive_coding` | `exactMatch` | <http://www.wikidata.org/entity/Q1315146> |
-| `cognitive/reinforcement_learning` | `exactMatch` | <http://www.wikidata.org/entity/Q830687> |
-| `cognitive/social_cognition` | `exactMatch` | <http://www.wikidata.org/entity/Q1432778> |
-| `cognitive/swarm_intelligence` | `exactMatch` | <http://www.wikidata.org/entity/Q863960> |
-| `cognitive/synaptic_plasticity` | `exactMatch` | <http://www.wikidata.org/entity/Q1551556> |
-| `cognitive/working_memory` | `exactMatch` | <http://www.wikidata.org/entity/Q11337567> |
-| `mathematics/bayes_theorem` | `exactMatch` | <http://www.wikidata.org/entity/Q182505> |
-| `mathematics/conditional_probability` | `exactMatch` | <http://www.wikidata.org/entity/Q327069> |
-| `mathematics/differential_geometry` | `exactMatch` | <http://www.wikidata.org/entity/Q188444> |
-| `mathematics/dynamical_systems` | `exactMatch` | <http://www.wikidata.org/entity/Q3174497> |
-| `mathematics/entropy` | `exactMatch` | <http://www.wikidata.org/entity/Q204570> |
-| `mathematics/free_energy_principle` | `closeMatch` | <http://www.wikidata.org/entity/Q17014702> |
-| `mathematics/information_geometry` | `exactMatch` | <http://www.wikidata.org/entity/Q3798604> |
-| `mathematics/information_theory` | `exactMatch` | <http://www.wikidata.org/entity/Q131222> |
-| `mathematics/markov_chain_monte_carlo` | `exactMatch` | <http://www.wikidata.org/entity/Q1191869> |
-| `mathematics/mutual_information` | `exactMatch` | <http://www.wikidata.org/entity/Q252973> |
-| `mathematics/probability_distributions` | `exactMatch` | <http://purl.obolibrary.org/obo/STATO_0000225> |
-| `mathematics/probability_theory` | `exactMatch` | <http://www.wikidata.org/entity/Q5862903> |
-| `mathematics/variational_inference` | `narrowMatch` | <http://www.wikidata.org/entity/Q7915794> |
-| `philosophy/enactivism` | `closeMatch` | <http://www.wikidata.org/entity/Q431627> |
-| `philosophy/philosophy_of_mind` | `exactMatch` | <http://www.wikidata.org/entity/Q23407> |
-| `systems/complex_systems` | `closeMatch` | <http://www.wikidata.org/entity/Q2995634> |
-| `systems/cybernetics` | `exactMatch` | <http://www.wikidata.org/entity/Q123637> |
-| `systems/dynamical_systems` | `exactMatch` | <http://www.wikidata.org/entity/Q3174497> |
-| `systems/guided_self_organization` | `relatedMatch` | <http://www.wikidata.org/entity/Q609408> |
-| `systems/knowledge_graphs` | `exactMatch` | <http://www.wikidata.org/entity/Q33002955> |
+| Document path | Separate topic IRI | Predicate | Target |
+|---|---|---|---|
+| `biology/adrenaline` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/adrenaline> | `exactMatch` | <http://purl.obolibrary.org/obo/CHEBI_28918> |
+| `biology/adrenaline` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/adrenaline> | `exactMatch` | <http://purl.obolibrary.org/obo/NCIT_C2292> |
+| `biology/biofilm_formation` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/biofilm_formation> | `closeMatch` | <http://purl.obolibrary.org/obo/GO_0042710> |
+| `biology/cortisol` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/cortisol> | `exactMatch` | <http://purl.obolibrary.org/obo/CHEBI_17650> |
+| `biology/cortisol` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/cortisol> | `exactMatch` | <http://purl.obolibrary.org/obo/NCIT_C2290> |
+| `biology/cortisol` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/cortisol> | `exactMatch` | <http://www.wikidata.org/entity/Q190875> |
+| `biology/gene_expression` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/gene_expression> | `exactMatch` | <http://purl.obolibrary.org/obo/GO_0010467> |
+| `biology/gene_regulation` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/gene_regulation> | `exactMatch` | <http://purl.obolibrary.org/obo/GO_0010468> |
+| `biology/homeostasis` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/homeostasis> | `exactMatch` | <http://purl.obolibrary.org/obo/GO_0042592> |
+| `biology/morphogenesis` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/morphogenesis> | `exactMatch` | <http://purl.obolibrary.org/obo/GO_0009653> |
+| `biology/neuromuscular_junction` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/neuromuscular_junction> | `broadMatch` | <http://purl.obolibrary.org/obo/GO_0031594> |
+| `biology/serotonin` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/serotonin> | `exactMatch` | <http://purl.obolibrary.org/obo/CHEBI_28790> |
+| `biology/serotonin` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/serotonin> | `exactMatch` | <http://purl.obolibrary.org/obo/NCIT_C828> |
+| `biology/structural_plasticity` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/structural_plasticity> | `broadMatch` | <http://www.wikidata.org/entity/Q849491> |
+| `biology/symbiosis` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/symbiosis> | `exactMatch` | <http://www.wikidata.org/entity/Q121610> |
+| `biology/wound_healing` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/biology/wound_healing> | `exactMatch` | <http://purl.obolibrary.org/obo/GO_0042060> |
+| `cognitive/active_inference` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/active_inference> | `relatedMatch` | <http://www.wikidata.org/entity/Q17014702> |
+| `cognitive/attention_mechanisms` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/attention_mechanisms> | `relatedMatch` | <http://www.wikidata.org/entity/Q6501338> |
+| `cognitive/bayesian_inference` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/bayesian_inference> | `closeMatch` | <http://purl.obolibrary.org/obo/STATO_0000706> |
+| `cognitive/bayesian_inference` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/bayesian_inference> | `exactMatch` | <http://www.wikidata.org/entity/Q812535> |
+| `cognitive/decision_making` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/decision_making> | `exactMatch` | <http://www.wikidata.org/entity/Q1331926> |
+| `cognitive/free_energy_principle` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/free_energy_principle> | `closeMatch` | <http://www.wikidata.org/entity/Q17014702> |
+| `cognitive/memory_systems` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/memory_systems> | `relatedMatch` | <http://www.wikidata.org/entity/Q492> |
+| `cognitive/motor_control` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/motor_control> | `exactMatch` | <http://www.wikidata.org/entity/Q2996165> |
+| `cognitive/neural_plasticity` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/neural_plasticity> | `exactMatch` | <http://www.wikidata.org/entity/Q849491> |
+| `cognitive/oxytocin` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/oxytocin> | `exactMatch` | <http://purl.obolibrary.org/obo/CHEBI_7872> |
+| `cognitive/oxytocin` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/oxytocin> | `exactMatch` | <http://purl.obolibrary.org/obo/NCIT_C2283> |
+| `cognitive/predictive_coding` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/predictive_coding> | `exactMatch` | <http://www.wikidata.org/entity/Q1315146> |
+| `cognitive/reinforcement_learning` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/reinforcement_learning> | `exactMatch` | <http://www.wikidata.org/entity/Q830687> |
+| `cognitive/social_cognition` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/social_cognition> | `exactMatch` | <http://www.wikidata.org/entity/Q1432778> |
+| `cognitive/swarm_intelligence` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/swarm_intelligence> | `exactMatch` | <http://www.wikidata.org/entity/Q863960> |
+| `cognitive/synaptic_plasticity` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/synaptic_plasticity> | `exactMatch` | <http://www.wikidata.org/entity/Q1551556> |
+| `cognitive/working_memory` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/cognitive/working_memory> | `exactMatch` | <http://www.wikidata.org/entity/Q11337567> |
+| `mathematics/bayes_theorem` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/bayes_theorem> | `exactMatch` | <http://www.wikidata.org/entity/Q182505> |
+| `mathematics/conditional_probability` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/conditional_probability> | `exactMatch` | <http://www.wikidata.org/entity/Q327069> |
+| `mathematics/differential_geometry` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/differential_geometry> | `exactMatch` | <http://www.wikidata.org/entity/Q188444> |
+| `mathematics/dynamical_systems` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/dynamical_systems> | `exactMatch` | <http://www.wikidata.org/entity/Q3174497> |
+| `mathematics/entropy` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/entropy> | `exactMatch` | <http://www.wikidata.org/entity/Q204570> |
+| `mathematics/free_energy_principle` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/free_energy_principle> | `closeMatch` | <http://www.wikidata.org/entity/Q17014702> |
+| `mathematics/information_geometry` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/information_geometry> | `exactMatch` | <http://www.wikidata.org/entity/Q3798604> |
+| `mathematics/information_theory` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/information_theory> | `exactMatch` | <http://www.wikidata.org/entity/Q131222> |
+| `mathematics/markov_chain_monte_carlo` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/markov_chain_monte_carlo> | `exactMatch` | <http://www.wikidata.org/entity/Q1191869> |
+| `mathematics/mutual_information` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/mutual_information> | `exactMatch` | <http://www.wikidata.org/entity/Q252973> |
+| `mathematics/probability_distributions` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/probability_distributions> | `exactMatch` | <http://purl.obolibrary.org/obo/STATO_0000225> |
+| `mathematics/probability_theory` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/probability_theory> | `exactMatch` | <http://www.wikidata.org/entity/Q5862903> |
+| `mathematics/variational_inference` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/mathematics/variational_inference> | `narrowMatch` | <http://www.wikidata.org/entity/Q7915794> |
+| `philosophy/enactivism` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/philosophy/enactivism> | `closeMatch` | <http://www.wikidata.org/entity/Q431627> |
+| `philosophy/philosophy_of_mind` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/philosophy/philosophy_of_mind> | `exactMatch` | <http://www.wikidata.org/entity/Q23407> |
+| `systems/complex_systems` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/systems/complex_systems> | `closeMatch` | <http://www.wikidata.org/entity/Q2995634> |
+| `systems/cybernetics` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/systems/cybernetics> | `exactMatch` | <http://www.wikidata.org/entity/Q123637> |
+| `systems/dynamical_systems` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/systems/dynamical_systems> | `exactMatch` | <http://www.wikidata.org/entity/Q3174497> |
+| `systems/guided_self_organization` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/systems/guided_self_organization> | `relatedMatch` | <http://www.wikidata.org/entity/Q609408> |
+| `systems/knowledge_graphs` | <https://purl.org/okn/frink/kg/cognitive-kb/concept/systems/knowledge_graphs> | `exactMatch` | <http://www.wikidata.org/entity/Q33002955> |

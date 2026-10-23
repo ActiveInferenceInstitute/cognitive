@@ -1,10 +1,12 @@
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-SELECT ?concept ?label ?mapping ?external ?source
+PREFIX schema: <https://schema.org/>
+SELECT ?page ?concept ?label ?mapping ?external ?source
 WHERE {
   GRAPH <https://purl.org/okn/frink/kg/cognitive-kb> {
     ?concept a skos:Concept ; skos:prefLabel ?label ;
-             ?mapping ?external ; dcterms:source ?source .
+             ?mapping ?external .
+    ?page schema:about ?concept ; dcterms:source ?source .
     VALUES ?mapping { skos:exactMatch skos:closeMatch skos:broadMatch skos:narrowMatch skos:relatedMatch }
   }
 }

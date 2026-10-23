@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 from datetime import date
 from pathlib import Path
+from urllib.parse import unquote
 
 import networkx as nx
 import pytest
@@ -61,12 +62,109 @@ def test_the_graph_has_pages_domains_kinds_and_unique_directed_links(vault: Path
     }
     assert graph.nodes["math/entropy"] == {"title": "Entropy", "domain": "math", "kind": "concept"}
     assert graph.nodes["math/README"]["kind"] == "navigation"
+    assert graph.nodes["math/README"]["domain"] == "math"
     assert graph.nodes["top"]["domain"] == ""
+    assert list(nx.selfloop_edges(graph)) == []
     # entropy -> kl is both a typed relation and a body link: one edge with two names
     assert graph.edges["math/entropy", "math/kl"]["relations"] == ["implements", "references"]
     assert graph.edges["math/entropy", "bio/free_energy"]["relations"] == ["related"]
     assert graph.has_edge("math/kl", "math/entropy")
     assert not graph.has_edge("math/bayes", "math/entropy")
+
+
+def test_projection_keeps_topic_directions_and_document_assertions(vault: Path) -> None:
+    kb = vault / "knowledge_base"
+    page(
+        kb / "math" / "entropy.md",
+        {
+            "title": "Entropy",
+            "type": "concept",
+            "tags": ["mathematics", "local_keyword"],
+            "semantic_relations": [
+                {"type": name, "links": ["[[kl]]"]}
+                for name in ("implements", "foundation_for", "skos:broader", "unreviewed")
+            ]
+            + [
+                {"type": "foundation", "links": ["[[free_energy]]"]},
+                {"type": "cites", "links": ["[[citations/paper]]"]},
+                {"type": "documents", "links": ["[[guides/manual]]"]},
+            ],
+        },
+        "\n[[kl]]\n",
+    )
+    page(
+        kb / "citations" / "paper.md",
+        {
+            "title": "Paper",
+            "type": "citation",
+            "semantic_relations": [{"type": "cited_by", "links": ["[[entropy]]"]}],
+        },
+    )
+    page(
+        kb / "citations" / "old.md",
+        {"title": "Old citation", "type": "citation_redirect", "redirect": "[[paper]]"},
+    )
+    page(
+        kb / "guides" / "manual.md",
+        {
+            "title": "Manual",
+            "type": "guide",
+            "processing_priority": "high",
+            "semantic_relations": [{"type": "implements", "links": ["[[kl]]"]}],
+        },
+    )
+    page(kb / "guides" / "editorial.md", {"type": "unreviewed_editorial_type"})
+    page(kb / "guides" / "untyped.md", None)
+
+    graph = report_module.knowledge_graph(vault)
+    assert set(graph) == {
+        "math/entropy",
+        "math/kl",
+        "math/bayes",
+        "math/README",
+        "bio/free_energy",
+        "bio/lonely",
+        "top",
+        "citations/paper",
+        "citations/old",
+        "guides/manual",
+        "guides/editorial",
+        "guides/untyped",
+    }
+    assert list(nx.selfloop_edges(graph)) == []
+    assert graph.edges["math/entropy", "math/kl"]["relations"] == [
+        "broader",
+        "document/unreviewed",
+        "foundation_for",
+        "implements",
+        "references",
+    ]
+    assert graph.edges["math/entropy", "bio/free_energy"]["relations"] == ["foundation"]
+    assert not graph.has_edge("bio/free_energy", "math/entropy")
+    assert graph.edges["math/entropy", "citations/paper"]["relations"] == ["cites"]
+    assert graph.edges["citations/paper", "math/entropy"]["relations"] == ["citedBy"]
+    assert graph.edges["math/entropy", "guides/manual"]["relations"] == ["document/documents"]
+    assert graph.edges["guides/manual", "math/kl"]["relations"] == ["document/implements"]
+    assert graph.edges["citations/old", "citations/paper"]["relations"] == ["isReplacedBy"]
+    for document in (
+        "citations/paper",
+        "citations/old",
+        "guides/manual",
+        "guides/editorial",
+        "guides/untyped",
+    ):
+        assert graph.nodes[document]["kind"] == "other"
+        assert graph.nodes[document]["domain"] == document.split("/")[0]
+    result = report_module.compute_report(graph)
+    assert result["kinds"] == {"concept": 6, "navigation": 1, "other": 5}
+    assert result["relations"]["foundation_for"] == result["relations"]["cites"] == 1
+    assert {row["domain"]: row["pages"] for row in result["domains"]} == {
+        "math": 4,
+        "bio": 2,
+        "citations": 2,
+        "guides": 3,
+        "(top level)": 1,
+    }
 
 
 def test_measurements_match_a_hand_count(vault: Path) -> None:
@@ -99,6 +197,8 @@ def test_markdown_summary_names_the_domains_hubs_and_relations(vault: Path) -> N
     assert "7 pages and 6 links" in text and "2 page(s) have no links" in text
     assert "| math | 4 | 5 | 80% |" in text
     assert "| Bayes | math | 2 |" in text and "| references | 5 |" in text
+    assert "document connectivity projection" in text.lower()
+    assert "RDF identity" in text
 
 
 def test_an_empty_graph_is_an_error() -> None:
@@ -129,9 +229,47 @@ def test_no_figures_writes_only_the_numbers_and_relative_output_is_under_the_roo
 
 def test_the_real_knowledge_base_is_one_connected_graph_with_its_exported_pages() -> None:
     graph = report_module.knowledge_graph(REPO_ROOT)
-    _, export = rdf.build_graph(REPO_ROOT)
+    triples, export = rdf.build_graph(REPO_ROOT)
+    documents = {
+        subject: unquote(subject[len(rdf.PAGE) + 1 : -1])
+        for subject, predicate, obj in triples.triples
+        if predicate == rdf.iri(rdf.RDF_TYPE)
+        and obj == rdf.iri(rdf.PREFIXES["schema"] + "CreativeWork")
+    }
+    topics = {
+        obj: documents[subject]
+        for subject, predicate, obj in triples.triples
+        if subject in documents and predicate == rdf.iri(rdf.PREFIXES["schema"] + "about")
+    }
+    assert set(graph) == set(documents.values())
     assert graph.number_of_nodes() == export.pages
+    assert len(topics) == export.concepts
+    assert {node for node, data in graph.nodes(data=True) if data["kind"] == "concept"} == set(
+        topics.values()
+    )
+    assert list(nx.selfloop_edges(graph)) == []
+    concept_edges = [
+        (topics[subject], predicate[1:-1], topics[obj])
+        for subject, predicate, obj in triples.triples
+        if subject in topics and obj in topics
+    ]
+    assert concept_edges
+    for source, predicate, target in concept_edges:
+        name = predicate.removeprefix(rdf.RELATION).removeprefix(rdf.PREFIXES["skos"])
+        assert name in graph.edges[source, target]["relations"]
+    memberships = [
+        (topics[obj], unquote(subject[len(rdf.DOMAIN) + 1 : -1]))
+        for subject, predicate, obj in triples.triples
+        if predicate == rdf.iri(rdf.PREFIXES["skos"] + "member") and obj in topics
+    ]
+    assert memberships
+    for document, domain in memberships:
+        assert graph.nodes[document]["domain"] == domain
     result = report_module.compute_report(graph)
+    assert result["kinds"]["navigation"] == export.navigation_pages
+    assert {
+        row["domain"]: row["pages"] for row in result["domains"] if row["domain"] != "(top level)"
+    } == dict(export.domains)
     assert result["links"] <= export.typed_edges + export.link_edges
     assert result["largest_component"] > 0.99 * result["pages"]
     assert {"cognitive", "mathematics"} <= {row["domain"] for row in result["domains"]}

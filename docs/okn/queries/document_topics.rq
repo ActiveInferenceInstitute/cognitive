@@ -1,0 +1,14 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT ?page ?title ?concept ?label ?source
+WHERE {
+  GRAPH <https://purl.org/okn/frink/kg/cognitive-kb> {
+    ?page dcterms:title ?title ;
+          schema:about ?concept ; dcterms:subject ?concept ; dcterms:source ?source .
+    ?concept skos:prefLabel ?label .
+    FILTER EXISTS { ?page a schema:CreativeWork }
+    FILTER EXISTS { ?concept a skos:Concept }
+  }
+}
+ORDER BY ?page

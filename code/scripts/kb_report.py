@@ -1,12 +1,14 @@
 """Measure and draw the knowledge base as a graph.
 
 The RDF export (``export_rdf``) turns every page and link into triples. This
-script reads those triples back into a directed graph and reports how the
+script projects those triples into document connectivity and reports how the
 vault is connected: how big each domain is, how much of its linking stays
 inside the domain, which pages are hubs, how the degree distribution falls
 off, and which relation names carry the typed edges. Building the graph from
 the exported triples rather than from the Markdown keeps the report honest
-about what the published graph contains.
+about what the published graph contains. Topic relations are projected through
+their owning documents; this is not an RDF identity model. Documents, topics,
+keywords and domains remain separate resources in the export.
 
 Usage::
 
@@ -39,10 +41,16 @@ TOP = 15
 
 _SHORT = {
     rdf.PREFIXES["skos"] + "related": "related",
+    rdf.PREFIXES["skos"] + "broader": "broader",
+    rdf.PREFIXES["skos"] + "narrower": "narrower",
+    rdf.PREFIXES["skos"] + "broaderTransitive": "broaderTransitive",
+    rdf.PREFIXES["skos"] + "narrowerTransitive": "narrowerTransitive",
     rdf.PREFIXES["dcterms"] + "isPartOf": "isPartOf",
     rdf.PREFIXES["dcterms"] + "hasPart": "hasPart",
     rdf.PREFIXES["dcterms"] + "references": "references",
     rdf.PREFIXES["dcterms"] + "isReplacedBy": "isReplacedBy",
+    rdf.PREFIXES["bibo"] + "cites": "cites",
+    rdf.PREFIXES["bibo"] + "citedBy": "citedBy",
 }
 
 
@@ -59,31 +67,35 @@ def _literal(term: str) -> str:
 
 
 def knowledge_graph(repo_root: Path) -> nx.DiGraph:
-    """The page graph of ``repo_root``: nodes are pages, edges are links.
+    """Document connectivity projection of ``repo_root``'s exported RDF.
 
     Node attributes: ``title``, ``domain`` (top-level folder, ``""`` for a
-    page at the top) and ``kind`` (``concept``, ``navigation`` or ``other``).
+    page at the top) and ``kind`` (``concept`` for a topic-bearing document,
+    ``navigation`` for a CollectionPage, or ``other`` for citation/editorial
+    and other documents). The ``concept`` kind does not type a document as an
+    RDF Concept. About/subject links identify topic ownership, not edges.
+    Topic relations and domain memberships project onto their owning documents;
+    document-only pages retain their source-path domain. Keywords and external
+    mappings are not document nodes or connectivity edges.
     An edge carries ``relations``, the set of relation names that link the pair
     in that direction (``references`` for a body link, ``related`` for
-    ``skos:related``, the local name for a graph-defined relation).
+    ``skos:related``, the local name for a graph-defined relation, retaining
+    ``document/`` for document-scoped assertions). Multiple names share an edge.
     """
     triples, _ = rdf.build_graph(repo_root)
     graph = nx.DiGraph()
     titles: dict[str, str] = {}
     kinds: dict[str, str] = {}
+    topic_documents: dict[str, str] = {}
     domains: dict[str, str] = {}
     edges: dict[tuple[str, str], set[str]] = defaultdict(set)
     type_predicate = rdf.RDF_TYPE
     title_predicate = rdf.PREFIXES["dcterms"] + "title"
+    topic_predicates = {rdf.PREFIXES["schema"] + "about", rdf.PREFIXES["dcterms"] + "subject"}
     member = rdf.PREFIXES["skos"] + "member"
     for subject, predicate, obj in triples.triples:
         predicate_iri = _bare(predicate)
         source = _page_id(_bare(subject))
-        if predicate_iri == member and _bare(subject).startswith(rdf.DOMAIN):
-            target = _page_id(_bare(obj))
-            if target is not None:
-                domains[target] = unquote(_bare(subject)[len(rdf.DOMAIN) :])
-            continue
         if source is None:
             continue
         if predicate_iri == title_predicate:
@@ -91,24 +103,31 @@ def knowledge_graph(repo_root: Path) -> nx.DiGraph:
         elif predicate_iri == type_predicate:
             if _bare(obj) == rdf.PREFIXES["schema"] + "CollectionPage":
                 kinds[source] = "navigation"
-            elif _bare(obj) == rdf.PREFIXES["skos"] + "Concept":
-                kinds.setdefault(source, "concept")
+        elif predicate_iri in topic_predicates and _bare(obj).startswith(rdf.CONCEPT):
+            topic_documents[_bare(obj)] = source
+            kinds.setdefault(source, "concept")
+    for subject, predicate, obj in triples.triples:
+        predicate_iri = _bare(predicate)
+        target = topic_documents.get(_bare(obj), _page_id(_bare(obj)))
+        if predicate_iri == member and _bare(subject).startswith(rdf.DOMAIN):
+            if target is not None:
+                domains[target] = unquote(_bare(subject)[len(rdf.DOMAIN) :])
+            continue
+        source = topic_documents.get(_bare(subject), _page_id(_bare(subject)))
+        if source not in titles or target not in titles:
+            continue
+        if predicate_iri in _SHORT:
+            name = _SHORT[predicate_iri]
+        elif predicate_iri.startswith(rdf.RELATION):
+            name = predicate_iri[len(rdf.RELATION) :]
         else:
-            target = _page_id(_bare(obj))
-            if target is None:
-                continue
-            if predicate_iri in _SHORT:
-                name = _SHORT[predicate_iri]
-            elif predicate_iri.startswith(rdf.RELATION):
-                name = predicate_iri[len(rdf.RELATION) :]
-            else:
-                continue
-            edges[(source, target)].add(name)
+            continue
+        edges[(source, target)].add(name)
     for page in titles:
         graph.add_node(
             page,
             title=titles[page],
-            domain=domains.get(page, ""),
+            domain=domains.get(page, page.split("/", 1)[0] if "/" in page else ""),
             kind=kinds.get(page, "other"),
         )
     for (source, target), names in edges.items():
@@ -187,6 +206,12 @@ def report_markdown(report: dict[str, Any]) -> str:
     """A human-readable summary of ``report``."""
     lines = [
         "# Knowledge base connectivity",
+        "",
+        "This document connectivity projection maps topic relations to their owning "
+        "documents and retains document links. It is not an RDF identity model. "
+        "The concept kind denotes a topic-bearing document; about/subject links "
+        "do not create connectivity edges. Domains include all documents by folder; "
+        "document/ relation names retain document-scoped assertions.",
         "",
         f"{report['pages']} pages and {report['links']} links "
         f"(density {report['density']:.4f}, reciprocity {report['reciprocity']:.3f}, "

@@ -10,14 +10,18 @@ RDF = rdf.PREFIXES["rdf"]
 DCT = rdf.PREFIXES["dcterms"]
 SCHEMA = rdf.PREFIXES["schema"]
 BIBO = rdf.PREFIXES["bibo"]
-A, B, C = (rdf.iri(rdf.page_iri(n)) for n in ("a", "b", "c"))
+A, B, C = (rdf.iri(rdf.concept_iri(n)) for n in ("a", "b", "c"))
+PA, PB, PC = (rdf.iri(rdf.page_iri(n)) for n in ("a", "b", "c"))
 
 
 def concept_graph():
     graph = rdf.Graph()
-    for node in (A, B, C):
+    for node, page in zip((A, B, C), (PA, PB, PC), strict=True):
         graph.add(node, rdf.iri(rdf.RDF_TYPE), rdf.iri(SKOS + "Concept"))
-        graph.add(node, rdf.iri(rdf.RDF_TYPE), rdf.iri(SCHEMA + "CreativeWork"))
+        graph.add(node, rdf.iri(SKOS + "inScheme"), rdf.iri(rdf.SCHEME))
+        graph.add(page, rdf.iri(rdf.RDF_TYPE), rdf.iri(SCHEMA + "CreativeWork"))
+        graph.add(page, rdf.iri(SCHEMA + "about"), node)
+        graph.add(page, rdf.iri(DCT + "subject"), node)
         graph.add(node, rdf.iri(SKOS + "prefLabel"), rdf.literal(node, lang="en"))
     return graph
 
@@ -41,6 +45,151 @@ def add_review(graph, source=A, relation="exactMatch", target=B, key="a"):
 
 def error_codes(graph):
     return {finding["code"] for finding in semantic_quality(graph)["errors"]}
+
+
+def test_quality_rejects_combined_document_concept_identity():
+    graph = rdf.Graph()
+    graph.add(A, rdf.iri(rdf.RDF_TYPE), rdf.iri(SKOS + "Concept"))
+    graph.add(A, rdf.iri(rdf.RDF_TYPE), rdf.iri(SCHEMA + "CreativeWork"))
+    assert "document_concept_overlap" in error_codes(graph)
+
+
+@pytest.mark.parametrize("source,target", [(PA, B), (A, PB)])
+def test_mapping_endpoints_cannot_be_documents_even_with_complete_evidence(source, target):
+    graph = concept_graph()
+    assert error_codes(graph) == set()
+    add_review(graph, source, "closeMatch", target)
+    assert "concept_relation_endpoint" in error_codes(graph)
+
+
+@pytest.mark.parametrize("predicate", [SCHEMA + "about", DCT + "subject"])
+def test_document_topic_links_reject_wrong_topic_or_document_targets(predicate):
+    for target in (B, PA):
+        graph = concept_graph()
+        assert error_codes(graph) == set()
+        graph.triples = {t for t in graph.triples if t[:2] != (PA, rdf.iri(predicate))}
+        graph.add(PA, rdf.iri(predicate), target)
+        assert {"document_topic_endpoint", "topic_document_link"} <= error_codes(graph)
+
+
+@pytest.mark.parametrize(
+    "predicate,obj",
+    [
+        (DCT + "title", rdf.literal("Title")),
+        (DCT + "description", rdf.literal("Summary")),
+        (DCT + "created", rdf.typed_date("2026-10-23")),
+        (DCT + "license", rdf.iri(rdf.LICENSE)),
+        (DCT + "source", rdf.iri("https://example.org/source")),
+        (SCHEMA + "author", rdf.literal("Author")),
+        (SCHEMA + "sameAs", rdf.iri("https://doi.org/10.1000/test")),
+        (rdf.VOCAB + "status", rdf.literal("stable")),
+    ],
+)
+def test_source_document_metadata_is_accepted_on_pages_and_rejected_on_concepts(predicate, obj):
+    graph = concept_graph()
+    graph.add(PA, rdf.iri(predicate), obj)
+    assert error_codes(graph) == set()
+    graph.add(A, rdf.iri(predicate), obj)
+    assert "concept_document_metadata" in error_codes(graph)
+
+
+@pytest.mark.parametrize("predicate", [BIBO + "cites", BIBO + "citedBy", DCT + "references"])
+def test_document_relations_reject_concept_endpoints(predicate):
+    graph = concept_graph()
+    graph.add(PA, rdf.iri(predicate), PB)
+    assert error_codes(graph) == set()
+    graph.add(A, rdf.iri(predicate), PB)
+    assert "document_relation_endpoint" in error_codes(graph)
+
+
+@pytest.mark.parametrize("document", [False, True])
+def test_custom_relation_scope_and_declaration_corruptions_are_fatal(document):
+    graph = concept_graph()
+    predicate = (rdf.DOCUMENT_RELATION if document else rdf.RELATION) + "implements"
+    rdf._describe_vocabulary(
+        graph,
+        {
+            predicate: (
+                "implements",
+                not document,
+                "Source-authored document assertion."
+                if document
+                else rdf.CONCEPT_RELATIONS["implements"],
+            )
+        },
+    )
+    graph.add(PA if document else A, rdf.iri(predicate), PB if document else B)
+    assert error_codes(graph) == set()
+    graph.add(A if document else PA, rdf.iri(predicate), B if document else PB)
+    assert "relation_scope_endpoint" in error_codes(graph)
+    graph.triples = {
+        t
+        for t in graph.triples
+        if t[:2] != (rdf.iri(predicate), rdf.iri(rdf.PREFIXES["rdfs"] + "domain"))
+    }
+    assert "relation_scope_declaration" in error_codes(graph)
+
+
+def test_document_relation_cannot_indirectly_inherit_skos_concept_domain():
+    graph = concept_graph()
+    predicate = rdf.DOCUMENT_RELATION + "implements"
+    rdf._describe_vocabulary(graph, {predicate: ("implements", False, "Source assertion.")})
+    graph.add(PA, rdf.iri(predicate), PB)
+    assert error_codes(graph) == set()
+    bridge = rdf.iri("https://example.org/relation")
+    graph.add(rdf.iri(predicate), rdf.iri(rdf.PREFIXES["rdfs"] + "subPropertyOf"), bridge)
+    graph.add(
+        bridge, rdf.iri(rdf.PREFIXES["rdfs"] + "subPropertyOf"), rdf.iri(SKOS + "semanticRelation")
+    )
+    assert {"relation_scope_declaration", "concept_relation_endpoint"} <= error_codes(graph)
+
+
+@pytest.mark.parametrize("kind", ["citation", "citation_redirect", "guide", "index"])
+def test_document_roles_cannot_get_a_topic_even_if_links_are_well_formed(kind):
+    graph = concept_graph()
+    graph.add(PA, rdf.iri(rdf.VOCAB + "pageType"), rdf.literal(kind))
+    assert "document_topic_endpoint" in error_codes(graph)
+
+
+def test_domain_collections_require_concept_members():
+    graph = concept_graph()
+    domain = rdf.iri(rdf.DOMAIN + "test")
+    graph.add(domain, rdf.iri(SKOS + "member"), A)
+    assert error_codes(graph) == set()
+    graph.add(domain, rdf.iri(SKOS + "member"), PA)
+    assert "domain_member_endpoint" in error_codes(graph)
+
+
+def test_keywords_accept_concepts_and_reject_document_values():
+    graph = concept_graph()
+    graph.add(PA, rdf.iri(SCHEMA + "keywords"), rdf.iri("https://example.org/concept"))
+    assert error_codes(graph) == set()
+    graph.add(PA, rdf.iri(SCHEMA + "keywords"), PB)
+    assert "keyword_iri" in error_codes(graph)
+
+
+def test_domain_members_require_local_page_topic_concepts():
+    graph = concept_graph()
+    external = rdf.iri("https://example.org/concept")
+    graph.add(external, rdf.iri(RDF + "type"), rdf.iri(SKOS + "Concept"))
+    graph.add(rdf.iri(rdf.DOMAIN + "test"), rdf.iri(SKOS + "member"), external)
+    assert "domain_member_endpoint" in error_codes(graph)
+
+
+@pytest.mark.parametrize(
+    "predicate", [rdf.PREFIXES["rdfs"] + "comment", rdf.VOCAB + "sourceRelation"]
+)
+def test_empty_relation_meaning_or_source_name_is_rejected(predicate):
+    graph = concept_graph()
+    relation = rdf.RELATION + "implements"
+    rdf._describe_vocabulary(
+        graph, {relation: ("implements", True, rdf.CONCEPT_RELATIONS["implements"])}
+    )
+    graph.add(A, rdf.iri(relation), B)
+    assert error_codes(graph) == set()
+    graph.triples = {t for t in graph.triples if t[:2] != (rdf.iri(relation), rdf.iri(predicate))}
+    graph.add(rdf.iri(relation), rdf.iri(predicate), rdf.literal(" ", lang="en"))
+    assert "relation_scope_declaration" in error_codes(graph)
 
 
 def test_clean_real_graph_terms_and_coverage_are_deterministic():
@@ -96,7 +245,7 @@ def test_missing_labels_and_language_and_untyped_dates_are_nonfatal():
     graph = concept_graph()
     graph.triples = {t for t in graph.triples if t[:2] != (A, rdf.iri(SKOS + "prefLabel"))}
     graph.add(B, rdf.iri(SKOS + "altLabel"), rdf.literal("Alias"))
-    graph.add(C, rdf.iri(DCT + "modified"), rdf.literal("spring 2024"))
+    graph.add(PC, rdf.iri(DCT + "modified"), rdf.literal("spring 2024"))
     report = semantic_quality(graph)
     assert report["machine_checks_passed"]
     assert {w["code"] for w in report["warnings"]} == {
@@ -127,16 +276,16 @@ def test_all_iri_positions_reject_invalid_http_terms(term, position):
 @pytest.mark.parametrize("text", ["2026-02-30", "2023-02-29", "20261020", "2024-01-01Z"])
 def test_profile_dates_reject_impossible_or_nonprofile_typed_values(text):
     graph = concept_graph()
-    graph.add(A, rdf.iri(DCT + "created"), rdf.literal(text, datatype=rdf.XSD_DATE))
+    graph.add(PA, rdf.iri(DCT + "created"), rdf.literal(text, datatype=rdf.XSD_DATE))
     assert "invalid_date" in error_codes(graph)
 
 
 def test_dates_accept_leap_day_and_year_requires_local_four_digit_format():
     graph = concept_graph()
-    graph.add(A, rdf.iri(DCT + "created"), rdf.literal("2024-02-29", datatype=rdf.XSD_DATE))
-    graph.add(A, rdf.iri(SCHEMA + "datePublished"), rdf.literal("2024", datatype=rdf.XSD_GYEAR))
+    graph.add(PA, rdf.iri(DCT + "created"), rdf.literal("2024-02-29", datatype=rdf.XSD_DATE))
+    graph.add(PA, rdf.iri(SCHEMA + "datePublished"), rdf.literal("2024", datatype=rdf.XSD_GYEAR))
     assert error_codes(graph) == set()
-    graph.add(A, rdf.iri(SCHEMA + "datePublished"), rdf.literal("twenty", datatype=rdf.XSD_GYEAR))
+    graph.add(PA, rdf.iri(SCHEMA + "datePublished"), rdf.literal("twenty", datatype=rdf.XSD_GYEAR))
     assert "invalid_year" in error_codes(graph)
 
 
@@ -144,7 +293,7 @@ def test_dates_accept_leap_day_and_year_requires_local_four_digit_format():
 def test_local_keyword_requires_complete_declaration(missing):
     graph = concept_graph()
     keyword = rdf.iri(rdf.BASE + "keyword/quality")
-    graph.add(A, rdf.iri(SCHEMA + "keywords"), keyword)
+    graph.add(PA, rdf.iri(SCHEMA + "keywords"), keyword)
     for p, value in (
         (rdf.RDF_TYPE, rdf.iri(SKOS + "Concept")),
         (rdf.RDF_TYPE, rdf.iri(SCHEMA + "DefinedTerm")),
@@ -229,6 +378,10 @@ def test_literal_semantic_endpoints_fail_and_unrelated_local_relations_have_no_h
     assert "semantic_relation_endpoint" in error_codes(graph)
     graph = concept_graph()
     graph.add(A, rdf.iri(rdf.RELATION + "implements"), B)
+    rdf._describe_vocabulary(
+        graph,
+        {rdf.RELATION + "implements": ("implements", True, rdf.CONCEPT_RELATIONS["implements"])},
+    )
     graph.add(A, rdf.iri(SKOS + "related"), B)
     assert error_codes(graph) == set()
 
@@ -290,21 +443,21 @@ def test_hierarchy_cycle_is_warning_and_exact_match_does_not_substitute_identity
 
 def test_citation_directions_normalize_to_one_citing_to_cited_pair():
     graph = concept_graph()
-    graph.add(A, rdf.iri(BIBO + "citedBy"), B)
-    graph.add(B, rdf.iri(BIBO + "cites"), A)
+    graph.add(PA, rdf.iri(BIBO + "citedBy"), PB)
+    graph.add(PB, rdf.iri(BIBO + "cites"), PA)
     report = semantic_quality(graph)
     assert report["errors"] == []
     assert report["coverage"]["citation_pairs"] == 1
-    graph.add(A, rdf.iri(BIBO + "cites"), rdf.literal("not a document IRI"))
+    graph.add(PA, rdf.iri(BIBO + "cites"), rdf.literal("not a document IRI"))
     assert "citation_endpoint" in error_codes(graph)
 
 
 @pytest.mark.parametrize("relation", ["cites", "citedBy"])
 def test_citation_endpoints_allow_external_documents_and_reject_absent_local_pages(relation):
     graph = concept_graph()
-    graph.add(A, rdf.iri(BIBO + relation), rdf.iri("https://doi.org/10.1000/example"))
+    graph.add(PA, rdf.iri(BIBO + relation), rdf.iri("https://doi.org/10.1000/example"))
     assert error_codes(graph) == set()
-    graph.add(A, rdf.iri(BIBO + relation), rdf.iri(rdf.page_iri("absent")))
+    graph.add(PA, rdf.iri(BIBO + relation), rdf.iri(rdf.page_iri("absent")))
     assert "citation_endpoint" in error_codes(graph)
 
 

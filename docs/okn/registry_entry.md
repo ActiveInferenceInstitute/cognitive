@@ -37,12 +37,14 @@ contacts:
 ---
 
 The knowledge base of the Active Inference Institute's `cognitive` repository as RDF. Every
-page is a `schema:CreativeWork`; articles on one idea are also `skos:Concept`s in one concept
-scheme, grouped into `skos:Collection`s by domain (mathematics, biology, cognitive science,
-philosophy, systems, ontology, citations). Edges are typed relations from each page's
-`semantic_relations` (`skos:related`, `dcterms:isPartOf`, `dcterms:hasPart` or a term under
-`https://purl.org/okn/frink/kg/cognitive-kb/relation/` that is a sub-property of
-`skos:semanticRelation`) and untyped body links (`dcterms:references`). Citation pages carry
+page is a `schema:CreativeWork` document. Topic-bearing documents link through
+`schema:about` and `dcterms:subject` to separate stable `/concept/<path>` SKOS
+concepts in one concept scheme, grouped into domain `skos:Collection`s.
+Conceptual relations have concept endpoints and explicit predicate meanings;
+document references, citations, navigation, redirects and documentation relations
+retain document endpoints. Ambiguous mixed-role assertions are preserved under
+`https://purl.org/okn/frink/kg/cognitive-kb/relation/document/` without a SKOS
+super-property. Body links use `dcterms:references`. Citation pages carry
 authors, year and DOI (`schema:sameAs`). Explicit reviewed mappings use SKOS
 predicates with source, rationale and review-date evidence. Unreviewed Wikidata
 identifiers are `rdfs:seeAlso` discovery links. Tags point to concepts; citation
@@ -56,7 +58,9 @@ identity or clinical equivalence. No external grant funding is claimed.
 A cross-graph query follows the existing Wikidata mappings through the OKN
 identifier-mappings graph to labeled OBO identifiers in Ubergraph. Captured live
 responses, the query and replayable join evidence are in the source repository's
-`docs/okn/evidence/2026-10-20-graph-methods/`. This demonstrates identifier-based discovery;
+`docs/okn/evidence/2026-10-20-graph-methods/`. Those historical receipts predate
+the document/topic migration and require a fresh capture for the current export.
+They demonstrate identifier-based discovery;
 it does not add equivalence assertions. The reusable
 capture and submission methods are maintained in `docxology/daf-okn`.
 
