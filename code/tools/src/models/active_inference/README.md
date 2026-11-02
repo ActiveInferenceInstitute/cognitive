@@ -48,3 +48,17 @@ assert np.isclose(posterior.sum(), 1.0)
 ```
 
 Only the validated discrete dispatcher modes documented above are exported.
+
+## Model declaration
+
+The canonical discrete model is also declared in Generalized Notation Notation in
+[`specs/discrete_variational.gnn.md`](../../../../../specs/discrete_variational.gnn.md).
+That declaration is the canonical statement of `A`, `B`, `C`, `D`, and `E`; the
+configuration in
+[`config_examples/discrete_variational.yaml`](config_examples/discrete_variational.yaml)
+stays the runtime configuration, and
+[`code/tests/test_gnn_conformance.py`](../../../../tests/test_gnn_conformance.py)
+fails when the two disagree. `gnn_spec.py` reads the declaration with the
+standard library plus NumPy; the format's parser revision is pinned in
+[`specs/gnn-pin.json`](../../../../../specs/gnn-pin.json). See
+[`docs/gnn.md`](../../../../../docs/gnn.md) for the commands.
