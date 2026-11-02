@@ -25,6 +25,7 @@ semantic_relations:
       - "[[policy/README|Documentation term policy]]"
       - "[[okn/README|Open Knowledge Network export]]"
       - "[[repo_docs/README|Repository documentation]]"
+      - "[[gnn|Model specification]]"
 ---
 
 # Documentation hub
@@ -58,6 +59,8 @@ working entry points.
 - [`development/`](development/README.md): development loop and CI.
 - [`agents/`](agents/README.md): navigation for agent documentation.
 - [`manuscript/`](manuscript/README.md): the executable manuscript.
+- [`gnn.md`](gnn.md): the GNN declaration of the canonical discrete model and how
+  it is bound to the runtime configuration.
 - [`policy/`](policy/README.md): the term policy the documentation gate enforces.
 - [`okn/`](okn/README.md): the knowledge base as RDF for the Open Knowledge Network.
 - [`examples/`](examples/README.md): validated example entry points.

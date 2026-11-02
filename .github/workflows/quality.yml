@@ -108,6 +108,44 @@ jobs:
       - name: Benchmarks
         run: cognitive-benchmark --repetitions 1 --output "${RUNNER_TEMP}/benchmarks.json"
 
+  # The declaration in specs/ is the canonical statement of the canonical
+  # discrete model, and it is validated with the upstream parser revision pinned
+  # in specs/gnn-pin.json. The runtime is provisioned from that commit into its
+  # own environment so the parser's dependencies cannot disturb this package's
+  # environment, and the parser files are digest-verified before their verdict is
+  # used. When the runtime cannot be provisioned this job fails: a check that did
+  # not run must never read as a pass.
+  gnn-conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
+
+      - name: Provision the pinned GNN parser
+        run: |
+          set -euo pipefail
+          python -m venv "$RUNNER_TEMP/gnn-runtime"
+          "$RUNNER_TEMP/gnn-runtime/bin/python" -m pip install --upgrade pip
+          "$RUNNER_TEMP/gnn-runtime/bin/python" -m pip install \
+            "generalized-notation-notation @ git+https://github.com/ActiveInferenceInstitute/Generalized_Notation_Notation@8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1"
+          "$RUNNER_TEMP/gnn-runtime/bin/python" -c \
+            "import gnn, pathlib; print('gnn', gnn.__version__, pathlib.Path(gnn.__file__).parent)"
+
+      - name: Validate the declaration with the pinned parser
+        run: python -m scripts.validate_gnn_spec --gnn-runtime "$RUNNER_TEMP/gnn-runtime/bin/python" --json
+
+      # The tests skip the parser check when no runtime is named, so name it:
+      # in this job the check is required.
+      - name: Re-run the conformance tests against the pinned parser
+        env:
+          GNN_RUNTIME_PYTHON: ${{ runner.temp }}/gnn-runtime/bin/python
+        run: python -m pytest -q code/tests/test_gnn_conformance.py
+
   okn-replay:
     runs-on: ubuntu-latest
     steps:

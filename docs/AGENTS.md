@@ -50,6 +50,8 @@ conceptual and educational material. Keep the two clearly separated.
   by the code, so regenerate them rather than editing them.
 - `docs/architecture/README.md` — how the settings, simulation, plotting and
   command-line modules fit together.
+- `docs/gnn.md` — the GNN declaration of the canonical discrete model, its
+  binding to the canonical configuration, and the validation commands.
 - `docs/config/settings.md` — the reference for every key code reads from
   `config.yaml`; the tests in `code/tests/test_docs_sync.py` require each key and
   its default to appear there.

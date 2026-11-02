@@ -1,6 +1,6 @@
 # AII sidecar — InstituteOS metadata. Schema: instituteos.platform.aii_sidecar
 meta:
-  updated: '2026-10-11'
+  updated: '2026-11-01'
 repo:
   name: cognitive
   slug: cognitive
@@ -18,6 +18,8 @@ ecosystem:
     note: Federated via the InstituteOS .aii manifest.
   - repo: ActiveInferenceInstitute/Active_Inference_Ontology
     note: Uses Active Inference Ontology terms.
+  - repo: ActiveInferenceInstitute/Generalized_Notation_Notation
+    note: Canonical discrete model declared in GNN; the parser revision is pinned in specs/gnn-pin.json.
   links:
     github: https://github.com/ActiveInferenceInstitute/cognitive
     website: https://www.activeinference.org
@@ -28,6 +30,30 @@ artifacts:
 - path: LICENSE
   kind: doc
   description: License.
+- path: specs/discrete_variational.gnn.md
+  kind: doc
+  description: GNN declaration of the canonical discrete model.
+- path: specs/gnn-pin.json
+  kind: data
+  description: Pinned upstream GNN parser revision with parser-file digests.
+- path: docs/gnn.md
+  kind: doc
+  description: Model specification - the declaration, its binding, and the validation commands.
+- path: code/tools/src/models/active_inference/config_examples/discrete_variational.yaml
+  kind: data
+  description: Canonical runtime configuration bound to the declaration.
+- path: code/tools/src/models/active_inference/gnn_spec.py
+  kind: code
+  description: Reader for the committed GNN declaration (standard library plus NumPy).
+- path: code/scripts/validate_gnn_spec.py
+  kind: tool
+  description: GNN conformance validator - semantics plus the pinned parser.
+- path: code/tests/test_gnn_conformance.py
+  kind: test
+  description: Binds the declaration to the canonical configuration and negative controls.
+- path: code/tests/gnn_parser_probe.py
+  kind: tool
+  description: The only module that imports the upstream GNN parser; prints JSON.
 provenance:
   license: MIT
   citation:

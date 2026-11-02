@@ -56,6 +56,7 @@ non-interactive `Agg` Matplotlib backend.
 | `test_boundary_validation.py`, `test_validation_branches.py`, `test_guards_and_cli.py` | Rejected inputs and numerical edge cases |
 | `test_verify_links.py`, `test_check_markdown_links.py` | The two link gates in `code/scripts/` |
 | `test_validate_docs.py`, `test_normalize_frontmatter.py`, `test_kb_index.py` | Documentation tooling |
+| `test_gnn_conformance.py` | The GNN declaration, its binding to the canonical configuration, and the pinned-parser gate |
 | `test_build_pipeline.py` | `build_manuscript.py` and the documentation gates end to end |
 | `test_mutation_check.py` | The mutation harness (`mutation_check.py`) |
 | `test_truth_audit.py`, `test_version_consistency.py` | Repository-wide truth gates; version agreement |
