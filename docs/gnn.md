@@ -70,6 +70,30 @@ The remaining dispatcher keys (`method`, `policy_type`, `learning_rate`,
 model parameters; they stay the configuration's business and are not declared
 here.
 
+## Adoption context
+
+The patterns and pin discipline this adoption follows are documented upstream in
+the [GNN downstream adoption guide](https://github.com/ActiveInferenceInstitute/Generalized_Notation_Notation/blob/main/docs/gnn/integration/downstream_adoption.md)
+(main branch; the guide postdates the pinned `v5.0.3` revision, so it is not part
+of the pin). This repository uses **pattern D, structure-only declaration**, with
+the authored `A`, `B`, `C`, `D`, and `E` declared alongside the structure: the
+document states the model, the YAML remains the runtime configuration the factory
+loads, no runtime code reads the document, and a conformance test binds the two
+sides so editing either alone fails the suite. What that proves: the declared
+model is reviewable in one place and cannot drift from the implementation. Two
+sibling repositories show the other directions:
+
+- [ActInf_RxInfer](https://github.com/ActiveInferenceInstitute/ActInf_RxInfer) —
+  a conjugate Beta-Bernoulli model read by a dependency-free Julia reader;
+- [ActiveBlockference](https://github.com/ActiveInferenceInstitute/ActiveBlockference) —
+  a discrete grid-world POMDP whose document is generated from the implementation.
+
+The language itself is specified in the
+[GNN syntax reference](https://github.com/ActiveInferenceInstitute/Generalized_Notation_Notation/blob/main/docs/gnn/gnn_syntax.md),
+and the exemplar corpus under `input/gnn_files/` in the GNN repository is read by
+the courses' [GNN syntax track](https://github.com/ActiveInferenceInstitute/courses)
+at the same pin.
+
 ## Commands
 
 ```bash
