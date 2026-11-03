@@ -116,6 +116,7 @@ jobs:
   # used. When the runtime cannot be provisioned this job fails: a check that did
   # not run must never read as a pass.
   gnn-conformance:
+    name: gnn conformance (pinned v5.0.3)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -131,8 +132,34 @@ jobs:
           set -euo pipefail
           python -m venv "$RUNNER_TEMP/gnn-runtime"
           "$RUNNER_TEMP/gnn-runtime/bin/python" -m pip install --upgrade pip
+          PIN=specs/gnn-pin.json
+          REPO=$(python -c "import json;print(json.load(open('$PIN'))['repository'])")
+          TAG=$(python -c "import json;print(json.load(open('$PIN'))['tag'])")
+          COMMIT=$(python -c "import json;print(json.load(open('$PIN'))['commit'])")
+          # A moved tag must fail here, not silently install a different tree.
+          python - "$REPO" "$TAG" "$COMMIT" <<'PY'
+          import subprocess
+          import sys
+
+          repo, tag, commit = sys.argv[1:4]
+          output = subprocess.run(
+              ["git", "ls-remote", "--tags", repo, f"refs/tags/{tag}*"],
+              capture_output=True,
+              text=True,
+              check=True,
+          ).stdout
+          refs = {
+              line.split("\t")[1]: line.split("\t")[0]
+              for line in output.splitlines()
+              if "\t" in line
+          }
+          resolved = refs.get(f"refs/tags/{tag}^{{}}") or refs.get(f"refs/tags/{tag}")
+          if resolved != commit:
+              raise SystemExit(f"tag {tag} resolves to {resolved}, pin says {commit}")
+          print(f"tag {tag} peels to {commit}")
+          PY
           "$RUNNER_TEMP/gnn-runtime/bin/python" -m pip install \
-            "generalized-notation-notation @ git+https://github.com/ActiveInferenceInstitute/Generalized_Notation_Notation@8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1"
+            "generalized-notation-notation @ git+${REPO}@${COMMIT}"
           "$RUNNER_TEMP/gnn-runtime/bin/python" -c \
             "import gnn, pathlib; print('gnn', gnn.__version__, pathlib.Path(gnn.__file__).parent)"
 
