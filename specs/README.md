@@ -14,7 +14,7 @@ updated: 2026-11-03
   SHA-256 of each parser file.
 
 Validate with `python -m scripts.validate_gnn_spec --gnn-runtime <python>
---json`. The `gnn conformance (pinned v5.0.3)` CI job also checks that the tag
+--json`. The `gnn conformance (pinned)` CI job also checks that the tag
 still resolves to the pinned commit before installing it. The model side of the
 binding is in
 [`../code/tools/src/models/active_inference/AGENTS.md`](../code/tools/src/models/active_inference/AGENTS.md).

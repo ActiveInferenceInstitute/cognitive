@@ -116,7 +116,7 @@ jobs:
   # used. When the runtime cannot be provisioned this job fails: a check that did
   # not run must never read as a pass.
   gnn-conformance:
-    name: gnn conformance (pinned v5.0.3)
+    name: gnn conformance (pinned)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -173,6 +173,14 @@ jobs:
           GNN_RUNTIME_PYTHON: ${{ runner.temp }}/gnn-runtime/bin/python
         run: python -m pytest -q code/tests/test_gnn_conformance.py
 
+      - name: Report the resolved GNN version
+        run: |
+          PIN=specs/gnn-pin.json
+          VERSION=$("$RUNNER_TEMP/gnn-runtime/bin/python" -c 'import gnn; print(gnn.__version__)')
+          TAG=$(python3 -c "import json;print(json.load(open('$PIN'))['tag'])")
+          test -n "$VERSION"
+          test "$VERSION" = "${TAG#v}"
+          echo "gnn-version=${VERSION}" >> "$GITHUB_STEP_SUMMARY"
   okn-replay:
     runs-on: ubuntu-latest
     steps:
