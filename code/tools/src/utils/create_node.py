@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import re
 from collections.abc import Mapping
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -74,7 +74,7 @@ class NodeCreator:
 
     @staticmethod
     def _generate_id(prefix: str) -> str:
-        timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+        timestamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
         safe_prefix = re.sub(r"[^A-Za-z0-9_-]", "_", prefix.strip())
         return f"{safe_prefix}_{timestamp}"
 
@@ -99,7 +99,7 @@ class NodeCreator:
             ) from exc
 
         variables = dict(template_vars or {})
-        now = datetime.now(timezone.utc).isoformat()
+        now = datetime.now(UTC).isoformat()
         variables.update(
             {
                 "node_id": self._generate_id(node_type),
