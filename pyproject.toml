@@ -7,7 +7,7 @@ name = "cognitive-active-inference"
 version = "2.1.0"
 description = "Configurable, validated Active Inference models and knowledge tools"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "Active Inference Institute" }]
