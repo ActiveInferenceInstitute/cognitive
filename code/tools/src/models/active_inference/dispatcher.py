@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from enum import Enum
+from enum import StrEnum
 from pathlib import Path
 
 import numpy as np
@@ -14,7 +14,7 @@ from .base import ModelState
 from .generative_model import DiscreteGenerativeModel
 
 
-class InferenceMethod(str, Enum):
+class InferenceMethod(StrEnum):
     """Implemented belief and policy inference methods."""
 
     VARIATIONAL = "variational"
@@ -22,13 +22,13 @@ class InferenceMethod(str, Enum):
     MEAN_FIELD = "mean_field"
 
 
-class PolicyType(str, Enum):
+class PolicyType(StrEnum):
     """Policy representation supported by the discrete dispatcher."""
 
     DISCRETE = "discrete"
 
 
-class PolicyAggregation(str, Enum):
+class PolicyAggregation(StrEnum):
     """How the energies of policies sharing a first action are combined.
 
     ``MARGINAL`` (the default) is the Bayesian model average used in the

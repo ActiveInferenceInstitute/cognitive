@@ -8,15 +8,10 @@ obviously the wrong one.
 from __future__ import annotations
 
 import re
-import sys
+import tomllib
 from pathlib import Path
 
 import cognitive
-
-if sys.version_info >= (3, 11):
-    import tomllib
-else:  # the project supports 3.10, which has no tomllib
-    import tomli as tomllib
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 

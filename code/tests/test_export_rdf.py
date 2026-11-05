@@ -7,13 +7,12 @@ import subprocess
 import sys
 from datetime import date, datetime
 from pathlib import Path
-from typing import Literal
+from typing import Literal, assert_never
 
 import pytest
 import rdflib
 import yaml
 from scripts import export_rdf as rdf
-from typing_extensions import assert_never
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SKOS = rdf.PREFIXES["skos"]
