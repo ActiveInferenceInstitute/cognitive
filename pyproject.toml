@@ -7,7 +7,7 @@ name = "cognitive-active-inference"
 version = "2.1.0"
 description = "Configurable, validated Active Inference models and knowledge tools"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "Active Inference Institute" }]
@@ -17,7 +17,8 @@ dependencies = [
   "matplotlib>=3.7",
   "networkx>=3.0",
   "numpy>=1.24",
-  "Pillow>=9.5",
+  # 13.0.0 is the first Pillow release with no open advisory. Do not lower this floor.
+  "Pillow>=13.0.0",
   "plotly>=5.15",
   "PyYAML>=6.0",
   "seaborn>=0.12",
