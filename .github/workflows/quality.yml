@@ -2,6 +2,7 @@ name: quality
 
 on:
   push:
+    branches: [main]
   pull_request:
 
 # The workflow only reads the repository. Declaring that here replaces the
