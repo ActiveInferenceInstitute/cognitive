@@ -48,6 +48,9 @@
 | `code/scripts/validate_gnn_spec.py` | `tool` | GNN conformance validator - semantics plus the pinned parser. |
 | `code/tests/test_gnn_conformance.py` | `test` | Binds the declaration to the canonical configuration and negative controls. |
 | `code/tests/gnn_parser_probe.py` | `tool` | The only module that imports the upstream GNN parser; prints JSON. |
+| `code/scripts/validate_docs.py` | `tool` | Aggregate documentation gate - frontmatter, links, catalogs and term policy. |
+| `code/scripts/check_markdown_links.py` | `tool` | Standard Markdown link and anchor validation. |
+| `code/tests/test_docs_sync.py` | `test` | Keeps the settings reference and the configured keys in sync. |
 | `AGENTS.md` | `doc` | Agent guidance. |
 | `pyproject.toml` | `code` | Python package configuration. |
 | `docs` | `doc` | Documentation tree. |

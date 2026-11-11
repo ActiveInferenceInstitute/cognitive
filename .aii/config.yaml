@@ -1,7 +1,7 @@
 # AII sidecar — InstituteOS metadata. Schema: aii_platform.aii_sidecar
 meta:
   sidecar_version: 1.2.1
-  updated: '2026-11-10'
+  updated: '2026-11-11'
 repo:
   name: cognitive
   slug: cognitive
@@ -58,6 +58,15 @@ artifacts:
 - path: code/tests/gnn_parser_probe.py
   kind: tool
   description: The only module that imports the upstream GNN parser; prints JSON.
+- path: code/scripts/validate_docs.py
+  kind: tool
+  description: Aggregate documentation gate - frontmatter, links, catalogs and term policy.
+- path: code/scripts/check_markdown_links.py
+  kind: tool
+  description: Standard Markdown link and anchor validation.
+- path: code/tests/test_docs_sync.py
+  kind: test
+  description: Keeps the settings reference and the configured keys in sync.
 - path: AGENTS.md
   kind: doc
   description: Agent guidance.

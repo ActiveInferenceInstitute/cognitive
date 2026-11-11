@@ -44,3 +44,18 @@ history; this file is not a log. Remove an item when it is done.
   a language model (the second pass dropped 23 of 720), not checked one by one: sample them and promote the confirmed ones to
   `skos:exactMatch`. The other concept pages, and MeSH or an ontology for mathematics and physics,
   are not aligned yet.
+
+## Environment prerequisites
+
+- **Documentation gate dependencies.** `code/scripts/validate_docs.py` imports
+  PyYAML and the RDF modules. Run it from an environment created with
+  `python -m pip install -e ".[dev]"`; a checkout whose environment lacks those
+  packages stops at the import instead of running the checklist. The same
+  environment is needed for `code/tests/test_docs_sync.py`, which imports the
+  installed `cognitive` package.
+- **Manuscript toolchain.** `cognitive-build-manuscript` renders HTML and PDF
+  only when Pandoc and XeLaTeX are on `PATH`. Use `--no-render` to build figures
+  and hydrated source without either, or `--no-pdf` to skip only the PDF.
+- **GNN conformance.** `code/scripts/validate_gnn_spec.py` needs the upstream
+  parser named with `--gnn-runtime` or `--gnn-root`; without one it reports the
+  missing runtime instead of validating.

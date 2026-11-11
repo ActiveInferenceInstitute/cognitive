@@ -23,6 +23,16 @@ vault is the explanation. Each side points at the other.
 | Reproduce the paper | [Manuscript](#manuscript) |
 | Contribute | [Contributing](#contributing) |
 
+## Status
+
+The package, its test suite, and the offline documentation gates run without
+network access. The manuscript build needs Pandoc and XeLaTeX; `--no-render`
+skips both. The GNN conformance job needs the upstream parser pinned in
+[`specs/gnn-pin.json`](specs/gnn-pin.json), and the OKN replay job needs the
+captured cross-graph evidence in `docs/okn/evidence/`. The core package, the
+knowledge base and the documentation gate need no credentials and no private
+checkout.
+
 ## Quick start
 
 Python 3.11 or newer:
@@ -303,7 +313,8 @@ Longer routes by background: [learning roadmap](knowledge_base/learning_roadmap.
 ## Documentation
 
 [`docs/README.md`](docs/README.md) is the spine. It covers the implemented package
-and the process around it.
+and the process around it, and its complete page index links every page in the
+tree, including the manuscript and tools sub-trees.
 
 | Folder | Contents |
 |---|---|

@@ -32,8 +32,9 @@ list of importable agents is [[docs/agents/agent_docs_readme|the agent documenta
   notes.
 - `code/scripts/` — the repository tooling and validation gates.
 - `code/tests/` — the pytest suite.
-- `docs/` — documentation tree; `knowledge_base/` — the Obsidian vault;
-  `examples/` — runnable scripts.
+- `docs/` — documentation tree; `docs/README.md` is the spine and its complete
+  page index links every page, including the manuscript and tools sub-trees.
+  `knowledge_base/` — the Obsidian vault; `examples/` — runnable scripts.
 
 ## Tests and gates
 
