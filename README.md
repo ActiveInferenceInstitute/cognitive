@@ -25,7 +25,7 @@ vault is the explanation. Each side points at the other.
 
 ## Quick start
 
-Python 3.10 or newer:
+Python 3.11 or newer:
 
 ```bash
 python -m pip install -e ".[dev]"
@@ -369,12 +369,14 @@ flowchart LR
 ```
 
 CI ([`quality.yml`](.github/workflows/quality.yml), described in
-[`docs/tools/ci_tools.md`](docs/tools/ci_tools.md)) runs four jobs in parallel.
+[`docs/tools/ci_tools.md`](docs/tools/ci_tools.md)) runs six jobs in parallel.
 
 ```mermaid
 flowchart LR
-    PUSH["push or pull request"] --> T["tests<br/>Python 3.10 and 3.12"]
+    PUSH["push or pull request"] --> T["tests<br/>Python 3.12"]
     PUSH --> C["checks<br/>lint, types, docs,<br/>manuscript, benchmarks"]
+    PUSH --> G["gnn-conformance<br/>pinned parser"]
+    PUSH --> O["okn-replay<br/>captured evidence"]
     PUSH --> M["mutation-gate"]
     PUSH --> P["build-package<br/>wheel and console scripts"]
 ```

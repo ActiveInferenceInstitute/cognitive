@@ -11,7 +11,7 @@ updated: 2026-11-03
 
 | Job | What it proves |
 |---|---|
-| `tests` | The suite on Python 3.10 and 3.12 with branch coverage over the configured source trees. |
+| `tests` | The suite on Python 3.12 with branch coverage over the configured source trees. |
 | `checks` | Ruff, mypy, compileall, the documentation and link gate, OKN submission diagnostics, semantic-review freshness, the manuscript pipeline and the benchmarks. |
 | `gnn conformance (pinned)` | `specs/discrete_variational.gnn.md` against the parser commit in `specs/gnn-pin.json`. |
 | `okn-replay` | Replays captured evidence and checks the separate join explanations. |

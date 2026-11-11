@@ -71,8 +71,8 @@ rather than inside the validator; see
 
 Use temporary directories for figures, animations, benchmark JSON, and
 manuscript renders. The CI workflow in `.github/workflows/quality.yml` runs
-the same gates on Python 3.10 and 3.12, runs the mutation gate as a separate
-job, and builds the distribution, installs the wheel, and runs `--help` on seven
-of the eight declared console scripts (`cognitive-mutation-check` is exercised by
+the same gates on Python 3.12, runs the mutation gate as a separate
+job, and builds the distribution, installs the wheel, and runs `--help` on ten
+of the eleven declared console scripts (`cognitive-mutation-check` is exercised by
 the mutation job). The full manuscript workflow is documented in
 [`docs/manuscript/README.md`](../manuscript/README.md).

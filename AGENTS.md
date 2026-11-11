@@ -22,6 +22,34 @@ Entry point for the agent material in this repository. It separates what can
 be imported and run from what is design documentation only. The authoritative
 list of importable agents is [[docs/agents/agent_docs_readme|the agent documentation clearinghouse]].
 
+## Repository layout
+
+- `code/tools/src/` — the installed `cognitive` package: settings, simulation,
+  episodes, the dispatcher, models, visualization, benchmarks and the `cognitive`
+  command.
+- `code/Things/` — the installed `Things` package with the runnable
+  `Simple_POMDP` and `Continuous_Generic` agents; the other folders are design
+  notes.
+- `code/scripts/` — the repository tooling and validation gates.
+- `code/tests/` — the pytest suite.
+- `docs/` — documentation tree; `knowledge_base/` — the Obsidian vault;
+  `examples/` — runnable scripts.
+
+## Tests and gates
+
+```bash
+python -m pip install -e ".[dev]"
+python -m pytest -q --cov
+ruff check . && ruff format --check code
+mypy code/tools/src code/Things code/scripts
+python code/scripts/validate_docs.py --json
+```
+
+`python -m pytest -q --cov` is the test command; `--cov` measures branch
+coverage over the configured source tree against the floor in `pyproject.toml`.
+The full development loop, including the manuscript build, benchmarks and the
+mutation gate, is in [[docs/development/README|the development guide]].
+
 ## Agents that run
 
 - **Discrete Active Inference runtime** (`code/tools/src/models/active_inference/`):

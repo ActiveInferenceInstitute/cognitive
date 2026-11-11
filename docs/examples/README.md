@@ -18,7 +18,7 @@ questions.
 
 | Where | What it is | Use it to |
 |---|---|---|
-| [`examples/`](../../examples/README.md) at the repository root | Six scripts you run with `python examples/<name>.py`; each writes figures, tables or RDF | See a complete run and copy it as a starting point |
+| [`examples/`](../../examples/README.md) at the repository root | Eight scripts you run with `python examples/<name>.py`; each writes figures, tables or RDF | See a complete run and copy it as a starting point |
 | This folder | Markdown pages that explain API patterns and agent families | Read how a call fits together before writing your own |
 
 The scripts are tested: `code/tests/test_examples.py` runs every one and checks

@@ -22,6 +22,7 @@ It is not a catalog of hypothetical tools.
 Installed console commands (from `pyproject.toml`, available after
 `python -m pip install -e ".[dev]"`):
 
+- `cognitive` — run a simulation, sweep, plot or other subcommand.
 - `cognitive-create-node` — create knowledge nodes.
 - `cognitive-verify-links` — validate Obsidian wiki links.
 - `cognitive-validate-docs` — validate documentation, examples, and links.
@@ -29,6 +30,9 @@ Installed console commands (from `pyproject.toml`, available after
   links as quoted strings (`--check` / `--write`).
 - `cognitive-kb-index` — check or regenerate the knowledge-base catalogs
   (`--check` / `--write`).
+- `cognitive-export-rdf` — export the knowledge base as RDF for the Open
+  Knowledge Network.
+- `cognitive-kb-report` — write the knowledge-base connectivity report.
 - `cognitive-benchmark` — run the runtime benchmarks.
 - `cognitive-build-manuscript` — build the executable manuscript.
 - `cognitive-mutation-check` — run the mutation gate.
@@ -41,6 +45,10 @@ Repository scripts (run with `python code/scripts/...`):
 - `check_markdown_links.py` — standard Markdown link and anchor validation.
 - `normalize_frontmatter.py` — `semantic_relations` quoting.
 - `kb_index.py` — knowledge-base catalog generation.
+- `kb_report.py` — knowledge-base connectivity report.
+- `export_rdf.py` — RDF export, sample/statistics refresh, and OKN diagnostics.
+- `semantic_review.py` — semantic-review queue freshness.
+- `validate_gnn_spec.py` — GNN declaration conformance against the pinned parser.
 - `build_manuscript.py` — manuscript build pipeline.
 - `mutation_check.py` — mutation gate.
 

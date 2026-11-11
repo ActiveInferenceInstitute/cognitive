@@ -17,14 +17,13 @@ semantic_relations:
 # CI tools
 
 The only CI workflow is `.github/workflows/quality.yml` (name `quality`). It
-runs on every push and pull request and has four independent jobs.
+runs on every push and pull request and has six independent jobs.
 
 ## `tests`
 
-Runs on Python 3.10 and 3.12:
+Runs on Python 3.12:
 `python -m pytest -q -p pytest_cov --cov` (branch coverage against the
-`fail_under` floor in `pyproject.toml`). The 3.10 leg needs the `tomli` backport,
-which the `dev` extra declares.
+`fail_under` floor in `pyproject.toml`).
 
 ## `checks`
 
@@ -41,6 +40,18 @@ Runs once, on Python 3.12, everything that does not depend on the interpreter:
   assertions that the rendered HTML has no unresolved markers
 - `cognitive-benchmark --repetitions 1 --output <temp>/benchmarks.json`
 
+## `gnn-conformance`
+
+Provisions the parser commit pinned in `specs/gnn-pin.json` in its own
+environment, refuses a moved tag, and validates
+`specs/discrete_variational.gnn.md` plus the conformance tests against it.
+
+## `okn-replay`
+
+Exports the knowledge base and replays the captured cross-graph evidence in
+`docs/okn/evidence/2026-10-23-entity-model`, then checks the separate
+assertion-path explanations.
+
 ## `mutation-gate`
 
 `python -m scripts.mutation_check --json` on Python 3.12; a surviving mutation
@@ -49,7 +60,7 @@ fails the job. See [[docs/tools/mutation_testing|Mutation testing]].
 ## `build-package`
 
 Builds the distribution with `python -m build`, runs `twine check`, installs the
-wheel, and runs `--help` on seven of the eight console scripts
+wheel, and runs `--help` on ten of the eleven console scripts
 (`cognitive-mutation-check` is exercised by the mutation job).
 
 Run the same commands locally; see
