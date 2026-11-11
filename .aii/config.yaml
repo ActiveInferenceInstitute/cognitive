@@ -1,12 +1,14 @@
-# AII sidecar — InstituteOS metadata. Schema: instituteos.platform.aii_sidecar
+# AII sidecar — InstituteOS metadata. Schema: aii_platform.aii_sidecar
 meta:
-  updated: '2026-11-01'
+  sidecar_version: 1.2.1
+  updated: '2026-11-10'
 repo:
   name: cognitive
   slug: cognitive
   full_name: ActiveInferenceInstitute/cognitive
-  description: Tested Python package for Active Inference agents and an Obsidian knowledge base of
-    linked pages on the mathematics, biology, cognitive science and philosophy behind it.
+  description: Tested Python package for Active Inference agents and an Obsidian knowledge
+    base of linked pages on the mathematics, biology, cognitive science and philosophy
+    behind it.
 institute:
   category: research-software
   maturity: released
@@ -19,7 +21,8 @@ ecosystem:
   - repo: ActiveInferenceInstitute/Active_Inference_Ontology
     note: Uses Active Inference Ontology terms.
   - repo: ActiveInferenceInstitute/Generalized_Notation_Notation
-    note: Canonical discrete model declared in GNN; the parser revision is pinned in specs/gnn-pin.json.
+    note: Canonical discrete model declared in GNN; the parser revision is pinned
+      in specs/gnn-pin.json.
   links:
     github: https://github.com/ActiveInferenceInstitute/cognitive
     website: https://www.activeinference.org
@@ -38,7 +41,8 @@ artifacts:
   description: Pinned upstream GNN parser revision with parser-file digests.
 - path: docs/gnn.md
   kind: doc
-  description: Model specification - the declaration, its binding, and the validation commands.
+  description: Model specification - the declaration, its binding, and the validation
+    commands.
 - path: code/tools/src/models/active_inference/config_examples/discrete_variational.yaml
   kind: data
   description: Canonical runtime configuration bound to the declaration.
@@ -54,6 +58,18 @@ artifacts:
 - path: code/tests/gnn_parser_probe.py
   kind: tool
   description: The only module that imports the upstream GNN parser; prints JSON.
+- path: AGENTS.md
+  kind: doc
+  description: Agent guidance.
+- path: pyproject.toml
+  kind: code
+  description: Python package configuration.
+- path: docs
+  kind: doc
+  description: Documentation tree.
+- path: CHANGELOG.md
+  kind: doc
+  description: Changelog.
 provenance:
   license: MIT
   citation:
@@ -61,16 +77,26 @@ provenance:
 instituteos:
   tags:
   - cognitive
-  - title
+  - active-inference
   - modeling
-  - framework
-  - type
   - python
 capabilities:
 - tested
 - documentation
 - dataset
+- python-package
+- ci
 tasks:
   docs:
     cmd: ls docs
     description: List documentation.
+  inventory:
+    cmd: git ls-files
+    description: List tracked files.
+docs:
+- README.md
+- AGENTS.md
+- docs/INTEGRATION.md
+- docs/README.md
+- docs/AGENTS.md
+schema: aii-sidecar/v1

@@ -400,3 +400,11 @@ Code is MIT ([`LICENSE`](LICENSE)). Repository-owned knowledge-base content and
 RDF graph exports are [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
 under [`LICENSE-KNOWLEDGE-BASE.md`](LICENSE-KNOWLEDGE-BASE.md).
 Documentation outside the knowledge base remains CC BY-NC-SA 4.0.
+
+## InstituteOS sidecar
+
+This repository carries a committed [`.aii/`](.aii/README.md) sidecar with curated
+InstituteOS metadata (`aii-sidecar/v1`): category, maturity, ecosystem relations,
+key artifacts, provenance, and portable tasks. It is read by
+[InstituteOS](https://github.com/ActiveInferenceInstitute/InstituteOS) tooling and
+does not affect the project's build or runtime.

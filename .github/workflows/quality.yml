@@ -20,6 +20,7 @@ jobs:
   # The suite on every supported interpreter, with branch coverage across the
   # whole configured source tree against the floor in pyproject.toml.
   tests:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -37,6 +38,7 @@ jobs:
 
   # Everything that does not depend on the interpreter version runs once.
   checks:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
