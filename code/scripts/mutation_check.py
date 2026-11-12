@@ -111,9 +111,9 @@ MUTATIONS: tuple[Mutation, ...] = (
     ),
     Mutation(
         name="rdf_export_normalises_parent_directory_links",
-        path="code/scripts/export_rdf.py",
-        original=('    resolved = Path(os.path.normpath(resolved))  # may carry ".." segments\n'),
-        mutated='    resolved = Path(resolved)  # may carry ".." segments\n',
+        path="code/scripts/verify_links.py",
+        original="        candidate = Path(os.path.normpath(candidate))\n",
+        mutated="        candidate = Path(candidate)\n",
         rationale=(
             "A link such as [[../mathematics/x]] resolved to a path that still held "
             "'..', so the exported edge pointed at an IRI no page has."

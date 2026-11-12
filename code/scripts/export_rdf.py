@@ -539,7 +539,7 @@ def _shipped_index(root: Path) -> LinkIndex:
     return LinkIndex(
         markdown_by_stem=by_stem,
         markdown_by_rel_no_suffix=by_rel,
-        all_files_by_rel={_normalise_key(path.as_posix()) for path in files},
+        all_files_by_rel={_normalise_key(path.as_posix()): path for path in files},
         markdown_by_alias=by_alias,
     )
 
@@ -549,7 +549,6 @@ def _resolve(root: Path, source: Path, target: str, index: LinkIndex) -> str | N
     resolved = _resolve_target_path(root, source, target, index)
     if resolved is None:
         return None
-    resolved = Path(os.path.normpath(resolved))  # may carry ".." segments
     try:
         if not _is_shipped(resolved.relative_to(root)):
             return None
