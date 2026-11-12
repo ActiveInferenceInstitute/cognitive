@@ -11,7 +11,7 @@ Seven SPARQL queries used for the Open Knowledge Network export and its evidence
 
 | Query | Role |
 |---|---|
-| `cross_graph_obo.rq` | The cross-graph join replayed and explained by the `okn-replay` CI job. |
+| `cross_graph_obo.rq` | The cross-graph join replayed and explained by the `tests` CI job's replay steps. |
 | `mapping_evidence.rq` | Page, concept, mapping, target, evidence, rationale and review status. |
 | `citation_identifiers.rq` | Page identifiers, titles, DOIs and sources. |
 | `concept_mappings.rq` | Page, concept, mapping, external identifier and source. |

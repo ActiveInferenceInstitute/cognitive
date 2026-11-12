@@ -14,7 +14,7 @@ there were two on a day): `2026-10-13`, `2026-10-20`,
 SHA-256 digests and the local graph digest, plus the captured SPARQL responses
 and the replay query.
 
-The `okn-replay` CI job replays `2026-10-23-entity-model`:
+The `tests` CI job's replay step replays `2026-10-23-entity-model`:
 `daf-okn join --replay docs/okn/evidence/2026-10-23-entity-model`. The parent
 [`../README.md`](../README.md) describes the export, and
 [`../AGENTS.md`](../AGENTS.md) states what is generated.

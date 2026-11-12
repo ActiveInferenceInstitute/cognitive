@@ -20,19 +20,20 @@ Packaging is defined entirely in `pyproject.toml` (setuptools backend):
 
 - The `cognitive` package maps to `code/tools/src`; `Things` to
   `code/Things`; `scripts` to `code/scripts`.
-- Console entry points: `cognitive-create-node`, `cognitive-verify-links`,
-  `cognitive-validate-docs`, `cognitive-normalize-frontmatter`,
-  `cognitive-kb-index`, `cognitive-benchmark`, `cognitive-build-manuscript`,
-  `cognitive-mutation-check`.
+- Console entry points are declared in
+  [`pyproject.toml`](../../pyproject.toml), rather than duplicated here.
 
 Install for development:
 
 ```bash
-python -m pip install -e ".[dev]"
+uv sync --locked --extra dev --python 3.12
 ```
 
-The CI `build-package` job builds the distribution with `python -m build`,
-checks it with `twine check`, and installs the wheel.
+The CI `tests` job builds with the locked development tools and
+`python -m build --no-isolation`, checks metadata with `twine check`, and
+installs the wheel in an independent environment using exported locked
+requirements. Console smoke checks run outside the checkout so an editable
+installation cannot hide a broken wheel.
 
 Do not introduce a separate packaging toolchain; extend `pyproject.toml`
 when new modules or entry points are added.

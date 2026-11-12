@@ -32,29 +32,29 @@ lists the whole set and the order to run it.
 | Mathematics | Does the implementation match a closed form or identity? | `code/tests/test_math_oracles.py`, `test_dispatcher_semantics.py` |
 | Inputs | Does a malformed input raise `ValueError` rather than propagate? | `test_boundary_validation.py`, `test_config_validation.py`, `test_validation_branches.py` |
 | Behaviour | Do the models keep their lifecycle (step, reset, save, load)? | `test_model_lifecycle.py`, `test_simple_pomdp.py`, `test_pomdp_edge_paths.py` |
-| Test strength | Would the suite notice a wrong line? | `python -m scripts.mutation_check` (the `mutation-gate` CI job) |
-| Coverage | Is every branch exercised? | `pytest --cov`, floor `fail_under = 90` in `pyproject.toml` |
-| Static | Types and style | `ruff check .`, `mypy code/tools/src code/Things code/scripts`, `python -m compileall -q code` |
-| Documentation | Frontmatter, links, forbidden terms, catalogs, manuscript | `validate_docs.py`, `verify_links.py`, `check_markdown_links.py` |
-| Manuscript | Do figures and variables rebuild from the package? | `python -m scripts.build_manuscript --no-render --output <dir>` |
+| Test strength | Would the suite notice a wrong line? | `scripts.mutation_check`, retained in the `tests` CI job |
+| Coverage | Does branch coverage meet the configured whole-package floor? | `./run.sh test-full` |
+| Static | Types and style | `./run.sh lint`, `./run.sh types` |
+| Documentation | Frontmatter, links, term policy, catalogs, manuscript | `./run.sh docs` |
+| Manuscript | Do figures and variables rebuild and render from the package? | `./run.sh manuscript`, add `--pdf` for PDF |
 | Runtime | Do the benchmarks still run? | `cognitive-benchmark --repetitions 1` |
-| Packaging | Does the wheel build and do the console scripts start? | `python -m build`, `twine check`, then each `--help` (CI `build-package` job) |
+| Packaging | Does the wheel build and do the console scripts start? | Locked build, metadata check and independent wheel smoke step in CI `tests` |
 
 ## Order to run before a change
 
 ```bash
-python -m pytest -q --cov
-ruff check .
-mypy code/tools/src code/Things code/scripts
-python -m compileall -q code
-python code/scripts/validate_docs.py --json
-python code/scripts/verify_links.py . --json
-python -m scripts.mutation_check
+./run.sh lint
+./run.sh types
+./run.sh test-full
+./run.sh docs
+./run.sh gnn
+./run.sh manuscript
+uv run --locked --extra dev python -m scripts.mutation_check --json
 ```
 
-The same sequence, plus the manuscript build and benchmarks, is
+The complete development loop and benchmarks are described in
 [`docs/development/README.md`](../development/README.md). CI runs it in
-`.github/workflows/quality.yml` on Python 3.10 and 3.12.
+`.github/workflows/quality.yml` on Python 3.12.
 
 ## Rules of thumb
 

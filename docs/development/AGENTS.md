@@ -25,18 +25,32 @@ automated development agents.
 
 ## Development loop
 
+Use the shared root entry point rather than copying gate subprocess commands:
+
 ```bash
-python -m pip install -e ".[dev]"
-python -m pytest -q --cov
-ruff check .
-mypy code/tools/src code/Things code/scripts
-python -m compileall -q code
-python code/scripts/validate_docs.py --json
-python code/scripts/verify_links.py . --json
+./run.sh                 # defaults to test
+./run.sh lint
+./run.sh types
+./run.sh test-full
+./run.sh docs
+./run.sh gnn             # requires provisioned GNN_RUNTIME_PYTHON
+./run.sh manuscript      # no-render + HTML; --pdf adds PDF
 ```
 
-The complete loop, including the manuscript build, benchmark, and mutation
-check, is in `docs/development/README.md`.
+It invokes
+`uv run --locked --extra dev --python 3.12 python code/scripts/gate.py ARM`.
+The default `test` arm selects only the core-model files documented in
+`docs/development/README.md`, with `-m 'not visualization'` and no coverage.
+It provides narrower feedback, not equivalent full-suite coverage or workload.
+`test-full` runs the entire suite with branch coverage. GNN provisioning is
+explicit through `./run.sh gnn --provision`, which permits network access.
+
+The complete contract, prerequisites, independent benchmark and mutation
+commands, and consolidated CI job descriptions are in
+`docs/development/README.md`. Hosted Actions execution is currently blocked
+by the organization's billing lock; do not describe configuration or local
+evidence as a hosted pass. Measured values belong only in the generated
+`gate-measurements.md` and its source `gate-measurements.json`.
 
 ## Conventions
 

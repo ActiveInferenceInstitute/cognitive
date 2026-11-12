@@ -41,7 +41,10 @@ conceptual and educational material. Keep the two clearly separated.
 
 ## Entry points
 
-- `docs/README.md` — navigation spine for the whole tree.
+- `docs/README.md` — curated navigation hub for the whole tree.
+- `docs/documentation-index.md` — generated flat Markdown inventory; regenerate
+  with `code/scripts/docs_index.py --write .` in the locked development environment.
+  Agent instructions and the index itself are excluded.
 - `docs/manuscript/README.md` — the executable end-to-end example.
 - `docs/api/README.md` — API documentation policy and reference.
 - `docs/cli/README.md` — the `cognitive` command (`settings`, `simulate`, `sweep`,
@@ -76,15 +79,17 @@ conceptual and educational material. Keep the two clearly separated.
 
 ## Validation
 
+From the repository root:
+
 ```bash
-python code/scripts/validate_docs.py --json
-python code/scripts/verify_links.py . --json
-python code/scripts/normalize_frontmatter.py --check .
-python code/scripts/kb_index.py --check .
+./run.sh docs
 ```
 
-The first is the aggregate gate (frontmatter, Python fences, public exports,
-term policy, wiki and Markdown links, knowledge-base catalogs, manuscript
-references). The second checks explicit file-like wiki links. The last two are
-also run by the first; each accepts `--write` to apply its fix. See
-`docs/development/README.md` for the full development loop.
+The shared root entry point runs the locked Python development environment.
+The docs arm includes `validate_docs.py` (frontmatter, Python fences, public
+exports, term policy, wiki and Markdown links, knowledge-base catalogs,
+manuscript references), generated documentation-index and gate-evidence
+freshness, and OKN submission, quality, and semantic-review checks.
+See `docs/development/README.md` for index/catalog regeneration and the other
+shared gate arms. Keep measured counts and timings in the generated
+`docs/development/gate-measurements.md`, sourced from its JSON evidence.

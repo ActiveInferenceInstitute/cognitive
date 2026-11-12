@@ -29,7 +29,8 @@ stays the runtime configuration the factory reads, and
 together, so editing one side alone fails the suite.
 
 The upstream parser revision is pinned. The declaration is checked with the
-revision recorded in [`specs/gnn-pin.json`](../specs/gnn-pin.json) — GNN v5.0.3,
+revision recorded in the canonical **`gnn-importer-pin/v1`** declaration,
+[`specs/gnn-pin.json`](../specs/gnn-pin.json) — GNN tag **`v5.0.3`**,
 commit `8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1` — never with a live checkout,
 and the parser files are digest-verified before their verdict is used.
 
@@ -38,7 +39,7 @@ and the parser files are digest-verified before their verdict is used.
 | Path | Purpose |
 | --- | --- |
 | [`specs/discrete_variational.gnn.md`](../specs/discrete_variational.gnn.md) | The declaration: `A`, `B`, `C`, `D`, `E`, the variables they connect, the equations, and the ontology annotations. |
-| [`specs/gnn-pin.json`](../specs/gnn-pin.json) | The pinned upstream revision — repository, tag, commit — and the SHA-256 digest of every parser file. |
+| [`specs/gnn-pin.json`](../specs/gnn-pin.json) | The canonical `gnn-importer-pin/v1` importer pin: repository, tag, commit, recorded date, and parser-file SHA-256 digests. |
 | [`code/tools/src/models/active_inference/gnn_spec.py`](../code/tools/src/models/active_inference/gnn_spec.py) | The reader. Standard library plus NumPy; no upstream import. |
 | [`code/tests/test_gnn_conformance.py`](../code/tests/test_gnn_conformance.py) | The binding between the declaration and the runtime model, with negative controls. |
 | [`code/tests/gnn_parser_probe.py`](../code/tests/gnn_parser_probe.py) | The only module that imports the upstream parser. Runs as a subprocess under the pinned interpreter and prints JSON. |
@@ -96,29 +97,33 @@ at the same pin.
 
 ## Commands
 
-```bash
-# Semantics always; the pinned parser when a runtime is named.
-python -m scripts.validate_gnn_spec --gnn-runtime <python> --json
-GNN_RUNTIME_PYTHON=<python> python -m scripts.validate_gnn_spec
-GNN_ROOT=<gnn-checkout> GNN_PYTHON=<python> python -m scripts.validate_gnn_spec
-
-# The binding itself, with or without a runtime.
-python -m pytest -q code/tests/test_gnn_conformance.py
-```
-
-Provision the pinned runtime with `uv` (the commit is the one in
-`specs/gnn-pin.json`):
+The shared root gate requires a separately provisioned pinned parser runtime:
 
 ```bash
-uv venv --python 3.12 /tmp/gnn-runtime
-uv pip install --python /tmp/gnn-runtime/bin/python \
-  "generalized-notation-notation @ git+https://github.com/ActiveInferenceInstitute/Generalized_Notation_Notation@8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1"
-GNN_RUNTIME_PYTHON=/tmp/gnn-runtime/bin/python python -m scripts.validate_gnn_spec
+GNN_RUNTIME_PYTHON=/path/to/gnn-runtime/bin/python ./run.sh gnn
 ```
 
-Exit codes: `0` pass, `1` conformance failure, `2` the runtime was unavailable,
-so the parser check was not run. Exit `2` is a reported *not run* and never a
-pass — the same convention the repository's other gates use.
+This runs the validator and conformance tests in the locked project environment,
+while parser imports run under the independent interpreter. To check the tag
+and provision the pinned commit explicitly, permitting network access:
+
+```bash
+./run.sh gnn --provision
+```
+
+The canonical JSON pin supplies repository, tag, commit, and parser-file digests;
+do not duplicate these in install commands. A moved tag or mismatched parser
+digest is a failure, not permission to use a different revision.
+
+For validator diagnostics independently of the aggregate arm:
+
+```bash
+uv run --locked --extra dev --python 3.12 python -m scripts.validate_gnn_spec --gnn-runtime /path/to/gnn-runtime/bin/python --json
+```
+
+The validator returns `0` for pass, `1` for conformance failure, and `2` when
+the runtime is unavailable and the parser check was not run. An unavailable
+parser is never a conformance pass; the aggregate GNN gate requires it.
 
 ## What each check proves
 
@@ -137,15 +142,23 @@ pass — the same convention the repository's other gates use.
 ## Changing the model
 
 Change the declaration and the canonical configuration together, then run
-`python -m scripts.validate_gnn_spec --gnn-runtime <python>` and
-`python -m pytest -q code/tests/test_gnn_conformance.py`. Any figure or example
-derived from the canonical configuration changes with it.
+`GNN_RUNTIME_PYTHON=/path/to/gnn-runtime/bin/python ./run.sh gnn`. Any figure or
+example derived from the canonical configuration changes with it. Pin changes
+must update the canonical JSON and parser digests together.
 
 ## Continuous integration
 
-The `gnn-conformance` job in
-[`quality.yml`](../.github/workflows/quality.yml) provisions the pinned revision
-in its own Python runtime, runs the validator against it, and re-runs the
-conformance tests with `GNN_RUNTIME_PYTHON` set so the parser check cannot be
-skipped there. It is a required check: when the runtime cannot be provisioned the
-step fails rather than passing quietly.
+The independent `gnn-conformance` job in
+[`quality.yml`](../.github/workflows/quality.yml) has the display name
+**`gnn conformance (pinned)`**. Preserve both identifiers. It uses
+`ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448`
+and `uv.lock` for the project environment. The parser stays in a separate
+runtime provisioned from the canonical JSON, after checking that the tag still
+peels to the pinned commit. `GNN_RUNTIME_PYTHON` is required for `./run.sh gnn`,
+so failed provisioning cannot silently skip the parser.
+
+Only `specs/discrete_variational.gnn.md` is parsed; the job does not discover
+other declarations. See [the GNN CI pointer](../.github/GNN.md) for scope and
+[CI tools](tools/ci_tools.md) for the consolidated `tests` job. Hosted Actions
+execution is currently blocked by the organization's billing lock; the job
+contract does not assert hosted success.
