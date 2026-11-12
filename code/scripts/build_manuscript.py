@@ -350,6 +350,66 @@ def _hydrate_sources(output: Path, variables: dict[str, str], manuscript_dir: Pa
     return combined_path
 
 
+def _validate_figure_registry(output: Path, registry: list[dict[str, Any]], combined: Path) -> None:
+    """Require generated assets and manuscript figures to agree before rendering."""
+    labels: set[str] = set()
+    files: set[str] = set()
+    for entry in registry:
+        label, filename = entry["label"], entry["file"]
+        if not isinstance(label, str) or not re.fullmatch(r"fig:[A-Za-z0-9_-]+", label):
+            raise ValueError(f"Invalid registered figure label: {label!r}")
+        if not isinstance(filename, str) or not re.fullmatch(
+            r"figures/[A-Za-z0-9_-]+\.png", filename
+        ):
+            raise ValueError(f"Invalid registered figure path: {filename!r}")
+        if label in labels or filename in files:
+            raise ValueError(f"Duplicate figure registry entry: {label}, {filename}")
+        labels.add(label)
+        files.add(filename)
+        path = output / filename
+        if path.is_symlink() or not path.is_file() or path.stat().st_size == 0:
+            raise ValueError(f"Registered figure must be a regular nonempty file: {filename}")
+
+    # Match the manuscript label, reference, and path patterns in validate_docs.
+    source = combined.read_text(encoding="utf-8")
+    declared = re.findall(r"\{#(fig:[A-Za-z0-9_-]+)(?:\s[^}]*)?\}", source)
+    references = set(re.findall(r"\[@(fig:[A-Za-z0-9_-]+)\]", source))
+    figure_paths = {
+        f"figures/{filename}" for filename in re.findall(r"figures/([A-Za-z0-9_-]+\.png)", source)
+    }
+    if len(declared) != len(set(declared)):
+        raise ValueError("Duplicate manuscript figure labels")
+    if set(declared) != labels:
+        raise ValueError(
+            "Manuscript figure labels do not match registry: "
+            f"unregistered={sorted(set(declared) - labels)}, "
+            f"undeclared={sorted(labels - set(declared))}"
+        )
+    if figure_paths != files:
+        raise ValueError(
+            "Manuscript figure paths do not match registry: "
+            f"unregistered={sorted(figure_paths - files)}, unused={sorted(files - figure_paths)}"
+        )
+    declared_pairs = {
+        (label, filename)
+        for filename, label in re.findall(
+            r"!\[[^\]]*\]\((figures/[A-Za-z0-9_-]+\.png)\)"
+            r"\s*\{#(fig:[A-Za-z0-9_-]+)(?:\s[^}]*)?\}",
+            source,
+        )
+    }
+    registered_pairs = {(entry["label"], entry["file"]) for entry in registry}
+    if declared_pairs != registered_pairs:
+        raise ValueError(
+            "Manuscript figure label/path pairs do not match registry: "
+            f"unregistered={sorted(declared_pairs - registered_pairs)}, "
+            f"undeclared={sorted(registered_pairs - declared_pairs)}"
+        )
+    unresolved = references - labels
+    if unresolved:
+        raise ValueError(f"Unresolved manuscript figure references: {sorted(unresolved)}")
+
+
 def _strip_crossref_caption_prefix(document: dict[str, Any]) -> None:
     """Remove prefixes that LaTeX adds again around crossref captions."""
 
@@ -529,6 +589,7 @@ def build(
         (manuscript_dir / "references.bib").read_text(encoding="utf-8"), encoding="utf-8"
     )
     combined = _hydrate_sources(output, variables, manuscript_dir)
+    _validate_figure_registry(output, registry, combined)
     if render_documents:
         _render(output, combined, config, manuscript_dir, render_pdf=render_pdf)
     manifest = {
