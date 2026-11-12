@@ -1,0 +1,345 @@
+{
+  "schema": "cognitive-gate-measurements/v1",
+  "baseline_revision": "b3890b0a881329a4fa89ebe97772346218cb810c",
+  "host": "Darwin 27.0.0 arm64",
+  "python": "3.12.16",
+  "sources": {
+    "run.sh": "9574a332a10bbc56bcb47a0b679d895ff85012bb76d77c2c97d4b9462d57d054",
+    "pyproject.toml": "e7757fbeeb057c06ce23a4435f075faa9db86b7feae04818312d2a5a9ee7ae3a",
+    "uv.lock": "2ce44cc07e0ebb51f7ba360be886af4e04db8a10d9c9461671aa34cdf4540ff7",
+    ".github/workflows/quality.yml": "ff8810077adafda7036534c55693ed594ae87836ce2e72abfd01db7e3fa7df73",
+    "code/scripts/gate.py": "a8e3c6dadbae3e4497c528cf66775affccd30a7481ffeddb28ef0c0614b98996",
+    "code/scripts/docs_index.py": "f3fc3d602fabeb6a77c9cd8998a54c23ae8a770d87e1f6e026fbdec00bd19f02",
+    "code/scripts/gate_evidence.py": "d21c810b41e023ea6c02e78d0333e0ad0ca7db5ad580c78a54090974bff341aa",
+    "code/scripts/build_manuscript.py": "3c087e103fc1e8ea8f5a402a2337b9d0c647705d4f6cddaa441d1e90c56262b3",
+    "code/scripts/validate_gnn_spec.py": "5b7144fc49c3417b6139651d4e3ab52dc28acd2da5a08dfa3317e97def0ecb11",
+    "code/scripts/verify_links.py": "8697b980bbf23ef0d28e0fd4a1085c658a877faafe2775861a79c678151ddfe8",
+    "code/scripts/export_rdf.py": "1ebac6108516ead4e23120cd57c51392b5dbf2153a594c285413032a55019411",
+    "code/scripts/mutation_check.py": "0f94b920f54069294d48dd4643a9efb27832a941ab41215b6838de4b1ebce2a1"
+  },
+  "before": {
+    "lint": {
+      "seconds": 0.281,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "ruff",
+          "check",
+          "."
+        ],
+        [
+          "python",
+          "-m",
+          "ruff",
+          "format",
+          "--check",
+          "code"
+        ],
+        [
+          "python",
+          "-m",
+          "compileall",
+          "-q",
+          "code"
+        ]
+      ]
+    },
+    "types": {
+      "seconds": 0.239,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "mypy",
+          "code/tools/src",
+          "code/Things",
+          "code/scripts"
+        ]
+      ]
+    },
+    "test": {
+      "seconds": 3.984,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "pytest",
+          "-q",
+          "-m",
+          "not visualization",
+          "code/tests/test_active_inference_api.py",
+          "code/tests/test_dispatcher_semantics.py",
+          "code/tests/test_simple_pomdp.py",
+          "code/tests/test_math_oracles.py"
+        ]
+      ],
+      "passed": 76
+    },
+    "test-full": {
+      "seconds": 523.657,
+      "exit_code": 1,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "pytest_cov",
+          "--cov"
+        ]
+      ],
+      "passed": 1223,
+      "coverage_percent": 96.32
+    },
+    "docs": {
+      "seconds": 31.301,
+      "exit_code": 1,
+      "commands": [
+        [
+          "python",
+          "code/scripts/validate_docs.py",
+          "--json"
+        ],
+        [
+          "python",
+          "-m",
+          "scripts.export_rdf",
+          "--check-submission"
+        ],
+        [
+          "python",
+          "-m",
+          "scripts.export_rdf",
+          "--quality-report"
+        ],
+        [
+          "python",
+          "-m",
+          "scripts.semantic_review",
+          "--root",
+          ".",
+          "--output",
+          "docs/okn",
+          "--check"
+        ]
+      ]
+    },
+    "gnn": {
+      "seconds": 10.277,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "scripts.validate_gnn_spec",
+          "--gnn-runtime",
+          "./output/estate/gnn-runtime/bin/python",
+          "--json"
+        ],
+        [
+          "python",
+          "-m",
+          "pytest",
+          "-q",
+          "code/tests/test_gnn_conformance.py"
+        ]
+      ]
+    },
+    "manuscript": {
+      "seconds": 5.048,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "scripts.build_manuscript",
+          "--no-render",
+          "--output",
+          "output/estate/before-no-render"
+        ],
+        [
+          "python",
+          "-m",
+          "scripts.build_manuscript",
+          "--no-pdf",
+          "--output",
+          "output/estate/before-manuscript"
+        ]
+      ]
+    }
+  },
+  "after": {
+    "lint": {
+      "seconds": 0.294,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "ruff",
+          "check",
+          "."
+        ],
+        [
+          "python",
+          "-m",
+          "ruff",
+          "format",
+          "--check",
+          "code"
+        ],
+        [
+          "python",
+          "-m",
+          "compileall",
+          "-q",
+          "code"
+        ]
+      ]
+    },
+    "types": {
+      "seconds": 0.29,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "mypy",
+          "code/tools/src",
+          "code/Things",
+          "code/scripts"
+        ]
+      ]
+    },
+    "test": {
+      "seconds": 3.342,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "pytest",
+          "-q",
+          "-m",
+          "not visualization",
+          "code/tests/test_active_inference_api.py",
+          "code/tests/test_dispatcher_semantics.py",
+          "code/tests/test_simple_pomdp.py",
+          "code/tests/test_math_oracles.py"
+        ]
+      ],
+      "passed": 76
+    },
+    "docs": {
+      "seconds": 56.922,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "code/scripts/docs_index.py",
+          "--check"
+        ],
+        [
+          "python",
+          "code/scripts/gate_evidence.py",
+          "--check"
+        ],
+        [
+          "python",
+          "code/scripts/validate_docs.py",
+          "--json"
+        ],
+        [
+          "python",
+          "-m",
+          "scripts.export_rdf",
+          "--check-submission"
+        ],
+        [
+          "python",
+          "-m",
+          "scripts.export_rdf",
+          "--quality-report"
+        ],
+        [
+          "python",
+          "-m",
+          "scripts.semantic_review",
+          "--root",
+          ".",
+          "--output",
+          "docs/okn",
+          "--check"
+        ]
+      ]
+    },
+    "gnn": {
+      "seconds": 8.104,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "scripts.validate_gnn_spec",
+          "--gnn-runtime",
+          "./output/estate/gnn-runtime/bin/python",
+          "--json"
+        ],
+        [
+          "python",
+          "-m",
+          "pytest",
+          "-q",
+          "code/tests/test_gnn_conformance.py"
+        ]
+      ]
+    },
+    "manuscript": {
+      "seconds": 3.95,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "scripts.build_manuscript",
+          "--no-render",
+          "--output",
+          "./output/estate/after-manuscript-source"
+        ],
+        [
+          "python",
+          "-m",
+          "scripts.build_manuscript",
+          "--output",
+          "./output/estate/after-manuscript",
+          "--no-pdf"
+        ]
+      ]
+    },
+    "test-full": {
+      "seconds": 733.052,
+      "exit_code": 0,
+      "commands": [
+        [
+          "python",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "pytest_cov",
+          "--cov"
+        ]
+      ],
+      "passed": 1267,
+      "coverage_percent": 95.91
+    }
+  },
+  "notes": [
+    "Before test-full and docs failed on the case-insensitive AGENTS/agents navigation collision. Their durations are failed observations, not successful-work speedup evidence."
+  ]
+}
