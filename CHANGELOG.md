@@ -14,6 +14,11 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ### Added
 
+- Shared locked root gates through `./run.sh`, with a narrower core-model default
+  test arm and explicit full-suite coverage, documentation, GNN, and manuscript arms.
+- A deterministic generated flat documentation index, separate from the curated hub.
+- Provenance-backed gate measurements kept in their generated development report.
+
 - CC BY 4.0 licensing for repository-owned knowledge-base content and RDF exports,
   with attribution guidance and explicit separation from the software and other documentation.
 - OKN submission criteria and interoperability evidence, executable mapping queries,
@@ -26,12 +31,26 @@ a computed result are marked **behaviour change** and say what moved and why.
 - A complete regenerable gallery, including relation counts, with measured captions and
   source/output hash receipts from `scripts.regenerate_gallery`.
 
+### Changed
+
+- Consolidated CI project checks in `tests` while retaining the independent
+  `gnn-conformance` job and its `gnn conformance (pinned)` display name.
+  Hosted Actions execution remains blocked by the organization's billing lock;
+  local evidence is not a hosted-success claim.
+
 ### Removed
 
 - Unused `InferenceConfig.custom_params` and the dispatcher YAML `model` alias.
   Supply `generative_model` and declared configuration fields; unknown fields are errors.
 
 ### Fixed
+
+- Extensionless wiki links prefer their Markdown page over a same-named directory
+  index when both spellings match. Exact paths win over case-folded matches, and
+  Markdown targets retain their indexed canonical spelling. This prevents
+  `AGENTS`/`agents` collisions from creating dangling RDF document references.
+- Manuscript rendering validates each registered figure's label-to-file mapping
+  and requires regular, nonempty generated assets before invoking Pandoc.
 
 - The examples instructions contained a term rejected by the documentation gate on CI.
 - Replaced the superseded license table with an SPDX expression and explicit license files,

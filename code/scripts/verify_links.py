@@ -85,7 +85,7 @@ class LinkReport:
 class LinkIndex:
     markdown_by_stem: dict[str, list[Path]]
     markdown_by_rel_no_suffix: dict[str, Path]
-    all_files_by_rel: set[str]
+    all_files_by_rel: dict[str, Path]
     # Frontmatter ``aliases:`` of each page, so ``[[plasticity]]`` opens the page
     # that lists "plasticity" as an alias, as Obsidian does.
     markdown_by_alias: dict[str, Path] = field(default_factory=dict)
@@ -140,13 +140,13 @@ def _frontmatter_aliases(path: Path) -> list[str]:
 def _build_index(root_dir: Path) -> LinkIndex:
     markdown_by_stem: dict[str, list[Path]] = {}
     markdown_by_rel_no_suffix: dict[str, Path] = {}
-    all_files_by_rel: set[str] = set()
+    all_files_by_rel: dict[str, Path] = {}
     markdown_by_alias: dict[str, Path] = {}
 
     for path in _iter_files(root_dir):
         rel_path = path.relative_to(root_dir)
         rel_key = _normalise_key(rel_path.as_posix())
-        all_files_by_rel.add(rel_key)
+        all_files_by_rel[rel_key] = rel_path
 
         if path.suffix.lower() != ".md":
             continue
@@ -230,10 +230,10 @@ def _candidate_paths(root_dir: Path, source_path: Path, target: str) -> list[Pat
     candidates: list[Path] = []
     for base in base_candidates:
         candidates.append(base)
-        candidates.append(base / "README.md")
-        candidates.append(base / "index.md")
         if not _has_file_suffix(target):
             candidates.append(base.with_suffix(".md"))
+        candidates.append(base / "README.md")
+        candidates.append(base / "index.md")
 
     return candidates
 
@@ -273,18 +273,34 @@ def _resolve_target_path(
     Mirrors :func:`_target_exists` but returns the resolved file so
     callers can inspect its headings for anchor validation.
     """
-    seen: set[str] = set()
+    # Exact path spelling must win before a case-insensitive filesystem can
+    # redirect a document name to a same-named directory (or the reverse).
+    candidates: list[tuple[Path, Path | None]] = []
+    seen: set[Path] = set()
     for candidate in _candidate_paths(root_dir, source_path, target):
-        key = _normalise_key(str(candidate))
-        if key in seen:
+        candidate = Path(os.path.normpath(candidate))
+        if candidate in seen:
             continue
-        seen.add(key)
+        seen.add(candidate)
+        canonical = None
+        try:
+            relative = candidate.relative_to(root_dir)
+        except ValueError:
+            pass
+        else:
+            canonical = index.all_files_by_rel.get(_normalise_key(relative.as_posix()))
+            if canonical is not None and canonical == relative:
+                return root_dir / canonical
+        candidates.append((candidate, canonical))
+    for candidate, canonical in candidates:
+        if canonical is not None:
+            return root_dir / canonical
         if candidate.is_file():
             return candidate
 
     rel_key = _normalise_key(target)
     if rel_key in index.all_files_by_rel:
-        return root_dir / target
+        return root_dir / index.all_files_by_rel[rel_key]
 
     # The index holds paths relative to the root; callers read the file, so join
     # them to the root rather than depend on the working directory.

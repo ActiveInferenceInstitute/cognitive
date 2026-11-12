@@ -4,17 +4,22 @@ Reproducibility is treated as a chain of executable checks rather than a
 statement about intention. A clean build performs the following sequence:
 
 ```text
-config.yaml
+config.yaml experiment declaration
     -> validated DiscreteGenerativeModel
     -> seeded dispatcher and continuous agent
-    -> figure generator and hydrated manuscript tokens
-    -> figure registry and combined-source hash
-    -> Pandoc-crossref HTML and XeLaTeX PDF
+    -> computed variable mapping (recorded in manuscript_variables.json)
+    -> hydrated numbered sections and generated figures
+    -> validated figure registry and combined-source hash
+    -> Pandoc-crossref HTML and, when requested, XeLaTeX PDF
 ```
 
+The computed variable mapping is shared by the generated JSON and hydrated
+prose; numerical results are not maintained independently in the manuscript.
 The builder writes a `build_manifest.json` containing the package version,
 configuration path, hydrated variables, figure registry, and SHA-256 hash of
-`combined.md`. The formal source-to-state contract is:
+`combined.md`. Before rendering, every registered figure must be a regular
+nonempty file, and registry labels and paths must agree with the manuscript.
+The formal source-to-state contract is:
 
 $$
 \operatorname{load}(\operatorname{save}(S)) = S
@@ -31,19 +36,33 @@ trip.
 From the repository root:
 
 ```bash
-python -m pytest -q
-ruff check .
-mypy code/tools/src code/Things code/scripts
-python -m compileall -q code
-python code/scripts/validate_docs.py --json
-python code/scripts/verify_links.py . --json
-cognitive-build-manuscript --output build/manuscript
+./run.sh lint
+./run.sh types
+./run.sh test
+./run.sh test-full
+./run.sh docs
+./run.sh gnn
+./run.sh manuscript
+./run.sh manuscript --pdf
 ```
 
-The first five commands protect runtime and static integrity. The two
-documentation commands inspect tracked text and explicit path-like links.
-The final command proves that figures, variables, references, and rendered
-artifacts can be produced from a fresh output directory.
+The root runner invokes `uv run --locked --extra dev --python 3.12 python
+code/scripts/gate.py` with the selected arm; a bare `./run.sh` selects `test`.
+`lint` checks Ruff lint and formatting plus compilation; `types` runs mypy.
+`test` runs selected core-model tests excluding visualization, without coverage,
+from the existing `active_inference_api`, `dispatcher_semantics`, `simple_pomdp`,
+and `math_oracles` test modules. `test-full` runs the whole suite with branch
+coverage. `docs` runs
+`validate_docs` and the OKN submission, quality, and semantic freshness checks.
+`gnn` runs the validator and conformance tests with a provisioned
+`GNN_RUNTIME_PYTHON`; `./run.sh gnn --provision` explicitly allows network
+provisioning of that independent parser interpreter.
+
+`manuscript` first exercises the no-render pipeline and then renders HTML.
+Its `--pdf` option additionally builds the full PDF. The authoritative
+`code/scripts/build_manuscript.py` builder produces the figures, computed
+variables, validated registry, hydrated prose, and publication artifacts;
+the gate orchestrates it rather than introducing a separate build path.
 
 ## Provenance boundary
 

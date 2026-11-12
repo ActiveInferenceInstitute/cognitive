@@ -32,24 +32,36 @@ list of importable agents is [[docs/agents/agent_docs_readme|the agent documenta
   notes.
 - `code/scripts/` — the repository tooling and validation gates.
 - `code/tests/` — the pytest suite.
-- `docs/` — documentation tree; `docs/README.md` is the spine and its complete
-  page index links every page, including the manuscript and tools sub-trees.
+- `docs/` — documentation tree; `docs/README.md` is the curated hub. The generated
+  `docs/documentation-index.md` recursively lists long-lived Markdown, including
+  manuscript and tools pages, excluding agent instructions and the index itself.
   `knowledge_base/` — the Obsidian vault; `examples/` — runnable scripts.
 
 ## Tests and gates
 
+Use the shared root entry point; it invokes
+`uv run --locked --extra dev --python 3.12 python code/scripts/gate.py ARM`
+against `uv.lock`:
+
 ```bash
-python -m pip install -e ".[dev]"
-python -m pytest -q --cov
-ruff check . && ruff format --check code
-mypy code/tools/src code/Things code/scripts
-python code/scripts/validate_docs.py --json
+./run.sh                 # defaults to test
+./run.sh lint            # Ruff lint + format check + compileall
+./run.sh types           # mypy
+./run.sh test            # selected core-model tests only; no coverage
+./run.sh test-full       # whole suite with branch coverage
+./run.sh docs            # documentation, generated freshness, and OKN gates
+./run.sh gnn             # validator + conformance with pinned parser runtime
+./run.sh manuscript      # no-render + HTML; --pdf adds PDF
 ```
 
-`python -m pytest -q --cov` is the test command; `--cov` measures branch
-coverage over the configured source tree against the floor in `pyproject.toml`.
-The full development loop, including the manuscript build, benchmarks and the
-mutation gate, is in [[docs/development/README|the development guide]].
+`gnn` requires a separately provisioned `GNN_RUNTIME_PYTHON`; use
+`./run.sh gnn --provision` only when network provisioning is intended.
+`test-full` applies the branch-coverage floor in `pyproject.toml` across the
+configured source tree. The [development guide](docs/development/README.md)
+documents prerequisites, index generation, additional benchmark and mutation
+checks, and the consolidated CI contract. Hosted Actions execution is currently
+blocked by the organization's billing lock; do not infer hosted success from
+configuration or local measurements.
 
 ## Agents that run
 

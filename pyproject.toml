@@ -31,6 +31,10 @@ network = ["scipy>=1.10"]
 # Used by the helper scripts in docs/repo_docs/repo_scripts.
 maintenance = ["tqdm>=4.66"]
 dev = [
+  "build>=1.2",
+  "setuptools>=77.0.3",
+  "twine>=5.0",
+  "wheel",
   "coverage>=7.0",
   "mypy>=1.8",
   "pytest>=8.0",
@@ -41,6 +45,10 @@ dev = [
   "scipy>=1.10",
   "tomli>=2.0; python_version < '3.11'",
   "types-PyYAML>=6.0",
+]
+replay = [
+  "rdflib==7.6.0",
+  "daf-okn @ git+https://github.com/docxology/daf-okn.git@7fa42efec2b060ef066c2685d4c27ade0ae91a1a",
 ]
 
 [project.scripts]

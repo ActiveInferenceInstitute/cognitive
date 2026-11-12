@@ -2,77 +2,158 @@
 title: Development resources
 type: documentation
 status: stable
-updated: 2026-10-09
+updated: 2026-11-12
 ---
 
 # Development resources
 
-The project is a Python package configured by the repository root
-`pyproject.toml`. Use an editable install with the development extra:
+The project is configured by the repository root `pyproject.toml` and `uv.lock`.
+Use the shared root entry point for local work and CI. It invokes
+`uv run --locked --extra dev --python 3.12 python code/scripts/gate.py ARM`;
+`uv` prepares the locked development environment without a separate editable
+installation step.
+
+## Shared gates
+
+Run from the repository root:
 
 ```bash
-python -m pip install -e ".[dev]"
+./run.sh                 # defaults to test
+./run.sh lint
+./run.sh types
+./run.sh test
+./run.sh test-full
+./run.sh docs
+./run.sh gnn
+./run.sh manuscript
 ```
 
-The supported development loop is:
+| Arm | Scope |
+|---|---|
+| `lint` | Ruff lint, Ruff format check, and compileall. It checks formatting without rewriting files. |
+| `types` | mypy over the configured package, agents, and repository scripts. |
+| `test` | Selected core-model test files listed below, with `-m 'not visualization'`, without coverage. |
+| `test-full` | The entire suite, including visualization, with branch coverage over the configured source tree and its configured floor. |
+| `docs` | `validate_docs.py`, documentation-index freshness, OKN submission and quality checks, and semantic-review freshness. |
+| `gnn` | The GNN validator and conformance tests using the separately provisioned pinned parser interpreter. |
+| `manuscript` | The no-render pipeline followed by HTML rendering; add `--pdf` to include PDF rendering. |
+
+The default `test` arm provides narrower core-model feedback, using only:
+
+- `code/tests/test_active_inference_api.py`
+- `code/tests/test_dispatcher_semantics.py`
+- `code/tests/test_simple_pomdp.py`
+- `code/tests/test_math_oracles.py`
+
+It also applies `-m 'not visualization'` and does not collect coverage.
+This selection is not equivalent to the full suite's coverage or workload and
+does not replace `test-full`. Coverage scope for `test-full` is defined in
+`pyproject.toml`; do not narrow it with a `--cov=<path>` override.
+See [coverage tools](../tools/coverage_tools.md).
+
+The before fast-test sample runs this same file and marker selection against
+the original source; the repository previously had no named fast arm. The
+generated report retains command selections and exit codes. Single samples
+do not establish a universal speedup.
+
+The docs arm runs `docs_index.py --check` and `gate_evidence.py --check` to
+check generated navigation and measured-evidence freshness without rewriting
+them.
+
+### Provisioned tools
+
+The GNN arm requires `GNN_RUNTIME_PYTHON` to name the pinned parser's Python
+interpreter. Provisioning is an explicit network operation:
 
 ```bash
-python -m pytest -q --cov
-ruff format code/Things code/tools/src code/scripts code/tests
-ruff check .
-mypy code/tools/src code/Things code/scripts
-python -m compileall -q code
-python code/scripts/validate_docs.py --json
-python code/scripts/verify_links.py . --json
-python code/scripts/check_markdown_links.py . --json
-python code/scripts/normalize_frontmatter.py --check .
-python code/scripts/kb_index.py --check .
-python code/scripts/export_rdf.py --check .
-python -m scripts.build_manuscript --no-render --output "${TMPDIR:-/tmp}/manuscript"
-cognitive-benchmark --repetitions 1 --output "${TMPDIR:-/tmp}/benchmarks.json"
-python -m scripts.mutation_check
+./run.sh gnn --provision
+GNN_RUNTIME_PYTHON=/path/to/gnn-runtime/bin/python ./run.sh gnn
 ```
 
-`mutation_check` applies a declared set of source mutations and requires the
-suite to reject each one. It answers the question coverage cannot: whether a
-covered line is also a checked line. See
-[`../tools/mutation_testing.md`](../tools/mutation_testing.md). It spawns one
-pytest subprocess per mutation, so run it before opening a change rather than on
-every save.
+The pin and parser-integrity contract are documented in
+[Model specification](../gnn.md). An unavailable parser is not a conformance pass.
 
-`--cov` measures branch coverage across every module in the configured source
-tree against the floor in `pyproject.toml`; see
-[`../tools/coverage_tools.md`](../tools/coverage_tools.md) for why the report
-carries no include filter.
+The manuscript arm needs Pandoc and pandoc-crossref for HTML; `--pdf` also
+requires XeLaTeX. For a no-render-only invocation and renderer setup, see the
+[manuscript guide](../manuscript/README.md).
 
-The manuscript and benchmark commands run the same code as the
-`cognitive-build-manuscript` and `cognitive-benchmark` entry points.
-`--no-render` runs every stage the package owns and skips only Pandoc and
-XeLaTeX, so the manuscript pipeline stays checkable without a document
-toolchain. Drop the flag to render HTML and the PDF (`--no-pdf` renders HTML
-only).
+## Documentation maintenance
 
-`validate_docs.py` is the aggregate documentation gate. It already includes the
-standard Markdown link check, the `semantic_relations` quoting check
-(`normalize_frontmatter.py`, which fixes drift with `--write`), and the
-knowledge-base catalog check (`kb_index.py`, which regenerates each domain's
-`catalog.md` with `--write`) and the check that the committed RDF sample and statistics in
-[`docs/okn`](../okn/README.md) match the pages (`export_rdf.py --write-docs` refreshes
-them). The standalone `check_markdown_links.py` and
-`verify_links.py` scripts report heading-anchor mismatches for standard links
-and for wiki links with a `#fragment`; anchor mismatches are advisory and do not
-fail the gate. The gates are listed in
-[`../../README.md`](../../README.md#quality-gates).
+`validate_docs.py` checks frontmatter, Python fences, public exports, term
+policy, wiki and Markdown links, knowledge-base catalogs, manuscript references,
+and committed RDF documentation. The root docs arm adds the OKN submission,
+quality, and semantic-review checks. The term policy lives in
+[`../policy/documentation_terms.yaml`](../policy/documentation_terms.yaml).
+Heading-anchor mismatches reported by the link tools remain advisory.
 
-The documentation term policy those gates enforce lives in
-[`../policy/documentation_terms.yaml`](../policy/documentation_terms.yaml)
-rather than inside the validator; see
-[`../policy/README.md`](../policy/README.md).
+The [documentation hub](../README.md) is curated navigation; the separate
+[documentation index](../documentation-index.md) is generated recursively from
+long-lived Markdown under `docs/`, excluding agent instructions and the index
+itself. It includes the generated gate-measurement page. Refresh the appropriate
+catalogs after adding or renaming a page, then run the shared docs gate:
+
+```bash
+uv run --locked --extra dev --python 3.12 python code/scripts/docs_index.py --write .
+uv run --locked --extra dev --python 3.12 python code/scripts/kb_index.py --write .
+./run.sh docs
+```
+
+Use `docs_index.py --check .` to check the flat index without writing it.
+The knowledge-base catalogs and the documentation index cover different trees.
+Generated gate measurements are recorded in
+[`gate-measurements.md`](gate-measurements.md), from
+[`gate-measurements.json`](gate-measurements.json); keep measured counts and
+execution timings there rather than copying them into guides.
+
+For a future comparison, preserve a before record before editing, then record
+the after phase serially on the same host. Each arm accepts `--record FILE`;
+redirect its output to a sibling `PHASE-ARM.log` to retain test and coverage
+observations. Provision dependencies and the pinned parser before timing.
+Do not compare different selections as equivalent work or use failed arms
+to claim a speedup.
+
+```bash
+mkdir -p output/gate-measurements
+BASELINE_REVISION=$(git rev-parse HEAD)
+./run.sh test --record output/gate-measurements/before.json > output/gate-measurements/before-test.log 2>&1
+# After editing and recording every after arm:
+uv run --locked --extra dev python code/scripts/gate_evidence.py --refresh \
+  --before output/gate-measurements/before.json \
+  --after output/gate-measurements/after.json \
+  --baseline-revision "$BASELINE_REVISION"
+uv run --locked --extra dev python code/scripts/gate_evidence.py --check
+```
+
+The refresh script derives the Markdown from the preserved JSON and logs and
+binds it to the gate sources. A source change makes the checked evidence stale;
+keep the original records instead of editing measured values.
+
+
+## Additional checks and CI
+
+The benchmark and mutation checks remain available independently:
+
+```bash
+uv run --locked --extra dev --python 3.12 cognitive-benchmark --repetitions 1 --output "${TMPDIR:-/tmp}/benchmarks.json"
+uv run --locked --extra dev --python 3.12 python -m scripts.mutation_check
+```
+
+The mutation check changes source temporarily and must run alone after other
+tests finish. It checks that the suite rejects each declared source mutation;
+see [mutation testing](../tools/mutation_testing.md).
+
+Build and package-validation tools are locked development dependencies. The
+captured OKN replay uses the optional `replay` extra, including pinned
+`daf-okn` and `rdflib==7.6.0`, through
+`uv run --locked --extra dev --extra replay` only for replay steps.
 
 Use temporary directories for figures, animations, benchmark JSON, and
-manuscript renders. The CI workflow in `.github/workflows/quality.yml` runs
-the same gates on Python 3.12, runs the mutation gate as a separate
-job, and builds the distribution, installs the wheel, and runs `--help` on ten
-of the eleven declared console scripts (`cognitive-mutation-check` is exercised by
-the mutation job). The full manuscript workflow is documented in
-[`docs/manuscript/README.md`](../manuscript/README.md).
+manuscript renders. The [quality workflow](../../.github/workflows/quality.yml)
+defines a consolidated `tests` job and an independent `gnn-conformance` job
+(display name `gnn conformance (pinned)`). Both use the locked project environment
+and the shared setup action; the parser keeps its separate interpreter.
+See [CI tools](../tools/ci_tools.md) for the job contract.
+
+Hosted Actions execution is currently blocked by the organization's billing
+lock. Workflow configuration and local measurements are not evidence of a
+successful hosted run.

@@ -8,9 +8,9 @@ status: stable
 
 [![quality](https://github.com/ActiveInferenceInstitute/cognitive/actions/workflows/quality.yml/badge.svg)](https://github.com/ActiveInferenceInstitute/cognitive/actions/workflows/quality.yml)
 
-A tested Python package for **Active Inference** agents, and an Obsidian vault of
-about 2,100 linked pages that explain the mathematics, biology, cognitive
-science and philosophy behind it. The package is the executable reference; the
+A Python package for **Active Inference** agents, and an Obsidian vault of
+linked pages that explain the mathematics, biology, cognitive science and
+philosophy behind it. The package is the executable reference; the
 vault is the explanation. Each side points at the other.
 
 | I want to | Go to |
@@ -25,11 +25,14 @@ vault is the explanation. Each side points at the other.
 
 ## Status
 
-The package, its test suite, and the offline documentation gates run without
-network access. The manuscript build needs Pandoc and XeLaTeX; `--no-render`
-skips both. The GNN conformance job needs the upstream parser pinned in
+After provisioning the locked dependencies, the package, test suite, and
+offline documentation gates do not need network access. Manuscript HTML needs
+Pandoc and pandoc-crossref; PDF also needs XeLaTeX. The no-render pipeline
+skips those renderers. The GNN conformance job needs the upstream parser pinned in
 [`specs/gnn-pin.json`](specs/gnn-pin.json), and the OKN replay job needs the
-captured cross-graph evidence in `docs/okn/evidence/`. The core package, the
+captured cross-graph evidence in `docs/okn/evidence/`. Hosted Actions execution
+is currently blocked by the organization's billing lock; configured checks are
+not evidence of hosted success. The core package, the
 knowledge base and the documentation gate need no credentials and no private
 checkout.
 
@@ -312,9 +315,11 @@ Longer routes by background: [learning roadmap](knowledge_base/learning_roadmap.
 
 ## Documentation
 
-[`docs/README.md`](docs/README.md) is the spine. It covers the implemented package
-and the process around it, and its complete page index links every page in the
-tree, including the manuscript and tools sub-trees.
+[`docs/README.md`](docs/README.md) is the curated documentation hub for the
+implemented package and the process around it. The separate generated
+[`docs/documentation-index.md`](docs/documentation-index.md) lists long-lived
+Markdown recursively, including the manuscript and tools sub-trees, while
+excluding agent instructions and the index itself.
 
 | Folder | Contents |
 |---|---|
@@ -351,49 +356,51 @@ flowchart LR
 ```
 
 ```bash
-cognitive-build-manuscript --output build/manuscript              # HTML and PDF
-cognitive-build-manuscript --no-render --output build/manuscript  # no Pandoc or XeLaTeX needed
+./run.sh manuscript        # no-render checks, then HTML
+./run.sh manuscript --pdf  # also render PDF (requires XeLaTeX)
 ```
 
 ## Quality gates
 
+Use the shared root entry point; bare `./run.sh` defaults to `test`:
+
 ```bash
-python -m pytest -q --cov                           # tests; branch coverage against the floor
-ruff check . && ruff format --check code            # lint and format
-mypy code/tools/src code/Things code/scripts        # types
-python code/scripts/validate_docs.py --json         # documentation gate
-python -m scripts.mutation_check                    # would the tests notice a wrong line?
+./run.sh lint             # Ruff lint + format check + compileall
+./run.sh types            # mypy
+./run.sh test             # selected core-model tests only; no coverage
+./run.sh test-full        # entire suite with branch coverage
+./run.sh docs             # docs, index/evidence freshness, OKN checks
+./run.sh gnn              # validator + conformance; requires pinned runtime
+./run.sh manuscript       # no-render pipeline + HTML; --pdf adds PDF
 ```
 
-`--cov` measures every module in the configured source tree, so the number is the
-package's, not a chosen subset's ([why](docs/tools/coverage_tools.md)). The
-documentation gate runs the whole checklist in one pass:
+The entry point invokes
+`uv run --locked --extra dev --python 3.12 python code/scripts/gate.py ARM`
+using `uv.lock`. GNN needs `GNN_RUNTIME_PYTHON` pointing to the independently
+provisioned pinned parser; `./run.sh gnn --provision` explicitly enables its
+network provisioning. See [development resources](docs/development/README.md)
+for prerequisites and additional benchmark and mutation commands.
 
-```mermaid
-flowchart LR
-    VD["validate_docs"] --> FM["frontmatter parses,<br/>relations are quoted links"]
-    VD --> CAT["catalogs are current"]
-    VD --> WL["wiki links resolve"]
-    VD --> ML["Markdown links resolve"]
-    VD --> FN["fences are closed,<br/>Python examples compile"]
-    VD --> TP["term policy"]
-```
+`test-full` measures branch coverage across the configured source tree, not a
+chosen subset ([why](docs/tools/coverage_tools.md)). The docs arm includes
+frontmatter, links, Python fences, catalogs, public exports, term policy,
+manuscript references, documentation-index and gate-evidence freshness, and OKN
+submission, quality, and semantic-review checks.
 
 CI ([`quality.yml`](.github/workflows/quality.yml), described in
-[`docs/tools/ci_tools.md`](docs/tools/ci_tools.md)) runs six jobs in parallel.
+[CI tools](docs/tools/ci_tools.md)) defines a consolidated `tests` job for core
+gates, manuscript HTML, benchmarks, captured OKN replay, mutation qualification,
+and package checks. The independent `gnn-conformance` job keeps its display name
+`gnn conformance (pinned)` and separate parser interpreter. Both use
+`ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448`
+and the lockfile. Hosted execution is currently blocked by the organization's
+billing lock; this is the configured contract, not a hosted-success claim.
 
-```mermaid
-flowchart LR
-    PUSH["push or pull request"] --> T["tests<br/>Python 3.12"]
-    PUSH --> C["checks<br/>lint, types, docs,<br/>manuscript, benchmarks"]
-    PUSH --> G["gnn-conformance<br/>pinned parser"]
-    PUSH --> O["okn-replay<br/>captured evidence"]
-    PUSH --> M["mutation-gate"]
-    PUSH --> P["build-package<br/>wheel and console scripts"]
-```
-
-Tests write artifacts only to temporary directories, and generated output is
-excluded from version control. The term policy is in
+Tests write artifacts to temporary directories. Local measurement provenance
+and results belong in the generated
+[gate measurements](docs/development/gate-measurements.md), sourced from
+[gate-measurements.json](docs/development/gate-measurements.json), rather than
+copied counts or timings in guides. The term policy is in
 [`docs/policy/documentation_terms.yaml`](docs/policy/documentation_terms.yaml).
 
 ## Contributing
@@ -402,8 +409,10 @@ excluded from version control. The term policy is in
 - New pages follow [`knowledge_base/linking_standards.md`](knowledge_base/linking_standards.md):
   YAML frontmatter with quoted `semantic_relations` links, and `[[wiki links]]` only
   to pages that exist.
-- After adding or renaming a page, run `python code/scripts/kb_index.py --write`
-  and then the documentation gate.
+- After adding or renaming a documentation page, regenerate the flat index with
+  `uv run --locked --extra dev --python 3.12 python code/scripts/docs_index.py --write .`.
+  For knowledge-base pages, regenerate `kb_index.py --write .` in the same locked
+  environment. Then run `./run.sh docs`.
 - Release notes are in [`CHANGELOG.md`](CHANGELOG.md); open work is tracked in the
   backlog file at the repository root.
 

@@ -5,20 +5,16 @@ on:
     branches: [main]
   pull_request:
 
-# The workflow only reads the repository. Declaring that here replaces the
-# broad default token scope with the narrowest one that still works.
 permissions:
   contents: read
 
-# A branch that receives a second push while the first is still running does
-# not need both results; cancel the stale run rather than paying for it.
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  # The suite on every supported interpreter, with branch coverage across the
-  # whole configured source tree against the floor in pyproject.toml.
+  # Reuse one locked project environment instead of installing it independently
+  # for tests, static/docs checks, mutation checks, packaging and OKN replay.
   tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
@@ -28,52 +24,19 @@ jobs:
         python-version: ["3.12"]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+      - uses: ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448
         with:
           python-version: ${{ matrix.python-version }}
-          cache: pip
-          cache-dependency-path: pyproject.toml
-      - run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
-      - run: PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q -p pytest_cov --cov
+      - name: Lint and byte compilation
+        run: ./run.sh lint
+      - name: Types
+        run: ./run.sh types
+      - name: Full tests with whole-package branch coverage
+        run: ./run.sh test-full
+      - name: Documentation, links and graph checks
+        run: ./run.sh docs
 
-  # Everything that does not depend on the interpreter version runs once.
-  checks:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
-        with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: pyproject.toml
-      - run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
-
-      - name: Static checks
-        run: |
-          ruff check .
-          ruff format --check code
-          mypy code/tools/src code/Things code/scripts
-          python -m compileall -q code
-
-      # Frontmatter, catalogs, wiki links, Markdown links, fenced Python and
-      # the term policy.
-      - name: Documentation and links
-        run: python code/scripts/validate_docs.py --json
-
-      - name: OKN submission machine criteria
-        run: python -m scripts.export_rdf --check-submission
-
-      - name: Graph-wide semantic diagnostics
-        run: python -m scripts.export_rdf --quality-report
-
-      - name: Semantic review queue freshness
-        run: python -m scripts.semantic_review --root . --output docs/okn --check
-
-      # Ubuntu's archive does not carry pandoc-crossref, and a crossref binary
-      # only loads under the Pandoc it was built against, so both come from
-      # their release pages as a pinned pair (crossref v0.3.26 is built with
-      # Pandoc 3.12.1). Bump the two versions together.
+      # The archive lacks crossref. Install the compatible pinned release pair.
       - name: Install document toolchain
         env:
           PANDOC_VERSION: "3.12.1"
@@ -90,159 +53,53 @@ jobs:
           sudo install -m 0755 "$RUNNER_TEMP/crossref/pandoc-crossref" /usr/local/bin/pandoc-crossref
           pandoc --version | head -1
           pandoc-crossref --version
-
-      # The runner has no XeLaTeX, so the PDF stage is skipped and only the
-      # HTML render is asserted. A skipped render must never read as a pass.
-      - name: Manuscript pipeline
-        run: |
-          python -m scripts.build_manuscript --no-render --output "${RUNNER_TEMP}/no-render"
-          python -m scripts.build_manuscript --no-pdf --output "${RUNNER_TEMP}/manuscript"
-          python - <<'PY'
-          import json, os, pathlib
-          output = pathlib.Path(os.environ["RUNNER_TEMP"]) / "manuscript"
-          manifest = json.loads((output / "build_manifest.json").read_text())
-          assert manifest["rendered_documents"] is True, manifest
-          html = (output / "manuscript.html").read_text()
-          for leftover in ("{{", "[@fig:", "[@sec:", "[@eq:", "[@tbl:"):
-              assert leftover not in html, f"unresolved {leftover!r} in rendered HTML"
-          print(f"rendered manuscript is fully resolved ({len(html)} bytes)")
-          PY
-
+      - name: Manuscript source and HTML (runner has no XeLaTeX)
+        run: ./run.sh manuscript --output "$RUNNER_TEMP/manuscript"
       - name: Benchmarks
-        run: cognitive-benchmark --repetitions 1 --output "${RUNNER_TEMP}/benchmarks.json"
-
-  # The declaration in specs/ is the canonical statement of the canonical
-  # discrete model, and it is validated with the upstream parser revision pinned
-  # in specs/gnn-pin.json. The runtime is provisioned from that commit into its
-  # own environment so the parser's dependencies cannot disturb this package's
-  # environment, and the parser files are digest-verified before their verdict is
-  # used. When the runtime cannot be provisioned this job fails: a check that did
-  # not run must never read as a pass.
-  gnn-conformance:
-    name: gnn conformance (pinned)
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
-        with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: pyproject.toml
-      - run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
-
-      - name: Provision the pinned GNN parser
+        run: uv run --locked --extra dev cognitive-benchmark --repetitions 1 --output "$RUNNER_TEMP/benchmarks.json"
+      - name: Mutation gate
+        run: uv run --locked --extra dev python -m scripts.mutation_check --json
+      - name: Build and install the wheel in an independent environment
         run: |
           set -euo pipefail
-          python -m venv "$RUNNER_TEMP/gnn-runtime"
-          "$RUNNER_TEMP/gnn-runtime/bin/python" -m pip install --upgrade pip
-          PIN=specs/gnn-pin.json
-          REPO=$(python -c "import json;print(json.load(open('$PIN'))['repository'])")
-          TAG=$(python -c "import json;print(json.load(open('$PIN'))['tag'])")
-          COMMIT=$(python -c "import json;print(json.load(open('$PIN'))['commit'])")
-          # A moved tag must fail here, not silently install a different tree.
-          python - "$REPO" "$TAG" "$COMMIT" <<'PY'
-          import subprocess
-          import sys
-
-          repo, tag, commit = sys.argv[1:4]
-          output = subprocess.run(
-              ["git", "ls-remote", "--tags", repo, f"refs/tags/{tag}*"],
-              capture_output=True,
-              text=True,
-              check=True,
-          ).stdout
-          refs = {
-              line.split("\t")[1]: line.split("\t")[0]
-              for line in output.splitlines()
-              if "\t" in line
-          }
-          resolved = refs.get(f"refs/tags/{tag}^{{}}") or refs.get(f"refs/tags/{tag}")
-          if resolved != commit:
-              raise SystemExit(f"tag {tag} resolves to {resolved}, pin says {commit}")
-          print(f"tag {tag} peels to {commit}")
-          PY
-          "$RUNNER_TEMP/gnn-runtime/bin/python" -m pip install \
-            "generalized-notation-notation @ git+${REPO}@${COMMIT}"
-          "$RUNNER_TEMP/gnn-runtime/bin/python" -c \
-            "import gnn, pathlib; print('gnn', gnn.__version__, pathlib.Path(gnn.__file__).parent)"
-
-      - name: Validate the declaration with the pinned parser
-        run: python -m scripts.validate_gnn_spec --gnn-runtime "$RUNNER_TEMP/gnn-runtime/bin/python" --json
-
-      # The tests skip the parser check when no runtime is named, so name it:
-      # in this job the check is required.
-      - name: Re-run the conformance tests against the pinned parser
-        env:
-          GNN_RUNTIME_PYTHON: ${{ runner.temp }}/gnn-runtime/bin/python
-        run: python -m pytest -q code/tests/test_gnn_conformance.py
-
-      - name: Report the resolved GNN version
-        run: |
-          PIN=specs/gnn-pin.json
-          VERSION=$("$RUNNER_TEMP/gnn-runtime/bin/python" -c 'import gnn; print(gnn.__version__)')
-          TAG=$(python3 -c "import json;print(json.load(open('$PIN'))['tag'])")
-          test -n "$VERSION"
-          test "$VERSION" = "${TAG#v}"
-          echo "gnn-version=${VERSION}" >> "$GITHUB_STEP_SUMMARY"
-  okn-replay:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
-        with:
-          python-version: "3.12"
-      - name: Install graph and pinned OKN methods
-        run: |
-          python -m pip install -e ".[dev]"
-          # The support profile binds the RDFLib materializer version as well as source bytes.
-          python -m pip install "rdflib==7.6.0" "daf-okn @ git+https://github.com/docxology/daf-okn.git@7fa42efec2b060ef066c2685d4c27ade0ae91a1a"
-      - name: Export and replay captured cross-graph evidence
-        run: |
-          python -m scripts.export_rdf
-          daf-okn join --source output/okn/cognitive-kb.nq \
-            --query docs/okn/queries/cross_graph_obo.rq \
-            --replay docs/okn/evidence/2026-10-23-entity-model \
-            --output "${RUNNER_TEMP}/cognitive-okn-replay"
-      - name: Verify separate assertion-path explanations
-        run: |
-          daf-okn explain-join --source output/okn/cognitive-kb.nq \
-            --query docs/okn/queries/cross_graph_obo.rq \
-            --capture docs/okn/evidence/2026-10-23-entity-model \
-            --output docs/okn/explanations/2026-10-23-entity-model --check
-
-  # Coverage proves a line ran. This job proves the suite would notice if a
-  # line were wrong: each declared mutation is written to disk, its tests run,
-  # and a mutation the suite still passes fails the job.
-  mutation-gate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
-        with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: pyproject.toml
-      - run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
-      - run: python -m scripts.mutation_check --json
-
-  # A package that imports from a checkout can still fail to build, and the
-  # declared entry points only run once something installs the wheel.
-  build-package:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
-        with:
-          python-version: "3.12"
-      - run: |
-          python -m pip install --upgrade pip build twine
-          python -m build
-          python -m twine check dist/*
-          python -m pip install dist/*.whl
+          uv run --locked --extra dev python -m build --no-isolation --outdir "$RUNNER_TEMP/dist"
+          uv run --locked --extra dev python -m twine check "$RUNNER_TEMP"/dist/*
+          uv export --locked --extra dev --no-emit-project --output-file "$RUNNER_TEMP/requirements.txt"
+          uv venv --python 3.12 "$RUNNER_TEMP/wheel-smoke"
+          uv pip sync --python "$RUNNER_TEMP/wheel-smoke/bin/python" "$RUNNER_TEMP/requirements.txt"
+          uv pip install --no-deps --python "$RUNNER_TEMP/wheel-smoke/bin/python" "$RUNNER_TEMP"/dist/*.whl
+          export PATH="$RUNNER_TEMP/wheel-smoke/bin:$PATH"
+          cd "$RUNNER_TEMP"
           for command in cognitive cognitive-verify-links cognitive-validate-docs cognitive-normalize-frontmatter \
-                         cognitive-kb-index cognitive-export-rdf cognitive-kb-report cognitive-benchmark cognitive-create-node cognitive-build-manuscript; do
+                         cognitive-kb-index cognitive-export-rdf cognitive-kb-report cognitive-benchmark cognitive-create-node cognitive-build-manuscript cognitive-mutation-check; do
             "$command" --help > /dev/null
           done
           for command in simulate sweep plot continuous hierarchical; do
             cognitive "$command" --help > /dev/null
           done
+      # The optional methods are part of the same lock; install them only for replay.
+      - name: Export and replay captured cross-graph evidence
+        run: |
+          uv run --locked --extra dev --extra replay python -m scripts.export_rdf
+          uv run --locked --extra dev --extra replay daf-okn join --source output/okn/cognitive-kb.nq \
+            --query docs/okn/queries/cross_graph_obo.rq \
+            --replay docs/okn/evidence/2026-10-23-entity-model \
+            --output "$RUNNER_TEMP/cognitive-okn-replay"
+          uv run --locked --extra dev --extra replay daf-okn explain-join --source output/okn/cognitive-kb.nq \
+            --query docs/okn/queries/cross_graph_obo.rq \
+            --capture docs/okn/evidence/2026-10-23-entity-model \
+            --output docs/okn/explanations/2026-10-23-entity-model --check
+
+  # Preserve the required GNN context and keep the pinned parser's dependency
+  # environment separate from the locked importer environment.
+  gnn-conformance:
+    name: gnn conformance (pinned)
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448
+        with:
+          python-version: "3.12"
+      - name: Provision, validate and require pinned parser conformance
+        run: ./run.sh gnn --provision --runtime "$RUNNER_TEMP/gnn-runtime/bin/python"

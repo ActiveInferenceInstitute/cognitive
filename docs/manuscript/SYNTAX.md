@@ -43,12 +43,26 @@ references use paths relative to `combined.md`:
 
 Table labels are declared next to the Markdown table. The builder writes a
 machine-readable `figure_registry.json` and `build_manifest.json` beside the
-rendered files.
+rendered files. Before rendering, including in `--no-render` mode, it requires
+unique registry labels and paths, regular nonempty PNG files (not symlinks),
+and matching manuscript image label/path pairs. Figure references
+such as `[@fig:belief_updates]` must resolve to registered, declared labels.
+Duplicate labels, swapped label-to-image associations, missing or empty assets,
+unregistered source figures, unused registry paths, and unresolved figure
+references fail the build. These checks use the label, reference, and
+figure-path patterns already used by `validate_docs.py`, and bind each image
+path to its adjacent Pandoc figure label.
 
 ## Hydrated variables
+
+`config.yaml` is the experiment declaration, not a second set of prose
+values. The builder computes variables from the validated model and seeded
+results, records them in generated `manuscript_variables.json`, and uses
+the same values to hydrate the numbered sections into `combined.md`.
 
 Tokens are uppercase names enclosed by double braces. The builder must emit a
 value for every token before rendering. Current tokens are
 `MODEL_STATES`, `MODEL_OBSERVATIONS`, `MODEL_ACTIONS`, `MODEL_A_SHAPE`,
 `MODEL_B_SHAPE`, `HORIZON`, `SEED`, `OBS_SEQUENCE`, `POLICY_COUNT`,
-`METHOD_COUNT`, `FIGURE_COUNT`, and `PACKAGE_VERSION`.
+`METHOD_COUNT`, `FIGURE_COUNT`, `PACKAGE_VERSION`, `EFE_BELIEF`, and
+`EFE_MIN_ACTION`.

@@ -42,35 +42,51 @@ cognitive/
 - **Matrix system**: Agents are configured via YAML files specifying A (likelihood), B (transition), C (preference), D (prior), and E (action distribution) matrices with shape constraints.
 - **Each Thing is self-contained**: Has its own config, README, AGENTS.md, and often its own output directory. Some (Path_Network) have their own virtual environments.
 
-## Running Tests
+## Tests and Gates
+
+Run from the repository root through the shared entry point:
 
 ```bash
-# Run full test suite from repo root
-python -m pytest code/tests/ -v
-
-# Run a specific test file
-python -m pytest code/tests/test_simple_pomdp.py -v
-
-# Run with coverage (branch coverage over every configured source module,
-# against the floor in pyproject.toml -- do not pass --cov=<path>, which
-# silently narrows what is measured)
-python -m pytest -q --cov
-
-# Run benchmarks
-cognitive-benchmark --repetitions 1
+./run.sh                 # defaults to test
+./run.sh lint            # Ruff lint + format check + compileall
+./run.sh types           # mypy
+./run.sh test            # selected core-model tests only; no coverage
+./run.sh test-full       # whole suite with branch coverage
+./run.sh docs            # documentation, generated freshness, and OKN checks
+./run.sh gnn             # validator + conformance; pinned runtime required
+./run.sh manuscript      # no-render + HTML; --pdf adds PDF
 ```
 
-Test configuration is in `pytest.ini` and `pyproject.toml`. Shared fixtures (sample matrices, belief vectors, output directories) are in `code/tests/conftest.py`. Matplotlib is set to `Agg` backend in conftest for non-interactive test runs.
+The wrapper invokes
+`uv run --locked --extra dev --python 3.12 python code/scripts/gate.py ARM`
+using `uv.lock`. The GNN parser stays in an independent interpreter named by
+`GNN_RUNTIME_PYTHON`; `./run.sh gnn --provision` explicitly permits network
+provisioning. Do not treat an unavailable parser as a conformance pass.
+
+Coverage scope and its floor come from `pyproject.toml`; do not narrow
+`test-full` with `--cov=<path>`. Test configuration is in `pytest.ini` and
+`pyproject.toml`; shared fixtures are in `code/tests/conftest.py`, which selects
+Matplotlib's non-interactive `Agg` backend.
+
+See [development resources](docs/development/README.md) for tool prerequisites,
+benchmark and mutation commands. CI consolidates core checks in `tests` while
+retaining the independent `gnn-conformance` job, display name
+`gnn conformance (pinned)`. Hosted Actions execution is currently blocked by the
+organization's billing lock; workflow definitions are not hosted-success
+receipts. Measurements belong in the generated
+[gate-measurements.md](docs/development/gate-measurements.md), sourced from
+[gate-measurements.json](docs/development/gate-measurements.json).
 
 ## Dependencies
 
-Python 3.10+. Core dependencies (per `pyproject.toml`): `click`, `jinja2`,
+The shared gates use Python 3.12 and locked development dependencies. Core dependencies (per `pyproject.toml`): `click`, `jinja2`,
 `matplotlib`, `networkx`, `numpy`, `Pillow`, `plotly`, `PyYAML`, `seaborn`.
 No global requirements.txt exists; some Things have their own (e.g., Path_Network).
 
 ## Conventions
 
 ### Documentation
+- `docs/README.md` is curated navigation; `docs/documentation-index.md` is the generated flat index. Regenerate it with `uv run --locked --extra dev --python 3.12 python code/scripts/docs_index.py --write .`, then run `./run.sh docs`.
 - Every folder must have both `AGENTS.md` (technical documentation) and `README.md` (overview/navigation).
 - Markdown files use YAML frontmatter with `semantic_relations` for Obsidian graph connections.
 - Use `[[wiki-link]]` syntax for internal cross-references. The repo is an Obsidian vault.

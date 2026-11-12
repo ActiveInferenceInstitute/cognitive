@@ -14,5 +14,5 @@ run: `2026-10-23-entity-model/` holds `join-support.md`,
 They are generated from the capture by
 `daf-okn explain-join --capture docs/okn/evidence/2026-10-23-entity-model
 --output docs/okn/explanations/2026-10-23-entity-model --check`, which the
-`okn-replay` CI job runs. The parent
+replay step in the `tests` CI job runs. The parent
 [`../AGENTS.md`](../AGENTS.md) lists the generated artifacts.

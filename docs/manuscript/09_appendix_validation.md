@@ -29,11 +29,20 @@ The manuscript build is valid only if all of the following are true:
 | Artifact | Check |
 | --- | --- |
 | `combined.md` | no unresolved double-brace variables remain |
+| `manuscript_variables.json` | computed variables come from the declared configuration and executable results and hydrate the prose |
 | `references.bib` | all cited keys exist |
-| `figure_registry.json` | each registered file exists |
+| `figure_registry.json` | unique label/path pairs agree with manuscript image declarations; references resolve; every registered asset is a regular nonempty file, not a symlink |
 | `manuscript.html` | Pandoc exits successfully |
 | `manuscript.pdf` | XeLaTeX exits successfully when requested |
 | `build_manifest.json` | source hash and package version are present |
+
+The registry is checked before rendering, not merely serialized afterward.
+Missing, empty, non-regular, or symlinked assets; duplicate labels or registry
+paths; swapped label-to-image associations; source figures absent from the
+registry; unused registry entries; and unresolved figure cross-references fail
+the build. `--no-render` exercises
+these checks without requiring Pandoc or XeLaTeX. The `manuscript` gate runs
+that path followed by HTML; `manuscript --pdf` also requires the full PDF.
 
 ## Limitations of evidence
 
