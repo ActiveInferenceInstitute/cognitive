@@ -38,7 +38,7 @@ and the parser files are digest-verified before their verdict is used.
 | Path | Purpose |
 | --- | --- |
 | [`specs/discrete_variational.gnn.md`](../specs/discrete_variational.gnn.md) | The declaration: `A`, `B`, `C`, `D`, `E`, the variables they connect, the equations, and the ontology annotations. |
-| [`specs/gnn-pin.json`](../specs/gnn-pin.json) | The pinned upstream revision, the language version, and the SHA-256 digest of every parser file. |
+| [`specs/gnn-pin.json`](../specs/gnn-pin.json) | The pinned upstream revision — repository, tag, commit — and the SHA-256 digest of every parser file. |
 | [`code/tools/src/models/active_inference/gnn_spec.py`](../code/tools/src/models/active_inference/gnn_spec.py) | The reader. Standard library plus NumPy; no upstream import. |
 | [`code/tests/test_gnn_conformance.py`](../code/tests/test_gnn_conformance.py) | The binding between the declaration and the runtime model, with negative controls. |
 | [`code/tests/gnn_parser_probe.py`](../code/tests/gnn_parser_probe.py) | The only module that imports the upstream parser. Runs as a subprocess under the pinned interpreter and prints JSON. |
