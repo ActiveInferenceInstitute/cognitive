@@ -3,6 +3,7 @@ title: Cognitive Active Inference — Backlog
 type: backlog
 status: active
 owner: Active Inference Institute
+updated: 2026-11-12
 ---
 
 # Backlog
@@ -39,27 +40,49 @@ history; this file is not a log. Remove an item when it is done.
   Hebb, Jaynes, Friston 2010) has been checked against its record. The rest of the pages are
   mostly navigation, index and software-usage pages. Parameter values and "illustrative"
   numbers in the colony-biology pseudocode remain unsourced and are labelled as illustrative.
-- **Identifier alignment for the RDF graph.** Raw `wikidata` identifiers
-  are discovery links exported as `rdfs:seeAlso`, not SKOS mappings.
-  Label search and language-model screening do not establish semantic
-  equivalence. Review each source concept and target denotation individually;
-  record justified relations in `external_mappings`, which emits
-  concept-level SKOS relations. Use `skos:exactMatch` only when that review
-  supports equivalence; do not promote raw identifiers automatically.
-  Remaining Wikidata, MeSH, mathematics, and physics alignments require
-  the same explicit review.
+- **Identifier alignment for the RDF graph.** 697 knowledge-base pages carry a
+  `wikidata` identifier. The export publishes each as an `rdfs:seeAlso`
+  discovery link, not a SKOS mapping (`code/scripts/export_rdf.py`), and only
+  reviewed `external_mappings` become mapping assertions: currently 53
+  assertions over 47 pages, listed in `docs/okn/alignment-review.md`. Those
+  identifiers were found by label search and screened twice by a language model
+  (the second pass dropped 23 of 720), not checked one by one. Label search
+  and language-model screening do not establish semantic equivalence.
+  Review each source concept and target denotation individually before adding
+  a reviewed `external_mappings` assertion under the evidence rules in
+  `docs/okn/mapping-curation-2026-10-20.md`. Use `skos:exactMatch` only when
+  that review supports equivalence; leave unreviewed identifiers as discovery
+  links rather than promoting them automatically. The other concept pages,
+  and MeSH or an ontology for mathematics and physics, require the same
+  explicit review.
 
 ## Environment prerequisites
 
-- **Documentation gate dependencies.** `code/scripts/validate_docs.py` imports
-  PyYAML and the RDF modules. Run it from an environment created with
-  `python -m pip install -e ".[dev]"`; a checkout whose environment lacks those
-  packages stops at the import instead of running the checklist. The same
-  environment is needed for `code/tests/test_docs_sync.py`, which imports the
-  installed `cognitive` package.
-- **Manuscript toolchain.** `cognitive-build-manuscript` renders HTML and PDF
-  only when Pandoc and XeLaTeX are on `PATH`. Use `--no-render` to build figures
-  and hydrated source without either, or `--no-pdf` to skip only the PDF.
-- **GNN conformance.** `code/scripts/validate_gnn_spec.py` needs the upstream
-  parser named with `--gnn-runtime` or `--gnn-root`; without one it reports the
-  missing runtime instead of validating.
+- **Documentation gate dependencies.** Use the shared root gate: `./run.sh docs`
+  runs in the locked environment (`uv run --locked --extra dev --python 3.12`)
+  and prepares PyYAML and the RDF modules without a separate editable install
+  (`docs/development/README.md`). Invoking `code/scripts/validate_docs.py`
+  directly in a checkout whose environment lacks them stops at the import;
+  `code/tests/test_docs_sync.py` also imports the installed `cognitive` package.
+  The arm covers frontmatter, link and manuscript checks, the generated
+  documentation index, measured-gate evidence freshness, OKN submission and
+  quality checks, and semantic-review freshness.
+- **Manuscript toolchain.** `./run.sh manuscript` builds the no-render pipeline
+  and HTML; `--pdf` adds the PDF. HTML needs Pandoc and `pandoc-crossref` on
+  `PATH`, and the PDF also needs XeLaTeX. `cognitive-build-manuscript
+  --no-render` builds figures and hydrated source without either, and
+  `--no-pdf` skips only the PDF.
+- **GNN conformance.** The canonical pin is `specs/gnn-pin.json`
+  (`gnn-importer-pin/v1`, tag `v5.0.3`, commit `8f293d9`) with SHA-256 digests
+  for five parser files. It is not on the `v5.1.0` shipped-importer cutover:
+  this repository keeps its own reader and the pinned parser probe
+  (`docs/gnn.md`, pattern D). `./run.sh gnn --provision` checks the tag and
+  provisions the parser; without a runtime, `code/scripts/validate_gnn_spec.py`
+  exits 2 and reports the parser as not run, which the gate treats as a
+  failure. A moved tag or mismatched digest is a failure, not permission to use
+  another revision.
+- **Hosted Actions are billing-locked.** Run `43246633657` on `main` at
+  `bfa9468` failed in 3 s per job with "The job was not started because your
+  account is locked due to a billing issue"; the workflow files and the local
+  `./run.sh` arms are the contract, not a hosted success. `.github/GNN.md` and
+  `docs/development/README.md` say the same.
