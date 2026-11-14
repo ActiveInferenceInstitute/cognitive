@@ -46,11 +46,15 @@ history; this file is not a log. Remove an item when it is done.
   reviewed `external_mappings` become mapping assertions: currently 53
   assertions over 47 pages, listed in `docs/okn/alignment-review.md`. Those
   identifiers were found by label search and screened twice by a language model
-  (the second pass dropped 23 of 720), not checked one by one: sample the 697
-  discovery links, add confirmed ones as reviewed `external_mappings` under the
-  evidence rules in `docs/okn/mapping-curation-2026-10-20.md`, and leave the
-  rest as discovery links. The other concept pages, and MeSH or an ontology for
-  mathematics and physics, are not aligned yet.
+  (the second pass dropped 23 of 720), not checked one by one. Label search
+  and language-model screening do not establish semantic equivalence.
+  Review each source concept and target denotation individually before adding
+  a reviewed `external_mappings` assertion under the evidence rules in
+  `docs/okn/mapping-curation-2026-10-20.md`. Use `skos:exactMatch` only when
+  that review supports equivalence; leave unreviewed identifiers as discovery
+  links rather than promoting them automatically. The other concept pages,
+  and MeSH or an ontology for mathematics and physics, require the same
+  explicit review.
 
 ## Environment prerequisites
 

@@ -210,3 +210,107 @@ def test_the_default_aggregation_is_the_bayesian_model_average() -> None:
     minimum = dispatcher(policy_aggregation="min").calculate_expected_free_energy(current.copy())
     assert default == pytest.approx(marginal, abs=1e-12)
     assert not np.allclose(default, minimum)
+
+
+@pytest.mark.parametrize("method", ["variational", "mean_field", "sampling"])
+@pytest.mark.parametrize("temperature", [0.25, 1.0, 4.0])
+@pytest.mark.parametrize("goal_prior", [None, np.array([0.2, 0.8])])
+def test_action_prior_weights_policy_inference_once_without_changing_public_energy(
+    method: str, temperature: float, goal_prior: np.ndarray | None
+) -> None:
+    base = model()
+    biased = DiscreteGenerativeModel(
+        A=base.A,
+        B=base.B,
+        C=base.C,
+        D=base.D,
+        E=np.array([0.85, 0.15]),
+    )
+    engine = ActiveInferenceDispatcher(
+        InferenceConfig(
+            method=method,
+            policy_type="discrete",
+            temporal_horizon=1,
+            learning_rate=1.0,
+            precision_init=1.0,
+            temperature=temperature,
+            num_samples=4096,
+            seed=0,
+        ),
+        biased,
+    )
+    current = state(biased)
+    energies = np.array(
+        [
+            biased.evaluate_policy(current.beliefs, (action,), engine.config.discount_factor)
+            for action in range(2)
+        ]
+    )
+    prior = biased.E if goal_prior is None else goal_prior
+    weights = prior * np.exp(-(energies - energies.min()) / temperature)
+    expected = weights / weights.sum()
+
+    assert engine.calculate_expected_free_energy(current) == pytest.approx(energies, abs=1e-12)
+    assert engine.calculate_expected_free_energy(current, prior) == pytest.approx(
+        energies - temperature * np.log(prior + 1e-12), abs=1e-12
+    )
+    actual = engine.dispatch_policy_inference(current, goal_prior)
+    tolerance = 0.025 if method == "sampling" else 1e-10
+    assert actual == pytest.approx(expected, abs=tolerance)
+
+
+@pytest.mark.parametrize(
+    ("likelihood", "prior", "observation", "expected"),
+    [
+        (
+            [[0.6, 0.0, 0.3], [0.4, 1.0, 0.7]],
+            [0.25, 0.25, 0.5],
+            0,
+            [0.5, 0.0, 0.5],
+        ),
+        (
+            [[0.6, 0.5, 0.3], [0.4, 0.5, 0.7]],
+            [0.0, 0.5, 0.5],
+            0,
+            [0.0, 0.625, 0.375],
+        ),
+        (np.eye(3), [0.2, 0.3, 0.5], 2, [0.0, 0.0, 1.0]),
+        (np.eye(3), [1.0, 0.0, 0.0], 2, [1.0, 0.0, 0.0]),
+    ],
+    ids=["likelihood-zero", "prior-zero", "singleton", "impossible-observation"],
+)
+def test_sampling_beliefs_preserve_exact_posterior_support(
+    likelihood: list[list[float]] | np.ndarray,
+    prior: list[float],
+    observation: int,
+    expected: list[float],
+) -> None:
+    generative = DiscreteGenerativeModel(
+        A=np.asarray(likelihood),
+        B=np.eye(3)[:, :, np.newaxis],
+        C=np.zeros(len(likelihood)),
+        D=np.array(prior),
+        E=np.ones(1),
+    )
+    engine = ActiveInferenceDispatcher(
+        InferenceConfig(
+            method="sampling",
+            policy_type="discrete",
+            temporal_horizon=1,
+            learning_rate=1.0,
+            precision_init=1.0,
+            num_samples=512,
+            seed=0,
+        ),
+        generative,
+    )
+    current = state(generative)
+    updated = engine.dispatch_belief_update(observation, current)
+    expected_vector = np.array(expected)
+
+    assert np.all(updated[expected_vector == 0.0] == 0.0)
+    assert updated == pytest.approx(expected_vector, abs=0.01)
+    assert updated.sum() == pytest.approx(1.0, abs=1e-12)
+    np.testing.assert_array_equal(current.beliefs, prior)
+    if np.count_nonzero(expected_vector) == 1:
+        np.testing.assert_array_equal(updated, expected_vector)

@@ -19,15 +19,17 @@ cognitive/
       utils/                    # matrix_utils, create_node, visualization helpers
       visualization/            # MatrixPlotter
       analysis/                 # Analysis tools
-    Things/              # Self-contained agent implementations (each has its own config)
-      Generic_Thing/     # Base cognitive agent with Markov blankets
-      Simple_POMDP/      # Discrete Active Inference (educational)
-      Generic_POMDP/     # Extended POMDP framework
-      Continuous_Generic/ # Continuous state-space models
-      Ant_Colony/        # Swarm intelligence / stigmergy
-      BioFirm/           # Biological firm theory
-      Path_Network/      # Path network agent (has its own venv)
-      KG_Multi_Agent/    # Knowledge graph multi-agent system
+    Things/               # Two executable agents; eight documentation-only designs
+      Simple_POMDP/       # Executable discrete educational agent
+      Continuous_Generic/ # Executable continuous agent and visualizer
+      Generic_Thing/      # Documentation only; also contains saved PNG images
+      Generic_POMDP/      # Documentation-only design
+      Ant_Colony/         # Documentation-only design
+      BioFirm/            # Documentation-only design
+      Path_Network/       # Documentation-only design
+      KG_Multi_Agent/     # Documentation-only design
+      Baseball_Game/      # Documentation-only design
+      ActiveInferenceInstitute/ # Documentation-only design
     tests/               # Centralized test suite
     scripts/             # Utility scripts (e.g., verify_links.py)
   knowledge_base/        # Theoretical foundations (cognitive, math, biology, philosophy, ontology)
@@ -37,10 +39,21 @@ cognitive/
 
 ### Key Design Patterns
 
-- **ActiveInferenceModel** (`code/tools/src/models/active_inference/base.py`): Abstract base class all agents extend. Provides belief updating, policy inference, precision updating, and free energy calculation.
-- **ActiveInferenceDispatcher** (`dispatcher.py`): Routes operations to specific inference implementations (variational, sampling, mean-field) and policy types (discrete, continuous, hierarchical).
-- **Matrix system**: Agents are configured via YAML files specifying A (likelihood), B (transition), C (preference), D (prior), and E (action distribution) matrices with shape constraints.
-- **Each Thing is self-contained**: Has its own config, README, AGENTS.md, and often its own output directory. Some (Path_Network) have their own virtual environments.
+- **ActiveInferenceModel** (`code/tools/src/models/active_inference/base.py`):
+  Abstract model interface for belief updating, policy inference, precision,
+  and free energy. Standalone Things need not inherit from it.
+- **ActiveInferenceDispatcher** (`dispatcher.py`): Implements `variational`,
+  `sampling`, and `mean_field` inference with `PolicyType.DISCRETE` only.
+  `Things.Continuous_Generic` is a standalone continuous implementation;
+  hierarchical episodes compose controllers rather than introducing a
+  dispatcher policy type.
+- **Discrete matrix system**: A is the observation likelihood, B the
+  transition tensor, C log observation preferences, D the state prior,
+  and E the action prior. Shapes and probability constraints are validated.
+- **Things boundary**: Only `Simple_POMDP` and `Continuous_Generic` are
+  executable agents. The other eight folders are documentation-only designs;
+  do not describe them as implemented agents or infer private environments
+  from their names.
 
 ## Tests and Gates
 
@@ -81,7 +94,9 @@ receipts. Measurements belong in the generated
 
 The shared gates use Python 3.12 and locked development dependencies. Core dependencies (per `pyproject.toml`): `click`, `jinja2`,
 `matplotlib`, `networkx`, `numpy`, `Pillow`, `plotly`, `PyYAML`, `seaborn`.
-No global requirements.txt exists; some Things have their own (e.g., Path_Network).
+Dependency and runtime authority is the root `pyproject.toml`, `uv.lock`,
+and shared gate configuration. Documentation-only Things are not separate
+executable environments.
 
 ## Conventions
 

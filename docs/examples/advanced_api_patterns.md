@@ -12,11 +12,24 @@ semantic_relations:
 
 # Advanced API patterns
 
-The three inference methods, policy aggregation, and a goal prior all go through
-the same dispatcher. `InferenceConfig` accepts `variational`, `sampling`, and
-`mean_field`, and `policy_aggregation` accepts `marginal` (default) or `min`.
-Only discrete policies are implemented; hierarchical or user-defined inference
-methods are not part of the package.
+The three inference methods share the discrete dispatcher.
+`InferenceConfig.method` accepts `variational`, `sampling`, and `mean_field`;
+`policy_aggregation` accepts `marginal` (default) or `min`.
+The dispatcher supports only `policy_type="discrete"`. Continuous agents and
+hierarchical episode composition are separate APIs, not dispatcher policy types.
+
+All three policy methods use the model's action prior `E` unless `goal_prior`
+replaces it for that call. The common target is proportional to
+`(prior + 1e-12) * exp(-G / temperature)`, with the prior applied once.
+Sampling approximates this target through sampled action counts.
+
+`calculate_expected_free_energy(state)` deliberately returns prior-free
+per-action energy `G`. Supplying its optional `goal_prior` returns
+`G - temperature * log(prior + 1e-12)` instead.
+
+Sampling belief updates draw Dirichlet samples only on positive posterior
+support. Zero posterior components remain exactly zero; singleton support
+returns the deterministic posterior.
 
 ```python
 import numpy as np
@@ -33,7 +46,7 @@ model = DiscreteGenerativeModel(
     B=np.stack([np.eye(2), np.array([[0.1, 0.9], [0.9, 0.1]])], axis=2),
     C=np.array([0.0, 1.0]),
     D=np.array([0.5, 0.5]),
-    E=np.array([0.5, 0.5]),
+    E=np.array([0.85, 0.15]),
 )
 state = ModelState(np.array([0.9, 0.1]), model.E.copy(), 1.0, 0.0, 0.0)
 
