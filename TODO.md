@@ -39,11 +39,15 @@ history; this file is not a log. Remove an item when it is done.
   Hebb, Jaynes, Friston 2010) has been checked against its record. The rest of the pages are
   mostly navigation, index and software-usage pages. Parameter values and "illustrative"
   numbers in the colony-biology pseudocode remain unsourced and are labelled as illustrative.
-- **Identifier alignment for the RDF graph.** About 700 concept pages carry a `wikidata`
-  identifier, exported as `skos:closeMatch`. They were found by label search and screened twice by
-  a language model (the second pass dropped 23 of 720), not checked one by one: sample them and promote the confirmed ones to
-  `skos:exactMatch`. The other concept pages, and MeSH or an ontology for mathematics and physics,
-  are not aligned yet.
+- **Identifier alignment for the RDF graph.** Raw `wikidata` identifiers
+  are discovery links exported as `rdfs:seeAlso`, not SKOS mappings.
+  Label search and language-model screening do not establish semantic
+  equivalence. Review each source concept and target denotation individually;
+  record justified relations in `external_mappings`, which emits
+  concept-level SKOS relations. Use `skos:exactMatch` only when that review
+  supports equivalence; do not promote raw identifiers automatically.
+  Remaining Wikidata, MeSH, mathematics, and physics alignments require
+  the same explicit review.
 
 ## Environment prerequisites
 

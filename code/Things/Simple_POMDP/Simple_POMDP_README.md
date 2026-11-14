@@ -51,18 +51,19 @@ Every `inference` field is either used or rejected with a `ValueError`:
 
 | Field | Effect |
 |---|---|
-| `learning_rate` | Weight of the exact Bayes posterior in the belief update, in `[0, 1]`. |
+| `learning_rate` | Finite real number, clipped to `[0, 1]` when blending the exact Bayesian posterior into the previous belief. Zero preserves the previous belief. Boolean, nonnumeric, and nonfinite values are rejected during construction. |
 | `temperature` | Positive number. `step()` samples the action from `softmax(-(G - ln E) / temperature)`, where `G` is the one-step expected free energy and `E` the action prior. Omit it for greedy selection, the zero-temperature limit. |
 | `seed` | Seeds the generator behind transitions, observations, and sampled actions. The root-level `seed` is equivalent; giving both with different values is an error. |
 | `time_horizon`, `temporal_horizon` | Must be 1 when present: the agent scores single actions. Use `ActiveInferenceDispatcher` for multi-step policies. |
 | `num_iterations`, `policy_learning_rate` | Rejected: the belief update is one exact Bayes step and `E` is never learned, so nothing would read them. |
 
-`matrices` must define exactly `A_matrix` to `E_matrix`;
-each takes `shape`, `initialization` (`uniform`, `random`,
+`matrices` must define exactly `A_matrix` to `E_matrix`.
+Each accepts `shape`, `initialization` (`uniform`, `random`,
 `random_stochastic`, `identity_based`, `log_preferences`),
 `initialization_params`, `constraints` (`non_negative`, `column_stochastic`,
-`sum_to_one`; `row_stochastic` for 2-D matrices only), `description`, and
-`learning_rate`.
+`sum_to_one`; `row_stochastic` for 2-D matrices only), and `description`.
+Matrix-level `learning_rate` is rejected; `inference.learning_rate` controls
+the belief update.
 
 ## Matrix conventions
 
@@ -84,8 +85,20 @@ each takes `shape`, `initialization` (`uniform`, `random`,
 - `learning_rate` blends the Bayesian posterior into the previous belief.
 - `run(steps, actions=None)` calls `step` repeatedly; `reset()` restores the
   prior, time, and history.
-- `save_state(path)` and `load_state(path)` write and read versioned YAML
-  (`schema_version: 1`) including the history.
+- `save_state(path)` writes versioned YAML with integer `schema_version: 1`,
+  `current_state`, `beliefs`, `time_step`, and `history`.
+  `load_state(path)` validates the complete payload before replacing state.
+  Time must be a non-negative integer value; state, observation, and action
+  indices must be integral and within their respective spaces. Booleans are
+  not indices or time values.
+  Every required history field must be a list of length `time_step`.
+  Belief vectors have one component per state; expected-free-energy vectors
+  have one component per action. Numeric values must be finite.
+  Current and historical belief vectors must be non-negative with positive
+  mass and are normalized on load.
+  Invalid payloads raise `ValueError`; file-access errors remain ordinary
+  filesystem exceptions. Rejection leaves the previous state and history
+  unchanged.
 - The seed defaults to 7 when neither the root nor `inference` sets one.
 - `state.history` records `states`, `observations`, `actions`, `beliefs`,
   `free_energy`, `efe_total`, `efe_epistemic`, and `efe_pragmatic`.

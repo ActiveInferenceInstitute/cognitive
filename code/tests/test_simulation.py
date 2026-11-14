@@ -64,6 +64,27 @@ def test_world_noise_does_not_depend_on_how_the_agent_samples() -> None:
     assert not np.array_equal(exact.policy_posteriors, sampled.policy_posteriors)
 
 
+@pytest.mark.parametrize("method", ["variational", "mean_field", "sampling"])
+def test_episode_uses_model_action_prior_with_a_noiseless_sensor(method: str) -> None:
+    model = replace(
+        example_model(stickiness=0.5, sensor_noise=0.0), E=np.array([0.85, 0.15])
+    )
+    trajectory = run_episode(
+        model,
+        config(method=method, temporal_horizon=1, learning_rate=1.0, num_samples=4096),
+        3,
+        seed=11,
+    )
+    # Identical action effects leave the model's prior as the only policy bias.
+    expected = np.tile(model.E, (trajectory.steps, 1))
+    tolerance = 0.025 if method == "sampling" else 1e-10
+    assert trajectory.policy_posteriors == pytest.approx(expected, abs=tolerance)
+    if method == "sampling":
+        np.testing.assert_array_equal(
+            trajectory.beliefs[1:], np.eye(model.num_states)[trajectory.states[1:]]
+        )
+
+
 def test_complexity_is_the_divergence_of_the_posterior_from_the_prediction() -> None:
     model = corridor_model()
     trajectory = run_episode(model, config(), 10, seed=3)

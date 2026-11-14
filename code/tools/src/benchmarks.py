@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 import time
 from collections.abc import Callable
 from pathlib import Path
@@ -116,12 +117,16 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--repetitions", type=int, default=10)
     parser.add_argument("--output", type=Path, help="Write JSON to this path as well as stdout")
     args = parser.parse_args(argv)
-    report = run_benchmarks(args.repetitions)
-    encoded = json.dumps(report, indent=2, sort_keys=True)
-    print(encoded)
-    if args.output:
-        args.output.parent.mkdir(parents=True, exist_ok=True)
-        args.output.write_text(encoded + "\n", encoding="utf-8")
+    try:
+        report = run_benchmarks(args.repetitions)
+        encoded = json.dumps(report, indent=2, sort_keys=True)
+        print(encoded)
+        if args.output:
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            args.output.write_text(encoded + "\n", encoding="utf-8")
+    except (ValueError, OSError) as error:
+        print(f"error: {error}", file=sys.stderr)
+        return 2
     return 0
 
 

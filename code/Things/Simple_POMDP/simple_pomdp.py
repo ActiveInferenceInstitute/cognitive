@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from numbers import Real
 from pathlib import Path
 from typing import Any
 
@@ -231,7 +232,7 @@ class SimplePOMDP:
                 raise ValueError("visualization.style.font_size must be a positive number")
 
     def _validate_inference(self) -> None:
-        """Reject inference fields that this agent would otherwise ignore."""
+        """Validate inference settings before model construction."""
         inference = self.config["inference"]
         unused = sorted({"num_iterations", "policy_learning_rate"}.intersection(inference))
         if unused:
@@ -245,6 +246,17 @@ class SimplePOMDP:
                     f"inference.{key} must be 1: SimplePOMDP plans one step ahead. "
                     "Use ActiveInferenceDispatcher for multi-step policies"
                 )
+        learning_rate = inference.get("learning_rate", 1.0)
+        try:
+            finite_rate = (
+                isinstance(learning_rate, Real)
+                and not isinstance(learning_rate, bool)
+                and np.isfinite(float(learning_rate))
+            )
+        except OverflowError:
+            finite_rate = False
+        if not finite_rate:
+            raise ValueError("inference.learning_rate must be a finite number")
         if "temperature" in inference:
             temperature = inference["temperature"]
             if isinstance(temperature, bool) or not isinstance(temperature, (int, float)):
@@ -474,24 +486,95 @@ class SimplePOMDP:
         return destination
 
     def load_state(self, path: str | Path) -> None:
-        """Load a validated model state and history."""
+        """Validate the complete saved state before replacing the current state."""
         with Path(path).open(encoding="utf-8") as state_file:
-            payload = yaml.safe_load(state_file)
-        if not isinstance(payload, dict) or payload.get("schema_version") != 1:
+            try:
+                payload = yaml.safe_load(state_file)
+            except yaml.YAMLError as error:
+                raise ValueError("Unsupported or malformed POMDP state") from error
+        if (
+            not isinstance(payload, dict)
+            or type(payload.get("schema_version")) is not int
+            or payload["schema_version"] != 1
+        ):
             raise ValueError("Unsupported or malformed POMDP state")
-        current_state = as_integer(payload["current_state"], "current_state")
-        beliefs = _normalize(np.asarray(payload["beliefs"], dtype=float))
-        if current_state < 0 or current_state >= self.B.shape[0] or beliefs.shape != self.D.shape:
+        missing = {"current_state", "beliefs", "time_step", "history"}.difference(payload)
+        if missing:
+            raise ValueError(f"Saved state is missing required fields: {sorted(missing)}")
+
+        current_state = self._saved_integer(payload["current_state"], "current_state")
+        if not 0 <= current_state < self.B.shape[0]:
             raise ValueError("Saved state dimensions are incompatible with this model")
-        history = payload.get("history")
+        beliefs = self._saved_vector(
+            payload["beliefs"], self.D.size, "beliefs", probability=True
+        )
+        time_step = self._saved_integer(payload["time_step"], "time_step")
+        if time_step < 0:
+            raise ValueError("Saved time_step must be non-negative")
+        history = payload["history"]
         if not isinstance(history, dict) or set(history) != set(self.state.history):
             raise ValueError("Saved history fields are incompatible with this model")
+        for key, values in history.items():
+            if not isinstance(values, list) or len(values) != time_step:
+                raise ValueError(f"Saved history.{key} must be a list of length time_step")
+
+        validated_history: dict[str, list[Any]] = {}
+        for key, size in (
+            ("states", self.B.shape[0]),
+            ("observations", self.A.shape[0]),
+            ("actions", self.B.shape[2]),
+        ):
+            indices = [
+                self._saved_integer(value, f"history.{key}[{index}]")
+                for index, value in enumerate(history[key])
+            ]
+            if any(not 0 <= value < size for value in indices):
+                raise ValueError(f"Saved history.{key} indices must be in [0, {size})")
+            validated_history[key] = indices
+        for key in ("beliefs", "efe_total", "efe_epistemic", "efe_pragmatic"):
+            probability = key == "beliefs"
+            size = self.D.size if probability else self.B.shape[2]
+            validated_history[key] = [
+                self._saved_vector(
+                    values, size, f"history.{key}[{index}]", probability=probability
+                )
+                for index, values in enumerate(history[key])
+            ]
+        validated_history["free_energy"] = self._saved_vector(
+            history["free_energy"], time_step, "history.free_energy"
+        ).tolist()
         self.state = SimplePOMDPState(
             current_state=current_state,
             beliefs=beliefs,
-            time_step=as_integer(payload["time_step"], "time_step"),
-            history={key: list(values) for key, values in history.items()},
+            time_step=time_step,
+            history=validated_history,
         )
+
+    @staticmethod
+    def _saved_integer(value: Any, name: str) -> int:
+        if isinstance(value, bool):
+            raise ValueError(f"Saved {name} must be an integer")
+        return as_integer(value, f"Saved {name}")
+
+    @staticmethod
+    def _saved_vector(
+        values: Any, size: int, name: str, *, probability: bool = False
+    ) -> np.ndarray:
+        if not isinstance(values, list) or len(values) != size:
+            raise ValueError(f"Saved {name} dimensions are incompatible with this model")
+        if any(isinstance(value, bool) or not isinstance(value, Real) for value in values):
+            raise ValueError(f"Saved {name} must contain finite numbers")
+        try:
+            vector = np.asarray(values, dtype=float)
+        except (ValueError, OverflowError) as error:
+            raise ValueError(f"Saved {name} must contain finite numbers") from error
+        if not np.all(np.isfinite(vector)):
+            raise ValueError(f"Saved {name} must contain finite numbers")
+        if probability:
+            if np.any(vector < 0.0) or not np.any(vector > 0.0):
+                raise ValueError(f"Saved {name} must be non-negative with positive mass")
+            vector = _normalize(vector)
+        return vector
 
     def _get_observation(self, state: int) -> int:
         probabilities = _normalize(self.A[:, state])

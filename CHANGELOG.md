@@ -45,6 +45,15 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ### Fixed
 
+- **Behaviour change:** apply the default action prior once across all discrete
+  inference methods and preserve exact zero support during sampling belief updates.
+- Validate SimplePOMDP learning rates at construction and complete saved states
+  before replacing live state.
+- Return status 2 for expected benchmark CLI failures while retaining computed
+  stdout measurements when optional file output fails.
+- Correct RDF identifier-alignment and executable-Things guidance without
+  promoting unreviewed identifiers or documentation-only designs.
+
 - Extensionless wiki links prefer their Markdown page over a same-named directory
   index when both spellings match. Exact paths win over case-folded matches, and
   Markdown targets retain their indexed canonical spelling. This prevents
