@@ -7,7 +7,7 @@
     "run.sh": "9574a332a10bbc56bcb47a0b679d895ff85012bb76d77c2c97d4b9462d57d054",
     "pyproject.toml": "e7757fbeeb057c06ce23a4435f075faa9db86b7feae04818312d2a5a9ee7ae3a",
     "uv.lock": "2ce44cc07e0ebb51f7ba360be886af4e04db8a10d9c9461671aa34cdf4540ff7",
-    ".github/workflows/quality.yml": "8cba7318df4835a4af0dd0c33ca3753dad9126a08b877cd05cf7deeae88c509a",
+    ".github/workflows/quality.yml": "06a15224ed886669d0813183e75de6d31b08ef64936b714b534b04b2701fcbb7",
     "code/scripts/gate.py": "a8e3c6dadbae3e4497c528cf66775affccd30a7481ffeddb28ef0c0614b98996",
     "code/scripts/docs_index.py": "f3fc3d602fabeb6a77c9cd8998a54c23ae8a770d87e1f6e026fbdec00bd19f02",
     "code/scripts/gate_evidence.py": "d21c810b41e023ea6c02e78d0333e0ad0ca7db5ad580c78a54090974bff341aa",
@@ -341,6 +341,6 @@
   },
   "notes": [
     "Before test-full and docs failed on the case-insensitive AGENTS/agents navigation collision. Their durations are failed observations, not successful-work speedup evidence.",
-    "These are historical measurements preserved without changed timings, exits, counts or coverage from [the prior measurement record](https://github.com/ActiveInferenceInstitute/cognitive/blob/33839c83d48ba024d4e0219c866a9986af35092c/docs/development/gate-measurements.json). The November 16 refresh updates the current gate-definition binding after only the workflow capture paths changed; it is not a new measurement or a performance claim for the expanded corpus. The historical workflow SHA-256 is ff8810077adafda7036534c55693ed594ae87836ce2e72abfd01db7e3fa7df73."
+    "These are historical measurements preserved without changed timings, exits, counts or coverage from [the prior measurement record](https://github.com/ActiveInferenceInstitute/cognitive/blob/33839c83d48ba024d4e0219c866a9986af35092c/docs/development/gate-measurements.json). The November 16 refresh updates the current gate-definition binding after the workflow capture paths and explicit required-check name changed; it is not a new measurement or a performance claim for the expanded corpus. The historical workflow SHA-256 is ff8810077adafda7036534c55693ed594ae87836ce2e72abfd01db7e3fa7df73."
   ]
 }

@@ -37,6 +37,8 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ### Changed
 
+- Name the single-version quality job explicitly `tests` to match the required
+  branch-rule context; its matrix, commands and acceptance thresholds are unchanged.
 - Consolidated CI project checks in `tests` while retaining the independent
   `gnn-conformance` job and its `gnn conformance (pinned)` display name.
   Hosted Actions execution remains blocked by the organization's billing lock;
