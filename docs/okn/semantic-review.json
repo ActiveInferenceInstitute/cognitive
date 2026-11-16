@@ -19691,7 +19691,9 @@
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/bioinformatics>",
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/catalog>",
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/cell_biology>",
+          "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/cohort_census_design>",
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/comparative_social_insect_analysis>",
+          "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/cue_reliability_offspring_interventions>",
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/developmental_networks>",
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/developmental_systems>",
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/ecological_dynamics>",
@@ -19709,6 +19711,7 @@
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/metabolic_networks>",
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/microbiology>",
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/molecular_biology>",
+          "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/multilag_stratified_preparations>",
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/myrmecology>",
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/neuroscience>",
           "<https://purl.org/okn/frink/kg/cognitive-kb/page/biology/plant_biology>",
@@ -19762,7 +19765,7 @@
           "yaml_type": "date"
         }
       },
-      "source_sha256": "ab80cb6a99b0b89611cce1915c2316ff02b151359261af6afb55a5f29139e90b",
+      "source_sha256": "64f4b7c5d7fea4e92a00f7677994c91f4d837cce5902c2361ed01874fdf10da5",
       "source_type_terms": [
         "\"index\""
       ],
