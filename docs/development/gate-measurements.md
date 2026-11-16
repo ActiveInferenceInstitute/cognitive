@@ -20,6 +20,7 @@ Single samples do not establish a general speedup. Hosted Actions did not verify
 
 Before test-full and docs failed on the case-insensitive AGENTS/agents navigation collision. Their durations are failed observations, not successful-work speedup evidence.
 These are historical measurements preserved without changed timings, exits, counts or coverage from [the prior measurement record](https://github.com/ActiveInferenceInstitute/cognitive/blob/33839c83d48ba024d4e0219c866a9986af35092c/docs/development/gate-measurements.json). The November 16 refresh updates the current gate-definition binding after the workflow capture paths changed and the redundant one-cell matrix became an equivalent single Python 3.12 job named tests; it is not a new measurement or a performance claim for the expanded corpus. The historical workflow SHA-256 is ff8810077adafda7036534c55693ed594ae87836ce2e72abfd01db7e3fa7df73.
+The dependency refresh retains the historical measurements above while binding the lockfile for coverage 7.17.2 and Ruff 0.17.4. It does not measure the updated dependencies or establish a new performance claim. The historical lockfile SHA-256 is 2ce44cc07e0ebb51f7ba360be886af4e04db8a10d9c9461671aa34cdf4540ff7.
 
 | Arm | Before (s) | Before exit | After (s) | After exit |
 | --- | ---: | ---: | ---: | ---: |

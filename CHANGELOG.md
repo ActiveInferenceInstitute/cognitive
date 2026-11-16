@@ -37,6 +37,9 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ### Changed
 
+- Updated the development coverage and Ruff patch releases with a current lockfile
+  provenance binding; retained gate measurements remain explicitly historical.
+
 - Run quality as one Python 3.12 job named `tests`, without a redundant one-cell
   matrix, to match the required branch-rule context. Commands and thresholds are unchanged.
 - Consolidated CI project checks in `tests` while retaining the independent
