@@ -83,12 +83,12 @@ jobs:
           uv run --locked --extra dev --extra replay python -m scripts.export_rdf
           uv run --locked --extra dev --extra replay daf-okn join --source output/okn/cognitive-kb.nq \
             --query docs/okn/queries/cross_graph_obo.rq \
-            --replay docs/okn/evidence/2026-10-23-entity-model \
+            --replay docs/okn/evidence/2026-11-16-current-corpus \
             --output "$RUNNER_TEMP/cognitive-okn-replay"
           uv run --locked --extra dev --extra replay daf-okn explain-join --source output/okn/cognitive-kb.nq \
             --query docs/okn/queries/cross_graph_obo.rq \
-            --capture docs/okn/evidence/2026-10-23-entity-model \
-            --output docs/okn/explanations/2026-10-23-entity-model --check
+            --capture docs/okn/evidence/2026-11-16-current-corpus \
+            --output docs/okn/explanations/2026-11-16-current-corpus --check
 
   # Preserve the required GNN context and keep the pinned parser's dependency
   # environment separate from the locked importer environment.

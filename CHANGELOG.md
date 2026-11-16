@@ -14,6 +14,10 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ### Added
 
+- A genuine November 16 OKN join capture and separate assertion-path explanation
+  bound to the current knowledge-base export. CI replays this capture; all historical
+  captures and explanations remain unchanged. External labels do not validate science.
+
 - Shared locked root gates through `./run.sh`, with a narrower core-model default
   test arm and explicit full-suite coverage, documentation, GNN, and manuscript arms.
 - A deterministic generated flat documentation index, separate from the curated hub.

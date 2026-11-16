@@ -50,7 +50,7 @@ uv run --extra dev python -m pytest code/tests/test_export_rdf.py -q
 
 The [captured cross-graph query](queries/cross_graph_obo.rq) joins those keys to
 the OKN identifier-mappings graph and then to OBO labels in Ubergraph.
-[Generated results and linked source pages](evidence/2026-10-23-entity-model/join-results.md)
+[Generated results and linked source pages](evidence/2026-11-16-current-corpus/join-results.md)
 record the actual live-response join. Raw responses, queries and hashes are
 preserved beside that report. The join was executed locally against cognitive's
 export and live OKN responses; cognitive-kb is not yet hosted in the federation.
@@ -62,7 +62,7 @@ With the methods installed, replay the captured response files offline:
 ```bash
 daf-okn join --source output/okn/cognitive-kb.nq \
   --query docs/okn/queries/cross_graph_obo.rq \
-  --replay docs/okn/evidence/2026-10-23-entity-model --output output/okn-replay
+  --replay docs/okn/evidence/2026-11-16-current-corpus --output output/okn-replay
 ```
 
 The cross-graph query is ready for the server-side federation after cognitive-kb
@@ -79,6 +79,9 @@ The [earlier October 20 capture](evidence/2026-10-20/join-results.md) and
 [October 20 graph-methods capture](evidence/2026-10-20-graph-methods/join-results.md)
 are preserved with their original export/query hashes and original combined
 page/concept model. They cannot replay against this revised export and query.
+The [October 23 entity-model capture](evidence/2026-10-23-entity-model/join-results.md)
+likewise remains unchanged: its local graph hash predates subsequent corpus additions.
+The November 16 capture binds the current corpus without changing reviewed mappings.
 The current capture binds the stored join query, result bytes and structured
 provenance. Replay checks the complete stage and file inventory.
 
