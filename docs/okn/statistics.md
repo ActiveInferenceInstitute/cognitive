@@ -12,11 +12,11 @@ pages, then regenerate; never edit this file.
 
 | Quantity | Count |
 |---|---|
-| Pages (all described as `schema:CreativeWork`) | 2167 |
-| Separate page-topic concepts (`skos:Concept`) | 2006 |
+| Pages (all described as `schema:CreativeWork`) | 2170 |
+| Separate page-topic concepts (`skos:Concept`) | 2009 |
 | Document-scoped source relation assertions | 555 |
 | Additional local keyword concepts | 1945 |
-| Concept-valued keyword links | 7207 |
+| Concept-valued keyword links | 7213 |
 | Navigation pages (`schema:CollectionPage`) | 73 |
 | Redirect pages | 4 |
 | Documents whose topics have reviewed external mappings | 47 |
@@ -24,13 +24,13 @@ pages, then regenerate; never edit this file.
 | Reviewed exact matches | 40 |
 | Reviewed close matches | 6 |
 | Reviewed associative matches | 4 |
-| Typed edges from `semantic_relations` | 10764 |
-| Untyped edges from body links (`dcterms:references`) | 23908 |
-| Triples | 79488 |
+| Typed edges from `semantic_relations` | 10770 |
+| Untyped edges from body links (`dcterms:references`) | 23924 |
+| Triples | 79558 |
 | Links to concepts that have no page yet (not exported) | 0 |
 | Links to files outside the knowledge base (not exported) | 725 |
 | Self-links dropped | 71 |
-| Latest page update | 2026-10-12 |
+| Latest page update | 2026-11-15 |
 
 ## Pages by domain
 
@@ -38,7 +38,7 @@ pages, then regenerate; never edit this file.
 |---|---|
 | `BioFirm` | 10 |
 | `agents` | 29 |
-| `biology` | 193 |
+| `biology` | 196 |
 | `citations` | 39 |
 | `cognitive` | 851 |
 | `free_energy_principle` | 58 |
@@ -52,7 +52,7 @@ pages, then regenerate; never edit this file.
 
 | Type | Pages |
 |---|---|
-| `concept` | 1334 |
+| `concept` | 1337 |
 | `mathematical_concept` | 522 |
 | `knowledge_base` | 56 |
 | `citation` | 34 |
@@ -95,7 +95,7 @@ pages, then regenerate; never edit this file.
 
 | Relation | Edges |
 |---|---|
-| `relates` | 8043 |
+| `relates` | 8049 |
 | `foundation` | 509 |
 | `implements` | 461 |
 | `related` | 442 |

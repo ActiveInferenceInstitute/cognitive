@@ -208,3 +208,9 @@ The [[AGENTS|biological agents documentation]] provides specific guidance for im
 - [[bee_communication_systems|Bee Communication Systems]]
 - [[comparative_social_insect_analysis|Comparative Analysis of Ant and Bee Social Systems]]
 - [[implementation_examples_social_insects|Implementation Examples Using Social Insect Code]]
+
+## Experiment-design reference cards
+
+- [[cohort_census_design]] — Inclusive censuses and survival-conditioned endpoint sampling.
+- [[multilag_stratified_preparations]] — Testing coarse-state predictive closure across preparation histories and lags.
+- [[cue_reliability_offspring_interventions]] — Separating information quality from reproductive consequences in evolutionary experiments.
