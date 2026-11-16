@@ -66,9 +66,7 @@ def test_world_noise_does_not_depend_on_how_the_agent_samples() -> None:
 
 @pytest.mark.parametrize("method", ["variational", "mean_field", "sampling"])
 def test_episode_uses_model_action_prior_with_a_noiseless_sensor(method: str) -> None:
-    model = replace(
-        example_model(stickiness=0.5, sensor_noise=0.0), E=np.array([0.85, 0.15])
-    )
+    model = replace(example_model(stickiness=0.5, sensor_noise=0.0), E=np.array([0.85, 0.15]))
     trajectory = run_episode(
         model,
         config(method=method, temporal_horizon=1, learning_rate=1.0, num_samples=4096),

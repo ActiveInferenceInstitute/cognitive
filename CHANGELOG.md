@@ -45,6 +45,9 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ### Fixed
 
+- Align saved-state and simulation-test call layout with the locked formatter;
+  computations and validation semantics are unchanged.
+
 - **Behaviour change:** apply the default action prior once across all discrete
   inference methods and preserve exact zero support during sampling belief updates.
 - Validate SimplePOMDP learning rates at construction and complete saved states

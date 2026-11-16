@@ -505,9 +505,7 @@ class SimplePOMDP:
         current_state = self._saved_integer(payload["current_state"], "current_state")
         if not 0 <= current_state < self.B.shape[0]:
             raise ValueError("Saved state dimensions are incompatible with this model")
-        beliefs = self._saved_vector(
-            payload["beliefs"], self.D.size, "beliefs", probability=True
-        )
+        beliefs = self._saved_vector(payload["beliefs"], self.D.size, "beliefs", probability=True)
         time_step = self._saved_integer(payload["time_step"], "time_step")
         if time_step < 0:
             raise ValueError("Saved time_step must be non-negative")
@@ -535,9 +533,7 @@ class SimplePOMDP:
             probability = key == "beliefs"
             size = self.D.size if probability else self.B.shape[2]
             validated_history[key] = [
-                self._saved_vector(
-                    values, size, f"history.{key}[{index}]", probability=probability
-                )
+                self._saved_vector(values, size, f"history.{key}[{index}]", probability=probability)
                 for index, values in enumerate(history[key])
             ]
         validated_history["free_energy"] = self._saved_vector(
