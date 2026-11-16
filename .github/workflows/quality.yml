@@ -19,15 +19,11 @@ jobs:
     name: tests
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.12"]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.12"
       - name: Lint and byte compilation
         run: ./run.sh lint
       - name: Types
