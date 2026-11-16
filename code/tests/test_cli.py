@@ -3,11 +3,13 @@
 from __future__ import annotations
 
 import json
+import math
 import subprocess
 import sys
 from pathlib import Path
 
 import pytest
+from cognitive.benchmarks import run_benchmarks
 from cognitive.cli import build_parser, main
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -167,6 +169,96 @@ def test_benchmark_is_passed_through(capsys: pytest.CaptureFixture[str], tmp_pat
     status, out, _ = run(capsys, "benchmark", "--repetitions", "1", "--output", str(target))
     assert status == 0 and json.loads(out)["repetitions"] == 1
     assert json.loads(target.read_text())["benchmarks"]
+
+
+@pytest.mark.parametrize("repetitions", [0, -1])
+def test_benchmark_library_preserves_validation_errors(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, repetitions: int
+) -> None:
+    monkeypatch.chdir(tmp_path)
+    with pytest.raises(ValueError):
+        run_benchmarks(repetitions)
+
+
+def test_benchmark_library_preserves_execution_os_errors(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.chdir(tmp_path)
+    (tmp_path / ".benchmarks").write_text("occupied", encoding="utf-8")
+    with pytest.raises(OSError):
+        run_benchmarks(1)
+
+
+@pytest.mark.parametrize(
+    ("module", "prefix"),
+    [("cognitive", ["benchmark"]), ("cognitive.benchmarks", [])],
+)
+@pytest.mark.parametrize(
+    "scenario",
+    ["zero", "negative", "execution-error", "output-parent", "output-directory", "success"],
+)
+def test_benchmark_cli_reports_errors_without_losing_computed_measurements(
+    tmp_path: Path, module: str, prefix: list[str], scenario: str
+) -> None:
+    output = tmp_path / "reports" / "benchmark.json"
+    repetitions = "0" if scenario == "zero" else "-1" if scenario == "negative" else "1"
+    if scenario == "execution-error":
+        (tmp_path / ".benchmarks").write_text("occupied", encoding="utf-8")
+    elif scenario == "output-parent":
+        output.parent.write_text("occupied", encoding="utf-8")
+    elif scenario == "output-directory":
+        output.mkdir(parents=True)
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            "-B",
+            "-m",
+            module,
+            *prefix,
+            "--repetitions",
+            repetitions,
+            "--output",
+            str(output),
+        ],
+        cwd=tmp_path,
+        capture_output=True,
+        text=True,
+        check=False,
+        timeout=30,
+    )
+    assert "Traceback" not in result.stderr
+    if scenario != "success":
+        assert result.returncode == 2
+        assert result.stderr.startswith("error:")
+        assert len(result.stderr.splitlines()) == 1
+    else:
+        assert result.returncode == 0
+        assert result.stderr == ""
+
+    if scenario in {"zero", "negative", "execution-error"}:
+        assert result.stdout == ""
+        assert not output.exists()
+    else:
+        report = json.loads(result.stdout)
+        assert report["schema_version"] == 1
+        assert report["repetitions"] == 1
+        assert {row["name"] for row in report["benchmarks"]} == {
+            "matrix_operations",
+            "dispatcher_inference",
+            "simple_pomdp",
+            "continuous_inference",
+        }
+        for row in report["benchmarks"]:
+            assert row["repetitions"] == 1
+            assert math.isfinite(row["total_seconds"]) and row["total_seconds"] >= 0.0
+            assert row["seconds_per_call"] == row["total_seconds"]
+        if scenario == "success":
+            assert json.loads(output.read_text(encoding="utf-8")) == report
+        elif scenario == "output-parent":
+            assert output.parent.read_text(encoding="utf-8") == "occupied"
+        else:
+            assert output.is_dir()
 
 
 def test_an_unknown_sweep_parameter_is_refused_by_the_parser(

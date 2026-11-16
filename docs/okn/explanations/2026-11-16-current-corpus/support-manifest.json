@@ -1,0 +1,8 @@
+{
+  "explanation_schema_version": 1,
+  "files": {
+    "join-support.json": "e9a1edc2035e022fd7e8c7dce13c9972e37707a5e549f7d8ddcc5ea9b621c6cd",
+    "join-support.md": "f2870fa75adbbdcae448e4629ed6861c7b2d3b42996ab6d7c6eaf1aeb911b424"
+  },
+  "profile": "cognitive-obo-join-support-1"
+}

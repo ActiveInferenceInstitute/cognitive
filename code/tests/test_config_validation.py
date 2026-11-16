@@ -174,21 +174,28 @@ def test_configuration_file_paths_resolve_relative_to_the_file(tmp_path: Path) -
         SimplePOMDP(not_a_mapping)
 
 
-def test_run_and_persistence_round_trip(tmp_path: Path) -> None:
-    """A simulation replays from disk with its history intact."""
-    model = SimplePOMDP(pomdp_config())
-    results = model.run(3)
-    assert len(results) == 3
+@pytest.mark.parametrize("steps", [0, 3])
+def test_run_and_persistence_round_trip(tmp_path: Path, steps: int) -> None:
+    """A saved episode preserves the current state and every history column."""
+    model = SimplePOMDP(pomdp_config(visualization={"output_dir": str(tmp_path / "plots")}))
+    results = model.run(steps)
+    assert len(results) == steps
     assert all(0 <= observation < 2 for observation, _ in results)
 
     saved = model.save_state(tmp_path / "state.yaml")
     beliefs = model.state.beliefs.copy()
     time_step = model.state.time_step
+    current_state = model.state.current_state
+    history = {key: np.asarray(values).copy() for key, values in model.state.history.items()}
     model.reset()
     assert model.state.time_step == 0
     model.load_state(saved)
     assert model.state.beliefs == pytest.approx(beliefs)
     assert model.state.time_step == time_step
+    assert model.state.current_state == current_state
+    assert set(model.state.history) == set(history)
+    for key, values in history.items():
+        np.testing.assert_allclose(model.state.history[key], values)
 
     with pytest.raises(ValueError, match="steps must be non-negative"):
         model.run(-1)
@@ -219,6 +226,227 @@ def test_persistence_rejects_incompatible_saved_state(tmp_path: Path) -> None:
     saved.write_text(yaml.safe_dump(payload), encoding="utf-8")
     with pytest.raises(ValueError, match="history fields are incompatible"):
         model.load_state(saved)
+
+
+@pytest.mark.parametrize(
+    "learning_rate",
+    [None, "0.5", "invalid", [], {}, True, 1j, float("nan"), float("inf"), -float("inf")],
+)
+def test_learning_rate_is_rejected_before_model_construction(
+    tmp_path: Path, learning_rate: object
+) -> None:
+    plots = tmp_path / "plots"
+    with pytest.raises(ValueError, match=r"inference\.learning_rate"):
+        SimplePOMDP(
+            pomdp_config(
+                inference={"learning_rate": learning_rate},
+                visualization={"output_dir": str(plots)},
+            )
+        )
+    assert not plots.exists()
+
+
+@pytest.mark.parametrize("learning_rate", [-2.0, 0.0, 0.25, 1.0, 2.0, np.float32(0.25)])
+def test_finite_learning_rates_keep_the_existing_clipped_bayesian_blend(
+    tmp_path: Path, learning_rate: float
+) -> None:
+    model = SimplePOMDP(
+        pomdp_config(
+            inference={"learning_rate": learning_rate},
+            visualization={"output_dir": str(tmp_path / "plots")},
+        )
+    )
+    prior = model.state.beliefs.copy()
+    predicted = model.B[:, :, 0] @ prior
+    observation, _ = model.step(action=0)
+    posterior = predicted * model.A[observation]
+    posterior /= posterior.sum()
+    weight = min(max(float(learning_rate), 0.0), 1.0)
+    assert model.state.beliefs == pytest.approx((1.0 - weight) * prior + weight * posterior)
+
+
+@pytest.mark.parametrize(
+    "missing", ["schema_version", "current_state", "beliefs", "time_step", "history"]
+)
+def test_saved_state_requires_all_fields_without_mutating_live_state(
+    tmp_path: Path, missing: str
+) -> None:
+    model = SimplePOMDP(pomdp_config(visualization={"output_dir": str(tmp_path / "plots")}))
+    model.run(2, actions=[0, 1])
+    saved = model.save_state(tmp_path / "state.yaml")
+    original = saved.read_text(encoding="utf-8")
+    original_state = model.state
+    payload = yaml.safe_load(original)
+    del payload[missing]
+    saved.write_text(yaml.safe_dump(payload), encoding="utf-8")
+
+    with pytest.raises(ValueError):
+        model.load_state(saved)
+
+    assert model.state is original_state
+    model.save_state(saved)
+    assert saved.read_text(encoding="utf-8") == original
+
+
+@pytest.mark.parametrize(
+    ("field_path", "invalid"),
+    [
+        (("schema_version",), True),
+        (("schema_version",), 1.0),
+        (("current_state",), -1),
+        (("current_state",), 2),
+        (("current_state",), 0.5),
+        (("current_state",), True),
+        (("current_state",), "1"),
+        (("current_state",), float("nan")),
+        (("time_step",), -1),
+        (("time_step",), 0.5),
+        (("time_step",), True),
+        (("time_step",), "2"),
+        (("time_step",), float("inf")),
+        (("time_step",), float("nan")),
+        (("time_step",), 0),
+        (("time_step",), 3),
+        (("beliefs",), 0.5),
+        (("beliefs",), [[0.5, 0.5]]),
+        (("beliefs",), [0.2, 0.3, 0.5]),
+        (("beliefs",), ["0.5", 0.5]),
+        (("beliefs",), [True, 0.5]),
+        (("beliefs",), [float("nan"), 0.5]),
+        (("beliefs",), [float("inf"), 0.5]),
+        (("beliefs",), [-0.1, 1.1]),
+        (("beliefs",), [0.0, 0.0]),
+        (("history",), None),
+        (("history",), {}),
+        (("history", "states"), [0]),
+        (("history", "free_energy"), [0.0, 0.0, 0.0]),
+        (("history", "free_energy", 0), [0.0]),
+        (("history", "free_energy", 0), "0.0"),
+        (("history", "free_energy", 0), True),
+        (("history", "free_energy", 0), float("nan")),
+        (("history", "free_energy", 0), float("inf")),
+        (("history", "beliefs", 0), [-0.1, 1.1]),
+        (("history", "beliefs", 0), [0.0, 0.0]),
+    ]
+    + [
+        (("history", key), invalid)
+        for key in (
+            "states",
+            "observations",
+            "actions",
+            "beliefs",
+            "free_energy",
+            "efe_total",
+            "efe_epistemic",
+            "efe_pragmatic",
+        )
+        for invalid in ("00", None)
+    ]
+    + [
+        (("history", key, 0), invalid)
+        for key in ("states", "observations", "actions")
+        for invalid in (-1, 2, 0.5, True, "1", float("nan"), float("inf"))
+    ]
+    + [
+        (("history", key, 0), invalid)
+        for key in ("beliefs", "efe_total", "efe_epistemic", "efe_pragmatic")
+        for invalid in (
+            0.5,
+            [0.5],
+            [[0.5, 0.5]],
+            ["0.5", 0.5],
+            [True, 0.5],
+            [float("nan"), 0.5],
+            [float("inf"), 0.5],
+        )
+    ],
+)
+def test_saved_state_rejection_preserves_the_complete_live_state(
+    tmp_path: Path, field_path: tuple[str | int, ...], invalid: object
+) -> None:
+    model = SimplePOMDP(pomdp_config(visualization={"output_dir": str(tmp_path / "plots")}))
+    model.run(2, actions=[0, 1])
+    saved = model.save_state(tmp_path / "state.yaml")
+    original = saved.read_text(encoding="utf-8")
+    original_state = model.state
+    payload = yaml.safe_load(original)
+    target = payload
+    for key in field_path[:-1]:
+        target = target[key]
+    target[field_path[-1]] = invalid
+    saved.write_text(yaml.safe_dump(payload), encoding="utf-8")
+
+    with pytest.raises(ValueError):
+        model.load_state(saved)
+
+    assert model.state is original_state
+    model.save_state(saved)
+    assert saved.read_text(encoding="utf-8") == original
+
+
+def test_malformed_saved_yaml_preserves_the_live_state(tmp_path: Path) -> None:
+    model = SimplePOMDP(pomdp_config(visualization={"output_dir": str(tmp_path / "plots")}))
+    model.run(2, actions=[0, 1])
+    saved = model.save_state(tmp_path / "state.yaml")
+    original = saved.read_text(encoding="utf-8")
+    original_state = model.state
+    saved.write_text("history: [", encoding="utf-8")
+    with pytest.raises(ValueError):
+        model.load_state(saved)
+    assert model.state is original_state
+    model.save_state(saved)
+    assert saved.read_text(encoding="utf-8") == original
+
+
+def test_saved_state_uses_distinct_space_dimensions_and_normalizes_positive_beliefs(
+    tmp_path: Path,
+) -> None:
+    config = pomdp_config(visualization={"output_dir": str(tmp_path / "plots")})
+    config["observation_space"] = {"num_observations": 3}
+    config["action_space"] = {"num_actions": 4}
+    config["matrices"]["A_matrix"] = {
+        "shape": [3, 2],
+        "initialization": "uniform",
+        "constraints": ["column_stochastic"],
+    }
+    config["matrices"]["B_matrix"]["shape"] = [2, 2, 4]
+    config["matrices"]["C_matrix"]["shape"] = [3]
+    config["matrices"]["C_matrix"]["initialization_params"]["preferences"] = [0.0, 1.0, 2.0]
+    config["matrices"]["E_matrix"]["shape"] = [4]
+    model = SimplePOMDP(config)
+    model.run(2, actions=[2, 3])
+    saved = model.save_state(tmp_path / "state.yaml")
+    payload = yaml.safe_load(saved.read_text(encoding="utf-8"))
+    payload["current_state"] = 1.0
+    payload["time_step"] = 2.0
+    payload["beliefs"] = [2.0, 3.0]
+    payload["history"]["states"] = [0.0, 1.0]
+    payload["history"]["observations"] = [1.0, 2.0]
+    payload["history"]["actions"] = [2.0, 3.0]
+    payload["history"]["beliefs"][0] = [1e-200, 3e-200]
+    saved.write_text(yaml.safe_dump(payload), encoding="utf-8")
+    model.load_state(saved)
+    assert model.state.current_state == 1 and model.state.time_step == 2
+    assert model.state.beliefs == pytest.approx([0.4, 0.6])
+    assert model.state.history["beliefs"][0] == pytest.approx([0.25, 0.75])
+    assert model.state.history["observations"] == [1, 2]
+    assert model.state.history["actions"] == [2, 3]
+    assert np.asarray(model.state.history["efe_total"]).shape == (2, 4)
+    assert np.asarray(model.state.history["efe_epistemic"]).shape == (2, 4)
+    assert np.asarray(model.state.history["efe_pragmatic"]).shape == (2, 4)
+
+    for key, out_of_range in (("states", 2), ("observations", 3), ("actions", 4)):
+        model.save_state(saved)
+        original = saved.read_text(encoding="utf-8")
+        original_state = model.state
+        payload = yaml.safe_load(original)
+        payload["history"][key][0] = out_of_range
+        saved.write_text(yaml.safe_dump(payload), encoding="utf-8")
+        with pytest.raises(ValueError):
+            model.load_state(saved)
+        assert model.state is original_state
+        model.save_state(saved)
+        assert saved.read_text(encoding="utf-8") == original
 
 
 def _docs_tree(root: Path) -> None:

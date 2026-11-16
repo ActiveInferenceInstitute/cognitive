@@ -14,6 +14,10 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ### Added
 
+- A genuine November 16 OKN join capture and separate assertion-path explanation
+  bound to the current knowledge-base export. CI replays this capture; all historical
+  captures and explanations remain unchanged. External labels do not validate science.
+
 - Shared locked root gates through `./run.sh`, with a narrower core-model default
   test arm and explicit full-suite coverage, documentation, GNN, and manuscript arms.
 - A deterministic generated flat documentation index, separate from the curated hub.
@@ -33,6 +37,8 @@ a computed result are marked **behaviour change** and say what moved and why.
 
 ### Changed
 
+- Run quality as one Python 3.12 job named `tests`, without a redundant one-cell
+  matrix, to match the required branch-rule context. Commands and thresholds are unchanged.
 - Consolidated CI project checks in `tests` while retaining the independent
   `gnn-conformance` job and its `gnn conformance (pinned)` display name.
   Hosted Actions execution remains blocked by the organization's billing lock;
@@ -44,6 +50,18 @@ a computed result are marked **behaviour change** and say what moved and why.
   Supply `generative_model` and declared configuration fields; unknown fields are errors.
 
 ### Fixed
+
+- Align saved-state and simulation-test call layout with the locked formatter;
+  computations and validation semantics are unchanged.
+
+- **Behaviour change:** apply the default action prior once across all discrete
+  inference methods and preserve exact zero support during sampling belief updates.
+- Validate SimplePOMDP learning rates at construction and complete saved states
+  before replacing live state.
+- Return status 2 for expected benchmark CLI failures while retaining computed
+  stdout measurements when optional file output fails.
+- Correct RDF identifier-alignment and executable-Things guidance without
+  promoting unreviewed identifiers or documentation-only designs.
 
 - Extensionless wiki links prefer their Markdown page over a same-named directory
   index when both spellings match. Exact paths win over case-folded matches, and

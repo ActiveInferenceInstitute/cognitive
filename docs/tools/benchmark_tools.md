@@ -16,15 +16,27 @@ semantic_relations:
 
 # Benchmark tools
 
-The repository benchmark suite is run through the installed `cognitive-benchmark`
-entry point (backed by `cognitive.benchmarks`, `code/tools/src/benchmarks.py`):
+Both CLI entry points run the same benchmark implementation:
 
 ```bash
+cognitive benchmark --repetitions 1
 cognitive-benchmark --repetitions 1
 ```
 
-Options: `--repetitions N` (default 10, must be at least 1) and `--output PATH`,
+They are also available as `python -m cognitive benchmark` and
+`python -m cognitive.benchmarks`.
+
+Options: `--repetitions N` (default 10, at least 1) and `--output PATH`,
 which writes the JSON report to a file as well as stdout.
+
+Successful execution returns status 0. Expected execution or output errors
+return status 2 with a concise `error:` diagnostic on stderr, without a
+traceback. Computed measurements are printed before optional file output;
+if that file write fails, the JSON measurements remain on stdout and the
+command still returns status 2.
+
+The library function `cognitive.benchmarks.run_benchmarks` continues to raise
+exceptions for callers to handle.
 
 The runner measures four runtime micro-benchmarks and nothing else; it does not
 time visualization, link checking, or any knowledge-base tooling:

@@ -46,7 +46,7 @@ flowchart LR
 | [`registry_entry.md`](registry_entry.md) | The registry entry file to submit, and the upload steps. |
 | [`submission_criteria.md`](submission_criteria.md) | Jim Balhoff's supplied requirements, evidence, and acceptance boundaries. |
 | [`interoperability.md`](interoperability.md) | Existing identifier mappings, local query examples, and mapping review rules. |
-| [`evidence/2026-10-23-entity-model/join-results.md`](evidence/2026-10-23-entity-model/join-results.md) | Current join/replay evidence for separate documents and concepts; earlier captures remain preserved separately. |
+| [`evidence/2026-11-16-current-corpus/join-results.md`](evidence/2026-11-16-current-corpus/join-results.md) | Current join/replay evidence for separate documents and concepts; earlier captures remain preserved separately. |
 | [`landing_zone.md`](landing_zone.md) | Review package, access-request draft, and upload/processing acceptance steps. |
 
 ## Generate the graph

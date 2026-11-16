@@ -2,21 +2,21 @@
 title: Inspecting captured cross-graph assertion paths
 type: reference
 status: stable
-updated: 2026-10-23
+updated: 2026-11-16
 ---
 
 # Inspecting captured cross-graph assertion paths
 
-The [captured result](evidence/2026-10-23-entity-model/join-results.md) connects a
+The [captured result](evidence/2026-11-16-current-corpus/join-results.md) connects a
 document, its topic, a reviewed Wikidata mapping and returned external ontology
 mapping/label assertions. The optional `daf-okn explain-join` workflow makes the supporting
 predicates, review records and raw response locations inspectable for each path.
 It produces a separately versioned report beside the capture.
 
 The current offline example includes the complete
-[support report](explanations/2026-10-23-entity-model/join-support.md),
-[machine-readable evidence](explanations/2026-10-23-entity-model/join-support.json)
-and [support manifest](explanations/2026-10-23-entity-model/support-manifest.json).
+[support report](explanations/2026-11-16-current-corpus/join-support.md),
+[machine-readable evidence](explanations/2026-11-16-current-corpus/join-support.json)
+and [support manifest](explanations/2026-11-16-current-corpus/support-manifest.json).
 Continuous integration recomputes and checks these bytes using the pinned methods
 revision and RDFLib version in the workflow below.
 
@@ -29,11 +29,11 @@ first, then explain the existing capture offline:
 uv run --extra dev python -m scripts.export_rdf
 daf-okn explain-join --source output/okn/cognitive-kb.nq \
   --query docs/okn/queries/cross_graph_obo.rq \
-  --capture docs/okn/evidence/2026-10-23-entity-model \
+  --capture docs/okn/evidence/2026-11-16-current-corpus \
   --output output/okn-join-support
 daf-okn explain-join --source output/okn/cognitive-kb.nq \
   --query docs/okn/queries/cross_graph_obo.rq \
-  --capture docs/okn/evidence/2026-10-23-entity-model \
+  --capture docs/okn/evidence/2026-11-16-current-corpus \
   --output output/okn-join-support --check
 ```
 

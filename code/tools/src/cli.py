@@ -351,22 +351,22 @@ def _episode_command(args: argparse.Namespace) -> int:
 
 def main(argv: Sequence[str] | None = None) -> int:
     arguments = list(sys.argv[1:] if argv is None else argv)
-    if arguments[:1] == ["benchmark"]:
-        from .benchmarks import main as benchmark_main
-
-        return benchmark_main(arguments[1:])
-    args = build_parser().parse_args(arguments)
-    handlers = {
-        "settings": _settings_command,
-        "simulate": _simulate_command,
-        "sweep": _sweep_command,
-        "plot": _plot_command,
-        "continuous": _episode_command,
-        "hierarchical": _episode_command,
-    }
     try:
+        if arguments[:1] == ["benchmark"]:
+            from .benchmarks import main as benchmark_main
+
+            return benchmark_main(arguments[1:])
+        args = build_parser().parse_args(arguments)
+        handlers = {
+            "settings": _settings_command,
+            "simulate": _simulate_command,
+            "sweep": _sweep_command,
+            "plot": _plot_command,
+            "continuous": _episode_command,
+            "hierarchical": _episode_command,
+        }
         return handlers[args.command](args)
-    except (ValueError, FileNotFoundError, OSError) as error:
+    except (ValueError, OSError) as error:
         print(f"error: {error}", file=sys.stderr)
         return 2
 

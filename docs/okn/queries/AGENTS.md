@@ -10,7 +10,7 @@ updated: 2026-11-03
 - Name a graph or predicate only if the export emits it; read
   `code/scripts/export_rdf.py` before changing a query.
 - `cross_graph_obo.rq` is bound to the capture in
-  `docs/okn/evidence/2026-10-23-entity-model` and to the explanation. Changing it
+  `docs/okn/evidence/2026-11-16-current-corpus` and to the explanation. Changing it
   means capturing new evidence, not editing the old capture.
 - Run `python -m scripts.export_rdf --check-submission` after a query change that
   touches submission evidence.

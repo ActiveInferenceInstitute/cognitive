@@ -14,5 +14,5 @@ updated: 2026-11-03
 - New console entry points belong in the `tests` job's wheel smoke loop as well as in
   `pyproject.toml`.
 - Keep the `tests` job's replay capture path in step with
-  `docs/okn/evidence/2026-10-23-entity-model`.
+  `docs/okn/evidence/2026-11-16-current-corpus`.
 - Parent rules: [../../AGENTS.md](../../AGENTS.md).

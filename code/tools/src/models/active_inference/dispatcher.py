@@ -123,7 +123,7 @@ class ActiveInferenceDispatcher:
         state: ModelState,
         goal_prior: np.ndarray | None = None,
     ) -> np.ndarray:
-        """Return the inferred distribution over the first action of each policy."""
+        """Infer first-action probabilities using ``goal_prior`` or, by default, ``E``."""
         update_fn = {
             InferenceMethod.VARIATIONAL: self._variational_policy_inference,
             InferenceMethod.SAMPLING: self._sampling_policy_inference,
@@ -151,14 +151,23 @@ class ActiveInferenceDispatcher:
         self, observation: int | np.ndarray, state: ModelState
     ) -> np.ndarray:
         posterior = self.model.posterior(observation, state.beliefs)
+        support = posterior > 0.0
+        if np.count_nonzero(support) == 1:
+            return posterior
         concentration = max(float(self.config.num_samples), 2.0)
-        particles = self._rng.dirichlet(posterior * concentration, size=self.config.num_samples)
-        return self._normalize(np.mean(particles, axis=0), self.model.num_states)
+        particles = self._rng.dirichlet(
+            posterior[support] * concentration, size=self.config.num_samples
+        )
+        beliefs = np.zeros_like(posterior)
+        beliefs[support] = np.mean(particles, axis=0)
+        return self._normalize(beliefs, self.model.num_states)
 
     def _variational_policy_inference(
         self, state: ModelState, goal_prior: np.ndarray | None
     ) -> np.ndarray:
-        energies = self.calculate_expected_free_energy(state, goal_prior)
+        energies = self.calculate_expected_free_energy(
+            state, self.model.E if goal_prior is None else goal_prior
+        )
         return self._softmax(-energies / self.config.temperature)
 
     def _mean_field_policy_inference(
@@ -176,8 +185,7 @@ class ActiveInferenceDispatcher:
     def _sampling_policy_inference(
         self, state: ModelState, goal_prior: np.ndarray | None
     ) -> np.ndarray:
-        energies = self.calculate_expected_free_energy(state, goal_prior)
-        target = self._softmax(-energies / self.config.temperature)
+        target = self._variational_policy_inference(state, goal_prior)
         samples = self._rng.choice(
             self.model.num_actions,
             size=self.config.num_samples,
