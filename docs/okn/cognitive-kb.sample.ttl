@@ -94,7 +94,7 @@ kg:dataset
     dcterms:creator <https://activeinference.institute/> ;
     dcterms:description "Concept pages on Active Inference and the sciences around it, linked by typed and untyped relations, with citation records and navigation pages."@en ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-10-12"^^xsd:date ;
+    dcterms:modified "2026-11-15"^^xsd:date ;
     dcterms:publisher <https://activeinference.institute/> ;
     dcterms:source <https://github.com/ActiveInferenceInstitute/cognitive> ;
     dcterms:title "Cognitive Active Inference knowledge base"@en ;
