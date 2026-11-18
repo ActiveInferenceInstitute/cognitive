@@ -21,31 +21,23 @@ adds the setup and verification details needed for a fresh checkout.
 
 ## Prerequisites
 
-- Python 3.10 or newer (the floor declared in `pyproject.toml`).
-- A virtual environment is recommended.
-- A LaTeX/XeLaTeX installation is optional and is only required for a PDF
-  manuscript build.
+- The package requires Python 3.11 or newer. Development gates use Python 3.12
+  and the dependencies in `uv.lock`.
+- Install `uv` and use a shell with Bash to run the development gates.
+- Manuscript HTML rendering needs Pandoc and pandoc-crossref. PDF rendering also
+  needs XeLaTeX.
 
 ## Install
 
-From the repository root:
+From the repository root, prepare the locked development environment and check
+that the command is available.
 
 ```bash
-python -m venv .venv
-.venv/bin/python -m pip install -e ".[dev]"
+uv run --locked --extra dev --python 3.12 cognitive --help
 ```
 
-On Windows, use `.venv\Scripts\python` instead of `.venv/bin/python`.
-
-The editable install provides the `cognitive`, `Things`, and `scripts` packages
-and these console commands:
-
-```bash
-cognitive-create-node --help
-cognitive-verify-links . --json
-cognitive-validate-docs . --json
-cognitive-benchmark --repetitions 1
-```
+The environment includes the `cognitive`, `Things`, and `scripts` packages.
+See the [[docs/tools/README|tools guide]] for the knowledge-base authoring commands.
 
 ## Run a discrete model
 
@@ -59,35 +51,29 @@ runtime API. For implementation behavior, use the package source and tests.
 
 ## Verify the checkout
 
-Run the same checks used by the repository's quality workflow:
+Run the core-model tests and documentation checks from the repository root.
 
 ```bash
-python -m pytest -q
-ruff check .
-mypy code/tools/src code/Things code/scripts
-python -m compileall -q code
-python code/scripts/validate_docs.py --json
-python code/scripts/verify_links.py . --json
+./run.sh test
+./run.sh docs
 ```
 
-The documentation validator checks YAML frontmatter, Python fenced examples,
-public exports, manuscript references, and explicit wiki links. Unresolved
-extensionless wiki targets may be intentional concept links; use
-`--strict-wiki-links` when auditing those targets as files.
+Use `./run.sh test-full` for the full suite and its branch coverage threshold.
+The docs arm checks frontmatter, internal links, generated catalogs, manuscript
+references, and OKN export quality and freshness. The
+[[docs/development/README|development guide]] lists the additional gate arms
+and the prerequisites for each.
 
 ## Build the manuscript
 
-After installation:
-
 ```bash
-cognitive-build-manuscript --output build/manuscript
+./run.sh manuscript
 ```
 
-Use `--no-pdf` if XeLaTeX is unavailable. The build writes HTML, figures,
-provenance manifests, and (when enabled) PDF output to the requested directory;
-these generated files are ignored by Git. See
-[`docs/manuscript/README.md`](../../docs/manuscript/README.md) for the source
-section map and build contract.
+This runs the no-render pipeline and builds HTML under `build/manuscript`.
+Use `./run.sh manuscript --pdf` when XeLaTeX is available. See the
+[[docs/manuscript/README|manuscript guide]] for the renderer setup, output
+locations, and a no-render-only command.
 
 ## Where to go next
 

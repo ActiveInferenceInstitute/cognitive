@@ -1,18 +1,19 @@
 ---
 title: OKN registry entry for cognitive-kb
-description: The registry entry file to submit for cognitive-kb, and the steps from export to a listed graph.
+description: The accepted cognitive-kb registry entry, its proposed update, and the handoff to lakeFS.
 type: guide
 status: stable
-updated: 2026-10-12
+updated: 2026-11-17
 ---
 
 # Registry entry for cognitive-kb
 
-The FRINK registry takes a graph as a pull request that adds one Markdown file to
-`docs/registry/kgs/` of [`frink-okn/okn-registry`](https://github.com/frink-okn/okn-registry),
-following its [contribution guide](https://registry.okn.us/registry/contribute/). Save the
-block below as `docs/registry/kgs/cognitive-kb.md`. It was submitted as
-[pull request 535](https://github.com/frink-okn/okn-registry/pull/535).
+The initial FRINK registry entry for `cognitive-kb` was accepted through
+[pull request 535](https://github.com/frink-okn/okn-registry/pull/535), merged
+November 3, 2026. The block below is the proposed update for the current
+document and topic concept model. Submit it as an update to
+`docs/registry/kgs/cognitive-kb.md` through the
+[registry contribution workflow](https://registry.okn.us/registry/contribute/).
 
 The `sparql` and `tpf` fields are left out on purpose. The registry asks contributors to omit
 them until the graph has been uploaded and converted, and RENCI adds them once the graph's own
@@ -55,14 +56,13 @@ and their literature across Active Inference, cognitive science, mathematics and
 biology. SKOS correspondences apply to concept meanings and do not assert OWL
 identity or clinical equivalence. No external grant funding is claimed.
 
-A cross-graph query follows the existing Wikidata mappings through the OKN
-identifier-mappings graph to labeled OBO identifiers in Ubergraph. Captured live
-responses, the query and replayable join evidence are in the source repository's
-`docs/okn/evidence/2026-10-20-graph-methods/`. Those historical receipts predate
-the document/topic migration and require a fresh capture for the current export.
-They demonstrate identifier-based discovery;
-it does not add equivalence assertions. The reusable
-capture and submission methods are maintained in `docxology/daf-okn`.
+A cross-graph query follows reviewed Wikidata mappings through the OKN
+identifier-mappings graph to labeled OBO identifiers in Ubergraph. The query,
+captured responses and replayable join evidence for the current corpus are in
+[`docs/okn/evidence/2026-11-16-current-corpus`](https://github.com/ActiveInferenceInstitute/cognitive/tree/main/docs/okn/evidence/2026-11-16-current-corpus).
+The join demonstrates identifier-based discovery while preserving the stated
+mapping predicates. The reusable capture and submission methods are maintained
+in `docxology/daf-okn`.
 
 Entity IRIs are under `https://purl.org/okn/frink/kg/cognitive-kb/`; the named graph is
 `https://purl.org/okn/frink/kg/cognitive-kb`. A prose description, vocabulary mapping, sample
@@ -72,11 +72,9 @@ The exporter, `code/scripts/export_rdf.py`, is in the same repository.
 
 ## Steps
 
-1. `uv run --extra dev python -m scripts.export_rdf --check-submission` checks machine criteria.
-2. `uv run --extra dev python -m scripts.export_rdf` writes `output/okn/cognitive-kb.nq`,
-   `cognitive-kb.ttl` and `manifest.json`. Review [submission criteria](submission_criteria.md).
-3. Update the registry entry through its contribution workflow using the block above.
-4. When it is accepted, upload `cognitive-kb.nq` to the `cognitive-kb` lakeFS repository as the
-   registry's [setup guide](https://registry.okn.us/help/setup/) describes.
-5. Verify processing with RENCI; RENCI adds the `sparql` and `tpf` fields when
-   the endpoints are up. Keep the source revision and manifest with the upload receipt.
+1. Follow the [landing-zone handoff](landing_zone.md) to prepare, stage and
+   verify the current graph against the [submission criteria](submission_criteria.md).
+2. Submit the updated description and current query examples through the
+   registry contribution workflow.
+3. Verify processing with RENCI. RENCI adds the `sparql` and `tpf` fields when
+   the endpoints are up. Keep the source revision and manifest with the lakeFS receipt.

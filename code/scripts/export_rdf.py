@@ -383,13 +383,13 @@ def _title(frontmatter: dict[str, Any], node_id: str) -> str:
 
 
 def _describe_page(
-    graph: Graph, node_id: str, path: Path, frontmatter: dict[str, Any], report: Report
+    graph: Graph, node_id: str, relative_path: Path, frontmatter: dict[str, Any], report: Report
 ) -> None:
     subject = iri(page_iri(node_id))
     title = _title(frontmatter, node_id)
     page_type = str(frontmatter.get("type") or "").strip()
-    navigation = _is_navigation(path) or page_type in {"index", "catalog", "agents"}
-    topic = iri(concept_iri(node_id)) if _has_topic(path, frontmatter) else None
+    navigation = _is_navigation(relative_path) or page_type in {"index", "catalog", "agents"}
+    topic = iri(concept_iri(node_id)) if _has_topic(relative_path, frontmatter) else None
 
     graph.add(subject, iri(RDF_TYPE), iri(PREFIXES["schema"] + "CreativeWork"))
     if navigation:
@@ -453,7 +453,7 @@ def _describe_page(
     if page_type:
         graph.add(subject, iri(VOCAB + "pageType"), literal(page_type))
         report.page_types[page_type] += 1
-    source = f"{SOURCE_REPOSITORY}/blob/main/{KB_NAME}/{node_id}.md"
+    source = f"{SOURCE_REPOSITORY}/blob/main/{KB_NAME}/{relative_path.as_posix()}"
     graph.add(subject, iri(PREFIXES["dcterms"] + "source"), iri(quote(source, safe=":/-_.~")))
     if frontmatter.get("license"):
         graph.add(subject, iri(PREFIXES["dcterms"] + "license"), iri(str(frontmatter["license"])))
@@ -754,12 +754,22 @@ def build_graph(repo_root: Path) -> tuple[Graph, Report]:
     for path in _markdown_paths(kb_root):
         _require_regular_source(path, root)
         node_id = path.relative_to(kb_root).with_suffix("").as_posix()
+        if node_id in records:
+            previous_path = records[node_id][0].relative_to(root)
+            raise ValueError(
+                f"duplicate page identifier {node_id!r}: "
+                f"{previous_path} and {path.relative_to(root)}"
+            )
         frontmatter, body = _split(path.read_text(encoding="utf-8"))
         records[node_id] = path, frontmatter, body
-    topics = {node_id for node_id, (path, fm, _) in records.items() if _has_topic(path, fm)}
+    topics = {
+        node_id
+        for node_id, (path, fm, _) in records.items()
+        if _has_topic(path.relative_to(kb_root), fm)
+    }
     for node_id, (path, frontmatter, body) in records.items():
         report.pages += 1
-        _describe_page(graph, node_id, path, frontmatter, report)
+        _describe_page(graph, node_id, path.relative_to(kb_root), frontmatter, report)
         for key in ("updated", "modified"):
             if frontmatter.get(key) is not None:
                 updated_dates.append(date_text(frontmatter[key]))

@@ -46,10 +46,10 @@ It provides narrower feedback, not equivalent full-suite coverage or workload.
 explicit through `./run.sh gnn --provision`, which permits network access.
 
 The complete contract, prerequisites, independent benchmark and mutation
-commands, and consolidated CI job descriptions are in
-`docs/development/README.md`. Hosted Actions execution is currently blocked
-by the organization's billing lock; do not describe configuration or local
-evidence as a hosted pass. Measured values belong only in the generated
+commands, and optional hosted job descriptions are in
+`docs/development/README.md`. Follow the
+[[docs/development/contribution_guide#Publish the local gate result|local merge gate]]
+for the required `tests` status. Measured values belong only in the generated
 `gate-measurements.md` and its source `gate-measurements.json`.
 
 ## Conventions

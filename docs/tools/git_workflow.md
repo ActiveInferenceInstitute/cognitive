@@ -50,7 +50,8 @@ mathematical contract updates the executable manuscript.
 
 ## What gates a push
 
-The `quality` workflow (`.github/workflows/quality.yml`) runs on every push and
-pull request. See [[docs/tools/ci_tools|CI tools]] for its jobs. Because
-`validate_docs.py` reads `git ls-files`, stage new documentation before running
-it locally.
+The required `tests` status comes from the
+[[docs/development/contribution_guide#Publish the local gate result|verified local gate]].
+The hosted `quality` workflow runs on manual dispatch. See
+[[docs/tools/ci_tools|CI tools]] for its jobs. Stage new documentation before
+checking it locally because `validate_docs.py` reads `git ls-files`.

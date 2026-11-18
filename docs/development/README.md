@@ -149,11 +149,12 @@ captured OKN replay uses the optional `replay` extra, including pinned
 
 Use temporary directories for figures, animations, benchmark JSON, and
 manuscript renders. The [quality workflow](../../.github/workflows/quality.yml)
-defines a consolidated `tests` job and an independent `gnn-conformance` job
-(display name `gnn conformance (pinned)`). Both use the locked project environment
+is manually dispatched. It defines `Hosted quality (optional)` under the `tests`
+job key and an independent `gnn-conformance` job with display name
+`gnn conformance (pinned)`. Both use the locked project environment
 and the shared setup action; the parser keeps its separate interpreter.
 See [CI tools](../tools/ci_tools.md) for the job contract.
 
-Hosted Actions execution is currently blocked by the organization's billing
-lock. Workflow configuration and local measurements are not evidence of a
-successful hosted run.
+The [contribution guide](contribution_guide.md#publish-the-local-gate-result)
+describes how exact-commit local results satisfy the required `tests` status.
+Hosted job results are informational.

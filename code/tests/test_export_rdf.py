@@ -633,7 +633,29 @@ def test_markdown_case_matching_agrees_with_link_resolution_and_manifest(tmp_pat
         rdf.iri(DCT + "title"),
         rdf.literal("Upper", lang="en"),
     ) in graph.triples
+    assert _has(
+        graph,
+        rdf.page_iri("math/UPPER"),
+        DCT + "source",
+        rdf.iri(f"{rdf.SOURCE_REPOSITORY}/blob/main/knowledge_base/math/UPPER.MD"),
+    )
     assert "knowledge_base/math/UPPER.MD" in rdf._source_hashes(root)
+
+
+def test_export_rejects_distinct_markdown_files_with_the_same_page_identifier(tmp_path):
+    root = _vault(tmp_path)
+    case_variant = root / "knowledge_base/math/entropy.MD"
+    if case_variant.exists():
+        pytest.skip("test filesystem cannot represent both Markdown suffix case variants")
+    _page(
+        case_variant, {"title": "Distinct file with a colliding page identifier", "type": "concept"}
+    )
+
+    with pytest.raises(ValueError, match="duplicate page identifier 'math/entropy'") as failure:
+        rdf.main([str(root)])
+    assert "entropy.md" in str(failure.value)
+    assert "entropy.MD" in str(failure.value)
+    assert not (root / "output/okn").exists()
 
 
 @pytest.mark.parametrize("mode", ["--quality-report", "--check-submission"])

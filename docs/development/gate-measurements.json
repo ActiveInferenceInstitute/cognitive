@@ -1,25 +1,25 @@
 {
   "schema": "cognitive-gate-measurements/v1",
-  "baseline_revision": "b3890b0a881329a4fa89ebe97772346218cb810c",
-  "host": "Darwin 27.0.0 arm64",
+  "baseline_revision": "b903407a7bdf2600a53bd6007a3be04c4697b998",
+  "host": "Darwin 27.2.0 arm64",
   "python": "3.12.16",
   "sources": {
     "run.sh": "9574a332a10bbc56bcb47a0b679d895ff85012bb76d77c2c97d4b9462d57d054",
     "pyproject.toml": "e7757fbeeb057c06ce23a4435f075faa9db86b7feae04818312d2a5a9ee7ae3a",
     "uv.lock": "2b65824617be2d4cd25227c25268596135be81618962a1e277dfa33b353f3b78",
-    ".github/workflows/quality.yml": "aef8971e5b52cb2cd35e2716b33db160196087758c646ca17ad29859c0ca4ef6",
+    ".github/workflows/quality.yml": "fb28628afd00687c27b723a20af7e92d514b897240c915c578bdd27242e053f8",
     "code/scripts/gate.py": "a8e3c6dadbae3e4497c528cf66775affccd30a7481ffeddb28ef0c0614b98996",
     "code/scripts/docs_index.py": "f3fc3d602fabeb6a77c9cd8998a54c23ae8a770d87e1f6e026fbdec00bd19f02",
-    "code/scripts/gate_evidence.py": "d21c810b41e023ea6c02e78d0333e0ad0ca7db5ad580c78a54090974bff341aa",
+    "code/scripts/gate_evidence.py": "40d84d38fd53926b7e97544bb778c15ed83896223a145652f575aec506c83e66",
     "code/scripts/build_manuscript.py": "3c087e103fc1e8ea8f5a402a2337b9d0c647705d4f6cddaa441d1e90c56262b3",
     "code/scripts/validate_gnn_spec.py": "5b7144fc49c3417b6139651d4e3ab52dc28acd2da5a08dfa3317e97def0ecb11",
     "code/scripts/verify_links.py": "8697b980bbf23ef0d28e0fd4a1085c658a877faafe2775861a79c678151ddfe8",
-    "code/scripts/export_rdf.py": "1ebac6108516ead4e23120cd57c51392b5dbf2153a594c285413032a55019411",
+    "code/scripts/export_rdf.py": "4abded14a9a39c7fe055c5f496623c482bc38e0f6932629ccd6c148f5e4168d7",
     "code/scripts/mutation_check.py": "0f94b920f54069294d48dd4643a9efb27832a941ab41215b6838de4b1ebce2a1"
   },
   "before": {
     "lint": {
-      "seconds": 0.281,
+      "seconds": 0.23,
       "exit_code": 0,
       "commands": [
         [
@@ -47,7 +47,7 @@
       ]
     },
     "types": {
-      "seconds": 0.239,
+      "seconds": 0.297,
       "exit_code": 0,
       "commands": [
         [
@@ -61,7 +61,7 @@
       ]
     },
     "test": {
-      "seconds": 3.984,
+      "seconds": 60.756,
       "exit_code": 0,
       "commands": [
         [
@@ -77,105 +77,12 @@
           "code/tests/test_math_oracles.py"
         ]
       ],
-      "passed": 76
-    },
-    "test-full": {
-      "seconds": 523.657,
-      "exit_code": 1,
-      "commands": [
-        [
-          "python",
-          "-m",
-          "pytest",
-          "-q",
-          "-p",
-          "pytest_cov",
-          "--cov"
-        ]
-      ],
-      "passed": 1223,
-      "coverage_percent": 96.32
-    },
-    "docs": {
-      "seconds": 31.301,
-      "exit_code": 1,
-      "commands": [
-        [
-          "python",
-          "code/scripts/validate_docs.py",
-          "--json"
-        ],
-        [
-          "python",
-          "-m",
-          "scripts.export_rdf",
-          "--check-submission"
-        ],
-        [
-          "python",
-          "-m",
-          "scripts.export_rdf",
-          "--quality-report"
-        ],
-        [
-          "python",
-          "-m",
-          "scripts.semantic_review",
-          "--root",
-          ".",
-          "--output",
-          "docs/okn",
-          "--check"
-        ]
-      ]
-    },
-    "gnn": {
-      "seconds": 10.277,
-      "exit_code": 0,
-      "commands": [
-        [
-          "python",
-          "-m",
-          "scripts.validate_gnn_spec",
-          "--gnn-runtime",
-          "./output/estate/gnn-runtime/bin/python",
-          "--json"
-        ],
-        [
-          "python",
-          "-m",
-          "pytest",
-          "-q",
-          "code/tests/test_gnn_conformance.py"
-        ]
-      ]
-    },
-    "manuscript": {
-      "seconds": 5.048,
-      "exit_code": 0,
-      "commands": [
-        [
-          "python",
-          "-m",
-          "scripts.build_manuscript",
-          "--no-render",
-          "--output",
-          "output/estate/before-no-render"
-        ],
-        [
-          "python",
-          "-m",
-          "scripts.build_manuscript",
-          "--no-pdf",
-          "--output",
-          "output/estate/before-manuscript"
-        ]
-      ]
+      "passed": 98
     }
   },
   "after": {
     "lint": {
-      "seconds": 0.294,
+      "seconds": 0.276,
       "exit_code": 0,
       "commands": [
         [
@@ -203,7 +110,7 @@
       ]
     },
     "types": {
-      "seconds": 0.29,
+      "seconds": 0.315,
       "exit_code": 0,
       "commands": [
         [
@@ -217,7 +124,7 @@
       ]
     },
     "test": {
-      "seconds": 3.342,
+      "seconds": 7.631,
       "exit_code": 0,
       "commands": [
         [
@@ -233,115 +140,10 @@
           "code/tests/test_math_oracles.py"
         ]
       ],
-      "passed": 76
-    },
-    "docs": {
-      "seconds": 56.922,
-      "exit_code": 0,
-      "commands": [
-        [
-          "python",
-          "code/scripts/docs_index.py",
-          "--check"
-        ],
-        [
-          "python",
-          "code/scripts/gate_evidence.py",
-          "--check"
-        ],
-        [
-          "python",
-          "code/scripts/validate_docs.py",
-          "--json"
-        ],
-        [
-          "python",
-          "-m",
-          "scripts.export_rdf",
-          "--check-submission"
-        ],
-        [
-          "python",
-          "-m",
-          "scripts.export_rdf",
-          "--quality-report"
-        ],
-        [
-          "python",
-          "-m",
-          "scripts.semantic_review",
-          "--root",
-          ".",
-          "--output",
-          "docs/okn",
-          "--check"
-        ]
-      ]
-    },
-    "gnn": {
-      "seconds": 8.104,
-      "exit_code": 0,
-      "commands": [
-        [
-          "python",
-          "-m",
-          "scripts.validate_gnn_spec",
-          "--gnn-runtime",
-          "./output/estate/gnn-runtime/bin/python",
-          "--json"
-        ],
-        [
-          "python",
-          "-m",
-          "pytest",
-          "-q",
-          "code/tests/test_gnn_conformance.py"
-        ]
-      ]
-    },
-    "manuscript": {
-      "seconds": 3.95,
-      "exit_code": 0,
-      "commands": [
-        [
-          "python",
-          "-m",
-          "scripts.build_manuscript",
-          "--no-render",
-          "--output",
-          "./output/estate/after-manuscript-source"
-        ],
-        [
-          "python",
-          "-m",
-          "scripts.build_manuscript",
-          "--output",
-          "./output/estate/after-manuscript",
-          "--no-pdf"
-        ]
-      ]
-    },
-    "test-full": {
-      "seconds": 733.052,
-      "exit_code": 0,
-      "commands": [
-        [
-          "python",
-          "-m",
-          "pytest",
-          "-q",
-          "-p",
-          "pytest_cov",
-          "--cov"
-        ]
-      ],
-      "passed": 1267,
-      "coverage_percent": 95.91
+      "passed": 98
     }
   },
   "notes": [
-    "Before test-full and docs failed on the case-insensitive AGENTS/agents navigation collision. Their durations are failed observations, not successful-work speedup evidence.",
-    "These are historical measurements preserved without changed timings, exits, counts or coverage from [the prior measurement record](https://github.com/ActiveInferenceInstitute/cognitive/blob/33839c83d48ba024d4e0219c866a9986af35092c/docs/development/gate-measurements.json). The November 16 refresh updates the current gate-definition binding after the workflow capture paths changed and the redundant one-cell matrix became an equivalent single Python 3.12 job named tests; it is not a new measurement or a performance claim for the expanded corpus. The historical workflow SHA-256 is ff8810077adafda7036534c55693ed594ae87836ce2e72abfd01db7e3fa7df73.",
-    "The dependency refresh retains the historical measurements above while binding the lockfile for coverage 7.17.2 and Ruff 0.17.4. It does not measure the updated dependencies or establish a new performance claim. The historical lockfile SHA-256 is 2ce44cc07e0ebb51f7ba360be886af4e04db8a10d9c9461671aa34cdf4540ff7."
+    "Both phases measure lint, type checking, and the focused core tests. Full-suite and documentation validation are recorded separately."
   ]
 }

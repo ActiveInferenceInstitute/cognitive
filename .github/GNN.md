@@ -31,5 +31,5 @@ is not a pass. See [Model specification](../docs/gnn.md).
 The job uses
 `ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448`
 and `uv.lock` for the project environment; the parser interpreter is separate.
-Hosted Actions execution is currently blocked by the organization's billing
-lock, so the configured job is not evidence of hosted success.
+The hosted job is available through manual dispatch of the optional `quality`
+workflow. Use the local pinned conformance gate for the merge review.
