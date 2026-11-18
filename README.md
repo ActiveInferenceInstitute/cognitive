@@ -30,9 +30,8 @@ offline documentation gates do not need network access. Manuscript HTML needs
 Pandoc and pandoc-crossref; PDF also needs XeLaTeX. The no-render pipeline
 skips those renderers. The GNN conformance job needs the upstream parser pinned in
 [`specs/gnn-pin.json`](specs/gnn-pin.json), and the OKN replay job needs the
-captured cross-graph evidence in `docs/okn/evidence/`. Hosted Actions execution
-is currently blocked by the organization's billing lock; configured checks are
-not evidence of hosted success. The core package, the
+captured cross-graph evidence in `docs/okn/evidence/`. The hosted quality
+workflow is optional. The core package, the
 knowledge base and the documentation gate need no credentials and no private
 checkout.
 
@@ -388,13 +387,14 @@ manuscript references, documentation-index and gate-evidence freshness, and OKN
 submission, quality, and semantic-review checks.
 
 CI ([`quality.yml`](.github/workflows/quality.yml), described in
-[CI tools](docs/tools/ci_tools.md)) defines a consolidated `tests` job for core
-gates, manuscript HTML, benchmarks, captured OKN replay, mutation qualification,
+[CI tools](docs/tools/ci_tools.md)) is manually dispatched. Its
+`Hosted quality (optional)` job runs core gates, manuscript HTML, benchmarks,
+captured OKN replay, mutation qualification,
 and package checks. The independent `gnn-conformance` job keeps its display name
 `gnn conformance (pinned)` and separate parser interpreter. Both use
 `ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448`
-and the lockfile. Hosted execution is currently blocked by the organization's
-billing lock; this is the configured contract, not a hosted-success claim.
+and the lockfile. The required `tests` status comes from the
+[local merge gate](docs/development/contribution_guide.md#publish-the-local-gate-result).
 
 Tests write artifacts to temporary directories. Local measurement provenance
 and results belong in the generated

@@ -159,6 +159,6 @@ so failed provisioning cannot silently skip the parser.
 
 Only `specs/discrete_variational.gnn.md` is parsed; the job does not discover
 other declarations. See [the GNN CI pointer](../.github/GNN.md) for scope and
-[CI tools](tools/ci_tools.md) for the consolidated `tests` job. Hosted Actions
-execution is currently blocked by the organization's billing lock; the job
-contract does not assert hosted success.
+[CI tools](tools/ci_tools.md) for the optional hosted quality workflow.
+The hosted workflow runs on manual dispatch. Local conformance uses the
+same pinned parser requirements.

@@ -17,9 +17,9 @@ semantic_relations:
 # CI tools
 
 The CI workflow is [quality.yml](../../.github/workflows/quality.yml), named
-`quality`, triggered by pushes and pull requests. It defines a consolidated
-`tests` job and an independent `gnn-conformance` job. Superseded runs on the same
-ref are cancelled by workflow concurrency.
+`quality`, available through manual dispatch. It defines the `tests` job with
+display name `Hosted quality (optional)` and an independent `gnn-conformance`
+job. Superseded runs on the same ref are cancelled by workflow concurrency.
 
 ## Shared environment and entry point
 
@@ -69,8 +69,10 @@ the exact pin and scope.
 
 ## Execution evidence
 
-Hosted Actions execution is currently blocked by the organization's billing
-lock. This page describes the configured contract, not a successful hosted run.
+Hosted checks are informational and can fail when Actions billing is
+unavailable. The required `tests` status is published after the
+[local merge gate](../development/contribution_guide.md#publish-the-local-gate-result)
+passes on the exact candidate.
 Local measurements and their provenance live only in the generated
 [gate measurements](../development/gate-measurements.md), sourced from
 [gate-measurements.json](../development/gate-measurements.json).

@@ -64,11 +64,10 @@ forbidden terms, and catalog freshness. See
 
 ## Review
 
-Changes are reviewed as ordinary pull requests, with the `quality` workflow
-(`.github/workflows/quality.yml`) as the automated reviewer. Reviewers check
-what the scripts cannot: whether a claim is true and whether a link points at the
-right page. Findings from an audit become fixes in the
-same change or entries in the backlog file; they are not kept as separate report files.
+Use the [[docs/development/contribution_guide|local gate and pull request review]]
+for content changes. Reviewers check whether claims are supported and links
+point to the intended pages. Record audit findings as fixes in the same change
+or as entries in the backlog file.
 
 ## Rename, move, and retire
 

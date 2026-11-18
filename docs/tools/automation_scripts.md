@@ -40,6 +40,6 @@ no external automation services.
   fixes.
 - `link_fix_prompt.md` — guidance for link repairs.
 
-Run any script with `python <path> --help` for its options. The CI workflow
-(`.github/workflows/quality.yml`) runs the gates on every push. There is no
-scheduler, task runner, or Makefile.
+Run any script with `python <path> --help` for its options. Use `./run.sh` for
+the shared local gates. The optional hosted workflow
+(`.github/workflows/quality.yml`) runs on manual dispatch.

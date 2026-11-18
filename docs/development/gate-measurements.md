@@ -18,9 +18,9 @@ Both phases measure lint, type checking, and the focused core tests. Full-suite 
 
 | Arm | Before (s) | Before exit | After (s) | After exit |
 | --- | ---: | ---: | ---: | ---: |
-| lint | 0.230 | 0 | 0.303 | 0 |
-| types | 0.297 | 0 | 0.476 | 0 |
-| test | 60.756 | 0 | 13.267 | 0 |
+| lint | 0.230 | 0 | 0.276 | 0 |
+| types | 0.297 | 0 | 0.315 | 0 |
+| test | 60.756 | 0 | 7.631 | 0 |
 
 ## Test observations
 

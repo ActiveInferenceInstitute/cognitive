@@ -1,9 +1,7 @@
 name: quality
 
 on:
-  push:
-    branches: [main]
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -16,7 +14,7 @@ jobs:
   # Reuse one locked project environment instead of installing it independently
   # for tests, static/docs checks, mutation checks, packaging and OKN replay.
   tests:
-    name: tests
+    name: Hosted quality (optional)
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:

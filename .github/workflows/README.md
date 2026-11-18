@@ -7,11 +7,11 @@ updated: 2026-11-12
 
 # `.github/workflows/`
 
-[quality.yml](quality.yml) is configured for pushes and pull requests.
+[quality.yml](quality.yml) is available through manual dispatch.
 
 | Job key | Display name / scope |
 |---|---|
-| `tests` | Consolidated lint, types, full-suite branch coverage, docs and OKN checks, manuscript no-render and HTML, benchmarks, evidence replay, mutation qualification, and package checks. |
+| `tests` | `Hosted quality (optional)`: consolidated lint, types, full-suite branch coverage, docs and OKN checks, manuscript no-render and HTML, benchmarks, evidence replay, mutation qualification, and package checks. |
 | `gnn-conformance` | `gnn conformance (pinned)`: the single `specs/discrete_variational.gnn.md` declaration against the parser pinned by `specs/gnn-pin.json`, in an independent interpreter. |
 
 Both jobs use
@@ -25,6 +25,6 @@ The GNN parser environment stays separate from the project environment.
 `gnn-conformance` key and `gnn conformance (pinned)` display name.
 See [CI tools](../../docs/tools/ci_tools.md) and [GNN conformance](../GNN.md).
 
-Hosted Actions execution is currently blocked by the organization's billing
-lock; these job definitions are not a claim of hosted success. Local evidence
-is recorded in [gate measurements](../../docs/development/gate-measurements.md).
+Hosted job results are informational and can fail when Actions billing is
+unavailable. CodeQL may report separate checks. The required `tests` status
+comes from the [verified local merge gate](../../docs/development/contribution_guide.md#publish-the-local-gate-result).

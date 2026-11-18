@@ -59,9 +59,10 @@ against `uv.lock`:
 `test-full` applies the branch-coverage floor in `pyproject.toml` across the
 configured source tree. The [development guide](docs/development/README.md)
 documents prerequisites, index generation, additional benchmark and mutation
-checks, and the consolidated CI contract. Hosted Actions execution is currently
-blocked by the organization's billing lock; do not infer hosted success from
-configuration or local measurements.
+checks, and the optional hosted workflow. Follow the
+[local merge gate](docs/development/contribution_guide.md#publish-the-local-gate-result)
+for the required `tests` status. Bind passing receipts to the exact pull request
+head before reporting success.
 
 ## Agents that run
 

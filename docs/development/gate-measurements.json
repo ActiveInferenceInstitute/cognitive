@@ -7,7 +7,7 @@
     "run.sh": "9574a332a10bbc56bcb47a0b679d895ff85012bb76d77c2c97d4b9462d57d054",
     "pyproject.toml": "e7757fbeeb057c06ce23a4435f075faa9db86b7feae04818312d2a5a9ee7ae3a",
     "uv.lock": "2b65824617be2d4cd25227c25268596135be81618962a1e277dfa33b353f3b78",
-    ".github/workflows/quality.yml": "aef8971e5b52cb2cd35e2716b33db160196087758c646ca17ad29859c0ca4ef6",
+    ".github/workflows/quality.yml": "fb28628afd00687c27b723a20af7e92d514b897240c915c578bdd27242e053f8",
     "code/scripts/gate.py": "a8e3c6dadbae3e4497c528cf66775affccd30a7481ffeddb28ef0c0614b98996",
     "code/scripts/docs_index.py": "f3fc3d602fabeb6a77c9cd8998a54c23ae8a770d87e1f6e026fbdec00bd19f02",
     "code/scripts/gate_evidence.py": "40d84d38fd53926b7e97544bb778c15ed83896223a145652f575aec506c83e66",
@@ -82,7 +82,7 @@
   },
   "after": {
     "lint": {
-      "seconds": 0.303,
+      "seconds": 0.276,
       "exit_code": 0,
       "commands": [
         [
@@ -110,7 +110,7 @@
       ]
     },
     "types": {
-      "seconds": 0.476,
+      "seconds": 0.315,
       "exit_code": 0,
       "commands": [
         [
@@ -124,7 +124,7 @@
       ]
     },
     "test": {
-      "seconds": 13.267,
+      "seconds": 7.631,
       "exit_code": 0,
       "commands": [
         [
