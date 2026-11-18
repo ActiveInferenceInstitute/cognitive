@@ -7,6 +7,8 @@ updated: 2026-11-03
 
 # AGENTS.md — `.github/`
 
+The [automation guide](AUTOMATION.md) covers Dependabot and CI.
+
 - Keep Dependabot groups; the two ecosystems update on one weekly pull request
   each.
 - Workflow actions are pinned to full commit SHAs with the version in a comment.
