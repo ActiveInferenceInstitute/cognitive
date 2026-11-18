@@ -3,7 +3,7 @@ title: Open Knowledge Network export
 description: The cognitive-kb RDF graph exported from the knowledge base for the Open Knowledge Network registry, with its description, vocabulary mapping, sample and registry entry.
 type: reference
 status: stable
-updated: 2026-10-23
+updated: 2026-11-17
 semantic_relations:
   - type: documents
     links:
@@ -23,8 +23,9 @@ flowchart LR
     E --> NQ["cognitive-kb.nq<br/>N-Quads, graph<br/>purl.org/okn/frink/kg/cognitive-kb"]
     E --> TTL["cognitive-kb.ttl<br/>Turtle"]
     E --> S["docs/okn/<br/>sample + statistics"]
-    NQ --> L["lakeFS upload"]
-    L --> R["registry.okn.us/kg/cognitive-kb"]
+    NQ --> L["lakeFS develop<br/>upload and commit"]
+    L --> M["lakeFS main<br/>merge and conversion"]
+    M --> D["Stable release<br/>tag and deployment"]
 ```
 
 ## Contents
@@ -43,11 +44,11 @@ flowchart LR
 | [`join-support.md`](join-support.md) | Offline per-path inspection of mapping reviews and captured remote bindings. |
 | [`graph-quality.md`](graph-quality.md) | Graph-wide semantic integrity rules, deterministic diagnostics, coverage and provenance inputs. |
 | [`mapping-curation-2026-10-20.md`](mapping-curation-2026-10-20.md) | Source-reviewed candidate decisions across the priority concepts and multiple domains, including justified deferrals. |
-| [`registry_entry.md`](registry_entry.md) | The registry entry file to submit, and the upload steps. |
+| [`registry_entry.md`](registry_entry.md) | The accepted registry entry and proposed updates for the current graph. |
 | [`submission_criteria.md`](submission_criteria.md) | Jim Balhoff's supplied requirements, evidence, and acceptance boundaries. |
 | [`interoperability.md`](interoperability.md) | Existing identifier mappings, local query examples, and mapping review rules. |
 | [`evidence/2026-11-16-current-corpus/join-results.md`](evidence/2026-11-16-current-corpus/join-results.md) | Current join/replay evidence for separate documents and concepts; earlier captures remain preserved separately. |
-| [`landing_zone.md`](landing_zone.md) | Review package, access-request draft, and upload/processing acceptance steps. |
+| [`landing_zone.md`](landing_zone.md) | Prepare the release bundle, stage it on lakeFS, and verify processing and deployment. |
 
 ## Generate the graph
 
