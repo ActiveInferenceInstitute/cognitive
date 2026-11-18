@@ -75,15 +75,9 @@ def render(data: dict[str, Any]) -> str:
         f"Baseline source: `{data['baseline_revision']}`. "
         f"Host: {data['host']}; Python {data['python']}.",
         "",
-        "One serial wall-time sample per arm per phase, using the same locked project environment.",
-        "Dependency acquisition and supervisor admission are excluded. "
-        "Warm caches are not cleared.",
-        "The before fast-test sample reconstructs the same selected core-model",
-        "commands against the original source; there was no named fast CI arm.",
-        "The fast selection is not a substitute for full-suite coverage.",
-        "Before manuscript: source generation and HTML; after uses the same selection.",
-        "Single samples do not establish a general speedup. "
-        "Hosted Actions did not verify these results.",
+        "Each duration is a local wall-clock measurement for the commands in the adjacent JSON.",
+        "Dependency acquisition and supervisor admission are excluded. Cache state can vary.",
+        "Single samples do not establish a general speedup.",
         "",
         *data.get("notes", []),
         "",

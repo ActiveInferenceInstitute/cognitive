@@ -37,35 +37,33 @@ them.
 
 ## How a target resolves
 
-For `[[target]]` in a file, `verify_links.py` tries, in order:
+For `[[target]]` in a file, `verify_links.py` looks for a file relative to the
+linking file or the repository root. It tries the given path, then the same
+name with `.md` when the suffix is omitted, then `README.md` and `index.md`
+inside a matching directory. Exact spelling takes precedence over
+case-insensitive candidates.
 
-1. The path relative to the linking file, then relative to the repository root,
-   each as given, with `README.md` or `index.md` appended, and with `.md` added
-   when the target has no recognized file suffix.
-2. The path as a case-insensitive repository-relative key.
-3. For a target without a file suffix, a page with that path (without `.md`) or,
-   failing that, any page whose file name (stem) matches. The first match in
-   scan order wins.
+For a target without a recognized file suffix, the checker falls back to a
+matching Markdown basename, then to a frontmatter `aliases` entry. If more
+than one file has the same basename, the first in scan order wins. A target
+can resolve this way even when its directory component is misspelled.
+Alias matching ignores case and treats hyphens and underscores as spaces.
 
-A target that resolves is counted; if it has a `#heading`, the heading must
-slugify to a heading in the target file, otherwise an anchor warning is
-reported (a warning, not a failure).
+For a link with `#heading`, the checker compares the normalized fragment with
+the headings in the resolved file. A missing heading produces an advisory
+warning.
 
 ## Concept links versus file links
 
-A target that does not resolve is treated as follows:
+Use a source-relative or repository-root-relative path for an explicit file
+reference. Include the `.md` suffix on a Markdown path when a missing or
+misspelled path should fail the check without a basename or alias lookup.
+An unresolved path or recognized file name is reported as broken. An unresolved
+bare name is counted as a skipped concept link in the default mode.
 
-- If it contains a `/`, ends in a recognized suffix (`.md`, `.py`, `.yaml`,
-  `.png`, and so on), the link is an explicit file reference and is **broken**.
-- If it is a bare name with no `/` and no suffix, it is a **concept link**: it
-  is skipped and counted, on the convention that the page may be written later.
-  Roughly a third of the vault's links are concept links.
-
-`verify_links.py --strict-wiki-links` removes the second rule and reports
-every unresolved target. CI uses the default mode. Use the path form
-(`knowledge_base/cognitive/active_inference`) for any link that must keep
-working, since a typo in a path fails the gate while a typo in a bare name does
-not.
+Use `verify_links.py --strict-wiki-links` to report unresolved bare names as
+well. This option keeps the same resolution rules. The documentation gate uses
+the default mode.
 
 ## What the checker ignores
 

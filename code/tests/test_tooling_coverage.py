@@ -165,8 +165,18 @@ def test_node_creator_renders_a_template(tmp_path: Path) -> None:
     assert "# curiosity" in body
     assert created.parent.name == "beliefs"
 
-    with pytest.raises(FileExistsError):
+    with pytest.raises(FileExistsError, match="Node already exists"):
         creator.create_node("belief", "curiosity")
+    assert created.read_text(encoding="utf-8") == body
+
+    absent_target = tmp_path / "unrelated.md"
+    destination = created.with_name("collision.md")
+    destination.symlink_to(absent_target)
+    with pytest.raises(FileExistsError, match="Node already exists"):
+        creator.create_node("belief", "collision")
+    assert destination.is_symlink()
+    assert not absent_target.exists()
+
     # An unmapped type falls back to a simple plural directory.
     (templates / "insight_template.md").write_text("# {{ node_name }}\n", encoding="utf-8")
     assert creator.create_node("insight", "one").parent.name == "insights"

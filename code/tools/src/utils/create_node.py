@@ -115,9 +115,11 @@ class NodeCreator:
         output_dir = self.knowledge_base_path / self._PLURAL_TYPES.get(node_type, f"{node_type}s")
         output_dir.mkdir(parents=True, exist_ok=True)
         output_file = output_dir / f"{safe_name}.md"
-        if output_file.exists():
-            raise FileExistsError(f"Node already exists: {output_file}")
-        output_file.write_text(content, encoding="utf-8")
+        try:
+            with output_file.open("x", encoding="utf-8") as handle:
+                handle.write(content)
+        except FileExistsError as exc:
+            raise FileExistsError(f"Node already exists: {output_file}") from exc
         return output_file
 
 
