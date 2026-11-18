@@ -2,7 +2,7 @@
 title: OKN submission criteria and evidence
 type: reference
 status: stable
-updated: 2026-10-20
+updated: 2026-11-17
 ---
 
 # OKN submission criteria and evidence
@@ -19,7 +19,7 @@ RENCI decides whether to accept the graph. The
 | Clear public research, education or public-good innovation use case | [Graph description](graph_description.md): concept discovery, reading paths and literature links | RENCI assesses thematic fit |
 | CC-BY or CC0 graph license | [CC BY 4.0 notice](../../LICENSE-KNOWLEDGE-BASE.md); `dcterms:license` on dataset and concept scheme | Maintainer approved the change and reported no known third-party content exceptions; checks cannot establish ownership |
 | Recommended domain standards and identifiers | SKOS, Dublin Core, schema.org, PROV-O, DCAT, VoID; existing Wikidata and DOI links | Apply domain identifiers only when a page denotes the appropriate entity |
-| Good-faith evidence of mapping and meshing with OKN graphs | [Interoperability](interoperability.md), [captured join results](evidence/2026-10-20-graph-methods/join-results.md), runnable cross-graph query | Local export joined with live identifier-mappings and Ubergraph responses; hosting cognitive-kb and server-side execution remain separate steps |
+| Good-faith evidence of mapping and meshing with OKN graphs | [Interoperability](interoperability.md), [captured join results](evidence/2026-11-16-current-corpus/join-results.md), runnable cross-graph query | Local export joined with live identifier-mappings and Ubergraph responses; hosting cognitive-kb and server-side execution remain separate steps |
 | Federal-program alignment is encouraged, not required | Existing description reports volunteer maintenance without external grant support | Do not claim an NSF or NIH award for this graph |
 
 ## Before upload
@@ -37,9 +37,9 @@ RENCI decides whether to accept the graph. The
 4. Review identifier correspondence, execute the example queries, and replay the
    captured join using daf-okn. Preserve the source export, bounded queries,
    remote responses and hashes. Recheck the federation query after deployment.
-5. Update the registry description and obtain the landing-zone access specified
-   by the public workflow. Use [the landing-zone handoff](landing_zone.md) and
-   record the actual upload and processing receipts.
+5. Use [the landing-zone handoff](landing_zone.md) with the provisioned
+   repository access. Record the upload and processing receipts and submit
+   any registry description or query updates through the contribution workflow.
 
 Mahir's subsequent semantic review is implemented in the [vocabulary contract](vocabulary.md):
 concept-valued keywords, standard citation predicates, discovery-only unreviewed
@@ -63,8 +63,9 @@ connect the matching declared resources; metadata/citations remain on documents;
 domain collections and conceptual relations have concept endpoints. Reviewed
 mapping evidence must describe the migrated concept subject. Inspect the generated
 document-scoped assertion table for ambiguous source labels and mixed-role links.
-Earlier capture receipts describe the earlier model; regenerate and replay fresh
-evidence after this migration before relying on a submission packet.
+The [November 16 capture](evidence/2026-11-16-current-corpus/join-results.md)
+binds the current document and topic concept model. Regenerate and replay
+evidence after a change to the export or its join query.
 
 The repository's automated check is a necessary technical check, not a full
 submission certification. Generated exports, registry acceptance, upload,
