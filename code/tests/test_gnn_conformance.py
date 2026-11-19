@@ -169,6 +169,11 @@ def test_digest_check_reports_missing_and_changed_files(tmp_path: Path):
     package.mkdir()
     mismatches = digest_mismatches(package, pin)
     assert len(mismatches) == len(pin["parser_files"])
+    assert {
+        "src/gnn/validation/consistency_checker.py",
+        "src/gnn/validation/orientation.py",
+        "src/gnn/validation/semantic_validator.py",
+    } <= {item["path"] for item in mismatches}
     assert {item["reason"] for item in mismatches} == {"missing"}
     (package / "__init__.py").write_text("not the pinned module\n", encoding="utf-8")
     mismatches = digest_mismatches(package, pin)

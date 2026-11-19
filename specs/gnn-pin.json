@@ -9,6 +9,9 @@
     "src/gnn/parsers/__init__.py": "257f10d65b54ed2cc421fe25257d6ae506dc3dbde8685b7a5672aba06f0c4991",
     "src/gnn/parsers/common.py": "c27da82a05058ec2f96b4c675374a848e64535122bf3a63155a47b8b23e3076e",
     "src/gnn/parsers/markdown_parser.py": "24a30ea7e67d597e891fe16e521e13be5f2013af90eeb282cfe257940b281e82",
-    "src/gnn/parsers/markdown_parser_parameter.py": "2e94e88c79b8998387f2a1c53fe88dcc45adc498c47c30f7ec3bd577a8072061"
+    "src/gnn/parsers/markdown_parser_parameter.py": "2e94e88c79b8998387f2a1c53fe88dcc45adc498c47c30f7ec3bd577a8072061",
+    "src/gnn/validation/consistency_checker.py": "52371f1a84a88aa1c897aa3b256ffe851485795d2ef494240387eb9bdf037de9",
+    "src/gnn/validation/orientation.py": "e2336596d90c46e51d14eab4c3c444eaa646c722211fbe243332dbe9d71c0265",
+    "src/gnn/validation/semantic_validator.py": "575dda02acf01989a1bbc217923748dc180741dacb97e682e30e4323670aedfb"
   }
 }

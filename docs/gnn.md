@@ -32,14 +32,14 @@ The upstream parser revision is pinned. The declaration is checked with the
 revision recorded in the canonical **`gnn-importer-pin/v1`** declaration,
 [`specs/gnn-pin.json`](../specs/gnn-pin.json) — GNN tag **`v5.0.3`**,
 commit `8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1` — never with a live checkout,
-and the parser files are digest-verified before their verdict is used.
+and the recorded parser and validator files are digest-verified before use.
 
 ## Files
 
 | Path | Purpose |
 | --- | --- |
 | [`specs/discrete_variational.gnn.md`](../specs/discrete_variational.gnn.md) | The declaration: `A`, `B`, `C`, `D`, `E`, the variables they connect, the equations, and the ontology annotations. |
-| [`specs/gnn-pin.json`](../specs/gnn-pin.json) | The canonical `gnn-importer-pin/v1` importer pin: repository, tag, commit, recorded date, and parser-file SHA-256 digests. |
+| [`specs/gnn-pin.json`](../specs/gnn-pin.json) | The canonical `gnn-importer-pin/v1` importer pin: repository, tag, commit, recorded date, and SHA-256 digests of parser and validator files. |
 | [`code/tools/src/models/active_inference/gnn_spec.py`](../code/tools/src/models/active_inference/gnn_spec.py) | The reader. Standard library plus NumPy; no upstream import. |
 | [`code/tests/test_gnn_conformance.py`](../code/tests/test_gnn_conformance.py) | The binding between the declaration and the runtime model, with negative controls. |
 | [`code/tests/gnn_parser_probe.py`](../code/tests/gnn_parser_probe.py) | The only module that imports the upstream parser. Runs as a subprocess under the pinned interpreter and prints JSON. |
@@ -62,8 +62,8 @@ canonical configuration, and the conformance test compares:
 applies `B[:, :, action]`. The declaration holds one 2x2 matrix per action index,
 so each declared matrix is exactly the slice the runtime applies: index 0 keeps
 the hidden state, index 1 flips it with probability 0.90. The pinned parser also
-reports the tensor orientation it sees, and the conformance test requires that
-report to say canonical.
+reports a valid but ambiguous orientation because each action slice is doubly
+stochastic. Conformance requires the reported orientation to be valid.
 
 The remaining dispatcher keys (`method`, `policy_type`, `learning_rate`,
 `precision_init`, `temperature`, `discount_factor`, `exploration_weight`,
@@ -111,9 +111,8 @@ and provision the pinned commit explicitly, permitting network access:
 ./run.sh gnn --provision
 ```
 
-The canonical JSON pin supplies repository, tag, commit, and parser-file digests;
-do not duplicate these in install commands. A moved tag or mismatched parser
-digest is a failure, not permission to use a different revision.
+The canonical JSON pin supplies repository, tag, commit, and parser and validator digests. A moved tag or a digest mismatch
+fails conformance.
 
 For validator diagnostics independently of the aggregate arm:
 
@@ -131,8 +130,7 @@ parser is never a conformance pass; the aggregate GNN gate requires it.
   the numbers, the dimensions, and the horizon. It cannot notice a fault both
   sides share, and it says nothing about the format.
 - **Pinned parser** proves the document is readable by a known revision of the
-  format: no parse error, no semantic error, a canonical transition-tensor
-  orientation, a consistency score of 1.0, and agreement with the reader on
+  format: no parse error, no semantic error, a valid transition-tensor orientation, a consistency score of 1.0, and agreement with the reader on
   every variable and ontology annotation. Its files are digest-verified first,
   so a different revision cannot report this verdict.
 - **Neither** proves the model is the right model for a task. The declaration
@@ -144,7 +142,7 @@ parser is never a conformance pass; the aggregate GNN gate requires it.
 Change the declaration and the canonical configuration together, then run
 `GNN_RUNTIME_PYTHON=/path/to/gnn-runtime/bin/python ./run.sh gnn`. Any figure or
 example derived from the canonical configuration changes with it. Pin changes
-must update the canonical JSON and parser digests together.
+must update the canonical JSON and the parser and validator digests together.
 
 ## Continuous integration
 
