@@ -12,7 +12,7 @@
     "code/scripts/docs_index.py": "f3fc3d602fabeb6a77c9cd8998a54c23ae8a770d87e1f6e026fbdec00bd19f02",
     "code/scripts/gate_evidence.py": "40d84d38fd53926b7e97544bb778c15ed83896223a145652f575aec506c83e66",
     "code/scripts/build_manuscript.py": "3c087e103fc1e8ea8f5a402a2337b9d0c647705d4f6cddaa441d1e90c56262b3",
-    "code/scripts/validate_gnn_spec.py": "5b7144fc49c3417b6139651d4e3ab52dc28acd2da5a08dfa3317e97def0ecb11",
+    "code/scripts/validate_gnn_spec.py": "1611c88b28d7e9fef96dc2f16948c65f4fb4ba22dfea7af60b19f4ef537b606e",
     "code/scripts/verify_links.py": "8697b980bbf23ef0d28e0fd4a1085c658a877faafe2775861a79c678151ddfe8",
     "code/scripts/export_rdf.py": "4abded14a9a39c7fe055c5f496623c482bc38e0f6932629ccd6c148f5e4168d7",
     "code/scripts/mutation_check.py": "0f94b920f54069294d48dd4643a9efb27832a941ab41215b6838de4b1ebce2a1"
@@ -82,7 +82,7 @@
   },
   "after": {
     "lint": {
-      "seconds": 0.276,
+      "seconds": 0.752,
       "exit_code": 0,
       "commands": [
         [
@@ -110,7 +110,7 @@
       ]
     },
     "types": {
-      "seconds": 0.315,
+      "seconds": 2.938,
       "exit_code": 0,
       "commands": [
         [
@@ -124,7 +124,7 @@
       ]
     },
     "test": {
-      "seconds": 7.631,
+      "seconds": 10.254,
       "exit_code": 0,
       "commands": [
         [

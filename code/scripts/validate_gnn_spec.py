@@ -11,8 +11,8 @@ Two checks run, in this order:
 2. **Pinned parser** (needs a runtime): the revision recorded in
    ``specs/gnn-pin.json`` parses the document, agrees with
    ``cognitive.models.active_inference.gnn_spec`` on every variable, and reports
-   no error, no semantic error, no B-orientation warning, and full consistency.
-   The parser files are digest-verified before their output is trusted.
+   no error, no semantic error, valid B orientation, and full consistency.
+   The recorded parser and validator files are digest-verified before their output is trusted.
 
 Exit codes: ``0`` pass, ``1`` conformance failure, ``2`` the pinned runtime is
 unavailable, so the parser check was not run — which is never a pass.
@@ -43,7 +43,7 @@ PROBE_PATH = gnn_spec.ROOT / "code" / "tests" / "gnn_parser_probe.py"
 
 
 def digest_mismatches(package_dir: Path, pin: dict[str, Any]) -> list[dict[str, str]]:
-    """Return the recorded parser files that are missing or have changed."""
+    """Return the recorded parser and validator files that are missing or have changed."""
     mismatches: list[dict[str, str]] = []
     for recorded, expected in pin.get("parser_files", {}).items():
         relative = recorded.split("src/gnn/", 1)[-1]
@@ -176,7 +176,7 @@ def parser_conformance(payload: dict[str, Any], text: str | None = None) -> dict
         differences.append(f"semantic validation failed: {semantic_errors}")
     orientation = payload.get("orientation", {})
     if not orientation.get("valid", False):
-        differences.append(f"B orientation is not canonical: {orientation.get('notes')}")
+        differences.append(f"B orientation is invalid: {orientation.get('notes')}")
     score = payload.get("consistency", {}).get("consistency_score")
     if score != 1.0:
         differences.append(f"consistency score is {score}, expected 1.0")
