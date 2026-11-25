@@ -30,8 +30,8 @@ together, so editing one side alone fails the suite.
 
 The upstream parser revision is pinned. The declaration is checked with the
 revision recorded in the canonical **`gnn-importer-pin/v1`** declaration,
-[`specs/gnn-pin.json`](../specs/gnn-pin.json) — GNN tag **`v5.0.3`**,
-commit `8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1` — never with a live checkout,
+[`specs/gnn-pin.json`](../specs/gnn-pin.json) — GNN tag **`v5.1.0`**,
+commit `75c834bd8519dc7b5adc4d24f16bf393cfd1ecdf` — never with a live checkout,
 and the recorded parser and validator files are digest-verified before use.
 
 ## Files
@@ -74,9 +74,8 @@ here.
 ## Adoption context
 
 The patterns and pin discipline this adoption follows are documented upstream in
-the [GNN downstream adoption guide](https://github.com/ActiveInferenceInstitute/Generalized_Notation_Notation/blob/main/docs/gnn/integration/downstream_adoption.md)
-(main branch; the guide postdates the pinned `v5.0.3` revision, so it is not part
-of the pin). This repository uses **pattern D, structure-only declaration**, with
+the [GNN downstream adoption guide](https://github.com/ActiveInferenceInstitute/Generalized_Notation_Notation/blob/v5.1.0/docs/gnn/integration/downstream_adoption.md)
+(at the pinned `v5.1.0` revision). This repository uses **pattern D, structure-only declaration**, with
 the authored `A`, `B`, `C`, `D`, and `E` declared alongside the structure: the
 document states the model, the YAML remains the runtime configuration the factory
 loads, no runtime code reads the document, and a conformance test binds the two
