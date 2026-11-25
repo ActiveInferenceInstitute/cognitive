@@ -8,8 +8,8 @@ upstream parser needs its own interpreter.
 The single canonical importer pin is [`specs/gnn-pin.json`](../specs/gnn-pin.json),
 with schema **`gnn-importer-pin/v1`**, repository
 `https://github.com/ActiveInferenceInstitute/Generalized_Notation_Notation`,
-tag **`v5.0.3`**, and commit
-**`8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1`**. It also records the SHA-256
+tag **`v5.1.0`**, and commit
+**`75c834bd8519dc7b5adc4d24f16bf393cfd1ecdf`**. It also records the SHA-256
 of each parser file. The job checks that the tag still peels to the pinned
 commit, provisions that commit, and verifies parser digests before trusting
 its verdict. The JSON is the declaration consumed by tooling; this page is a

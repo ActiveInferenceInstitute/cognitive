@@ -182,7 +182,7 @@ def test_digest_check_reports_missing_and_changed_files(tmp_path: Path):
 
 def test_parser_conformance_rejects_a_disagreeing_payload():
     payload = {
-        "gnn_version": "5.0.3",
+        "gnn_version": "5.1.0",
         "gnn_module": "/tmp/gnn/__init__.py",
         "parser": {
             "success": True,

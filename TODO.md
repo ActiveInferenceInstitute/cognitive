@@ -73,8 +73,8 @@ history; this file is not a log. Remove an item when it is done.
   --no-render` builds figures and hydrated source without either, and
   `--no-pdf` skips only the PDF.
 - **GNN conformance.** The canonical pin is `specs/gnn-pin.json`
-  (`gnn-importer-pin/v1`, tag `v5.0.3`, commit `8f293d9`) with SHA-256 digests
-  for five parser files. It is not on the `v5.1.0` shipped-importer cutover:
+  (`gnn-importer-pin/v1`, tag `v5.1.0`, commit `75c834b`) with SHA-256 digests
+  for eight parser and validator files. `v5.1.0` ships `gnn.importers`;
   this repository keeps its own reader and the pinned parser probe
   (`docs/gnn.md`, pattern D). `./run.sh gnn --provision` checks the tag and
   provisions the parser; without a runtime, `code/scripts/validate_gnn_spec.py`

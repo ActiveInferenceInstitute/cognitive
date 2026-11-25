@@ -9,8 +9,8 @@ updated: 2026-11-03
 
 - [`discrete_variational.gnn.md`](discrete_variational.gnn.md) — the GNN
   declaration of the canonical discrete model.
-- [`gnn-pin.json`](gnn-pin.json) — the upstream repository, tag (`v5.0.3`),
-  commit `8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1`, and the SHA-256 digests of the
+- [`gnn-pin.json`](gnn-pin.json) — the upstream repository, tag (`v5.1.0`),
+  commit `75c834bd8519dc7b5adc4d24f16bf393cfd1ecdf`, and the SHA-256 digests of the
   parser and validator files used by conformance.
 
 Validate with `python -m scripts.validate_gnn_spec --gnn-runtime <python>
