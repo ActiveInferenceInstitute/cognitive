@@ -61,4 +61,4 @@ stays the runtime configuration, and
 fails when the two disagree. `gnn_spec.py` reads the declaration with the
 standard library plus NumPy; the format's parser revision is pinned in
 [`specs/gnn-pin.json`](../../../../../specs/gnn-pin.json). See
-[`docs/gnn.md`](../../../../../docs/gnn.md) for the commands.
+[`docs/config/gnn.md`](../../../../../docs/config/gnn.md) for the commands.

@@ -26,7 +26,7 @@ horizon with the canonical configuration
 `code/tools/src/models/active_inference/config_examples/discrete_variational.yaml`
 as loaded by `ActiveInferenceFactory.create_from_yaml`. It also compares the
 pinned parser's reading with the repository's reader. A missing parser runtime
-is not a pass. See [Model specification](../docs/gnn.md).
+is not a pass. See [Model specification](../docs/config/gnn.md).
 
 The job uses
 `ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448`

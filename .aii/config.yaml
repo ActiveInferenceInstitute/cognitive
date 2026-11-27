@@ -39,7 +39,7 @@ artifacts:
 - path: specs/gnn-pin.json
   kind: data
   description: Pinned upstream GNN parser revision with parser-file digests.
-- path: docs/gnn.md
+- path: docs/config/gnn.md
   kind: doc
   description: Model specification - the declaration, its binding, and the validation
     commands.

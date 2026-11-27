@@ -1,3 +1,5 @@
+manuscript_dir: "docs/manuscript"
+
 paper:
   title: "Validated Discrete and Continuous Active Inference in Python"
   subtitle: "A reproducible implementation audit from generative model to manuscript"

@@ -71,7 +71,7 @@ GNN_RUNTIME_PYTHON=/path/to/gnn-runtime/bin/python ./run.sh gnn
 ```
 
 The pin and parser-integrity contract are documented in
-[Model specification](../gnn.md). An unavailable parser is not a conformance pass.
+[Model specification](../config/gnn.md). An unavailable parser is not a conformance pass.
 
 The manuscript arm needs Pandoc and pandoc-crossref for HTML; `--pdf` also
 requires XeLaTeX. For a no-render-only invocation and renderer setup, see the

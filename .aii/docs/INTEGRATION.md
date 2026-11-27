@@ -42,7 +42,7 @@
 | `LICENSE` | `doc` | License. |
 | `specs/discrete_variational.gnn.md` | `doc` | GNN declaration of the canonical discrete model. |
 | `specs/gnn-pin.json` | `data` | Pinned upstream GNN parser revision with parser-file digests. |
-| `docs/gnn.md` | `doc` | Model specification - the declaration, its binding, and the validation commands. |
+| `docs/config/gnn.md` | `doc` | Model specification - the declaration, its binding, and the validation commands. |
 | `code/tools/src/models/active_inference/config_examples/discrete_variational.yaml` | `data` | Canonical runtime configuration bound to the declaration. |
 | `code/tools/src/models/active_inference/gnn_spec.py` | `code` | Reader for the committed GNN declaration (standard library plus NumPy). |
 | `code/scripts/validate_gnn_spec.py` | `tool` | GNN conformance validator - semantics plus the pinned parser. |

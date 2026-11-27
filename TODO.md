@@ -76,7 +76,7 @@ history; this file is not a log. Remove an item when it is done.
   (`gnn-importer-pin/v1`, tag `v5.1.0`, commit `75c834b`) with SHA-256 digests
   for eight parser and validator files. `v5.1.0` ships `gnn.importers`;
   this repository keeps its own reader and the pinned parser probe
-  (`docs/gnn.md`, pattern D). `./run.sh gnn --provision` checks the tag and
+  (`docs/config/gnn.md`, pattern D). `./run.sh gnn --provision` checks the tag and
   provisions the parser; without a runtime, `code/scripts/validate_gnn_spec.py`
   exits 2 and reports the parser as not run, which the gate treats as a
   failure. A moved tag or mismatched digest is a failure, not permission to use
