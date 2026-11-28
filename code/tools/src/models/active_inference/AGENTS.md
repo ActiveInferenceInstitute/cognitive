@@ -28,4 +28,4 @@ declaration is checked against.
 `ActiveInferenceFactory.create_from_yaml`, so editing one side alone fails the
 suite, and `code/scripts/validate_gnn_spec.py` runs the pinned parser whenever a
 runtime for it is named. Change the declaration and the canonical configuration
-together, then follow `docs/gnn.md`.
+together, then follow `docs/config/gnn.md`.

@@ -8,7 +8,7 @@ can compare the two without importing the upstream parser. The upstream parser
 itself runs only in ``code/tests/gnn_parser_probe.py``, under the revision pinned
 in ``specs/gnn-pin.json``.
 
-See ``docs/gnn.md`` for the commands and for what each check proves.
+See ``docs/config/gnn.md`` for the commands and for what each check proves.
 """
 
 from __future__ import annotations

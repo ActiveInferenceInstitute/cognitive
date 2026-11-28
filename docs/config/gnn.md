@@ -10,10 +10,10 @@ tags:
 semantic_relations:
   - type: documents
     links:
-      - "[[README|Documentation hub]]"
-      - "[[../README|Repository README]]"
-      - "[[architecture/README|Architecture]]"
-      - "[[repo_docs/README|Repository documentation]]"
+      - "[[../README|Documentation hub]]"
+      - "[[../../README|Repository README]]"
+      - "[[../architecture/README|Architecture]]"
+      - "[[../repo_docs/README|Repository documentation]]"
 ---
 
 # Model specification
@@ -23,14 +23,14 @@ The canonical discrete model is declared in
 (GNN): one plain-text document describes the likelihood, transition tensor,
 preferences, priors, and planning horizon. The declaration is the canonical
 statement of the model, the configuration in
-[`config_examples/discrete_variational.yaml`](../code/tools/src/models/active_inference/config_examples/discrete_variational.yaml)
+[`config_examples/discrete_variational.yaml`](../../code/tools/src/models/active_inference/config_examples/discrete_variational.yaml)
 stays the runtime configuration the factory reads, and
-[`test_gnn_conformance.py`](../code/tests/test_gnn_conformance.py) binds the two
+[`test_gnn_conformance.py`](../../code/tests/test_gnn_conformance.py) binds the two
 together, so editing one side alone fails the suite.
 
 The upstream parser revision is pinned. The declaration is checked with the
 revision recorded in the canonical **`gnn-importer-pin/v1`** declaration,
-[`specs/gnn-pin.json`](../specs/gnn-pin.json) — GNN tag **`v5.1.0`**,
+[`specs/gnn-pin.json`](../../specs/gnn-pin.json) — GNN tag **`v5.1.0`**,
 commit `75c834bd8519dc7b5adc4d24f16bf393cfd1ecdf` — never with a live checkout,
 and the recorded parser and validator files are digest-verified before use.
 
@@ -38,12 +38,12 @@ and the recorded parser and validator files are digest-verified before use.
 
 | Path | Purpose |
 | --- | --- |
-| [`specs/discrete_variational.gnn.md`](../specs/discrete_variational.gnn.md) | The declaration: `A`, `B`, `C`, `D`, `E`, the variables they connect, the equations, and the ontology annotations. |
-| [`specs/gnn-pin.json`](../specs/gnn-pin.json) | The canonical `gnn-importer-pin/v1` importer pin: repository, tag, commit, recorded date, and SHA-256 digests of parser and validator files. |
-| [`code/tools/src/models/active_inference/gnn_spec.py`](../code/tools/src/models/active_inference/gnn_spec.py) | The reader. Standard library plus NumPy; no upstream import. |
-| [`code/tests/test_gnn_conformance.py`](../code/tests/test_gnn_conformance.py) | The binding between the declaration and the runtime model, with negative controls. |
-| [`code/tests/gnn_parser_probe.py`](../code/tests/gnn_parser_probe.py) | The only module that imports the upstream parser. Runs as a subprocess under the pinned interpreter and prints JSON. |
-| [`code/scripts/validate_gnn_spec.py`](../code/scripts/validate_gnn_spec.py) | The validator: semantics always, pinned parser when a runtime is named. |
+| [`specs/discrete_variational.gnn.md`](../../specs/discrete_variational.gnn.md) | The declaration: `A`, `B`, `C`, `D`, `E`, the variables they connect, the equations, and the ontology annotations. |
+| [`specs/gnn-pin.json`](../../specs/gnn-pin.json) | The canonical `gnn-importer-pin/v1` importer pin: repository, tag, commit, recorded date, and SHA-256 digests of parser and validator files. |
+| [`code/tools/src/models/active_inference/gnn_spec.py`](../../code/tools/src/models/active_inference/gnn_spec.py) | The reader. Standard library plus NumPy; no upstream import. |
+| [`code/tests/test_gnn_conformance.py`](../../code/tests/test_gnn_conformance.py) | The binding between the declaration and the runtime model, with negative controls. |
+| [`code/tests/gnn_parser_probe.py`](../../code/tests/gnn_parser_probe.py) | The only module that imports the upstream parser. Runs as a subprocess under the pinned interpreter and prints JSON. |
+| [`code/scripts/validate_gnn_spec.py`](../../code/scripts/validate_gnn_spec.py) | The validator: semantics always, pinned parser when a runtime is named. |
 
 ## What the declaration is bound to
 
@@ -146,7 +146,7 @@ must update the canonical JSON and the parser and validator digests together.
 ## Continuous integration
 
 The independent `gnn-conformance` job in
-[`quality.yml`](../.github/workflows/quality.yml) has the display name
+[`quality.yml`](../../.github/workflows/quality.yml) has the display name
 **`gnn conformance (pinned)`**. Preserve both identifiers. It uses
 `ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448`
 and `uv.lock` for the project environment. The parser stays in a separate
@@ -155,7 +155,7 @@ peels to the pinned commit. `GNN_RUNTIME_PYTHON` is required for `./run.sh gnn`,
 so failed provisioning cannot silently skip the parser.
 
 Only `specs/discrete_variational.gnn.md` is parsed; the job does not discover
-other declarations. See [the GNN CI pointer](../.github/GNN.md) for scope and
-[CI tools](tools/ci_tools.md) for the optional hosted quality workflow.
+other declarations. See [the GNN CI pointer](../../.github/GNN.md) for scope and
+[CI tools](../tools/ci_tools.md) for the optional hosted quality workflow.
 The hosted workflow runs on manual dispatch. Local conformance uses the
 same pinned parser requirements.
